@@ -207,3 +207,51 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+
+// Begin my additions --------------------------------------------------------------------------------------------------------------------------------------------
+
+const u16 gMetatiles_leob_general[] = INCBIN_U16("graphics/leob_general/metatiles.bin");
+const u16 gMetatileAttributes_leob_general[] = INCBIN_U16("graphics/leob_general/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_sootopolis[] = INCBIN_U16("data/tilesets/secondary/leob_sootopolis/metatiles.bin");
+const u16 gMetatileAttributes_leob_sootopolis[] = INCBIN_U16("data/tilesets/secondary/leob_sootopolis/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_mauville[] = INCBIN_U16("data/tilesets/secondary/leob_mauville/metatiles.bin");
+const u16 gMetatileAttributes_leob_mauville[] = INCBIN_U16("data/tilesets/secondary/leob_mauville/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_mossdeep[] = INCBIN_U16("data/tilesets/secondary/leob_mossdeep/metatiles.bin");
+const u16 gMetatileAttributes_leob_mossdeep[] = INCBIN_U16("data/tilesets/secondary/leob_mossdeep/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatiles.bin");
+const u16 gMetatileAttributes_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_rustboro[] = INCBIN_U16("data/tilesets/secondary/leob_rustboro/metatiles.bin");
+const u16 gMetatileAttributes_leob_rustboro[] = INCBIN_U16("data/tilesets/secondary/leob_rustboro/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_slateport[] = INCBIN_U16("data/tilesets/secondary/leob_slateport/metatiles.bin");
+const u16 gMetatileAttributes_leob_slateport[] = INCBIN_U16("data/tilesets/secondary/leob_slateport/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_fallarbor[] = INCBIN_U16("data/tilesets/secondary/leob_fallarbor/metatiles.bin");
+const u16 gMetatileAttributes_leob_fallarbor[] = INCBIN_U16("data/tilesets/secondary/leob_fallarbor/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_fortree[] = INCBIN_U16("data/tilesets/secondary/leob_fortree/metatiles.bin");
+const u16 gMetatileAttributes_leob_fortree[] = INCBIN_U16("data/tilesets/secondary/leob_fortree/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_lavaridge[] = INCBIN_U16("data/tilesets/secondary/leob_lavaridge/metatiles.bin");
+const u16 gMetatileAttributes_leob_lavaridge[] = INCBIN_U16("data/tilesets/secondary/leob_lavaridge/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_lilycove[] = INCBIN_U16("data/tilesets/secondary/leob_lilycove/metatiles.bin");
+const u16 gMetatileAttributes_leob_lilycove[] = INCBIN_U16("data/tilesets/secondary/leob_lilycove/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_battle_frontier_outside_east[] = INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/metatiles.bin");
+const u16 gMetatileAttributes_leob_battle_frontier_outside_east[] = INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_battle_frontier_outside_west[] = INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/metatiles.bin");
+const u16 gMetatileAttributes_leob_battle_frontier_outside_west[] = INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_dewford[] = INCBIN_U16("data/tilesets/secondary/leob_dewford/metatiles.bin");
+const u16 gMetatileAttributes_leob_dewford[] = INCBIN_U16("data/tilesets/secondary/leob_dewford/metatile_attributes.bin");
+
+const u16 gMetatiles_leob_ever_grande[] = INCBIN_U16("data/tilesets/secondary/leob_ever_grande/metatiles.bin");
+const u16 gMetatileAttributes_leob_ever_grande[] = INCBIN_U16("data/tilesets/secondary/leob_ever_grande/metatile_attributes.bin");

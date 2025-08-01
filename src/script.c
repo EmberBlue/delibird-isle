@@ -637,3 +637,11 @@ void Script_RequestWriteVar_Internal(u32 varId)
         return;
     Script_RequestEffects(SCREFF_V1 | SCREFF_SAVE);
 }
+
+
+
+
+void GetObjectEventTrainerRangeFromTemplate(void)
+{
+    gSpecialVar_Result = gMapHeader.events->objectEvents[gSpecialVar_LastTalked - 1].trainerRange_berryTreeId;
+}

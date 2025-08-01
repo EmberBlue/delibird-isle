@@ -1634,3 +1634,314 @@ const u16 gTilesetPalettes_UnionRoom[][16] =
 };
 
 const u32 gTilesetTiles_UnionRoom[] = INCBIN_U32("data/tilesets/secondary/union_room/tiles.4bpp.lz");
+
+
+
+
+// Begin my template addions -------------------------------------------------------------------------------------------------------
+
+
+const u32 gTilesetTiles_leob_general[] = INCBIN_U32("graphics/leob_general/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_leob_general[][16] = {
+    INCBIN_U16("graphics/leob_general/palettes/00.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/01.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/02.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/03.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/04.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/05.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/06.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/07.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/08.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/09.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/10.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/11.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/12.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/13.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/14.gbapal"),
+    INCBIN_U16("graphics/leob_general/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_sootopolis[] = INCBIN_U32("data/tilesets/secondary/leob_sootopolis/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_leob_sootopolis[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_sootopolis/palettes/15.gbapal"),
+};
+
+
+const u32 gTilesetTiles_leob_mauville[] = INCBIN_U32("data/tilesets/secondary/leob_mauville/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_mauville[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mauville/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_mossdeep[] = INCBIN_U32("data/tilesets/secondary/leob_mossdeep/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_mossdeep[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_mossdeep/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_petalburg[] = INCBIN_U32("data/tilesets/secondary/leob_petalburg/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_petalburg[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_petalburg/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_rustboro[] = INCBIN_U32("data/tilesets/secondary/leob_rustboro/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_rustboro[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_rustboro/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_slateport[] = INCBIN_U32("data/tilesets/secondary/leob_slateport/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_slateport[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_slateport/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_fallarbor[] = INCBIN_U32("data/tilesets/secondary/leob_fallarbor/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_fallarbor[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fallarbor/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_fortree[] = INCBIN_U32("data/tilesets/secondary/leob_fortree/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_fortree[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_fortree/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_lavaridge[] = INCBIN_U32("data/tilesets/secondary/leob_lavaridge/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_lavaridge[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lavaridge/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_lilycove[] = INCBIN_U32("data/tilesets/secondary/leob_lilycove/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_lilycove[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_lilycove/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_battle_frontier_outside_east[] = INCBIN_U32("data/tilesets/secondary/leob_battle_frontier_outside_east/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_battle_frontier_outside_east[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_east/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_battle_frontier_outside_west[] = INCBIN_U32("data/tilesets/secondary/leob_battle_frontier_outside_west/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_battle_frontier_outside_west[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_battle_frontier_outside_west/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_dewford[] = INCBIN_U32("data/tilesets/secondary/leob_dewford/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_dewford[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_dewford/palettes/15.gbapal"),
+};
+
+const u32 gTilesetTiles_leob_ever_grande[] = INCBIN_U32("data/tilesets/secondary/leob_ever_grande/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_ever_grande[][16] = {
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/15.gbapal"),
+};
+

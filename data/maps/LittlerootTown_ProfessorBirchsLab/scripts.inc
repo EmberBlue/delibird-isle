@@ -656,6 +656,30 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ScottAboardSSTidalCall::
 	releaseall
 	end
 
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SkipIntro::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_SkipIntro, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_SkipIntroNo
+	setflag FLAG_SKIP_INTRO
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_SkipIntroYes, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_SkipIntroNo::
+	clearflag FLAG_SKIP_INTRO
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_SkipIntroNo, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_Text_SkipIntro:
+	.string "Would you like to skip\n"
+	.string "the intro in the future?$"
+
+LittlerootTown_ProfessorBirchsLab_Text_SkipIntroYes:
+	.string "The intro will now be skipped.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_SkipIntroNo:
+	.string "The intro will not be skipped.$"
+
+
 LittlerootTown_ProfessorBirchsLab_Text_BirchAwayOnFieldwork:
 	.string "Hunh? PROF. BIRCH?\p"
 	.string "The PROF's away on fieldwork.\n"

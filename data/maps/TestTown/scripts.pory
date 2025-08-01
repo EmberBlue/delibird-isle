@@ -1,0 +1,9 @@
+mapscripts TestTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: TestTown_OnEnter
+}
+
+script TestTown_OnEnter {
+    # Nothing special on entry; normal player start.
+    return
+}
+

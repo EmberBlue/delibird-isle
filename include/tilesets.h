@@ -10,4 +10,7 @@ extern const struct Tileset *const gTilesetPointer_SecretBaseRedCave;
 extern const struct Tileset gTileset_Building;
 extern const struct Tileset gTileset_BrendansMaysHouse;
 
+//Begin new tileset additions -----------------------------------------------------------------------------
+extern const struct Tileset gTileset_leob_general;
+
 #endif //GUARD_tilesets_H

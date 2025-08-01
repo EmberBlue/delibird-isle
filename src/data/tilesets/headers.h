@@ -830,3 +830,157 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+
+// Begin my additions -----------------------------------------------------------------------------------------------------------------------
+
+const struct Tileset gTileset_leob_general = {
+    .tiles = gTilesetTiles_leob_general,
+    .palettes = gTilesetPalettes_leob_general,
+    .metatiles = gMetatiles_leob_general,
+    .metatileAttributes = gMetatileAttributes_leob_general,
+    .isCompressed = FALSE,
+    .isSecondary = FALSE, // Or TRUE if used as secondary
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_sootopolis =
+{
+    .tiles = gTilesetTiles_leob_sootopolis,
+    .palettes = gTilesetPalettes_leob_sootopolis,
+    .metatiles = gMetatiles_leob_sootopolis,
+    .metatileAttributes = gMetatileAttributes_leob_sootopolis,
+    .callback = NULL,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+};
+
+const struct Tileset gTileset_leob_mauville = {
+    .tiles = gTilesetTiles_leob_mauville,
+    .palettes = gTilesetPalettes_leob_mauville,
+    .metatiles = gMetatiles_leob_mauville,
+    .metatileAttributes = gMetatileAttributes_leob_mauville,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_mossdeep = {
+    .tiles = gTilesetTiles_leob_mossdeep,
+    .palettes = gTilesetPalettes_leob_mossdeep,
+    .metatiles = gMetatiles_leob_mossdeep,
+    .metatileAttributes = gMetatileAttributes_leob_mossdeep,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_petalburg = {
+    .tiles = gTilesetTiles_leob_petalburg,
+    .palettes = gTilesetPalettes_leob_petalburg,
+    .metatiles = gMetatiles_leob_petalburg,
+    .metatileAttributes = gMetatileAttributes_leob_petalburg,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_rustboro = {
+    .tiles = gTilesetTiles_leob_rustboro,
+    .palettes = gTilesetPalettes_leob_rustboro,
+    .metatiles = gMetatiles_leob_rustboro,
+    .metatileAttributes = gMetatileAttributes_leob_rustboro,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_slateport = {
+    .tiles = gTilesetTiles_leob_slateport,
+    .palettes = gTilesetPalettes_leob_slateport,
+    .metatiles = gMetatiles_leob_slateport,
+    .metatileAttributes = gMetatileAttributes_leob_slateport,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_fallarbor = {
+    .tiles = gTilesetTiles_leob_fallarbor,
+    .palettes = gTilesetPalettes_leob_fallarbor,
+    .metatiles = gMetatiles_leob_fallarbor,
+    .metatileAttributes = gMetatileAttributes_leob_fallarbor,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_fortree = {
+    .tiles = gTilesetTiles_leob_fortree,
+    .palettes = gTilesetPalettes_leob_fortree,
+    .metatiles = gMetatiles_leob_fortree,
+    .metatileAttributes = gMetatileAttributes_leob_fortree,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_lavaridge = {
+    .tiles = gTilesetTiles_leob_lavaridge,
+    .palettes = gTilesetPalettes_leob_lavaridge,
+    .metatiles = gMetatiles_leob_lavaridge,
+    .metatileAttributes = gMetatileAttributes_leob_lavaridge,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_lilycove = {
+    .tiles = gTilesetTiles_leob_lilycove,
+    .palettes = gTilesetPalettes_leob_lilycove,
+    .metatiles = gMetatiles_leob_lilycove,
+    .metatileAttributes = gMetatileAttributes_leob_lilycove,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_battle_frontier_outside_east = {
+    .tiles = gTilesetTiles_leob_battle_frontier_outside_east,
+    .palettes = gTilesetPalettes_leob_battle_frontier_outside_east,
+    .metatiles = gMetatiles_leob_battle_frontier_outside_east,
+    .metatileAttributes = gMetatileAttributes_leob_battle_frontier_outside_east,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_battle_frontier_outside_west = {
+    .tiles = gTilesetTiles_leob_battle_frontier_outside_west,
+    .palettes = gTilesetPalettes_leob_battle_frontier_outside_west,
+    .metatiles = gMetatiles_leob_battle_frontier_outside_west,
+    .metatileAttributes = gMetatileAttributes_leob_battle_frontier_outside_west,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_dewford = {
+    .tiles = gTilesetTiles_leob_dewford,
+    .palettes = gTilesetPalettes_leob_dewford,
+    .metatiles = gMetatiles_leob_dewford,
+    .metatileAttributes = gMetatileAttributes_leob_dewford,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_leob_ever_grande = {
+    .tiles = gTilesetTiles_leob_ever_grande,
+    .palettes = gTilesetPalettes_leob_ever_grande,
+    .metatiles = gMetatiles_leob_ever_grande,
+    .metatileAttributes = gMetatileAttributes_leob_ever_grande,
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .callback = NULL,
+};
