@@ -4426,10 +4426,20 @@
       "name": "TestTown_Layout",
       "width": 35,
       "height": 30,
-      "primary_tileset": "gTileset_leob_general",
-      "secondary_tileset": "gTileset_leob_sootopolis",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_petalburg",
       "border_filepath": "data/layouts/TestTown/border.bin",
       "blockdata_filepath": "data/layouts/TestTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TEST_TOWN_CONNECTOR",
+      "name": "Littleroot_TestTown_Connector_Layout",
+      "width": 15,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_sootopolis",
+      "border_filepath": "data/layouts/Littleroot_TestTown_Connector/border.bin",
+      "blockdata_filepath": "data/layouts/Littleroot_TestTown_Connector/map.bin"
     }
   ]
 }

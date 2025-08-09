@@ -1,0 +1,49 @@
+{
+  "id": "MAP_LITTLEROOT_TEST_TOWN_CONNECTOR",
+  "name": "Littleroot_TestTown_Connector",
+  "layout": "LAYOUT_LITTLEROOT_TEST_TOWN_CONNECTOR",
+  "music": "MUS_DUMMY",
+  "region_map_section": "LAYOUT_LITTLEROOT_TEST_TOWN_CONNECTOR",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 3,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN",
+      "dest_warp_id": "5"
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_TEST_TOWN",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_TEST_TOWN",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

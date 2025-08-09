@@ -1,9 +1,22 @@
 mapscripts TestTown_MapScripts {
-    MAP_SCRIPT_ON_TRANSITION: TestTown_OnEnter
 }
 
-script TestTown_OnEnter {
-    # Nothing special on entry; normal player start.
-    return
+
+script BuzzTrainerScript {
+    trainerbattle_single(TRAINER_BUZZ_TEST, BuzzIntroText, BuzzWinText)
+    msgbox(BuzzAfterText, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
 }
 
+text BuzzIntroText {
+    "I'm Buzz, and this bug-themed powerhouse is going to flatten you!"
+}
+
+text BuzzWinText {
+    "Whoa... even Hariyama couldn’t stop you."
+}
+
+text BuzzAfterText {
+    "Maybe I’ll train with some actual bugs next time..."
+}

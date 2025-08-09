@@ -211,8 +211,8 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 // Begin my additions --------------------------------------------------------------------------------------------------------------------------------------------
 
-const u16 gMetatiles_leob_general[] = INCBIN_U16("graphics/leob_general/metatiles.bin");
-const u16 gMetatileAttributes_leob_general[] = INCBIN_U16("graphics/leob_general/metatile_attributes.bin");
+const u16 gMetatiles_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatiles.bin");
+const u16 gMetatileAttributes_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatile_attributes.bin");
 
 const u16 gMetatiles_leob_sootopolis[] = INCBIN_U16("data/tilesets/secondary/leob_sootopolis/metatiles.bin");
 const u16 gMetatileAttributes_leob_sootopolis[] = INCBIN_U16("data/tilesets/secondary/leob_sootopolis/metatile_attributes.bin");
@@ -222,9 +222,6 @@ const u16 gMetatileAttributes_leob_mauville[] = INCBIN_U16("data/tilesets/second
 
 const u16 gMetatiles_leob_mossdeep[] = INCBIN_U16("data/tilesets/secondary/leob_mossdeep/metatiles.bin");
 const u16 gMetatileAttributes_leob_mossdeep[] = INCBIN_U16("data/tilesets/secondary/leob_mossdeep/metatile_attributes.bin");
-
-const u16 gMetatiles_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatiles.bin");
-const u16 gMetatileAttributes_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatile_attributes.bin");
 
 const u16 gMetatiles_leob_rustboro[] = INCBIN_U16("data/tilesets/secondary/leob_rustboro/metatiles.bin");
 const u16 gMetatileAttributes_leob_rustboro[] = INCBIN_U16("data/tilesets/secondary/leob_rustboro/metatile_attributes.bin");

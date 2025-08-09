@@ -1161,3 +1161,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NewBirchsLab/scripts.inc"
 
 	.include "data/maps/TestTown/scripts.inc"
+
+	.include "data/maps/Littleroot_TestTown_Connector/scripts.inc"

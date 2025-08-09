@@ -834,15 +834,7 @@ const struct Tileset gTileset_UnionRoom =
 
 // Begin my additions -----------------------------------------------------------------------------------------------------------------------
 
-const struct Tileset gTileset_leob_general = {
-    .tiles = gTilesetTiles_leob_general,
-    .palettes = gTilesetPalettes_leob_general,
-    .metatiles = gMetatiles_leob_general,
-    .metatileAttributes = gMetatileAttributes_leob_general,
-    .isCompressed = FALSE,
-    .isSecondary = FALSE, // Or TRUE if used as secondary
-    .callback = NULL,
-};
+
 
 const struct Tileset gTileset_leob_sootopolis =
 {
@@ -875,6 +867,8 @@ const struct Tileset gTileset_leob_mossdeep = {
     .callback = NULL,
 };
 
+
+
 const struct Tileset gTileset_leob_petalburg = {
     .tiles = gTilesetTiles_leob_petalburg,
     .palettes = gTilesetPalettes_leob_petalburg,
@@ -884,6 +878,7 @@ const struct Tileset gTileset_leob_petalburg = {
     .isSecondary = TRUE,
     .callback = NULL,
 };
+
 
 const struct Tileset gTileset_leob_rustboro = {
     .tiles = gTilesetTiles_leob_rustboro,
