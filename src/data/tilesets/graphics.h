@@ -1639,6 +1639,7 @@ const u32 gTilesetTiles_UnionRoom[] = INCBIN_U32("data/tilesets/secondary/union_
 
 
 
+
 const u32 gTilesetTiles_leob_sootopolis[] = INCBIN_U32("data/tilesets/secondary/leob_sootopolis/tiles.4bpp.lz");
 
 const u16 gTilesetPalettes_leob_sootopolis[][16] =
@@ -1923,3 +1924,129 @@ const u16 gTilesetPalettes_leob_ever_grande[][16] = {
     INCBIN_U16("data/tilesets/secondary/leob_ever_grande/palettes/15.gbapal"),
 };
 
+
+
+
+
+
+
+
+
+
+
+// ================= Desert_Primary — tiles + palettes =================
+
+// tiles (compressed .4bpp.lz)
+const u32 gTilesetTiles_DesertPrimary[] = INCBIN_U32("data/tilesets/primary/Desert_Primary/tiles.4bpp.lz");
+
+// palettes (13 real + 3 fillers = 16 total; each file is 32-byte BGR555)
+// Desert_Primary palettes
+const u16 gTilesetPalettes_DesertPrimary[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/Desert_Primary/palettes/00.gbapal"),
+};
+
+
+
+// Space Meteor (secondary)
+const u32 gTilesetTiles_SpaceMeteor[] =
+    INCBIN_U32("data/tilesets/secondary/space_meteor/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_SpaceMeteor[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/space_meteor/palettes/15.gbapal"),
+};
+
+
+// ---- SECONDARY: Shady_Forest (art + palettes) ----
+const u32 gTilesetTiles_ShadyForest[] =
+    INCBIN_U32("data/tilesets/secondary/Shady_Forest/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_ShadyForest[][16] =
+{
+    // real palettes (00..11)
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/11.gbapal"),
+    // fillers (duplicate a safe palette, usually 00)
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/palettes/00.gbapal"),
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---- PRIMARY: leob_general (art + palettes) ----
+const u32 gTilesetTiles_leob_general[] = INCBIN_U32("data/tilesets/primary/leob_general/tiles.4bpp.lz");
+const u16 gTilesetPalettes_leob_general[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/leob_general/palettes/15.gbapal"),
+};

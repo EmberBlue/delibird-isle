@@ -1,6 +1,41 @@
 const u16 gMetatiles_General[] = INCBIN_U16("data/tilesets/primary/general/metatiles.bin");
 const u16 gMetatileAttributes_General[] = INCBIN_U16("data/tilesets/primary/general/metatile_attributes.bin");
 
+
+// ---- PRIMARY: leob_general (metatiles + attributes) ----
+const u16 gMetatiles_leob_general[] = INCBIN_U16("data/tilesets/primary/leob_general/metatiles.bin");
+const u16 gMetatileAttributes_leob_general[] = INCBIN_U16("data/tilesets/primary/leob_general/metatile_attributes.bin");
+
+
+
+
+
+// ---- PRIMARY: Desert_Primary (metatiles + attributes) ----
+const u16 gMetatiles_DesertPrimary[] = INCBIN_U16("data/tilesets/primary/Desert_Primary/metatiles.bin");
+const u16 gMetatileAttributes_DesertPrimary[] = INCBIN_U16("data/tilesets/primary/Desert_Primary/metatile_attributes.bin");
+
+
+// ================= Space Meteor (secondary) =================
+const u16 gMetatiles_SpaceMeteor[] =
+    INCBIN_U16("data/tilesets/secondary/space_meteor/metatiles.bin");
+const u16 gMetatileAttributes_SpaceMeteor[] =
+    INCBIN_U16("data/tilesets/secondary/space_meteor/metatile_attributes.bin");
+
+    
+    // ---- SECONDARY: Shady_Forest (metatiles + attributes) ----
+const u16 gMetatiles_ShadyForest[] =
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/metatiles.bin");
+const u16 gMetatileAttributes_ShadyForest[] =
+    INCBIN_U16("data/tilesets/secondary/Shady_Forest/metatile_attributes.bin");
+
+
+
+
+
+
+
+
+
 const u16 gMetatiles_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatiles.bin");
 const u16 gMetatileAttributes_Petalburg[] = INCBIN_U16("data/tilesets/secondary/petalburg/metatile_attributes.bin");
 
@@ -210,6 +245,7 @@ const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/
 
 
 // Begin my additions --------------------------------------------------------------------------------------------------------------------------------------------
+
 
 const u16 gMetatiles_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatiles.bin");
 const u16 gMetatileAttributes_leob_petalburg[] = INCBIN_U16("data/tilesets/secondary/leob_petalburg/metatile_attributes.bin");

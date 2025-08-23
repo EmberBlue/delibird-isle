@@ -3,16 +3,70 @@
 // Whether a palette has a night version, located at ((x + 9) % 16).pal
 #define SWAP_PAL(x) ((x) < NUM_PALS_IN_PRIMARY ? 1 << (x) : 1 << ((x) - NUM_PALS_IN_PRIMARY))
 
+// ---- Redirect vanilla General to leob_general assets ----
 const struct Tileset gTileset_General =
 {
-    .isCompressed = TRUE,
-    .isSecondary = FALSE,
-    .tiles = gTilesetTiles_General,
-    .palettes = gTilesetPalettes_General,
-    .metatiles = gMetatiles_General,
-    .metatileAttributes = gMetatileAttributes_General,
-    .callback = InitTilesetAnim_General,
+    .isCompressed        = TRUE, // leob_general tiles are tiles.4bpp.lz
+    .isSecondary         = FALSE,
+    .tiles               = gTilesetTiles_leob_general,
+    .palettes            = gTilesetPalettes_leob_general,
+    .metatiles           = gMetatiles_leob_general,
+    .metatileAttributes  = gMetatileAttributes_leob_general,
+    .callback            = InitTilesetAnim_General, // or NULL if you prefer
 };
+
+
+
+
+
+
+
+
+
+// ---- Tileset object: Desert_Primary ----
+const struct Tileset gTileset_Primary_Desert = {
+    .isCompressed = TRUE,
+    .isSecondary  = FALSE,
+    .tiles        = gTilesetTiles_DesertPrimary,
+    .palettes     = gTilesetPalettes_DesertPrimary,
+    .metatiles    = gMetatiles_DesertPrimary,
+    .metatileAttributes = gMetatileAttributes_DesertPrimary,
+    .callback     = InitTilesetAnim_General, // or NULL
+};
+
+// ================= Secondary: Space Meteor =================
+const struct Tileset gTileset_SpaceMeteor =
+{
+    .isCompressed        = TRUE,   // tiles.4bpp.lz
+    .isSecondary         = TRUE,   // secondary tileset
+    .tiles               = gTilesetTiles_SpaceMeteor,
+    .palettes            = gTilesetPalettes_SpaceMeteor,
+    .metatiles           = gMetatiles_SpaceMeteor,
+    .metatileAttributes  = gMetatileAttributes_SpaceMeteor,
+    .callback            = NULL,   // set to an anim callback if you add one
+};
+
+// ---- SECONDARY: Shady_Forest ----
+const struct Tileset gTileset_ShadyForest =
+{
+    .isCompressed        = TRUE,  // tiles.4bpp.lz
+    .isSecondary         = TRUE,
+    .tiles               = gTilesetTiles_ShadyForest,
+    .palettes            = gTilesetPalettes_ShadyForest,
+    .metatiles           = gMetatiles_ShadyForest,
+    .metatileAttributes  = gMetatileAttributes_ShadyForest,
+    .callback            = NULL,  // add an anim callback later if you have one
+};
+
+
+
+
+
+
+
+
+
+
 
 const struct Tileset gTileset_Petalburg =
 {
