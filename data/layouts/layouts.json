@@ -4427,7 +4427,7 @@
       "width": 35,
       "height": 30,
       "primary_tileset": "gTileset_Primary_Desert",
-      "secondary_tileset": "gTileset_leob_mauville",
+      "secondary_tileset": "gTileset_leob_petalburg",
       "border_filepath": "data/layouts/TestTown/border.bin",
       "blockdata_filepath": "data/layouts/TestTown/map.bin"
     },
