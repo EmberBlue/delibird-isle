@@ -167,7 +167,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_lilycove",
+      "secondary_tileset": "gTileset_leob_petalburg",
       "border_filepath": "data/layouts/Route101/border.bin",
       "blockdata_filepath": "data/layouts/Route101/map.bin"
     },
@@ -177,7 +177,7 @@
       "width": 50,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_leob_petalburg",
       "border_filepath": "data/layouts/Route102/border.bin",
       "blockdata_filepath": "data/layouts/Route102/map.bin"
     },
@@ -4427,7 +4427,7 @@
       "width": 35,
       "height": 30,
       "primary_tileset": "gTileset_Primary_Desert",
-      "secondary_tileset": "gTileset_leob_petalburg",
+      "secondary_tileset": "gTileset_Desert_Village_Secondary",
       "border_filepath": "data/layouts/TestTown/border.bin",
       "blockdata_filepath": "data/layouts/TestTown/map.bin"
     },
@@ -4436,10 +4436,20 @@
       "name": "Littleroot_TestTown_Connector_Layout",
       "width": 15,
       "height": 6,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_sootopolis",
+      "primary_tileset": "gTileset_Primary_frp_building",
+      "secondary_tileset": "gTileset_frp_safari_zone_building",
       "border_filepath": "data/layouts/Littleroot_TestTown_Connector/border.bin",
       "blockdata_filepath": "data/layouts/Littleroot_TestTown_Connector/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROGUE_SPECIAL_MEWTWO",
+      "name": "Rogue_Special_Mewtwo_Layout",
+      "width": 19,
+      "height": 21,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/Rogue_Special_Mewtwo/border.bin",
+      "blockdata_filepath": "data/layouts/Rogue_Special_Mewtwo/map.bin"
     }
   ]
 }

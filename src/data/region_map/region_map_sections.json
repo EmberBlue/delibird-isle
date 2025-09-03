@@ -1710,6 +1710,14 @@
       "y": 12,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_ROGUE_SPECIAL_MEWTWO",
+      "name": "SPECIAL MEWTWO",
+      "x": 6,
+      "y": 14,
+      "width": 1,
+      "height": 1
     }
   ]
 }

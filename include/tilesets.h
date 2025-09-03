@@ -27,5 +27,28 @@ extern const u16  gMetatileAttributes_DesertPrimary[];
 extern const struct Tileset gTileset_Primary_Desert;
 
 
+// ---- Primary: general_hub externs ----
+extern const u32  gTilesetTiles_general_hub[];
+extern const u16  gTilesetPalettes_general_hub[][16];
+extern const u16  gMetatiles_general_hub[];
+extern const u16  gMetatileAttributes_general_hub[];
+extern const struct Tileset gTileset_general_hub;
+
+
+// ---- FR Port Primary: General ----
+extern const u32  gTilesetTiles_frp_general[];
+extern const u16  gTilesetPalettes_frp_general[][16];
+extern const u16  gMetatiles_frp_general[];
+extern const u16  gMetatileAttributes_frp_general[];
+extern const struct Tileset gTileset_Primary_frp_general;
+
+
+// ---- FR Port Primary: Building ----
+extern const u32  gTilesetTiles_frp_building[];
+extern const u16  gTilesetPalettes_frp_building[][16];
+extern const u16  gMetatiles_frp_building[];
+extern const u16  gMetatileAttributes_frp_building[];
+extern const struct Tileset gTileset_Primary_frp_building;
+
 
 #endif //GUARD_tilesets_H
