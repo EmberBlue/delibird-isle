@@ -629,6 +629,22 @@ void InitTilesetAnim_Building(void)
     sPrimaryTilesetAnimCallback = TilesetAnim_Building;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 static void TilesetAnim_General(u16 timer)
 {
     if (timer % 16 == 0)

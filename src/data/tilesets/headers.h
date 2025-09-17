@@ -31,7 +31,7 @@ const struct Tileset gTileset_Primary_Desert = {
     .palettes     = gTilesetPalettes_DesertPrimary,
     .metatiles    = gMetatiles_DesertPrimary,
     .metatileAttributes = gMetatileAttributes_DesertPrimary,
-    .callback     = InitTilesetAnim_General, // or NULL
+    .callback     = NULL, // or NULL
 };
 
 // ================= Secondary: Space Meteor =================

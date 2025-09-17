@@ -304,19 +304,9 @@ static const u8 sMapHealLocations[][3] =
     [MAPSEC_MOSSDEEP_CITY] = {MAP_GROUP(MAP_MOSSDEEP_CITY), MAP_NUM(MAP_MOSSDEEP_CITY), HEAL_LOCATION_MOSSDEEP_CITY},
     [MAPSEC_SOOTOPOLIS_CITY] = {MAP_GROUP(MAP_SOOTOPOLIS_CITY), MAP_NUM(MAP_SOOTOPOLIS_CITY), HEAL_LOCATION_SOOTOPOLIS_CITY},
     [MAPSEC_EVER_GRANDE_CITY] = {MAP_GROUP(MAP_EVER_GRANDE_CITY), MAP_NUM(MAP_EVER_GRANDE_CITY), HEAL_LOCATION_EVER_GRANDE_CITY},
-
-    [MAPSEC_TEST_TOWN] = {
-    MAP_GROUP(MAP_TEST_TOWN),
-    MAP_NUM(MAP_TEST_TOWN),
-    HEAL_LOCATION_TEST_TOWN
-},
-
-[MAPSEC_ROGUE_SPECIAL_MEWTWO] = {
-    MAP_GROUP(MAP_ROGUE_SPECIAL_MEWTWO),
-    MAP_NUM(MAP_ROGUE_SPECIAL_MEWTWO),
-    HEAL_LOCATION_ROGUE_SPECIAL_MEWTWO
-},
-
+    [MAPSEC_TEST_TOWN] = {MAP_GROUP(MAP_TEST_TOWN), MAP_NUM(MAP_TEST_TOWN), HEAL_LOCATION_TEST_TOWN},
+    // [MAPSEC_TEST_DESERT_ROUTE] = {MAP_GROUP(MAP_TEST_DESERT_ROUTE), MAP_NUM(MAP_TEST_DESERT_ROUTE), HEAL_LOCATION_NONE},
+    [MAPSEC_ROGUE_SPECIAL_MEWTWO] = {MAP_GROUP(MAP_ROGUE_SPECIAL_MEWTWO), MAP_NUM(MAP_ROGUE_SPECIAL_MEWTWO), HEAL_LOCATION_ROGUE_SPECIAL_MEWTWO},
     [MAPSEC_ROUTE_101] = {MAP_GROUP(MAP_ROUTE101), MAP_NUM(MAP_ROUTE101), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_102] = {MAP_GROUP(MAP_ROUTE102), MAP_NUM(MAP_ROUTE102), HEAL_LOCATION_NONE},
     [MAPSEC_ROUTE_103] = {MAP_GROUP(MAP_ROUTE103), MAP_NUM(MAP_ROUTE103), HEAL_LOCATION_NONE},
@@ -1861,47 +1851,108 @@ static void LoadFlyDestIcons(void)
 #define sIconMapSec   data[0]
 #define sFlickerTimer data[1]
 
+
+// Replace the whole CreateFlyDestIcons() with this:
+// src/region_map.c
 static void CreateFlyDestIcons(void)
 {
-    u16 canFlyFlag;
     u16 mapSecId;
-    u16 x;
-    u16 y;
-    u16 width;
-    u16 height;
-    u16 shape;
+    u16 x, y, width, height, shape;
     u8 spriteId;
 
-    canFlyFlag = FLAG_VISITED_LITTLEROOT_TOWN;
-    for (mapSecId = MAPSEC_LITTLEROOT_TOWN; mapSecId <= MAPSEC_EVER_GRANDE_CITY; mapSecId++)
+    for (mapSecId = 0; mapSecId < MAPSEC_COUNT; mapSecId++)
     {
+        if (mapSecId == MAPSEC_NONE)
+            continue;
+
+        // Only places the game considers flyable:
+        {
+            u8 t = GetMapsecType(mapSecId);
+            if (!(t == MAPSECTYPE_CITY_CANFLY || t == MAPSECTYPE_BATTLE_FRONTIER))
+                continue;
+        }
+
         GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
+        if (width == 0 || height == 0) // not on the region grid
+            continue;
+
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
         y = (y + MAPCURSOR_Y_MIN) * 8 + 4;
 
-        if (width == 2)
-            shape = SPRITE_SHAPE(16x8);
-        else if (height == 2)
-            shape = SPRITE_SHAPE(8x16);
-        else
-            shape = SPRITE_SHAPE(8x8);
+        if (width == 2)      shape = SPRITE_SHAPE(16x8);
+        else if (height == 2)shape = SPRITE_SHAPE(8x16);
+        else                 shape = SPRITE_SHAPE(8x8);
 
         spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x, y, 10);
-        if (spriteId != MAX_SPRITES)
-        {
-            gSprites[spriteId].oam.shape = shape;
+        if (spriteId == MAX_SPRITES) continue;
 
-            if (FlagGet(canFlyFlag))
-                gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
-            else
-                shape += 3;
-
-            StartSpriteAnim(&gSprites[spriteId], shape);
-            gSprites[spriteId].sIconMapSec = mapSecId;
-        }
-        canFlyFlag++;
+        gSprites[spriteId].oam.shape = shape;
+        gSprites[spriteId].callback = SpriteCB_FlyDestIcon; // flicker on hover
+        StartSpriteAnim(&gSprites[spriteId], shape);
+        gSprites[spriteId].data[0] = mapSecId; // sIconMapSec
     }
 }
+
+
+
+
+
+
+
+
+
+// static void CreateFlyDestIcons(void)
+// {
+//     u16 canFlyFlag;
+//     u16 mapSecId;
+//     u16 x;
+//     u16 y;
+//     u16 width;
+//     u16 height;
+//     u16 shape;
+//     u8 spriteId;
+
+//     canFlyFlag = FLAG_VISITED_LITTLEROOT_TOWN;
+//     for (mapSecId = MAPSEC_LITTLEROOT_TOWN; mapSecId <= MAPSEC_EVER_GRANDE_CITY; mapSecId++)
+//     {
+//         GetMapSecDimensions(mapSecId, &x, &y, &width, &height);
+//         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
+//         y = (y + MAPCURSOR_Y_MIN) * 8 + 4;
+
+//         if (width == 2)
+//             shape = SPRITE_SHAPE(16x8);
+//         else if (height == 2)
+//             shape = SPRITE_SHAPE(8x16);
+//         else
+//             shape = SPRITE_SHAPE(8x8);
+
+//         spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x, y, 10);
+//         if (spriteId != MAX_SPRITES)
+//         {
+//             gSprites[spriteId].oam.shape = shape;
+
+//             if (FlagGet(canFlyFlag))
+//                 gSprites[spriteId].callback = SpriteCB_FlyDestIcon;
+//             else
+//                 shape += 3;
+
+//             StartSpriteAnim(&gSprites[spriteId], shape);
+//             gSprites[spriteId].sIconMapSec = mapSecId;
+//         }
+//         canFlyFlag++;
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 // Draw a red outline box on the mapsec if its corresponding flag has been set
 // Only used for Battle Frontier, but set up to handle more

@@ -132,15 +132,24 @@
       "x": 3,
       "y": 52
     },
-    { "id": "HEAL_LOCATION_TEST_TOWN", 
-    "map": "MAP_TEST_TOWN", 
-    "x": 6, 
-    "y": 8 
-   },
-    { "id": "HEAL_LOCATION_ROGUE_SPECIAL_MEWTWO", 
-    "map": "MAP_ROGUE_SPECIAL_MEWTWO", 
-    "x": 9, 
-    "y": 12
-  }
+    {
+      "id": "HEAL_LOCATION_TEST_TOWN",
+      "map": "MAP_TEST_TOWN",
+      "x": 6,
+      "y": 8
+    },
+    {
+      "id": "HEAL_LOCATION_ROGUE_SPECIAL_MEWTWO",
+      "map": "MAP_ROGUE_SPECIAL_MEWTWO",
+      "x": 9,
+      "y": 12,
+      "warpId": 0
+    },
+    {
+      "id": "HEAL_LOCATION_TEST_TOWN_2",
+      "map": "MAP_TEST_TOWN",
+      "x": 16,
+      "y": 16
+    }
   ]
 }

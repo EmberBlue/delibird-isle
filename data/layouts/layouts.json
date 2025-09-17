@@ -117,7 +117,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/DewfordTown/border.bin",
       "blockdata_filepath": "data/layouts/DewfordTown/map.bin"
     },
@@ -187,7 +187,7 @@
       "width": 80,
       "height": 22,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_leob_petalburg",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin"
     },
@@ -207,7 +207,7 @@
       "width": 40,
       "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/Route105/border.bin",
       "blockdata_filepath": "data/layouts/Route105/map.bin"
     },
@@ -215,9 +215,9 @@
       "id": "LAYOUT_ROUTE106",
       "name": "Route106_Layout",
       "width": 80,
-      "height": 20,
+      "height": 25,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/Route106/border.bin",
       "blockdata_filepath": "data/layouts/Route106/map.bin"
     },
@@ -237,7 +237,7 @@
       "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "secondary_tileset": "gTileset_leob_slateport",
       "border_filepath": "data/layouts/Route108/border.bin",
       "blockdata_filepath": "data/layouts/Route108/map.bin"
     },
@@ -247,7 +247,7 @@
       "width": 40,
       "height": 63,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
+      "secondary_tileset": "gTileset_leob_slateport",
       "border_filepath": "data/layouts/Route109/border.bin",
       "blockdata_filepath": "data/layouts/Route109/map.bin"
     },
@@ -4450,6 +4450,16 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/Rogue_Special_Mewtwo/border.bin",
       "blockdata_filepath": "data/layouts/Rogue_Special_Mewtwo/map.bin"
+    },
+    {
+      "id": "LAYOUT_TEST_DESERT_ROUTE",
+      "name": "TestDesertRoute_Layout",
+      "width": 35,
+      "height": 32,
+      "primary_tileset": "gTileset_Primary_Desert",
+      "secondary_tileset": "gTileset_leob_slateport",
+      "border_filepath": "data/layouts/TestDesertRoute/border.bin",
+      "blockdata_filepath": "data/layouts/TestDesertRoute/map.bin"
     }
   ]
 }

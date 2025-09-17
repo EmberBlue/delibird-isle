@@ -1718,6 +1718,14 @@
       "y": 14,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_TEST_DESERT_ROUTE",
+      "name": "TEST_DESERT_ROUTE",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
     }
   ]
 }

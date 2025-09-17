@@ -1,5 +1,28 @@
 mapscripts TestTown_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: TestTown_SetVisited
+    MAP_SCRIPT_ON_LOAD:       TestTown_SetVisited
 }
+
+script TestTown_SetVisited {
+    setflag(FLAG_VISITED_TEST_TOWN)
+    end
+}
+
+
+script ShowVisitedFlag {
+    if (flag(FLAG_VISITED_TEST_TOWN)) {
+        msgbox("Visited flag is SET.", MSGBOX_DEFAULT)
+    } else {
+        msgbox("Visited flag is NOT set.", MSGBOX_DEFAULT)
+    }
+    end
+}
+
+script Test_Town_OnTransition {
+    setflag(FLAG_VISITED_TEST_TOWN)
+    end
+}
+
 
 
 script BuzzTrainerScript {

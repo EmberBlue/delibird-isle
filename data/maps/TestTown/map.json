@@ -7,12 +7,18 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
-  "allow_cycling": false,
-  "allow_escaping": false,
+  "allow_cycling": true,
+  "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_TEST_DESERT_ROUTE",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_POKE_BALL",
@@ -48,10 +54,24 @@
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TEST_TOWN_CONNECTOR",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 5,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_TEST_DESERT_ROUTE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": [],
-  "primary_tileset": "general",
-  "secondary_tileset": "secondary_petalburg"
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "TestTown_SetVisited"
+    }
+  ]
 }
