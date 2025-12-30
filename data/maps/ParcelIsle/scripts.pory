@@ -1,0 +1,47 @@
+mapscripts ParcelIsle_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelIsle_SetVisited
+    MAP_SCRIPT_ON_LOAD:       ParcelIsle_SetVisited
+}
+
+script ParcelIsle_SetVisited {
+    setflag(FLAG_VISITED_PARCEL_ISLE)
+    end
+}
+
+// Define the ID to match Porymap
+const LOCALID_DELIBIRD = 1
+
+// Optional little debug helper you can call from an NPC or a sign
+script ShowVisitedFlag_ParcelIsle {
+    if (flag(FLAG_VISITED_PARCEL_ISLE)) {
+        msgbox("Parcel Isle visited flag is SET.", MSGBOX_DEFAULT)
+    } else {
+        msgbox("Parcel Isle visited flag is NOT set.", MSGBOX_DEFAULT)
+    }
+    end
+}
+
+movement Movement_DelibirdRun {
+    walk_left
+    walk_left
+    walk_up
+    walk_up
+    walk_right
+    walk_right
+    walk_down
+    walk_down
+    step_end
+}
+
+script Delibird_Interact {
+    lock
+    faceplayer
+    msgbox("Delibird chirps excitedly and dashes around!", MSGBOX_DEFAULT)
+    applymovement(LOCALID_DELIBIRD, Movement_DelibirdRun)
+    waitmovement(0)
+    release
+    end
+}
+
+
+

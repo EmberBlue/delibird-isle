@@ -95,7 +95,8 @@
     "Underwater_Route125",
     "TestTown",
     "Littleroot_TestTown_Connector",
-    "TestDesertRoute"
+    "TestDesertRoute",
+    "ParcelIsle"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

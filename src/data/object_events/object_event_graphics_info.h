@@ -4672,6 +4672,17 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Follower = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+
+
+
+
+
+
+
+
+
+
+// Keep this block present in object_event_graphics_info.h
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_LIGHT,
@@ -4688,5 +4699,86 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
     .subspriteTables = sOamTables_32x32,
     .anims = sAnimTable_Inanimate,
     .images = gFieldEffectObjectPicTable_BallLight,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+
+
+
+
+
+
+
+// object_event_graphics_info.h
+const u16 gObjectEventPal_Cacnea[] =
+    INCBIN_U16("graphics/pokemon/cacnea/overworld_normal.gbapal");
+
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cacnea = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,   // quick start
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,   // TRUE if you used .4bpp.lz above
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Following,    // standard walk anims
+    .images = gObjectEventPicTable_Cacnea,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+
+
+
+
+// ---------- Agatha ----------
+const u16 gObjectEventPal_Agatha[] =
+    INCBIN_U16("graphics/object_events/pics/people/kanto/agatha.gbapal");
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Agatha = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,   // any NPC_* tag 1–4 is fine; reuse is OK
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,              // 32x32
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_1,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = TRUE,        // no walking; facings only
+    .compressed = FALSE,      // we used .4bpp (not .lz)
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Nurse,          // 4 facings, no walk — safe built-in table
+    .images = gObjectEventPicTable_Agatha,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+
+
+
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Delibird = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_DELIBIRD,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Following,
+    .images = gObjectEventPicTable_Delibird,
     .affineAnims = gDummySpriteAffineAnimTable,
 };

@@ -19,6 +19,51 @@ const struct Tileset gTileset_General =
 
 
 
+// JohtoGeneral primary tileset
+extern const u32 gTilesetGfx_JohtoGeneral[];
+extern const u16 gTilesetPalettes_JohtoGeneral[][16];
+extern const u16 gMetatiles_JohtoGeneral[];
+extern const u16 gMetatileAttributes_JohtoGeneral[];
+
+const struct Tileset gTileset_JohtoGeneral =
+{
+    .isCompressed        = TRUE,  // TRUE because tiles.4bpp.lz
+    .isSecondary         = FALSE,
+    .tiles               = gTilesetGfx_JohtoGeneral,      // now u32*
+    .palettes            = gTilesetPalettes_JohtoGeneral,
+    .metatiles           = gMetatiles_JohtoGeneral,
+    .metatileAttributes  = gMetatileAttributes_JohtoGeneral,
+    .callback            = NULL,
+};
+
+
+// AzaleaTown (secondary) tileset
+extern const u32 gTilesetGfx_AzaleaTown[];
+extern const u16 gTilesetPalettes_AzaleaTown[][16];
+extern const u16 gMetatiles_AzaleaTown[];
+extern const u16 gMetatileAttributes_AzaleaTown[];
+
+const struct Tileset gTileset_AzaleaTown =
+{
+    .isCompressed        = TRUE,   // TRUE if using tiles.4bpp.lz; FALSE if .4bpp
+    .isSecondary         = TRUE,   // <- SECONDARY tileset
+    .tiles               = gTilesetGfx_AzaleaTown,
+    .palettes            = gTilesetPalettes_AzaleaTown,
+    .metatiles           = gMetatiles_AzaleaTown,
+    .metatileAttributes  = gMetatileAttributes_AzaleaTown,
+    .callback            = NULL,   // or a tileset-specific anim if you have one
+};
+
+
+
+
+
+
+
+
+
+
+
 
 
 

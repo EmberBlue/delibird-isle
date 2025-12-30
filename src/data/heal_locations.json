@@ -135,8 +135,8 @@
     {
       "id": "HEAL_LOCATION_TEST_TOWN",
       "map": "MAP_TEST_TOWN",
-      "x": 6,
-      "y": 8
+      "x": 33,
+      "y": 21
     },
     {
       "id": "HEAL_LOCATION_ROGUE_SPECIAL_MEWTWO",
@@ -150,6 +150,18 @@
       "map": "MAP_TEST_TOWN",
       "x": 16,
       "y": 16
+    },
+    {
+      "id": "HEAL_LOCATION_TEST_DESERT_ROUTE",
+      "map": "MAP_TEST_DESERT_ROUTE",
+      "x": 17,
+      "y": 16
+    },
+    {
+      "id": "HEAL_LOCATION_PARCEL_ISLE",
+      "map": "MAP_PARCEL_ISLE",
+      "x": 20,
+      "y": 56
     }
   ]
 }

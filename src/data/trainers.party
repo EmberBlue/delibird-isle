@@ -16890,3 +16890,19 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Belly Drum
 - Earthquake
 
+=== TRAINER_ACEROLA_1 ===
+Name: ACEROLA
+Class: Leader              
+Pic: Alola Acerola         
+Gender: Female
+Music: Suspicious
+Double Battle: No
+
+Sableye
+Level: 42
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Kyogre
+Level: 42
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+

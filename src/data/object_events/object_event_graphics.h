@@ -358,6 +358,7 @@ const u32 gObjectEventPic_Lucy[] = INCBIN_U32("graphics/object_events/pics/peopl
 const u32 gObjectEventPic_Brandon[] = INCBIN_U32("graphics/object_events/pics/people/frontier_brains/brandon.4bpp");
 const u32 gObjectEventPic_PokeBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_poke.4bpp");
 
+
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/deoxys.4bpp");
 const u32 gObjectEventPic_MewOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/mew.4bpp");
 const u32 gObjectEventPic_DusclopsOld[] = INCBIN_U32("graphics/object_events/pics/pokemon_old/dusclops.4bpp");
@@ -388,6 +389,17 @@ const u16 gObjectEventPal_Substitute[] = INCBIN_U16("graphics/object_events/pics
 
 const u16 gObjectEventPaletteEmotes[] = INCBIN_U16("graphics/misc/emotes.gbapal");
 const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/palettes/neon_light.gbapal");
+
+
+
+
+
+
+
+
+
+
+
 
 #if OW_FOLLOWERS_POKEBALLS
 const u32 gObjectEventPic_MasterBall[] = INCBIN_U32("graphics/object_events/pics/misc/ball_master.4bpp");
@@ -462,3 +474,27 @@ const u16 gObjectEventPal_StrangeBall[] = INCBIN_U16("graphics/object_events/pic
 
 const u32 gFieldEffectObjectPic_CaveDust[] = INCBIN_U32("graphics/field_effects/pics/cave_dust.4bpp");
 const u16 gFieldEffectObjectPalette_CaveDust[] = INCBIN_U16("graphics/field_effects/palettes/cave_dust.gbapal");
+
+
+
+
+
+
+
+
+
+const u32 gObjectEventPic_Delibird_OW[] =
+    INCBIN_U32("graphics/pokemon/delibird/overworld.4bpp");
+
+const u16 gObjectEventPal_Delibird[] =
+    INCBIN_U16("graphics/pokemon/delibird/overworld_normal.gbapal");
+
+
+
+// ---------- Cacnea OW sheet for object-events (distinct symbol for Porymap) ----------
+const u32 gObjectEventPic_Cacnea_OW[] =
+    INCBIN_U32("graphics/pokemon/cacnea/overworld.4bpp");
+
+// ---------- Agatha OW sheet ----------
+const u32 gObjectEventPic_Agatha[] =
+    INCBIN_U32("graphics/object_events/pics/people/kanto/agatha.4bpp");

@@ -1167,3 +1167,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Rogue_Special_Mewtwo/scripts.inc"
 
 	.include "data/maps/TestDesertRoute/scripts.inc"
+
+	.include "data/maps/ParcelIsle/scripts.inc"

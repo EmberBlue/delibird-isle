@@ -127,7 +127,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_leob_lavaridge",
       "border_filepath": "data/layouts/LavaridgeTown/border.bin",
       "blockdata_filepath": "data/layouts/LavaridgeTown/map.bin"
     },
@@ -2917,7 +2917,7 @@
       "width": 30,
       "height": 46,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_leob_lavaridge",
       "border_filepath": "data/layouts/JaggedPass/border.bin",
       "blockdata_filepath": "data/layouts/JaggedPass/map.bin"
     },
@@ -4424,8 +4424,8 @@
     {
       "id": "LAYOUT_TEST_TOWN",
       "name": "TestTown_Layout",
-      "width": 35,
-      "height": 30,
+      "width": 45,
+      "height": 50,
       "primary_tileset": "gTileset_Primary_Desert",
       "secondary_tileset": "gTileset_Desert_Village_Secondary",
       "border_filepath": "data/layouts/TestTown/border.bin",
@@ -4460,6 +4460,16 @@
       "secondary_tileset": "gTileset_leob_slateport",
       "border_filepath": "data/layouts/TestDesertRoute/border.bin",
       "blockdata_filepath": "data/layouts/TestDesertRoute/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_ISLE",
+      "name": "ParcelIsle_Layout",
+      "width": 83,
+      "height": 60,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "border_filepath": "data/layouts/ParcelIsle/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelIsle/map.bin"
     }
   ]
 }

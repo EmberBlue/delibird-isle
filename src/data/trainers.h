@@ -42219,3 +42219,46 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 16893
+    [DIFFICULTY_NORMAL][TRAINER_ACEROLA_1] =
+    {
+#line 16894
+        .trainerName = _("ACEROLA"),
+#line 16895
+        .trainerClass = TRAINER_CLASS_LEADER,
+#line 16896
+        .trainerPic = TRAINER_PIC_ALOLA_ACEROLA,
+        .encounterMusic_gender =
+#line 16897
+F_TRAINER_FEMALE | 
+#line 16898
+            TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
+#line 16899
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16901
+            .species = SPECIES_SABLEYE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16903
+            .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
+#line 16902
+            .lvl = 42,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 16905
+            .species = SPECIES_KYOGRE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16907
+            .iv = TRAINER_PARTY_IVS(12, 12, 12, 12, 12, 12),
+#line 16906
+            .lvl = 42,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

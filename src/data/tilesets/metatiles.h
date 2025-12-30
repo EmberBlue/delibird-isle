@@ -25,6 +25,31 @@ const u16 gMetatileAttributes_frp_general[] = INCBIN_U16("data/tilesets/primary/
 const u16 gMetatiles_frp_building[] = INCBIN_U16("data/tilesets/primary/frp_building/metatiles.bin");
 const u16 gMetatileAttributes_frp_building[] = INCBIN_U16("data/tilesets/primary/frp_building/metatile_attributes.bin");
 
+// ---- PRIMARY: Johto General (metatiles + attributes) ----
+const u16 gMetatiles_JohtoGeneral[] = INCBIN_U16("data/tilesets/primary/johtogeneral/metatiles.bin");
+const u16 gMetatileAttributes_JohtoGeneral[] = INCBIN_U16("data/tilesets/primary/johtogeneral/metatile_attributes.bin");
+
+
+
+
+// --- AzaleaTown secondary: metatiles + attributes ---
+const u16 gMetatiles_AzaleaTown[] =
+    INCBIN_U16("data/tilesets/secondary/azaleatown/metatiles.bin");
+
+const u16 gMetatileAttributes_AzaleaTown[] =
+    INCBIN_U16("data/tilesets/secondary/azaleatown/metatile_attributes.bin");
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

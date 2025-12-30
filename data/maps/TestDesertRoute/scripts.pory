@@ -1,3 +1,64 @@
-mapscripts TestDesertRoute_MapScripts {
+// ========== TestDesertRoute (block-style Poryscript) ==========
 
+mapscripts TestDesertRoute_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: TestDesertRoute_OnTransition
+    MAP_SCRIPT_ON_LOAD:       TestDesertRoute_OnLoad
+}
+
+script TestDesertRoute_OnTransition {
+    end
+}
+
+script TestDesertRoute_OnLoad {
+    end
+}
+
+// ---------- Movement pattern: double hop ----------
+movement TestDesertRoute_Bounce {
+    jump_in_place_up
+    delay_8
+    jump_in_place_up
+    end
+}
+
+// ---------- Talk-to-Pokémon script ----------
+script TestDesertRoute_CacneaScript {
+    lock
+    faceplayer
+    applymovement(THIS_OBJECT, TestDesertRoute_Bounce)
+    waitmovement(0)
+    // cry SPECIES_CACNEA, 0      // optional
+    // playsfx SE_M_BOUNCE_1      // optional
+    msgbox(gText_TestDesertRoute_Cacnea, MSGBOX_DEFAULT)
+    release
+    end
+}
+
+text gText_TestDesertRoute_Cacnea {
+    "Cacnea perks up and bounces in the hot sand!"
+}
+
+
+
+
+
+// Route/Map script
+script AcerolaTrainerScript {
+    trainerbattle_single(TRAINER_ACEROLA_1, AcerolaIntroText, AcerolaDefeatText)
+    msgbox(AcerolaAfterText, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+// Text blocks
+text AcerolaIntroText {
+    "Heehee… I’m Acerola! Let’s see if you can handle some spooky fun!"
+}
+
+text AcerolaDefeatText {
+    "Whaaat~? You weren’t scared at all… you’re super strong!"
+}
+
+text AcerolaAfterText {
+    "The ghosts adore tough Trainers. Come play again sometime, okay?"
 }

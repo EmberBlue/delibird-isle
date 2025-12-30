@@ -3592,6 +3592,66 @@ const u16 gTilesetPalettes_frp_viridian_gym[][16] =
 
 
 
+// Primary tileset palettes: JohtoGeneral
+// Expecting files:
+// data/tilesets/primary/johtogeneral/palettes/00.gbapal ... 15.gbapal
+
+
+// Tiles (compressed 4bpp). Set .isCompressed = TRUE in the tileset.
+const u32 gTilesetGfx_JohtoGeneral[] =
+    INCBIN_U32("data/tilesets/primary/johtogeneral/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_JohtoGeneral[][16] =
+{
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/primary/johtogeneral/palettes/15.gbapal"),
+};
+
+
+
+
+
+// ---------------- AzaleaTown (SECONDARY) ----------------
+// Tiles (use .lz if you compressed; otherwise point to .4bpp and set
+// .isCompressed = FALSE in the tileset struct)
+const u32 gTilesetGfx_AzaleaTown[] =
+    INCBIN_U32("data/tilesets/secondary/azaleatown/tiles.4bpp.lz");
+
+// Palette rows. Keep ONLY the rows you actually have in the folder.
+// If one file is named oddly (e.g. 09_over.gbapal), you can reference it directly.
+const u16 gTilesetPalettes_AzaleaTown[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/09.gbapal"),      // or "09_over.gbapal"
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/azaleatown/palettes/15.gbapal"),
+};
 
 
 

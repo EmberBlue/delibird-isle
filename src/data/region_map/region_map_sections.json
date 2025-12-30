@@ -1726,6 +1726,14 @@
       "y": 0,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_PARCEL_ISLE",
+      "name": "PARCEL ISLE",
+      "x": 27,
+      "y": 14,
+      "width": 1,
+      "height": 1
     }
   ]
 }

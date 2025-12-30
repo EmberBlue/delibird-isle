@@ -50,5 +50,11 @@ extern const u16  gMetatiles_frp_building[];
 extern const u16  gMetatileAttributes_frp_building[];
 extern const struct Tileset gTileset_Primary_frp_building;
 
+// ---- Johto General Primary externs ----
+extern const u32 gTilesetTiles_JohtoGeneral[];
+extern const u16 gTilesetPalettes_JohtoGeneral[][16];
+extern const u16 gTilesetPalettes_JohtoGeneral_Summer[][16];
+extern const u16 gTilesetPalettes_JohtoGeneral_Autumn[][16];
+extern const u16 gTilesetPalettes_JohtoGeneral_Winter[][16];
 
 #endif //GUARD_tilesets_H

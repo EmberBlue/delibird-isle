@@ -1345,6 +1345,7 @@ static const struct SpriteFrameImage sPicTable_HoOhOld[] = {
     overworld_frame(gObjectEventPic_HoOhOld, 4, 4, 1),
 };
 
+
 static const struct SpriteFrameImage sPicTable_RubySapphireBrendan[] = {
     overworld_ascending_frames(gObjectEventPic_RubySapphireBrendanNormal, 2, 4),
 };
@@ -1356,3 +1357,66 @@ static const struct SpriteFrameImage sPicTable_KirliaOld[] = {
 static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
     overworld_ascending_frames(gObjectEventPic_RubySapphireMayNormal, 2, 4),
 };
+
+
+
+
+// ---------- Cacnea OW 4x4 frames ----------
+extern const u32 gObjectEventPic_Cacnea_OW[];
+
+static const struct SpriteFrameImage gObjectEventPicTable_Cacnea[] = {
+    overworld_ascending_frames(gObjectEventPic_Cacnea_OW, 4, 4)
+};
+
+
+
+// // ---------- Agatha (3-frame facing sheet -> 4 facing frames) ----------
+// extern const u32 gObjectEventPic_Agatha[];
+
+// // Each overworld_frame(img, cols, rows, index) picks one 32x32 tile frame.
+// // agatha.png is 3 columns x 1 row (L, D, R). We duplicate D for "Up".
+// static const struct SpriteFrameImage gObjectEventPicTable_Agatha[] = {
+//     // Down (front)
+//     overworld_frame(gObjectEventPic_Agatha, 3, 1, 1),
+//     // Up (reuse front since the sheet has no back)
+//     overworld_frame(gObjectEventPic_Agatha, 3, 1, 1),
+//     // Left
+//     overworld_frame(gObjectEventPic_Agatha, 3, 1, 0),
+//     // Right
+//     overworld_frame(gObjectEventPic_Agatha, 3, 1, 2),
+// };
+
+
+
+extern const u32 gObjectEventPic_Agatha[];
+
+const struct SpriteFrameImage gObjectEventPicTable_Agatha[] = {
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 0),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 1),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 2),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 3),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 4),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 5),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 6),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 7),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 8),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4, 9),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4,10),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4,11),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4,12),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4,13),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4,14),
+    overworld_frame(gObjectEventPic_Agatha, 2, 4,15),
+};
+
+
+
+
+
+// ---------- Delibird OW 4x4 frames ----------
+extern const u32 gObjectEventPic_Delibird_OW[];
+
+static const struct SpriteFrameImage gObjectEventPicTable_Delibird[] = {
+    overworld_ascending_frames(gObjectEventPic_Delibird_OW, 4, 4)
+};
+
