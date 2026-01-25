@@ -77,6 +77,90 @@
       ],
       "encounters": [
         {
+          "map": "MAP_PARCEL_ISLE",
+          "base_label": "gParcelIsle_Morning",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_DELIBIRD" }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PARCEL_ISLE",
+          "base_label": "gParcelIsle_Day",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_DELIBIRD" }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PARCEL_ISLE",
+          "base_label": "gParcelIsle_Evening",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_BULBASAUR" }
+            ]
+          }
+        },
+        {
+          "map": "MAP_PARCEL_ISLE",
+          "base_label": "gParcelIsle_Night",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 10, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 11, "max_level": 14, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 12, "max_level": 13, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 15, "max_level": 15, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 14, "max_level": 16, "species": "SPECIES_BULBASAUR" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_DELIBIRD" },
+              { "min_level": 18, "max_level": 18, "species": "SPECIES_BULBASAUR" }
+            ]
+          }
+        },
+        {
           "map": "MAP_ROUTE101",
           "base_label": "gRoute101_Morning",
           "land_mons": {
