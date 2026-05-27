@@ -143,6 +143,9 @@ skeleton:
 3. **The erased lab** — emptied with precision; an erasure staged as a
    burglary. An official dismisses it; residents look away.
 4. **The only bridge out** — panicked, stuck Poliwag driven downstream.
+   *(Silent retroactive load: the Poliwag line is what Dr. Heron's noble lie
+   once protected, and what the concern's greenwash now leans on. See §04.
+   The first scene of the game plays differently on the second read.)*
 5. **Poacher ambush** — functional, not cartoonish. "They ran right where we
    need them." "…Stock?" "You think you're early? You're late."
 6. **Ranger Hale intervenes** — "It's a living corridor. That's enough." Sends
@@ -198,6 +201,14 @@ skeleton:
 - ✅ **Mentor at the climax** → **alive, in voluntary exile** at a small
   failing wetland that mirrors where Sketch died; recording the place before
   it's gone; gives partial confession, accepts exposure, does not return. (§04)
+- ✅ **Mentor's name** → **Dr. Heron** (she/her); single-name in the
+  Pokémon-naturalist tradition, wading-bird emblem of her stance. (§04)
+- ✅ **Noble lie species** → **the Poliwag line (Politoed recovery data)**;
+  the bridge Poliwag scene (Prologue beat 4) is the silent retroactive
+  callback. (§04)
+- ✅ **Noble lie preserve** → **the marshlands north of Mahogany Town, on the
+  rim of the Lake of Rage** (distant Johto; spatially separate from Sketch's
+  wetland south of Goldenrod). (§04)
 - 🟡 **Region skeleton** → DRAFT in §01 (revisable).
 
 > **MACRO ARC FULLY LOCKED.** Region shape, conflict, mentor, the noble lie, the
@@ -205,8 +216,13 @@ skeleton:
 
 ## Open questions (now in progress)
 
-- **§04 (residual)** The mentor's name; the exact shape of the noble lie
-  (species, preserve, decade); the specific remote-Delibird-Isle corner where
-  the exile-wetland sits (settles with §01).
+- **§04 (residual)** Decade of the noble lie (tied to Dr. Heron's age); the
+  specific remote-Delibird-Isle corner where the exile-wetland sits (settles
+  with §01).
 - **§01** Region skeleton: confirm/redraw zone count and order.
-- Later: gameplay systems (certifications, survey mechanic); roster ethos.
+- **§05 (next?)** Factions: the Concern (board, money flow), the Council
+  (Dorsey's office), the Climate Corps's institutional shape.
+- **§06 (next?)** Pokémon roster ethos: who appears where, edge-species logic,
+  the species list for the exile-wetland.
+- Later: gameplay systems (certifications, survey mechanic, **notebook
+  marginalia decoding**); roster ethos.

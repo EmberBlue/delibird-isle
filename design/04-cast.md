@@ -3,54 +3,79 @@
 > The emotional core. **No one here is evil; everyone is leashed.** The
 > extraction economy coerces through leverage over the vulnerable.
 
-## The Mentor (your teacher; the one who wrote the letter)
+## The Mentor: Dr. Heron (your teacher; the one who wrote the letter)
 
 - Respected regional ecologist. Invited the player to *witness* and *be honest*
-  (prologue letter, §07). The player carries their **field notebook**.
-- **Truth:** not silenced — **coerced into collaboration.** Their research on
+  (prologue letter, §07). The player carries her **field notebook.**
+- **Truth:** not silenced — **coerced into collaboration.** Her research on
   *habitat resilience* and *migration corridors* was turned into the greenwash
-  that legitimizes the extraction. The lab "erasure" was **staged**.
-- **Motive: coerced / personal cost (LOCKED).** Not greed, not defeatism. They
-  were leashed by something held over them. This makes them *partly a victim* —
+  that legitimizes the extraction. The lab "erasure" was **staged.**
+- **Motive: coerced / personal cost (LOCKED).** Not greed, not defeatism. She
+  was leashed by something held over her. This makes her *partly a victim* —
   the most forgivable motive — which is exactly why the reveal grieves rather
-  than enrages. They **rhyme with Harland**: both squeezed by the same economy.
+  than enrages. She **rhymes with Harland**: both squeezed by the same economy.
+
+### The name (LOCKED): Dr. Heron
+
+A wading bird's name. A heron stands still in shallow water and waits — eyes,
+patience, no hurry. Dr. Heron's stance, distilled to a single word. Follows
+the Pokémon-naturalist single-name convention (Oak, Elm, Birch, Rowan) but
+specifies a wetland-edge bird instead of a tree — the right specificity for
+this region and this teacher. **She / her.** Old enough to be a crusader,
+young enough to still be doing fieldwork the day the lever closed.
 
 ### The three-layer reveal (structure)
-1. **Silencing** — the player (and world) assume the mentor was buried for
+1. **Silencing** — the player (and world) assume Dr. Heron was buried for
    getting too close. Most of the game runs on this belief.
-2. **Collaboration** — the player discovers the mentor's science is *inside* the
+2. **Collaboration** — the player discovers her science is *inside* the
    greenwash. Betrayal.
-3. **Coercion** — the final layer: they didn't sell out, they were *forced*.
-   Grief replaces anger. There is no clean villain to hate, no clean teacher to
-   mourn.
+3. **Coercion** — the final layer: she didn't sell out, she was *forced*.
+   Grief replaces anger. There is no clean villain to hate, no clean teacher
+   to mourn.
 
 ### The lever (LOCKED): a buried dishonesty + money (doubled leash)
 The concern holds **both** halves and needs no thugs — just an accountant and a
 filing cabinet:
-- **The secret:** the mentor once committed a buried dishonesty (exact shape
-  OPEN, below). Exposure discredits not just them but the entire conservation
-  movement built on their name.
-- **The money:** the concern funds the mentor's lab / life's work. Pull it and
+- **The secret:** Dr. Heron once committed a buried dishonesty (specifics
+  below). Exposure discredits not just her but the entire conservation
+  movement built on her name.
+- **The money:** the concern funds her lab / life's work. Pull it and
   everything (and everyone employed) dies.
-- **The threat:** *"We know what you did, and we fund what you built. Give us the
-  resilience models, or both die together."* This is the **same economic lever
-  as on Harland** — survival — which makes the thesis airtight.
+- **The threat:** *"We know what you did, and we fund what you built. Give us
+  the resilience models, or both die together."* This is the **same economic
+  lever as on Harland** — survival — which makes the thesis airtight.
 
 ### The buried dishonesty (LOCKED): the noble lie
-Early in their career the mentor **fudged data to *protect* a habitat** —
-overstated a species' recovery to secure a legal preserve. Born of love for the
-land. Decades later the concern weaponizes it to *destroy* the land. This
-complicates "be honest" perfectly: the letter the player carries is at once a
-**confession, a warning, and the thing that dooms them.** The crusader's one
-lie, told to save a place, becomes the weapon that ruins it.
+
+Early in her career, before the crusader years, Dr. Heron **fudged data to
+*protect* a habitat** — overstated **Politoed recovery** in **the marshlands
+north of Mahogany Town, on the rim of the Lake of Rage** (distant Johto), to
+secure the preserve's legal protection. Born of love for the land; born of
+watching a frog population she had counted by hand collapse along an
+embankment she could not save through honest means. The lie worked. The
+preserve was secured. The Poliwag line persisted there — barely, but
+persistently — and that persistence was itself read as her vindication.
+
+Decades later the concern weaponizes that same falsified recovery model to
+*destroy* the lands she spent the rest of her career defending. The letter
+the player carries is at once a **confession, a warning, and the thing that
+dooms her.** The crusader's one lie, told to save a place, becomes the weapon
+that ruins it.
+
+**The species haunts the player from the prologue forward.** The **bridge
+Poliwag scene** (§00, Prologue beat 4) is the silent retroactive load: Wren
+bears witness to a wounded Poliwag without yet knowing this is the exact
+species lineage Dr. Heron's lie protected and the concern's greenwash now
+leans on. The first scene of the game and the climax reveal share one
+species. The bridge plays differently on the second read.
 
 ### The climax knot (LOCKED): honesty has collateral
-To expose the greenwash, the player **must also expose the mentor's lie** —
-destroying the teacher who taught them honesty, **and de-protecting the preserve
-the lie once saved** (its legal protection rested on the fudged recovery data).
-Truth-telling has maximum collateral. The player chooses it anyway; the game
-refuses to say it was simply right. This is the engine of the clear-eyed-grief
-ending (§02).
+To expose the greenwash, the player **must also expose Dr. Heron's lie** —
+destroying the teacher who taught them honesty, **and de-protecting the
+Mahogany marshlands preserve** the lie once saved (its legal protection
+rested on the fudged Politoed recovery data). Truth-telling has maximum
+collateral. The player chooses it anyway; the game refuses to say it was
+simply right. This is the engine of the clear-eyed-grief ending (§02).
 
 ### Public identity (LOCKED): field naturalist who became a crusader
 
@@ -117,10 +142,14 @@ The meeting is constrained:
   brokenness but in part *because of it* — they have arranged things so Wren
   is free to act without having to negotiate with a defense.
 - **The location is the punctuation.** A small wetland dying the same death
-  as the one Wren grew up beside. Wren learns how to survey it (with their
-  new partner, with their now-readable notebook) *while the only person who
-  ever taught them the verb is dying in front of them.* No music swells. The
-  thesis lands not in speech but in the act of the survey itself.
+  as the one Wren grew up beside. **Among its dying inhabitants are the same
+  Poliwag-line frogs Dr. Heron's models once said would thrive** — she is
+  cataloging the failure of her own falsified prediction, by hand, with the
+  honesty she did not extend to them decades ago. Wren learns how to survey
+  it (with their new partner, with their now-readable notebook) *while the
+  only person who ever taught them the verb is dying in front of them.* No
+  music swells. The thesis lands not in speech but in the act of the survey
+  itself.
 
 This is the engine of the clear-eyed-grief ending (§02). It is also why the
 epilogue's *what now* carries weight: Wren has, by then, finished what the
@@ -216,7 +245,8 @@ This wound is **load-bearing.**
 
 ## OPEN
 
-- The mentor's **name.**
-- The exact shape of the noble lie (which species, which preserve, which decade).
-- The specific remote corner of Delibird Isle where the mentor went into exile
-  (settles with the region skeleton in §01).
+- The **decade** of the noble lie (tied to Dr. Heron's age — implied
+  "older crusader," not numerically fixed; likely 25–35 years before
+  game-present).
+- The specific remote corner of Delibird Isle where the **exile-wetland**
+  sits (settles with the region skeleton in §01).
