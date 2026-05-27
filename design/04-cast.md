@@ -52,6 +52,80 @@ Truth-telling has maximum collateral. The player chooses it anyway; the game
 refuses to say it was simply right. This is the engine of the clear-eyed-grief
 ending (§02).
 
+### Public identity (LOCKED): field naturalist who became a crusader
+
+Decades in the boots. The mentor made their reputation in the field, over
+years of local observation — the kind of naturalist whose hand-drawn species
+accounts became regional standards. Their public weight grew out of that
+work, not out of office. As they aged, signing a letter or speaking at a
+hearing could protect a place: their name had been *earned in mud.*
+
+That is what the noble lie misused. Faced with a habitat they knew was
+failing, they bet the credibility they had built in the field to save it —
+and crossed into fabrication. The lie worked. The preserve was saved.
+
+And that is what the concern weaponizes now: not a title, not a contract —
+*the name they built in the field.* When the concern uses their resilience
+models to greenwash extraction, it borrows the public trust the mentor
+*earned by being honest in mud for thirty years.* The misuse is calibrated to
+feel like the opposite of itself. This is why the betrayal grieves: the lever
+turned the most honest thing about them into a weapon.
+
+### Pre-climax presence (LOCKED): the notebook's layered marginalia
+
+Wren never hears from the mentor directly during the game. The mentor's voice
+arrives only in pieces, **in the margins of the notebook itself.**
+
+- The notebook was sent before the silence, annotated heavily and in layers:
+  field corrections, pressed leaves, redrawn sketches, small questions written
+  to a future reader *who would understand them later.*
+- Some annotations are legible immediately. Most aren't — they reference
+  species behaviors, survey methods, or local landmarks Wren hasn't learned
+  yet.
+- As Wren's competence grows in-game, **more marginalia becomes readable.** A
+  margin that read as a cryptic squiggle in Act I resolves into a precise
+  field cue in Act III. The mentor's voice arrives *on Wren's schedule, in
+  Wren's newly opened eyes.*
+- All of it was written by someone *still hopeful.* The notebook is a
+  ghost-voice from before the lever closed. The contrast with the broken
+  person Wren finds at the climax is part of the wound.
+
+This keeps the notebook as the central artifact — the mentor's eye and
+Sketch's eye, doubled — and keeps the mascot/recording motif airtight.
+Reading the notebook deeper is itself the progression mechanic of the
+relationship.
+
+### At the climax (LOCKED): voluntary exile in a failing wetland
+
+The mentor is assumed dead for most of the game (the staged erasure, above).
+Wren finds them alive at the climax, in **voluntary exile at a small failing
+wetland on a remote corner of Delibird Isle** — slipped away from the
+concern, gone to do the only honest work they had left: **record the place
+before it's gone.** A Smeargle-act, in a place that catastrophically
+resembles the wetland south of Goldenrod where Sketch died.
+
+The meeting is constrained:
+
+- They are already too far gone to give Wren what Wren came for. Partial
+  confession; some of the truth is still locked inside them; *the rest is in
+  the notebook.* They tell Wren: **finish it.**
+- They have prepared their own end. The exile is not a hideout, it is a
+  decision. They will not survive the publication, and they will not be
+  pursued back into a fight they cannot win. Wren cannot stop this.
+- Wren *still chooses* to expose them. The mentor accepts. The grief is
+  visible on both faces. The exposure happens not despite the mentor's
+  brokenness but in part *because of it* — they have arranged things so Wren
+  is free to act without having to negotiate with a defense.
+- **The location is the punctuation.** A small wetland dying the same death
+  as the one Wren grew up beside. Wren learns how to survey it (with their
+  new partner, with their now-readable notebook) *while the only person who
+  ever taught them the verb is dying in front of them.* No music swells. The
+  thesis lands not in speech but in the act of the survey itself.
+
+This is the engine of the clear-eyed-grief ending (§02). It is also why the
+epilogue's *what now* carries weight: Wren has, by then, finished what the
+mentor could not.
+
 ## The Climate Corps (your colleagues; grounded professionals)
 
 - **Hale** — Ranger; calm competence, quiet authority, no swagger. The closest
@@ -142,6 +216,7 @@ This wound is **load-bearing.**
 
 ## OPEN
 
-- Protagonist: name, the Smeargle's name, the specific corner of Johto.
-- The mentor's name; whether they appear alive at the climax or only through the
-  notebook + testimony.
+- The mentor's **name.**
+- The exact shape of the noble lie (which species, which preserve, which decade).
+- The specific remote corner of Delibird Isle where the mentor went into exile
+  (settles with the region skeleton in §01).

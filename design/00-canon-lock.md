@@ -190,6 +190,14 @@ skeleton:
   open. (§04)
 - ✅ **Protagonist character type** → **Wren**, fully defined, age 20–22, fixed
   backstory and dialogue; player picks pronouns only. (§04)
+- ✅ **Mentor's public identity** → **field naturalist who became a crusader**;
+  reputation earned in mud over decades; the concern weaponizes the trust they
+  built by being honest. (§04)
+- ✅ **Mentor's pre-climax voice** → **the notebook's layered marginalia**;
+  decoded as Wren's competence grows; written by someone still hopeful. (§04)
+- ✅ **Mentor at the climax** → **alive, in voluntary exile** at a small
+  failing wetland that mirrors where Sketch died; recording the place before
+  it's gone; gives partial confession, accepts exposure, does not return. (§04)
 - 🟡 **Region skeleton** → DRAFT in §01 (revisable).
 
 > **MACRO ARC FULLY LOCKED.** Region shape, conflict, mentor, the noble lie, the
@@ -197,7 +205,8 @@ skeleton:
 
 ## Open questions (now in progress)
 
-- **§04 (next)** The mentor: name, whether they appear alive at the climax or
-  only through the notebook + testimony, where they are during the game.
+- **§04 (residual)** The mentor's name; the exact shape of the noble lie
+  (species, preserve, decade); the specific remote-Delibird-Isle corner where
+  the exile-wetland sits (settles with §01).
 - **§01** Region skeleton: confirm/redraw zone count and order.
 - Later: gameplay systems (certifications, survey mechanic); roster ethos.
