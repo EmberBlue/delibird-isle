@@ -16,11 +16,16 @@ participant** in a region under quiet ecological and institutional stress.
 
 ### Identity
 - **Title:** Pokémon Anthropocene.
-- **Region type:** large, island-based region with diverse biomes and
-  architecture tied to ecology and history.
+- **Region:** **Skaldmere** — a large, cold-temperate maritime island region
+  with diverse biomes (saltmarsh and temperate forest in the south up to
+  thawing permafrost in the highlands and on Delibird Isle) and architecture
+  tied to ecology and history. The name fuses *skald* (the poet who **records**
+  what would be lost — the game's central act) with *mere* (a wetland — the
+  dying ground). See §01.
 - **Delibird Isle:** a *location within* the game — a festive, chilly island
-  whose cheerful surface hides ecological stress (thawing permafrost). Not the
-  whole game.
+  whose cheerful surface hides ecological stress (thawing permafrost). One zone
+  of Skaldmere, not the whole game. The game is titled for its quietest,
+  most emblematic place.
 - **Mascots:** Delibird + Smeargle. They embody the core loop —
   **Smeargle = document/observe/record** (the player's notebook made flesh);
   **Delibird = deliver/aid/steward** (help given during storms). Together:
@@ -209,20 +214,29 @@ skeleton:
 - ✅ **Noble lie preserve** → **the marshlands north of Mahogany Town, on the
   rim of the Lake of Rage** (distant Johto; spatially separate from Sketch's
   wetland south of Goldenrod). (§04)
-- 🟡 **Region skeleton** → DRAFT in §01 (revisable).
+- ✅ **Region name** → **Skaldmere** (skald = record + mere = wetland;
+  Delibird Isle is one zone within it). (§01)
+- ✅ **Region skeleton** → **FIRMED**: 8 zones, ecologically ordered
+  south→north / warm→cold; ~6–7 certifications. (§01)
+- ✅ **Mentor reveal pacing** → **builds across the back half**: silencing
+  (zones 1–6), collaboration (zone 7, Industrial Coast), coercion + climax
+  (zone 8). (§01, §04)
+- ✅ **Exile-wetland / climax site** → the keystone **freshwater marsh at the
+  heart of The Last Corridor** (zone 8); fuses keystone + exile + confession.
+  (§01, §04)
 
 > **MACRO ARC FULLY LOCKED.** Region shape, conflict, mentor, the noble lie, the
 > climax knot, and the ending note are all decided. Now building the next layer.
 
 ## Open questions (now in progress)
 
-- **§04 (residual)** Decade of the noble lie (tied to Dr. Heron's age); the
-  specific remote-Delibird-Isle corner where the exile-wetland sits (settles
-  with §01).
-- **§01** Region skeleton: confirm/redraw zone count and order.
+- **§04 (residual)** Decade of the noble lie (tied to Dr. Heron's age).
+- **§01 (residual)** Map shape & connectivity (gating, Surf/ferry unlocks);
+  per-zone town/landmark names and each certification-test; exact placement of
+  the Poisoned Waters event and Harland/Dorsey beats.
 - **§05 (next?)** Factions: the Concern (board, money flow), the Council
   (Dorsey's office), the Climate Corps's institutional shape.
 - **§06 (next?)** Pokémon roster ethos: who appears where, edge-species logic,
-  the species list for the exile-wetland.
+  the species list for the Last Corridor exile-marsh.
 - Later: gameplay systems (certifications, survey mechanic, **notebook
   marginalia decoding**); roster ethos.

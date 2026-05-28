@@ -20,7 +20,7 @@ game built in this repo.
 | # | Section | File | Status |
 |---|---------|------|--------|
 | 00 | Canon Lock — the foundation & "do not contradict" rules | `00-canon-lock.md` | LOCKED |
-| 01 | Region & Journey Skeleton — full-game arc, biomes, certification ladder | `01-region-skeleton.md` | DRAFT |
+| 01 | Region & Journey Skeleton — Skaldmere, full-game arc, biomes, certification ladder | `01-region-skeleton.md` | FIRMED |
 | 02 | The Conflict — Industrialists, the endgame, the climax | `02-conflict.md` | LOCKED |
 | 03 | Myth & Legendaries — resolved: none (fully grounded) | `00-canon-lock.md` | LOCKED |
 | 04 | Cast Bible — characters, arcs, the mentor mystery | `04-cast.md` | DRAFT |

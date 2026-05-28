@@ -122,12 +122,15 @@ relationship.
 
 ### At the climax (LOCKED): voluntary exile in a failing wetland
 
-The mentor is assumed dead for most of the game (the staged erasure, above).
-Wren finds them alive at the climax, in **voluntary exile at a small failing
-wetland on a remote corner of Delibird Isle** — slipped away from the
-concern, gone to do the only honest work they had left: **record the place
-before it's gone.** A Smeargle-act, in a place that catastrophically
-resembles the wetland south of Goldenrod where Sketch died.
+Dr. Heron is assumed dead for most of the game (the staged erasure, above).
+Wren finds her alive at the climax, in **voluntary exile at the small,
+failing freshwater marsh at the heart of The Last Corridor** (zone 8, §01) —
+the keystone habitat the whole region depends on, dying, with the Poliwag
+line as its keystone-indicator. She slipped away from the concern to do the
+only honest work she had left: **record the place before it's gone.** A
+Smeargle-act, in a place that catastrophically resembles the wetland south of
+Goldenrod where Sketch died — and that holds the very Poliwag-line frogs her
+noble lie once claimed to save.
 
 The meeting is constrained:
 
@@ -248,5 +251,5 @@ This wound is **load-bearing.**
 - The **decade** of the noble lie (tied to Dr. Heron's age — implied
   "older crusader," not numerically fixed; likely 25–35 years before
   game-present).
-- The specific remote corner of Delibird Isle where the **exile-wetland**
-  sits (settles with the region skeleton in §01).
+- *(Resolved: the exile-wetland is the keystone freshwater marsh at the heart
+  of The Last Corridor, zone 8 — see §01.)*
