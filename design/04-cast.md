@@ -34,16 +34,20 @@ young enough to still be doing fieldwork the day the lever closed.
    to mourn.
 
 ### The lever (LOCKED): a buried dishonesty + money (doubled leash)
-The concern holds **both** halves and needs no thugs — just an accountant and a
-filing cabinet:
+**Mereholt** holds both halves and needs no thugs — just an accountant and a
+filing cabinet (§05):
 - **The secret:** Dr. Heron once committed a buried dishonesty (specifics
   below). Exposure discredits not just her but the entire conservation
   movement built on her name.
-- **The money:** the concern funds her lab / life's work. Pull it and
-  everything (and everyone employed) dies.
+- **The money:** the **Mereholt Foundation** funds her lab / life's work
+  (§05). Pull it and everything (and everyone employed) dies.
 - **The threat:** *"We know what you did, and we fund what you built. Give us
   the resilience models, or both die together."* This is the **same economic
   lever as on Harland** — survival — which makes the thesis airtight.
+- **The hand on the lever** is **Hollis Aune** (§05), Dr. Heron's former
+  graduate student, now Foundation Program Officer — the warm face of the
+  squeeze, herself leashed by the Mereholt board. Three rhymes: Harland ↔
+  Heron ↔ Hollis.
 
 ### The buried dishonesty (LOCKED): the noble lie
 
@@ -160,14 +164,25 @@ mentor could not.
 
 ## The Climate Corps (your colleagues; grounded professionals)
 
-- **Hale** — Ranger; calm competence, quiet authority, no swagger. The closest
-  thing to a guide. *"This region doesn't need heroes. It needs witnesses."*
-  *"We don't 'win.' We reduce harm."* *"Get attached to results, not praise."*
+Institutional context in §05 — the Corps is partially Mereholt-funded, which
+means Hale and Rin work inside the same leash, knowingly.
+
+- **Hale** — Ranger; calm competence, quiet authority, no swagger. District
+  station chief. The closest thing to a guide. *"This region doesn't need
+  heroes. It needs witnesses."* *"We don't 'win.' We reduce harm."* *"Get
+  attached to results, not praise."* His stoicism is **not peace** — it's a
+  career's worth of figuring out what real work can be done inside an
+  institution that cannot afford to be fully honest about its sponsors (§05).
 - **Rin** — Ranger; practical, tired, observant. Hands-on; tends the partner
   meadow and the field kits.
-- **Ilex** — Surveyor; maps change and *timelines*, not solutions. Quietly
-  unsettling, intelligent. *"Now you'll notice how often damage wears the mask
-  of improvement."* Carries the recurring red-cloth symbol.
+- **Ilex** — **Skaldmere Survey** (sister agency, §05), not Climate Corps.
+  Maps change and *timelines*, not solutions. Quietly unsettling, intelligent.
+  *"Now you'll notice how often damage wears the mask of improvement."* The
+  recurring red-cloth motif is a Surveyor measurement-marker that, over years,
+  becomes an unintentional memorial register at points where habitat has
+  vanished. The Survey is the one institution in the region that is
+  meaningfully unleashed — too small and too slow to be worth capturing. Late
+  game, Ilex's red-cloth points become the spine of Wren's evidentiary case.
 
 ## The Protagonist
 
@@ -238,11 +253,24 @@ This wound is **load-bearing.**
 
 ## Human antagonists (grounded, never cartoon)
 
-- **The Industrialists** — extraction concern; power is *legitimacy*, not menace.
-- **Councilman Dorsey** — political interface; sells relief/development,
-  weaponizes blame, frames the Corps as outsiders.
-- **Captain Harland** — proud fisher dependent on the extraction economy; misled,
-  not evil; the human cost made personal.
+Full institutional context in §05; thumbnail roster here.
+
+- **Cordelia Brooke** — Chair & CEO of Mereholt Resources Ltd. Second-
+  generation leadership, polished, decent in her own self-conception. The
+  player's final-act adversary battle (§02). She is also leashed (board, debt
+  covenants); she will mention it once and not as an excuse.
+- **Hollis Aune** — Mereholt Foundation Conservation Program Officer. Dr.
+  Heron's former graduate student; the warm face of the lever. Probably not
+  battled — she fights with paper, not partners. Third leg of the
+  Harland↔Heron↔Hollis rhyme.
+- **Councilman Dorsey** — Commissioner of Resource Development and
+  Public-Private Partnerships, Skaldmere Regional Council. Sells
+  relief/development, weaponizes blame, frames the Corps as outsiders. Was
+  Mereholt Foundation senior advisor before standing for Council; will
+  return. Sincere — which is what makes him dangerous.
+- **Captain Harland** — proud fisher dependent on the extraction economy;
+  misled, not evil; the human cost made personal. *You cannot punch a
+  paycheck.*
 - **Poachers / enforcers** — labor, not masterminds; cynics ("the land's already
   dead, we just admit it"), not zealots.
 

@@ -224,6 +224,21 @@ skeleton:
 - ✅ **Exile-wetland / climax site** → the keystone **freshwater marsh at the
   heart of The Last Corridor** (zone 8); fuses keystone + exile + confession.
   (§01, §04)
+- ✅ **Concern's name & structure** → **Mereholt**: Foundation (public face,
+  funds Heron's lab + part of the Climate Corps) over Resources Ltd
+  (Coastal / Permafrost / Logistics subsidiaries). CEO **Cordelia Brooke**.
+  (§05)
+- ✅ **Lever-holder** → **Hollis Aune**, Foundation Conservation Program
+  Officer and Dr. Heron's former graduate student; herself leashed by the
+  Mereholt board. Triple-rhyme: Harland ↔ Heron ↔ Hollis. (§05)
+- ✅ **Climate Corps funding** → ~⅔ public, ~⅓ **Mereholt Foundation** — the
+  Corps is also leashed; Hale's stoicism is not peace. (§05)
+- ✅ **Skaldmere Survey** → Ilex's institution; small, slow, mostly unleashed;
+  red-cloth measurement markers become the spine of Wren's evidentiary case.
+  (§05)
+- ✅ **Council apparatus** → **Skaldmere Regional Council**, captured (not
+  corrupt); Dorsey is Commissioner of Resource Development & Public-Private
+  Partnerships (revolving-door from/to Mereholt Foundation). (§05)
 
 > **MACRO ARC FULLY LOCKED.** Region shape, conflict, mentor, the noble lie, the
 > climax knot, and the ending note are all decided. Now building the next layer.
@@ -231,12 +246,14 @@ skeleton:
 ## Open questions (now in progress)
 
 - **§04 (residual)** Decade of the noble lie (tied to Dr. Heron's age).
+- **§05 (residual)** Foundation chair's name (retired Climate Corps director);
+  Cordelia Brooke's roster (defers to §06); Regional Director's name (may
+  remain a function); the university partnership town (defers to §01 detail).
 - **§01 (residual)** Map shape & connectivity (gating, Surf/ferry unlocks);
   per-zone town/landmark names and each certification-test; exact placement of
   the Poisoned Waters event and Harland/Dorsey beats.
-- **§05 (next?)** Factions: the Concern (board, money flow), the Council
-  (Dorsey's office), the Climate Corps's institutional shape.
 - **§06 (next?)** Pokémon roster ethos: who appears where, edge-species logic,
-  the species list for the Last Corridor exile-marsh.
+  the species list for the Last Corridor exile-marsh, Cordelia's boardroom
+  team, Dorsey's political-image roster.
 - Later: gameplay systems (certifications, survey mechanic, **notebook
-  marginalia decoding**); roster ethos.
+  marginalia decoding**, **red-cloth memorial points**); roster ethos.

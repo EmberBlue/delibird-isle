@@ -24,7 +24,7 @@ game built in this repo.
 | 02 | The Conflict — Industrialists, the endgame, the climax | `02-conflict.md` | LOCKED |
 | 03 | Myth & Legendaries — resolved: none (fully grounded) | `00-canon-lock.md` | LOCKED |
 | 04 | Cast Bible — characters, arcs, the mentor mystery | `04-cast.md` | DRAFT |
-| 05 | Organizations — Climate Corps, Surveyors, Industrialists, locals | `05-organizations.md` | OPEN |
+| 05 | Organizations — Mereholt, the Council, Climate Corps, Skaldmere Survey | `05-organizations.md` | FIRMED |
 | 06 | Ecology Bible — biomes, indicator species, disturbance logic | `06-ecology.md` | OPEN |
 | 07 | Prologue (long-form, verbatim canon) | `07-prologue.md` | DRAFT |
 | 08 | Chapter 1 (long-form, verbatim canon) | `08-chapter-01.md` | DRAFT |

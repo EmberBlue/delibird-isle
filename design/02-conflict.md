@@ -9,11 +9,17 @@ Large-scale resource extraction (mining / drilling / industrial fishing) is
 quietly hollowing the region. It is not run by cartoon villains — it is run by
 people inside a system of incentives:
 
-- **Industrialists** — the extraction concern. Polished, lawful-on-paper,
-  genuinely believe (or have convinced themselves) they are providing for the
-  region. Their power is *legitimacy*, not menace.
-- **Councilman Dorsey** — the political interface. Sells "relief" and
-  "development," weaponizes blame, frames the Climate Corps as outsiders.
+- **Industrialists — Mereholt** (LOCKED, §05). Public face: the Mereholt
+  Foundation (conservation grants, preserve signage, Foundation funds Dr.
+  Heron's lab and a third of the Climate Corps's budget). Real entity:
+  Mereholt Resources Ltd, with Coastal / Permafrost / Logistics subsidiaries.
+  CEO **Cordelia Brooke** — polished, lawful-on-paper, genuinely believes
+  Mereholt **is** the regional economy. Power is *legitimacy*, not menace.
+- **Councilman Dorsey** — Commissioner of Resource Development and
+  Public-Private Partnerships, Skaldmere Regional Council (§05). Sells
+  "relief" and "development," weaponizes blame, frames the Climate Corps as
+  outsiders. The Council is captured, not corrupt — it cannot afford to deny
+  Mereholt anything that affects throughput.
 - **Captain Harland** — a proud fisher whose livelihood depends on the very
   extraction economy. Misled, not evil. The human cost made personal. *You
   cannot punch a paycheck.*
@@ -39,10 +45,13 @@ they are actually uncovering a **collaboration**.
   honesty made physical (not a mascot/mechanic gimmick). Every survey extends
   the dataset that can *expose* the extraction **or** *further legitimize* it.
   The player's honesty is both the weapon and the open question.
-- **Mentor's motive: coerced** (§04). Not greed, not defeatism — they were
-  **leashed by personal cost / leverage**. Partly a victim; the most forgivable
-  motive, which is exactly why it hurts. Specific lever: OPEN (§04). This makes
-  the mentor *rhyme with Harland* — both squeezed by the same economy.
+- **Mentor's motive: coerced** (§04). Not greed, not defeatism — Dr. Heron was
+  **leashed by a buried dishonesty + lab funding** (§04). Partly a victim; the
+  most forgivable motive, which is exactly why it hurts. **The lever-holder
+  is Hollis Aune** — Dr. Heron's former graduate student, now Mereholt
+  Foundation Conservation Program Officer, herself leashed by the Mereholt
+  board (§05). This makes the mentor *rhyme with Harland* and *with Hollis* —
+  three people squeezed by the same economy at three different layers.
 
 ## Escalation (mapped to §01)
 
@@ -78,5 +87,6 @@ entry, chosen knowing exactly what it cost.
 
 ## Open
 
-- The mentor's **specific lever** (§04) and **who holds it**.
-- The ending's emotional **note** — quiet hope / clear-eyed grief / open.
+- *(Resolved: the mentor's lever is the noble lie + Mereholt lab funding; the
+  lever-holder is Hollis Aune. §04, §05.)*
+- *(Resolved: the ending's emotional note is **clear-eyed grief**. §00, §04.)*
