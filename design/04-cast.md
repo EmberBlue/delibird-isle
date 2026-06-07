@@ -9,7 +9,9 @@
   (prologue letter, §07). The player carries her **field notebook.**
 - **Truth:** not silenced — **coerced into collaboration.** Her research on
   *habitat resilience* and *migration corridors* was turned into the greenwash
-  that legitimizes the extraction. The lab "erasure" was **staged.**
+  that legitimizes the extraction — specifically by industrializing her noble
+  lie: a local, temporary recovery generalized into "resilience is unlimited"
+  (the resilience crux, §06). The lab "erasure" was **staged.**
 - **Motive: coerced / personal cost (LOCKED).** Not greed, not defeatism. She
   was leashed by something held over her. This makes her *partly a victim* —
   the most forgivable motive — which is exactly why the reveal grieves rather

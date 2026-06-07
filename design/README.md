@@ -25,7 +25,7 @@ game built in this repo.
 | 03 | Myth & Legendaries — resolved: none (fully grounded) | `00-canon-lock.md` | LOCKED |
 | 04 | Cast Bible — characters, arcs, the mentor mystery | `04-cast.md` | DRAFT |
 | 05 | Organizations — Mereholt, the Council, Climate Corps, Skaldmere Survey | `05-organizations.md` | FIRMED |
-| 06 | Ecology Bible — biomes, indicator species, disturbance logic | `06-ecology.md` | OPEN |
+| 06 | Ecology Bible — indicator/keystone logic, the resilience crux, disturbance taxonomy, survey-states | `06-ecology.md` | FIRMED |
 | 07 | Prologue (long-form, verbatim canon) | `07-prologue.md` | DRAFT |
 | 08 | Chapter 1 (long-form, verbatim canon) | `08-chapter-01.md` | DRAFT |
 | 09 | Delibird Isle — the location, gift economy, permafrost arc | `09-delibird-isle.md` | DRAFT |

@@ -71,6 +71,8 @@ Poliwag line and mirrors the wetland south of Goldenrod where Sketch died.
 
 - **Certifications are competencies, not type-gyms.** Each tests an ecological
   skill (survey, restraint, response, remediation), not "beat the Water gym."
+  These four competencies map onto the four survey-states in §06 (read /
+  don't-intervene / act-in-time / slow-remediation).
 - **Each zone escalates the same theme**, not the spectacle: damage that wears
   the mask of improvement; livelihoods entangled with harm; documentation as
   the only real power the player holds.

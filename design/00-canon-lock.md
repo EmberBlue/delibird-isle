@@ -239,21 +239,42 @@ skeleton:
 - ✅ **Council apparatus** → **Skaldmere Regional Council**, captured (not
   corrupt); Dorsey is Commissioner of Resource Development & Public-Private
   Partnerships (revolving-door from/to Mereholt Foundation). (§05)
+- ✅ **Ecological model** → indicator guilds (amphibian / lichen-fungal /
+  wading-bird / apex), keystones, trophic cascade, bioaccumulation,
+  fragmentation/corridors, range-shift & permafrost feedback. (§06)
+- ✅ **The resilience crux** → ecosystems have thresholds; past them they flip
+  to a degraded state and **do not flip back** (hysteresis). The greenwash
+  fraud = Heron's noble lie industrialized: a local, temporary recovery
+  generalized into "resilience is unlimited." Disproved only by long-baseline
+  (red-cloth) data. The engine of clear-eyed grief. (§06, §04, §05, §02)
+- ✅ **Survey-state model** → routes have an ecological *state* (Reference /
+  Stressed / Collapsing / Shifted); encounter tables, condition, and
+  abundance are functions of state; **abundance ≠ health.** Bridge to §10/§11.
+  (§06)
+- ✅ **Disturbance taxonomy** → six types (contamination, hydrological
+  alteration, overharvest/dredging, permafrost-thaw/extraction, fragmentation,
+  eutrophication/runoff), each mapped to a Mereholt arm and a "mask." (§06)
 
 > **MACRO ARC FULLY LOCKED.** Region shape, conflict, mentor, the noble lie, the
 > climax knot, and the ending note are all decided. Now building the next layer.
 
 ## Open questions (now in progress)
 
-- **§04 (residual)** Decade of the noble lie (tied to Dr. Heron's age).
+- **§04 (residual)** Decade of the noble lie (tied to Dr. Heron's age);
+  promote Cast from DRAFT → LOCKED.
 - **§05 (residual)** Foundation chair's name (retired Climate Corps director);
-  Cordelia Brooke's roster (defers to §06); Regional Director's name (may
+  Cordelia Brooke's roster (defers to §11); Regional Director's name (may
   remain a function); the university partnership town (defers to §01 detail).
 - **§01 (residual)** Map shape & connectivity (gating, Surf/ferry unlocks);
   per-zone town/landmark names and each certification-test; exact placement of
   the Poisoned Waters event and Harland/Dorsey beats.
-- **§06 (next?)** Pokémon roster ethos: who appears where, edge-species logic,
-  the species list for the Last Corridor exile-marsh, Cordelia's boardroom
-  team, Dorsey's political-image roster.
-- Later: gameplay systems (certifications, survey mechanic, **notebook
-  marginalia decoding**, **red-cloth memorial points**); roster ethos.
+- **§06 (residual)** Riparian-engineer species (z4); kelp/otter-cascade pair
+  (z7); whether any zone is shown *recovering* in-game. Full rosters → §11.
+- **§10 (next?)** Mechanics: the **survey/transect** mechanic that reads the
+  Reference/Stressed/Collapsing/Shifted states (§06); certification
+  competencies; **notebook-marginalia decoding**; how survey-state transitions
+  fire (scripted vs. responsive).
+- **§11 (next?)** Routes & encounter tables: state-dependent rosters per zone,
+  the Last Corridor exile-marsh species list, Cordelia's boardroom team,
+  Dorsey's political-image roster. Hard-depends on §06.
+- Later: §12 implementation mapping onto pokeemerald-expansion.
