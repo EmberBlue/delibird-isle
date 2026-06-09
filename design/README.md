@@ -12,8 +12,10 @@ game built in this repo.
 ## Status legend
 
 - **LOCKED** — decided; do not contradict without an explicit change.
+- **FIRMED** — content is firm; small revisions still welcome.
 - **DRAFT** — written, open to revision.
 - **OPEN** — not yet decided; needs discussion.
+- **LIVING** — kept up to date as code lands (e.g. §12).
 
 ## Table of contents
 
@@ -31,7 +33,7 @@ game built in this repo.
 | 09 | Delibird Isle — the location, gift economy, permafrost arc | `09-delibird-isle.md` | DRAFT |
 | 10 | Mechanics — catching, breeding, battling, certifications | `10-mechanics.md` | OPEN |
 | 11 | Routes & Encounter Tables — ecological placement | `11-routes.md` | OPEN |
-| 12 | Implementation Notes — engine mapping (pokeemerald-expansion) | `12-implementation.md` | OPEN |
+| 12 | Implementation Notes — engine mapping (pokeemerald-expansion), build state, RAM budget | `12-implementation.md` | LIVING |
 
 ## Sources
 

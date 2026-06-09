@@ -46,3 +46,6 @@ tools/trainerproc/trainerproc
 *.fastSmol
 *.smolTM
 __pycache__
+
+# Claude Code: machine-local permission state (not for VCS)
+.claude/settings.local.json
