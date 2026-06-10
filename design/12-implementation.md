@@ -42,6 +42,19 @@ links cleanly. (Alternative: `rm -rf build/modern-debug` before `make check`.)
 in headless mGBA. This is the model for future mechanic tests (survey-state
 classification, certification gating, etc., §10).
 
+**Full-suite baseline (recorded so regressions are detectable):**
+`make check DEBUG=0` over the whole tree: **2841 PASS / 21 KNOWN_FAILING /
+615 TO_DO / 4 FAILED** (3481 total). The 4 failures are **pre-existing fork
+inheritance, not ours** — verified by rebuilding at the last design-only
+commit (no Skaldmere code) in a clean worktree: the same test fails
+identically there. All four are deep upstream battle-mechanics cases
+(Weather Ball typing in sun ×3 — `aerilate.c:43`, `weather_ball.c:23`,
+`normalize.c:200` — plus one AI damage-preference case, `ai.c:162`), far
+from anything Skaldmere touches. Disposition: **tolerated baseline**; do
+not chase unless battle correctness for those moves starts to matter.
+A future suite run is *clean for our purposes* if FAILED ≤ these 4 and
+our prefixes (`DNS`, `Survey`, …) are all PASS.
+
 ## Visual verification (headless screenshots)
 
 `tools/screenshot/capture.py` renders the built ROM to a PNG via a **headless
