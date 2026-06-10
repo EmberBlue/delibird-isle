@@ -254,6 +254,23 @@ skeleton:
 - ✅ **Disturbance taxonomy** → six types (contamination, hydrological
   alteration, overharvest/dredging, permafrost-thaw/extraction, fragmentation,
   eutrophication/runoff), each mapped to a Mereholt arm and a "mask." (§06)
+- ✅ **Prologue & Chapter 1 prose** → extracted from the source export into
+  proper sections **§07** (Prologue, FIRMED) and **§08** (Chapter 1, FIRMED),
+  canonical dialogue preserved verbatim; **§09** Delibird Isle drafted from the
+  seed concept reconciled with the locked permafrost frame. (§07–§09)
+- ✅ **Core mechanic / the survey verb** → surveying *augments* the standard
+  loop (never replaces it). The player reads indicator guilds + abundance +
+  condition + disturbance signs against a red-cloth baseline, classifies the
+  state, and records it in the notebook. Reading is the gameplay; the four
+  certification competencies (survey/restraint/response/remediation) map onto
+  the four survey-states. (§10)
+- ✅ **Survey-state transitions** → primarily plot-clock scripted, with a small
+  set of **authored responsive exceptions** (Mistwood recovery the lead case).
+  The player documents degradation; they do not gameplay-reverse it — preserves
+  clear-eyed grief. (§10, resolves a §06 open item)
+- ✅ **Notebook mechanic** → one artifact, three jobs (survey log + decoding
+  mentor marginalia + progression display); marginalia resolve from cryptic to
+  legible as competence grows. Cheap, packed save state (§10, §04, §12)
 
 > **MACRO ARC FULLY LOCKED.** Region shape, conflict, mentor, the noble lie, the
 > climax knot, and the ending note are all decided. Now building the next layer.
@@ -270,11 +287,13 @@ skeleton:
   the Poisoned Waters event and Harland/Dorsey beats.
 - **§06 (residual)** Riparian-engineer species (z4); kelp/otter-cascade pair
   (z7); whether any zone is shown *recovering* in-game. Full rosters → §11.
-- **§10 (next?)** Mechanics: the **survey/transect** mechanic that reads the
-  Reference/Stressed/Collapsing/Shifted states (§06); certification
-  competencies; **notebook-marginalia decoding**; how survey-state transitions
-  fire (scripted vs. responsive).
+- **§10 (residual)** Three flagged *proposals* to settle (mis-read cost →
+  recommend soft/diegetic; partner recognition → recommend lightly-responsive;
+  over-catch notebook note → keep non-punitive); the survey UI shape and the
+  encounter-by-state delivery mechanism (joint with §11/§12).
 - **§11 (next?)** Routes & encounter tables: state-dependent rosters per zone,
   the Last Corridor exile-marsh species list, Cordelia's boardroom team,
-  Dorsey's political-image roster. Hard-depends on §06.
-- Later: §12 implementation mapping onto pokeemerald-expansion.
+  Dorsey's political-image roster. Hard-depends on §06 and §10.
+- **§12 (living)** Implementation mapping onto pokeemerald-expansion; the
+  pre-Skaldmere WIP audit (day/night, Parcel Isle map, Delibird assets) is the
+  first open action.

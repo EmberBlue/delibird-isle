@@ -393,8 +393,12 @@ The player is not lectured. The ecology is learned the way Wren learns it:
   choice in §11).
 - **The Last Corridor's full species list** (→ §11, but constrained here:
   ecologically *complete*, keystone = Poliwag line, every guild represented).
-- **How survey-state transitions are triggered** in-engine — purely scripted
-  to the plot clock, or partly responsive to player action (→ §10).
-- **Whether any zone is shown recovering** within the game (a counter-example
-  to the irreversible zones) — a candidate for the Mistwood snare/culvert
-  restoration paying off late. Decide with §08/§11.
+- ✅ *(Resolved in §10)* **How survey-state transitions are triggered** —
+  primarily plot-clock scripted, with a small set of authored responsive
+  exceptions. The world degrades on the narrative clock; the player documents
+  it rather than gameplay-reversing it (preserves clear-eyed grief, §02).
+- ✅ *(Resolved in §10)* **Whether any zone is shown recovering** — yes, a
+  small authored few; the **Mistwood snare/culvert restoration** is the lead
+  candidate, transitioning toward recovery in response to the player's correct
+  restraint/remediation. Keeps documentation from feeling futile without lying
+  about what testimony can do. Exact placement with §08/§11.

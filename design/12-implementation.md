@@ -112,19 +112,25 @@ Filled in as each system lands. Empty rows = not yet implemented.
 | §05 red-cloth points | Surveyor measurement markers | Object events with field-survey interaction |
 | §06 survey states | Ecological state per route | New routine driving `src/data/wild_encounters.json` selection; save state |
 | §06 indicator guilds | Species placement logic | `src/data/wild_encounters.json`, organized by guild per §06 |
-| §10 (pending) | Survey/transect mechanic | TBD — new field menu + UI |
-| §10 (pending) | Certification system | TBD — save flags + a credential UI |
+| §10 survey verb | Field-action "Survey" + report UI (designed in §10) | New field-action menu entry + UI screen (model on Pokédex / region-map UI); ~80 B save for per-point survey records |
+| §10 notebook | Survey log + marginalia decode + progression (designed in §10) | New UI screen; ~48 B save (decoded-marginalia bitfield + logged surveys); text in ROM |
+| §10 certifications | Credential ladder + 4 competencies (designed in §10) | Save flags + per-competency levels (~6 B); credential UI |
+| §10 partner recognition | "Starters choose you" meadow (designed in §10) | Authored overworld script + 1-byte result |
 | §11 (pending) | Full encounter tables per state | `src/data/wild_encounters.json` |
 
 ## Open / next actions (implementation track)
 
 - **Audit pre-Skaldmere WIP** — what survives, what gets renamed, what
-  gets discarded. Should produce a short list in this section.
-- **§10 Mechanics design** before any of the survey/notebook/certification
-  systems get C scaffolding — we need the verb defined before we build it.
-- **§11 Routes & encounters** — the JSON is the spec; can be drafted
-  side-by-side with §11 once the survey-state model has a runtime story
-  from §10.
+  gets discarded. Should produce a short list in this section. **This is the
+  first open implementation action.**
+- ✅ **§10 Mechanics design** — done. The survey verb, notebook, certification
+  ladder, partner recognition, and state-transition model are specified, each
+  with a RAM estimate. The survey/notebook/certification systems are now ready
+  for C scaffolding when development starts.
+- **§11 Routes & encounters** — the JSON is the spec; can be drafted now that
+  §06 (guilds/states) and §10 (state→encounter delivery) both exist. Settle the
+  encounter-by-state delivery mechanism (swappable groups vs. map versions)
+  first — it shapes how the JSON is authored.
 - **CI** — set up a workflow that runs `make modern` + `mgba-rom-test`
   on push. Catches regressions before they compound. Defer until the
   first real mechanic lands.
