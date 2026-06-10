@@ -51,6 +51,16 @@ objects and the test ELF fails to link. `DEBUG=0` routes tests to their own
 `build/modern-test/` dir. See `design/12-implementation.md` for the full
 explanation. `test/dns.c` is a worked example (day/night verification).
 
+### Seeing the game (headless screenshots)
+
+Building is not playing, but you are not blind either: `tools/screenshot/`
+renders the built ROM to a PNG via a headless mGBA core (no display server).
+Run `bash tools/screenshot/setup.sh` once, then
+`python3 tools/screenshot/capture.py --frames 4500 --out /tmp/shot.png` and
+open the PNG. Supports input injection (`--press START@4500:8`) and savestates
+for reaching specific maps. Use this to actually verify any UI / map / cutscene
+change, not just that it compiles.
+
 ## RAM budget (important)
 
 The base pokeemerald-expansion ROM already uses **~87 % of EWRAM (256 KB)

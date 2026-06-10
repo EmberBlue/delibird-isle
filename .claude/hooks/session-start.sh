@@ -52,6 +52,9 @@ cat >&2 <<'EOF'
 
   Design bible:   design/   (read design/README.md first — start at §00)
   Build the ROM:  make tools && make -j modern    (produces pokeemerald.gba)
+  Run tests:      make check DEBUG=0 TESTS="..."   (DEBUG=0 is required)
+  See the game:   bash tools/screenshot/setup.sh   (one-time), then
+                  python3 tools/screenshot/capture.py --out /tmp/shot.png
   RAM headroom:   EWRAM/IWRAM are ~87% used in the base expansion.
                   Custom mechanics that need new state should plan for it.
 EOF

@@ -42,6 +42,25 @@ links cleanly. (Alternative: `rm -rf build/modern-debug` before `make check`.)
 in headless mGBA. This is the model for future mechanic tests (survey-state
 classification, certification gating, etc., §10).
 
+## Visual verification (headless screenshots)
+
+`tools/screenshot/capture.py` renders the built ROM to a PNG via a **headless
+mGBA core** (mGBA Python bindings + Pillow — no display server). This closes
+the "can build/test but can't see it" gap: the same ROM that passes
+`make check` can be rendered frame-by-frame and inspected. Verified working —
+boots our ROM through the GAME FREAK intro to the Emerald title screen, with
+input injection (`--press`) functional.
+
+```bash
+bash tools/screenshot/setup.sh                                   # one-time deps
+python3 tools/screenshot/capture.py --frames 4500 --out shot.png # capture
+```
+
+For a *specific* map, use a savestate parked there or the expansion's debug
+warp rather than scripting the whole intro (see `tools/screenshot/README.md`).
+This is how UI / map / cutscene work (§09, §10's survey & notebook UIs) gets
+visually confirmed in a remote session.
+
 ## Confirmed-active engine features (relevant to design)
 
 - **Day/night system (DNS)** — `OW_ENABLE_DNS TRUE` (`include/config/overworld.h`),
