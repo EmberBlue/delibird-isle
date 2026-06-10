@@ -10,6 +10,14 @@
 > is the data the player reads, the case Wren builds, and the reason the
 > ending is grief and not triumph.**
 
+> **Plain-language rule.** It's Pokémon, not a biology class. The real-ecology
+> terms in this document are *backstage scaffolding* — they keep the world
+> consistent so the losses land — and **none of them reach the player.**
+> In-game, every idea here is said plainly: not "trophic cascade" but *"take
+> out the big ones and the whole web comes apart"*; not "hysteresis" but *"it
+> won't come back."* Where a technical word survives below, read it as a note
+> to the designer, never as dialogue.
+
 ## Reading guide
 
 Three load-bearing ideas, in order of weight:
@@ -63,26 +71,26 @@ of The Last Corridor** (LOCKED, §01/§04). Other zones have their own keystones
 (a riparian engineer, a kelp-forest engineer; below). The lesson the player
 internalizes: *the most important species is rarely the most impressive one.*
 
-### Trophic cascade & mesopredator release
+### Take out the big ones and the web comes apart *(trophic cascade)*
 
-When a level of the food web is removed, the levels below reorganize — usually
-toward **simplification**. Remove the apex and mid-level predators boom
-("mesopredator release"), then over-consume the next tier down, then that tier
-crashes. The player sees cascades as **skewed abundance**: a route swarming
-with one mid-tier species and empty of everything above and below it is not
-healthy — it is collapsing. *Abundance is not health.* This is a deliberate
-inversion of the usual Pokémon instinct ("lots of Pokémon = good route").
+When one rung of the food web is removed, the rungs below reshuffle — usually
+toward something simpler and poorer. Remove the top predators and the
+mid-sized ones boom, eat out the tier below them, and that tier crashes. The
+player sees this as **lopsided numbers**: a route swarming with one middling
+species and empty of everything above and below it isn't healthy — it's
+collapsing. *Lots of Pokémon is not the same as a healthy place.* That's a
+deliberate flip of the usual Pokémon reflex ("a crowded route is a good route").
 
-### Bioaccumulation & biomagnification
+### Poison climbs the food chain *(bioaccumulation)*
 
-Toxins concentrate as they move up the food web; the apex predator carries the
-distilled legacy of contamination that entered the system decades and trophic
-levels below it. This is why **legacy contamination outlives its source**
-(Floodbasin, zone 3): the old Mereholt operation is closed, the "remediation"
-is underway, and the contamination is still climbing the food web. The mask
-("we already fixed that") versus the signal (deformed amphibians, sick apex).
+Toxins build up as they move up the food web, so the top predator ends up
+carrying the concentrated leftovers of contamination that entered far below it,
+years earlier. This is why **old poison outlives the thing that spilled it**
+(Floodbasin, zone 3): the old Mereholt operation is closed, the "cleanup" is
+underway, and the contamination is *still* climbing — sick top predators,
+deformed amphibians — long after "we already fixed that."
 
-### Edge effects, fragmentation & corridors
+### Cut a habitat up and it bleeds out at the edges *(fragmentation)*
 
 Cutting a habitat into pieces creates **edge** — degraded margin where the
 interior conditions fail — and **isolates** the remaining populations, which
@@ -94,33 +102,36 @@ survives *because the corridor is still whole.* Mereholt Logistics' roads and
 the closing extraction frontier are narrowing it. Fragment the corridor and
 even an undamaged marsh dies of isolation. **The zone's name is its ecology.**
 
-### Range shift, phenological mismatch & the permafrost feedback
+### Warming pushes things uphill until there's no uphill left *(range shift)*
 
-Under warming, species move upslope and poleward; timings decouple (the food
-emerges before or after the consumer needs it). Cold specialists pushed
-upslope eventually **run out of "up"** (Highlands, zone 5). And permafrost,
-once thawed, releases stored carbon and **does not refreeze on any human
-timescale** — the ground itself slumps and destabilizes (thermokarst, the
-tilted "drunken forest"). Permafrost thaw is the game's purest example of
+As it warms, animals move upslope and north, and timing slips out of sync (the
+food shows up before or after the thing that eats it). Cold-loving species get
+pushed up the mountain until they **run out of "up"** (Highlands, zone 5). And
+once frozen ground thaws it **doesn't refreeze** on any timescale that matters
+to people — the ground itself sags and buckles (the tilted "drunken forest,"
+ponds where there was none). Thawing permafrost is the game's purest
 **one-way damage** (Highlands z5, Delibird Isle z6; Mereholt Permafrost, §05).
 
-## The resilience crux (FIRMED — the intellectual heart)
+## The resilience crux (FIRMED — the heart of the conflict)
 
-This is the single most important section in the document, because it is the
-scientific question the entire plot litigates.
+The single most important section in the document, because it's the question
+the whole plot is really fighting over: *how much can a place take before it
+doesn't come back?*
 
-### Regime shifts, thresholds, and hysteresis
+### Some damage doesn't come back
 
-An ecosystem absorbs disturbance while retaining its function — up to a
-point. Past a **threshold**, it flips to an **alternative stable state**: a
-different, usually simpler and more degraded configuration. The cruel part is
-**hysteresis** — removing the disturbance does *not* flip it back. A clear
-lake tipped into a turbid algae-choked state stays turbid even after the
-nutrient load is cut. A kelp forest grazed into an urchin barren stays barren.
-**Recovery is not the reverse of collapse.** This asymmetry — easy to break,
-hard or impossible to rebuild — is the mechanical engine of the **clear-eyed
-grief** ending (§02). Some of what Wren documents is already past its
-threshold. No testimony brings it back.
+A place can soak up a lot of harm and still recover — up to a point. Past that
+point, it doesn't. It settles into a poorer version of itself and *stays
+there*, even after you stop doing the thing that broke it. A clear pond turned
+green and choked stays green after you cut the runoff. A kelp bed stripped bare
+stays bare. **Coming back is not just breaking played backwards** — breaking is
+quick, and undoing it is slow or impossible. That one-way door is the engine of
+the **clear-eyed grief** ending (§02): some of what Wren records has already
+gone through it, and no amount of honest testimony pulls it back.
+
+> *Backstage terms, never spoken in-game: the point of no return is a
+> **threshold**; the failure to bounce back once you cross it is
+> **hysteresis**. The player only ever hears it plain — "it won't come back."*
 
 ### What "resilience" really is, and the fraud built on it
 
