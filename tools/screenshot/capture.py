@@ -72,7 +72,7 @@ def main():
         for key_bit, at, hold in presses:
             if at <= frame < at + hold:
                 held |= (1 << key_bit)
-        core.set_keys(held)
+        core.set_keys(raw=held)
         core.run_frame()
 
     if not hasattr(image, "to_pil"):

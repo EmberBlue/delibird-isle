@@ -131,7 +131,10 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(MAP_INSIDE_OF_TRUCK), MAP_NUM(MAP_INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
+    // INTERIM (Skaldmere): the game opens at the cold coastal arrival town
+    // (§07 prologue), not the Hoenn truck. The proper prologue cutscene
+    // (ferry horn, the letter) replaces this scaffolding later.
+    SetWarpDestination(MAP_GROUP(MAP_PARCEL_ISLE), MAP_NUM(MAP_PARCEL_ISLE), WARP_ID_NONE, 20, 25);
     WarpIntoMap();
 }
 

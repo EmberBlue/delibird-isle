@@ -90,6 +90,25 @@ The first custom game code, built and verified (not just config):
   This proves the bigger point: custom systems for this game are buildable and
   fully testable here, the same way the DNS was verified.
 
+- **Opening warps into Skaldmere, not Hoenn** (interim scaffolding). The game
+  now starts at the coastal arrival map instead of the Emerald truck:
+  - `src/new_game.c` — `WarpToTruck()` spawns at `MAP_PARCEL_ISLE` (20, 25).
+  - `src/overworld.c` — `CB2_NewGame` no longer runs `ExecuteTruckSequence`.
+  - `src/main_menu.c` — NEW GAME routes straight to `CB2_NewGame`, skipping the
+    Hoenn Birch speech.
+  - `data/maps/ParcelIsle/map.json` — fog weather + a quiet island theme for the
+    §07 "salt, fog, gull cries" arrival mood.
+
+  All three are marked `INTERIM (Skaldmere)` in-code: the proper §07 prologue
+  cutscene (ferry horn, the letter, gender select) replaces them later. Verified
+  end-to-end via the screenshot tool — NEW GAME spawns the player into the
+  custom overworld map; confirmed visually.
+
+  **ParcelIsle status:** still the throwaway prototype layout (mostly void +
+  trees). It is being used as the first spawn target to prove the map pipeline.
+  Authoring the real dock-town layout (water's edge, the pier, modest homes —
+  §07 Scene 1) is the next map increment, now iterable with screenshot feedback.
+
 Toolchain: `arm-none-eabi-gcc 13.2.1` (Ubuntu package
 `gcc-arm-none-eabi`), installed automatically by the SessionStart hook
 (`.claude/hooks/session-start.sh`). No devkitARM dependency for the
