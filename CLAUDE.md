@@ -38,6 +38,19 @@ build takes a few minutes; incremental builds are seconds.
 let you run the in-tree test suite against a built ROM without an emulator
 window. Useful for CI-style verification of mechanics.
 
+```bash
+make check DEBUG=0 -j$(nproc)              # run the whole test suite
+make check DEBUG=0 TESTS="DNS" -j$(nproc)  # run only matching tests
+```
+
+**Always pass `DEBUG=0` to `make check`.** The Makefile defaults `DEBUG=1`,
+which makes the normal build and the test build share `build/modern-debug/`.
+Tests need `-DTESTING=1` but the normal build uses `-DTESTING=0`, and some
+`src/` files gate symbols on `#if TESTING`; sharing the dir reuses stale
+objects and the test ELF fails to link. `DEBUG=0` routes tests to their own
+`build/modern-test/` dir. See `design/12-implementation.md` for the full
+explanation. `test/dns.c` is a worked example (day/night verification).
+
 ## RAM budget (important)
 
 The base pokeemerald-expansion ROM already uses **~87 % of EWRAM (256 KB)

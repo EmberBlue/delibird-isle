@@ -14,6 +14,49 @@ make tools                        # builds host tools (preproc, gbagfx, ...)
 make -j$(nproc) modern            # produces pokeemerald.gba
 ```
 
+## Headless testing (verified working)
+
+The in-tree test suite runs against a built ROM via the vendored
+`mgba-rom-test-hydra`. **Run tests with `DEBUG=0`:**
+
+```bash
+make check DEBUG=0 -j$(nproc)                 # build + run the whole suite
+make check DEBUG=0 TESTS="DNS" -j$(nproc)     # run only tests whose name matches
+```
+
+**Why `DEBUG=0` matters (a real gotcha — don't lose this):** the Makefile
+defaults `DEBUG ?= 1`, which forces *both* the normal build and the test build
+to share the `build/modern-debug/` object directory. But the test build needs
+`-DTESTING=1` and the normal build uses `-DTESTING=0`; several `src/` files
+(`battle_message.c`, `generational_changes.c`, …) gate symbols on
+`#if TESTING`. If you `make modern` (TESTING=0) and then `make check`
+(TESTING=1) into the *same* dir, make reuses the stale TESTING=0 objects and
+the test ELF fails to link (`undefined reference to TestInitConfigData`,
+`sBattlerAbilities`, …). `DEBUG=0` routes the test build to its own
+`build/modern-test/` dir, so everything compiles fresh with `TESTING=1` and
+links cleanly. (Alternative: `rm -rf build/modern-debug` before `make check`.)
+
+**Verified test:** `test/dns.c` — drives the day/night system with
+`SetTimeOfDay()` and asserts `GetTimeOfDay()` returns the correct phase
+(morning/day/evening/night) for representative clock hours. Both tests **PASS**
+in headless mGBA. This is the model for future mechanic tests (survey-state
+classification, certification gating, etc., §10).
+
+## Confirmed-active engine features (relevant to design)
+
+- **Day/night system (DNS)** — `OW_ENABLE_DNS TRUE` (`include/config/overworld.h`),
+  implemented across `overworld.c` / `palette.c` / `field_weather.c` / `rtc.c`.
+  Tints outdoor maps only (`MapHasNaturalLight`: town/city/route/ocean) — indoor
+  maps are intentionally untinted. Runs on **fake RTC** (`OW_USE_FAKE_RTC TRUE`):
+  the cycle advances with playtime, so every player sees the full
+  dawn→day→dusk→night regardless of real-world clock — the right choice for a
+  narrative game. Schedule is GEN_8+ (morning 6–10, day 10–19, evening 19–20,
+  night 20–6). **Functionally verified** (see `test/dns.c` above).
+- **Time-of-day encounters** — `OW_TIME_OF_DAY_ENCOUNTERS TRUE`: the engine
+  natively supports multiple encounter tables per map keyed on a runtime
+  condition. This is the **architectural precedent for survey-state encounters**
+  (§10 System 5 / §11) — a state-keyed variant of an existing, tested mechanism.
+
 Toolchain: `arm-none-eabi-gcc 13.2.1` (Ubuntu package
 `gcc-arm-none-eabi`), installed automatically by the SessionStart hook
 (`.claude/hooks/session-start.sh`). No devkitARM dependency for the
