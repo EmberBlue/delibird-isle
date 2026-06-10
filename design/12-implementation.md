@@ -84,21 +84,58 @@ post-build delta.
 - **`mgba-rom-test-hydra`** drives `mgba-rom-test` for the in-tree test
   suite. This is how we'll regression-test ROM behavior in CI-style.
 
-## Currently implemented (from prior WIP — pre-Skaldmere)
+## Pre-Skaldmere WIP — audit results (DONE)
 
-Established by git history before the design bible was started; these
-features survive on the current branch:
+Audited against the locked design. Everything below sits in the shared
+history both branches inherit (the working branch is identical to
+`pre-day-night-system` apart from `design/`, infra, and `.gitignore`), so
+none of it is at risk of being lost.
 
-- Delibird species tiles and a snow-grass animated tile.
-- A WIP **day/night system** (see `WIP: pre-day-night-system changes`
-  commit).
-- A "Parcel Isle" map (working name for what is now zone 6, Delibird Isle,
-  per §01) with Seafoam-derived tilesets.
-- Backup snapshots of fly cleanup and `.pal` restorations.
+**Reusable assets (keep):**
 
-**Action item:** audit these against the locked design (§01 zone map,
-§09 Delibird Isle) and document which parts are reusable vs. which need
-renaming/rework. This audit is not yet done.
+- **FireRed Tileset Port (FRP)** — a complete ~60-tileset library vendored
+  under `data/tilesets/{primary,secondary}/frp_*`. High-value for Skaldmere's
+  cold-temperate coastal look: `frp_seafoam_islands` (ice cave —
+  §09 Crystal Cavern candidate), `frp_island_harbor` (docks/ferry — §07
+  arrival, §01 zone 7), `frp_sevii_islands_*` (cold islands). The
+  `extern/Firered-Tileset-Port` submodule is **uninitialized and not needed**
+  — the verified build succeeds without it; the vendored copies in
+  `data/tilesets/` are authoritative.
+- **Custom snow-grass animation** —
+  `data/tilesets/secondary/frp_seafoam_islands/anim_snow_grass.png`, a custom
+  addition to the Seafoam tileset. Reusable for §09 Delibird Isle / zone 5
+  Highlands.
+- **Delibird overworld sprite** —
+  `graphics/object_events/pics/pokemon_ow/delibird.{png,pal}` + shiny palette.
+  Directly reusable for §09's delivery questline / follower moments.
+- **`johtogeneral` primary tileset** (with flower/sandy/water anims) — fits
+  the Johto-arrival framing (§04/§07); keep available.
+
+**Prototype debris (scrap or rename when zone work starts):**
+
+- **`ParcelIsle`** — a throwaway prototype, *not* a real Delibird Isle:
+  volcanic-ash weather, `MUS_DUMMY` music, one Delibird NPC
+  (`Delibird_Interact`), and a warp to `MAP_TEST_DESERT_ROUTE`. Verdict:
+  **build §09 fresh.** The registered IDs (`MAP_PARCEL_ISLE`,
+  `LAYOUT_PARCEL_ISLE`, `MAPSEC_PARCEL_ISLE`) can be renamed/reused as the
+  Delibird Isle shell. The `scripts.pory` confirms the poryscript pipeline
+  has been exercised end-to-end.
+- **`TestTown`, `Littleroot_TestTown_Connector`, `TestDesertRoute`** —
+  prototyping leftovers; remove once real zones exist.
+
+**Corrections to earlier assumptions:**
+
+- **There is no custom day/night system.** The branch name
+  `pre-day-night-system` marks a snapshot taken *before* that work started;
+  it never landed. What exists is the **expansion's built-in time-of-day
+  system**, already configured on: `OW_USE_FAKE_RTC TRUE`,
+  `OW_TIMES_OF_DAY`, and — the key find — **`OW_TIME_OF_DAY_ENCOUNTERS
+  TRUE`**.
+- **Architectural precedent for §10/§11:** `OW_TIME_OF_DAY_ENCOUNTERS` means
+  the engine *natively* supports multiple encounter tables per map selected
+  by a runtime condition (time of day). Survey-state encounter switching
+  (§10 System 5, §11) can follow this exact pattern — a state-keyed variant
+  of an existing, tested mechanism rather than a novel system.
 
 ## How design sections map to code (forward-looking)
 
@@ -120,9 +157,11 @@ Filled in as each system lands. Empty rows = not yet implemented.
 
 ## Open / next actions (implementation track)
 
-- **Audit pre-Skaldmere WIP** — what survives, what gets renamed, what
-  gets discarded. Should produce a short list in this section. **This is the
-  first open implementation action.**
+- ✅ **Audit pre-Skaldmere WIP** — done; results above. Key outcomes: FRP
+  tileset library + snow-grass anim + Delibird OW sprite are reusable;
+  ParcelIsle is a scrap-and-rename prototype; no custom day/night exists but
+  the expansion's `OW_TIME_OF_DAY_ENCOUNTERS` is the architectural precedent
+  for survey-state encounters.
 - ✅ **§10 Mechanics design** — done. The survey verb, notebook, certification
   ladder, partner recognition, and state-transition model are specified, each
   with a RAM estimate. The survey/notebook/certification systems are now ready
