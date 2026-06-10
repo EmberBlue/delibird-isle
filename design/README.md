@@ -28,9 +28,9 @@ game built in this repo.
 | 04 | Cast Bible — characters, arcs, the mentor mystery | `04-cast.md` | DRAFT |
 | 05 | Organizations — Mereholt, the Council, Climate Corps, Skaldmere Survey | `05-organizations.md` | FIRMED |
 | 06 | Ecology Bible — indicator/keystone logic, the resilience crux, disturbance taxonomy, survey-states | `06-ecology.md` | FIRMED |
-| 07 | Prologue (long-form, verbatim canon) | `07-prologue.md` | DRAFT |
-| 08 | Chapter 1 (long-form, verbatim canon) | `08-chapter-01.md` | DRAFT |
-| 09 | Delibird Isle — the location, gift economy, permafrost arc | `09-delibird-isle.md` | DRAFT |
+| 07 | Prologue — Arrival at the Edge of Change (long-form, verbatim canon) | `07-prologue.md` | FIRMED |
+| 08 | Chapter 1 — Forest Certification & the Mentor's Legacy (long-form) | `08-chapter-01.md` | FIRMED |
+| 09 | Delibird Isle (zone 6) — festival cheer over a permafrost crisis | `09-delibird-isle.md` | DRAFT |
 | 10 | Mechanics — catching, breeding, battling, certifications | `10-mechanics.md` | OPEN |
 | 11 | Routes & Encounter Tables — ecological placement | `11-routes.md` | OPEN |
 | 12 | Implementation Notes — engine mapping (pokeemerald-expansion), build state, RAM budget | `12-implementation.md` | LIVING |
