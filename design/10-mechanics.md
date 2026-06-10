@@ -40,6 +40,13 @@ the standard Pokémon verbs threaded through it.
 
 ## System 1 — The Survey (FIRMED) · *the keystone verb*
 
+> **Implementation status:** the **classifier is built and tested** —
+> `src/survey.c` / `include/survey.h` (`ClassifySurveyState`,
+> `RecommendedResponse`), 6 passing headless tests (`test/survey.c`), 104 B
+> ROM / 0 B RAM (§12). The "reading" rules below are now executable code. Still
+> to build: the survey *action* + report UI, per-point persistence, and the
+> state→encounter wiring.
+
 A **survey** is a structured field observation taken at a **survey point.**
 
 - **Where.** Survey points are designated transect locations, anchored to

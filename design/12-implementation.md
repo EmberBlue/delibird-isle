@@ -57,6 +57,20 @@ classification, certification gating, etc., §10).
   condition. This is the **architectural precedent for survey-state encounters**
   (§10 System 5 / §11) — a state-keyed variant of an existing, tested mechanism.
 
+## Skaldmere systems implemented (so far)
+
+The first custom game code, built and verified (not just config):
+
+- **Survey-state classifier** (`src/survey.c`, `include/survey.h`,
+  `test/survey.c`). The core "reading" verb (§10 System 1): observed signals →
+  ecological state, plus the state → recommended-response mapping. Pure,
+  deterministic, 6 passing headless tests. **104 B ROM, 0 B RAM.** Not yet
+  wired to UI, save, or encounters — those are the next survey increments, and
+  they will *call* this function rather than reimplement the rules.
+
+  This proves the bigger point: custom systems for this game are buildable and
+  fully testable here, the same way the DNS was verified.
+
 Toolchain: `arm-none-eabi-gcc 13.2.1` (Ubuntu package
 `gcc-arm-none-eabi`), installed automatically by the SessionStart hook
 (`.claude/hooks/session-start.sh`). No devkitARM dependency for the
@@ -192,7 +206,8 @@ Filled in as each system lands. Empty rows = not yet implemented.
 | §05 red-cloth points | Surveyor measurement markers | Object events with field-survey interaction |
 | §06 survey states | Ecological state per route | New routine driving `src/data/wild_encounters.json` selection; save state |
 | §06 indicator guilds | Species placement logic | `src/data/wild_encounters.json`, organized by guild per §06 |
-| §10 survey verb | Field-action "Survey" + report UI (designed in §10) | New field-action menu entry + UI screen (model on Pokédex / region-map UI); ~80 B save for per-point survey records |
+| §10 survey verb — **state classifier** | **DONE & tested**: `src/survey.c` + `include/survey.h`. `ClassifySurveyState()` reads observed signals → Reference/Stressed/Collapsing/Shifted (the §06 table); `RecommendedResponse()` maps state → record/restrain/intervene/witness. 6 headless tests in `test/survey.c` (PASS). Cost: **104 B ROM, 0 B RAM** (pure logic). |
+| §10 survey verb — UI + persistence | Field-action "Survey" + report UI; per-point save records (still to build) | New field-action menu entry + UI screen (model on Pokédex / region-map UI); ~80 B save; calls `ClassifySurveyState()` |
 | §10 notebook | Survey log + marginalia decode + progression (designed in §10) | New UI screen; ~48 B save (decoded-marginalia bitfield + logged surveys); text in ROM |
 | §10 certifications | Credential ladder + 4 competencies (designed in §10) | Save flags + per-competency levels (~6 B); credential UI |
 | §10 partner recognition | "Starters choose you" meadow (designed in §10) | Authored overworld script + 1-byte result |
