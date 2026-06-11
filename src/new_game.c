@@ -1,4 +1,5 @@
 #include "global.h"
+#include "fake_rtc.h"
 #include "new_game.h"
 #include "random.h"
 #include "pokemon.h"
@@ -134,7 +135,10 @@ static void WarpToTruck(void)
     // INTERIM (Skaldmere): the game opens at the cold coastal arrival town
     // (§07 prologue), not the Hoenn truck. The proper prologue cutscene
     // (ferry horn, the letter) replaces this scaffolding later.
-    SetWarpDestination(MAP_GROUP(MAP_PARCEL_ISLE), MAP_NUM(MAP_PARCEL_ISLE), WARP_ID_NONE, 20, 25);
+    // The ferry arrives in daylight (§07 scene 1); start the clock at 10:00
+    // so a new game doesn't open under the DNS night tint.
+    FakeRtc_ForwardTimeTo(10, 0, 0);
+    SetWarpDestination(MAP_GROUP(MAP_PARCEL_ISLE), MAP_NUM(MAP_PARCEL_ISLE), WARP_ID_NONE, 41, 48);
     WarpIntoMap();
 }
 
