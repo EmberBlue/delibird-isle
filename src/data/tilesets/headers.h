@@ -150,7 +150,12 @@ const struct Tileset gTileset_Primary_frp_general = {
     .palettes     = gTilesetPalettes_frp_general,
     .metatiles    = gMetatiles_frp_general,
     .metatileAttributes = gMetatileAttributes_frp_general,
-    .callback     = InitTilesetAnim_General, // or NULL if no animation
+    // NULL on purpose: InitTilesetAnim_General is the vanilla-Emerald
+    // animator and DMA-stomps vanilla water/flower/sand frames over the
+    // FR port's tiles at the vanilla offsets, corrupting the art. The
+    // port's own anim frames (anim/, anim2/) need a dedicated callback
+    // before this can animate. See design/12-implementation.md.
+    .callback     = NULL,
 };
 
 // ---- FR Port Primary: Building ----
