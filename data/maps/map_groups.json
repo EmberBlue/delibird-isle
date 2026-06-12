@@ -96,7 +96,8 @@
     "TestTown",
     "Littleroot_TestTown_Connector",
     "TestDesertRoute",
-    "ParcelIsle"
+    "ParcelIsle",
+    "ParcelBridge"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

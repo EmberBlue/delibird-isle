@@ -1,0 +1,211 @@
+// ParcelBridge -- the long bridge out (§07 Scenes 4-6, the load-bearing
+// set-piece). The stuck Poliwag below the bridge are the most important
+// silent payload in the game: the species Dr. Heron's noble lie protected,
+// witnessed before its meaning is known (§04/§06). Staged quiet; nothing
+// rushes it. Quoted dialogue is canonical-verbatim from design/07-prologue.md.
+//
+// The Hale-vs-poacher battle is an authored cutscene approximation (fade +
+// narration), not a real NPC-vs-NPC battle -- the engine has no spectator
+// battles. Recorded in §12; revisit only if it ever matters.
+
+const LOCALID_BRIDGE_POLIWAG_1 = 1
+const LOCALID_BRIDGE_POLIWAG_2 = 2
+const LOCALID_BRIDGE_POLIWAG_3 = 3
+const LOCALID_BRIDGE_POACHER   = 4
+const LOCALID_BRIDGE_THUG_1    = 5
+const LOCALID_BRIDGE_THUG_2    = 6
+const LOCALID_BRIDGE_HALE      = 7
+
+mapscripts ParcelBridge_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelBridge_OnTransition
+}
+
+// Pre-scene: Poliwag visible, poachers and Hale hidden.
+// Post-scene: Poliwag gone upstream; Hale stands at the east landing.
+script ParcelBridge_OnTransition {
+    if (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
+        setflag(FLAG_TEMP_2)      // hide the Poliwag cluster
+        setflag(FLAG_TEMP_3)      // hide the poacher crew
+        clearflag(FLAG_TEMP_4)    // Hale remains
+    } else {
+        clearflag(FLAG_TEMP_2)
+        setflag(FLAG_TEMP_3)
+        setflag(FLAG_TEMP_4)
+    }
+    end
+}
+
+// Mid-bridge trigger: the whole §07 scene 4-6 sequence.
+script ParcelBridge_SceneTrigger {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
+        end
+    }
+    lockall
+
+    // --- Scene 4: the Poliwag (quiet; the camera lingers) ---
+    msgbox(format("Wind over the rail. Water surging beneath the boards."), MSGBOX_DEFAULT)
+    msgbox(format("Below, at the stream mouth--a cluster of Poliwag crowds the embankment.\pPanicked. Not blocking the way.\nStuck."), MSGBOX_DEFAULT)
+    msgbox(format("They flinch as your shadow crosses them, but they don't flee. Their eyes are wide.\pSomething upstream drove them here."), MSGBOX_DEFAULT)
+    closemessage
+
+    // --- Scene 5: the poacher ambush (functional, not cartoonish) ---
+    clearflag(FLAG_TEMP_3)
+    addobject(LOCALID_BRIDGE_POACHER)
+    addobject(LOCALID_BRIDGE_THUG_1)
+    addobject(LOCALID_BRIDGE_THUG_2)
+    playse(SE_PIN)
+    applymovement(LOCALID_BRIDGE_POACHER, Movement_PoacherIn)
+    applymovement(LOCALID_BRIDGE_THUG_1, Movement_Thug1In)
+    applymovement(LOCALID_BRIDGE_THUG_2, Movement_Thug2In)
+    waitmovement(0)
+    msgbox(format("Poacher: Perfect. They ran right where we need them.\pDon't touch anything, kid.\nYou'll spook the stock."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: …Stock?"), MSGBOX_DEFAULT)
+    msgbox(format("Poacher: You heard me."), MSGBOX_DEFAULT)
+    msgbox(format("The Poacher unslings a net. Below, the Poliwag scatter helplessly.\pYou have no Pokémon.\nNothing in your hands but a notebook."), MSGBOX_DEFAULT)
+    closemessage
+
+    // --- Scene 6: Hale ---
+    playse(SE_PIN)
+    delay(30)
+    clearflag(FLAG_TEMP_4)
+    addobject(LOCALID_BRIDGE_HALE)
+    applymovement(LOCALID_BRIDGE_HALE, Movement_HaleIn)
+    waitmovement(0)
+    msgbox(format("Hale: Step away from the water."), MSGBOX_DEFAULT)
+    msgbox(format("Poacher: This isn't your jurisdiction."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: It's a living corridor.\nThat's enough."), MSGBOX_DEFAULT)
+    closemessage
+
+    // The battle, witnessed: practiced, minimal, over fast.
+    fadescreen(FADE_TO_BLACK)
+    playse(SE_BALL_THROW)
+    delay(40)
+    playse(SE_NOT_EFFECTIVE)
+    delay(40)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox(format("It isn't much of a fight.\pHale's movements are practiced and minimal. No wasted motion. No speech."), MSGBOX_DEFAULT)
+    applymovement(LOCALID_BRIDGE_POACHER, Movement_PoacherReel)
+    waitmovement(0)
+    msgbox(format("Poacher: You think you're early?\nYou're late."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_BRIDGE_POACHER, Movement_PoacherOut)
+    applymovement(LOCALID_BRIDGE_THUG_1, Movement_Thug1Out)
+    applymovement(LOCALID_BRIDGE_THUG_2, Movement_Thug2Out)
+    waitmovement(0)
+    removeobject(LOCALID_BRIDGE_POACHER)
+    removeobject(LOCALID_BRIDGE_THUG_1)
+    removeobject(LOCALID_BRIDGE_THUG_2)
+    setflag(FLAG_TEMP_3)
+
+    // The Poliwag slip upstream in a tight, trembling group.
+    applymovement(LOCALID_BRIDGE_HALE, Movement_HaleToRail)
+    waitmovement(0)
+    applymovement(LOCALID_BRIDGE_POLIWAG_1, Movement_PoliwagAway)
+    applymovement(LOCALID_BRIDGE_POLIWAG_2, Movement_PoliwagAway)
+    applymovement(LOCALID_BRIDGE_POLIWAG_3, Movement_PoliwagAway)
+    waitmovement(0)
+    removeobject(LOCALID_BRIDGE_POLIWAG_1)
+    removeobject(LOCALID_BRIDGE_POLIWAG_2)
+    removeobject(LOCALID_BRIDGE_POLIWAG_3)
+    setflag(FLAG_TEMP_2)
+    msgbox(format("The Poliwag slip upstream in a tight, trembling group.\pHale watches them go before he looks at you."), MSGBOX_DEFAULT)
+
+    // The assessment: like a tool, not a hero.
+    applymovement(LOCALID_BRIDGE_HALE, Movement_HaleFacePlayer)
+    waitmovement(0)
+    msgbox(format("Hale: This region doesn't need heroes.\nIt needs witnesses."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: If you want answers, there's a station across the bridge.\pYou can learn to do more than stare."), MSGBOX_DEFAULT)
+    closemessage
+
+    setflag(FLAG_SKALDMERE_BRIDGE_SCENE)
+    releaseall
+    end
+}
+
+// Pre-scene interaction with the cluster (if approached from the embankment)
+script ParcelBridge_PoliwagCluster {
+    lock
+    msgbox(format("The Poliwag flinch, but they don't flee.\pTheir eyes are wide."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// The poachers never chat. If somehow examined mid-scene:
+script ParcelBridge_PoacherTalk {
+    lock
+    faceplayer
+    msgbox(format("Don't touch anything, kid."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// Post-scene Hale at the east landing.
+script ParcelBridge_Hale {
+    lock
+    faceplayer
+    msgbox(format("Hale: The station's past the trees. When you're ready.\pGet attached to results, not praise."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelBridge_Sign {
+    msgbox(format("THE LONG BRIDGE\pWind advisory in effect.\nMind the rail."), MSGBOX_SIGN)
+    end
+}
+
+movement Movement_PoacherIn {
+    walk_right * 13
+    face_right
+    step_end
+}
+movement Movement_Thug1In {
+    walk_right * 13
+    face_right
+    step_end
+}
+movement Movement_Thug2In {
+    walk_right * 13
+    face_right
+    step_end
+}
+movement Movement_PoacherReel {
+    walk_left
+    face_right
+    step_end
+}
+movement Movement_PoacherOut {
+    walk_left * 14
+    step_end
+}
+movement Movement_Thug1Out {
+    walk_left * 14
+    step_end
+}
+movement Movement_Thug2Out {
+    walk_left * 14
+    step_end
+}
+movement Movement_HaleIn {
+    walk_left * 22
+    face_left
+    step_end
+}
+movement Movement_HaleToRail {
+    walk_down
+    face_down
+    delay_16
+    delay_16
+    step_end
+}
+movement Movement_HaleFacePlayer {
+    walk_up
+    face_left
+    step_end
+}
+movement Movement_PoliwagAway {
+    walk_up
+    walk_up
+    walk_up
+    step_end
+}

@@ -1,0 +1,162 @@
+{
+  "id": "MAP_PARCEL_BRIDGE",
+  "name": "ParcelBridge",
+  "layout": "LAYOUT_PARCEL_BRIDGE",
+  "music": "MUS_DEWFORD",
+  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "requires_flash": false,
+  "weather": "WEATHER_FOG_HORIZONTAL",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PARCEL_ISLE",
+      "offset": -26,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_BRIDGE_POLIWAG_1",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(POLIWAG)",
+      "x": 26,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelBridge_PoliwagCluster",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_BRIDGE_POLIWAG_2",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(POLIWAG)",
+      "x": 28,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelBridge_PoliwagCluster",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_BRIDGE_POLIWAG_3",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(POLIWAG)",
+      "x": 30,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelBridge_PoliwagCluster",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_BRIDGE_POACHER",
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
+      "x": 10,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelBridge_PoacherTalk",
+      "flag": "FLAG_TEMP_3"
+    },
+    {
+      "local_id": "LOCALID_BRIDGE_THUG_1",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 9,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelBridge_PoacherTalk",
+      "flag": "FLAG_TEMP_3"
+    },
+    {
+      "local_id": "LOCALID_BRIDGE_THUG_2",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 9,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelBridge_PoacherTalk",
+      "flag": "FLAG_TEMP_3"
+    },
+    {
+      "local_id": "LOCALID_BRIDGE_HALE",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 52,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelBridge_Hale",
+      "flag": "FLAG_TEMP_4"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 10,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelBridge_SceneTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelBridge_SceneTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 24,
+      "y": 12,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelBridge_SceneTrigger"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 48,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelBridge_Sign"
+    }
+  ]
+}

@@ -60,6 +60,8 @@ def build():
             forest(x, y)
     for y in range(8, 40):
         for x in list(range(0, 8)) + list(range(74, 83)):
+            if 74 <= x and 36 <= y <= 38:
+                continue            # east corridor: the way to the long bridge
             forest(x, y)
 
     # --- grass field with sparse decoration (rows 8-39) ---------------------
@@ -103,6 +105,11 @@ def build():
     for x in range(36, 47):           # small plaza mid-town
         for y in range(22, 27):
             put(x, y, SAND)
+    for x in range(41, 83):           # east track: town to the long bridge
+        put(x, 37, SAND)
+    for x in range(74, 83):           # grass apron through the forest gap
+        put(x, 36, GRASS)
+        put(x, 38, GRASS)
 
     return grid
 

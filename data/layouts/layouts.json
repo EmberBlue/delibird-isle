@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_frp_seafoam_islands",
       "border_filepath": "data/layouts/ParcelIsle/border.bin",
       "blockdata_filepath": "data/layouts/ParcelIsle/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_BRIDGE",
+      "name": "ParcelBridge_Layout",
+      "width": 60,
+      "height": 24,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "border_filepath": "data/layouts/ParcelBridge/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelBridge/map.bin"
     }
   ]
 }
