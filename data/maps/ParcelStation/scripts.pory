@@ -117,7 +117,11 @@ script ParcelStation_Rin {
     lock
     faceplayer
     if (flag(FLAG_SYS_POKEMON_GET)) {
-        msgbox(format("Rin: Welcome to walking with consequences."), MSGBOX_DEFAULT)
+        msgbox(format("Rin: Rough out there. Set your partner down a minute--
+there's a cot and a kit."), MSGBOX_DEFAULT)
+        closemessage
+        call(Common_EventScript_OutOfCenterPartyHeal)
+        msgbox(format("Rin: Better. Welcome to walking with consequences."), MSGBOX_DEFAULT)
         release
         end
     }

@@ -99,7 +99,14 @@ def build():
     put(41, 54, POST_B, col=1, elev=1)
     put(42, 54, POST_A, col=1, elev=1)
 
-    # --- sandy track: pier head north into town, then a plaza ---------------
+    # --- sandy track: pier head north into town, then a plaza ---------------    # --- tall grass (wild encounters; §06 saltmarsh-fringe guild) -----------
+    for (x0, x1, y0, y1) in ((12, 21, 12, 18), (52, 62, 13, 19),
+                             (55, 66, 29, 35), (13, 22, 28, 34)):
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                put(x, y, 12)        # MB_TALL_GRASS
+
+
     for y in range(9, 43):
         put(41, y, SAND)
     for x in range(36, 47):           # small plaza mid-town

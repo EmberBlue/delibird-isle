@@ -75,7 +75,14 @@ def build():
             if (x * 13 + y * 7) % 53 == 0 and y not in (9, 10, 11):
                 put(x, y, BUSH, col=1)
 
-    # the braided stream, forced into one channel: a wide water band that
+    # the braided stream, forced into one channel: a wide water band that    # sparse tall grass in the thinned stretches (degraded; fewer encounters)
+    for (x0, x1, y0, y1) in ((24, 34, 6, 9), (42, 52, 12, 14), (50, 58, 6, 8)):
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                if not (9 <= y <= 11):
+                    put(x, y, 12)
+
+
     # narrows to a single fast gap under the road embankment (the culvert)
     for y in range(0, H):
         for x in range(64, 68):

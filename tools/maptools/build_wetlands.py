@@ -81,7 +81,13 @@ def build():
         for x in range(9, 18):
             put(x, y, SAND)
 
-    # the backwater: large pool east with the fishing dock
+    # the backwater: large pool east with the fishing dock    # tall reed-grass (wild encounters; the amphibian guild lives here)
+    for (x0, x1, y0, y1) in ((9, 17, 14, 21), (18, 24, 25, 30), (28, 34, 32, 36)):
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                put(x, y, 12)
+
+
     pool(32, 42, 12, 24)
     for y in range(14, 25):          # dock planks from the settlement edge
         put(34, y, PLANK_L)          # out into the backwater

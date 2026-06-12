@@ -86,6 +86,12 @@ def build():
                 put(x, y, TUFT_A if (x + y) % 2 else TUFT_B)
 
     pool(26, 30, 10, 12)    # the shaded pool (Lotad)
+    # tall grass on the meadow fringe (wild encounters)
+    for (x0, x1, y0, y1) in ((9, 16, 22, 29), (28, 36, 28, 31), (37, 41, 14, 19)):
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                put(x, y, 12)
+
     pool(33, 35, 14, 24)    # the long shallow channel Rin tends
     pool(37, 41, 25, 28)    # the deeper channel (Carvanha)
 
