@@ -22,14 +22,17 @@ GRASS = 1
 TUFT_A, TUFT_B = 8, 9          # decorative grass tufts
 FLOWERS = 4
 BUSH = 5                        # round bush (blocked)
-CANOPY_A, CANOPY_B = 12, 13     # dense tree canopy mass
-TRUNK_A, TRUNK_B = 20, 21       # canopy bottom edge w/ trunks on grass
 SAND = 261                      # plain sand (also used as the town's track)
 SHORE_A, SHORE_B = 256, 257     # sand above -> water below edge
 WATER = 282                     # open sea
 PLANK_L, PLANK_M, PLANK_R = 313, 314, 315   # wooden pier planks
 POST_A, POST_B = 309, 310       # pier pilings (pair)
-TREE_OVERHANG_A, TREE_OVERHANG_B = 266, 267  # tree hanging over water
+
+# A *complete* tree is four metatiles assembled by quadrant; tiling the
+# region by (x%2, y%2) parity makes whole trees repeat seamlessly into a
+# forest mass (verified on the contact sheet + in-game). Anchored to the
+# global grid (0,0) so adjacent forest regions always line up.
+TREE_QUAD = {(0, 0): 28, (1, 0): 29, (0, 1): 36, (1, 1): 37}
 
 
 def word(mid, col=0, elev=3):
@@ -42,21 +45,23 @@ def build():
     def put(x, y, mid, col=0, elev=3):
         grid[y][x] = word(mid, col, elev)
 
-    # --- north forest wall (rows 0-7 canopy, row 8 trunk edge) -------------
-    for y in range(0, 8):
+    def forest(x, y):
+        # complete-tree fill, blocked; parity keeps trees whole across the region
+        put(x, y, TREE_QUAD[(x % 2, y % 2)], col=1)
+
+    # --- north forest wall (rows 0-8, four tree-rows deep) -----------------
+    for y in range(0, 9):
         for x in range(W):
-            put(x, y, CANOPY_A if (x + y) % 2 == 0 else CANOPY_B, col=1)
-    for x in range(W):
-        put(x, 8, TRUNK_A if x % 2 == 0 else TRUNK_B, col=1)
+            forest(x, y)
 
     # --- side forest frames (rows 9-41) -------------------------------------
     for y in range(9, 42):
-        for x in (0, 1, 2, 80, 81, 82):
-            put(x, y, CANOPY_A if (x + y) % 2 == 0 else CANOPY_B, col=1)
+        for x in (0, 1, 2, 3, 79, 80, 81, 82):
+            forest(x, y)
 
     # --- grass field with sparse decoration (rows 9-39) ---------------------
     for y in range(9, 40):
-        for x in range(3, 80):
+        for x in range(4, 79):
             r = (x * 7 + y * 13) % 71
             if r == 0:
                 put(x, y, FLOWERS)
@@ -67,7 +72,7 @@ def build():
 
     # --- sand shoreline strip (rows 40-43) ----------------------------------
     for y in range(40, 44):
-        for x in range(3, 80):
+        for x in range(4, 79):
             put(x, y, SAND)
 
     # --- shore edge (row 44) and open sea (rows 45-59) ----------------------
@@ -76,11 +81,6 @@ def build():
     for y in range(45, H):
         for x in range(W):
             put(x, y, WATER, col=1, elev=1)
-
-    # trees overhanging the water, sparse accents
-    for x in (12, 61):
-        put(x, 44, TREE_OVERHANG_A, col=1)
-        put(x + 1, 44, TREE_OVERHANG_B, col=1)
 
     # --- the ferry pier (x 40-42), planks from the sand into the sea --------
     for y in range(43, 54):
