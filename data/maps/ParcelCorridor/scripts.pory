@@ -141,3 +141,9 @@ movement Movement_WorkerLeave {
     walk_down
     step_end
 }
+
+
+script ParcelCorridor_ItemSuperPotion {
+    finditem(ITEM_SUPER_POTION)
+    end
+}

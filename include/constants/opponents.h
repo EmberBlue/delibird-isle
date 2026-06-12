@@ -872,7 +872,11 @@
 #define TRAINER_SKALD_POACHER_B               859
 #define TRAINER_SKALD_ENFORCER                860
 
-#define TRAINERS_COUNT                      861
+#define TRAINER_SKALD_KID                     861
+#define TRAINER_SKALD_BIRDER                  862
+#define TRAINER_SKALD_FORAGER                 863
+
+#define TRAINERS_COUNT                      864
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

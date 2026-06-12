@@ -82,43 +82,87 @@ ParcelIsle_Shopkeeper::
 # 69 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Shopkeeper_Text_0, MSGBOX_DEFAULT
 # 70 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_Shopkeeper_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelIsle_Shopkeeper_Text_1, MSGBOX_YESNO
 # 71 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelIsle_Shopkeeper_2
+ParcelIsle_Shopkeeper_1:
+# 74 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Shopkeeper_Text_2, MSGBOX_DEFAULT
+# 75 "data/maps/ParcelIsle/scripts.pory"
 	release
+	end
+
+ParcelIsle_Shopkeeper_2:
+# 72 "data/maps/ParcelIsle/scripts.pory"
+	pokemart ParcelIsle_MartItems
+	goto ParcelIsle_Shopkeeper_1
+
+
+# 79 "data/maps/ParcelIsle/scripts.pory"
+
+# 80 "data/maps/ParcelIsle/scripts.pory"
+	.align 2
+# 81 "data/maps/ParcelIsle/scripts.pory"
+ParcelIsle_MartItems::
+# 82 "data/maps/ParcelIsle/scripts.pory"
+	.2byte ITEM_POKE_BALL
+# 83 "data/maps/ParcelIsle/scripts.pory"
+	.2byte ITEM_POTION
+# 84 "data/maps/ParcelIsle/scripts.pory"
+	.2byte ITEM_ANTIDOTE
+# 85 "data/maps/ParcelIsle/scripts.pory"
+	.2byte ITEM_PARALYZE_HEAL
+# 86 "data/maps/ParcelIsle/scripts.pory"
+	.2byte ITEM_REPEL
+# 87 "data/maps/ParcelIsle/scripts.pory"
+	.2byte ITEM_NONE
+
+ParcelIsle_KidTrainer::
+# 91 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_KID, ParcelIsle_KidTrainer_Text_0, ParcelIsle_KidTrainer_Text_1
+# 94 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_KidTrainer_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelIsle_ItemPotion::
+# 99 "data/maps/ParcelIsle/scripts.pory"
+	finditem ITEM_POTION
 	end
 
 
 ParcelIsle_Neighbor::
-# 78 "data/maps/ParcelIsle/scripts.pory"
+# 106 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 79 "data/maps/ParcelIsle/scripts.pory"
+# 107 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 80 "data/maps/ParcelIsle/scripts.pory"
+# 108 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Neighbor_Text_0, MSGBOX_DEFAULT
-# 81 "data/maps/ParcelIsle/scripts.pory"
+# 109 "data/maps/ParcelIsle/scripts.pory"
 	applymovement 4, Movement_GlanceAway
-# 82 "data/maps/ParcelIsle/scripts.pory"
+# 110 "data/maps/ParcelIsle/scripts.pory"
 	waitmovement 0
-# 83 "data/maps/ParcelIsle/scripts.pory"
+# 111 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Neighbor_Text_1, MSGBOX_DEFAULT
-# 84 "data/maps/ParcelIsle/scripts.pory"
+# 112 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 
-# 88 "data/maps/ParcelIsle/scripts.pory"
+# 116 "data/maps/ParcelIsle/scripts.pory"
 Movement_GlanceAway:
-# 89 "data/maps/ParcelIsle/scripts.pory"
+# 117 "data/maps/ParcelIsle/scripts.pory"
 	face_right
-# 90 "data/maps/ParcelIsle/scripts.pory"
+# 118 "data/maps/ParcelIsle/scripts.pory"
 	delay_16
-# 91 "data/maps/ParcelIsle/scripts.pory"
+# 119 "data/maps/ParcelIsle/scripts.pory"
 	delay_16
-# 92 "data/maps/ParcelIsle/scripts.pory"
+# 120 "data/maps/ParcelIsle/scripts.pory"
 	step_end
 
 ParcelIsle_FerrySign::
-# 96 "data/maps/ParcelIsle/scripts.pory"
+# 124 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerrySign_Text_0, MSGBOX_SIGN
 	end
 
@@ -172,21 +216,43 @@ ParcelIsle_Shopkeeper_Text_0:
 ParcelIsle_Shopkeeper_Text_1:
 # 70 "data/maps/ParcelIsle/scripts.pory"
 	.string "You get used to it.\n"
-	.string "Mostly.$"
+	.string "Mostly.\p"
+	.string "Need supplies? The shelf's stocked,\n"
+	.string "when the boat remembers us.$"
+
+ParcelIsle_Shopkeeper_Text_2:
+# 74 "data/maps/ParcelIsle/scripts.pory"
+	.string "Mind the fog out there.$"
+
+ParcelIsle_KidTrainer_Text_0:
+# 92 "data/maps/ParcelIsle/scripts.pory"
+	.string "Timo: You came off the ferry!\n"
+	.string "Mainlanders always have neat Pokémon.\l"
+	.string "Battle me!$"
+
+ParcelIsle_KidTrainer_Text_1:
+# 93 "data/maps/ParcelIsle/scripts.pory"
+	.string "Timo: Whoa. Okay.$"
+
+ParcelIsle_KidTrainer_Text_2:
+# 94 "data/maps/ParcelIsle/scripts.pory"
+	.string "Timo: Gran says don't go past the\n"
+	.string "bridge.\p"
+	.string "She won't say why.$"
 
 ParcelIsle_Neighbor_Text_0:
-# 80 "data/maps/ParcelIsle/scripts.pory"
+# 108 "data/maps/ParcelIsle/scripts.pory"
 	.string "Oh--you're the one the scientist wrote\n"
 	.string "about, aren't you? The young naturalist\l"
 	.string "with the--$"
 
 ParcelIsle_Neighbor_Text_1:
-# 83 "data/maps/ParcelIsle/scripts.pory"
+# 111 "data/maps/ParcelIsle/scripts.pory"
 	.string "…Forget I said anything. It's cold out.\n"
 	.string "You should get indoors, {PLAYER}.$"
 
 ParcelIsle_FerrySign_Text_0:
-# 96 "data/maps/ParcelIsle/scripts.pory"
+# 124 "data/maps/ParcelIsle/scripts.pory"
 	.string "FERRY LANDING\p"
 	.string "The mainland schedule board is blank.\n"
 	.string "It has been for a while.$"

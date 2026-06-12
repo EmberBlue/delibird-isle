@@ -62,6 +62,8 @@ script ParcelStation_Hale {
                 msgbox(format("Ilex: You didn't agree."), MSGBOX_DEFAULT)
                 msgbox(format("Hale: Forest Certification complete."), MSGBOX_DEFAULT)
                 msgbox(format("No fanfare.\pRin hands you a proper field kit: sample vials, a flow gauge, a better headlamp, spare red cloth."), MSGBOX_DEFAULT)
+                giveitem(ITEM_POKE_BALL, 10)
+                giveitem(ITEM_POTION, 5)
                 msgbox(format("Ilex speaks last.\pIlex: Now you'll start noticing how often damage wears the mask of improvement."), MSGBOX_DEFAULT)
                 setflag(FLAG_SKALDMERE_FOREST_CERT)
                 release
@@ -107,6 +109,7 @@ script ParcelStation_Hale {
     msgbox(format("Hale: Your mentor worked with us.\pWhatever happened at that lab…\nwasn't random."), MSGBOX_DEFAULT)
     msgbox(format("Hale hands you a heavier second pack: an empty Poké Ball case, a hand-marked folded map, and a laminated card stamped PROVISIONAL.\pOn the card, a small printed strip of red cloth."), MSGBOX_DEFAULT)
     msgbox(format("Hale: This isn't ownership.\nIt's responsibility."), MSGBOX_DEFAULT)
+    giveitem(ITEM_POKE_BALL, 5)
     msgbox(format("Hale: The Holding Meadow is east. The ones that wait are there.\pYou don't pick. And they don't obey."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_STATION_BRIEF)
     release
@@ -349,5 +352,19 @@ script ParcelStation_Lookout {
         format("Garr: Station kid, huh? This line was here before your stakes were.\pWalk away."),
         format("Garr: Tch. Practiced, are you."))
     msgbox(format("Garr coils his line, unhurried, and looks past you at the station.\pGarr: Write your little report.\nIt changes nothing out here."), MSGBOX_DEFAULT)
+    end
+}
+
+
+script ParcelStation_BirderTrainer {
+    trainerbattle_single(TRAINER_SKALD_BIRDER,
+        format("Neri: Shh--you'll flush the Taillow. …Too late. Fine, battle."),
+        format("Neri: Hmph. The birds liked you better anyway."))
+    msgbox(format("Neri: Counting nests, if you must know.\pFewer every spring. Nobody writes that down but me."), MSGBOX_DEFAULT)
+    end
+}
+
+script ParcelStation_ItemBalls {
+    finditem(ITEM_POKE_BALL, 5)
     end
 }

@@ -122,6 +122,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelWetlands_DeadFish",
       "flag": "FLAG_TEMP_4"
+    },
+    {
+      "local_id": "LOCALID_WET_FORAGER",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 14,
+      "y": 22,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelWetlands_ForagerTrainer",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_WET_ANTIDOTE",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 12,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelWetlands_ItemAntidote",
+      "flag": "FLAG_SKALD_ITEM_WET_ANTIDOTE"
     }
   ],
   "warp_events": [],

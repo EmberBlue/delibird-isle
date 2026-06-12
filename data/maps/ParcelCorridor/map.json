@@ -47,6 +47,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelCorridor_FarSide",
       "flag": "FLAG_TEMP_3"
+    },
+    {
+      "local_id": "LOCALID_COR_SUPERPOTION",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 57,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCorridor_ItemSuperPotion",
+      "flag": "FLAG_SKALD_ITEM_COR_SUPERPOTION"
     }
   ],
   "warp_events": [],

@@ -16979,3 +16979,60 @@ Carvanha
 Level: 6
 - Aqua Jet
 - Leer
+
+=== TRAINER_SKALD_KID ===
+Name: TIMO
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Zigzagoon
+Level: 4
+- Tackle
+- Growl
+
+Wurmple
+Level: 3
+- Tackle
+- String Shot
+
+=== TRAINER_SKALD_BIRDER ===
+Name: NERI
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Taillow
+Level: 5
+- Peck
+- Growl
+
+Wingull
+Level: 5
+- Water Gun
+- Growl
+
+=== TRAINER_SKALD_FORAGER ===
+Name: BRAN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Shroomish
+Level: 6
+- Absorb
+- Tackle
+
+Lotad
+Level: 6
+- Absorb
+- Astonish

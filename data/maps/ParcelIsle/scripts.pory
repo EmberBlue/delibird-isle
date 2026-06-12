@@ -67,8 +67,36 @@ script ParcelIsle_Shopkeeper {
     lock
     faceplayer
     msgbox(format("Wind's been coming off the water wrong all month. Strange weather inland, too--my supplier says the fog sits in the valleys till noon."), MSGBOX_DEFAULT)
-    msgbox(format("You get used to it.\nMostly."), MSGBOX_DEFAULT)
+    msgbox(format("You get used to it.\nMostly.\pNeed supplies? The shelf's stocked, when the boat remembers us."), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        pokemart(ParcelIsle_MartItems)
+    }
+    msgbox(format("Mind the fog out there."), MSGBOX_DEFAULT)
     release
+    end
+}
+
+raw `
+	.align 2
+ParcelIsle_MartItems::
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_NONE
+`
+
+script ParcelIsle_KidTrainer {
+    trainerbattle_single(TRAINER_SKALD_KID,
+        format("Timo: You came off the ferry! Mainlanders always have neat Pokémon. Battle me!"),
+        format("Timo: Whoa. Okay."))
+    msgbox(format("Timo: Gran says don't go past the bridge.\pShe won't say why."), MSGBOX_DEFAULT)
+    end
+}
+
+script ParcelIsle_ItemPotion {
+    finditem(ITEM_POTION)
     end
 }
 

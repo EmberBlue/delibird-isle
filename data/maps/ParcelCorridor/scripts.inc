@@ -230,6 +230,12 @@ Movement_WorkerLeave:
 # 142 "data/maps/ParcelCorridor/scripts.pory"
 	step_end
 
+ParcelCorridor_ItemSuperPotion::
+# 147 "data/maps/ParcelCorridor/scripts.pory"
+	finditem ITEM_SUPER_POTION
+	end
+
+
 ParcelCorridor_CulvertScene_Text_0:
 # 41 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Doduo stops.\p"

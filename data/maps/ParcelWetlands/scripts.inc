@@ -466,6 +466,20 @@ ParcelWetlands_PoacherB::
 	end
 
 
+ParcelWetlands_ForagerTrainer::
+# 295 "data/maps/ParcelWetlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FORAGER, ParcelWetlands_ForagerTrainer_Text_0, ParcelWetlands_ForagerTrainer_Text_1
+# 298 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_ForagerTrainer_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelWetlands_ItemAntidote::
+# 303 "data/maps/ParcelWetlands/scripts.pory"
+	finditem ITEM_ANTIDOTE
+	end
+
+
 ParcelWetlands_Harland_Text_0:
 # 57 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Harland: …Maybe I was wrong about you.\p"
@@ -688,3 +702,19 @@ ParcelWetlands_PoacherB_Text_2:
 # 289 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Mora: Spoken for by WHO? Mind your own\n"
 	.string "business.$"
+
+ParcelWetlands_ForagerTrainer_Text_0:
+# 296 "data/maps/ParcelWetlands/scripts.pory"
+	.string "Bran: Mind your boots--mudcaps grow\n"
+	.string "where you least want them.\p"
+	.string "And trainers, apparently. C'mon then.$"
+
+ParcelWetlands_ForagerTrainer_Text_1:
+# 297 "data/maps/ParcelWetlands/scripts.pory"
+	.string "Bran: Heh. Soft hands, hard hits.$"
+
+ParcelWetlands_ForagerTrainer_Text_2:
+# 298 "data/maps/ParcelWetlands/scripts.pory"
+	.string "Bran: The reed beds used to go twice as\n"
+	.string "far out.\p"
+	.string "Ask anyone old enough to remember.$"

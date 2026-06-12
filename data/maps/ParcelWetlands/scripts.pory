@@ -289,3 +289,17 @@ script ParcelWetlands_PoacherB {
     msgbox(format("Mora: Spoken for by WHO? Mind your own business."), MSGBOX_DEFAULT)
     end
 }
+
+
+script ParcelWetlands_ForagerTrainer {
+    trainerbattle_single(TRAINER_SKALD_FORAGER,
+        format("Bran: Mind your boots--mudcaps grow where you least want them.\pAnd trainers, apparently. C'mon then."),
+        format("Bran: Heh. Soft hands, hard hits."))
+    msgbox(format("Bran: The reed beds used to go twice as far out.\pAsk anyone old enough to remember."), MSGBOX_DEFAULT)
+    end
+}
+
+script ParcelWetlands_ItemAntidote {
+    finditem(ITEM_ANTIDOTE)
+    end
+}
