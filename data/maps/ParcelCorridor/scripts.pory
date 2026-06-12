@@ -1,0 +1,143 @@
+// ParcelCorridor -- the Old Service Cut / Hollowbend Spur (§08 Act V).
+// "The Corridor That Shrank": the thesis tutorial. Most damage is
+// procedural, not malicious; the failure state is agreement, not inaction.
+// Observe Only. No battles here, on purpose. Quoted dialogue is
+// canonical-verbatim from design/08-chapter-01.md.
+//
+// VAR_SKALDMERE_CH1_EVIDENCE bits (continued from Act IV):
+//   9  culvert read    10  worker exchange done
+
+const LOCALID_COR_WORKER = 1
+const LOCALID_COR_WOOPER = 2
+
+mapscripts ParcelCorridor_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelCorridor_OnTransition
+}
+
+script ParcelCorridor_OnTransition {
+    // The worker is at the culvert until his exchange is done.
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 10)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        setflag(FLAG_TEMP_2)
+    } else {
+        clearflag(FLAG_TEMP_2)
+    }
+    // The far-side Wooper appears during the culvert scene only.
+    setflag(FLAG_TEMP_3)
+    end
+}
+
+// --- the culvert scene (Doduo stops; the splash on the far side) ------------
+script ParcelCorridor_CulvertScene {
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 9)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        end
+    }
+    lockall
+    msgbox(format("Doduo stops.\pBoth heads fix on the same point: a culvert under the old road--concrete, narrow, functional."), MSGBOX_DEFAULT)
+    msgbox(format("Upstream of it, the channel is wide and braided.\nDownstream, it is one fast cut.\pYou kneel. You don't touch the water.\nYou listen."), MSGBOX_DEFAULT)
+    msgbox(format("The sound is sharper than it should be. Less layered. More forceful."), MSGBOX_DEFAULT)
+    closemessage
+    clearflag(FLAG_TEMP_3)
+    addobject(LOCALID_COR_WOOPER)
+    playse(SE_PIN)
+    msgbox(format("A splash, on the far side."), MSGBOX_DEFAULT)
+    msgbox(format("Something small tries the current--once, twice--and retreats to the far bank.\pNot trapped.\nExcluded."), MSGBOX_DEFAULT)
+    applymovement(LOCALID_COR_WOOPER, Movement_WooperRetreat)
+    waitmovement(0)
+    removeobject(LOCALID_COR_WOOPER)
+    setflag(FLAG_TEMP_3)
+    msgbox(format("The corridor still exists.\nBut it's thinner."), MSGBOX_DEFAULT)
+    msgbox(format("You feel the urge to widen the channel. Stack stones. Slow the flow.\pYou don't.\nYou remember the basin. You write it down instead."), MSGBOX_DEFAULT)
+    setvar(VAR_0x8004, 9)
+    special(SkaldmereCertTaskMark)
+    setvar(VAR_TEMP_1, 1)
+    releaseall
+    end
+}
+
+script ParcelCorridor_FarSide {
+    lock
+    msgbox(format("It watches the current from the far bank.\nIt does not try again."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- the worker (where damage becomes policy) --------------------------------
+script ParcelCorridor_Worker {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 9)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("A man in an orange vest, clipboard in hand. He nods at the stream like it's a colleague.\pWorker: Quite a current through there, eh?"), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A man in an orange vest, clipboard in hand. He brightens--relieved to see a Ranger.\pWorker: Oh good. You're with the station, right?\nWe've been meaning to flag this."), MSGBOX_DEFAULT)
+    msgbox(format("Worker: Drainage specs met code, but wildlife keeps clogging it.\pWe're scheduled to install grates next month."), MSGBOX_DEFAULT)
+    msgbox(format("Grates would solve his problem.\pThis is the moment Ilex warned about--\nwhere damage becomes policy."), MSGBOX_DEFAULT)
+    msgbox(format("Worker: It meets regulation. But if you want, I can note that Rangers were consulted."), MSGBOX_DEFAULT)
+    msgbox(format("Note that Rangers were consulted?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("You start to nod--\pand stop.\pThe grates would solve HIS problem.\nThe failure state is not action. It is agreement."), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: …No.\pWho approved the design?"), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("{PLAYER}: No.\pWho approved the design?"), MSGBOX_DEFAULT)
+    }
+    msgbox(format("{PLAYER}: Do you have the pre-construction flow data?"), MSGBOX_DEFAULT)
+    msgbox(format("The worker shifts his weight.\pWorker: That'd be… county records, I think. Or the contractor."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: Fixing it later might mean it's already too late.\pYou write all of it down: the specs, the schedule, the missing data, his crew number."), MSGBOX_DEFAULT)
+    msgbox(format("He scribbles something vague.\pWorker: …I'll note that the corridor width changed."), MSGBOX_DEFAULT)
+    msgbox(format("It's not enough.\nBut it's not nothing.\pHe leaves."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_COR_WORKER, Movement_WorkerLeave)
+    waitmovement(0)
+    removeobject(LOCALID_COR_WORKER)
+    setvar(VAR_0x8004, 10)
+    special(SkaldmereCertTaskMark)
+    setflag(FLAG_TEMP_2)
+    msgbox(format("Turning back down the cut, you realize:\pyou were watched. Not by the worker.\nBy the system."), MSGBOX_DEFAULT)
+    msgbox(format("The report will move slowly. It will be questioned. Maybe ignored.\pBut it exists now.\nAnd that changes timelines."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- observation points along the cut ----------------------------------------
+script ParcelCorridor_ObsStumps {
+    msgbox(format("Old stumps in a rough line, cut flat, gray with years.\pThe forest didn't thin here.\nIt was thinned."), MSGBOX_SIGN)
+    end
+}
+script ParcelCorridor_ObsMoss {
+    msgbox(format("The moss grows uneven--thick on the north faces, absent where the canopy used to hold the damp."), MSGBOX_SIGN)
+    end
+}
+script ParcelCorridor_ObsDrainage {
+    msgbox(format("A drainage cut, knife-straight.\nNothing in nature drains like this."), MSGBOX_SIGN)
+    end
+}
+script ParcelCorridor_ObsRoad {
+    msgbox(format("A cracked service road, half-reclaimed by weeds.\pIt looks abandoned.\nIt isn't harmless."), MSGBOX_SIGN)
+    end
+}
+script ParcelCorridor_ObsCulvert {
+    msgbox(format("The culvert. Concrete, narrow, functional.\pUpstream: broad and braided.\nDownstream: a single fast channel."), MSGBOX_SIGN)
+    end
+}
+
+movement Movement_WooperRetreat {
+    face_right
+    delay_16
+    walk_right
+    step_end
+}
+movement Movement_WorkerLeave {
+    walk_left * 6
+    walk_down
+    step_end
+}

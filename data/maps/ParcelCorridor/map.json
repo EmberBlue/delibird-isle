@@ -1,0 +1,124 @@
+{
+  "id": "MAP_PARCEL_CORRIDOR",
+  "name": "ParcelCorridor",
+  "layout": "LAYOUT_PARCEL_CORRIDOR",
+  "music": "MUS_DEWFORD",
+  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PARCEL_WETLANDS",
+      "offset": -11,
+      "direction": "left"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 60,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCorridor_Worker",
+      "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_COR_WOOPER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(WOOPER)",
+      "x": 68,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCorridor_FarSide",
+      "flag": "FLAG_TEMP_3"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 9,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelCorridor_CulvertScene"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 10,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelCorridor_CulvertScene"
+    },
+    {
+      "type": "trigger",
+      "x": 58,
+      "y": 11,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelCorridor_CulvertScene"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCorridor_ObsStumps"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCorridor_ObsMoss"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCorridor_ObsDrainage"
+    },
+    {
+      "type": "sign",
+      "x": 45,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCorridor_ObsRoad"
+    },
+    {
+      "type": "sign",
+      "x": 63,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCorridor_ObsCulvert"
+    }
+  ]
+}

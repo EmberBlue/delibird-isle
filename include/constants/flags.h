@@ -1394,7 +1394,7 @@
 // #define FLAG_UNUSED_0x881                           (SYSTEM_FLAGS + 0x21) // Unused Flag
 // #define FLAG_UNUSED_0x882                           (SYSTEM_FLAGS + 0x22) // Unused Flag
 // #define FLAG_UNUSED_0x883                           (SYSTEM_FLAGS + 0x23) // Unused Flag
-#define FLAG_UNUSED_0x884                           (SYSTEM_FLAGS + 0x24) // Unused Flag
+#define FLAG_SKALDMERE_FOREST_CERT                  (SYSTEM_FLAGS + 0x24) // Skaldmere: §08 Forest Certification earned
 #define FLAG_SKALDMERE_ARRIVAL_INTRO                 (SYSTEM_FLAGS + 0x25) // Skaldmere: §07 arrival scroll shown
 #define FLAG_SKALDMERE_BRIDGE_SCENE                  (SYSTEM_FLAGS + 0x26) // Skaldmere: §07 bridge scene (Poliwag/poacher/Hale) done
 #define FLAG_SKALDMERE_STATION_BRIEF                 (SYSTEM_FLAGS + 0x27) // Skaldmere: §08 Act I station briefing done

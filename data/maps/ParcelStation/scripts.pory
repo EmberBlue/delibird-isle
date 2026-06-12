@@ -46,6 +46,33 @@ script ParcelStation_Hale {
     lock
     faceplayer
     if (flag(FLAG_SYS_POKEMON_GET)) {
+        if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+            msgbox(format("Hale: You did well. Don't get attached to praise.\nGet attached to results."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: We're going west.\nThe wetlands are sick."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        if (defeated(TRAINER_SKALD_ENFORCER)) {
+            setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+            setvar(VAR_0x8004, 1536)
+            specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+            if (var(VAR_RESULT) == 2) {
+                msgbox(format("Hale reads your corridor notes without comment. Rin watches Doduo. Ilex closes the ledger."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: You didn't intervene."), MSGBOX_DEFAULT)
+                msgbox(format("Ilex: You didn't agree."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: Forest Certification complete."), MSGBOX_DEFAULT)
+                msgbox(format("No fanfare.\pRin hands you a proper field kit: sample vials, a flow gauge, a better headlamp, spare red cloth."), MSGBOX_DEFAULT)
+                msgbox(format("Ilex speaks last.\pIlex: Now you'll start noticing how often damage wears the mask of improvement."), MSGBOX_DEFAULT)
+                setflag(FLAG_SKALDMERE_FOREST_CERT)
+                release
+                end
+            }
+            msgbox(format("Hale slides a laminated sheet across the table.\pCORRIDOR AUDIT -- LOW PRIORITY\nRoute: Old Service Cut / Hollowbend Spur\pReport Type: Verification\nAction Status: OBSERVE ONLY."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: This corridor used to connect two wetland pockets. Then someone improved a road.\pHe doesn't say who.\nHe doesn't have to."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: East of the wetlands landing, past the tree line.\nWalk it. Read it. Touch nothing."), MSGBOX_DEFAULT)
+            release
+            end
+        }
         if (defeated(TRAINER_SKALD_LOOKOUT)) {
             msgbox(format("Hale: Four tasks. Logged.\pNo fanfare. That's how it should feel."), MSGBOX_DEFAULT)
             msgbox(format("Hale: North of here the forest gives out and the wetlands begin. There's a fishing landing on the backwater.\pPeople up there are angry, and somebody is feeding them a story."), MSGBOX_DEFAULT)
@@ -102,6 +129,16 @@ script ParcelStation_Rin {
 script ParcelStation_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("Ilex: Damage wears the mask of improvement.\pYou'll see it everywhere now.\nI'm sorry."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (defeated(TRAINER_SKALD_ENFORCER)) {
+        msgbox(format("Ilex: Low priority means nobody's watching.\pWhich means we still have time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         setvar(VAR_0x8004, 3)
         specialvar(VAR_RESULT, SkaldmereCertTaskGet)

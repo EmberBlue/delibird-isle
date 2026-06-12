@@ -17,6 +17,11 @@
       "map": "MAP_PARCEL_STATION",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_PARCEL_CORRIDOR",
+      "offset": 11,
+      "direction": "right"
     }
   ],
   "object_events": [

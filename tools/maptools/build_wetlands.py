@@ -45,12 +45,21 @@ def build():
             put(x, y1, SHORE_A if x % 2 == 0 else SHORE_B, col=1)
 
     # forest frame, with the south corridor back to the station (x24-26)
+    # and the east corridor to the Old Service Cut (rows 20-22)
     for y in range(H):
         for x in range(W):
             if 23 <= x <= 27 and y >= H - 8:
                 continue
+            if x >= W - 8 and 19 <= y <= 23:
+                continue
             if x < 8 or x >= W - 8 or y < 8 or y >= H - 8:
                 forest(x, y)
+    for y in range(19, 24):
+        for x in range(W - 8, W):
+            put(x, y, GRASS)
+    for y in range(20, 23):
+        for x in range(W - 8, W):
+            put(x, y, SAND)
     for y in range(H - 8, H):
         for x in range(23, 28):
             put(x, y, GRASS)
