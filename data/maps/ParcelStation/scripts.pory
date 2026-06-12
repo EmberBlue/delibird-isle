@@ -1,0 +1,149 @@
+// ParcelStation -- the first Climate Corps field station + the Holding
+// Meadow (§08 Acts I-II). Exterior staging for now (interiors come with the
+// building pass). Quoted dialogue is canonical-verbatim from
+// design/08-chapter-01.md. The recognition is authored along the Doduo path
+// the prose follows (§10 partner-recognition; the lightly-responsive
+// variant is a later pass). No fanfare anywhere -- §08: credentials, not
+// trophies; "no welcome ceremony."
+
+const LOCALID_STATION_HALE    = 1
+const LOCALID_STATION_RIN     = 2
+const LOCALID_STATION_ILEX    = 3
+const LOCALID_MEADOW_LOTAD    = 4
+const LOCALID_MEADOW_SHROOMISH = 5
+const LOCALID_MEADOW_SEEDOT   = 6
+const LOCALID_MEADOW_NUMEL    = 7
+const LOCALID_MEADOW_ELECTRIKE = 8
+const LOCALID_MEADOW_CARVANHA = 9
+const LOCALID_MEADOW_DODUO    = 10
+
+mapscripts ParcelStation_MapScripts {
+}
+
+// --- Act I: the briefing (Hale, at the station yard) -----------------------
+script ParcelStation_Hale {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("Hale: This doesn't make you a Ranger.\pTraining starts tomorrow. Rest.\nYou'll need your boots dry."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_STATION_BRIEF)) {
+        msgbox(format("Hale: The meadow's east.\pYou walk. You observe. You stop where you're compelled to stop."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Hale: No welcome ceremony. We document ecological change, interrupt exploitation, coordinate restoration.\pOften without public support."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: We don't 'win.' We reduce harm. We keep corridors open.\nWe stop the worst of it."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: Your mentor worked with us.\pWhatever happened at that lab…\nwasn't random."), MSGBOX_DEFAULT)
+    msgbox(format("Hale hands you a heavier second pack: an empty Poké Ball case, a hand-marked folded map, and a laminated card stamped PROVISIONAL.\pOn the card, a small printed strip of red cloth."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: This isn't ownership.\nIt's responsibility."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: The Holding Meadow is east. The ones that wait are there.\pYou don't pick. And they don't obey."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_STATION_BRIEF)
+    release
+    end
+}
+
+script ParcelStation_Rin {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("Rin: Welcome to walking with consequences."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Rin doesn't look up. She is redirecting a channel's flow, one stone at a time.\pRin: Nothing stays here permanently.\nThat's the rule."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_Ilex {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("Ilex: It makes you accountable."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Ilex: They've all been displaced.\nBut not broken."), MSGBOX_DEFAULT)
+    msgbox(format("Ilex: They aren't rare. They aren't powerful.\pThey are stable."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- Act II: the ones that wait (non-uniform reactions, §08) ---------------
+script ParcelStation_Lotad {
+    lock
+    msgbox(format("The Lotad rests at the pool's shaded edge.\pIt registers you, and goes back to being still.\nCalm."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_Shroomish {
+    lock
+    msgbox(format("The Shroomish recoils--spores pulsing once, twice--\pthen settles. It doesn't move away."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_Seedot {
+    lock
+    msgbox(format("The Seedot freezes mid-hop between the roots.\pIt is very committed to being a seed."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_Numel {
+    lock
+    msgbox(format("The Numel is curled by the dry corner of the meadow, radiating heat.\pThe ground here is drier than it should be.\pYou write that down before you realize you're doing it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_Electrike {
+    lock
+    msgbox(format("The Electrike paces the perimeter, closer each pass.\pIt never quite stops."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_Carvanha {
+    lock
+    msgbox(format("Something circles in the deeper channel.\pThe Carvanha keeps its distance.\nSo do you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- The recognition (the Doduo path; §08 Act II verbatim beats) -----------
+script ParcelStation_Doduo {
+    lock
+    if (!flag(FLAG_SKALDMERE_STATION_BRIEF)) {
+        msgbox(format("A Doduo stands at the clearing's edge.\pOne head watches you.\nThe other watches the forest."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The Doduo moves. One head stays on you; the other sweeps the treeline.\pYou stop--\nbecause moving feels wrong."), MSGBOX_DEFAULT)
+    msgbox(format("You kneel.\pBehind you, quiet footsteps: Rin sets a single Poké Ball on the ground between you, and steps back."), MSGBOX_DEFAULT)
+    msgbox(format("Rin: If it chooses to enter,\nyou're provisional partners."), MSGBOX_DEFAULT)
+    closemessage
+    delay(60)
+    playse(SE_BALL_THROW)
+    delay(60)
+    msgbox(format("The Doduo studies you a moment longer.\pThen it nudges the ball.\pThe ball closes with no shake.\nJust stillness."), MSGBOX_DEFAULT)
+    removeobject(LOCALID_MEADOW_DODUO)
+    givemon(SPECIES_DODUO, 5)
+    setflag(FLAG_SYS_POKEMON_GET)
+    msgbox(format("It feels warm.\pWREN received DODUO."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: This doesn't make you a Ranger."), MSGBOX_DEFAULT)
+    msgbox(format("Ilex: It makes you accountable."), MSGBOX_DEFAULT)
+    msgbox(format("Rin: Welcome to walking with consequences."), MSGBOX_DEFAULT)
+    msgbox(format("You leave the meadow not empowered--\nbut entangled.\pAnd that is the point."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_Sign {
+    msgbox(format("CLIMATE CORPS -- FIELD STATION\pThe Holding Meadow is east.\nNothing stays there permanently."), MSGBOX_SIGN)
+    end
+}

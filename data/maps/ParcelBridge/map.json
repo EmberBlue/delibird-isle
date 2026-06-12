@@ -17,6 +17,11 @@
       "map": "MAP_PARCEL_ISLE",
       "offset": -26,
       "direction": "left"
+    },
+    {
+      "map": "MAP_PARCEL_STATION",
+      "offset": -4,
+      "direction": "right"
     }
   ],
   "object_events": [
