@@ -49,19 +49,22 @@ def build():
         # complete-tree fill, blocked; parity keeps trees whole across the region
         put(x, y, TREE_QUAD[(x % 2, y % 2)], col=1)
 
-    # --- north forest wall (rows 0-8, four tree-rows deep) -----------------
-    for y in range(0, 9):
+    # --- forest deep enough that the camera can never see past it ----------
+    # The view extends 7 tiles past the player horizontally (4 up), so any
+    # frame the player can stand beside must be >= 8 tiles deep, and every
+    # forest region is even-aligned so quadrant parity yields whole trees.
+    # North wall: rows 0-7. Side frames: x 0-7 and x 74-81 (x82 stays sea-
+    # adjacent beyond view range), rows 8-39.
+    for y in range(0, 8):
         for x in range(W):
             forest(x, y)
-
-    # --- side forest frames (rows 9-41) -------------------------------------
-    for y in range(9, 42):
-        for x in (0, 1, 2, 3, 79, 80, 81, 82):
+    for y in range(8, 40):
+        for x in list(range(0, 8)) + list(range(74, 83)):
             forest(x, y)
 
-    # --- grass field with sparse decoration (rows 9-39) ---------------------
-    for y in range(9, 40):
-        for x in range(4, 79):
+    # --- grass field with sparse decoration (rows 8-39) ---------------------
+    for y in range(8, 40):
+        for x in range(8, 74):
             r = (x * 7 + y * 13) % 71
             if r == 0:
                 put(x, y, FLOWERS)
@@ -70,9 +73,11 @@ def build():
             elif r == 60 and y < 36:
                 put(x, y, BUSH, col=1)
 
-    # --- sand shoreline strip (rows 40-43) ----------------------------------
+    # --- sand shoreline strip (rows 40-43), full-width open beach ----------
+    # The beach spans the whole south coast; the only place the sea border
+    # is visible is past actual ocean/beach, where it reads as ocean.
     for y in range(40, 44):
-        for x in range(4, 79):
+        for x in range(W):
             put(x, y, SAND)
 
     # --- shore edge (row 44) and open sea (rows 45-59) ----------------------
