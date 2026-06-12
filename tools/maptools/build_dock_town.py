@@ -108,8 +108,15 @@ def main():
     data = b"".join(struct.pack("<H", c) for row in grid for c in row)
     assert len(data) == W * H * 2, len(data)
     (out / "map.bin").write_bytes(data)
-    (out / "border.bin").write_bytes(struct.pack("<4H", *([word(WATER, 1, 1)] * 4)))
-    print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin")
+    # Border: endless tree canopy. The forest frames the map north/east/west,
+    # so the repeating out-of-bounds block must be canopy, not sea — the only
+    # open edge is south, and the pier never sees past the water rows
+    # (southmost standable y=53; view reaches y=58 < H). Matches the in-map
+    # (x+y) parity checker.
+    border = [CANOPY_A, CANOPY_B, CANOPY_B, CANOPY_A]
+    (out / "border.bin").write_bytes(
+        struct.pack("<4H", *[word(m, col=1) for m in border]))
+    print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin (canopy)")
 
 
 if __name__ == "__main__":
