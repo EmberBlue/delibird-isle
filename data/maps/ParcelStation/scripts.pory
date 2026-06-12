@@ -147,15 +147,11 @@ script ParcelStation_Ilex {
         end
     }
     if (flag(FLAG_SYS_POKEMON_GET)) {
-        setvar(VAR_0x8004, 3)
-        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
-        copyvar(VAR_0x8005, VAR_RESULT)
-        setvar(VAR_0x8004, 4)
-        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
-        copyvar(VAR_0x8006, VAR_RESULT)
-        setvar(VAR_0x8004, 5)
-        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
-        if (var(VAR_0x8005) == 1 && var(VAR_0x8006) == 1 && var(VAR_RESULT) == 1) {
+        // count the three stake bits (3,4,5 -> mask 0x38) with the generic helper
+        setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
+        setvar(VAR_0x8004, 56)
+        specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+        if (var(VAR_RESULT) == 3) {
             msgbox(format("Ilex: Bank, substrate, canopy.\nLet's see what you saw."), MSGBOX_DEFAULT)
             special(SkaldmereClassifyMeadow)
             msgbox(format("Ilex: Reference state. Whole.\pKeystone breeding, every guild present, nothing swarming, no damage."), MSGBOX_DEFAULT)

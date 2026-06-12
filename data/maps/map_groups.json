@@ -100,7 +100,8 @@
     "ParcelBridge",
     "ParcelStation",
     "ParcelWetlands",
-    "ParcelCorridor"
+    "ParcelCorridor",
+    "ParcelTownLodging"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

@@ -107,10 +107,10 @@
   ],
   "warp_events": [
     {
-      "x": 41,
-      "y": 48,
+      "x": 45,
+      "y": 20,
       "elevation": 0,
-      "dest_map": "MAP_PARCEL_ISLE",
+      "dest_map": "MAP_PARCEL_TOWN_LODGING",
       "dest_warp_id": "0"
     }
   ],

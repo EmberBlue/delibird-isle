@@ -99,6 +99,20 @@ def build():
     put(41, 54, POST_B, col=1, elev=1)
     put(42, 54, POST_A, col=1, elev=1)
 
+    # --- the lodging (first enterable building; door = metatile 61) --------
+    # Best-guess FR assembly: blue roof (40/41/43), eaves (44/45/47),
+    # walls (52/55) + windows (7), non-animated door (61, walkable).
+    house = [
+        (40, 41, 41, 43),
+        (44, 45, 45, 47),
+        (52,  7,  7, 55),
+        (52, 61,  7, 55),
+    ]
+    for dy, row in enumerate(house):
+        for dx, mid in enumerate(row):
+            walkable = (mid == 61)
+            put(44 + dx, 17 + dy, mid, col=0 if walkable else 1)
+
     # --- sandy track: pier head north into town, then a plaza ---------------    # --- tall grass (wild encounters; §06 saltmarsh-fringe guild) -----------
     for (x0, x1, y0, y1) in ((12, 21, 12, 18), (52, 62, 13, 19),
                              (55, 66, 29, 35), (13, 22, 28, 34)):

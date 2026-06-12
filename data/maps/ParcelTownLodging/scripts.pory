@@ -1,0 +1,24 @@
+// ParcelTownLodging -- the lodging from §07 ("the door with the lamp lit").
+// The letter scene (§07 Scene 2) will be staged here when the full prologue
+// cutscene lands; for now it is warmth, a bed, and a keeper who doesn't pry.
+
+mapscripts ParcelTownLodging_MapScripts {
+}
+
+script ParcelTownLodging_Keeper {
+    lock
+    faceplayer
+    msgbox(format("Keeper: The scientist's room is paid through the season.\pShe insisted. Before."), MSGBOX_DEFAULT)
+    msgbox(format("Keeper: You look wrung out.\nRest a while?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        closemessage
+        fadescreen(FADE_TO_BLACK)
+        call(Common_EventScript_OutOfCenterPartyHeal)
+        fadescreen(FADE_FROM_BLACK)
+        msgbox(format("Morning comes gray and early.\pYour partner looks rested.\nSo, almost, do you."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Keeper: The kettle's always on."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
