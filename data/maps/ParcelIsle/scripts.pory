@@ -1,6 +1,20 @@
+// ParcelIsle -- the arrival dock town (§07 Scene 1; town name pending the
+// §01 detail pass). The held-breath town: residents subtly evasive, never
+// hostile. Dialogue beats are from design/07-prologue.md -- the two opening
+// scroll paragraphs are canonical and verbatim. No exposition dumps;
+// everyone implies more than they state (§00 anti-rules).
+
+// Object event local IDs (must match data/maps/ParcelIsle/map.json)
+const LOCALID_HEAVYCOAT  = 1
+const LOCALID_FISHER     = 2
+const LOCALID_SHOPKEEPER = 3
+const LOCALID_NEIGHBOR   = 4
+
 mapscripts ParcelIsle_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelIsle_SetVisited
-    MAP_SCRIPT_ON_LOAD:       ParcelIsle_SetVisited
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelIsle_Arrival
+    ]
 }
 
 script ParcelIsle_SetVisited {
@@ -8,40 +22,77 @@ script ParcelIsle_SetVisited {
     end
 }
 
-// Define the ID to match Porymap
-const LOCALID_DELIBIRD = 1
-
-// Optional little debug helper you can call from an NPC or a sign
-script ShowVisitedFlag_ParcelIsle {
-    if (flag(FLAG_VISITED_PARCEL_ISLE)) {
-        msgbox("Parcel Isle visited flag is SET.", MSGBOX_DEFAULT)
-    } else {
-        msgbox("Parcel Isle visited flag is NOT set.", MSGBOX_DEFAULT)
+// One-time §07 opening: the scroll, the ferry horn, boots on damp wood.
+// The full prologue cutscene (the letter, pronoun select) replaces the
+// Birch skip later; this is the in-world half of it.
+script ParcelIsle_Arrival {
+    setvar(VAR_TEMP_0, 1)
+    if (flag(FLAG_SKALDMERE_ARRIVAL_INTRO)) {
+        end
     }
+    lockall
+    msgbox(format("In an age of unstable climates and shrinking wildlands, the bond between people and Pokémon has changed. Some work to restore balance. Others seek control."), MSGBOX_DEFAULT)
+    msgbox(format("You've just arrived from Johto, leaving behind your old home and Pokémon. You carry only a bag, a notebook… and a memory."), MSGBOX_DEFAULT)
+    closemessage
+    playse(SE_SHIP)
+    delay(96)
+    msgbox(format("The ferry horn fades out across the water.\pThe boards are damp under your boots."), MSGBOX_DEFAULT)
+    closemessage
+    setflag(FLAG_SKALDMERE_ARRIVAL_INTRO)
+    releaseall
     end
 }
 
-movement Movement_DelibirdRun {
-    walk_left
-    walk_left
-    walk_up
-    walk_up
-    walk_right
-    walk_right
-    walk_down
-    walk_down
-    step_end
-}
-
-script Delibird_Interact {
+// §07: "An NPC in a heavy coat points the way."
+script ParcelIsle_HeavyCoat {
     lock
     faceplayer
-    msgbox("Delibird chirps excitedly and dashes around!", MSGBOX_DEFAULT)
-    applymovement(LOCALID_DELIBIRD, Movement_DelibirdRun)
-    waitmovement(0)
+    msgbox(format("Off the ferry, then. Lodging's up the track--the door with the lamp lit."), MSGBOX_DEFAULT)
+    msgbox(format("Mind the boards. They're slick when the fog sits.\p…And keep your questions for morning, eh?"), MSGBOX_DEFAULT)
     release
     end
 }
 
+// §07: a fisher at the pier says the currents "have been wrong for weeks."
+script ParcelIsle_Fisher {
+    lock
+    faceplayer
+    msgbox(format("Currents have been wrong for weeks. The fish know it before we do.\p…You didn't hear that from me."), MSGBOX_DEFAULT)
+    release
+    end
+}
 
+// §07: a shopkeeper mentions "strange weather inland" like an everyday nuisance.
+script ParcelIsle_Shopkeeper {
+    lock
+    faceplayer
+    msgbox(format("Wind's been coming off the water wrong all month. Strange weather inland, too--my supplier says the fog sits in the valleys till noon."), MSGBOX_DEFAULT)
+    msgbox(format("You get used to it.\nMostly."), MSGBOX_DEFAULT)
+    release
+    end
+}
 
+// §07: a neighbor asks if you're "the one the scientist wrote about,"
+// then quickly changes the subject.
+script ParcelIsle_Neighbor {
+    lock
+    faceplayer
+    msgbox(format("Oh--you're the one the scientist wrote about, aren't you? The young naturalist with the--"), MSGBOX_DEFAULT)
+    applymovement(LOCALID_NEIGHBOR, Movement_GlanceAway)
+    waitmovement(0)
+    msgbox(format("…Forget I said anything. It's cold out. You should get indoors, {PLAYER}."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+movement Movement_GlanceAway {
+    face_right
+    delay_16
+    delay_16
+    step_end
+}
+
+script ParcelIsle_FerrySign {
+    msgbox(format("FERRY LANDING\pThe mainland schedule board is blank.\nIt has been for a while."), MSGBOX_SIGN)
+    end
+}

@@ -23,6 +23,7 @@
 #include "tv.h"
 #include "coins.h"
 #include "text.h"
+#include "string_util.h"
 #include "overworld.h"
 #include "mail.h"
 #include "battle_records.h"
@@ -91,6 +92,18 @@ static void InitPlayerTrainerId(void)
 {
     u32 trainerId = (Random() << 16) | GetGeneratedTrainerIdLower();
     SetTrainerId(trainerId, gSaveBlock2Ptr->playerTrainerId);
+}
+
+// INTERIM (Skaldmere): Wren is a fixed, fully-defined protagonist (§04) —
+// the player chooses pronouns only, and that choice arrives with the real
+// §07 opening. Until then every new game is named canonically so dialogue
+// can use {PLAYER} and the menu isn't blank.
+static const u8 sSkaldmereDefaultName[] = _("Wren");
+
+static void SetSkaldmereDefaultIdentity(void)
+{
+    StringCopy(gSaveBlock2Ptr->playerName, sSkaldmereDefaultName);
+    gSaveBlock2Ptr->playerGender = MALE;
 }
 
 // L=A isnt set here for some reason.
@@ -175,6 +188,7 @@ void NewGameInitData(void)
     gSaveBlock2Ptr->specialSaveWarpFlags = 0;
     gSaveBlock2Ptr->gcnLinkFlags = 0;
     InitPlayerTrainerId();
+    SetSkaldmereDefaultIdentity();
     PlayTimeCounter_Reset();
     ClearPokedexFlags();
     InitEventData();
