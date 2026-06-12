@@ -108,15 +108,15 @@ def main():
     data = b"".join(struct.pack("<H", c) for row in grid for c in row)
     assert len(data) == W * H * 2, len(data)
     (out / "map.bin").write_bytes(data)
-    # Border: endless tree canopy. The forest frames the map north/east/west,
-    # so the repeating out-of-bounds block must be canopy, not sea — the only
-    # open edge is south, and the pier never sees past the water rows
-    # (southmost standable y=53; view reaches y=58 < H). Matches the in-map
-    # (x+y) parity checker.
-    border = [CANOPY_A, CANOPY_B, CANOPY_B, CANOPY_A]
+    # Border: open sea. Plain water tiles cleanly to itself in a 2x2 block,
+    # and "island town surrounded by ocean" is internally coherent past
+    # any edge - including where the forest meets it on the west/east.
+    # The canopy-mass alternative reads as bumpy mush when tiled (it's only
+    # the top half of a real tree); the FRP general tileset has no clean
+    # 2x2 "proper tree" block that tiles to itself as endless forest.
     (out / "border.bin").write_bytes(
-        struct.pack("<4H", *[word(m, col=1) for m in border]))
-    print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin (canopy)")
+        struct.pack("<4H", *([word(WATER, col=1, elev=1)] * 4)))
+    print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin (water)")
 
 
 if __name__ == "__main__":
