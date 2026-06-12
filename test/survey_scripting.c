@@ -12,6 +12,8 @@ u16 SkaldmereCertTaskGet(void);
 u16 SkaldmereCertTaskCount(void);
 u16 SkaldmereClassifyMeadow(void);
 
+#define TASKS VAR_SKALDMERE_CERT_TASKS
+
 TEST("Cert tasks: var roundtrip works in this context")
 {
     VarSet(VAR_SKALDMERE_CERT_TASKS, 0);
@@ -25,9 +27,10 @@ TEST("Cert tasks: mark, get, count")
 {
     VarSet(VAR_SKALDMERE_CERT_TASKS, 0);
 
+    gSpecialVar_0x8005 = TASKS;
     gSpecialVar_0x8004 = 2;
     SkaldmereCertTaskMark();
-    EXPECT_EQ(VarGet(VAR_SKALDMERE_CERT_TASKS), 1 << 2);
+    EXPECT_EQ(VarGet(TASKS), 1 << 2);
 
     gSpecialVar_0x8004 = 2;
     EXPECT_EQ(SkaldmereCertTaskGet(), 1);
@@ -36,9 +39,11 @@ TEST("Cert tasks: mark, get, count")
 
     gSpecialVar_0x8004 = 6;
     SkaldmereCertTaskMark();
+    gSpecialVar_0x8004 = 0x7F;       // count mask
     EXPECT_EQ(SkaldmereCertTaskCount(), 2);
 
-    VarSet(VAR_SKALDMERE_CERT_TASKS, 0x7F);
+    VarSet(TASKS, 0x7F);
+    gSpecialVar_0x8004 = 0x7F;
     EXPECT_EQ(SkaldmereCertTaskCount(), 7);
 
     VarSet(VAR_SKALDMERE_CERT_TASKS, 0);

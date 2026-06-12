@@ -11,26 +11,25 @@
 //   0..2  the three practice snares
 //   3..5  the survey stakes: bank, substrate, canopy
 //   6     the water sample
-#define CERT_TASK_BITS 7
-#define CERT_ALL_MASK ((1 << CERT_TASK_BITS) - 1)
-
-// in: gSpecialVar_0x8004 = bit index. Marks a training task done.
+// Generic var-bitfield helpers so every chapter's clue/task tracking reuses
+// one tested path. in: gSpecialVar_0x8005 = var id, gSpecialVar_0x8004 = bit.
 void SkaldmereCertTaskMark(void)
 {
-    VarSet(VAR_SKALDMERE_CERT_TASKS,
-           VarGet(VAR_SKALDMERE_CERT_TASKS) | (1 << gSpecialVar_0x8004));
+    VarSet(gSpecialVar_0x8005,
+           VarGet(gSpecialVar_0x8005) | (1 << gSpecialVar_0x8004));
 }
 
-// in: gSpecialVar_0x8004 = bit index. Returns 0/1 (use with specialvar).
+// Returns 0/1 (use with specialvar).
 u16 SkaldmereCertTaskGet(void)
 {
-    return (VarGet(VAR_SKALDMERE_CERT_TASKS) >> gSpecialVar_0x8004) & 1;
+    return (VarGet(gSpecialVar_0x8005) >> gSpecialVar_0x8004) & 1;
 }
 
-// Returns the number of training tasks done, 0..7 (use with specialvar).
+// in: gSpecialVar_0x8005 = var id, gSpecialVar_0x8004 = mask of bits that
+// count. Returns the number of set bits within the mask.
 u16 SkaldmereCertTaskCount(void)
 {
-    u32 v = VarGet(VAR_SKALDMERE_CERT_TASKS) & CERT_ALL_MASK;
+    u32 v = VarGet(gSpecialVar_0x8005) & gSpecialVar_0x8004;
     u16 n = 0;
     while (v)
     {

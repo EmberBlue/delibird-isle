@@ -17,6 +17,11 @@
       "map": "MAP_PARCEL_BRIDGE",
       "offset": 4,
       "direction": "left"
+    },
+    {
+      "map": "MAP_PARCEL_WETLANDS",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [

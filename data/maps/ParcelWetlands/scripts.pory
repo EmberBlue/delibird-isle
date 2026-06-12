@@ -1,0 +1,291 @@
+// ParcelWetlands -- the wetlands edge (§08 Act IV). Harland's grievance,
+// Dorsey's polished half-truths, the Poisoned Waters event, the enforcer.
+// Quoted dialogue is canonical-verbatim from design/08-chapter-01.md.
+// Never a stereotyped evil team (§00): poachers are working people with
+// opportunistic Pokémon; the cost wears a human face.
+//
+// VAR_SKALDMERE_CH1_EVIDENCE bits:
+//   0-2 pre clues (reeds, crate imprint, trade tag)
+//   3   Harland talked      4  Dorsey talked     5  poisoned waters seen
+//   6-8 post evidence (residue, pipe segment, manifest)
+
+const LOCALID_WET_HARLAND   = 1
+const LOCALID_WET_DORSEY    = 2
+const LOCALID_WET_POACHER_A = 3
+const LOCALID_WET_POACHER_B = 4
+const LOCALID_WET_ENFORCER  = 5
+const LOCALID_WET_KARP_1    = 6
+const LOCALID_WET_KARP_2    = 7
+
+mapscripts ParcelWetlands_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelWetlands_OnTransition
+}
+
+script ParcelWetlands_OnTransition {
+    // Dorsey vanishes once the enforcer is exposed.
+    if (defeated(TRAINER_SKALD_ENFORCER)) {
+        setflag(FLAG_TEMP_2)
+        setflag(FLAG_TEMP_3)
+    } else {
+        clearflag(FLAG_TEMP_2)
+        setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+        setvar(VAR_0x8004, 448)
+        specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+        if (var(VAR_RESULT) == 3) {
+            clearflag(FLAG_TEMP_3)
+        } else {
+            setflag(FLAG_TEMP_3)
+        }
+    }
+    // The belly-up fish exist only after the event.
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        clearflag(FLAG_TEMP_4)
+    } else {
+        setflag(FLAG_TEMP_4)
+    }
+    end
+}
+
+// --- Harland (three states: grievance / fury / shaken) ----------------------
+script ParcelWetlands_Harland {
+    lock
+    faceplayer
+    if (defeated(TRAINER_SKALD_ENFORCER)) {
+        msgbox(format("Harland: …Maybe I was wrong about you.\pBut I still don't trust your people."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("Harland: Look at this! You said you were protecting the water!"), MSGBOX_DEFAULT)
+        msgbox(format("Harland: Don't stand there writing. READ it, then. The residue. The pipe.\pThere's a soaked manifest washed up by the south bank. Read all of it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Harland: My father fished these waters. His father too.\pAnd now you show up with rules and paperwork and tell me the water belongs to you?"), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: It doesn't belong to me."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: Then why does it feel like it does?"), MSGBOX_DEFAULT)
+    msgbox(format("Harland turns back to his nets.\pHarland: You want to talk? Talk to Councilman Dorsey. He's down by the landing.\nSomeone who actually listens."), MSGBOX_DEFAULT)
+    setvar(VAR_0x8004, 3)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// --- Dorsey (public warmth; the half-truth) ---------------------------------
+script ParcelWetlands_Dorsey {
+    lock
+    faceplayer
+    msgbox(format("Dorsey: Ah--the new provisional. Welcome to the landing.\pDorsey: We can protect Pokémon and protect jobs.\nWe don't need fear-based restrictions."), MSGBOX_DEFAULT)
+    msgbox(format("Dorsey: These people work hard. The Corps means well, I'm sure--but rules written far away land hard out here.\pHe shakes your hand. It is a very good handshake."), MSGBOX_DEFAULT)
+    msgbox(format("As you turn away, quieter, almost to himself:\pDorsey: People need someone to blame.\nBetter it isn't us."), MSGBOX_DEFAULT)
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 4)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// --- pre-event clues ---------------------------------------------------------
+script ParcelWetlands_ClueReeds {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 0)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The disturbed reeds. Already noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("The reeds here are bent in a swath, all one direction--dragged, not blown.\pYou note the width of the drag."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelWetlands_ClueCrate {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 1)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The crate imprint. Already noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A rectangular imprint pressed deep in the mud. Slats. Corner braces.\pA crate sat here long enough to matter, and left recently enough to be wet."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelWetlands_ClueTag {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 2)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The trade tag. Bagged and noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A plastic tag, snapped off its loop. A lot number, no license field.\pThe kind of tag that isn't supposed to exist.\nEnough to point. Not enough to convict."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// --- the Poisoned Waters event (fires after Harland + Dorsey) ----------------
+script ParcelWetlands_PoisonTrigger {
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 24)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) != 2) {
+        end
+    }
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("Shouting, down at the backwater."), MSGBOX_DEFAULT)
+    clearflag(FLAG_TEMP_4)
+    addobject(LOCALID_WET_KARP_1)
+    addobject(LOCALID_WET_KARP_2)
+    msgbox(format("Fish float belly-up against the dock pilings. A faint sheen crawls on the surface, bending the light wrong.\pPeople crowd the bank. Panic is curdling into anger."), MSGBOX_DEFAULT)
+    msgbox(format("Harland is there, and he is furious."), MSGBOX_DEFAULT)
+    setvar(VAR_0x8004, 5)
+    special(SkaldmereCertTaskMark)
+    setvar(VAR_TEMP_1, 1)
+    releaseall
+    end
+}
+
+script ParcelWetlands_DeadFish {
+    lock
+    msgbox(format("It drifts against the piling and does not right itself."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- post-event evidence ------------------------------------------------------
+script ParcelWetlands_EvResidue {
+    lock
+    call(ParcelWetlands_RequirePoison)
+    if (var(VAR_RESULT) == 0) {
+        release
+        end
+    }
+    setvar(VAR_0x8004, 6)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The residue sample. Sealed."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("Upstream of the dock, the residue collects in the reed roots--greasy, faintly sweet-smelling.\pIt did not start here. You seal a sample."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    call(ParcelWetlands_CheckEvidenceDone)
+    release
+    end
+}
+script ParcelWetlands_EvPipe {
+    lock
+    call(ParcelWetlands_RequirePoison)
+    if (var(VAR_RESULT) == 0) {
+        release
+        end
+    }
+    setvar(VAR_0x8004, 7)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The pipe segment. Photographed and noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A broken discharge-pipe segment, half-buried at the waterline. The break is old. The staining inside is not.\pYou photograph it where it lies."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    call(ParcelWetlands_CheckEvidenceDone)
+    release
+    end
+}
+script ParcelWetlands_EvManifest {
+    lock
+    call(ParcelWetlands_RequirePoison)
+    if (var(VAR_RESULT) == 0) {
+        release
+        end
+    }
+    setvar(VAR_0x8004, 8)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The manifest. Drying between notebook pages."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A transport manifest, soaked but readable. Tonnage. Dates. A carrier code you don't recognize--\pand a consignee field somebody inked out by hand."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    call(ParcelWetlands_CheckEvidenceDone)
+    release
+    end
+}
+
+script ParcelWetlands_RequirePoison {
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("The backwater is quiet. Harland's boats sit low on their lines."), MSGBOX_SIGN)
+    }
+    return
+}
+
+script ParcelWetlands_CheckEvidenceDone {
+    setvar(VAR_0x8004, 448)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) == 3) {
+        msgbox(format("Residue. Pipe. Manifest.\pEnough to point. Not enough to convict.\nYou write all of it down."), MSGBOX_DEFAULT)
+        clearflag(FLAG_TEMP_3)
+        addobject(LOCALID_WET_ENFORCER)
+        msgbox(format("Someone is waiting for you by the landing."), MSGBOX_DEFAULT)
+    }
+    return
+}
+
+// --- the enforcer (despair-bait; the lever's street version) -----------------
+script ParcelWetlands_Enforcer {
+    trainerbattle_single(TRAINER_SKALD_ENFORCER,
+        format("Voss: You think you're saving something?\pThe land's already dead.\nWe're just the first to admit it."),
+        format("Voss: Hm."))
+    lock
+    faceplayer
+    msgbox(format("Voss straightens his coat, unhurried.\pVoss: Your mentor tried.\nLook how that went."), MSGBOX_DEFAULT)
+    msgbox(format("He walks past you like you've stopped existing.\pBy the landing, people are looking for Councilman Dorsey.\nNobody can find him."), MSGBOX_DEFAULT)
+    removeobject(LOCALID_WET_ENFORCER)
+    setflag(FLAG_TEMP_3)
+    removeobject(LOCALID_WET_DORSEY)
+    setflag(FLAG_TEMP_2)
+    release
+    end
+}
+
+// --- the working poachers (opportunists, not a team) -------------------------
+script ParcelWetlands_PoacherA {
+    trainerbattle_single(TRAINER_SKALD_POACHER_A,
+        format("Selt: Nothing illegal about standing by the water, kid."),
+        format("Selt: Fine, fine. Moving along."))
+    msgbox(format("Selt: A man's got to eat. You want villains, look further up the money."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWetlands_PoacherB {
+    trainerbattle_single(TRAINER_SKALD_POACHER_B,
+        format("Mora: This patch is spoken for. Walk on."),
+        format("Mora: Ugh. Whatever."))
+    msgbox(format("Mora: Spoken for by WHO? Mind your own business."), MSGBOX_DEFAULT)
+    end
+}

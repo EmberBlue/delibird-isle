@@ -16927,3 +16927,55 @@ Level: 3
 IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 - Tackle
 - Growl
+
+=== TRAINER_SKALD_POACHER_A ===
+Name: SELT
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Zigzagoon
+Level: 4
+- Tackle
+- Growl
+
+Wingull
+Level: 4
+- Water Gun
+- Growl
+
+=== TRAINER_SKALD_POACHER_B ===
+Name: MORA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Lotad
+Level: 5
+- Astonish
+- Growl
+
+=== TRAINER_SKALD_ENFORCER ===
+Name: VOSS
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Poochyena
+Level: 6
+- Tackle
+- Howl
+
+Carvanha
+Level: 6
+- Aqua Jet
+- Leer

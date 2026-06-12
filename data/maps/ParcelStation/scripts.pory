@@ -30,6 +30,8 @@ script ParcelStation_OnTransition {
         setflag(FLAG_TEMP_5)
         end
     }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
+    setvar(VAR_0x8004, 127)
     specialvar(VAR_RESULT, SkaldmereCertTaskCount)
     if (var(VAR_RESULT) == 7) {
         clearflag(FLAG_TEMP_5)
@@ -46,11 +48,14 @@ script ParcelStation_Hale {
     if (flag(FLAG_SYS_POKEMON_GET)) {
         if (defeated(TRAINER_SKALD_LOOKOUT)) {
             msgbox(format("Hale: Four tasks. Logged.\pNo fanfare. That's how it should feel."), MSGBOX_DEFAULT)
-            msgbox(format("Hale: Next is a corridor audit.\nLow priority. Observe only.\pRest first."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: North of here the forest gives out and the wetlands begin. There's a fishing landing on the backwater.\pPeople up there are angry, and somebody is feeding them a story."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: Go listen. Document what you see.\nDon't argue with anyone's paycheck."), MSGBOX_DEFAULT)
             release
             end
         }
-        specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+        setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
+    setvar(VAR_0x8004, 127)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
         if (var(VAR_RESULT) == 7) {
             msgbox(format("Hale: A call just came in. West fringe, by the treeline.\pSomeone's working a line down there who shouldn't be."), MSGBOX_DEFAULT)
             msgbox(format("Hale: You have a partner now.\nGo do more than stare."), MSGBOX_DEFAULT)
@@ -203,6 +208,7 @@ script ParcelStation_Sign {
 // --- Act III: the certification training tasks ------------------------------
 script ParcelStation_Snare1 {
     lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
     setvar(VAR_0x8004, 0)
     call(ParcelStation_ClearSnare)
     release
@@ -210,6 +216,7 @@ script ParcelStation_Snare1 {
 }
 script ParcelStation_Snare2 {
     lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
     setvar(VAR_0x8004, 1)
     call(ParcelStation_ClearSnare)
     release
@@ -217,6 +224,7 @@ script ParcelStation_Snare2 {
 }
 script ParcelStation_Snare3 {
     lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
     setvar(VAR_0x8004, 2)
     call(ParcelStation_ClearSnare)
     release
@@ -235,6 +243,7 @@ script ParcelStation_ClearSnare {
 
 script ParcelStation_StakeBank {
     lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
     setvar(VAR_0x8004, 3)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
@@ -249,6 +258,7 @@ script ParcelStation_StakeBank {
 }
 script ParcelStation_StakeSubstrate {
     lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
     setvar(VAR_0x8004, 4)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
@@ -263,6 +273,7 @@ script ParcelStation_StakeSubstrate {
 }
 script ParcelStation_StakeCanopy {
     lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
@@ -277,6 +288,7 @@ script ParcelStation_StakeCanopy {
 }
 script ParcelStation_WaterSample {
     lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CERT_TASKS)
     setvar(VAR_0x8004, 6)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {

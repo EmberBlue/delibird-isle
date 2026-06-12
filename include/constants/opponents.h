@@ -868,7 +868,11 @@
 
 #define TRAINER_SKALD_LOOKOUT                 857
 
-#define TRAINERS_COUNT                      858
+#define TRAINER_SKALD_POACHER_A               858
+#define TRAINER_SKALD_POACHER_B               859
+#define TRAINER_SKALD_ENFORCER                860
+
+#define TRAINERS_COUNT                      861
 #define MAX_TRAINERS_COUNT                  864
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

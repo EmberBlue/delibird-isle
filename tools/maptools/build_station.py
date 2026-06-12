@@ -45,13 +45,22 @@ def build():
         for x in range(x0, x1):
             put(x, y1, SHORE_A if x % 2 == 0 else SHORE_B, col=1)
 
-    # --- forest frame, 8 deep, except the west corridor (rows 13-17) -------
+    # --- forest frame, 8 deep, except the west corridor (rows 13-17)
+    # and the north corridor to the wetlands (x 23-27) ----------------------
     for y in range(H):
         for x in range(W):
             if x < 8 and 13 <= y <= 17:
                 continue
+            if 23 <= x <= 27 and y < 8:
+                continue
             if x < 8 or x >= W - 8 or y < 8 or y >= H - 8:
                 forest(x, y)
+    for y in range(0, 8):
+        for x in range(23, 28):
+            put(x, y, GRASS)
+    for y in range(0, 8):
+        for x in range(24, 27):
+            put(x, y, SAND)
 
     # --- the track in from the bridge (rows 14-16) --------------------------
     for y in range(13, 18):

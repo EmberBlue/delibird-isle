@@ -4490,6 +4490,16 @@
       "secondary_tileset": "gTileset_frp_seafoam_islands",
       "border_filepath": "data/layouts/ParcelStation/border.bin",
       "blockdata_filepath": "data/layouts/ParcelStation/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_WETLANDS",
+      "name": "ParcelWetlands_Layout",
+      "width": 50,
+      "height": 44,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "border_filepath": "data/layouts/ParcelWetlands/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelWetlands/map.bin"
     }
   ]
 }
