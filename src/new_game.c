@@ -24,6 +24,8 @@
 #include "coins.h"
 #include "text.h"
 #include "string_util.h"
+#include "script_pokemon_util.h"
+#include "constants/vars.h"
 #include "overworld.h"
 #include "mail.h"
 #include "battle_records.h"

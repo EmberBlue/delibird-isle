@@ -563,3 +563,7 @@ gSpecials::
 	def_special UseBlankMessageToCancelPokemonPic
 	def_special EnterCode
 	def_special GetCodeFeedback
+	def_special SkaldmereCertTaskMark
+	def_special SkaldmereCertTaskGet
+	def_special SkaldmereCertTaskCount
+	def_special SkaldmereClassifyMeadow

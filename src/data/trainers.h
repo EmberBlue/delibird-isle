@@ -42262,3 +42262,56 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 16910
+    [DIFFICULTY_NORMAL][TRAINER_SKALD_LOOKOUT] =
+    {
+#line 16911
+        .trainerName = _("GARR"),
+#line 16912
+        .trainerClass = TRAINER_CLASS_HIKER,
+#line 16913
+        .trainerPic = TRAINER_PIC_HIKER,
+        .encounterMusic_gender =
+#line 16915
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 16916
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 16917
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 16919
+            .species = SPECIES_POOCHYENA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16921
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
+#line 16920
+            .lvl = 4,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16922
+                MOVE_TACKLE,
+                MOVE_HOWL,
+            },
+            },
+            {
+#line 16925
+            .species = SPECIES_ZIGZAGOON,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16927
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
+#line 16926
+            .lvl = 3,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16928
+                MOVE_TACKLE,
+                MOVE_GROWL,
+            },
+            },
+        },
+    },

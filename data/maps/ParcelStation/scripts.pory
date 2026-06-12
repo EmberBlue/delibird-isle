@@ -16,8 +16,27 @@ const LOCALID_MEADOW_NUMEL    = 7
 const LOCALID_MEADOW_ELECTRIKE = 8
 const LOCALID_MEADOW_CARVANHA = 9
 const LOCALID_MEADOW_DODUO    = 10
+const LOCALID_SNARE_1         = 11
+const LOCALID_SNARE_2         = 12
+const LOCALID_SNARE_3         = 13
+const LOCALID_LOOKOUT         = 14
 
 mapscripts ParcelStation_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelStation_OnTransition
+}
+
+script ParcelStation_OnTransition {
+    if (defeated(TRAINER_SKALD_LOOKOUT)) {
+        setflag(FLAG_TEMP_5)
+        end
+    }
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) == 7) {
+        clearflag(FLAG_TEMP_5)
+    } else {
+        setflag(FLAG_TEMP_5)
+    }
+    end
 }
 
 // --- Act I: the briefing (Hale, at the station yard) -----------------------
@@ -25,7 +44,24 @@ script ParcelStation_Hale {
     lock
     faceplayer
     if (flag(FLAG_SYS_POKEMON_GET)) {
-        msgbox(format("Hale: This doesn't make you a Ranger.\pTraining starts tomorrow. Rest.\nYou'll need your boots dry."), MSGBOX_DEFAULT)
+        if (defeated(TRAINER_SKALD_LOOKOUT)) {
+            msgbox(format("Hale: Four tasks. Logged.\pNo fanfare. That's how it should feel."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: Next is a corridor audit.\nLow priority. Observe only.\pRest first."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+        if (var(VAR_RESULT) == 7) {
+            msgbox(format("Hale: A call just came in. West fringe, by the treeline.\pSomeone's working a line down there who shouldn't be."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: You have a partner now.\nGo do more than stare."), MSGBOX_DEFAULT)
+            clearflag(FLAG_TEMP_5)
+            addobject(LOCALID_LOOKOUT)
+            release
+            end
+        }
+        msgbox(format("Hale: Training. Three of our practice snares are out on the fringe--find them, clear them."), MSGBOX_DEFAULT)
+        msgbox(format("Hale: Ilex set three survey stakes: bank, substrate, canopy. Read each one.\pAnd Rin wants a water sample from the channel."), MSGBOX_DEFAULT)
+        msgbox(format("Hale: No deadline.\nDo it properly."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -62,7 +98,23 @@ script ParcelStation_Ilex {
     lock
     faceplayer
     if (flag(FLAG_SYS_POKEMON_GET)) {
-        msgbox(format("Ilex: It makes you accountable."), MSGBOX_DEFAULT)
+        setvar(VAR_0x8004, 3)
+        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+        copyvar(VAR_0x8005, VAR_RESULT)
+        setvar(VAR_0x8004, 4)
+        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+        copyvar(VAR_0x8006, VAR_RESULT)
+        setvar(VAR_0x8004, 5)
+        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+        if (var(VAR_0x8005) == 1 && var(VAR_0x8006) == 1 && var(VAR_RESULT) == 1) {
+            msgbox(format("Ilex: Bank, substrate, canopy.\nLet's see what you saw."), MSGBOX_DEFAULT)
+            special(SkaldmereClassifyMeadow)
+            msgbox(format("Ilex: Reference state. Whole.\pKeystone breeding, every guild present, nothing swarming, no damage."), MSGBOX_DEFAULT)
+            msgbox(format("Ilex: Remember exactly what this feels like.\pYou will spend the rest of your life measuring places against it."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("Ilex: Three stakes. Bank, substrate, canopy.\pRead all three, then come back."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -145,5 +197,104 @@ script ParcelStation_Doduo {
 
 script ParcelStation_Sign {
     msgbox(format("CLIMATE CORPS -- FIELD STATION\pThe Holding Meadow is east.\nNothing stays there permanently."), MSGBOX_SIGN)
+    end
+}
+
+// --- Act III: the certification training tasks ------------------------------
+script ParcelStation_Snare1 {
+    lock
+    setvar(VAR_0x8004, 0)
+    call(ParcelStation_ClearSnare)
+    release
+    end
+}
+script ParcelStation_Snare2 {
+    lock
+    setvar(VAR_0x8004, 1)
+    call(ParcelStation_ClearSnare)
+    release
+    end
+}
+script ParcelStation_Snare3 {
+    lock
+    setvar(VAR_0x8004, 2)
+    call(ParcelStation_ClearSnare)
+    release
+    end
+}
+script ParcelStation_ClearSnare {
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The cleared snare site. The wire is in your pack."), MSGBOX_DEFAULT)
+        return
+    }
+    msgbox(format("A practice snare, half-hidden in the grass--a wire loop on a bent stake.\pYou unhook the trigger and wind the wire, the way the manual says.\nSlowly. No sudden pulls."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    return
+}
+
+script ParcelStation_StakeBank {
+    lock
+    setvar(VAR_0x8004, 3)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The bank stake. Already read."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A survey stake by the channel. A strip of red cloth, faded.\pBANK: edges soft but holding. Root mass intact.\nYou write it down."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelStation_StakeSubstrate {
+    lock
+    setvar(VAR_0x8004, 4)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The substrate stake. Already read."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A survey stake in the open meadow. Red cloth, knotted twice.\pSUBSTRATE: mixed soil, no compaction, drains clean.\nYou write it down."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelStation_StakeCanopy {
+    lock
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The canopy stake. Already read."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A survey stake at the tree line. Red cloth, nearly new.\pCANOPY: broken sunlight, layered growth, edge gradual--not cut.\nYou write it down."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelStation_WaterSample {
+    lock
+    setvar(VAR_0x8004, 6)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The sampling point. Rin has your vial."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("You kneel at the channel and draw a sample.\pThe water runs clear--but colder than the air explains.\pConditions matter. You label the vial and note the temperature."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// --- Act III: the distress call (the first real battle) ---------------------
+script ParcelStation_Lookout {
+    trainerbattle_single(TRAINER_SKALD_LOOKOUT,
+        format("Garr: Station kid, huh? This line was here before your stakes were.\pWalk away."),
+        format("Garr: Tch. Practiced, are you."))
+    msgbox(format("Garr coils his line, unhurried, and looks past you at the station.\pGarr: Write your little report.\nIt changes nothing out here."), MSGBOX_DEFAULT)
     end
 }
