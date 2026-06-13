@@ -37,11 +37,18 @@ def build():
     def forest(x, y):
         put(x, y, TREE_QUAD[(x % 2, y % 2)], col=1)
 
-    # north/south forest walls -- dense at the west, visibly thinning east
+    # north/south forest walls -- dense at the west, visibly thinning east.
+    # Also carve a corridor at x 4-9 for the connection to the Floodbasin (z3).
     for y in range(0, 6):
         for x in range(W):
+            if 4 <= x <= 9:
+                continue
             if x < 20 or (x < 44 and (x * 7 + y * 3) % 9 < 5) or (x >= 44 and (x * 7 + y * 3) % 9 < 2):
                 forest(x, y)
+    # connector track up to the floodbasin
+    for y in range(0, 9):
+        for x in range(5, 9):
+            put(x, y, SAND)
     for y in range(14, H):
         for x in range(W):
             if x < 20 or (x < 44 and (x * 5 + y * 3) % 9 < 5) or (x >= 44 and (x * 5 + y * 3) % 9 < 2):

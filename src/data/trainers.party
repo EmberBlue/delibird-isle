@@ -17036,3 +17036,42 @@ Lotad
 Level: 6
 - Absorb
 - Astonish
+
+=== TRAINER_SKALD_REMEDIATOR ===
+Name: KOLE
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wooper
+Level: 9
+- Water Gun
+- Tail Whip
+- Mud Sport
+
+Croagunk
+Level: 9
+- Astonish
+- Mud Slap
+
+=== TRAINER_SKALD_BASIN_KID ===
+Name: PIPER
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Wurmple
+Level: 7
+- Tackle
+- String Shot
+
+Surskit
+Level: 7
+- Bubble
+- Quick Attack

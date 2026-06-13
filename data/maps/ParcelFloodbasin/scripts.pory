@@ -1,0 +1,160 @@
+// ParcelFloodbasin -- §01/§06 zone 3, Chapter 2 opener: "the wetlands are
+// sick" (Hale at the chapter close). The first zone whose survey returns
+// something other than Reference. Legacy contamination resurfacing from a
+// decades-old Mereholt operation: the amphibian guild is the keystone AND
+// the indicator AND the loser. The Foundation outreach booth is the §05
+// mask, sitting next to the harm.
+//
+// VAR_SKALDMERE_CH2_EVIDENCE bits:
+//   0  discharge pipe noted     1  sheen on the water      2  dead reed band
+//   3  deformed Wooper observed 4  sick apex (Karp) observed
+//   5  booth visited (the mask)
+//   6  classifier read complete
+
+const LOCALID_BASIN_REMEDIATOR = 1
+const LOCALID_BASIN_KID        = 2
+const LOCALID_BASIN_DEFORMED_WOOPER = 3
+const LOCALID_BASIN_SICK_KARP  = 4
+
+mapscripts ParcelFloodbasin_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelFloodbasin_SetMapVar
+    ]
+}
+
+script ParcelFloodbasin_SetMapVar {
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+// First entry: the rain, the smell, Hale's brief made real.
+script ParcelFloodbasin_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_FLOODBASIN_ARRIVAL)) {
+        end
+    }
+    lockall
+    msgbox(format("The trees open onto a low, wide basin. Rain ticks on the reeds.\pSomething is wrong with the smell."), MSGBOX_DEFAULT)
+    msgbox(format("Doduo walks on, but slower. One head sweeps the ground.\nThe other watches the water."), MSGBOX_DEFAULT)
+    msgbox(format("Hale's brief, on paper:\pLEGACY CONTAMINATION -- OWNERSHIP UNCONTESTED -- ACTIVE REMEDIATION CITED.\nWalk the upstream. Read it for yourself."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_FLOODBASIN_ARRIVAL)
+    releaseall
+    end
+}
+
+// --- the five observation points ------------------------------------------
+script ParcelFloodbasin_Discharge {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 0)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The discharge pipe. Noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A concrete pipe, half-buried, mouth fouled with brown crust.\pStamped:\nDISCHARGE -- AUTHORIZED USE ONLY.\pThe authorization is decades old.\nThe crust is fresher than that."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelFloodbasin_Sheen {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 1)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The sheen. Documented."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A faint iridescence crawls on the surface, bending the rain wrong.\pIt is not new. The cattails downstream of it carry the same stain at their bases."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelFloodbasin_DeadReeds {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 2)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The dead reed band. Photographed."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A band of dead reeds along the south bank. Straw-pale.\pAround them, the reeds are fine. The kill line is exactly the height of the floodwater six months ago."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// --- the visible indicators (Pokémon, not bg signs) -----------------------
+script ParcelFloodbasin_DeformedWooper {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 3)
+    special(SkaldmereCertTaskMark)
+    msgbox(format("A Wooper, low to the ground. Two left feet.\pIt does not flinch.\pIt has been the way it is since it hatched, and that is recent."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_SickKarp {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 4)
+    special(SkaldmereCertTaskMark)
+    msgbox(format("A grown Magikarp lists against the bank, scales graying.\pIt was not in the pipe. It was at the top of the food web.\pPoison climbs."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- the mask: the outreach booth -----------------------------------------
+script ParcelFloodbasin_BoothSign {
+    msgbox(format("MEREHOLT FOUNDATION COMMUNITY OUTREACH\pRemediation underway.\nPlease report concerns to your local representative.\pThe paint is wet from the rain.\nThe sign is older."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFloodbasin_Remediator {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("Kole adjusts his clipboard. He has been adjusting his clipboard for an hour."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Kole: Oh--Ranger! Welcome to the active remediation site.\pWe've been at it… some time now. Foundation does great work."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: When was the last reading?"), MSGBOX_DEFAULT)
+    msgbox(format("Kole: …Quarter or two. We're due."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: Who signed off on the discharge stamp on that pipe?"), MSGBOX_DEFAULT)
+    msgbox(format("Kole, more carefully:\pKole: You'd have to ask the office. I just check the boxes."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: I'm asking. The Wooper has two left feet."), MSGBOX_DEFAULT)
+    closemessage
+    delay(30)
+    msgbox(format("Kole's voice goes flat.\pKole: Move along, Ranger.\nThis isn't your patch."), MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_SKALD_REMEDIATOR,
+        format("Kole: --tch. Fine. We'll do this the loud way."),
+        format("Kole: Hmph."))
+    msgbox(format("Kole: Write up whatever you write up.\pThis river ran sick before you got here.\nIt will run sick after."), MSGBOX_DEFAULT)
+    msgbox(format("He goes back to his clipboard.\pHe does not pick up a pen."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// --- the wild-card kid trainer (worldbuilding) ----------------------------
+script ParcelFloodbasin_BasinKidTrainer {
+    trainerbattle_single(TRAINER_SKALD_BASIN_KID,
+        format("Piper: Gran fishes here. Used to. Wanna battle?"),
+        format("Piper: Ohh. You're good!"))
+    msgbox(format("Piper: She doesn't eat what she catches anymore.\pSells it to the people who don't ask."), MSGBOX_DEFAULT)
+    end
+}
+
+script ParcelFloodbasin_ItemRevive {
+    finditem(ITEM_REVIVE)
+    end
+}

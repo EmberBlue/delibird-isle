@@ -64,3 +64,19 @@ void SkaldmereSetGender(void)
 {
     gSaveBlock2Ptr->playerGender = gSpecialVar_0x8004;
 }
+
+// §06 contamination signature: amphibians present but low-density, with
+// disturbance signs (deformities), and abundance skewed by a mesopredator
+// swarm. Returns the SurveyState the Floodbasin reads as -- the first time
+// the player sees the classifier produce something other than Reference.
+u16 SkaldmereClassifyFloodbasin(void)
+{
+    struct SurveySignals signals = {
+        .keystone = KEYSTONE_STRAINED,
+        .abundance = ABUNDANCE_MESOPREDATOR_SWARM,
+        .sensitiveGuildPresent = TRUE,    // amphibians still here -- the lie's seam
+        .apexPresent = TRUE,              // and SICK: bioaccumulation
+        .disturbanceSigns = TRUE,
+    };
+    return ClassifySurveyState(&signals);
+}

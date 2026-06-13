@@ -17,6 +17,11 @@
       "map": "MAP_PARCEL_WETLANDS",
       "offset": -11,
       "direction": "left"
+    },
+    {
+      "map": "MAP_PARCEL_FLOODBASIN",
+      "offset": 4,
+      "direction": "up"
     }
   ],
   "object_events": [

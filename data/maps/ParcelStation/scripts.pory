@@ -47,8 +47,14 @@ script ParcelStation_Hale {
     faceplayer
     if (flag(FLAG_SYS_POKEMON_GET)) {
         if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+            if (flag(FLAG_SKALDMERE_FLOODBASIN_ARRIVAL)) {
+                msgbox(format("Hale: Walk it slowly. Read every stake.\pTalk to whoever's manning the booth.\nThen come tell me what you saw."), MSGBOX_DEFAULT)
+                release
+                end
+            }
             msgbox(format("Hale: You did well. Don't get attached to praise.\nGet attached to results."), MSGBOX_DEFAULT)
             msgbox(format("Hale: We're going west.\nThe wetlands are sick."), MSGBOX_DEFAULT)
+            msgbox(format("Hale: Past the corridor's culvert, the forest opens onto the Floodbasin.\pYour audit was the warm-up.\nThis is the work."), MSGBOX_DEFAULT)
             release
             end
         }
@@ -137,6 +143,19 @@ script ParcelStation_Ilex {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        // After the Floodbasin walk: count the 6 evidence bits and use the
+        // classifier the player has now earned to surface what they read.
+        setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+        setvar(VAR_0x8004, 63)
+        specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+        if (var(VAR_RESULT) == 6) {
+            msgbox(format("Ilex: Pipe, sheen, dead reeds. The Wooper. The Karp. The booth.\pPut a name on it."), MSGBOX_DEFAULT)
+            specialvar(VAR_RESULT, SkaldmereClassifyFloodbasin)
+            msgbox(format("Ilex: COLLAPSING.\pThe keystone is straining; the apex is sick; the mid-tier swarms.\pThis is what 'we're remediating that' actually looks like."), MSGBOX_DEFAULT)
+            msgbox(format("Ilex: Your report is on Hale's desk by morning.\pThe office will sit on it for a while.\nThat is also part of the work."), MSGBOX_DEFAULT)
+            release
+            end
+        }
         msgbox(format("Ilex: Damage wears the mask of improvement.\pYou'll see it everywhere now.\nI'm sorry."), MSGBOX_DEFAULT)
         release
         end

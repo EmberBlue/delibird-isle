@@ -568,3 +568,4 @@ gSpecials::
 	def_special SkaldmereCertTaskCount
 	def_special SkaldmereClassifyMeadow
 	def_special SkaldmereSetGender
+	def_special SkaldmereClassifyFloodbasin
