@@ -61,6 +61,12 @@ open the PNG. Supports input injection (`--press START@4500:8`) and savestates
 for reaching specific maps. Use this to actually verify any UI / map / cutscene
 change, not just that it compiles.
 
+### Continuous integration
+
+`.github/workflows/build.yml` builds the ROM and runs the Skaldmere test
+families on every push, and uploads the ROM as an artifact (Actions tab).
+Keep the repo private — a built ROM contains Nintendo's copyrighted assets.
+
 ## RAM budget (important)
 
 The base pokeemerald-expansion ROM already uses **~87 % of EWRAM (256 KB)

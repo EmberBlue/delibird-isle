@@ -1,38 +1,74 @@
-name: CI
+name: build
+
+# Builds the ROM and runs the Skaldmere test suite on every push/PR, and
+# uploads the ROM as a downloadable artifact. Mirrors the verified local
+# recipe in CLAUDE.md / design/12-implementation.md exactly.
+#
+# NOTE: a compiled Pokemon ROM contains Nintendo's copyrighted assets.
+# Keep this repository PRIVATE; do not publish the artifact.
 
 on:
   push:
-    branches:
-      - master
-      - upcoming
+    branches: ["**"]
   pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    env:
-      GAME_VERSION: EMERALD
-      GAME_REVISION: 0
-      GAME_LANGUAGE: ENGLISH
-      COMPARE: 0
-      UNUSED_ERROR: 1
+    runs-on: ubuntu-24.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Install binutils
+      - name: Install ARM toolchain
         run: |
-          sudo apt update
-          sudo apt install -y binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
-        # build-essential and git are already installed
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends \
+            binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi \
+            libpng-dev
 
-      - name: ROM
-        env:
-          COMPARE: 0
-        run: make -j${nproc} -O all
+      - name: Build host tools
+        run: make tools -j$(nproc)
 
-      - name: Test
-        env:
-          TEST: 1
+      - name: Build ROM (modern)
+        run: make -j$(nproc) modern
+
+      - name: Verify ROM artifact
         run: |
-          make -j${nproc} check
+          test -f pokeemerald.gba
+          ls -la pokeemerald.gba
+          test "$(stat -c%s pokeemerald.gba)" -eq 33554432
+
+      - name: Upload ROM
+        uses: actions/upload-artifact@v4
+        with:
+          name: delibird-isle-rom
+          path: pokeemerald.gba
+          retention-days: 14
+
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ARM toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends \
+            binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi \
+            libpng-dev
+
+      - name: Build tools
+        run: make tools -j$(nproc)
+
+      # DEBUG=0 routes tests to build/modern-test with -DTESTING=1
+      # (see design/12-implementation.md). TESTS is a single name-prefix
+      # filter, not an OR, so each Skaldmere test family runs as its own
+      # step; the first builds the test ELF, the rest reuse it (fast).
+      - name: Survey classifier tests
+        run: make check DEBUG=0 TESTS="Survey" -j$(nproc)
+      - name: DNS tests
+        run: make check DEBUG=0 TESTS="DNS" -j$(nproc)
+      - name: Cert-task script-bridge tests
+        run: make check DEBUG=0 TESTS="Cert" -j$(nproc)
+      - name: Meadow classification test
+        run: make check DEBUG=0 TESTS="Meadow" -j$(nproc)

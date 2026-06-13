@@ -459,9 +459,12 @@ Filled in as each system lands. Empty rows = not yet implemented.
 - **Polish backlog** (any time, much of it Porymap-friendly for the user):
   building-exterior + ransacked-lab art, real town/zone names (§01 pass),
   the title screen, the spectate-battle presentation, "they" pronouns.
-- **CI** — a GitHub Actions workflow running `make modern` + `make check
-  DEBUG=0` on push would catch regressions automatically and publish the ROM
-  as an artifact. Worth doing now that there's a real test suite + content.
+- ✅ **CI** — `.github/workflows/build.yml` builds the ROM + runs the
+  Skaldmere test families on every push and uploads `pokeemerald.gba` as a
+  downloadable artifact (Actions tab → delibird-isle-rom). Mirrors the
+  verified local recipe; **not yet confirmed green on a GitHub runner** — the
+  first run should be watched (this container can't trigger Actions). Keep the
+  repo private (ROM = Nintendo assets).
 
 ## Updating this file
 
