@@ -1,0 +1,50 @@
+// ParcelFerry -- the crossing (the real §07 opening). The scroll plays at
+// sea; the manifest check is the §04 pronoun choice, diegetic; the warp to
+// the pier applies the chosen avatar. The two scroll paragraphs are
+// canonical-verbatim. ('They' pronouns need engine work -- logged in §12;
+// the manifest offers he/she for now.)
+
+const LOCALID_FERRY_ATTENDANT = 1
+
+mapscripts ParcelFerry_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelFerry_Opening
+    ]
+}
+
+script ParcelFerry_Opening {
+    setvar(VAR_TEMP_0, 1)
+    lockall
+    msgbox(format("In an age of unstable climates and shrinking wildlands, the bond between people and Pokémon has changed. Some work to restore balance. Others seek control."), MSGBOX_DEFAULT)
+    msgbox(format("You've just arrived from Johto, leaving behind your old home and Pokémon. You carry only a bag, a notebook… and a memory."), MSGBOX_DEFAULT)
+    closemessage
+    delay(30)
+    msgbox(format("The cabin sways. Beyond the porthole, gray water and grayer sky.\pThe attendant works down the aisle, checking the manifest against the faces."), MSGBOX_DEFAULT)
+    msgbox(format("Attendant: Wren, off at the island stop, yes?\pThe ink's run. Says here…"), MSGBOX_DEFAULT)
+    multichoice(20, 6, MULTI_SKALD_MANIFEST, FALSE)
+    switch (var(VAR_RESULT)) {
+        case 0:
+            setvar(VAR_0x8004, 0)
+        case 1:
+            setvar(VAR_0x8004, 1)
+        default:
+            setvar(VAR_0x8004, 0)
+    }
+    special(SkaldmereSetGender)
+    msgbox(format("The attendant marks the page and moves on.\pAttendant: We're coming in.\nMind the boards--they'll be slick."), MSGBOX_DEFAULT)
+    closemessage
+    delay(40)
+    playse(SE_SHIP)
+    delay(60)
+    warp(MAP_PARCEL_ISLE, 41, 48)
+    waitstate
+    end
+}
+
+script ParcelFerry_Attendant {
+    lock
+    faceplayer
+    msgbox(format("Attendant: Island stop's next.\nGather your things."), MSGBOX_DEFAULT)
+    release
+    end
+}

@@ -567,3 +567,4 @@ gSpecials::
 	def_special SkaldmereCertTaskGet
 	def_special SkaldmereCertTaskCount
 	def_special SkaldmereClassifyMeadow
+	def_special SkaldmereSetGender

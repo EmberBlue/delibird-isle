@@ -55,3 +55,12 @@ u16 SkaldmereClassifyMeadow(void)
     };
     return ClassifySurveyState(&signals);
 }
+
+// §07 opening / §04: the player chooses pronouns only — everything else
+// about Wren is fixed. in: gSpecialVar_0x8004 = MALE/FEMALE. The avatar
+// graphics apply on the next warp, which the ferry-arrival script does
+// immediately after the choice.
+void SkaldmereSetGender(void)
+{
+    gSaveBlock2Ptr->playerGender = gSpecialVar_0x8004;
+}

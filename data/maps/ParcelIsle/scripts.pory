@@ -31,9 +31,6 @@ script ParcelIsle_Arrival {
         end
     }
     lockall
-    msgbox(format("In an age of unstable climates and shrinking wildlands, the bond between people and Pokémon has changed. Some work to restore balance. Others seek control."), MSGBOX_DEFAULT)
-    msgbox(format("You've just arrived from Johto, leaving behind your old home and Pokémon. You carry only a bag, a notebook… and a memory."), MSGBOX_DEFAULT)
-    closemessage
     playse(SE_SHIP)
     delay(96)
     msgbox(format("The ferry horn fades out across the water.\pThe boards are damp under your boots."), MSGBOX_DEFAULT)

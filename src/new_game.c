@@ -153,7 +153,7 @@ static void WarpToTruck(void)
     // The ferry arrives in daylight (§07 scene 1); start the clock at 10:00
     // so a new game doesn't open under the DNS night tint.
     FakeRtc_ForwardTimeTo(10, 0, 0);
-    SetWarpDestination(MAP_GROUP(MAP_PARCEL_ISLE), MAP_NUM(MAP_PARCEL_ISLE), WARP_ID_NONE, 41, 48);
+    SetWarpDestination(MAP_GROUP(MAP_PARCEL_FERRY), MAP_NUM(MAP_PARCEL_FERRY), WARP_ID_NONE, 4, 6);
     WarpIntoMap();
 }
 

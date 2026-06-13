@@ -789,6 +789,12 @@ struct MultichoiceListStruct
     u8 count;
 };
 
+static const struct MenuAction sSkaldManifestOptions[] =
+{
+    {COMPOUND_STRING("He")},
+    {COMPOUND_STRING("She")},
+};
+
 static const struct MultichoiceListStruct sMultichoiceLists[] =
 {
     [MULTI_BRINEY_ON_DEWFORD]          = MULTICHOICE(MultichoiceList_BrineyOnDewford),
@@ -906,6 +912,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_SKALD_MANIFEST]             = MULTICHOICE(sSkaldManifestOptions),
 };
 
 const u8 *const gStdStrings[] =
