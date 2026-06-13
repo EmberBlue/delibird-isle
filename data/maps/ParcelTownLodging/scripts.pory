@@ -22,3 +22,17 @@ script ParcelTownLodging_Keeper {
     release
     end
 }
+
+
+// §07 Scene 2 -- the mentor's letter, on the desk in her paid-up room.
+// The three quoted lines are canonical-verbatim.
+script ParcelTownLodging_Letter {
+    lock
+    msgbox(format("A letter lies on the desk, addressed in a careful field-hand you know from years of margins."), MSGBOX_DEFAULT)
+    msgbox(format("You don't need to be brilliant.\nYou need to be honest."), MSGBOX_DEFAULT)
+    msgbox(format("If the data is real, people will try to bury it. Not because they're evil--because it threatens what they've built."), MSGBOX_DEFAULT)
+    msgbox(format("Meet me at the lab in the morning.\nCome early. Bring curiosity.\nBring boots."), MSGBOX_DEFAULT)
+    msgbox(format("The letter is dated three weeks ago."), MSGBOX_DEFAULT)
+    release
+    end
+}

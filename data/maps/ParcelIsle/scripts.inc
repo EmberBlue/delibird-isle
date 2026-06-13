@@ -167,6 +167,12 @@ ParcelIsle_FerrySign::
 	end
 
 
+ParcelIsle_LabSign::
+# 130 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_LabSign_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsle_Arrival_Text_0:
 # 34 "data/maps/ParcelIsle/scripts.pory"
 	.string "In an age of unstable climates and\n"
@@ -256,3 +262,10 @@ ParcelIsle_FerrySign_Text_0:
 	.string "FERRY LANDING\p"
 	.string "The mainland schedule board is blank.\n"
 	.string "It has been for a while.$"
+
+ParcelIsle_LabSign_Text_0:
+# 130 "data/maps/ParcelIsle/scripts.pory"
+	.string "FIELD RESEARCH ANNEX\n"
+	.string "Skaldmere Survey cooperative site\p"
+	.string "A strip of red cloth is nailed under the\n"
+	.string "plate, faded gray.$"

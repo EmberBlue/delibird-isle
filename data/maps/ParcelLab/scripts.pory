@@ -1,0 +1,58 @@
+// ParcelLab -- the erased lab (§07 Scene 3, "destroyed with precision").
+// Someone carefully took what mattered, then staged the mess. An erasure,
+// not a burglary. The official's line is canonical-verbatim. The whole
+// front half of the game runs on the false read this room creates.
+
+const LOCALID_LAB_OFFICIAL = 1
+const LOCALID_LAB_RESIDENT = 2
+
+mapscripts ParcelLab_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelLab_FirstEntry
+    ]
+}
+
+script ParcelLab_FirstEntry {
+    setvar(VAR_TEMP_0, 1)
+    if (flag(FLAG_SKALDMERE_LAB_SEEN)) {
+        end
+    }
+    lockall
+    msgbox(format("The door was damaged--but not blown open.\pInside: shelves emptied. Drives removed. Sample jars gone.\nA desk lamp on its side."), MSGBOX_DEFAULT)
+    msgbox(format("Whoever did this took what mattered, carefully--\pthen staged the mess."), MSGBOX_DEFAULT)
+    msgbox(format("Not a burglary.\nAn erasure."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_LAB_SEEN)
+    releaseall
+    end
+}
+
+// §07 verbatim: bureaucratic and practiced.
+script ParcelLab_Official {
+    lock
+    faceplayer
+    msgbox(format("Official: No signs of forced entry beyond the latch. Could be vandalism.\pWe've filed it.\nNot much else we can do."), MSGBOX_DEFAULT)
+    msgbox(format("He says it the way a man reads a bus schedule.\pHe has said it before."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelLab_Resident {
+    lock
+    msgbox(format("She doesn't meet your eyes.\pAs you pass, barely a breath:\nDon't make noise about it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// the examine points: the precision is the message
+script ParcelLab_Shelves {
+    msgbox(format("The shelves are empty--but not swept. Every binder gone; the bookends still standing.\pSomeone took these one at a time."), MSGBOX_SIGN)
+    end
+}
+script ParcelLab_Desk {
+    msgbox(format("The desk drawers hang open, contents intact: pens, tape, a tin of nails.\pOnly the drive bay beneath is empty, its cable coiled neatly on the blotter.\pVandals don't coil cables."), MSGBOX_SIGN)
+    end
+}
+script ParcelLab_SampleRack {
+    msgbox(format("A sample rack, every slot bare. No broken glass anywhere.\pOn the floor, one paper label, machine-printed:\nPOLIWAG -- MARSH 7 -- WK 41."), MSGBOX_SIGN)
+    end
+}

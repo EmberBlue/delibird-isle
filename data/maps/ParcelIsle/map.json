@@ -112,6 +112,13 @@
       "elevation": 0,
       "dest_map": "MAP_PARCEL_TOWN_LODGING",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_LAB",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
@@ -123,6 +130,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelIsle_FerrySign"
+    },
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelIsle_LabSign"
     }
   ]
 }

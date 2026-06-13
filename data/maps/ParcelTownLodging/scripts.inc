@@ -35,6 +35,24 @@ ParcelTownLodging_Keeper_2:
 	goto ParcelTownLodging_Keeper_1
 
 
+ParcelTownLodging_Letter::
+# 30 "data/maps/ParcelTownLodging/scripts.pory"
+	lock
+# 31 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Letter_Text_0, MSGBOX_DEFAULT
+# 32 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Letter_Text_1, MSGBOX_DEFAULT
+# 33 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Letter_Text_2, MSGBOX_DEFAULT
+# 34 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Letter_Text_3, MSGBOX_DEFAULT
+# 35 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Letter_Text_4, MSGBOX_DEFAULT
+# 36 "data/maps/ParcelTownLodging/scripts.pory"
+	release
+	end
+
+
 ParcelTownLodging_Keeper_Text_0:
 # 11 "data/maps/ParcelTownLodging/scripts.pory"
 	.string "Keeper: The scientist's room is paid\n"
@@ -55,3 +73,31 @@ ParcelTownLodging_Keeper_Text_2:
 ParcelTownLodging_Keeper_Text_3:
 # 20 "data/maps/ParcelTownLodging/scripts.pory"
 	.string "Keeper: The kettle's always on.$"
+
+ParcelTownLodging_Letter_Text_0:
+# 31 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "A letter lies on the desk, addressed in\n"
+	.string "a careful field-hand you know from\l"
+	.string "years of margins.$"
+
+ParcelTownLodging_Letter_Text_1:
+# 32 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "You don't need to be brilliant.\n"
+	.string "You need to be honest.$"
+
+ParcelTownLodging_Letter_Text_2:
+# 33 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "If the data is real, people will try to\n"
+	.string "bury it. Not because they're\l"
+	.string "evil--because it threatens what\l"
+	.string "they've built.$"
+
+ParcelTownLodging_Letter_Text_3:
+# 34 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "Meet me at the lab in the morning.\n"
+	.string "Come early. Bring curiosity.\n"
+	.string "Bring boots.$"
+
+ParcelTownLodging_Letter_Text_4:
+# 35 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "The letter is dated three weeks ago.$"

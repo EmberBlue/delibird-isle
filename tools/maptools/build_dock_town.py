@@ -113,6 +113,18 @@ def build():
             walkable = (mid == 61)
             put(44 + dx, 17 + dy, mid, col=0 if walkable else 1)
 
+    # --- the erased lab (§07 scene 3) -- a wider shell, door center --------
+    lab = [
+        (40, 41, 41, 41, 43),
+        (44, 45, 45, 45, 47),
+        (52,  7, 24,  7, 55),
+        (52,  7, 61,  7, 55),
+    ]
+    for dy, row in enumerate(lab):
+        for dx, mid in enumerate(row):
+            walkable = (mid == 61)
+            put(33 + dx, 17 + dy, mid, col=0 if walkable else 1)
+
     # --- sandy track: pier head north into town, then a plaza ---------------    # --- tall grass (wild encounters; §06 saltmarsh-fringe guild) -----------
     for (x0, x1, y0, y1) in ((12, 21, 12, 18), (52, 62, 13, 19),
                              (55, 66, 29, 35), (13, 22, 28, 34)):

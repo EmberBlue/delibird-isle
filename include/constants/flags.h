@@ -51,7 +51,7 @@
 #define FLAG_SKALD_ITEM_STATION_BALLS  0x25 // Skaldmere item ball
 #define FLAG_SKALD_ITEM_WET_ANTIDOTE   0x26 // Skaldmere item ball
 #define FLAG_SKALD_ITEM_COR_SUPERPOTION 0x27 // Skaldmere item ball
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_SKALDMERE_LAB_SEEN        0x28 // Skaldmere: §07 erased-lab scene seen
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

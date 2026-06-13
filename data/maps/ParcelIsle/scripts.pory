@@ -124,3 +124,9 @@ script ParcelIsle_FerrySign {
     msgbox(format("FERRY LANDING\pThe mainland schedule board is blank.\nIt has been for a while."), MSGBOX_SIGN)
     end
 }
+
+
+script ParcelIsle_LabSign {
+    msgbox(format("FIELD RESEARCH ANNEX\nSkaldmere Survey cooperative site\pA strip of red cloth is nailed under the plate, faded gray."), MSGBOX_SIGN)
+    end
+}
