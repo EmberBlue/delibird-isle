@@ -277,6 +277,40 @@ def build_learnsets(move_index, species_consts):
     return learn, gen
 
 
+def species_mon_data(ability_index, item_index):
+    """Per-species abilities (slot 1 / slot 2 / hidden) and wild-held items
+    (.itemCommon / .itemRare), as indices into the abilities/items lists, so the
+    ability + held-item pickers can mark a Pokemon's real options."""
+    sidir = os.path.join(POKE, "species_info")
+    out = {}
+    for f in sorted(os.listdir(sidir)):
+        if not f.endswith("_families.h"):
+            continue
+        text = read(os.path.join(sidir, f))
+        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=", text)]
+        for i, (sp, start) in enumerate(marks):
+            end = marks[i + 1][1] if i + 1 < len(marks) else len(text)
+            chunk = text[start:end]
+            rec = {}
+            mab = re.search(r"\.abilities\s*=\s*\{([^}]*)\}", chunk)   # first wins
+            if mab:
+                slots = re.findall(r"ABILITY_\w+", mab.group(1))
+                idxs = [(-1 if a == "ABILITY_NONE" else ability_index.get(a, -1)) for a in slots]
+                while len(idxs) < 3:
+                    idxs.append(-1)
+                if any(x >= 0 for x in idxs[:3]):
+                    rec["ab"] = idxs[:3]
+            items = []
+            for key in ("itemCommon", "itemRare"):
+                mi = re.search(r"\." + key + r"\s*=\s*(ITEM_\w+)", chunk)
+                items.append(item_index.get(mi.group(1), -1) if (mi and mi.group(1) != "ITEM_NONE") else -1)
+            if any(x >= 0 for x in items):
+                rec["item"] = items
+            if rec:
+                out[sp] = rec
+    return out
+
+
 def build_data():
     data = {
         "species": species_list(),
@@ -310,6 +344,10 @@ def build_data():
     data["meta"]["learnGen"] = gen
     data["meta"]["learnCount"] = len(learn)
     data["meta"]["scopeCount"] = len(scope_consts)
+    # Per-species abilities + wild-held items, for the ability/held-item pickers.
+    ability_index = {a["c"]: i for i, a in enumerate(data["abilities"])}
+    item_index = {it["c"]: i for i, it in enumerate(data["items"])}
+    data["mon"] = species_mon_data(ability_index, item_index)
     return data
 
 

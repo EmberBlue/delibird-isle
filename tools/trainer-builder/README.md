@@ -32,7 +32,9 @@ repo and open it locally.
    default view (Gen 1–4 families + cross-gen evolutions + regional forms, hiding
    Mega/Gigantamax/Primal gimmick forms); turn it off to pick literally anything.
    Learnsets are bundled for the in-scope roster (~640 mons); other picks fall
-   back to the full move list.
+   back to the full move list. Picking a species also marks the **ability** picker
+   (Ability 1 / Ability 2 / Hidden) and floats that mon's **wild-held items**
+   (common / rare) to the top of the held-item picker.
 3. Write a line or two of **backstory** — it's saved as a `/* */` comment above
    the block (the build strips it before compiling; it's there for whoever reads
    `trainers.party`).

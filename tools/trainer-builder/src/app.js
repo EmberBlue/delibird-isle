@@ -25,13 +25,14 @@
     return list;
   }
 
-  // Species of the party card a move combo lives in (for learnset filtering).
-  function moveSpecies(input) {
+  // Species of the party card a combo lives in (for learnset/ability/item marks).
+  function cardSpecies(input) {
     var card = input.closest(".mon");
     if (!card) return "";
     var sp = card.querySelector('[data-f="species"]');
     return sp ? (sp.dataset.value || "") : "";
   }
+  function monRec(sp) { return (sp && D.mon && D.mon[sp.slice(8)]) || null; }
 
   // Move options for a species: its learnset, tagged by method + level, sorted
   // level-up (by level) → egg → TM/tutor. Falls back to all moves when the
@@ -59,6 +60,42 @@
     return out;
   }
 
+  // Ability picker: the species' real abilities marked (slot 1 / slot 2 / hidden)
+  // up top, then every ability below (trainers can run any ability).
+  function abilityOptionsFor(sp) {
+    var rec = monRec(sp);
+    if (!rec || !rec.ab) return LISTS.ability;
+    var labels = ["Ability 1", "Ability 2", "Hidden"], cls = ["b-lv", "b-lv", "b-tm"];
+    var out = [], seen = {};
+    rec.ab.forEach(function (ai, idx) {
+      if (ai < 0) return;
+      var a = D.abilities[ai];
+      if (seen[a.c]) return;
+      out.push({ c: a.c, n: a.n, badge: labels[idx], bclass: cls[idx], group: "spA" });
+      seen[a.c] = 1;
+    });
+    LISTS.ability.forEach(function (a) { if (!seen[a.c]) out.push({ c: a.c, n: a.n, group: "allA" }); });
+    return out;
+  }
+
+  // Held-item picker: the species' wild-held items marked (common / rare) up top,
+  // then every item below.
+  function itemOptionsFor(sp) {
+    var rec = monRec(sp);
+    if (!rec || !rec.item) return LISTS.item;
+    var labels = ["Wild common", "Wild rare"], cls = ["b-egg", "b-tm"];
+    var out = [], seen = {};
+    rec.item.forEach(function (ii, idx) {
+      if (ii < 0) return;
+      var it = D.items[ii];
+      if (seen[it.c]) return;
+      out.push({ c: it.c, n: it.n, badge: labels[idx], bclass: cls[idx], group: "wild" });
+      seen[it.c] = 1;
+    });
+    LISTS.item.forEach(function (it) { if (!seen[it.c]) out.push({ c: it.c, n: it.n, group: "allI" }); });
+    return out;
+  }
+
   /* ---- combobox ------------------------------------------------------ */
   var openPop = null;
   function closePop() { if (openPop) { openPop.classList.remove("open"); openPop = null; } }
@@ -73,11 +110,17 @@
     wrap.appendChild(pop);
     var active = -1, rendered = [];
 
-    var GROUP = { lv: "Level-up", egg: "Egg moves", tm: "TM / Tutor" };
+    var GROUP = { lv: "Level-up", egg: "Egg moves", tm: "TM / Tutor",
+                  spA: "Abilities", allA: "All abilities",
+                  wild: "Held in the wild", allI: "All items" };
     function render(q) {
       var kind = input.dataset.kind;
       q = (q || "").trim().toLowerCase();
-      var opts = kind === "move" ? moveOptionsFor(moveSpecies(input)) : optionsFor(kind);
+      var opts;
+      if (kind === "move") opts = moveOptionsFor(cardSpecies(input));
+      else if (kind === "ability") opts = abilityOptionsFor(cardSpecies(input));
+      else if (kind === "item") opts = itemOptionsFor(cardSpecies(input));
+      else opts = optionsFor(kind);
       var out = [], i;
       for (i = 0; i < opts.length; i++) {          // no cap — the popup scrolls
         var o = opts[i];
