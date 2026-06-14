@@ -44,16 +44,16 @@
     var out = [], seen = {};
     (rec.lv || []).forEach(function (p) {
       var m = D.moves[p[1]];
-      out.push({ c: m.c, n: m.n, badge: "Lv " + p[0], bclass: "b-lv", rank: [0, p[0]] });
+      out.push({ c: m.c, n: m.n, badge: "Lv " + p[0], bclass: "b-lv", group: "lv", rank: [0, p[0]] });
       seen[m.c] = 1;
     });
     (rec.egg || []).forEach(function (i) {
       var m = D.moves[i];
-      if (!seen[m.c]) { out.push({ c: m.c, n: m.n, badge: "Egg", bclass: "b-egg", rank: [1, 0] }); seen[m.c] = 1; }
+      if (!seen[m.c]) { out.push({ c: m.c, n: m.n, badge: "Egg", bclass: "b-egg", group: "egg", rank: [1, 0] }); seen[m.c] = 1; }
     });
     (rec.tm || []).forEach(function (i) {
       var m = D.moves[i];
-      if (!seen[m.c]) { out.push({ c: m.c, n: m.n, badge: "TM", bclass: "b-tm", rank: [2, 0] }); seen[m.c] = 1; }
+      if (!seen[m.c]) { out.push({ c: m.c, n: m.n, badge: "TM", bclass: "b-tm", group: "tm", rank: [2, 0] }); seen[m.c] = 1; }
     });
     out.sort(function (a, b) { return a.rank[0] - b.rank[0] || a.rank[1] - b.rank[1] || a.n.localeCompare(b.n); });
     return out;
@@ -73,23 +73,27 @@
     wrap.appendChild(pop);
     var active = -1, rendered = [];
 
+    var GROUP = { lv: "Level-up", egg: "Egg moves", tm: "TM / Tutor" };
     function render(q) {
       var kind = input.dataset.kind;
       q = (q || "").trim().toLowerCase();
       var opts = kind === "move" ? moveOptionsFor(moveSpecies(input)) : optionsFor(kind);
       var out = [], i;
-      for (i = 0; i < opts.length && out.length < 60; i++) {
+      for (i = 0; i < opts.length; i++) {          // no cap — the popup scrolls
         var o = opts[i];
         if (!q || o.n.toLowerCase().indexOf(q) >= 0 || o.c.toLowerCase().indexOf(q) >= 0) out.push(o);
       }
       rendered = out; active = -1;
-      pop.innerHTML = out.map(function (o, idx) {
+      var html = "", lastG = null;
+      out.forEach(function (o, idx) {
+        if (o.group && o.group !== lastG) { html += '<div class="combo-hd">' + GROUP[o.group] + "</div>"; lastG = o.group; }
         var right = "";
         if (kind === "species" && !o.sc) right = '<span class="gbadge">out of scope</span> ';
         else if (o.badge) right = '<span class="lbadge ' + (o.bclass || "") + '">' + esc(o.badge) + "</span> ";
-        return '<div class="combo-opt" data-i="' + idx + '"><span>' + esc(o.n) + "</span>" +
-               right + "<small>" + esc(o.c) + "</small></div>";
-      }).join("") || '<div class="combo-opt"><span class="muted">no match</span></div>';
+        html += '<div class="combo-opt" data-i="' + idx + '"><span>' + esc(o.n) + "</span>" +
+                right + "<small>" + esc(o.c) + "</small></div>";
+      });
+      pop.innerHTML = html || '<div class="combo-opt"><span class="muted">no match</span></div>';
     }
     function open() { closePop(); render(input.value); pop.classList.add("open"); openPop = pop; }
     function pick(o) {

@@ -56,9 +56,11 @@
   .iv-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
   .iv-grid .fld{flex:none;min-width:0}
   .combo{position:relative}
-  .combo-pop{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 2px);max-height:240px;
+  .combo-pop{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 2px);max-height:320px;
     overflow:auto;background:#0d1117;border:1px solid var(--accent2);border-radius:8px;display:none;
     box-shadow:0 10px 30px rgba(0,0,0,.5)}
+  .combo-hd{padding:5px 9px;font-size:10px;text-transform:uppercase;letter-spacing:.7px;
+    color:var(--accent);background:#0b0e13;border-top:1px solid var(--line);position:sticky;top:0}
   .combo-pop.open{display:block}
   .combo-opt{padding:6px 9px;cursor:pointer;font-size:13px;display:flex;justify-content:space-between;gap:8px}
   .combo-opt:hover,.combo-opt.active{background:var(--panel2)}
