@@ -7,6 +7,10 @@ ground beneath everything is in `design/`.
 
 ## Read first, in this order
 
+0. `design/SESSION-HANDOFF.md` — **live state for continuing sessions**: the
+   current model situation, decisions in flight, WIP, and the immediate menu.
+   Read it before starting work; trust `design/12-implementation.md` over it
+   for anything structural.
 1. `design/README.md` — table of contents, status legend.
 2. `design/00-canon-lock.md` — "do not contradict" rules. The locked facts
    here are the spine; anything you write must agree with them.
