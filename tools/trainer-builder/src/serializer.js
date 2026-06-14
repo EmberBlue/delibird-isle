@@ -22,6 +22,7 @@
  *        species:  "SPECIES_POOCHYENA"   // required
  *        gender:   "M" | "F" | ""
  *        item:     "ITEM_ORAN_BERRY" | ""
+ *        ball:     "ITEM_GREAT_BALL" | ""    // Poke Ball the mon is sent out in
  *        level:    9
  *        ability:  "ABILITY_RUN_AWAY" | ""
  *        ivs:      {hp,atk,def,spa,spd,spe} | null   // 0-31 each
@@ -60,6 +61,7 @@
     lines.push(head);
     lines.push("Level: " + (mon.level != null && mon.level !== "" ? mon.level : 5));
     if (mon.ability) lines.push("Ability: " + mon.ability);
+    if (mon.ball) lines.push("Ball: " + mon.ball);
     var iv = ivLine(mon.ivs);
     if (iv) lines.push(iv);
     var moves = (mon.moves || []).filter(function (m) { return m; });

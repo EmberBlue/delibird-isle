@@ -60,12 +60,12 @@ const samples = [
           ivs: { hp: 18, atk: 18, def: 18, spa: 18, spd: 18, spe: 18 },
           moves: ["MOVE_TACKLE", "MOVE_HOWL", "MOVE_SAND_ATTACK", "MOVE_BITE"] },
         { species: "SPECIES_CARVANHA", gender: "M", item: "ITEM_ORAN_BERRY",
-          level: 6, ability: "ABILITY_ROUGH_SKIN",
+          ball: "ITEM_GREAT_BALL", level: 6, ability: "ABILITY_ROUGH_SKIN",
           moves: ["MOVE_AQUA_JET", "MOVE_LEER", "MOVE_BITE", "MOVE_FOCUS_ENERGY"] },
       ],
     },
     expect: ["SPECIES_POOCHYENA", "SPECIES_CARVANHA", "MOVE_AQUA_JET",
-             "ITEM_ORAN_BERRY", "ABILITY_ROUGH_SKIN", "AI_FLAG_TRY_TO_FAINT"],
+             "ITEM_ORAN_BERRY", "ABILITY_ROUGH_SKIN", "AI_FLAG_TRY_TO_FAINT", "ITEM_GREAT_BALL"],
   },
 ];
 

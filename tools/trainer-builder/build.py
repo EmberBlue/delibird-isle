@@ -68,24 +68,93 @@ def species_display(const):
     return n
 
 
+def species_aliases():
+    """SPECIES_X -> SPECIES_Y for the base-form alias defines (e.g.
+    SPECIES_ARCEUS -> SPECIES_ARCEUS_NORMAL, SPECIES_DEOXYS -> ..._NORMAL)."""
+    text = read(os.path.join(INC, "species.h"))
+    out = {}
+    for m in re.finditer(r"^#define\s+(SPECIES_\w+)\s+(SPECIES_\w+)\s*$", text, re.M):
+        out[m.group(1)] = m.group(2)
+    return out
+
+
+def species_info_meta():
+    """Per-species national-dex number and regional-form flag, read from every
+    species_info family file. Used to collapse alternate forms to their base."""
+    sidir = os.path.join(POKE, "species_info")
+    natdex, regional = {}, set()
+    rflags = ("isAlolanForm", "isGalarianForm", "isHisuianForm", "isPaldeanForm")
+    for f in sorted(os.listdir(sidir)):
+        if not f.endswith("_families.h"):
+            continue
+        text = read(os.path.join(sidir, f))
+        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=", text)]
+        for i, (sp, start) in enumerate(marks):
+            end = marks[i + 1][1] if i + 1 < len(marks) else len(text)
+            chunk = text[start:end]
+            md = re.search(r"\.natDexNum\s*=\s*(NATIONAL_DEX_\w+)", chunk)
+            if md:
+                natdex[sp] = md.group(1)
+            if any(re.search(r"\." + fl + r"\s*=\s*TRUE", chunk) for fl in rflags):
+                regional.add(sp)
+    return natdex, regional
+
+
 def species_list():
     text = read(os.path.join(INC, "species.h"))
-    seen = {}
+    numeric = {}
     for const, val in parse_defines(text, "SPECIES_", want_value=True):
-        if const == "SPECIES_NONE":
+        if const == "SPECIES_NONE" or val is None or val == 0:
             continue
-        if val is None:           # alias define (e.g. SPECIES_DEOXYS -> ..._NORMAL)
-            continue
-        if val == 0:
-            continue
-        # First numeric definition wins (base species, not later form aliases).
-        if const in seen:
-            continue
-        seen[const] = val
+        numeric.setdefault(const, val)        # first numeric definition wins
+
+    # Multi-form species (Arceus, Deoxys, Rotom, Unown, Giratina, ...) expose a
+    # clean base alias (SPECIES_ARCEUS) plus per-form constants. Show the clean
+    # alias and collapse the form variants under it.
+    aliases = species_aliases()
+    alias_bases, alias_entries = set(), []
+    for ax, ay in aliases.items():
+        if ay in numeric:
+            alias_bases.add(ax[len("SPECIES_"):])
+            alias_entries.append((ax, numeric[ay]))
+
+    def is_collapsed_form(const):
+        name = const[len("SPECIES_"):]
+        return any(name.startswith(b + "_") for b in alias_bases)
+
+    # Collapse non-regional alternate forms (Mega/Gigantamax/cosplay/battle forms)
+    # to the base species for their national dex number; keep regionals (which
+    # carry a form flag) and cross-gen evolutions (which have their own dex no.).
+    natdex, regional = species_info_meta()
+    dexmin = {}
+    for const, val in numeric.items():
+        dn = natdex.get(const[len("SPECIES_"):])
+        if dn:
+            dexmin[dn] = min(dexmin.get(dn, 1 << 30), val)
+
     items = []
-    for const, val in sorted(seen.items(), key=lambda kv: kv[1]):
+    for const, val in numeric.items():
+        suffix = const[len("SPECIES_"):]
+        if is_collapsed_form(const):
+            continue
+        dn = natdex.get(suffix)
+        if dn and suffix not in regional and val != dexmin[dn]:
+            continue                          # alternate form -> collapsed to base
         items.append({"c": const, "n": species_display(const), "v": val})
+    for ax, val in alias_entries:
+        items.append({"c": ax, "n": species_display(ax), "v": val})
+    items.sort(key=lambda d: d["v"])
     return items
+
+
+def balls_list():
+    """The catchable Poke Balls (item block 1..27: Poke .. Cherish)."""
+    text = read(os.path.join(INC, "items.h"))
+    out = []
+    for const, val in parse_defines(text, "ITEM_", want_value=True):
+        if val is not None and 1 <= val <= 27 and const.endswith("_BALL"):
+            out.append((val, {"c": const, "n": pretty(const, "ITEM_")}))
+    return [d for _, d in sorted(out)]
 
 
 def scope_species_set():
@@ -103,7 +172,9 @@ def scope_species_set():
         if not os.path.exists(path):
             continue
         text = read(path)
-        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=\s*\{", text)]
+        # Match both `= { ... }` and macro initializers (e.g. ARCEUS uses
+        # `= ARCEUS_SPECIES_INFO(...)`), so multi-form species aren't missed.
+        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=", text)]
         for i, (sp, start) in enumerate(marks):
             end = marks[i + 1][1] if i + 1 < len(marks) else len(text)
             if any(re.search(r"\." + f + r"\s*=\s*TRUE", text[start:end]) for f in exclude):
@@ -223,7 +294,7 @@ def parse_species_info():
         if os.path.isdir(sidir) else []
     for path in files:
         text = read(path)
-        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=\s*\{", text)]
+        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=", text)]
         for i, (sp, start) in enumerate(marks):
             end = marks[i + 1][1] if i + 1 < len(marks) else len(text)
             chunk = text[start:end]
@@ -279,6 +350,7 @@ def build_data():
         "pics": pic_list(),
         "music": music_list(),
         "aiFlags": ai_list(),
+        "balls": balls_list(),
         "meta": {
             "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             # National-dex value cutoffs (verified in species.h): canon = Gens 1-3
@@ -291,6 +363,11 @@ def build_data():
     # forms (the .sc flag). Drives the dropdown filter and which species get
     # bundled learnsets; out-of-scope mons fall back to the full move list.
     scope = scope_species_set()
+    # A clean base alias (SPECIES_ARCEUS) is in scope if its target form
+    # (SPECIES_ARCEUS_NORMAL) belongs to a Gen 1-4 family.
+    for ax, ay in species_aliases().items():
+        if ay[len("SPECIES_"):] in scope:
+            scope.add(ax[len("SPECIES_"):])
     for s in data["species"]:
         if s["c"][len("SPECIES_"):] in scope:
             s["sc"] = 1
@@ -330,7 +407,7 @@ PUBLIC_DEMO = {
     "backstory": "A friendly kid who will not stop talking about bugs.",
     "party": [
         {"species": "SPECIES_CATERPIE", "level": 6, "ability": "ABILITY_SHIELD_DUST",
-         "moves": ["MOVE_TACKLE", "MOVE_STRING_SHOT"]},
+         "ball": "ITEM_NET_BALL", "moves": ["MOVE_TACKLE", "MOVE_STRING_SHOT"]},
         {"species": "SPECIES_WEEDLE", "level": 6, "ability": "ABILITY_SHIELD_DUST",
          "moves": ["MOVE_POISON_STING", "MOVE_STRING_SHOT"]},
     ],

@@ -174,6 +174,8 @@
 
   /* ---- party cards --------------------------------------------------- */
   var party = $("#party-cards");
+  var BALL_OPTS = '<option value="">Default (Poké Ball)</option>' +
+    D.balls.map(function (b) { return '<option value="' + b.c + '">' + esc(b.n) + "</option>"; }).join("");
   function monCard() {
     var d = document.createElement("div");
     d.className = "mon";
@@ -186,6 +188,7 @@
         '<div class="fld sm"><label>Level</label><input type="number" data-f="level" min="1" max="100" value="5"></div>' +
         '<div class="fld"><label>Ability</label><div class="combo"><input class="combo-in" data-kind="ability" data-f="ability" placeholder="optional"></div></div>' +
         '<div class="fld"><label>Held item</label><div class="combo"><input class="combo-in" data-kind="item" data-f="item" placeholder="optional"></div></div>' +
+        '<div class="fld sm" style="flex:0 0 130px"><label>Ball</label><select data-f="ball">' + BALL_OPTS + "</select></div>" +
       "</div>" +
       '<div class="row"><div class="fld grow"><label>Moves (up to 4)</label></div></div>' +
       '<div class="row">' + [0, 1, 2, 3].map(function (i) {
@@ -230,6 +233,7 @@
       level: get("level").value,
       ability: comboVal(get("ability")),
       item: comboVal(get("item")),
+      ball: get("ball").value,
       moves: moves, ivs: ivs,
     };
   }
@@ -355,6 +359,7 @@
       $('[data-f="level"]', card).value = m.level != null ? m.level : 5;
       setCombo($('[data-f="ability"]', card), m.ability || "");
       setCombo($('[data-f="item"]', card), m.item || "");
+      $('[data-f="ball"]', card).value = m.ball || "";
       var mv = $$('[data-f="move"]', card);
       (m.moves || []).forEach(function (mc, i) { if (mv[i]) setCombo(mv[i], mc); });
       if (m.ivs) $$("[data-iv]", card).forEach(function (inp) {
