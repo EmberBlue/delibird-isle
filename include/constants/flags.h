@@ -53,7 +53,7 @@
 #define FLAG_SKALD_ITEM_COR_SUPERPOTION 0x27 // Skaldmere item ball
 #define FLAG_SKALDMERE_LAB_SEEN        0x28 // Skaldmere: §07 erased-lab scene seen
 #define FLAG_SKALDMERE_FLOODBASIN_ARRIVAL  0x29 // Skaldmere: §08 Ch2 Floodbasin entry / "the wetlands are sick"
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
+#define FLAG_SKALDMERE_WETLAND_CERT    0x2A // Skaldmere: §08 Ch2 Wetland Certification earned
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag

@@ -47,8 +47,31 @@ script ParcelStation_Hale {
     faceplayer
     if (flag(FLAG_SYS_POKEMON_GET)) {
         if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+            // Chapter 2 close: once Ilex has filed the report (CH2 bit 6),
+            // Hale signs the Wetland Certification. No fanfare.
+            if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+                msgbox(format("Hale: Two credentials. A sick forest corridor and a sicker basin.\pThat's the shape of the job, {PLAYER}.\nIt doesn't get prettier west of here."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: Rest up. The River and the farmland are next, and the people there have even less reason to like us."), MSGBOX_DEFAULT)
+                release
+                end
+            }
+            setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+            setvar(VAR_0x8004, 6)
+            specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+            if (var(VAR_RESULT) == 1) {
+                msgbox(format("Hale reads it twice. He doesn't argue with any of it.\pHale: You couldn't fix it."), MSGBOX_DEFAULT)
+                msgbox(format("{PLAYER}: No."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: And you didn't pretend you had.\pThat's the certification. Not the cleanup --\nthe refusal to sign off on a lie."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: Wetland Certification complete."), MSGBOX_DEFAULT)
+                giveitem(ITEM_SUPER_POTION, 5)
+                giveitem(ITEM_PARALYZE_HEAL, 5)
+                msgbox(format("Rin tops off your kit without a word.\pIlex, from across the room:\nIlex: It won't simply come back. Now you know that in your hands."), MSGBOX_DEFAULT)
+                setflag(FLAG_SKALDMERE_WETLAND_CERT)
+                release
+                end
+            }
             if (flag(FLAG_SKALDMERE_FLOODBASIN_ARRIVAL)) {
-                msgbox(format("Hale: Walk it slowly. Read every stake.\pTalk to whoever's manning the booth.\nThen come tell me what you saw."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: Walk it slowly. Read every stake.\pTalk to whoever's manning the booth.\nThen tell Ilex what you saw."), MSGBOX_DEFAULT)
                 release
                 end
             }
@@ -143,16 +166,25 @@ script ParcelStation_Ilex {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        // After the Floodbasin walk: count the 6 evidence bits and use the
-        // classifier the player has now earned to surface what they read.
+        // bit 6 of CH2_EVIDENCE = the report has been filed.
         setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+        setvar(VAR_0x8004, 6)
+        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+        if (var(VAR_RESULT) == 1) {
+            msgbox(format("Ilex: It's filed. The papers are Hale's to sign.\pDon't expect him to smile about it."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        // count the 6 evidence bits and run the classifier the player earned.
         setvar(VAR_0x8004, 63)
         specialvar(VAR_RESULT, SkaldmereCertTaskCount)
         if (var(VAR_RESULT) == 6) {
             msgbox(format("Ilex: Pipe, sheen, dead reeds. The Wooper. The Karp. The booth.\pPut a name on it."), MSGBOX_DEFAULT)
             specialvar(VAR_RESULT, SkaldmereClassifyFloodbasin)
             msgbox(format("Ilex: COLLAPSING.\pThe keystone is straining; the apex is sick; the mid-tier swarms.\pThis is what 'we're remediating that' actually looks like."), MSGBOX_DEFAULT)
-            msgbox(format("Ilex: Your report is on Hale's desk by morning.\pThe office will sit on it for a while.\nThat is also part of the work."), MSGBOX_DEFAULT)
+            setvar(VAR_0x8004, 6)
+            special(SkaldmereCertTaskMark)
+            msgbox(format("Ilex: I'll have your report typed by morning.\pGo tell Hale you're done.\nThe certification's his to give."), MSGBOX_DEFAULT)
             release
             end
         }
