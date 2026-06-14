@@ -27,7 +27,11 @@ repo and open it locally.
    generation, plus egg + teachable/tutor). Untick **Learnset moves only** to pick
    any move (trainers can legally run off-learnset sets). Leave moves blank to let
    the engine pick the mon's last four level-up moves. Learnsets are bundled for
-   canon species (Gen 1–4); others fall back to the full move list.
+   the in-scope roster — the **Gen 1–4 evolutionary families plus their cross-gen
+   evolutions (Sylveon, Annihilape, Mamoswine…) and regional forms (Alolan/
+   Galarian/Hisuian/Paldean)**, excluding Mega/Gigantamax/Primal gimmick forms
+   (~590 species). Untick **Gen 1–4 roster** to browse every species; those fall
+   back to the full move list.
 3. Write a line or two of **backstory** — it's saved as a `/* */` comment above
    the block (the build strips it before compiling; it's there for whoever reads
    `trainers.party`).

@@ -20,8 +20,7 @@
   function optionsFor(kind) {
     var list = LISTS[kind];
     if (kind === "species" && $("#canon-only").checked) {
-      var max = D.meta.canonMaxValue;
-      list = list.filter(function (o) { return o.v <= max; });
+      list = list.filter(function (o) { return o.sc; });   // Gen 1-4 families + forms
     }
     return list;
   }
@@ -86,7 +85,7 @@
       rendered = out; active = -1;
       pop.innerHTML = out.map(function (o, idx) {
         var right = "";
-        if (kind === "species" && o.v > D.meta.canonMaxValue) right = '<span class="gbadge">non-canon</span> ';
+        if (kind === "species" && !o.sc) right = '<span class="gbadge">out of scope</span> ';
         else if (o.badge) right = '<span class="lbadge ' + (o.bclass || "") + '">' + esc(o.badge) + "</span> ";
         return '<div class="combo-opt" data-i="' + idx + '"><span>' + esc(o.n) + "</span>" +
                right + "<small>" + esc(o.c) + "</small></div>";

@@ -57,6 +57,17 @@ def parse_defines(text, prefix, want_value=False):
     return out
 
 
+def species_display(const):
+    n = pretty(const, "SPECIES_")
+    for suf, rep in ((" Mega X", "(Mega X)"), (" Mega Y", "(Mega Y)"), (" Mega", "(Mega)"),
+                     (" Gmax", "(Gmax)"), (" Primal", "(Primal)"),
+                     (" Alola", "(Alolan)"), (" Galar", "(Galarian)"),
+                     (" Hisui", "(Hisuian)"), (" Paldea", "(Paldean)")):
+        if n.endswith(suf):
+            return n[:-len(suf)] + " " + rep
+    return n
+
+
 def species_list():
     text = read(os.path.join(INC, "species.h"))
     seen = {}
@@ -73,8 +84,32 @@ def species_list():
         seen[const] = val
     items = []
     for const, val in sorted(seen.items(), key=lambda kv: kv[1]):
-        items.append({"c": const, "n": pretty(const, "SPECIES_"), "v": val})
+        items.append({"c": const, "n": species_display(const), "v": val})
     return items
+
+
+def scope_species_set():
+    """Species in the Gen 1-4 evolutionary families — including their cross-gen
+    evolutions (Sylveon, Annihilape, ...) and regional forms (Alolan/Galarian/
+    Hisuian/Paldean) — but NOT battle-gimmick forms (Mega/Primal/Gigantamax/Totem).
+    pokeemerald-expansion groups species_info by the family's introductory gen, so
+    membership of gen_1..4_families.h is the authoritative signal."""
+    sidir = os.path.join(POKE, "species_info")
+    exclude = ("isMegaEvolution", "isPrimalReversion", "isGigantamax",
+               "isUltraBurst", "isTotem", "isDynamax")
+    keep = set()
+    for g in (1, 2, 3, 4):
+        path = os.path.join(sidir, "gen_%d_families.h" % g)
+        if not os.path.exists(path):
+            continue
+        text = read(path)
+        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=\s*\{", text)]
+        for i, (sp, start) in enumerate(marks):
+            end = marks[i + 1][1] if i + 1 < len(marks) else len(text)
+            if any(re.search(r"\." + f + r"\s*=\s*TRUE", text[start:end]) for f in exclude):
+                continue
+            keep.add(sp)
+    return keep
 
 
 def simple_list(filename, prefix, exclude=()):
@@ -252,14 +287,20 @@ def build_data():
             "genCutoffs": {"1": 151, "2": 251, "3": 386, "4": 493},
         },
     }
-    # Per-species learnsets (move indices into data["moves"]). Built for canon
-    # species (Gen 1-4) to keep the bundle lean; others fall back to "all moves".
+    # Roster scope: Gen 1-4 families + their cross-gen evolutions and regional
+    # forms (the .sc flag). Drives the dropdown filter and which species get
+    # bundled learnsets; out-of-scope mons fall back to the full move list.
+    scope = scope_species_set()
+    for s in data["species"]:
+        if s["c"][len("SPECIES_"):] in scope:
+            s["sc"] = 1
     move_index = {m["c"]: i for i, m in enumerate(data["moves"])}
-    canon = [s["c"] for s in data["species"] if s["v"] <= data["meta"]["canonMaxValue"]]
-    learn, gen = build_learnsets(move_index, canon)
+    scope_consts = [s["c"] for s in data["species"] if s.get("sc")]
+    learn, gen = build_learnsets(move_index, scope_consts)
     data["learn"] = learn
     data["meta"]["learnGen"] = gen
     data["meta"]["learnCount"] = len(learn)
+    data["meta"]["scopeCount"] = len(scope_consts)
     return data
 
 
