@@ -26,11 +26,12 @@ repo and open it locally.
    from your ROM's actual learnsets (level-up from the active `P_LVL_UP_LEARNSETS`
    generation, plus egg + teachable/tutor). Untick **Learnset moves only** to pick
    any move (trainers can legally run off-learnset sets). Leave moves blank to let
-   the engine pick the mon's last four level-up moves. Learnsets are bundled for
-   the in-scope roster — the **Gen 1–4 evolutionary families plus their cross-gen
-   evolutions (Sylveon, Annihilape, Mamoswine…) and regional forms (Alolan/
-   Galarian/Hisuian/Paldean)**, excluding Mega/Gigantamax/Primal gimmick forms
-   (~590 species). Untick **Gen 1–4 roster** to browse every species; those fall
+   the engine pick the mon's last four level-up moves. **Nothing is collapsed** —
+   every real species and form in the expansion is selectable (Megas, type plates,
+   cosmetic forms, regionals, …). The **Gen 1–4 roster** toggle just curates the
+   default view (Gen 1–4 families + cross-gen evolutions + regional forms, hiding
+   Mega/Gigantamax/Primal gimmick forms); turn it off to pick literally anything.
+   Learnsets are bundled for the in-scope roster (~640 mons); other picks fall
    back to the full move list.
 3. Write a line or two of **backstory** — it's saved as a `/* */` comment above
    the block (the build strips it before compiling; it's there for whoever reads
