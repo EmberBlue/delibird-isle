@@ -21,7 +21,13 @@ repo and open it locally.
    and a **Pic** (auto-fills from the class for standard classes). Name + Pic are
    required by the engine; the preview warns you if either is missing.
 2. **Add Pokémon** (up to 6). Search species/abilities/items/moves by typing.
-   Leave moves blank to let the engine pick the mon's last four level-up moves.
+   When you pick a species, the move pickers filter to **that Pokémon's learnset**,
+   each move tagged by method and level — **Lv 13** / **Egg** / **TM** — pulled
+   from your ROM's actual learnsets (level-up from the active `P_LVL_UP_LEARNSETS`
+   generation, plus egg + teachable/tutor). Untick **Learnset moves only** to pick
+   any move (trainers can legally run off-learnset sets). Leave moves blank to let
+   the engine pick the mon's last four level-up moves. Learnsets are bundled for
+   canon species (Gen 1–4); others fall back to the full move list.
 3. Write a line or two of **backstory** — it's saved as a `/* */` comment above
    the block (the build strips it before compiling; it's there for whoever reads
    `trainers.party`).

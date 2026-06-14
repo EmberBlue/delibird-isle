@@ -26,6 +26,40 @@
     return list;
   }
 
+  // Species of the party card a move combo lives in (for learnset filtering).
+  function moveSpecies(input) {
+    var card = input.closest(".mon");
+    if (!card) return "";
+    var sp = card.querySelector('[data-f="species"]');
+    return sp ? (sp.dataset.value || "") : "";
+  }
+
+  // Move options for a species: its learnset, tagged by method + level, sorted
+  // level-up (by level) → egg → TM/tutor. Falls back to all moves when the
+  // "Learnset moves only" toggle is off, no species is set, or there's no data.
+  function moveOptionsFor(speciesConst) {
+    var filterOn = !$("#learn-filter") || $("#learn-filter").checked;
+    if (!filterOn || !speciesConst) return LISTS.move;
+    var rec = D.learn && D.learn[speciesConst.slice(8)];   // strip "SPECIES_"
+    if (!rec) return LISTS.move;
+    var out = [], seen = {};
+    (rec.lv || []).forEach(function (p) {
+      var m = D.moves[p[1]];
+      out.push({ c: m.c, n: m.n, badge: "Lv " + p[0], bclass: "b-lv", rank: [0, p[0]] });
+      seen[m.c] = 1;
+    });
+    (rec.egg || []).forEach(function (i) {
+      var m = D.moves[i];
+      if (!seen[m.c]) { out.push({ c: m.c, n: m.n, badge: "Egg", bclass: "b-egg", rank: [1, 0] }); seen[m.c] = 1; }
+    });
+    (rec.tm || []).forEach(function (i) {
+      var m = D.moves[i];
+      if (!seen[m.c]) { out.push({ c: m.c, n: m.n, badge: "TM", bclass: "b-tm", rank: [2, 0] }); seen[m.c] = 1; }
+    });
+    out.sort(function (a, b) { return a.rank[0] - b.rank[0] || a.rank[1] - b.rank[1] || a.n.localeCompare(b.n); });
+    return out;
+  }
+
   /* ---- combobox ------------------------------------------------------ */
   var openPop = null;
   function closePop() { if (openPop) { openPop.classList.remove("open"); openPop = null; } }
@@ -43,16 +77,19 @@
     function render(q) {
       var kind = input.dataset.kind;
       q = (q || "").trim().toLowerCase();
-      var opts = optionsFor(kind), out = [], i;
+      var opts = kind === "move" ? moveOptionsFor(moveSpecies(input)) : optionsFor(kind);
+      var out = [], i;
       for (i = 0; i < opts.length && out.length < 60; i++) {
         var o = opts[i];
         if (!q || o.n.toLowerCase().indexOf(q) >= 0 || o.c.toLowerCase().indexOf(q) >= 0) out.push(o);
       }
       rendered = out; active = -1;
       pop.innerHTML = out.map(function (o, idx) {
-        var badge = (kind === "species" && o.v > D.meta.canonMaxValue) ? '<span class="gbadge">non-canon</span> ' : "";
+        var right = "";
+        if (kind === "species" && o.v > D.meta.canonMaxValue) right = '<span class="gbadge">non-canon</span> ';
+        else if (o.badge) right = '<span class="lbadge ' + (o.bclass || "") + '">' + esc(o.badge) + "</span> ";
         return '<div class="combo-opt" data-i="' + idx + '"><span>' + esc(o.n) + "</span>" +
-               badge + "<small>" + esc(o.c) + "</small></div>";
+               right + "<small>" + esc(o.c) + "</small></div>";
       }).join("") || '<div class="combo-opt"><span class="muted">no match</span></div>';
     }
     function open() { closePop(); render(input.value); pop.classList.add("open"); openPop = pop; }

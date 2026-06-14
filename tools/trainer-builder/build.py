@@ -143,6 +143,97 @@ def ai_list():
     return out
 
 
+# --- per-species learnsets (so the move picker reflects the actual ROM) -------
+POKE = os.path.join(ROOT, "src", "data", "pokemon")
+SKIP_MOVES = {"MOVE_NONE", "MOVE_UNAVAILABLE"}
+
+
+def active_levelup_gen():
+    """Resolve P_LVL_UP_LEARNSETS to the gen_N.h file actually compiled in."""
+    cfg = read(os.path.join(ROOT, "include", "config", "pokemon.h"))
+    m = re.search(r"#define\s+P_LVL_UP_LEARNSETS\s+(\w+)", cfg)
+    val = m.group(1) if m else "GEN_LATEST"
+    lu_dir = os.path.join(POKE, "level_up_learnsets")
+    avail = sorted(int(re.match(r"gen_(\d+)\.h", f).group(1))
+                   for f in os.listdir(lu_dir) if re.match(r"gen_\d+\.h$", f))
+    if val == "GEN_LATEST":
+        return max(avail)
+    m2 = re.match(r"GEN_(\d+)", val)
+    want = int(m2.group(1)) if m2 else max(avail)
+    return max([g for g in avail if g <= want] or avail)   # dispatch picks highest <= want
+
+
+def parse_levelup(path):
+    text = read(path)
+    out = {}
+    for m in re.finditer(r"(s\w+LevelUpLearnset)\[\]\s*=\s*\{(.*?)\};", text, re.S):
+        out[m.group(1)] = [(int(lvl), mv) for lvl, mv in
+                           re.findall(r"LEVEL_UP_MOVE\(\s*(\d+)\s*,\s*(MOVE_\w+)\)", m.group(2))]
+    return out
+
+
+def parse_movelist(path, suffix):
+    text = read(path)
+    out = {}
+    for m in re.finditer(r"(s\w+" + suffix + r")\[\]\s*=\s*\{(.*?)\};", text, re.S):
+        out[m.group(1)] = re.findall(r"MOVE_\w+", m.group(2))
+    return out
+
+
+def parse_species_info():
+    """Map SPECIES_X -> its level-up / egg / teachable array names (authoritative)."""
+    out = {}
+    sidir = os.path.join(POKE, "species_info")
+    files = [os.path.join(sidir, f) for f in os.listdir(sidir) if f.endswith("_families.h")] \
+        if os.path.isdir(sidir) else []
+    for path in files:
+        text = read(path)
+        marks = [(m.group(1), m.end()) for m in re.finditer(r"\[SPECIES_(\w+)\]\s*=\s*\{", text)]
+        for i, (sp, start) in enumerate(marks):
+            end = marks[i + 1][1] if i + 1 < len(marks) else len(text)
+            chunk = text[start:end]
+            def field(name):
+                mm = re.search(r"\." + name + r"\s*=\s*(s\w+)", chunk)
+                return mm.group(1) if mm else None
+            out[sp] = {"lvl": field("levelUpLearnset"),
+                       "egg": field("eggMoveLearnset"),
+                       "tm": field("teachableLearnset")}
+    return out
+
+
+def build_learnsets(move_index, species_consts):
+    gen = active_levelup_gen()
+    lv_store = parse_levelup(os.path.join(POKE, "level_up_learnsets", "gen_%d.h" % gen))
+    egg_store = parse_movelist(os.path.join(POKE, "egg_moves.h"), "EggMoveLearnset")
+    tm_store = parse_movelist(os.path.join(POKE, "teachable_learnsets.h"), "TeachableLearnset")
+    info = parse_species_info()
+
+    def idxs(moves):
+        return [move_index[mv] for mv in moves if mv in move_index and mv not in SKIP_MOVES]
+
+    learn = {}
+    for sp_const in species_consts:
+        suffix = sp_const[len("SPECIES_"):]
+        rec = info.get(suffix)
+        if not rec:
+            continue
+        entry = {}
+        lv = lv_store.get(rec["lvl"]) if rec["lvl"] else None
+        if lv:
+            lst = [[lvl, move_index[mv]] for lvl, mv in lv if mv in move_index and mv not in SKIP_MOVES]
+            if lst:
+                entry["lv"] = lst
+        egg = idxs(egg_store.get(rec["egg"], [])) if rec["egg"] else []
+        if egg:
+            entry["egg"] = egg
+        tm = idxs(tm_store.get(rec["tm"], [])) if rec["tm"] else []
+        if tm:
+            entry["tm"] = tm
+        if entry:
+            learn[suffix] = entry
+    return learn, gen
+
+
 def build_data():
     data = {
         "species": species_list(),
@@ -161,6 +252,14 @@ def build_data():
             "genCutoffs": {"1": 151, "2": 251, "3": 386, "4": 493},
         },
     }
+    # Per-species learnsets (move indices into data["moves"]). Built for canon
+    # species (Gen 1-4) to keep the bundle lean; others fall back to "all moves".
+    move_index = {m["c"]: i for i, m in enumerate(data["moves"])}
+    canon = [s["c"] for s in data["species"] if s["v"] <= data["meta"]["canonMaxValue"]]
+    learn, gen = build_learnsets(move_index, canon)
+    data["learn"] = learn
+    data["meta"]["learnGen"] = gen
+    data["meta"]["learnCount"] = len(learn)
     return data
 
 
