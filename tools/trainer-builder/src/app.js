@@ -324,22 +324,10 @@
   }
 
   /* ---- boot ---------------------------------------------------------- */
-  var DEMO = {
-    id: "TRAINER_SKALD_ENFORCER", name: "VOSS",
-    trainerClass: "TRAINER_CLASS_EXPERT", pic: "TRAINER_PIC_EXPERT_M",
-    gender: "Male", music: "TRAINER_ENCOUNTER_MUSIC_INTENSE",
-    ai: ["AI_FLAG_BASIC_TRAINER", "AI_FLAG_TRY_TO_FAINT"],
-    backstory: "A Mereholt enforcer. Sells despair as realism:\n\"The land's already dead -- we're just the first to admit it.\"",
-    party: [
-      { species: "SPECIES_POOCHYENA", level: 6, ability: "ABILITY_QUICK_FEET",
-        ivs: { hp: 18, atk: 18, def: 18, spa: 18, spd: 18, spe: 18 },
-        moves: ["MOVE_TACKLE", "MOVE_HOWL", "MOVE_SAND_ATTACK", "MOVE_BITE"] },
-      { species: "SPECIES_CARVANHA", gender: "M", item: "ITEM_ORAN_BERRY",
-        level: 6, ability: "ABILITY_ROUGH_SKIN",
-        moves: ["MOVE_AQUA_JET", "MOVE_LEER", "MOVE_BITE", "MOVE_FOCUS_ENERGY"] },
-    ],
-  };
-  globalThis.__tbDemo = function () { applyTrainer(DEMO); };
+  // The demo trainer is injected by build.py (different for the private vs the
+  // sanitized public build), so no canon content is hard-coded in this file.
+  var DEMO = globalThis.TBDEMO || null;
+  globalThis.__tbDemo = function () { if (DEMO) applyTrainer(DEMO); };
 
   monCard();          // start with one empty Pokémon
   renderSaved();

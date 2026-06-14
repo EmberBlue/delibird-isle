@@ -164,6 +164,56 @@ def build_data():
     return data
 
 
+# Demo trainer loaded by the app's #demo link. The private build uses a canon
+# example; the public build uses a generic, content-free one so nothing from the
+# design bible is ever published.
+PRIVATE_DEMO = {
+    "id": "TRAINER_SKALD_ENFORCER", "name": "VOSS",
+    "trainerClass": "TRAINER_CLASS_EXPERT", "pic": "TRAINER_PIC_EXPERT_M",
+    "gender": "Male", "music": "TRAINER_ENCOUNTER_MUSIC_INTENSE",
+    "ai": ["AI_FLAG_BASIC_TRAINER", "AI_FLAG_TRY_TO_FAINT"],
+    "backstory": "A Mereholt enforcer. Sells despair as realism:\n\"The land's already dead -- we're just the first to admit it.\"",
+    "party": [
+        {"species": "SPECIES_POOCHYENA", "level": 6, "ability": "ABILITY_QUICK_FEET",
+         "ivs": {"hp": 18, "atk": 18, "def": 18, "spa": 18, "spd": 18, "spe": 18},
+         "moves": ["MOVE_TACKLE", "MOVE_HOWL", "MOVE_SAND_ATTACK", "MOVE_BITE"]},
+        {"species": "SPECIES_CARVANHA", "gender": "M", "item": "ITEM_ORAN_BERRY",
+         "level": 6, "ability": "ABILITY_ROUGH_SKIN",
+         "moves": ["MOVE_AQUA_JET", "MOVE_LEER", "MOVE_BITE", "MOVE_FOCUS_ENERGY"]},
+    ],
+}
+PUBLIC_DEMO = {
+    "id": "TRAINER_ROUTE3_BUG_CATCHER", "name": "WADE",
+    "trainerClass": "TRAINER_CLASS_BUG_CATCHER", "pic": "TRAINER_PIC_BUG_CATCHER",
+    "gender": "Male", "music": "TRAINER_ENCOUNTER_MUSIC_MALE",
+    "ai": ["AI_FLAG_BASIC_TRAINER"],
+    "backstory": "A friendly kid who will not stop talking about bugs.",
+    "party": [
+        {"species": "SPECIES_CATERPIE", "level": 6, "ability": "ABILITY_SHIELD_DUST",
+         "moves": ["MOVE_TACKLE", "MOVE_STRING_SHOT"]},
+        {"species": "SPECIES_WEEDLE", "level": 6, "ability": "ABILITY_SHIELD_DUST",
+         "moves": ["MOVE_POISON_STING", "MOVE_STRING_SHOT"]},
+    ],
+}
+
+
+def render(template, serializer, app, data_js, demo, public):
+    dj = data_js + "globalThis.TBDEMO=" + json.dumps(demo, separators=(",", ":")) + ";"
+    html = (template
+            .replace("/*{{DATA}}*/", dj)
+            .replace("/*{{SERIALIZER}}*/", serializer)
+            .replace("/*{{APP}}*/", app))
+    if public:
+        # Strip the design-bible-derived panel and region-specific naming so the
+        # published page is a generic dev tool with no proprietary content.
+        html = re.sub(r"\s*<!--PRIVATE-->.*?<!--/PRIVATE-->", "", html, flags=re.S)
+        html = (html
+                .replace("Skaldmere Trainer Builder", "Trainer Builder")
+                .replace("TRAINER_SKALD_FISHER", "TRAINER_ROUTE3_YOUNGSTER")
+                .replace("TRAINER_SKALD_FOO", "TRAINER_ROUTE3_YOUNGSTER"))
+    return html
+
+
 def main():
     data = build_data()
     data["meta"]["count"] = {k: len(v) for k, v in data.items() if isinstance(v, list)}
@@ -171,27 +221,27 @@ def main():
     serializer = read(os.path.join(HERE, "src", "serializer.js"))
     app = read(os.path.join(HERE, "src", "app.js"))
     template = read(os.path.join(HERE, "src", "template.html"))
+    data_js = "globalThis.TBDATA=" + json.dumps(data, separators=(",", ":")) + ";"
 
-    data_js = "globalThis.TBDATA = " + json.dumps(data, separators=(",", ":")) + ";"
-
-    html = (template
-            .replace("/*{{DATA}}*/", data_js)
-            .replace("/*{{SERIALIZER}}*/", serializer)
-            .replace("/*{{APP}}*/", app))
-
-    out_path = os.path.join(HERE, "trainer-builder.html")
-    with open(out_path, "w", encoding="utf-8") as f:
-        f.write(html)
+    builds = [
+        ("trainer-builder.html", PRIVATE_DEMO, False),         # full, in-repo, private
+        ("trainer-builder.public.html", PUBLIC_DEMO, True),    # sanitized, for Pages
+    ]
+    for fname, demo, public in builds:
+        html = render(template, serializer, app, data_js, demo, public)
+        path = os.path.join(HERE, fname)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(html)
+        print("Built %-30s %4d KB%s" % (os.path.relpath(path, ROOT),
+              len(html.encode("utf-8")) // 1024, "  (public/sanitized)" if public else ""))
 
     # Also emit data.js so the Node self-test and ad-hoc tooling can use it.
     with open(os.path.join(HERE, "src", "data.js"), "w", encoding="utf-8") as f:
         f.write(data_js + "\nif(typeof module!=='undefined')module.exports=globalThis.TBDATA;\n")
 
     counts = data["meta"]["count"]
-    print("Built", os.path.relpath(out_path, ROOT))
     for k in ("species", "moves", "abilities", "items", "classes", "pics", "music", "aiFlags"):
         print("  %-10s %5d" % (k, counts[k]))
-    print("  size       %5d KB" % (len(html.encode("utf-8")) // 1024))
 
 
 if __name__ == "__main__":
