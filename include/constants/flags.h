@@ -54,9 +54,9 @@
 #define FLAG_SKALDMERE_LAB_SEEN        0x28 // Skaldmere: §07 erased-lab scene seen
 #define FLAG_SKALDMERE_FLOODBASIN_ARRIVAL  0x29 // Skaldmere: §08 Ch2 Floodbasin entry / "the wetlands are sick"
 #define FLAG_SKALDMERE_WETLAND_CERT    0x2A // Skaldmere: §08 Ch2 Wetland Certification earned
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
+#define FLAG_SKALDMERE_RIVER_ARRIVAL  0x2B // Skaldmere: §08 Ch3 River/Farmland entry / "the river is stressed -- the window is still open"
+#define FLAG_SKALDMERE_WATERSHED_CERT 0x2C // Skaldmere: §08 Ch3 Watershed Certification earned
+#define FLAG_SKALD_ITEM_RIVER         0x2D // Skaldmere: §08 Ch3 River item ball
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag
 #define FLAG_UNUSED_0x02F    0x2F // Unused Flag
 #define FLAG_UNUSED_0x030    0x30 // Unused Flag

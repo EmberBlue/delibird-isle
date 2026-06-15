@@ -4520,6 +4520,16 @@
       "secondary_tileset": "gTileset_frp_seafoam_islands",
       "border_filepath": "data/layouts/ParcelFloodbasin/border.bin",
       "blockdata_filepath": "data/layouts/ParcelFloodbasin/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_RIVER",
+      "name": "ParcelRiver_Layout",
+      "width": 84,
+      "height": 44,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "border_filepath": "data/layouts/ParcelRiver/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelRiver/map.bin"
     }
   ]
 }

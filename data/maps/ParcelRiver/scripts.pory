@@ -1,0 +1,206 @@
+// ParcelRiver -- §01/§06 zone 4, Chapter 3 opener: "the river is stressed."
+//
+// Upstream of the Floodbasin -- the source, and the first place the harm wears
+// a local face. The river reads STRESSED, not Collapsing: a channelized cut
+// (hydrological alteration), a broken beaver-dam relic whose engineers are
+// gone (a wetland coming unbuilt), eutrophic runoff off the farmland -- and,
+// the point, a clean braided reach upstream that proves the river can still
+// come back. The window is open. It is also closing.
+//
+// Harland fishes here; the lever (§02/§05) runs through his boat payment -- a
+// Mereholt subsidiary holds the note, the same crest as the Foundation Water
+// Board that ordered the cut. He is misled, not evil; the cost, not the enemy.
+// Ilex works the bank as a field surveyor: the debrief and the Watershed
+// Certification happen here, in situ, because Chapter 3's lesson is judgment
+// on the ground -- which relief still works, and the discipline not to sign
+// off on the one that doesn't.
+//
+// VAR_SKALDMERE_CH3_EVIDENCE bits (count 0..5 with mask 0x3F):
+//   0  channelized cut         1  broken dam relic
+//   2  runoff bloom            3  clean upstream reach (the baseline)
+//   4  irrigation board (mask) 5  Harland heard (the lever, local)
+//   6  classified + filed (Ilex)
+
+const LOCALID_RIVER_ILEX    = 1
+const LOCALID_RIVER_HARLAND = 2
+const LOCALID_RIVER_FARMER  = 3
+
+mapscripts ParcelRiver_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelRiver_SetMapVar
+    ]
+}
+
+script ParcelRiver_SetMapVar {
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+// First entry: you climb out of the basin, following the channel up to where
+// the sickness starts -- and find it is not one wound but a watershed of them.
+script ParcelRiver_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_RIVER_ARRIVAL)) {
+        end
+    }
+    lockall
+    msgbox(format("The land lifts and the trees thin. The water that fouled the basin runs out of here -- clearer than below, but not clear.\pUpstream, somewhere, it is still right. You can almost see the line where it stops being right."), MSGBOX_DEFAULT)
+    msgbox(format("This is worked country. Nets dry on a far rail. A crop runs green right down to the bank. A boat sits low at a mooring.\pDoduo takes the bank ahead, and does not hurry."), MSGBOX_DEFAULT)
+    msgbox(format("Hale's note, folded in your kit:\pWATERSHED -- LIVING SYSTEM, ACTIVE USE.\nRead the whole river before you judge any part of it."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_RIVER_ARRIVAL)
+    releaseall
+    end
+}
+
+// --- the survey: four ecological tells + the mask -------------------------
+// 0: the channelized cut -- hydrological alteration you can stand beside
+script ParcelRiver_ChannelCut {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 0)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The straightened cut. Measured."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("Here the river stops wandering and runs dead straight between graded banks. The water moves faster, and there is nowhere in it to rest.\pSomeone filed this as an improvement. The fish that lived in the slack water it erased did not get a vote."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 1: the broken dam relic -- the keystone engineers, gone; a wetland unbuilding
+script ParcelRiver_DamRelic {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 1)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The broken dam. Noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A low ridge of cut timber lies across the old oxbow -- a dam, breached and never repaired. The ones that built it, and kept it whole, are not here anymore.\pThe pond it held has gone still and green. A wetland is a thing that gets BUILT, and tended. This one is coming unbuilt, quietly, with nobody to mend it."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 2: the runoff bloom -- eutrophication; too much of an ordinary thing
+script ParcelRiver_RunoffStain {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 2)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The runoff edge. Recorded."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("Where the cropland meets the water, the river greens -- a bloom, fed by whatever the rain rinses off the fields.\pThis is not poison the way the basin's pipe was poison. It is too much of an ordinary thing, all at once. It chokes a river just the same."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 3: the clean upstream reach -- the baseline; proof, and clock
+script ParcelRiver_CleanReach {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 3)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The clean reach. Held against the rest."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("The braided reach above the cut still does it right -- splitting and rejoining over gravel bars, the water broken and bright and cold.\pMayflies lift off it in the chill. Fewer than there should be. But there. This reach is the proof the river can come back -- and it is the clock running on that proof."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 4: the irrigation board -- the §05 mask, signed by the hand that cut the river
+script ParcelRiver_IrrigationBoard {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 4)
+    special(SkaldmereCertTaskMark)
+    msgbox(format("SKALDMERE WATER BOARD\nMEREHOLT FOUNDATION -- STEWARD MEMBER\pIRRIGATION AND WATERSHED HEALTH INITIATIVE\nSustainable use. Shared future.\pThe Board sets the water rights. The Board ordered the cut straightened. The Board's steward sells the fertilizer that greens the bank.\pThe paint is new. The signatures are the same."), MSGBOX_SIGN)
+    release
+    end
+}
+
+// 5: Harland -- the lever made local; the cost, named
+script ParcelRiver_Harland {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("Harland works his line and says nothing more.\pThe water hasn't changed its mind either."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Harland doesn't turn from the water.\pHarland: You're the one with the notebook. Word came up the river ahead of you.\pCome to tell me the fishing's poor. As if I can't read my own water."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: The catch is down because the river is. The cut. The bloom off the fields."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: I KNOW why it's down. Knew before you could walk.\pMy father fished this. His father helped build half that dam your people keep photographing -- back when building it was the work."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: And the Board says straighten the cut, the floods stop taking my gear. The Foundation carries the note on the boat so I keep working while it all gets sorted.\pSo what is it you'd have me do. Tie up and starve on principle?"), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: …Who holds the note on the boat?"), MSGBOX_DEFAULT)
+    msgbox(format("Harland stops reeling.\pHarland: A Mereholt outfit. Coastal lending.\pSame crest as the fertilizer sacks. Same crest as the Board.\pHadn't set those side by side before. Don't care for how they line up."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: Write your report, Ranger. Read me right when you do.\pI'm not your villain. I'm the man they'll send the bill to."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// --- the farmer: a real constraint, not a cartoon ---------------------------
+script ParcelRiver_Farmer {
+    lock
+    faceplayer
+    msgbox(format("Farmer: Mind the rows, Ranger.\pThey tell me my runoff greens the water. Likely true. They also tell me grow more for less, or sell to the Foundation buyer at the Foundation's number."), MSGBOX_DEFAULT)
+    msgbox(format("Farmer: I'd put a buffer strip along the bank tomorrow. Costs me two rows and a season's yield.\pYou find me the one who'll pay for those two rows, and I'll dig it before you've walked home."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- Ilex: the field debrief + the Watershed Certification ------------------
+script ParcelRiver_Ilex {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("Ilex: Stressed, not shifted. Hold that difference like a coal.\pMost of the river you'll meet from here has already chosen. This one hasn't. Yet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 63)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) == 6) {
+        msgbox(format("Ilex doesn't look up from the bank she's measuring.\pIlex: The cut. The broken dam. The bloom. The clean reach. The Board's sign. The man on the boat.\pPut a name on the river."), MSGBOX_DEFAULT)
+        specialvar(VAR_RESULT, SkaldmereClassifyRiver)
+        msgbox(format("Ilex: STRESSED.\pThe engineers are thinning; the cut took the slack water; the bloom is climbing. But the sensitive guild is still in that upstream reach. The web hasn't simplified yet."), MSGBOX_DEFAULT)
+        msgbox(format("Ilex: Which means this is the rarest reading you will ever file.\pThe one where doing the right thing in time still does something."), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: So we intervene. Pull the cut, mend the dam --"), MSGBOX_DEFAULT)
+        msgbox(format("Ilex: Some of it. Not all of it, and not by signing the Board's plan.\pRelieve what's reversible -- the buffer strip, the bloom, the fish passage. Refuse what isn't dressed as relief: another straightened mile, another 'flood control' that finishes the slack water."), MSGBOX_DEFAULT)
+        msgbox(format("Ilex: A Stressed river doesn't need a hero. It needs someone who can tell the two apart and has the spine to say so out loud."), MSGBOX_DEFAULT)
+        setvar(VAR_0x8004, 6)
+        special(SkaldmereCertTaskMark)
+        msgbox(format("Ilex straightens, and for once signs something on the spot. No ceremony. A strip of red cloth, knotted to your kit.\pIlex: Watershed Certification. Hale would make you walk back for it. I won't.\pYou read the window. Now you keep it open."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALDMERE_WATERSHED_CERT)
+        giveitem(ITEM_SUPER_POTION, 5)
+        giveitem(ITEM_REVIVE, 2)
+        release
+        end
+    }
+    msgbox(format("Ilex kneels at the waterline, red cloth at her wrist.\pIlex: Don't classify a river from one bend. Walk it -- the cut, the old dam, the bloom off the fields, the clean water above. Read the Board's sign, and hear the man on the boat.\pThen come put a name to it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRiver_ItemPotion {
+    finditem(ITEM_HYPER_POTION)
+    end
+}

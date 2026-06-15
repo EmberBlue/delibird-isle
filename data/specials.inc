@@ -569,3 +569,4 @@ gSpecials::
 	def_special SkaldmereClassifyMeadow
 	def_special SkaldmereSetGender
 	def_special SkaldmereClassifyFloodbasin
+	def_special SkaldmereClassifyRiver

@@ -50,8 +50,15 @@ script ParcelStation_Hale {
             // Chapter 2 close: once Ilex has filed the report (CH2 bit 6),
             // Hale signs the Wetland Certification. No fanfare.
             if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
-                msgbox(format("Hale: Two credentials. A sick forest corridor and a sicker basin.\pThat's the shape of the job, {PLAYER}.\nIt doesn't get prettier west of here."), MSGBOX_DEFAULT)
-                msgbox(format("Hale: Rest up. The River and the farmland are next, and the people there have even less reason to like us."), MSGBOX_DEFAULT)
+                if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+                    msgbox(format("Hale: Three credentials. Forest, basin, and a whole watershed you had the sense not to 'fix' all at once.\pIlex signed that one in the field. She doesn't do that.\nMeans you read it right."), MSGBOX_DEFAULT)
+                    msgbox(format("Hale: Rest. It climbs from here -- the highlands, then the coast.\nThe cold doesn't forgive, and the coast doesn't pretend to."), MSGBOX_DEFAULT)
+                    release
+                    end
+                }
+                msgbox(format("Hale: Two credentials. A sick forest corridor and a sicker basin.\pThe River's next -- and it's the first place you'll go that isn't already lost. There's still a window there."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: Follow the channel up out of the basin. North, past the discharge, where the trees thin.\pIlex is working the bank up there. Read the whole river before you name any part of it."), MSGBOX_DEFAULT)
+                msgbox(format("Hale: The people on that water have even less reason to like us than the last lot.\nListen anyway."), MSGBOX_DEFAULT)
                 release
                 end
             }

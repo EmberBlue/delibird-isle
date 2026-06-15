@@ -110,6 +110,16 @@ def build():
             for x in range(x0, x1):
                 put(x, y, 12)
 
+    # --- north trail up to the River (Chapter 3 connection; offset 0, x34-36)
+    # A bank track carved through the north forest, beside the discharge plume:
+    # the player follows the channel upstream to find where the sickness starts.
+    for y in range(0, 9):
+        for x in range(34, 37):
+            put(x, y, GRASS)
+    for y in range(9, 14):
+        for x in range(35, 37):
+            put(x, y, GRASS)       # stay clear of the plume (x33-34) on the way down
+
     return grid
 
 

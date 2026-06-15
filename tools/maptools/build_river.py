@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
-"""Generate the River & Farmland (§01/§06 zone 4 — Chapter 3 opener).
+"""Generate the River & Farmland (§01/§06 zone 4 -- Chapter 3 opener).
 
-Upstream of the Floodbasin: a working river, channelized in sections;
-farm strips along its east bank; a broken beaver-dam relic that USED to
-make a wetland pocket. The ecology and the human cost meet here -- this
-is Harland's people's watershed. Eutrophication tells: a green tinge on
-the slack water, runoff stains along the cropland edges.
+Upstream of the Floodbasin: a working river the player walks beside. The §06
+lesson made geography:
 
-84x44, frp_general + seafoam. Connects south to ParcelFloodbasin
-(corridor rows 8-11 here = floodbasin rows 8-11, offset 0).
+  * west / north -- braided CLEAN reaches (what a river should look like)
+  * centre       -- a CHANNELIZED cut: straight water between sand "concrete"
+                    banks (hydrological alteration you can see)
+  * east-centre  -- a broken BEAVER-DAM relic across an oxbow: the riparian
+                    engineer USED to make a wetland here; without it the slack
+                    water has gone green (eutrophic)
+  * east         -- FARMLAND strip-crops, with runoff stains along the edges
+
+The river reads STRESSED, not Collapsing: strained, but the window is open.
+
+84x44, frp_general + seafoam. Walkable bank network so every survey point,
+Harland, the farmer and the dam are reachable on foot. The player enters at
+the SOUTH on a dry bank (x34-36) that connects up into the Floodbasin's north
+trail (offset 0); the river mouth runs just west of that bank.
 
 Run from repo root: python3 tools/maptools/build_river.py
 """
@@ -21,11 +30,15 @@ GRASS = 1
 TUFT_A, TUFT_B = 8, 9
 FLOWERS = 4
 BUSH = 5
+ENCOUNTER = 12          # the tall-grass encounter tile (walkable)
 SAND = 261
 SHORE_A, SHORE_B = 256, 257
 WATER = 282
 PLANK_L, PLANK_M, PLANK_R = 313, 314, 315
 TREE_QUAD = {(0, 0): 28, (1, 0): 29, (0, 1): 36, (1, 1): 37}
+
+# The connection seam: the south opening (and the Floodbasin trail it meets).
+OPEN_X0, OPEN_X1 = 33, 38     # walkable bank columns at the south edge
 
 
 def word(mid, col=0, elev=3):
@@ -41,74 +54,85 @@ def build():
     def forest(x, y):
         put(x, y, TREE_QUAD[(x % 2, y % 2)], col=1)
 
+    def water(x, y):
+        put(x, y, WATER, col=1, elev=1)
+
     def pool(x0, x1, y0, y1):
         for y in range(y0, y1):
             for x in range(x0, x1):
-                put(x, y, WATER, col=1, elev=1)
-        for x in range(x0, x1):
+                water(x, y)
+        for x in range(x0, x1):           # south shore lip
             put(x, y1, SHORE_A if x % 2 == 0 else SHORE_B, col=1)
 
-    # --- forest frame with the south corridor (matches Floodbasin north) ---
-    # Floodbasin opens to the north at x 30-37 (the discharge pipe is at
-    # x 33-34 there, in WATER). We connect at x 30-37 so the river spills
-    # SOUTH into the basin's pipe -- the river IS the source.
+    def grass_patch(x0, x1, y0, y1, tile=ENCOUNTER):
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                put(x, y, tile)
+
+    # --- forest frame, with the walkable south opening --------------------
     for y in range(H):
         for x in range(W):
-            if 30 <= x <= 37 and y >= H - 8:
+            if OPEN_X0 <= x < OPEN_X1 and y >= H - 8:
                 continue
             if x < 8 or x >= W - 8 or y < 8 or y >= H - 8:
                 forest(x, y)
-    # the river mouth at the south edge -- the water comes from upstream
+    # the south entrance: a sand track on a dry bank (player arrives here)
     for y in range(H - 8, H):
-        for x in range(30, 38):
-            put(x, y, WATER, col=1, elev=1)
-    # shoreline lip just inside the south corridor connector
-    for x in range(30, 38):
-        put(x, H - 8, SHORE_A if x % 2 == 0 else SHORE_B, col=1)
+        for x in range(OPEN_X0, OPEN_X1):
+            put(x, y, GRASS)
+    for y in range(H - 8, H):
+        for x in range(34, 37):
+            put(x, y, SAND)
 
-    # --- the main river: a wide channel snaking west-to-south ---------------
-    # west reach: braided (clean, upstream)
-    pool(10, 18, 12, 16)
-    pool(18, 26, 14, 18)
-    pool(26, 34, 16, 20)
-    # the channelized middle: straight concrete cut (collision banks, sand)
-    for y in range(20, 34):
-        for x in range(31, 38):
-            put(x, y, WATER, col=1, elev=1)
-    # concrete banks (sand reads as cut-bank gravel)
-    for y in range(20, 34):
-        put(30, y, SAND)
-        put(38, y, SAND)
-    # the old beaver dam relic (a broken plank line across an oxbow east)
-    pool(48, 60, 14, 22)   # the oxbow pond -- now slack, eutrophic feel
-    for x in range(50, 58):
-        put(x, 16, PLANK_M, col=1)  # the broken dam ridge
+    # --- the river: a single channel down the west-centre -----------------
+    # Upstream braided clean reaches (NW), narrowing into the channelized cut,
+    # down to the mouth just west of the entrance. It never walls the map: the
+    # whole east side and the far-west bank stay walkable, joined by a ford.
+    pool(11, 19, 12, 16)                  # upper braided reach (clean)
+    pool(17, 25, 14, 18)                  # mid braided reach
+    pool(23, 30, 16, 20)                  # the reaches gather toward the cut
+    # the channelized straight cut: water x29-32 with sand "concrete" banks
+    for y in range(20, 35):
+        for x in range(29, 33):
+            water(x, y)
+        put(28, y, SAND)                  # west cut-bank (gravel/concrete)
+        put(33, y, SAND)                  # east cut-bank
+    # the mouth: the cut drains south, ending at the seam just west of the bank
+    for y in range(35, H):
+        for x in range(29, 33):
+            water(x, y)
+    # a shallow FORD across the cut (sand over water) so west bank <-> east bank
+    for x in range(28, 34):
+        put(x, 31, SAND)
 
-    # --- east-bank farmland: rectangular crop strips (worked land) ---------
-    for stripe_y in (10, 15, 20, 25, 30, 34):
-        for x in range(62, W - 8):
+    # --- the broken beaver-dam oxbow (east-centre) ------------------------
+    pool(45, 58, 12, 20)                  # the oxbow pond -- slack, eutrophic
+    for x in range(48, 56):
+        put(x, 14, PLANK_M, col=1)        # the broken dam ridge (relic)
+
+    # --- east-bank farmland: rectangular strip-crops ----------------------
+    for row_y in (10, 14, 18, 22, 26, 30):
+        for x in range(62, W - 9):
             for dy in range(2):
-                put(x, stripe_y + dy, TUFT_A if (x + stripe_y) % 2 else TUFT_B)
+                put(x, row_y + dy, TUFT_A if (x + row_y) % 2 else TUFT_B)
 
-    # --- track from the south river-mouth up the west bank ----------------
-    for y in range(H - 8, 18):
-        for dx in (-1, 0, 1):
-            put(28 + dx, y, SAND)
-    # cross-track east at y=22 toward the farmland
-    for x in range(28, 62):
-        put(x, 22, SAND)
-    # north track to the broken-dam relic
-    for y in range(16, 23):
-        put(55, y, SAND) if (55, y) not in [(55, 16)] else None
+    # --- a sand bank-track linking the entrance to every feature ----------
+    for y in range(18, H - 8):             # entrance up the east bank of the cut
+        put(35, y, SAND)
+    for x in range(35, 62):                # east across to the farmland
+        put(x, 23, SAND)
+    for x in range(34, 45):                # spur to the dam oxbow
+        put(x, 17, SAND)
+    for y in range(17, 24):
+        put(44, y, SAND)
+    for x in range(20, 35):                # west across the ford to the reaches
+        put(x, 27, SAND)
 
-    # --- tall grass (encounters: §06 zone-4 indicator + invertebrates) ----
-    for (x0, x1, y0, y1) in ((10, 18, 22, 28),      # west bank, upstream-clean
-                              (40, 50, 26, 32),     # mid, channelized-stressed
-                              (62, 72, 12, 18),     # farmland edge, runoff
-                              (62, 72, 28, 34)):    # farmland edge, runoff
-        for y in range(y0, y1):
-            for x in range(x0, x1):
-                put(x, y, 12)
+    # --- tall grass (encounters, §06 state-keyed) -------------------------
+    grass_patch(10, 18, 20, 26)            # west bank -- clean, upstream
+    grass_patch(38, 46, 26, 32)            # mid -- channelized, stressed
+    grass_patch(60, 68, 11, 16)            # farmland edge -- runoff
+    grass_patch(60, 68, 28, 33)            # farmland edge -- runoff
 
     return grid
 

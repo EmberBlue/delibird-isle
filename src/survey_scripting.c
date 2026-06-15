@@ -80,3 +80,21 @@ u16 SkaldmereClassifyFloodbasin(void)
     };
     return ClassifySurveyState(&signals);
 }
+
+// §06 zone 4: the river reads STRESSED -- and that is the whole point of the
+// chapter. A riparian dam-builder (the wetland's engineer) strained by removal
+// upstream and the channelized cut; the sensitive invertebrate guild thinning
+// but STILL PRESENT (the open window); the apex thinning, not swarming; visible
+// hydrological-alteration damage (the concrete banks, the broken dam relic).
+// Strained, not collapsed: relief NOW and it recovers. Wait, and it won't.
+u16 SkaldmereClassifyRiver(void)
+{
+    struct SurveySignals signals = {
+        .keystone = KEYSTONE_STRAINED,        // the dam-builder, thinned out upstream
+        .abundance = ABUNDANCE_SKEWED,        // apex thinning -- not a swarm yet
+        .sensitiveGuildPresent = TRUE,        // mayfly-coded inverts thinning, still here
+        .apexPresent = TRUE,
+        .disturbanceSigns = TRUE,             // channelization + the broken dam
+    };
+    return ClassifySurveyState(&signals);
+}
