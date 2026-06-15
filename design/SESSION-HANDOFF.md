@@ -50,14 +50,27 @@ narration).
 **So: confirm with the user which mode they want before doing prose-heavy
 work.** Don't assume.
 
-## In flight (WIP on the branch)
+## Recently shipped (this branch)
 
-- **`tools/maptools/build_river.py`** + `data/layouts/ParcelRiver/*` — a
-  **partial** zone-4 (River & Farmland) map generator. Map shell only; NOT
-  integrated (no layouts.json/map_groups/map.json/scripts/connection/
-  encounters). The **9-step pickup plan is in commit `23576965`'s message** —
-  read it before touching zone 4. Free resources reserved there:
-  `FLAG_UNUSED_0x02B`, `VAR_UNUSED_0x4091`.
+- **Chapter 3 — the River & Farmland (zone 4)** is BUILT and integrated. The
+  old `build_river.py` WIP shell was rewritten into a walkable map; everything
+  in commit `23576965`'s 9-step plan is now done. `ParcelRiver` (84×44)
+  connects **up** from the Floodbasin (offset 0; a trail carved through the
+  basin's north forest at x34–36, beside the discharge plume — see
+  `build_floodbasin.py`). Survey reads **STRESSED** (`SkaldmereClassifyRiver`,
+  tested; STRAINED keystone + SKEWED + sensitive guild still present +
+  disturbance). Four tells (cut / broken dam / runoff / clean reach) + the
+  Foundation Water-Board mask + Harland (the lever made local) feed
+  `VAR_SKALDMERE_CH3_EVIDENCE`; **Ilex signs the Watershed Certification in the
+  field**. Claimed: `FLAG_SKALDMERE_RIVER_ARRIVAL` 0x2B,
+  `FLAG_SKALDMERE_WATERSHED_CERT` 0x2C, `FLAG_SKALD_ITEM_RIVER` 0x2D,
+  `VAR_SKALDMERE_CH3_EVIDENCE` 0x4091. The riparian-engineer **keystone species
+  stays OPEN** (§06) — carried by the broken-dam relic + narration, no sprite
+  committed (Bibarel is roster-questionable).
+- **Trainer Builder app** lives on the *other* branch
+  `claude/wizardly-noether-znwom5` (`tools/trainer-builder/`): a self-contained
+  web app for authoring trainers by hand (learnsets / abilities / wild items /
+  balls). A side-quest; not on this game branch.
 
 ## Chosen "while waiting" work: trainer teams (pure data, no Fable)
 
@@ -88,7 +101,12 @@ must be 0). Stale-object traps + the full gotcha list: §12.
 
 ## Immediate menu (the user picks)
 
-1. **Wait** for Fable (clean pause; this is the user's current lean).
-2. **Trainer-team pass** (no-prose; guide ready; first target = existing 9).
-3. **Zone 4 structure** in placeholder-prose mode (river starter + 9-step plan).
-4. **Polish** (Porymap art on building/lab/town exteriors; title screen).
+(Zone 4 / Chapter 3 is now done. The user OK'd Opus prose for it — Fable is no
+longer a blocker for continuing.)
+
+1. **Zone 5 — the Highlands (Chapter 4)**: cold specialists; §06 *one-way*
+   damage (permafrost — the first place that won't come back). The tonal turn.
+2. **Chapter 3 polish**: a river trainer (none placed yet — the Trainer Builder
+   makes this easy), Porymap art on the cut/dam tiles, a Harland follow-up beat.
+3. **Flesh the ~9 Skald trainer teams** (still 1–2 mons / 2 moves each).
+4. **Polish** (building/lab/town exteriors; title screen).
