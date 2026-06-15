@@ -231,7 +231,7 @@
         '<div class="fld sm"><label>Level</label><input type="number" data-f="level" min="1" max="100" value="5"></div>' +
         '<div class="fld"><label>Ability</label><div class="combo"><input class="combo-in" data-kind="ability" data-f="ability" placeholder="optional"></div></div>' +
         '<div class="fld"><label>Held item</label><div class="combo"><input class="combo-in" data-kind="item" data-f="item" placeholder="optional"></div></div>' +
-        '<div class="fld sm" style="flex:0 0 130px"><label>Ball</label><select data-f="ball">' + BALL_OPTS + "</select></div>" +
+        '<div class="fld"><label>Ball</label><select data-f="ball">' + BALL_OPTS + "</select></div>" +
       "</div>" +
       '<div class="row"><div class="fld grow"><label>Moves (up to 4)</label></div></div>' +
       '<div class="row">' + [0, 1, 2, 3].map(function (i) {
