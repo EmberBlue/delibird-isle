@@ -882,9 +882,14 @@
 #define TRAINER_SKALD_SURVEYOR                867
 #define TRAINER_SKALD_REVELER                 868
 #define TRAINER_SKALD_HERON                   869
+#define TRAINER_SKALD_RAIN                    870
+#define TRAINER_SKALD_SUN                     871
+#define TRAINER_SKALD_SAND                    872
+#define TRAINER_SKALD_ICE                     873
+#define TRAINER_SKALD_DIRECTOR                874
 
-#define TRAINERS_COUNT                      870
-#define MAX_TRAINERS_COUNT                  872
+#define TRAINERS_COUNT                      875
+#define MAX_TRAINERS_COUNT                  877
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

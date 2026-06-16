@@ -78,8 +78,8 @@
 #define FLAG_SKALDMERE_HERON_MET     0x40 // Skaldmere: §08 Ch7 Dr. Heron found / confession seen
 #define FLAG_SKALDMERE_FINALE_DONE   0x41 // Skaldmere: §08 Ch7 testimony filed / the ending seen
 #define FLAG_SKALD_ITEM_CORRIDOR     0x42 // Skaldmere: §08 Ch7 Last Corridor item
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
+#define FLAG_SKALDMERE_WEATHER_ARRIVAL 0x43 // Skaldmere: Mereholt Climate Station first entry
+#define FLAG_SKALDMERE_WEATHER_CLEARED 0x44 // Skaldmere: weather gauntlet (the Director) beaten
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
 #define FLAG_UNUSED_0x046    0x46 // Unused Flag
 #define FLAG_UNUSED_0x047    0x47 // Unused Flag

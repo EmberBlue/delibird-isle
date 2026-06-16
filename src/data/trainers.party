@@ -17141,3 +17141,96 @@ Level: 32
 
 Pelipper
 Level: 33
+
+=== TRAINER_SKALD_RAIN ===
+Name: MARLOWE
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 33
+
+Ludicolo
+Level: 34
+
+Kingdra
+Level: 35
+
+=== TRAINER_SKALD_SUN ===
+Name: HELIO
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Ninetales
+Level: 33
+
+Tropius
+Level: 34
+
+Camerupt
+Level: 35
+
+=== TRAINER_SKALD_SAND ===
+Name: DUNE
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Cacturne
+Level: 33
+
+Flygon
+Level: 34
+
+Tyranitar
+Level: 35
+
+=== TRAINER_SKALD_ICE ===
+Name: FROSK
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sealeo
+Level: 33
+
+Glalie
+Level: 34
+
+Walrein
+Level: 35
+
+=== TRAINER_SKALD_DIRECTOR ===
+Name: VANE
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Politoed
+Level: 36
+
+Ninetales
+Level: 37
+
+Tyranitar
+Level: 37
+
+Walrein
+Level: 38

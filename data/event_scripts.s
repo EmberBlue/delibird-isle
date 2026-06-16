@@ -1182,3 +1182,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ParcelDelibird/scripts.inc"
 	.include "data/maps/ParcelCoast/scripts.inc"
 	.include "data/maps/ParcelMarsh/scripts.inc"
+	.include "data/maps/ParcelWeather/scripts.inc"

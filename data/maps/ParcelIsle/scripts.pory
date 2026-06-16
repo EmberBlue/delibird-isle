@@ -156,17 +156,28 @@ script ParcelIsle_FerryCaptain {
         waitstate
         end
     }
-    msgbox(format("Captain: The coast works, then. Grim business up that way -- cranes, ice, and a great deal of money.\pClimb aboard?"), MSGBOX_YESNO)
-    if (var(VAR_RESULT) == 0) {
-        msgbox(format("Captain: Suit yourself. I'll be on the water."), MSGBOX_DEFAULT)
-        release
+    msgbox(format("Captain: The coast works, then?\pGrim business up that way -- cranes, ice, and a great deal of money."), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        closemessage
+        playse(SE_SHIP)
+        delay(40)
+        warp(MAP_PARCEL_COAST, 38, 38)
+        waitstate
         end
     }
-    closemessage
-    playse(SE_SHIP)
-    delay(40)
-    warp(MAP_PARCEL_COAST, 38, 38)
-    waitstate
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("Captain: Then there's the climate station out on the spit -- Mereholt's weather people.\pWord is they'll take a challenger, if you fancy a scrap with the folk who reckon the sky's got knobs. Out there?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+            closemessage
+            playse(SE_SHIP)
+            delay(40)
+            warp(MAP_PARCEL_WEATHER, 23, 36)
+            waitstate
+            end
+        }
+    }
+    msgbox(format("Captain: Suit yourself. I'll be on the water."), MSGBOX_DEFAULT)
+    release
     end
 }
 

@@ -178,18 +178,15 @@ ParcelIsle_FerryCaptain::
 # 159 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_4, MSGBOX_YESNO
 # 160 "data/maps/ParcelIsle/scripts.pory"
-	compare VAR_RESULT, 0
+	compare VAR_RESULT, 1
 	goto_if_eq ParcelIsle_FerryCaptain_14
-# 165 "data/maps/ParcelIsle/scripts.pory"
-	closemessage
-# 166 "data/maps/ParcelIsle/scripts.pory"
-	playse SE_SHIP
-# 167 "data/maps/ParcelIsle/scripts.pory"
-	delay 40
 # 168 "data/maps/ParcelIsle/scripts.pory"
-	warp MAP_PARCEL_COAST, 38, 38
-# 169 "data/maps/ParcelIsle/scripts.pory"
-	waitstate
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelIsle_FerryCaptain_17
+ParcelIsle_FerryCaptain_16:
+# 179 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_6, MSGBOX_DEFAULT
+# 180 "data/maps/ParcelIsle/scripts.pory"
+	release
 	end
 
 ParcelIsle_FerryCaptain_2:
@@ -239,14 +236,41 @@ ParcelIsle_FerryCaptain_11:
 
 ParcelIsle_FerryCaptain_14:
 # 161 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_5, MSGBOX_DEFAULT
+	closemessage
 # 162 "data/maps/ParcelIsle/scripts.pory"
-	release
+	playse SE_SHIP
+# 163 "data/maps/ParcelIsle/scripts.pory"
+	delay 40
+# 164 "data/maps/ParcelIsle/scripts.pory"
+	warp MAP_PARCEL_COAST, 38, 38
+# 165 "data/maps/ParcelIsle/scripts.pory"
+	waitstate
+	end
+
+ParcelIsle_FerryCaptain_17:
+# 169 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_5, MSGBOX_YESNO
+# 170 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelIsle_FerryCaptain_19
+	goto ParcelIsle_FerryCaptain_16
+
+ParcelIsle_FerryCaptain_19:
+# 171 "data/maps/ParcelIsle/scripts.pory"
+	closemessage
+# 172 "data/maps/ParcelIsle/scripts.pory"
+	playse SE_SHIP
+# 173 "data/maps/ParcelIsle/scripts.pory"
+	delay 40
+# 174 "data/maps/ParcelIsle/scripts.pory"
+	warp MAP_PARCEL_WEATHER, 23, 36
+# 175 "data/maps/ParcelIsle/scripts.pory"
+	waitstate
 	end
 
 
 ParcelIsle_LabSign::
-# 175 "data/maps/ParcelIsle/scripts.pory"
+# 186 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_LabSign_Text_0, MSGBOX_SIGN
 	end
 
@@ -356,18 +380,26 @@ ParcelIsle_FerryCaptain_Text_3:
 
 ParcelIsle_FerryCaptain_Text_4:
 # 159 "data/maps/ParcelIsle/scripts.pory"
-	.string "Captain: The coast works, then. Grim\n"
-	.string "business up that way -- cranes, ice, and\l"
-	.string "a great deal of money.\p"
-	.string "Climb aboard?$"
+	.string "Captain: The coast works, then?\p"
+	.string "Grim business up that way -- cranes,\n"
+	.string "ice, and a great deal of money.$"
 
 ParcelIsle_FerryCaptain_Text_5:
-# 161 "data/maps/ParcelIsle/scripts.pory"
+# 169 "data/maps/ParcelIsle/scripts.pory"
+	.string "Captain: Then there's the climate\n"
+	.string "station out on the spit -- Mereholt's\l"
+	.string "weather people.\p"
+	.string "Word is they'll take a challenger, if you\n"
+	.string "fancy a scrap with the folk who reckon\l"
+	.string "the sky's got knobs. Out there?$"
+
+ParcelIsle_FerryCaptain_Text_6:
+# 179 "data/maps/ParcelIsle/scripts.pory"
 	.string "Captain: Suit yourself. I'll be on the\n"
 	.string "water.$"
 
 ParcelIsle_LabSign_Text_0:
-# 175 "data/maps/ParcelIsle/scripts.pory"
+# 186 "data/maps/ParcelIsle/scripts.pory"
 	.string "FIELD RESEARCH ANNEX\n"
 	.string "Skaldmere Survey cooperative site\p"
 	.string "A strip of red cloth is nailed under the\n"

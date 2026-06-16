@@ -52,6 +52,20 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **The weather-division gauntlet** (the "gyms" half of the user's fork) is
+  BUILT. `ParcelWeather` (48×40) — the Mereholt Climate Station, an on-theme
+  optional challenge: four climatologists who each command a weather (RAIN
+  Pelipper/Ludicolo/Kingdra · SUN Ninetales/Tropius/Camerupt · SAND
+  Cacturne/Flygon/Tyranitar · ICE Sealeo/Glalie/Walrein) + the DIRECTOR (Vane)
+  who commands all four — the climate-management-hubris theme made into a
+  gauntlet. Clear the four (sight battles), the Director gates on all four
+  defeated, beat him for the four weather rocks. Reached by the dock-town
+  captain's **third ferry route** (gated on the Coastal cert). New trainers
+  870–874 (`MAX_TRAINERS_COUNT` raised 872→877, RAM unchanged); flags 0x43–0x44.
+  NB: the Director's battle is a `trainerbattle_single` from a `TRAINER_TYPE_NONE`
+  object (same pattern as Heron) — render + sight confirmed, full battle not yet
+  playtested. **STILL OPEN from the fork: the HM/ranger-tools half** (Strength to
+  clear a slump, Flash for a cave; disable Cut/Rock Smash) — not started.
 - **Chapter 7 — The Last Corridor (zone 8), THE CLIMAX,** is BUILT — the 8-zone
   main story is now complete end to end. `ParcelMarsh` (56×48): the dying
   keystone freshwater marsh, warped in from the Station (Hale walks you to the
