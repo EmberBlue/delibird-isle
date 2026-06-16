@@ -52,6 +52,23 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **Chapter 5 — Delibird Isle (zone 6)** is BUILT and integrated. The title
+  location and the **interlude** — NOT a cert zone (no survey/classifier). §09
+  adapted to a playable Holiday Village where the give-vs-take thesis is a
+  literal **gift economy**. `ParcelDelibird` (60×44) is a sea-framed island
+  reached by **ferry** (a gated captain at the dock town, unlocks after
+  `FLAG_SKALDMERE_HIGHLAND_CERT`; `warp(MAP, x, y)` both ways — no edge
+  connection). Beats: the elder's storm-relief **delivery quest** → a free
+  **Delibird** + a Ranger commendation (a grace note, not a credential); a
+  give-economy gift NPC; the thaw made playable (a flood-relief beat you help
+  but cannot win — reduce harm); environmental-storytelling thaw signs (sinking
+  cabin, summit thermokarst); the Foundation festival banner (the §05 mask).
+  Encounters: cold/festive (Delibird/Stantler/Snorunt/Sneasel) + shore range-
+  shift + Lapras on the surf. Claimed flags 0x31–0x35, 0x37–0x39.
+  **GOTCHA RELEARNED:** low `FLAG_UNUSED_0x0xx` must be grep-verified
+  unreferenced before claiming — `0x36` is TestTown's and broke the link until
+  restored (and `rm build/modern-debug/data/{map_events,maps}.o` after a
+  flags.h fix or the stale object keeps the bad symbol).
 - **Chapter 4 — the Highlands (zone 5)** is BUILT and integrated. The tonal
   turn: the first zone that reads **SHIFTED** (`SkaldmereClassifyHighlands` →
   SURVEY_SHIFTED, tested) — the response is **witness, not repair**.
@@ -118,15 +135,17 @@ must be 0). Stale-object traps + the full gotcha list: §12.
 
 ## Immediate menu (the user picks)
 
-(Zones 4 & 5 / Chapters 3–4 are done, Opus prose. All four survey states are now
-on the board: Reference, Collapsing, Stressed, Shifted.)
+(Zones 3–6 / Chapters 2–5 are done, Opus prose. All four survey states are on
+the board (Reference, Collapsing, Stressed, Shifted) and the interlude is built.
+Playable spine now runs ferry → town → … → basin → river → highlands, plus the
+Delibird Isle ferry hop.)
 
-1. **Zone 6 — Delibird Isle (Chapter 5 / the §09 interlude)**: ferry/surf to the
-   cold island; a festival staged over a permafrost collapse — mutual aid vs.
-   taking, the thesis in miniature; the emotional breather. **§09 is written
-   long-form prose to adapt** (unlike z4/z5, which were built from constraints).
-   Needs the ferry/surf hop wired (Hale already names the ferry at the summit).
-2. **Ch4/Ch3 polish**: a snow/ice tileset for the Highlands; trainers in the
-   river + highlands (none placed yet); a Harland/Hollis follow-up beat.
-3. **Flesh the ~9 Skald trainer teams** (still 1–2 mons / 2 moves each).
-4. **Polish** (building/lab/town exteriors; title screen).
+1. **Zone 7 — the Coast (Mereholt Coastal, Chapter 6)**: the back half opens —
+   the extraction hub at its source, Harland's economy where it's run from.
+   Check §01/§05 for the coast's design (likely less-drafted than §09 was).
+2. **Delibird Isle expansion**: the Crystal Cavern (the §09 quiet climax — an
+   elder/a loss, not a boss); the Snowy Summit / Shoreline Cliffs as their own
+   areas; a real randomized gift-trade at the square.
+3. **A snow/ice tileset** (would lift the Highlands *and* the Delibird summit —
+   both currently evoke cold via pale scree + prose).
+4. **Flesh the ~9 Skald trainer teams**; place trainers in z4–z6 (none yet).

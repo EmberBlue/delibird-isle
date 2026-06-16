@@ -172,20 +172,23 @@ The first custom game code, built and verified (not just config):
   mid-pier. Buildings (homes, general store, pier shelter) are v1.1.
   Verified by walking it in the built ROM (pier spawn + the full walk north).
 
-## Skaldmere content built — the playable game so far (Chapters 0–4)
+## Skaldmere content built — the playable game so far (Chapters 0–5)
 
 **Status:** the §07 prologue + §08 Chapter 1 + Chapter 2 (the Floodbasin) +
-**Chapter 3 (the River & Farmland)** + **Chapter 4 (the Highlands)** are
-playable, plus a density layer (wild encounters, a shop, trainers, item pickups,
-healing, two enterable buildings). Each chapter's survey reads a different state
-via the one tested classifier — and all four states are now on the board:
+**Chapter 3 (the River & Farmland)** + **Chapter 4 (the Highlands)** +
+**Chapter 5 (Delibird Isle, the §09 interlude)** are playable, plus a density
+layer (wild encounters, a shop, trainers, item pickups, healing, two enterable
+buildings). Each *certification* chapter's survey reads a different state via
+the one tested classifier — all four states are on the board:
 Meadow→Reference, Floodbasin→Collapsing, River→Stressed, **Highlands→Shifted**.
 Certifications: Forest, Wetland, Watershed, **Highland** (the last two signed in
-the field — Ilex at the river, Hale at the summit). Regression: `make check
-DEBUG=0` = the inherited-battle-test baseline (4 pre-existing fails), 0 of ours.
-*The map graph + register/scene detail below predates Chapters 2–4 — trust the
-SESSION-HANDOFF "Recently shipped" note and the git log for those zones until
-this section is reconciled.*
+the field — Ilex at the river, Hale at the summit). Delibird Isle is the
+**interlude** — no survey, no credential; a ferry hop, a gift economy, a free
+Delibird, the thaw made playable. Regression: `make check DEBUG=0` = the
+inherited-battle-test baseline (4 pre-existing fails), 0 of ours.
+*The map graph + register/scene detail below predates Chapters 2–5 (now 12 maps)
+— trust the SESSION-HANDOFF "Recently shipped" note and the git log for those
+zones until this section is reconciled.*
 
 ### The map graph (now 11 maps — §12 detail below is the original 8)
 
