@@ -52,6 +52,23 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **Chapter 4 — the Highlands (zone 5)** is BUILT and integrated. The tonal
+  turn: the first zone that reads **SHIFTED** (`SkaldmereClassifyHighlands` →
+  SURVEY_SHIFTED, tested) — the response is **witness, not repair**.
+  `ParcelHighlands` (64×56) is a vertical climb (green foothills → bare scree →
+  a dead-end headwall), connected **up** from the River (offset 0; a causeway+
+  trail carved at x21-22 through the river's north forest — `build_highlands.py`
+  + a `build_river.py` edit). Six tells (thermokarst / drunken forest /
+  compression band / lowlander-upslope / the "exploratory" drill / the
+  homesteader) feed `VAR_SKALDMERE_CH4_EVIDENCE`; **Ilex** measures the
+  shrinking cold band, **Hollis Aune** (Foundation) is the warm sincere mask /
+  kindest threat, and **Hale signs the Highland Certification at the summit** and
+  points to the Delibird Isle ferry (zone 6). Encounters encode the shift
+  (generalists own the common slots; cold-specialists pushed to the rare ones; a
+  stray Numel upslope). Claimed: `FLAG_SKALDMERE_HIGHLAND_ARRIVAL` 0x2E,
+  `FLAG_SKALDMERE_HIGHLAND_CERT` 0x2F, `FLAG_SKALD_ITEM_HIGHLANDS` 0x30,
+  `VAR_SKALDMERE_CH4_EVIDENCE` 0x409B. Cold visuals are evoked by layout+prose on
+  the shared frp tileset — a snow/ice tileset is a deferred art pass.
 - **Chapter 3 — the River & Farmland (zone 4)** is BUILT and integrated. The
   old `build_river.py` WIP shell was rewritten into a walkable map; everything
   in commit `23576965`'s 9-step plan is now done. `ParcelRiver` (84×44)
@@ -101,12 +118,15 @@ must be 0). Stale-object traps + the full gotcha list: §12.
 
 ## Immediate menu (the user picks)
 
-(Zone 4 / Chapter 3 is now done. The user OK'd Opus prose for it — Fable is no
-longer a blocker for continuing.)
+(Zones 4 & 5 / Chapters 3–4 are done, Opus prose. All four survey states are now
+on the board: Reference, Collapsing, Stressed, Shifted.)
 
-1. **Zone 5 — the Highlands (Chapter 4)**: cold specialists; §06 *one-way*
-   damage (permafrost — the first place that won't come back). The tonal turn.
-2. **Chapter 3 polish**: a river trainer (none placed yet — the Trainer Builder
-   makes this easy), Porymap art on the cut/dam tiles, a Harland follow-up beat.
+1. **Zone 6 — Delibird Isle (Chapter 5 / the §09 interlude)**: ferry/surf to the
+   cold island; a festival staged over a permafrost collapse — mutual aid vs.
+   taking, the thesis in miniature; the emotional breather. **§09 is written
+   long-form prose to adapt** (unlike z4/z5, which were built from constraints).
+   Needs the ferry/surf hop wired (Hale already names the ferry at the summit).
+2. **Ch4/Ch3 polish**: a snow/ice tileset for the Highlands; trainers in the
+   river + highlands (none placed yet); a Harland/Hollis follow-up beat.
 3. **Flesh the ~9 Skald trainer teams** (still 1–2 mons / 2 moves each).
 4. **Polish** (building/lab/town exteriors; title screen).

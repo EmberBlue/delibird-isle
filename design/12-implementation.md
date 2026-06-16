@@ -172,20 +172,22 @@ The first custom game code, built and verified (not just config):
   mid-pier. Buildings (homes, general store, pier shelter) are v1.1.
   Verified by walking it in the built ROM (pier spawn + the full walk north).
 
-## Skaldmere content built — the playable game so far (Chapters 0–3)
+## Skaldmere content built — the playable game so far (Chapters 0–4)
 
 **Status:** the §07 prologue + §08 Chapter 1 + Chapter 2 (the Floodbasin) +
-**Chapter 3 (the River & Farmland)** are playable, plus a density layer (wild
-encounters, a shop, trainers, item pickups, healing, two enterable buildings).
-Each chapter's survey reads a different state via the one tested classifier:
-Meadow→Reference, Floodbasin→Collapsing, **River→Stressed**. Certifications:
-Forest, Wetland, **Watershed** (Ilex signs the last in the field). Regression:
-`make check DEBUG=0` = the inherited-battle-test baseline (4 pre-existing
-fails), 0 of ours. *The map graph + register/scene detail below predates
-Chapters 2–3 — trust the SESSION-HANDOFF "Recently shipped" note and the git
-log for those two zones until this section is reconciled.*
+**Chapter 3 (the River & Farmland)** + **Chapter 4 (the Highlands)** are
+playable, plus a density layer (wild encounters, a shop, trainers, item pickups,
+healing, two enterable buildings). Each chapter's survey reads a different state
+via the one tested classifier — and all four states are now on the board:
+Meadow→Reference, Floodbasin→Collapsing, River→Stressed, **Highlands→Shifted**.
+Certifications: Forest, Wetland, Watershed, **Highland** (the last two signed in
+the field — Ilex at the river, Hale at the summit). Regression: `make check
+DEBUG=0` = the inherited-battle-test baseline (4 pre-existing fails), 0 of ours.
+*The map graph + register/scene detail below predates Chapters 2–4 — trust the
+SESSION-HANDOFF "Recently shipped" note and the git log for those zones until
+this section is reconciled.*
 
-### The map graph (now 10 maps — §12 detail below is the original 8)
+### The map graph (now 11 maps — §12 detail below is the original 8)
 
 ```
 ParcelFerry (cabin, new-game start)
