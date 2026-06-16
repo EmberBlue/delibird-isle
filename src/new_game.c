@@ -50,6 +50,7 @@
 #include "union_room_chat.h"
 #include "constants/map_groups.h"
 #include "constants/items.h"
+#include "constants/heal_locations.h"
 #include "difficulty.h"
 #include "follower_npc.h"
 
@@ -155,6 +156,10 @@ static void WarpToTruck(void)
     FakeRtc_ForwardTimeTo(10, 0, 0);
     SetWarpDestination(MAP_GROUP(MAP_PARCEL_FERRY), MAP_NUM(MAP_PARCEL_FERRY), WARP_ID_NONE, 4, 6);
     WarpIntoMap();
+    // Without this, a whiteout falls back to the vanilla default
+    // (Petalburg City), which doesn't exist in the Skaldmere flow. Seed the
+    // respawn at the arrival dock town until the player heals somewhere later.
+    SetLastHealLocationWarp(HEAL_LOCATION_PARCEL_ISLE);
 }
 
 void Sav2_ClearSetDefault(void)
