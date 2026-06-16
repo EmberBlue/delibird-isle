@@ -1,8 +1,8 @@
 {
-  "id": "MAP_PARCEL_RIVER",
-  "name": "ParcelRiver",
-  "layout": "LAYOUT_PARCEL_RIVER",
-  "music": "MUS_ROUTE110",
+  "id": "MAP_PARCEL_HIGHLANDS",
+  "name": "ParcelHighlands",
+  "layout": "LAYOUT_PARCEL_HIGHLANDS",
+  "music": "MUS_MT_PYRE_EXTERIOR",
   "region_map_section": "MAPSEC_PARCEL_ISLE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -14,144 +14,142 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_PARCEL_FLOODBASIN",
+      "map": "MAP_PARCEL_RIVER",
       "offset": 0,
       "direction": "down"
-    },
-    {
-      "map": "MAP_PARCEL_HIGHLANDS",
-      "offset": 0,
-      "direction": "up"
     }
   ],
   "object_events": [
     {
-      "local_id": "LOCALID_RIVER_ILEX",
+      "local_id": "LOCALID_HL_ILEX",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 37,
-      "y": 28,
+      "x": 19,
+      "y": 16,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelRiver_Ilex",
+      "script": "ParcelHighlands_Ilex",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_RIVER_HARLAND",
-      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 33,
-      "y": 32,
+      "local_id": "LOCALID_HL_HOLLIS",
+      "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
+      "x": 43,
+      "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelRiver_Harland",
+      "script": "ParcelHighlands_Hollis",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_RIVER_FARMER",
-      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 66,
-      "y": 20,
+      "local_id": "LOCALID_HL_HOMESTEADER",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 50,
+      "y": 42,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelRiver_Farmer",
+      "script": "ParcelHighlands_Homesteader",
       "flag": "0"
     },
     {
-      "local_id": "LOCALID_RIVER_ITEM",
+      "local_id": "LOCALID_HL_HALE",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 31,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelHighlands_Hale",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HL_LOWLANDER",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ZIGZAGOON)",
+      "x": 31,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelHighlands_Lowlander",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_HL_ITEM",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 73,
-      "y": 32,
+      "x": 52,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelRiver_ItemPotion",
-      "flag": "FLAG_SKALD_ITEM_RIVER"
+      "script": "ParcelHighlands_ItemPotion",
+      "flag": "FLAG_SKALD_ITEM_HIGHLANDS"
     }
   ],
   "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 34,
-      "y": 41,
+      "x": 21,
+      "y": 50,
       "elevation": 3,
       "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "ParcelRiver_FirstEntry"
+      "script": "ParcelHighlands_FirstEntry"
     },
     {
       "type": "trigger",
-      "x": 35,
-      "y": 41,
+      "x": 22,
+      "y": 50,
       "elevation": 3,
       "var": "VAR_TEMP_1",
       "var_value": "0",
-      "script": "ParcelRiver_FirstEntry"
-    },
-    {
-      "type": "trigger",
-      "x": 36,
-      "y": 41,
-      "elevation": 3,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "ParcelRiver_FirstEntry"
+      "script": "ParcelHighlands_FirstEntry"
     }
   ],
   "bg_events": [
     {
       "type": "sign",
-      "x": 33,
-      "y": 27,
+      "x": 30,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ParcelRiver_ChannelCut"
+      "script": "ParcelHighlands_Thermokarst"
     },
     {
       "type": "sign",
-      "x": 51,
-      "y": 20,
+      "x": 42,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ParcelRiver_DamRelic"
+      "script": "ParcelHighlands_DrunkenForest"
     },
     {
       "type": "sign",
-      "x": 60,
-      "y": 29,
+      "x": 40,
+      "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ParcelRiver_RunoffStain"
-    },
-    {
-      "type": "sign",
-      "x": 26,
-      "y": 20,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ParcelRiver_CleanReach"
-    },
-    {
-      "type": "sign",
-      "x": 59,
-      "y": 22,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "ParcelRiver_IrrigationBoard"
+      "script": "ParcelHighlands_DrillSign"
     }
   ]
 }

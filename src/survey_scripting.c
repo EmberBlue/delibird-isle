@@ -98,3 +98,22 @@ u16 SkaldmereClassifyRiver(void)
     };
     return ClassifySurveyState(&signals);
 }
+
+// §06 zone 5: the Highlands read SHIFTED -- the first place that won't come
+// back, and the tonal turn of the whole game. Permafrost thaw is one-way
+// (carbon feedback): the keystone is the frozen ground itself, and it is
+// going. The cold-specialist guild is compressed upslope until it runs out of
+// "up"; lowland species climb into the gap; the ground slumps, the forest
+// tilts. KEYSTONE_ABSENT alone forces SHIFTED -- nothing outvotes it. The
+// honest response is not repair. It is witness.
+u16 SkaldmereClassifyHighlands(void)
+{
+    struct SurveySignals signals = {
+        .keystone = KEYSTONE_ABSENT,          // the frozen ground -- thawing, gone
+        .abundance = ABUNDANCE_SKEWED,        // a simpler assembly; lowlanders upslope
+        .sensitiveGuildPresent = FALSE,       // the cold-specialists, compressed out
+        .apexPresent = FALSE,
+        .disturbanceSigns = TRUE,             // thermokarst, slumping, the drunken forest
+    };
+    return ClassifySurveyState(&signals);
+}

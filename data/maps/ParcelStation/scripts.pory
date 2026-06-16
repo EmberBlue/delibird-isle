@@ -51,8 +51,14 @@ script ParcelStation_Hale {
             // Hale signs the Wetland Certification. No fanfare.
             if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
                 if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
-                    msgbox(format("Hale: Three credentials. Forest, basin, and a whole watershed you had the sense not to 'fix' all at once.\pIlex signed that one in the field. She doesn't do that.\nMeans you read it right."), MSGBOX_DEFAULT)
-                    msgbox(format("Hale: Rest. It climbs from here -- the highlands, then the coast.\nThe cold doesn't forgive, and the coast doesn't pretend to."), MSGBOX_DEFAULT)
+                    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+                        msgbox(format("Hale: Four. Forest, basin, watershed -- and a mountain you couldn't save and didn't pretend to.\pThat last one is the one that makes a Ranger. The rest is competence."), MSGBOX_DEFAULT)
+                        msgbox(format("Hale: There's a ferry to Delibird Isle when you want it. Go watch a festival held on thawing ground.\pWatch how hard people will work to keep from saying a thing out loud."), MSGBOX_DEFAULT)
+                        release
+                        end
+                    }
+                    msgbox(format("Hale: Three credentials. Forest, basin, watershed.\pNow the climb. Follow the river up past the clean reaches, to where the water comes from -- the high cold."), MSGBOX_DEFAULT)
+                    msgbox(format("Hale: It won't read like the others. You will not get to fix this one.\pIlex is up there already, measuring how much of it is left. Go learn what 'too late' looks like, so you'll know it the next time it isn't."), MSGBOX_DEFAULT)
                     release
                     end
                 }

@@ -105,7 +105,8 @@
     "ParcelLab",
     "ParcelFerry",
     "ParcelFloodbasin",
-    "ParcelRiver"
+    "ParcelRiver",
+    "ParcelHighlands"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

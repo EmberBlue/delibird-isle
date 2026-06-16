@@ -134,6 +134,16 @@ def build():
     grass_patch(60, 68, 11, 16)            # farmland edge -- runoff
     grass_patch(60, 68, 28, 33)            # farmland edge -- runoff
 
+    # --- north exit up to the Highlands (zone 5 connection; offset 0, x21-22)
+    # A headwater trail: through the north forest, on a causeway across the
+    # upper braided reach. You follow the clean water up to its cold source.
+    for y in range(0, 8):
+        for x in range(21, 23):
+            put(x, y, SAND)
+    for y in range(14, 18):
+        for x in range(21, 23):
+            put(x, y, SAND)
+
     return grid
 
 

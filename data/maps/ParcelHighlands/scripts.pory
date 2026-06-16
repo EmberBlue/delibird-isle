@@ -1,0 +1,210 @@
+// ParcelHighlands -- §01/§06 zone 5, Chapter 4: "the first place that won't
+// come back." The tonal turn. The river was Stressed (a window). The Highlands
+// read SHIFTED -- past the threshold, one-way. Permafrost thaw is the game's
+// purest irreversible damage: the frozen ground was the keystone, and it is
+// going. The cold-specialist guild is compressed upslope until it runs out of
+// mountain; lowland generalists climb into the gap; the ground slumps and the
+// forest tilts. Mereholt Permafrost drills it under an "exploratory" mask, and
+// Hollis Aune -- warm, sincere, not lying -- is the kindest threat in the game.
+//
+// The certification here is the hardest: not repair. Witness. The honest
+// response to a place already past saving (RESPONSE_WITNESS, §06/§10).
+//
+// VAR_SKALDMERE_CH4_EVIDENCE bits (count 0..5, mask 0x3F):
+//   0 thermokarst/slump   1 drunken forest   2 compression band (Ilex)
+//   3 lowlander upslope    4 the drill (mask)  5 the homesteader (the cost)
+//   6 classified + filed (Hale)   7 met Hollis (uncounted one-shot)
+
+const LOCALID_HL_ILEX        = 1
+const LOCALID_HL_HOLLIS      = 2
+const LOCALID_HL_HOMESTEADER = 3
+const LOCALID_HL_HALE        = 4
+const LOCALID_HL_LOWLANDER   = 5
+
+mapscripts ParcelHighlands_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelHighlands_SetMapVar
+    ]
+}
+
+script ParcelHighlands_SetMapVar {
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+// First entry: the climb, and the wrongness of warmth where there should be bite.
+script ParcelHighlands_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_HIGHLAND_ARRIVAL)) {
+        end
+    }
+    lockall
+    msgbox(format("The trail climbs out of the trees and keeps climbing. The air should bite up here.\pIt only aches. The cold that made this place is leaving it."), MSGBOX_DEFAULT)
+    msgbox(format("Doduo slows, both heads low. The ground gives underfoot where it should be iron -- soft, where a hundred winters packed it solid."), MSGBOX_DEFAULT)
+    msgbox(format("Hale's note, in pencil the damp has feathered:\pHIGHLAND -- READ IT HONESTLY.\nYou are going to want to fix this. You cannot. That is the lesson."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_HIGHLAND_ARRIVAL)
+    releaseall
+    end
+}
+
+// --- the survey: four read tells (0,1,3,4) + Ilex (2) + the homesteader (5) --
+// 0: thermokarst -- the ground itself thawing, collapsing, one-way
+script ParcelHighlands_Thermokarst {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 0)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The sunk pond. Logged."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A pond sits where no pond was ever drawn. The ice locked in the ground melted, the soil dropped into the hollow, and the meltwater pooled in the wound. THERMOKARST, the manual calls it.\pThe water is new. The collapse that made it does not refill. You cannot refreeze what has already let go."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 1: the drunken forest -- trees tilting as their footing turns to slurry
+script ParcelHighlands_DrunkenForest {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 1)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The leaning stand. Noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("The trees lean. Not bowed by wind -- each tilted at its own drunk angle, where the frozen soil that gripped their roots turned to slurry and let them go.\pThey are not dying of cold. They are dying of warmth, slowly, on their feet. A forest losing its balance."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 3: a lowlander upslope -- the generalist inherits the gap (range shift)
+script ParcelHighlands_Lowlander {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 3)
+    special(SkaldmereCertTaskMark)
+    msgbox(format("A Zigzagoon noses through the scree, perfectly at ease -- a thousand feet higher than it has any business being.\pIt isn't lost. It's the new tenant. The cold used to keep its kind down the slope. The cold isn't keeping anything anymore.\pThis is what a place looks like as it simplifies: the one that eats everything, everywhere, and little else beside."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// 4: the drill -- Mereholt Permafrost, the "exploratory" mask
+script ParcelHighlands_DrillSign {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 4)
+    special(SkaldmereCertTaskMark)
+    msgbox(format("MEREHOLT PERMAFROST -- SURVEY STATION SIX\pEXPLORATORY ONLY. No extraction is licensed at this site.\pThe rig is bolted to ground that is moving. The bore runs down into the freeze -- to learn how fast it is failing, and to stand first in line for whatever the failing lays bare."), MSGBOX_SIGN)
+    release
+    end
+}
+
+// 2: Ilex at the compression band -- red cloth that measures loss, not baseline
+script ParcelHighlands_Ilex {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 2)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("Ilex moves a stake inward a hand's width and writes the new number. She does not explain it twice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Ilex kneels at a line of red cloth strung between two stakes, an arm's length apart.\pIlex: Last season these stood wider. The season before, wider still."), MSGBOX_DEFAULT)
+    msgbox(format("Ilex: This is the band the cold-lovers have left. The Sneasel. The Swinub that root the high snow. Pushed up the slope each year, into a thinner and thinner ring of cold."), MSGBOX_DEFAULT)
+    msgbox(format("Ilex: Above this is bare rock and sky. There is no higher for them to climb.\pI stopped recording where they are. Now I record how much less of it there is."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: And when the ring closes?"), MSGBOX_DEFAULT)
+    msgbox(format("Ilex: Then I will have a number for that, too.\pDownslope, the red cloth marks what is still here. Up here it marks what is leaving. It is the same cloth. That is the part they never understand."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// the mask made human: Hollis Aune (a scene; sets the uncounted bit 7)
+script ParcelHighlands_Hollis {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 7)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("Hollis: The coffee's still warm, Ranger. The offer stands.\pSo does the ground, for now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A woman in a clean Foundation jacket warms her hands at a field heater. She smiles, and means it -- that is the unsettling part.\pHollis: You must be the Ranger they sent up. Hollis Aune, Mereholt Foundation. Come in out of the wind. There is coffee."), MSGBOX_DEFAULT)
+    msgbox(format("Hollis: I know how the rig reads to you. But the thaw is coming whether we bore it or not. Better someone is here measuring it -- funding the relocation grants, the warming center, the training for what comes next."), MSGBOX_DEFAULT)
+    msgbox(format("Hollis: None of that is a lie. You can check every line of it. We are doing real good up here, beside the real harm.\pThat is not a contradiction. That is just how it actually works."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: I believe you. That isn't the part I'm writing down."), MSGBOX_DEFAULT)
+    msgbox(format("Hollis pauses, the smile unchanged.\pHollis: No. I don't suppose it is.\pThen let me be kind plainly, so you don't mistake it for a threat. Our science is the only science up here. A survey that contradicts ours doesn't save the cold."), MSGBOX_DEFAULT)
+    msgbox(format("Hollis: It just defunds the coffee.\pShe refills her cup. The heater hums. Beneath it, the ground goes on quietly moving."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 5: the homesteader -- the human cost, the one who won't be 'adapted'
+script ParcelHighlands_Homesteader {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The old woman sets another log. It sits crooked, like everything up here now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("An old woman stacks wood against a cabin whose near corner has sunk a hand's depth into the softening ground.\pHomesteader: You're not from the company. Good. I am tired of being adapted at."), MSGBOX_DEFAULT)
+    msgbox(format("Homesteader: Eight generations of us wintered this slope. You knew where you stood -- the ground held, the cold came, the cold went, the ground held again.\pNow the ground breathes. The doors won't shut true. The well runs muddy in a month it never did."), MSGBOX_DEFAULT)
+    msgbox(format("Homesteader: The Foundation's grant will move me somewhere warm and write resilience on the cheque. The young ones already signed. I don't blame them."), MSGBOX_DEFAULT)
+    msgbox(format("Homesteader: The ground is dying. They call it opportunity.\pI call it leaving."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// Hale at the headwall: the field debrief + the Highland Certification (witness)
+script ParcelHighlands_Hale {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("Hale looks out over the slumping ground a long while before he speaks.\pHale: You kept the record. That is the whole of the work up here.\pSomeday someone reads it and knows exactly what was lost, and when -- and who was smiling while it went."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 63)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) == 6) {
+        msgbox(format("Hale stands where the trail runs out of mountain. He does not turn around.\pHale: The sunk ponds. The drunk trees. The band Ilex measures. The lowlander in the scree. The drill. The woman who won't take the grant.\pName it."), MSGBOX_DEFAULT)
+        specialvar(VAR_RESULT, SkaldmereClassifyHighlands)
+        msgbox(format("Hale: SHIFTED.\pThe frozen ground was the keystone, and it is going. The cold guild is gone from everywhere but that last ring. What moves in is whatever moves in anywhere -- a poorer place, settling into being poorer."), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: So what do we DO. There has to be something --"), MSGBOX_DEFAULT)
+        msgbox(format("Hale: There isn't. Not here. You cannot refreeze a mountain.\pThe runoff you can slow. The cut you can fight. This you cannot put back. It is the first time you will have stood somewhere and known that for certain."), MSGBOX_DEFAULT)
+        msgbox(format("Hale: So the work changes. Not save it -- WITNESS it. Record it true, name the hand that's on it, and carry that down to a place you still can save.\pThat is not surrender. Surrender is letting them file this as 'adaptation' and signing your name under it."), MSGBOX_DEFAULT)
+        setvar(VAR_0x8004, 6)
+        special(SkaldmereCertTaskMark)
+        msgbox(format("Hale knots a strip of red cloth to your pack himself -- the same cloth as a survey stake. Up here it means what it means down there: someone saw, and wrote it down.\pHale: Highland Certification. The hardest one to earn, because there's no fixing it to hide behind. You didn't look away."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALDMERE_HIGHLAND_CERT)
+        giveitem(ITEM_MAX_POTION, 3)
+        giveitem(ITEM_REVIVE, 3)
+        msgbox(format("Hale: There's a ferry to Delibird Isle when your legs are under you. They hold a festival out there, on ground exactly like this.\pGo and see what people do with grief when they have agreed, together, not to name it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Hale stands at the headwall, where the trail runs out.\pHale: Don't name it from up here, looking down. Walk it first -- the thaw ponds, the leaning trees, the band Ilex works, the drill, the lowlander that's moved in, the holdout who won't go.\pThen come and tell me what it is. All of it, or none of it counts."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelHighlands_ItemPotion {
+    finditem(ITEM_HYPER_POTION)
+    end
+}
