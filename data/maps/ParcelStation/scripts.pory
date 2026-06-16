@@ -26,6 +26,12 @@ mapscripts ParcelStation_MapScripts {
 }
 
 script ParcelStation_OnTransition {
+    // The station hub is the player's home base: anchor the whiteout respawn
+    // here so it never falls back to the vanilla Petalburg default -- and so
+    // saves made before the new-game heal-location fix self-correct the first
+    // time they pass through. (Reuses the Isle dock heal point until per-zone
+    // stations exist; harmless to re-set on every transition.)
+    setrespawn(HEAL_LOCATION_PARCEL_ISLE)
     if (defeated(TRAINER_SKALD_LOOKOUT)) {
         setflag(FLAG_TEMP_5)
         end
