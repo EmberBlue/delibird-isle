@@ -52,6 +52,24 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **Chapter 6 — the Industrial Coast (zone 7)** is BUILT and integrated. The
+  endgame ramp; the extraction economy unmasked. `ParcelCoast` (64×44): a
+  working harbour (cannery + Mereholt office on the land, the overfished sea to
+  the east, Harland's boat at the quay), reached by **ferry** — the dock-town
+  captain now runs a second route to the coast, gated behind
+  `FLAG_SKALDMERE_DELIBIRD_ARRIVAL` so the island interlude comes first (§01
+  order). Survey reads **COLLAPSING** (`SkaldmereClassifyCoast` → SURVEY_COLLAPSING,
+  tested — a live trophic cascade: keystone grazer FAILING + mesopredator swarm).
+  Two big beats land: **the collaboration reveal** — the notebook's marginalia
+  finally decode, and the Board's "sustainable harvest" model is Dr. Heron's
+  methods in her own hand (she was never silenced; she's the citation) — and
+  **Harland's arc home** (the lever fully visible, his boat note Mereholt's, no
+  redemption, he endorses the testimony and names its futility). Hollis Aune
+  delivers the kindest threat; Hale debriefs + signs the **Coastal Certification**
+  and turns the player toward **zone 8, the Last Corridor** (the climax — Heron
+  found). Encounters encode the collapse (harbour generalists/scavengers; a
+  Tentacool swarm + fished-rare Sharpedo on the surf). Flags 0x3A–0x3E, var
+  0x409D (all grep-verified free this time).
 - **Trainers for the new zones (z4–z6).** Each of the three previously
   trainer-less zones now has one themed, roster-legal trainer (sight-3 overworld
   object + a `trainerbattle_single` + a thematic post-battle line):
@@ -145,14 +163,19 @@ must be 0). Stale-object traps + the full gotcha list: §12.
 
 ## Immediate menu (the user picks)
 
-(Zones 3–6 / Chapters 2–5 are done, Opus prose. All four survey states are on
-the board (Reference, Collapsing, Stressed, Shifted) and the interlude is built.
-Playable spine now runs ferry → town → … → basin → river → highlands, plus the
-Delibird Isle ferry hop.)
+(Zones 3–7 / Chapters 2–6 are done, Opus prose. Survey spine complete:
+Reference / Stressed / Collapsing (×2: basin + coast) / Shifted, plus the
+interlude. The collaboration reveal (Heron complicit) has landed at the coast;
+all that's left is the climax. Playable spine: ferry → town → … → basin → river
+→ highlands, plus the Delibird Isle and Industrial Coast ferry hops.)
 
-1. **Zone 7 — the Coast (Mereholt Coastal, Chapter 6)**: the back half opens —
-   the extraction hub at its source, Harland's economy where it's run from.
-   Check §01/§05 for the coast's design (likely less-drafted than §09 was).
+1. **Zone 8 — The Last Corridor (Chapter 7, the CLIMAX)**: the keystone
+   freshwater marsh at the region's heart, where **Dr. Heron is found alive in
+   exile** — the full reveal, the coercion, the reckoning of testimony (§01
+   "back half" is LOCKED; the Poliwag line is the keystone, tying back to the
+   prologue). This is the ending; it deserves a careful read of §01 §02 §04 and
+   the prologue first, and probably a design check-in before building — the
+   emotional load is the whole game's, and it shouldn't be improvised.
 2. **Delibird Isle expansion**: the Crystal Cavern (the §09 quiet climax — an
    elder/a loss, not a boss); the Snowy Summit / Shoreline Cliffs as their own
    areas; a real randomized gift-trade at the square.

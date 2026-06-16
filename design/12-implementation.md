@@ -172,21 +172,24 @@ The first custom game code, built and verified (not just config):
   mid-pier. Buildings (homes, general store, pier shelter) are v1.1.
   Verified by walking it in the built ROM (pier spawn + the full walk north).
 
-## Skaldmere content built — the playable game so far (Chapters 0–5)
+## Skaldmere content built — the playable game so far (Chapters 0–6)
 
 **Status:** the §07 prologue + §08 Chapter 1 + Chapter 2 (the Floodbasin) +
 **Chapter 3 (the River & Farmland)** + **Chapter 4 (the Highlands)** +
-**Chapter 5 (Delibird Isle, the §09 interlude)** are playable, plus a density
-layer (wild encounters, a shop, trainers, item pickups, healing, two enterable
-buildings). Each *certification* chapter's survey reads a different state via
-the one tested classifier — all four states are on the board:
-Meadow→Reference, Floodbasin→Collapsing, River→Stressed, **Highlands→Shifted**.
-Certifications: Forest, Wetland, Watershed, **Highland** (the last two signed in
-the field — Ilex at the river, Hale at the summit). Delibird Isle is the
-**interlude** — no survey, no credential; a ferry hop, a gift economy, a free
-Delibird, the thaw made playable. Regression: `make check DEBUG=0` = the
-inherited-battle-test baseline (4 pre-existing fails), 0 of ours.
-*The map graph + register/scene detail below predates Chapters 2–5 (now 12 maps)
+**Chapter 5 (Delibird Isle, the §09 interlude)** + **Chapter 6 (the Industrial
+Coast)** are playable, plus a density layer (wild encounters, a shop, trainers,
+item pickups, healing, two enterable buildings). Each *certification* chapter's
+survey reads a state via the one tested classifier:
+Meadow→Reference, River→Stressed, Floodbasin & **Coast→Collapsing**,
+**Highlands→Shifted** (the marine Collapsing is a fresh mechanism — a live
+trophic cascade vs. the basin's legacy contamination). Certifications: Forest,
+Wetland, Watershed, Highland, **Coastal** (the field-signed ones: Ilex at the
+river, Hale at the summit and the coast). Delibird Isle is the **interlude** (no
+survey/credential — ferry, gift economy, free Delibird, the thaw made playable).
+The **collaboration reveal** (Dr. Heron's methods inside Mereholt's greenwash)
+lands at the coast; only zone 8, the climax, remains. Regression: `make check
+DEBUG=0` = the inherited-battle-test baseline (4 pre-existing fails), 0 of ours.
+*The map graph + register/scene detail below predates Chapters 2–6 (now 13 maps)
 — trust the SESSION-HANDOFF "Recently shipped" note and the git log for those
 zones until this section is reconciled.*
 
