@@ -4506,8 +4506,8 @@
       "name": "ParcelCorridor_Layout",
       "width": 70,
       "height": 20,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelCorridor/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCorridor/map.bin"
     },
@@ -4516,8 +4516,8 @@
       "name": "ParcelFloodbasin_Layout",
       "width": 72,
       "height": 44,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelFloodbasin/border.bin",
       "blockdata_filepath": "data/layouts/ParcelFloodbasin/map.bin"
     },
@@ -4526,8 +4526,8 @@
       "name": "ParcelRiver_Layout",
       "width": 84,
       "height": 44,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelRiver/border.bin",
       "blockdata_filepath": "data/layouts/ParcelRiver/map.bin"
     },
@@ -4536,8 +4536,8 @@
       "name": "ParcelHighlands_Layout",
       "width": 64,
       "height": 56,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelHighlands/border.bin",
       "blockdata_filepath": "data/layouts/ParcelHighlands/map.bin"
     },
