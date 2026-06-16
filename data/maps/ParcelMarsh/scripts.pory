@@ -1,0 +1,193 @@
+// ParcelMarsh -- §01/§02/§04/§06 zone 8, Chapter 7: THE CLIMAX. The Last
+// Corridor's keystone freshwater marsh, dying at the heart of the wilderness,
+// the place the whole region drains from. Its keystone-indicator is the Poliwag
+// line -- the same frogs from the prologue bridge, the species Dr. Heron's noble
+// lie once "saved." Wren finds Heron alive here, in voluntary exile, cataloging
+// the failure of her own falsified prediction by hand. The full reveal lands
+// face to face: she did not sell out -- she was coerced (the double leash: the
+// buried lie + Mereholt's funding, with Hollis the hand on it). She has prepared
+// her own end. Wren chooses to expose her anyway -- truth-telling with maximum
+// collateral. The survey is the final credential; the testimony is the ending.
+// Clear-eyed grief. The expansion is only delayed. No legendary. No saved day.
+// The marsh mirrors the wetland where Sketch died (§04).
+//
+// VAR_SKALDMERE_CH7_EVIDENCE bits (count 0..3, mask 0xF): 0 drying channel,
+// 1 dead reeds, 2 the encroaching edge, 3 the Poliwag (the keystone). The full
+// Heron scene gates on all four -- you read the place before you read her.
+
+const LOCALID_MARSH_HERON   = 1
+const LOCALID_MARSH_POLIWAG = 2
+
+mapscripts ParcelMarsh_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelMarsh_SetMapVar
+    ]
+}
+
+script ParcelMarsh_SetMapVar {
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+script ParcelMarsh_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_CORRIDOR_ARRIVAL)) {
+        end
+    }
+    lockall
+    msgbox(format("The trees close behind you and the wilderness opens into a marsh -- small, soft, unfenced. No crest on anything. No road but the one biting in from the east.\pIt is the first place since the meadow that nobody has come to sell."), MSGBOX_DEFAULT)
+    msgbox(format("You have stood somewhere like this before. You try not to think about where. The notebook is heavy against your side.\pYou carry it because your partner can no longer draw. Every page since has been Sketch's eye, kept open by hand."), MSGBOX_DEFAULT)
+    msgbox(format("Doduo goes still. At the stream mouth ahead, a knot of Poliwag huddle against the bank -- panicked, stuck, exactly the way the first ones were, on the bridge, the day you understood nothing yet.\pYou understand now. Read it. Then find her."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_CORRIDOR_ARRIVAL)
+    releaseall
+    end
+}
+
+// --- the four tells -------------------------------------------------------
+// 0: the drying channel -- the headwater going
+script ParcelMarsh_DryChannel {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE)
+    setvar(VAR_0x8004, 0)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The dry channel. Logged."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A channel that should run cold and full runs to cracked grey mud instead. The marsh is losing its water from the top -- a little less every season, from everything upstream that you have spent this whole journey writing down.\pNo single wound. A thousand small ones, draining a place to death."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 1: the dead reeds -- the fine indicators going first
+script ParcelMarsh_DeadReeds {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE)
+    setvar(VAR_0x8004, 1)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The dead reeds. Noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A band of reeds gone straw-pale and brittle, the fine sedges that need their feet wet the year round. They are the first to feel a marsh begin to leave.\pYou have learned to read the small things first. The big things only confirm what the small ones already said."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 2: the encroaching edge -- the cut coming in
+script ParcelMarsh_Edge {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE)
+    setvar(VAR_0x8004, 2)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The graded edge. Measured."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("On the east side the wild stops in a straight line. Graded ground, a survey flag, the start of a road to nothing yet.\pNobody has taken this marsh. Someone has simply begun to stand at its edge and wait. That is all it takes now. The frontier closes by leaning on a place until it gives."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 3: the Poliwag -- the keystone; the whole knot, from the prologue forward
+script ParcelMarsh_Poliwag {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE)
+    setvar(VAR_0x8004, 3)
+    special(SkaldmereCertTaskMark)
+    msgbox(format("The Poliwag press together where the stream still runs, fewer than the bank was worn for. They flinch as you kneel, and hold their ground, because there is no ground left behind them to take.\pThe keystone. The indicator. The first creatures you ever saw in trouble, before you had the word for it."), MSGBOX_DEFAULT)
+    msgbox(format("You had it backwards on the bridge. You thought something was chasing them upstream.\pNothing was chasing them. The water in front of them was simply running out. It has been running out their whole lives, and yours."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- Dr. Heron: the confession, the battle, the survey, the ending --------
+script ParcelMarsh_Heron {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Dr. Heron has gone back to her counting. The tally grows, one careful mark at a time.\pShe does not look up again. There is nothing left to say that the notebook does not already hold -- in her hand, and now in yours."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE)
+    setvar(VAR_0x8004, 15)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) < 4) {
+        if (flag(FLAG_SKALDMERE_HERON_MET)) {
+            msgbox(format("Heron: Not yet. The drying channel. The dead reeds. The edge they have cut. And them -- the frogs, last of all.\pRead the whole place. Then we'll talk about the part of it that's me."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("An old woman kneels at the waterline, a wading-bird stillness to her, marking a tally on a damp page. She is counting Poliwag, under her breath, the way you count something you do not want to finish counting."), MSGBOX_DEFAULT)
+        msgbox(format("She does not startle.\pHeron: You found me. Of course you did.\pI taught you how to find the things that don't want finding."), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: …Dr. Heron."), MSGBOX_DEFAULT)
+        msgbox(format("Heron: Don't. Not yet.\pYou came to read a place, not a person. So read the place first -- all of it, the way I taught you. Then come back to me. I'm not going anywhere. I've seen to that."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALDMERE_HERON_MET)
+        release
+        end
+    }
+    // --- the full reckoning ---
+    msgbox(format("Heron sets the tally down and looks at you properly -- the first time, you realize, that she has looked AT you and not past you to the water.\pHeron: COLLAPSING. You don't have to say it; I can see you've already written it. The keystone failing, the web letting go from the bottom. The frogs hanging on last, because they always do."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: I should know how long they can hang on. I built half my name on the number."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: The recovery model on the coast. The curves. They're yours."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: They're mine.\pForty years ago. A marsh like this one, north of Mahogany. The Poliwag were going under and the law would not lift a finger for a number that small. So I made the number bigger. I wrote down a recovery that had not happened, and I swore to it under my own name."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: It worked. The preserve was protected. The frogs held on -- barely, but they held. And for thirty years I told myself a lie with a good heart and good results was near enough to the truth."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: Then the concern read my beautiful lie and saw the shape of a key. If one marsh bounces back, they all do. If they all do, then nothing you take can't be given back later.\pMy little mercy became their permission. For everything. For the dredge, the cut, the thaw. For this."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: You could have said. Somewhere, sometime, you could have said --"), MSGBOX_DEFAULT)
+    msgbox(format("Heron: Said what, to whom, on whose coin? The same hand that funds the lab holds the lie. The day I tell the truth, the work dies, the name dies, and the whole movement I gave my life to dies discredited by its own founder.\pThe woman who signs my funding was my student. She visits. She calls me Dr. H. She has been very kind about all of it."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: That is how it's done now, {PLAYER}. No villains in a tower. Just people you love, standing in the door, very sorry, not moving."), MSGBOX_DEFAULT)
+    // the battle -- the conversation made physical
+    msgbox(format("She stands. Out of the reeds her Pokémon rise around her -- old, field-worn, well-kept. The Politoed last of all, the one she could never quite let go of. The one the lie was for.\pHeron: You came to read me too. Then read me all the way down. I won't make it easy. I never made anything easy. That was the good part of me."), MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_SKALD_HERON,
+        format("Heron: Patient, now. Wait for the thing to show itself.\nThe way I taught you."),
+        format("Heron: …There. All of me, in the open. The good years and the bought ones both."))
+    msgbox(format("Heron lowers herself back to the waterline, slower than before. The Politoed settles against her knee."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: I can't give you the rest. Some of it I cannot say aloud even now.\pBut it's in the notebook. The margins. You can read them at last -- you couldn't, when I sent it ahead. That was the whole point of sending it ahead. I wrote it to the person you were going to become."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: I came here to do the one honest thing I had left. Count them. Truly, this time. Write down how many, and the day the last one goes.\pI'm not leaving this marsh. Don't spend your breath on it; I've made my arrangements, the same as I make everything -- carefully, and alone."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: So finish it. Take the record -- mine, and Ilex's long cloth, and yours -- and put it somewhere it cannot be unsaid.\pIt will cost you. It will cost the Mahogany frogs the protection my lie bought them. It will cost me the last thing I have. Do it anyway."), MSGBOX_DEFAULT)
+    msgbox(format("Heron: That is the whole of what I have left to teach. Honesty is not free. Pay for it anyway, and keep the receipt."), MSGBOX_DEFAULT)
+    // the survey as the final credential
+    closemessage
+    delay(30)
+    msgbox(format("So you do the work. The last survey, with the woman who taught you the verb watching you do it, and Doduo quiet at your shoulder.\pYou kneel where she kneels. You read the marsh the way six broken places taught you to read -- the failing keystone, the thinning web, the edge leaning in -- and you write it down true."), MSGBOX_DEFAULT)
+    specialvar(VAR_RESULT, SkaldmereClassifyCorridor)
+    msgbox(format("No certification this time. No red cloth from anyone's hand. You tie the last strip to your own pack yourself, and nobody signs it.\pThe notebook was your teacher's eye, and your lost partner's. The first words in your own hand go in under cold grey light. They are the truest thing you have ever written. They end someone you love."), MSGBOX_DEFAULT)
+    // Hale's coda, the ending note
+    msgbox(format("Back at the treeline Hale waits where he said he would, not one step nearer.\pHale: Is it done?\p{PLAYER}: …It's true.\pHale: That's the only done there is."), MSGBOX_DEFAULT)
+    msgbox(format("Hale: They'll bury it -- some of them. And some of them will read it. And a few of those will be standing where you are standing now, one day, with a notebook of their own.\pThat is the work. Not the winning. The witnessing -- and the handing on."), MSGBOX_DEFAULT)
+    msgbox(format("The expansion will slow. It will not stop. The mentor is gone, or going. Some of what you recorded had already crossed over before your pen touched it, and will not come back.\pAnd the record exists now, honest, in your hand. It is not nothing. On the worst days it is the only thing there is."), MSGBOX_DEFAULT)
+    msgbox(format("Behind you, in the last of the running water, a single Poliwag slips upstream in a tight, exhausted line -- the way they did at the bridge, the first morning, before you had the word for what you were seeing.\pYou have the word now. You wrote it down. You begin the long walk out."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_FINALE_DONE)
+    release
+    end
+}
+
+// the keystone, up close (a second look; the tell is set on first examine)
+script ParcelMarsh_PoliwagWatch {
+    lock
+    call(ParcelMarsh_Poliwag)
+    release
+    end
+}
+
+script ParcelMarsh_Item {
+    finditem(ITEM_MAX_REVIVE)
+    end
+}
+
+// leaving the marsh -- the long walk back to the station
+script ParcelMarsh_Leave {
+    lockall
+    msgbox(format("The trail south leads back out of the wilderness, toward the station, and whatever the record does next."), MSGBOX_DEFAULT)
+    closemessage
+    warp(MAP_PARCEL_STATION, 15, 16)
+    waitstate
+    end
+}

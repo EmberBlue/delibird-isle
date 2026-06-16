@@ -42868,3 +42868,59 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 17127
+    [DIFFICULTY_NORMAL][TRAINER_SKALD_HERON] =
+    {
+#line 17128
+        .trainerName = _("HERON"),
+#line 17129
+        .trainerClass = TRAINER_CLASS_EXPERT,
+#line 17130
+        .trainerPic = TRAINER_PIC_EXPERT_F,
+        .encounterMusic_gender =
+#line 17131
+F_TRAINER_FEMALE | 
+#line 17132
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+#line 17133
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 17134
+        .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_TRY_TO_FAINT,
+        .partySize = 3,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 17136
+            .species = SPECIES_POLITOED,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17138
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17137
+            .lvl = 32,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17139
+            .species = SPECIES_QUAGSIRE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17141
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17140
+            .lvl = 32,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17142
+            .species = SPECIES_PELIPPER,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17144
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17143
+            .lvl = 33,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

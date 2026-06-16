@@ -17123,3 +17123,21 @@ Level: 21
 
 Delibird
 Level: 21
+
+=== TRAINER_SKALD_HERON ===
+Name: HERON
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Politoed
+Level: 32
+
+Quagsire
+Level: 32
+
+Pelipper
+Level: 33

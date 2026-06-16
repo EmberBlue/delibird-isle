@@ -53,9 +53,22 @@ script ParcelStation_Hale {
                 if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
                     if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
                         if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
-                            msgbox(format("Hale: Five. You've read the whole sweep of it now -- forest to mountain to the works on the coast.\pAnd you've read what's in the footnotes. Whose name is in them."), MSGBOX_DEFAULT)
-                            msgbox(format("Hale: One place left. The Last Corridor, inland -- the marsh all of it used to drain from. Where she went to hide.\pThat one isn't a survey. Rest. Then we go and tell the truth with our whole chest, and we live with the cost."), MSGBOX_DEFAULT)
-                            release
+                            if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+                                msgbox(format("Hale: It's filed. It's true. Now we find out who reads it -- and that part was never ours to control.\pOurs was the writing it down. Rest, {PLAYER}. You've earned a night that isn't about the work."), MSGBOX_DEFAULT)
+                                release
+                                end
+                            }
+                            msgbox(format("Hale: Five credentials. You've read the whole sweep of it now -- forest to mountain to the works on the coast.\pAnd you've read what's in the footnotes. Whose name is in them."), MSGBOX_DEFAULT)
+                            msgbox(format("Hale: One place left. The Last Corridor, inland -- the keystone marsh all of it drains from. Where she went.\pI'll walk you to the treeline. I won't go in. This last one is yours alone."), MSGBOX_DEFAULT)
+                            msgbox(format("Hale: Ready to go now?"), MSGBOX_YESNO)
+                            if (var(VAR_RESULT) == 0) {
+                                msgbox(format("Hale: Take the time you need. It will keep. It has kept this long."), MSGBOX_DEFAULT)
+                                release
+                                end
+                            }
+                            closemessage
+                            warp(MAP_PARCEL_MARSH, 28, 38)
+                            waitstate
                             end
                         }
                         msgbox(format("Hale: Four. Forest, basin, watershed -- and a mountain you couldn't save and didn't pretend to.\pThat last one is the one that makes a Ranger. The rest is competence."), MSGBOX_DEFAULT)

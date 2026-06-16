@@ -14597,6 +14597,105 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_PARCEL_MARSH",
+          "base_label": "sParcelMarsh",
+          "land_mons": {
+            "encounter_rate": 14,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_ZIGZAGOON"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_ZIGZAGOON"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_LOTAD"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_SURSKIT"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_LINOONE"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 33,
+                "max_level": 34,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 31,
+                "max_level": 34,
+                "species": "SPECIES_MARILL"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_POLIWAG"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_WOOPER"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_POLIWHIRL"
+              },
+              {
+                "min_level": 32,
+                "max_level": 34,
+                "species": "SPECIES_QUAGSIRE"
+              },
+              {
+                "min_level": 30,
+                "max_level": 33,
+                "species": "SPECIES_MAGIKARP"
+              }
+            ]
+          }
         }
       ]
     },

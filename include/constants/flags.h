@@ -74,10 +74,10 @@
 #define FLAG_SKALDMERE_COAST_HARLAND 0x3C // Skaldmere: §08 Ch6 Harland's dockside scene seen
 #define FLAG_SKALD_ITEM_COAST_A      0x3D // Skaldmere: §08 Ch6 Coast item A
 #define FLAG_SKALD_ITEM_COAST_B      0x3E // Skaldmere: §08 Ch6 Coast item B
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_SKALDMERE_CORRIDOR_ARRIVAL 0x3F // Skaldmere: §08 Ch7 Last Corridor first entry (the climax)
+#define FLAG_SKALDMERE_HERON_MET     0x40 // Skaldmere: §08 Ch7 Dr. Heron found / confession seen
+#define FLAG_SKALDMERE_FINALE_DONE   0x41 // Skaldmere: §08 Ch7 testimony filed / the ending seen
+#define FLAG_SKALD_ITEM_CORRIDOR     0x42 // Skaldmere: §08 Ch7 Last Corridor item
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag

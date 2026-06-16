@@ -136,3 +136,22 @@ u16 SkaldmereClassifyCoast(void)
     };
     return ClassifySurveyState(&signals);
 }
+
+// §06 zone 8 / the climax: the Last Corridor's keystone marsh reads COLLAPSING.
+// The Poliwag line -- the keystone-indicator, the same frogs from the prologue
+// bridge, the species Dr. Heron's noble lie once "saved" -- is failing here, the
+// headwater drying under cumulative pressure and an encroaching edge. The web at
+// the heart of the whole region is coming apart. The survey IS the final
+// credential: Wren reads it while the one who taught them the verb dies in front
+// of them, and testifies anyway. FAILING keystone => COLLAPSING.
+u16 SkaldmereClassifyCorridor(void)
+{
+    struct SurveySignals signals = {
+        .keystone = KEYSTONE_FAILING,         // the Poliwag line, barely holding
+        .abundance = ABUNDANCE_SKEWED,        // the web thinning from the bottom up
+        .sensitiveGuildPresent = FALSE,       // the marsh's fine indicators, going
+        .apexPresent = FALSE,
+        .disturbanceSigns = TRUE,             // the drying, the encroaching edge
+    };
+    return ClassifySurveyState(&signals);
+}

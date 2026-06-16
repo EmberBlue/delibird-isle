@@ -572,3 +572,4 @@ gSpecials::
 	def_special SkaldmereClassifyRiver
 	def_special SkaldmereClassifyHighlands
 	def_special SkaldmereClassifyCoast
+	def_special SkaldmereClassifyCorridor

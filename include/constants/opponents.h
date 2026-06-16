@@ -881,8 +881,9 @@
 #define TRAINER_SKALD_ANGLER                  866
 #define TRAINER_SKALD_SURVEYOR                867
 #define TRAINER_SKALD_REVELER                 868
+#define TRAINER_SKALD_HERON                   869
 
-#define TRAINERS_COUNT                      869
+#define TRAINERS_COUNT                      870
 #define MAX_TRAINERS_COUNT                  872
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

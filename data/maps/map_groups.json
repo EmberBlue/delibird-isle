@@ -108,7 +108,8 @@
     "ParcelRiver",
     "ParcelHighlands",
     "ParcelDelibird",
-    "ParcelCoast"
+    "ParcelCoast",
+    "ParcelMarsh"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

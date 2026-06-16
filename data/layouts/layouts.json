@@ -4560,6 +4560,16 @@
       "secondary_tileset": "gTileset_frp_seafoam_islands",
       "border_filepath": "data/layouts/ParcelCoast/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCoast/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_MARSH",
+      "name": "ParcelMarsh_Layout",
+      "width": 56,
+      "height": 48,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "border_filepath": "data/layouts/ParcelMarsh/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelMarsh/map.bin"
     }
   ]
 }
