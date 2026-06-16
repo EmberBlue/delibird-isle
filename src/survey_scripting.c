@@ -117,3 +117,22 @@ u16 SkaldmereClassifyHighlands(void)
     };
     return ClassifySurveyState(&signals);
 }
+
+// §06 zone 7: the Industrial Coast reads COLLAPSING -- the trophic cascade in
+// motion, the clearest "take out the big ones and the web comes apart" in the
+// game. Industrial overfishing has pulled the apex (Sharpedo, Gyarados) and the
+// otter-coded grazer that guards the kelp; the urchins boom unchecked and strip
+// the canopy; the forage fish and the seabirds that hunt them crash; the dredge
+// has scarred the seafloor (that part will not come back). FAILING keystone +
+// mesopredator swarm => COLLAPSING. Reversible only if the fishing stops now.
+u16 SkaldmereClassifyCoast(void)
+{
+    struct SurveySignals signals = {
+        .keystone = KEYSTONE_FAILING,              // the otter-grazer, fished to nothing
+        .abundance = ABUNDANCE_MESOPREDATOR_SWARM, // urchins/mid-fish boom; apex gone
+        .sensitiveGuildPresent = FALSE,            // kelp stripped, forage crashed
+        .apexPresent = FALSE,
+        .disturbanceSigns = TRUE,                  // dredge scars, the nets, the cannery
+    };
+    return ClassifySurveyState(&signals);
+}

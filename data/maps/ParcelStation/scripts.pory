@@ -52,8 +52,14 @@ script ParcelStation_Hale {
             if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
                 if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
                     if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+                        if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+                            msgbox(format("Hale: Five. You've read the whole sweep of it now -- forest to mountain to the works on the coast.\pAnd you've read what's in the footnotes. Whose name is in them."), MSGBOX_DEFAULT)
+                            msgbox(format("Hale: One place left. The Last Corridor, inland -- the marsh all of it used to drain from. Where she went to hide.\pThat one isn't a survey. Rest. Then we go and tell the truth with our whole chest, and we live with the cost."), MSGBOX_DEFAULT)
+                            release
+                            end
+                        }
                         msgbox(format("Hale: Four. Forest, basin, watershed -- and a mountain you couldn't save and didn't pretend to.\pThat last one is the one that makes a Ranger. The rest is competence."), MSGBOX_DEFAULT)
-                        msgbox(format("Hale: There's a ferry to Delibird Isle when you want it. Go watch a festival held on thawing ground.\pWatch how hard people will work to keep from saying a thing out loud."), MSGBOX_DEFAULT)
+                        msgbox(format("Hale: Take the ferry from the dock town. Delibird Isle first, for the breather -- you've earned one. Then up the coast to the Mereholt works.\pThat's the back of it. The coast won't bother hiding what it is."), MSGBOX_DEFAULT)
                         release
                         end
                     }

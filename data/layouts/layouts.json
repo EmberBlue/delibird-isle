@@ -4550,6 +4550,16 @@
       "secondary_tileset": "gTileset_frp_seafoam_islands",
       "border_filepath": "data/layouts/ParcelDelibird/border.bin",
       "blockdata_filepath": "data/layouts/ParcelDelibird/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_COAST",
+      "name": "ParcelCoast_Layout",
+      "width": 64,
+      "height": 44,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "border_filepath": "data/layouts/ParcelCoast/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelCoast/map.bin"
     }
   ]
 }

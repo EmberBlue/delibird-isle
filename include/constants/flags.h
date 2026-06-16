@@ -69,11 +69,11 @@
 #define FLAG_SKALD_ITEM_DELIBIRD_A       0x37 // Skaldmere: §09 hidden present A
 #define FLAG_SKALD_ITEM_DELIBIRD_B       0x38 // Skaldmere: §09 hidden present B
 #define FLAG_SKALDMERE_DELIBIRD_GIVER    0x39 // Skaldmere: §09 gift-square villager one-shot
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
+#define FLAG_SKALDMERE_COAST_ARRIVAL 0x3A // Skaldmere: §08 Ch6 Industrial Coast first entry
+#define FLAG_SKALDMERE_COASTAL_CERT  0x3B // Skaldmere: §08 Ch6 Coastal Certification earned
+#define FLAG_SKALDMERE_COAST_HARLAND 0x3C // Skaldmere: §08 Ch6 Harland's dockside scene seen
+#define FLAG_SKALD_ITEM_COAST_A      0x3D // Skaldmere: §08 Ch6 Coast item A
+#define FLAG_SKALD_ITEM_COAST_B      0x3E // Skaldmere: §08 Ch6 Coast item B
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag

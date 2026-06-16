@@ -169,19 +169,26 @@ ParcelIsle_FerryCaptain::
 # 131 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_unset FLAG_SKALDMERE_HIGHLAND_CERT, ParcelIsle_FerryCaptain_2
 # 136 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_1, MSGBOX_YESNO
-# 137 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALDMERE_DELIBIRD_ARRIVAL, ParcelIsle_FerryCaptain_5
+# 150 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_3, MSGBOX_YESNO
+# 151 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelIsle_FerryCaptain_8
+# 159 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_4, MSGBOX_YESNO
+# 160 "data/maps/ParcelIsle/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq ParcelIsle_FerryCaptain_5
-# 142 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_eq ParcelIsle_FerryCaptain_14
+# 165 "data/maps/ParcelIsle/scripts.pory"
 	closemessage
-# 143 "data/maps/ParcelIsle/scripts.pory"
+# 166 "data/maps/ParcelIsle/scripts.pory"
 	playse SE_SHIP
-# 144 "data/maps/ParcelIsle/scripts.pory"
+# 167 "data/maps/ParcelIsle/scripts.pory"
 	delay 40
-# 145 "data/maps/ParcelIsle/scripts.pory"
-	warp MAP_PARCEL_DELIBIRD, 30, 38
-# 146 "data/maps/ParcelIsle/scripts.pory"
+# 168 "data/maps/ParcelIsle/scripts.pory"
+	warp MAP_PARCEL_COAST, 38, 38
+# 169 "data/maps/ParcelIsle/scripts.pory"
 	waitstate
 	end
 
@@ -193,15 +200,53 @@ ParcelIsle_FerryCaptain_2:
 	end
 
 ParcelIsle_FerryCaptain_5:
+# 137 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_1, MSGBOX_YESNO
 # 138 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_2, MSGBOX_DEFAULT
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_FerryCaptain_11
+# 143 "data/maps/ParcelIsle/scripts.pory"
+	closemessage
+# 144 "data/maps/ParcelIsle/scripts.pory"
+	playse SE_SHIP
+# 145 "data/maps/ParcelIsle/scripts.pory"
+	delay 40
+# 146 "data/maps/ParcelIsle/scripts.pory"
+	warp MAP_PARCEL_DELIBIRD, 30, 38
+# 147 "data/maps/ParcelIsle/scripts.pory"
+	waitstate
+	end
+
+ParcelIsle_FerryCaptain_8:
+# 152 "data/maps/ParcelIsle/scripts.pory"
+	closemessage
+# 153 "data/maps/ParcelIsle/scripts.pory"
+	playse SE_SHIP
+# 154 "data/maps/ParcelIsle/scripts.pory"
+	delay 40
+# 155 "data/maps/ParcelIsle/scripts.pory"
+	warp MAP_PARCEL_DELIBIRD, 30, 38
+# 156 "data/maps/ParcelIsle/scripts.pory"
+	waitstate
+	end
+
+ParcelIsle_FerryCaptain_11:
 # 139 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_2, MSGBOX_DEFAULT
+# 140 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_FerryCaptain_14:
+# 161 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_5, MSGBOX_DEFAULT
+# 162 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 
 ParcelIsle_LabSign::
-# 152 "data/maps/ParcelIsle/scripts.pory"
+# 175 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_LabSign_Text_0, MSGBOX_SIGN
 	end
 
@@ -283,28 +328,46 @@ ParcelIsle_FerrySign_Text_0:
 
 ParcelIsle_FerryCaptain_Text_0:
 # 132 "data/maps/ParcelIsle/scripts.pory"
-	.string "Captain: Delibird Isle? She's out past\n"
-	.string "the channel ice, and that's no crossing\l"
-	.string "to make without a reason worth the\l"
-	.string "cold.\p"
+	.string "Captain: Passage out? The open\n"
+	.string "channel's no crossing to make without a\l"
+	.string "reason worth the cold.\p"
 	.string "Come back when the Corps has sent you\n"
-	.string "up the coast. You'll know when.$"
+	.string "up the mountains. You'll know when.$"
 
 ParcelIsle_FerryCaptain_Text_1:
-# 136 "data/maps/ParcelIsle/scripts.pory"
-	.string "Captain: Off to the island, then? Good.\n"
-	.string "They could use a face that isn't there\l"
-	.string "to sell them something.\p"
-	.string "Midwinter's on out there. Climb aboard\n"
-	.string "-- mind the spray.$"
+# 137 "data/maps/ParcelIsle/scripts.pory"
+	.string "Captain: Off to Delibird Isle, then?\n"
+	.string "Good. They could use a face that isn't\l"
+	.string "there to sell them something.\p"
+	.string "Midwinter's on out there. Climb aboard?$"
 
 ParcelIsle_FerryCaptain_Text_2:
-# 138 "data/maps/ParcelIsle/scripts.pory"
+# 139 "data/maps/ParcelIsle/scripts.pory"
 	.string "Captain: I'll keep her warm. Come back\n"
 	.string "when you're ready.$"
 
+ParcelIsle_FerryCaptain_Text_3:
+# 150 "data/maps/ParcelIsle/scripts.pory"
+	.string "Captain: Two runs out of this harbour\n"
+	.string "now. Back to Delibird Isle for the lights\l"
+	.string "-- or up the coast to the Mereholt\l"
+	.string "works, if you've the stomach.\p"
+	.string "The island?$"
+
+ParcelIsle_FerryCaptain_Text_4:
+# 159 "data/maps/ParcelIsle/scripts.pory"
+	.string "Captain: The coast works, then. Grim\n"
+	.string "business up that way -- cranes, ice, and\l"
+	.string "a great deal of money.\p"
+	.string "Climb aboard?$"
+
+ParcelIsle_FerryCaptain_Text_5:
+# 161 "data/maps/ParcelIsle/scripts.pory"
+	.string "Captain: Suit yourself. I'll be on the\n"
+	.string "water.$"
+
 ParcelIsle_LabSign_Text_0:
-# 152 "data/maps/ParcelIsle/scripts.pory"
+# 175 "data/maps/ParcelIsle/scripts.pory"
 	.string "FIELD RESEARCH ANNEX\n"
 	.string "Skaldmere Survey cooperative site\p"
 	.string "A strip of red cloth is nailed under the\n"

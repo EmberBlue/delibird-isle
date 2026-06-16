@@ -1,0 +1,254 @@
+// ParcelCoast -- §01/§06 zone 7, Chapter 6: the Industrial Coast. The endgame
+// ramp; the extraction economy made physical and unmasked. The coast reads
+// COLLAPSING -- a live trophic cascade (overfishing's mesopredator release) over
+// a dredge scar that won't come back. Two things land here:
+//   1. HARLAND'S ARC comes home -- the lever fully visible, his boat note
+//      Mereholt's, the trap unbearable, and no redemption (you can't punch a
+//      paycheck, §00/§02). He endorses the testimony and names its futility.
+//   2. THE COLLABORATION REVEAL -- the notebook's marginalia finally decode: the
+//      Board's "sustainable harvest" model is Dr. Heron's methods, in Heron's
+//      hand. She was never silenced. She is the citation. (§01 zone-7 turn;
+//      sets up zone 8, the Last Corridor, where she is found.)
+//
+// Voice: the same spare register, heavier; the leash tightening; Heron's notebook
+// voice bleeding into the player's own. Play the harm plain -- the scale speaks.
+//
+// VAR_SKALDMERE_CH6_EVIDENCE bits (count 0..5, mask 0x3F):
+//   0 dredge scar   1 urchin barren   2 the catch all one size
+//   3 the empty pilings   4 the plaque (mask + Heron reveal)   5 Harland
+//   6 classified + filed (Hale)
+
+const LOCALID_COAST_HARLAND = 1
+const LOCALID_COAST_HALE    = 2
+const LOCALID_COAST_HOLLIS  = 3
+const LOCALID_COAST_WORKER  = 4
+
+mapscripts ParcelCoast_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelCoast_SetMapVar
+    ]
+}
+
+script ParcelCoast_SetMapVar {
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+script ParcelCoast_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_COAST_ARRIVAL)) {
+        end
+    }
+    lockall
+    msgbox(format("The boat rounds the headland and the harbour opens up -- and it is BUSY. Cranes, hulls, the gut-and-ice smell of a working catch. Gulls wheeling over all of it.\pIt looks alive. You have learned, by now, to distrust how alive a place can look."), MSGBOX_DEFAULT)
+    msgbox(format("Everything here wears the Mereholt crest. The cranes. The fuel drums. The waiting trucks.\pThe side of the fishing boat tied at the end of the quay."), MSGBOX_DEFAULT)
+    msgbox(format("Hale's note is shorter than usual:\pTHE COAST. You've read the others. This one doesn't bother to hide.\nSee if you can still read it anyway."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_COAST_ARRIVAL)
+    releaseall
+    end
+}
+
+// --- the survey: the cascade, read from a dock ----------------------------
+// 0: the dredge scar -- the one-way door (benthic regime shift)
+script ParcelCoast_Dredge {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 0)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The dredge scar. Logged."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("Off the end of the quay a band of the seabed shows pale through the water -- scraped to bare rock where the dredge passed, the kelp's holdfasts torn out with everything they anchored.\pThe fish can come back, in time, if they let them. The seafloor they grew on cannot. They dredged the foundation out from under the recovery."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 1: the urchin barren -- mesopredator release; the cascade, visible
+script ParcelCoast_Barren {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 1)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The urchin barren. Counted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("Where the kelp forest stood, urchins -- a grey carpet of them, spines and nothing else, grazing the last fronds to stubble.\pNothing thins their numbers anymore. The animal that ate the urchins was fished out years back. Pull one creature from a web and the whole forest follows it down. You are watching that happen, slowly, from a dock."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 2: the catch all one size -- the apex fished out (abundance lopsided)
+script ParcelCoast_Catch {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 2)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The sorted catch. Measured."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("A pallet of sorted catch, iced and waiting. You walk the rows.\pAll one size. All one age. The big old breeders that used to anchor a haul simply are not in it -- caught out years ago, never replaced.\pThey are fishing the children now. The parents are already gone."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 3: the empty pilings -- the seabird crash (the top of the web falls last)
+script ParcelCoast_Pilings {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 3)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The bare pilings. Noted."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("The pilings should be white with gulls this season. A hunched handful sit there instead, and the ledges past the breakwater are bare.\pThe gulls eat the small fish. The small fish need the kelp's shelter. Take the bottom out of a web and the top falls last -- but it falls."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 4: the plaque -- the mask, and the reveal the whole game has been walking toward
+script ParcelCoast_Plaque {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 4)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("MEREHOLT COASTAL -- CERTIFIED SUSTAINABLE HARVEST.\pYou do not need to read it again. You know whose name holds it up now."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("MEREHOLT COASTAL -- CERTIFIED SUSTAINABLE HARVEST\pYields managed to a scientific recovery model. Independently validated.\nA future for the fishery, and for the families who work it."), MSGBOX_SIGN)
+    msgbox(format("You open your own notebook to hold the model against what you just surveyed.\pThe margins stop you cold."), MSGBOX_DEFAULT)
+    msgbox(format("The recovery curves on that plaque. The stocking formulas. The red-cloth sampling method.\pThey are already in your notebook -- in the hand you have been reading as marginalia since the first marsh. Dr. Heron's hand."), MSGBOX_DEFAULT)
+    msgbox(format("She is not missing. She was never silenced.\pShe is the citation. Her science is the thing that signed off on all of this.\pYou close the notebook very carefully -- the way you would close a door on something sleeping."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// 5: Harland -- the arc comes home; the lever visible; no redemption
+script ParcelCoast_Harland {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("Harland works the line he isn't using.\pHarland: Write it true. That's the whole of what I've got left to ask anyone."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Harland is aboard, coiling a line he has no use for, because his hands need something to do. He sees you and does not pretend otherwise.\pHarland: So. You came all the way down to the bottom of it. Where the money's made and the fish aren't."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: The grounds are collapsing. The dredge, the catch, the empty pilings. You've fished this your whole life. You knew before I did."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: Course I knew. Better eye for this water than your whole Corps.\pAnd every season I take her out and add to it. You want to hear me say it plain? I'm helping kill it. There. Said."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: The note on this boat is Mereholt's. The buyer's Mereholt's. The fuel, the ice, the loan against a catch I haven't landed yet -- Mereholt's.\pI stop fishing, I lose her. I lose her, my crew doesn't eat. So I fish it down to bones and I hate every haul. That's the whole arithmetic."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: …I'm going to write down what I saw. All of it."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: I know you are. I'll not ask you not to.\pJust -- when they read it and decide on nothing, the way they will? Remember I told you they would. So you don't go thinking it was your report that wasn't good enough."), MSGBOX_DEFAULT)
+    msgbox(format("Harland: It was never going to be one report that turned this. It was always going to take all of them. Mine too, if I ever find the spine.\pWrite it true, Ranger. Somebody should, before there's nothing left out there to lie about."), MSGBOX_DEFAULT)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+// Hollis Aune, at the Mereholt office -- the kindest threat in the game
+script ParcelCoast_Hollis {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("Hollis: The tea's still on, Ranger. The offer with it.\pThink about how you write it. That's all I ever ask."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Hollis Aune again -- a clean desk, a window full of working harbour behind her. She pours two cups without asking.\pHollis: Ranger. You've been thorough. The whole coast, I hear. Good. Thoroughness is rare."), MSGBOX_DEFAULT)
+    msgbox(format("Hollis: I'll be direct, since you've earned direct. Your survey will be read -- by the Board, by the press, by the people who fund what recovery there is out there.\pAnd the model they trust, the one keeping this fishery open instead of shuttered, carries a name. A name I think you care about."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: …Dr. Heron's."), MSGBOX_DEFAULT)
+    msgbox(format("Hollis: I would hate for one unmeasured word from you to undo her life's work. For her to be remembered as the scientist whose model failed -- instead of the one whose science is the only reason there's a fishery left to argue over at all."), MSGBOX_DEFAULT)
+    msgbox(format("Hollis: So think about how you write it. For her sake.\pThat is the whole of what I'm asking."), MSGBOX_DEFAULT)
+    msgbox(format("She slides a cup toward you. It is very good tea.\pYou understand, now, that she is not protecting Dr. Heron's legacy. She is protecting Dr. Heron's leash -- and she has just shown you, gently, that it runs through your hands too."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// Hale -- the field debrief: the classification, the reveal confirmed, the cert,
+// and the turn toward zone 8 (the Last Corridor, the reckoning)
+script ParcelCoast_Hale {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("Hale watches a crane swing a full net over the rail.\pHale: Rest while you can. The next place doesn't have a quay to stand on, or a Hollis to pour you tea.\pIt has her."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 63)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) == 6) {
+        msgbox(format("Hale stands where the quay meets the open water, watching the boats.\pHale: The dredge scar. The urchins. The catch all one age. The empty pilings. The plaque. The man on the boat.\pName it."), MSGBOX_DEFAULT)
+        specialvar(VAR_RESULT, SkaldmereClassifyCoast)
+        msgbox(format("Hale: COLLAPSING.\pThe grazer's gone, the urchins own the kelp, the apex is fished to nothing, and the web is coming apart in front of you in real time."), MSGBOX_DEFAULT)
+        msgbox(format("Hale: The overfishing, you could still stop -- if anyone with the power to wanted to. The dredged seabed you cannot. Half of it savable, half already gone.\pThe hardest kind of place to write down honestly. You did."), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: Hale. The model on the plaque. The methods are hers. Dr. Heron's. She isn't lost, she's --"), MSGBOX_DEFAULT)
+        msgbox(format("Hale, not surprised:\pHale: I know. Have known a while.\pI told you at the start -- her ending up at that lab wasn't random. This is the rest of that sentence."), MSGBOX_DEFAULT)
+        msgbox(format("Hale: Your mentor didn't vanish, {PLAYER}. She made a bargain. And the bargain is out there right now with her name on the paperwork, strangling a kelp bed.\pI'm sorry. You came looking for a hero. You found a person. That's the worse thing, and the truer one."), MSGBOX_DEFAULT)
+        setvar(VAR_0x8004, 6)
+        special(SkaldmereCertTaskMark)
+        msgbox(format("Hale ties the red cloth to your pack without ceremony.\pHale: Coastal Certification. For reading a place that's screaming and keeping your hand steady enough to write it down anyway."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALDMERE_COASTAL_CERT)
+        giveitem(ITEM_MAX_POTION, 5)
+        giveitem(ITEM_FULL_HEAL, 5)
+        msgbox(format("Hale: There's one place left. Inland -- the deep corridor, the marsh all of this used to drain from. Unfished, unbuilt. Too raw to be worth taking. Yet.\pThat's where she went to hide. That's where we finish this -- not with a survey. With a reckoning."), MSGBOX_DEFAULT)
+        msgbox(format("Hale: Rest first. Then we go inland, and we tell the truth with our whole chest, and we live with what it costs.\pThat was always the job, {PLAYER}. This is just the first time it's cost this much."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Hale: Don't name it from the office window. Walk the quay -- the dredge line, the barren, the catch on the pallet, the pilings, the plaque on the wall.\pAnd talk to the man on the boat. Especially him.\pThen come tell me what this is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// a dock worker -- the people in the picture (not the enemy)
+script ParcelCoast_Worker {
+    lock
+    faceplayer
+    msgbox(format("Worker: Four generations my family's worked this quay. Good work. Honest work.\pDon't let that badge let you forget there's people in the frame, Ranger. We didn't dredge it. We haul what we're told to haul, or we don't eat. Same as the fish."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCoast_ItemA {
+    finditem(ITEM_PEARL)
+    end
+}
+script ParcelCoast_ItemB {
+    finditem(ITEM_BIG_PEARL)
+    end
+}
+
+// the ferry home
+script ParcelCoast_ReturnFerry {
+    lock
+    faceplayer
+    msgbox(format("Sailor: Back to the dock town, Ranger? Can't say I blame you.\pNothing to do here but watch them take it."), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("Sailor: I'll wait. The catch isn't going anywhere.\nLess of it every run -- but it isn't going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    closemessage
+    playse(SE_SHIP)
+    delay(40)
+    warp(MAP_PARCEL_ISLE, 41, 48)
+    waitstate
+    end
+}
