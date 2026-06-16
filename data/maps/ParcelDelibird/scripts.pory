@@ -190,6 +190,27 @@ script ParcelDelibird_ItemB {
     end
 }
 
+// the Crystal Cavern mouth (§09) -- the LAMP (Flash) ranger tool gates it
+script ParcelDelibird_CaveMouth {
+    lock
+    faceplayer
+    if (!flag(FLAG_SKALDMERE_RANGER_KIT)) {
+        msgbox(format("A low cleft in the rock breathes cold air -- a cave mouth, pitch dark a few steps in.\pYou'd walk into a wall in there, or worse. You'd want a proper lamp before you tried it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The cave mouth breathes its old, deep cold. You unhood the ranger lamp -- its light reaches in and finds no far wall.\pGo in?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("You leave the cold where it is, for now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    closemessage
+    warp(MAP_PARCEL_CAVERN, 19, 30)
+    waitstate
+    end
+}
+
 // a festival reveler -- the warmth straight, the dread in a child's offhand line
 script ParcelDelibird_RevelerTrainer {
     trainerbattle_single(TRAINER_SKALD_REVELER,

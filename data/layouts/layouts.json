@@ -4580,6 +4580,16 @@
       "secondary_tileset": "gTileset_frp_seafoam_islands",
       "border_filepath": "data/layouts/ParcelWeather/border.bin",
       "blockdata_filepath": "data/layouts/ParcelWeather/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_CAVERN",
+      "name": "ParcelCavern_Layout",
+      "width": 40,
+      "height": 36,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "border_filepath": "data/layouts/ParcelCavern/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelCavern/map.bin"
     }
   ]
 }

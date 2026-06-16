@@ -1,0 +1,80 @@
+// ParcelCavern -- §09 Delibird Isle's Crystal Cavern: the cold refuge, the
+// deepest cold the warming island has left. The ranger-tools demo (HMs
+// reframed, no Pokemon move, no soft-lock):
+//   * the LAMP (Flash) gated the way in -- the entrance script on the Delibird
+//     summit refuses you without the field kit;
+//   * the WINCH (Strength) clears a fallen ice-jam to a reward in here.
+// A quiet §09 beat at the deep pool (a loss, not a boss). Rarer Ice encounters.
+
+const LOCALID_CAVERN_DEBRIS   = 1
+const LOCALID_CAVERN_DELIBIRD = 2
+
+mapscripts ParcelCavern_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelCavern_SetMapVar
+    ]
+}
+
+script ParcelCavern_SetMapVar {
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+script ParcelCavern_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_CAVERN_ARRIVAL)) {
+        end
+    }
+    lockall
+    msgbox(format("Your ranger lamp throws a long cold light, and the cavern answers it -- walls of old blue ice, crystal hung from the dark like frozen rain.\pThe air bites here. Truly bites. It is the only place on the whole island that still can."), MSGBOX_DEFAULT)
+    msgbox(format("This is the cold the festival is named for, all of it, retreated into one room under the mountain.\pWhat the island used to be, kept in a jar against the thaw. You walk softly. It feels like a held breath."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_CAVERN_ARRIVAL)
+    releaseall
+    end
+}
+
+// the WINCH (Strength) -- clear the fallen ice-jam for the reward
+script ParcelCavern_Debris {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_CAVERN_REWARD)) {
+        msgbox(format("The slab is winched aside. Cold air pours from the hollow it kept shut."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A slab of ceiling-ice has sheared off and jammed the mouth of a side hollow -- too heavy to shift, too solid to break, and you wouldn't break it in here if you could."), MSGBOX_DEFAULT)
+    msgbox(format("You unfold the ranger winch from the field kit, set the hook, and lean into it. Slow, no sudden force. The slab grinds aside.\pThis is what the tool is FOR -- moving the heavy thing without shattering the place it's in."), MSGBOX_DEFAULT)
+    playse(SE_ICE_CRACK)
+    closemessage
+    delay(20)
+    giveitem(ITEM_NEVER_MELT_ICE)
+    giveitem(ITEM_RARE_CANDY, 2)
+    setflag(FLAG_SKALDMERE_CAVERN_REWARD)
+    removeobject(LOCALID_CAVERN_DEBRIS)
+    msgbox(format("In the hollow: a knot of true everfrost, and supplies an old surveyor cached here and never came back for.\pYou take them, and note the date on the tin. It is older than you are."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// the §09 quiet beat -- the last Delibird of the cold, no boss, just a loss
+script ParcelCavern_Delibird {
+    lock
+    msgbox(format("A single Delibird sits at the lip of the deep pool, very still, watching the ice it can no longer count on.\pIt is not delivering anything. There is no one down here to deliver to. It has simply come to where the cold still is, the way the old come home."), MSGBOX_DEFAULT)
+    msgbox(format("It looks at you, and at the lamp, and seems to decide you are not the thaw.\pIt goes back to watching the water. You leave it the cold. It is the only gift the cavern has left to give, and it is giving it to a bird."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCavern_Heart {
+    msgbox(format("The deepest pool. The water here has not been warm in ten thousand years, and the islanders measure their winters against it.\pIt is a hand's-width lower than the old mark on the wall. You do not need a survey to read that one. You write it down anyway. That is the job."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCavern_Leave {
+    lockall
+    msgbox(format("The mouth of the cavern, and the bright thin daylight of the summit beyond."), MSGBOX_DEFAULT)
+    closemessage
+    warp(MAP_PARCEL_DELIBIRD, 20, 10)
+    waitstate
+    end
+}

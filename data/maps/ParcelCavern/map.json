@@ -1,0 +1,44 @@
+{
+  "id": "MAP_PARCEL_CAVERN",
+  "name": "ParcelCavern",
+  "layout": "LAYOUT_PARCEL_CAVERN",
+  "music": "MUS_MT_PYRE_EXTERIOR",
+  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_CAVERN_DEBRIS", "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
+      "x": 27, "y": 18, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN", "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCavern_Debris", "flag": "FLAG_SKALDMERE_CAVERN_REWARD"
+    },
+    {
+      "local_id": "LOCALID_CAVERN_DELIBIRD", "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELIBIRD)",
+      "x": 19, "y": 8, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN", "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCavern_Delibird", "flag": "0"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    { "type": "trigger", "x": 18, "y": 29, "elevation": 3, "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelCavern_FirstEntry" },
+    { "type": "trigger", "x": 19, "y": 29, "elevation": 3, "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelCavern_FirstEntry" },
+    { "type": "trigger", "x": 20, "y": 29, "elevation": 3, "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelCavern_FirstEntry" },
+    { "type": "trigger", "x": 18, "y": 32, "elevation": 3, "var": "VAR_TEMP_2", "var_value": "0", "script": "ParcelCavern_Leave" },
+    { "type": "trigger", "x": 19, "y": 32, "elevation": 3, "var": "VAR_TEMP_2", "var_value": "0", "script": "ParcelCavern_Leave" },
+    { "type": "trigger", "x": 20, "y": 32, "elevation": 3, "var": "VAR_TEMP_2", "var_value": "0", "script": "ParcelCavern_Leave" }
+  ],
+  "bg_events": [
+    { "type": "sign", "x": 19, "y": 16, "elevation": 0, "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelCavern_Heart" }
+  ]
+}

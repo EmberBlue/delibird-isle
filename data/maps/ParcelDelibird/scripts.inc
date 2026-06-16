@@ -261,10 +261,45 @@ ParcelDelibird_ItemB::
 	end
 
 
-ParcelDelibird_RevelerTrainer::
+ParcelDelibird_CaveMouth::
 # 195 "data/maps/ParcelDelibird/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_REVELER, ParcelDelibird_RevelerTrainer_Text_0, ParcelDelibird_RevelerTrainer_Text_1
+	lock
+# 196 "data/maps/ParcelDelibird/scripts.pory"
+	faceplayer
+# 197 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_unset FLAG_SKALDMERE_RANGER_KIT, ParcelDelibird_CaveMouth_2
+# 202 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_CaveMouth_Text_1, MSGBOX_YESNO
+# 203 "data/maps/ParcelDelibird/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelDelibird_CaveMouth_5
+# 208 "data/maps/ParcelDelibird/scripts.pory"
+	closemessage
+# 209 "data/maps/ParcelDelibird/scripts.pory"
+	warp MAP_PARCEL_CAVERN, 19, 30
+# 210 "data/maps/ParcelDelibird/scripts.pory"
+	waitstate
+	end
+
+ParcelDelibird_CaveMouth_2:
 # 198 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_CaveMouth_Text_0, MSGBOX_DEFAULT
+# 199 "data/maps/ParcelDelibird/scripts.pory"
+	release
+	end
+
+ParcelDelibird_CaveMouth_5:
+# 204 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_CaveMouth_Text_2, MSGBOX_DEFAULT
+# 205 "data/maps/ParcelDelibird/scripts.pory"
+	release
+	end
+
+
+ParcelDelibird_RevelerTrainer::
+# 216 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_REVELER, ParcelDelibird_RevelerTrainer_Text_0, ParcelDelibird_RevelerTrainer_Text_1
+# 219 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_RevelerTrainer_Text_2, MSGBOX_DEFAULT
 	end
 
@@ -545,8 +580,28 @@ ParcelDelibird_ReturnFerry_Text_1:
 	.string "Sailor: Stay for the lights, then.\n"
 	.string "They're worth it.$"
 
+ParcelDelibird_CaveMouth_Text_0:
+# 198 "data/maps/ParcelDelibird/scripts.pory"
+	.string "A low cleft in the rock breathes cold\n"
+	.string "air -- a cave mouth, pitch dark a few\l"
+	.string "steps in.\p"
+	.string "You'd walk into a wall in there, or worse.\n"
+	.string "You'd want a proper lamp before you\l"
+	.string "tried it.$"
+
+ParcelDelibird_CaveMouth_Text_1:
+# 202 "data/maps/ParcelDelibird/scripts.pory"
+	.string "The cave mouth breathes its old, deep\n"
+	.string "cold. You unhood the ranger lamp -- its\l"
+	.string "light reaches in and finds no far wall.\p"
+	.string "Go in?$"
+
+ParcelDelibird_CaveMouth_Text_2:
+# 204 "data/maps/ParcelDelibird/scripts.pory"
+	.string "You leave the cold where it is, for now.$"
+
 ParcelDelibird_RevelerTrainer_Text_0:
-# 196 "data/maps/ParcelDelibird/scripts.pory"
+# 217 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Noel: A Ranger! At Midwinter! You HAVE\n"
 	.string "to battle me, it's tradition.\p"
 	.string "Loser owes the winner cocoa. We don't\n"
@@ -554,12 +609,12 @@ ParcelDelibird_RevelerTrainer_Text_0:
 	.string "keep it with cocoa.$"
 
 ParcelDelibird_RevelerTrainer_Text_1:
-# 197 "data/maps/ParcelDelibird/scripts.pory"
+# 218 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Noel: Awww. Fine, fine -- cocoa's on me!\n"
 	.string "That's the best way to lose anyhow.$"
 
 ParcelDelibird_RevelerTrainer_Text_2:
-# 198 "data/maps/ParcelDelibird/scripts.pory"
+# 219 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Noel: Gran says the festival's smaller\n"
 	.string "every year. Says the ice comes in slower\l"
 	.string "than it did.\p"

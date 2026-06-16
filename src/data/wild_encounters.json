@@ -14500,6 +14500,105 @@
           }
         },
         {
+          "map": "MAP_PARCEL_CAVERN",
+          "base_label": "sParcelCavern",
+          "land_mons": {
+            "encounter_rate": 14,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SNORUNT"
+              },
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_SNORUNT"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_DELIBIRD"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SWINUB"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_PILOSWINE"
+              },
+              {
+                "min_level": 26,
+                "max_level": 28,
+                "species": "SPECIES_GLALIE"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_SNEASEL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 28,
+                "species": "SPECIES_DELIBIRD"
+              },
+              {
+                "min_level": 26,
+                "max_level": 28,
+                "species": "SPECIES_GLALIE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 22,
+                "max_level": 25,
+                "species": "SPECIES_SPHEAL"
+              },
+              {
+                "min_level": 24,
+                "max_level": 27,
+                "species": "SPECIES_SEALEO"
+              },
+              {
+                "min_level": 23,
+                "max_level": 26,
+                "species": "SPECIES_SPHEAL"
+              },
+              {
+                "min_level": 26,
+                "max_level": 28,
+                "species": "SPECIES_WALREIN"
+              },
+              {
+                "min_level": 26,
+                "max_level": 28,
+                "species": "SPECIES_LAPRAS"
+              }
+            ]
+          }
+        },
+        {
           "map": "MAP_PARCEL_COAST",
           "base_label": "sParcelCoast",
           "land_mons": {

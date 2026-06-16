@@ -78,6 +78,10 @@ script ParcelStation_Hale {
                     }
                     msgbox(format("Hale: Three credentials. Forest, basin, watershed.\pNow the climb. Follow the river up past the clean reaches, to where the water comes from -- the high cold."), MSGBOX_DEFAULT)
                     msgbox(format("Hale: It won't read like the others. You will not get to fix this one.\pIlex is up there already, measuring how much of it is left. Go learn what 'too late' looks like, so you'll know it the next time it isn't."), MSGBOX_DEFAULT)
+                    if (!flag(FLAG_SKALDMERE_RANGER_KIT)) {
+                        msgbox(format("Hale: One more thing. The country gets rough from here.\pRin's upgraded your field kit -- a lamp for the dark places, a winch for the heavy ones. Ranger tools, not weapons. We don't cut, we don't smash. We move what has to move and light what has to be seen."), MSGBOX_DEFAULT)
+                        setflag(FLAG_SKALDMERE_RANGER_KIT)
+                    }
                     release
                     end
                 }

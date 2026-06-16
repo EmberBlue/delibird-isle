@@ -52,6 +52,18 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **The Ranger-tools + the Crystal Cavern** (the "HMs" half of the fork, DONE —
+  HMs reframed as ranger gear, no Pokémon move, no soft-lock, no Cut/Rock Smash).
+  Hale grants the **field kit** (a flag) in the Watershed dispatch — a **Lamp**
+  (Flash) and a **Winch** (Strength). `ParcelCavern` (40×36, §09's Crystal
+  Cavern): an icy grotto under the Delibird Isle summit, **entered via the Lamp**
+  (the cave-mouth sign on the Delibird peak refuses you without the kit), with
+  the **Winch** clearing a fallen ice-jam to a reward (NeverMeltIce + 2 Rare
+  Candy), a quiet §09 beat (the last Delibird of the cold, the deep pool a hand
+  lower than the old mark), and rarer Ice encounters (Snorunt/Sneasel/Glalie,
+  Walrein/Lapras on water). Flags 0x45–0x47. Renders + builds clean; the cave
+  "walls" are forest tiles (a true cave/snow tileset is the deferred art pass,
+  same as the Highlands). **Both halves of the gyms/HMs fork are now shipped.**
 - **The weather-division gauntlet** (the "gyms" half of the user's fork) is
   BUILT. `ParcelWeather` (48×40) — the Mereholt Climate Station, an on-theme
   optional challenge: four climatologists who each command a weather (RAIN

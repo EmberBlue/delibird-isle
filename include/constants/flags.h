@@ -80,9 +80,9 @@
 #define FLAG_SKALD_ITEM_CORRIDOR     0x42 // Skaldmere: §08 Ch7 Last Corridor item
 #define FLAG_SKALDMERE_WEATHER_ARRIVAL 0x43 // Skaldmere: Mereholt Climate Station first entry
 #define FLAG_SKALDMERE_WEATHER_CLEARED 0x44 // Skaldmere: weather gauntlet (the Director) beaten
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
+#define FLAG_SKALDMERE_RANGER_KIT    0x45 // Skaldmere: ranger field-kit upgrade (Lamp + Winch tools)
+#define FLAG_SKALDMERE_CAVERN_ARRIVAL 0x46 // Skaldmere: §09 Crystal Cavern first entry
+#define FLAG_SKALDMERE_CAVERN_REWARD 0x47 // Skaldmere: §09 Crystal Cavern winch-cleared reward taken
 #define FLAG_UNUSED_0x048    0x48 // Unused Flag
 #define FLAG_UNUSED_0x049    0x49 // Unused Flag
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag
