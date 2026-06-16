@@ -52,6 +52,23 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **Chapter 7 — The Last Corridor (zone 8), THE CLIMAX,** is BUILT — the 8-zone
+  main story is now complete end to end. `ParcelMarsh` (56×48): the dying
+  keystone freshwater marsh, warped in from the Station (Hale walks you to the
+  treeline, gated on the Coastal cert, and doesn't follow; a leave-trigger walks
+  you back). The Poliwag keystone (the prologue's stuck frogs) at the stream
+  mouth; four tells (drying channel / dead reeds / encroaching edge / the
+  Poliwag) in `VAR_SKALDMERE_CH7_EVIDENCE`. **Dr. Heron** found alive in exile,
+  the full reveal (coerced via the double leash; Hollis the hand), a grounded
+  battle that IS the conversation (`TRAINER_SKALD_HERON` 869 — Politoed/Quagsire/
+  Pelipper), "finish it," the survey as the final credential
+  (`SkaldmereClassifyCorridor` → COLLAPSING, tested), the choice to testify with
+  maximum collateral, clear-eyed grief. Flags 0x3F–0x42 + var 0x40A1.
+  **UNVERIFIED IN-EMULATOR:** the climax is build+test-clean but NOT yet
+  playtested — esp. `trainerbattle_single` from Heron's `TRAINER_TYPE_NONE`
+  object (mid-conversation battle); confirm it triggers, and screenshot the
+  marsh. **Cordelia Brooke (the §02 boardroom 2nd boss) is designed but NOT
+  built.**
 - **Chapter 6 — the Industrial Coast (zone 7)** is BUILT and integrated. The
   endgame ramp; the extraction economy unmasked. `ParcelCoast` (64×44): a
   working harbour (cannery + Mereholt office on the land, the overfished sea to
@@ -163,24 +180,28 @@ must be 0). Stale-object traps + the full gotcha list: §12.
 
 ## Immediate menu (the user picks)
 
-(Zones 3–7 / Chapters 2–6 are done, Opus prose. Survey spine complete:
-Reference / Stressed / Collapsing (×2: basin + coast) / Shifted, plus the
-interlude. The collaboration reveal (Heron complicit) has landed at the coast;
-all that's left is the climax. Playable spine: ferry → town → … → basin → river
-→ highlands, plus the Delibird Isle and Industrial Coast ferry hops.)
+(All 8 zones / the whole main story (Chapters 0–7) are BUILT, Opus prose. Survey
+spine complete: Reference / Stressed / Collapsing (×3: basin, coast, corridor) /
+Shifted, the interlude, the collaboration reveal, and the climax. What's left is
+depth, verification, and polish — not main-line story.)
 
-1. **Zone 8 — The Last Corridor (Chapter 7, the CLIMAX)**: the keystone
-   freshwater marsh at the region's heart, where **Dr. Heron is found alive in
-   exile** — the full reveal, the coercion, the reckoning of testimony (§01
-   "back half" is LOCKED; the Poliwag line is the keystone, tying back to the
-   prologue). This is the ending; it deserves a careful read of §01 §02 §04 and
-   the prologue first, and probably a design check-in before building — the
-   emotional load is the whole game's, and it shouldn't be improvised.
-2. **Delibird Isle expansion**: the Crystal Cavern (the §09 quiet climax — an
-   elder/a loss, not a boss); the Snowy Summit / Shoreline Cliffs as their own
-   areas; a real randomized gift-trade at the square.
-3. **A snow/ice tileset** (would lift the Highlands *and* the Delibird summit —
-   both currently evoke cold via pale scree + prose).
-4. **Flesh the ~9 Skald trainer teams** (still 1–2 mons / 2 moves each); add a
-   second trainer to z4–z6 (one each now) and a generous islander heal-NPC on
-   Delibird Isle (no heal point out there yet).
+**Live design fork (user asked, Tue): gyms & HMs.** Canon (§01) replaces
+type-gyms with the *Certifications* (ecological competencies) — built and
+gating progression like badges, but currently reading-heavy (~1 trainer/zone).
+HMs are unused: traversal is gated by certs + ferries (the boat = Surf).
+Cut/Rock Smash are environmentally destructive = anti-thesis. Awaiting the
+user's steer on (a) adding gatekeeper/boss battles + the Cordelia finale, and
+(b) HM approach (ranger-tools reframe vs. a thematic subset vs. none).
+
+1. **Playtest + harden the climax** (highest priority): confirm Heron's
+   mid-conversation `trainerbattle_single` triggers from a NONE object; walk the
+   whole Station→marsh→confession→ending→return chain in-emulator; screenshot.
+   The ending is the one place a silent bug would hurt most.
+2. **Cordelia Brooke — the §02 boardroom finale** (designed, unbuilt): the
+   second grounded boss, a "fight" that's policy, not spectacle, after the
+   testimony lands. The only main-line story beat still missing.
+3. **Deepen the zones** (the "make it much longer" work): more trainers +
+   gatekeeper battles; the full Delibird Isle areas (Crystal Cavern / Snowy
+   Summit / Shoreline Cliffs); environmental puzzles; a snow/ice tileset; a
+   randomized gift-trade; a Delibird Isle heal-NPC.
+4. **Flesh the ~9 original Skald trainer teams** (still 1–2 mons / 2 moves each).

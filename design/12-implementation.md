@@ -172,7 +172,15 @@ The first custom game code, built and verified (not just config):
   mid-pier. Buildings (homes, general store, pier shelter) are v1.1.
   Verified by walking it in the built ROM (pier spawn + the full walk north).
 
-## Skaldmere content built — the playable game so far (Chapters 0–6)
+## Skaldmere content built — the playable game so far (Chapters 0–7: MAIN STORY COMPLETE)
+
+> The whole 8-zone spine is built: prologue → forest → basin → river → highlands
+> → Delibird Isle (interlude) → Industrial Coast → **The Last Corridor (the
+> climax — Dr. Heron, the testimony, clear-eyed grief).** 14 maps. Survey states
+> seen: Reference / Stressed / Collapsing / Shifted. Remaining is depth + polish,
+> not story (the one missing main-line beat: the Cordelia boardroom finale).
+> The climax is build+test-clean but not yet in-emulator playtested.
+
 
 **Status:** the §07 prologue + §08 Chapter 1 + Chapter 2 (the Floodbasin) +
 **Chapter 3 (the River & Farmland)** + **Chapter 4 (the Highlands)** +
