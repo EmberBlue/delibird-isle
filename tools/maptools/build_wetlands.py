@@ -93,6 +93,9 @@ def build():
         put(34, y, PLANK_L)          # out into the backwater
         put(35, y, PLANK_M)
         put(36, y, PLANK_R)
+    for x in range(37, 42):          # a footbridge east across the backwater to
+        put(x, 20, PLANK_M)          # the corridor landing -- without this the
+        put(x, 21, PLANK_M)          # east exit is unreachable (a §08 soft-lock)
     for x in range(30, 42):          # settlement ground south of the water
         for y in range(25, 31):
             put(x, y, SAND)
