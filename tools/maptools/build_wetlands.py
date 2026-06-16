@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Generate the wetlands edge (§08 Act IV) north of the station.
 
-Where the forest gives way to wetland: wet meadow, shallow pools, mud
-flats, and a small fishing-dock settlement on a backwater. Harland's
-grievance, Dorsey's polished half-truths, and the Poisoned Waters event
-all stage here. 50x44, frp_general + seafoam. Connects south to
-ParcelStation (corridors at x24-26, offset 0).
+Where the forest gives way to wetland: wet meadow, shallow pools, mud flats,
+and a small fishing-dock settlement on a backwater. Harland's grievance,
+Dorsey's half-truths, and the Poisoned Waters event stage here. Rebuilt on
+gTileset_General + gTileset_leob_dewford to match the station/bridge (clean
+water, real plank dock) instead of the old seafoam grid. 50x44.
+
+Geometry is preserved (forest frame, south corridor to the station, east
+corridor to the Old Service Cut, the dock + footbridge causeway) so the 9
+object events, the poison cutscene, and the connections still line up.
 
 Run from repo root: python3 tools/maptools/build_wetlands.py
 """
@@ -14,14 +18,14 @@ from pathlib import Path
 
 W, H = 50, 44
 
+# gTileset_General primary (shared) + gTileset_leob_dewford secondary
 GRASS = 1
-TUFT_A, TUFT_B = 8, 9
 FLOWERS = 4
-SAND = 261                       # reads as mud flat / packed track here
-SHORE_A, SHORE_B = 256, 257
-WATER = 282
-PLANK_L, PLANK_M, PLANK_R = 313, 314, 315
-TREE_QUAD = {(0, 0): 28, (1, 0): 29, (0, 1): 36, (1, 1): 37}
+SAND = 292                       # mud flat / packed track / settlement ground
+OCEAN = 368                      # backwater / pools (clean, elev 1)
+DECK = 440                       # dock + footbridge planks
+TALL_GRASS = 13                  # reed beds (wild encounters)
+TREES = 579                      # forest wall (blocked, elev 0)
 
 
 def word(mid, col=0, elev=3):
@@ -34,15 +38,12 @@ def build():
     def put(x, y, mid, col=0, elev=3):
         grid[y][x] = word(mid, col, elev)
 
-    def forest(x, y):
-        put(x, y, TREE_QUAD[(x % 2, y % 2)], col=1)
-
     def pool(x0, x1, y0, y1):
         for y in range(y0, y1):
             for x in range(x0, x1):
-                put(x, y, WATER, col=1, elev=1)
+                put(x, y, OCEAN, col=0, elev=1)
         for x in range(x0, x1):
-            put(x, y1, SHORE_A if x % 2 == 0 else SHORE_B, col=1)
+            put(x, y1, SAND)             # walkable shore lip
 
     # forest frame, with the south corridor back to the station (x24-26)
     # and the east corridor to the Old Service Cut (rows 20-22)
@@ -53,7 +54,7 @@ def build():
             if x >= W - 8 and 19 <= y <= 23:
                 continue
             if x < 8 or x >= W - 8 or y < 8 or y >= H - 8:
-                forest(x, y)
+                put(x, y, TREES, col=1, elev=0)
     for y in range(19, 24):
         for x in range(W - 8, W):
             put(x, y, GRASS)
@@ -67,13 +68,10 @@ def build():
         for x in range(24, 27):
             put(x, y, SAND)
 
-    # wet meadow texture: heavy tufts, scattered reed-pools, mud flats
+    # wet meadow texture: scattered flowers
     for y in range(8, H - 8):
         for x in range(8, W - 8):
-            r = (x * 13 + y * 5) % 37
-            if r == 0:
-                put(x, y, TUFT_A if (x + y) % 2 else TUFT_B)
-            elif r == 19:
+            if (x * 13 + y * 5) % 37 == 19:
                 put(x, y, FLOWERS)
     pool(10, 16, 10, 13)             # reed pool NW (disturbed reeds clue)
     pool(13, 18, 22, 25)             # mid pool
@@ -81,25 +79,23 @@ def build():
         for x in range(9, 18):
             put(x, y, SAND)
 
-    # the backwater: large pool east with the fishing dock    # tall reed-grass (wild encounters; the amphibian guild lives here)
+    # tall reed-grass (wild encounters; the amphibian guild lives here)
     for (x0, x1, y0, y1) in ((9, 17, 14, 21), (18, 24, 25, 30), (28, 34, 32, 36)):
         for y in range(y0, y1):
             for x in range(x0, x1):
-                put(x, y, 12)
+                put(x, y, TALL_GRASS)
 
-
+    # the backwater: large pool east with the fishing dock + footbridge
     pool(32, 42, 12, 24)
     for y in range(14, 25):          # dock planks from the settlement edge
-        put(34, y, PLANK_L)          # out into the backwater
-        put(35, y, PLANK_M)
-        put(36, y, PLANK_R)
+        for x in range(34, 37):      # out into the backwater
+            put(x, y, DECK)
     for x in range(37, 42):          # a footbridge east across the backwater to
         for y in range(20, 23):      # the corridor landing -- without this the
-            put(x, y, PLANK_M)       # east exit is unreachable (a §08 soft-lock)
+            put(x, y, DECK)          # east exit is unreachable (a §08 soft-lock)
     for x in range(38, 40):          # and a plank ramp straight down to the
-        put(x, 23, PLANK_M)          # settlement ground, so the through-route to
-        put(x, 24, PLANK_M)          # the exit is a wide, obvious causeway and
-        # not a one-tile turn lost in the wetland fog (a §08 playtest snag).
+        put(x, 23, DECK)             # settlement ground, so the through-route to
+        put(x, 24, DECK)             # the exit is a wide, obvious causeway
     for x in range(30, 42):          # settlement ground south of the water
         for y in range(25, 31):
             put(x, y, SAND)
@@ -121,7 +117,7 @@ def main():
     assert len(data) == W * H * 2, len(data)
     (out / "map.bin").write_bytes(data)
     (out / "border.bin").write_bytes(
-        struct.pack("<4H", word(28, 1), word(29, 1), word(36, 1), word(37, 1)))
+        struct.pack("<4H", *([word(TREES, col=1, elev=0)] * 4)))
     print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin (forest)")
 
 

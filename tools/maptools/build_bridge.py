@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-"""Generate the long bridge east of the arrival town (§07 Scenes 4-6).
+"""Generate the long bridge east of Delibird Isle (§07 Scenes 4-6).
 
-The island town connects to the mainland by one long bridge -- the first
-gate and the first set-piece: the stuck Poliwag at the stream mouth below,
-the poacher ambush, Hale's intervention. 60x24, frp_general + seafoam,
-connects west to ParcelIsle (corridor rows 10-12 here = town rows 36-38,
-offset 26).
+The island connects to the mainland by one long wooden bridge -- the first
+gate and first set-piece: the stuck Poliwag at the stream mouth below, the
+poacher ambush, Hale's intervention. Rebuilt on gTileset_General +
+gTileset_leob_dewford to match the isle (clean ocean, real plank deck) instead
+of the old noisy seafoam grid. 60x24.
+
+Geometry is unchanged from the original so the §07 cutscene movements and the
+Isle/Station connections still line up exactly: deck at rows 10-12, Poliwag
+embankment x24-32 / y13-16, west corridor + east landing at rows 9-13.
 
 Run from repo root: python3 tools/maptools/build_bridge.py
 """
@@ -14,12 +18,12 @@ from pathlib import Path
 
 W, H = 60, 24
 
+# gTileset_General primary (shared) + gTileset_leob_dewford secondary
 GRASS = 1
-SAND = 261
-SHORE_A, SHORE_B = 256, 257
-WATER = 282
-PLANK_L, PLANK_M, PLANK_R = 313, 314, 315
-TREE_QUAD = {(0, 0): 28, (1, 0): 29, (0, 1): 36, (1, 1): 37}
+SAND = 292                       # beach / track sand
+OCEAN = 368                      # open sea (clean waves, elev 1)
+DECK = 440                       # wooden plank bridge deck
+TREES = 579                      # forest wall (blocked, elev 0)
 
 
 def word(mid, col=0, elev=3):
@@ -27,41 +31,36 @@ def word(mid, col=0, elev=3):
 
 
 def build():
-    # default: open sea
-    grid = [[word(WATER, col=1, elev=1) for _ in range(W)] for _ in range(H)]
+    grid = [[word(OCEAN, col=0, elev=1) for _ in range(W)] for _ in range(H)]
 
     def put(x, y, mid, col=0, elev=3):
         grid[y][x] = word(mid, col, elev)
 
-    def forest(x, y):
-        put(x, y, TREE_QUAD[(x % 2, y % 2)], col=1)
+    def deck(x, y):
+        put(x, y, DECK)
 
-    # --- west shoulder: forest wall with the corridor from town -------------
-    # Corridor rows 10-12 align with the town's east gap (rows 36-38 there).
+    # --- west shoulder: forest wall with the corridor from the isle ---------
+    # Corridor rows 9-13 align with the isle's east gap (offset 26).
     for y in range(H):
         for x in range(0, 8):
             if not (9 <= y <= 13):
-                forest(x, y)
-    for y in range(9, 14):          # grass apron around the corridor
+                put(x, y, TREES, col=1, elev=0)
+    for y in range(9, 14):          # grass apron
         for x in range(0, 8):
             put(x, y, GRASS)
-    for y in range(10, 13):         # the sandy track itself
+    for y in range(10, 13):         # the sandy track onto the bridge
         for x in range(0, 8):
             put(x, y, SAND)
 
     # --- the long bridge (rows 10-12, x 8-46) -------------------------------
     for x in range(8, 47):
-        put(x, 10, PLANK_L)
-        put(x, 11, PLANK_M)
-        put(x, 12, PLANK_R)
+        for y in range(10, 13):
+            deck(x, y)
 
-    # --- stream-mouth embankment below the bridge (south side, mid-span) ----
-    # Where the §07 Poliwag cluster waits: a sand pocket at the water's edge.
+    # --- stream-mouth embankment below the bridge (Poliwag wait, mid-span) --
     for y in range(13, 17):
         for x in range(24, 33):
             put(x, y, SAND)
-    for x in range(24, 33):         # its waterline
-        put(x, 17, SHORE_A if x % 2 == 0 else SHORE_B, col=1)
 
     # --- east landing: grass headland, track onward, forest beyond ----------
     for y in range(8, 17):
@@ -73,13 +72,13 @@ def build():
     for y in range(H):
         for x in range(56, W):
             if not (9 <= y <= 13):
-                forest(x, y)
+                put(x, y, TREES, col=1, elev=0)
     for y in range(0, 8):           # north-east forest cap
         for x in range(48, W):
-            forest(x, y)
+            put(x, y, TREES, col=1, elev=0)
     for y in range(17, H):          # south-east forest cap
         for x in range(48, W):
-            forest(x, y)
+            put(x, y, TREES, col=1, elev=0)
 
     return grid
 
@@ -91,9 +90,8 @@ def main():
     data = b"".join(struct.pack("<H", c) for row in grid for c in row)
     assert len(data) == W * H * 2, len(data)
     (out / "map.bin").write_bytes(data)
-    # open sea border: every non-connected edge is water or deep forest
     (out / "border.bin").write_bytes(
-        struct.pack("<4H", *([word(WATER, col=1, elev=1)] * 4)))
+        struct.pack("<4H", *([word(OCEAN, col=0, elev=1)] * 4)))
     print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin")
 
 
