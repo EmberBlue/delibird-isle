@@ -1,0 +1,119 @@
+{
+  "id": "MAP_PARCEL_DELIBIRD",
+  "name": "ParcelDelibird",
+  "layout": "LAYOUT_PARCEL_DELIBIRD",
+  "music": "MUS_LILYCOVE",
+  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_DEL_ELDER",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 12, "y": 25, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_Elder", "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DEL_DELIBIRD",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELIBIRD)",
+      "x": 28, "y": 27, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_Delibird", "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DEL_GIVER",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "x": 31, "y": 27, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_Giver", "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DEL_FISHER",
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 47, "y": 33, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_Fisher", "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DEL_RELIEF",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 15, "y": 20, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_Relief", "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DEL_SAILOR",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 31, "y": 38, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_ReturnFerry", "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_DEL_ITEM_A",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 22, "y": 10, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_ItemA", "flag": "FLAG_SKALD_ITEM_DELIBIRD_A"
+    },
+    {
+      "local_id": "LOCALID_DEL_ITEM_B",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 50, "y": 32, "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0, "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibird_ItemB", "flag": "FLAG_SKALD_ITEM_DELIBIRD_B"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [
+    {
+      "type": "trigger", "x": 29, "y": 36, "elevation": 3,
+      "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelDelibird_FirstEntry"
+    },
+    {
+      "type": "trigger", "x": 30, "y": 36, "elevation": 3,
+      "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelDelibird_FirstEntry"
+    },
+    {
+      "type": "trigger", "x": 31, "y": 36, "elevation": 3,
+      "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelDelibird_FirstEntry"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign", "x": 15, "y": 18, "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelDelibird_SlumpSign"
+    },
+    {
+      "type": "sign", "x": 40, "y": 11, "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelDelibird_SummitSign"
+    },
+    {
+      "type": "sign", "x": 30, "y": 31, "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelDelibird_BannerSign"
+    }
+  ]
+}

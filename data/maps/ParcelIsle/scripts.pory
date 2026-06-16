@@ -9,6 +9,7 @@ const LOCALID_HEAVYCOAT  = 1
 const LOCALID_FISHER     = 2
 const LOCALID_SHOPKEEPER = 3
 const LOCALID_NEIGHBOR   = 4
+const LOCALID_FERRY_CAPTAIN = 7
 
 mapscripts ParcelIsle_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelIsle_SetVisited
@@ -119,6 +120,30 @@ movement Movement_GlanceAway {
 
 script ParcelIsle_FerrySign {
     msgbox(format("FERRY LANDING\pThe mainland schedule board is blank.\nIt has been for a while."), MSGBOX_SIGN)
+    end
+}
+
+// §09: the ferry to Delibird Isle (zone 6). Unlocks once the Highlands are
+// behind you -- Hale names the boat at the summit. Reduce harm, then come here.
+script ParcelIsle_FerryCaptain {
+    lock
+    faceplayer
+    if (!flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("Captain: Delibird Isle? She's out past the channel ice, and that's no crossing to make without a reason worth the cold.\pCome back when the Corps has sent you up the coast. You'll know when."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Captain: Off to the island, then? Good. They could use a face that isn't there to sell them something.\pMidwinter's on out there. Climb aboard -- mind the spray."), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("Captain: I'll keep her warm. Come back when you're ready."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    closemessage
+    playse(SE_SHIP)
+    delay(40)
+    warp(MAP_PARCEL_DELIBIRD, 30, 38)
+    waitstate
     end
 }
 

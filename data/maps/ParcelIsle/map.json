@@ -103,6 +103,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelIsle_ItemPotion",
       "flag": "FLAG_SKALD_ITEM_TOWN_POTION"
+    },
+    {
+      "local_id": "LOCALID_FERRY_CAPTAIN",
+      "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+      "x": 44,
+      "y": 44,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelIsle_FerryCaptain",
+      "flag": "0"
     }
   ],
   "warp_events": [

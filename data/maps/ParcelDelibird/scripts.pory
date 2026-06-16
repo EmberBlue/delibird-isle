@@ -1,0 +1,191 @@
+// ParcelDelibird -- §01/§06/§09 zone 6, Chapter 5: the interlude. The title
+// location, and the whole game in one place. Festival cheer over an
+// irreversible permafrost thaw; the give-vs-take thesis made literal in a gift
+// economy. NOT a certification zone -- no survey, no credential. A breather.
+//
+// The rule for the voice (§09): play the warmth STRAIGHT. The islanders are the
+// most generous people in Skaldmere, and they mean every kindness. The dread is
+// entirely in what the player already knows -- that the cold under the festival
+// is leaving and will not come back. Cheer as courage, not denial. A second
+// read is a wake.
+//
+// Give economy: the elder's storm-relief parcel (deliver it -> the Delibird
+// guardian lore -> a free Delibird + a Ranger commendation, a grace note, not a
+// cert). The thaw made playable: a relief beat you help with but cannot win.
+// Mereholt's money is on the festival banner.
+
+const LOCALID_DEL_ELDER    = 1
+const LOCALID_DEL_DELIBIRD = 2
+const LOCALID_DEL_GIVER    = 3
+const LOCALID_DEL_FISHER   = 4
+const LOCALID_DEL_RELIEF   = 5
+const LOCALID_DEL_SAILOR   = 6
+
+mapscripts ParcelDelibird_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_0, 0: ParcelDelibird_SetMapVar
+    ]
+}
+
+script ParcelDelibird_SetMapVar {
+    setvar(VAR_TEMP_0, 1)
+    end
+}
+
+// First entry: the warmth, played straight. The ache is the player's to bring.
+script ParcelDelibird_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_DELIBIRD_ARRIVAL)) {
+        end
+    }
+    lockall
+    msgbox(format("The boat noses in and the island takes you by surprise. String lights, cabins the colours of sweets, woodsmoke and something baking.\pPeople wave. They don't know you, and they wave anyway."), MSGBOX_DEFAULT)
+    msgbox(format("It is the warmest place you have set foot in since you started keeping the notebook.\pYou know, now, what the warmth is standing on. You climbed it. You couldn't fix it."), MSGBOX_DEFAULT)
+    msgbox(format("A banner over the square snaps in the wind:\nDELIBIRD ISLE MIDWINTER -- ALL WELCOME.\pSmaller, underneath: in partnership with the Mereholt Foundation.\pDoduo leans into your leg. You go up into the lights."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_DELIBIRD_ARRIVAL)
+    releaseall
+    end
+}
+
+// --- the elder: storm-relief lore, the delivery, the free Delibird ---------
+script ParcelDelibird_Elder {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("Elder: The young ones say give until it's a habit, so the giving's already done when the storm comes and there's no time to decide.\pYou've got the habit now. I can see it on the bird."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
+        msgbox(format("Elder: Tomas got his blanket, then. Bless you.\pCome here. There's a thing we do for someone who carries for a stranger without being asked twice."), MSGBOX_DEFAULT)
+        msgbox(format("Elder: We raise Delibird here. Have for longer than the records. In a hard winter they carry food cabin to cabin -- they find the door that needs it. Nobody trained that into them. It's just what they are."), MSGBOX_DEFAULT)
+        msgbox(format("Elder: This one took to you off the boat. Take it. It'll deliver for you the way it delivered for us.\pThe storms are worse now. We'll need more of that, not less."), MSGBOX_DEFAULT)
+        playse(SE_PIN)
+        givemon(SPECIES_DELIBIRD, 22)
+        setflag(FLAG_SKALDMERE_DELIBIRD_GIFT)
+        msgbox(format("WREN received DELIBIRD.\pIt shifts its little sack to one side and looks at you, ready to be useful."), MSGBOX_DEFAULT)
+        msgbox(format("Elder, quieter:\pElder: There's a paper from the Foundation says we should think about relocating the festival. Somewhere it won't flood.\pWe held it here anyway. While there's a here.\pTell your people we said thank you, and no."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
+        msgbox(format("Elder: Old Tomas keeps to the south shore, by the water. The blanket's for him -- his cabin's the one with the cold corner.\pGo on. Reciprocity doesn't keep."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("An old woman sorts folded blankets into oilcloth parcels, quick and sure, a Delibird stacking them at her elbow.\pElder: Ranger, is it? Then make yourself useful in the good way, not the clipboard way."), MSGBOX_DEFAULT)
+    msgbox(format("Elder: The island runs on this -- you give before you're asked, and the island gives back before you need. It's not charity. It's how a cold place keeps everyone alive through a bad season.\pThe opposite of the people who only ever take from it."), MSGBOX_DEFAULT)
+    msgbox(format("Elder: Here. A storm-relief parcel for old Tomas, down on the south shore. Carry it for me?"), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_DELIBIRD_PARCEL)
+    msgbox(format("You take the parcel. It is heavier than a blanket should be. There's food in it too."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// the delivery target: reciprocity in action
+script ParcelDelibird_Fisher {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
+        msgbox(format("Tomas: Warm through, thanks to you. Mind the corner of my cabin -- the floor slopes to the sea a little more each winter.\pUsed to be level. I remember it level."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
+        msgbox(format("An old fisher straightens, slow, by a cabin whose seaward corner has settled into the sand.\pTomas: From Marta? You carried this all the way down for an old man you've never met."), MSGBOX_DEFAULT)
+        msgbox(format("Tomas: That's the island in you already, and you only just landed.\pHere -- take this for the road. No, take it. That's how it works. You'll learn."), MSGBOX_DEFAULT)
+        giveitem(ITEM_HYPER_POTION)
+        setflag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)
+        msgbox(format("Tomas: Now go tell Marta I'm fine. She'll have a bird ready for you. She always does.\pIt's how she says thank you. Don't refuse it -- that's the one rude thing you can do here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Tomas: Cold off the water today. There's coffee in the square if you've come up short.\pUp here you never go without. We see to that ourselves."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// the give economy, made literal -- a villager who gives, full stop
+script ParcelDelibird_Giver {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_DELIBIRD_GIVER)) {
+        msgbox(format("Villager: Pass it on someday, that's all. To whoever's cold next."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Villager: New face! Midwinter rule: nobody meets the giving table empty-handed.\pHere -- from the square to you. Don't thank me. Thank me by doing it to the next one."), MSGBOX_DEFAULT)
+    giveitem(ITEM_NEVER_MELT_ICE)
+    setflag(FLAG_SKALDMERE_DELIBIRD_GIVER)
+    msgbox(format("Villager: A feather-charm. The old folk say it keeps the cold honest.\pWe could use a little more honest cold. Less every year to keep."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- the thaw made playable: a relief beat you help, but cannot win --------
+script ParcelDelibird_Relief {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_DELIBIRD_RELIEF)) {
+        msgbox(format("Villager: Bailed dry for now. It'll be back by the thaw moon. It always comes back a little higher.\pThanks for the arms, Ranger."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A man stacks sandbags against a seep of meltwater rising through what used to be the village green. A Delibird ferries icy blocks to shore the wall.\pVillager: Ranger! Spare arms? The ground's let go under here -- water comes up where there's no rain to explain it."), MSGBOX_DEFAULT)
+    msgbox(format("You work the line until the seep is bagged back. The Delibird drops the last block and shakes off, pleased."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_DELIBIRD_RELIEF)
+    msgbox(format("Villager: There. Dry.\pYou don't say it and he doesn't ask: the ice under us is thawing, and bags hold water, not winters. We didn't fix it. We bought a season.\pVillager: A season's a lot, some years. Thank you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// a Delibird in the square -- the give ethic with feathers on
+script ParcelDelibird_Delibird {
+    lock
+    msgbox(format("A Delibird works the square, tucking a wrapped something into a child's hands, then another's, never its own.\pIt notices you watching. It considers its sack, considers you -- and decides you look like you have enough.\pIt moves on. That, too, is the lesson."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- environmental storytelling: the thaw, read like a culvert -------------
+script ParcelDelibird_SlumpSign {
+    msgbox(format("The green dips here into a shallow new pond nobody dug. The cabin beside it has sunk at one corner; its door no longer hangs square.\pThe islanders have laid planks across the wet and hung a lantern on them. They walk the planks to the festival and do not look down.\pYou look down."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_SummitSign {
+    msgbox(format("From the peak you can see the whole crescent of the island at once -- and the meltwater pooling in the high hollows where the snowpack should still be holding.\pThis is the cold the festival is named for. There is less of it than there was last Midwinter. There will be less next.\pIt is the most beautiful view in Skaldmere. You write down why it won't last."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_BannerSign {
+    msgbox(format("MEREHOLT FOUNDATION -- PROUD SPONSOR OF DELIBIRD ISLE MIDWINTER\pWarm blankets, warm meals, a warmer future.\pThe blankets are real. The meals are real. The warmer future is the part that pays for the banner.\pThe same crest is on the drill up the coast."), MSGBOX_SIGN)
+    end
+}
+
+// --- the ferry home ---------------------------------------------------------
+script ParcelDelibird_ReturnFerry {
+    lock
+    faceplayer
+    msgbox(format("Sailor: Back to the mainland, Ranger? Whenever you're ready.\pThe island will be here. For a while yet, it'll be here."), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("Sailor: Stay for the lights, then. They're worth it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    closemessage
+    playse(SE_SHIP)
+    delay(40)
+    warp(MAP_PARCEL_ISLE, 41, 48)
+    waitstate
+    end
+}
+
+script ParcelDelibird_ItemA {
+    finditem(ITEM_NUGGET)
+    end
+}
+script ParcelDelibird_ItemB {
+    finditem(ITEM_STAR_PIECE)
+    end
+}

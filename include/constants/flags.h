@@ -60,15 +60,15 @@
 #define FLAG_SKALDMERE_HIGHLAND_ARRIVAL 0x2E // Skaldmere: §08 Ch4 Highlands entry / "the first place that won't come back"
 #define FLAG_SKALDMERE_HIGHLAND_CERT  0x2F // Skaldmere: §08 Ch4 Highland Certification earned (witness, not repair)
 #define FLAG_SKALD_ITEM_HIGHLANDS     0x30 // Skaldmere: §08 Ch4 Highlands item ball
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
+#define FLAG_SKALDMERE_DELIBIRD_ARRIVAL  0x31 // Skaldmere: §09 Ch5 Delibird Isle first entry
+#define FLAG_SKALDMERE_DELIBIRD_PARCEL   0x32 // Skaldmere: §09 carrying the elder's storm-relief parcel
+#define FLAG_SKALDMERE_DELIBIRD_DELIVERED 0x33 // Skaldmere: §09 relief parcel delivered to the fisher
+#define FLAG_SKALDMERE_DELIBIRD_GIFT     0x34 // Skaldmere: §09 received the free Delibird (+ commendation)
+#define FLAG_SKALDMERE_DELIBIRD_RELIEF   0x35 // Skaldmere: §09 helped the thaw-flood relief (reduce harm)
+#define FLAG_UNUSED_0x036    0x36 // Unused Flag (referenced by TestTown -- leave it)
+#define FLAG_SKALD_ITEM_DELIBIRD_A       0x37 // Skaldmere: §09 hidden present A
+#define FLAG_SKALD_ITEM_DELIBIRD_B       0x38 // Skaldmere: §09 hidden present B
+#define FLAG_SKALDMERE_DELIBIRD_GIVER    0x39 // Skaldmere: §09 gift-square villager one-shot
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
