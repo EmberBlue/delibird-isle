@@ -307,6 +307,14 @@ ParcelHighlands_ItemPotion::
 	end
 
 
+ParcelHighlands_SurveyorTrainer::
+# 215 "data/maps/ParcelHighlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_SURVEYOR, ParcelHighlands_SurveyorTrainer_Text_0, ParcelHighlands_SurveyorTrainer_Text_1
+# 218 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_SurveyorTrainer_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 42 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The trail climbs out of the trees and\n"
@@ -607,3 +615,25 @@ ParcelHighlands_Hale_Text_8:
 	.string "the holdout who won't go.\p"
 	.string "Then come and tell me what it is. All of\n"
 	.string "it, or none of it counts.$"
+
+ParcelHighlands_SurveyorTrainer_Text_0:
+# 216 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Kass: Foundation crew. You'll be the\n"
+	.string "Ranger poking at our boreholes.\p"
+	.string "Keep it sporting -- mons, not\n"
+	.string "paperwork.$"
+
+ParcelHighlands_SurveyorTrainer_Text_1:
+# 217 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Kass: Tch. Fine.\p"
+	.string "You're not wrong about the ground. I\n"
+	.string "just get paid not to write it down.$"
+
+ParcelHighlands_SurveyorTrainer_Text_2:
+# 218 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Kass, lower:\p"
+	.string "Kass: Off the record? I've moved my\n"
+	.string "stakes up the slope three years\l"
+	.string "running. Same line your Ilex works.\p"
+	.string "We measure the same thing. They just\n"
+	.string "pay me to call it opportunity.$"

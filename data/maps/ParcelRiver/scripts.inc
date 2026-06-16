@@ -289,6 +289,14 @@ ParcelRiver_ItemPotion::
 	end
 
 
+ParcelRiver_AnglerTrainer::
+# 210 "data/maps/ParcelRiver/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ANGLER, ParcelRiver_AnglerTrainer_Text_0, ParcelRiver_AnglerTrainer_Text_1
+# 213 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_AnglerTrainer_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 47 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -546,3 +554,25 @@ ParcelRiver_Ilex_Text_8:
 	.string "water above. Read the Board's sign, and\l"
 	.string "hear the man on the boat.\p"
 	.string "Then come put a name to it.$"
+
+ParcelRiver_AnglerTrainer_Text_0:
+# 211 "data/maps/ParcelRiver/scripts.pory"
+	.string "Dell: Forty years I worked this reach.\n"
+	.string "Pulled Seaking out by the armful, once.\p"
+	.string "Now look at it. Battle me -- I could use\n"
+	.string "the distraction.$"
+
+ParcelRiver_AnglerTrainer_Text_1:
+# 212 "data/maps/ParcelRiver/scripts.pory"
+	.string "Dell: Hah. You've still got the eye for\n"
+	.string "it.\n"
+	.string "Wish the river did.$"
+
+ParcelRiver_AnglerTrainer_Text_2:
+# 213 "data/maps/ParcelRiver/scripts.pory"
+	.string "Dell: The Board swears the cut'll bring\n"
+	.string "the fish back. The Board swears a lot of\l"
+	.string "things.\p"
+	.string "You're the first one came up here to\n"
+	.string "LOOK instead of promise. Means\l"
+	.string "something.$"

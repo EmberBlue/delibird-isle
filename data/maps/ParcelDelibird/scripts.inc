@@ -261,6 +261,14 @@ ParcelDelibird_ItemB::
 	end
 
 
+ParcelDelibird_RevelerTrainer::
+# 195 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_REVELER, ParcelDelibird_RevelerTrainer_Text_0, ParcelDelibird_RevelerTrainer_Text_1
+# 198 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_RevelerTrainer_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelDelibird_FirstEntry_Text_0:
 # 42 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The boat noses in and the island takes\n"
@@ -536,3 +544,24 @@ ParcelDelibird_ReturnFerry_Text_1:
 # 172 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Sailor: Stay for the lights, then.\n"
 	.string "They're worth it.$"
+
+ParcelDelibird_RevelerTrainer_Text_0:
+# 196 "data/maps/ParcelDelibird/scripts.pory"
+	.string "Noel: A Ranger! At Midwinter! You HAVE\n"
+	.string "to battle me, it's tradition.\p"
+	.string "Loser owes the winner cocoa. We don't\n"
+	.string "keep score with money up here -- we\l"
+	.string "keep it with cocoa.$"
+
+ParcelDelibird_RevelerTrainer_Text_1:
+# 197 "data/maps/ParcelDelibird/scripts.pory"
+	.string "Noel: Awww. Fine, fine -- cocoa's on me!\n"
+	.string "That's the best way to lose anyhow.$"
+
+ParcelDelibird_RevelerTrainer_Text_2:
+# 198 "data/maps/ParcelDelibird/scripts.pory"
+	.string "Noel: Gran says the festival's smaller\n"
+	.string "every year. Says the ice comes in slower\l"
+	.string "than it did.\p"
+	.string "I don't really get it. But I get the\n"
+	.string "cocoa. Come on, before it's cold!$"

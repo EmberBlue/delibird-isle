@@ -204,3 +204,12 @@ script ParcelRiver_ItemPotion {
     finditem(ITEM_HYPER_POTION)
     end
 }
+
+// a river angler -- the decline, embodied; the Board's promises, doubted
+script ParcelRiver_AnglerTrainer {
+    trainerbattle_single(TRAINER_SKALD_ANGLER,
+        format("Dell: Forty years I worked this reach. Pulled Seaking out by the armful, once.\pNow look at it. Battle me -- I could use the distraction."),
+        format("Dell: Hah. You've still got the eye for it.\nWish the river did."))
+    msgbox(format("Dell: The Board swears the cut'll bring the fish back. The Board swears a lot of things.\pYou're the first one came up here to LOOK instead of promise. Means something."), MSGBOX_DEFAULT)
+    end
+}

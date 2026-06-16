@@ -17075,3 +17075,51 @@ Surskit
 Level: 7
 - Bubble
 - Quick Attack
+
+=== TRAINER_SKALD_ANGLER ===
+Name: DELL
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Goldeen
+Level: 13
+
+Marill
+Level: 13
+
+=== TRAINER_SKALD_SURVEYOR ===
+Name: KASS
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Sneasel
+Level: 19
+
+Geodude
+Level: 20
+
+=== TRAINER_SKALD_REVELER ===
+Name: NOEL
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Snorunt
+Level: 20
+
+Stantler
+Level: 21
+
+Delibird
+Level: 21

@@ -189,3 +189,12 @@ script ParcelDelibird_ItemB {
     finditem(ITEM_STAR_PIECE)
     end
 }
+
+// a festival reveler -- the warmth straight, the dread in a child's offhand line
+script ParcelDelibird_RevelerTrainer {
+    trainerbattle_single(TRAINER_SKALD_REVELER,
+        format("Noel: A Ranger! At Midwinter! You HAVE to battle me, it's tradition.\pLoser owes the winner cocoa. We don't keep score with money up here -- we keep it with cocoa."),
+        format("Noel: Awww. Fine, fine -- cocoa's on me!\nThat's the best way to lose anyhow."))
+    msgbox(format("Noel: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
+    end
+}

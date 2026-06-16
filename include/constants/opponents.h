@@ -878,8 +878,11 @@
 
 #define TRAINER_SKALD_REMEDIATOR              864
 #define TRAINER_SKALD_BASIN_KID               865
+#define TRAINER_SKALD_ANGLER                  866
+#define TRAINER_SKALD_SURVEYOR                867
+#define TRAINER_SKALD_REVELER                 868
 
-#define TRAINERS_COUNT                      866
+#define TRAINERS_COUNT                      869
 #define MAX_TRAINERS_COUNT                  872
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 

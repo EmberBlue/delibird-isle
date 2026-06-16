@@ -208,3 +208,13 @@ script ParcelHighlands_ItemPotion {
     finditem(ITEM_HYPER_POTION)
     end
 }
+
+// a Foundation field surveyor -- the mask, off the record; Kass measures the
+// same loss as Ilex and is paid to file it as opportunity
+script ParcelHighlands_SurveyorTrainer {
+    trainerbattle_single(TRAINER_SKALD_SURVEYOR,
+        format("Kass: Foundation crew. You'll be the Ranger poking at our boreholes.\pKeep it sporting -- mons, not paperwork."),
+        format("Kass: Tch. Fine.\pYou're not wrong about the ground. I just get paid not to write it down."))
+    msgbox(format("Kass, lower:\pKass: Off the record? I've moved my stakes up the slope three years running. Same line your Ilex works.\pWe measure the same thing. They just pay me to call it opportunity."), MSGBOX_DEFAULT)
+    end
+}

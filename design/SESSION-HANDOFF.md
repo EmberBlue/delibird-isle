@@ -52,6 +52,16 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **Trainers for the new zones (z4–z6).** Each of the three previously
+  trainer-less zones now has one themed, roster-legal trainer (sight-3 overworld
+  object + a `trainerbattle_single` + a thematic post-battle line):
+  `TRAINER_SKALD_ANGLER` (River — Goldeen/Marill, the decline + the Board's
+  empty promises), `TRAINER_SKALD_SURVEYOR` (Highlands — Sneasel/Geodude, the
+  Foundation mask off the record: "they pay me to call it opportunity"),
+  `TRAINER_SKALD_REVELER` (Delibird Isle — Snorunt/Stantler/Delibird, festival
+  warmth with the dread in a child's offhand line). IDs 866–868; `TRAINERS_COUNT`
+  → 869 (3 free slots left before the 872 ceiling). Parties omit moves
+  (trainerproc auto-fills level-up moves — clean + always learnset-valid).
 - **Chapter 5 — Delibird Isle (zone 6)** is BUILT and integrated. The title
   location and the **interlude** — NOT a cert zone (no survey/classifier). §09
   adapted to a playable Holiday Village where the give-vs-take thesis is a
@@ -148,4 +158,6 @@ Delibird Isle ferry hop.)
    areas; a real randomized gift-trade at the square.
 3. **A snow/ice tileset** (would lift the Highlands *and* the Delibird summit —
    both currently evoke cold via pale scree + prose).
-4. **Flesh the ~9 Skald trainer teams**; place trainers in z4–z6 (none yet).
+4. **Flesh the ~9 Skald trainer teams** (still 1–2 mons / 2 moves each); add a
+   second trainer to z4–z6 (one each now) and a generous islander heal-NPC on
+   Delibird Isle (no heal point out there yet).
