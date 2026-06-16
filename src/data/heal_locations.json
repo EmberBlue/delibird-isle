@@ -160,8 +160,8 @@
     {
       "id": "HEAL_LOCATION_PARCEL_ISLE",
       "map": "MAP_PARCEL_ISLE",
-      "x": 41,
-      "y": 48
+      "x": 33,
+      "y": 27
     }
   ]
 }

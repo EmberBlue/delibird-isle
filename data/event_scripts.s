@@ -1169,6 +1169,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TestDesertRoute/scripts.inc"
 
 	.include "data/maps/ParcelIsle/scripts.inc"
+	.include "data/maps/ParcelIsle_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/ParcelBridge/scripts.inc"
 	.include "data/maps/ParcelStation/scripts.inc"
 	.include "data/maps/ParcelWetlands/scripts.inc"

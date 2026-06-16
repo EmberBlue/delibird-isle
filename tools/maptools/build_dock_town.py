@@ -1,42 +1,49 @@
 #!/usr/bin/env python3
-"""Generate the Skaldmere dock town map (§07 Scene 1 — arrival pier).
+"""Generate Delibird Isle -- the arrival town (§07 Scene 1).
 
-Writes data/layouts/ParcelIsle/map.bin + border.bin (83x60, frp_general +
-frp_seafoam_islands). The town: forest wall north, grass field with a few
-homes (v1.1), sandy track, sand shoreline, open sea south, and a wooden
-ferry pier where the player arrives. Cold-coastal, not snowy (§07).
+A real coastal town now, not a tile-grid: green commons, dirt paths, a sand
+beach where the ferry lands, open sea south, and iconic buildings (a Pokemon
+Center for real healing, the shuttered lab, the lodging, town houses) stamped
+*verbatim* from Dewford so they render correctly on the same tileset
+(gTileset_General + gTileset_leob_dewford).
 
-Metatile IDs were identified empirically from the rendered contact sheet
-(tools/maptools/metatile_sheet.py). Map cell word = (elev<<12)|(col<<10)|id.
+Kept at 83x60 so the existing right-connection to the long bridge (offset 26)
+and the ferry-arrival/heal coordinates stay valid. Building footprints and
+terrain IDs were read off data/layouts/DewfordTown/map.bin and OldaleTown
+(shared primary) -- see tools/maptools for the decoders.
 
 Run from repo root:  python3 tools/maptools/build_dock_town.py
-Then rebuild the ROM (map data is packed at build time).
 """
 import struct
 from pathlib import Path
 
 W, H = 83, 60
 
-# --- frp_general metatile IDs (verified on the contact sheet) ---------------
-GRASS = 1
-TUFT_A, TUFT_B = 8, 9          # decorative grass tufts
-FLOWERS = 4
-BUSH = 5                        # round bush (blocked)
-SAND = 261                      # plain sand (also used as the town's track)
-SHORE_A, SHORE_B = 256, 257     # sand above -> water below edge
-WATER = 282                     # open sea
-PLANK_L, PLANK_M, PLANK_R = 313, 314, 315   # wooden pier planks
-POST_A, POST_B = 309, 310       # pier pilings (pair)
-
-# A *complete* tree is four metatiles assembled by quadrant; tiling the
-# region by (x%2, y%2) parity makes whole trees repeat seamlessly into a
-# forest mass (verified on the contact sheet + in-game). Anchored to the
-# global grid (0,0) so adjacent forest regions always line up.
-TREE_QUAD = {(0, 0): 28, (1, 0): 29, (0, 1): 36, (1, 1): 37}
+# --- terrain metatiles -------------------------------------------------------
+# Primary (gTileset_General, id < 512) -- shared with every secondary:
+GRASS = 1                       # green commons (walkable)
+PATH = 473                      # packed dirt path (walkable)
+# Secondary (gTileset_leob_dewford):
+SAND = 292                      # beach / track sand (walkable)
+TALL_GRASS = 13                 # wild-encounter grass (walkable)
+TREES = 579                     # forest wall (blocked, elev 0)
+OCEAN = 368                     # open sea (surf water, elev 1)
 
 
 def word(mid, col=0, elev=3):
     return (elev << 12) | (col << 10) | mid
+
+
+# --- building stamps, copied verbatim from Dewford --------------------------
+# (src_x, src_y, w, h, door_dx, door_dy) in DewfordTown/map.bin. Copying the
+# full 16-bit word (mid|collision|elevation) reproduces each building exactly.
+DEW_W, DEW_H = 20, 20
+_dew = struct.unpack(
+    f"<{DEW_W*DEW_H}H", Path("data/layouts/DewfordTown/map.bin").read_bytes())
+
+POKECENTER = (1, 7, 4, 4, 1, 3)     # red-roof Center; door tile at rel (1,3)
+GYMHOUSE = (5, 13, 6, 5, 3, 4)      # the gym shell (used for the future gym)
+HOUSE = (16, 11, 4, 4, 1, 3)        # clean 4x4 town house
 
 
 def build():
@@ -45,123 +52,76 @@ def build():
     def put(x, y, mid, col=0, elev=3):
         grid[y][x] = word(mid, col, elev)
 
-    def forest(x, y):
-        # complete-tree fill, blocked; parity keeps trees whole across the region
-        put(x, y, TREE_QUAD[(x % 2, y % 2)], col=1)
-
-    # --- forest deep enough that the camera can never see past it ----------
-    # The view extends 7 tiles past the player horizontally (4 up), so any
-    # frame the player can stand beside must be >= 8 tiles deep, and every
-    # forest region is even-aligned so quadrant parity yields whole trees.
-    # North wall: rows 0-7. Side frames: x 0-7 and x 74-81 (x82 stays sea-
-    # adjacent beyond view range), rows 8-39.
-    for y in range(0, 8):
-        for x in range(W):
-            forest(x, y)
-    for y in range(8, 40):
-        for x in list(range(0, 8)) + list(range(74, 83)):
-            if 74 <= x and 36 <= y <= 38:
-                continue            # east corridor: the way to the long bridge
-            forest(x, y)
-
-    # --- grass field with sparse decoration (rows 8-39) ---------------------
-    for y in range(8, 40):
-        for x in range(8, 74):
-            r = (x * 7 + y * 13) % 71
-            if r == 0:
-                put(x, y, FLOWERS)
-            elif r in (17, 44):
-                put(x, y, TUFT_A if (x + y) % 2 else TUFT_B)
-            elif r == 60 and y < 36:
-                put(x, y, BUSH, col=1)
-
-    # --- sand shoreline strip (rows 40-43), full-width open beach ----------
-    # The beach spans the whole south coast; the only place the sea border
-    # is visible is past actual ocean/beach, where it reads as ocean.
-    for y in range(40, 44):
-        for x in range(W):
-            put(x, y, SAND)
-
-    # --- shore edge (row 44) and open sea (rows 45-59) ----------------------
-    for x in range(W):
-        put(x, 44, SHORE_A if x % 2 == 0 else SHORE_B, col=1)
-    for y in range(45, H):
-        for x in range(W):
-            put(x, y, WATER, col=1, elev=1)
-
-    # --- the ferry pier (x 40-42), planks from the sand into the sea --------
-    for y in range(43, 54):
-        put(40, y, PLANK_L)
-        put(41, y, PLANK_M)
-        put(42, y, PLANK_R)
-    # pilings at the pier's end
-    put(40, 54, POST_A, col=1, elev=1)
-    put(41, 54, POST_B, col=1, elev=1)
-    put(42, 54, POST_A, col=1, elev=1)
-
-    # --- the lodging (first enterable building; door = metatile 61) --------
-    # Best-guess FR assembly: blue roof (40/41/43), eaves (44/45/47),
-    # walls (52/55) + windows (7), non-animated door (61, walkable).
-    house = [
-        (40, 41, 41, 43),
-        (44, 45, 45, 47),
-        (52,  7,  7, 55),
-        (52, 61,  7, 55),
-    ]
-    for dy, row in enumerate(house):
-        for dx, mid in enumerate(row):
-            walkable = (mid == 61)
-            put(44 + dx, 17 + dy, mid, col=0 if walkable else 1)
-
-    # --- the erased lab (§07 scene 3) -- a wider shell, door center --------
-    lab = [
-        (40, 41, 41, 41, 43),
-        (44, 45, 45, 45, 47),
-        (52,  7, 24,  7, 55),
-        (52,  7, 61,  7, 55),
-    ]
-    for dy, row in enumerate(lab):
-        for dx, mid in enumerate(row):
-            walkable = (mid == 61)
-            put(33 + dx, 17 + dy, mid, col=0 if walkable else 1)
-
-    # --- sandy track: pier head north into town, then a plaza ---------------    # --- tall grass (wild encounters; §06 saltmarsh-fringe guild) -----------
-    for (x0, x1, y0, y1) in ((12, 21, 12, 18), (52, 62, 13, 19),
-                             (55, 66, 29, 35), (13, 22, 28, 34)):
+    def fill(x0, x1, y0, y1, mid, col=0, elev=3):
         for y in range(y0, y1):
             for x in range(x0, x1):
-                put(x, y, 12)        # MB_TALL_GRASS
+                grid[y][x] = word(mid, col, elev)
 
+    def stamp(stampdef, ax, ay):
+        """Place a building so its door lands at world (ax, ay); copy words
+        verbatim from Dewford. Returns the door world coordinate."""
+        sx, sy, w, h, ddx, ddy = stampdef
+        ox, oy = ax - ddx, ay - ddy
+        for j in range(h):
+            for i in range(w):
+                grid[oy + j][ox + i] = _dew[(sy + j) * DEW_W + (sx + i)]
+        return (ax, ay)
 
-    for y in range(9, 43):
-        put(41, y, SAND)
-    for x in range(36, 47):           # small plaza mid-town
-        for y in range(22, 27):
-            put(x, y, SAND)
-    for x in range(41, 83):           # east track: town to the long bridge
-        put(x, 37, SAND)
-    for x in range(74, 83):           # grass apron through the forest gap
-        put(x, 36, GRASS)
-        put(x, 38, GRASS)
+    # --- the isle: forest wall inland, open sea + beach to the south --------
+    # You arrive by ferry onto the south beach; forest frames the north/west/
+    # east (the bridge punches east at y36-38 toward the station). A sand
+    # fringe softens the tree line.
+    fill(0, W, 50, H, OCEAN, col=0, elev=1)         # open sea (south)
+    fill(0, W, 44, 50, SAND)                        # south beach (ferry lands)
+    fill(0, W, 0, 3, TREES, col=1, elev=0)          # north forest wall
+    fill(0, 3, 0, 44, TREES, col=1, elev=0)         # west forest wall
+    fill(W - 3, W, 0, 44, TREES, col=1, elev=0)     # east forest wall
+    fill(3, 6, 3, 44, SAND)                         # west sand fringe
+    fill(W - 6, W - 3, 3, 44, SAND)                 # east sand fringe
+    fill(3, W - 3, 3, 6, SAND)                      # north sand fringe
+    # east exit to the bridge: punch a dirt path through the forest wall
+    fill(W - 6, W, 36, 39, PATH)
 
-    return grid
+    # --- dirt paths: the town's spine ---------------------------------------
+    fill(39, 43, 22, 49, PATH)                      # beach -> plaza promenade
+    fill(28, 58, 27, 31, PATH)                      # central plaza (E-W)
+    fill(28, 58, 22, 23, PATH)                      # north plaza edge
+    for x in range(56, W - 3):                      # plaza -> east bridge path
+        put(x, 37, PATH)
+    fill(56, 58, 31, 38, PATH)                      # plaza down to the east path
+    fill(39, 43, 37, 38, PATH)                      # link promenade to east path
+
+    # --- buildings ----------------------------------------------------------
+    pc_door = stamp(POKECENTER, 33, 26)             # Pokemon Center (heals)
+    lab_door = stamp(HOUSE, 47, 26)                 # the shuttered lab
+    lodging_door = stamp(HOUSE, 52, 21)             # the lodging
+    stamp(HOUSE, 30, 20)                            # town house (decor)
+    stamp(HOUSE, 62, 26)                            # town house (decor)
+
+    # a stub of path in front of each enterable door so you can reach it
+    for (dx, dy) in (pc_door, lab_door, lodging_door):
+        put(dx, dy + 1, PATH)
+
+    # --- tall grass (wild encounters; the saltmarsh-fringe guild, §06) ------
+    for (x0, x1, y0, y1) in ((9, 19, 13, 20), (63, 72, 13, 21), (9, 18, 33, 41)):
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                put(x, y, TALL_GRASS)
+
+    return grid, dict(pc=pc_door, lab=lab_door, lodging=lodging_door)
 
 
 def main():
-    grid = build()
+    grid, doors = build()
     out = Path("data/layouts/ParcelIsle")
     data = b"".join(struct.pack("<H", c) for row in grid for c in row)
     assert len(data) == W * H * 2, len(data)
     (out / "map.bin").write_bytes(data)
-    # Border: open sea. Plain water tiles cleanly to itself in a 2x2 block,
-    # and "island town surrounded by ocean" is internally coherent past
-    # any edge - including where the forest meets it on the west/east.
-    # The canopy-mass alternative reads as bumpy mush when tiled (it's only
-    # the top half of a real tree); the FRP general tileset has no clean
-    # 2x2 "proper tree" block that tiles to itself as endless forest.
+    # Border: open sea (the isle sits in ocean; off-map reads as water).
     (out / "border.bin").write_bytes(
-        struct.pack("<4H", *([word(WATER, col=1, elev=1)] * 4)))
-    print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin (water)")
+        struct.pack("<4H", *([word(OCEAN, col=0, elev=1)] * 4)))
+    print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin")
+    print("door coords:", doors)
 
 
 if __name__ == "__main__":

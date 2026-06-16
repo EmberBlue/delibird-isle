@@ -4466,8 +4466,8 @@
       "name": "ParcelIsle_Layout",
       "width": 83,
       "height": 60,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelIsle/border.bin",
       "blockdata_filepath": "data/layouts/ParcelIsle/map.bin"
     },

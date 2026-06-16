@@ -36,7 +36,7 @@ script ParcelFerry_Opening {
     delay(40)
     playse(SE_SHIP)
     delay(60)
-    warp(MAP_PARCEL_ISLE, 41, 48)
+    warp(MAP_PARCEL_ISLE, 41, 47)
     waitstate
     end
 }

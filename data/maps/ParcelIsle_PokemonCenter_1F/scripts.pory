@@ -1,0 +1,32 @@
+// ParcelIsle_PokemonCenter_1F -- the isle's aid station. Real healing (the
+// shared nurse script) and the town's whiteout respawn anchor. The Climate
+// Corps runs it; the flavor NPC sets the tone (work, not trophies, §08).
+
+const LOCALID_PARCEL_ISLE_NURSE = 1
+
+mapscripts ParcelIsle_PokemonCenter_1F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelIsle_PokemonCenter_1F_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script ParcelIsle_PokemonCenter_1F_OnTransition {
+    setrespawn(HEAL_LOCATION_PARCEL_ISLE)
+    end
+}
+
+script ParcelIsle_PokemonCenter_1F_EventScript_Nurse {
+    setvar(VAR_0x800B, LOCALID_PARCEL_ISLE_NURSE)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    end
+}
+
+script ParcelIsle_PokemonCenter_1F_EventScript_Fisher {
+    lock
+    faceplayer
+    msgbox(format("Aid's free for provisionals. Corps covers it.\pYou'll need it--the bridge corridor doesn't forgive a tired team."), MSGBOX_DEFAULT)
+    release
+    end
+}

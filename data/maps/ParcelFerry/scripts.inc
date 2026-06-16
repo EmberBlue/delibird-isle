@@ -50,7 +50,7 @@ ParcelFerry_Opening_1:
 # 38 "data/maps/ParcelFerry/scripts.pory"
 	delay 60
 # 39 "data/maps/ParcelFerry/scripts.pory"
-	warp MAP_PARCEL_ISLE, 41, 48
+	warp MAP_PARCEL_ISLE, 41, 47
 # 40 "data/maps/ParcelFerry/scripts.pory"
 	waitstate
 	end
