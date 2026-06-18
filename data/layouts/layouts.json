@@ -4546,8 +4546,8 @@
       "name": "ParcelDelibird_Layout",
       "width": 60,
       "height": 44,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelDelibird/border.bin",
       "blockdata_filepath": "data/layouts/ParcelDelibird/map.bin"
     },
@@ -4556,8 +4556,8 @@
       "name": "ParcelCoast_Layout",
       "width": 64,
       "height": 44,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelCoast/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCoast/map.bin"
     },
@@ -4566,8 +4566,8 @@
       "name": "ParcelMarsh_Layout",
       "width": 56,
       "height": 48,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelMarsh/border.bin",
       "blockdata_filepath": "data/layouts/ParcelMarsh/map.bin"
     },
@@ -4576,8 +4576,8 @@
       "name": "ParcelWeather_Layout",
       "width": 48,
       "height": 40,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_dewford",
       "border_filepath": "data/layouts/ParcelWeather/border.bin",
       "blockdata_filepath": "data/layouts/ParcelWeather/map.bin"
     },
@@ -4586,8 +4586,8 @@
       "name": "ParcelCavern_Layout",
       "width": 40,
       "height": 36,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_seafoam_islands",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/ParcelCavern/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCavern/map.bin"
     }
