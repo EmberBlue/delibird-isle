@@ -1,13 +1,15 @@
 // ParcelCavern -- §09 Delibird Isle's Crystal Cavern: the cold refuge, the
-// deepest cold the warming island has left. The ranger-tools demo (HMs
-// reframed, no Pokemon move, no soft-lock):
-//   * the LAMP (Flash) gated the way in -- the entrance script on the Delibird
-//     summit refuses you without the field kit;
-//   * the WINCH (Strength) clears a fallen ice-jam to a reward in here.
+// deepest cold the warming island has left. The two field moves the badges
+// have already taught you finally bite here, on the harder country:
+//   * FLASH (HM05, Mirren's badge) lights the dark -- the map is requires_flash,
+//     and the Delibird summit mouth won't let you in blind without it;
+//   * STRENGTH (HM04, Sluice's badge) shoulders a sheared slab of ceiling-ice
+//     off a side hollow, where an old surveyor's everfrost cache still waits.
 // A quiet §09 beat at the deep pool (a loss, not a boss). Rarer Ice encounters.
 
-const LOCALID_CAVERN_DEBRIS   = 1
+const LOCALID_CAVERN_BOULDER  = 1
 const LOCALID_CAVERN_DELIBIRD = 2
+const LOCALID_CAVERN_CACHE    = 4
 // LOCALID_CAVERN_GATE is resolved from map.json object order via the generated
 // map_event_ids.h (Kelda is sight-triggered; no script references the id).
 
@@ -28,32 +30,25 @@ script ParcelCavern_FirstEntry {
         end
     }
     lockall
-    msgbox(format("Your ranger lamp throws a long cold light, and the cavern answers it -- walls of old blue ice, crystal hung from the dark like frozen rain.\pThe air bites here. Truly bites. It is the only place on the whole island that still can."), MSGBOX_DEFAULT)
+    msgbox(format("Light blooms from your Pokémon and the cavern answers it -- walls of old blue ice, crystal hung from the dark like frozen rain.\pThe air bites here. Truly bites. It is the only place on the whole island that still can."), MSGBOX_DEFAULT)
     msgbox(format("This is the cold the festival is named for, all of it, retreated into one room under the mountain.\pWhat the island used to be, kept in a jar against the thaw. You walk softly. It feels like a held breath."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_CAVERN_ARRIVAL)
     releaseall
     end
 }
 
-// the WINCH (Strength) -- clear the fallen ice-jam for the reward
-script ParcelCavern_Debris {
+// the everfrost cache -- a sheared slab of ceiling-ice (the pushable boulder,
+// EventScript_StrengthBoulder) jams the mouth of a side hollow. Shoulder it
+// aside with STRENGTH (HM04, Sluice's badge) and this is what it kept shut.
+script ParcelCavern_EverfrostCache {
     lock
     faceplayer
-    if (flag(FLAG_SKALDMERE_CAVERN_REWARD)) {
-        msgbox(format("The slab is winched aside. Cold air pours from the hollow it kept shut."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    msgbox(format("A slab of ceiling-ice has sheared off and jammed the mouth of a side hollow -- too heavy to shift, too solid to break, and you wouldn't break it in here if you could."), MSGBOX_DEFAULT)
-    msgbox(format("You unfold the ranger winch from the field kit, set the hook, and lean into it. Slow, no sudden force. The slab grinds aside.\pThis is what the tool is FOR -- moving the heavy thing without shattering the place it's in."), MSGBOX_DEFAULT)
     playse(SE_ICE_CRACK)
-    closemessage
-    delay(20)
     giveitem(ITEM_NEVER_MELT_ICE)
     giveitem(ITEM_RARE_CANDY, 2)
     setflag(FLAG_SKALDMERE_CAVERN_REWARD)
-    removeobject(LOCALID_CAVERN_DEBRIS)
-    msgbox(format("In the hollow: a knot of true everfrost, and supplies an old surveyor cached here and never came back for.\pYou take them, and note the date on the tin. It is older than you are."), MSGBOX_DEFAULT)
+    removeobject(LOCALID_CAVERN_CACHE)
+    msgbox(format("In the hollow the slab kept shut: a knot of true everfrost, and supplies an old surveyor cached here and never came back for.\pYou take them, and note the date on the tin. It is older than you are."), MSGBOX_DEFAULT)
     release
     end
 }

@@ -191,16 +191,17 @@ script ParcelDelibird_ItemB {
     end
 }
 
-// the Crystal Cavern mouth (§09) -- the LAMP (Flash) ranger tool gates it
+// the Crystal Cavern mouth (§09) -- pitch dark inside; FLASH (HM05) is the key
 script ParcelDelibird_CaveMouth {
     lock
     faceplayer
-    if (!flag(FLAG_SKALDMERE_RANGER_KIT)) {
-        msgbox(format("A low cleft in the rock breathes cold air -- a cave mouth, pitch dark a few steps in.\pYou'd walk into a wall in there, or worse. You'd want a proper lamp before you tried it."), MSGBOX_DEFAULT)
+    checkpartymove(MOVE_FLASH)
+    if (var(VAR_RESULT) == PARTY_SIZE) {
+        msgbox(format("A low cleft in the rock breathes cold air -- a cave mouth, pitch dark a few steps in.\pYou'd walk into a wall in there, or worse. Nothing in your party can throw light that far. Not yet."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("The cave mouth breathes its old, deep cold. You unhood the ranger lamp -- its light reaches in and finds no far wall.\pGo in?"), MSGBOX_YESNO)
+    msgbox(format("The cave mouth breathes its old, deep cold. One of your Pokémon can light the dark in there -- the glow reaches in and finds no far wall.\pGo in?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 0) {
         msgbox(format("You leave the cold where it is, for now."), MSGBOX_DEFAULT)
         release

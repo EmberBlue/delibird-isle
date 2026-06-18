@@ -267,69 +267,72 @@ ParcelDelibird_CaveMouth::
 # 197 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
 # 198 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_RANGER_KIT, ParcelDelibird_CaveMouth_2
-# 203 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_CaveMouth_Text_1, MSGBOX_YESNO
+	checkpartymove MOVE_FLASH
+# 199 "data/maps/ParcelDelibird/scripts.pory"
+	compare VAR_RESULT, PARTY_SIZE
+	goto_if_eq ParcelDelibird_CaveMouth_2
 # 204 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_CaveMouth_Text_1, MSGBOX_YESNO
+# 205 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_CaveMouth_5
-# 209 "data/maps/ParcelDelibird/scripts.pory"
-	closemessage
 # 210 "data/maps/ParcelDelibird/scripts.pory"
-	warp MAP_PARCEL_CAVERN, 19, 30
+	closemessage
 # 211 "data/maps/ParcelDelibird/scripts.pory"
+	warp MAP_PARCEL_CAVERN, 19, 30
+# 212 "data/maps/ParcelDelibird/scripts.pory"
 	waitstate
 	end
 
 ParcelDelibird_CaveMouth_2:
-# 199 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_CaveMouth_Text_0, MSGBOX_DEFAULT
 # 200 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_CaveMouth_Text_0, MSGBOX_DEFAULT
+# 201 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_CaveMouth_5:
-# 205 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_CaveMouth_Text_2, MSGBOX_DEFAULT
 # 206 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_CaveMouth_Text_2, MSGBOX_DEFAULT
+# 207 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_RevelerTrainer::
-# 217 "data/maps/ParcelDelibird/scripts.pory"
+# 218 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_REVELER, ParcelDelibird_RevelerTrainer_Text_0, ParcelDelibird_RevelerTrainer_Text_1
-# 220 "data/maps/ParcelDelibird/scripts.pory"
+# 221 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_RevelerTrainer_Text_2, MSGBOX_DEFAULT
 	end
 
 
 ParcelDelibird_GymIlex::
-# 232 "data/maps/ParcelDelibird/scripts.pory"
+# 233 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_GYM8, ParcelDelibird_GymIlex_Text_0, ParcelDelibird_GymIlex_Text_1, ParcelDelibird_GymIlex_Defeated
-# 237 "data/maps/ParcelDelibird/scripts.pory"
-	lock
 # 238 "data/maps/ParcelDelibird/scripts.pory"
-	faceplayer
+	lock
 # 239 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Text_2, MSGBOX_DEFAULT
+	faceplayer
 # 240 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_2, MSGBOX_DEFAULT
+# 241 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_GymIlex_Defeated::
-# 245 "data/maps/ParcelDelibird/scripts.pory"
-	setflag FLAG_BADGE08_GET
 # 246 "data/maps/ParcelDelibird/scripts.pory"
-	call Common_EventScript_PlayGymBadgeFanfare
+	setflag FLAG_BADGE08_GET
 # 247 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Defeated_Text_0, MSGBOX_DEFAULT
+	call Common_EventScript_PlayGymBadgeFanfare
 # 248 "data/maps/ParcelDelibird/scripts.pory"
-	giveitem ITEM_HM07
+	msgbox ParcelDelibird_GymIlex_Defeated_Text_0, MSGBOX_DEFAULT
 # 249 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Defeated_Text_1, MSGBOX_DEFAULT
+	giveitem ITEM_HM07
 # 250 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Defeated_Text_1, MSGBOX_DEFAULT
+# 251 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
@@ -611,27 +614,28 @@ ParcelDelibird_ReturnFerry_Text_1:
 	.string "They're worth it.$"
 
 ParcelDelibird_CaveMouth_Text_0:
-# 199 "data/maps/ParcelDelibird/scripts.pory"
+# 200 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A low cleft in the rock breathes cold\n"
 	.string "air -- a cave mouth, pitch dark a few\l"
 	.string "steps in.\p"
 	.string "You'd walk into a wall in there, or worse.\n"
-	.string "You'd want a proper lamp before you\l"
-	.string "tried it.$"
+	.string "Nothing in your party can throw light\l"
+	.string "that far. Not yet.$"
 
 ParcelDelibird_CaveMouth_Text_1:
-# 203 "data/maps/ParcelDelibird/scripts.pory"
+# 204 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The cave mouth breathes its old, deep\n"
-	.string "cold. You unhood the ranger lamp -- its\l"
-	.string "light reaches in and finds no far wall.\p"
+	.string "cold. One of your Pokémon can light the\l"
+	.string "dark in there -- the glow reaches in and\l"
+	.string "finds no far wall.\p"
 	.string "Go in?$"
 
 ParcelDelibird_CaveMouth_Text_2:
-# 205 "data/maps/ParcelDelibird/scripts.pory"
+# 206 "data/maps/ParcelDelibird/scripts.pory"
 	.string "You leave the cold where it is, for now.$"
 
 ParcelDelibird_RevelerTrainer_Text_0:
-# 218 "data/maps/ParcelDelibird/scripts.pory"
+# 219 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Noel: A Ranger! At Midwinter! You HAVE\n"
 	.string "to battle me, it's tradition.\p"
 	.string "Loser owes the winner cocoa. We don't\n"
@@ -639,12 +643,12 @@ ParcelDelibird_RevelerTrainer_Text_0:
 	.string "keep it with cocoa.$"
 
 ParcelDelibird_RevelerTrainer_Text_1:
-# 219 "data/maps/ParcelDelibird/scripts.pory"
+# 220 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Noel: Awww. Fine, fine -- cocoa's on me!\n"
 	.string "That's the best way to lose anyhow.$"
 
 ParcelDelibird_RevelerTrainer_Text_2:
-# 220 "data/maps/ParcelDelibird/scripts.pory"
+# 221 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Noel: Gran says the festival's smaller\n"
 	.string "every year. Says the ice comes in slower\l"
 	.string "than it did.\p"
@@ -652,7 +656,7 @@ ParcelDelibird_RevelerTrainer_Text_2:
 	.string "cocoa. Come on, before it's cold!$"
 
 ParcelDelibird_GymIlex_Text_0:
-# 233 "data/maps/ParcelDelibird/scripts.pory"
+# 234 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Ilex stands a little apart from the\n"
 	.string "lights, a folded square of red cloth in\l"
 	.string "one hand, eyes on the high snowline\l"
@@ -672,12 +676,12 @@ ParcelDelibird_GymIlex_Text_0:
 	.string "From up here, looking down.$"
 
 ParcelDelibird_GymIlex_Text_1:
-# 234 "data/maps/ParcelDelibird/scripts.pory"
+# 235 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Ilex: Steady. You kept the frame. Few\n"
 	.string "do, this high up.$"
 
 ParcelDelibird_GymIlex_Text_2:
-# 239 "data/maps/ParcelDelibird/scripts.pory"
+# 240 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Ilex turns the red cloth over once,\n"
 	.string "then pockets it.\p"
 	.string "Ilex: The snowline I'm watching is lower\n"
@@ -689,7 +693,7 @@ ParcelDelibird_GymIlex_Text_2:
 	.string "badge.$"
 
 ParcelDelibird_GymIlex_Defeated_Text_0:
-# 247 "data/maps/ParcelDelibird/scripts.pory"
+# 248 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Ilex: The Skyline clearance. It marks\n"
 	.string "you fit to read a place from any height\l"
 	.string "-- and to be trusted on the harder\l"
@@ -697,7 +701,7 @@ ParcelDelibird_GymIlex_Defeated_Text_0:
 	.string "You'll want the tool that goes with it.$"
 
 ParcelDelibird_GymIlex_Defeated_Text_1:
-# 249 "data/maps/ParcelDelibird/scripts.pory"
+# 250 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Ilex: WATERFALL. It takes you up the\n"
 	.string "climbs that turn most people back.\p"
 	.string "The corridor inland has a few. That's\n"
