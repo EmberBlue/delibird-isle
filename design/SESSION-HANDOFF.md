@@ -2,8 +2,17 @@
 
 > **Purpose:** the *live state* a new session can't get from the durable docs.
 > The durable docs carry the structure; this carries the moment. Last updated
-> end of the session that shipped the Wetland Certification + Chapter-2 opener.
+> end of the session that shipped the **traditional-HM traversal pass** (all six
+> field moves wired as real gates/nooks) + the 12-gym ladder + the archipelago
+> region map + the ferry hub.
 > **If this note disagrees with reality, reality wins — update or delete it.**
+
+> ⚠️ **SUPERSEDED (this session):** older bullets below describe HMs as
+> *reframed ranger tools* ("Lamp"/"Winch", "no Cut/Rock Smash") and the gyms/HMs
+> as an *open fork*. That is no longer the design. The user chose **traditional
+> gyms + HMs**; it is **built and shipped**. See the top "Recently shipped"
+> entry and §00's amended "No gyms" lock. The ranger-tool bullets are kept only
+> as historical record.
 
 ## The 60-second orientation
 
@@ -52,6 +61,28 @@ work.** Don't assume.
 
 ## Recently shipped (this branch)
 
+- **Traditional gyms + HMs — BUILT (the fork, resolved).** The user chose real
+  gyms and real HMs over the ranger-tools reframe. Now live:
+  - **12-leader ladder** on the engine's 8-badge + HM spine, *reframed* as
+    Ranger Certifications + Mereholt clearances (§00 amended): 8 certification
+    leaders (Tarn/Mirren/Breen/Sluice/Vale/Harland/Vane/Ilex) each grant the HM
+    they authorize, + 4 clearance gatekeepers (Ward/Moore/Kelda/Aune) on the
+    water. Parties in `trainers.party`; IDs 875–885.
+  - **All six field moves wired as real traversal** (this pass): **Cut** deadfall
+    sealing the Corridor's west road (forces Tarn's HM01); **Rock Smash** rubble
+    sealing the Floodbasin→River channel (forces Breen's HM06); **Flash**
+    (Cavern `requires_flash` + the Delibird summit mouth gates on `MOVE_FLASH`);
+    **Strength** (the Cavern "winch" is now a real `EventScript_StrengthBoulder`
+    over an everfrost cache); **Surf** (a surfable thaw-pond + reward islet in
+    the Highlands, HM03 from Vale right there); **Waterfall** (a real climb on
+    the Highlands headwall, vanilla Route124 tiles, PP Max at the crest).
+    Each chokepoint was decoded from `map.bin` to prove a full seal + a reachable
+    HM source first — no soft-locks. Hale's "we don't cut, we don't smash"
+    briefing reconciled to license the field work while keeping the ethos.
+  - **Custom Skaldmere archipelago region map** + 13 per-zone MAPSECs, and a
+    **Dock Town ferry hub** (a clean destination menu, routes open by cert).
+  - Item-flag gotcha **re-confirmed**: `0x20–0x23` are live in vanilla Littleroot/
+    Birch — claimed `0x68`/`0xE9` instead (grep-verified unreferenced).
 - **The Ranger-tools + the Crystal Cavern** (the "HMs" half of the fork, DONE —
   HMs reframed as ranger gear, no Pokémon move, no soft-lock, no Cut/Rock Smash).
   Hale grants the **field kit** (a flag) in the Watershed dispatch — a **Lamp**
@@ -211,13 +242,15 @@ spine complete: Reference / Stressed / Collapsing (×3: basin, coast, corridor) 
 Shifted, the interlude, the collaboration reveal, and the climax. What's left is
 depth, verification, and polish — not main-line story.)
 
-**Live design fork (user asked, Tue): gyms & HMs.** Canon (§01) replaces
-type-gyms with the *Certifications* (ecological competencies) — built and
-gating progression like badges, but currently reading-heavy (~1 trainer/zone).
-HMs are unused: traversal is gated by certs + ferries (the boat = Surf).
-Cut/Rock Smash are environmentally destructive = anti-thesis. Awaiting the
-user's steer on (a) adding gatekeeper/boss battles + the Cordelia finale, and
-(b) HM approach (ranger-tools reframe vs. a thematic subset vs. none).
+**RESOLVED design fork: gyms & HMs.** The user chose **traditional gyms + HMs**.
+Built and shipped: the 12-leader certification/clearance ladder + all six HMs
+wired as real traversal gates/nooks (see "Recently shipped" + §00's amended
+"No gyms" lock). The leaders are still framed as competence/access tests, not
+power-fantasy. *Remaining polish:* the leaders are sight-line/optional except
+where an HM gate forces them (Cut→Tarn, Rock Smash→Breen are the two hard ones);
+more hard gates could be added, and an in-emulator pass should confirm the
+surf/waterfall/strength feel. The **Cordelia finale** is still unbuilt (the one
+main-line story beat missing).
 
 1. **Playtest + harden the climax** (highest priority): confirm Heron's
    mid-conversation `trainerbattle_single` triggers from a NONE object; walk the

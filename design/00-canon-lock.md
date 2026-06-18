@@ -39,8 +39,17 @@ participant** in a region under quiet ecological and institutional stress.
 ### Player & progression
 - Player arc: **witness → provisional actor → accountable participant.** Never
   a chosen-one; the world exists with or without them.
-- **No gyms.** Progression is via **Ranger Certifications** — credentials, not
-  trophies. Earned through ecological competence (surveys, restraint, response).
+- **Progression is the Ranger-Certification / Mereholt-clearance ladder** —
+  credentials and access-control, **not** trophies. Earned through ecological
+  competence (surveys, restraint, response). *Implemented on the engine's
+  8-badge + HM spine* — a deliberate amendment to the original "no gyms" lock
+  (see "Resolved"): **12 field leaders** — 8 grant a Skaldmere certification
+  plus the field-craft (HM) it authorizes, 4 are Mereholt clearance gatekeepers
+  posted on the access-controlled water. The badge slots are credentials; the
+  HMs (Cut / Flash / Rock Smash / Strength / Surf / Fly / Waterfall / Dive) are
+  the real field work the certifications license, and they gate traversal for
+  real (deadfall, rubble, an ice-slab, the thaw-ponds, the headwall falls, the
+  dark of the cavern).
 - Large full region; many certifications across many biomes.
 
 ### Antagonism
@@ -105,7 +114,10 @@ participant** in a region under quiet ecological and institutional stress.
 - No chosen-one / prophecy framing.
 - No cartoon villain organization or stereotyped evil-team Pokémon.
 - No constant spectacle or apocalyptic escalation.
-- No gym-badge power-fantasy formula.
+- No gym-badge **power-fantasy** formula. (Progression *does* run on the
+  engine's badge + HM spine, but the leaders test **competence and access** —
+  reading a place, holding a sightline, earning a clearance — never domination.
+  Badges are credentials, HMs are field-craft; never an escalating power trophy.)
 - No exposition dumps or melodrama; dialogue implies more than it states.
 - No ecological placement without logic.
 
@@ -271,6 +283,19 @@ skeleton:
 - ✅ **Notebook mechanic** → one artifact, three jobs (survey log + decoding
   mentor marginalia + progression display); marginalia resolve from cryptic to
   legible as competence grows. Cheap, packed save state (§10, §04, §12)
+- ✅ **Traversal & "gyms"** (amends the original *No gyms* lock) → progression
+  runs on the engine's **8-badge + HM** spine, **reframed** to keep the ethos:
+  **12 field leaders** — 8 Ranger-certification leaders that grant the field-
+  craft (HM) they authorize, + 4 **Mereholt clearance gatekeepers** on the
+  access-controlled water. Badges = credentials / clearances, not trophies; the
+  HMs (Cut / Flash / Rock Smash / Strength / Surf / Fly / Waterfall / Dive) are
+  **real traversal gates** — a Cut deadfall and Rock Smash rubble seal the
+  mainland route; Flash + Strength open the Crystal Cavern; Surf + Waterfall
+  open the Highlands water. The ecology-first stance holds: leaders test reading
+  a place, not beating it — *"we don't tear up a living place for sport, but a
+  deadfall over the only path, a slide of rock over a culvert? we clear those,
+  and put them back where we can."* A deliberate, committed change; shipped in
+  code this pass. (§00, §10, §01)
 
 > **MACRO ARC FULLY LOCKED.** Region shape, conflict, mentor, the noble lie, the
 > climax knot, and the ending note are all decided. Now building the next layer.

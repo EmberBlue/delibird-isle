@@ -137,10 +137,16 @@ The notebook (§04) is one object doing three jobs:
 
 ## System 3 — Certifications (FIRMED) · *progression as competence*
 
-No gyms (§00). Progression is the **Ranger Certification ladder** (§01) —
-credentials issued at the Regional Director's office, *prepared* at field
-stations (§05). Each certification tests one or more of four competencies,
-which map directly onto the four survey-states (§06):
+Progression is the **Ranger Certification ladder** (§01) — credentials issued
+at the Regional Director's office, *prepared* at field stations (§05). It runs
+on the engine's **8-badge + HM spine, reframed** (§00 amends the original "no
+gyms" lock): the certification leaders and the Mereholt clearance gatekeepers
+*are* the badge fights mechanically, but they test **competence and access**,
+not domination — reading a place, holding a sightline, earning a clearance —
+and each certification hands over the **field-craft (HM)** it authorizes, which
+then gates traversal for real (§12). Twelve leaders total: 8 certification, 4
+clearance. Each certification tests one or more of four competencies, which map
+directly onto the four survey-states (§06):
 
 | Competency | The skill | Survey-state it answers | Taught in |
 |------------|-----------|-------------------------|-----------|
@@ -217,7 +223,10 @@ Rationale:
 - **Battling** — standard. Encounters are wild battles; story battles use
   **plausible, locally-appropriate rosters** (poachers as laborers, the
   enforcer, Dorsey's political-image team, Cordelia's boardroom team — §00,
-  §05). **No gym battles.**
+  §05). The certification leaders and clearance gatekeepers are single battles
+  on the badge spine, but framed as **competence/access tests, not gym
+  power-fantasy** (§00 amends "no gyms"); their rosters are plausible and
+  locally-appropriate like every other fight.
 - **Breeding** — standard and available; Delibird Isle even rewards an Egg
   (§09). Breeding is leisure, not gated progression.
 - **Roster scope** — Gens 1–3 + related Gen 4 continuations/babies (§00).
