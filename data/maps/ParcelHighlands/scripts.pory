@@ -209,6 +209,15 @@ script ParcelHighlands_ItemPotion {
     end
 }
 
+// the surf-islet cache -- a thaw-pond out on the headwall flat with a single
+// rock island. Only SURF (HM03, Vale's badge, earned right here) reaches it.
+// An old survey marker and a tin someone left when the pond was smaller.
+script ParcelHighlands_SurfCache {
+    finditem(ITEM_RARE_CANDY)
+    setflag(FLAG_SKALD_ITEM_HL_SURF)
+    end
+}
+
 // a Foundation field surveyor -- the mask, off the record; Kass measures the
 // same loss as Ilex and is paid to file it as opportunity
 script ParcelHighlands_SurveyorTrainer {
