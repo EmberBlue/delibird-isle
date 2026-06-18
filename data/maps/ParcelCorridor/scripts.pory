@@ -147,3 +147,29 @@ script ParcelCorridor_ItemSuperPotion {
     finditem(ITEM_SUPER_POTION)
     end
 }
+
+// --- Gym 2: Mereholt Permafrost / Subsurface Survey checkpoint (Mirren) ------
+// Division clearance, not a trophy. Mirren reads the cut the way she reads a
+// cave: by what the dark hides. Beating her files the Subsurface clearance
+// (Badge 2), which the Corps logs as fit-for-enclosed-survey -- it releases
+// HM05 Flash. A checkpoint on the road before the up-neck to the basin.
+script ParcelCorridor_GymMirren {
+    trainerbattle_single(TRAINER_SKALD_GYM2,
+        format("Mirren: Subsurface Survey. I sign who goes past this cut and who doesn't.\pYou read rock for a living yet? Show me you read anything at all."),
+        format("Mirren: …Steady under pressure. Noted."),
+        ParcelCorridor_GymMirren_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Mirren: Cleared provisional. The basin's darker than this.\pDon't go in blind."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridor_GymMirren_Defeated {
+    setflag(FLAG_BADGE02_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("Mirren: Subsurface clearance. It logs you fit to survey enclosed ground.\pComes with the standard kit."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM05)
+    msgbox(format("Mirren: FLASH. Lights a cave or a culvert from the inside.\pYou'll want it where the daylight stops."), MSGBOX_DEFAULT)
+    release
+    end
+}

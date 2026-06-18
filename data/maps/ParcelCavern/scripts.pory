@@ -8,6 +8,8 @@
 
 const LOCALID_CAVERN_DEBRIS   = 1
 const LOCALID_CAVERN_DELIBIRD = 2
+// LOCALID_CAVERN_GATE is resolved from map.json object order via the generated
+// map_event_ids.h (Kelda is sight-triggered; no script references the id).
 
 mapscripts ParcelCavern_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -76,5 +78,31 @@ script ParcelCavern_Leave {
     closemessage
     warp(MAP_PARCEL_DELIBIRD, 20, 10)
     waitstate
+    end
+}
+
+// --- Mereholt clearance checkpoint: the Deepwater audit (Kelda) -------------
+// Not a badge, not an HM. Mereholt's Deepwater Ops keeps an officer posted at
+// the cold heart of the cavern -- the one cold thing left is, of course, the
+// one thing the access regime has logged and assigned. Kelda audits who reads
+// the everfrost; beating her sets the Cavern clearance against your card.
+// Cold, competent, no warmth to spare. Posted at the heart sign (the audited
+// spot one tile south of the pool's measuring mark).
+script ParcelCavern_GateKelda {
+    trainerbattle_single(TRAINER_SKALD_GATE_CAVERN,
+        format("Kelda: Deepwater Ops. Even the cold is logged down here, provisional.\pYou want clearance to read the heart of this place? Earn the audit first."),
+        format("Kelda: …Recorded. You read the cold; now the cold reads you."),
+        ParcelCavern_GateKelda_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Kelda: You're entered against your card. The everfrost is on Mereholt's books--\nand now, so is your competence to stand near it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCavern_GateKelda_Defeated {
+    setflag(FLAG_SKALDMERE_GATE_CAVERN)
+    msgbox(format("Kelda: Cavern clearance: logged and filed. Deepwater keeps a close ledger.\pNo one is granted the cold. You took it."), MSGBOX_DEFAULT)
+    release
     end
 }

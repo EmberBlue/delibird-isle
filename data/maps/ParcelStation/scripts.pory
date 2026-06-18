@@ -20,6 +20,9 @@ const LOCALID_SNARE_1         = 11
 const LOCALID_SNARE_2         = 12
 const LOCALID_SNARE_3         = 13
 const LOCALID_LOOKOUT         = 14
+// LOCALID_STATION_GATE is resolved from map.json object order via the
+// generated map_event_ids.h (the gate is sight-triggered; no script
+// references the id).
 
 mapscripts ParcelStation_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelStation_OnTransition
@@ -455,5 +458,29 @@ script ParcelStation_BirderTrainer {
 
 script ParcelStation_ItemBalls {
     finditem(ITEM_POKE_BALL, 5)
+    end
+}
+
+// --- Mereholt clearance checkpoint: the Station gate (Ward) ------------------
+// Not a badge, not an HM. A Mereholt-administered field checkpoint on the
+// up-road below the forest neck. Beating Ward gets you logged as competent --
+// the gate recognizes you and sets the Station clearance flag. Tutorial-tier
+// wall: the first body standing between a provisional and the road north.
+script ParcelStation_GateWard {
+    trainerbattle_single(TRAINER_SKALD_GATE_STATION,
+        format("Ward: Station clearance is checked here, provisional. The road north is Mereholt's to open.\pShow me you can hold a line before you walk one."),
+        format("Ward: …Adequate. The line's yours to pass."),
+        ParcelStation_GateWard_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Ward: You're in the log. Keep your card on you--\nthe next checkpoint won't take my word for it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelStation_GateWard_Defeated {
+    setflag(FLAG_SKALDMERE_GATE_STATION)
+    msgbox(format("Ward: Station clearance: granted. Logged and filed.\pNo ceremony. That's not what this is."), MSGBOX_DEFAULT)
+    release
     end
 }

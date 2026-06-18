@@ -10,6 +10,8 @@ const LOCALID_FISHER     = 2
 const LOCALID_SHOPKEEPER = 3
 const LOCALID_NEIGHBOR   = 4
 const LOCALID_FERRY_CAPTAIN = 7
+// LOCALID_ISLE_GATE is resolved from map.json object order via the generated
+// map_event_ids.h (the gate is sight-triggered; no script references the id).
 
 mapscripts ParcelIsle_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelIsle_SetVisited
@@ -184,5 +186,30 @@ script ParcelIsle_FerryCaptain {
 
 script ParcelIsle_LabSign {
     msgbox(format("FIELD RESEARCH ANNEX\nSkaldmere Survey cooperative site\pA strip of red cloth is nailed under the plate, faded gray."), MSGBOX_SIGN)
+    end
+}
+
+// --- Mereholt clearance checkpoint: the harbour gate (Moore) ----------------
+// The ferry hub's harbour-master, posted on the green by the landing. Not a
+// badge, not an HM -- a Mereholt clearance the harbour logs against your card.
+// Mid-game tier: the Isle is the start town with no team early, so a green
+// provisional will walk past Moore unproven. He's a sight trainer; the player
+// returns later, by ferry, with a team that can actually hold the line.
+script ParcelIsle_GateMoore {
+    trainerbattle_single(TRAINER_SKALD_GATE_ISLE,
+        format("Moore: Harbour-master. Every hull and every hand that moves through here is logged.\pYou want clearance on this water? Earn the entry."),
+        format("Moore: …Noted. The harbour knows your name now."),
+        ParcelIsle_GateMoore_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Moore: You're cleared through the landing. The ferry runs answer to the log,\nand the log answers for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelIsle_GateMoore_Defeated {
+    setflag(FLAG_SKALDMERE_GATE_ISLE)
+    msgbox(format("Moore: Harbour clearance: entered against your card. Filed with the manifest.\pNobody hands that out. You took it."), MSGBOX_DEFAULT)
+    release
     end
 }

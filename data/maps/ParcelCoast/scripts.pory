@@ -18,7 +18,7 @@
 //   3 the empty pilings   4 the plaque (mask + Heron reveal)   5 Harland
 //   6 classified + filed (Hale)
 
-const LOCALID_COAST_HARLAND = 1
+const LOCALID_COAST_GYM     = 1   // Harland: survey beat + Gym 6 (one object)
 const LOCALID_COAST_HALE    = 2
 const LOCALID_COAST_HOLLIS  = 3
 const LOCALID_COAST_WORKER  = 4
@@ -137,26 +137,39 @@ script ParcelCoast_Plaque {
     end
 }
 
-// 5: Harland -- the arc comes home; the lever visible; no redemption
-script ParcelCoast_Harland {
+// 5 + Gym 6: Harland -- the arc comes home AND the seamanship endorsement.
+// The same object carries both roles. His survey confession ("write it true",
+// the lever visible, no redemption -- §00/§02, misled not evil) folds into the
+// intro, marking survey bit 5 so Hale's coastal debrief still counts six. Then
+// the gym frame: not a power duel -- a tired elder of the fishing collective
+// vouching for you to cross his waters. Beating him earns the Tradewind
+// clearance (Badge 6), which lights up HM02 Fly. Warm, resigned, no antagonism.
+script ParcelCoast_GymHarland {
+    trainerbattle_single(TRAINER_SKALD_GYM6,
+        format("Harland is aboard, coiling a line he has no use for, because his hands need something to do. He sees you and does not pretend otherwise.\pHarland: So. You came all the way down to the bottom of it. Where the money's made and the fish aren't.\pHarland: The note on this boat is Mereholt's. The buyer's, the fuel, the loan against a catch I haven't landed -- all Mereholt's. I fish it down to bones and I hate every haul. That's the whole arithmetic.\pHarland: You want to cross my waters with that badge of yours? Then show an old hand you can read a sea before you sail it. Humour a tired man. Let's see your line."),
+        format("Harland: …Aye. You read the water. I'll not pretend you didn't."),
+        ParcelCoast_GymHarland_Defeated)
+    // Re-talk, after the clearance is earned. The survey beat persists here too.
     lock
     faceplayer
+    msgbox(format("Harland works the line he isn't using.\pHarland: It was never one report that'd turn this. Always all of them. Mine too, if I find the spine.\pWrite it true, Ranger. That's the whole of what I've got left to ask anyone."), MSGBOX_DEFAULT)
     setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
     setvar(VAR_0x8004, 5)
-    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
-    if (var(VAR_RESULT) == 1) {
-        msgbox(format("Harland works the line he isn't using.\pHarland: Write it true. That's the whole of what I've got left to ask anyone."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    msgbox(format("Harland is aboard, coiling a line he has no use for, because his hands need something to do. He sees you and does not pretend otherwise.\pHarland: So. You came all the way down to the bottom of it. Where the money's made and the fish aren't."), MSGBOX_DEFAULT)
-    msgbox(format("{PLAYER}: The grounds are collapsing. The dredge, the catch, the empty pilings. You've fished this your whole life. You knew before I did."), MSGBOX_DEFAULT)
-    msgbox(format("Harland: Course I knew. Better eye for this water than your whole Corps.\pAnd every season I take her out and add to it. You want to hear me say it plain? I'm helping kill it. There. Said."), MSGBOX_DEFAULT)
-    msgbox(format("Harland: The note on this boat is Mereholt's. The buyer's Mereholt's. The fuel, the ice, the loan against a catch I haven't landed yet -- Mereholt's.\pI stop fishing, I lose her. I lose her, my crew doesn't eat. So I fish it down to bones and I hate every haul. That's the whole arithmetic."), MSGBOX_DEFAULT)
-    msgbox(format("{PLAYER}: …I'm going to write down what I saw. All of it."), MSGBOX_DEFAULT)
-    msgbox(format("Harland: I know you are. I'll not ask you not to.\pJust -- when they read it and decide on nothing, the way they will? Remember I told you they would. So you don't go thinking it was your report that wasn't good enough."), MSGBOX_DEFAULT)
-    msgbox(format("Harland: It was never going to be one report that turned this. It was always going to take all of them. Mine too, if I ever find the spine.\pWrite it true, Ranger. Somebody should, before there's nothing left out there to lie about."), MSGBOX_DEFAULT)
     special(SkaldmereCertTaskMark)
+    release
+    end
+}
+
+script ParcelCoast_GymHarland_Defeated {
+    setflag(FLAG_BADGE06_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    // The survey "talked to Harland" beat -- bit 5 -- completes on the endorsement.
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    special(SkaldmereCertTaskMark)
+    msgbox(format("Harland: That's the Tradewind clearance. Out here it means you can be trusted on the water -- a thing I don't hand out twice.\pTakes me back. Wish I'd less to be resigned about when I give it. Here. You'll want this with it."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM02)
+    msgbox(format("Harland: FLY. Carries you back to any harbour you've already made.\pA fisher's mercy, that. Some days the only kindness is a fast way home. Use it better than I've used my seasons."), MSGBOX_DEFAULT)
     release
     end
 }

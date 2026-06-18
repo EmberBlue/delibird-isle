@@ -297,6 +297,36 @@ ParcelRiver_AnglerTrainer::
 	end
 
 
+ParcelRiver_GymSluice::
+# 224 "data/maps/ParcelRiver/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_GYM4, ParcelRiver_GymSluice_Text_0, ParcelRiver_GymSluice_Text_1, ParcelRiver_GymSluice_Defeated
+# 228 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 229 "data/maps/ParcelRiver/scripts.pory"
+	faceplayer
+# 230 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_GymSluice_Text_2, MSGBOX_DEFAULT
+# 231 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+
+ParcelRiver_GymSluice_Defeated::
+# 236 "data/maps/ParcelRiver/scripts.pory"
+	setflag FLAG_BADGE04_GET
+# 237 "data/maps/ParcelRiver/scripts.pory"
+	call Common_EventScript_PlayGymBadgeFanfare
+# 238 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_GymSluice_Defeated_Text_0, MSGBOX_DEFAULT
+# 239 "data/maps/ParcelRiver/scripts.pory"
+	giveitem ITEM_HM04
+# 240 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_GymSluice_Defeated_Text_1, MSGBOX_DEFAULT
+# 241 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 47 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -576,3 +606,39 @@ ParcelRiver_AnglerTrainer_Text_2:
 	.string "You're the first one came up here to\n"
 	.string "LOOK instead of promise. Means\l"
 	.string "something.$"
+
+ParcelRiver_GymSluice_Text_0:
+# 225 "data/maps/ParcelRiver/scripts.pory"
+	.string "Sluice: Sluice Division. Every drop that\n"
+	.string "crosses this spine is metered, rated,\l"
+	.string "and accounted to someone.\p"
+	.string "You want clearance to work this\n"
+	.string "watershed? Show me you read a ledger as\l"
+	.string "well as a current.$"
+
+ParcelRiver_GymSluice_Text_1:
+# 226 "data/maps/ParcelRiver/scripts.pory"
+	.string "Sluice: …Balanced. Down to the drop. The\n"
+	.string "crossing's yours.$"
+
+ParcelRiver_GymSluice_Text_2:
+# 230 "data/maps/ParcelRiver/scripts.pory"
+	.string "Sluice: Mind the cut upstream. The\n"
+	.string "Board rated it an improvement.\p"
+	.string "I metered it. The water disagrees with\n"
+	.string "the rating.$"
+
+ParcelRiver_GymSluice_Defeated_Text_0:
+# 238 "data/maps/ParcelRiver/scripts.pory"
+	.string "Sluice: That's your Sluice clearance.\n"
+	.string "Line item 04 -- it certifies you fit to\l"
+	.string "move what the river leaves in the way.\p"
+	.string "Signed, sealed, on the ledger.$"
+
+ParcelRiver_GymSluice_Defeated_Text_1:
+# 240 "data/maps/ParcelRiver/scripts.pory"
+	.string "Sluice: STRENGTH. Shoulders a boulder\n"
+	.string "out of a channel where it has no\l"
+	.string "business sitting.\p"
+	.string "The river drops plenty of those. So\n"
+	.string "does the Board.$"

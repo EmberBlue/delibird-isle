@@ -213,3 +213,31 @@ script ParcelRiver_AnglerTrainer {
     msgbox(format("Dell: The Board swears the cut'll bring the fish back. The Board swears a lot of things.\pYou're the first one came up here to LOOK instead of promise. Means something."), MSGBOX_DEFAULT)
     end
 }
+
+// --- Gym 4: the Sluice Division checkpoint (Sluice) -------------------------
+// Mereholt's watershed/sluice operations audits everyone who crosses the river
+// spine. Sluice isn't a believer -- she's an auditor: water is a rights ledger,
+// and the badge is line item 04, a clearance the Corps recognizes. Beating her
+// trips Strength (HM04) -- the field competence to move what the river drops.
+// No type-cliché; a gate worn as paperwork. (§02/§05 water-rights tone.)
+script ParcelRiver_GymSluice {
+    trainerbattle_single(TRAINER_SKALD_GYM4,
+        format("Sluice: Sluice Division. Every drop that crosses this spine is metered, rated, and accounted to someone.\pYou want clearance to work this watershed? Show me you read a ledger as well as a current."),
+        format("Sluice: …Balanced. Down to the drop. The crossing's yours."),
+        ParcelRiver_GymSluice_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Sluice: Mind the cut upstream. The Board rated it an improvement.\pI metered it. The water disagrees with the rating."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRiver_GymSluice_Defeated {
+    setflag(FLAG_BADGE04_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("Sluice: That's your Sluice clearance. Line item 04 -- it certifies you fit to move what the river leaves in the way.\pSigned, sealed, on the ledger."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM04)
+    msgbox(format("Sluice: STRENGTH. Shoulders a boulder out of a channel where it has no business sitting.\pThe river drops plenty of those. So does the Board."), MSGBOX_DEFAULT)
+    release
+    end
+}

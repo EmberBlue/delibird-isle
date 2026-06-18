@@ -17,6 +17,8 @@
 
 const LOCALID_MARSH_HERON   = 1
 const LOCALID_MARSH_POLIWAG = 2
+// LOCALID_MARSH_GATE is resolved from map.json object order via the generated
+// map_event_ids.h (Aune is sight-triggered; no script references the id).
 
 mapscripts ParcelMarsh_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -189,5 +191,31 @@ script ParcelMarsh_Leave {
     closemessage
     warp(MAP_PARCEL_STATION, 15, 16)
     waitstate
+    end
+}
+
+// --- Mereholt clearance checkpoint: the last wall (Aune) --------------------
+// Not a badge, not an HM. The final Mereholt clearance, and the coldest face of
+// the whole access regime: a director, sent to stand at the last open place
+// before the climax. She does not belong in this marsh and she knows it; she
+// has come to log it anyway. The player passes her audit before reaching the
+// waterline where Dr. Heron kneels. Aune is a separate wall -- she does NOT
+// touch Heron's scene; beating her only sets the Marsh clearance flag.
+script ParcelMarsh_GateAune {
+    trainerbattle_single(TRAINER_SKALD_GATE_MARSH,
+        format("Aune: Director, Mereholt. I came out to the end of the road to see what's worth the paperwork.\pNothing past me is cleared until I clear it. Show me why you should reach the water at all."),
+        format("Aune: …Sufficient. The last gate logs you. Go and read what's left to read."),
+        ParcelMarsh_GateAune_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Aune: You're entered. The final clearance, against your card.\pWhat you find past here is no longer the regime's to grant or deny.\nIt was only ever yours to record."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelMarsh_GateAune_Defeated {
+    setflag(FLAG_SKALDMERE_GATE_MARSH)
+    msgbox(format("Aune: Marsh clearance: granted. The last one Mereholt has to give.\pEverything that matters now is downstream of this, and out of our hands. Funny, that."), MSGBOX_DEFAULT)
+    release
     end
 }

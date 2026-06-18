@@ -226,6 +226,36 @@ ParcelFloodbasin_ItemRevive::
 	end
 
 
+ParcelFloodbasin_GymBreen::
+# 168 "data/maps/ParcelFloodbasin/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_GYM3, ParcelFloodbasin_GymBreen_Text_0, ParcelFloodbasin_GymBreen_Text_1, ParcelFloodbasin_GymBreen_Defeated
+# 172 "data/maps/ParcelFloodbasin/scripts.pory"
+	lock
+# 173 "data/maps/ParcelFloodbasin/scripts.pory"
+	faceplayer
+# 174 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_GymBreen_Text_2, MSGBOX_DEFAULT
+# 175 "data/maps/ParcelFloodbasin/scripts.pory"
+	release
+	end
+
+
+ParcelFloodbasin_GymBreen_Defeated::
+# 179 "data/maps/ParcelFloodbasin/scripts.pory"
+	setflag FLAG_BADGE03_GET
+# 180 "data/maps/ParcelFloodbasin/scripts.pory"
+	call Common_EventScript_PlayGymBadgeFanfare
+# 181 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_GymBreen_Defeated_Text_0, MSGBOX_DEFAULT
+# 182 "data/maps/ParcelFloodbasin/scripts.pory"
+	giveitem ITEM_HM06
+# 183 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_GymBreen_Defeated_Text_1, MSGBOX_DEFAULT
+# 184 "data/maps/ParcelFloodbasin/scripts.pory"
+	release
+	end
+
+
 ParcelFloodbasin_FirstEntry_Text_0:
 # 37 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "The trees open onto a low, wide basin.\n"
@@ -385,3 +415,34 @@ ParcelFloodbasin_BasinKidTrainer_Text_2:
 	.string "Piper: She doesn't eat what she\n"
 	.string "catches anymore.\p"
 	.string "Sells it to the people who don't ask.$"
+
+ParcelFloodbasin_GymBreen_Text_0:
+# 169 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "Breen: Logistics. This is a haul road,\n"
+	.string "not a hiking trail.\p"
+	.string "Nobody moves up to the river neck on my\n"
+	.string "road without clearing me first.$"
+
+ParcelFloodbasin_GymBreen_Text_1:
+# 170 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "Breen: …Fine. You can carry weight. Move\n"
+	.string "up.$"
+
+ParcelFloodbasin_GymBreen_Text_2:
+# 174 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "Breen: Cleared. The neck's open to you.\p"
+	.string "Mind the loads coming down -- they\n"
+	.string "don't stop for paperwork.$"
+
+ParcelFloodbasin_GymBreen_Defeated_Text_0:
+# 181 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "Breen: Quarry clearance. Logs you fit\n"
+	.string "to move earth on division ground.\p"
+	.string "Tool's bonded to it. Standard issue.$"
+
+ParcelFloodbasin_GymBreen_Defeated_Text_1:
+# 183 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "Breen: ROCK SMASH. Breaks the rubble\n"
+	.string "that blocks a road.\p"
+	.string "There's plenty of it where you're\n"
+	.string "headed.$"

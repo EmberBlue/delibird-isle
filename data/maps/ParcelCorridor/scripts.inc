@@ -236,6 +236,36 @@ ParcelCorridor_ItemSuperPotion::
 	end
 
 
+ParcelCorridor_GymMirren::
+# 157 "data/maps/ParcelCorridor/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_GYM2, ParcelCorridor_GymMirren_Text_0, ParcelCorridor_GymMirren_Text_1, ParcelCorridor_GymMirren_Defeated
+# 161 "data/maps/ParcelCorridor/scripts.pory"
+	lock
+# 162 "data/maps/ParcelCorridor/scripts.pory"
+	faceplayer
+# 163 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_GymMirren_Text_2, MSGBOX_DEFAULT
+# 164 "data/maps/ParcelCorridor/scripts.pory"
+	release
+	end
+
+
+ParcelCorridor_GymMirren_Defeated::
+# 168 "data/maps/ParcelCorridor/scripts.pory"
+	setflag FLAG_BADGE02_GET
+# 169 "data/maps/ParcelCorridor/scripts.pory"
+	call Common_EventScript_PlayGymBadgeFanfare
+# 170 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_GymMirren_Defeated_Text_0, MSGBOX_DEFAULT
+# 171 "data/maps/ParcelCorridor/scripts.pory"
+	giveitem ITEM_HM05
+# 172 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_GymMirren_Defeated_Text_1, MSGBOX_DEFAULT
+# 173 "data/maps/ParcelCorridor/scripts.pory"
+	release
+	end
+
+
 ParcelCorridor_CulvertScene_Text_0:
 # 41 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Doduo stops.\p"
@@ -420,3 +450,32 @@ ParcelCorridor_ObsCulvert_Text_0:
 	.string "functional.\p"
 	.string "Upstream: broad and braided.\n"
 	.string "Downstream: a single fast channel.$"
+
+ParcelCorridor_GymMirren_Text_0:
+# 158 "data/maps/ParcelCorridor/scripts.pory"
+	.string "Mirren: Subsurface Survey. I sign who\n"
+	.string "goes past this cut and who doesn't.\p"
+	.string "You read rock for a living yet? Show me\n"
+	.string "you read anything at all.$"
+
+ParcelCorridor_GymMirren_Text_1:
+# 159 "data/maps/ParcelCorridor/scripts.pory"
+	.string "Mirren: …Steady under pressure. Noted.$"
+
+ParcelCorridor_GymMirren_Text_2:
+# 163 "data/maps/ParcelCorridor/scripts.pory"
+	.string "Mirren: Cleared provisional. The basin's\n"
+	.string "darker than this.\p"
+	.string "Don't go in blind.$"
+
+ParcelCorridor_GymMirren_Defeated_Text_0:
+# 170 "data/maps/ParcelCorridor/scripts.pory"
+	.string "Mirren: Subsurface clearance. It logs\n"
+	.string "you fit to survey enclosed ground.\p"
+	.string "Comes with the standard kit.$"
+
+ParcelCorridor_GymMirren_Defeated_Text_1:
+# 172 "data/maps/ParcelCorridor/scripts.pory"
+	.string "Mirren: FLASH. Lights a cave or a\n"
+	.string "culvert from the inside.\p"
+	.string "You'll want it where the daylight stops.$"

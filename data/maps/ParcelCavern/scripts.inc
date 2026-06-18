@@ -1,34 +1,34 @@
 ParcelCavern_MapScripts::
-# 13 "data/maps/ParcelCavern/scripts.pory"
+# 15 "data/maps/ParcelCavern/scripts.pory"
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, ParcelCavern_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
 ParcelCavern_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-# 14 "data/maps/ParcelCavern/scripts.pory"
+# 16 "data/maps/ParcelCavern/scripts.pory"
 	map_script_2 VAR_TEMP_0, 0, ParcelCavern_SetMapVar
 	.2byte 0
 
 
 ParcelCavern_SetMapVar::
-# 19 "data/maps/ParcelCavern/scripts.pory"
+# 21 "data/maps/ParcelCavern/scripts.pory"
 	setvar VAR_TEMP_0, 1
 	end
 
 
 ParcelCavern_FirstEntry::
-# 24 "data/maps/ParcelCavern/scripts.pory"
+# 26 "data/maps/ParcelCavern/scripts.pory"
 	setvar VAR_TEMP_1, 1
-# 25 "data/maps/ParcelCavern/scripts.pory"
+# 27 "data/maps/ParcelCavern/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_CAVERN_ARRIVAL, ParcelCavern_FirstEntry_2
-# 28 "data/maps/ParcelCavern/scripts.pory"
-	lockall
-# 29 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_FirstEntry_Text_0, MSGBOX_DEFAULT
 # 30 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_FirstEntry_Text_1, MSGBOX_DEFAULT
+	lockall
 # 31 "data/maps/ParcelCavern/scripts.pory"
-	setflag FLAG_SKALDMERE_CAVERN_ARRIVAL
+	msgbox ParcelCavern_FirstEntry_Text_0, MSGBOX_DEFAULT
 # 32 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_FirstEntry_Text_1, MSGBOX_DEFAULT
+# 33 "data/maps/ParcelCavern/scripts.pory"
+	setflag FLAG_SKALDMERE_CAVERN_ARRIVAL
+# 34 "data/maps/ParcelCavern/scripts.pory"
 	releaseall
 	end
 
@@ -37,78 +37,102 @@ ParcelCavern_FirstEntry_2:
 
 
 ParcelCavern_Debris::
-# 38 "data/maps/ParcelCavern/scripts.pory"
-	lock
-# 39 "data/maps/ParcelCavern/scripts.pory"
-	faceplayer
 # 40 "data/maps/ParcelCavern/scripts.pory"
+	lock
+# 41 "data/maps/ParcelCavern/scripts.pory"
+	faceplayer
+# 42 "data/maps/ParcelCavern/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_CAVERN_REWARD, ParcelCavern_Debris_2
-# 45 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_Debris_Text_1, MSGBOX_DEFAULT
-# 46 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_Debris_Text_2, MSGBOX_DEFAULT
 # 47 "data/maps/ParcelCavern/scripts.pory"
-	playse SE_ICE_CRACK
+	msgbox ParcelCavern_Debris_Text_1, MSGBOX_DEFAULT
 # 48 "data/maps/ParcelCavern/scripts.pory"
-	closemessage
+	msgbox ParcelCavern_Debris_Text_2, MSGBOX_DEFAULT
 # 49 "data/maps/ParcelCavern/scripts.pory"
-	delay 20
+	playse SE_ICE_CRACK
 # 50 "data/maps/ParcelCavern/scripts.pory"
-	giveitem ITEM_NEVER_MELT_ICE
+	closemessage
 # 51 "data/maps/ParcelCavern/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 2
+	delay 20
 # 52 "data/maps/ParcelCavern/scripts.pory"
-	setflag FLAG_SKALDMERE_CAVERN_REWARD
+	giveitem ITEM_NEVER_MELT_ICE
 # 53 "data/maps/ParcelCavern/scripts.pory"
-	removeobject 1
+	giveitem ITEM_RARE_CANDY, 2
 # 54 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_Debris_Text_3, MSGBOX_DEFAULT
+	setflag FLAG_SKALDMERE_CAVERN_REWARD
 # 55 "data/maps/ParcelCavern/scripts.pory"
+	removeobject 1
+# 56 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_Debris_Text_3, MSGBOX_DEFAULT
+# 57 "data/maps/ParcelCavern/scripts.pory"
 	release
 	end
 
 ParcelCavern_Debris_2:
-# 41 "data/maps/ParcelCavern/scripts.pory"
+# 43 "data/maps/ParcelCavern/scripts.pory"
 	msgbox ParcelCavern_Debris_Text_0, MSGBOX_DEFAULT
-# 42 "data/maps/ParcelCavern/scripts.pory"
+# 44 "data/maps/ParcelCavern/scripts.pory"
 	release
 	end
 
 
 ParcelCavern_Delibird::
-# 61 "data/maps/ParcelCavern/scripts.pory"
-	lock
-# 62 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_Delibird_Text_0, MSGBOX_DEFAULT
 # 63 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_Delibird_Text_1, MSGBOX_DEFAULT
+	lock
 # 64 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_Delibird_Text_0, MSGBOX_DEFAULT
+# 65 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_Delibird_Text_1, MSGBOX_DEFAULT
+# 66 "data/maps/ParcelCavern/scripts.pory"
 	release
 	end
 
 
 ParcelCavern_Heart::
-# 69 "data/maps/ParcelCavern/scripts.pory"
+# 71 "data/maps/ParcelCavern/scripts.pory"
 	msgbox ParcelCavern_Heart_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCavern_Leave::
-# 74 "data/maps/ParcelCavern/scripts.pory"
-	lockall
-# 75 "data/maps/ParcelCavern/scripts.pory"
-	msgbox ParcelCavern_Leave_Text_0, MSGBOX_DEFAULT
 # 76 "data/maps/ParcelCavern/scripts.pory"
-	closemessage
+	lockall
 # 77 "data/maps/ParcelCavern/scripts.pory"
-	warp MAP_PARCEL_DELIBIRD, 20, 10
+	msgbox ParcelCavern_Leave_Text_0, MSGBOX_DEFAULT
 # 78 "data/maps/ParcelCavern/scripts.pory"
+	closemessage
+# 79 "data/maps/ParcelCavern/scripts.pory"
+	warp MAP_PARCEL_DELIBIRD, 20, 10
+# 80 "data/maps/ParcelCavern/scripts.pory"
 	waitstate
 	end
 
 
+ParcelCavern_GateKelda::
+# 92 "data/maps/ParcelCavern/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_GATE_CAVERN, ParcelCavern_GateKelda_Text_0, ParcelCavern_GateKelda_Text_1, ParcelCavern_GateKelda_Defeated
+# 96 "data/maps/ParcelCavern/scripts.pory"
+	lock
+# 97 "data/maps/ParcelCavern/scripts.pory"
+	faceplayer
+# 98 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_GateKelda_Text_2, MSGBOX_DEFAULT
+# 99 "data/maps/ParcelCavern/scripts.pory"
+	release
+	end
+
+
+ParcelCavern_GateKelda_Defeated::
+# 104 "data/maps/ParcelCavern/scripts.pory"
+	setflag FLAG_SKALDMERE_GATE_CAVERN
+# 105 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_GateKelda_Defeated_Text_0, MSGBOX_DEFAULT
+# 106 "data/maps/ParcelCavern/scripts.pory"
+	release
+	end
+
+
 ParcelCavern_FirstEntry_Text_0:
-# 29 "data/maps/ParcelCavern/scripts.pory"
+# 31 "data/maps/ParcelCavern/scripts.pory"
 	.string "Your ranger lamp throws a long cold\n"
 	.string "light, and the cavern answers it --\l"
 	.string "walls of old blue ice, crystal hung from\l"
@@ -118,7 +142,7 @@ ParcelCavern_FirstEntry_Text_0:
 	.string "still can.$"
 
 ParcelCavern_FirstEntry_Text_1:
-# 30 "data/maps/ParcelCavern/scripts.pory"
+# 32 "data/maps/ParcelCavern/scripts.pory"
 	.string "This is the cold the festival is named\n"
 	.string "for, all of it, retreated into one room\l"
 	.string "under the mountain.\p"
@@ -127,12 +151,12 @@ ParcelCavern_FirstEntry_Text_1:
 	.string "feels like a held breath.$"
 
 ParcelCavern_Debris_Text_0:
-# 41 "data/maps/ParcelCavern/scripts.pory"
+# 43 "data/maps/ParcelCavern/scripts.pory"
 	.string "The slab is winched aside. Cold air pours\n"
 	.string "from the hollow it kept shut.$"
 
 ParcelCavern_Debris_Text_1:
-# 45 "data/maps/ParcelCavern/scripts.pory"
+# 47 "data/maps/ParcelCavern/scripts.pory"
 	.string "A slab of ceiling-ice has sheared off\n"
 	.string "and jammed the mouth of a side hollow\l"
 	.string "-- too heavy to shift, too solid to\l"
@@ -140,7 +164,7 @@ ParcelCavern_Debris_Text_1:
 	.string "if you could.$"
 
 ParcelCavern_Debris_Text_2:
-# 46 "data/maps/ParcelCavern/scripts.pory"
+# 48 "data/maps/ParcelCavern/scripts.pory"
 	.string "You unfold the ranger winch from the\n"
 	.string "field kit, set the hook, and lean into it.\l"
 	.string "Slow, no sudden force. The slab grinds\l"
@@ -150,7 +174,7 @@ ParcelCavern_Debris_Text_2:
 	.string "place it's in.$"
 
 ParcelCavern_Debris_Text_3:
-# 54 "data/maps/ParcelCavern/scripts.pory"
+# 56 "data/maps/ParcelCavern/scripts.pory"
 	.string "In the hollow: a knot of true everfrost,\n"
 	.string "and supplies an old surveyor cached\l"
 	.string "here and never came back for.\p"
@@ -158,7 +182,7 @@ ParcelCavern_Debris_Text_3:
 	.string "tin. It is older than you are.$"
 
 ParcelCavern_Delibird_Text_0:
-# 62 "data/maps/ParcelCavern/scripts.pory"
+# 64 "data/maps/ParcelCavern/scripts.pory"
 	.string "A single Delibird sits at the lip of the\n"
 	.string "deep pool, very still, watching the ice\l"
 	.string "it can no longer count on.\p"
@@ -168,7 +192,7 @@ ParcelCavern_Delibird_Text_0:
 	.string "the way the old come home.$"
 
 ParcelCavern_Delibird_Text_1:
-# 63 "data/maps/ParcelCavern/scripts.pory"
+# 65 "data/maps/ParcelCavern/scripts.pory"
 	.string "It looks at you, and at the lamp, and\n"
 	.string "seems to decide you are not the thaw.\p"
 	.string "It goes back to watching the water. You\n"
@@ -177,7 +201,7 @@ ParcelCavern_Delibird_Text_1:
 	.string "giving it to a bird.$"
 
 ParcelCavern_Heart_Text_0:
-# 69 "data/maps/ParcelCavern/scripts.pory"
+# 71 "data/maps/ParcelCavern/scripts.pory"
 	.string "The deepest pool. The water here has\n"
 	.string "not been warm in ten thousand years,\l"
 	.string "and the islanders measure their winters\l"
@@ -188,6 +212,32 @@ ParcelCavern_Heart_Text_0:
 	.string "down anyway. That is the job.$"
 
 ParcelCavern_Leave_Text_0:
-# 75 "data/maps/ParcelCavern/scripts.pory"
+# 77 "data/maps/ParcelCavern/scripts.pory"
 	.string "The mouth of the cavern, and the bright\n"
 	.string "thin daylight of the summit beyond.$"
+
+ParcelCavern_GateKelda_Text_0:
+# 93 "data/maps/ParcelCavern/scripts.pory"
+	.string "Kelda: Deepwater Ops. Even the cold is\n"
+	.string "logged down here, provisional.\p"
+	.string "You want clearance to read the heart of\n"
+	.string "this place? Earn the audit first.$"
+
+ParcelCavern_GateKelda_Text_1:
+# 94 "data/maps/ParcelCavern/scripts.pory"
+	.string "Kelda: …Recorded. You read the cold;\n"
+	.string "now the cold reads you.$"
+
+ParcelCavern_GateKelda_Text_2:
+# 98 "data/maps/ParcelCavern/scripts.pory"
+	.string "Kelda: You're entered against your\n"
+	.string "card. The everfrost is on Mereholt's\l"
+	.string "books--\n"
+	.string "and now, so is your competence to stand\l"
+	.string "near it.$"
+
+ParcelCavern_GateKelda_Defeated_Text_0:
+# 105 "data/maps/ParcelCavern/scripts.pory"
+	.string "Kelda: Cavern clearance: logged and\n"
+	.string "filed. Deepwater keeps a close ledger.\p"
+	.string "No one is granted the cold. You took it.$"

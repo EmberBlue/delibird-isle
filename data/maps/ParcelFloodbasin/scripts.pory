@@ -158,3 +158,29 @@ script ParcelFloodbasin_ItemRevive {
     finditem(ITEM_REVIVE)
     end
 }
+
+// --- Gym 3: Mereholt Logistics / Quarry & Roadworks checkpoint (Breen) -------
+// Access control wearing a hard hat. Breen runs the haul road and decides who
+// it carries. Beating him files the Quarry clearance (Badge 3), logged as
+// fit-to-move-earth -- it releases HM06 Rock Smash. A checkpoint on the
+// up-road below the River neck.
+script ParcelFloodbasin_GymBreen {
+    trainerbattle_single(TRAINER_SKALD_GYM3,
+        format("Breen: Logistics. This is a haul road, not a hiking trail.\pNobody moves up to the river neck on my road without clearing me first."),
+        format("Breen: …Fine. You can carry weight. Move up."),
+        ParcelFloodbasin_GymBreen_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Breen: Cleared. The neck's open to you.\pMind the loads coming down -- they don't stop for paperwork."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_GymBreen_Defeated {
+    setflag(FLAG_BADGE03_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("Breen: Quarry clearance. Logs you fit to move earth on division ground.\pTool's bonded to it. Standard issue."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM06)
+    msgbox(format("Breen: ROCK SMASH. Breaks the rubble that blocks a road.\pThere's plenty of it where you're headed."), MSGBOX_DEFAULT)
+    release
+    end
+}

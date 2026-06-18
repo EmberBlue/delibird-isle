@@ -218,3 +218,32 @@ script ParcelHighlands_SurveyorTrainer {
     msgbox(format("Kass, lower:\pKass: Off the record? I've moved my stakes up the slope three years running. Same line your Ilex works.\pWe measure the same thing. They just pay me to call it opportunity."), MSGBOX_DEFAULT)
     end
 }
+
+// --- Gym 5: the Vale Division checkpoint (Vale) -----------------------------
+// Mereholt Permafrost, Highland Operations -- the last clearance before the
+// ferry. Vale stands the corridor at the climb's mouth and audits who leaves
+// the slope. The cold is in her division's name, not her tone: the badge is a
+// corporate clearance (line item 05), and the HM is framed as a meltwater
+// permit -- the right to move standing thaw-water -- not as ice-flavor. The
+// final gate before the climax; the ground is already past saving (§04/§10).
+script ParcelHighlands_GymVale {
+    trainerbattle_single(TRAINER_SKALD_GYM5,
+        format("Vale: Highland Operations. Past this point the ground is no longer ours to fix -- only to clear people off of, in order.\pNobody leaves this slope on my ledger unproven. Show me you've earned the meltwater permit."),
+        format("Vale: …Cleared. You go down with it signed."),
+        ParcelHighlands_GymVale_Defeated)
+    lock
+    faceplayer
+    msgbox(format("Vale: The ferry runs from the lowland landing. Take what you witnessed here with you.\pIt's the only thing that leaves this slope unspoiled."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelHighlands_GymVale_Defeated {
+    setflag(FLAG_BADGE05_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("Vale: Vale clearance. Line item 05 -- the last one Highland Operations issues before the water.\pIt certifies you fit to cross what the thaw has put in the way."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM03)
+    msgbox(format("Vale: SURF. A meltwater permit, in plain terms -- it moves you over the standing thaw the slope keeps making.\pThere's more of it every season. We don't advertise that."), MSGBOX_DEFAULT)
+    release
+    end
+}

@@ -20,6 +20,7 @@ const LOCALID_DEL_GIVER    = 3
 const LOCALID_DEL_FISHER   = 4
 const LOCALID_DEL_RELIEF   = 5
 const LOCALID_DEL_SAILOR   = 6
+const LOCALID_DEL_GYM      = 7   // Ilex: Gym 8, the aerial-survey competency test
 
 mapscripts ParcelDelibird_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -217,5 +218,35 @@ script ParcelDelibird_RevelerTrainer {
         format("Noel: A Ranger! At Midwinter! You HAVE to battle me, it's tradition.\pLoser owes the winner cocoa. We don't keep score with money up here -- we keep it with cocoa."),
         format("Noel: Awww. Fine, fine -- cocoa's on me!\nThat's the best way to lose anyhow."))
     msgbox(format("Noel: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
+    end
+}
+
+// --- Gym 8: Ilex, Skaldmere Survey -- the aerial-survey competency test ------
+// Not a power duel. Ilex maps change and timelines, not solutions (§00/§04/§05),
+// and carries the red cloth. The festival is an interlude, not a survey -- so
+// this gym touches no certification machine. It is a structural competency
+// check: read a place from above, the way a surveyor does, and you earn the
+// Skyline clearance (Badge 8), which lights up HM07 Waterfall. Quiet, exact,
+// faintly unsettling. The dread is the player's to bring.
+script ParcelDelibird_GymIlex {
+    trainerbattle_single(TRAINER_SKALD_GYM8,
+        format("Ilex stands a little apart from the lights, a folded square of red cloth in one hand, eyes on the high snowline above the cabins.\pIlex: Surveyor, Skaldmere Survey. I don't fix anything. I measure how fast it's going.\pIlex: You read places on the ground -- snares, residue, the catch on the pallet. I read them from above. The whole crescent of an island at once, before and after, change against change.\pIlex: A field hand should be able to do both. Show me you can hold a line of sight as steady as a line of evidence. From up here, looking down."),
+        format("Ilex: Steady. You kept the frame. Few do, this high up."),
+        ParcelDelibird_GymIlex_Defeated)
+    // Re-talk, after the clearance is earned.
+    lock
+    faceplayer
+    msgbox(format("Ilex turns the red cloth over once, then pockets it.\pIlex: The snowline I'm watching is lower than last Midwinter. I'll have the number before the festival packs up.\pIlex: Numbers don't save a place. They just make it impossible to say later that nobody knew. Carry that with the badge."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibird_GymIlex_Defeated {
+    setflag(FLAG_BADGE08_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("Ilex: The Skyline clearance. It marks you fit to read a place from any height -- and to be trusted on the harder water.\pYou'll want the tool that goes with it."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM07)
+    msgbox(format("Ilex: WATERFALL. It takes you up the climbs that turn most people back.\pThe corridor inland has a few. That's where the last of this gets written. You're nearly ready for it."), MSGBOX_DEFAULT)
+    release
     end
 }

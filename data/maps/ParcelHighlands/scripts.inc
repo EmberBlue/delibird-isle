@@ -315,6 +315,36 @@ ParcelHighlands_SurveyorTrainer::
 	end
 
 
+ParcelHighlands_GymVale::
+# 230 "data/maps/ParcelHighlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_GYM5, ParcelHighlands_GymVale_Text_0, ParcelHighlands_GymVale_Text_1, ParcelHighlands_GymVale_Defeated
+# 234 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 235 "data/maps/ParcelHighlands/scripts.pory"
+	faceplayer
+# 236 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_GymVale_Text_2, MSGBOX_DEFAULT
+# 237 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+
+ParcelHighlands_GymVale_Defeated::
+# 242 "data/maps/ParcelHighlands/scripts.pory"
+	setflag FLAG_BADGE05_GET
+# 243 "data/maps/ParcelHighlands/scripts.pory"
+	call Common_EventScript_PlayGymBadgeFanfare
+# 244 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_GymVale_Defeated_Text_0, MSGBOX_DEFAULT
+# 245 "data/maps/ParcelHighlands/scripts.pory"
+	giveitem ITEM_HM03
+# 246 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_GymVale_Defeated_Text_1, MSGBOX_DEFAULT
+# 247 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 42 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The trail climbs out of the trees and\n"
@@ -637,3 +667,42 @@ ParcelHighlands_SurveyorTrainer_Text_2:
 	.string "running. Same line your Ilex works.\p"
 	.string "We measure the same thing. They just\n"
 	.string "pay me to call it opportunity.$"
+
+ParcelHighlands_GymVale_Text_0:
+# 231 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Vale: Highland Operations. Past this\n"
+	.string "point the ground is no longer ours to\l"
+	.string "fix -- only to clear people off of, in\l"
+	.string "order.\p"
+	.string "Nobody leaves this slope on my ledger\n"
+	.string "unproven. Show me you've earned the\l"
+	.string "meltwater permit.$"
+
+ParcelHighlands_GymVale_Text_1:
+# 232 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Vale: …Cleared. You go down with it\n"
+	.string "signed.$"
+
+ParcelHighlands_GymVale_Text_2:
+# 236 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Vale: The ferry runs from the lowland\n"
+	.string "landing. Take what you witnessed here\l"
+	.string "with you.\p"
+	.string "It's the only thing that leaves this\n"
+	.string "slope unspoiled.$"
+
+ParcelHighlands_GymVale_Defeated_Text_0:
+# 244 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Vale: Vale clearance. Line item 05 --\n"
+	.string "the last one Highland Operations issues\l"
+	.string "before the water.\p"
+	.string "It certifies you fit to cross what the\n"
+	.string "thaw has put in the way.$"
+
+ParcelHighlands_GymVale_Defeated_Text_1:
+# 246 "data/maps/ParcelHighlands/scripts.pory"
+	.string "Vale: SURF. A meltwater permit, in plain\n"
+	.string "terms -- it moves you over the standing\l"
+	.string "thaw the slope keeps making.\p"
+	.string "There's more of it every season. We\n"
+	.string "don't advertise that.$"
