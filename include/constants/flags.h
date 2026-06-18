@@ -89,8 +89,8 @@
 #define FLAG_SKALDMERE_GYM5_GATE 0x4B // Skaldmere: Highlands Operations checkpoint cleared
 #define FLAG_SKALDMERE_GYM6_GATE 0x4C // Skaldmere: Coast checkpoint cleared
 #define FLAG_SKALDMERE_GYM8_GATE 0x4D // Skaldmere: Delibird Aerial Survey checkpoint cleared
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_SKALDMERE_GATE_STATION 0x4E // Skaldmere: Station checkpoint cleared
+#define FLAG_SKALDMERE_GATE_ISLE    0x4F // Skaldmere: Isle harbor checkpoint cleared
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -98,8 +98,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_SKALDMERE_GATE_CAVERN           0x54  // Skaldmere: Cavern Deepwater checkpoint cleared
+#define FLAG_SKALDMERE_GATE_MARSH            0x55  // Skaldmere: Marsh final checkpoint cleared
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57

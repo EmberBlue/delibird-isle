@@ -894,9 +894,14 @@
 #define TRAINER_SKALD_GYM5                    879
 #define TRAINER_SKALD_GYM6                    880
 #define TRAINER_SKALD_GYM8                    881
+// Clearance-only gatekeepers (no badge/HM -- pure checkpoints, push to 12)
+#define TRAINER_SKALD_GATE_STATION            882
+#define TRAINER_SKALD_GATE_ISLE               883
+#define TRAINER_SKALD_GATE_CAVERN             884
+#define TRAINER_SKALD_GATE_MARSH              885
 
-#define TRAINERS_COUNT                      882
-#define MAX_TRAINERS_COUNT                  882
+#define TRAINERS_COUNT                      886
+#define MAX_TRAINERS_COUNT                  886
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

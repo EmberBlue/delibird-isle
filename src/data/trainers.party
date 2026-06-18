@@ -17373,3 +17373,78 @@ Level: 42
 Pelipper
 Level: 42
 
+=== TRAINER_SKALD_GATE_STATION ===
+Name: WARD
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Poochyena
+Level: 8
+
+Wingull
+Level: 9
+
+Electrike
+Level: 10
+
+=== TRAINER_SKALD_GATE_ISLE ===
+Name: MOORE
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 29
+
+Sharpedo
+Level: 30
+
+Tentacruel
+Level: 31
+
+=== TRAINER_SKALD_GATE_CAVERN ===
+Name: KELDA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lapras
+Level: 42
+
+Lanturn
+Level: 43
+
+Kingdra
+Level: 44
+
+=== TRAINER_SKALD_GATE_MARSH ===
+Name: AUNE
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gyarados
+Level: 52
+
+Walrein
+Level: 53
+
+Tyranitar
+Level: 54
+
+Salamence
+Level: 55
+
