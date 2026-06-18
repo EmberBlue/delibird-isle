@@ -17253,3 +17253,123 @@ Level: 15
 Wingull
 Level: 16
 
+=== TRAINER_SKALD_GYM2 ===
+Name: MIRREN
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 17
+
+Sandshrew
+Level: 18
+
+Onix
+Level: 19
+
+=== TRAINER_SKALD_GYM3 ===
+Name: BREEN
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Nosepass
+Level: 21
+
+Makuhita
+Level: 21
+
+Graveler
+Level: 22
+
+Rhyhorn
+Level: 23
+
+=== TRAINER_SKALD_GYM4 ===
+Name: SLUICE
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Quagsire
+Level: 24
+
+Pelipper
+Level: 25
+
+Whiscash
+Level: 26
+
+=== TRAINER_SKALD_GYM5 ===
+Name: VALE
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sneasel
+Level: 28
+
+Glalie
+Level: 29
+
+Piloswine
+Level: 30
+
+Lapras
+Level: 31
+
+=== TRAINER_SKALD_GYM6 ===
+Name: HARLAND
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gyarados
+Level: 34
+
+Pelipper
+Level: 35
+
+Sharpedo
+Level: 36
+
+Tentacruel
+Level: 37
+
+=== TRAINER_SKALD_GYM8 ===
+Name: ILEX
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swellow
+Level: 40
+
+Skarmory
+Level: 41
+
+Altaria
+Level: 42
+
+Pelipper
+Level: 42
+

@@ -888,9 +888,15 @@
 #define TRAINER_SKALD_ICE                     873
 #define TRAINER_SKALD_DIRECTOR                874
 #define TRAINER_SKALD_GYM1                    875
+#define TRAINER_SKALD_GYM2                    876
+#define TRAINER_SKALD_GYM3                    877
+#define TRAINER_SKALD_GYM4                    878
+#define TRAINER_SKALD_GYM5                    879
+#define TRAINER_SKALD_GYM6                    880
+#define TRAINER_SKALD_GYM8                    881
 
-#define TRAINERS_COUNT                      876
-#define MAX_TRAINERS_COUNT                  877
+#define TRAINERS_COUNT                      882
+#define MAX_TRAINERS_COUNT                  882
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

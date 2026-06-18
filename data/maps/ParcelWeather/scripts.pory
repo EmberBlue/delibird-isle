@@ -112,6 +112,12 @@ script ParcelWeather_Director {
     giveitem(ITEM_HEAT_ROCK)
     giveitem(ITEM_SMOOTH_ROCK)
     giveitem(ITEM_ICY_ROCK)
+    // Gym 7: the Climate Station clearance (Badge 7 -> Dive). A Mereholt stamp
+    // bundled with the kit; Vane resents the paperwork, hands it over anyway.
+    setflag(FLAG_BADGE07_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("Vane: And the stamp that rides with the kit -- a Deepwater clearance. Mereholt's notion, not mine.\pIt authorizes the gear that goes under the water, not only over it. DIVE."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM08)
     setflag(FLAG_SKALDMERE_WEATHER_CLEARED)
     msgbox(format("Vane: Now go. Before I remember which side of this fence pays me."), MSGBOX_DEFAULT)
     release

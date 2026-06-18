@@ -16,7 +16,8 @@ const LOCALID_WET_POACHER_B = 4
 const LOCALID_WET_ENFORCER  = 5
 const LOCALID_WET_KARP_1    = 6
 const LOCALID_WET_KARP_2    = 7
-const LOCALID_WET_GYM       = 8
+// LOCALID_WET_GYM is resolved from map.json object order via the generated
+// map_event_ids.h (the gym is sight-triggered; no script references the id).
 
 mapscripts ParcelWetlands_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelWetlands_OnTransition

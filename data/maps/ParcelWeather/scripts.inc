@@ -107,11 +107,19 @@ ParcelWeather_Director::
 	giveitem ITEM_SMOOTH_ROCK
 # 114 "data/maps/ParcelWeather/scripts.pory"
 	giveitem ITEM_ICY_ROCK
-# 115 "data/maps/ParcelWeather/scripts.pory"
-	setflag FLAG_SKALDMERE_WEATHER_CLEARED
-# 116 "data/maps/ParcelWeather/scripts.pory"
-	msgbox ParcelWeather_Director_Text_11, MSGBOX_DEFAULT
 # 117 "data/maps/ParcelWeather/scripts.pory"
+	setflag FLAG_BADGE07_GET
+# 118 "data/maps/ParcelWeather/scripts.pory"
+	call Common_EventScript_PlayGymBadgeFanfare
+# 119 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Director_Text_11, MSGBOX_DEFAULT
+# 120 "data/maps/ParcelWeather/scripts.pory"
+	giveitem ITEM_HM08
+# 121 "data/maps/ParcelWeather/scripts.pory"
+	setflag FLAG_SKALDMERE_WEATHER_CLEARED
+# 122 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Director_Text_12, MSGBOX_DEFAULT
+# 123 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
@@ -152,31 +160,31 @@ ParcelWeather_Director_14:
 
 
 ParcelWeather_ReturnFerry::
-# 122 "data/maps/ParcelWeather/scripts.pory"
+# 128 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 123 "data/maps/ParcelWeather/scripts.pory"
+# 129 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 124 "data/maps/ParcelWeather/scripts.pory"
+# 130 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_ReturnFerry_Text_0, MSGBOX_YESNO
-# 125 "data/maps/ParcelWeather/scripts.pory"
+# 131 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_ReturnFerry_2
-# 130 "data/maps/ParcelWeather/scripts.pory"
+# 136 "data/maps/ParcelWeather/scripts.pory"
 	closemessage
-# 131 "data/maps/ParcelWeather/scripts.pory"
+# 137 "data/maps/ParcelWeather/scripts.pory"
 	playse SE_SHIP
-# 132 "data/maps/ParcelWeather/scripts.pory"
+# 138 "data/maps/ParcelWeather/scripts.pory"
 	delay 40
-# 133 "data/maps/ParcelWeather/scripts.pory"
+# 139 "data/maps/ParcelWeather/scripts.pory"
 	warp MAP_PARCEL_ISLE, 41, 48
-# 134 "data/maps/ParcelWeather/scripts.pory"
+# 140 "data/maps/ParcelWeather/scripts.pory"
 	waitstate
 	end
 
 ParcelWeather_ReturnFerry_2:
-# 126 "data/maps/ParcelWeather/scripts.pory"
+# 132 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_ReturnFerry_Text_1, MSGBOX_DEFAULT
-# 127 "data/maps/ParcelWeather/scripts.pory"
+# 133 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
@@ -379,17 +387,25 @@ ParcelWeather_Director_Text_10:
 	.string "knows it's coming.$"
 
 ParcelWeather_Director_Text_11:
-# 116 "data/maps/ParcelWeather/scripts.pory"
+# 119 "data/maps/ParcelWeather/scripts.pory"
+	.string "Vane: And the stamp that rides with the\n"
+	.string "kit -- a Deepwater clearance.\l"
+	.string "Mereholt's notion, not mine.\p"
+	.string "It authorizes the gear that goes under\n"
+	.string "the water, not only over it. DIVE.$"
+
+ParcelWeather_Director_Text_12:
+# 122 "data/maps/ParcelWeather/scripts.pory"
 	.string "Vane: Now go. Before I remember which\n"
 	.string "side of this fence pays me.$"
 
 ParcelWeather_ReturnFerry_Text_0:
-# 124 "data/maps/ParcelWeather/scripts.pory"
+# 130 "data/maps/ParcelWeather/scripts.pory"
 	.string "Sailor: Back to the dock town, Ranger?\p"
 	.string "Honest air out there, at least.\n"
 	.string "Whatever they sell in here, it isn't\l"
 	.string "that.$"
 
 ParcelWeather_ReturnFerry_Text_1:
-# 126 "data/maps/ParcelWeather/scripts.pory"
+# 132 "data/maps/ParcelWeather/scripts.pory"
 	.string "Sailor: Take your time. Mind the fans.$"

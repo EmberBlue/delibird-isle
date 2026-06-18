@@ -83,12 +83,12 @@
 #define FLAG_SKALDMERE_RANGER_KIT    0x45 // Skaldmere: ranger field-kit upgrade (Lamp + Winch tools)
 #define FLAG_SKALDMERE_CAVERN_ARRIVAL 0x46 // Skaldmere: §09 Crystal Cavern first entry
 #define FLAG_SKALDMERE_CAVERN_REWARD 0x47 // Skaldmere: §09 Crystal Cavern winch-cleared reward taken
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
+#define FLAG_SKALDMERE_GYM2_GATE 0x48 // Skaldmere: Corridor Subsurface checkpoint cleared
+#define FLAG_SKALDMERE_GYM3_GATE 0x49 // Skaldmere: Floodbasin Quarry checkpoint cleared
+#define FLAG_SKALDMERE_GYM4_GATE 0x4A // Skaldmere: River Watershed checkpoint cleared
+#define FLAG_SKALDMERE_GYM5_GATE 0x4B // Skaldmere: Highlands Operations checkpoint cleared
+#define FLAG_SKALDMERE_GYM6_GATE 0x4C // Skaldmere: Coast checkpoint cleared
+#define FLAG_SKALDMERE_GYM8_GATE 0x4D // Skaldmere: Delibird Aerial Survey checkpoint cleared
 #define FLAG_UNUSED_0x04E    0x4E // Unused Flag
 #define FLAG_UNUSED_0x04F    0x4F // Unused Flag
 
