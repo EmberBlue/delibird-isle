@@ -795,6 +795,14 @@ static const struct MenuAction sSkaldManifestOptions[] =
     {COMPOUND_STRING("She")},
 };
 
+static const struct MenuAction sSkaldFerryOptions[] =
+{
+    {COMPOUND_STRING("Delibird Isle")},
+    {COMPOUND_STRING("Mereholt Coast")},
+    {COMPOUND_STRING("Climate Station")},
+    {COMPOUND_STRING("Stay ashore")},
+};
+
 static const struct MultichoiceListStruct sMultichoiceLists[] =
 {
     [MULTI_BRINEY_ON_DEWFORD]          = MULTICHOICE(MultichoiceList_BrineyOnDewford),
@@ -913,6 +921,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_SKALD_MANIFEST]             = MULTICHOICE(sSkaldManifestOptions),
+    [MULTI_SKALD_FERRY]                = MULTICHOICE(sSkaldFerryOptions),
 };
 
 const u8 *const gStdStrings[] =
