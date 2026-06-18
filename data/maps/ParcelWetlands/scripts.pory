@@ -16,6 +16,7 @@ const LOCALID_WET_POACHER_B = 4
 const LOCALID_WET_ENFORCER  = 5
 const LOCALID_WET_KARP_1    = 6
 const LOCALID_WET_KARP_2    = 7
+const LOCALID_WET_GYM       = 8
 
 mapscripts ParcelWetlands_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelWetlands_OnTransition
@@ -301,5 +302,33 @@ script ParcelWetlands_ForagerTrainer {
 
 script ParcelWetlands_ItemAntidote {
     finditem(ITEM_ANTIDOTE)
+    end
+}
+
+// --- Gym 1: the Tidewater Division checkpoint (Tarn) -------------------------
+// Mereholt's hydrology division gatekeeps the marsh. Beating Tarn earns the
+// Tidal clearance (Badge 1), which the Corps recognizes as field competence --
+// it lights up HM01 Cut (vanilla badge->field-move gating). The first real
+// gate; the §08 survey credential is separate (story), this is the structure.
+script ParcelWetlands_GymTarn {
+    trainerbattle_single(TRAINER_SKALD_GYM1,
+        format("Tarn: The Tidewater Division reads every drop that leaves this marsh.\pYou want to pass? Show me you can read the water too."),
+        format("Tarn: …Hm. The current's yours, then."),
+        ParcelWetlands_GymTarn_Defeated)
+    // Re-talk, after the badge is earned:
+    lock
+    faceplayer
+    msgbox(format("Tarn: A provisional who can actually fight.\pUse that clearance well. The water upstream is worse."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlands_GymTarn_Defeated {
+    setflag(FLAG_BADGE01_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("Tarn: That's the Tidal clearance. It marks you fit to carry field tools.\pStarting with this one."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM01)
+    msgbox(format("Tarn: CUT. Clears deadfall and overgrowth in the field.\pThe marsh has plenty of both, lately."), MSGBOX_DEFAULT)
+    release
     end
 }

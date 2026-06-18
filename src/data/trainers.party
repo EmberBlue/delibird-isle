@@ -17234,3 +17234,22 @@ Level: 37
 
 Walrein
 Level: 38
+
+=== TRAINER_SKALD_GYM1 ===
+Name: TARN
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Marill
+Level: 14
+
+Lombre
+Level: 15
+
+Wingull
+Level: 16
+

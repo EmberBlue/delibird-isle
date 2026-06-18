@@ -887,8 +887,9 @@
 #define TRAINER_SKALD_SAND                    872
 #define TRAINER_SKALD_ICE                     873
 #define TRAINER_SKALD_DIRECTOR                874
+#define TRAINER_SKALD_GYM1                    875
 
-#define TRAINERS_COUNT                      875
+#define TRAINERS_COUNT                      876
 #define MAX_TRAINERS_COUNT                  877
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
