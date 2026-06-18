@@ -3,7 +3,7 @@
   "name": "ParcelStation",
   "layout": "LAYOUT_PARCEL_STATION",
   "music": "MUS_DEWFORD",
-  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "region_map_section": "MAPSEC_SKALD_STATION",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",

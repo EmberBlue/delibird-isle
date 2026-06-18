@@ -3,7 +3,7 @@
   "name": "ParcelMarsh",
   "layout": "LAYOUT_PARCEL_MARSH",
   "music": "MUS_MT_PYRE_EXTERIOR",
-  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "region_map_section": "MAPSEC_SKALD_MARSH",
   "requires_flash": false,
   "weather": "WEATHER_RAIN",
   "map_type": "MAP_TYPE_ROUTE",
@@ -17,52 +17,141 @@
     {
       "local_id": "LOCALID_MARSH_HERON",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 26, "y": 20, "elevation": 3,
+      "x": 26,
+      "y": 20,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelMarsh_Heron", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMarsh_Heron",
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_MARSH_POLIWAG",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(POLIWAG)",
-      "x": 24, "y": 26, "elevation": 3,
+      "x": 24,
+      "y": 26,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelMarsh_Poliwag", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMarsh_Poliwag",
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_MARSH_ITEM",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 12, "y": 34, "elevation": 3,
+      "x": 12,
+      "y": 34,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelMarsh_Item", "flag": "FLAG_SKALD_ITEM_CORRIDOR"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMarsh_Item",
+      "flag": "FLAG_SKALD_ITEM_CORRIDOR"
     },
     {
       "local_id": "LOCALID_MARSH_GATE",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
-      "x": 26, "y": 22, "elevation": 3,
+      "x": 26,
+      "y": 22,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL", "trainer_sight_or_berry_tree_id": "4",
-      "script": "ParcelMarsh_GateAune", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ParcelMarsh_GateAune",
+      "flag": "0"
     }
   ],
   "warp_events": [],
   "coord_events": [
-    { "type": "trigger", "x": 27, "y": 37, "elevation": 3, "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelMarsh_FirstEntry" },
-    { "type": "trigger", "x": 28, "y": 37, "elevation": 3, "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelMarsh_FirstEntry" },
-    { "type": "trigger", "x": 29, "y": 37, "elevation": 3, "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelMarsh_FirstEntry" },
-    { "type": "trigger", "x": 27, "y": 41, "elevation": 3, "var": "VAR_TEMP_2", "var_value": "0", "script": "ParcelMarsh_Leave" },
-    { "type": "trigger", "x": 28, "y": 41, "elevation": 3, "var": "VAR_TEMP_2", "var_value": "0", "script": "ParcelMarsh_Leave" },
-    { "type": "trigger", "x": 29, "y": 41, "elevation": 3, "var": "VAR_TEMP_2", "var_value": "0", "script": "ParcelMarsh_Leave" }
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 37,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelMarsh_FirstEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 37,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelMarsh_FirstEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 37,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelMarsh_FirstEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 41,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelMarsh_Leave"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 41,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelMarsh_Leave"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 41,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelMarsh_Leave"
+    }
   ],
   "bg_events": [
-    { "type": "sign", "x": 34, "y": 24, "elevation": 0, "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelMarsh_DryChannel" },
-    { "type": "sign", "x": 14, "y": 12, "elevation": 0, "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelMarsh_DeadReeds" },
-    { "type": "sign", "x": 44, "y": 16, "elevation": 0, "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelMarsh_Edge" }
+    {
+      "type": "sign",
+      "x": 34,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelMarsh_DryChannel"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelMarsh_DeadReeds"
+    },
+    {
+      "type": "sign",
+      "x": 44,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelMarsh_Edge"
+    }
   ]
 }

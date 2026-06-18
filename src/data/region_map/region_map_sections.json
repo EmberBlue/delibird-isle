@@ -1081,7 +1081,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_MANSION",
-      "name": "POKéMON MANSION",
+      "name": "POK\u00e9MON MANSION",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1097,7 +1097,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_LEAGUE",
-      "name": "POKéMON LEAGUE",
+      "name": "POK\u00e9MON LEAGUE",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1121,7 +1121,7 @@
     },
     {
       "id": "MAPSEC_POKEMON_TOWER",
-      "name": "POKéMON TOWER",
+      "name": "POK\u00e9MON TOWER",
       "x": 0,
       "y": 0,
       "width": 1,
@@ -1729,9 +1729,105 @@
     },
     {
       "id": "MAPSEC_PARCEL_ISLE",
-      "name": "PARCEL ISLE",
-      "x": 27,
-      "y": 14,
+      "name": "THE DOCKS",
+      "x": 6,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_BRIDGE",
+      "name": "LONG BRIDGE",
+      "x": 9,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_STATION",
+      "name": "FIELD STATION",
+      "x": 16,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_WETLANDS",
+      "name": "THE WETLANDS",
+      "x": 14,
+      "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_MARSH",
+      "name": "KEYSTONE MARSH",
+      "x": 11,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_CORRIDOR",
+      "name": "SERVICE CUT",
+      "x": 16,
+      "y": 7,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_FLOODBASIN",
+      "name": "THE FLOODBASIN",
+      "x": 14,
+      "y": 10,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_RIVER",
+      "name": "THE RIVER",
+      "x": 14,
+      "y": 6,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_HIGHLANDS",
+      "name": "THE HIGHLANDS",
+      "x": 13,
+      "y": 2,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_COAST",
+      "name": "MEREHOLT COAST",
+      "x": 2,
+      "y": 8,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_DELIBIRD",
+      "name": "DELIBIRD ISLE",
+      "x": 22,
+      "y": 5,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_CAVERN",
+      "name": "CRYSTAL CAVERN",
+      "x": 23,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_WEATHER",
+      "name": "CLIMATE STN",
+      "x": 20,
+      "y": 12,
       "width": 1,
       "height": 1
     }

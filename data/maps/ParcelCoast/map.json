@@ -3,7 +3,7 @@
   "name": "ParcelCoast",
   "layout": "LAYOUT_PARCEL_COAST",
   "music": "MUS_SLATEPORT",
-  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "region_map_section": "MAPSEC_SKALD_COAST",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_CITY",
@@ -17,102 +17,172 @@
     {
       "local_id": "LOCALID_COAST_GYM",
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 41, "y": 19, "elevation": 3,
+      "x": 41,
+      "y": 19,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL", "trainer_sight_or_berry_tree_id": "4",
-      "script": "ParcelCoast_GymHarland", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ParcelCoast_GymHarland",
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_COAST_HALE",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 30, "y": 20, "elevation": 3,
+      "x": 30,
+      "y": 20,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelCoast_Hale", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCoast_Hale",
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_COAST_HOLLIS",
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
-      "x": 13, "y": 33, "elevation": 3,
+      "x": 13,
+      "y": 33,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelCoast_Hollis", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCoast_Hollis",
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_COAST_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 22, "y": 24, "elevation": 3,
+      "x": 22,
+      "y": 24,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelCoast_Worker", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCoast_Worker",
+      "flag": "0"
     },
     {
       "local_id": "LOCALID_COAST_ITEM_A",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 8, "y": 36, "elevation": 3,
+      "x": 8,
+      "y": 36,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelCoast_ItemA", "flag": "FLAG_SKALD_ITEM_COAST_A"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCoast_ItemA",
+      "flag": "FLAG_SKALD_ITEM_COAST_A"
     },
     {
       "local_id": "LOCALID_COAST_ITEM_B",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 38, "y": 6, "elevation": 3,
+      "x": 38,
+      "y": 6,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelCoast_ItemB", "flag": "FLAG_SKALD_ITEM_COAST_B"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCoast_ItemB",
+      "flag": "FLAG_SKALD_ITEM_COAST_B"
     },
     {
       "local_id": "LOCALID_COAST_SAILOR",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 39, "y": 38, "elevation": 3,
+      "x": 39,
+      "y": 38,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 0, "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE", "trainer_sight_or_berry_tree_id": "0",
-      "script": "ParcelCoast_ReturnFerry", "flag": "0"
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCoast_ReturnFerry",
+      "flag": "0"
     }
   ],
   "warp_events": [],
   "coord_events": [
     {
-      "type": "trigger", "x": 37, "y": 36, "elevation": 3,
-      "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelCoast_FirstEntry"
+      "type": "trigger",
+      "x": 37,
+      "y": 36,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelCoast_FirstEntry"
     },
     {
-      "type": "trigger", "x": 38, "y": 36, "elevation": 3,
-      "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelCoast_FirstEntry"
+      "type": "trigger",
+      "x": 38,
+      "y": 36,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelCoast_FirstEntry"
     },
     {
-      "type": "trigger", "x": 39, "y": 36, "elevation": 3,
-      "var": "VAR_TEMP_1", "var_value": "0", "script": "ParcelCoast_FirstEntry"
+      "type": "trigger",
+      "x": 39,
+      "y": 36,
+      "elevation": 3,
+      "var": "VAR_TEMP_1",
+      "var_value": "0",
+      "script": "ParcelCoast_FirstEntry"
     }
   ],
   "bg_events": [
     {
-      "type": "sign", "x": 42, "y": 8, "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelCoast_Dredge"
+      "type": "sign",
+      "x": 42,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoast_Dredge"
     },
     {
-      "type": "sign", "x": 42, "y": 28, "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelCoast_Barren"
+      "type": "sign",
+      "x": 42,
+      "y": 28,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoast_Barren"
     },
     {
-      "type": "sign", "x": 38, "y": 12, "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelCoast_Catch"
+      "type": "sign",
+      "x": 38,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoast_Catch"
     },
     {
-      "type": "sign", "x": 42, "y": 36, "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelCoast_Pilings"
+      "type": "sign",
+      "x": 42,
+      "y": 36,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoast_Pilings"
     },
     {
-      "type": "sign", "x": 16, "y": 30, "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", "script": "ParcelCoast_Plaque"
+      "type": "sign",
+      "x": 16,
+      "y": 30,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoast_Plaque"
     }
   ]
 }

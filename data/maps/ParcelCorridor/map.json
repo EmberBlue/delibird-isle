@@ -3,7 +3,7 @@
   "name": "ParcelCorridor",
   "layout": "LAYOUT_PARCEL_CORRIDOR",
   "music": "MUS_DEWFORD",
-  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "region_map_section": "MAPSEC_SKALD_CORRIDOR",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
