@@ -218,6 +218,15 @@ script ParcelHighlands_SurfCache {
     end
 }
 
+// the waterfall-crest cache -- a meltwater fall on the headwall pours into the
+// NW thaw-pond. Surf the pond to the foot of the fall, then WATERFALL (HM07,
+// Ilex's Skyline badge) up to the hidden crest pool. A premium left behind.
+script ParcelHighlands_FallsCache {
+    finditem(ITEM_PP_MAX)
+    setflag(FLAG_SKALD_ITEM_HL_FALLS)
+    end
+}
+
 // a Foundation field surveyor -- the mask, off the record; Kass measures the
 // same loss as Ilex and is paid to file it as opportunity
 script ParcelHighlands_SurveyorTrainer {

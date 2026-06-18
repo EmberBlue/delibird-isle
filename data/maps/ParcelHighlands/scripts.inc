@@ -315,40 +315,48 @@ ParcelHighlands_SurfCache::
 	end
 
 
+ParcelHighlands_FallsCache::
+# 225 "data/maps/ParcelHighlands/scripts.pory"
+	finditem ITEM_PP_MAX
+# 226 "data/maps/ParcelHighlands/scripts.pory"
+	setflag FLAG_SKALD_ITEM_HL_FALLS
+	end
+
+
 ParcelHighlands_SurveyorTrainer::
-# 224 "data/maps/ParcelHighlands/scripts.pory"
+# 233 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_SURVEYOR, ParcelHighlands_SurveyorTrainer_Text_0, ParcelHighlands_SurveyorTrainer_Text_1
-# 227 "data/maps/ParcelHighlands/scripts.pory"
+# 236 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_SurveyorTrainer_Text_2, MSGBOX_DEFAULT
 	end
 
 
 ParcelHighlands_GymVale::
-# 239 "data/maps/ParcelHighlands/scripts.pory"
+# 248 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_GYM5, ParcelHighlands_GymVale_Text_0, ParcelHighlands_GymVale_Text_1, ParcelHighlands_GymVale_Defeated
-# 243 "data/maps/ParcelHighlands/scripts.pory"
+# 252 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 244 "data/maps/ParcelHighlands/scripts.pory"
+# 253 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 245 "data/maps/ParcelHighlands/scripts.pory"
+# 254 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_GymVale_Text_2, MSGBOX_DEFAULT
-# 246 "data/maps/ParcelHighlands/scripts.pory"
+# 255 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_GymVale_Defeated::
-# 251 "data/maps/ParcelHighlands/scripts.pory"
+# 260 "data/maps/ParcelHighlands/scripts.pory"
 	setflag FLAG_BADGE05_GET
-# 252 "data/maps/ParcelHighlands/scripts.pory"
+# 261 "data/maps/ParcelHighlands/scripts.pory"
 	call Common_EventScript_PlayGymBadgeFanfare
-# 253 "data/maps/ParcelHighlands/scripts.pory"
+# 262 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_GymVale_Defeated_Text_0, MSGBOX_DEFAULT
-# 254 "data/maps/ParcelHighlands/scripts.pory"
+# 263 "data/maps/ParcelHighlands/scripts.pory"
 	giveitem ITEM_HM03
-# 255 "data/maps/ParcelHighlands/scripts.pory"
+# 264 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_GymVale_Defeated_Text_1, MSGBOX_DEFAULT
-# 256 "data/maps/ParcelHighlands/scripts.pory"
+# 265 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
@@ -655,20 +663,20 @@ ParcelHighlands_Hale_Text_8:
 	.string "it, or none of it counts.$"
 
 ParcelHighlands_SurveyorTrainer_Text_0:
-# 225 "data/maps/ParcelHighlands/scripts.pory"
+# 234 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Kass: Foundation crew. You'll be the\n"
 	.string "Ranger poking at our boreholes.\p"
 	.string "Keep it sporting -- mons, not\n"
 	.string "paperwork.$"
 
 ParcelHighlands_SurveyorTrainer_Text_1:
-# 226 "data/maps/ParcelHighlands/scripts.pory"
+# 235 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Kass: Tch. Fine.\p"
 	.string "You're not wrong about the ground. I\n"
 	.string "just get paid not to write it down.$"
 
 ParcelHighlands_SurveyorTrainer_Text_2:
-# 227 "data/maps/ParcelHighlands/scripts.pory"
+# 236 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Kass, lower:\p"
 	.string "Kass: Off the record? I've moved my\n"
 	.string "stakes up the slope three years\l"
@@ -677,7 +685,7 @@ ParcelHighlands_SurveyorTrainer_Text_2:
 	.string "pay me to call it opportunity.$"
 
 ParcelHighlands_GymVale_Text_0:
-# 240 "data/maps/ParcelHighlands/scripts.pory"
+# 249 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Vale: Highland Operations. Past this\n"
 	.string "point the ground is no longer ours to\l"
 	.string "fix -- only to clear people off of, in\l"
@@ -687,12 +695,12 @@ ParcelHighlands_GymVale_Text_0:
 	.string "meltwater permit.$"
 
 ParcelHighlands_GymVale_Text_1:
-# 241 "data/maps/ParcelHighlands/scripts.pory"
+# 250 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Vale: …Cleared. You go down with it\n"
 	.string "signed.$"
 
 ParcelHighlands_GymVale_Text_2:
-# 245 "data/maps/ParcelHighlands/scripts.pory"
+# 254 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Vale: The ferry runs from the lowland\n"
 	.string "landing. Take what you witnessed here\l"
 	.string "with you.\p"
@@ -700,7 +708,7 @@ ParcelHighlands_GymVale_Text_2:
 	.string "slope unspoiled.$"
 
 ParcelHighlands_GymVale_Defeated_Text_0:
-# 253 "data/maps/ParcelHighlands/scripts.pory"
+# 262 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Vale: Vale clearance. Line item 05 --\n"
 	.string "the last one Highland Operations issues\l"
 	.string "before the water.\p"
@@ -708,7 +716,7 @@ ParcelHighlands_GymVale_Defeated_Text_0:
 	.string "thaw has put in the way.$"
 
 ParcelHighlands_GymVale_Defeated_Text_1:
-# 255 "data/maps/ParcelHighlands/scripts.pory"
+# 264 "data/maps/ParcelHighlands/scripts.pory"
 	.string "Vale: SURF. A meltwater permit, in plain\n"
 	.string "terms -- it moves you over the standing\l"
 	.string "thaw the slope keeps making.\p"
