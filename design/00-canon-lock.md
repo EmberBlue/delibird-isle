@@ -305,7 +305,7 @@ skeleton:
 - **§04 (residual)** Decade of the noble lie (tied to Dr. Heron's age);
   promote Cast from DRAFT → LOCKED.
 - **§05 (residual)** Foundation chair's name (retired Climate Corps director);
-  Cordelia Brooke's roster (defers to §11); Regional Director's name (may
+  Cordelia Brooke's roster ✅ resolved+built (Persian/Ninetales/Altaria/Milotic, §05); Regional Director's name (may
   remain a function); the university partnership town (defers to §01 detail).
 - **§01 (residual)** Map shape & connectivity (gating, Surf/ferry unlocks);
   per-zone town/landmark names and each certification-test; exact placement of

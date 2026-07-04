@@ -263,8 +263,10 @@ chronically underfunded: honest mapping does not generate press releases.
 ## Open
 
 - The Foundation chair's name (the retired Climate Corps director).
-- Cordelia Brooke's specific roster for the boardroom confrontation
-  (§06 territory).
+- *(Resolved, built: the boardroom coda is in-game — `ParcelBoardroom`, off the
+  Coast quay, post-testimony. Cordelia's roster: Persian / Ninetales / Altaria /
+  Milotic, 55–58 — show animals, curated for boardroom-photo neutrality per the
+  lock above; Lady class, so the payout is the joke that isn't.)*
 - Hollis Aune's specific Pokémon (if any — she may credibly be unbattled;
   she fights with paper, not partners).
 - The Regional Director's name (Hale's superior, mostly off-screen — may

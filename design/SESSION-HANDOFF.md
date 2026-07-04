@@ -249,16 +249,17 @@ wired as real traversal gates/nooks (see "Recently shipped" + §00's amended
 power-fantasy. *Remaining polish:* the leaders are sight-line/optional except
 where an HM gate forces them (Cut→Tarn, Rock Smash→Breen are the two hard ones);
 more hard gates could be added, and an in-emulator pass should confirm the
-surf/waterfall/strength feel. The **Cordelia finale** is still unbuilt (the one
-main-line story beat missing).
+surf/waterfall/strength feel. The **Cordelia boardroom coda is now BUILT** (`ParcelBoardroom`; aide summons
+on the Coast quay post-testimony; Hollis's no-second-cup closer) -- the main
+story is complete end to end, coda included.
 
 1. **Playtest + harden the climax** (highest priority): confirm Heron's
    mid-conversation `trainerbattle_single` triggers from a NONE object; walk the
    whole Station→marsh→confession→ending→return chain in-emulator; screenshot.
    The ending is the one place a silent bug would hurt most.
-2. **Cordelia Brooke — the §02 boardroom finale** (designed, unbuilt): the
-   second grounded boss, a "fight" that's policy, not spectacle, after the
-   testimony lands. The only main-line story beat still missing.
+2. ~~Cordelia Brooke — the §02 boardroom finale~~ **BUILT** (this session):
+   `ParcelBoardroom` off the Coast quay, post-testimony summons, Lady-class
+   photo-neutral roster, Hollis arc-closer. Playtest it along with the climax.
 3. **Deepen the zones** (the "make it much longer" work): more trainers +
    gatekeeper battles; the full Delibird Isle areas (Crystal Cavern / Snowy
    Summit / Shoreline Cliffs); environmental puzzles; a snow/ice tileset; a
