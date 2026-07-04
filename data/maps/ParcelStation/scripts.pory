@@ -199,6 +199,15 @@ script ParcelStation_Hale {
 script ParcelStation_Rin {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Rin is where she always is, resetting the channel's stones after the rain.\pShe looks up this time. That is how you know she heard."), MSGBOX_DEFAULT)
+        msgbox(format("Rin: The whole station heard. I'm not going to make a speech about it, and neither should you.\pThe water still needs moving. That's the good news, if you want any.\pSet your partner down a minute -- cot and kit, same as ever."), MSGBOX_DEFAULT)
+        closemessage
+        call(Common_EventScript_OutOfCenterPartyHeal)
+        msgbox(format("Rin: Better.\pThe work doesn't know it's famous. Best thing about it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("Rin: Rough out there. Set your partner down a minute--
 there's a cot and a kit."), MSGBOX_DEFAULT)

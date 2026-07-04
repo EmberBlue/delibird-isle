@@ -162,6 +162,13 @@ script ParcelCoast_GymHarland {
     // Re-talk, after the clearance is earned. The survey beat persists here too.
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The boat is where it always is. Harland is watching the water instead of working a line, which is new.\pHarland: They read your file aloud at the quota hearing. Parts of it twice.\pMy name's in it, where I put it. First thing I've signed in years that a company didn't draft."), MSGBOX_DEFAULT)
+        msgbox(format("Harland: The review grounds half the fleet two days a week now. The lawyers call it ruin. It'll pinch, right enough -- winters pinched anyway.\pHarland: I told you once it'd never be one report. It wasn't."), MSGBOX_DEFAULT)
+        msgbox(format("Harland: They tell me all it bought is time. Aye.\pTime's what a season is, Ranger. I've lived season to season my whole life.\pIt's more than I'd been given yet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Harland works the line he isn't using.\pHarland: It was never one report that'd turn this. Always all of them. Mine too, if I find the spine.\pWrite it true, Ranger. That's the whole of what I've got left to ask anyone."), MSGBOX_DEFAULT)
     setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
     setvar(VAR_0x8004, 5)

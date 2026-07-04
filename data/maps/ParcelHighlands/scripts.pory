@@ -108,6 +108,12 @@ script ParcelHighlands_DrillSign {
 script ParcelHighlands_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Ilex is at the stakes, the same as always. The red cloth runs out along the compression band, patient as a fault line.\pIlex: The hearings cite the cloth now. Decades of it, read into the record by a clerk who pronounced everything correctly.\pShe almost smiles. Almost."), MSGBOX_DEFAULT)
+        msgbox(format("Ilex: The band is still shrinking. The number does not know it's been believed.\pShe moves a stake inward a hand's width, and writes it down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
     setvar(VAR_0x8004, 2)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)

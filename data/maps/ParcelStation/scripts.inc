@@ -315,460 +315,477 @@ ParcelStation_Rin::
 # 201 "data/maps/ParcelStation/scripts.pory"
 	faceplayer
 # 202 "data/maps/ParcelStation/scripts.pory"
-	goto_if_set FLAG_SYS_POKEMON_GET, ParcelStation_Rin_2
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelStation_Rin_2
 # 211 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Rin_Text_2, MSGBOX_DEFAULT
-# 212 "data/maps/ParcelStation/scripts.pory"
+	goto_if_set FLAG_SYS_POKEMON_GET, ParcelStation_Rin_5
+# 220 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Rin_Text_5, MSGBOX_DEFAULT
+# 221 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_Rin_2:
 # 203 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Rin_Text_0, MSGBOX_DEFAULT
+# 204 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Rin_Text_1, MSGBOX_DEFAULT
 # 205 "data/maps/ParcelStation/scripts.pory"
 	closemessage
 # 206 "data/maps/ParcelStation/scripts.pory"
 	call Common_EventScript_OutOfCenterPartyHeal
 # 207 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Rin_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelStation_Rin_Text_2, MSGBOX_DEFAULT
 # 208 "data/maps/ParcelStation/scripts.pory"
+	release
+	end
+
+ParcelStation_Rin_5:
+# 212 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Rin_Text_3, MSGBOX_DEFAULT
+# 214 "data/maps/ParcelStation/scripts.pory"
+	closemessage
+# 215 "data/maps/ParcelStation/scripts.pory"
+	call Common_EventScript_OutOfCenterPartyHeal
+# 216 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Rin_Text_4, MSGBOX_DEFAULT
+# 217 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Ilex::
-# 217 "data/maps/ParcelStation/scripts.pory"
+# 226 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 218 "data/maps/ParcelStation/scripts.pory"
+# 227 "data/maps/ParcelStation/scripts.pory"
 	faceplayer
-# 219 "data/maps/ParcelStation/scripts.pory"
+# 228 "data/maps/ParcelStation/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelStation_Ilex_2
-# 246 "data/maps/ParcelStation/scripts.pory"
+# 255 "data/maps/ParcelStation/scripts.pory"
 	checktrainerflag TRAINER_SKALD_ENFORCER
 	goto_if 1, ParcelStation_Ilex_5
-# 251 "data/maps/ParcelStation/scripts.pory"
+# 260 "data/maps/ParcelStation/scripts.pory"
 	goto_if_set FLAG_SYS_POKEMON_GET, ParcelStation_Ilex_11
-# 268 "data/maps/ParcelStation/scripts.pory"
+# 277 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_10, MSGBOX_DEFAULT
-# 269 "data/maps/ParcelStation/scripts.pory"
+# 278 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_11, MSGBOX_DEFAULT
-# 270 "data/maps/ParcelStation/scripts.pory"
+# 279 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_Ilex_2:
-# 221 "data/maps/ParcelStation/scripts.pory"
+# 230 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE
-# 222 "data/maps/ParcelStation/scripts.pory"
+# 231 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 6
-# 223 "data/maps/ParcelStation/scripts.pory"
+# 232 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 224 "data/maps/ParcelStation/scripts.pory"
+# 233 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelStation_Ilex_8
-# 230 "data/maps/ParcelStation/scripts.pory"
+# 239 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 63
-# 231 "data/maps/ParcelStation/scripts.pory"
+# 240 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskCount
-# 232 "data/maps/ParcelStation/scripts.pory"
+# 241 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 6
 	goto_if_eq ParcelStation_Ilex_14
-# 242 "data/maps/ParcelStation/scripts.pory"
+# 251 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_4, MSGBOX_DEFAULT
-# 243 "data/maps/ParcelStation/scripts.pory"
+# 252 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_Ilex_5:
-# 247 "data/maps/ParcelStation/scripts.pory"
+# 256 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_5, MSGBOX_DEFAULT
-# 248 "data/maps/ParcelStation/scripts.pory"
+# 257 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_Ilex_8:
-# 225 "data/maps/ParcelStation/scripts.pory"
+# 234 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_0, MSGBOX_DEFAULT
-# 226 "data/maps/ParcelStation/scripts.pory"
+# 235 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_Ilex_11:
-# 253 "data/maps/ParcelStation/scripts.pory"
+# 262 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 254 "data/maps/ParcelStation/scripts.pory"
+# 263 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 56
-# 255 "data/maps/ParcelStation/scripts.pory"
+# 264 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskCount
-# 256 "data/maps/ParcelStation/scripts.pory"
+# 265 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq ParcelStation_Ilex_17
-# 264 "data/maps/ParcelStation/scripts.pory"
+# 273 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_9, MSGBOX_DEFAULT
-# 265 "data/maps/ParcelStation/scripts.pory"
+# 274 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_Ilex_14:
-# 233 "data/maps/ParcelStation/scripts.pory"
+# 242 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_1, MSGBOX_DEFAULT
-# 234 "data/maps/ParcelStation/scripts.pory"
+# 243 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereClassifyFloodbasin
-# 235 "data/maps/ParcelStation/scripts.pory"
+# 244 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_2, MSGBOX_DEFAULT
-# 236 "data/maps/ParcelStation/scripts.pory"
+# 245 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 6
-# 237 "data/maps/ParcelStation/scripts.pory"
+# 246 "data/maps/ParcelStation/scripts.pory"
 	special SkaldmereCertTaskMark
-# 238 "data/maps/ParcelStation/scripts.pory"
+# 247 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_3, MSGBOX_DEFAULT
-# 239 "data/maps/ParcelStation/scripts.pory"
+# 248 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_Ilex_17:
-# 257 "data/maps/ParcelStation/scripts.pory"
+# 266 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_6, MSGBOX_DEFAULT
-# 258 "data/maps/ParcelStation/scripts.pory"
+# 267 "data/maps/ParcelStation/scripts.pory"
 	special SkaldmereClassifyMeadow
-# 259 "data/maps/ParcelStation/scripts.pory"
+# 268 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_7, MSGBOX_DEFAULT
-# 260 "data/maps/ParcelStation/scripts.pory"
+# 269 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Ilex_Text_8, MSGBOX_DEFAULT
-# 261 "data/maps/ParcelStation/scripts.pory"
+# 270 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Lotad::
-# 276 "data/maps/ParcelStation/scripts.pory"
+# 285 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 277 "data/maps/ParcelStation/scripts.pory"
+# 286 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Lotad_Text_0, MSGBOX_DEFAULT
-# 278 "data/maps/ParcelStation/scripts.pory"
+# 287 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Shroomish::
-# 283 "data/maps/ParcelStation/scripts.pory"
+# 292 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 284 "data/maps/ParcelStation/scripts.pory"
+# 293 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Shroomish_Text_0, MSGBOX_DEFAULT
-# 285 "data/maps/ParcelStation/scripts.pory"
+# 294 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Seedot::
-# 290 "data/maps/ParcelStation/scripts.pory"
+# 299 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 291 "data/maps/ParcelStation/scripts.pory"
+# 300 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Seedot_Text_0, MSGBOX_DEFAULT
-# 292 "data/maps/ParcelStation/scripts.pory"
+# 301 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Numel::
-# 297 "data/maps/ParcelStation/scripts.pory"
+# 306 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 298 "data/maps/ParcelStation/scripts.pory"
+# 307 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Numel_Text_0, MSGBOX_DEFAULT
-# 299 "data/maps/ParcelStation/scripts.pory"
+# 308 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Electrike::
-# 304 "data/maps/ParcelStation/scripts.pory"
+# 313 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 305 "data/maps/ParcelStation/scripts.pory"
+# 314 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Electrike_Text_0, MSGBOX_DEFAULT
-# 306 "data/maps/ParcelStation/scripts.pory"
+# 315 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Carvanha::
-# 311 "data/maps/ParcelStation/scripts.pory"
-	lock
-# 312 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Carvanha_Text_0, MSGBOX_DEFAULT
-# 313 "data/maps/ParcelStation/scripts.pory"
-	release
-	end
-
-
-ParcelStation_Doduo::
-# 319 "data/maps/ParcelStation/scripts.pory"
-	lock
 # 320 "data/maps/ParcelStation/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_STATION_BRIEF, ParcelStation_Doduo_2
-# 325 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_1, MSGBOX_DEFAULT
-# 326 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_2, MSGBOX_DEFAULT
-# 327 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_3, MSGBOX_DEFAULT
-# 328 "data/maps/ParcelStation/scripts.pory"
-	closemessage
-# 329 "data/maps/ParcelStation/scripts.pory"
-	delay 60
-# 330 "data/maps/ParcelStation/scripts.pory"
-	playse SE_BALL_THROW
-# 331 "data/maps/ParcelStation/scripts.pory"
-	delay 60
-# 332 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_4, MSGBOX_DEFAULT
-# 333 "data/maps/ParcelStation/scripts.pory"
-	removeobject 10
-# 334 "data/maps/ParcelStation/scripts.pory"
-	givemon SPECIES_DODUO, 5
-# 335 "data/maps/ParcelStation/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
-# 336 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_5, MSGBOX_DEFAULT
-# 337 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_6, MSGBOX_DEFAULT
-# 338 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_7, MSGBOX_DEFAULT
-# 339 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_8, MSGBOX_DEFAULT
-# 340 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_9, MSGBOX_DEFAULT
-# 341 "data/maps/ParcelStation/scripts.pory"
-	release
-	end
-
-ParcelStation_Doduo_2:
+	lock
 # 321 "data/maps/ParcelStation/scripts.pory"
-	msgbox ParcelStation_Doduo_Text_0, MSGBOX_DEFAULT
+	msgbox ParcelStation_Carvanha_Text_0, MSGBOX_DEFAULT
 # 322 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
-ParcelStation_Sign::
+ParcelStation_Doduo::
+# 328 "data/maps/ParcelStation/scripts.pory"
+	lock
+# 329 "data/maps/ParcelStation/scripts.pory"
+	goto_if_unset FLAG_SKALDMERE_STATION_BRIEF, ParcelStation_Doduo_2
+# 334 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_1, MSGBOX_DEFAULT
+# 335 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_2, MSGBOX_DEFAULT
+# 336 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_3, MSGBOX_DEFAULT
+# 337 "data/maps/ParcelStation/scripts.pory"
+	closemessage
+# 338 "data/maps/ParcelStation/scripts.pory"
+	delay 60
+# 339 "data/maps/ParcelStation/scripts.pory"
+	playse SE_BALL_THROW
+# 340 "data/maps/ParcelStation/scripts.pory"
+	delay 60
+# 341 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_4, MSGBOX_DEFAULT
+# 342 "data/maps/ParcelStation/scripts.pory"
+	removeobject 10
+# 343 "data/maps/ParcelStation/scripts.pory"
+	givemon SPECIES_DODUO, 5
+# 344 "data/maps/ParcelStation/scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 345 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_5, MSGBOX_DEFAULT
 # 346 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_6, MSGBOX_DEFAULT
+# 347 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_7, MSGBOX_DEFAULT
+# 348 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_8, MSGBOX_DEFAULT
+# 349 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_9, MSGBOX_DEFAULT
+# 350 "data/maps/ParcelStation/scripts.pory"
+	release
+	end
+
+ParcelStation_Doduo_2:
+# 330 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Doduo_Text_0, MSGBOX_DEFAULT
+# 331 "data/maps/ParcelStation/scripts.pory"
+	release
+	end
+
+
+ParcelStation_Sign::
+# 355 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelStation_Snare1::
-# 352 "data/maps/ParcelStation/scripts.pory"
+# 361 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 353 "data/maps/ParcelStation/scripts.pory"
+# 362 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 354 "data/maps/ParcelStation/scripts.pory"
+# 363 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 0
-# 355 "data/maps/ParcelStation/scripts.pory"
+# 364 "data/maps/ParcelStation/scripts.pory"
 	call ParcelStation_ClearSnare
-# 356 "data/maps/ParcelStation/scripts.pory"
+# 365 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Snare2::
-# 360 "data/maps/ParcelStation/scripts.pory"
+# 369 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 361 "data/maps/ParcelStation/scripts.pory"
+# 370 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 362 "data/maps/ParcelStation/scripts.pory"
+# 371 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 1
-# 363 "data/maps/ParcelStation/scripts.pory"
+# 372 "data/maps/ParcelStation/scripts.pory"
 	call ParcelStation_ClearSnare
-# 364 "data/maps/ParcelStation/scripts.pory"
+# 373 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Snare3::
-# 368 "data/maps/ParcelStation/scripts.pory"
+# 377 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 369 "data/maps/ParcelStation/scripts.pory"
+# 378 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 370 "data/maps/ParcelStation/scripts.pory"
+# 379 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 2
-# 371 "data/maps/ParcelStation/scripts.pory"
+# 380 "data/maps/ParcelStation/scripts.pory"
 	call ParcelStation_ClearSnare
-# 372 "data/maps/ParcelStation/scripts.pory"
+# 381 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_ClearSnare::
-# 376 "data/maps/ParcelStation/scripts.pory"
+# 385 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 377 "data/maps/ParcelStation/scripts.pory"
+# 386 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelStation_ClearSnare_2
-# 381 "data/maps/ParcelStation/scripts.pory"
+# 390 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_ClearSnare_Text_1, MSGBOX_DEFAULT
-# 382 "data/maps/ParcelStation/scripts.pory"
+# 391 "data/maps/ParcelStation/scripts.pory"
 	special SkaldmereCertTaskMark
 	return
 
 ParcelStation_ClearSnare_2:
-# 378 "data/maps/ParcelStation/scripts.pory"
+# 387 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_ClearSnare_Text_0, MSGBOX_DEFAULT
 	return
 
 
 ParcelStation_StakeBank::
-# 387 "data/maps/ParcelStation/scripts.pory"
+# 396 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 388 "data/maps/ParcelStation/scripts.pory"
+# 397 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 389 "data/maps/ParcelStation/scripts.pory"
+# 398 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 3
-# 390 "data/maps/ParcelStation/scripts.pory"
+# 399 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 391 "data/maps/ParcelStation/scripts.pory"
+# 400 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelStation_StakeBank_2
-# 396 "data/maps/ParcelStation/scripts.pory"
+# 405 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_StakeBank_Text_1, MSGBOX_SIGN
-# 397 "data/maps/ParcelStation/scripts.pory"
+# 406 "data/maps/ParcelStation/scripts.pory"
 	special SkaldmereCertTaskMark
-# 398 "data/maps/ParcelStation/scripts.pory"
+# 407 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_StakeBank_2:
-# 392 "data/maps/ParcelStation/scripts.pory"
+# 401 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_StakeBank_Text_0, MSGBOX_SIGN
-# 393 "data/maps/ParcelStation/scripts.pory"
+# 402 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_StakeSubstrate::
-# 402 "data/maps/ParcelStation/scripts.pory"
+# 411 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 403 "data/maps/ParcelStation/scripts.pory"
+# 412 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 404 "data/maps/ParcelStation/scripts.pory"
+# 413 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 4
-# 405 "data/maps/ParcelStation/scripts.pory"
+# 414 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 406 "data/maps/ParcelStation/scripts.pory"
+# 415 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelStation_StakeSubstrate_2
-# 411 "data/maps/ParcelStation/scripts.pory"
+# 420 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_StakeSubstrate_Text_1, MSGBOX_SIGN
-# 412 "data/maps/ParcelStation/scripts.pory"
+# 421 "data/maps/ParcelStation/scripts.pory"
 	special SkaldmereCertTaskMark
-# 413 "data/maps/ParcelStation/scripts.pory"
+# 422 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_StakeSubstrate_2:
-# 407 "data/maps/ParcelStation/scripts.pory"
+# 416 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_StakeSubstrate_Text_0, MSGBOX_SIGN
-# 408 "data/maps/ParcelStation/scripts.pory"
+# 417 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_StakeCanopy::
-# 417 "data/maps/ParcelStation/scripts.pory"
+# 426 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 418 "data/maps/ParcelStation/scripts.pory"
+# 427 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 419 "data/maps/ParcelStation/scripts.pory"
+# 428 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 5
-# 420 "data/maps/ParcelStation/scripts.pory"
+# 429 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 421 "data/maps/ParcelStation/scripts.pory"
+# 430 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelStation_StakeCanopy_2
-# 426 "data/maps/ParcelStation/scripts.pory"
+# 435 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_StakeCanopy_Text_1, MSGBOX_SIGN
-# 427 "data/maps/ParcelStation/scripts.pory"
+# 436 "data/maps/ParcelStation/scripts.pory"
 	special SkaldmereCertTaskMark
-# 428 "data/maps/ParcelStation/scripts.pory"
+# 437 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_StakeCanopy_2:
-# 422 "data/maps/ParcelStation/scripts.pory"
+# 431 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_StakeCanopy_Text_0, MSGBOX_SIGN
-# 423 "data/maps/ParcelStation/scripts.pory"
+# 432 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_WaterSample::
-# 432 "data/maps/ParcelStation/scripts.pory"
+# 441 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 433 "data/maps/ParcelStation/scripts.pory"
+# 442 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CERT_TASKS
-# 434 "data/maps/ParcelStation/scripts.pory"
+# 443 "data/maps/ParcelStation/scripts.pory"
 	setvar VAR_0x8004, 6
-# 435 "data/maps/ParcelStation/scripts.pory"
+# 444 "data/maps/ParcelStation/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 436 "data/maps/ParcelStation/scripts.pory"
+# 445 "data/maps/ParcelStation/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelStation_WaterSample_2
-# 441 "data/maps/ParcelStation/scripts.pory"
+# 450 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_WaterSample_Text_1, MSGBOX_SIGN
-# 442 "data/maps/ParcelStation/scripts.pory"
+# 451 "data/maps/ParcelStation/scripts.pory"
 	special SkaldmereCertTaskMark
-# 443 "data/maps/ParcelStation/scripts.pory"
+# 452 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 ParcelStation_WaterSample_2:
-# 437 "data/maps/ParcelStation/scripts.pory"
+# 446 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_WaterSample_Text_0, MSGBOX_SIGN
-# 438 "data/maps/ParcelStation/scripts.pory"
+# 447 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_Lookout::
-# 449 "data/maps/ParcelStation/scripts.pory"
+# 458 "data/maps/ParcelStation/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_LOOKOUT, ParcelStation_Lookout_Text_0, ParcelStation_Lookout_Text_1
-# 452 "data/maps/ParcelStation/scripts.pory"
+# 461 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_Lookout_Text_2, MSGBOX_DEFAULT
 	end
 
 
 ParcelStation_BirderTrainer::
-# 458 "data/maps/ParcelStation/scripts.pory"
+# 467 "data/maps/ParcelStation/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_BIRDER, ParcelStation_BirderTrainer_Text_0, ParcelStation_BirderTrainer_Text_1
-# 461 "data/maps/ParcelStation/scripts.pory"
+# 470 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_BirderTrainer_Text_2, MSGBOX_DEFAULT
 	end
 
 
 ParcelStation_ItemBalls::
-# 466 "data/maps/ParcelStation/scripts.pory"
+# 475 "data/maps/ParcelStation/scripts.pory"
 	finditem ITEM_POKE_BALL, 5
 	end
 
 
 ParcelStation_GateWard::
-# 476 "data/maps/ParcelStation/scripts.pory"
+# 485 "data/maps/ParcelStation/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_GATE_STATION, ParcelStation_GateWard_Text_0, ParcelStation_GateWard_Text_1, ParcelStation_GateWard_Defeated
-# 480 "data/maps/ParcelStation/scripts.pory"
+# 489 "data/maps/ParcelStation/scripts.pory"
 	lock
-# 481 "data/maps/ParcelStation/scripts.pory"
+# 490 "data/maps/ParcelStation/scripts.pory"
 	faceplayer
-# 482 "data/maps/ParcelStation/scripts.pory"
+# 491 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_GateWard_Text_2, MSGBOX_DEFAULT
-# 483 "data/maps/ParcelStation/scripts.pory"
+# 492 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
 
 ParcelStation_GateWard_Defeated::
-# 488 "data/maps/ParcelStation/scripts.pory"
+# 497 "data/maps/ParcelStation/scripts.pory"
 	setflag FLAG_SKALDMERE_GATE_STATION
-# 489 "data/maps/ParcelStation/scripts.pory"
+# 498 "data/maps/ParcelStation/scripts.pory"
 	msgbox ParcelStation_GateWard_Defeated_Text_0, MSGBOX_DEFAULT
-# 490 "data/maps/ParcelStation/scripts.pory"
+# 499 "data/maps/ParcelStation/scripts.pory"
 	release
 	end
 
@@ -1101,35 +1118,58 @@ ParcelStation_Hale_Text_47:
 
 ParcelStation_Rin_Text_0:
 # 203 "data/maps/ParcelStation/scripts.pory"
+	.string "Rin is where she always is, resetting\n"
+	.string "the channel's stones after the rain.\p"
+	.string "She looks up this time. That is how you\n"
+	.string "know she heard.$"
+
+ParcelStation_Rin_Text_1:
+# 204 "data/maps/ParcelStation/scripts.pory"
+	.string "Rin: The whole station heard. I'm not\n"
+	.string "going to make a speech about it, and\l"
+	.string "neither should you.\p"
+	.string "The water still needs moving. That's the\n"
+	.string "good news, if you want any.\p"
+	.string "Set your partner down a minute -- cot\n"
+	.string "and kit, same as ever.$"
+
+ParcelStation_Rin_Text_2:
+# 207 "data/maps/ParcelStation/scripts.pory"
+	.string "Rin: Better.\p"
+	.string "The work doesn't know it's famous. Best\n"
+	.string "thing about it.$"
+
+ParcelStation_Rin_Text_3:
+# 212 "data/maps/ParcelStation/scripts.pory"
 	.string "Rin: Rough out there. Set your partner\n"
 	.string "down a minute-- there's a cot and a kit.$"
 
-ParcelStation_Rin_Text_1:
-# 207 "data/maps/ParcelStation/scripts.pory"
+ParcelStation_Rin_Text_4:
+# 216 "data/maps/ParcelStation/scripts.pory"
 	.string "Rin: Better. Welcome to walking with\n"
 	.string "consequences.$"
 
-ParcelStation_Rin_Text_2:
-# 211 "data/maps/ParcelStation/scripts.pory"
+ParcelStation_Rin_Text_5:
+# 220 "data/maps/ParcelStation/scripts.pory"
 	.string "Rin doesn't look up. She is redirecting a\n"
 	.string "channel's flow, one stone at a time.\p"
 	.string "Rin: Nothing stays here permanently.\n"
 	.string "That's the rule.$"
 
 ParcelStation_Ilex_Text_0:
-# 225 "data/maps/ParcelStation/scripts.pory"
+# 234 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: It's filed. The papers are Hale's\n"
 	.string "to sign.\p"
 	.string "Don't expect him to smile about it.$"
 
 ParcelStation_Ilex_Text_1:
-# 233 "data/maps/ParcelStation/scripts.pory"
+# 242 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: Pipe, sheen, dead reeds. The\n"
 	.string "Wooper. The Karp. The booth.\p"
 	.string "Put a name on it.$"
 
 ParcelStation_Ilex_Text_2:
-# 235 "data/maps/ParcelStation/scripts.pory"
+# 244 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: COLLAPSING.\p"
 	.string "The keystone is straining; the apex is\n"
 	.string "sick; the mid-tier swarms.\p"
@@ -1137,62 +1177,62 @@ ParcelStation_Ilex_Text_2:
 	.string "actually looks like.$"
 
 ParcelStation_Ilex_Text_3:
-# 238 "data/maps/ParcelStation/scripts.pory"
+# 247 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: I'll have your report typed by\n"
 	.string "morning.\p"
 	.string "Go tell Hale you're done.\n"
 	.string "The certification's his to give.$"
 
 ParcelStation_Ilex_Text_4:
-# 242 "data/maps/ParcelStation/scripts.pory"
+# 251 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: Damage wears the mask of\n"
 	.string "improvement.\p"
 	.string "You'll see it everywhere now.\n"
 	.string "I'm sorry.$"
 
 ParcelStation_Ilex_Text_5:
-# 247 "data/maps/ParcelStation/scripts.pory"
+# 256 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: Low priority means nobody's\n"
 	.string "watching.\p"
 	.string "Which means we still have time.$"
 
 ParcelStation_Ilex_Text_6:
-# 257 "data/maps/ParcelStation/scripts.pory"
+# 266 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: Bank, substrate, canopy.\n"
 	.string "Let's see what you saw.$"
 
 ParcelStation_Ilex_Text_7:
-# 259 "data/maps/ParcelStation/scripts.pory"
+# 268 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: Reference state. Whole.\p"
 	.string "Keystone breeding, every guild present,\n"
 	.string "nothing swarming, no damage.$"
 
 ParcelStation_Ilex_Text_8:
-# 260 "data/maps/ParcelStation/scripts.pory"
+# 269 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: Remember exactly what this feels\n"
 	.string "like.\p"
 	.string "You will spend the rest of your life\n"
 	.string "measuring places against it.$"
 
 ParcelStation_Ilex_Text_9:
-# 264 "data/maps/ParcelStation/scripts.pory"
+# 273 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: Three stakes. Bank, substrate,\n"
 	.string "canopy.\p"
 	.string "Read all three, then come back.$"
 
 ParcelStation_Ilex_Text_10:
-# 268 "data/maps/ParcelStation/scripts.pory"
+# 277 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: They've all been displaced.\n"
 	.string "But not broken.$"
 
 ParcelStation_Ilex_Text_11:
-# 269 "data/maps/ParcelStation/scripts.pory"
+# 278 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: They aren't rare. They aren't\n"
 	.string "powerful.\p"
 	.string "They are stable.$"
 
 ParcelStation_Lotad_Text_0:
-# 277 "data/maps/ParcelStation/scripts.pory"
+# 286 "data/maps/ParcelStation/scripts.pory"
 	.string "The Lotad rests at the pool's shaded\n"
 	.string "edge.\p"
 	.string "It registers you, and goes back to\n"
@@ -1200,19 +1240,19 @@ ParcelStation_Lotad_Text_0:
 	.string "Calm.$"
 
 ParcelStation_Shroomish_Text_0:
-# 284 "data/maps/ParcelStation/scripts.pory"
+# 293 "data/maps/ParcelStation/scripts.pory"
 	.string "The Shroomish recoils--spores pulsing\n"
 	.string "once, twice--\p"
 	.string "then settles. It doesn't move away.$"
 
 ParcelStation_Seedot_Text_0:
-# 291 "data/maps/ParcelStation/scripts.pory"
+# 300 "data/maps/ParcelStation/scripts.pory"
 	.string "The Seedot freezes mid-hop between\n"
 	.string "the roots.\p"
 	.string "It is very committed to being a seed.$"
 
 ParcelStation_Numel_Text_0:
-# 298 "data/maps/ParcelStation/scripts.pory"
+# 307 "data/maps/ParcelStation/scripts.pory"
 	.string "The Numel is curled by the dry corner of\n"
 	.string "the meadow, radiating heat.\p"
 	.string "The ground here is drier than it should\n"
@@ -1221,87 +1261,87 @@ ParcelStation_Numel_Text_0:
 	.string "you're doing it.$"
 
 ParcelStation_Electrike_Text_0:
-# 305 "data/maps/ParcelStation/scripts.pory"
+# 314 "data/maps/ParcelStation/scripts.pory"
 	.string "The Electrike paces the perimeter,\n"
 	.string "closer each pass.\p"
 	.string "It never quite stops.$"
 
 ParcelStation_Carvanha_Text_0:
-# 312 "data/maps/ParcelStation/scripts.pory"
+# 321 "data/maps/ParcelStation/scripts.pory"
 	.string "Something circles in the deeper\n"
 	.string "channel.\p"
 	.string "The Carvanha keeps its distance.\n"
 	.string "So do you.$"
 
 ParcelStation_Doduo_Text_0:
-# 321 "data/maps/ParcelStation/scripts.pory"
+# 330 "data/maps/ParcelStation/scripts.pory"
 	.string "A Doduo stands at the clearing's edge.\p"
 	.string "One head watches you.\n"
 	.string "The other watches the forest.$"
 
 ParcelStation_Doduo_Text_1:
-# 325 "data/maps/ParcelStation/scripts.pory"
+# 334 "data/maps/ParcelStation/scripts.pory"
 	.string "The Doduo moves. One head stays on you;\n"
 	.string "the other sweeps the treeline.\p"
 	.string "You stop--\n"
 	.string "because moving feels wrong.$"
 
 ParcelStation_Doduo_Text_2:
-# 326 "data/maps/ParcelStation/scripts.pory"
+# 335 "data/maps/ParcelStation/scripts.pory"
 	.string "You kneel.\p"
 	.string "Behind you, quiet footsteps: Rin sets a\n"
 	.string "single Poké Ball on the ground between\l"
 	.string "you, and steps back.$"
 
 ParcelStation_Doduo_Text_3:
-# 327 "data/maps/ParcelStation/scripts.pory"
+# 336 "data/maps/ParcelStation/scripts.pory"
 	.string "Rin: If it chooses to enter,\n"
 	.string "you're provisional partners.$"
 
 ParcelStation_Doduo_Text_4:
-# 332 "data/maps/ParcelStation/scripts.pory"
+# 341 "data/maps/ParcelStation/scripts.pory"
 	.string "The Doduo studies you a moment longer.\p"
 	.string "Then it nudges the ball.\p"
 	.string "The ball closes with no shake.\n"
 	.string "Just stillness.$"
 
 ParcelStation_Doduo_Text_5:
-# 336 "data/maps/ParcelStation/scripts.pory"
+# 345 "data/maps/ParcelStation/scripts.pory"
 	.string "It feels warm.\p"
 	.string "WREN received DODUO.$"
 
 ParcelStation_Doduo_Text_6:
-# 337 "data/maps/ParcelStation/scripts.pory"
+# 346 "data/maps/ParcelStation/scripts.pory"
 	.string "Hale: This doesn't make you a Ranger.$"
 
 ParcelStation_Doduo_Text_7:
-# 338 "data/maps/ParcelStation/scripts.pory"
+# 347 "data/maps/ParcelStation/scripts.pory"
 	.string "Ilex: It makes you accountable.$"
 
 ParcelStation_Doduo_Text_8:
-# 339 "data/maps/ParcelStation/scripts.pory"
+# 348 "data/maps/ParcelStation/scripts.pory"
 	.string "Rin: Welcome to walking with\n"
 	.string "consequences.$"
 
 ParcelStation_Doduo_Text_9:
-# 340 "data/maps/ParcelStation/scripts.pory"
+# 349 "data/maps/ParcelStation/scripts.pory"
 	.string "You leave the meadow not empowered--\n"
 	.string "but entangled.\p"
 	.string "And that is the point.$"
 
 ParcelStation_Sign_Text_0:
-# 346 "data/maps/ParcelStation/scripts.pory"
+# 355 "data/maps/ParcelStation/scripts.pory"
 	.string "CLIMATE CORPS -- FIELD STATION\p"
 	.string "The Holding Meadow is east.\n"
 	.string "Nothing stays there permanently.$"
 
 ParcelStation_ClearSnare_Text_0:
-# 378 "data/maps/ParcelStation/scripts.pory"
+# 387 "data/maps/ParcelStation/scripts.pory"
 	.string "The cleared snare site. The wire is in\n"
 	.string "your pack.$"
 
 ParcelStation_ClearSnare_Text_1:
-# 381 "data/maps/ParcelStation/scripts.pory"
+# 390 "data/maps/ParcelStation/scripts.pory"
 	.string "A practice snare, half-hidden in the\n"
 	.string "grass--a wire loop on a bent stake.\p"
 	.string "You unhook the trigger and wind the\n"
@@ -1309,11 +1349,11 @@ ParcelStation_ClearSnare_Text_1:
 	.string "Slowly. No sudden pulls.$"
 
 ParcelStation_StakeBank_Text_0:
-# 392 "data/maps/ParcelStation/scripts.pory"
+# 401 "data/maps/ParcelStation/scripts.pory"
 	.string "The bank stake. Already read.$"
 
 ParcelStation_StakeBank_Text_1:
-# 396 "data/maps/ParcelStation/scripts.pory"
+# 405 "data/maps/ParcelStation/scripts.pory"
 	.string "A survey stake by the channel. A strip\n"
 	.string "of red cloth, faded.\p"
 	.string "BANK: edges soft but holding. Root mass\n"
@@ -1321,11 +1361,11 @@ ParcelStation_StakeBank_Text_1:
 	.string "You write it down.$"
 
 ParcelStation_StakeSubstrate_Text_0:
-# 407 "data/maps/ParcelStation/scripts.pory"
+# 416 "data/maps/ParcelStation/scripts.pory"
 	.string "The substrate stake. Already read.$"
 
 ParcelStation_StakeSubstrate_Text_1:
-# 411 "data/maps/ParcelStation/scripts.pory"
+# 420 "data/maps/ParcelStation/scripts.pory"
 	.string "A survey stake in the open meadow. Red\n"
 	.string "cloth, knotted twice.\p"
 	.string "SUBSTRATE: mixed soil, no compaction,\n"
@@ -1333,11 +1373,11 @@ ParcelStation_StakeSubstrate_Text_1:
 	.string "You write it down.$"
 
 ParcelStation_StakeCanopy_Text_0:
-# 422 "data/maps/ParcelStation/scripts.pory"
+# 431 "data/maps/ParcelStation/scripts.pory"
 	.string "The canopy stake. Already read.$"
 
 ParcelStation_StakeCanopy_Text_1:
-# 426 "data/maps/ParcelStation/scripts.pory"
+# 435 "data/maps/ParcelStation/scripts.pory"
 	.string "A survey stake at the tree line. Red\n"
 	.string "cloth, nearly new.\p"
 	.string "CANOPY: broken sunlight, layered\n"
@@ -1345,11 +1385,11 @@ ParcelStation_StakeCanopy_Text_1:
 	.string "You write it down.$"
 
 ParcelStation_WaterSample_Text_0:
-# 437 "data/maps/ParcelStation/scripts.pory"
+# 446 "data/maps/ParcelStation/scripts.pory"
 	.string "The sampling point. Rin has your vial.$"
 
 ParcelStation_WaterSample_Text_1:
-# 441 "data/maps/ParcelStation/scripts.pory"
+# 450 "data/maps/ParcelStation/scripts.pory"
 	.string "You kneel at the channel and draw a\n"
 	.string "sample.\p"
 	.string "The water runs clear--but colder than\n"
@@ -1358,40 +1398,40 @@ ParcelStation_WaterSample_Text_1:
 	.string "and note the temperature.$"
 
 ParcelStation_Lookout_Text_0:
-# 450 "data/maps/ParcelStation/scripts.pory"
+# 459 "data/maps/ParcelStation/scripts.pory"
 	.string "Garr: Station kid, huh? This line was\n"
 	.string "here before your stakes were.\p"
 	.string "Walk away.$"
 
 ParcelStation_Lookout_Text_1:
-# 451 "data/maps/ParcelStation/scripts.pory"
+# 460 "data/maps/ParcelStation/scripts.pory"
 	.string "Garr: Tch. Practiced, are you.$"
 
 ParcelStation_Lookout_Text_2:
-# 452 "data/maps/ParcelStation/scripts.pory"
+# 461 "data/maps/ParcelStation/scripts.pory"
 	.string "Garr coils his line, unhurried, and looks\n"
 	.string "past you at the station.\p"
 	.string "Garr: Write your little report.\n"
 	.string "It changes nothing out here.$"
 
 ParcelStation_BirderTrainer_Text_0:
-# 459 "data/maps/ParcelStation/scripts.pory"
+# 468 "data/maps/ParcelStation/scripts.pory"
 	.string "Neri: Shh--you'll flush the Taillow.\n"
 	.string "…Too late. Fine, battle.$"
 
 ParcelStation_BirderTrainer_Text_1:
-# 460 "data/maps/ParcelStation/scripts.pory"
+# 469 "data/maps/ParcelStation/scripts.pory"
 	.string "Neri: Hmph. The birds liked you better\n"
 	.string "anyway.$"
 
 ParcelStation_BirderTrainer_Text_2:
-# 461 "data/maps/ParcelStation/scripts.pory"
+# 470 "data/maps/ParcelStation/scripts.pory"
 	.string "Neri: Counting nests, if you must know.\p"
 	.string "Fewer every spring. Nobody writes that\n"
 	.string "down but me.$"
 
 ParcelStation_GateWard_Text_0:
-# 477 "data/maps/ParcelStation/scripts.pory"
+# 486 "data/maps/ParcelStation/scripts.pory"
 	.string "Ward: Station clearance is checked\n"
 	.string "here, provisional. The road north is\l"
 	.string "Mereholt's to open.\p"
@@ -1399,19 +1439,19 @@ ParcelStation_GateWard_Text_0:
 	.string "walk one.$"
 
 ParcelStation_GateWard_Text_1:
-# 478 "data/maps/ParcelStation/scripts.pory"
+# 487 "data/maps/ParcelStation/scripts.pory"
 	.string "Ward: …Adequate. The line's yours to\n"
 	.string "pass.$"
 
 ParcelStation_GateWard_Text_2:
-# 482 "data/maps/ParcelStation/scripts.pory"
+# 491 "data/maps/ParcelStation/scripts.pory"
 	.string "Ward: You're in the log. Keep your card\n"
 	.string "on you--\n"
 	.string "the next checkpoint won't take my word\l"
 	.string "for it.$"
 
 ParcelStation_GateWard_Defeated_Text_0:
-# 489 "data/maps/ParcelStation/scripts.pory"
+# 498 "data/maps/ParcelStation/scripts.pory"
 	.string "Ward: Station clearance: granted.\n"
 	.string "Logged and filed.\p"
 	.string "No ceremony. That's not what this is.$"

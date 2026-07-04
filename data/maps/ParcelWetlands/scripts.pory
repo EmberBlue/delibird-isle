@@ -24,9 +24,14 @@ mapscripts ParcelWetlands_MapScripts {
 }
 
 script ParcelWetlands_OnTransition {
-    // Dorsey vanishes once the enforcer is exposed.
+    // Dorsey vanishes once the enforcer is exposed -- and returns to the
+    // landing after the testimony goes public, to manage the story in person.
     if (defeated(TRAINER_SKALD_ENFORCER)) {
-        setflag(FLAG_TEMP_2)
+        if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+            clearflag(FLAG_TEMP_2)
+        } else {
+            setflag(FLAG_TEMP_2)
+        }
         setflag(FLAG_TEMP_3)
     } else {
         clearflag(FLAG_TEMP_2)
@@ -83,6 +88,13 @@ script ParcelWetlands_Harland {
 script ParcelWetlands_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Councilman Dorsey is back at the landing, working his way along the stalls. The suit is new. The handshake is the same.\pDorsey: Ranger! The very person. You'll have seen the Council's statement -- we welcome the findings. Welcome them. Some of us were calling for an independent review years ago. Check the record."), MSGBOX_DEFAULT)
+        msgbox(format("Dorsey: Development that listens. Relief that reaches. It's what I've always stood for out here.\pHe is already looking past you, at the next hand that needs shaking.\pDorsey: The review board will want local liaisons, you know. People who understand both sides. I've put my name forward. Somebody sensible has to."), MSGBOX_DEFAULT)
+        msgbox(format("As you turn away, quieter, almost to himself:\pDorsey: People need someone to thank.\nBetter it's us."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Dorsey: Ah--the new provisional. Welcome to the landing.\pDorsey: We can protect Pokémon and protect jobs.\nWe don't need fear-based restrictions."), MSGBOX_DEFAULT)
     msgbox(format("Dorsey: These people work hard. The Corps means well, I'm sure--but rules written far away land hard out here.\pHe shakes your hand. It is a very good handshake."), MSGBOX_DEFAULT)
     msgbox(format("As you turn away, quieter, almost to himself:\pDorsey: People need someone to blame.\nBetter it isn't us."), MSGBOX_DEFAULT)
