@@ -136,6 +136,12 @@ script ParcelHighlands_Ilex {
 script ParcelHighlands_Hollis {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The rig behind her is quiet. There is a court seal on the housing, new enough to still lie flat.\pHollis: Enjoined pending survey. Your survey, as it happens.\pShe says it the way she says everything -- warmly, and with the arithmetic already done."), MSGBOX_DEFAULT)
+        msgbox(format("Hollis: The relocation grants are frozen with the rest of it, you know. The warming center too. That is the part nobody prices.\pShe warms her hands at the field heater.\pThe smile is still there. It has somewhere colder to live now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
     setvar(VAR_0x8004, 7)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
