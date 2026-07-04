@@ -253,10 +253,12 @@ surf/waterfall/strength feel. The **Cordelia boardroom coda is now BUILT** (`Par
 on the Coast quay post-testimony; Hollis's no-second-cup closer) -- the main
 story is complete end to end, coda included.
 
-1. **Playtest + harden the climax** (highest priority): confirm Heron's
-   mid-conversation `trainerbattle_single` triggers from a NONE object; walk the
-   whole Station→marsh→confession→ending→return chain in-emulator; screenshot.
-   The ending is the one place a silent bug would hurt most.
+1. **Playtest + harden the endgame chain** (highest priority): the climax
+   (Heron), the boardroom coda (Cordelia), and the post-finale reaction pass
+   (Dorsey back at the landing / Harland / Ilex / Rin / Hollis×2) all share the
+   unplaytested `trainerbattle_single`-from-NONE-object + flag-branch pattern.
+   Walk Station→marsh→ending→Coast aide→boardroom→world-tour in-emulator.
+   A parked savestate harness would make this repeatable.
 2. ~~Cordelia Brooke — the §02 boardroom finale~~ **BUILT** (this session):
    `ParcelBoardroom` off the Coast quay, post-testimony summons, Lady-class
    photo-neutral roster, Hollis arc-closer. Playtest it along with the climax.
