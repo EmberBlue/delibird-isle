@@ -461,7 +461,7 @@
 #define FLAG_REGISTERED_WALLACE              (TRAINER_REGISTERED_FLAGS_START + REMATCH_WALLACE)
 
 #define FLAG_SKALDMERE_CORDELIA_DONE         0x1AA // Skaldmere: the boardroom coda (Cordelia Brooke) played out
-#define FLAG_UNUSED_0x1AB                    0x1AB // Unused Flag
+#define FLAG_SKALD_DEL_GIFT_SQUARE           0x1AB // Skaldmere: §09 gift-square parcel taken
 
 #define FLAG_DEFEATED_DEOXYS                 0x1AC
 #define FLAG_BATTLED_DEOXYS                  0x1AD

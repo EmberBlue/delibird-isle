@@ -21,6 +21,10 @@ const LOCALID_DEL_FISHER   = 4
 const LOCALID_DEL_RELIEF   = 5
 const LOCALID_DEL_SAILOR   = 6
 const LOCALID_DEL_GYM      = 7   // Ilex: Gym 8, the aerial-survey competency test
+const LOCALID_DEL_KEEPER   = 11  // the gift square (after the item balls + reveler)
+const LOCALID_DEL_HUT      = 12  // the warming hut (heal)
+const LOCALID_DEL_STRINGER = 13
+const LOCALID_DEL_FOLDER   = 14
 
 mapscripts ParcelDelibird_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -49,9 +53,18 @@ script ParcelDelibird_FirstEntry {
 }
 
 // --- the elder: storm-relief lore, the delivery, the free Delibird ---------
+// Post-finale, she carries the island's answer to the testimony: the lights
+// go up early, and that is not denial. Cheer as courage (§09).
 script ParcelDelibird_Elder {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Elder: Word reached us. Word always reaches an island last, and stays longest.\pYou wrote it down and you didn't soften it. Herself in it too, I hear. That took something out of you, I expect.\pIt ought to. The true ones cost."), MSGBOX_DEFAULT)
+        msgbox(format("Elder: The channel won't refreeze for it, child. The winters don't read filings.\pBut the lights are going up early this year -- you'll have seen. That's not us pretending.\pThat's us carrying it."), MSGBOX_DEFAULT)
+        msgbox(format("Elder: The festival was never about the cold, whatever the name says. It was about each other, in the cold.\pThat part keeps. That part we don't need anyone's permission to keep."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
         msgbox(format("Elder: The young ones say give until it's a habit, so the giving's already done when the storm comes and there's no time to decide.\pYou've got the habit now. I can see it on the bird."), MSGBOX_DEFAULT)
         release
@@ -248,6 +261,83 @@ script ParcelDelibird_GymIlex_Defeated {
     msgbox(format("Ilex: The Skyline clearance. It marks you fit to read a place from any height -- and to be trusted on the harder water.\pYou'll want the tool that goes with it."), MSGBOX_DEFAULT)
     giveitem(ITEM_HM07)
     msgbox(format("Ilex: WATERFALL. It takes you up the climbs that turn most people back.\pThe corridor inland has a few. That's where the last of this gets written. You're nearly ready for it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- the gift square: the give-economy, playable (§09) ----------------------
+// Take one, leave one, if you can. Nobody keeps the ledger; that is the
+// system. One wrapped parcel per visitor (random), and the leaving is offered,
+// never enforced -- refusing it gets the thesis said out loud.
+script ParcelDelibird_SquareKeeper {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_DEL_GIFT_SQUARE)) {
+        msgbox(format("Keeper: The shelf thins and fills, thins and fills.\pNobody keeps the ledger, so nobody's ever behind."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A trestle table under the string lights, laid out with parcels -- mittens, dried fish, a kettle with a mended spout. A hand-lettered sign: TAKE ONE. LEAVE ONE, IF YOU CAN.\pThe keeper waves you closer.\pKeeper: Off the ferry? Then you're furthest from home, and that puts you first in line. House rule."), MSGBOX_DEFAULT)
+    msgbox(format("Keeper: Go on -- the wrapped ones. No peeking, no choosing. That's the whole game.\pYou take the parcel your hand lands on."), MSGBOX_DEFAULT)
+    random(4)
+    switch (var(VAR_RESULT)) {
+        case 0:
+            giveitem(ITEM_LUCKY_EGG)
+        case 1:
+            giveitem(ITEM_STAR_PIECE)
+        case 2:
+            giveitem(ITEM_PP_UP)
+        case 3:
+            giveitem(ITEM_SITRUS_BERRY, 3)
+    }
+    setflag(FLAG_SKALD_DEL_GIFT_SQUARE)
+    msgbox(format("Leave something on the shelf?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        checkitem(ITEM_POTION)
+        if (var(VAR_RESULT) == 1) {
+            removeitem(ITEM_POTION)
+            msgbox(format("You set a Potion between the mittens and the kettle. The keeper doesn't watch you do it, which is its own kind of manners.\pKeeper: There. Now you're from here."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("You go through your bag twice. The keeper waves it off before you can apologize.\pKeeper: The shelf's patient. So's the island.\nBring it when you're rich."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Keeper: Then don't. The square doesn't keep accounts.\pThat's not a kindness, mind. It's a discipline."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- the warming hut: storm-relief culture as a service (§09 heal NPC) ------
+script ParcelDelibird_WarmingHut {
+    lock
+    faceplayer
+    msgbox(format("The hut smells of woodsmoke and wet wool. A row of cots, a kettle always on, a crate of donated kit by the door.\pHutkeeper: In you come. Storm rule -- nobody asks, nobody pays.\pWeather counts as a storm. So does a long day."), MSGBOX_DEFAULT)
+    msgbox(format("Hutkeeper: Set your partners down by the stove. Go on."), MSGBOX_DEFAULT)
+    closemessage
+    call(Common_EventScript_OutOfCenterPartyHeal)
+    msgbox(format("Hutkeeper: There. Warmed through.\pThis hut's the oldest building standing on the island, you know. The festival is younger than the kindness.\pMost things are."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- festival texture: the lantern-stringer (warmth straight, dread offhand) -
+script ParcelDelibird_Stringer {
+    lock
+    faceplayer
+    msgbox(format("A woman on a short ladder feeds string lights along the eaves, a spare bulb held in her teeth. She talks around it.\pStringer: Every year they go up a week earlier. Notice that? Gran strung them the week of first freeze. That was the signal -- that was the whole point of them."), MSGBOX_DEFAULT)
+    msgbox(format("Stringer: There's been no first freeze worth the name in six years. So now we go by the calendar, like mainlanders.\pShe fits the bulb, and it comes on, warm against the grey.\pStringer: Still pretty, though. That's not nothing. Some years it's most of what we've got."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- festival texture: the blanket-folder (the mask, legible on inspection) --
+script ParcelDelibird_Blankets {
+    lock
+    faceplayer
+    msgbox(format("A man folds relief blankets into neat thirds on a bench -- good thick wool, brand new.\pFolder: Storm stock. We fold it in autumn so nobody has to think in January.\pHe squares a corner with more care than it needs."), MSGBOX_DEFAULT)
+    msgbox(format("Folder: Good blankets, these. Warm. Free.\pYou learn not to read the corner.\pThe corner, small and tasteful, reads MEREHOLT FOUNDATION."), MSGBOX_DEFAULT)
     release
     end
 }
