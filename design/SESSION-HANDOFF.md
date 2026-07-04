@@ -263,7 +263,8 @@ story is complete end to end, coda included.
    `ParcelBoardroom` off the Coast quay, post-testimony summons, Lady-class
    photo-neutral roster, Hollis arc-closer. Playtest it along with the climax.
 3. **Deepen the zones** (the "make it much longer" work): more trainers +
-   gatekeeper battles; the full Delibird Isle areas (Crystal Cavern / Snowy
-   Summit / Shoreline Cliffs); environmental puzzles; a snow/ice tileset; a
-   randomized gift-trade; a Delibird Isle heal-NPC.
+   gatekeeper battles; the full Delibird Isle areas (Snowy Summit / Shoreline
+   Cliffs; the Crystal Cavern exists); environmental puzzles; a snow/ice
+   tileset. ~~Gift-trade~~ + ~~heal-NPC~~ BUILT (the gift square + the
+   warming hut, this session).
 4. **Flesh the ~9 original Skald trainer teams** (still 1–2 mons / 2 moves each).
