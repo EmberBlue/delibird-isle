@@ -17448,3 +17448,25 @@ Level: 54
 Salamence
 Level: 55
 
+
+=== TRAINER_SKALD_CORDELIA ===
+Name: CORDELIA
+Class: Lady
+Pic: Elite Four Glacia
+Gender: Female
+Music: Female
+Items: Full Restore / Full Restore
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Persian
+Level: 55
+
+Ninetales
+Level: 56
+
+Altaria
+Level: 56
+
+Milotic
+Level: 58

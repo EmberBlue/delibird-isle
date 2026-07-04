@@ -43864,3 +43864,72 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 17452
+    [DIFFICULTY_NORMAL][TRAINER_SKALD_CORDELIA] =
+    {
+#line 17453
+        .trainerName = _("CORDELIA"),
+#line 17454
+        .trainerClass = TRAINER_CLASS_LADY,
+#line 17455
+        .trainerPic = TRAINER_PIC_ELITE_FOUR_GLACIA,
+        .encounterMusic_gender =
+#line 17456
+F_TRAINER_FEMALE | 
+#line 17457
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+#line 17458
+        .items = { ITEM_FULL_RESTORE, ITEM_FULL_RESTORE },
+#line 17459
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 17460
+        .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_TRY_TO_FAINT,
+        .partySize = 4,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 17462
+            .species = SPECIES_PERSIAN,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17464
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17463
+            .lvl = 55,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17465
+            .species = SPECIES_NINETALES,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17467
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17466
+            .lvl = 56,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17468
+            .species = SPECIES_ALTARIA,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17470
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17469
+            .lvl = 56,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17471
+            .species = SPECIES_MILOTIC,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17473
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17472
+            .lvl = 58,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

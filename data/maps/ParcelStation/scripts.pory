@@ -63,6 +63,12 @@ script ParcelStation_Hale {
                     if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
                         if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
                             if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+                                if (!flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+                                    msgbox(format("Hale: It's filed. It's true. Now we find out who reads it -- and that part was never ours to control.\pOurs was the writing it down."), MSGBOX_DEFAULT)
+                                    msgbox(format("Hale: …One reader has asked for you already. Mereholt. The coast office -- Brooke herself, up from the mainland.\pYou owe her nothing, {PLAYER}. Go anyway.\pYou've earned the seeing of her face while she says whatever she's decided to say."), MSGBOX_DEFAULT)
+                                    release
+                                    end
+                                }
                                 msgbox(format("Hale: It's filed. It's true. Now we find out who reads it -- and that part was never ours to control.\pOurs was the writing it down. Rest, {PLAYER}. You've earned a night that isn't about the work."), MSGBOX_DEFAULT)
                                 release
                                 end

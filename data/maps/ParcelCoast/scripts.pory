@@ -24,9 +24,19 @@ const LOCALID_COAST_HOLLIS  = 3
 const LOCALID_COAST_WORKER  = 4
 
 mapscripts ParcelCoast_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelCoast_HideAide
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0: ParcelCoast_SetMapVar
     ]
+}
+
+// the Mereholt aide only appears once the testimony has landed -- the
+// summons is the concern reading it (FLAG_TEMP_4 hides him before then)
+script ParcelCoast_HideAide {
+    if (!flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        setflag(FLAG_TEMP_4)
+    }
+    end
 }
 
 script ParcelCoast_SetMapVar {
@@ -178,6 +188,13 @@ script ParcelCoast_GymHarland_Defeated {
 script ParcelCoast_Hollis {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+        msgbox(format("Hollis's desk is clean in the new way -- the way a desk is clean when the drawers are empty.\pHollis: The conservation program is being restructured. Her word. I typed the memo myself.\pI still type well."), MSGBOX_DEFAULT)
+        msgbox(format("Hollis: You'll want to know whether I would do it again.\pSo do I, Ranger. So do I."), MSGBOX_DEFAULT)
+        msgbox(format("She does not pour a cup this time.\pThere is nowhere left to put the kindness."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
         msgbox(format("Hollis: The tea's still on, Ranger. The offer with it.\pThink about how you write it. That's all I ever ask."), MSGBOX_DEFAULT)
         release
@@ -262,6 +279,31 @@ script ParcelCoast_ReturnFerry {
     playse(SE_SHIP)
     delay(40)
     warp(MAP_PARCEL_ISLE, 41, 48)
+    waitstate
+    end
+}
+
+// --- the Mereholt aide: the summons (post-testimony) ------------------------
+// Appears on the quay outside the office once FLAG_SKALDMERE_FINALE_DONE is
+// set (see ParcelCoast_HideAide). The concern read the filing; the concern
+// asks for the author. He walks you up to the boardroom.
+script ParcelCoast_MereholtAide {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+        msgbox(format("Aide: No message came down.\pShe said you would already have everything she'd say."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A Mereholt suit waits where the office lamps meet the quay light. He does not make you ask.\pAide: Ms. Brooke is up from the mainland office. She has asked for you. By name -- no title on it.\pThe boardroom. Top of the stairs."), MSGBOX_DEFAULT)
+    msgbox(format("Go up?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("Aide: She'll wait. She prices patience like everything else.\pAccurately."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    closemessage
+    warp(MAP_PARCEL_BOARDROOM, 4, 2)
     waitstate
     end
 }

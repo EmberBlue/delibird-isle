@@ -1,0 +1,67 @@
+// ParcelBoardroom -- the §02/§05 finale coda: Cordelia Brooke, in a boardroom,
+// not in a cave. After the testimony lands (FLAG_SKALDMERE_FINALE_DONE), the
+// head of the concern asks for the player by name; a Mereholt aide on the
+// Coast quay walks you up. The fight is policy -- the battle is a courtesy
+// she requests, her team curated for boardroom-photo neutrality rather than
+// combat advantage (§05). No conversion, no collapse: she names the price of
+// the delay, mentions her own leash exactly once (locked, §05), turns the
+// Johto collateral over like an actuarial fact (§04's knot), and the economy
+// remains. Clear-eyed grief (§02). The stairs walk you back to the quay.
+//
+// Layout is vanilla Devon Corp 3F -- the long executive floor. The walk from
+// the stairs to the desk is the whole length of the room. That is the point.
+
+const LOCALID_BOARD_CORDELIA = 1
+
+mapscripts ParcelBoardroom_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_1, 0: ParcelBoardroom_Arrival
+    ]
+}
+
+// the room, read once, on the way in
+script ParcelBoardroom_Arrival {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+        end
+    }
+    lockall
+    msgbox(format("The boardroom runs the whole length of the building, and she has put all of it between the door and her chair.\pNo board. No counsel. No second cup.\pFor this, she wanted no witnesses."), MSGBOX_DEFAULT)
+    closemessage
+    releaseall
+    end
+}
+
+// the stairs -- back down to the quay
+script ParcelBoardroom_Leave {
+    lockall
+    warp(MAP_PARCEL_COAST, 15, 36)
+    waitstate
+    end
+}
+
+script ParcelBoardroom_Cordelia {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+        msgbox(format("Cordelia: The door is where you left it, Ranger.\pOne of us still has a region to run."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Cordelia Brooke does not stand to greet you. She finishes the line she is writing, caps the pen, and squares the page against the edge of the desk.\pCordelia: Ranger. Sit, don't sit. The meeting runs the same length either way."), MSGBOX_DEFAULT)
+    msgbox(format("Cordelia: You filed the truth. All of it, I'm told. I've had it read to me twice -- once by the lawyers, once by the people I pay to translate lawyers.\pReview of the coastal quotas. The permafrost leases enjoined pending survey. The corridor listing, fast-tracked.\pMy expansion, priced this morning at eighteen months of delay. Thirty, if the hearings run long."), MSGBOX_DEFAULT)
+    msgbox(format("Cordelia: That is what you bought. I wanted you to hear the price from me, because nobody who celebrates you this week will say it to your face.\pWhen the Politoed data is corrected, the Mahogany preserve loses its listing. Her lie protected that marsh for twenty years. Your truth un-protects it in a filing season.\pI don't say it to wound. I say it because the accounts should be kept whole. Someone in this room still keeps accounts."), MSGBOX_DEFAULT)
+    msgbox(format("Cordelia: And you are owed one correction, since we're keeping them.\pYou did not fight a company. Mereholt is the ferry you arrived on. The wage of the man who fed you on the crossing. Half the fuel in this harbour, and a third of the budget of the Corps that trained you.\pYou fought the way this region eats, Ranger. And you have won a delay."), MSGBOX_DEFAULT)
+    msgbox(format("For a moment the only sound is the harbour below -- the cranes, swinging weight through the cold air, on schedule.\pCordelia: The board would have my seat in a week if the figures faltered. There are covenants older than my chair that decide most of what I sign.\pI mention that once, for accuracy. Not absolution. Do not write it down as regret."), MSGBOX_DEFAULT)
+    msgbox(format("Cordelia: One item remains, and then the door.\pI have read eleven hundred pages about you, most of them in your own hand. Paper flattens people -- it is the only thing paper does reliably.\pI should like the primary source."), MSGBOX_DEFAULT)
+    msgbox(format("She rises, and the room seems to rise with her. From beside the desk, unhurried, her partners come out to stand where they have stood in ten years of photographs.\pGroomed. Calm. Asked for nothing, ever, until now.\pCordelia: Neither of us is used to losing in a room like this. Shall we?"), MSGBOX_DEFAULT)
+    trainerbattle_single(TRAINER_SKALD_CORDELIA,
+        format("Cordelia: Gently, now.\nThis is still a boardroom."),
+        format("Cordelia: …There it is.\nThe thing the paper flattened."))
+    msgbox(format("She recalls her partners the way a person closes a ledger -- precisely, without haste, finished.\pCordelia: No settlement. No counter-offer. There would be no number on it anyway.\pYou have made honesty expensive, which is more than most people manage with a whole life. It will not be enough. I think you know that better than the ones who'll drink to you tonight."), MSGBOX_DEFAULT)
+    msgbox(format("Cordelia: For what it is worth -- and you may price this however you like -- I read her model the year it was published, and I believed it.\pI wanted a region that could bear us. I still believe it can.\pWe differ on the arithmetic."), MSGBOX_DEFAULT)
+    msgbox(format("She turns her chair to the window, to the harbour, to the cranes still swinging on schedule.\pWhatever her face does next, she has put the whole length of the room between you and it.\pThe meeting is over. Nobody says so. It is over anyway."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_CORDELIA_DONE)
+    release
+    end
+}
