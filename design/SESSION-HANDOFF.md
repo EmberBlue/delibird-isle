@@ -228,6 +228,14 @@ must be 0). Stale-object traps + the full gotcha list: §12.
 
 ## Top gotchas (full list in §12 — these bite hardest)
 
+- **NEVER let MAX_TRAINERS_COUNT track TRAINERS_COUNT.** SYSTEM_FLAGS (badges,
+  FLAG_SYS_POKEMON_GET, visited flags…) sit at TRAINER_FLAGS_START +
+  MAX_TRAINERS_COUNT, and SaveBlock1's flags[] is sized from it — so every bump
+  silently breaks ALL existing saves (checksums still pass; the bits are just
+  misread → place-specific freezes/limbo NPC states). This bit us across the
+  872→877→886→887 bumps. It is now PINNED at 1000 (headroom to trainer 999);
+  saves from that build onward survive new trainers. Do not touch it.
+
 - `make check` **requires `DEBUG=0`** (shared obj-dir / TESTING flag).
 - New map's `scripts.inc` must be hand-added to `data/event_scripts.s`.
 - After editing `map.bin`/`map.json`: `rm build/modern-debug/data/{maps,map_events}.o`.

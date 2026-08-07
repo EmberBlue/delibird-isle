@@ -902,7 +902,14 @@
 #define TRAINER_SKALD_CORDELIA                886
 
 #define TRAINERS_COUNT                      887
-#define MAX_TRAINERS_COUNT                  887
+// PINNED with headroom (was tracking TRAINERS_COUNT exactly). Every change to
+// this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS -> every badge/system
+// flag AND the size of SaveBlock1's flags[] array -- i.e. it SILENTLY BREAKS
+// ALL EXISTING SAVES (checksums still pass; the data is just misread). That
+// is exactly what happened across the 872->877->886->887 bumps. Pinning a
+// ceiling means TRAINERS_COUNT can grow to 999 with no save impact. Do NOT
+// lower or raise this without accepting a region-wide save wipe.
+#define MAX_TRAINERS_COUNT                  1000
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H
