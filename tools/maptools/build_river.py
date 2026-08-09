@@ -23,7 +23,7 @@ FLOWERS = 4
 CROP = 4                        # strip-crop rows (flower beds, decorative)
 SAND = 292                     # bank / track / "concrete" cut-banks
 OCEAN = 368                    # the river (clean, elev 1)
-DECK = 440                     # the broken beaver-dam ridge
+DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                     # the broken beaver-dam ridge
 TALL_GRASS = 13
 TREES = 579                    # forest wall (blocked, elev 0)
 

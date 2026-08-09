@@ -22,7 +22,7 @@ GRASS = 1
 FLOWERS = 4
 SAND = 292                      # the pale frost-ground / scree above the treeline
 OCEAN = 368                     # thermokarst melt ponds (elev 1)
-DECK = 440                      # the drill rig
+DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                      # the drill rig
 TALL_GRASS = 13
 TREES = 579                     # forest wall (blocked, elev 0)
 

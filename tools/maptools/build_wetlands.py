@@ -23,7 +23,7 @@ GRASS = 1
 FLOWERS = 4
 SAND = 292                       # mud flat / packed track / settlement ground
 OCEAN = 368                      # backwater / pools (clean, elev 1)
-DECK = 440                       # dock + footbridge planks
+DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                       # dock + footbridge planks
 TALL_GRASS = 13                  # reed beds (wild encounters)
 TREES = 579                      # forest wall (blocked, elev 0)
 

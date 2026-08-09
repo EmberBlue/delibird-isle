@@ -22,7 +22,7 @@ W, H = 60, 24
 GRASS = 1
 SAND = 292                       # beach / track sand
 OCEAN = 368                      # open sea (clean waves, elev 1)
-DECK = 440                       # wooden plank bridge deck
+DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                       # wooden plank bridge deck
 TREES = 579                      # forest wall (blocked, elev 0)
 
 

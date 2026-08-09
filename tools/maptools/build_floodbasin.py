@@ -21,7 +21,7 @@ GRASS = 1
 FLOWERS = 4
 SAND = 292
 OCEAN = 368                      # pools / channels / the plume (clean, elev 1)
-DECK = 440                       # the outreach booth shed
+DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                       # the outreach booth shed
 TALL_GRASS = 13
 TREES = 579                      # forest wall (blocked, elev 0)
 

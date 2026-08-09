@@ -18,7 +18,7 @@ GRASS = 1
 FLOWERS = 4
 SAND = 292                       # the docks / waterfront / quay
 OCEAN = 368                      # the overfished sea (clean, elev 1)
-DECK = 440                       # docks, warehouses, the boat
+DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                       # docks, warehouses, the boat
 TALL_GRASS = 13
 TREES = 579                      # land frame (blocked, elev 0)
 

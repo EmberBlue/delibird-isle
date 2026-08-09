@@ -20,7 +20,7 @@ GRASS = 1
 FLOWERS = 4
 SAND = 292
 OCEAN = 368                     # the rain sampling pool (clean, elev 1)
-DECK = 440                      # the dais rail
+DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                      # the dais rail
 TREES = 579                     # compound wall (blocked, elev 0)
 
 OPEN_X0, OPEN_X1 = 21, 27          # the south gate / dock
