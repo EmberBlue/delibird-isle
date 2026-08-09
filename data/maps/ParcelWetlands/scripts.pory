@@ -80,6 +80,7 @@ script ParcelWetlands_Harland {
     msgbox(format("Harland turns back to his nets.\pHarland: You want to talk? Talk to Councilman Dorsey. He's down by the landing.\nSomeone who actually listens."), MSGBOX_DEFAULT)
     setvar(VAR_0x8004, 3)
     special(SkaldmereCertTaskMark)
+    setvar(VAR_TEMP_1, 0)
     release
     end
 }
@@ -101,6 +102,7 @@ script ParcelWetlands_Dorsey {
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 4)
     special(SkaldmereCertTaskMark)
+    setvar(VAR_TEMP_1, 0)
     release
     end
 }
@@ -154,15 +156,20 @@ script ParcelWetlands_ClueTag {
 
 // --- the Poisoned Waters event (fires after Harland + Dorsey) ----------------
 script ParcelWetlands_PoisonTrigger {
+    // FREEZE FIX: every exit path MUST move VAR_TEMP_1 off 0, or the trigger
+    // re-fires each frame and pins the player to the tile. Early exits park it
+    // at 2 (disarmed-unmet); the Harland/Dorsey beats re-arm it back to 0.
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 24)
     specialvar(VAR_RESULT, SkaldmereCertTaskCount)
     if (var(VAR_RESULT) != 2) {
+        setvar(VAR_TEMP_1, 2)
         end
     }
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
+        setvar(VAR_TEMP_1, 2)
         end
     }
     lockall
