@@ -137,8 +137,50 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
-	release
+	lockall
+	@ --- Skaldmere catch-up (debug): endgame-ready in one press. ---
+	@ Leaves the climax (the Marsh) + the boardroom coda unplayed; opens
+	@ everything up to them. Running it twice duplicates the mons/items.
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_B_DASH
+	setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE07_GET
+	setflag FLAG_BADGE08_GET
+	setflag FLAG_SKALDMERE_FOREST_CERT
+	setflag FLAG_SKALDMERE_WETLAND_CERT
+	setflag FLAG_SKALDMERE_WATERSHED_CERT
+	setflag FLAG_SKALDMERE_HIGHLAND_CERT
+	setflag FLAG_SKALDMERE_COASTAL_CERT
+	setflag FLAG_SKALDMERE_RANGER_KIT
+	setflag FLAG_SKALDMERE_DELIBIRD_ARRIVAL
+	givemon SPECIES_DODUO, 40
+	givemon SPECIES_ZIGZAGOON, 35
+	givemon SPECIES_MARILL, 38
+	additem ITEM_HM01, 1
+	additem ITEM_HM02, 1
+	additem ITEM_HM03, 1
+	additem ITEM_HM04, 1
+	additem ITEM_HM05, 1
+	additem ITEM_HM06, 1
+	additem ITEM_HM07, 1
+	additem ITEM_HM08, 1
+	additem ITEM_RARE_CANDY, 99
+	additem ITEM_ULTRA_BALL, 50
+	additem ITEM_HYPER_POTION, 20
+	additem ITEM_MAX_REVIVE, 10
+	addmoney 100000
+	msgbox Debug_Text_SkaldCatchUp, MSGBOX_DEFAULT
+	releaseall
 	end
+
+Debug_Text_SkaldCatchUp:
+	.string "SKALDMERE CATCH-UP applied.\p8 badges, 5 certifications, all HMs,\na field crew (Doduo/Zigzagoon/Marill),\l99 Rare Candies, supplies, 100k.\pThe ferry hub is open. The Marsh and\nwhat follows it are yours to play.$"
 
 Debug_EventScript_Script_2::
 	release
