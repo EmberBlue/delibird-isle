@@ -264,7 +264,15 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_STATION_HALL",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [],
   "bg_events": [
     {

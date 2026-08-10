@@ -1,0 +1,61 @@
+// ParcelStationHall -- inside the ranger field station at last. The story's
+// home base gets a room: the certification board (a diegetic progress wall),
+// Hale's creed over the door, the requisition shelf, and Moss the archivist.
+// Voice: the station is threadbare and organized; everything is signed for.
+
+const LOCALID_HALL_CLERK = 1
+// FLAG_UNUSED_0x1DA is claimed as Moss's one-time requisition flag (verified
+// unreferenced in vanilla). Rename it properly in flags.h when git is back.
+
+mapscripts ParcelStationHall_MapScripts {}
+
+script ParcelStationHall_Plaque {
+    msgbox(format("Carved over the inner door, the letters worn smooth:\pWE DON'T WIN. WE REDUCE HARM.\pSomeone has touched the words on the way out. Many times, for a long time."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelStationHall_Shelf {
+    msgbox(format("The requisition shelf: coils of red survey cloth, sample vials, spare lamp-glass, a winch arm with a mended handle.\pEverything is signed out and signed back in. The ledger's columns are full, going back years."), MSGBOX_SIGN)
+    end
+}
+
+// the certification board -- five slots under glass; the wall keeps the score
+script ParcelStationHall_CertWall {
+    setvar(VAR_TEMP_2, 0)
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) { addvar(VAR_TEMP_2, 1) }
+    if (flag(FLAG_SKALDMERE_WETLAND_CERT)) { addvar(VAR_TEMP_2, 1) }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) { addvar(VAR_TEMP_2, 1) }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) { addvar(VAR_TEMP_2, 1) }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) { addvar(VAR_TEMP_2, 1) }
+    switch (var(VAR_TEMP_2)) {
+        case 0:
+            msgbox(format("The certification board. Five slots under glass, five blank cards.\pForest. Wetland. Watershed. Highland. Coastal.\pThe glass is clean. Somebody dusts it anyway."), MSGBOX_SIGN)
+        case 1:
+            msgbox(format("The certification board. One card filled in, four blank.\pThe handwriting on the filled one is Hale's -- small, square, no flourish.\pIt does not say congratulations. It says the date."), MSGBOX_SIGN)
+        case 2:
+            msgbox(format("The certification board. Two cards filled.\pSomeone has straightened them so the edges line up exactly."), MSGBOX_SIGN)
+        case 3:
+            msgbox(format("The certification board. Three cards filled, two to go.\pThe blank ones wait without comment. That is the station's whole style."), MSGBOX_SIGN)
+        case 4:
+            msgbox(format("The certification board. Four of five.\pThe last slot is the Coastal card. The glass over it has been wiped more often than the rest."), MSGBOX_SIGN)
+        case 5:
+            msgbox(format("The certification board. All five cards filled, corner to corner, in Hale's small square hand.\pNobody has made a fuss of it. The board simply has no room left --\pwhich, here, is what a fuss looks like."), MSGBOX_SIGN)
+    }
+    end
+}
+
+script ParcelStationHall_Clerk {
+    lock
+    faceplayer
+    if (flag(FLAG_UNUSED_0x1DA)) {
+        msgbox(format("Moss: Stores are stores. If it's not on the shelf, the coast took it.\pSign the ledger on your way out. Everyone signs the ledger."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A narrow man behind a narrow desk, filing survey slips by some order only he can see.\pMoss: Provisional, yes? Then there's an issue kit with your name on it. Had it ready for weeks. Nobody tells me anything, but I stock for it anyway."), MSGBOX_DEFAULT)
+    giveitem(ITEM_GREAT_BALL, 5)
+    setflag(FLAG_UNUSED_0x1DA)
+    msgbox(format("Moss: Sign here. And initial here. And -- yes. There.\pMoss: The Corps runs on two things, provisional. Weather-proof ink, and people who come back. Try to be the second kind."), MSGBOX_DEFAULT)
+    release
+    end
+}

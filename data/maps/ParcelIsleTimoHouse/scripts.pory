@@ -1,0 +1,27 @@
+// Timo's house. The kid who battles strangers off the ferry lives here with
+// his gran -- the source of "don't go past the bridge." The dread is
+// domestic: a rule with no explanation, and a crayon drawing pinned low.
+
+const LOCALID_TIMO_GRAN = 1
+
+mapscripts ParcelIsleTimoHouse_MapScripts {}
+
+script ParcelIsleTimoHouse_Gran {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Gran: Past the bridge, was it. All the way past, and back again.\pShe looks at you a long moment, and nods once, the way a door closes softly."), MSGBOX_DEFAULT)
+        msgbox(format("Gran: His mother worked the works, down the coast. Years of it. We knew what it was and we needed what it paid, and both things were true at once.\pYou wrote it down out loud. Good. It was never going to be us that did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Gran: Timo's out by the water again, I expect. Battling strangers off the ferry.\pGran: I tell him, don't go past the bridge. He asks why. I tell him, because I said so.\pHe's too young for the other answer."), MSGBOX_DEFAULT)
+    msgbox(format("Gran: You've been past it, haven't you. It's on your boots.\pCome back through when you can. He listens to you lot more than he listens to me."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelIsleTimoHouse_Drawing {
+    msgbox(format("A crayon drawing, pinned low on the wall at a kid's eye height.\pA bridge. A river. A row of round blue somethings on the bank, with big happy eyes.\pThe frogs are all smiling. Every one of them."), MSGBOX_SIGN)
+    end
+}

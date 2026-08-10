@@ -1,0 +1,32 @@
+// The neighbor's house (§07). She is the one who nearly said too much on the
+// green -- "the one the scientist wrote about" -- and hurried you indoors.
+// Inside lives the other half of that marriage: the man who says almost
+// nothing, in a town where words carry over water.
+
+const LOCALID_NBH_MAN = 1
+
+mapscripts ParcelIsleNeighborHouse_MapScripts {}
+
+script ParcelIsleNeighborHouse_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("He is at the stove, the same as always. The kettle is on for two.\pMan: She cried when she read it, you know. Your filing. Not sad crying.\pThe kind where a held thing finally gets put down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A man at the stove, minding a kettle that is in no hurry.\pMan: Evening."), MSGBOX_DEFAULT)
+    msgbox(format("You wait. The kettle ticks.\pMan: …She talks enough for the both of us. It's not that I don't.\pIt's that the town is small, and words carry over water."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelIsleNeighborHouse_Schedules {
+    msgbox(format("Ferry schedules, years of them, pinned up in layers like sediment.\pThe older ones are dense with sailings. The recent ones are thin.\pThe blank spaces are recent, too."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsleNeighborHouse_Drawer {
+    msgbox(format("A writing drawer, locked. The keyhole is bright from use.\pWhoever writes here writes often -- and puts it away, every time, before the kettle sings."), MSGBOX_SIGN)
+    end
+}
