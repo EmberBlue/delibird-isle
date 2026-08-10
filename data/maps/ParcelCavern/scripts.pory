@@ -71,7 +71,7 @@ script ParcelCavern_Leave {
     lockall
     msgbox(format("The mouth of the cavern, and the bright thin daylight of the summit beyond."), MSGBOX_DEFAULT)
     closemessage
-    warp(MAP_PARCEL_DELIBIRD, 20, 10)
+    warp(MAP_PARCEL_DELIBIRD, 8, 4)
     waitstate
     end
 }

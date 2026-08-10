@@ -166,8 +166,8 @@
     {
       "id": "HEAL_LOCATION_PARCEL_DELIBIRD",
       "map": "MAP_PARCEL_DELIBIRD",
-      "x": 30,
-      "y": 38
+      "x": 9,
+      "y": 22
     },
     {
       "id": "HEAL_LOCATION_PARCEL_COAST",

@@ -1,96 +1,82 @@
 #!/usr/bin/env python3
-"""Delibird Isle holiday village -- Johto identity pass (v2).
+"""Delibird Isle holiday village -- HAND-DRAWN, tile by tile.
 
-Tilesets: gTileset_JohtoGeneral + gTileset_AzaleaTown (the first zone off the
-shared coastal set). Composed, not stamped-on-a-rectangle: sea ring, beach,
-a fenced gift square at the heart, cottages, a cliff shelf up north with the
-Crystal Cavern mouth, a mooring spit south. Every scripted coordinate from
-map.json is asserted walkable at build time.
+The map IS the drawing below: 30x26, every character a deliberate tile.
+Uppercase anchors mark scripted entities; their coordinates are extracted and
+printed so map.json / warps / heal locations follow the drawing, never the
+other way round. Johto/Azalea tilesets, picks behavior-verified.
 
-Safety rules (see .claude/skills/skald-verify): every WALKABLE tile must have
-empty top-layer cells (checked here against the tileset bins) -- top-layer art
-covers the player. Blocked tiles (trees, fences, cottages) may overhang.
+Legend: ~ sea(surf)  b beach  . grass  t tallgrass  f flowers  P path  M mud
+        T tree  F fence  Y sign  1..6 cottage(roof l/m/r, wall win/door/win)
+        R/r rock  C cave arch
+Anchors (walkable): E elder  D delibird  G giver  I ilex  K keeper  v reveler
+        s stringer  o folder  W hutkeeper  V relief  H fisher(Tomas)
+        A sailor  * ferry+heal  x cavern-exit  m slump-sign  n summit-sign
+        i itemA  j itemB  B banner
 """
-import struct, json, os
+import struct
 
-W,H = 60,44
-P="data/tilesets/primary/johtogeneral"; S="data/tilesets/secondary/azaleatown"
+ROWS = [
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",  # 0
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",  # 1
+"~~TTTTTTTTTTTTTTTTTTTTTTTTTT~~",  # 2
+"~~T....RCr....t.....Yn..123T~~",  # 3  summit shelf: cave, grass, sign, cottage
+"~~T.i..RxR....tt........456T~~",  # 4
+"~~TTTTTTTP.PTTTTTTTTTTTTTTTT~~",  # 5  pinch: two 1-wide gaps down
+"~~T123..P...P..123....T..t.T~~",  # 6  upper lane: two cottages
+"~~T456..P.s.P..456....T.tt.T~~",  # 7  stringer on the lane
+"~~TP.PPPP...PPPP.PPPP.T..t.T~~",  # 8  the high street
+"~~TP.FFFFFGFFFFF..123.TTTTT~~ ",  # 9  square north fence, giver at gate
+"~~TP.F.D...I..F...456......T~~",  # 10 delibird+ilex inside
+"~~TPBF..K.....F.....o....t.T~~",  # 11 keeper inside, folder east lane
+"~~TP.FFFFvFFFFF.PPPP.....t.T~~",  # 12 south gate, reveler at it
+"~~TP....P.......P..........T~~",  # 13
+"~~T123..PPPP..P.P.123......T~~",  # 14 elder's cottage / east cottage
+"~~T456E.P..P..PPP.456......T~~",  # 15 elder beside her door
+"~~TP.PPPP..PP..P..P.V......T~~",  # 16 relief villager on the lane
+"~~TP123.........MMMMm......T~~",  # 17 slump cabin on mud, its sign
+"~~TP456.W.......M123M...bbbT~~",  # 18 warming hut keeper at his door
+"~~T.PPPPP.......M456M..bbHbT~~",  # 19 Tomas on the east beach
+"~~T....P.....P..MMMMM.bbbjbT~~",  # 20 itemB in the cove
+"~~TTTTP.PPPPP.PTTTTTTTbbbbbT~~",  # 21 tree pinch to the shore
+"~~bbbbPPP*PPPPbbbbbbbbbbbbb~~ ",  # 22 the mooring shore, ferry lands at *
+"~~bbbbbbbAbbbbbbbbbbbbbbbbb~~ ",  # 23 sailor on the spit
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",  # 24
+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~",  # 25
+]
+W,H = 30,26
 
-GRASS=1; FLOWERS=4; TALL=10; TREE=36; SIGN=2; FENCE=238
-PATH=227; MUD=227; BEACH=227; SEA=265  # 265 = surfable (beh 16-21 family); 274 is shore decor
-ROCK_A=686; ROCK_B=687; CAVE=694
-# cottage kit (azalea): roof row / wall row (window, slats, window)
-COT_ROOF=(657,658,659); COT_WALL=(665,664,666)
+# tile words (behavior-verified johto/azalea picks; see skald-verify)
+GRASS,FLW,TALL,TREE,SIGN,FENCE = 1,4,10,36,2,238
+PATH,MUD,BEACH,SEA = 227,227,227,265
+RA,RB,CAVE = 686,687,694
+ROOF=(657,658,659); WALL=(665,664,666)
+def wq(m,c,e): return (e<<12)|(c<<10)|m
+WALKC={'.':GRASS,'t':TALL,'f':FLW,'P':PATH,'M':MUD,'b':BEACH}
+BLOCKC={'T':TREE,'F':FENCE,'Y':SIGN,'R':RA,'r':RB,'C':CAVE,
+        '1':ROOF[0],'2':ROOF[1],'3':ROOF[2],'4':WALL[0],'5':WALL[1],'6':WALL[2]}
+ANCH="EDGIKvsoWVHA*xmni jB".replace(" ","")
 
-def wq(mid,col,elev): return (elev<<12)|(col<<10)|mid
-WALK=lambda m: wq(m,0,3)
-BLOCK=lambda m: wq(m,1,0)
-WATER=lambda m: wq(m,0,1)
+assert len(ROWS)==H
+for y,row in enumerate(ROWS):
+    assert len(row.rstrip())<=W and len(row.rstrip())>=W-1, f"row {y} width {len(row)}"
+grid=[[wq(SEA,0,1)]*W for _ in range(H)]
+anchors={}
+for y,row in enumerate(ROWS):
+    row=(row.rstrip()+"~"*W)[:W]
+    for x,ch in enumerate(row):
+        if ch=='~': grid[y][x]=wq(SEA,0,1)
+        elif ch in WALKC: grid[y][x]=wq(WALKC[ch],0,3)
+        elif ch in BLOCKC: grid[y][x]=wq(BLOCKC[ch],1,0)
+        elif ch in ANCH:
+            grid[y][x]=wq(PATH if ch in "*AsoKvGIDB" else GRASS,0,3)
+            assert ch not in anchors, f"duplicate anchor {ch}"
+            anchors[ch]=(x,y)
+        else: raise SystemExit(f"unknown char {ch!r} at {x},{y}")
+missing=[c for c in ANCH if c not in anchors]
+assert not missing, f"anchors missing from drawing: {missing}"
 
-pm=open(P+"/metatiles.bin","rb").read(); sm=open(S+"/metatiles.bin","rb").read()
-def topclear(m):
-    d,o=(pm,m*24) if m<512 else (sm,(m-512)*24)
-    c=struct.unpack_from("<12H",d,o); return all(v==0 for v in c[8:12])
-for m in (GRASS,FLOWERS,PATH,MUD,BEACH):  # TALL exempt: grass overlays feet by design
-    assert topclear(m), f"walkable tile {m} has top-layer art"
-
-g=[[WATER(SEA)]*W for _ in range(H)]
-def fill(x0,x1,y0,y1,w):
-    for y in range(y0,y1+1):
-        for x in range(x0,x1+1): g[y][x]=w
-def cottage(x,y):
-    for i,m in enumerate(COT_ROOF): g[y][x+i]=BLOCK(m)
-    for i,m in enumerate(COT_WALL): g[y+1][x+i]=BLOCK(m)
-
-# land mass: beach ring then grass
-fill(3,56,4,41,WALK(BEACH))
-fill(5,54,6,39,WALK(GRASS))
-# north cliff shelf (summit): tree walls, grass shelf, cave apron
-fill(5,54,6,6,BLOCK(TREE)); fill(5,54,13,13,BLOCK(TREE))
-fill(6,53,7,12,WALK(GRASS))
-fill(17,23,7,9,WALK(GRASS))
-g[8][19]=BLOCK(ROCK_A); g[8][21]=BLOCK(ROCK_B); g[8][20]=BLOCK(CAVE)     # the cavern mouth
-g[7][19]=BLOCK(ROCK_B); g[7][20]=BLOCK(ROCK_A); g[7][21]=BLOCK(ROCK_B)
-g[11][40]=WALK(GRASS)                                                     # summit lookout
-# gap through the tree band down to the village
-fill(19,21,13,13,WALK(PATH)); fill(19,21,14,23,WALK(PATH))
-# village floor
-fill(8,43,20,34,WALK(GRASS))
-fill(22,38,24,33,WALK(PATH))
-# the gift square: fence ring with north+south gates
-for x in range(26,37):
-    if x not in (30,31): g[26][x]=BLOCK(FENCE); g[31][x]=BLOCK(FENCE)
-for y in range(27,31):
-    g[y][26]=BLOCK(FENCE); g[y][36]=BLOCK(FENCE)
-fill(27,35,27,30,WALK(PATH))
-# cottages: elder's, warming hut, east house, and the half-sunk slump cabin
-cottage(9,21); cottage(8,27); cottage(38,27)
-cottage(13,15); fill(12,17,17,18,WALK(MUD))          # slump cabin on mud
-fill(9,14,23,25,WALK(PATH)); fill(8,12,29,30,WALK(PATH)); fill(38,42,29,30,WALK(PATH))
-# flowers + tall grass texture
-for (x,y) in [(23,22),(37,23),(14,27),(36,32),(25,34),(18,21)]: g[y][x]=WALK(FLOWERS)
-fill(44,50,20,24,WALK(TALL)); fill(6,10,33,37,WALK(TALL)); fill(15,18,8,10,WALK(TALL))
-# summit sign + banner sign tiles (visual posts; bg events sit on/next to them)
-g[11][41]=BLOCK(SIGN)
-# south mooring spit + east beach
-fill(29,33,34,37,WALK(PATH))
-fill(27,35,37,41,WALK(BEACH))
-fill(44,51,27,38,WALK(BEACH))
-fill(43,43,29,31,WALK(GRASS))
-# scattered trees for depth (keep routes clear)
-for (x,y) in [(7,17),(16,30),(24,18),(34,20),(42,22),(37,17),(10,19),(45,25)]:
-    g[y][x]=BLOCK(TREE)
-
-# --- assertions: every scripted coordinate must be walkable ---
-MUST=[(12,25),(28,27),(31,27),(47,33),(15,20),(31,38),(22,10),(50,32),(35,29),
-      (28,28),(33,30),(11,30),(24,24),(27,32),(30,38),(20,10),(15,18),(40,11),(30,31)]
-bad=[]
-for (x,y) in MUST:
-    v=g[y][x]
-    if not (((v>>10)&3)==0 and ((v>>12)&0xF)==3): bad.append((x,y,hex(v)))
-assert not bad, f"scripted coords not walkable: {bad}"
-
-out="data/layouts/ParcelDelibird/map.bin"
-with open(out,"wb") as f:
-    for row in g: f.write(struct.pack(f"<{W}H",*row))
-print(f"wrote {out}; all {len(MUST)} scripted coords walkable")
+open("data/layouts/ParcelDelibird/map.bin","wb").write(
+    b"".join(struct.pack(f"<{W}H",*r) for r in grid))
+print(f"wrote 30x26 hand-drawn map; anchors:")
+for c in ANCH: print(f"  {c}: {anchors[c]}")

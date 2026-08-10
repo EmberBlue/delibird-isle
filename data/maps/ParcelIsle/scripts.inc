@@ -203,7 +203,7 @@ ParcelIsle_FerryCaptain_6:
 # 148 "data/maps/ParcelIsle/scripts.pory"
 	delay 40
 # 149 "data/maps/ParcelIsle/scripts.pory"
-	warp MAP_PARCEL_DELIBIRD, 30, 38
+	warp MAP_PARCEL_DELIBIRD, 9, 22
 # 150 "data/maps/ParcelIsle/scripts.pory"
 	waitstate
 	end
