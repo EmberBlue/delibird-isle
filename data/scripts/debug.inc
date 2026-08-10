@@ -144,6 +144,7 @@ Debug_EventScript_Script_1::
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_B_DASH
+	setflag FLAG_SYS_POKENAV_GET
 	setflag FLAG_BADGE01_GET
 	setflag FLAG_BADGE02_GET
 	setflag FLAG_BADGE03_GET

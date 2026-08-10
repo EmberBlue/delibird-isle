@@ -156,6 +156,9 @@ static void WarpToTruck(void)
     FakeRtc_ForwardTimeTo(10, 0, 0);
     SetWarpDestination(MAP_GROUP(MAP_PARCEL_FERRY), MAP_NUM(MAP_PARCEL_FERRY), WARP_ID_NONE, 4, 6);
     WarpIntoMap();
+    // The Corps nav unit (PokeNav) is standard field issue -- the region map
+    // must be reachable without vanilla's Devon errand, which this hack cut.
+    FlagSet(FLAG_SYS_POKENAV_GET);
     // Without this, a whiteout falls back to the vanilla default
     // (Petalburg City), which doesn't exist in the Skaldmere flow. Seed the
     // respawn at the arrival dock town until the player heals somewhere later.
