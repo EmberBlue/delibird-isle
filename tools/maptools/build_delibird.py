@@ -1,116 +1,96 @@
 #!/usr/bin/env python3
-"""Generate Delibird Isle (§01/§06/§09 zone 6 -- Chapter 5, the interlude).
+"""Delibird Isle holiday village -- Johto identity pass (v2).
 
-The title location: festival cheer over an irreversible permafrost thaw. A warm
-beach + ferry pier south, the holiday village + gift square at the centre, the
-snowy summit (thermokarst pond, drunken forest, a sinking cabin) north. Rebuilt
-on gTileset_General + gTileset_leob_dewford. 60x44. No edge connection -- ferry
-warp in/out from ParcelIsle.
+Tilesets: gTileset_JohtoGeneral + gTileset_AzaleaTown (the first zone off the
+shared coastal set). Composed, not stamped-on-a-rectangle: sea ring, beach,
+a fenced gift square at the heart, cottages, a cliff shelf up north with the
+Crystal Cavern mouth, a mooring spit south. Every scripted coordinate from
+map.json is asserted walkable at build time.
 
-Run from repo root: python3 tools/maptools/build_delibird.py
+Safety rules (see .claude/skills/skald-verify): every WALKABLE tile must have
+empty top-layer cells (checked here against the tileset bins) -- top-layer art
+covers the player. Blocked tiles (trees, fences, cottages) may overhang.
 """
-import struct
-from pathlib import Path
+import struct, json, os
 
-W, H = 60, 44
+W,H = 60,44
+P="data/tilesets/primary/johtogeneral"; S="data/tilesets/secondary/azaleatown"
 
-# gTileset_General primary (shared) + gTileset_leob_dewford secondary
-GRASS = 1
-FLOWERS = 4
-SAND = 292
-OCEAN = 368                     # the sea / melt ponds (clean, elev 1)
-DECK = 440  # general plank deck; its art was TOP-layer (covered sprites) until the tileset fix -- see general/metatiles.bin 440 (now COVERED: water bottom, planks middle)                      # village cabins
-TALL_GRASS = 13
-TREES = 579                     # forest (blocked, elev 0)
+GRASS=1; FLOWERS=4; TALL=10; TREE=36; SIGN=2; FENCE=238
+PATH=227; MUD=227; BEACH=227; SEA=265  # 265 = surfable (beh 16-21 family); 274 is shore decor
+ROCK_A=686; ROCK_B=687; CAVE=694
+# cottage kit (azalea): roof row / wall row (window, slats, window)
+COT_ROOF=(657,658,659); COT_WALL=(665,664,666)
 
-LAND_X0, LAND_X1 = 6, 54
-LAND_Y0, LAND_Y1 = 6, 37
-SUMMIT_Y = 14
+def wq(mid,col,elev): return (elev<<12)|(col<<10)|mid
+WALK=lambda m: wq(m,0,3)
+BLOCK=lambda m: wq(m,1,0)
+WATER=lambda m: wq(m,0,1)
 
+pm=open(P+"/metatiles.bin","rb").read(); sm=open(S+"/metatiles.bin","rb").read()
+def topclear(m):
+    d,o=(pm,m*24) if m<512 else (sm,(m-512)*24)
+    c=struct.unpack_from("<12H",d,o); return all(v==0 for v in c[8:12])
+for m in (GRASS,FLOWERS,PATH,MUD,BEACH):  # TALL exempt: grass overlays feet by design
+    assert topclear(m), f"walkable tile {m} has top-layer art"
 
-def word(mid, col=0, elev=3):
-    return (elev << 12) | (col << 10) | mid
+g=[[WATER(SEA)]*W for _ in range(H)]
+def fill(x0,x1,y0,y1,w):
+    for y in range(y0,y1+1):
+        for x in range(x0,x1+1): g[y][x]=w
+def cottage(x,y):
+    for i,m in enumerate(COT_ROOF): g[y][x+i]=BLOCK(m)
+    for i,m in enumerate(COT_WALL): g[y+1][x+i]=BLOCK(m)
 
+# land mass: beach ring then grass
+fill(3,56,4,41,WALK(BEACH))
+fill(5,54,6,39,WALK(GRASS))
+# north cliff shelf (summit): tree walls, grass shelf, cave apron
+fill(5,54,6,6,BLOCK(TREE)); fill(5,54,13,13,BLOCK(TREE))
+fill(6,53,7,12,WALK(GRASS))
+fill(17,23,7,9,WALK(GRASS))
+g[8][19]=BLOCK(ROCK_A); g[8][21]=BLOCK(ROCK_B); g[8][20]=BLOCK(CAVE)     # the cavern mouth
+g[7][19]=BLOCK(ROCK_B); g[7][20]=BLOCK(ROCK_A); g[7][21]=BLOCK(ROCK_B)
+g[11][40]=WALK(GRASS)                                                     # summit lookout
+# gap through the tree band down to the village
+fill(19,21,13,13,WALK(PATH)); fill(19,21,14,23,WALK(PATH))
+# village floor
+fill(8,43,20,34,WALK(GRASS))
+fill(22,38,24,33,WALK(PATH))
+# the gift square: fence ring with north+south gates
+for x in range(26,37):
+    if x not in (30,31): g[26][x]=BLOCK(FENCE); g[31][x]=BLOCK(FENCE)
+for y in range(27,31):
+    g[y][26]=BLOCK(FENCE); g[y][36]=BLOCK(FENCE)
+fill(27,35,27,30,WALK(PATH))
+# cottages: elder's, warming hut, east house, and the half-sunk slump cabin
+cottage(9,21); cottage(8,27); cottage(38,27)
+cottage(13,15); fill(12,17,17,18,WALK(MUD))          # slump cabin on mud
+fill(9,14,23,25,WALK(PATH)); fill(8,12,29,30,WALK(PATH)); fill(38,42,29,30,WALK(PATH))
+# flowers + tall grass texture
+for (x,y) in [(23,22),(37,23),(14,27),(36,32),(25,34),(18,21)]: g[y][x]=WALK(FLOWERS)
+fill(44,50,20,24,WALK(TALL)); fill(6,10,33,37,WALK(TALL)); fill(15,18,8,10,WALK(TALL))
+# summit sign + banner sign tiles (visual posts; bg events sit on/next to them)
+g[11][41]=BLOCK(SIGN)
+# south mooring spit + east beach
+fill(29,33,34,37,WALK(PATH))
+fill(27,35,37,41,WALK(BEACH))
+fill(44,51,27,38,WALK(BEACH))
+fill(43,43,29,31,WALK(GRASS))
+# scattered trees for depth (keep routes clear)
+for (x,y) in [(7,17),(16,30),(24,18),(34,20),(42,22),(37,17),(10,19),(45,25)]:
+    g[y][x]=BLOCK(TREE)
 
-def build():
-    grid = [[word(OCEAN, 0, 1) for _ in range(W)] for _ in range(H)]   # the sea
+# --- assertions: every scripted coordinate must be walkable ---
+MUST=[(12,25),(28,27),(31,27),(47,33),(15,20),(31,38),(22,10),(50,32),(35,29),
+      (28,28),(33,30),(11,30),(24,24),(27,32),(30,38),(20,10),(15,18),(40,11),(30,31)]
+bad=[]
+for (x,y) in MUST:
+    v=g[y][x]
+    if not (((v>>10)&3)==0 and ((v>>12)&0xF)==3): bad.append((x,y,hex(v)))
+assert not bad, f"scripted coords not walkable: {bad}"
 
-    def put(x, y, mid, col=0, elev=3):
-        if 0 <= x < W and 0 <= y < H:
-            grid[y][x] = word(mid, col, elev)
-
-    def water(x, y):
-        put(x, y, OCEAN, col=0, elev=1)
-
-    def pool(x0, x1, y0, y1):
-        for y in range(y0, y1):
-            for x in range(x0, x1):
-                water(x, y)
-
-    def cabin(x, y, door_dx=1):           # a 3x2 plank cabin with a walkable door
-        for dy in range(2):
-            for dx in range(3):
-                put(x + dx, y + dy, DECK, col=1)
-        put(x + door_dx, y + 2, SAND)
-
-    def patch(x0, x1, y0, y1, tile):
-        for y in range(y0, y1):
-            for x in range(x0, x1):
-                put(x, y, tile)
-
-    # --- the island land: green village south, pale scree north ------------
-    for y in range(LAND_Y0, LAND_Y1):
-        for x in range(LAND_X0, LAND_X1):
-            put(x, y, SAND if y < SUMMIT_Y else GRASS)
-    for x in range(LAND_X0, LAND_X1):
-        put(x, LAND_Y1 - 1, SAND); put(x, LAND_Y1 - 2, SAND)     # south beach
-        put(x, LAND_Y0, SAND)                                    # north lip
-    for y in range(LAND_Y0, LAND_Y1):
-        put(LAND_X0, y, SAND)
-        put(LAND_X1 - 1, y, SAND)
-
-    # --- the ferry pier (south): you arrive here at (30,38) ----------------
-    for y in range(LAND_Y1 - 1, 40):
-        put(29, y, SAND); put(30, y, SAND); put(31, y, SAND)
-
-    # --- the snowy summit (north): the thaw at its plainest ----------------
-    pool(38, 45, 8, 11)                   # thermokarst melt pond on the peak
-    for (tx, ty) in ((11, 9), (14, 8), (17, 10), (12, 11), (47, 9), (45, 12)):
-        put(tx, ty, TREES, col=1, elev=0)  # the drunken forest, tilting
-    patch(20, 28, 8, 12, TALL_GRASS)      # the last cold ground (encounters)
-
-    # --- the thaw seeping into the village: a slump + a sinking cabin ------
-    pool(11, 15, 16, 19)
-    cabin(16, 16)                         # a cabin sinking toward the new pond
-
-    # --- the Holiday Village: cabins around a central GIFT SQUARE -----------
-    patch(24, 35, 24, 31, SAND)           # the gift square (the give economy)
-    cabin(9, 22)
-    cabin(44, 22)
-    cabin(38, 31)
-    cabin(10, 31)
-    for y in range(SUMMIT_Y, LAND_Y1 - 2):
-        for x in range(LAND_X0 + 1, LAND_X1 - 1):
-            if (x * 5 + y * 3) % 17 == 0 and grid[y][x] == word(GRASS):
-                put(x, y, FLOWERS)
-
-    # --- shore encounters (range shift: warm-water birds too far north) ----
-    patch(48, 53, 30, 35, TALL_GRASS)
-
-    return grid
-
-
-def main():
-    grid = build()
-    out = Path("data/layouts/ParcelDelibird")
-    out.mkdir(parents=True, exist_ok=True)
-    data = b"".join(struct.pack("<H", c) for row in grid for c in row)
-    assert len(data) == W * H * 2, len(data)
-    (out / "map.bin").write_bytes(data)
-    (out / "border.bin").write_bytes(
-        struct.pack("<4H", *([word(OCEAN, col=0, elev=1)] * 4)))
-    print(f"wrote {out}/map.bin ({len(data)} bytes, {W}x{H}) + border.bin (sea)")
-
-
-if __name__ == "__main__":
-    main()
+out="data/layouts/ParcelDelibird/map.bin"
+with open(out,"wb") as f:
+    for row in g: f.write(struct.pack(f"<{W}H",*row))
+print(f"wrote {out}; all {len(MUST)} scripted coords walkable")

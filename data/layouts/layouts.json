@@ -4546,8 +4546,8 @@
       "name": "ParcelDelibird_Layout",
       "width": 60,
       "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_AzaleaTown",
       "border_filepath": "data/layouts/ParcelDelibird/border.bin",
       "blockdata_filepath": "data/layouts/ParcelDelibird/map.bin"
     },
