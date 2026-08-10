@@ -160,9 +160,9 @@ Debug_EventScript_Script_1::
 	setflag FLAG_SKALDMERE_COASTAL_CERT
 	setflag FLAG_SKALDMERE_RANGER_KIT
 	setflag FLAG_SKALDMERE_DELIBIRD_ARRIVAL
-	givemon SPECIES_DODUO, 40
-	givemon SPECIES_ZIGZAGOON, 35
-	givemon SPECIES_MARILL, 38
+	givemon SPECIES_DODRIO, 45, move1=MOVE_FLY, move2=MOVE_DRILL_PECK, move3=MOVE_TRI_ATTACK, move4=MOVE_AGILITY
+	givemon SPECIES_LINOONE, 45, move1=MOVE_CUT, move2=MOVE_ROCK_SMASH, move3=MOVE_STRENGTH, move4=MOVE_FLASH
+	givemon SPECIES_AZUMARILL, 45, move1=MOVE_SURF, move2=MOVE_WATERFALL, move3=MOVE_DIVE, move4=MOVE_PLAY_ROUGH
 	additem ITEM_HM01, 1
 	additem ITEM_HM02, 1
 	additem ITEM_HM03, 1
@@ -181,7 +181,7 @@ Debug_EventScript_Script_1::
 	end
 
 Debug_Text_SkaldCatchUp:
-	.string "SKALDMERE CATCH-UP applied.\p8 badges, 5 certifications, all HMs,\na field crew (Doduo/Zigzagoon/Marill),\l99 Rare Candies, supplies, 100k.\pThe ferry hub is open. The Marsh and\nwhat follows it are yours to play.$"
+	.string "SKALDMERE CATCH-UP applied.\p8 badges, 5 certifications, all HMs,\na ready field crew: Dodrio, Linoone,\land Azumarill, HMs already learnt.\l99 Rare Candies, supplies, 100k.\pThe ferry hub is open. The Marsh and\nwhat follows it are yours to play.$"
 
 Debug_EventScript_Script_2::
 	release
