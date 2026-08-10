@@ -1186,3 +1186,6 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ParcelWeather/scripts.inc"
 	.include "data/maps/ParcelCavern/scripts.inc"
 	.include "data/maps/ParcelBoardroom/scripts.inc"
+	.include "data/maps/ParcelStationHall/scripts.inc"
+	.include "data/maps/ParcelIsleNeighborHouse/scripts.inc"
+	.include "data/maps/ParcelIsleTimoHouse/scripts.inc"

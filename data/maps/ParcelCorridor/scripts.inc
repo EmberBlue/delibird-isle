@@ -37,244 +37,246 @@ ParcelCorridor_CulvertScene::
 # 37 "data/maps/ParcelCorridor/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelCorridor_CulvertScene_2
-# 40 "data/maps/ParcelCorridor/scripts.pory"
-	lockall
-# 41 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_CulvertScene_Text_0, MSGBOX_DEFAULT
-# 42 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_CulvertScene_Text_1, MSGBOX_DEFAULT
-# 43 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_CulvertScene_Text_2, MSGBOX_DEFAULT
 # 44 "data/maps/ParcelCorridor/scripts.pory"
-	closemessage
+	lockall
 # 45 "data/maps/ParcelCorridor/scripts.pory"
-	clearflag FLAG_TEMP_3
+	msgbox ParcelCorridor_CulvertScene_Text_0, MSGBOX_DEFAULT
 # 46 "data/maps/ParcelCorridor/scripts.pory"
-	addobject 2
+	msgbox ParcelCorridor_CulvertScene_Text_1, MSGBOX_DEFAULT
 # 47 "data/maps/ParcelCorridor/scripts.pory"
-	playse SE_PIN
+	msgbox ParcelCorridor_CulvertScene_Text_2, MSGBOX_DEFAULT
 # 48 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_CulvertScene_Text_3, MSGBOX_DEFAULT
+	closemessage
 # 49 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_CulvertScene_Text_4, MSGBOX_DEFAULT
+	clearflag FLAG_TEMP_3
 # 50 "data/maps/ParcelCorridor/scripts.pory"
-	applymovement 2, Movement_WooperRetreat
+	addobject 2
 # 51 "data/maps/ParcelCorridor/scripts.pory"
-	waitmovement 0
+	playse SE_PIN
 # 52 "data/maps/ParcelCorridor/scripts.pory"
-	removeobject 2
+	msgbox ParcelCorridor_CulvertScene_Text_3, MSGBOX_DEFAULT
 # 53 "data/maps/ParcelCorridor/scripts.pory"
-	setflag FLAG_TEMP_3
+	msgbox ParcelCorridor_CulvertScene_Text_4, MSGBOX_DEFAULT
 # 54 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_CulvertScene_Text_5, MSGBOX_DEFAULT
+	applymovement 2, Movement_WooperRetreat
 # 55 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_CulvertScene_Text_6, MSGBOX_DEFAULT
+	waitmovement 0
 # 56 "data/maps/ParcelCorridor/scripts.pory"
-	setvar VAR_0x8004, 9
+	removeobject 2
 # 57 "data/maps/ParcelCorridor/scripts.pory"
-	special SkaldmereCertTaskMark
+	setflag FLAG_TEMP_3
 # 58 "data/maps/ParcelCorridor/scripts.pory"
-	setvar VAR_TEMP_1, 1
+	msgbox ParcelCorridor_CulvertScene_Text_5, MSGBOX_DEFAULT
 # 59 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_CulvertScene_Text_6, MSGBOX_DEFAULT
+# 60 "data/maps/ParcelCorridor/scripts.pory"
+	setvar VAR_0x8004, 9
+# 61 "data/maps/ParcelCorridor/scripts.pory"
+	special SkaldmereCertTaskMark
+# 62 "data/maps/ParcelCorridor/scripts.pory"
+	setvar VAR_TEMP_1, 1
+# 63 "data/maps/ParcelCorridor/scripts.pory"
 	releaseall
 	end
 
 ParcelCorridor_CulvertScene_2:
+# 41 "data/maps/ParcelCorridor/scripts.pory"
+	setvar VAR_TEMP_1, 1
 	end
 
 
 ParcelCorridor_FarSide::
-# 64 "data/maps/ParcelCorridor/scripts.pory"
+# 68 "data/maps/ParcelCorridor/scripts.pory"
 	lock
-# 65 "data/maps/ParcelCorridor/scripts.pory"
+# 69 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_FarSide_Text_0, MSGBOX_DEFAULT
-# 66 "data/maps/ParcelCorridor/scripts.pory"
+# 70 "data/maps/ParcelCorridor/scripts.pory"
 	release
 	end
 
 
 ParcelCorridor_Worker::
-# 72 "data/maps/ParcelCorridor/scripts.pory"
-	lock
-# 73 "data/maps/ParcelCorridor/scripts.pory"
-	faceplayer
-# 74 "data/maps/ParcelCorridor/scripts.pory"
-	setvar VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE
-# 75 "data/maps/ParcelCorridor/scripts.pory"
-	setvar VAR_0x8004, 9
 # 76 "data/maps/ParcelCorridor/scripts.pory"
-	specialvar VAR_RESULT, SkaldmereCertTaskGet
+	lock
 # 77 "data/maps/ParcelCorridor/scripts.pory"
+	faceplayer
+# 78 "data/maps/ParcelCorridor/scripts.pory"
+	setvar VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE
+# 79 "data/maps/ParcelCorridor/scripts.pory"
+	setvar VAR_0x8004, 9
+# 80 "data/maps/ParcelCorridor/scripts.pory"
+	specialvar VAR_RESULT, SkaldmereCertTaskGet
+# 81 "data/maps/ParcelCorridor/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCorridor_Worker_2
-# 82 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_1, MSGBOX_DEFAULT
-# 83 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_2, MSGBOX_DEFAULT
-# 84 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_3, MSGBOX_DEFAULT
-# 85 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_4, MSGBOX_DEFAULT
 # 86 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_5, MSGBOX_YESNO
+	msgbox ParcelCorridor_Worker_Text_1, MSGBOX_DEFAULT
 # 87 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Worker_Text_2, MSGBOX_DEFAULT
+# 88 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Worker_Text_3, MSGBOX_DEFAULT
+# 89 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Worker_Text_4, MSGBOX_DEFAULT
+# 90 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Worker_Text_5, MSGBOX_YESNO
+# 91 "data/maps/ParcelCorridor/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelCorridor_Worker_5
-# 91 "data/maps/ParcelCorridor/scripts.pory"
+# 95 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_Worker_Text_8, MSGBOX_DEFAULT
 ParcelCorridor_Worker_4:
-# 93 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_9, MSGBOX_DEFAULT
-# 94 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_10, MSGBOX_DEFAULT
-# 95 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_11, MSGBOX_DEFAULT
-# 96 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_12, MSGBOX_DEFAULT
 # 97 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_13, MSGBOX_DEFAULT
+	msgbox ParcelCorridor_Worker_Text_9, MSGBOX_DEFAULT
 # 98 "data/maps/ParcelCorridor/scripts.pory"
-	closemessage
+	msgbox ParcelCorridor_Worker_Text_10, MSGBOX_DEFAULT
 # 99 "data/maps/ParcelCorridor/scripts.pory"
-	applymovement 1, Movement_WorkerLeave
+	msgbox ParcelCorridor_Worker_Text_11, MSGBOX_DEFAULT
 # 100 "data/maps/ParcelCorridor/scripts.pory"
-	waitmovement 0
+	msgbox ParcelCorridor_Worker_Text_12, MSGBOX_DEFAULT
 # 101 "data/maps/ParcelCorridor/scripts.pory"
-	removeobject 1
+	msgbox ParcelCorridor_Worker_Text_13, MSGBOX_DEFAULT
 # 102 "data/maps/ParcelCorridor/scripts.pory"
-	setvar VAR_0x8004, 10
+	closemessage
 # 103 "data/maps/ParcelCorridor/scripts.pory"
-	special SkaldmereCertTaskMark
+	applymovement 1, Movement_WorkerLeave
 # 104 "data/maps/ParcelCorridor/scripts.pory"
-	setflag FLAG_TEMP_2
+	waitmovement 0
 # 105 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_14, MSGBOX_DEFAULT
+	removeobject 1
 # 106 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_Worker_Text_15, MSGBOX_DEFAULT
+	setvar VAR_0x8004, 10
 # 107 "data/maps/ParcelCorridor/scripts.pory"
+	special SkaldmereCertTaskMark
+# 108 "data/maps/ParcelCorridor/scripts.pory"
+	setflag FLAG_TEMP_2
+# 109 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Worker_Text_14, MSGBOX_DEFAULT
+# 110 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Worker_Text_15, MSGBOX_DEFAULT
+# 111 "data/maps/ParcelCorridor/scripts.pory"
 	release
 	end
 
 ParcelCorridor_Worker_2:
-# 78 "data/maps/ParcelCorridor/scripts.pory"
+# 82 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_Worker_Text_0, MSGBOX_DEFAULT
-# 79 "data/maps/ParcelCorridor/scripts.pory"
+# 83 "data/maps/ParcelCorridor/scripts.pory"
 	release
 	end
 
 ParcelCorridor_Worker_5:
-# 88 "data/maps/ParcelCorridor/scripts.pory"
+# 92 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_Worker_Text_6, MSGBOX_DEFAULT
-# 89 "data/maps/ParcelCorridor/scripts.pory"
+# 93 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_Worker_Text_7, MSGBOX_DEFAULT
 	goto ParcelCorridor_Worker_4
 
 
 ParcelCorridor_ObsStumps::
-# 113 "data/maps/ParcelCorridor/scripts.pory"
+# 117 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_ObsStumps_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCorridor_ObsMoss::
-# 117 "data/maps/ParcelCorridor/scripts.pory"
+# 121 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_ObsMoss_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCorridor_ObsDrainage::
-# 121 "data/maps/ParcelCorridor/scripts.pory"
+# 125 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_ObsDrainage_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCorridor_ObsRoad::
-# 125 "data/maps/ParcelCorridor/scripts.pory"
+# 129 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_ObsRoad_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCorridor_ObsCulvert::
-# 129 "data/maps/ParcelCorridor/scripts.pory"
+# 133 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_ObsCulvert_Text_0, MSGBOX_SIGN
 	end
 
 
-# 133 "data/maps/ParcelCorridor/scripts.pory"
-Movement_WooperRetreat:
-# 134 "data/maps/ParcelCorridor/scripts.pory"
-	face_right
-# 135 "data/maps/ParcelCorridor/scripts.pory"
-	delay_16
-# 136 "data/maps/ParcelCorridor/scripts.pory"
-	walk_right
 # 137 "data/maps/ParcelCorridor/scripts.pory"
+Movement_WooperRetreat:
+# 138 "data/maps/ParcelCorridor/scripts.pory"
+	face_right
+# 139 "data/maps/ParcelCorridor/scripts.pory"
+	delay_16
+# 140 "data/maps/ParcelCorridor/scripts.pory"
+	walk_right
+# 141 "data/maps/ParcelCorridor/scripts.pory"
 	step_end
 
-# 139 "data/maps/ParcelCorridor/scripts.pory"
+# 143 "data/maps/ParcelCorridor/scripts.pory"
 Movement_WorkerLeave:
-# 140 "data/maps/ParcelCorridor/scripts.pory"
+# 144 "data/maps/ParcelCorridor/scripts.pory"
 	walk_left
-# 140 "data/maps/ParcelCorridor/scripts.pory"
+# 144 "data/maps/ParcelCorridor/scripts.pory"
 	walk_left
-# 140 "data/maps/ParcelCorridor/scripts.pory"
+# 144 "data/maps/ParcelCorridor/scripts.pory"
 	walk_left
-# 140 "data/maps/ParcelCorridor/scripts.pory"
+# 144 "data/maps/ParcelCorridor/scripts.pory"
 	walk_left
-# 140 "data/maps/ParcelCorridor/scripts.pory"
+# 144 "data/maps/ParcelCorridor/scripts.pory"
 	walk_left
-# 140 "data/maps/ParcelCorridor/scripts.pory"
+# 144 "data/maps/ParcelCorridor/scripts.pory"
 	walk_left
-# 141 "data/maps/ParcelCorridor/scripts.pory"
+# 145 "data/maps/ParcelCorridor/scripts.pory"
 	walk_down
-# 142 "data/maps/ParcelCorridor/scripts.pory"
+# 146 "data/maps/ParcelCorridor/scripts.pory"
 	step_end
 
 ParcelCorridor_ItemSuperPotion::
-# 147 "data/maps/ParcelCorridor/scripts.pory"
+# 151 "data/maps/ParcelCorridor/scripts.pory"
 	finditem ITEM_SUPER_POTION
 	end
 
 
 ParcelCorridor_GymMirren::
-# 157 "data/maps/ParcelCorridor/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_GYM2, ParcelCorridor_GymMirren_Text_0, ParcelCorridor_GymMirren_Text_1, ParcelCorridor_GymMirren_Defeated
 # 161 "data/maps/ParcelCorridor/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_GYM2, ParcelCorridor_GymMirren_Text_0, ParcelCorridor_GymMirren_Text_1, ParcelCorridor_GymMirren_Defeated
+# 165 "data/maps/ParcelCorridor/scripts.pory"
 	lock
-# 162 "data/maps/ParcelCorridor/scripts.pory"
+# 166 "data/maps/ParcelCorridor/scripts.pory"
 	faceplayer
-# 163 "data/maps/ParcelCorridor/scripts.pory"
+# 167 "data/maps/ParcelCorridor/scripts.pory"
 	msgbox ParcelCorridor_GymMirren_Text_2, MSGBOX_DEFAULT
-# 164 "data/maps/ParcelCorridor/scripts.pory"
+# 168 "data/maps/ParcelCorridor/scripts.pory"
 	release
 	end
 
 
 ParcelCorridor_GymMirren_Defeated::
-# 168 "data/maps/ParcelCorridor/scripts.pory"
-	setflag FLAG_BADGE02_GET
-# 169 "data/maps/ParcelCorridor/scripts.pory"
-	call Common_EventScript_PlayGymBadgeFanfare
-# 170 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_GymMirren_Defeated_Text_0, MSGBOX_DEFAULT
-# 171 "data/maps/ParcelCorridor/scripts.pory"
-	giveitem ITEM_HM05
 # 172 "data/maps/ParcelCorridor/scripts.pory"
-	msgbox ParcelCorridor_GymMirren_Defeated_Text_1, MSGBOX_DEFAULT
+	setflag FLAG_BADGE02_GET
 # 173 "data/maps/ParcelCorridor/scripts.pory"
+	call Common_EventScript_PlayGymBadgeFanfare
+# 174 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_GymMirren_Defeated_Text_0, MSGBOX_DEFAULT
+# 175 "data/maps/ParcelCorridor/scripts.pory"
+	giveitem ITEM_HM05
+# 176 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_GymMirren_Defeated_Text_1, MSGBOX_DEFAULT
+# 177 "data/maps/ParcelCorridor/scripts.pory"
 	release
 	end
 
 
 ParcelCorridor_CulvertScene_Text_0:
-# 41 "data/maps/ParcelCorridor/scripts.pory"
+# 45 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Doduo stops.\p"
 	.string "Both heads fix on the same point: a\n"
 	.string "culvert under the old road--concrete,\l"
 	.string "narrow, functional.$"
 
 ParcelCorridor_CulvertScene_Text_1:
-# 42 "data/maps/ParcelCorridor/scripts.pory"
+# 46 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Upstream of it, the channel is wide and\n"
 	.string "braided.\n"
 	.string "Downstream, it is one fast cut.\p"
@@ -282,16 +284,16 @@ ParcelCorridor_CulvertScene_Text_1:
 	.string "You listen.$"
 
 ParcelCorridor_CulvertScene_Text_2:
-# 43 "data/maps/ParcelCorridor/scripts.pory"
+# 47 "data/maps/ParcelCorridor/scripts.pory"
 	.string "The sound is sharper than it should be.\n"
 	.string "Less layered. More forceful.$"
 
 ParcelCorridor_CulvertScene_Text_3:
-# 48 "data/maps/ParcelCorridor/scripts.pory"
+# 52 "data/maps/ParcelCorridor/scripts.pory"
 	.string "A splash, on the far side.$"
 
 ParcelCorridor_CulvertScene_Text_4:
-# 49 "data/maps/ParcelCorridor/scripts.pory"
+# 53 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Something small tries the\n"
 	.string "current--once, twice--and retreats to\l"
 	.string "the far bank.\p"
@@ -299,12 +301,12 @@ ParcelCorridor_CulvertScene_Text_4:
 	.string "Excluded.$"
 
 ParcelCorridor_CulvertScene_Text_5:
-# 54 "data/maps/ParcelCorridor/scripts.pory"
+# 58 "data/maps/ParcelCorridor/scripts.pory"
 	.string "The corridor still exists.\n"
 	.string "But it's thinner.$"
 
 ParcelCorridor_CulvertScene_Text_6:
-# 55 "data/maps/ParcelCorridor/scripts.pory"
+# 59 "data/maps/ParcelCorridor/scripts.pory"
 	.string "You feel the urge to widen the channel.\n"
 	.string "Stack stones. Slow the flow.\p"
 	.string "You don't.\n"
@@ -312,13 +314,13 @@ ParcelCorridor_CulvertScene_Text_6:
 	.string "down instead.$"
 
 ParcelCorridor_FarSide_Text_0:
-# 65 "data/maps/ParcelCorridor/scripts.pory"
+# 69 "data/maps/ParcelCorridor/scripts.pory"
 	.string "It watches the current from the far\n"
 	.string "bank.\n"
 	.string "It does not try again.$"
 
 ParcelCorridor_Worker_Text_0:
-# 78 "data/maps/ParcelCorridor/scripts.pory"
+# 82 "data/maps/ParcelCorridor/scripts.pory"
 	.string "A man in an orange vest, clipboard in\n"
 	.string "hand. He nods at the stream like it's a\l"
 	.string "colleague.\p"
@@ -326,7 +328,7 @@ ParcelCorridor_Worker_Text_0:
 	.string "eh?$"
 
 ParcelCorridor_Worker_Text_1:
-# 82 "data/maps/ParcelCorridor/scripts.pory"
+# 86 "data/maps/ParcelCorridor/scripts.pory"
 	.string "A man in an orange vest, clipboard in\n"
 	.string "hand. He brightens--relieved to see a\l"
 	.string "Ranger.\p"
@@ -335,30 +337,30 @@ ParcelCorridor_Worker_Text_1:
 	.string "We've been meaning to flag this.$"
 
 ParcelCorridor_Worker_Text_2:
-# 83 "data/maps/ParcelCorridor/scripts.pory"
+# 87 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Worker: Drainage specs met code, but\n"
 	.string "wildlife keeps clogging it.\p"
 	.string "We're scheduled to install grates next\n"
 	.string "month.$"
 
 ParcelCorridor_Worker_Text_3:
-# 84 "data/maps/ParcelCorridor/scripts.pory"
+# 88 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Grates would solve his problem.\p"
 	.string "This is the moment Ilex warned about--\n"
 	.string "where damage becomes policy.$"
 
 ParcelCorridor_Worker_Text_4:
-# 85 "data/maps/ParcelCorridor/scripts.pory"
+# 89 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Worker: It meets regulation. But if you\n"
 	.string "want, I can note that Rangers were\l"
 	.string "consulted.$"
 
 ParcelCorridor_Worker_Text_5:
-# 86 "data/maps/ParcelCorridor/scripts.pory"
+# 90 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Note that Rangers were consulted?$"
 
 ParcelCorridor_Worker_Text_6:
-# 88 "data/maps/ParcelCorridor/scripts.pory"
+# 92 "data/maps/ParcelCorridor/scripts.pory"
 	.string "You start to nod--\p"
 	.string "and stop.\p"
 	.string "The grates would solve HIS problem.\n"
@@ -366,28 +368,28 @@ ParcelCorridor_Worker_Text_6:
 	.string "agreement.$"
 
 ParcelCorridor_Worker_Text_7:
-# 89 "data/maps/ParcelCorridor/scripts.pory"
+# 93 "data/maps/ParcelCorridor/scripts.pory"
 	.string "{PLAYER}: …No.\p"
 	.string "Who approved the design?$"
 
 ParcelCorridor_Worker_Text_8:
-# 91 "data/maps/ParcelCorridor/scripts.pory"
+# 95 "data/maps/ParcelCorridor/scripts.pory"
 	.string "{PLAYER}: No.\p"
 	.string "Who approved the design?$"
 
 ParcelCorridor_Worker_Text_9:
-# 93 "data/maps/ParcelCorridor/scripts.pory"
+# 97 "data/maps/ParcelCorridor/scripts.pory"
 	.string "{PLAYER}: Do you have the\n"
 	.string "pre-construction flow data?$"
 
 ParcelCorridor_Worker_Text_10:
-# 94 "data/maps/ParcelCorridor/scripts.pory"
+# 98 "data/maps/ParcelCorridor/scripts.pory"
 	.string "The worker shifts his weight.\p"
 	.string "Worker: That'd be… county records, I\n"
 	.string "think. Or the contractor.$"
 
 ParcelCorridor_Worker_Text_11:
-# 95 "data/maps/ParcelCorridor/scripts.pory"
+# 99 "data/maps/ParcelCorridor/scripts.pory"
 	.string "{PLAYER}: Fixing it later might mean\n"
 	.string "it's already too late.\p"
 	.string "You write all of it down: the specs, the\n"
@@ -395,87 +397,87 @@ ParcelCorridor_Worker_Text_11:
 	.string "number.$"
 
 ParcelCorridor_Worker_Text_12:
-# 96 "data/maps/ParcelCorridor/scripts.pory"
+# 100 "data/maps/ParcelCorridor/scripts.pory"
 	.string "He scribbles something vague.\p"
 	.string "Worker: …I'll note that the corridor\n"
 	.string "width changed.$"
 
 ParcelCorridor_Worker_Text_13:
-# 97 "data/maps/ParcelCorridor/scripts.pory"
+# 101 "data/maps/ParcelCorridor/scripts.pory"
 	.string "It's not enough.\n"
 	.string "But it's not nothing.\p"
 	.string "He leaves.$"
 
 ParcelCorridor_Worker_Text_14:
-# 105 "data/maps/ParcelCorridor/scripts.pory"
+# 109 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Turning back down the cut, you realize:\p"
 	.string "you were watched. Not by the worker.\n"
 	.string "By the system.$"
 
 ParcelCorridor_Worker_Text_15:
-# 106 "data/maps/ParcelCorridor/scripts.pory"
+# 110 "data/maps/ParcelCorridor/scripts.pory"
 	.string "The report will move slowly. It will be\n"
 	.string "questioned. Maybe ignored.\p"
 	.string "But it exists now.\n"
 	.string "And that changes timelines.$"
 
 ParcelCorridor_ObsStumps_Text_0:
-# 113 "data/maps/ParcelCorridor/scripts.pory"
+# 117 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Old stumps in a rough line, cut flat,\n"
 	.string "gray with years.\p"
 	.string "The forest didn't thin here.\n"
 	.string "It was thinned.$"
 
 ParcelCorridor_ObsMoss_Text_0:
-# 117 "data/maps/ParcelCorridor/scripts.pory"
+# 121 "data/maps/ParcelCorridor/scripts.pory"
 	.string "The moss grows uneven--thick on the\n"
 	.string "north faces, absent where the canopy\l"
 	.string "used to hold the damp.$"
 
 ParcelCorridor_ObsDrainage_Text_0:
-# 121 "data/maps/ParcelCorridor/scripts.pory"
+# 125 "data/maps/ParcelCorridor/scripts.pory"
 	.string "A drainage cut, knife-straight.\n"
 	.string "Nothing in nature drains like this.$"
 
 ParcelCorridor_ObsRoad_Text_0:
-# 125 "data/maps/ParcelCorridor/scripts.pory"
+# 129 "data/maps/ParcelCorridor/scripts.pory"
 	.string "A cracked service road, half-reclaimed\n"
 	.string "by weeds.\p"
 	.string "It looks abandoned.\n"
 	.string "It isn't harmless.$"
 
 ParcelCorridor_ObsCulvert_Text_0:
-# 129 "data/maps/ParcelCorridor/scripts.pory"
+# 133 "data/maps/ParcelCorridor/scripts.pory"
 	.string "The culvert. Concrete, narrow,\n"
 	.string "functional.\p"
 	.string "Upstream: broad and braided.\n"
 	.string "Downstream: a single fast channel.$"
 
 ParcelCorridor_GymMirren_Text_0:
-# 158 "data/maps/ParcelCorridor/scripts.pory"
+# 162 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Mirren: Subsurface Survey. I sign who\n"
 	.string "goes past this cut and who doesn't.\p"
 	.string "You read rock for a living yet? Show me\n"
 	.string "you read anything at all.$"
 
 ParcelCorridor_GymMirren_Text_1:
-# 159 "data/maps/ParcelCorridor/scripts.pory"
+# 163 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Mirren: …Steady under pressure. Noted.$"
 
 ParcelCorridor_GymMirren_Text_2:
-# 163 "data/maps/ParcelCorridor/scripts.pory"
+# 167 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Mirren: Cleared provisional. The basin's\n"
 	.string "darker than this.\p"
 	.string "Don't go in blind.$"
 
 ParcelCorridor_GymMirren_Defeated_Text_0:
-# 170 "data/maps/ParcelCorridor/scripts.pory"
+# 174 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Mirren: Subsurface clearance. It logs\n"
 	.string "you fit to survey enclosed ground.\p"
 	.string "Comes with the standard kit.$"
 
 ParcelCorridor_GymMirren_Defeated_Text_1:
-# 172 "data/maps/ParcelCorridor/scripts.pory"
+# 176 "data/maps/ParcelCorridor/scripts.pory"
 	.string "Mirren: FLASH. Lights a cave or a\n"
 	.string "culvert from the inside.\p"
 	.string "You'll want it where the daylight stops.$"

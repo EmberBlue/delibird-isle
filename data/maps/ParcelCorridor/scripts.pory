@@ -35,6 +35,10 @@ script ParcelCorridor_CulvertScene {
     setvar(VAR_0x8004, 9)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
+        // FREEZE FIX: disarm on the already-done path too, or the trigger
+        // re-fires every frame and pins the player to the road (same class
+        // as the Wetlands poison trigger).
+        setvar(VAR_TEMP_1, 1)
         end
     }
     lockall

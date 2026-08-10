@@ -4,6 +4,8 @@
 // Voice: the station is threadbare and organized; everything is signed for.
 
 const LOCALID_HALL_CLERK = 1
+// FLAG_SKALD_HALL_REQUISITION is claimed as Moss's one-time requisition flag (verified
+// unreferenced in vanilla). Rename it properly in flags.h when git is back.
 
 mapscripts ParcelStationHall_MapScripts {}
 
@@ -45,9 +47,7 @@ script ParcelStationHall_CertWall {
 script ParcelStationHall_Clerk {
     lock
     faceplayer
-    setflag(FLAG_SYS_POKENAV_GET)
     if (flag(FLAG_SKALD_HALL_REQUISITION)) {
-        msgbox(format("Moss: And check your nav unit's on your belt. It is? Good.\pThe Corps map runs on it. Lose it and you owe stores a form with three signatures."), MSGBOX_DEFAULT)
         msgbox(format("Moss: Stores are stores. If it's not on the shelf, the coast took it.\pSign the ledger on your way out. Everyone signs the ledger."), MSGBOX_DEFAULT)
         release
         end
