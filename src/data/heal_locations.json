@@ -162,6 +162,24 @@
       "map": "MAP_PARCEL_ISLE",
       "x": 33,
       "y": 27
+    },
+    {
+      "id": "HEAL_LOCATION_PARCEL_DELIBIRD",
+      "map": "MAP_PARCEL_DELIBIRD",
+      "x": 30,
+      "y": 38
+    },
+    {
+      "id": "HEAL_LOCATION_PARCEL_COAST",
+      "map": "MAP_PARCEL_COAST",
+      "x": 38,
+      "y": 38
+    },
+    {
+      "id": "HEAL_LOCATION_PARCEL_WEATHER",
+      "map": "MAP_PARCEL_WEATHER",
+      "x": 23,
+      "y": 36
     }
   ]
 }
