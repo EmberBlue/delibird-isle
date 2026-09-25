@@ -171,7 +171,7 @@ Debug_EventScript_Script_1::
 	additem ITEM_HM06, 1
 	additem ITEM_HM07, 1
 	additem ITEM_HM08, 1
-	additem ITEM_RARE_CANDY, 99
+	additem ITEM_RARE_CANDY, 999
 	additem ITEM_ULTRA_BALL, 50
 	additem ITEM_HYPER_POTION, 20
 	additem ITEM_MAX_REVIVE, 10
@@ -184,8 +184,14 @@ Debug_Text_SkaldCatchUp:
 	.string "SKALDMERE CATCH-UP applied.\p8 badges, 5 certifications, all HMs,\na ready field crew: Dodrio, Linoone,\land Azumarill, HMs already learnt.\l99 Rare Candies, supplies, 100k.\pThe ferry hub is open. The Marsh and\nwhat follows it are yours to play.$"
 
 Debug_EventScript_Script_2::
+@ Skaldmere: 999 Rare Candies, nothing else -- for a playthrough already under way.
+	additem ITEM_RARE_CANDY, 999
+	msgbox Debug_Text_Skald_RareCandies, MSGBOX_DEFAULT
 	release
 	end
+
+Debug_Text_Skald_RareCandies:
+	.string "999 RARE CANDIES added to the bag.$"
 
 Debug_EventScript_Script_3::
 	release
