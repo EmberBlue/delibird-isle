@@ -781,6 +781,14 @@ ParcelIsle_PreserveGateSign::
 	end
 
 
+ParcelIsle_ToBridge::
+# 508 "data/maps/ParcelIsle/scripts.pory"
+	warp MAP_PARCEL_BRIDGE, 1, 11
+# 509 "data/maps/ParcelIsle/scripts.pory"
+	waitstate
+	end
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "The ferry horn fades out across the\n"

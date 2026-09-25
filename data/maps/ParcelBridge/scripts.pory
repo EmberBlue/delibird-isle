@@ -209,3 +209,10 @@ movement Movement_PoliwagAway {
     walk_up
     step_end
 }
+
+// West edge -> Saltwick by warp (different primary tileset; see ParcelIsle).
+script ParcelBridge_ToSaltwick {
+    warp(MAP_PARCEL_ISLE, 42, 20)
+    waitstate
+    end
+}

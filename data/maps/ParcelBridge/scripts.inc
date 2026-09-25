@@ -500,6 +500,14 @@ Movement_PoliwagAway:
 # 210 "data/maps/ParcelBridge/scripts.pory"
 	step_end
 
+ParcelBridge_ToSaltwick::
+# 215 "data/maps/ParcelBridge/scripts.pory"
+	warp MAP_PARCEL_ISLE, 42, 20
+# 216 "data/maps/ParcelBridge/scripts.pory"
+	waitstate
+	end
+
+
 ParcelBridge_SceneTrigger_Text_0:
 # 47 "data/maps/ParcelBridge/scripts.pory"
 	.string "Wind over the rail. Water surging\n"

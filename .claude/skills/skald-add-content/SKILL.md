@@ -15,9 +15,12 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 2. `data/maps/<Name>/map.json` + `scripts.pory` (see existing Parcel maps).
 3. Register: name into `data/maps/map_groups.json`; add
    `.include "data/maps/<Name>/scripts.inc"` to `data/event_scripts.s`.
-4. Exterior door: warp_event ON the door tile (doors are col1 — correct);
+4. Connections: ONLY between maps sharing the same primary tileset (the engine
+   reloads just the secondary on a seamless crossing). Different primary =>
+   edge coord triggers that `warp` both ways (see ParcelIsle_ToBridge).
+5. Exterior door: warp_event ON the door tile (doors are col1 — correct);
    interior exit warps' dest_warp_id = the exterior warp's INDEX (order matters).
-5. Build ritual: rm stale .o files (see skald-verify) then `make -j modern`.
+6. Build ritual: rm stale .o files (see skald-verify) then `make -j modern`.
 
 ## Flags & vars
 - Claim only a `FLAG_UNUSED_*` whose define greps unreferenced outside flags.h.

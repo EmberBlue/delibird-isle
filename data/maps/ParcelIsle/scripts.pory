@@ -498,3 +498,14 @@ script ParcelIsle_PreserveGateSign {
     msgbox(format("MISTWOOD SHORE PRESERVE\nNo entry beyond this point without a Corps permit.\pThe green-and-grey crest of the Mereholt Foundation, cast in bronze, very clean.\pThe gate is chained."), MSGBOX_SIGN)
     end
 }
+
+// The road east ends at the map edge and WARPS to the bridge instead of
+// connecting seamlessly: a seamless connection only reloads the secondary
+// tileset, and Saltwick's primary (FireRed general) differs from the bridge's.
+// Rule for the whole region: connections only between maps that share a
+// primary tileset; everything else is a warp.
+script ParcelIsle_ToBridge {
+    warp(MAP_PARCEL_BRIDGE, 1, 11)
+    waitstate
+    end
+}

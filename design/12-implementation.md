@@ -351,6 +351,14 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
 - **The sea's wave crests** (metatiles 266/267, top-layer tiles 6/8/24/56)
   ship with palette 0 (grass greens) in the port; they are meant to be drawn
   with the water palette (4) — patched in `frp_general/metatiles.bin`.
+- **Seamless connections reload only the SECONDARY tileset**
+  (`LoadMapFromCameraTransition`, src/overworld.c) — vanilla assumes every
+  connected outdoor map shares one primary. A connection between a
+  `frp_general` map and a `General`/`JohtoGeneral` map renders the far side
+  as garbage (the bridge, 2026-09-25). **Rule: connect only maps that share a
+  primary tileset; otherwise cross by warp** (edge coord triggers that
+  `warp`, as Saltwick↔bridge now does). Plan zones on `frp_general` + a
+  per-zone secondary so routes can connect seamlessly.
 - **Doors:** animated doors (98) are solid tiles you press into; FR's
   non-animated house doors (670) are *walkable* tiles you step onto.
 - **The S.S. Anne platform planks (747–749, 776–778)** carry the ship's hull
