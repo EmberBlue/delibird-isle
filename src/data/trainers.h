@@ -43933,3 +43933,46 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 17474
+    [DIFFICULTY_NORMAL][TRAINER_SKALD_HARBOUR_LAD] =
+    {
+#line 17475
+        .trainerName = _("KIP"),
+#line 17476
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
+#line 17477
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
+        .encounterMusic_gender =
+#line 17479
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 17480
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 17481
+        .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_TRY_TO_FAINT,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 17483
+            .species = SPECIES_KRABBY,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17485
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17484
+            .lvl = 6,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17486
+            .species = SPECIES_WINGULL,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17488
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17487
+            .lvl = 5,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

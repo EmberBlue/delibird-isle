@@ -403,7 +403,7 @@ ParcelCoast_ReturnFerry::
 # 287 "data/maps/ParcelCoast/scripts.pory"
 	delay 40
 # 288 "data/maps/ParcelCoast/scripts.pory"
-	warp MAP_PARCEL_ISLE, 41, 48
+	warp MAP_PARCEL_ISLE, 15, 31
 # 289 "data/maps/ParcelCoast/scripts.pory"
 	waitstate
 	end

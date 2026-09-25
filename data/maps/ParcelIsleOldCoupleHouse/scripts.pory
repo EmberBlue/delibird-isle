@@ -1,0 +1,33 @@
+// ParcelIsleOldCoupleHouse -- Aud and Sten. She kept the kettle Dr. Heron
+// drank from; he rowed the Corps boat for thirty years.
+
+mapscripts ParcelIsleOldCoupleHouse_MapScripts {
+}
+
+script ParcelIsleOldCoupleHouse_Aud {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Aud: She sat where you're standing and read me your letters. Not the words -- she'd never. Just that they'd come, and what the weather was where you were.\pI think you were the only person she was ever honest with, and you were a child, and far away."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("Aud: She took tea here. Every Thursday, for years. Sat in that chair and said nothing about her work and everything about the gulls.\pThe last Thursday she washed her own cup. She'd never done that."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Aud: Sit down, you're letting the fog in. No, you're not, the fog's already in; it lives here.\pYou'll be the young one from the letters. Don't look surprised. Everyone knows. Nobody says."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelIsleOldCoupleHouse_Sten {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Sten: Thirty years on the Corps boat. I rowed Hale out to his first survey. Rowed the Director out to his last, the day he took the Foundation job.\pSame boat. Same oars. I never once asked either of them what they were counting."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("Sten: The bridge. They built it the year the marsh road flooded. It was a temporary bridge. That was twenty-two years ago.\pEverything on this coast is temporary if you wait long enough for it to be permanent."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Sten: Aud'll talk your ear off. Let her. I'm the quiet one; it's an arrangement.\p…The currents are wrong. She'll tell you they're not. They're wrong."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

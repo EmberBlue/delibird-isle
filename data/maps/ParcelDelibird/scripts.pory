@@ -29,6 +29,7 @@ const LOCALID_DEL_FOLDER   = 14
 mapscripts ParcelDelibird_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_0, 0: ParcelDelibird_SetMapVar
+        VAR_TEMP_1, 0: ParcelDelibird_FirstEntry
     ]
 }
 
@@ -190,7 +191,7 @@ script ParcelDelibird_ReturnFerry {
     closemessage
     playse(SE_SHIP)
     delay(40)
-    warp(MAP_PARCEL_ISLE, 41, 48)
+    warp(MAP_PARCEL_ISLE, 15, 31)
     waitstate
     end
 }

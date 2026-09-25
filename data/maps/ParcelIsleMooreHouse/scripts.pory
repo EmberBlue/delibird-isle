@@ -1,0 +1,18 @@
+// ParcelIsleMooreHouse -- the harbour-master's house. His sister keeps it.
+
+mapscripts ParcelIsleMooreHouse_MapScripts {
+}
+
+script ParcelIsleMooreHouse_Runa {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Runa: He came home last night and sat in the dark for an hour. The log's still open on the table. He couldn't decide what to write.\pHe wrote your name, in the end. Then the date. That's all a log is, he says."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_GATE_ISLE)) {
+        msgbox(format("Runa: You beat him on the lane? He'll not say it, so I will: he was pleased. He hasn't lost to anyone since the Director.\pHe logs the ones who beat him in a different ink."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Runa: My brother's the harbour-master. Every hull, every hand. He'll tell you that himself; he tells everyone.\pHe hasn't logged a mainland ferry in a year. He still opens the book every morning."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

@@ -1,0 +1,19 @@
+// ParcelIsleAnniHouse -- Anni's house. Her boy Piet, in bed with the fog in
+// his chest.
+
+mapscripts ParcelIsleAnniHouse_MapScripts {
+}
+
+script ParcelIsleAnniHouse_Piet {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Piet: Mum read the frog part out loud. Twice, for Rolf, and once more for me.\pWhen I'm better I'm going to count something. Everything. I've got a list started."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_ANNI_DONE)) {
+        msgbox(format("Piet: You took the net down to Tobin. Mum said. She said you didn't complain about the jetty.\pI'm not allowed on the jetty. When I'm better. That's what everyone says. When."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Piet: The fog gets in my chest. That's what the doctor says. He says it like it's the fog's fault.\pMum says the fog's been here longer than the doctor."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

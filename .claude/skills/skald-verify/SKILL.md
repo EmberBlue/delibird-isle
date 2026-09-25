@@ -5,6 +5,9 @@ description: Verification playbook for delibird-isle map/script/tileset work. Us
 
 # Skaldmere verification playbook
 
+**Automated:** `python3 tools/skald/audit.py [MapName]` runs every audit below
+over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
+
 ## The traps that burned us (check FIRST)
 
 1. **Ghost tilesets.** `gTileset_General` binds `leob_general`, NOT
@@ -21,7 +24,7 @@ description: Verification playbook for delibird-isle map/script/tileset work. Us
    from a direct spawn; test through the real ferry flow or after any warp.
 4. **Fake-free flags.** A flag is free only if `grep -rl THE_DEFINE data/ src/`
    (minus flags.h) is empty for a define that EXISTS — 0x1AC "looked free"
-   but is Deoxys's. Never touch MAX_TRAINERS_COUNT (pinned 1000; save layout).
+   but is Deoxys's. Never touch MAX_TRAINERS_COUNT (pinned 2048; save layout).
 5. **Metatile layers.** `DrawMetatile` (src/field_camera.c): cells 0-3→Bg3,
    4-7→Bg2 (under sprites), 8-11→Bg1 (COVERS sprites). Floor art in top cells
    = player hidden. Behavior mask is 0x00FF; layer bits 12-15.
@@ -45,3 +48,13 @@ START, A, then B-mash ~130-frame spacing through the intro scroll. Mash B not
 A. Deterministic per input schedule. Interiors smaller than viewport don't
 scroll the camera. Cutscenes pan the camera off the player — mid-cutscene
 frames prove nothing about sprite visibility.
+
+## FireRed tileset (frp_*) specifics
+
+- Attributes are **u16** (behaviour low byte, layer bits 12-13) — decode with `<H`.
+- Tile roles: `tools/skald/legends/*.json`; look at any tile with
+  `tools/skald/tileascii.py --tiles 40-63`. Water rims sit on the water tile
+  (291 land-north, 298 land-west, 300 land-east). Non-animated doors (670) are
+  walkable; animated doors (98) are solid.
+- The primary needs `InitTilesetAnim_FrpGeneral` as its callback or water shows
+  static garbage; the vanilla General animator corrupts FR art.

@@ -1,0 +1,33 @@
+// ParcelIsleHarbourOffice -- Mereholt Logistics, Saltwick. A bright room
+// with the crest on everything. The face of the system is always pleasant.
+
+mapscripts ParcelIsleHarbourOffice_MapScripts {
+}
+
+script ParcelIsleHarbourOffice_Dagny {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+        msgbox(format("Dagny: I've been asked to say nothing to you, and I've been asked in writing, so I'll say this: the coffee's still on.\pWe're a logistics office. We'll move whatever the region decides to move. We always have. That was never the problem, was it."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Dagny: Every manifest since Tuesday has the word 'pending' on it. I've had to order more of the stamp.\pI'm not being funny. I ordered the stamp. That's my job now."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("Dagny: The Corps' provisional. Welcome. Your field kit came through this office -- Foundation grant, Coastal freight, Logistics handling. All one family.\pThat's not a threat. It's an org chart. People confuse the two."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Dagny: Mereholt Logistics. Freight, fuel, ferry co-ordination, and the storm-relief blankets, if you're wondering who paid for those.\pWe're the part of the company that's easy to like. Coffee?"), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelIsleHarbourOffice_Osk {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Osk: I filed the same three forms for six years. This week they sent me a fourth.\pIt's called an 'impact acknowledgement'. Nobody can tell me what it acknowledges."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Osk: I do the manifests. Everything that comes off the boat, everything that goes on.\pIf you want to know what a town runs on, don't ask the mayor. Ask the manifest."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

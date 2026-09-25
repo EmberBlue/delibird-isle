@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PARCEL_ISLE",
-      "offset": -26,
+      "offset": -9,
       "direction": "left"
     },
     {

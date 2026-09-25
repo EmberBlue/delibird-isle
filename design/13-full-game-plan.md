@@ -1,8 +1,8 @@
 # 13 — Full-Game Plan: from a story skeleton to a game
 
-> Status: **DRAFT** (an honest audit of the build as of 2026-09-25 and the
-> plan to make it a full game. Targets and phase order are proposals for the
-> user to approve; the story-structure fixes touch §04 (a new minor-cast
+> Status: **FIRMED** (the audit of the build as of 2026-09-25 and the plan to
+> make it a full game. **Targets set by the user on 2026-09-25: 100,000+ words,
+> 1,000+ trainers, a map count in the low hundreds.** Phase order is mine; the story-structure fixes touch §04 (a new minor-cast
 > member) and must be locked in §00 before they are built.)
 
 ## The audit — what exists, measured
@@ -63,11 +63,11 @@ thirtieth of its battles. A romhack of this ambition wants 15–20 hours.
 
 | | Now | Target |
 |---|---|---|
-| Playtime | 3–5 h | **15–20 h** |
-| Dialogue | 15k words | **55–65k words** |
-| Trainers | 30 | **~200** (20–25 per zone incl. leaders; rematches post-game) |
-| Outdoor maps | 12 | **~40** (each zone = a settlement + 2–3 route/area maps, each hand-drawn at real scale) |
-| Interiors | 9 | **~40** (every settlement has enterable houses, a leader's building, one working interior — cannery floor, survey hut, community centre) |
+| Playtime | 3–5 h | **30+ h** (vanilla scale) |
+| Dialogue | 15k words | **100,000+ words** (user's target, 2026-09-25) |
+| Trainers | 30 | **1,000+** (user's target; ceiling raised to 2048 ids) |
+| Outdoor maps | 12 | **100+** ("many many more maps": each zone = a settlement + several route/area maps, each hand-drawn at real scale) |
+| Interiors | 9 | **100+** (every settlement has enterable houses, a leader's building, one working interior — cannery floor, survey hut, community centre) |
 | Residents | 3–11 per town | **10–20**, each with lines in three story states (before the zone's cert / after / post-finale) |
 | Side quests | 1 | **20+** (2–4 per zone, each a small ecological story, never fetch-only) |
 | Species | 160 | **200+**, with zone-exclusives and survey-state-dependent tables |
@@ -147,3 +147,14 @@ Phase 0 (one session), then Phase 1 — because Dock Town is the first thing
 the player sees, and because a finished zone 1 settles every question the
 other zones will ask (scale, tileset pairing, resident density, how a side
 quest is built, how the peer works) before they are asked six more times.
+
+## Progress log
+
+- **2026-09-25 — Phase 1 begun: Saltwick (Dock Town) shipped.** Hand-drawn
+  44×36 on `frp_general + frp_vermilion_city` (the first FireRed-tileset zone),
+  13 buildings, 8 new interiors (co-op hall, chandlery, harbour office, net
+  loft, four houses), 16 outdoor + 14 indoor residents each in three story
+  states, 3 side quests (Anni's net → Old Rod; Sigrun's gull count → Lucky
+  Egg; Corwen's Delibird → Scope Lens), harbour surf + fishing tables, the
+  town named. 360 → ~4,000 words for the town. The pipeline that built it
+  (`tools/skald/`) is the template for every zone that follows.

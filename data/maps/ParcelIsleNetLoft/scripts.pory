@@ -1,0 +1,30 @@
+// ParcelIsleNetLoft -- Grette's loft. Nets on every beam, and the
+// Foundation's storm-relief blankets stacked in the corner, still in plastic.
+
+mapscripts ParcelIsleNetLoft_MapScripts {
+}
+
+script ParcelIsleNetLoft_Grette {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Grette: Blankets. Sixty of them, Foundation crest, still in the plastic. Nobody's had a storm bad enough to need sixty blankets.\pThat's the thing about relief. It's for a disaster that suits the giver."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("Grette: A net's a survey. Every hole tells you what went through and what didn't.\pI've been reading this coast in mesh for fifty years. You've got a notebook. Same thing, slower."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Grette: Mind the Zigzagoon. He thinks the nets are for him.\pSixty years I've made nets for this quay. The last ten, they've come back with less in them and more holes. Work it out yourself."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelIsleNetLoft_Zigzagoon {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
+    msgbox(format("Zigzagoon is tangled in a net and entirely content about it."), MSGBOX_DEFAULT)
+    waitmoncry
+    release
+    end
+}

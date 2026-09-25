@@ -1202,3 +1202,101 @@ static void BlendAnimPalette_BattleDome_FloorLightsNoBlend(u16 timer)
             sSecondaryTilesetAnimCallback = NULL;
     }
 }
+
+// ---------------------------------------------------------------------------
+// FireRed general tileset (frp_general): its animations live at FR's own
+// VRAM offsets, which is why the vanilla General animator (water @432,
+// sand-edge @464 x10, flower @508 x4) corrupts this tileset's art. Offsets
+// below were recovered by matching each frame 0 against tiles.png:
+//   water + currents + land/water edge : 48 tiles @ 416, 8 frames
+//   sand/water edge                    : 18 tiles @ 464, 8 frames
+//   flower                             :  4 tiles @ 508, 5 frames
+// ---------------------------------------------------------------------------
+const u16 gTilesetAnims_FrpGeneral_Flower_Frame0[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/flower/0.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Flower_Frame1[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/flower/1.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Flower_Frame2[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/flower/2.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Flower_Frame3[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/flower/3.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Flower_Frame4[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/flower/4.4bpp");
+
+const u16 *const gTilesetAnims_FrpGeneral_Flower[] = {
+    gTilesetAnims_FrpGeneral_Flower_Frame0,
+    gTilesetAnims_FrpGeneral_Flower_Frame1,
+    gTilesetAnims_FrpGeneral_Flower_Frame2,
+    gTilesetAnims_FrpGeneral_Flower_Frame3,
+    gTilesetAnims_FrpGeneral_Flower_Frame4,
+};
+
+const u16 gTilesetAnims_FrpGeneral_Water_Frame0[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/0.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Water_Frame1[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/1.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Water_Frame2[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/2.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Water_Frame3[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/3.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Water_Frame4[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/4.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Water_Frame5[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/5.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Water_Frame6[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/6.4bpp");
+const u16 gTilesetAnims_FrpGeneral_Water_Frame7[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/water_current_landwatersedge/7.4bpp");
+
+const u16 *const gTilesetAnims_FrpGeneral_Water[] = {
+    gTilesetAnims_FrpGeneral_Water_Frame0,
+    gTilesetAnims_FrpGeneral_Water_Frame1,
+    gTilesetAnims_FrpGeneral_Water_Frame2,
+    gTilesetAnims_FrpGeneral_Water_Frame3,
+    gTilesetAnims_FrpGeneral_Water_Frame4,
+    gTilesetAnims_FrpGeneral_Water_Frame5,
+    gTilesetAnims_FrpGeneral_Water_Frame6,
+    gTilesetAnims_FrpGeneral_Water_Frame7,
+};
+
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame0[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/0.4bpp");
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame1[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/1.4bpp");
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame2[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/2.4bpp");
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame3[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/3.4bpp");
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame4[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/4.4bpp");
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame5[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/5.4bpp");
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame6[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/6.4bpp");
+const u16 gTilesetAnims_FrpGeneral_SandWaterEdge_Frame7[] = INCBIN_U16("data/tilesets/primary/frp_general/anim/sandwatersedge/7.4bpp");
+
+const u16 *const gTilesetAnims_FrpGeneral_SandWaterEdge[] = {
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame0,
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame1,
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame2,
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame3,
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame4,
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame5,
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame6,
+    gTilesetAnims_FrpGeneral_SandWaterEdge_Frame7,
+};
+
+static void QueueAnimTiles_FrpGeneral_Flower(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_FrpGeneral_Flower);
+    AppendTilesetAnimToBuffer(gTilesetAnims_FrpGeneral_Flower[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(508)), 4 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_FrpGeneral_Water(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_FrpGeneral_Water);
+    AppendTilesetAnimToBuffer(gTilesetAnims_FrpGeneral_Water[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(416)), 48 * TILE_SIZE_4BPP);
+}
+
+static void QueueAnimTiles_FrpGeneral_SandWaterEdge(u16 timer)
+{
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_FrpGeneral_SandWaterEdge);
+    AppendTilesetAnimToBuffer(gTilesetAnims_FrpGeneral_SandWaterEdge[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(464)), 18 * TILE_SIZE_4BPP);
+}
+
+static void TilesetAnim_FrpGeneral(u16 timer)
+{
+    if (timer % 16 == 0)
+        QueueAnimTiles_FrpGeneral_Flower(timer / 16);
+    if (timer % 16 == 1)
+        QueueAnimTiles_FrpGeneral_Water(timer / 16);
+    if (timer % 16 == 2)
+        QueueAnimTiles_FrpGeneral_SandWaterEdge(timer / 16);
+}
+
+void InitTilesetAnim_FrpGeneral(void)
+{
+    sPrimaryTilesetAnimCounter = 0;
+    sPrimaryTilesetAnimCounterMax = 256;
+    sPrimaryTilesetAnimCallback = TilesetAnim_FrpGeneral;
+}

@@ -1,0 +1,49 @@
+// ParcelIsleChandlery -- Kit's shop. Rope, lamp oil, and the town's only
+// Poké Balls. Her brother sits outside.
+
+mapscripts ParcelIsleChandlery_MapScripts {
+}
+
+script ParcelIsleChandlery_Kit {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Kit: Sold more rope this week than all winter. Everybody's tying something down before the hearings.\pShelf's stocked. The boat remembered us, for once. Need anything?"), MSGBOX_YESNO)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("Kit: Ranger stock's in -- the Corps pays on time, which is more than I can say for the fleet.\pDon't tell Ossian I said fleet. Need anything?"), MSGBOX_YESNO)
+    } else {
+        msgbox(format("Kit: Off the ferry? Then you'll want a lamp and you'll want to not ask about the weather.\pThe shelf's stocked, when the boat remembers us. Need supplies?"), MSGBOX_YESNO)
+    }
+    if (var(VAR_RESULT) == 1) {
+        pokemart(ParcelIsleChandlery_Items)
+    }
+    msgbox(format("Kit: Mind the fog out there."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+raw `
+	.align 2
+ParcelIsleChandlery_Items::
+	.2byte ITEM_POKE_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_REPEL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_NONE
+`
+
+script ParcelIsleChandlery_Hjalmar {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Hjalmar: Rope, lamp oil, and news. Kit sells two of those. The third's free now, and it's all anyone's buying."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("Hjalmar: Rope, lamp oil, and news. Kit sells two of those.\pThe third you get for free by standing here long enough. I've been here an hour."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

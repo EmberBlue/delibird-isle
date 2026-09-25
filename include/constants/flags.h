@@ -516,12 +516,12 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
-#define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
+#define FLAG_SKALD_ITEM_TOWN_NETBALL   0x1DE // Skaldmere: Saltwick beach item ball
+#define FLAG_SKALD_Q_ANNI_NET          0x1DF // Skaldmere: Saltwick -- carrying Anni's mended net to Tobin
+#define FLAG_SKALD_Q_ANNI_DONE         0x1E0 // Skaldmere: Saltwick -- Tobin has the net (Old Rod given)
+#define FLAG_SKALD_Q_SIGRUN            0x1E1 // Skaldmere: Saltwick -- agreed to count the Wingull for Sigrun
+#define FLAG_SKALD_Q_SIGRUN_DONE       0x1E2 // Skaldmere: Saltwick -- Sigrun's count rewarded
+#define FLAG_SKALD_Q_BIRDER_DONE       0x1E3 // Skaldmere: Saltwick -- Corwen's Delibird sighting rewarded
 
 // Mystery Gift Flags (Unknown)
 #define FLAG_MYSTERY_GIFT_DONE               0x1E4

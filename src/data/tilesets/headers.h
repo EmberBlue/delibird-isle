@@ -155,7 +155,7 @@ const struct Tileset gTileset_Primary_frp_general = {
     // FR port's tiles at the vanilla offsets, corrupting the art. The
     // port's own anim frames (anim/, anim2/) need a dedicated callback
     // before this can animate. See design/12-implementation.md.
-    .callback     = NULL,
+    .callback     = InitTilesetAnim_FrpGeneral, // FR-offset animator (water 416, sand-edge 464, flower 508)
 };
 
 // ---- FR Port Primary: Building ----

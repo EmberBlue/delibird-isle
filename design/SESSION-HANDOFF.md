@@ -2,9 +2,10 @@
 
 > **Purpose:** the *live state* a new session can't get from the durable docs.
 > The durable docs carry the structure; this carries the moment. Last updated
-> 2026-09-15, end of the session that shipped the HM gates, the boardroom
-> coda + reaction pass, the freeze fixes, the cheat start, the interiors and
-> the hand-drawn Delibird village.
+> 2026-09-25, end of the session that set the full-game targets (§13:
+> 100k+ words, 1,000+ trainers, 100+ maps), built the map pipeline
+> (`tools/skald/`), and shipped Saltwick — the dock town rebuilt by hand on
+> the FireRed harbour tileset with 8 new interiors and ~4,000 words.
 > **If this note disagrees with reality, reality wins — update or delete it.**
 
 ## The 60-second orientation
@@ -82,12 +83,24 @@ Delibird is on `JohtoGeneral + AzaleaTown`; the other pairings wired in
 `src/data/tilesets/headers.h` are unused and waiting. The user can also open
 any map in Porymap locally (same file format) and push the result back.
 
-**The density/identity pass is the next work, one zone per pass:**
-1. **Dock Town (`ParcelIsle`)** — the first thing the player sees. Shrink to
-   town scale (~40×30), harbour character, doors that go somewhere.
-2. Station route (`ParcelStation`), then Wetlands/Corridor.
-3. Coast (harbour/industrial tiles), Highlands (rock), forest zones (woods).
-More interiors go with each: the user wants houses you can enter.
+**The pipeline (use it, don't rebuild it):** `tools/skald/newmap.py` scaffolds
+and registers a map; `tools/skald/draw.py <canvas.txt>` builds `map.bin` from
+an ASCII drawing + a legend (stamps for buildings, anchors for scripted
+entities, door coordinates printed); `tools/skald/audit.py` is the whole
+skald-verify playbook automated (run it before every commit);
+`tools/skald/newtrainer.py` allocates ids; `tools/skald/tileascii.py` shows
+any tile as text. Worked example: `data/layouts/ParcelIsle/canvas.txt`.
+
+**Done: Saltwick (Dock Town)** — 44×36 on `frp_general + frp_vermilion_city`,
+13 doors, 8 new interiors, 30 residents in three story states, 3 side quests,
+harbour fishing. **Next, one zone per pass, same recipe:**
+1. **Saltmarsh routes** out of Saltwick: the preserve gate north (fence at
+   (20–22,2)) is the hook for a coastal route; the bridge east stays.
+2. The Station and its route (`ParcelStation` 50×40 → a real station village).
+3. Wetlands/Corridor, then Coast (`frp_island_harbor`), Highlands (rock),
+   forest zones (`frp_viridian_forest`).
+Each zone: settlement + routes + interiors + 10–20 residents × 3 states +
+20–25 trainers + side quests. Trainers are the biggest gap (30 of 1,000).
 
 Model note: Fable 5 was available and did the prose this session. The old
 "hybrid" rule (structure on any model, prose strings left as
@@ -125,10 +138,10 @@ be 0 before commit.
   early `end`s — otherwise the trigger re-fires every frame and the game
   freezes in place. This was the Wetlands poison trigger *and* the Corridor
   culvert. `skald-verify` audits it.
-- **`MAX_TRAINERS_COUNT` is pinned at 1000 and must not move**:
+- **`MAX_TRAINERS_COUNT` is pinned at 2048 (raised once, deliberately, 2026-09-25; old saves died) and must not move again**:
   `SYSTEM_FLAGS = TRAINER_FLAGS_START + MAX_TRAINERS_COUNT`, so changing it
   shifts every system flag and corrupts existing saves (that was the
-  "freezes in some places" bug). `TRAINERS_COUNT` can grow to 999 freely.
+  "freezes in some places" bug). `TRAINERS_COUNT` can grow to 2047 freely.
 - **Metatile layering:** cells 0–3 → BG3, 4–7 → BG2 (under sprites), 8–11 →
   BG1 (**covers** sprites). A walkable tile with art in cells 8–11 hides the
   player (the bridge-deck bug). `gTileset_General` binds

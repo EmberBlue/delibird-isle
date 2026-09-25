@@ -176,7 +176,7 @@ ParcelWeather_ReturnFerry::
 # 138 "data/maps/ParcelWeather/scripts.pory"
 	delay 40
 # 139 "data/maps/ParcelWeather/scripts.pory"
-	warp MAP_PARCEL_ISLE, 41, 48
+	warp MAP_PARCEL_ISLE, 15, 31
 # 140 "data/maps/ParcelWeather/scripts.pory"
 	waitstate
 	end

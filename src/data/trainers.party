@@ -17470,3 +17470,18 @@ Level: 56
 
 Milotic
 Level: 58
+
+=== TRAINER_SKALD_HARBOUR_LAD ===
+Name: KIP
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Krabby
+Level: 6
+
+Wingull
+Level: 5

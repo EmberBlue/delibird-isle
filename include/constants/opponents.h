@@ -901,15 +901,18 @@
 #define TRAINER_SKALD_GATE_MARSH              885
 #define TRAINER_SKALD_CORDELIA                886
 
-#define TRAINERS_COUNT                      887
-// PINNED with headroom (was tracking TRAINERS_COUNT exactly). Every change to
-// this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS -> every badge/system
-// flag AND the size of SaveBlock1's flags[] array -- i.e. it SILENTLY BREAKS
-// ALL EXISTING SAVES (checksums still pass; the data is just misread). That
-// is exactly what happened across the 872->877->886->887 bumps. Pinning a
-// ceiling means TRAINERS_COUNT can grow to 999 with no save impact. Do NOT
-// lower or raise this without accepting a region-wide save wipe.
-#define MAX_TRAINERS_COUNT                  1000
+#define TRAINER_SKALD_HARBOUR_LAD         887
+
+#define TRAINERS_COUNT                      888
+// PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
+// build: the target is 1000+ Skald trainers on top of the inherited vanilla
+// table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS
+// -> every badge/system flag AND the size of SaveBlock1's flags[] array, i.e.
+// it SILENTLY BREAKS ALL EXISTING SAVES (checksums still pass; the bits are
+// misread). That bump was accepted once, deliberately, with headroom for the
+// whole plan. TRAINERS_COUNT may grow to 2047 with no save impact. Do NOT
+// lower or raise this again without accepting another region-wide save wipe.
+#define MAX_TRAINERS_COUNT                  2048
 #define TRAINER_PARTNER(partner)           (MAX_TRAINERS_COUNT + partner)
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

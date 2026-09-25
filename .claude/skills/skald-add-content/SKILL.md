@@ -5,7 +5,11 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 
 # Skaldmere add-content checklist
 
-## New map / interior
+## New map / interior (use the pipeline: tools/skald/)
+0. `python3 tools/skald/newmap.py --name <Name> ...` registers everything below;
+   outdoor maps are DRAWN: `data/layouts/<Name>/canvas.txt` + a legend in
+   `tools/skald/legends/`, built by `python3 tools/skald/draw.py <canvas>`
+   (prints anchor + door coordinates for map.json). Never generate fills.
 1. Reuse a vanilla layout when possible (interiors: LAYOUT_HOUSE1 exits (3,8)/(4,8),
    HOUSE2 (3,7)/(4,7), Birch lab (6,12)/(7,12), PC 1F (6,8)/(7,8), Devon 3F (2,1)).
 2. `data/maps/<Name>/map.json` + `scripts.pory` (see existing Parcel maps).
@@ -17,8 +21,10 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 
 ## Flags & vars
 - Claim only a `FLAG_UNUSED_*` whose define greps unreferenced outside flags.h.
-- NEVER change MAX_TRAINERS_COUNT (pinned 1000 — moving it shifts SYSTEM_FLAGS
-  and silently corrupts every save). TRAINERS_COUNT may grow to 999 freely.
+- NEVER change MAX_TRAINERS_COUNT (pinned 2048 since 2026-09-25 — moving it shifts
+  SYSTEM_FLAGS and silently corrupts every save). TRAINERS_COUNT may grow to 2047.
+- `python3 tools/skald/newtrainer.py TAG --name .. --class .. --mons "Krabby / Level 6"`
+  allocates the id, the constant and the party stub.
 
 ## Trainers
 - Party in `src/data/trainers.party` (Showdown-ish; see TRAINER_SKALD_* tail),
@@ -31,6 +37,8 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 - §00 register: implies more than it states; no exposition dumps.
 
 ## Ship ritual
+- `python3 tools/skald/audit.py` must be clean (walkability, warps, trigger guards,
+  top-layer cover, connections, fly rows, trainer registration).
 - Build green → zip the .gba (32MB > 30MB send cap; zip ≈ 16MB, mGBA opens zips)
   → SendUserFile → commit (footer: session URL) → push; if the container has no
   git creds, push small TEXT files via mcp github push_files (binaries cannot

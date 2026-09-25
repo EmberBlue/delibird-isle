@@ -212,35 +212,7 @@
     }
   ],
   "warp_events": [],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 29,
-      "y": 36,
-      "elevation": 3,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "ParcelDelibird_FirstEntry"
-    },
-    {
-      "type": "trigger",
-      "x": 30,
-      "y": 36,
-      "elevation": 3,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "ParcelDelibird_FirstEntry"
-    },
-    {
-      "type": "trigger",
-      "x": 31,
-      "y": 36,
-      "elevation": 3,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "ParcelDelibird_FirstEntry"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

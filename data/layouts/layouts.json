@@ -4464,10 +4464,10 @@
     {
       "id": "LAYOUT_PARCEL_ISLE",
       "name": "ParcelIsle_Layout",
-      "width": 83,
-      "height": 60,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "width": 44,
+      "height": 36,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_vermilion_city",
       "border_filepath": "data/layouts/ParcelIsle/border.bin",
       "blockdata_filepath": "data/layouts/ParcelIsle/map.bin"
     },

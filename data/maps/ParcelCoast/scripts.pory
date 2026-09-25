@@ -285,7 +285,7 @@ script ParcelCoast_ReturnFerry {
     closemessage
     playse(SE_SHIP)
     delay(40)
-    warp(MAP_PARCEL_ISLE, 41, 48)
+    warp(MAP_PARCEL_ISLE, 15, 31)
     waitstate
     end
 }

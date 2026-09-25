@@ -1,0 +1,63 @@
+legend frp_general__frp_vermilion_city
+size 44 36
+# Saltwick -- the arrival dock town on the Saltmarsh Coast (zone 1). Hand-composed:
+# forest cap with the closed preserve gate (north), three lanes of buildings,
+# the boardwalk quay, a jetty to the landing platform, the west inlet, the
+# east road to the long bridge (rows 18-22).
+anchor j p
+anchor C p
+anchor @ p
+anchor k p
+anchor r p
+anchor y .
+anchor z .
+anchor O .
+anchor m .
+anchor I s
+anchor 8 s
+anchor o .
+anchor h b
+anchor a b
+anchor N b
+anchor U b
+anchor g p
+anchor l .
+anchor 3 S
+anchor 4 S
+---
+T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#
+############################################
+T#T#T#T#T#T#T#....T#F3F.T#....T#T#T#T#T#T#T#
+##############....##.p..##....##############
+T#.................,.p......,.......,..o..T#
+##.B..A###..R####....p..P####..K####..A#####
+T#,...####..#####....p..#####..#####..####T#
+##....####..#####....p..#####..#####..######
+T#.B..####.S#####....p..#####.Z#####..####T#
+##...pppppjppppppppppppfpp@ppfpppCpppppppp##
+T#,..............,...................,....T#
+##..B...................................B.##
+T#.,..M###HHH.V###..FFF...A###HHH.V###....T#
+##....####....####..F4F...####....####....##
+nnnne.####....####....,...####....####..B.T#
+~~~~>s####....####S.......####....####....##
+~~~~>ppppppkppppppppppppppppppppppppppppppT#
+~~~~>ILLLLLLLLLLLLL..p.fff........m.fffff.##
+~~~~>s......yBz......p...,...O...B.....,....
+~~~~>spppppppppppppppppppppppppppppppppppppp
+~~~~>spppppppppppppppppppppppppppppprppppSpp
+~~~~>spppppppppppppppppppppppppppppppppppppp
+~~~~>s..p.....,...........p.,......,........
+~~~~>s..pA###......V###...p...A###...A###.T#
+~~~~>s..p####...B..####.,.p.B.####...####B##
+~~~~>8..p####......####...pFFF####.B.####.T#
+~~~~>s..p####....Z.####...g.l.####...####.##
+~~~~>[bbbUbbbbbbbhbbbNbba]ssssssssssssssssss
+~~~~unnnnnnnnJ####nnnnnnnnnnnnnnnnnnnnnnnnnn
+~~~~~~~~~~~~~J####~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~J####~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~J####~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~J####~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~D#####~~~~~~~~~~~~~~~~~~~~~~~~~~
+dddddddd~~~~######~~~~~~~~~~~~~~~~~~dddddddd
+dddddddd~~~~######~~~~~~~~~~~~~~~~~~dddddddd

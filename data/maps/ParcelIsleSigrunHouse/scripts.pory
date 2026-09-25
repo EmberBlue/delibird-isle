@@ -1,0 +1,25 @@
+// ParcelIsleSigrunHouse -- Sigrun's. Empty but for the photograph and the
+// gull that comes in the window.
+
+mapscripts ParcelIsleSigrunHouse_MapScripts {
+}
+
+script ParcelIsleSigrunHouse_Wingull {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_WINGULL, CRY_MODE_NORMAL)
+    msgbox(format("A Wingull, in the house as if it owns it. It looks at you, and then at the window, and then at you."), MSGBOX_DEFAULT)
+    waitmoncry
+    release
+    end
+}
+
+script ParcelIsleSigrunHouse_Photo {
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("A photograph: a man on a boat, laughing, a hand on the gunwale.\pOn the hull, in the corner of the frame, a crest. Green and grey. The kerning is the same as the gate, the office, the blankets.\pYou would not have seen it, the first day."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A photograph: a man on a boat, laughing, a hand on the gunwale. The frame is the cleanest thing in the room."), MSGBOX_SIGN)
+    }
+    end
+}

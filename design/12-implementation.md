@@ -332,6 +332,30 @@ Last known good build (base expansion, no Skaldmere content yet):
 ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
 `POKEMON EMER` / `BPEE`.
 
+
+### FireRed tileset port (frp_*) — facts that cost a session (do not rediscover)
+
+- **Attributes are u16** (`metatile_attributes.bin` = 2 bytes/metatile):
+  behaviour in the low byte, layer type in bits 12–13. Decoding as u32
+  interleaves pairs and every behaviour reads wrong.
+- **Metatile ids match pokefirered's for 0–511** (491 identical; the rest of
+  FR's 640-tile primary is folded into the frp secondaries' first tiles).
+  So pokefirered's town layouts are a free dictionary of how buildings, piers
+  and shore rims assemble: `tools/skald/tileascii.py` renders any tile as
+  text, and the fetched FR layouts translate 1:1. The verified roles live in
+  `tools/skald/legends/frp_general__frp_vermilion_city.json`.
+- **Animations need their own callback** (`InitTilesetAnim_FrpGeneral` in
+  `src/tileset_anims.c`): FR keeps water+currents+land-edge as 48 tiles @416,
+  sand/water edge as 18 tiles @464, flower as 4 tiles @508 — exactly
+  pokefirered's offsets. The vanilla General animator stomps FR art.
+- **The sea's wave crests** (metatiles 266/267, top-layer tiles 6/8/24/56)
+  ship with palette 0 (grass greens) in the port; they are meant to be drawn
+  with the water palette (4) — patched in `frp_general/metatiles.bin`.
+- **Doors:** animated doors (98) are solid tiles you press into; FR's
+  non-animated house doors (670) are *walkable* tiles you step onto.
+- **The S.S. Anne platform planks (747–749, 776–778)** carry the ship's hull
+  on their top layer and hide the player — use plain planks (454).
+
 ## RAM budget (the binding constraint)
 
 ROM is comfortable; the GBA's RAM is the hard limit. The base expansion
