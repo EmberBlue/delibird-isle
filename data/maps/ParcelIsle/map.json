@@ -82,7 +82,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ParcelIsle_KidTrainer",
-      "flag": "0"
+      "flag": "FLAG_SKALD_NO_PARTNER_YET"
     },
     {
       "local_id": "LOCALID_TOWN_POTION",
@@ -124,7 +124,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
       "script": "ParcelIsle_GateMoore",
-      "flag": "0"
+      "flag": "FLAG_SKALD_NO_PARTNER_YET"
     },
     {
       "local_id": "LOCALID_INNKEEPER",

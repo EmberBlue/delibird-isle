@@ -147,6 +147,14 @@ script ParcelIsle_NetMender {
 
 // Kip, the harbour lad -- an optional battle on the quay. Talk-triggered.
 script ParcelIsle_HarbourLad {
+    lock
+    faceplayer
+    if (!flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("Kip: You came off the ferry with a bag and no Pokémon. Not even one. Who does that?\pCome back when you've got something that can stand on the quay. Then we'll see."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    release
     trainerbattle_single(TRAINER_SKALD_HARBOUR_LAD,
         format("Kip: You came off the ferry with a bag and no Pokémon, and now look at you.\pBet you can't beat my Krabby. The channel used to be full of them."),
         format("Kip: …Used to be. Yeah."))

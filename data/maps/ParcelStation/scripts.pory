@@ -342,6 +342,7 @@ script ParcelStation_Doduo {
     removeobject(LOCALID_MEADOW_DODUO)
     givemon(SPECIES_DODUO, 5)
     setflag(FLAG_SYS_POKEMON_GET)
+    clearflag(FLAG_SKALD_NO_PARTNER_YET)
     msgbox(format("It feels warm.\pWREN received DODUO."), MSGBOX_DEFAULT)
     msgbox(format("Hale: This doesn't make you a Ranger."), MSGBOX_DEFAULT)
     msgbox(format("Ilex: It makes you accountable."), MSGBOX_DEFAULT)

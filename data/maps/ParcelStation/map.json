@@ -233,7 +233,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ParcelStation_BirderTrainer",
-      "flag": "0"
+      "flag": "FLAG_SKALD_NO_PARTNER_YET"
     },
     {
       "local_id": "LOCALID_STATION_BALLS",
@@ -261,7 +261,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "ParcelStation_GateWard",
-      "flag": "0"
+      "flag": "FLAG_SKALD_NO_PARTNER_YET"
     }
   ],
   "warp_events": [

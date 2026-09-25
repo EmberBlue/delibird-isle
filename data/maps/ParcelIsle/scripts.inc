@@ -208,583 +208,598 @@ ParcelIsle_NetMender_12:
 
 ParcelIsle_HarbourLad::
 # 150 "data/maps/ParcelIsle/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_HARBOUR_LAD, ParcelIsle_HarbourLad_Text_0, ParcelIsle_HarbourLad_Text_1
-# 153 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 154 "data/maps/ParcelIsle/scripts.pory"
+# 151 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 155 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_HarbourLad_2
+# 152 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SYS_POKEMON_GET, ParcelIsle_HarbourLad_2
+# 157 "data/maps/ParcelIsle/scripts.pory"
+	release
 # 158 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_HarbourLad_Text_3, MSGBOX_DEFAULT
-ParcelIsle_HarbourLad_1:
-# 160 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_HARBOUR_LAD, ParcelIsle_HarbourLad_Text_1, ParcelIsle_HarbourLad_Text_2
+# 161 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 162 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 163 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_HarbourLad_5
+# 166 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_HarbourLad_Text_4, MSGBOX_DEFAULT
+ParcelIsle_HarbourLad_4:
+# 168 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_HarbourLad_2:
-# 156 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_HarbourLad_Text_2, MSGBOX_DEFAULT
-	goto ParcelIsle_HarbourLad_1
+# 153 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_HarbourLad_Text_0, MSGBOX_DEFAULT
+# 154 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_HarbourLad_5:
+# 164 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_HarbourLad_Text_3, MSGBOX_DEFAULT
+	goto ParcelIsle_HarbourLad_4
 
 
 ParcelIsle_Widow::
-# 166 "data/maps/ParcelIsle/scripts.pory"
+# 174 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 167 "data/maps/ParcelIsle/scripts.pory"
+# 175 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 168 "data/maps/ParcelIsle/scripts.pory"
+# 176 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_SIGRUN_DONE, ParcelIsle_Widow_2
-# 173 "data/maps/ParcelIsle/scripts.pory"
+# 181 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_SIGRUN, ParcelIsle_Widow_5
-# 187 "data/maps/ParcelIsle/scripts.pory"
+# 195 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_5, MSGBOX_YESNO
-# 188 "data/maps/ParcelIsle/scripts.pory"
+# 196 "data/maps/ParcelIsle/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelIsle_Widow_8
-# 192 "data/maps/ParcelIsle/scripts.pory"
+# 200 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_7, MSGBOX_DEFAULT
 ParcelIsle_Widow_7:
-# 194 "data/maps/ParcelIsle/scripts.pory"
+# 202 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Widow_2:
-# 169 "data/maps/ParcelIsle/scripts.pory"
+# 177 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_0, MSGBOX_DEFAULT
-# 170 "data/maps/ParcelIsle/scripts.pory"
+# 178 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Widow_5:
-# 174 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_Widow_12
-# 179 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_Widow_13
 # 182 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_Widow_12
+# 187 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_Widow_13
+# 190 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_4, MSGBOX_DEFAULT
 ParcelIsle_Widow_11:
-# 184 "data/maps/ParcelIsle/scripts.pory"
+# 192 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Widow_8:
-# 189 "data/maps/ParcelIsle/scripts.pory"
+# 197 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_6, MSGBOX_DEFAULT
-# 190 "data/maps/ParcelIsle/scripts.pory"
+# 198 "data/maps/ParcelIsle/scripts.pory"
 	setflag FLAG_SKALD_Q_SIGRUN
 	goto ParcelIsle_Widow_7
 
 ParcelIsle_Widow_12:
-# 175 "data/maps/ParcelIsle/scripts.pory"
+# 183 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_1, MSGBOX_DEFAULT
-# 176 "data/maps/ParcelIsle/scripts.pory"
+# 184 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_2, MSGBOX_DEFAULT
-# 177 "data/maps/ParcelIsle/scripts.pory"
+# 185 "data/maps/ParcelIsle/scripts.pory"
 	giveitem ITEM_LUCKY_EGG
-# 178 "data/maps/ParcelIsle/scripts.pory"
+# 186 "data/maps/ParcelIsle/scripts.pory"
 	setflag FLAG_SKALD_Q_SIGRUN_DONE
 	goto ParcelIsle_Widow_11
 
 ParcelIsle_Widow_13:
-# 180 "data/maps/ParcelIsle/scripts.pory"
+# 188 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Widow_Text_3, MSGBOX_DEFAULT
 	goto ParcelIsle_Widow_11
 
 
 ParcelIsle_FerrySign::
-# 199 "data/maps/ParcelIsle/scripts.pory"
+# 207 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_FerrySign_2
-# 202 "data/maps/ParcelIsle/scripts.pory"
+# 210 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerrySign_Text_1, MSGBOX_SIGN
 ParcelIsle_FerrySign_1:
 	end
 
 ParcelIsle_FerrySign_2:
-# 200 "data/maps/ParcelIsle/scripts.pory"
+# 208 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerrySign_Text_0, MSGBOX_SIGN
 	goto ParcelIsle_FerrySign_1
 
 
 ParcelIsle_FerryCaptain::
-# 211 "data/maps/ParcelIsle/scripts.pory"
-	lock
-# 212 "data/maps/ParcelIsle/scripts.pory"
-	faceplayer
-# 213 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_HIGHLAND_CERT, ParcelIsle_FerryCaptain_2
-# 218 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_1, MSGBOX_DEFAULT
 # 219 "data/maps/ParcelIsle/scripts.pory"
-	multichoice 1, 1, MULTI_SKALD_FERRY, FALSE
+	lock
 # 220 "data/maps/ParcelIsle/scripts.pory"
-	switch VAR_RESULT
+	faceplayer
 # 221 "data/maps/ParcelIsle/scripts.pory"
-	case 0, ParcelIsle_FerryCaptain_6
+	goto_if_unset FLAG_SKALDMERE_HIGHLAND_CERT, ParcelIsle_FerryCaptain_2
+# 226 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_1, MSGBOX_DEFAULT
+# 227 "data/maps/ParcelIsle/scripts.pory"
+	multichoice 1, 1, MULTI_SKALD_FERRY, FALSE
 # 228 "data/maps/ParcelIsle/scripts.pory"
+	switch VAR_RESULT
+# 229 "data/maps/ParcelIsle/scripts.pory"
+	case 0, ParcelIsle_FerryCaptain_6
+# 236 "data/maps/ParcelIsle/scripts.pory"
 	case 1, ParcelIsle_FerryCaptain_7
-# 240 "data/maps/ParcelIsle/scripts.pory"
+# 248 "data/maps/ParcelIsle/scripts.pory"
 	case 2, ParcelIsle_FerryCaptain_8
-# 253 "data/maps/ParcelIsle/scripts.pory"
+# 261 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_4, MSGBOX_DEFAULT
-# 254 "data/maps/ParcelIsle/scripts.pory"
+# 262 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_FerryCaptain_2:
-# 214 "data/maps/ParcelIsle/scripts.pory"
+# 222 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_0, MSGBOX_DEFAULT
-# 215 "data/maps/ParcelIsle/scripts.pory"
+# 223 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 	end
 
 ParcelIsle_FerryCaptain_6:
-# 222 "data/maps/ParcelIsle/scripts.pory"
+# 230 "data/maps/ParcelIsle/scripts.pory"
 	closemessage
-# 223 "data/maps/ParcelIsle/scripts.pory"
+# 231 "data/maps/ParcelIsle/scripts.pory"
 	playse SE_SHIP
-# 224 "data/maps/ParcelIsle/scripts.pory"
+# 232 "data/maps/ParcelIsle/scripts.pory"
 	delay 40
-# 225 "data/maps/ParcelIsle/scripts.pory"
+# 233 "data/maps/ParcelIsle/scripts.pory"
 	warp MAP_PARCEL_DELIBIRD, 9, 22
-# 226 "data/maps/ParcelIsle/scripts.pory"
+# 234 "data/maps/ParcelIsle/scripts.pory"
 	waitstate
 	end
 
 ParcelIsle_FerryCaptain_7:
-# 229 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_DELIBIRD_ARRIVAL, ParcelIsle_FerryCaptain_11
-# 234 "data/maps/ParcelIsle/scripts.pory"
-	closemessage
-# 235 "data/maps/ParcelIsle/scripts.pory"
-	playse SE_SHIP
-# 236 "data/maps/ParcelIsle/scripts.pory"
-	delay 40
 # 237 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALDMERE_DELIBIRD_ARRIVAL, ParcelIsle_FerryCaptain_11
+# 242 "data/maps/ParcelIsle/scripts.pory"
+	closemessage
+# 243 "data/maps/ParcelIsle/scripts.pory"
+	playse SE_SHIP
+# 244 "data/maps/ParcelIsle/scripts.pory"
+	delay 40
+# 245 "data/maps/ParcelIsle/scripts.pory"
 	warp MAP_PARCEL_COAST, 38, 38
-# 238 "data/maps/ParcelIsle/scripts.pory"
+# 246 "data/maps/ParcelIsle/scripts.pory"
 	waitstate
 	end
 
 ParcelIsle_FerryCaptain_8:
-# 241 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_COASTAL_CERT, ParcelIsle_FerryCaptain_14
-# 246 "data/maps/ParcelIsle/scripts.pory"
-	closemessage
-# 247 "data/maps/ParcelIsle/scripts.pory"
-	playse SE_SHIP
-# 248 "data/maps/ParcelIsle/scripts.pory"
-	delay 40
 # 249 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALDMERE_COASTAL_CERT, ParcelIsle_FerryCaptain_14
+# 254 "data/maps/ParcelIsle/scripts.pory"
+	closemessage
+# 255 "data/maps/ParcelIsle/scripts.pory"
+	playse SE_SHIP
+# 256 "data/maps/ParcelIsle/scripts.pory"
+	delay 40
+# 257 "data/maps/ParcelIsle/scripts.pory"
 	warp MAP_PARCEL_WEATHER, 23, 36
-# 250 "data/maps/ParcelIsle/scripts.pory"
+# 258 "data/maps/ParcelIsle/scripts.pory"
 	waitstate
 	end
 
 ParcelIsle_FerryCaptain_11:
-# 230 "data/maps/ParcelIsle/scripts.pory"
+# 238 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_2, MSGBOX_DEFAULT
-# 231 "data/maps/ParcelIsle/scripts.pory"
+# 239 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_FerryCaptain_14:
-# 242 "data/maps/ParcelIsle/scripts.pory"
+# 250 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_3, MSGBOX_DEFAULT
-# 243 "data/maps/ParcelIsle/scripts.pory"
+# 251 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 
 ParcelIsle_GateMoore::
-# 264 "data/maps/ParcelIsle/scripts.pory"
+# 272 "data/maps/ParcelIsle/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_GATE_ISLE, ParcelIsle_GateMoore_Text_0, ParcelIsle_GateMoore_Text_1, ParcelIsle_GateMoore_Defeated
-# 268 "data/maps/ParcelIsle/scripts.pory"
+# 276 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 269 "data/maps/ParcelIsle/scripts.pory"
+# 277 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 270 "data/maps/ParcelIsle/scripts.pory"
+# 278 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_GateMoore_Text_2, MSGBOX_DEFAULT
-# 271 "data/maps/ParcelIsle/scripts.pory"
+# 279 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 
 ParcelIsle_GateMoore_Defeated::
-# 276 "data/maps/ParcelIsle/scripts.pory"
+# 284 "data/maps/ParcelIsle/scripts.pory"
 	setflag FLAG_SKALDMERE_GATE_ISLE
-# 277 "data/maps/ParcelIsle/scripts.pory"
+# 285 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_GateMoore_Defeated_Text_0, MSGBOX_DEFAULT
-# 278 "data/maps/ParcelIsle/scripts.pory"
+# 286 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 
 ParcelIsle_ItemNetBall::
-# 283 "data/maps/ParcelIsle/scripts.pory"
+# 291 "data/maps/ParcelIsle/scripts.pory"
 	finditem ITEM_NET_BALL
 	end
 
 
 ParcelIsle_LogisticsClerk::
-# 293 "data/maps/ParcelIsle/scripts.pory"
+# 301 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 294 "data/maps/ParcelIsle/scripts.pory"
-	faceplayer
-# 295 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_LogisticsClerk_2
-# 297 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelIsle_LogisticsClerk_3
-# 299 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_LogisticsClerk_4
 # 302 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 303 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_LogisticsClerk_2
+# 305 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelIsle_LogisticsClerk_3
+# 307 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_LogisticsClerk_4
+# 310 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_LogisticsClerk_Text_3, MSGBOX_DEFAULT
 ParcelIsle_LogisticsClerk_1:
-# 304 "data/maps/ParcelIsle/scripts.pory"
+# 312 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_LogisticsClerk_2:
-# 296 "data/maps/ParcelIsle/scripts.pory"
+# 304 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_LogisticsClerk_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_LogisticsClerk_1
 
 ParcelIsle_LogisticsClerk_3:
-# 298 "data/maps/ParcelIsle/scripts.pory"
+# 306 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_LogisticsClerk_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsle_LogisticsClerk_1
 
 ParcelIsle_LogisticsClerk_4:
-# 300 "data/maps/ParcelIsle/scripts.pory"
+# 308 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_LogisticsClerk_Text_2, MSGBOX_DEFAULT
 	goto ParcelIsle_LogisticsClerk_1
 
 
 ParcelIsle_KidA::
-# 310 "data/maps/ParcelIsle/scripts.pory"
+# 318 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 311 "data/maps/ParcelIsle/scripts.pory"
+# 319 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 312 "data/maps/ParcelIsle/scripts.pory"
+# 320 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_KidA_2
-# 314 "data/maps/ParcelIsle/scripts.pory"
+# 322 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_BRIDGE_SCENE, ParcelIsle_KidA_3
-# 317 "data/maps/ParcelIsle/scripts.pory"
+# 325 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidA_Text_2, MSGBOX_DEFAULT
 ParcelIsle_KidA_1:
-# 319 "data/maps/ParcelIsle/scripts.pory"
+# 327 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_KidA_2:
-# 313 "data/maps/ParcelIsle/scripts.pory"
+# 321 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidA_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_KidA_1
 
 ParcelIsle_KidA_3:
-# 315 "data/maps/ParcelIsle/scripts.pory"
+# 323 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidA_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsle_KidA_1
 
 
 ParcelIsle_KidB::
-# 324 "data/maps/ParcelIsle/scripts.pory"
+# 332 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 325 "data/maps/ParcelIsle/scripts.pory"
+# 333 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 326 "data/maps/ParcelIsle/scripts.pory"
+# 334 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_KidB_2
-# 328 "data/maps/ParcelIsle/scripts.pory"
+# 336 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_BRIDGE_SCENE, ParcelIsle_KidB_3
-# 331 "data/maps/ParcelIsle/scripts.pory"
+# 339 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidB_Text_2, MSGBOX_DEFAULT
 ParcelIsle_KidB_1:
-# 333 "data/maps/ParcelIsle/scripts.pory"
+# 341 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_KidB_2:
-# 327 "data/maps/ParcelIsle/scripts.pory"
+# 335 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidB_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_KidB_1
 
 ParcelIsle_KidB_3:
-# 329 "data/maps/ParcelIsle/scripts.pory"
+# 337 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidB_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsle_KidB_1
 
 
 ParcelIsle_OldMan::
-# 339 "data/maps/ParcelIsle/scripts.pory"
+# 347 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 340 "data/maps/ParcelIsle/scripts.pory"
+# 348 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 341 "data/maps/ParcelIsle/scripts.pory"
+# 349 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_OldMan_2
-# 343 "data/maps/ParcelIsle/scripts.pory"
+# 351 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_OldMan_3
-# 346 "data/maps/ParcelIsle/scripts.pory"
+# 354 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_OldMan_Text_2, MSGBOX_DEFAULT
 ParcelIsle_OldMan_1:
-# 348 "data/maps/ParcelIsle/scripts.pory"
+# 356 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_OldMan_2:
-# 342 "data/maps/ParcelIsle/scripts.pory"
+# 350 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_OldMan_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_OldMan_1
 
 ParcelIsle_OldMan_3:
-# 344 "data/maps/ParcelIsle/scripts.pory"
+# 352 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_OldMan_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsle_OldMan_1
 
 
 ParcelIsle_Birder::
-# 354 "data/maps/ParcelIsle/scripts.pory"
+# 362 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 355 "data/maps/ParcelIsle/scripts.pory"
+# 363 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 356 "data/maps/ParcelIsle/scripts.pory"
+# 364 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_BIRDER_DONE, ParcelIsle_Birder_2
-# 365 "data/maps/ParcelIsle/scripts.pory"
+# 373 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_DELIBIRD_ARRIVAL, ParcelIsle_Birder_5
-# 377 "data/maps/ParcelIsle/scripts.pory"
+# 385 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_Birder_12
-# 380 "data/maps/ParcelIsle/scripts.pory"
+# 388 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Birder_Text_6, MSGBOX_DEFAULT
 ParcelIsle_Birder_11:
-# 382 "data/maps/ParcelIsle/scripts.pory"
+# 390 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Birder_2:
-# 357 "data/maps/ParcelIsle/scripts.pory"
+# 365 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_Birder_8
-# 360 "data/maps/ParcelIsle/scripts.pory"
+# 368 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Birder_Text_1, MSGBOX_DEFAULT
 ParcelIsle_Birder_7:
-# 362 "data/maps/ParcelIsle/scripts.pory"
+# 370 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Birder_5:
-# 366 "data/maps/ParcelIsle/scripts.pory"
+# 374 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Birder_Text_2, MSGBOX_YESNO
-# 367 "data/maps/ParcelIsle/scripts.pory"
+# 375 "data/maps/ParcelIsle/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelIsle_Birder_16
-# 372 "data/maps/ParcelIsle/scripts.pory"
+# 380 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Birder_Text_4, MSGBOX_DEFAULT
 ParcelIsle_Birder_15:
-# 374 "data/maps/ParcelIsle/scripts.pory"
+# 382 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Birder_8:
-# 358 "data/maps/ParcelIsle/scripts.pory"
+# 366 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Birder_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_Birder_7
 
 ParcelIsle_Birder_12:
-# 378 "data/maps/ParcelIsle/scripts.pory"
+# 386 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Birder_Text_5, MSGBOX_DEFAULT
 	goto ParcelIsle_Birder_11
 
 ParcelIsle_Birder_16:
-# 368 "data/maps/ParcelIsle/scripts.pory"
+# 376 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Birder_Text_3, MSGBOX_DEFAULT
-# 369 "data/maps/ParcelIsle/scripts.pory"
+# 377 "data/maps/ParcelIsle/scripts.pory"
 	giveitem ITEM_SCOPE_LENS
-# 370 "data/maps/ParcelIsle/scripts.pory"
+# 378 "data/maps/ParcelIsle/scripts.pory"
 	setflag FLAG_SKALD_Q_BIRDER_DONE
 	goto ParcelIsle_Birder_15
 
 
 ParcelIsle_KidTrainer::
-# 387 "data/maps/ParcelIsle/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_KID, ParcelIsle_KidTrainer_Text_0, ParcelIsle_KidTrainer_Text_1
-# 390 "data/maps/ParcelIsle/scripts.pory"
-	lock
-# 391 "data/maps/ParcelIsle/scripts.pory"
-	faceplayer
-# 392 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_KidTrainer_2
 # 395 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_KID, ParcelIsle_KidTrainer_Text_0, ParcelIsle_KidTrainer_Text_1
+# 398 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 399 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 400 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_KidTrainer_2
+# 403 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidTrainer_Text_3, MSGBOX_DEFAULT
 ParcelIsle_KidTrainer_1:
-# 397 "data/maps/ParcelIsle/scripts.pory"
+# 405 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_KidTrainer_2:
-# 393 "data/maps/ParcelIsle/scripts.pory"
+# 401 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_KidTrainer_Text_2, MSGBOX_DEFAULT
 	goto ParcelIsle_KidTrainer_1
 
 
 ParcelIsle_TownSign::
-# 402 "data/maps/ParcelIsle/scripts.pory"
+# 410 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_TownSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsle_Neighbor::
-# 413 "data/maps/ParcelIsle/scripts.pory"
-	lock
-# 414 "data/maps/ParcelIsle/scripts.pory"
-	faceplayer
-# 415 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_Neighbor_2
-# 417 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_LAB_SEEN, ParcelIsle_Neighbor_3
-# 420 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_Neighbor_Text_2, MSGBOX_DEFAULT
 # 421 "data/maps/ParcelIsle/scripts.pory"
-	applymovement 4, Movement_GlanceAway
+	lock
 # 422 "data/maps/ParcelIsle/scripts.pory"
-	waitmovement 0
+	faceplayer
 # 423 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_Neighbor_2
+# 425 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_LAB_SEEN, ParcelIsle_Neighbor_3
+# 428 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Neighbor_Text_2, MSGBOX_DEFAULT
+# 429 "data/maps/ParcelIsle/scripts.pory"
+	applymovement 4, Movement_GlanceAway
+# 430 "data/maps/ParcelIsle/scripts.pory"
+	waitmovement 0
+# 431 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Neighbor_Text_3, MSGBOX_DEFAULT
 ParcelIsle_Neighbor_1:
-# 425 "data/maps/ParcelIsle/scripts.pory"
+# 433 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Neighbor_2:
-# 416 "data/maps/ParcelIsle/scripts.pory"
+# 424 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Neighbor_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_Neighbor_1
 
 ParcelIsle_Neighbor_3:
-# 418 "data/maps/ParcelIsle/scripts.pory"
+# 426 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Neighbor_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsle_Neighbor_1
 
 
-# 429 "data/maps/ParcelIsle/scripts.pory"
+# 437 "data/maps/ParcelIsle/scripts.pory"
 Movement_GlanceAway:
-# 430 "data/maps/ParcelIsle/scripts.pory"
+# 438 "data/maps/ParcelIsle/scripts.pory"
 	face_right
-# 431 "data/maps/ParcelIsle/scripts.pory"
+# 439 "data/maps/ParcelIsle/scripts.pory"
 	delay_16
-# 432 "data/maps/ParcelIsle/scripts.pory"
+# 440 "data/maps/ParcelIsle/scripts.pory"
 	delay_16
-# 433 "data/maps/ParcelIsle/scripts.pory"
+# 441 "data/maps/ParcelIsle/scripts.pory"
 	step_end
 
 ParcelIsle_Innkeeper::
-# 438 "data/maps/ParcelIsle/scripts.pory"
+# 446 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 439 "data/maps/ParcelIsle/scripts.pory"
+# 447 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 440 "data/maps/ParcelIsle/scripts.pory"
+# 448 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_Innkeeper_2
-# 442 "data/maps/ParcelIsle/scripts.pory"
+# 450 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_Innkeeper_3
-# 445 "data/maps/ParcelIsle/scripts.pory"
+# 453 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Innkeeper_Text_2, MSGBOX_DEFAULT
 ParcelIsle_Innkeeper_1:
-# 447 "data/maps/ParcelIsle/scripts.pory"
+# 455 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_Innkeeper_2:
-# 441 "data/maps/ParcelIsle/scripts.pory"
+# 449 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Innkeeper_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_Innkeeper_1
 
 ParcelIsle_Innkeeper_3:
-# 443 "data/maps/ParcelIsle/scripts.pory"
+# 451 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_Innkeeper_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsle_Innkeeper_1
 
 
 ParcelIsle_ChandlerBrother::
-# 453 "data/maps/ParcelIsle/scripts.pory"
+# 461 "data/maps/ParcelIsle/scripts.pory"
 	lock
-# 454 "data/maps/ParcelIsle/scripts.pory"
+# 462 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 455 "data/maps/ParcelIsle/scripts.pory"
+# 463 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_ChandlerBrother_2
-# 457 "data/maps/ParcelIsle/scripts.pory"
+# 465 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_ChandlerBrother_3
-# 460 "data/maps/ParcelIsle/scripts.pory"
+# 468 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_ChandlerBrother_Text_2, MSGBOX_DEFAULT
 ParcelIsle_ChandlerBrother_1:
-# 462 "data/maps/ParcelIsle/scripts.pory"
+# 470 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
 ParcelIsle_ChandlerBrother_2:
-# 456 "data/maps/ParcelIsle/scripts.pory"
+# 464 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_ChandlerBrother_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsle_ChandlerBrother_1
 
 ParcelIsle_ChandlerBrother_3:
-# 458 "data/maps/ParcelIsle/scripts.pory"
+# 466 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_ChandlerBrother_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsle_ChandlerBrother_1
 
 
 ParcelIsle_ItemPotion::
-# 467 "data/maps/ParcelIsle/scripts.pory"
+# 475 "data/maps/ParcelIsle/scripts.pory"
 	finditem ITEM_POTION
 	end
 
 
 ParcelIsle_LabSign::
-# 472 "data/maps/ParcelIsle/scripts.pory"
+# 480 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_LabSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsle_HallSign::
-# 477 "data/maps/ParcelIsle/scripts.pory"
+# 485 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_HallSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsle_NoticeBoard::
-# 482 "data/maps/ParcelIsle/scripts.pory"
+# 490 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_NoticeBoard_2
-# 484 "data/maps/ParcelIsle/scripts.pory"
+# 492 "data/maps/ParcelIsle/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_NoticeBoard_3
-# 487 "data/maps/ParcelIsle/scripts.pory"
+# 495 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_NoticeBoard_Text_2, MSGBOX_SIGN
 ParcelIsle_NoticeBoard_1:
 	end
 
 ParcelIsle_NoticeBoard_2:
-# 483 "data/maps/ParcelIsle/scripts.pory"
+# 491 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_NoticeBoard_Text_0, MSGBOX_SIGN
 	goto ParcelIsle_NoticeBoard_1
 
 ParcelIsle_NoticeBoard_3:
-# 485 "data/maps/ParcelIsle/scripts.pory"
+# 493 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_NoticeBoard_Text_1, MSGBOX_SIGN
 	goto ParcelIsle_NoticeBoard_1
 
 
 ParcelIsle_WeatherStationSign::
-# 493 "data/maps/ParcelIsle/scripts.pory"
+# 501 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_WeatherStationSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsle_PreserveGateSign::
-# 498 "data/maps/ParcelIsle/scripts.pory"
+# 506 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_PreserveGateSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsle_ToBridge::
-# 508 "data/maps/ParcelIsle/scripts.pory"
+# 516 "data/maps/ParcelIsle/scripts.pory"
 	warp MAP_PARCEL_BRIDGE, 1, 11
-# 509 "data/maps/ParcelIsle/scripts.pory"
+# 517 "data/maps/ParcelIsle/scripts.pory"
 	waitstate
 	end
 
@@ -956,25 +971,34 @@ ParcelIsle_NetMender_Text_5:
 	.string "not a fact. It's just true.$"
 
 ParcelIsle_HarbourLad_Text_0:
-# 151 "data/maps/ParcelIsle/scripts.pory"
+# 153 "data/maps/ParcelIsle/scripts.pory"
+	.string "Kip: You came off the ferry with a bag\n"
+	.string "and no Pokémon. Not even one. Who does\l"
+	.string "that?\p"
+	.string "Come back when you've got something\n"
+	.string "that can stand on the quay. Then we'll\l"
+	.string "see.$"
+
+ParcelIsle_HarbourLad_Text_1:
+# 159 "data/maps/ParcelIsle/scripts.pory"
 	.string "Kip: You came off the ferry with a bag\n"
 	.string "and no Pokémon, and now look at you.\p"
 	.string "Bet you can't beat my Krabby. The\n"
 	.string "channel used to be full of them.$"
 
-ParcelIsle_HarbourLad_Text_1:
-# 152 "data/maps/ParcelIsle/scripts.pory"
+ParcelIsle_HarbourLad_Text_2:
+# 160 "data/maps/ParcelIsle/scripts.pory"
 	.string "Kip: …Used to be. Yeah.$"
 
-ParcelIsle_HarbourLad_Text_2:
-# 156 "data/maps/ParcelIsle/scripts.pory"
+ParcelIsle_HarbourLad_Text_3:
+# 164 "data/maps/ParcelIsle/scripts.pory"
 	.string "Kip: My dad says you cost him his berth.\n"
 	.string "My mum says you saved the channel.\p"
 	.string "They had that argument at dinner. I ate\n"
 	.string "in the loft.$"
 
-ParcelIsle_HarbourLad_Text_3:
-# 158 "data/maps/ParcelIsle/scripts.pory"
+ParcelIsle_HarbourLad_Text_4:
+# 166 "data/maps/ParcelIsle/scripts.pory"
 	.string "Kip: Krabby was under the jetty when I\n"
 	.string "was little. Dozens. Now I go out to the\l"
 	.string "rocks to find one.\p"
@@ -982,13 +1006,13 @@ ParcelIsle_HarbourLad_Text_3:
 	.string "where they went.$"
 
 ParcelIsle_Widow_Text_0:
-# 169 "data/maps/ParcelIsle/scripts.pory"
+# 177 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: Eleven this morning. I count\n"
 	.string "them anyway. It's a way of saying good\l"
 	.string "morning to someone who isn't here.$"
 
 ParcelIsle_Widow_Text_1:
-# 175 "data/maps/ParcelIsle/scripts.pory"
+# 183 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: You wrote it down. All of it. The\n"
 	.string "whole coast, in a notebook, and you put\l"
 	.string "the gulls in.\p"
@@ -996,13 +1020,13 @@ ParcelIsle_Widow_Text_1:
 	.string "number he hadn't counted himself.$"
 
 ParcelIsle_Widow_Text_2:
-# 176 "data/maps/ParcelIsle/scripts.pory"
+# 184 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: This was his. It's the only thing\n"
 	.string "on the boat the sea didn't take.\p"
 	.string "It should go with someone who counts.$"
 
 ParcelIsle_Widow_Text_3:
-# 180 "data/maps/ParcelIsle/scripts.pory"
+# 188 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: Nine today. There were forty on\n"
 	.string "these racks when Eirik still fished. The\l"
 	.string "racks were white with them.\p"
@@ -1010,20 +1034,20 @@ ParcelIsle_Widow_Text_3:
 	.string "should have the number besides me.$"
 
 ParcelIsle_Widow_Text_4:
-# 182 "data/maps/ParcelIsle/scripts.pory"
+# 190 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: Twelve this morning. I'll tell\n"
 	.string "you again when you're back. Numbers\l"
 	.string "only mean something twice.$"
 
 ParcelIsle_Widow_Text_5:
-# 187 "data/maps/ParcelIsle/scripts.pory"
+# 195 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: Count the gulls with me. On the\n"
 	.string "racks. Go on.\p"
 	.string "Twelve. Say it back, so it's two of us\n"
 	.string "who know.$"
 
 ParcelIsle_Widow_Text_6:
-# 189 "data/maps/ParcelIsle/scripts.pory"
+# 197 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: Twelve. Good. My husband kept\n"
 	.string "the count for thirty years and I keep\l"
 	.string "it for him.\p"
@@ -1032,12 +1056,12 @@ ParcelIsle_Widow_Text_6:
 	.string "coming back.$"
 
 ParcelIsle_Widow_Text_7:
-# 192 "data/maps/ParcelIsle/scripts.pory"
+# 200 "data/maps/ParcelIsle/scripts.pory"
 	.string "Sigrun: No? Then it's just me who knows.\n"
 	.string "That's been fine so far.$"
 
 ParcelIsle_FerrySign_Text_0:
-# 200 "data/maps/ParcelIsle/scripts.pory"
+# 208 "data/maps/ParcelIsle/scripts.pory"
 	.string "FERRY LANDING\p"
 	.string "Mainland schedule: SUSPENDED\n"
 	.string "PENDING REGIONAL REVIEW\p"
@@ -1045,13 +1069,13 @@ ParcelIsle_FerrySign_Text_0:
 	.string "pencil: about time.$"
 
 ParcelIsle_FerrySign_Text_1:
-# 202 "data/maps/ParcelIsle/scripts.pory"
+# 210 "data/maps/ParcelIsle/scripts.pory"
 	.string "FERRY LANDING\p"
 	.string "The mainland schedule board is blank.\n"
 	.string "It has been for a while.$"
 
 ParcelIsle_FerryCaptain_Text_0:
-# 214 "data/maps/ParcelIsle/scripts.pory"
+# 222 "data/maps/ParcelIsle/scripts.pory"
 	.string "Captain: Passage out? The open\n"
 	.string "channel's no crossing to make without a\l"
 	.string "reason worth the cold.\p"
@@ -1059,30 +1083,30 @@ ParcelIsle_FerryCaptain_Text_0:
 	.string "up the mountains. You'll know when.$"
 
 ParcelIsle_FerryCaptain_Text_1:
-# 218 "data/maps/ParcelIsle/scripts.pory"
+# 226 "data/maps/ParcelIsle/scripts.pory"
 	.string "Captain: Harbour's open. Where am I\n"
 	.string "taking you?$"
 
 ParcelIsle_FerryCaptain_Text_2:
-# 230 "data/maps/ParcelIsle/scripts.pory"
+# 238 "data/maps/ParcelIsle/scripts.pory"
 	.string "Captain: The coast run opens once\n"
 	.string "you've made the Delibird crossing.\n"
 	.string "One island at a time.$"
 
 ParcelIsle_FerryCaptain_Text_3:
-# 242 "data/maps/ParcelIsle/scripts.pory"
+# 250 "data/maps/ParcelIsle/scripts.pory"
 	.string "Captain: The climate station? That\n"
 	.string "route opens once you've worked the\l"
 	.string "coast.\n"
 	.string "Not before.$"
 
 ParcelIsle_FerryCaptain_Text_4:
-# 253 "data/maps/ParcelIsle/scripts.pory"
+# 261 "data/maps/ParcelIsle/scripts.pory"
 	.string "Captain: Suit yourself. I'll be on the\n"
 	.string "water.$"
 
 ParcelIsle_GateMoore_Text_0:
-# 265 "data/maps/ParcelIsle/scripts.pory"
+# 273 "data/maps/ParcelIsle/scripts.pory"
 	.string "Moore: Harbour-master. Every hull and\n"
 	.string "every hand that moves through here is\l"
 	.string "logged.\p"
@@ -1090,26 +1114,26 @@ ParcelIsle_GateMoore_Text_0:
 	.string "the entry.$"
 
 ParcelIsle_GateMoore_Text_1:
-# 266 "data/maps/ParcelIsle/scripts.pory"
+# 274 "data/maps/ParcelIsle/scripts.pory"
 	.string "Moore: …Noted. The harbour knows your\n"
 	.string "name now.$"
 
 ParcelIsle_GateMoore_Text_2:
-# 270 "data/maps/ParcelIsle/scripts.pory"
+# 278 "data/maps/ParcelIsle/scripts.pory"
 	.string "Moore: You're cleared through the\n"
 	.string "landing. The ferry runs answer to the\l"
 	.string "log,\n"
 	.string "and the log answers for you.$"
 
 ParcelIsle_GateMoore_Defeated_Text_0:
-# 277 "data/maps/ParcelIsle/scripts.pory"
+# 285 "data/maps/ParcelIsle/scripts.pory"
 	.string "Moore: Harbour clearance: entered\n"
 	.string "against your card. Filed with the\l"
 	.string "manifest.\p"
 	.string "Nobody hands that out. You took it.$"
 
 ParcelIsle_LogisticsClerk_Text_0:
-# 296 "data/maps/ParcelIsle/scripts.pory"
+# 304 "data/maps/ParcelIsle/scripts.pory"
 	.string "Pell: Half my manifests are on hold. The\n"
 	.string "other half are lawyers.\p"
 	.string "I used to log trucks. Now I log the\n"
@@ -1117,7 +1141,7 @@ ParcelIsle_LogisticsClerk_Text_0:
 	.string "That's the part that gets me.$"
 
 ParcelIsle_LogisticsClerk_Text_1:
-# 298 "data/maps/ParcelIsle/scripts.pory"
+# 306 "data/maps/ParcelIsle/scripts.pory"
 	.string "Pell: Relief convoy for the basin, three\n"
 	.string "trucks, Foundation crest, Council seal.\p"
 	.string "Relief for what? Don't ask me. I log\n"
@@ -1125,7 +1149,7 @@ ParcelIsle_LogisticsClerk_Text_1:
 	.string "it means.$"
 
 ParcelIsle_LogisticsClerk_Text_2:
-# 300 "data/maps/ParcelIsle/scripts.pory"
+# 308 "data/maps/ParcelIsle/scripts.pory"
 	.string "Pell: Corps is hiring provisionals again.\n"
 	.string "That's you? Congratulations. Your\l"
 	.string "gear's on a manifest with our crest on\l"
@@ -1134,7 +1158,7 @@ ParcelIsle_LogisticsClerk_Text_2:
 	.string "for accuracy.$"
 
 ParcelIsle_LogisticsClerk_Text_3:
-# 302 "data/maps/ParcelIsle/scripts.pory"
+# 310 "data/maps/ParcelIsle/scripts.pory"
 	.string "Pell: Everything that moves through\n"
 	.string "Saltwick is on a manifest. Fuel, crates,\l"
 	.string "the ferry you came in on, the potion on\l"
@@ -1143,34 +1167,34 @@ ParcelIsle_LogisticsClerk_Text_3:
 	.string "stop. I've got you already.$"
 
 ParcelIsle_KidA_Text_0:
-# 313 "data/maps/ParcelIsle/scripts.pory"
+# 321 "data/maps/ParcelIsle/scripts.pory"
 	.string "Ebba: Nils says you wrote it down. All of\n"
 	.string "it. Even the frogs.\p"
 	.string "Are we in it? We saw them first.$"
 
 ParcelIsle_KidA_Text_1:
-# 315 "data/maps/ParcelIsle/scripts.pory"
+# 323 "data/maps/ParcelIsle/scripts.pory"
 	.string "Ebba: You saw them too. On the bridge.\n"
 	.string "Going the wrong way.\p"
 	.string "Nils said you'd say we made it up. You\n"
 	.string "didn't.$"
 
 ParcelIsle_KidA_Text_2:
-# 317 "data/maps/ParcelIsle/scripts.pory"
+# 325 "data/maps/ParcelIsle/scripts.pory"
 	.string "Ebba: There were frogs in the inlet\n"
 	.string "going the WRONG way! Upstream, all in a\l"
 	.string "line, like they were late for something.\p"
 	.string "Nils says frogs don't get late.$"
 
 ParcelIsle_KidB_Text_0:
-# 327 "data/maps/ParcelIsle/scripts.pory"
+# 335 "data/maps/ParcelIsle/scripts.pory"
 	.string "Nils: What's the word? For when a place\n"
 	.string "is running out?\p"
 	.string "Ebba says you've got a word for it now.\n"
 	.string "I want the word.$"
 
 ParcelIsle_KidB_Text_1:
-# 329 "data/maps/ParcelIsle/scripts.pory"
+# 337 "data/maps/ParcelIsle/scripts.pory"
 	.string "Nils: Gran says the Poliwag have always\n"
 	.string "done that. Gran says a lot of things\l"
 	.string "have always done that.\p"
@@ -1178,13 +1202,13 @@ ParcelIsle_KidB_Text_1:
 	.string "last time.$"
 
 ParcelIsle_KidB_Text_2:
-# 331 "data/maps/ParcelIsle/scripts.pory"
+# 339 "data/maps/ParcelIsle/scripts.pory"
 	.string "Nils: Frogs don't get late. They get\n"
 	.string "scared, maybe.\p"
 	.string "Don't tell Ebba I said scared.$"
 
 ParcelIsle_OldMan_Text_0:
-# 342 "data/maps/ParcelIsle/scripts.pory"
+# 350 "data/maps/ParcelIsle/scripts.pory"
 	.string "Halvar: Somebody finally said it out\n"
 	.string "loud. In writing. With a name at the\l"
 	.string "bottom.\p"
@@ -1194,7 +1218,7 @@ ParcelIsle_OldMan_Text_0:
 	.string "the point.$"
 
 ParcelIsle_OldMan_Text_1:
-# 344 "data/maps/ParcelIsle/scripts.pory"
+# 352 "data/maps/ParcelIsle/scripts.pory"
 	.string "Halvar: Hale signed for you? Hale\n"
 	.string "doesn't sign for anyone. He didn't sign\l"
 	.string "for me, and I ran his station before he\l"
@@ -1204,7 +1228,7 @@ ParcelIsle_OldMan_Text_1:
 	.string "careful in the wrong places.$"
 
 ParcelIsle_OldMan_Text_2:
-# 346 "data/maps/ParcelIsle/scripts.pory"
+# 354 "data/maps/ParcelIsle/scripts.pory"
 	.string "Halvar: Forty years I walked that\n"
 	.string "bridge for the Corps. Never saw the\l"
 	.string "water this quiet.\p"
@@ -1212,7 +1236,7 @@ ParcelIsle_OldMan_Text_2:
 	.string "does when it's counting.$"
 
 ParcelIsle_Birder_Text_0:
-# 358 "data/maps/ParcelIsle/scripts.pory"
+# 366 "data/maps/ParcelIsle/scripts.pory"
 	.string "Corwen: The storm-relief birds were on\n"
 	.string "the wireless this morning. By name.\l"
 	.string "Delibird. Somebody read your filing on\l"
@@ -1221,7 +1245,7 @@ ParcelIsle_Birder_Text_0:
 	.string "made the news. Good.$"
 
 ParcelIsle_Birder_Text_1:
-# 360 "data/maps/ParcelIsle/scripts.pory"
+# 368 "data/maps/ParcelIsle/scripts.pory"
 	.string "Corwen: Eleven species on the inlet\n"
 	.string "today. Twenty, the year I started.\p"
 	.string "The list is the only thing I own that\n"
@@ -1229,7 +1253,7 @@ ParcelIsle_Birder_Text_1:
 	.string "time.$"
 
 ParcelIsle_Birder_Text_2:
-# 366 "data/maps/ParcelIsle/scripts.pory"
+# 374 "data/maps/ParcelIsle/scripts.pory"
 	.string "Corwen: You've been out to the island. I\n"
 	.string "can see it on you -- the cold's still in\l"
 	.string "your coat.\p"
@@ -1237,7 +1261,7 @@ ParcelIsle_Birder_Text_2:
 	.string "the ground, not in a picture.$"
 
 ParcelIsle_Birder_Text_3:
-# 368 "data/maps/ParcelIsle/scripts.pory"
+# 376 "data/maps/ParcelIsle/scripts.pory"
 	.string "Corwen: …Then they're still there. I\n"
 	.string "haven't been able to cross since my\l"
 	.string "knee. Fifteen years I've had them on\l"
@@ -1246,12 +1270,12 @@ ParcelIsle_Birder_Text_3:
 	.string "off. I'm done needing it.$"
 
 ParcelIsle_Birder_Text_4:
-# 372 "data/maps/ParcelIsle/scripts.pory"
+# 380 "data/maps/ParcelIsle/scripts.pory"
 	.string "Corwen: No. …No, that's honest. Come\n"
 	.string "back when you have.$"
 
 ParcelIsle_Birder_Text_5:
-# 378 "data/maps/ParcelIsle/scripts.pory"
+# 386 "data/maps/ParcelIsle/scripts.pory"
 	.string "Corwen: The Survey knot. Ilex ties them\n"
 	.string "left over right; she's the only one. So\l"
 	.string "you've met her.\p"
@@ -1260,24 +1284,24 @@ ParcelIsle_Birder_Text_5:
 	.string "like a rope. Then come and tell me.$"
 
 ParcelIsle_Birder_Text_6:
-# 380 "data/maps/ParcelIsle/scripts.pory"
+# 388 "data/maps/ParcelIsle/scripts.pory"
 	.string "Corwen: Wingull, Pelipper, one Swablu\n"
 	.string "that has no business this far north.\p"
 	.string "I keep a list. It's shorter than it was.\n"
 	.string "That's not an opinion. That's a list.$"
 
 ParcelIsle_KidTrainer_Text_0:
-# 388 "data/maps/ParcelIsle/scripts.pory"
+# 396 "data/maps/ParcelIsle/scripts.pory"
 	.string "Timo: You came off the ferry!\n"
 	.string "Mainlanders always have neat Pokémon.\l"
 	.string "Battle me!$"
 
 ParcelIsle_KidTrainer_Text_1:
-# 389 "data/maps/ParcelIsle/scripts.pory"
+# 397 "data/maps/ParcelIsle/scripts.pory"
 	.string "Timo: Whoa. Okay.$"
 
 ParcelIsle_KidTrainer_Text_2:
-# 393 "data/maps/ParcelIsle/scripts.pory"
+# 401 "data/maps/ParcelIsle/scripts.pory"
 	.string "Timo: You went past the bridge. Gran\n"
 	.string "says you're allowed now because of the\l"
 	.string "knot.\p"
@@ -1285,13 +1309,13 @@ ParcelIsle_KidTrainer_Text_2:
 	.string "want to be allowed first.$"
 
 ParcelIsle_KidTrainer_Text_3:
-# 395 "data/maps/ParcelIsle/scripts.pory"
+# 403 "data/maps/ParcelIsle/scripts.pory"
 	.string "Timo: Gran says don't go past the\n"
 	.string "bridge.\p"
 	.string "She won't say why.$"
 
 ParcelIsle_TownSign_Text_0:
-# 402 "data/maps/ParcelIsle/scripts.pory"
+# 410 "data/maps/ParcelIsle/scripts.pory"
 	.string "SALTWICK\p"
 	.string "Saltmarsh Coast -- Skaldmere Regional\n"
 	.string "Council\p"
@@ -1300,7 +1324,7 @@ ParcelIsle_TownSign_Text_0:
 	.string "COASTAL.$"
 
 ParcelIsle_Neighbor_Text_0:
-# 416 "data/maps/ParcelIsle/scripts.pory"
+# 424 "data/maps/ParcelIsle/scripts.pory"
 	.string "Marit: I said forget I said anything.\n"
 	.string "That first day.\p"
 	.string "I'm not saying it now. She wrote about\n"
@@ -1309,46 +1333,46 @@ ParcelIsle_Neighbor_Text_0:
 	.string "knew that too.$"
 
 ParcelIsle_Neighbor_Text_1:
-# 418 "data/maps/ParcelIsle/scripts.pory"
+# 426 "data/maps/ParcelIsle/scripts.pory"
 	.string "Marit: You've been in the annex. I can\n"
 	.string "tell; people come out of there quiet.\p"
 	.string "She left it tidy. That's what nobody\n"
 	.string "says. Ransacked places aren't tidy.$"
 
 ParcelIsle_Neighbor_Text_2:
-# 420 "data/maps/ParcelIsle/scripts.pory"
+# 428 "data/maps/ParcelIsle/scripts.pory"
 	.string "Oh--you're the one the scientist wrote\n"
 	.string "about, aren't you? The young naturalist\l"
 	.string "with the--$"
 
 ParcelIsle_Neighbor_Text_3:
-# 423 "data/maps/ParcelIsle/scripts.pory"
+# 431 "data/maps/ParcelIsle/scripts.pory"
 	.string "…Forget I said anything. It's cold out.\n"
 	.string "You should get indoors, {PLAYER}.$"
 
 ParcelIsle_Innkeeper_Text_0:
-# 441 "data/maps/ParcelIsle/scripts.pory"
+# 449 "data/maps/ParcelIsle/scripts.pory"
 	.string "Liv: Two lawyers and a journalist in the\n"
 	.string "good rooms. Mum's charging them double\l"
 	.string "and apologising for it.\p"
 	.string "Your room's still yours. She won't let it.$"
 
 ParcelIsle_Innkeeper_Text_1:
-# 443 "data/maps/ParcelIsle/scripts.pory"
+# 451 "data/maps/ParcelIsle/scripts.pory"
 	.string "Liv: Mum says rangers eat like they're\n"
 	.string "paid in weather. She's made the big pot.\p"
 	.string "She hasn't made the big pot since the\n"
 	.string "scientist left.$"
 
 ParcelIsle_Innkeeper_Text_2:
-# 445 "data/maps/ParcelIsle/scripts.pory"
+# 453 "data/maps/ParcelIsle/scripts.pory"
 	.string "Liv: Mum's kept your room since the\n"
 	.string "letter came. Swept it every week. She\l"
 	.string "wouldn't say who for.\p"
 	.string "The lamp's lit. Go on in.$"
 
 ParcelIsle_ChandlerBrother_Text_0:
-# 456 "data/maps/ParcelIsle/scripts.pory"
+# 464 "data/maps/ParcelIsle/scripts.pory"
 	.string "Ossian: Kit's sold more rope this week\n"
 	.string "than all winter. Everyone suddenly\l"
 	.string "wants to tie something down.\p"
@@ -1356,7 +1380,7 @@ ParcelIsle_ChandlerBrother_Text_0:
 	.string "was the wrong way to be right.$"
 
 ParcelIsle_ChandlerBrother_Text_1:
-# 458 "data/maps/ParcelIsle/scripts.pory"
+# 466 "data/maps/ParcelIsle/scripts.pory"
 	.string "Ossian: Kit's got the ranger stock in\n"
 	.string "now. Repels, the good potions. Says the\l"
 	.string "Corps pays on time, unlike some.\p"
@@ -1364,21 +1388,21 @@ ParcelIsle_ChandlerBrother_Text_1:
 	.string "fleet.$"
 
 ParcelIsle_ChandlerBrother_Text_2:
-# 460 "data/maps/ParcelIsle/scripts.pory"
+# 468 "data/maps/ParcelIsle/scripts.pory"
 	.string "Ossian: Kit's inside. She sells; I sit.\n"
 	.string "It's an arrangement.\p"
 	.string "Wind's coming off the water wrong all\n"
 	.string "month. You get used to it. Mostly.$"
 
 ParcelIsle_LabSign_Text_0:
-# 472 "data/maps/ParcelIsle/scripts.pory"
+# 480 "data/maps/ParcelIsle/scripts.pory"
 	.string "FIELD RESEARCH ANNEX\n"
 	.string "Skaldmere Survey cooperative site\p"
 	.string "A strip of red cloth is nailed under the\n"
 	.string "plate, faded gray.$"
 
 ParcelIsle_HallSign_Text_0:
-# 477 "data/maps/ParcelIsle/scripts.pory"
+# 485 "data/maps/ParcelIsle/scripts.pory"
 	.string "SALTWICK FISHERS' CO-OPERATIVE\p"
 	.string "Meetings first Tuesday. Members and\n"
 	.string "guests.\p"
@@ -1386,7 +1410,7 @@ ParcelIsle_HallSign_Text_0:
 	.string "support of the MEREHOLT FOUNDATION.$"
 
 ParcelIsle_NoticeBoard_Text_0:
-# 483 "data/maps/ParcelIsle/scripts.pory"
+# 491 "data/maps/ParcelIsle/scripts.pory"
 	.string "NOTICES\p"
 	.string "REGIONAL HEARINGS -- COASTAL QUOTAS:\n"
 	.string "public sessions, the Council hall,\l"
@@ -1397,7 +1421,7 @@ ParcelIsle_NoticeBoard_Text_0:
 	.string "to the corner of the board.$"
 
 ParcelIsle_NoticeBoard_Text_1:
-# 485 "data/maps/ParcelIsle/scripts.pory"
+# 493 "data/maps/ParcelIsle/scripts.pory"
 	.string "NOTICES\p"
 	.string "Skaldmere Climate Corps: provisional\n"
 	.string "rangers wanted. Apply at the district\l"
@@ -1407,7 +1431,7 @@ ParcelIsle_NoticeBoard_Text_1:
 	.string "Lost: one grey cat, answers to Sedge.$"
 
 ParcelIsle_NoticeBoard_Text_2:
-# 487 "data/maps/ParcelIsle/scripts.pory"
+# 495 "data/maps/ParcelIsle/scripts.pory"
 	.string "NOTICES\p"
 	.string "Mereholt Coastal: day-rate hiring,\n"
 	.string "quay, dawn. Own boots.\p"
@@ -1417,7 +1441,7 @@ ParcelIsle_NoticeBoard_Text_2:
 	.string "corners of it are still under the pins.$"
 
 ParcelIsle_WeatherStationSign_Text_0:
-# 493 "data/maps/ParcelIsle/scripts.pory"
+# 501 "data/maps/ParcelIsle/scripts.pory"
 	.string "AUTOMATED WEATHER STATION 04\n"
 	.string "Skaldmere Climate Corps\p"
 	.string "Instrument sponsorship: the Mereholt\n"
@@ -1426,7 +1450,7 @@ ParcelIsle_WeatherStationSign_Text_0:
 	.string "is off.$"
 
 ParcelIsle_PreserveGateSign_Text_0:
-# 498 "data/maps/ParcelIsle/scripts.pory"
+# 506 "data/maps/ParcelIsle/scripts.pory"
 	.string "MISTWOOD SHORE PRESERVE\n"
 	.string "No entry beyond this point without a\l"
 	.string "Corps permit.\p"
