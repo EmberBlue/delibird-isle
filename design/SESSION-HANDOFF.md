@@ -157,6 +157,10 @@ locally. Publish only if asked.
 
 ## Immediate menu (the user picks)
 
+**Read `design/13-full-game-plan.md` first** — the audit (15k words of
+dialogue, 30 trainers, ~4 h of content) and the phased plan to a 15–20 h game.
+The menu below is that plan's phases 0 and 1.
+
 1. **Dock Town rebuilt by hand** (ASCII drawing, town scale, harbour identity,
    enterable houses) — the stated next step.
 2. **Endgame playtest** in the emulator via Script 1, fix what breaks.

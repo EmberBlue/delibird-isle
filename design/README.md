@@ -34,6 +34,7 @@ game built in this repo.
 | 10 | Mechanics — the survey verb, the notebook, certifications, state transitions | `10-mechanics.md` | FIRMED |
 | 11 | Routes & Encounter Tables — ecological placement | `11-routes.md` | OPEN |
 | 12 | Implementation Notes — engine mapping (pokeemerald-expansion), build state, RAM budget | `12-implementation.md` | LIVING |
+| 13 | Full-Game Plan — the audit, targets, story-structure fixes, phases | `13-full-game-plan.md` | DRAFT |
 
 ## Sources
 
