@@ -129,11 +129,11 @@ script ParcelIsle_Dockworker {
     if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
         msgbox(format("ROLF: Eighteen months of delay, they're saying. You know what eighteen months is to a guy on a day rate?\pI'm not saying you're wrong. ANNI read me the frog part. I'm saying it's easy to be right when it's not your boat."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("ROLF: Boat's not late today. Boat's not coming. The office says \"pending review\".\pThat your review? Yeah. Thought so."), MSGBOX_DEFAULT)
+        msgbox(format("ROLF: Boat's not late today. Boat's not coming. The office says 'pending review'.\pThat your review? Yeah. Thought so."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("ROLF: The crest on the crates is the crest on my paycheck. Same one that's on the RANGERS' gear, come to think of it.\pFunny what you stop noticing."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("ROLF: Boat's late. Boat's always late now.\pIf you want work, there's a board by the inn. Mostly it says \"no\"."), MSGBOX_DEFAULT)
+        msgbox(format("ROLF: Boat's late. Boat's always late now.\pIf you want work, there's a board by the inn. Mostly it says 'no'."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -328,7 +328,7 @@ script ParcelIsle_LogisticsClerk {
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("PELL: The RANGERS are hiring again? Congratulations. Your gear came in on our manifest, by the way.\pNot a complaint. I'm paid for accuracy."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("PELL: Everything that moves through SALTWICK is on a manifest. Fuel, crates, the ferry you came in on.\pYou? \"Passenger, one, island stop.\" I've already got you."), MSGBOX_DEFAULT)
+        msgbox(format("PELL: Everything that moves through SALTWICK is on a manifest. Fuel, crates, the ferry you came in on.\pYou? 'Passenger, one, island stop.' I've already got you."), MSGBOX_DEFAULT)
     }
     release
     end

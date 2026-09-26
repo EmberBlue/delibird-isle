@@ -23,7 +23,7 @@ script ParcelIsleHall_Ivar {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("IVAR: My berth is \"pending\". PENDING! And she's over there counting votes like it's a catch.\pI'm not angry at you. I decided that. It's taking effort."), MSGBOX_DEFAULT)
+        msgbox(format("IVAR: My berth is 'pending'. PENDING! And she's over there counting votes like it's a catch.\pI'm not angry at you. I decided that. It's taking effort."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("IVAR: RANGER! Good. Tell her the basin's fine. The Council says it's fine!\pShe'll listen to you. You've got the knot."), MSGBOX_DEFAULT)
     } else {
@@ -55,7 +55,7 @@ script ParcelIsleHall_Bard {
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("BARD: After her talk she came back and sat with the ones who hadn't clapped. Me among them.\pShe wrote down every complaint. I never saw the notes. I've always wondered who did."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("BARD: The scientist gave a talk in here once. \"Resilience.\" Big word for a small room.\pHalf of us clapped. I remember which half."), MSGBOX_DEFAULT)
+        msgbox(format("BARD: The scientist gave a talk in here once. 'Resilience.' Big word for a small room.\pHalf of us clapped. I remember which half."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -73,7 +73,7 @@ script ParcelIsleHall_Minutes {
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CO-OP MINUTES (extraordinary)\pMotion: appear at the regional hearing in support of the filed record. CARRIED, 12-9.\pMotion: write to the FOUNDATION regarding the roof grant. WITHDRAWN.\pChair's note: nobody stayed for tea."), MSGBOX_SIGN)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("CO-OP MINUTES\pItem 3: the quota. MEREHOLT COASTAL proposes a \"sustainable harvest\" figure based on the resilience model. Chair asks whose model. No answer minuted.\pItem 4: the FOUNDATION renews the roof grant. Carried, with thanks."), MSGBOX_SIGN)
+        msgbox(format("CO-OP MINUTES\pItem 3: the quota. MEREHOLT COASTAL proposes a 'sustainable harvest' figure based on the resilience model. Chair asks whose model. No answer minuted.\pItem 4: the FOUNDATION renews the roof grant. Carried, with thanks."), MSGBOX_SIGN)
     } else {
         msgbox(format("CO-OP MINUTES\pItem 1: the channel dredge is complete.\nItem 2: the FOUNDATION's storm-relief blankets have arrived and are in the loft.\pItem 3: the herring. Discussion. No motion.\nItem 4: the schedule board. Discussion. No motion."), MSGBOX_SIGN)
     }

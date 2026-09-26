@@ -49,16 +49,15 @@ ParcelIsleNetLoft_Zigzagoon::
 
 ParcelIsleNetLoft_Grette_Text_0:
 # 11 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	.string "Grette: Blankets. Sixty of them,\n"
-	.string "Foundation crest, still in the plastic.\l"
-	.string "Nobody's had a storm bad enough to\l"
-	.string "need sixty blankets.\p"
+	.string "GRETTE: Sixty blankets. FOUNDATION\n"
+	.string "crest, still in the plastic. Nobody's had\l"
+	.string "a storm bad enough for sixty blankets.\p"
 	.string "That's the thing about relief. It's for a\n"
 	.string "disaster that suits the giver.$"
 
 ParcelIsleNetLoft_Grette_Text_1:
 # 13 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	.string "Grette: A net's a survey. Every hole\n"
+	.string "GRETTE: A net's a survey. Every hole\n"
 	.string "tells you what went through and what\l"
 	.string "didn't.\p"
 	.string "I've been reading this coast in mesh for\n"
@@ -67,14 +66,13 @@ ParcelIsleNetLoft_Grette_Text_1:
 
 ParcelIsleNetLoft_Grette_Text_2:
 # 15 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	.string "Grette: Mind the Zigzagoon. He thinks\n"
+	.string "GRETTE: Mind the ZIGZAGOON. He thinks\n"
 	.string "the nets are for him.\p"
 	.string "Sixty years I've made nets for this\n"
-	.string "quay. The last ten, they've come back\l"
-	.string "with less in them and more holes. Work it\l"
-	.string "out yourself.$"
+	.string "quay. The last ten, they come back with\l"
+	.string "less in them and more holes. Work it out.$"
 
 ParcelIsleNetLoft_Zigzagoon_Text_0:
 # 26 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	.string "Zigzagoon is tangled in a net and\n"
-	.string "entirely content about it.$"
+	.string "ZIGZAGOON is tangled in a net and\n"
+	.string "completely happy about it.$"

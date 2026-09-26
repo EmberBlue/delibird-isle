@@ -10,7 +10,7 @@ script ParcelIsleHarbourOffice_Dagny {
     if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
         msgbox(format("DAGNY: I've been asked, in writing, to say nothing to you. So here's what I'll say: the coffee's still on.\pWe're a logistics office. We move whatever the region decides to move. That was never the problem, was it?"), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("DAGNY: Every manifest since Tuesday has \"PENDING\" on it. I had to order more of the stamp.\pI'm not joking. I ordered the stamp. That's my job now."), MSGBOX_DEFAULT)
+        msgbox(format("DAGNY: Every manifest since Tuesday has 'PENDING' on it. I had to order more of the stamp.\pI'm not joking. I ordered the stamp. That's my job now."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("DAGNY: The new RANGER! Welcome. Your field kit came through this office. FOUNDATION grant, COASTAL freight, LOGISTICS handling. All one family.\pThat's not a threat, it's an org chart. People confuse the two."), MSGBOX_DEFAULT)
     } else {
@@ -24,7 +24,7 @@ script ParcelIsleHarbourOffice_Osk {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("OSK: I filed the same three forms for six years. This week they sent me a fourth.\pIt's called an \"impact acknowledgement\". Nobody can tell me what it acknowledges."), MSGBOX_DEFAULT)
+        msgbox(format("OSK: I filed the same three forms for six years. This week they sent me a fourth.\pIt's called an 'impact acknowledgement'. Nobody can tell me what it acknowledges."), MSGBOX_DEFAULT)
     } else {
         msgbox(format("OSK: I do the manifests. Everything off the boat, everything onto it.\pIf you want to know what a town runs on, don't ask the mayor. Ask the manifest."), MSGBOX_DEFAULT)
     }

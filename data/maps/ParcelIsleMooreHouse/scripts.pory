@@ -7,7 +7,7 @@ script ParcelIsleMooreHouse_Runa {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("RUNA: He came home last night and sat in the dark for an hour. Couldn't decide what to write in the log.\pHe wrote your name in the end. Then the date. \"That's all a log is,\" he says."), MSGBOX_DEFAULT)
+        msgbox(format("RUNA: He came home last night and sat in the dark for an hour. Couldn't decide what to write in the log.\pHe wrote your name in the end. Then the date. 'That's all a log is,' he says."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_GATE_ISLE)) {
         msgbox(format("RUNA: You beat him on the lane? He won't say it, so I will: he was pleased.\pHe logs the ones who beat him in a different ink."), MSGBOX_DEFAULT)
     } else {

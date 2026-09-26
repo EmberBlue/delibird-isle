@@ -10,7 +10,7 @@ script ParcelIsleAnniHouse_Piet {
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("PIET: Mom read the frog part out loud. Twice for ROLF and once more for me.\pWhen I'm better I'm going to count something. Everything. I've got a list started."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_ANNI_DONE)) {
-        msgbox(format("PIET: You took the net down to TOBIN! Mom said you didn't even complain about the jetty.\pI'm not allowed on the jetty. \"When you're better.\" That's what everyone says. When."), MSGBOX_DEFAULT)
+        msgbox(format("PIET: You took the net down to TOBIN! Mom said you didn't even complain about the jetty.\pI'm not allowed on the jetty. 'When you're better.' That's what everyone says. When."), MSGBOX_DEFAULT)
     } else {
         msgbox(format("PIET: The fog gets in my chest. That's what the doctor says. He says it like it's the fog's fault.\pMom says the fog's been here longer than the doctor."), MSGBOX_DEFAULT)
     }

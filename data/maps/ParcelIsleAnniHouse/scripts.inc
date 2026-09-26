@@ -31,25 +31,25 @@ ParcelIsleAnniHouse_Piet_3:
 
 ParcelIsleAnniHouse_Piet_Text_0:
 # 11 "data/maps/ParcelIsleAnniHouse/scripts.pory"
-	.string "Piet: Mum read the frog part out loud.\n"
-	.string "Twice, for Rolf, and once more for me.\p"
+	.string "PIET: Mom read the frog part out loud.\n"
+	.string "Twice for ROLF and once more for me.\p"
 	.string "When I'm better I'm going to count\n"
 	.string "something. Everything. I've got a list\l"
 	.string "started.$"
 
 ParcelIsleAnniHouse_Piet_Text_1:
 # 13 "data/maps/ParcelIsleAnniHouse/scripts.pory"
-	.string "Piet: You took the net down to Tobin.\n"
-	.string "Mum said. She said you didn't complain\l"
-	.string "about the jetty.\p"
-	.string "I'm not allowed on the jetty. When I'm\n"
-	.string "better. That's what everyone says.\l"
-	.string "When.$"
+	.string "PIET: You took the net down to TOBIN!\n"
+	.string "Mom said you didn't even complain about\l"
+	.string "the jetty.\p"
+	.string "I'm not allowed on the jetty. 'When\n"
+	.string "you're better.' That's what everyone\l"
+	.string "says. When.$"
 
 ParcelIsleAnniHouse_Piet_Text_2:
 # 15 "data/maps/ParcelIsleAnniHouse/scripts.pory"
-	.string "Piet: The fog gets in my chest. That's\n"
+	.string "PIET: The fog gets in my chest. That's\n"
 	.string "what the doctor says. He says it like\l"
 	.string "it's the fog's fault.\p"
-	.string "Mum says the fog's been here longer\n"
+	.string "Mom says the fog's been here longer\n"
 	.string "than the doctor.$"

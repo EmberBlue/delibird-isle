@@ -36,23 +36,22 @@ ParcelIsleSigrunHouse_Photo_2:
 
 ParcelIsleSigrunHouse_Wingull_Text_0:
 # 12 "data/maps/ParcelIsleSigrunHouse/scripts.pory"
-	.string "A Wingull, in the house as if it owns it.\n"
-	.string "It looks at you, and then at the window,\l"
-	.string "and then at you.$"
+	.string "A WINGULL, in the house like it owns the\n"
+	.string "place.\p"
+	.string "It looks at you, then at the window,\n"
+	.string "then at you.$"
 
 ParcelIsleSigrunHouse_Photo_Text_0:
 # 20 "data/maps/ParcelIsleSigrunHouse/scripts.pory"
-	.string "A photograph: a man on a boat, laughing,\n"
-	.string "a hand on the gunwale.\p"
-	.string "On the hull, in the corner of the frame,\n"
-	.string "a crest. Green and grey. The kerning is\l"
-	.string "the same as the gate, the office, the\l"
-	.string "blankets.\p"
-	.string "You would not have seen it, the first\n"
-	.string "day.$"
+	.string "A photo of a man on a boat, laughing,\n"
+	.string "one hand on the rail.\p"
+	.string "On the hull, in the corner of the frame:\n"
+	.string "a green-and-gray crest. The same one\l"
+	.string "as the gate, the office, the blankets.$"
 
 ParcelIsleSigrunHouse_Photo_Text_1:
 # 22 "data/maps/ParcelIsleSigrunHouse/scripts.pory"
-	.string "A photograph: a man on a boat, laughing,\n"
-	.string "a hand on the gunwale. The frame is the\l"
-	.string "cleanest thing in the room.$"
+	.string "A photo of a man on a boat, laughing,\n"
+	.string "one hand on the rail.\p"
+	.string "The frame is the cleanest thing in the\n"
+	.string "room.$"
