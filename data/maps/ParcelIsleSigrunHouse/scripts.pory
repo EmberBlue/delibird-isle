@@ -9,7 +9,7 @@ script ParcelIsleSigrunHouse_Wingull {
     faceplayer
     waitse
     playmoncry(SPECIES_WINGULL, CRY_MODE_NORMAL)
-    msgbox(format("A Wingull, in the house as if it owns it. It looks at you, and then at the window, and then at you."), MSGBOX_DEFAULT)
+    msgbox(format("A WINGULL, in the house like it owns the place.\pIt looks at you, then at the window, then at you."), MSGBOX_DEFAULT)
     waitmoncry
     release
     end
@@ -17,9 +17,9 @@ script ParcelIsleSigrunHouse_Wingull {
 
 script ParcelIsleSigrunHouse_Photo {
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("A photograph: a man on a boat, laughing, a hand on the gunwale.\pOn the hull, in the corner of the frame, a crest. Green and grey. The kerning is the same as the gate, the office, the blankets.\pYou would not have seen it, the first day."), MSGBOX_SIGN)
+        msgbox(format("A photo of a man on a boat, laughing, one hand on the rail.\pOn the hull, in the corner of the frame: a green-and-gray crest. The same one as the gate, the office, the blankets."), MSGBOX_SIGN)
     } else {
-        msgbox(format("A photograph: a man on a boat, laughing, a hand on the gunwale. The frame is the cleanest thing in the room."), MSGBOX_SIGN)
+        msgbox(format("A photo of a man on a boat, laughing, one hand on the rail.\pThe frame is the cleanest thing in the room."), MSGBOX_SIGN)
     }
     end
 }

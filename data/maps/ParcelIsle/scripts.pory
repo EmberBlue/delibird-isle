@@ -1,13 +1,9 @@
-// ParcelIsle -- SALTWICK, the arrival dock town on the Saltmarsh Coast (§07
-// Scene 1). Hand-drawn 44x36 on the FireRed harbour tileset; the drawing is
-// data/layouts/ParcelIsle/canvas.txt. The held-breath town: residents subtly
-// evasive, never hostile. Everyone implies more than they state (§00).
-//
-// Three story states run through every resident:
-//   arrival           -- before FLAG_SKALDMERE_FOREST_CERT
-//   after the forest  -- FLAG_SKALDMERE_FOREST_CERT (you went past the bridge)
-//   after the finale  -- FLAG_SKALDMERE_FINALE_DONE (the record is filed)
-// Mereholt is the ferry you arrived on (§02): the town runs on it and knows it.
+// ParcelIsle -- SALTWICK, the arrival town. Hand-drawn 44x36 (canvas.txt).
+// Voice rule (2026-09-26): people talk like people. Short, in character, a bit
+// funny, and it tells you something you can use. No narrator boxes except
+// signs. Story moments are played on screen, not described.
+// Three states: arrival / after FLAG_SKALDMERE_FOREST_CERT / after
+// FLAG_SKALDMERE_FINALE_DONE.
 
 const LOCALID_HEAVYCOAT     = 1
 const LOCALID_FISHER        = 2
@@ -37,7 +33,7 @@ script ParcelIsle_SetVisited {
     end
 }
 
-// One-time §07 opening: the ferry horn, boots on damp wood.
+// Arrival: the horn, then Bram comes down the jetty to meet the boat.
 script ParcelIsle_Arrival {
     setvar(VAR_TEMP_0, 1)
     if (flag(FLAG_SKALDMERE_ARRIVAL_INTRO)) {
@@ -45,159 +41,187 @@ script ParcelIsle_Arrival {
     }
     lockall
     playse(SE_SHIP)
-    delay(96)
-    msgbox(format("The ferry horn fades out across the water.\pThe boards are damp under your boots. Gulls on the racks. A town holding its breath."), MSGBOX_DEFAULT)
+    delay(60)
+    applymovement(LOCALID_HEAVYCOAT, Movement_BramToJetty)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_FaceUp)
+    waitmovement(0)
+    msgbox(format("BRAM: Hey! You're the mainlander, right? WREN?\pKnew it. Nobody else gets off at this stop."), MSGBOX_DEFAULT)
+    msgbox(format("BRAM: Listen. The inn's up the lane, past the POKéMON CENTER. Look for the door with the lamp lit.\pAnd watch your step on the boards. They're slick when the fog rolls in."), MSGBOX_DEFAULT)
+    msgbox(format("BRAM: Questions? Save them for tomorrow. Around here, nobody answers anything after dark."), MSGBOX_DEFAULT)
     closemessage
+    applymovement(LOCALID_HEAVYCOAT, Movement_BramBack)
+    waitmovement(0)
     setflag(FLAG_SKALDMERE_ARRIVAL_INTRO)
     releaseall
     end
+}
+
+movement Movement_BramToJetty {
+    walk_left
+    walk_left
+    walk_down
+    walk_down
+    walk_down
+    step_end
+}
+
+movement Movement_BramBack {
+    walk_up
+    walk_up
+    walk_up
+    walk_right
+    walk_right
+    face_left
+    step_end
+}
+
+movement Movement_FaceUp {
+    face_up
+    step_end
 }
 
 // ---------------------------------------------------------------------------
 // THE QUAY
 // ---------------------------------------------------------------------------
 
-// §07: "An NPC in a heavy coat points the way." Bram, the ferry hand.
 script ParcelIsle_HeavyCoat {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Bram: Schedule board's got a date on it again. First time in a year.\pThey want to look busy while the hearings run, I reckon.\pMind the boards. Some things don't change."), MSGBOX_DEFAULT)
+        msgbox(format("BRAM: The schedule board's got a date on it again. First time in a year!\pI'd say things are looking up, but I've been wrong before."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Bram: So you went past the bridge after all.\pThe red cloth on your pack -- that's the Survey's knot. Nobody ties that for show.\p…Keep your questions for morning, still. Morning's when I answer them."), MSGBOX_DEFAULT)
+        msgbox(format("BRAM: So you're a RANGER now. Provisional, but still.\pTake it from a ferry hand: the knot on your pack means more around here than the badge does."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Bram: Off the ferry, then. Lodging's up the track--the door with the lamp lit. Up the lane, past the Center."), MSGBOX_DEFAULT)
-        msgbox(format("Mind the boards. They're slick when the fog sits.\p…And keep your questions for morning, eh?"), MSGBOX_DEFAULT)
+        msgbox(format("BRAM: The inn's up the lane, past the POKéMON CENTER. Door with the lamp.\pThe RANGERS are past the north gate, if that's who you're here for. Rin usually leaves it open."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// §07: a fisher at the pier says the currents "have been wrong for weeks."
-// Old Tobin, on the landing platform. Also the far end of Anni's errand.
+// Tobin, on the landing platform. Also the far end of Anni's errand.
 script ParcelIsle_Fisher {
     lock
     faceplayer
     if (flag(FLAG_SKALD_Q_ANNI_NET) && !flag(FLAG_SKALD_Q_ANNI_DONE)) {
-        msgbox(format("Tobin: That's my net. Anni's stitch -- nobody else doubles the selvedge.\pShe sent you down with it? Then she likes you, and she doesn't like anyone."), MSGBOX_DEFAULT)
-        msgbox(format("Tobin: Here. My spare rod. Old, but it knows the inlet.\pFish it honest. Throw the small ones back. There's fewer small ones every year, and you'll want to know why before I do."), MSGBOX_DEFAULT)
+        msgbox(format("TOBIN: That's my net! Only ANNI doubles the edge like that.\pShe sent you all the way down here? Then she likes you. She doesn't like anybody."), MSGBOX_DEFAULT)
+        msgbox(format("TOBIN: Here, take my spare rod. It's old, but it knows this water.\pThrow the little ones back, okay? There's fewer every year."), MSGBOX_DEFAULT)
         giveitem(ITEM_OLD_ROD)
         setflag(FLAG_SKALD_Q_ANNI_DONE)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Tobin: They'll have to count them now. Properly. In front of people.\pForty years I've counted for nobody but myself. Funny to be right and hate it."), MSGBOX_DEFAULT)
+        msgbox(format("TOBIN: They have to count the fish properly now. In front of people!\pForty years I counted for nobody. Funny to be right and hate it."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Tobin: Herring came back thin this week. Thin and early. That's not a season, that's a symptom.\p…You'd know the word for it now, wouldn't you. Ranger."), MSGBOX_DEFAULT)
+        msgbox(format("TOBIN: The herring came in thin this week. Thin and early.\pThat's not a season. That's a symptom. You're the RANGER, you tell me the word for it."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Tobin: Currents have been wrong for weeks. The fish know it before we do.\p…You didn't hear that from me."), MSGBOX_DEFAULT)
+        msgbox(format("TOBIN: The currents have been wrong for weeks. The fish know it before we do.\pYou didn't hear that from me."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// Rolf, Mereholt Coastal day-rate. The paycheck with a face.
+// Rolf, MEREHOLT COASTAL day-rate. The paycheck with a face.
 script ParcelIsle_Dockworker {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
-        msgbox(format("Rolf: Eighteen months, they're saying. Delay.\pYou know what eighteen months is to a man on a day rate? It's a number somebody else gets to say out loud."), MSGBOX_DEFAULT)
-        msgbox(format("Rolf: …I'm not saying you're wrong. I read it. Anni read it to me, the parts with the frogs.\pI'm saying it's easier to be right when it's not your boat."), MSGBOX_DEFAULT)
+        msgbox(format("ROLF: Eighteen months of delay, they're saying. You know what eighteen months is to a guy on a day rate?\pI'm not saying you're wrong. ANNI read me the frog part. I'm saying it's easy to be right when it's not your boat."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Rolf: Boat's not late today. Boat's not coming. Office says 'pending review'.\pThat your review? …Thought so."), MSGBOX_DEFAULT)
+        msgbox(format("ROLF: Boat's not late today. Boat's not coming. The office says \"pending review\".\pThat your review? Yeah. Thought so."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Rolf: The crest on the crates is the crest on my cheque. Same kerning. I stopped noticing it years ago.\pFunny what a stranger's face makes you notice again."), MSGBOX_DEFAULT)
+        msgbox(format("ROLF: The crest on the crates is the crest on my paycheck. Same one that's on the RANGERS' gear, come to think of it.\pFunny what you stop noticing."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Rolf: Boat's late. Boat's always late now.\pNothing to unload but weather. You want work, there's a board by the lodging. Mostly it says 'no'."), MSGBOX_DEFAULT)
+        msgbox(format("ROLF: Boat's late. Boat's always late now.\pIf you want work, there's a board by the inn. Mostly it says \"no\"."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// Anni, mending nets on the quay. Side quest: carry the mended net to Tobin.
+// Anni, mending nets. Side quest: carry the mended net to Tobin.
 script ParcelIsle_NetMender {
     lock
     faceplayer
     if (flag(FLAG_SKALD_Q_ANNI_DONE)) {
         if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-            msgbox(format("Anni: Rolf had me read him the filing. The frog part, twice.\pHe didn't say anything after. That's a lot, for Rolf.\pKeep the rod. Tobin never lent it to anyone."), MSGBOX_DEFAULT)
+            msgbox(format("ANNI: ROLF had me read him your report. The frog part, twice.\pHe didn't say anything after. For ROLF, that's a speech."), MSGBOX_DEFAULT)
         } else {
-            msgbox(format("Anni: Tobin gave you the spare rod? Then you're in his books, and there's only ever been three names in them.\pFish the inlet. Tell me if the Magikarp are still there. They used to be so thick you could walk on them."), MSGBOX_DEFAULT)
+            msgbox(format("ANNI: TOBIN gave you his rod? He's never lent that to anyone!\pGo fish the inlet. Tell me if the MAGIKARP are still in there. They used to be so thick you could walk across."), MSGBOX_DEFAULT)
         }
         release
         end
     }
     if (flag(FLAG_SKALD_Q_ANNI_NET)) {
-        msgbox(format("Anni: Tobin's on the landing, at the end of the jetty. He won't come up. He says the town's gone strange.\pHe's right, but the net still needs carrying."), MSGBOX_DEFAULT)
+        msgbox(format("ANNI: TOBIN's at the end of the jetty, on the platform. He won't come up. Says the town's gone strange.\pHe's right, but the net still needs carrying."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Anni: You're the ranger they're talking about at the hall. The one who went out and came back with a knot on the pack.\pGood. Then you can carry something. This net's mended and Tobin's is torn, and my knees don't do the jetty."), MSGBOX_DEFAULT)
-        msgbox(format("Anni: Take it down to him. End of the jetty, the one who won't look up.\pTell him the selvedge is doubled. He'll know whose it is."), MSGBOX_DEFAULT)
+        msgbox(format("ANNI: You're the new RANGER, right? Good, you can carry things.\pThis net's mended and TOBIN's is torn. My knees don't do the jetty anymore."), MSGBOX_DEFAULT)
+        msgbox(format("ANNI: Take it down to him. End of the jetty, the grumpy one.\pTell him the edge is doubled. He'll know whose it is."), MSGBOX_DEFAULT)
         setflag(FLAG_SKALD_Q_ANNI_NET)
         release
         end
     }
-    msgbox(format("Anni: Nets don't tear like they used to. Nothing in them heavy enough to tear them.\p…Don't put that in your notebook. It's not a fact. It's just true."), MSGBOX_DEFAULT)
+    msgbox(format("ANNI: Nets don't tear like they used to. Nothing in them heavy enough to tear them.\pDon't write that down. It's not a fact. It's just true."), MSGBOX_DEFAULT)
     release
     end
 }
 
-// Kip, the harbour lad -- an optional battle on the quay. Talk-triggered.
+// Kip -- an optional battle on the quay. Talk-triggered.
 script ParcelIsle_HarbourLad {
     lock
     faceplayer
     if (!flag(FLAG_SYS_POKEMON_GET)) {
-        msgbox(format("Kip: You came off the ferry with a bag and no Pokémon. Not even one. Who does that?\pCome back when you've got something that can stand on the quay. Then we'll see."), MSGBOX_DEFAULT)
+        msgbox(format("KIP: You got off the ferry with a bag and no POKéMON? Not even one?\pCome back when you've got something. Then we'll see."), MSGBOX_DEFAULT)
         release
         end
     }
     release
     trainerbattle_single(TRAINER_SKALD_HARBOUR_LAD,
-        format("Kip: You came off the ferry with a bag and no Pokémon, and now look at you.\pBet you can't beat my Krabby. The channel used to be full of them."),
-        format("Kip: …Used to be. Yeah."))
+        format("KIP: Hey, mainlander! Bet you can't beat my KRABBY.\pThe whole channel used to be full of them!"),
+        format("KIP: Used to be. Yeah."))
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Kip: My dad says you cost him his berth. My mum says you saved the channel.\pThey had that argument at dinner. I ate in the loft."), MSGBOX_DEFAULT)
+        msgbox(format("KIP: My dad says you cost him his berth. My mom says you saved the channel.\pThey had that fight at dinner. I ate in the loft."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Kip: Krabby was under the jetty when I was little. Dozens. Now I go out to the rocks to find one.\pI'm not sad about it. I'm just saying where they went."), MSGBOX_DEFAULT)
+        msgbox(format("KIP: There were dozens of KRABBY under the jetty when I was little. Now I have to go out to the rocks to find one.\pI'm not sad about it. I'm just saying where they went."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// Sigrun, the widow at the drying racks. Side quest: count the Wingull.
+// Sigrun at the drying racks. Side quest: count the WINGULL with her.
 script ParcelIsle_Widow {
     lock
     faceplayer
     if (flag(FLAG_SKALD_Q_SIGRUN_DONE)) {
-        msgbox(format("Sigrun: Eleven this morning. I count them anyway. It's a way of saying good morning to someone who isn't here."), MSGBOX_DEFAULT)
+        msgbox(format("SIGRUN: Eleven this morning. I still count them. It's how I say good morning to someone who isn't here."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALD_Q_SIGRUN)) {
         if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-            msgbox(format("Sigrun: You wrote it down. All of it. The whole coast, in a notebook, and you put the gulls in.\pHe'd have liked that. He never trusted a number he hadn't counted himself."), MSGBOX_DEFAULT)
-            msgbox(format("Sigrun: This was his. It's the only thing on the boat the sea didn't take.\pIt should go with someone who counts."), MSGBOX_DEFAULT)
+            msgbox(format("SIGRUN: You put the gulls in your report. The actual gulls!\pMy EIRIK would have liked that. He never trusted a number he hadn't counted himself."), MSGBOX_DEFAULT)
+            msgbox(format("SIGRUN: This was his. It's the only thing on the boat the sea didn't take.\pIt should go to someone who counts."), MSGBOX_DEFAULT)
             giveitem(ITEM_LUCKY_EGG)
             setflag(FLAG_SKALD_Q_SIGRUN_DONE)
         } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-            msgbox(format("Sigrun: Nine today. There were forty on these racks when Eirik still fished. The racks were white with them.\pWrite that in your book. Nine. Someone should have the number besides me."), MSGBOX_DEFAULT)
+            msgbox(format("SIGRUN: Nine today. When EIRIK still fished there were forty on these racks. Forty!\pWrite that down. Nine. Somebody should have the number besides me."), MSGBOX_DEFAULT)
         } else {
-            msgbox(format("Sigrun: Twelve this morning. I'll tell you again when you're back. Numbers only mean something twice."), MSGBOX_DEFAULT)
+            msgbox(format("SIGRUN: Twelve this morning. Come back another day and I'll give you the next one.\pA number only means something twice."), MSGBOX_DEFAULT)
         }
         release
         end
     }
-    msgbox(format("Sigrun: Count the gulls with me. On the racks. Go on.\pTwelve. Say it back, so it's two of us who know."), MSGBOX_YESNO)
+    msgbox(format("SIGRUN: Count the gulls with me. On the racks there. Go on.\pTwelve. Say it back, so two of us know it."), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("Sigrun: Twelve. Good. My husband kept the count for thirty years and I keep it for him.\pCome back and I'll give you the next one. That's all a survey is. Somebody coming back."), MSGBOX_DEFAULT)
+        msgbox(format("SIGRUN: Twelve. Good. My husband kept that count for thirty years.\pCome back and I'll give you the next one. That's all a survey is, you know. Somebody coming back."), MSGBOX_DEFAULT)
         setflag(FLAG_SKALD_Q_SIGRUN)
     } else {
-        msgbox(format("Sigrun: No? Then it's just me who knows. That's been fine so far."), MSGBOX_DEFAULT)
+        msgbox(format("SIGRUN: No? Then it's just me who knows. That's been fine so far."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -205,25 +229,24 @@ script ParcelIsle_Widow {
 
 script ParcelIsle_FerrySign {
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("FERRY LANDING\pMainland schedule: SUSPENDED\nPENDING REGIONAL REVIEW\pSomeone has written underneath, in pencil: about time."), MSGBOX_SIGN)
+        msgbox(format("FERRY LANDING\pMainland service: SUSPENDED\nPENDING REGIONAL REVIEW\pSomeone wrote underneath in pencil: ABOUT TIME."), MSGBOX_SIGN)
     } else {
         msgbox(format("FERRY LANDING\pThe mainland schedule board is blank.\nIt has been for a while."), MSGBOX_SIGN)
     }
     end
 }
 
-// §09: the ferry hub. Delibird first (post-Highland cert), the Coast once
-// you've made the Delibird crossing, the Climate Station once the Coastal
-// cert is in hand. Outer islands each run a ferry home to here.
+// The ferry hub: DELIBIRD ISLE first, the COAST after that crossing, the
+// CLIMATE STATION once the Coastal Certification is in hand.
 script ParcelIsle_FerryCaptain {
     lock
     faceplayer
     if (!flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
-        msgbox(format("Captain: Passage out? The open channel's no crossing to make without a reason worth the cold.\pCome back when the Corps has sent you up the mountains. You'll know when."), MSGBOX_DEFAULT)
+        msgbox(format("CAPTAIN: Passage out? Not in this cold, not without a reason.\pCome back when the RANGERS have sent you up the mountains. You'll know when."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Captain: Harbour's open. Where am I taking you?"), MSGBOX_DEFAULT)
+    msgbox(format("CAPTAIN: Harbour's open. Where to?"), MSGBOX_DEFAULT)
     multichoice(1, 1, MULTI_SKALD_FERRY, FALSE)
     switch (var(VAR_RESULT)) {
         case 0:
@@ -235,7 +258,7 @@ script ParcelIsle_FerryCaptain {
             end
         case 1:
             if (!flag(FLAG_SKALDMERE_DELIBIRD_ARRIVAL)) {
-                msgbox(format("Captain: The coast run opens once you've made the Delibird crossing.\nOne island at a time."), MSGBOX_DEFAULT)
+                msgbox(format("CAPTAIN: The coast run opens after you've made the DELIBIRD crossing.\nOne island at a time."), MSGBOX_DEFAULT)
                 release
                 end
             }
@@ -247,7 +270,7 @@ script ParcelIsle_FerryCaptain {
             end
         case 2:
             if (!flag(FLAG_SKALDMERE_COASTAL_CERT)) {
-                msgbox(format("Captain: The climate station? That route opens once you've worked the coast.\nNot before."), MSGBOX_DEFAULT)
+                msgbox(format("CAPTAIN: The climate station? That run opens once you've worked the coast. Not before."), MSGBOX_DEFAULT)
                 release
                 end
             }
@@ -258,31 +281,29 @@ script ParcelIsle_FerryCaptain {
             waitstate
             end
         default:
-            msgbox(format("Captain: Suit yourself. I'll be on the water."), MSGBOX_DEFAULT)
+            msgbox(format("CAPTAIN: Suit yourself. I'll be on the water."), MSGBOX_DEFAULT)
             release
             end
     }
     end
 }
 
-// --- Mereholt clearance checkpoint: the harbour-master (Moore) --------------
-// Sight trainer on the lane down to the quay. A green provisional walks past
-// him unproven; the player returns by ferry later with a team that holds.
+// Moore, the harbour-master. A sight trainer on the lane to the quay.
 script ParcelIsle_GateMoore {
     trainerbattle_single(TRAINER_SKALD_GATE_ISLE,
-        format("Moore: Harbour-master. Every hull and every hand that moves through here is logged.\pYou want clearance on this water? Earn the entry."),
-        format("Moore: …Noted. The harbour knows your name now."),
+        format("MOORE: Harbour-master. Every hull and every hand that moves through here goes in my log.\pYou want harbour clearance? Earn it."),
+        format("MOORE: Noted. The harbour knows your name now."),
         ParcelIsle_GateMoore_Defeated)
     lock
     faceplayer
-    msgbox(format("Moore: You're cleared through the landing. The ferry runs answer to the log,\nand the log answers for you."), MSGBOX_DEFAULT)
+    msgbox(format("MOORE: You're cleared through the landing. The ferry runs answer to the log, and the log answers for you."), MSGBOX_DEFAULT)
     release
     end
 }
 
 script ParcelIsle_GateMoore_Defeated {
     setflag(FLAG_SKALDMERE_GATE_ISLE)
-    msgbox(format("Moore: Harbour clearance: entered against your card. Filed with the manifest.\pNobody hands that out. You took it."), MSGBOX_DEFAULT)
+    msgbox(format("MOORE: Harbour clearance, entered against your card.\pNobody hands that out. You took it."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -296,33 +317,33 @@ script ParcelIsle_ItemNetBall {
 // THE STREET AND THE GREEN
 // ---------------------------------------------------------------------------
 
-// Pell, Mereholt Logistics. A clipboard walking up and down the road.
+// Pell, MEREHOLT LOGISTICS. A clipboard with legs.
 script ParcelIsle_LogisticsClerk {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Pell: Half my manifests are on hold. The other half are lawyers.\pI used to log trucks. Now I log the absence of trucks. It's the same form. That's the part that gets me."), MSGBOX_DEFAULT)
+        msgbox(format("PELL: Half my manifests are on hold. The other half are lawyers.\pI used to log trucks. Now I log the absence of trucks. It's the same form!"), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
-        msgbox(format("Pell: Relief convoy for the basin, three trucks, Foundation crest, Council seal.\pRelief for what? Don't ask me. I log what moves. Somebody else decides what it means."), MSGBOX_DEFAULT)
+        msgbox(format("PELL: Relief convoy for the basin. Three trucks, FOUNDATION crest, Council seal.\pRelief for what? Don't ask me. I log what moves."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Pell: Corps is hiring provisionals again. That's you? Congratulations. Your gear's on a manifest with our crest on it.\pNot a complaint. Just accuracy. I'm paid for accuracy."), MSGBOX_DEFAULT)
+        msgbox(format("PELL: The RANGERS are hiring again? Congratulations. Your gear came in on our manifest, by the way.\pNot a complaint. I'm paid for accuracy."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Pell: Everything that moves through Saltwick is on a manifest. Fuel, crates, the ferry you came in on, the potion on your belt if it came by boat.\pYou? Passenger, one, off at the island stop. I've got you already."), MSGBOX_DEFAULT)
+        msgbox(format("PELL: Everything that moves through SALTWICK is on a manifest. Fuel, crates, the ferry you came in on.\pYou? \"Passenger, one, island stop.\" I've already got you."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// Ebba and Nils, on the green. The Poliwag seed, seen by children first.
+// Ebba and Nils on the green. They saw the POLIWAG first.
 script ParcelIsle_KidA {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Ebba: Nils says you wrote it down. All of it. Even the frogs.\pAre we in it? We saw them first."), MSGBOX_DEFAULT)
+        msgbox(format("EBBA: NILS says you wrote everything down. Even the frogs!\pAre we in it? We saw them first!"), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
-        msgbox(format("Ebba: You saw them too. On the bridge. Going the wrong way.\pNils said you'd say we made it up. You didn't."), MSGBOX_DEFAULT)
+        msgbox(format("EBBA: You saw them too! On the bridge! Going the wrong way!\pNILS said you'd say we made it up. You didn't."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Ebba: There were frogs in the inlet going the WRONG way! Upstream, all in a line, like they were late for something.\pNils says frogs don't get late."), MSGBOX_DEFAULT)
+        msgbox(format("EBBA: There were frogs in the inlet going the WRONG way! Upstream! All in a line, like they were late for something!\pNILS says frogs don't get late."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -332,60 +353,60 @@ script ParcelIsle_KidB {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Nils: What's the word? For when a place is running out?\pEbba says you've got a word for it now. I want the word."), MSGBOX_DEFAULT)
+        msgbox(format("NILS: What's the word? For when a place is running out?\pEBBA says you've got a word for it now. I want the word."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
-        msgbox(format("Nils: Gran says the Poliwag have always done that. Gran says a lot of things have always done that.\pI counted anyway. Fourteen. Less than last time."), MSGBOX_DEFAULT)
+        msgbox(format("NILS: Gran says the POLIWAG have always done that. Gran says a lot of things have always done that.\pI counted anyway. Fourteen. Less than last time."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Nils: Frogs don't get late. They get scared, maybe.\pDon't tell Ebba I said scared."), MSGBOX_DEFAULT)
+        msgbox(format("NILS: Frogs don't get late. They get scared, maybe.\pDon't tell EBBA I said scared."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// Halvar, on the bench. Forty years of the Corps, and he still watches the road.
+// Halvar on the bench. Forty years in the RANGERS.
 script ParcelIsle_OldMan {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Halvar: Somebody finally said it out loud. In writing. With a name at the bottom.\pIt cost you. It'll cost everyone. Forty years I walked that bridge and it never once occurred to me that the cost was the point."), MSGBOX_DEFAULT)
+        msgbox(format("HALVAR: Somebody finally said it out loud. In writing, with a name at the bottom.\pIt'll cost you. It'll cost everyone. Forty years on that bridge and it never once occurred to me that the cost was the point."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Halvar: Hale signed for you? Hale doesn't sign for anyone. He didn't sign for me, and I ran his station before he did.\pWatch him. Not because he's wrong. Because he's tired, and tired men are careful in the wrong places."), MSGBOX_DEFAULT)
+        msgbox(format("HALVAR: HALE signed for you? HALE doesn't sign for anyone! He didn't sign for me, and I ran his station before he did.\pWatch him. Not because he's wrong. Because he's tired."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Halvar: Forty years I walked that bridge for the Corps. Never saw the water this quiet.\pQuiet's not peace. Quiet's what a place does when it's counting."), MSGBOX_DEFAULT)
+        msgbox(format("HALVAR: Forty years I walked that bridge for the RANGERS. Never saw the water this quiet.\pQuiet isn't peace, kid. Quiet is a place holding its breath."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// Corwen, the birder at the inlet. Side quest: tell him when you've seen a Delibird.
+// Corwen, the birder at the inlet. Side quest: tell him when you've seen a DELIBIRD.
 script ParcelIsle_Birder {
     lock
     faceplayer
     if (flag(FLAG_SKALD_Q_BIRDER_DONE)) {
         if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-            msgbox(format("Corwen: The storm-relief birds were on the wireless this morning. By name. Delibird. Somebody read your filing on air.\pForty years of lists and I never once made the news. Good."), MSGBOX_DEFAULT)
+            msgbox(format("CORWEN: The storm birds were on the radio this morning! By name! DELIBIRD!\pForty years of lists and I never once made the news. Good."), MSGBOX_DEFAULT)
         } else {
-            msgbox(format("Corwen: Eleven species on the inlet today. Twenty, the year I started.\pThe list is the only thing I own that gets shorter and heavier at the same time."), MSGBOX_DEFAULT)
+            msgbox(format("CORWEN: Eleven species on the inlet today. Twenty, the year I started.\pMy list is the only thing I own that gets shorter and heavier at the same time."), MSGBOX_DEFAULT)
         }
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_ARRIVAL)) {
-        msgbox(format("Corwen: You've been out to the island. I can see it on you -- the cold's still in your coat.\pTell me. Did you see one? A Delibird. On the ground, not in a picture."), MSGBOX_YESNO)
+        msgbox(format("CORWEN: You've been out to the island! I can tell, the cold's still in your coat.\pTell me. Did you see one? A DELIBIRD. On the ground, not in a picture."), MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) {
-            msgbox(format("Corwen: …Then they're still there. I haven't been able to cross since my knee. Fifteen years I've had them on the list from memory.\pTake this. It's for looking at what's far off. I'm done needing it."), MSGBOX_DEFAULT)
+            msgbox(format("CORWEN: Then they're still there! I haven't been able to make the crossing since my knee went.\pTake this. It's for looking at far-off things. I'm done needing it."), MSGBOX_DEFAULT)
             giveitem(ITEM_SCOPE_LENS)
             setflag(FLAG_SKALD_Q_BIRDER_DONE)
         } else {
-            msgbox(format("Corwen: No. …No, that's honest. Come back when you have."), MSGBOX_DEFAULT)
+            msgbox(format("CORWEN: No? Well. That's honest. Come back when you have."), MSGBOX_DEFAULT)
         }
         release
         end
     }
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Corwen: The Survey knot. Ilex ties them left over right; she's the only one. So you've met her.\pIf the Corps ever sends you north to the island, look for a bird with a tail like a rope. Then come and tell me."), MSGBOX_DEFAULT)
+        msgbox(format("CORWEN: That's a survey knot on your pack. ILEX ties them left over right. Nobody else does.\pIf the RANGERS ever send you north to the island, look for a bird with a tail like a rope. Then come tell me."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Corwen: Wingull, Pelipper, one Swablu that has no business this far north.\pI keep a list. It's shorter than it was. That's not an opinion. That's a list."), MSGBOX_DEFAULT)
+        msgbox(format("CORWEN: WINGULL, PELIPPER, and one SWABLU with no business this far north.\pI keep a list. It's shorter than it used to be. That's not an opinion. That's a list."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -393,21 +414,21 @@ script ParcelIsle_Birder {
 
 script ParcelIsle_KidTrainer {
     trainerbattle_single(TRAINER_SKALD_KID,
-        format("Timo: You came off the ferry! Mainlanders always have neat Pokémon. Battle me!"),
-        format("Timo: Whoa. Okay."))
+        format("TIMO: You're from the mainland! Mainlanders always have cool POKéMON. Let's battle!"),
+        format("TIMO: Whoa. Okay!"))
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Timo: You went past the bridge. Gran says you're allowed now because of the knot.\pWhat's past it? …No. Don't tell me. I want to be allowed first."), MSGBOX_DEFAULT)
+        msgbox(format("TIMO: You went past the bridge! Gran says you're allowed because of the knot.\pWhat's out there? No, wait, don't tell me. I want to be allowed first."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Timo: Gran says don't go past the bridge.\pShe won't say why."), MSGBOX_DEFAULT)
+        msgbox(format("TIMO: Gran says don't go past the bridge.\pShe won't say why. She just gets quiet."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
 script ParcelIsle_TownSign {
-    msgbox(format("SALTWICK\pSaltmarsh Coast -- Skaldmere Regional Council\pA smaller plate beneath, newer than the sign: Harbour works by MEREHOLT COASTAL."), MSGBOX_SIGN)
+    msgbox(format("SALTWICK\pSaltmarsh Coast -- Skaldmere Regional Council\pA newer plate underneath: HARBOUR WORKS BY MEREHOLT COASTAL."), MSGBOX_SIGN)
     end
 }
 
@@ -415,20 +436,19 @@ script ParcelIsle_TownSign {
 // THE LANES
 // ---------------------------------------------------------------------------
 
-// §07: a neighbour asks if you're "the one the scientist wrote about," then
-// changes the subject. Marit.
+// Marit, next door. "The one the scientist wrote about."
 script ParcelIsle_Neighbor {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Marit: I said forget I said anything. That first day.\pI'm not saying it now. She wrote about you because you'd do this. She knew. I think she was sorry, and I think she knew that too."), MSGBOX_DEFAULT)
+        msgbox(format("MARIT: I told you to forget I said anything, that first day. I'm not saying it now.\pShe wrote about you because she knew you'd do this. I think she was sorry. I think she knew that too."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_LAB_SEEN)) {
-        msgbox(format("Marit: You've been in the annex. I can tell; people come out of there quiet.\pShe left it tidy. That's what nobody says. Ransacked places aren't tidy."), MSGBOX_DEFAULT)
+        msgbox(format("MARIT: You've been in the annex. People come out of there quiet.\pShe left it tidy. That's what nobody says. Ransacked places aren't tidy."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Oh--you're the one the scientist wrote about, aren't you? The young naturalist with the--"), MSGBOX_DEFAULT)
+        msgbox(format("MARIT: Oh! You're the one the scientist wrote about, aren't you? The young naturalist with the--"), MSGBOX_DEFAULT)
         applymovement(LOCALID_NEIGHBOR, Movement_GlanceAway)
         waitmovement(0)
-        msgbox(format("…Forget I said anything. It's cold out. You should get indoors, {PLAYER}."), MSGBOX_DEFAULT)
+        msgbox(format("MARIT: Forget I said anything. It's cold out. Get indoors, {PLAYER}."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -441,31 +461,31 @@ movement Movement_GlanceAway {
     step_end
 }
 
-// Liv, sweeping outside the lodging. Her mother keeps the rooms.
+// Liv, sweeping outside the inn.
 script ParcelIsle_Innkeeper {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Liv: Two lawyers and a journalist in the good rooms. Mum's charging them double and apologising for it.\pYour room's still yours. She won't let it."), MSGBOX_DEFAULT)
+        msgbox(format("LIV: Two lawyers and a reporter in the good rooms. Mom's charging them double and apologizing for it.\pYour room's still yours. She won't let anyone else have it."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Liv: Mum says rangers eat like they're paid in weather. She's made the big pot.\pShe hasn't made the big pot since the scientist left."), MSGBOX_DEFAULT)
+        msgbox(format("LIV: Mom says RANGERS eat like they get paid in weather. She made the big pot.\pShe hasn't made the big pot since the scientist left."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Liv: Mum's kept your room since the letter came. Swept it every week. She wouldn't say who for.\pThe lamp's lit. Go on in."), MSGBOX_DEFAULT)
+        msgbox(format("LIV: Mom's kept your room since the letter came. Swept it every week. She wouldn't say who for.\pThe lamp's lit. Go on in, you'll freeze."), MSGBOX_DEFAULT)
     }
     release
     end
 }
 
-// Ossian, the chandler's brother, smoking outside the shop.
+// Ossian, the chandler's brother, on his smoke break.
 script ParcelIsle_ChandlerBrother {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Ossian: Kit's sold more rope this week than all winter. Everyone suddenly wants to tie something down.\pI sit. I've always sat. Turns out sitting was the wrong way to be right."), MSGBOX_DEFAULT)
+        msgbox(format("OSSIAN: KIT's sold more rope this week than all winter. Everyone suddenly wants to tie something down.\pMe, I sit. Turns out sitting was the wrong way to be right."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Ossian: Kit's got the ranger stock in now. Repels, the good potions. Says the Corps pays on time, unlike some.\pShe means the fleet. She won't say the fleet."), MSGBOX_DEFAULT)
+        msgbox(format("OSSIAN: KIT's got the RANGER stock in now. REPELS, the good POTIONS. Says the RANGERS pay on time, unlike some.\pShe means the fleet. She won't say the fleet."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Ossian: Kit's inside. She sells; I sit. It's an arrangement.\pWind's coming off the water wrong all month. You get used to it. Mostly."), MSGBOX_DEFAULT)
+        msgbox(format("OSSIAN: KIT's inside. She sells, I sit. It's an arrangement.\pWind's been coming off the water wrong all month. You get used to it. Mostly."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -482,38 +502,27 @@ script ParcelIsle_LabSign {
 }
 
 script ParcelIsle_HallSign {
-    msgbox(format("SALTWICK FISHERS' CO-OPERATIVE\pMeetings first Tuesday. Members and guests.\pUnder that, stencilled: with the support of the MEREHOLT FOUNDATION."), MSGBOX_SIGN)
+    msgbox(format("SALTWICK FISHERS' CO-OPERATIVE\pMeetings first Tuesday. Members and guests.\pStencilled underneath: WITH THE SUPPORT OF THE MEREHOLT FOUNDATION."), MSGBOX_SIGN)
     end
 }
 
 script ParcelIsle_NoticeBoard {
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("NOTICES\pREGIONAL HEARINGS -- COASTAL QUOTAS: public sessions, the Council hall, Thursdays. Transport provided.\pMereholt Coastal: day-rate hiring SUSPENDED pending review.\pSomeone has pinned a strip of red cloth to the corner of the board."), MSGBOX_SIGN)
+        msgbox(format("NOTICES\pREGIONAL HEARINGS -- COASTAL QUOTAS. Public sessions Thursdays at the Council hall. Transport provided.\pMEREHOLT COASTAL: day-rate hiring SUSPENDED pending review.\pSomeone pinned a strip of red cloth to the corner of the board."), MSGBOX_SIGN)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("NOTICES\pSkaldmere Climate Corps: provisional rangers wanted. Apply at the district station, past the bridge.\pMereholt Coastal: day-rate hiring, quay, dawn. Own boots.\pLost: one grey cat, answers to Sedge."), MSGBOX_SIGN)
+        msgbox(format("NOTICES\pSKALDMERE CLIMATE CORPS: provisional RANGERS wanted. Apply at the district station.\pMEREHOLT COASTAL: day-rate hiring, quay, dawn. Own boots.\pLOST: one gray cat, answers to SEDGE."), MSGBOX_SIGN)
     } else {
-        msgbox(format("NOTICES\pMereholt Coastal: day-rate hiring, quay, dawn. Own boots.\pFerry schedule: see board at landing.\pLost: one grey cat, answers to Sedge.\pA fourth notice has been torn down. Two corners of it are still under the pins."), MSGBOX_SIGN)
+        msgbox(format("NOTICES\pMEREHOLT COASTAL: day-rate hiring, quay, dawn. Own boots.\pFERRY SCHEDULE: see board at landing.\pLOST: one gray cat, answers to SEDGE.\pA fourth notice has been torn down. Two corners are still under the pins."), MSGBOX_SIGN)
     }
     end
 }
 
 script ParcelIsle_WeatherStationSign {
-    msgbox(format("AUTOMATED WEATHER STATION 04\nSkaldmere Climate Corps\pInstrument sponsorship: the Mereholt Foundation\pThe anemometer turns. The logger light is off."), MSGBOX_SIGN)
+    msgbox(format("AUTOMATED WEATHER STATION 04\nSkaldmere Climate Corps\pInstrument sponsorship: the MEREHOLT FOUNDATION\pThe anemometer turns. The logger light is off."), MSGBOX_SIGN)
     end
 }
 
 script ParcelIsle_PreserveGateSign {
-    msgbox(format("MISTWOOD SHORE PRESERVE\nNo entry beyond this point without a Corps permit.\pThe green-and-grey crest of the Mereholt Foundation, cast in bronze, very clean.\pThe gate is chained."), MSGBOX_SIGN)
-    end
-}
-
-// The road east ends at the map edge and WARPS to the bridge instead of
-// connecting seamlessly: a seamless connection only reloads the secondary
-// tileset, and Saltwick's primary (FireRed general) differs from the bridge's.
-// Rule for the whole region: connections only between maps that share a
-// primary tileset; everything else is a warp.
-script ParcelIsle_ToBridge {
-    warp(MAP_PARCEL_BRIDGE, 1, 11)
-    waitstate
+    msgbox(format("MISTWOOD SHORE PRESERVE\nSkaldmere Climate Corps -- Holding Meadow\pNo entry without a RANGER present.\pThe MEREHOLT FOUNDATION crest, cast in bronze, very clean."), MSGBOX_SIGN)
     end
 }

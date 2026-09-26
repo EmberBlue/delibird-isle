@@ -374,35 +374,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 43,
-      "y": 19,
-      "elevation": 3,
-      "var": "VAR_TEMP_2",
-      "var_value": "0",
-      "script": "ParcelIsle_ToBridge"
-    },
-    {
-      "type": "trigger",
-      "x": 43,
-      "y": 20,
-      "elevation": 3,
-      "var": "VAR_TEMP_2",
-      "var_value": "0",
-      "script": "ParcelIsle_ToBridge"
-    },
-    {
-      "type": "trigger",
-      "x": 43,
-      "y": 21,
-      "elevation": 3,
-      "var": "VAR_TEMP_2",
-      "var_value": "0",
-      "script": "ParcelIsle_ToBridge"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
@@ -422,8 +394,8 @@
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 2,
+      "x": 22,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelIsle_PreserveGateSign"

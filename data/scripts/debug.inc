@@ -10,6 +10,7 @@ Debug_ShowFieldMessageStringVar4::
 
 Debug_CheatStart::
 	setflag FLAG_SYS_POKEMON_GET
+	clearflag FLAG_SKALD_NO_PARTNER_YET
 	setflag FLAG_RESCUED_BIRCH
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 	setflag FLAG_ADVENTURE_STARTED
@@ -142,6 +143,7 @@ Debug_EventScript_Script_1::
 	@ Leaves the climax (the Marsh) + the boardroom coda unplayed; opens
 	@ everything up to them. Running it twice duplicates the mons/items.
 	setflag FLAG_SYS_POKEMON_GET
+	clearflag FLAG_SKALD_NO_PARTNER_YET
 	setflag FLAG_SYS_POKEDEX_GET
 	setflag FLAG_SYS_B_DASH
 	setflag FLAG_SYS_POKENAV_GET

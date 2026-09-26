@@ -1,5 +1,4 @@
-// ParcelIsleChandlery -- Kit's shop. Rope, lamp oil, and the town's only
-// Poké Balls. Her brother sits outside.
+// ParcelIsleChandlery -- Kit's shop. Rope, lamp oil, and the town's POKé BALLS.
 
 mapscripts ParcelIsleChandlery_MapScripts {
 }
@@ -8,16 +7,16 @@ script ParcelIsleChandlery_Kit {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Kit: Sold more rope this week than all winter. Everybody's tying something down before the hearings.\pShelf's stocked. The boat remembered us, for once. Need anything?"), MSGBOX_YESNO)
+        msgbox(format("KIT: I've sold more rope this week than all winter. Everyone wants to tie something down before the hearings.\pThe shelf's stocked. Need anything?"), MSGBOX_YESNO)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Kit: Ranger stock's in -- the Corps pays on time, which is more than I can say for the fleet.\pDon't tell Ossian I said fleet. Need anything?"), MSGBOX_YESNO)
+        msgbox(format("KIT: RANGER stock's in! The RANGERS pay on time, which is more than I can say for some people.\pNeed anything?"), MSGBOX_YESNO)
     } else {
-        msgbox(format("Kit: Off the ferry? Then you'll want a lamp and you'll want to not ask about the weather.\pThe shelf's stocked, when the boat remembers us. Need supplies?"), MSGBOX_YESNO)
+        msgbox(format("KIT: Off the ferry? Then you'll want a lamp, and you'll want to not ask about the weather.\pThe shelf's stocked, when the boat remembers us. Need anything?"), MSGBOX_YESNO)
     }
     if (var(VAR_RESULT) == 1) {
         pokemart(ParcelIsleChandlery_Items)
     }
-    msgbox(format("Kit: Mind the fog out there."), MSGBOX_DEFAULT)
+    msgbox(format("KIT: Mind the fog out there!"), MSGBOX_DEFAULT)
     release
     end
 }
@@ -40,9 +39,9 @@ script ParcelIsleChandlery_Hjalmar {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Hjalmar: Rope, lamp oil, and news. Kit sells two of those. The third's free now, and it's all anyone's buying."), MSGBOX_DEFAULT)
+        msgbox(format("HJALMAR: Rope, lamp oil, and gossip. KIT sells two of those.\pThe third is free now, and it's all anyone's buying."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Hjalmar: Rope, lamp oil, and news. Kit sells two of those.\pThe third you get for free by standing here long enough. I've been here an hour."), MSGBOX_DEFAULT)
+        msgbox(format("HJALMAR: Rope, lamp oil, and gossip. KIT sells two of those.\pThe third you get by standing here long enough. I've been here an hour."), MSGBOX_DEFAULT)
     }
     release
     end

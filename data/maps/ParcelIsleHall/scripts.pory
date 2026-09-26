@@ -1,7 +1,6 @@
-// ParcelIsleHall -- the Saltwick Fishers' Co-operative. A meeting hall that
-// smells of rope. The town's politics in one room: the dredge widened the
-// channel and thinned the catch, and everyone here is paid by one or the
-// other. Three states; the minutes on the board change with them.
+// ParcelIsleHall -- the Fishers' Co-operative. Smells of rope. The dredge
+// widened the channel and thinned the catch, and everyone here is paid by
+// one or the other.
 
 mapscripts ParcelIsleHall_MapScripts {
 }
@@ -10,11 +9,11 @@ script ParcelIsleHall_Brenna {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Brenna: We voted. Twelve to nine, to back your filing at the hearing.\pNine is a lot of nine, in a town this size. I'll be buying nine people's drinks for a year. That's what chairing is."), MSGBOX_DEFAULT)
+        msgbox(format("BRENNA: We voted. Twelve to nine, to back your report at the hearing.\pNine is a lot of nine in a town this size. I'll be buying nine people drinks for a year. That's what chairing is."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Brenna: The Corps sent you? Then you'll want the quota minutes. They're on the board.\pRead fast. The Foundation reads them slower, and they read them first."), MSGBOX_DEFAULT)
+        msgbox(format("BRENNA: A RANGER! Then you'll want the quota minutes. They're on the board.\pRead fast. The FOUNDATION reads them slower, but they read them first."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Brenna: Members and guests. You're a guest. Sit anywhere the members aren't.\pWe're between meetings. We're always between meetings. Nobody wants to be the one who calls the next one."), MSGBOX_DEFAULT)
+        msgbox(format("BRENNA: Members and guests. You're a guest. Sit anywhere the members aren't.\pWe're between meetings. We're always between meetings. Nobody wants to be the one who calls the next one."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -24,11 +23,11 @@ script ParcelIsleHall_Ivar {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Ivar: My berth's gone. Pending. My berth is pending, and she's over there counting votes like it's a catch.\pI'm not angry at you. I've decided that. It's taking effort."), MSGBOX_DEFAULT)
+        msgbox(format("IVAR: My berth is \"pending\". PENDING! And she's over there counting votes like it's a catch.\pI'm not angry at you. I decided that. It's taking effort."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Ivar: Ranger. Good. Tell her the basin's fine. The Council says it's fine, the Foundation says it's remediated--\pTell her. You've got the knot; she'll listen to a knot."), MSGBOX_DEFAULT)
+        msgbox(format("IVAR: RANGER! Good. Tell her the basin's fine. The Council says it's fine!\pShe'll listen to you. You've got the knot."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Ivar: The dredge widened the channel. Widened it! More boats in, bigger boats.\pYou don't fix a town by making it smaller. Tell her."), MSGBOX_DEFAULT)
+        msgbox(format("IVAR: The dredge widened the channel! More boats in, bigger boats!\pYou don't fix a town by making it smaller. Tell her that."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -38,11 +37,11 @@ script ParcelIsleHall_Jorunn {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Jorunn: I'm not smiling. I'm counting. Twelve to nine.\pHe thinks I won. Nobody won. I'd rather have the herring than the vote."), MSGBOX_DEFAULT)
+        msgbox(format("JORUNN: I'm not smiling. I'm counting. Twelve to nine.\pHe thinks I won. Nobody won. I'd rather have the herring than the vote."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Jorunn: Tell HIM the herring's thin. Tell him the Poliwag went up the inlet in a line like a funeral.\pHe knows. He was on the boat. He wants somebody else to say it so it isn't him."), MSGBOX_DEFAULT)
+        msgbox(format("JORUNN: Tell HIM the herring's thin. He was on the boat! He knows!\pHe just wants somebody else to say it so it isn't him."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Jorunn: More boats, less fish. Do the sum. He won't do the sum.\pI've done it. On the back of the quota form. It doesn't come out."), MSGBOX_DEFAULT)
+        msgbox(format("JORUNN: More boats, less fish. Do the math. He won't do the math.\pI did it on the back of the quota form. It doesn't come out."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -52,11 +51,11 @@ script ParcelIsleHall_Bard {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Bard: The notes. From the night she sat with the ones who didn't clap.\pThey were yours all along, then. In the margins. She was writing to you before she'd met you.\pI've lived long enough to see a thing like that. I'm not sure I wanted to."), MSGBOX_DEFAULT)
+        msgbox(format("BARD: The notes from the night she sat with the ones who didn't clap. They were yours all along, in the margins.\pShe was writing to you before she'd ever met you. I've lived long enough to see a thing like that. Not sure I wanted to."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("Bard: After the talk she came back and sat with the ones who hadn't clapped. Me among them.\pShe wrote it all down. Every complaint. I never saw the notes. I've wondered, since, who did."), MSGBOX_DEFAULT)
+        msgbox(format("BARD: After her talk she came back and sat with the ones who hadn't clapped. Me among them.\pShe wrote down every complaint. I never saw the notes. I've always wondered who did."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Bard: The scientist gave a talk in here once. Resilience. Big word for a small room.\pHalf of us clapped. I remember which half."), MSGBOX_DEFAULT)
+        msgbox(format("BARD: The scientist gave a talk in here once. \"Resilience.\" Big word for a small room.\pHalf of us clapped. I remember which half."), MSGBOX_DEFAULT)
     }
     release
     end
@@ -65,18 +64,18 @@ script ParcelIsleHall_Bard {
 script ParcelIsleHall_Kid {
     lock
     faceplayer
-    msgbox(format("Dad says the meeting's boring.\pDad's AT the meeting. Every time."), MSGBOX_DEFAULT)
+    msgbox(format("Dad says the meeting's boring.\pDad is AT the meeting. Every single time."), MSGBOX_DEFAULT)
     release
     end
 }
 
 script ParcelIsleHall_Minutes {
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("CO-OPERATIVE MINUTES (extraordinary)\pMotion: the Co-op to appear at the regional hearing in support of the filed record. CARRIED, 12-9.\pMotion: to write to the Foundation regarding the hall's roof grant. WITHDRAWN.\pChair's note: nobody stayed for tea."), MSGBOX_SIGN)
+        msgbox(format("CO-OP MINUTES (extraordinary)\pMotion: appear at the regional hearing in support of the filed record. CARRIED, 12-9.\pMotion: write to the FOUNDATION regarding the roof grant. WITHDRAWN.\pChair's note: nobody stayed for tea."), MSGBOX_SIGN)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("CO-OPERATIVE MINUTES\pItem 3: the quota. Coastal division proposes a 'sustainable harvest' figure based on the resilience model. Chair asks whose model. No answer minuted.\pItem 4: the Foundation renews the hall's roof grant. Carried, with thanks."), MSGBOX_SIGN)
+        msgbox(format("CO-OP MINUTES\pItem 3: the quota. MEREHOLT COASTAL proposes a \"sustainable harvest\" figure based on the resilience model. Chair asks whose model. No answer minuted.\pItem 4: the FOUNDATION renews the roof grant. Carried, with thanks."), MSGBOX_SIGN)
     } else {
-        msgbox(format("CO-OPERATIVE MINUTES\pItem 1: the channel dredge is complete. Item 2: the Foundation's storm-relief blankets have arrived and are in the loft.\pItem 3: the herring. Discussion. No motion.\pItem 4: the schedule board. Discussion. No motion."), MSGBOX_SIGN)
+        msgbox(format("CO-OP MINUTES\pItem 1: the channel dredge is complete.\nItem 2: the FOUNDATION's storm-relief blankets have arrived and are in the loft.\pItem 3: the herring. Discussion. No motion.\nItem 4: the schedule board. Discussion. No motion."), MSGBOX_SIGN)
     }
     end
 }
