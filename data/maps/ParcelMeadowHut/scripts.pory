@@ -1,0 +1,9 @@
+// ParcelMeadowHut -- Rin's hut at the edge of the Holding Meadow.
+
+mapscripts ParcelMeadowHut_MapScripts {
+}
+
+script ParcelMeadowHut_Note {
+    msgbox(format("A feeding chart, in marker:\pDODUO -- anything. SHROOMISH -- don't. SEEDOT -- pretends it doesn't eat.\pLOTAD -- pool. CARVANHA -- POOL, CAREFULLY. NUMEL -- warm sand, will not move for food.\pELECTRIKE -- catch it first."), MSGBOX_SIGN)
+    end
+}

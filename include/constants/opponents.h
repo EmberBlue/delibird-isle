@@ -903,7 +903,29 @@
 
 #define TRAINER_SKALD_HARBOUR_LAD         887
 
-#define TRAINERS_COUNT                      888
+#define TRAINER_SKALD_ROUTE1_YOUNGSTER    888
+
+#define TRAINER_SKALD_ROUTE1_LASS         889
+
+#define TRAINER_SKALD_ROUTE1_BIRDER       890
+
+#define TRAINER_SKALD_ROUTE1_FORAGER      891
+
+#define TRAINER_SKALD_ROUTE1_CAMPER       892
+
+#define TRAINER_SKALD_MISTWOOD_SANNA      893
+
+#define TRAINER_SKALD_MISTWOOD_PIM        894
+
+#define TRAINER_SKALD_MISTWOOD_FREYA      895
+
+#define TRAINER_SKALD_MISTWOOD_ARVID      896
+
+#define TRAINER_SKALD_MISTWOOD_TOVE       897
+
+#define TRAINER_SKALD_MISTWOOD_OLE        898
+
+#define TRAINERS_COUNT                      899
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS

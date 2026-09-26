@@ -1,0 +1,185 @@
+{
+ "_about": "FireRed general primary + Viridian Forest secondary. Forest floor 585, forest tall grass 644 (MB_TALL_GRASS), north arrow warp 663. Trees are the primary's 2x2 blocks: keep corridors on even coordinates so blocks never split.",
+ "fill": "#",
+ "border": [
+  28,
+  29,
+  36,
+  37
+ ],
+ "tiles": {
+  ".": [
+   1,
+   0,
+   3
+  ],
+  ",": [
+   8,
+   0,
+   3
+  ],
+  "p": [
+   217,
+   0,
+   3
+  ],
+  "g": [
+   585,
+   0,
+   3
+  ],
+  "k": [
+   644,
+   0,
+   3
+  ],
+  "t": [
+   10,
+   0,
+   3
+  ],
+  "^": [
+   663,
+   0,
+   3
+  ],
+  "X": [
+   28,
+   1,
+   0
+  ],
+  "w": [
+   29,
+   1,
+   0
+  ],
+  "x": [
+   36,
+   1,
+   0
+  ],
+  "W": [
+   37,
+   1,
+   0
+  ],
+  "S": [
+   2,
+   1,
+   0
+  ],
+  "Z": [
+   3,
+   1,
+   0
+  ],
+  "B": [
+   5,
+   1,
+   0
+  ],
+  "F": [
+   231,
+   1,
+   0
+  ]
+ },
+ "stamps": {
+  "T": {
+   "rows": [
+    [
+     30,
+     31
+    ],
+    [
+     22,
+     23
+    ]
+   ]
+  },
+  "N": {
+   "rows": [
+    [
+     28,
+     29
+    ],
+    [
+     36,
+     37
+    ]
+   ]
+  },
+  "V": {
+   "rows": [
+    [
+     672,
+     673,
+     702,
+     703
+    ],
+    [
+     680,
+     681,
+     681,
+     682
+    ],
+    [
+     688,
+     675,
+     675,
+     676
+    ],
+    [
+     696,
+     670,
+     683,
+     684
+    ]
+   ],
+   "pass": [
+    [
+     3,
+     1
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ],
+   "_note": "secondary ids: this shed is only valid with frp_vermilion_city -- Mistwood uses the primary shed below"
+  },
+  "A": {
+   "rows": [
+    [
+     40,
+     41,
+     42,
+     43
+    ],
+    [
+     48,
+     49,
+     50,
+     51
+    ],
+    [
+     56,
+     57,
+     58,
+     59
+    ],
+    [
+     66,
+     67,
+     98,
+     99
+    ]
+   ],
+   "door": [
+    3,
+    2
+   ],
+   "_note": "the primary blue-roof building (Kanto Mart shell) as the ranger post"
+  }
+ }
+}

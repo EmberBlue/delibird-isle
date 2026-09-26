@@ -1,0 +1,161 @@
+{
+  "id": "MAP_PARCEL_MEADOW",
+  "name": "ParcelMeadow",
+  "layout": "LAYOUT_PARCEL_MEADOW",
+  "music": "MUS_DEWFORD",
+  "region_map_section": "MAPSEC_PARCEL_ISLE",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PARCEL_ISLE",
+      "offset": -10,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_PARCEL_ROUTE1",
+      "offset": -4,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_MEADOW_RIN",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "x": 15,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Rin",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_MEADOW_DODUO",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(DODUO)",
+      "x": 4,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Doduo",
+      "flag": "FLAG_SKALD_PARTNER_DODUO"
+    },
+    {
+      "local_id": "LOCALID_MEADOW_SHROOMISH",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SHROOMISH)",
+      "x": 20,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Shroomish",
+      "flag": "FLAG_SKALD_PARTNER_SHROOMISH"
+    },
+    {
+      "local_id": "LOCALID_MEADOW_SEEDOT",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(SEEDOT)",
+      "x": 14,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Seedot",
+      "flag": "FLAG_SKALD_PARTNER_SEEDOT"
+    },
+    {
+      "local_id": "LOCALID_MEADOW_LOTAD",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(LOTAD)",
+      "x": 8,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Lotad",
+      "flag": "FLAG_SKALD_PARTNER_LOTAD"
+    },
+    {
+      "local_id": "LOCALID_MEADOW_CARVANHA",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(CARVANHA)",
+      "x": 5,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Carvanha",
+      "flag": "FLAG_SKALD_PARTNER_CARVANHA"
+    },
+    {
+      "local_id": "LOCALID_MEADOW_NUMEL",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(NUMEL)",
+      "x": 17,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Numel",
+      "flag": "FLAG_SKALD_PARTNER_NUMEL"
+    },
+    {
+      "local_id": "LOCALID_MEADOW_ELECTRIKE",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(ELECTRIKE)",
+      "x": 5,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMeadow_Electrike",
+      "flag": "FLAG_SKALD_PARTNER_ELECTRIKE"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 18,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_MEADOW_HUT",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelMeadow_Sign"
+    }
+  ]
+}

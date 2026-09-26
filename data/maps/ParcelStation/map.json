@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_PARCEL_BRIDGE",
-      "offset": 4,
-      "direction": "left"
-    },
-    {
       "map": "MAP_PARCEL_WETLANDS",
       "offset": 0,
       "direction": "up"
@@ -271,9 +266,62 @@
       "elevation": 0,
       "dest_map": "MAP_PARCEL_STATION_HALL",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 15,
+      "elevation": 3,
+      "dest_map": "MAP_PARCEL_MISTWOOD",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 13,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelStation_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 14,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelStation_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 15,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelStation_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 16,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelStation_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 17,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelStation_ToMistwood"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

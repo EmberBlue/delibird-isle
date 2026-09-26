@@ -1,0 +1,44 @@
+// ParcelMistwoodPost -- the Corps ranger post in Mistwood. Warden Skeld:
+// one man, a map, a kettle, and three snares he isn't allowed to touch
+// without a second ranger present. You are not a second ranger. He'll
+// take it.
+
+mapscripts ParcelMistwoodPost_MapScripts {
+}
+
+script ParcelMistwoodPost_Skeld {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_MISTWOOD_CUT_GIVEN)) {
+        if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+            msgbox(format("SKELD: Certified now, are you. Good. Means I can send you the paperwork instead of doing it."), MSGBOX_DEFAULT)
+        } else {
+            msgbox(format("SKELD: The deadfall's on the north track. CUT it and you're at the station in ten minutes.\pTell HALE I said you'll do. He'll know what that means."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_SNARE_FREED_1) && flag(FLAG_SKALD_SNARE_FREED_2) && flag(FLAG_SKALD_SNARE_FREED_3)) {
+        msgbox(format("SKELD: All three? You freed all three?\pRegulations say I need a second ranger present to touch a snare. Been waiting a week for one. Instead I get a tourist with a new POKéMON."), MSGBOX_DEFAULT)
+        msgbox(format("SKELD: ...I'll take it. Here."), MSGBOX_DEFAULT)
+        giveitem(ITEM_HM01)
+        msgbox(format("SKELD: CUT. Teach it to your partner. A tree came down across the north track in the storm and I've been walking the long way round for a month.\pClear it, and the station's just past. Tell HALE you'll do. He'll know what I mean."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_MISTWOOD_CUT_GIVEN)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_SNARE_FREED_1) || flag(FLAG_SKALD_SNARE_FREED_2) || flag(FLAG_SKALD_SNARE_FREED_3)) {
+        msgbox(format("SKELD: You've been touching my snares. Don't look at me like that, I can tell.\pThere were three. West wall, the nook past the clearing, the far end of the top gallery. Get them all and we'll talk."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("SKELD: Warden. Ranger post. Kettle's on, don't get excited, it's just water.\pThree snares in my woods this week. Wire ones. MEREHOLT day-rate boys, I'd bet my boots, catching whatever walks into them."), MSGBOX_DEFAULT)
+    msgbox(format("SKELD: Regulations say I can't clear a snare without a second ranger present. You're not a ranger.\pI'm not telling you to go and loosen three wires. West wall, the nook past the clearing, the far end of the top gallery. I'm just telling you where they are."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelMistwoodPost_Map {
+    msgbox(format("A hand-drawn map of MISTWOOD, pinned up. Three red circles: the west wall, the nook past the clearing, the far end of the top gallery.\pAnd a fourth mark, up at the north track: DEADFALL. LONG WAY ROUND."), MSGBOX_SIGN)
+    end
+}

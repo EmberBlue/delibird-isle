@@ -1,0 +1,346 @@
+// ParcelRoute1 -- ROUTE 1, the Holding Meadow to Mistwood. A river down the
+// west side with a plank bridge at its head, where the old bridge scene now
+// happens on screen: the stuck POLIWAG, two MEREHOLT poachers, a real battle,
+// and Hale. Plain voice, played not narrated.
+
+const LOCALID_R1_YOUNGSTER  = 1
+const LOCALID_R1_LASS       = 2
+const LOCALID_R1_BIRDER     = 3
+const LOCALID_R1_FORAGER    = 4
+const LOCALID_R1_CAMPER     = 5
+const LOCALID_R1_HALE       = 10
+const LOCALID_R1_POACHER    = 11
+const LOCALID_R1_THUG1      = 12
+const LOCALID_R1_THUG2      = 13
+const LOCALID_R1_POLIWAG1   = 14
+const LOCALID_R1_POLIWAG2   = 15
+const LOCALID_R1_POLIWAG3   = 16
+
+mapscripts ParcelRoute1_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelRoute1_OnTransition
+}
+
+script ParcelRoute1_OnTransition {
+    setflag(FLAG_TEMP_3)          // poachers stay hidden until the scene calls them
+    setflag(FLAG_TEMP_4)          // so does Hale
+    if (flag(FLAG_SKALD_ROUTE1_SCENE_DONE)) {
+        setflag(FLAG_TEMP_2)      // the POLIWAG have moved on
+    }
+    end
+}
+
+// ---------------------------------------------------------------------------
+// THE BRIDGE SCENE
+// ---------------------------------------------------------------------------
+script ParcelRoute1_BridgeScene {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALD_ROUTE1_SCENE_DONE)) {
+        end
+    }
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_R1_PlayerOntoBridge)
+    waitmovement(0)
+    msgbox(format("A whole crowd of POLIWAG, jammed up against the bank right under the bridge.\pThey're not going anywhere. They look stuck."), MSGBOX_DEFAULT)
+    closemessage
+    clearflag(FLAG_TEMP_3)
+    addobject(LOCALID_R1_POACHER)
+    addobject(LOCALID_R1_THUG1)
+    addobject(LOCALID_R1_THUG2)
+    applymovement(LOCALID_R1_POACHER, Movement_R1_PoacherIn)
+    applymovement(LOCALID_R1_THUG1, Movement_R1_Thug1In)
+    applymovement(LOCALID_R1_THUG2, Movement_R1_Thug2In)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_R1_FaceLeft)
+    waitmovement(0)
+    msgbox(format("POACHER: Perfect. They ran right into the shallows. Easy pickings.\pHey! Kid! Don't touch anything. You'll spook the stock."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: Stock?"), MSGBOX_DEFAULT)
+    msgbox(format("POACHER: You heard me. Beat it."), MSGBOX_DEFAULT)
+    closemessage
+    delay(40)
+    msgbox(format("POACHER: ...No? Fine. RAT! Go teach the tourist some manners."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_R1_THUG1, Movement_R1_Thug1ToPlayer)
+    waitmovement(0)
+    trainerbattle_no_intro(TRAINER_SKALD_POACHER_A, format("RAT: Ow! OW! Boss, the kid's got a real one!"))
+    msgbox(format("POACHER: Tch. Useless. Whatever, the RANGERS will be along any minute anyway--"), MSGBOX_DEFAULT)
+    closemessage
+    clearflag(FLAG_TEMP_4)
+    addobject(LOCALID_R1_HALE)
+    applymovement(LOCALID_R1_HALE, Movement_R1_HaleIn)
+    waitmovement(0)
+    msgbox(format("HALE: Step away from the water."), MSGBOX_DEFAULT)
+    msgbox(format("POACHER: This isn't your jurisdiction, RANGER."), MSGBOX_DEFAULT)
+    msgbox(format("HALE: It's a living corridor. That's all the jurisdiction I need."), MSGBOX_DEFAULT)
+    msgbox(format("POACHER: ...You think you're early, HALE? You're late."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_R1_THUG1, Movement_R1_Thug1Out)
+    applymovement(LOCALID_R1_POACHER, Movement_R1_PoacherOut)
+    applymovement(LOCALID_R1_THUG2, Movement_R1_Thug2Out)
+    waitmovement(0)
+    removeobject(LOCALID_R1_POACHER)
+    removeobject(LOCALID_R1_THUG1)
+    removeobject(LOCALID_R1_THUG2)
+    setflag(FLAG_TEMP_3)
+    applymovement(LOCALID_R1_HALE, Movement_R1_HaleToPlayer)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_R1_FaceRight)
+    waitmovement(0)
+    msgbox(format("HALE: You handled yourself. Most people would have just watched."), MSGBOX_DEFAULT)
+    msgbox(format("HALE: Now don't help them. The POLIWAG. Helping is how they got stuck in the first place. Give them room."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_R1_POLIWAG1, Movement_R1_PoliwagAway)
+    applymovement(LOCALID_R1_POLIWAG3, Movement_R1_PoliwagAway)
+    applymovement(LOCALID_R1_POLIWAG2, Movement_R1_PoliwagAwayLater)
+    waitmovement(0)
+    removeobject(LOCALID_R1_POLIWAG1)
+    removeobject(LOCALID_R1_POLIWAG2)
+    removeobject(LOCALID_R1_POLIWAG3)
+    setflag(FLAG_TEMP_2)
+    msgbox(format("HALE: There they go. Good. Remember what that looked like. You'll see it again."), MSGBOX_DEFAULT)
+    msgbox(format("HALE: I'm HALE. Skaldmere Climate Corps. RIN said you'd come through.\pThe station's on the far side of MISTWOOD. The woods are the quick way, if you don't mind the company.\pCome find me. You can learn to do more than stare."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_R1_HALE, Movement_R1_HaleOut)
+    waitmovement(0)
+    removeobject(LOCALID_R1_HALE)
+    setflag(FLAG_TEMP_4)
+    setflag(FLAG_SKALD_ROUTE1_SCENE_DONE)
+    setflag(FLAG_SKALDMERE_BRIDGE_SCENE)
+    releaseall
+    end
+}
+
+movement Movement_R1_PlayerOntoBridge {
+    walk_left
+    walk_left
+    face_down
+    step_end
+}
+
+movement Movement_R1_FaceLeft {
+    face_left
+    step_end
+}
+
+movement Movement_R1_FaceRight {
+    face_right
+    step_end
+}
+
+movement Movement_R1_PoacherIn {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    face_right
+    step_end
+}
+
+movement Movement_R1_Thug1In {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    face_right
+    step_end
+}
+
+movement Movement_R1_Thug2In {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    face_right
+    step_end
+}
+
+movement Movement_R1_Thug1ToPlayer {
+    walk_down
+    walk_right
+    walk_right
+    walk_right
+    face_right
+    step_end
+}
+
+movement Movement_R1_Thug1Out {
+    walk_left
+    walk_left
+    walk_left
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    step_end
+}
+
+movement Movement_R1_PoacherOut {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    step_end
+}
+
+movement Movement_R1_Thug2Out {
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    step_end
+}
+
+movement Movement_R1_HaleIn {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    face_left
+    step_end
+}
+
+movement Movement_R1_HaleToPlayer {
+    walk_left
+    walk_left
+    face_left
+    step_end
+}
+
+movement Movement_R1_HaleOut {
+    walk_right
+    walk_right
+    walk_up
+    walk_up
+    walk_up
+    walk_up
+    step_end
+}
+
+movement Movement_R1_PoliwagAway {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    step_end
+}
+
+movement Movement_R1_PoliwagAwayLater {
+    delay_16
+    delay_16
+    delay_16
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    step_end
+}
+
+script ParcelRoute1_Poliwag {
+    lock
+    msgbox(format("The POLIWAG flinch, but they don't swim off. They can't. Something's wrong with the water upstream."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRoute1_PoacherTalk {
+    lock
+    faceplayer
+    msgbox(format("Don't touch anything, kid."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRoute1_Hale {
+    lock
+    faceplayer
+    msgbox(format("HALE: The station's past the woods. When you're ready."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// ---------------------------------------------------------------------------
+// TRAINERS
+// ---------------------------------------------------------------------------
+script ParcelRoute1_Youngster {
+    trainerbattle_single(TRAINER_SKALD_ROUTE1_YOUNGSTER,
+        format("BO: I've been standing here ALL DAY waiting for someone to battle!"),
+        format("BO: Aw, man!"))
+    msgbox(format("BO: The tall grass has WOOPER in it. They just stare at you. It's creepy."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelRoute1_Lass {
+    trainerbattle_single(TRAINER_SKALD_ROUTE1_LASS,
+        format("IDA: Hi! Are you headed for MISTWOOD? Battle me first!"),
+        format("IDA: You're pretty good!"))
+    msgbox(format("IDA: The ledge is a shortcut back down. I use it when I'm late for tea."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelRoute1_Birder {
+    trainerbattle_single(TRAINER_SKALD_ROUTE1_BIRDER,
+        format("HALDEN: Look up. See that WINGULL? Now look at mine. Mine's better."),
+        format("HALDEN: Fine. Yours is better."))
+    msgbox(format("HALDEN: The gulls used to nest under the bridge. Not anymore. Nobody knows why.\pWell. Somebody knows why."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelRoute1_Forager {
+    trainerbattle_single(TRAINER_SKALD_ROUTE1_FORAGER,
+        format("MERIT: I'm picking mushrooms. My SHROOMISH helps. Sort of."),
+        format("MERIT: It ate half the basket anyway."))
+    msgbox(format("MERIT: The woods are full of kids who want to battle. Rangers-in-training, they call themselves.\pSame thing as kids who want to battle."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelRoute1_Camper {
+    trainerbattle_single(TRAINER_SKALD_ROUTE1_CAMPER,
+        format("RUBEN: You've got the look of somebody who just got their first POKéMON."),
+        format("RUBEN: Yep. Called it."))
+    msgbox(format("RUBEN: There's a footbridge at the river head. Don't hang around on it. Long story."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+// ---------------------------------------------------------------------------
+// ITEMS AND SIGNS
+// ---------------------------------------------------------------------------
+script ParcelRoute1_ItemPokeBalls {
+    finditem(ITEM_POKE_BALL, 3)
+    end
+}
+
+script ParcelRoute1_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+script ParcelRoute1_ItemPotion {
+    finditem(ITEM_POTION)
+    end
+}
+
+script ParcelRoute1_Sign {
+    msgbox(format("ROUTE 1\pSALTWICK -- south\nMISTWOOD -- north"), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRoute1_NoticeBoard {
+    msgbox(format("SKALDMERE CLIMATE CORPS\pMISTWOOD: snares have been found on the north track. Do not touch them. Report them at the RANGER POST in the woods.\pSigned: SKELD, Warden."), MSGBOX_SIGN)
+    end
+}

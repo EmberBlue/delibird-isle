@@ -500,3 +500,11 @@ script ParcelStation_GateWard_Defeated {
     release
     end
 }
+
+// West edge -> Mistwood by warp (the woods are on the FireRed primary; the
+// station is not -- different primaries must not connect seamlessly).
+script ParcelStation_ToMistwood {
+    warp(MAP_PARCEL_MISTWOOD, 14, 1)
+    waitstate
+    end
+}

@@ -1,0 +1,278 @@
+// ParcelMeadow -- the Holding Meadow, just past Saltwick's north gate. Where
+// you get your first POKéMON: seven edge species live here, hurt somewhere
+// and waiting to go back out. You don't pick one. You walk up, stand still,
+// and one of them decides. (§10 System 4, made real: any of the seven.)
+
+const LOCALID_MEADOW_RIN       = 1
+const LOCALID_MEADOW_DODUO     = 2
+const LOCALID_MEADOW_SHROOMISH = 3
+const LOCALID_MEADOW_SEEDOT    = 4
+const LOCALID_MEADOW_LOTAD     = 5
+const LOCALID_MEADOW_CARVANHA  = 6
+const LOCALID_MEADOW_NUMEL     = 7
+const LOCALID_MEADOW_ELECTRIKE = 8
+
+mapscripts ParcelMeadow_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_1, 0: ParcelMeadow_FirstEntry
+    ]
+}
+
+// Rin meets you at the gate.
+script ParcelMeadow_FirstEntry {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALD_MEADOW_INTRO)) {
+        end
+    }
+    lockall
+    applymovement(LOCALID_MEADOW_RIN, Movement_RinToGate)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_PlayerFaceUp)
+    waitmovement(0)
+    msgbox(format("RIN: Oh! You're WREN, right? HALE said you'd come up this way. I'm RIN. I look after the meadow."), MSGBOX_DEFAULT)
+    msgbox(format("RIN: House rules: everything in here got hurt somewhere and is waiting to go back out. So no chasing, no grabbing.\pIf one of them comes to YOU, though... that's different."), MSGBOX_DEFAULT)
+    msgbox(format("RIN: Go on, have a walk around. Say hi. Don't take it personally if they ignore you. Most of them ignore me."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_MEADOW_RIN, Movement_RinBack)
+    waitmovement(0)
+    setflag(FLAG_SKALD_MEADOW_INTRO)
+    releaseall
+    end
+}
+
+movement Movement_RinToGate {
+    walk_down
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    face_down
+    step_end
+}
+
+movement Movement_RinBack {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+    face_down
+    step_end
+}
+
+movement Movement_PlayerFaceUp {
+    face_up
+    step_end
+}
+
+script ParcelMeadow_Rin {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("RIN: Look at you, all certified. The meadow's quieter without your partner in it. Don't tell it I said that."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("RIN: HALE's at the station. Take the track north through MISTWOOD. It's a bit of a walk, and the woods are full of people who want to battle.\pThat's a good thing, by the way. Your partner needs the practice."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("RIN: Walk up to them. Stand still. That's the whole trick.\pThe DODUO's been watching you since you came in, if you want a hint."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMeadow_Sign {
+    msgbox(format("HOLDING MEADOW\nSkaldmere Climate Corps\pNo chasing. No feeding. No taking.\pIn pencil underneath: they pick YOU. -- R."), MSGBOX_SIGN)
+    end
+}
+
+// --- the seven ---------------------------------------------------------------
+// Each: if you already have a partner, a one-liner. Otherwise: stand still?
+// Yes -> it comes over, Rin throws you a Ball, it's yours.
+
+script ParcelMeadow_Doduo {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("The DODUO looks at you with one head. The other one is watching the trees."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The DODUO is watching you. One head, anyway.\pStand still?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        call(ParcelMeadow_Recognition)
+        givemon(SPECIES_DODUO, 5)
+        setflag(FLAG_SKALD_PARTNER_DODUO)
+        removeobject(LOCALID_MEADOW_DODUO)
+        msgbox(format("{PLAYER} received DODUO!"), MSGBOX_DEFAULT)
+        call(ParcelMeadow_AfterRecognition)
+    } else {
+        msgbox(format("The DODUO loses interest. Both heads."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMeadow_Shroomish {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("The SHROOMISH is asleep under the tree. Or pretending. Hard to tell with SHROOMISH."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The SHROOMISH opens one eye. It doesn't move. It's very good at not moving.\pStand still?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        call(ParcelMeadow_Recognition)
+        givemon(SPECIES_SHROOMISH, 5)
+        setflag(FLAG_SKALD_PARTNER_SHROOMISH)
+        removeobject(LOCALID_MEADOW_SHROOMISH)
+        msgbox(format("{PLAYER} received SHROOMISH!"), MSGBOX_DEFAULT)
+        call(ParcelMeadow_AfterRecognition)
+    } else {
+        msgbox(format("The SHROOMISH closes the eye again."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMeadow_Seedot {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("The SEEDOT is hanging from the branch by its stem, pretending to be an acorn. It's not fooling anyone."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The SEEDOT drops off the branch and lands in front of you. Thunk.\pStand still?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        call(ParcelMeadow_Recognition)
+        givemon(SPECIES_SEEDOT, 5)
+        setflag(FLAG_SKALD_PARTNER_SEEDOT)
+        removeobject(LOCALID_MEADOW_SEEDOT)
+        msgbox(format("{PLAYER} received SEEDOT!"), MSGBOX_DEFAULT)
+        call(ParcelMeadow_AfterRecognition)
+    } else {
+        msgbox(format("The SEEDOT rolls back to its tree."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMeadow_Lotad {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("The LOTAD is sitting at the edge of the pool with its pad in the water. Living the dream."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The LOTAD paddles over to your side of the pool and looks up.\pStand still?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        call(ParcelMeadow_Recognition)
+        givemon(SPECIES_LOTAD, 5)
+        setflag(FLAG_SKALD_PARTNER_LOTAD)
+        removeobject(LOCALID_MEADOW_LOTAD)
+        msgbox(format("{PLAYER} received LOTAD!"), MSGBOX_DEFAULT)
+        call(ParcelMeadow_AfterRecognition)
+    } else {
+        msgbox(format("The LOTAD paddles away again. Slowly. Everything LOTAD does is slowly."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMeadow_Carvanha {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("The CARVANHA circles the pool. It has been circling the pool since you got here. It will circle the pool after you leave."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The CARVANHA stops circling and stares at you through the water. It has a LOT of teeth.\pStand still?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        call(ParcelMeadow_Recognition)
+        givemon(SPECIES_CARVANHA, 5)
+        setflag(FLAG_SKALD_PARTNER_CARVANHA)
+        removeobject(LOCALID_MEADOW_CARVANHA)
+        msgbox(format("{PLAYER} received CARVANHA!"), MSGBOX_DEFAULT)
+        call(ParcelMeadow_AfterRecognition)
+    } else {
+        msgbox(format("The CARVANHA goes back to circling. Probably for the best."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMeadow_Numel {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("The NUMEL is lying in the warm sand. It hasn't noticed you. It may not have noticed anything this week."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The NUMEL lifts its head, very slowly, and blinks at you.\pStand still?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        call(ParcelMeadow_Recognition)
+        givemon(SPECIES_NUMEL, 5)
+        setflag(FLAG_SKALD_PARTNER_NUMEL)
+        removeobject(LOCALID_MEADOW_NUMEL)
+        msgbox(format("{PLAYER} received NUMEL!"), MSGBOX_DEFAULT)
+        call(ParcelMeadow_AfterRecognition)
+    } else {
+        msgbox(format("The NUMEL puts its head back down. That was a lot of effort."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMeadow_Electrike {
+    lock
+    faceplayer
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        msgbox(format("The ELECTRIKE runs the fence line, back and forth, back and forth. Your hair stands up when it passes."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("The ELECTRIKE skids to a stop in front of you. Sparks are coming off its fur.\pStand still?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        call(ParcelMeadow_Recognition)
+        givemon(SPECIES_ELECTRIKE, 5)
+        setflag(FLAG_SKALD_PARTNER_ELECTRIKE)
+        removeobject(LOCALID_MEADOW_ELECTRIKE)
+        msgbox(format("{PLAYER} received ELECTRIKE!"), MSGBOX_DEFAULT)
+        call(ParcelMeadow_AfterRecognition)
+    } else {
+        msgbox(format("The ELECTRIKE is off again before you can blink."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// Shared beats.
+script ParcelMeadow_Recognition {
+    closemessage
+    delay(40)
+    msgbox(format("...\p...\pIt's coming over."), MSGBOX_DEFAULT)
+    msgbox(format("RIN: Don't move! It's deciding!"), MSGBOX_DEFAULT)
+    closemessage
+    delay(40)
+    msgbox(format("RIN: ...Well. That's not how it usually goes.\pHere! Catch!"), MSGBOX_DEFAULT)
+    closemessage
+    playse(SE_BALL_THROW)
+    delay(30)
+    playse(SE_BALL)
+    delay(30)
+    msgbox(format("It walked straight into the Ball. No shaking. No fuss."), MSGBOX_DEFAULT)
+    playfanfare(MUS_OBTAIN_ITEM)
+    waitfanfare
+    return
+}
+
+script ParcelMeadow_AfterRecognition {
+    setflag(FLAG_SYS_POKEMON_GET)
+    clearflag(FLAG_SKALD_NO_PARTNER_YET)
+    msgbox(format("RIN: Congratulations, I guess! Now it's your problem.\pHALE's at the station. Take the track north, through MISTWOOD. It'll follow you. They always do, once they've decided."), MSGBOX_DEFAULT)
+    msgbox(format("RIN: Oh, and there's grass out there. Real POKéMON, not meadow POKéMON. Yours will want to fight them. Let it."), MSGBOX_DEFAULT)
+    return
+}

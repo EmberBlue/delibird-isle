@@ -124,7 +124,12 @@
     "ParcelIsleOldCoupleHouse",
     "ParcelIsleSigrunHouse",
     "ParcelIsleNetLoft",
-    "ParcelIsleMooreHouse"
+    "ParcelIsleMooreHouse",
+    "ParcelMeadow",
+    "ParcelRoute1",
+    "ParcelMistwood",
+    "ParcelMeadowHut",
+    "ParcelMistwoodPost"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

@@ -1,0 +1,148 @@
+// ParcelMistwood -- MISTWOOD, the forest between Route 1 and the station. A
+// maze of galleries and dead ends; six trainers; three snared POKéMON to
+// free for the warden at the ranger post, who pays in HM01 CUT -- which you
+// need for the deadfall blocking the north exit.
+
+const LOCALID_MW_SNARE_ZIGZAGOON = 10
+const LOCALID_MW_SNARE_HOOTHOOT  = 11
+const LOCALID_MW_SNARE_SEEDOT    = 12
+
+mapscripts ParcelMistwood_MapScripts {
+}
+
+// --- trainers ------------------------------------------------------------------
+script ParcelMistwood_Sanna {
+    trainerbattle_single(TRAINER_SKALD_MISTWOOD_SANNA,
+        format("SANNA: I've got two WURMPLE. Two! You can't beat two!"),
+        format("SANNA: Two wasn't enough..."))
+    msgbox(format("SANNA: The warden says don't touch the snares. But he also says report them. How do you report a thing you can't touch?"), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelMistwood_Pim {
+    trainerbattle_single(TRAINER_SKALD_MISTWOOD_PIM,
+        format("PIM: Nobody gets past this corridor without battling PIM! That's me."),
+        format("PIM: Okay, one person gets past."))
+    msgbox(format("PIM: There's a ZIGZAGOON stuck in a snare by the west wall. I'm not allowed to touch it. It's been there since yesterday."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelMistwood_Freya {
+    trainerbattle_single(TRAINER_SKALD_MISTWOOD_FREYA,
+        format("FREYA: My HOOTHOOT sleeps all day. Let's see if yours can wake it up!"),
+        format("FREYA: Well, it's awake now."))
+    msgbox(format("FREYA: The ranger post is in the clearing up ahead. The warden's grumpy, but he's got a map."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelMistwood_Arvid {
+    trainerbattle_single(TRAINER_SKALD_MISTWOOD_ARVID,
+        format("ARVID: I'm training to be a RANGER. Step one: beat everyone in the woods!"),
+        format("ARVID: Step one is harder than it sounds."))
+    msgbox(format("ARVID: Step two is the snares, I think. The warden won't tell me step two until I finish step one."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelMistwood_Tove {
+    trainerbattle_single(TRAINER_SKALD_MISTWOOD_TOVE,
+        format("TOVE: Shh! You'll scare the SEEDOT! ...Too late. Battle!"),
+        format("TOVE: The SEEDOT are all gone now. Thanks."))
+    msgbox(format("TOVE: The north exit's blocked. A whole tree came down in the storm. You'd need CUT to get through, and nobody out here has it."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelMistwood_Ole {
+    trainerbattle_single(TRAINER_SKALD_MISTWOOD_OLE,
+        format("OLE: Camping in the woods builds character! And POKéMON! Let's go!"),
+        format("OLE: My character needs more building."))
+    msgbox(format("OLE: I found a snare by the east wall with a HOOTHOOT in it, up past the clearing. I didn't know what to do so I did nothing. That's what the sign said."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+// --- the snares -----------------------------------------------------------------
+script ParcelMistwood_SnareZigzagoon {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_ENCOUNTER)
+    msgbox(format("A ZIGZAGOON is caught in a wire snare! It's pulling, and the wire's pulling back.\pLoosen the wire?"), MSGBOX_YESNO)
+    waitmoncry
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("You work the wire loose, one loop at a time.\pThe ZIGZAGOON bolts into the trees without looking back."), MSGBOX_DEFAULT)
+        closemessage
+        setflag(FLAG_SKALD_SNARE_FREED_1)
+        removeobject(LOCALID_MW_SNARE_ZIGZAGOON)
+    } else {
+        msgbox(format("The ZIGZAGOON stops pulling and stares at you."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMistwood_SnareHoothoot {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_HOOTHOOT, CRY_MODE_ENCOUNTER)
+    msgbox(format("A HOOTHOOT has one foot in a snare. It's standing on the other one, very calmly, like this is fine.\pLoosen the wire?"), MSGBOX_YESNO)
+    waitmoncry
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("You slip the loop off its foot.\pThe HOOTHOOT looks at you, hops once, and flies straight up."), MSGBOX_DEFAULT)
+        closemessage
+        setflag(FLAG_SKALD_SNARE_FREED_2)
+        removeobject(LOCALID_MW_SNARE_HOOTHOOT)
+    } else {
+        msgbox(format("The HOOTHOOT blinks. Slowly. It can wait."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelMistwood_SnareSeedot {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_SEEDOT, CRY_MODE_ENCOUNTER)
+    msgbox(format("A SEEDOT is dangling from a snare by its stem. It's pretending to be an acorn. It is not a very convincing acorn.\pLoosen the wire?"), MSGBOX_YESNO)
+    waitmoncry
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("You untwist the wire. The SEEDOT drops, rolls, and vanishes under a root."), MSGBOX_DEFAULT)
+        closemessage
+        setflag(FLAG_SKALD_SNARE_FREED_3)
+        removeobject(LOCALID_MW_SNARE_SEEDOT)
+    } else {
+        msgbox(format("The SEEDOT keeps pretending."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- items and signs ------------------------------------------------------------
+script ParcelMistwood_ItemPokeBall {
+    finditem(ITEM_POKE_BALL, 2)
+    end
+}
+
+script ParcelMistwood_ItemPotion {
+    finditem(ITEM_POTION)
+    end
+}
+
+script ParcelMistwood_ItemAntidote {
+    finditem(ITEM_ANTIDOTE)
+    end
+}
+
+script ParcelMistwood_Sign {
+    msgbox(format("MISTWOOD\nSkaldmere Climate Corps managed woodland\pStay on the track. Report snares at the RANGER POST. Do not touch them."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelMistwood_Board {
+    if (flag(FLAG_SKALD_MISTWOOD_CUT_GIVEN)) {
+        msgbox(format("RANGER POST\pSnares found this week: 3\nSnares cleared: 3\pIn different handwriting: by a tourist. -- S."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("RANGER POST\pSnares found this week: 3\nSnares cleared: 0\pThe warden is inside. He is not in a good mood."), MSGBOX_SIGN)
+    }
+    end
+}

@@ -1,0 +1,65 @@
+legend frp_general__frp_viridian_forest
+size 30 44
+# MISTWOOD -- the forest between Route 1 and the station. Dense primary tree
+# blocks on a 2x2 grid; galleries and dead ends carved out of them; the
+# Corps ranger post in a clearing; three snared Pokemon; the deadfall at the
+# north exit that needs Cut. The entrance zone (rows 36-43) is primary-only
+# so the edge preview from Route 1 stays clean.
+anchor 1 g
+anchor 2 g
+anchor 3 g
+anchor 4 g
+anchor 5 g
+anchor 6 g
+anchor i g
+anchor j g
+anchor m g
+anchor h g
+anchor s g
+anchor u g
+anchor v g
+---
+N#N#N#N#N#N#N#^XN#N#N#N#N#N#N#
+##############px##############
+N#N#N#N#N#N#N#pXN#N#N#N#N#N#N#
+##############px##############
+N#igN#N#N#N#N#ggN#N#N#N#N#N#N#
+##gg##########gg##############
+N#gvgggg5gkkkkkkggggggggN#N#N#
+##ggggggggkkkkkkgggggggg######
+N#N#N#N#N#N#N#N#N#N#N#4gN#N#N#
+######################gg######
+N#N#N#N#N#N#N#N#N#N#N#kkggugN#
+######################kkgggg##
+N#N#N#N#N#N#N#N#N#N#N#ggN#N#N#
+######################gg######
+N#N#N#N#N#N#N#N#N#N#gA###gN#N#
+####################g####g####
+N#N#N#N#N#N#N#N#N#N#g####gN#N#
+####################g####g####
+N#N#N#N#N#N#N#N#N#N#ggggggN#N#
+####################Zggggj####
+N#N#ggggggggkkkkgg3gggggggN#N#
+####gggghgggkkkkgggggggggg####
+N#N#ggN#N#N#N#N#N#N#N#N#N#N#N#
+####gg########################
+N#N#kkN#N#N#N#N#N#N#N#N#N#N#N#
+####kk########################
+N#N#kkN#N#N#N#N#N#N#N#N#N#N#N#
+####kk########################
+N#N#2gN#N#N#N#N#N#N#N#N#N#N#N#
+####gg########################
+N#sgggkkkk1gggggggkkkkggggN#N#
+##ggggkkkkggggggggkkkk6ggm####
+N#N#N#N#N#N#N#ggN#N#N#N#N#N#N#
+##############gg##############
+N#N#N#N#N#N#N#ggN#N#N#N#N#N#N#
+##############gg##############
+N#N#N#N#N#N#..pp..N#N#N#N#N#N#
+############..pp..############
+N#N#N#N#N#N#..pp..N#N#N#N#N#N#
+############..pp..############
+N#N#N#N#N#N#..pp..N#N#N#N#N#N#
+############..pp..############
+N#N#N#N#N#N#..ppS.N#N#N#N#N#N#
+############..pp..############

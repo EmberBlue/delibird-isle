@@ -1197,3 +1197,8 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ParcelIsleSigrunHouse/scripts.inc"
 	.include "data/maps/ParcelIsleNetLoft/scripts.inc"
 	.include "data/maps/ParcelIsleMooreHouse/scripts.inc"
+	.include "data/maps/ParcelMeadow/scripts.inc"
+	.include "data/maps/ParcelRoute1/scripts.inc"
+	.include "data/maps/ParcelMistwood/scripts.inc"
+	.include "data/maps/ParcelMeadowHut/scripts.inc"
+	.include "data/maps/ParcelMistwoodPost/scripts.inc"

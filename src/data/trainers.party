@@ -16929,7 +16929,7 @@ IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
 - Growl
 
 === TRAINER_SKALD_POACHER_A ===
-Name: SELT
+Name: RAT
 Class: Fisherman
 Pic: Fisherman
 Gender: Male
@@ -16937,15 +16937,11 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Zigzagoon
-Level: 4
-- Tackle
-- Growl
+Poochyena
+Level: 6
 
-Wingull
-Level: 4
-- Water Gun
-- Growl
+Zubat
+Level: 5
 
 === TRAINER_SKALD_POACHER_B ===
 Name: MORA
@@ -17485,3 +17481,162 @@ Level: 6
 
 Wingull
 Level: 5
+
+=== TRAINER_SKALD_ROUTE1_YOUNGSTER ===
+Name: BO
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 5
+
+Wingull
+Level: 5
+
+=== TRAINER_SKALD_ROUTE1_LASS ===
+Name: IDA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lotad
+Level: 6
+
+Wooper
+Level: 6
+
+=== TRAINER_SKALD_ROUTE1_BIRDER ===
+Name: HALDEN
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 6
+
+Taillow
+Level: 6
+
+=== TRAINER_SKALD_ROUTE1_FORAGER ===
+Name: MERIT
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Shroomish
+Level: 7
+
+=== TRAINER_SKALD_ROUTE1_CAMPER ===
+Name: RUBEN
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Poochyena
+Level: 7
+
+=== TRAINER_SKALD_MISTWOOD_SANNA ===
+Name: SANNA
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wurmple
+Level: 6
+
+Wurmple
+Level: 6
+
+=== TRAINER_SKALD_MISTWOOD_PIM ===
+Name: PIM
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wurmple
+Level: 7
+
+Shroomish
+Level: 7
+
+=== TRAINER_SKALD_MISTWOOD_FREYA ===
+Name: FREYA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hoothoot
+Level: 8
+
+=== TRAINER_SKALD_MISTWOOD_ARVID ===
+Name: ARVID
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 8
+
+Seedot
+Level: 7
+
+=== TRAINER_SKALD_MISTWOOD_TOVE ===
+Name: TOVE
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Seedot
+Level: 7
+
+Wurmple
+Level: 7
+
+Silcoon
+Level: 7
+
+=== TRAINER_SKALD_MISTWOOD_OLE ===
+Name: OLE
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Taillow
+Level: 8
+
+Poochyena
+Level: 8

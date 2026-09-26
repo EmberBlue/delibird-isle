@@ -91,7 +91,26 @@ skald-verify playbook automated (run it before every commit);
 `tools/skald/newtrainer.py` allocates ids; `tools/skald/tileascii.py` shows
 any tile as text. Worked example: `data/layouts/ParcelIsle/canvas.txt`.
 
-**Done: Saltwick (Dock Town)** — 44×36 on `frp_general + frp_vermilion_city`,
+**Done (2026-09-26): the opening rebuilt as a Pokémon opening, in the plain
+voice.** Saltwick re-voiced (people talk; scenes are played). North gate →
+the **Holding Meadow** (`ParcelMeadow`): Rin meets you, seven edge species
+live there, stand still by one and it picks you — any of Doduo/Shroomish/
+Seedot/Lotad/Carvanha/Numel/Electrike, level 5. → **Route 1**
+(`ParcelRoute1`, 30×48): river down the west side, plank bridge at its head
+where the Poliwag/poacher/Hale scene now plays on screen with a real battle
+(RAT), ledges, two grass fields, five trainers, a Cut pocket. → **Mistwood**
+(`ParcelMistwood`, 30×44, Viridian-Forest style): galleries and dead ends,
+six trainers, three snared Pokémon to free for Warden Skeld at the ranger
+post, who pays in HM01 Cut; the deadfall at the north exit needs it; the
+arrow tile warps to the Station's west edge (and back by trigger). The old
+bridge map is retired (unreachable). Sight trainers are hidden until you have
+a partner (`FLAG_SKALD_NO_PARTNER_YET`). Field moves no longer need badges
+(`OW_FIELD_MOVES_NEED_BADGES`), Pokémon never disobey (`B_OBEDIENCE_DISABLED`).
+
+**Next:** the Station as a town with a gym building (its Hale briefing still
+assumes the old meadow order — re-voice it), then the Wetlands.
+
+**Earlier: Saltwick (Dock Town)** — 44×36 on `frp_general + frp_vermilion_city`,
 13 doors, 8 new interiors, 30 residents in three story states, 3 side quests,
 harbour fishing. **Next, one zone per pass, same recipe:**
 1. **Saltmarsh routes** out of Saltwick: the preserve gate north (fence at

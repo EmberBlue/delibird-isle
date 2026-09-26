@@ -158,3 +158,9 @@ quest is built, how the peer works) before they are asked six more times.
   Egg; Corwen's Delibird → Scope Lens), harbour surf + fishing tables, the
   town named. 360 → ~4,000 words for the town. The pipeline that built it
   (`tools/skald/`) is the template for every zone that follows.
+- **2026-09-26 — the opening, done the vanilla way.** User verdict: maps
+  weird, dialogue corny, structure a corridor of HM gates. Response: Saltwick
+  re-voiced plain; the Holding Meadow (seven possible partners, minutes in);
+  Route 1 with a played bridge scene and five trainers; Mistwood as a forest
+  dungeon with six trainers and a snare quest that pays in Cut. Eleven
+  trainers and three hand-drawn maps added (41 trainers, 37 maps).

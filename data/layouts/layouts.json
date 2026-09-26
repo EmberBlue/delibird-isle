@@ -4590,6 +4590,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/ParcelCavern/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCavern/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_MEADOW",
+      "name": "ParcelMeadow_Layout",
+      "width": 24,
+      "height": 20,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_vermilion_city",
+      "border_filepath": "data/layouts/ParcelMeadow/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelMeadow/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_ROUTE1",
+      "name": "ParcelRoute1_Layout",
+      "width": 30,
+      "height": 48,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_vermilion_city",
+      "border_filepath": "data/layouts/ParcelRoute1/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelRoute1/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_MISTWOOD",
+      "name": "ParcelMistwood_Layout",
+      "width": 30,
+      "height": 44,
+      "primary_tileset": "gTileset_Primary_frp_general",
+      "secondary_tileset": "gTileset_frp_viridian_forest",
+      "border_filepath": "data/layouts/ParcelMistwood/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelMistwood/map.bin"
     }
   ]
 }

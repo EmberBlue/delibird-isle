@@ -3,6 +3,7 @@
 
 // Movement config
 #define OW_RUNNING_INDOORS          GEN_LATEST  // In Gen4+, players are allowed to run indoors.
+#define OW_FIELD_MOVES_NEED_BADGES  FALSE       // Skaldmere: the HM itself is the gate; a field move works as soon as a partner knows it (Cut is earned in Mistwood before any certification).
 #define SLOW_MOVEMENT_ON_STAIRS     FALSE       // If enabled, the player will move slower up/down stairs like in FR
 
 // Other settings

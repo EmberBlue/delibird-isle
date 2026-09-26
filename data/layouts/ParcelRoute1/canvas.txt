@@ -1,0 +1,70 @@
+legend frp_general__frp_vermilion_city
+size 30 48
+# ROUTE 1 -- Saltwick's meadow to Mistwood. A river down the west side with a
+# plank bridge at its head (the Poliwag scene), a ledge shelf, two grass
+# fields, five trainers, a Cut pocket on the far bank.
+anchor 1 .
+anchor 2 .
+anchor 3 .
+anchor 4 .
+anchor 5 .
+anchor i .
+anchor j .
+anchor k .
+anchor h .
+anchor a p
+anchor x .
+anchor y .
+anchor z .
+anchor 7 ~
+anchor 8 ~
+anchor 9 ~
+---
+T#T#T#T#T#T#T#ppT#T#T#T#T#T#T#
+##############pp##############
+T#T#T#........pp............T#
+######.......pppp..........B##
+T#T#T#.....Z.pppp........h..T#
+######.......pppp...........##
+T#T#T#.......pppp..,..ttttt.T#
+######......Bpppp.....ttttt.##
+T#T#T#.......pppp.B...ttttt.T#
+######.....B.,ppp.....ttttt.##
+T#T#T#.......pppp...........T#
+######.....ppLLLLLL.....,...##
+T#T#T#.....pppppp...4.......T#
+######.....pp..........B....##
+T#T#T#.....pp...tttttt......T#
+######.....pp...tttttt...,..##
+T#T#T#.....pp...tttttt......T#
+######.....pp...tttttt......##
+T#.........pp.....5.........T#
+##.xy......pp.........,.....##
+T#z........pp.......B...3...T#
+##.........pp...............##
+T#.........ap....,..k.....B.T#
+##.........pp...............##
+T#.........pp...............T#
+##.........pp...............##
+T#....[bb]ppp...............T#
+##....qnneBpp...............##
+T#....<~~>.pp...............T#
+##....<78>.pp...............##
+T#....<~~>.pp...............T#
+##....<~9>.pp...............##
+T#.j..<~~>.pp...............T#
+##....<~~>.pp...........B...##
+T#....<~~>.pp.....,.2.....i.T#
+##....<~~>.ppB........,.....##
+T#T#T#<~~>.pp.LLLLLLLLLLLLL.T#
+######<~~>.pp...tttt.......B##
+T#T#T#<~~>.pp...tttt.,......T#
+######<~~>.ppppptttt.....,..##
+T#T#T#<~~>....pp...,..1...B.T#
+######<~~>.B..pp.,..tttttt..##
+T#T#T#<~~>....pp....tttttt..T#
+######<~~>..,.pp....tttttt..##
+T#T#T#<~~>.B..ppS...tttttt..T#
+######<~~>....pp..B.....,...##
+T#T#T#<~~>T#T#ppT#T#T#T#T#T#T#
+######<~~>####pp##############

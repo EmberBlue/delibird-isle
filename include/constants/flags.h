@@ -658,27 +658,27 @@
 
 #define FLAG_TEST_TOWN_ITEMBALL_1  0x264 // Unused Flag
 #define FLAG_SKALD_NO_PARTNER_YET      0x265 // Skaldmere: set at new game, cleared when the partner enters the ball -- hides sight trainers a Pokemon-less Wren cannot battle
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
-#define FLAG_UNUSED_0x279  0x279 // Unused Flag
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
+#define FLAG_SKALD_PARTNER_DODUO           0x266 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_PARTNER_SHROOMISH       0x267 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_PARTNER_SEEDOT          0x268 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_PARTNER_LOTAD           0x269 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_PARTNER_CARVANHA        0x26A // Skaldmere: the new opening stretch
+#define FLAG_SKALD_PARTNER_NUMEL           0x26B // Skaldmere: the new opening stretch
+#define FLAG_SKALD_PARTNER_ELECTRIKE       0x26C // Skaldmere: the new opening stretch
+#define FLAG_SKALD_HIDDEN_ROUTE1_ANTIDOTE  0x26D // Skaldmere: the new opening stretch
+#define FLAG_SKALD_HIDDEN_MISTWOOD_ETHER   0x26E // Skaldmere: the new opening stretch
+#define FLAG_SKALD_ITEM_ROUTE1_POKEBALL    0x26F // Skaldmere: the new opening stretch
+#define FLAG_SKALD_ITEM_ROUTE1_RARE_CANDY  0x270 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_ITEM_ROUTE1_POTION      0x271 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_ITEM_MISTWOOD_POKEBALL  0x272 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_ITEM_MISTWOOD_POTION    0x273 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_ITEM_MISTWOOD_ANTIDOTE  0x274 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_SNARE_FREED_1           0x275 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_SNARE_FREED_2           0x276 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_SNARE_FREED_3           0x277 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_MISTWOOD_CUT_GIVEN      0x278 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_ROUTE1_SCENE_DONE       0x279 // Skaldmere: the new opening stretch
+#define FLAG_SKALD_MEADOW_INTRO            0x27A // Skaldmere: the new opening stretch
 #define FLAG_UNUSED_0x27B  0x27B // Unused Flag
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag

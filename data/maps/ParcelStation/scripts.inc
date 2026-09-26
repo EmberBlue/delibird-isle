@@ -792,6 +792,14 @@ ParcelStation_GateWard_Defeated::
 	end
 
 
+ParcelStation_ToMistwood::
+# 507 "data/maps/ParcelStation/scripts.pory"
+	warp MAP_PARCEL_MISTWOOD, 14, 1
+# 508 "data/maps/ParcelStation/scripts.pory"
+	waitstate
+	end
+
+
 ParcelStation_Hale_Text_0:
 # 67 "data/maps/ParcelStation/scripts.pory"
 	.string "Hale: It's filed. It's true. Now we find\n"
