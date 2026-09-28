@@ -208,8 +208,8 @@
       "x": 14,
       "y": 0,
       "elevation": 3,
-      "dest_map": "MAP_PARCEL_STATION",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_PARCEL_FERNWICK",
+      "dest_warp_id": "0"
     },
     {
       "x": 23,

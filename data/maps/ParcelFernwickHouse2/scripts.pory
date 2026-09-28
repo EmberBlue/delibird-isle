@@ -1,0 +1,21 @@
+mapscripts ParcelFernwickHouse2_MapScripts {
+}
+
+script ParcelFernwickHouse2_Woman {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: HALE was born in this house. He'd hate that I told you.\pHe hates most things I tell people. Have a biscuit."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHouse2_Zigzagoon {
+    lock
+    faceplayer
+    waitse
+    playmoncry(SPECIES_ZIGZAGOON, CRY_MODE_NORMAL)
+    msgbox(format("ZIGZAGOON is investigating your boots. Thoroughly."), MSGBOX_DEFAULT)
+    waitmoncry
+    release
+    end
+}

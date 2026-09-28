@@ -679,7 +679,7 @@
 #define FLAG_SKALD_MISTWOOD_CUT_GIVEN      0x278 // Skaldmere: the new opening stretch
 #define FLAG_SKALD_ROUTE1_SCENE_DONE       0x279 // Skaldmere: the new opening stretch
 #define FLAG_SKALD_MEADOW_INTRO            0x27A // Skaldmere: the new opening stretch
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
+#define FLAG_SKALD_HIDDEN_FERNWICK_CANDY   0x27B // Skaldmere: Fernwick cliff-path hidden item
 #define FLAG_UNUSED_0x27C  0x27C // Unused Flag
 #define FLAG_UNUSED_0x27D  0x27D // Unused Flag
 #define FLAG_UNUSED_0x27E  0x27E // Unused Flag

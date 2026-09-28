@@ -1,0 +1,14 @@
+mapscripts ParcelFernwickHouse3_MapScripts {
+}
+
+script ParcelFernwickHouse3_OldWoman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD WOMAN: So that's where she went. The marsh. I sold her the bread for it.\pI'm glad somebody found her. I'm glad it was you."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD WOMAN: The scientist came through here on her way somewhere. Bought bread. Didn't say where she was going.\pI've thought about that bread a lot."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

@@ -180,6 +180,12 @@
       "map": "MAP_PARCEL_WEATHER",
       "x": 23,
       "y": 36
+    },
+    {
+      "id": "HEAL_LOCATION_PARCEL_FERNWICK",
+      "map": "MAP_PARCEL_FERNWICK",
+      "x": 16,
+      "y": 39
     }
   ]
 }

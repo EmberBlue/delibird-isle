@@ -4620,6 +4620,16 @@
       "secondary_tileset": "gTileset_frp_viridian_forest",
       "border_filepath": "data/layouts/ParcelMistwood/border.bin",
       "blockdata_filepath": "data/layouts/ParcelMistwood/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_FERNWICK",
+      "name": "ParcelFernwick_Layout",
+      "width": 40,
+      "height": 60,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_rustboro",
+      "border_filepath": "data/layouts/ParcelFernwick/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelFernwick/map.bin"
     }
   ]
 }

@@ -44425,3 +44425,91 @@ F_TRAINER_FEMALE |
             },
         },
     },
+#line 17644
+    [DIFFICULTY_NORMAL][TRAINER_SKALD_FERNWICK_CADET_A] =
+    {
+#line 17645
+        .trainerName = _("SOLVI"),
+#line 17646
+        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
+#line 17647
+        .trainerPic = TRAINER_PIC_POKEMON_RANGER_F,
+        .encounterMusic_gender =
+#line 17648
+F_TRAINER_FEMALE | 
+#line 17649
+            TRAINER_ENCOUNTER_MUSIC_FEMALE,
+#line 17650
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 17651
+        .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_TRY_TO_FAINT,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 17653
+            .species = SPECIES_WOOPER,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17655
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17654
+            .lvl = 11,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17656
+            .species = SPECIES_ZIGZAGOON,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17658
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17657
+            .lvl = 11,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },
+#line 17659
+    [DIFFICULTY_NORMAL][TRAINER_SKALD_FERNWICK_CADET_B] =
+    {
+#line 17660
+        .trainerName = _("EGIL"),
+#line 17661
+        .trainerClass = TRAINER_CLASS_PKMN_RANGER,
+#line 17662
+        .trainerPic = TRAINER_PIC_POKEMON_RANGER_M,
+        .encounterMusic_gender =
+#line 17664
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 17665
+        .battleType = TRAINER_BATTLE_TYPE_SINGLES,
+#line 17666
+        .aiFlags = AI_FLAG_BASIC_TRAINER | AI_FLAG_TRY_TO_FAINT,
+        .partySize = 2,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 17668
+            .species = SPECIES_TAILLOW,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17670
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17669
+            .lvl = 11,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+            {
+#line 17671
+            .species = SPECIES_SHROOMISH,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17673
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 17672
+            .lvl = 12,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            },
+        },
+    },

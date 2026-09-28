@@ -1,0 +1,48 @@
+// ParcelFernwickSurvey -- the Skaldmere Survey district office. Ilex. The
+// Floodbasin classification (Chapter 2) is filed here, as it was at the old
+// station; same var bits, plain voice.
+
+mapscripts ParcelFernwickSurvey_MapScripts {
+}
+
+script ParcelFernwickSurvey_Clerk {
+    lock
+    faceplayer
+    msgbox(format("CLERK: Forty years of soil cores in the basement. Nobody ever asked to see them.\pNobody, until this month."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickSurvey_Ilex {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+        setvar(VAR_0x8004, 6)
+        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+        if (var(VAR_RESULT) == 1) {
+            msgbox(format("ILEX: It's filed. The paper's HALE's to sign. Don't expect him to smile about it."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        setvar(VAR_0x8004, 63)
+        specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+        if (var(VAR_RESULT) == 6) {
+            msgbox(format("ILEX: The pipe, the sheen, the dead reeds. The WOOPER. The MAGIKARP. The booth.\pPut a name on it."), MSGBOX_DEFAULT)
+            specialvar(VAR_RESULT, SkaldmereClassifyFloodbasin)
+            msgbox(format("ILEX: COLLAPSING. The keystone's straining, the apex is sick, the middle swarms.\pThat's what 'we're remediating that' looks like in real life."), MSGBOX_DEFAULT)
+            setvar(VAR_0x8004, 6)
+            special(SkaldmereCertTaskMark)
+            msgbox(format("ILEX: I'll have your report typed by morning. Go tell HALE you're done. The certification's his to give."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("ILEX: Damage wears the mask of improvement. You'll see it everywhere now.\pSorry. Nobody warned me either."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("ILEX: Skaldmere Survey. We measure things over time and write the numbers down.\pIt's less exciting than it sounds, and it sounds boring."), MSGBOX_DEFAULT)
+    msgbox(format("ILEX: Get certified first. Then come back and I'll show you how to read a place properly.\pReading is the whole job. The battles are just how you get there."), MSGBOX_DEFAULT)
+    release
+    end
+}

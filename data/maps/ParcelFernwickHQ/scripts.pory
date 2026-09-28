@@ -1,0 +1,128 @@
+// ParcelFernwickHQ -- the Corps District Station. Hale runs the region's
+// story from this room: every chapter's dispatch lives here. Flag logic is
+// the old station's, unchanged; the words are plain now.
+
+mapscripts ParcelFernwickHQ_MapScripts {
+}
+
+script ParcelFernwickHQ_Reception {
+    lock
+    faceplayer
+    msgbox(format("RECEPTION: Welcome to the District Station. HALE's the one who looks like he hasn't slept.\pHe hasn't."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHQ_Ranger {
+    lock
+    faceplayer
+    msgbox(format("RANGER: 'We don't win. We reduce harm.' It was on a poster in here.\pHALE took the poster down. Said posters don't reduce anything."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHQ_Hale {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+            if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+                if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+                    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+                        if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+                            if (!flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+                                msgbox(format("HALE: It's filed. It's true. Who reads it was never ours to control. Writing it down was."), MSGBOX_DEFAULT)
+                                msgbox(format("HALE: One reader's asked for you already. MEREHOLT. The coast office. BROOKE herself, up from the mainland.\pYou owe her nothing. Go anyway. You've earned watching her face while she says whatever she's decided to say."), MSGBOX_DEFAULT)
+                                release
+                                end
+                            }
+                            msgbox(format("HALE: It's filed. It's true. Who reads it was never ours to control.\pGet some rest, {PLAYER}. You've earned a night that isn't about the work."), MSGBOX_DEFAULT)
+                            release
+                            end
+                        }
+                        msgbox(format("HALE: Five certifications. You've seen the whole sweep of it now, forest to mountain to the works on the coast.\pAnd you've seen whose name is in the footnotes."), MSGBOX_DEFAULT)
+                        msgbox(format("HALE: One place left. The Last Corridor, inland. The keystone marsh everything drains from. Where she went.\pI'll walk you to the treeline. I won't go in. This one's yours."), MSGBOX_DEFAULT)
+                        msgbox(format("HALE: Ready?"), MSGBOX_YESNO)
+                        if (var(VAR_RESULT) == 0) {
+                            msgbox(format("HALE: Take the time you need. It's kept this long."), MSGBOX_DEFAULT)
+                            release
+                            end
+                        }
+                        closemessage
+                        warp(MAP_PARCEL_MARSH, 28, 38)
+                        waitstate
+                        end
+                    }
+                    msgbox(format("HALE: Four. Forest, basin, watershed, and a mountain you couldn't save and didn't pretend to.\pThat last one's what makes a RANGER. The rest is competence."), MSGBOX_DEFAULT)
+                    msgbox(format("HALE: Take the ferry from SALTWICK. DELIBIRD ISLE first; you've earned the breather. Then up the coast to the MEREHOLT works.\pThe coast won't bother hiding what it is."), MSGBOX_DEFAULT)
+                    release
+                    end
+                }
+                msgbox(format("HALE: Three certifications. Forest, basin, watershed.\pNow the climb. Follow the river up past the clean water, to where it comes from. The high cold."), MSGBOX_DEFAULT)
+                msgbox(format("HALE: It won't be like the others. You won't get to fix this one.\pILEX is up there already, measuring how much of it is left. Go learn what 'too late' looks like, so you know it next time it isn't."), MSGBOX_DEFAULT)
+                if (!flag(FLAG_SKALDMERE_RANGER_KIT)) {
+                    msgbox(format("HALE: One more thing. The country gets rough from here. Your clearances open the hard ground now.\pField craft, not force. A deadfall across the only path, a slide of rock over a culvert, we clear those. We don't tear up a living place for fun.\pMove what has to move. Light what has to be seen."), MSGBOX_DEFAULT)
+                    setflag(FLAG_SKALDMERE_RANGER_KIT)
+                }
+                release
+                end
+            }
+            msgbox(format("HALE: Two certifications. A sick forest corridor and a sicker basin.\pThe river's next. First place you'll go that isn't already lost. There's still a window there."), MSGBOX_DEFAULT)
+            msgbox(format("HALE: Follow the channel up out of the basin. North, past the discharge, where the trees thin out. ILEX is working the bank up there.\pRead the whole river before you name any part of it."), MSGBOX_DEFAULT)
+            msgbox(format("HALE: The people on that water have even less reason to like us than the last lot. Listen anyway."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+        setvar(VAR_0x8004, 6)
+        specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+        if (var(VAR_RESULT) == 1) {
+            msgbox(format("HALE: I read it twice. I'm not going to argue with any of it.\pYou couldn't fix it."), MSGBOX_DEFAULT)
+            msgbox(format("{PLAYER}: No."), MSGBOX_DEFAULT)
+            msgbox(format("HALE: And you didn't pretend you had. That's the certification. Not the cleanup. Refusing to sign off on a lie.\pWetland Certification. Done."), MSGBOX_DEFAULT)
+            giveitem(ITEM_SUPER_POTION, 5)
+            giveitem(ITEM_PARALYZE_HEAL, 5)
+            msgbox(format("HALE: Kit's topped up. ILEX will tell you it won't just come back. Now you know that in your hands."), MSGBOX_DEFAULT)
+            setflag(FLAG_SKALDMERE_WETLAND_CERT)
+            release
+            end
+        }
+        if (flag(FLAG_SKALDMERE_FLOODBASIN_ARRIVAL)) {
+            msgbox(format("HALE: Walk it slowly. Read every stake. Talk to whoever's manning the booth.\pThen tell ILEX what you saw."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("HALE: Forest Certification. Don't get attached to praise. Get attached to results."), MSGBOX_DEFAULT)
+        msgbox(format("HALE: The wetlands are sick. North of here the forest gives out and the marsh begins; there's a fishing landing on the backwater.\pPeople up there are angry, and somebody's feeding them a story. Go listen. Document what you see. Don't argue with anyone's paycheck."), MSGBOX_DEFAULT)
+        msgbox(format("HALE: Past the landing, east, there's an old service cut through the trees. It opens onto the FLOODBASIN.\pYour exam was the warm-up. That's the work."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(format("HALE: TARN passed you. He doesn't pass people. I've seen him fail a man for standing wrong."), MSGBOX_DEFAULT)
+        msgbox(format("HALE: Forest Certification. No fanfare. That's how it should feel."), MSGBOX_DEFAULT)
+        playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
+        msgbox(format("HALE: Proper field kit. Sample vials, a flow gauge, a better headlamp, spare red cloth. And these."), MSGBOX_DEFAULT)
+        giveitem(ITEM_POKE_BALL, 10)
+        giveitem(ITEM_POTION, 5)
+        setflag(FLAG_SKALDMERE_FOREST_CERT)
+        msgbox(format("HALE: Now the wetlands. North of here the forest gives out and the marsh begins; there's a fishing landing on the backwater.\pPeople up there are angry, and somebody's feeding them a story. Go listen. Document what you see. Don't argue with anyone's paycheck."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_STATION_BRIEF)) {
+        msgbox(format("HALE: The Certification Hall is across the boulevard. TARN. Practical exam.\pGo on. I've got paperwork, and you've got a partner that needs the practice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("HALE: No welcome ceremony. We document ecological change, we interrupt exploitation, we coordinate restoration. Often without anyone's support."), MSGBOX_DEFAULT)
+    msgbox(format("HALE: We don't win. We reduce harm. We keep corridors open. We stop the worst of it."), MSGBOX_DEFAULT)
+    msgbox(format("HALE: Your mentor worked with us. Whatever happened at that lab wasn't random.\pThat's all I'll say about it today."), MSGBOX_DEFAULT)
+    msgbox(format("HALE: Here. A proper pack, a marked map, and a card stamped PROVISIONAL. This isn't ownership. It's responsibility."), MSGBOX_DEFAULT)
+    giveitem(ITEM_POKE_BALL, 5)
+    msgbox(format("HALE: The Certification Hall is across the boulevard. TARN runs the practical. Pass it and you're a provisional for real.\pThen we'll talk about the marsh."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALDMERE_STATION_BRIEF)
+    release
+    end
+}

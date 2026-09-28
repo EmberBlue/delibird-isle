@@ -1,0 +1,18 @@
+mapscripts ParcelFernwickFlats_MapScripts {
+}
+
+script ParcelFernwickFlats_Man {
+    lock
+    faceplayer
+    msgbox(format("MAN: Corps housing. Six rangers, one bathroom.\pWe reduce harm. We do not reduce queues."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickFlats_Girl {
+    lock
+    faceplayer
+    msgbox(format("GIRL: Daddy's a RANGER. He says he doesn't win, he reduces harm.\pI told him that's a weird job."), MSGBOX_DEFAULT)
+    release
+    end
+}

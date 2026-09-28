@@ -1,0 +1,16 @@
+mapscripts ParcelFernwickCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelFernwickCenter_OnTransition
+}
+
+script ParcelFernwickCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_PARCEL_FERNWICK)
+    end
+}
+
+script ParcelFernwickCenter_Trainer {
+    lock
+    faceplayer
+    msgbox(format("BOY: The nurse healed my WOOPER. Then it got sick again.\pIt's a WOOPER thing, apparently."), MSGBOX_DEFAULT)
+    release
+    end
+}

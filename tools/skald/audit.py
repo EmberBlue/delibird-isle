@@ -131,13 +131,18 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
         mid, col, elev = at(x, y)
         return col == 0
 
-    # top-layer cover on walkable tiles (our layouts only -- vanilla ones are proven)
+    # top-layer cover on walkable tiles (our layouts only -- vanilla ones are proven;
+    # a layout reworked from a vanilla base is checked only where it differs from base.bin)
     if lay["blockdata_filepath"].startswith("data/layouts/Parcel"):
+        base_path = ROOT / Path(lay["blockdata_filepath"]).parent / "base.bin"
+        base = struct.unpack(f"<{W*H}H", base_path.read_bytes()) if base_path.exists() else None
         covered = set()
         for y in range(H):
             for x in range(W):
                 mid, col, elev = at(x, y)
                 if col != 0 or mid not in tiles:
+                    continue
+                if base is not None and base[y * W + x] == words[y * W + x]:
                     continue
                 beh = tiles[mid][1]
                 if beh == 0x02 or 0x10 <= beh <= 0x19 or beh in DOOR_BEHAVIOURS:  # grass/water shimmer/doorway overlays are intended

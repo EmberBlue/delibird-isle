@@ -1,0 +1,14 @@
+mapscripts ParcelFernwickFisher_MapScripts {
+}
+
+script ParcelFernwickFisher_OldMan {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_ANNI_DONE)) {
+        msgbox(format("GRETTIR: That's TOBIN's old rod! He lent it to you? Then you're the first. Bait's on the shelf. Advice is free.\pDon't wade past the second stake. The marsh doesn't give things back."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GRETTIR: Rods, bait, marsh advice. The advice is free: don't wade past the second stake.\pThe marsh doesn't give things back."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

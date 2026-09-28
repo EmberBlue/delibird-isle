@@ -129,7 +129,18 @@
     "ParcelRoute1",
     "ParcelMistwood",
     "ParcelMeadowHut",
-    "ParcelMistwoodPost"
+    "ParcelMistwoodPost",
+    "ParcelFernwick",
+    "ParcelFernwickHQ",
+    "ParcelFernwickHall",
+    "ParcelFernwickSurvey",
+    "ParcelFernwickMart",
+    "ParcelFernwickCenter",
+    "ParcelFernwickHouse1",
+    "ParcelFernwickFisher",
+    "ParcelFernwickHouse2",
+    "ParcelFernwickFlats",
+    "ParcelFernwickHouse3"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

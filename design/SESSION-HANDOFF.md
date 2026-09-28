@@ -107,8 +107,25 @@ bridge map is retired (unreachable). Sight trainers are hidden until you have
 a partner (`FLAG_SKALD_NO_PARTNER_YET`). Field moves no longer need badges
 (`OW_FIELD_MOVES_NEED_BADGES`), Pokémon never disobey (`B_OBEDIENCE_DISABLED`).
 
-**Next:** the Station as a town with a gym building (its Hale briefing still
-assumes the old meadow order — re-voice it), then the Wetlands.
+**Done (2026-09-28): Fernwick** (`ParcelFernwick`, 40×60) — the Corps district
+town, reworked from vanilla Rustboro on the upgraded (leob) Hoenn tileset via
+`tools/skald/import_layout.py` (copy a vanilla layout, edit it in a
+`build.py` of paint ops; `tools/skald/idgrid.py` prints any layout's ids).
+Devon building = District Station (Hale's whole dispatch, re-voiced, same
+flags), gym = Certification Hall (Tarn is gym 1 here now; BADGE01 + TM03;
+Hale then signs FOREST_CERT), school = Survey office (Ilex, the Floodbasin
+filing), park + pond where the flats were, ten interiors, thirteen outdoor
+residents, the north checkpoint (Ward), Garr and Neri as trainers. Mistwood's
+arrow warps to Fernwick's south road; Fernwick connects up to the Wetlands
+(offset −4). The old `ParcelStation` map is retired (unreachable).
+
+**The recipe for every city from here:** import the closest vanilla city on
+its leob tileset, rework it in build.py (move blocks, add water/parks, close
+roads), keep primary-only tiles on connected edges, then people it.
+
+**Next:** the Wetlands and the Corridor rebuilt the same way (Route 119/120
+are the vanilla bases with the right features: long grass, water, ledges,
+wooden walkways), and Tarn's duplicate in the old Wetlands map goes then.
 
 **Earlier: Saltwick (Dock Town)** — 44×36 on `frp_general + frp_vermilion_city`,
 13 doors, 8 new interiors, 30 residents in three story states, 3 side quests,

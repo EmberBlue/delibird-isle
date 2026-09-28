@@ -1,0 +1,176 @@
+// ParcelFernwick -- FERNWICK, the Corps district town on the bluff above the
+// marsh water. Reworked from Rustboro's bones (data/layouts/ParcelFernwick/
+// build.py is the map source). The District Station (Hale) is the big
+// building on the terrace, the Certification Hall (Tarn) faces the square,
+// the Survey office is the school building. Plain voice throughout.
+
+mapscripts ParcelFernwick_MapScripts {
+}
+
+// South road -> back into Mistwood (different primary tileset: warp, not connection).
+script ParcelFernwick_ToMistwood {
+    warp(MAP_PARCEL_MISTWOOD, 14, 1)
+    waitstate
+    end
+}
+
+// --- the north checkpoint --------------------------------------------------------
+script ParcelFernwick_GateWard {
+    trainerbattle_single(TRAINER_SKALD_GATE_STATION,
+        format("WARD: Station checkpoint. Nobody goes north to the marsh without clearance.\pYou want it? Earn it."),
+        format("WARD: Cleared. Logged."),
+        ParcelFernwick_GateWard_Defeated)
+    lock
+    faceplayer
+    msgbox(format("WARD: You're in the log. Keep your card on you. The next checkpoint won't take my word for it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_GateWard_Defeated {
+    setflag(FLAG_SKALDMERE_GATE_STATION)
+    msgbox(format("WARD: Station clearance: granted. No ceremony. That's not what this is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- trainers ----------------------------------------------------------------------
+script ParcelFernwick_Lookout {
+    trainerbattle_single(TRAINER_SKALD_LOOKOUT,
+        format("GARR: Nice view from up here. You can see the whole marsh.\pYou can see who's coming, too."),
+        format("GARR: Tch."))
+    msgbox(format("GARR: Write your little report. It changes nothing out here."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelFernwick_Birder {
+    trainerbattle_single(TRAINER_SKALD_BIRDER,
+        format("NERI: Shh! I'm counting nests! ...Okay. Fine. One battle."),
+        format("NERI: Fewer nests every spring, and now fewer wins."))
+    msgbox(format("NERI: Nobody writes the nest counts down but me. Somebody should."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+// --- residents ---------------------------------------------------------------------
+script ParcelFernwick_Ranger {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("RANGER: Half the station's been called to the hearings as witnesses. The other half is covering their shifts.\pHALE's doing both."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("RANGER: District Station. HALE's inside, if you're the one he keeps mentioning.\pHe mentions you a lot, for a man who doesn't talk."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelFernwick_OldMan {
+    lock
+    faceplayer
+    msgbox(format("OLD MAN: This was a fishing village before the Corps put the station here.\pNow it's a fishing village with paperwork."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(format("WOMAN: You passed TARN's exam? He didn't smile, did he. He never smiles. I think it's a Tidewater regulation."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("WOMAN: The Certification Hall's right there. TARN runs the exams.\pHe's not as scary as the sign makes him look. He's scarier."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelFernwick_Boy {
+    lock
+    faceplayer
+    msgbox(format("BOY: I'm gonna be a RANGER when I grow up! Or a fisherman.\pOr a MEREHOLT guy. They have the best boots."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_Girl {
+    lock
+    faceplayer
+    msgbox(format("GIRL: The pond used to have POLIWAG in it! Now it just has ducks.\pWell. WINGULL. Same thing."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_Fisher {
+    lock
+    faceplayer
+    msgbox(format("FISHER: The marsh water's been low since spring. You can walk to places you used to row to.\pThat's not good, whatever the Council says."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_Scientist {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SURVEYOR: Forty years of measuring and nobody cared. Now the lawyers want the numbers by Thursday.\pWe don't have a Thursday setting."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("SURVEYOR: We measure. That's all we do. Forty years of measuring.\pILEX is inside. She'll tell you it's boring. She's lying."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelFernwick_Gentleman {
+    lock
+    faceplayer
+    msgbox(format("GENTLEMAN: MEREHOLT paid for the fountain. It says so on the fountain.\pIt says so on most things around here, if you read the small plates."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_Clerk {
+    lock
+    faceplayer
+    msgbox(format("CLERK: Day rate at the marsh works is up again. Don't ask what the work is.\pNobody asks. That's the deal."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_Mother {
+    lock
+    faceplayer
+    msgbox(format("MOTHER: My boy wants to be a RANGER. I told him RANGERS don't get paid.\pHe said that's fine, he'll be a MEREHOLT guy on weekends."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwick_ItemSuperPotion {
+    finditem(ITEM_SUPER_POTION)
+    end
+}
+
+// --- signs --------------------------------------------------------------------------
+script ParcelFernwick_HallSign {
+    msgbox(format("SKALDMERE CLIMATE CORPS\nCERTIFICATION HALL\pForest Certification: practical examination.\nExaminer: TARN, Tidewater Division."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwick_HQSign {
+    msgbox(format("SKALDMERE CLIMATE CORPS\nDISTRICT STATION\pRangers, provisionals and the public: front desk."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwick_SurveySign {
+    msgbox(format("SKALDMERE SURVEY\nDistrict office\pLong-baseline monitoring. Soil cores, water logs, repeat photography.\pWe do not issue press releases."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwick_FisherSign {
+    msgbox(format("GRETTIR'S\nRods. Bait. Marsh advice.\pThe advice is free and you won't take it."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwick_CitySign {
+    msgbox(format("FERNWICK\nDistrict seat, Saltmarsh Coast\pA smaller plate: PROMENADE AND FOUNTAIN BY THE MEREHOLT FOUNDATION."), MSGBOX_SIGN)
+    end
+}

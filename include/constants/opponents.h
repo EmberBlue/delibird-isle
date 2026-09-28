@@ -925,7 +925,11 @@
 
 #define TRAINER_SKALD_MISTWOOD_OLE        898
 
-#define TRAINERS_COUNT                      899
+#define TRAINER_SKALD_FERNWICK_CADET_A    899
+
+#define TRAINER_SKALD_FERNWICK_CADET_B    900
+
+#define TRAINERS_COUNT                      901
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS

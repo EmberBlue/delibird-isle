@@ -1,0 +1,430 @@
+{
+  "id": "MAP_PARCEL_FERNWICK",
+  "name": "ParcelFernwick",
+  "layout": "LAYOUT_PARCEL_FERNWICK",
+  "music": "MUS_RUSTBORO",
+  "region_map_section": "MAPSEC_SKALD_STATION",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PARCEL_WETLANDS",
+      "offset": -4,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_FW_WARD",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 21,
+      "y": 3,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ParcelFernwick_GateWard",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_GARR",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 5,
+      "y": 21,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelFernwick_Lookout",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_NERI",
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 9,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelFernwick_Birder",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_RANGER",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 14,
+      "y": 18,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Ranger",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_OLDMAN",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
+      "x": 24,
+      "y": 22,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_OldMan",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_WOMAN",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 30,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Woman",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_BOY",
+      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "x": 19,
+      "y": 46,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Boy",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_GIRL",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 13,
+      "y": 29,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Girl",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_FISHER",
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 10,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Fisher",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_SCIENTIST",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 26,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Scientist",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_GENT",
+      "graphics_id": "OBJ_EVENT_GFX_GENTLEMAN",
+      "x": 30,
+      "y": 44,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Gentleman",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_CLERK",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 22,
+      "y": 50,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Clerk",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_MOTHER",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
+      "x": 12,
+      "y": 52,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_Mother",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_FW_ITEM_SUPERPOTION",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 33,
+      "y": 59,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelFernwick_ItemSuperPotion",
+      "flag": "FLAG_SKALD_ITEM_STATION_BALLS"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 16,
+      "y": 58,
+      "elevation": 3,
+      "dest_map": "MAP_PARCEL_MISTWOOD",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_HQ",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_HQ",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 27,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_HALL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 34,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_SURVEY",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 16,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_CENTER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_HOUSE1",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_FISHER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 30,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_HOUSE2",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 51,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_FLATS",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FERNWICK_HOUSE3",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 59,
+      "elevation": 3,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelFernwick_ToMistwood"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_HallSign"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_HQSign"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 35,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_SurveySign"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_FisherSign"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 49,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_CitySign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 22,
+      "elevation": 3,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_SKALD_HIDDEN_FERNWICK_CANDY"
+    }
+  ]
+}

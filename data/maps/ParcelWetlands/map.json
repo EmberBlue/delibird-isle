@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_PARCEL_STATION",
-      "offset": 0,
-      "direction": "down"
-    },
-    {
       "map": "MAP_PARCEL_CORRIDOR",
       "offset": 11,
       "direction": "right"
+    },
+    {
+      "map": "MAP_PARCEL_FERNWICK",
+      "offset": 4,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -163,7 +163,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
       "script": "ParcelWetlands_GymTarn",
-      "flag": "0"
+      "flag": "FLAG_BADGE01_GET"
     }
   ],
   "warp_events": [],

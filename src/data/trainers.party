@@ -17640,3 +17640,33 @@ Level: 8
 
 Poochyena
 Level: 8
+
+=== TRAINER_SKALD_FERNWICK_CADET_A ===
+Name: SOLVI
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wooper
+Level: 11
+
+Zigzagoon
+Level: 11
+
+=== TRAINER_SKALD_FERNWICK_CADET_B ===
+Name: EGIL
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Taillow
+Level: 11
+
+Shroomish
+Level: 12

@@ -164,3 +164,9 @@ quest is built, how the peer works) before they are asked six more times.
   Route 1 with a played bridge scene and five trainers; Mistwood as a forest
   dungeon with six trainers and a snare quest that pays in Cut. Eleven
   trainers and three hand-drawn maps added (41 trainers, 37 maps).
+- **2026-09-28 — Fernwick, the first vanilla-grade city.** User verdict:
+  cities must look like the vanilla ones, big and complex; remix existing maps.
+  Response: `import_layout.py` — copy a vanilla city on its upgraded tileset
+  and rework it by script. Fernwick (from Rustboro): District Station, Hall
+  (gym 1), Survey office, park and pond, ten interiors, thirteen residents,
+  three trainers, the north checkpoint. 43 trainers, 48 maps.

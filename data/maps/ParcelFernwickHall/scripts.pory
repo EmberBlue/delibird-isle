@@ -1,0 +1,57 @@
+// ParcelFernwickHall -- the Certification Hall. Gym 1: two cadets, then
+// Tarn of the Tidewater Division. Passing sets BADGE01; Hale signs the
+// Forest Certification at the station.
+
+mapscripts ParcelFernwickHall_MapScripts {
+}
+
+script ParcelFernwickHall_Greeter {
+    lock
+    faceplayer
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(format("GREETER: You passed! Nobody passes first time. Well, somebody just did. Go tell HALE before TARN changes his mind."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GREETER: The Certification Hall! Practical exams only. Two cadets, then TARN.\pYou can't skip the cadets. I've tried."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelFernwickHall_CadetA {
+    trainerbattle_single(TRAINER_SKALD_FERNWICK_CADET_A,
+        format("SOLVI: Cadet exam, round one! Don't go easy on me. They dock points for that."),
+        format("SOLVI: Points docked."))
+    msgbox(format("SOLVI: TARN's up the back. He talks slow. Don't mistake it for kindness."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelFernwickHall_CadetB {
+    trainerbattle_single(TRAINER_SKALD_FERNWICK_CADET_B,
+        format("EGIL: I've been a cadet for three years. THREE. Let me have this one."),
+        format("EGIL: Four years, then."))
+    msgbox(format("EGIL: Go on. He's waiting. He's always waiting."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script ParcelFernwickHall_Tarn {
+    trainerbattle_single(TRAINER_SKALD_GYM1,
+        format("TARN: Tidewater Division. I examine.\pYou want the Forest Certification, provisional? Show me you can hold a line when the water's against you."),
+        format("TARN: Hm. The current's yours, then."),
+        ParcelFernwickHall_Tarn_Defeated)
+    lock
+    faceplayer
+    msgbox(format("TARN: Passed is passed. Go and see HALE. He signs; I only say whether you can fight."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHall_Tarn_Defeated {
+    setflag(FLAG_BADGE01_GET)
+    playfanfare(MUS_OBTAIN_BADGE)
+    waitfanfare
+    msgbox(format("TARN: Forest Certification, practical: passed. HALE signs the paper. I only say whether you can fight.\pYou can."), MSGBOX_DEFAULT)
+    giveitem(ITEM_TM03)
+    msgbox(format("TARN: WATER PULSE. Teach it to something. The marsh is mostly water, and most of it's against you."), MSGBOX_DEFAULT)
+    release
+    end
+}
