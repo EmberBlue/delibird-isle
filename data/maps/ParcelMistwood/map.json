@@ -212,8 +212,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 23,
-      "y": 17,
+      "x": 22,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_PARCEL_MISTWOOD_POST",
       "dest_warp_id": "0"
@@ -231,8 +231,8 @@
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 19,
+      "x": 25,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelMistwood_Board"

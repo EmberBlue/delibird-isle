@@ -223,6 +223,40 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                         ok = True; break
         if not ok:
             warn(name, f"connection {d} -> {c['map']} (offset {off}) has no aligned walkable pair")
+    # reachability: flood-fill from every entry (warp tiles, connection edges, arrow tiles);
+    # every object, warp and trigger must be reachable or adjacent to reachable ground
+    seeds = set()
+    for e in mj.get("warp_events", []):
+        seeds.add((e["x"], e["y"]))
+    for c in mj.get("connections", []) or []:
+        d = c["direction"]
+        if d in ("left", "right"):
+            x = 0 if d == "left" else W - 1
+            seeds.update((x, y) for y in range(H) if walkable(x, y))
+        else:
+            y = 0 if d == "up" else H - 1
+            seeds.update((x, y) for x in range(W) if walkable(x, y))
+    if seeds:
+        seen, stack = set(), [s for s in seeds if walkable(*s)]
+        while stack:
+            x, y = stack.pop()
+            if (x, y) in seen or not (0 <= x < W and 0 <= y < H) or not walkable(x, y):
+                continue
+            seen.add((x, y))
+            stack += [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]
+        reach = 2 if mj.get("map_type") == "MAP_TYPE_INDOOR" else 1   # clerks and nurses are talked to across a counter
+        def near(x, y):
+            return (x, y) in seen or any((x + dx * k, y + dy * k) in seen
+                                         for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)) for k in range(1, reach + 1))
+        for e in mj.get("object_events", []):
+            if not near(e["x"], e["y"]):
+                warn(name, f"object {e['local_id']} at ({e['x']},{e['y']}) is unreachable from any entrance")
+        for e in mj.get("warp_events", []):
+            if not near(e["x"], e["y"]):
+                warn(name, f"warp at ({e['x']},{e['y']}) to {e['dest_map']} is unreachable from any entrance")
+        for e in mj.get("bg_events", []):
+            if not near(e["x"], e["y"]):
+                warn(name, f"sign/hidden item at ({e['x']},{e['y']}) is unreachable from any entrance")
     sec = mj.get("region_map_section")
     if sec and sec.startswith(("MAPSEC_PARCEL", "MAPSEC_SKALD")) and sec not in fly_secs:
         warn(name, f"{sec} has no sMapHealLocations row (fly lands in Littleroot's bedroom)")
