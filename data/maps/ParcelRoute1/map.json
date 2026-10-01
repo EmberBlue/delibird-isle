@@ -254,7 +254,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 10,
+      "x": 11,
       "y": 26,
       "elevation": 3,
       "var": "VAR_TEMP_1",

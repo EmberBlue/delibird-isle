@@ -176,28 +176,28 @@ Movement_R1_PlayerOntoBridge:
 # 114 "data/maps/ParcelRoute1/scripts.pory"
 	walk_left
 # 115 "data/maps/ParcelRoute1/scripts.pory"
-	face_down
+	walk_left
 # 116 "data/maps/ParcelRoute1/scripts.pory"
+	face_down
+# 117 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 119 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_FaceLeft:
 # 120 "data/maps/ParcelRoute1/scripts.pory"
-	face_left
+Movement_R1_FaceLeft:
 # 121 "data/maps/ParcelRoute1/scripts.pory"
+	face_left
+# 122 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 124 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_FaceRight:
 # 125 "data/maps/ParcelRoute1/scripts.pory"
-	face_right
+Movement_R1_FaceRight:
 # 126 "data/maps/ParcelRoute1/scripts.pory"
+	face_right
+# 127 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 129 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_PoacherIn:
 # 130 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+Movement_R1_PoacherIn:
 # 131 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 132 "data/maps/ParcelRoute1/scripts.pory"
@@ -211,14 +211,14 @@ Movement_R1_PoacherIn:
 # 136 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 137 "data/maps/ParcelRoute1/scripts.pory"
-	face_right
+	walk_down
 # 138 "data/maps/ParcelRoute1/scripts.pory"
+	face_right
+# 139 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 141 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_Thug1In:
 # 142 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+Movement_R1_Thug1In:
 # 143 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 144 "data/maps/ParcelRoute1/scripts.pory"
@@ -230,14 +230,14 @@ Movement_R1_Thug1In:
 # 147 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 148 "data/maps/ParcelRoute1/scripts.pory"
-	face_right
+	walk_down
 # 149 "data/maps/ParcelRoute1/scripts.pory"
+	face_right
+# 150 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 152 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_Thug2In:
 # 153 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+Movement_R1_Thug2In:
 # 154 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 155 "data/maps/ParcelRoute1/scripts.pory"
@@ -247,35 +247,35 @@ Movement_R1_Thug2In:
 # 157 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 158 "data/maps/ParcelRoute1/scripts.pory"
-	face_right
+	walk_down
 # 159 "data/maps/ParcelRoute1/scripts.pory"
+	face_right
+# 160 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 162 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_Thug1ToPlayer:
 # 163 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+Movement_R1_Thug1ToPlayer:
 # 164 "data/maps/ParcelRoute1/scripts.pory"
-	walk_right
+	walk_down
 # 165 "data/maps/ParcelRoute1/scripts.pory"
 	walk_right
 # 166 "data/maps/ParcelRoute1/scripts.pory"
 	walk_right
 # 167 "data/maps/ParcelRoute1/scripts.pory"
-	face_right
+	walk_right
 # 168 "data/maps/ParcelRoute1/scripts.pory"
+	face_right
+# 169 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 171 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_Thug1Out:
 # 172 "data/maps/ParcelRoute1/scripts.pory"
-	walk_left
+Movement_R1_Thug1Out:
 # 173 "data/maps/ParcelRoute1/scripts.pory"
 	walk_left
 # 174 "data/maps/ParcelRoute1/scripts.pory"
 	walk_left
 # 175 "data/maps/ParcelRoute1/scripts.pory"
-	walk_up
+	walk_left
 # 176 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 177 "data/maps/ParcelRoute1/scripts.pory"
@@ -289,12 +289,12 @@ Movement_R1_Thug1Out:
 # 181 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 182 "data/maps/ParcelRoute1/scripts.pory"
+	walk_up
+# 183 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 185 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_PoacherOut:
 # 186 "data/maps/ParcelRoute1/scripts.pory"
-	walk_up
+Movement_R1_PoacherOut:
 # 187 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 188 "data/maps/ParcelRoute1/scripts.pory"
@@ -308,12 +308,12 @@ Movement_R1_PoacherOut:
 # 192 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 193 "data/maps/ParcelRoute1/scripts.pory"
+	walk_up
+# 194 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 196 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_Thug2Out:
 # 197 "data/maps/ParcelRoute1/scripts.pory"
-	walk_up
+Movement_R1_Thug2Out:
 # 198 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 199 "data/maps/ParcelRoute1/scripts.pory"
@@ -323,12 +323,12 @@ Movement_R1_Thug2Out:
 # 201 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 202 "data/maps/ParcelRoute1/scripts.pory"
+	walk_up
+# 203 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 205 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_HaleIn:
 # 206 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+Movement_R1_HaleIn:
 # 207 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 208 "data/maps/ParcelRoute1/scripts.pory"
@@ -336,29 +336,29 @@ Movement_R1_HaleIn:
 # 209 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 210 "data/maps/ParcelRoute1/scripts.pory"
-	face_left
+	walk_down
 # 211 "data/maps/ParcelRoute1/scripts.pory"
+	face_left
+# 212 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 214 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_HaleToPlayer:
 # 215 "data/maps/ParcelRoute1/scripts.pory"
-	walk_left
+Movement_R1_HaleToPlayer:
 # 216 "data/maps/ParcelRoute1/scripts.pory"
 	walk_left
 # 217 "data/maps/ParcelRoute1/scripts.pory"
-	face_left
+	walk_left
 # 218 "data/maps/ParcelRoute1/scripts.pory"
+	face_left
+# 219 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 221 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_HaleOut:
 # 222 "data/maps/ParcelRoute1/scripts.pory"
-	walk_right
+Movement_R1_HaleOut:
 # 223 "data/maps/ParcelRoute1/scripts.pory"
 	walk_right
 # 224 "data/maps/ParcelRoute1/scripts.pory"
-	walk_up
+	walk_right
 # 225 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 226 "data/maps/ParcelRoute1/scripts.pory"
@@ -366,12 +366,12 @@ Movement_R1_HaleOut:
 # 227 "data/maps/ParcelRoute1/scripts.pory"
 	walk_up
 # 228 "data/maps/ParcelRoute1/scripts.pory"
+	walk_up
+# 229 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 231 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_PoliwagAway:
 # 232 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+Movement_R1_PoliwagAway:
 # 233 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 234 "data/maps/ParcelRoute1/scripts.pory"
@@ -383,18 +383,18 @@ Movement_R1_PoliwagAway:
 # 237 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 238 "data/maps/ParcelRoute1/scripts.pory"
+	walk_down
+# 239 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
-# 241 "data/maps/ParcelRoute1/scripts.pory"
-Movement_R1_PoliwagAwayLater:
 # 242 "data/maps/ParcelRoute1/scripts.pory"
-	delay_16
+Movement_R1_PoliwagAwayLater:
 # 243 "data/maps/ParcelRoute1/scripts.pory"
 	delay_16
 # 244 "data/maps/ParcelRoute1/scripts.pory"
 	delay_16
 # 245 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+	delay_16
 # 246 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 247 "data/maps/ParcelRoute1/scripts.pory"
@@ -406,108 +406,110 @@ Movement_R1_PoliwagAwayLater:
 # 250 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 # 251 "data/maps/ParcelRoute1/scripts.pory"
+	walk_down
+# 252 "data/maps/ParcelRoute1/scripts.pory"
 	step_end
 
 ParcelRoute1_Poliwag::
-# 255 "data/maps/ParcelRoute1/scripts.pory"
-	lock
 # 256 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_Poliwag_Text_0, MSGBOX_DEFAULT
+	lock
 # 257 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Poliwag_Text_0, MSGBOX_DEFAULT
+# 258 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 
 ParcelRoute1_PoacherTalk::
-# 262 "data/maps/ParcelRoute1/scripts.pory"
-	lock
 # 263 "data/maps/ParcelRoute1/scripts.pory"
-	faceplayer
+	lock
 # 264 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PoacherTalk_Text_0, MSGBOX_DEFAULT
+	faceplayer
 # 265 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PoacherTalk_Text_0, MSGBOX_DEFAULT
+# 266 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 
 ParcelRoute1_Hale::
-# 270 "data/maps/ParcelRoute1/scripts.pory"
-	lock
 # 271 "data/maps/ParcelRoute1/scripts.pory"
-	faceplayer
+	lock
 # 272 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_Hale_Text_0, MSGBOX_DEFAULT
+	faceplayer
 # 273 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Hale_Text_0, MSGBOX_DEFAULT
+# 274 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 
 ParcelRoute1_Youngster::
-# 281 "data/maps/ParcelRoute1/scripts.pory"
+# 282 "data/maps/ParcelRoute1/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_ROUTE1_YOUNGSTER, ParcelRoute1_Youngster_Text_0, ParcelRoute1_Youngster_Text_1
-# 284 "data/maps/ParcelRoute1/scripts.pory"
+# 285 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Youngster_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 ParcelRoute1_Lass::
-# 289 "data/maps/ParcelRoute1/scripts.pory"
+# 290 "data/maps/ParcelRoute1/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_ROUTE1_LASS, ParcelRoute1_Lass_Text_0, ParcelRoute1_Lass_Text_1
-# 292 "data/maps/ParcelRoute1/scripts.pory"
+# 293 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Lass_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 ParcelRoute1_Birder::
-# 297 "data/maps/ParcelRoute1/scripts.pory"
+# 298 "data/maps/ParcelRoute1/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_ROUTE1_BIRDER, ParcelRoute1_Birder_Text_0, ParcelRoute1_Birder_Text_1
-# 300 "data/maps/ParcelRoute1/scripts.pory"
+# 301 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Birder_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 ParcelRoute1_Forager::
-# 305 "data/maps/ParcelRoute1/scripts.pory"
+# 306 "data/maps/ParcelRoute1/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_ROUTE1_FORAGER, ParcelRoute1_Forager_Text_0, ParcelRoute1_Forager_Text_1
-# 308 "data/maps/ParcelRoute1/scripts.pory"
+# 309 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Forager_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 ParcelRoute1_Camper::
-# 313 "data/maps/ParcelRoute1/scripts.pory"
+# 314 "data/maps/ParcelRoute1/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_ROUTE1_CAMPER, ParcelRoute1_Camper_Text_0, ParcelRoute1_Camper_Text_1
-# 316 "data/maps/ParcelRoute1/scripts.pory"
+# 317 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Camper_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
 ParcelRoute1_ItemPokeBalls::
-# 324 "data/maps/ParcelRoute1/scripts.pory"
+# 325 "data/maps/ParcelRoute1/scripts.pory"
 	finditem ITEM_POKE_BALL, 3
 	end
 
 
 ParcelRoute1_ItemRareCandy::
-# 329 "data/maps/ParcelRoute1/scripts.pory"
+# 330 "data/maps/ParcelRoute1/scripts.pory"
 	finditem ITEM_RARE_CANDY
 	end
 
 
 ParcelRoute1_ItemPotion::
-# 334 "data/maps/ParcelRoute1/scripts.pory"
+# 335 "data/maps/ParcelRoute1/scripts.pory"
 	finditem ITEM_POTION
 	end
 
 
 ParcelRoute1_Sign::
-# 339 "data/maps/ParcelRoute1/scripts.pory"
+# 340 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRoute1_NoticeBoard::
-# 344 "data/maps/ParcelRoute1/scripts.pory"
+# 345 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_NoticeBoard_Text_0, MSGBOX_SIGN
 	end
 
@@ -598,103 +600,103 @@ ParcelRoute1_BridgeScene_Text_14:
 	.string "than stare.$"
 
 ParcelRoute1_Poliwag_Text_0:
-# 256 "data/maps/ParcelRoute1/scripts.pory"
+# 257 "data/maps/ParcelRoute1/scripts.pory"
 	.string "The POLIWAG flinch, but they don't swim\n"
 	.string "off. They can't. Something's wrong with\l"
 	.string "the water upstream.$"
 
 ParcelRoute1_PoacherTalk_Text_0:
-# 264 "data/maps/ParcelRoute1/scripts.pory"
+# 265 "data/maps/ParcelRoute1/scripts.pory"
 	.string "Don't touch anything, kid.$"
 
 ParcelRoute1_Hale_Text_0:
-# 272 "data/maps/ParcelRoute1/scripts.pory"
+# 273 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HALE: The station's past the woods.\n"
 	.string "When you're ready.$"
 
 ParcelRoute1_Youngster_Text_0:
-# 282 "data/maps/ParcelRoute1/scripts.pory"
+# 283 "data/maps/ParcelRoute1/scripts.pory"
 	.string "BO: I've been standing here ALL DAY\n"
 	.string "waiting for someone to battle!$"
 
 ParcelRoute1_Youngster_Text_1:
-# 283 "data/maps/ParcelRoute1/scripts.pory"
+# 284 "data/maps/ParcelRoute1/scripts.pory"
 	.string "BO: Aw, man!$"
 
 ParcelRoute1_Youngster_Text_2:
-# 284 "data/maps/ParcelRoute1/scripts.pory"
+# 285 "data/maps/ParcelRoute1/scripts.pory"
 	.string "BO: The tall grass has WOOPER in it.\n"
 	.string "They just stare at you. It's creepy.$"
 
 ParcelRoute1_Lass_Text_0:
-# 290 "data/maps/ParcelRoute1/scripts.pory"
+# 291 "data/maps/ParcelRoute1/scripts.pory"
 	.string "IDA: Hi! Are you headed for MISTWOOD?\n"
 	.string "Battle me first!$"
 
 ParcelRoute1_Lass_Text_1:
-# 291 "data/maps/ParcelRoute1/scripts.pory"
+# 292 "data/maps/ParcelRoute1/scripts.pory"
 	.string "IDA: You're pretty good!$"
 
 ParcelRoute1_Lass_Text_2:
-# 292 "data/maps/ParcelRoute1/scripts.pory"
+# 293 "data/maps/ParcelRoute1/scripts.pory"
 	.string "IDA: The ledge is a shortcut back down.\n"
 	.string "I use it when I'm late for tea.$"
 
 ParcelRoute1_Birder_Text_0:
-# 298 "data/maps/ParcelRoute1/scripts.pory"
+# 299 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HALDEN: Look up. See that WINGULL? Now\n"
 	.string "look at mine. Mine's better.$"
 
 ParcelRoute1_Birder_Text_1:
-# 299 "data/maps/ParcelRoute1/scripts.pory"
+# 300 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HALDEN: Fine. Yours is better.$"
 
 ParcelRoute1_Birder_Text_2:
-# 300 "data/maps/ParcelRoute1/scripts.pory"
+# 301 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HALDEN: The gulls used to nest under\n"
 	.string "the bridge. Not anymore. Nobody knows\l"
 	.string "why.\p"
 	.string "Well. Somebody knows why.$"
 
 ParcelRoute1_Forager_Text_0:
-# 306 "data/maps/ParcelRoute1/scripts.pory"
+# 307 "data/maps/ParcelRoute1/scripts.pory"
 	.string "MERIT: I'm picking mushrooms. My\n"
 	.string "SHROOMISH helps. Sort of.$"
 
 ParcelRoute1_Forager_Text_1:
-# 307 "data/maps/ParcelRoute1/scripts.pory"
+# 308 "data/maps/ParcelRoute1/scripts.pory"
 	.string "MERIT: It ate half the basket anyway.$"
 
 ParcelRoute1_Forager_Text_2:
-# 308 "data/maps/ParcelRoute1/scripts.pory"
+# 309 "data/maps/ParcelRoute1/scripts.pory"
 	.string "MERIT: The woods are full of kids who\n"
 	.string "want to battle. Rangers-in-training,\l"
 	.string "they call themselves.\p"
 	.string "Same thing as kids who want to battle.$"
 
 ParcelRoute1_Camper_Text_0:
-# 314 "data/maps/ParcelRoute1/scripts.pory"
+# 315 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RUBEN: You've got the look of somebody\n"
 	.string "who just got their first POKéMON.$"
 
 ParcelRoute1_Camper_Text_1:
-# 315 "data/maps/ParcelRoute1/scripts.pory"
+# 316 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RUBEN: Yep. Called it.$"
 
 ParcelRoute1_Camper_Text_2:
-# 316 "data/maps/ParcelRoute1/scripts.pory"
+# 317 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RUBEN: There's a footbridge at the\n"
 	.string "river head. Don't hang around on it.\l"
 	.string "Long story.$"
 
 ParcelRoute1_Sign_Text_0:
-# 339 "data/maps/ParcelRoute1/scripts.pory"
+# 340 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ROUTE 1\p"
 	.string "SALTWICK -- south\n"
 	.string "MISTWOOD -- north$"
 
 ParcelRoute1_NoticeBoard_Text_0:
-# 344 "data/maps/ParcelRoute1/scripts.pory"
+# 345 "data/maps/ParcelRoute1/scripts.pory"
 	.string "SKALDMERE CLIMATE CORPS\p"
 	.string "MISTWOOD: snares have been found on\n"
 	.string "the north track. Do not touch them.\l"

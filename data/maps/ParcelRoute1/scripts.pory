@@ -112,6 +112,7 @@ script ParcelRoute1_BridgeScene {
 movement Movement_R1_PlayerOntoBridge {
     walk_left
     walk_left
+    walk_left
     face_down
     step_end
 }
