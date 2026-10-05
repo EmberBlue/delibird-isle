@@ -153,6 +153,8 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
             warn(name, f"walkable metatiles with top-layer art (player drawn under): {sorted(covered)}")
 
     for e in mj.get("object_events", []):
+        if e.get("script") == "Common_EventScript_PkmnCenterNurse":
+            warn(name, f"object {e['local_id']} uses the shared nurse routine directly; wrap it (set VAR_0x800B, call, waitbuttonpress, release)")
         x, y = e["x"], e["y"]
         if not (0 <= x < W and 0 <= y < H):
             warn(name, f"object {e['local_id']} out of bounds ({x},{y})"); continue

@@ -363,6 +363,8 @@ bool8 CheckForTrainersWantingBattle(void)
 
     if (FlagGet(OW_FLAG_NO_TRAINER_SEE))
         return FALSE;
+    if (CalculatePlayerPartyCount() == 0)
+        return FALSE;
 
     gNoOfApproachingTrainers = 0;
     gApproachingTrainerId = 0;

@@ -1,6 +1,8 @@
 Common_EventScript_PkmnCenterNurse::
 	lock
 	faceplayer
+	getpartysize
+	goto_if_eq VAR_RESULT, 0, EventScript_PkmnCenterNurse_NoPokemon
 	setvar VAR_0x8004, 0
 	specialvar VAR_RESULT, CountPlayerTrainerStars
 	goto_if_eq VAR_RESULT, 4, EventScript_PkmnCenterNurse_GoldCard
@@ -11,6 +13,12 @@ Common_EventScript_PkmnCenterNurse::
 
 EventScript_PkmnCenterNurse_Goodbye::
 	message gText_WeHopeToSeeYouAgain
+	return
+
+@ The heal machine places one ball per party member and never finishes with
+@ an empty party; Skaldmere lets you reach a Center before your first POKéMON.
+EventScript_PkmnCenterNurse_NoPokemon::
+	message gText_PkmnCenterNurse_NoPokemon
 	return
 
 @ VAR_0x8004 is 1 when player has Gold Card; jumps are identical

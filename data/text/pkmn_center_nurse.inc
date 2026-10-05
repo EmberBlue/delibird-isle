@@ -1,3 +1,11 @@
+gText_PkmnCenterNurse_NoPokemon::
+	.string "Hello, and welcome to\n"
+	.string "the POKéMON CENTER.\p"
+	.string "Oh! You don't have any POKéMON\n"
+	.string "with you.\p"
+	.string "Come back once you have a partner,\n"
+	.string "okay?$"
+
 gText_WouldYouLikeToRestYourPkmn::
 	.string "Hello, and welcome to\n"
 	.string "the POKéMON CENTER.\p"

@@ -65,6 +65,28 @@ movement Movement_PlayerFaceUp {
     step_end
 }
 
+// North exit: Route 1 has grass and trainers, so nobody leaves without a partner.
+script ParcelMeadow_NeedPartner {
+    if (flag(FLAG_SYS_POKEMON_GET)) {
+        setvar(VAR_TEMP_2, 1)
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("RIN: WREN! Hold on!\pYou can't go up the route without a partner. The grass out there is full of wild POKéMON!"), MSGBOX_DEFAULT)
+    msgbox(format("RIN: Go say hi to somebody first. Walk up to one and stand still. That's the whole trick."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_MeadowPushBack)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+movement Movement_MeadowPushBack {
+    walk_down
+    step_end
+}
+
 script ParcelMeadow_Rin {
     lock
     faceplayer

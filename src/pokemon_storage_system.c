@@ -1559,7 +1559,13 @@ static void Task_PCMainMenu(u8 taskId)
             DestroyTask(taskId);
             break;
         default:
-            if (task->tInput == OPTION_WITHDRAW && CountPartyMons() == PARTY_SIZE)
+            if (CountPartyMons() == 0)
+            {
+                FillWindowPixelBuffer(0, PIXEL_FILL(1));
+                AddTextPrinterParameterized2(0, FONT_NORMAL, COMPOUND_STRING("You don't have any POKéMON with you."), 0, NULL, TEXT_COLOR_DARK_GRAY, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY);
+                task->tState = STATE_ERROR_MSG;
+            }
+            else if (task->tInput == OPTION_WITHDRAW && CountPartyMons() == PARTY_SIZE)
             {
                 // Can't withdraw
                 FillWindowPixelBuffer(0, PIXEL_FILL(1));

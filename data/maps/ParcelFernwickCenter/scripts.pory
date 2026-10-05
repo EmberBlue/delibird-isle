@@ -7,6 +7,15 @@ script ParcelFernwickCenter_OnTransition {
     end
 }
 
+script ParcelFernwickCenter_Nurse {
+    setvar(VAR_0x800B, LOCALID_FC_NURSE)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    end
+}
+
 script ParcelFernwickCenter_Trainer {
     lock
     faceplayer
