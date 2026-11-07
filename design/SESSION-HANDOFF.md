@@ -140,8 +140,13 @@ out of sight lines and treat "reached the battle screen" as the pass.
 - `ParcelStation` and `ParcelBridge` are retired (unreachable); delete when
   nothing references them. The old Delibird summit-mouth pocket at (3–6,3–4)
   is sealed (cosmetic).
-- The notebook UI / survey action (§10) is still signposts; the §13 fixes
-  **E** (notebook) and the Weather station post-game move are open.
+- The **Field Notebook** is a Key Item now (`ITEM_FIELD_NOTEBOOK`, given in
+  Hale's first brief): Assignment (where the story wants you next, from
+  Hale's own flag logic), Certifications, Side work, Margins (Heron's
+  marginalia, one line per clearance, plus the player's own line after the
+  finale). Pages are built in `src/survey_scripting.c` (`SkaldNotebookBuffer`)
+  and shown by `data/scripts/skald_notebook.pory`. The **survey action** at
+  red-cloth points (§13 fix E's other half) is still signposts.
 - Vanilla trainers 0–861 still exist in the data (unreachable); ids are
   pinned, `MAX_TRAINERS_COUNT` 2048 must not move.
 - Title screen, "they" pronouns, `Parcel*` folder names (placeholders; the

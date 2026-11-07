@@ -1852,6 +1852,10 @@ const u16 gItemIconPalette_PowderJar[] = INCBIN_U16("graphics/items/icon_palette
 const u32 gItemIcon_WailmerPail[] = INCBIN_U32("graphics/items/icons/wailmer_pail.4bpp.lz");
 const u16 gItemIconPalette_WailmerPail[] = INCBIN_U16("graphics/items/icon_palettes/wailmer_pail.gbapal");
 
+// Skaldmere
+const u32 gItemIcon_FieldNotebook[] = INCBIN_U32("graphics/items/icons/field_notebook.4bpp.lz");
+const u16 gItemIconPalette_FieldNotebook[] = INCBIN_U16("graphics/items/icon_palettes/field_notebook.gbapal");
+
 const u32 gItemIcon_PokeRadar[] = INCBIN_U32("graphics/items/icons/poke_radar.4bpp.lz");
 const u16 gItemIconPalette_PokeRadar[] = INCBIN_U16("graphics/items/icon_palettes/poke_radar.gbapal");
 

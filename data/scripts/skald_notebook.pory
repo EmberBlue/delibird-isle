@@ -1,0 +1,31 @@
+// The Field Notebook (ITEM_FIELD_NOTEBOOK): used from the bag anywhere in the
+// field (src/item_use.c -> ItemUseOnFieldCB_FieldNotebook). Four pages, each
+// built into gStringVar4 by SkaldNotebookBuffer (src/survey_scripting.c):
+// the assignment, the certifications, the side work, the margins.
+script Skald_EventScript_FieldNotebook {
+    lockall
+    do {
+        multichoice(0, 0, MULTI_SKALD_NOTEBOOK, FALSE)
+        switch (var(VAR_RESULT)) {
+            case 0:
+                setvar(VAR_0x8004, 0)
+                special(SkaldNotebookBuffer)
+                msgbox(gStringVar4, MSGBOX_DEFAULT)
+            case 1:
+                setvar(VAR_0x8004, 1)
+                special(SkaldNotebookBuffer)
+                msgbox(gStringVar4, MSGBOX_DEFAULT)
+            case 2:
+                setvar(VAR_0x8004, 2)
+                special(SkaldNotebookBuffer)
+                msgbox(gStringVar4, MSGBOX_DEFAULT)
+            case 3:
+                setvar(VAR_0x8004, 3)
+                special(SkaldNotebookBuffer)
+                msgbox(gStringVar4, MSGBOX_DEFAULT)
+        }
+    } while (var(VAR_RESULT) < 4)
+    closemessage
+    releaseall
+    end
+}

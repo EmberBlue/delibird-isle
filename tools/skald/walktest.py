@@ -51,6 +51,7 @@ def main():
     ap.add_argument("--dismiss", type=int, default=360, help="frames of B-mashing after each segment (a long scene needs ~1500)")
     ap.add_argument("--flag", action="append", default=[], help="FLAG_X to set before the new game (up to 5, repeatable)")
     ap.add_argument("--check", action="append", default=[], help="FLAG_X or VAR_X to print at the end")
+    ap.add_argument("--item", help="ITEM_X to put in the bag before the new game")
     a = ap.parse_args()
     syms, maps = symbols(), map_ids()
     flags = constants("include/constants/flags.h", "FLAG_", constants("include/constants/opponents.h", ""))   # system flags count up from MAX_TRAINERS_COUNT
@@ -85,6 +86,8 @@ def main():
     core.memory.u16[probe] = (group << 8) | num; core.memory.u16[probe + 2] = sx; core.memory.u16[probe + 4] = sy
     for i, f in enumerate(a.flag):
         core.memory.u16[probe + 6 + 2 * i] = flags[f]
+    if a.item:
+        core.memory.u16[probe + 20] = constants("include/constants/items.h", "ITEM_")[a.item]
     step(a.settle - 4400)
     def dismiss(frames):           # mash B: closes any scene text, harmless otherwise
         for f in range(0, frames, 45): presses[frame + f] = ("B", 8)
@@ -98,6 +101,10 @@ def main():
                 step(8, "A"); step(37)
         elif d.upper() == "WAIT":   # WAIT:n -- just mash B for n frames (a long scene, a chained warp sequence)
             dismiss(int(n)); continue
+        elif d.upper() == "TAP":    # TAP:KEY -- one tap (menus: TAP:START, TAP:DOWN, TAP:A, TAP:R ...), no dismiss phase
+            step(8, n.upper()); step(40); continue
+        elif d.upper() == "IDLE":   # IDLE:n -- wait n frames with no input (menu fades, text printing)
+            step(int(n)); continue
         else:
             step(16 * int(n) + 12, d.upper()); step(30)
         dismiss(a.dismiss)          # a trigger's text, a leave prompt, an arrival on the other side

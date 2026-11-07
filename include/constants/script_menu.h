@@ -125,6 +125,7 @@
 #define MULTI_BERRY_PLOT                   114
 #define MULTI_SKALD_MANIFEST               115
 #define MULTI_SKALD_FERRY                  116
+#define MULTI_SKALD_NOTEBOOK               117
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

@@ -771,6 +771,23 @@ static void ItemUseOnFieldCB_Berry(u8 taskId)
     DestroyTask(taskId);
 }
 
+// Skaldmere: the Field Notebook opens its pages as a script (the pages are
+// built by SkaldNotebookBuffer in src/survey_scripting.c).
+extern const u8 Skald_EventScript_FieldNotebook[];
+
+static void ItemUseOnFieldCB_FieldNotebook(u8 taskId)
+{
+    LockPlayerFieldControls();
+    ScriptContext_SetupScript(Skald_EventScript_FieldNotebook);
+    DestroyTask(taskId);
+}
+
+void ItemUseOutOfBattle_FieldNotebook(u8 taskId)
+{
+    sItemUseOnFieldCB = ItemUseOnFieldCB_FieldNotebook;
+    SetUpItemUseOnFieldCallback(taskId);
+}
+
 void ItemUseOutOfBattle_WailmerPail(u8 taskId)
 {
     if (TryToWaterSudowoodo() == TRUE)

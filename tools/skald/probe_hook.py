@@ -5,9 +5,9 @@
   python3 tools/skald/probe_hook.py --off    # remove it again before committing
 
 The hook adds an EWRAM array (gProbe) the harness pokes before the new game
-starts: [0] map id, [1] x, [2] y, [3..7] flags to set, and WarpToTruck writes
-back [8] = offset of SaveBlock1.flags, [9] = offset of SaveBlock1.vars so the
-harness can read flags and vars by name. Every added line carries the marker
+starts: [0] map id, [1] x, [2] y, [3..7] flags to set, [10] an item to put in
+the bag, and WarpToTruck writes back [8] = offset of SaveBlock1.flags,
+[9] = offset of SaveBlock1.vars so the harness can read flags and vars by name. Every added line carries the marker
 "TEMP TEST ONLY"; `grep -c "TEMP TEST" src/new_game.c` must be 0 in a commit.
 """
 import sys
@@ -27,6 +27,8 @@ HOOK = f"""    if (gProbe[0] != 0) {MARK}: tools/skald/walktest.py pokes gProbe 
                 FlagSet(gProbe[i]); {MARK}
         gProbe[8] = (u16)((u8 *)gSaveBlock1Ptr->flags - (u8 *)gSaveBlock1Ptr); {MARK}
         gProbe[9] = (u16)((u8 *)gSaveBlock1Ptr->vars - (u8 *)gSaveBlock1Ptr); {MARK}
+        if (gProbe[10] != 0) {MARK}
+            AddBagItem(gProbe[10], 1); {MARK}
     }} {MARK}
     else {MARK}
 """

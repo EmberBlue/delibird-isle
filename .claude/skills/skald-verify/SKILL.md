@@ -89,7 +89,12 @@ before the new game, so any later state is one spawn away (the ending:
 LEFT:2 --walk WAIT:9000`); `--check FLAG_X|VAR_X` prints flags and vars at
 the end (the hook writes the save-block offsets back into `gProbe[8..9]`).
 `--walk A:n` taps A n times (answers YES to a prompt; pair with `--dismiss
-0` so the B-mash doesn't answer NO first).
+0` so the B-mash doesn't answer NO first). Menus: `--item ITEM_X` puts an
+item in the bag before the new game; `TAP:KEY` is one tap with no B-mash
+(TAP:START, TAP:A, TAP:LEFT wraps the bag to Key Items), `IDLE:n` waits n
+frames with no input (the bag fades in ~120 frames; a text page prints in
+~300). The notebook was driven this way: START, A, LEFT, A (select), A
+(USE), then the multichoice.
 A trigger scene fired mid-segment eats the rest of that segment: walk onto
 the trigger as its own `--walk DIR:1` with `--dismiss 1800` (a page of text
 prints in ~300 frames; the default 360 only clears a one-liner), then

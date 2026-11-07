@@ -12691,6 +12691,26 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_DevonScope,
     },
 
+    // Skaldmere: Dr. Heron's field notebook, the player's from the Station
+    // brief on. Use it anywhere in the field: the assignment, the
+    // certifications, the side quests, and the margins that decode as the
+    // clearances come in (data/scripts/skald_notebook.pory).
+    [ITEM_FIELD_NOTEBOOK] =
+    {
+        .name = _("Field Notebook"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Her notebook, then\n"
+            "yours. The work,\n"
+            "written down."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_FieldNotebook,
+        .iconPic = gItemIcon_FieldNotebook,
+        .iconPalette = gItemIconPalette_FieldNotebook,
+    },
+
     [ITEM_BASEMENT_KEY] =
     {
         .name = _("Basement Key"),

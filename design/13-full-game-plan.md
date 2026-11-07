@@ -216,3 +216,13 @@ quest is built, how the peer works) before they are asked six more times.
   ids) and Perrin asks for one more at his desk. The whole sequence was
   walked headlessly and traced frame by frame. Open: the notebook UI (fix
   E), post-epilogue resident lines, the Weather station move, volume.
+- **2026-11-07 (the notebook) — fix E, the half that fits.** The Field
+  Notebook is a Key Item (`ITEM_FIELD_NOTEBOOK`, its own icon, given in
+  Hale's first brief): a four-page menu built in C from the story flags --
+  the Assignment (Hale's own briefing logic, so it always says where the
+  story wants you next), the Certifications and clearances, the Side work
+  (twelve quests with open/done), and the Margins (Heron's marginalia, one
+  line unlocking per clearance, the player's own line after the finale).
+  Driven headlessly through the bag with the harness's new TAP/IDLE
+  segments and `--item`. The Survey action at red-cloth points remains
+  signposts.

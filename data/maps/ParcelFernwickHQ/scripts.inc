@@ -50,8 +50,12 @@ ParcelFernwickHQ_Hale::
 # 124 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Hale_Text_32, MSGBOX_DEFAULT
 # 125 "data/maps/ParcelFernwickHQ/scripts.pory"
-	setflag FLAG_SKALDMERE_STATION_BRIEF
+	giveitem ITEM_FIELD_NOTEBOOK
 # 126 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Hale_Text_33, MSGBOX_DEFAULT
+# 127 "data/maps/ParcelFernwickHQ/scripts.pory"
+	setflag FLAG_SKALDMERE_STATION_BRIEF
+# 128 "data/maps/ParcelFernwickHQ/scripts.pory"
 	release
 	end
 
@@ -475,6 +479,15 @@ ParcelFernwickHQ_Hale_Text_31:
 
 ParcelFernwickHQ_Hale_Text_32:
 # 124 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "HALE: And this came care of the\n"
+	.string "Station, addressed to you, in her hand.\l"
+	.string "Nobody's opened it.\p"
+	.string "Her field notebook. Keep it on you. Read\n"
+	.string "it when you can; it'll tell you where you\l"
+	.string "are.$"
+
+ParcelFernwickHQ_Hale_Text_33:
+# 126 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "HALE: The Certification Hall is across\n"
 	.string "the boulevard. TARN runs the practical.\l"
 	.string "Pass it and you're a provisional for\l"

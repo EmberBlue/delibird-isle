@@ -121,6 +121,8 @@ script ParcelFernwickHQ_Hale {
     msgbox(format("HALE: Your mentor worked with us. Whatever happened at that lab wasn't random.\pThat's all I'll say about it today."), MSGBOX_DEFAULT)
     msgbox(format("HALE: Here. A proper pack, a marked map, and a card stamped PROVISIONAL. This isn't ownership. It's responsibility."), MSGBOX_DEFAULT)
     giveitem(ITEM_POKE_BALL, 5)
+    msgbox(format("HALE: And this came care of the Station, addressed to you, in her hand. Nobody's opened it.\pHer field notebook. Keep it on you. Read it when you can; it'll tell you where you are."), MSGBOX_DEFAULT)
+    giveitem(ITEM_FIELD_NOTEBOOK)
     msgbox(format("HALE: The Certification Hall is across the boulevard. TARN runs the practical. Pass it and you're a provisional for real.\pThen we'll talk about the marsh."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_STATION_BRIEF)
     release

@@ -292,6 +292,7 @@ gSpecials::
 	def_special DoSoftReset
 	def_special GameClear
 	def_special SkaldGameClear
+	def_special SkaldNotebookBuffer
 	def_special MoveElevator
 	def_special ShowGlassWorkshopMenu
 	def_special SpawnCameraObject

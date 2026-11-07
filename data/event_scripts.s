@@ -582,6 +582,7 @@ gStdScripts_End::
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"
+	.include "data/scripts/skald_notebook.inc"
 	.include "data/scripts/new_game.inc"
 	.include "data/scripts/hall_of_fame.inc"
 

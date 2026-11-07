@@ -66,3 +66,25 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 4. Every coord/bg event elevation 0; arrival scenes on the ON_FRAME table;
    re-point any ferry/Hale/summit warps that land on the rebuilt map.
 5. `audit.py`, build, TEMP-spawn screenshot, revert the spawn, commit.
+
+## Adding a key item (the Field Notebook is the template)
+1. `include/constants/items.h`: a new id before `ITEMS_COUNT`, bump the count.
+2. `src/data/items.h`: the entry (`POCKET_KEY_ITEMS`, `.importance = 1`,
+   `.type = ITEM_USE_FIELD`, `.fieldUseFunc = ItemUseOutOfBattle_X`).
+3. Icon: a 24×24 **4-bit** indexed PNG in `graphics/items/icons/` (Pillow:
+   `im.save(path, bits=4)`, index 0 transparent) and a JASC `.pal` (CRLF)
+   in `graphics/items/icon_palettes/`; declare both in
+   `src/data/graphics/items.h` (INCBIN) **and** `include/graphics.h` (extern)
+   or the items table fails to compile.
+4. `src/item_use.c` + `include/item_use.h`: the Berry pattern --
+   `sItemUseOnFieldCB = CB; SetUpItemUseOnFieldCallback(taskId);` and the CB
+   does `LockPlayerFieldControls(); ScriptContext_SetupScript(Script);
+   DestroyTask(taskId);`.
+5. The script can live in `data/scripts/<name>.pory` (the Makefile compiles
+   every .pory under data/); add `.include "data/scripts/<name>.inc"` to
+   `data/event_scripts.s`. Dynamic text: a special fills `gStringVar4`
+   (`msgbox(gStringVar4, MSGBOX_DEFAULT)` works); a menu is a
+   `MULTI_*` id in `include/constants/script_menu.h` + a `MenuAction` list
+   and a `MULTICHOICE(...)` row in `src/data/script_menu.h`.
+6. Give it in a script with `giveitem(ITEM_X)`; verify through the bag with
+   the walk test (`--item`, TAP/IDLE segments; see skald-verify).
