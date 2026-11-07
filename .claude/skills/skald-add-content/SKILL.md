@@ -47,3 +47,22 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   git creds, push small TEXT files via mcp github push_files (binaries cannot
   ride it — document recipes in design/PENDING-LOCAL-COMMITS.md instead).
 - Save-compat note for users: same .gba filename+folder keeps the .sav.
+
+## Rebuilding a zone from a vanilla layout (the 2026-11 recipe)
+1. Copy or row-slice the vanilla `map.bin` into `data/layouts/<Zone>/base.bin`
+   (+ its `border.bin`), set width/height/tilesets in `layouts.json`, and
+   write `build.py` (paint ops on raw ids; `paste_*` helpers for blocks from
+   other layouts of the same tileset pair; the General house ids 8–34 with
+   door 33; canopy 199 for trees). Run it; `layoutascii.py` to plan;
+   `render_map.py` to look.
+2. Trainer classes/pics must be Hoenn's (`Swimmer M`, `Tuber F`,
+   `Ruin Maniac`, `Pokemon Ranger F`, `Pokemon Breeder M`); `newtrainer.py`
+   allocates ids. Keep the level curve: Fernwick 11–16, Reedmere 10–16,
+   Corridor 14–19, Floodbasin 15–22, Elvsund 20–26, Haukfell 23–29, Delibird
+   28–32, Coast 27–35, Station 32–38, Marsh 36–42.
+3. Gym leaders in the field are trigger gates (see Mirren/Breen/Vale):
+   `trainerbattle_no_intro` inside the scene, then the badge, the HM, and a
+   step aside. Leaders indoors are talk battles (Tarn, Sluice, Vane).
+4. Every coord/bg event elevation 0; arrival scenes on the ON_FRAME table;
+   re-point any ferry/Hale/summit warps that land on the rebuilt map.
+5. `audit.py`, build, TEMP-spawn screenshot, revert the spawn, commit.

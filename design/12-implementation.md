@@ -529,3 +529,29 @@ When a system lands:
 3. Update the RAM-budget table with the measured delta from the build's
    memory-region report.
 4. If the bible changed in flight, note the design § that drove the change.
+
+
+## World graph as built (2026-11-07)
+
+Outdoor zones, their vanilla bases and connections. Interiors hang off each.
+
+| Zone (map) | In-game name | Base | Enters from | Leaves to |
+|---|---|---|---|---|
+| ParcelIsle | Saltwick | hand-drawn (frp_vermilion) | — | up → Meadow (offset 10); ferries |
+| ParcelMeadow | Holding Meadow | hand-drawn | down → Isle | up → Route 1 |
+| ParcelRoute1 | Route 1 | hand-drawn | down → Meadow | up → Mistwood |
+| ParcelMistwood | Mistwood | hand-drawn (frp_viridian_forest) | down → Route 1 | arrow warp → Fernwick (14,1) |
+| ParcelFernwick | Fernwick | Rustboro (leob_rustboro) | triggers → Mistwood | up → Wetlands (offset 3); HQ warp → Marsh |
+| ParcelWetlands | Reedmere | Route 119 rows 72–139 (Fortree) | down → Fernwick (−3) | right → Corridor (2) |
+| ParcelCorridor | Hollowbend Spur | Route 116 (leob_rustboro) | left → Wetlands (−2) | up → Floodbasin (65) |
+| ParcelFloodbasin | the Floodbasin / Leirvik | Route 120 (Fortree) | down → Corridor (−65) | up → River (−25), rubble (HM06) |
+| ParcelRiver | Elvsund | Route 117 ⊕ Mauville + painted farm & river | down → Floodbasin (5) | up → Highlands (30) |
+| ParcelHighlands | Haukfell | Route 115 + Route 114 falls (leob_fallarbor) | down → River (−30) | — (summit) |
+| ParcelDelibird | Delibird Isle | hand-drawn (AzaleaTown) | ferry | summit mouth → Cavern (16,10) |
+| ParcelCavern | Crystal Cavern | Shoal Cave ice room | script warp | ladder trigger → Delibird (8,4) |
+| ParcelCoast | Mereholt Coast | Slateport City | ferry → quay (30,55) | aide → Boardroom; ferry home |
+| ParcelWeather | Climate Station | Route 119 rows 0–35 | ferry → bridge (9,34) | ferry home |
+| ParcelMarsh | the Last Corridor | Route 119 rows 36–71 | Hale's warp → (37,27) | east-edge trigger → Fernwick (11,16) |
+
+Connection offsets follow `connected_coord = this_coord − offset`; the audit
+checks an aligned walkable pair and compatible elevations on every edge.

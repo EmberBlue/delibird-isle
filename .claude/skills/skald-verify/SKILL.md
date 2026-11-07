@@ -58,3 +58,20 @@ frames prove nothing about sprite visibility.
   walkable; animated doors (98) are solid.
 - The primary needs `InitTilesetAnim_FrpGeneral` as its callback or water shows
   static garbage; the vanilla General animator corrupts FR art.
+
+## Lessons from the 2026-11 rebuilds (check these too)
+- **Black tiles in-game or in the renderer = palette, not data.** The
+  leob_general 2×2 trees (468–477) only have a palette under leob_*
+  secondaries. Fill with canopy 199 elsewhere; prefer `gTileset_leob_rustboro`
+  over vanilla Rustboro.
+- **A trigger that never fires = elevation.** Coord/bg events match the
+  player's elevation unless the event's elevation is 0. Use 0 everywhere
+  (`audit.py` warns). Painted ground must match its neighbours' elevation or
+  the player is blocked; connection edge tiles at 0 bridge two levels.
+- **Arriving by warp onto a trigger tile does not fire it.** Use
+  `MAP_SCRIPT_ON_FRAME_TABLE [VAR_TEMP_1, 0: Script]` for arrival scenes.
+- **Audit seeds:** maps entered only by script warps need their arrival tile
+  in `ARRIVALS` inside `audit.py`, or every object reads as unreachable.
+- Fresh container: `python3 -m pip install --break-system-packages mgba pillow`
+  (not `pip3`). Capture timing: 16 frames per tile plus a few for the turn;
+  if a screenshot shows no dialogue, the walk fell one tile short.

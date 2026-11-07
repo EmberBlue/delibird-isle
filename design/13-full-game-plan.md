@@ -170,3 +170,24 @@ quest is built, how the peer works) before they are asked six more times.
   and rework it by script. Fernwick (from Rustboro): District Station, Hall
   (gym 1), Survey office, park and pond, ten interiors, thirteen residents,
   three trainers, the north checkpoint. 43 trainers, 48 maps.
+- **2026-11-07 — every zone rebuilt vanilla-grade; the game has its shape.**
+  User verdict: "finish the game, don't ask questions." Response, in one
+  session: Reedmere (Route 119 south; the Poisoned Waters event on
+  chokepoint triggers, Dorsey's ribbon, Gunnar's quest), the Corridor on
+  Route 116 (a stream cut through the rock, Mirren's trigger gate, the
+  Flash adit, the crew hut), the Floodbasin on Route 120 (Leirvik and
+  Dorsey's relief line — his first set piece, structural fix A), Elvsund as
+  a Route 117 / Mauville composite (market day, the six-voice water meeting
+  — fix C's multi-voice scene — Harland's boat at night, Sluice in the
+  Water Board office, Dell's lure quest), Haukfell on Route 115 with Route
+  114's waterfall (the slide you clear with Rock Smash and Strength, the
+  warming centre, Vale's gate, the bore), the Coast on Slateport (the quay,
+  the fish market, the cannery, the plaque in the office, a shift on the
+  boat), the Climate Station and the Marsh on Route 119's north halves (Vane
+  upstairs; Aune's unavoidable audit, Heron's confession as a played battle,
+  **the Hollis choice asked out loud** — fix F's missing beat), the Cavern
+  on the Shoal Cave ice room. Dorsey now appears in zones 2, 3 and 4 (fix
+  B). 96 trainers added (137 total), 33 maps added (78 total), ~14k words
+  added (~29k total). All eight zones re-voiced plain. Remaining: volume
+  (fix G and the 1,000-trainer target), the notebook UI (fix E), credits
+  and the post-game (fix F's tail).

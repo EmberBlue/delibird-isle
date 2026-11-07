@@ -2,11 +2,9 @@
 
 > **Purpose:** the *live state* a new session can't get from the durable docs.
 > The durable docs carry the structure; this carries the moment. Last updated
-> 2026-09-25, end of the session that set the full-game targets (§13:
-> 100k+ words, 1,000+ trainers, 100+ maps), built the map pipeline
-> (`tools/skald/`), and shipped Saltwick — the dock town rebuilt by hand on
-> the FireRed harbour tileset with 8 new interiors and ~4,000 words.
-> **If this note disagrees with reality, reality wins — update or delete it.**
+> 2026-11-07, end of the "finish the game" session that rebuilt every outdoor
+> zone on vanilla layouts and re-voiced the whole game in the plain Pokémon
+> register. **If this note disagrees with reality, reality wins.**
 
 ## The 60-second orientation
 
@@ -14,301 +12,116 @@ You are continuing **delibird-isle** (working title *Skaldmere*), an
 ecology-first Pokémon Emerald romhack (pokeemerald-expansion). Read order:
 
 1. `CLAUDE.md` (auto-loaded) — build/test/screenshot commands + gotchas.
-2. `design/README.md` → `design/00-canon-lock.md` → the bible (§01–§12).
-3. **`design/12-implementation.md`** — the "what exists in code" record and
-   the hard-won build gotchas. Trust it over this note for anything
-   structural, **except** its "map graph" subsection, which still describes
-   the original 8–11 maps and an 864-trainer ceiling — both long stale (see
-   "What's playable" below for the real numbers; the per-zone history is in
-   the appendix at the bottom of this file until §12 absorbs it).
+2. `design/README.md` → `design/00-canon-lock.md` → the bible (§01–§13).
+3. **`design/12-implementation.md`** — what exists in code and the build
+   gotchas; its "world graph" section (added this session) is the map of
+   the game as built.
 4. The git log on **`claude/emerald-romhack-planning-T2LgQ`** (the working
-   branch). Commit messages carry the reasoning.
+   branch). Every rebuild commit explains its choices.
 
 **First command of every session:** `git branch --show-current`. Web
-containers re-provision onto `claude/wizardly-noether-znwom5` (the Trainer
-Builder branch — see below). If you are there, run
-`git fetch origin claude/emerald-romhack-planning-T2LgQ && git checkout claude/emerald-romhack-planning-T2LgQ`
-before touching anything. This bit us three times in one session.
+containers re-provision onto `claude/wizardly-noether-znwom5`. If you are
+there: `git fetch origin claude/emerald-romhack-planning-T2LgQ && git checkout claude/emerald-romhack-planning-T2LgQ`.
 
-## What's playable right now
+## What's playable right now (the whole arc, end to end)
 
-**The main story is complete, end to end.** Prologue (ferry) → forest → basin
-→ river → highlands → Delibird Isle (interlude) → Industrial Coast → the Last
-Corridor climax (Dr. Heron) → Hale's summons → the marsh → the coast aide →
-the **Cordelia boardroom coda** (the last main-line beat) → a post-finale
-reaction pass over the cast (Rin, Hale, Ilex, Hollis, Harland, Dorsey, the
-Delibird elder). The CI run on the branch tip is **green** (build + the
-Skaldmere test families).
+Saltwick (dock town) → the Holding Meadow (seven partners) → Route 1 (the
+bridge scene) → Mistwood (the forest dungeon, Cut) → **Fernwick** (Corps
+district town, gym 1 Tarn) → **Reedmere** (the backwater landing: Harland,
+Dorsey's ribbon, the Poisoned Waters event, Voss) → **the Corridor /
+Hollowbend Spur** (the culvert scene, Mirren's gate = gym 2/Flash, the adit)
+→ **the Floodbasin / Leirvik** (Dorsey's relief line, the bridge tells,
+Kole, Breen's gate = gym 3/Rock Smash) → **Elvsund** (the River: market day,
+the water meeting in the hall, Harland's boat at night, Sluice = gym
+4/Strength in the Water Board office, Ilex signs the Watershed cert) →
+**Haukfell** (the Highlands: the slide, Vale's gate = gym 5/Surf, Hollis at
+the bore, Ilex's band, Hale's witness cert at the summit, the waterfall for
+later) → by ferry from Saltwick: **Delibird Isle** (+ the Crystal Cavern:
+Kelda, the everfrost) and the **Mereholt Coast** (the quay, the fish market,
+the cannery, the plaque, Hollis's tea, Harland = gym 6/Fly) and the
+**Climate Station** (Vane = gym 7/Dive) → Hale walks you from Fernwick to
+**the Last Corridor** (the Marsh: Aune's gate, Heron's confession and
+battle, the Hollis choice, the final survey, Hale's coda) → the coast aide
+→ the **boardroom coda** → the post-finale reaction pass.
 
-- **21 maps**: 12 outdoor zones (Isle/dock town, Bridge, Station, Wetlands,
-  Corridor, Floodbasin, River, Highlands, Delibird, Coast, Marsh, Weather)
-  + 9 interiors (ferry cabin, lodging, lab, Pokémon Center, **Station Hall**,
-  **two Isle houses**, the **Mereholt boardroom**, the Crystal Cavern).
-- **30 Skald trainers**: 7 numbered certification leaders (GYM1–6, GYM8),
-  the 4 Weather-station leaders + the Director, 4 Mereholt gate battles
-  (Station / Isle / Cavern / Marsh), Heron, Cordelia, and the route trainers.
-  Early route trainers are still thin (1–2 mons); the leaders run 3–4.
-- **6 HM traversal gates** (Cut, Rock Smash, Strength, Surf, Waterfall,
-  Flash) are real obstacles; HM sources exist for all six.
-- **Region map + Fly** work for every custom MAPSEC (13 rows in
-  `src/region_map.c` `sMapHealLocations`; Delibird/Coast/Weather have their
-  own heal spots, the mainland zones fly to the dock town).
-- **Cheat start**: debug menu (`R+START`) → Scripts → **Script 1** gives all
-  badges/certs, the PokéNav, HM01–08, ¥100k, and a field crew with the HMs
-  pre-learnt: Dodrio (Fly), Linoone (Cut/Rock Smash/Strength/Flash),
-  Azumarill (Surf/Waterfall/Dive). `data/scripts/debug.inc`.
-- Systems: survey classifier (5 certifications, 4 states seen), DNS,
-  wild tables on every route, shops, healing, item pickups.
-- Two project skills: `.claude/skills/skald-verify` (freeze/warp/tile
-  audits) and `.claude/skills/skald-add-content` (map/NPC/trainer recipe).
+**Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~29,400 words
+of dialogue, 137 Skald trainers (gyms 1–7 + 4 Mereholt gates + Heron +
+Cordelia + the Weather four + ~115 route/town trainers), seven field HMs
+wired as real traversal, 8 Skald map sections on the region map with heal
+spots at Saltwick, Fernwick, Elvsund, Delibird, the Coast and the Station.
+The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the
+*shape* of the game is now right; the remaining gap is volume.
 
-## THE thing to know: the user's verdict on the maps
+## THE recipe (every zone was built this way; keep using it)
 
-The user has played the build and the feedback is blunt and correct: the
-world reads as *"a trick room of wide boring areas that all look the same."*
-Every outdoor zone except Delibird is a generated `build_*.py` field on the
-same `General + leob_dewford` tileset pair, far too large for its content
-(Isle 83×60, River 84×44, Floodbasin 72×44, Corridor 70×20, Highlands 64×56,
-Coast 64×44, Marsh 56×48, Station 50×40, Wetlands 50×44, Weather 48×40).
-Generated fills are **no longer acceptable** — the user asked for manual
-design, and the rebuild must be visible in screenshots, not just green in CI.
-
-**The reference workflow is the Delibird village**
-(`tools/maptools/build_delibird.py`): a 30×26 ASCII drawing where every
-character is one tile and scripted-entity anchors are letters; the script
-asserts anchors unique/walkable, writes `map.bin`, and prints the
-coordinates you flow into `map.json` and the scripts. Read that file before
-drawing anything else. Zone identity comes from tileset pairing too —
-Delibird is on `JohtoGeneral + AzaleaTown`; the other pairings wired in
-`src/data/tilesets/headers.h` are unused and waiting. The user can also open
-any map in Porymap locally (same file format) and push the result back.
-
-**The pipeline (use it, don't rebuild it):** `tools/skald/newmap.py` scaffolds
-and registers a map; `tools/skald/draw.py <canvas.txt>` builds `map.bin` from
-an ASCII drawing + a legend (stamps for buildings, anchors for scripted
-entities, door coordinates printed); `tools/skald/audit.py` is the whole
-skald-verify playbook automated (run it before every commit);
-`tools/skald/newtrainer.py` allocates ids; `tools/skald/tileascii.py` shows
-any tile as text. Worked example: `data/layouts/ParcelIsle/canvas.txt`.
-
-**Done (2026-09-26): the opening rebuilt as a Pokémon opening, in the plain
-voice.** Saltwick re-voiced (people talk; scenes are played). North gate →
-the **Holding Meadow** (`ParcelMeadow`): Rin meets you, seven edge species
-live there, stand still by one and it picks you — any of Doduo/Shroomish/
-Seedot/Lotad/Carvanha/Numel/Electrike, level 5. → **Route 1**
-(`ParcelRoute1`, 30×48): river down the west side, plank bridge at its head
-where the Poliwag/poacher/Hale scene now plays on screen with a real battle
-(RAT), ledges, two grass fields, five trainers, a Cut pocket. → **Mistwood**
-(`ParcelMistwood`, 30×44, Viridian-Forest style): galleries and dead ends,
-six trainers, three snared Pokémon to free for Warden Skeld at the ranger
-post, who pays in HM01 Cut; the deadfall at the north exit needs it; the
-arrow tile warps to the Station's west edge (and back by trigger). The old
-bridge map is retired (unreachable). Sight trainers are hidden until you have
-a partner (`FLAG_SKALD_NO_PARTNER_YET`). Field moves no longer need badges
-(`OW_FIELD_MOVES_NEED_BADGES`), Pokémon never disobey (`B_OBEDIENCE_DISABLED`).
-
-**Done (2026-09-28): Fernwick** (`ParcelFernwick`, 40×60) — the Corps district
-town, reworked from vanilla Rustboro on the upgraded (leob) Hoenn tileset via
-`tools/skald/import_layout.py` (copy a vanilla layout, edit it in a
-`build.py` of paint ops; `tools/skald/idgrid.py` prints any layout's ids).
-Devon building = District Station (Hale's whole dispatch, re-voiced, same
-flags), gym = Certification Hall (Tarn is gym 1 here now; BADGE01 + TM03;
-Hale then signs FOREST_CERT), school = Survey office (Ilex, the Floodbasin
-filing), park + pond where the flats were, ten interiors, thirteen outdoor
-residents, the north checkpoint (Ward), Garr and Neri as trainers. Mistwood's
-arrow warps to Fernwick's south road; Fernwick connects up to the Wetlands
-(offset −4). The old `ParcelStation` map is retired (unreachable).
-
-**The recipe for every city from here:** import the closest vanilla city on
-its leob tileset, rework it in build.py (move blocks, add water/parks, close
-roads), keep primary-only tiles on connected edges, then people it.
-
-**Next:** the Wetlands and the Corridor rebuilt the same way (Route 119/120
-are the vanilla bases with the right features: long grass, water, ledges,
-wooden walkways), and Tarn's duplicate in the old Wetlands map goes then.
-
-**Earlier: Saltwick (Dock Town)** — 44×36 on `frp_general + frp_vermilion_city`,
-13 doors, 8 new interiors, 30 residents in three story states, 3 side quests,
-harbour fishing. **Next, one zone per pass, same recipe:**
-1. **Saltmarsh routes** out of Saltwick: the preserve gate north (fence at
-   (20–22,2)) is the hook for a coastal route; the bridge east stays.
-2. The Station and its route (`ParcelStation` 50×40 → a real station village).
-3. Wetlands/Corridor, then Coast (`frp_island_harbor`), Highlands (rock),
-   forest zones (`frp_viridian_forest`).
-Each zone: settlement + routes + interiors + 10–20 residents × 3 states +
-20–25 trainers + side quests. Trainers are the biggest gap (30 of 1,000).
-
-Model note: Fable 5 was available and did the prose this session. The old
-"hybrid" rule (structure on any model, prose strings left as
-`// PROSE-TBD: <intent>`) still applies whenever it isn't.
+1. **Pick a vanilla base** and slice/compose it: `data/layouts/<Zone>/base.bin`
+   is a copy or row-slice of a vanilla `map.bin` (Route 119 south half →
+   Reedmere, Route 116 → the Corridor, Route 120 → the Floodbasin, Route
+   117 over Mauville → Elvsund, Route 115 + Route 114's waterfall → Haukfell,
+   Slateport → the Coast, Route 119 north halves → the Station and the
+   Marsh, the Shoal Cave ice room → the Cavern). `build.py` beside it is the
+   map source: paint ops with raw ids, `paste_*` for blocks, the General
+   house (ids 8–34, door 33) for any small building, canopy 199 for tree
+   fills. **Never use the 2×2 Hoenn tree blocks (468–477) outside the
+   leob_* secondaries — they render black (no palette) under Fortree,
+   vanilla Rustboro, Mauville.** Render first: `tools/maptools/render_map.py`
+   (needs `python3 -m pip install pillow` on a fresh container).
+2. **Plan on text:** `python3 tools/skald/layoutascii.py LAYOUT_X [--rows a-b] [--ids]`.
+3. **Objects/scripts** by hand (map.json via a python dict; `scripts.pory`
+   plain voice: uppercase names, no narrator, no "You feel…"). Scenes that
+   must not be skippable live on **trigger lines across a chokepoint** or
+   on an **ON_FRAME table** when the player arrives by warp. Gym leaders in
+   the field are **trigger gates** (Mirren, Breen, Vale, Kelda) or
+   buildings (Tarn, Sluice, Vane).
+4. **Every coord/bg event uses elevation 0** (wildcard) — the audit enforces
+   it. Connection edge tiles get elevation 0 where levels differ.
+5. `python3 tools/skald/audit.py` before every commit (reachability is
+   seeded from warps, connections, door thresholds and the script-warp
+   arrival list; water counts on the Surf-era maps).
+6. Build → **TEMP spawn** (`src/new_game.c` `SetWarpDestination(... MAP_PARCEL_X ..., x, y); // TEMP TEST ONLY`)
+   → `tools/screenshot/capture.py` (new game: START@4500 A@4700 A@4900, B
+   every 70 frames to 8000, capture ≥8600; walking: 16 frames per tile + a
+   few for the turn) → **revert the spawn** (`grep -c "TEMP TEST" src/new_game.c` = 0) → commit.
 
 ## Known-open (honest list)
 
-- **Endgame chain not playtested in an emulator** (Station → Hale → Marsh →
-  Coast aide → boardroom → reactions). Build+test clean, every coord trigger
-  audited for re-fire, but nobody has walked it. Do this with Script 1 before
-  more endgame edits; the `trainerbattle_single`-from-`TRAINER_TYPE_NONE`
-  pattern (Heron, Director, Cordelia) is the thing to confirm.
-- Early trainers thin; `design/trainers-guide.md` has the recipe.
-- Vanilla Rayquaza title screen; "they" pronouns not wired; `Parcel*` map
-  names still placeholders (§01 naming pass); cave/snow tilesets deferred.
-- §12 "map graph" / trainer-ceiling subsection needs reconciling with the
-  numbers above.
-
-## The loop (so you don't relearn it)
-
-Build `make tools && make -j$(nproc) modern`. Test `make check DEBUG=0
-TESTS="<prefix>"` (prefixes: Survey, Cert, Meadow, DNS, Floodbasin; baseline
-4 inherited battle-test fails, 0 ours). After editing any `map.bin`,
-`map.json`, `.pory` or tileset binary:
-`rm build/modern-debug/data/{maps,map_events,event_scripts}.o build/modern-debug/src/tilesets.o`
-or the INCBINs go stale. See it: `bash tools/screenshot/setup.sh` once, then
-`tools/screenshot/capture.py --frames N --press KEY@FRAME:HOLD` (new game:
-`START@4500 A@4700 A@4900`, then **mash B, not A**, every ~130 frames; use
-savestates to reach deep maps). `grep -c "TEMP TEST" src/new_game.c` must
-be 0 before commit.
+- **Volume.** 137 trainers vs the 1,000 target; ~29k words vs 100k. The
+  cheapest next wins: a trainer-dense optional area per zone (a "Corps
+  field exam" tower, the old Weather gauntlet style), more residents in
+  three story states per town, and side quests (2–4 per zone; Gunnar's
+  Surskit count and Dell's lure are the templates).
+- **Not playtested end to end in an emulator** since the rebuilds: each zone
+  was screenshot-checked at its arrival and one scene; the gym gates fire;
+  the Floodbasin relief line fires. Walk the whole game with Script 1
+  (debug menu → Scripts) when there is time; the connection offsets and
+  the ferry/Hale warps were audited, not walked.
+- `ParcelStation` and `ParcelBridge` are retired (unreachable); delete when
+  nothing references them. The old Delibird summit-mouth pocket at (3–6,3–4)
+  is sealed (cosmetic).
+- The notebook UI / survey action (§10) is still signposts; the §13 fixes
+  **E** (notebook) and the Weather station post-game move are open.
+- Vanilla trainers 0–861 still exist in the data (unreachable); ids are
+  pinned, `MAX_TRAINERS_COUNT` 2048 must not move.
+- Title screen, "they" pronouns, `Parcel*` folder names (placeholders; the
+  in-game names are the real ones: Saltwick, Fernwick, Reedmere, Hollowbend
+  Spur, Leirvik, Elvsund, Haukfell, Mereholt Coast, the Climate Station).
 
 ## Top gotchas from this session (full list in §12)
 
-- **Coord triggers must set their guard var on *every* exit path**, including
-  early `end`s — otherwise the trigger re-fires every frame and the game
-  freezes in place. This was the Wetlands poison trigger *and* the Corridor
-  culvert. `skald-verify` audits it.
-- **`MAX_TRAINERS_COUNT` is pinned at 2048 (raised once, deliberately, 2026-09-25; old saves died) and must not move again**:
-  `SYSTEM_FLAGS = TRAINER_FLAGS_START + MAX_TRAINERS_COUNT`, so changing it
-  shifts every system flag and corrupts existing saves (that was the
-  "freezes in some places" bug). `TRAINERS_COUNT` can grow to 2047 freely.
-- **Metatile layering:** cells 0–3 → BG3, 4–7 → BG2 (under sprites), 8–11 →
-  BG1 (**covers** sprites). A walkable tile with art in cells 8–11 hides the
-  player (the bridge-deck bug). `gTileset_General` binds
-  `data/tilesets/primary/leob_general/` — `primary/general/` is a ghost
-  directory; patching it does nothing.
-- **Free-flag check:** grep the existing `FLAG_UNUSED_0x…` name outside
-  `flags.h` before claiming it — vanilla scripts still reference low ones
-  (0x20–0x23), and 0x1AC is Deoxys. Claimed this session: 0x68, 0xE9,
-  0x1AA, 0x1AB, 0x1DA.
-- Fly to a MAPSEC with no `sMapHealLocations` row lands in Littleroot's
-  bedroom (map 0,0). Add the row when you add a MAPSEC.
-- Spawning directly via `WarpToTruck` for a test leaves the avatar invisible
-  until the first warp — cosmetic, not a bug.
-- If git credentials vanish mid-session, the GitHub MCP `push_files` can
-  carry text files (not binaries); regenerate `map.bin` from its builder on
-  the other side instead of shipping it. Never `rebase --skip` your way out —
-  that silently dropped whole commits once (recovered from the reflog).
-
-## Trainer Builder (the "shiny trainers app")
-
-Lives on branch `claude/wizardly-noether-znwom5` under `tools/trainer-builder/`
-(`trainer-builder.html` is the single-file build; `build.py` regenerates it
-from `src/`). It was **never hosted anywhere** — no Pages workflow, no
-artifact; the user downloads the HTML from the private repo and opens it
-locally. Publish only if asked.
-
-## Immediate menu (the user picks)
-
-**Read `design/13-full-game-plan.md` first** — the audit (15k words of
-dialogue, 30 trainers, ~4 h of content) and the phased plan to a 15–20 h game.
-The menu below is that plan's phases 0 and 1.
-
-1. **Dock Town rebuilt by hand** (ASCII drawing, town scale, harbour identity,
-   enterable houses) — the stated next step.
-2. **Endgame playtest** in the emulator via Script 1, fix what breaks.
-3. **Trainer depth pass** for the early route trainers.
-4. **§12 reconciliation** + the §01 naming pass (real town/zone names).
-
----
-
-## Appendix — per-zone build history (kept until §12 absorbs it)
-
-> Older bullets below describe HMs as *reframed ranger tools* ("Lamp"/"Winch")
-> and the gyms/HMs as an *open fork*. That is no longer the design: the user
-> chose **traditional gyms + HMs**, it is built and shipped (§00's amended
-> "No gyms" lock). The ranger-tool bullets are historical record only.
-
-- **Traditional gyms + HMs — BUILT (the fork, resolved).** The user chose real
-  gyms and real HMs over the ranger-tools reframe. Now live:
-  - **12-leader ladder** on the engine's 8-badge + HM spine, *reframed* as
-    Ranger Certifications + Mereholt clearances (§00 amended): 8 certification
-    leaders (Tarn/Mirren/Breen/Sluice/Vale/Harland/Vane/Ilex) each grant the HM
-    they authorize, + 4 clearance gatekeepers (Ward/Moore/Kelda/Aune) on the
-    water. Parties in `trainers.party`; IDs 875–885.
-  - **All six field moves wired as real traversal**: **Cut** deadfall sealing
-    the Corridor's west road (forces Tarn's HM01); **Rock Smash** rubble
-    sealing the Floodbasin→River channel (forces Breen's HM06); **Flash**
-    (Cavern `requires_flash` + the Delibird summit mouth gates on `MOVE_FLASH`);
-    **Strength** (the Cavern "winch" is now a real `EventScript_StrengthBoulder`
-    over an everfrost cache); **Surf** (a surfable thaw-pond + reward islet in
-    the Highlands, HM03 from Vale right there); **Waterfall** (a real climb on
-    the Highlands headwall, vanilla Route124 tiles, PP Max at the crest).
-    Each chokepoint was decoded from `map.bin` to prove a full seal + a reachable
-    HM source first — no soft-locks. Hale's "we don't cut, we don't smash"
-    briefing reconciled to license the field work while keeping the ethos.
-  - **Custom Skaldmere archipelago region map** + 13 per-zone MAPSECs, and a
-    **Dock Town ferry hub** (a clean destination menu, routes open by cert).
-- **The Cordelia boardroom coda** — `ParcelBoardroom` off the Coast quay;
-  an aide summons the player post-testimony; Cordelia's Lady-class
-  photo-neutral roster (`TRAINER_SKALD_CORDELIA` 886); Hollis's no-second-cup
-  closer. `FLAG_SKALDMERE_CORDELIA_DONE` 0x1AA. Followed by the post-finale
-  reaction pass (Dorsey back at the landing, Harland, Ilex, Rin, Hollis×2,
-  the Delibird elder + festival texture, `FLAG_SKALD_DEL_GIFT_SQUARE` 0x1AB).
-- **The Ranger-tools + the Crystal Cavern** (historical). `ParcelCavern`
-  (40×36, §09's Crystal Cavern): an icy grotto under the Delibird Isle summit
-  with a Strength boulder clearing a fallen ice-jam to a reward (NeverMeltIce
-  + 2 Rare Candy), a quiet §09 beat, and rarer Ice encounters
-  (Snorunt/Sneasel/Glalie, Walrein/Lapras on water). Flags 0x45–0x47. The
-  cave "walls" are forest tiles (a true cave/snow tileset is deferred art).
-- **The weather-division gauntlet.** `ParcelWeather` (48×40) — the Mereholt
-  Climate Station: four climatologists who each command a weather (RAIN
-  Pelipper/Ludicolo/Kingdra · SUN Ninetales/Tropius/Camerupt · SAND
-  Cacturne/Flygon/Tyranitar · ICE Sealeo/Glalie/Walrein) + the DIRECTOR (Vane)
-  who commands all four. Clear the four (sight battles), the Director gates on
-  all four defeated, beat him for the four weather rocks. Reached by the
-  dock-town captain's **third ferry route** (gated on the Coastal cert).
-  Trainers 870–874; flags 0x43–0x44.
-- **Chapter 7 — The Last Corridor (zone 8), THE CLIMAX.** `ParcelMarsh`
-  (56×48): the dying keystone freshwater marsh, warped in from the Station
-  (Hale walks you to the treeline, gated on the Coastal cert). The Poliwag
-  keystone at the stream mouth; four tells in `VAR_SKALDMERE_CH7_EVIDENCE`.
-  **Dr. Heron** found alive in exile, the full reveal (coerced via the double
-  leash; Hollis the hand), a grounded battle that IS the conversation
-  (`TRAINER_SKALD_HERON` 869 — Politoed/Quagsire/Pelipper), "finish it," the
-  survey as the final credential (`SkaldmereClassifyCorridor` → COLLAPSING,
-  tested), the choice to testify with maximum collateral, clear-eyed grief.
-  Flags 0x3F–0x42 + var 0x40A1.
-- **Chapter 6 — the Industrial Coast (zone 7).** `ParcelCoast` (64×44): a
-  working harbour (cannery + Mereholt office, the overfished sea to the east,
-  Harland's boat at the quay), reached by **ferry** (second route, gated
-  behind `FLAG_SKALDMERE_DELIBIRD_ARRIVAL`). Survey reads **COLLAPSING**
-  (`SkaldmereClassifyCoast`, tested — a live trophic cascade). Beats: **the
-  collaboration reveal** (the Board's "sustainable harvest" model is Dr.
-  Heron's methods in her own hand) and **Harland's arc home**; Hollis Aune's
-  kindest threat; Hale signs the **Coastal Certification**. Flags 0x3A–0x3E,
-  var 0x409D.
-- **Trainers for zones 4–6:** `TRAINER_SKALD_ANGLER` (River),
-  `TRAINER_SKALD_SURVEYOR` (Highlands), `TRAINER_SKALD_REVELER` (Delibird
-  Isle). IDs 866–868. Parties omit moves (trainerproc auto-fills level-up
-  moves — always learnset-valid).
-- **Chapter 5 — Delibird Isle (zone 6), the interlude** — NOT a cert zone.
-  §09 adapted to a playable Holiday Village where the give-vs-take thesis is
-  a literal **gift economy**. Reached by **ferry** (gated on
-  `FLAG_SKALDMERE_HIGHLAND_CERT`; `warp` both ways). Beats: the elder's
-  storm-relief **delivery quest** → a free **Delibird** + a Ranger
-  commendation; a gift NPC; the thaw made playable; thaw signs; the Foundation
-  festival banner. Encounters: Delibird/Stantler/Snorunt/Sneasel + Lapras on
-  the surf. Flags 0x31–0x35, 0x37–0x39. (Now hand-drawn at 30×26 on
-  `JohtoGeneral + AzaleaTown`; the gift square and warming hut exist.)
-  **GOTCHA:** `0x36` is TestTown's — low `FLAG_UNUSED` must be grep-verified.
-- **Chapter 4 — the Highlands (zone 5).** The tonal turn: the first zone that
-  reads **SHIFTED** (`SkaldmereClassifyHighlands`, tested) — witness, not
-  repair. `ParcelHighlands` (64×56), connected **up** from the River. Six
-  tells feed `VAR_SKALDMERE_CH4_EVIDENCE`; **Ilex** measures the shrinking
-  cold band, **Hollis Aune** is the warm sincere mask, **Hale signs the
-  Highland Certification at the summit**. Flags 0x2E–0x30, var 0x409B.
-- **Chapter 3 — the River & Farmland (zone 4).** `ParcelRiver` (84×44)
-  connects **up** from the Floodbasin. Survey reads **STRESSED**
-  (`SkaldmereClassifyRiver`, tested). Four tells + the Water-Board mask +
-  Harland feed `VAR_SKALDMERE_CH3_EVIDENCE`; **Ilex signs the Watershed
-  Certification in the field**. Flags 0x2B–0x2D, var 0x4091. The
-  riparian-engineer keystone species stays OPEN (§06).
-- **Chapters 0–2** (prologue, forest certification, the Floodbasin): see
-  §12 "Skaldmere content built" — that part of §12 is accurate.
+- **Palettes:** the leob_general primary's 2×2 trees only have a palette
+  under the leob_* secondaries. Use canopy 199 elsewhere, and target
+  `gTileset_leob_rustboro` rather than vanilla Rustboro when a map only
+  uses a few secondary tiles.
+- **Elevation:** coord/bg events match the player's elevation unless the
+  event's is 0; Route 120's hamlet ground is elevation 5. Painted paths must
+  match neighbours; connection edges need a 0 tile between levels.
+- **Arrival by warp onto a trigger tile does not fire it** — use the
+  ON_FRAME table (the Coast, Marsh, Station, Cavern all do).
+- Trainer classes must be Hoenn's: `Swimmer M/F`, `Tuber M/F`, `Ruin Maniac`
+  (no `Scientist`), pics `Pokemon Ranger M/F`, `Pokemon Breeder M/F`.
+- `MUS_ROUTE111` does not exist; `MUS_ROUTE113` / `MUS_ROUTE119` / `MUS_ROUTE120` do.
+- The region-map constants and names are generated from
+  `src/data/region_map/region_map_sections.json` — never edit
+  `include/constants/region_map_sections.h`.
+- A fresh container needs `python3 -m pip install --break-system-packages mgba pillow`
+  (plain `pip3` targets another interpreter).
