@@ -1,0 +1,16 @@
+mapscripts ParcelCoastHouse2_MapScripts {
+}
+script ParcelCoastHouse2_Skipper {
+    lock
+    faceplayer
+    msgbox(format("SKIPPER: Sold the boat to the lending company the year the dredge came. Took the money. Bought this house. Best decision I ever made and I've never forgiven myself for it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastHouse2_Wife {
+    lock
+    faceplayer
+    msgbox(format("WIFE: He stands at the window and watches the boats go out. Forty years he went out. Now he watches. Watching's harder, he says."), MSGBOX_DEFAULT)
+    release
+    end
+}

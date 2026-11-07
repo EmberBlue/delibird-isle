@@ -1,0 +1,16 @@
+mapscripts ParcelCoastHouse1_MapScripts {
+}
+script ParcelCoastHouse1_Woman {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: My husband's on the cannery line, my son's on the boats, my daughter's at the FOUNDATION desk. Three wages, one crest. If it goes, we go with it. That's not loyalty. That's arithmetic."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastHouse1_Boy {
+    lock
+    faceplayer
+    msgbox(format("BOY: I'm going to be a diver! GYDA says there's nothing down there to see. I'll see it anyway."), MSGBOX_DEFAULT)
+    release
+    end
+}

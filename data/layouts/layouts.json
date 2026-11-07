@@ -4554,10 +4554,10 @@
     {
       "id": "LAYOUT_PARCEL_COAST",
       "name": "ParcelCoast_Layout",
-      "width": 64,
-      "height": 44,
+      "width": 40,
+      "height": 60,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/ParcelCoast/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCoast/map.bin"
     },

@@ -172,8 +172,8 @@
     {
       "id": "HEAL_LOCATION_PARCEL_COAST",
       "map": "MAP_PARCEL_COAST",
-      "x": 38,
-      "y": 38
+      "x": 19,
+      "y": 20
     },
     {
       "id": "HEAL_LOCATION_PARCEL_WEATHER",

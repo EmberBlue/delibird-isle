@@ -1,0 +1,34 @@
+// ParcelCoastHearing -- the quota hearing hall (the Battle Tent lobby). Closed
+// between seasons; in session once the testimony has landed.
+mapscripts ParcelCoastHearing_MapScripts {
+}
+script ParcelCoastHearing_Clerk {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CLERK: The hearing's in session. They read a CORPS filing into the record this morning. Parts of it twice.\pThe review board wants the author. I told them the author was a RANGER. They said that's not a title. I said no, it isn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("CLERK: Quota hearings are seasonal. Next session after the harvest. Objections in writing, to the Board. The Board reads them. The Board's very good at reading."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastHearing_Waiter1 {
+    lock
+    faceplayer
+    msgbox(format("FISHER: I've sat in this chair every season for nine years. Nine objections. I keep the carbon copies. Nobody else has them."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastHearing_Waiter2 {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: My husband's boat was grounded for an undersize catch. The size changed the week before. Nobody told the fish."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastHearing_Notice {
+    msgbox(format("QUOTA REVIEW BOARD -- members: MEREHOLT COASTAL HOLDINGS (3), the FOUNDATION (2), the Union (1), the Council (1). Quorum: four. The Union seat has been vacant for two years."), MSGBOX_SIGN)
+    end
+}

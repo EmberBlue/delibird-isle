@@ -1,0 +1,9 @@
+mapscripts ParcelCoastHouse3_MapScripts {
+}
+script ParcelCoastHouse3_Clerk {
+    lock
+    faceplayer
+    msgbox(format("CLERK: I file the catch logs at the coast office. I could tell you the exact day the numbers started going down. I won't. I like my flat. It has a view of the harbour."), MSGBOX_DEFAULT)
+    release
+    end
+}

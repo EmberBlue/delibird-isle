@@ -1,0 +1,39 @@
+// ParcelCoastOffice1F -- the Mereholt Foundation coast office, ground floor:
+// the public exhibit. The plaque is CH6 bit 4, and the reveal: the Board's
+// "sustainable harvest" model is Dr. Heron's methods, in Heron's hand.
+mapscripts ParcelCoastOffice1F_MapScripts {
+}
+script ParcelCoastOffice1F_Reception {
+    lock
+    faceplayer
+    msgbox(format("RECEPTION: Welcome to the MEREHOLT FOUNDATION. The exhibit is free. Ms. AUNE is upstairs; she's expecting a RANGER. Do take a brochure."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastOffice1F_Visitor {
+    lock
+    faceplayer
+    msgbox(format("MAN: I come in for the warm. They don't mind. The model on the wall's very clever. I don't understand a word of it and there's fewer fish every year, so I suppose it's working."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastOffice1F_Plaque {
+    lock
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE)
+    setvar(VAR_0x8004, 4)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The plaque. In the notebook, with the name underlined twice."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("SUSTAINABLE HARVEST FRAMEWORK -- MEREHOLT COASTAL FISHERIES. Yield curves. Age-class diagrams. The recovery model that governs every quota on this coast.\pSmall, at the bottom: after the methods of DR. E. HERON, with thanks."), MSGBOX_SIGN)
+    msgbox(format("The hand in the diagrams is the hand in the notebook's margins. The same abbreviations. The same way of drawing a food web with the keystone circled.\pShe was never silenced. She is the citation. Written down."), MSGBOX_SIGN)
+    special(SkaldmereCertTaskMark)
+    release
+    end
+}
+script ParcelCoastOffice1F_Model {
+    msgbox(format("A scale model of the harbour under glass. Tiny boats. A tiny cannery. The sea painted the blue it used to be. No urchins in the model."), MSGBOX_SIGN)
+    end
+}

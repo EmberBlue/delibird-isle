@@ -1,0 +1,32 @@
+// ParcelCoastOffice2F -- Hollis Aune's office. The kindest threat in the game.
+mapscripts ParcelCoastOffice2F_MapScripts {
+}
+script ParcelCoastOffice2F_Hollis {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
+        msgbox(format("HOLLIS: The conservation programme is being restructured. Her word. I typed the memo myself. I still type well.\pYou'll want to know whether I'd do it again. So do I, RANGER. So do I."), MSGBOX_DEFAULT)
+        msgbox(format("HOLLIS: No tea today. There's nowhere left to put the kindness."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("HOLLIS: The tea's still on, RANGER. The offer with it. Think about how you write it. That's all I ever ask."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("HOLLIS: RANGER. Sit. You've been thorough; the whole coast, I hear. Good. Thoroughness is rare. Two cups, I don't need to ask."), MSGBOX_DEFAULT)
+    msgbox(format("HOLLIS: I'll be direct, since you've earned direct. Your survey will be read. By the Board, by the press, by the people who fund what recovery there is out there.\pAnd the model they trust, the one keeping this coast working at all, has one name on it."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: …DR. HERON's."), MSGBOX_DEFAULT)
+    msgbox(format("HOLLIS: I would hate for one unmeasured word from you to undo her life's work. For her to be remembered as the scientist whose model failed, instead of the one whose science is the only reason there's a fishery left to argue about."), MSGBOX_DEFAULT)
+    msgbox(format("HOLLIS: So think about how you write it. For her sake. That's the whole of what I'm asking.\pIt's very good tea. Drink it while it's hot."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastOffice2F_Secretary {
+    lock
+    faceplayer
+    msgbox(format("SECRETARY: Ms. AUNE sees everyone. Fishers, mayors, RANGERS. She remembers how they take their tea. She remembers everything. It's why they sent her."), MSGBOX_DEFAULT)
+    release
+    end
+}

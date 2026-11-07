@@ -1,0 +1,28 @@
+// ParcelCoastCannery -- the Mereholt cannery floor. Two shifts a day. The fish stop; the cannery doesn't.
+mapscripts ParcelCoastCannery_MapScripts {
+}
+script ParcelCoastCannery_Foreman {
+    lock
+    faceplayer
+    msgbox(format("FOREMAN: Mind the line. We're at half speed; there's not the fish to run it full. Head office says run it anyway. So we run it. Water's cheap."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastCannery_Line {
+    lock
+    faceplayer
+    msgbox(format("WORKER: Every fish I gut's the same size. Used to be you'd get a big one and the whole line would stop to look. Nobody's stopped in a year."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastCannery_Inspector {
+    lock
+    faceplayer
+    msgbox(format("INSPECTOR: Quota compliance. Every landing weighed, every weight logged, every log to the coast office. The numbers are perfect. I check them myself.\pWhat the numbers add up to isn't my department."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastCannery_Board {
+    msgbox(format("QUOTA BOARD. This month: 41 tonnes landed, 40 tonnes permitted. Over by one. A note in red: ROUNDING. Last year's board, under it: 112 tonnes."), MSGBOX_SIGN)
+    end
+}

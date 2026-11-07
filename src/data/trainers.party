@@ -18694,3 +18694,216 @@ Level: 24
 
 Piloswine
 Level: 26
+
+=== TRAINER_SKALD_COAST_BRAGE ===
+Name: BRAGE
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machoke
+Level: 28
+
+Pelipper
+Level: 28
+
+=== TRAINER_SKALD_COAST_FROD ===
+Name: FROD
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tentacruel
+Level: 29
+
+Sharpedo
+Level: 29
+
+=== TRAINER_SKALD_COAST_GYDA ===
+Name: GYDA
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wailmer
+Level: 28
+
+Tentacool
+Level: 28
+
+Pelipper
+Level: 29
+
+=== TRAINER_SKALD_COAST_HROAR ===
+Name: HROAR
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 30
+
+=== TRAINER_SKALD_COAST_JORID ===
+Name: JORID
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Marill
+Level: 27
+
+Wingull
+Level: 27
+
+=== TRAINER_SKALD_COAST_KETIL ===
+Name: KETIL
+Class: Cooltrainer
+Pic: Cooltrainer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Manectric
+Level: 30
+
+Mightyena
+Level: 30
+
+=== TRAINER_SKALD_COAST_LIVA ===
+Name: LIVA
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gardevoir
+Level: 30
+
+Breloom
+Level: 30
+
+=== TRAINER_SKALD_COAST_MAGNUS ===
+Name: MAGNUS
+Class: Gentleman
+Pic: Gentleman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Muk
+Level: 30
+
+Kecleon
+Level: 29
+
+=== TRAINER_SKALD_COAST_NIKOLAI ===
+Name: NIKOLAI
+Class: Rich Boy
+Pic: Rich Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 28
+
+Plusle
+Level: 28
+
+=== TRAINER_SKALD_COAST_ODA ===
+Name: ODA
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roselia
+Level: 29
+
+Delcatty
+Level: 29
+
+=== TRAINER_SKALD_COAST_PETTER ===
+Name: PETTER
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hariyama
+Level: 29
+
+Wailmer
+Level: 29
+
+=== TRAINER_SKALD_COAST_RAGNAR ===
+Name: RAGNAR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Magikarp
+Level: 20
+
+Gyarados
+Level: 31
+
+=== TRAINER_SKALD_COAST_SOLVOR ===
+Name: SOLVOR
+Class: Pokefan
+Pic: Pokefan F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 29
+
+Wobbuffet
+Level: 29
+
+=== TRAINER_SKALD_COAST_TORE ===
+Name: TORE
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machop
+Level: 28
+
+Pelipper
+Level: 29
+
+Carvanha
+Level: 29

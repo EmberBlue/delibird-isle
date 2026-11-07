@@ -32,7 +32,7 @@ ParcelBoardroom_Leave::
 # 37 "data/maps/ParcelBoardroom/scripts.pory"
 	lockall
 # 38 "data/maps/ParcelBoardroom/scripts.pory"
-	warp MAP_PARCEL_COAST, 15, 36
+	warp MAP_PARCEL_COAST, 31, 28
 # 39 "data/maps/ParcelBoardroom/scripts.pory"
 	waitstate
 	end

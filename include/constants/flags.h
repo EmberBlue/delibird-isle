@@ -721,10 +721,10 @@
 #define FLAG_SKALD_HL_CENTRE_SCENE 0x2A2 // Skaldmere: Haukfell (the Highlands)
 #define FLAG_SKALD_ITEM_HL_ICE_HEAL 0x2A3 // Skaldmere: Haukfell (the Highlands)
 #define FLAG_SKALD_HIDDEN_HL_RARE_CANDY 0x2A4 // Skaldmere: Haukfell (the Highlands)
-#define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
-#define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
+#define FLAG_SKALD_ITEM_COAST_MAX_ELIXIR 0x2A5 // Skaldmere: the Mereholt Coast
+#define FLAG_SKALD_HIDDEN_COAST_HEART_SCALE 0x2A6 // Skaldmere: the Mereholt Coast
+#define FLAG_SKALD_HIDDEN_COAST_NUGGET 0x2A7 // Skaldmere: the Mereholt Coast
+#define FLAG_SKALD_COAST_SHIFT_DONE 0x2A8 // Skaldmere: the Mereholt Coast
 #define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
 #define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
 #define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag

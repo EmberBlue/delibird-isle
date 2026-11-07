@@ -1,0 +1,34 @@
+mapscripts ParcelCoastMart_MapScripts {
+}
+script ParcelCoastMart_Clerk {
+    lock
+    faceplayer
+    message(gText_HowMayIServeYou)
+    waitmessage
+    pokemart(ParcelCoastMart_Items)
+    msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+    release
+    end
+}
+raw `
+	.align 2
+ParcelCoastMart_Items::
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_NET_BALL
+	.2byte ITEM_DIVE_BALL
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_REVIVE
+	.2byte ITEM_MAX_REPEL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_NONE
+`
+script ParcelCoastMart_Customer {
+    lock
+    faceplayer
+    msgbox(format("SAILOR: DIVE BALLS. For what, I asked. The clerk said for the fish. I said there's no fish. She said that's not her department."), MSGBOX_DEFAULT)
+    release
+    end
+}

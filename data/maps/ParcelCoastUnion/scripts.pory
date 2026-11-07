@@ -1,0 +1,33 @@
+// ParcelCoastUnion -- the fishermen's union hall. Quotas, notes, and the men who hold them.
+mapscripts ParcelCoastUnion_MapScripts {
+}
+script ParcelCoastUnion_Chair {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CHAIR: The review grounds half the fleet two days a week. Half the hall wants your head. The other half knows the fish were gone anyway and somebody finally said so.\pI'm the other half. Barely."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("CHAIR: Union of Coastal Fishers. Forty-one boats. Forty-one notes held by MEREHOLT COASTAL LENDING. Guess how our votes go on quota day.\pWe're not cowards, RANGER. We're mortgaged."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastUnion_Fisher1 {
+    lock
+    faceplayer
+    msgbox(format("FISHER: HARLAND came down from the river to fish the coast because the river was done. Now the coast's done. There's nowhere further down."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastUnion_Fisher2 {
+    lock
+    faceplayer
+    msgbox(format("FISHER: The Board's model says the stock recovers in six years if we hold the quota. It said that six years ago."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCoastUnion_Board {
+    msgbox(format("MINUTES. Motion to request an independent stock survey: proposed, seconded, deferred. Deferred. Deferred. Deferred. Four years of the same line."), MSGBOX_SIGN)
+    end
+}

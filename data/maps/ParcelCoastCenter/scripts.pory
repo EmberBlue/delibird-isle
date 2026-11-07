@@ -1,0 +1,24 @@
+const LOCALID_CPC_NURSE = 1
+mapscripts ParcelCoastCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelCoastCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+script ParcelCoastCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_PARCEL_COAST)
+    end
+}
+script ParcelCoastCenter_Nurse {
+    setvar(VAR_0x800B, LOCALID_CPC_NURSE)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    end
+}
+script ParcelCoastCenter_Trainer {
+    lock
+    faceplayer
+    msgbox(format("SAILOR: Half the WINGULL in here come in with hooks in them. The other half come in with nothing in them. Starved. The nurse says it's a coastal thing."), MSGBOX_DEFAULT)
+    release
+    end
+}

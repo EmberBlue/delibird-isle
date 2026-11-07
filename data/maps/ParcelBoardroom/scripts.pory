@@ -35,7 +35,7 @@ script ParcelBoardroom_Arrival {
 // the stairs -- back down to the quay
 script ParcelBoardroom_Leave {
     lockall
-    warp(MAP_PARCEL_COAST, 15, 36)
+    warp(MAP_PARCEL_COAST, 31, 28)
     waitstate
     end
 }
