@@ -1,4 +1,5 @@
 #include "global.h"
+#include "battle_setup.h"
 #include "event_data.h"
 #include "string_util.h"
 #include "survey.h"
@@ -332,4 +333,26 @@ void SkaldNotebookBuffer(void)
             StringAppend(gStringVar4, sNb_Margins_Last);
         break;
     }
+}
+
+// ---------------------------------------------------------------------------
+// Route-trainer rematch tiers (tools/skald/rematch_tiers.py generates the
+// scripts and parties). A defeated trainer, talked to again, offers the
+// lowest unfought tier the player's clearances unlock: tier 2 at three,
+// 3 at five, 4 at seven, 5 after the epilogue; each tier is fought once.
+// Only reached when the trainer is already defeated (the first win runs the
+// trainerbattle_single continue script instead). Returns the highest unlocked
+// tier, or 0.
+// ---------------------------------------------------------------------------
+u16 SkaldRematchTier(void)
+{
+    u32 n;
+
+    if (FlagGet(FLAG_SKALDMERE_EPILOGUE_DONE))
+        return 5;
+    n = NbBadgeCount();
+    if (n >= 7) return 4;
+    if (n >= 5) return 3;
+    if (n >= 3) return 2;
+    return 0;
 }

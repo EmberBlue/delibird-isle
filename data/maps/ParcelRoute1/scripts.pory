@@ -353,22 +353,247 @@ script ParcelRoute1_NoticeBoard {
 script ParcelRoute1_T_Emil {
     trainerbattle_single(TRAINER_SKALD_R1_EMIL,
         format("EMIL: WURMPLE in every bush this year. My mum says that's a bad sign. Battle!"),
-        format("EMIL: Bad sign for me."))
+        format("EMIL: Bad sign for me."),
+        ParcelRoute1_T_Emil_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_R1_EMIL_R2)) {
+        goto(ParcelRoute1_T_Emil_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_R1_EMIL_R3)) {
+        goto(ParcelRoute1_T_Emil_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_R1_EMIL_R4)) {
+        goto(ParcelRoute1_T_Emil_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_R1_EMIL_R5)) {
+        goto(ParcelRoute1_T_Emil_R5)
+    }
     msgbox(format("EMIL: When there's too many of one thing it means something that eats them is gone. HALE told me that. HALE tells everyone that."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRoute1_T_Emil_FirstWin {
+    msgbox(format("EMIL: When there's too many of one thing it means something that eats them is gone. HALE told me that. HALE tells everyone that."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Emil_R2 {
+    lock
+    faceplayer
+    msgbox(format("EMIL: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EMIL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_EMIL_R2, format("EMIL: That's the one I wanted to see."))
+    msgbox(format("EMIL: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Emil_R3 {
+    lock
+    faceplayer
+    msgbox(format("EMIL: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EMIL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_EMIL_R3, format("EMIL: …Fair."))
+    msgbox(format("EMIL: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Emil_R4 {
+    lock
+    faceplayer
+    msgbox(format("EMIL: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EMIL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_EMIL_R4, format("EMIL: Still yours."))
+    msgbox(format("EMIL: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Emil_R5 {
+    lock
+    faceplayer
+    msgbox(format("EMIL: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EMIL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_EMIL_R5, format("EMIL: Still yours."))
+    msgbox(format("EMIL: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelRoute1_T_Astrid {
     trainerbattle_single(TRAINER_SKALD_R1_ASTRID,
         format("ASTRID: The river's low for spring. My LOTAD can stand on the bottom. Battle while it's still a river?"),
-        format("ASTRID: Still a river. Just."))
+        format("ASTRID: Still a river. Just."),
+        ParcelRoute1_T_Astrid_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_R1_ASTRID_R2)) {
+        goto(ParcelRoute1_T_Astrid_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_R1_ASTRID_R3)) {
+        goto(ParcelRoute1_T_Astrid_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_R1_ASTRID_R4)) {
+        goto(ParcelRoute1_T_Astrid_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_R1_ASTRID_R5)) {
+        goto(ParcelRoute1_T_Astrid_R5)
+    }
     msgbox(format("ASTRID: The bridge scene with the poachers? Everyone saw. Nobody did anything. Then a RANGER did. That's you, isn't it."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRoute1_T_Astrid_FirstWin {
+    msgbox(format("ASTRID: The bridge scene with the poachers? Everyone saw. Nobody did anything. Then a RANGER did. That's you, isn't it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Astrid_R2 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_ASTRID_R2, format("ASTRID: …Fair."))
+    msgbox(format("ASTRID: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Astrid_R3 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_ASTRID_R3, format("ASTRID: …Again, then. Later."))
+    msgbox(format("ASTRID: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Astrid_R4 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_ASTRID_R4, format("ASTRID: …Again, then. Later."))
+    msgbox(format("ASTRID: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Astrid_R5 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_ASTRID_R5, format("ASTRID: Still yours."))
+    msgbox(format("ASTRID: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelRoute1_T_Mats {
     trainerbattle_single(TRAINER_SKALD_R1_MATS,
         format("MATS: I'm walking to MISTWOOD. Everyone says don't. Battle me and I'll say I beat a RANGER first."),
-        format("MATS: I'll say I nearly beat one."))
+        format("MATS: I'll say I nearly beat one."),
+        ParcelRoute1_T_Mats_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_R1_MATS_R2)) {
+        goto(ParcelRoute1_T_Mats_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_R1_MATS_R3)) {
+        goto(ParcelRoute1_T_Mats_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_R1_MATS_R4)) {
+        goto(ParcelRoute1_T_Mats_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_R1_MATS_R5)) {
+        goto(ParcelRoute1_T_Mats_R5)
+    }
     msgbox(format("MATS: SKELD at the post won't let you through the deadfall without CUT. He's not being mean. The deadfall's real."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRoute1_T_Mats_FirstWin {
+    msgbox(format("MATS: SKELD at the post won't let you through the deadfall without CUT. He's not being mean. The deadfall's real."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Mats_R2 {
+    lock
+    faceplayer
+    msgbox(format("MATS: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MATS: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_MATS_R2, format("MATS: Still yours."))
+    msgbox(format("MATS: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Mats_R3 {
+    lock
+    faceplayer
+    msgbox(format("MATS: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MATS: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_MATS_R3, format("MATS: …Fair."))
+    msgbox(format("MATS: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Mats_R4 {
+    lock
+    faceplayer
+    msgbox(format("MATS: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MATS: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_MATS_R4, format("MATS: …Again, then. Later."))
+    msgbox(format("MATS: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRoute1_T_Mats_R5 {
+    lock
+    faceplayer
+    msgbox(format("MATS: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MATS: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_R1_MATS_R5, format("MATS: Right. That's the whole of it."))
+    msgbox(format("MATS: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 

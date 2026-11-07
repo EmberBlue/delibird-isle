@@ -83,15 +83,165 @@ script ParcelCavern_ItemIceHeal { finditem(ITEM_ICE_HEAL) end }
 script ParcelCavern_TechA {
     trainerbattle_single(TRAINER_SKALD_CAV_TECH_A,
         format("ROLF: Deepwater survey. We core the ice. The cores are getting shorter. Battle me, it's warmer than standing still."),
-        format("ROLF: Still cold."))
+        format("ROLF: Still cold."),
+        ParcelCavern_TechA_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CAV_TECH_A_R2)) {
+        goto(ParcelCavern_TechA_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CAV_TECH_A_R3)) {
+        goto(ParcelCavern_TechA_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CAV_TECH_A_R4)) {
+        goto(ParcelCavern_TechA_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CAV_TECH_A_R5)) {
+        goto(ParcelCavern_TechA_R5)
+    }
     msgbox(format("ROLF: Twenty metres of ice when they first cored it. Fourteen now. Deepwater calls that 'accessible'."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCavern_TechA_FirstWin {
+    msgbox(format("ROLF: Twenty metres of ice when they first cored it. Fourteen now. Deepwater calls that 'accessible'."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechA_R2 {
+    lock
+    faceplayer
+    msgbox(format("ROLF: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROLF: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_A_R2, format("ROLF: Noted. Properly, this time."))
+    msgbox(format("ROLF: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechA_R3 {
+    lock
+    faceplayer
+    msgbox(format("ROLF: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROLF: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_A_R3, format("ROLF: That's the one I wanted to see."))
+    msgbox(format("ROLF: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechA_R4 {
+    lock
+    faceplayer
+    msgbox(format("ROLF: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROLF: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_A_R4, format("ROLF: …Fair."))
+    msgbox(format("ROLF: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechA_R5 {
+    lock
+    faceplayer
+    msgbox(format("ROLF: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROLF: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_A_R5, format("ROLF: Right. That's the whole of it."))
+    msgbox(format("ROLF: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelCavern_TechB {
     trainerbattle_single(TRAINER_SKALD_CAV_TECH_B,
         format("UNN: Corps cadet, posted to watch the posted. KELDA watches me. I watch her. Spar, it passes the shift."),
-        format("UNN: Shift passed."))
+        format("UNN: Shift passed."),
+        ParcelCavern_TechB_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CAV_TECH_B_R2)) {
+        goto(ParcelCavern_TechB_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CAV_TECH_B_R3)) {
+        goto(ParcelCavern_TechB_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CAV_TECH_B_R4)) {
+        goto(ParcelCavern_TechB_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CAV_TECH_B_R5)) {
+        goto(ParcelCavern_TechB_R5)
+    }
     msgbox(format("UNN: There's a DELIBIRD at the far end that never leaves. KELDA logged it as an asset. I logged it as a bird."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCavern_TechB_FirstWin {
+    msgbox(format("UNN: There's a DELIBIRD at the far end that never leaves. KELDA logged it as an asset. I logged it as a bird."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechB_R2 {
+    lock
+    faceplayer
+    msgbox(format("UNN: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("UNN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_B_R2, format("UNN: Still yours."))
+    msgbox(format("UNN: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechB_R3 {
+    lock
+    faceplayer
+    msgbox(format("UNN: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("UNN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_B_R3, format("UNN: Still yours."))
+    msgbox(format("UNN: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechB_R4 {
+    lock
+    faceplayer
+    msgbox(format("UNN: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("UNN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_B_R4, format("UNN: …Again, then. Later."))
+    msgbox(format("UNN: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_TechB_R5 {
+    lock
+    faceplayer
+    msgbox(format("UNN: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("UNN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_TECH_B_R5, format("UNN: That's the one I wanted to see."))
+    msgbox(format("UNN: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 
@@ -108,14 +258,164 @@ script ParcelCavern_Leave {
 script ParcelCavern_T_Brynjulf {
     trainerbattle_single(TRAINER_SKALD_CAV_BRYNJULF,
         format("BRYNJULF: Deepwater core crew. The ice is shorter every season. Battle, it's warmer."),
-        format("BRYNJULF: Warmer. Briefly."))
+        format("BRYNJULF: Warmer. Briefly."),
+        ParcelCavern_T_Brynjulf_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CAV_BRYNJULF_R2)) {
+        goto(ParcelCavern_T_Brynjulf_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CAV_BRYNJULF_R3)) {
+        goto(ParcelCavern_T_Brynjulf_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CAV_BRYNJULF_R4)) {
+        goto(ParcelCavern_T_Brynjulf_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CAV_BRYNJULF_R5)) {
+        goto(ParcelCavern_T_Brynjulf_R5)
+    }
     msgbox(format("BRYNJULF: Twenty metres when they first cored it. Fourteen now. 'Accessible', the log says."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCavern_T_Brynjulf_FirstWin {
+    msgbox(format("BRYNJULF: Twenty metres when they first cored it. Fourteen now. 'Accessible', the log says."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Brynjulf_R2 {
+    lock
+    faceplayer
+    msgbox(format("BRYNJULF: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRYNJULF: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_BRYNJULF_R2, format("BRYNJULF: …Fair."))
+    msgbox(format("BRYNJULF: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Brynjulf_R3 {
+    lock
+    faceplayer
+    msgbox(format("BRYNJULF: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRYNJULF: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_BRYNJULF_R3, format("BRYNJULF: Still yours."))
+    msgbox(format("BRYNJULF: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Brynjulf_R4 {
+    lock
+    faceplayer
+    msgbox(format("BRYNJULF: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRYNJULF: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_BRYNJULF_R4, format("BRYNJULF: That's the one I wanted to see."))
+    msgbox(format("BRYNJULF: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Brynjulf_R5 {
+    lock
+    faceplayer
+    msgbox(format("BRYNJULF: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRYNJULF: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_BRYNJULF_R5, format("BRYNJULF: Noted. Properly, this time."))
+    msgbox(format("BRYNJULF: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelCavern_T_Aslaug {
     trainerbattle_single(TRAINER_SKALD_CAV_ASLAUG,
         format("ASLAUG: Cadet ASLAUG, posted to watch the posted. Spar. It passes the shift."),
-        format("ASLAUG: Shift passed."))
+        format("ASLAUG: Shift passed."),
+        ParcelCavern_T_Aslaug_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CAV_ASLAUG_R2)) {
+        goto(ParcelCavern_T_Aslaug_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CAV_ASLAUG_R3)) {
+        goto(ParcelCavern_T_Aslaug_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CAV_ASLAUG_R4)) {
+        goto(ParcelCavern_T_Aslaug_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CAV_ASLAUG_R5)) {
+        goto(ParcelCavern_T_Aslaug_R5)
+    }
     msgbox(format("ASLAUG: The DELIBIRD at the deep end never leaves. KELDA logged it as an asset. I logged it as a bird."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCavern_T_Aslaug_FirstWin {
+    msgbox(format("ASLAUG: The DELIBIRD at the deep end never leaves. KELDA logged it as an asset. I logged it as a bird."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Aslaug_R2 {
+    lock
+    faceplayer
+    msgbox(format("ASLAUG: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASLAUG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_ASLAUG_R2, format("ASLAUG: …Again, then. Later."))
+    msgbox(format("ASLAUG: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Aslaug_R3 {
+    lock
+    faceplayer
+    msgbox(format("ASLAUG: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASLAUG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_ASLAUG_R3, format("ASLAUG: …Fair."))
+    msgbox(format("ASLAUG: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Aslaug_R4 {
+    lock
+    faceplayer
+    msgbox(format("ASLAUG: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASLAUG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_ASLAUG_R4, format("ASLAUG: Still yours."))
+    msgbox(format("ASLAUG: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCavern_T_Aslaug_R5 {
+    lock
+    faceplayer
+    msgbox(format("ASLAUG: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASLAUG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CAV_ASLAUG_R5, format("ASLAUG: Noted. Properly, this time."))
+    msgbox(format("ASLAUG: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }

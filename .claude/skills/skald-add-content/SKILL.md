@@ -88,3 +88,13 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
    and a `MULTICHOICE(...)` row in `src/data/script_menu.h`.
 6. Give it in a script with `giveitem(ITEM_X)`; verify through the bag with
    the walk test (`--item`, TAP/IDLE segments; see skald-verify).
+
+## Route trainers and their rematch tiers
+Write a simple trainer in the exact shape the generator recognises
+(`trainerbattle_single(TRAINER_SKALD_X, format(intro), format(defeat))`,
+one `msgbox(format(post), MSGBOX_DEFAULT)`, `end`), add its id and party,
+then run `python3 tools/skald/rematch_tiers.py` (idempotent): it rewrites
+the script with the four tier branches, appends `_R2.._R5` ids and evolved
+parties. Never put anything before `trainerbattle_single` in a sighted
+trainer's object script: the approach path parses the trainer id out of
+the script's first command.

@@ -213,15 +213,165 @@ script ParcelMarsh_GateAune_Defeated {
 script ParcelMarsh_SecA {
     trainerbattle_single(TRAINER_SKALD_MARSH_SEC_A,
         format("VIG: Road's closed. Director's orders. You can argue with me or with her. Me first."),
-        format("VIG: …Her, then."))
+        format("VIG: …Her, then."),
+        ParcelMarsh_SecA_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MARSH_SEC_A_R2)) {
+        goto(ParcelMarsh_SecA_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MARSH_SEC_A_R3)) {
+        goto(ParcelMarsh_SecA_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MARSH_SEC_A_R4)) {
+        goto(ParcelMarsh_SecA_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MARSH_SEC_A_R5)) {
+        goto(ParcelMarsh_SecA_R5)
+    }
     msgbox(format("VIG: We graded fifty metres of road to nowhere and posted two guards on it. Ask me what we're guarding. Go on. I don't know either."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMarsh_SecA_FirstWin {
+    msgbox(format("VIG: We graded fifty metres of road to nowhere and posted two guards on it. Ask me what we're guarding. Go on. I don't know either."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecA_R2 {
+    lock
+    faceplayer
+    msgbox(format("VIG: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_A_R2, format("VIG: Noted. Properly, this time."))
+    msgbox(format("VIG: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecA_R3 {
+    lock
+    faceplayer
+    msgbox(format("VIG: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_A_R3, format("VIG: …Fair."))
+    msgbox(format("VIG: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecA_R4 {
+    lock
+    faceplayer
+    msgbox(format("VIG: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_A_R4, format("VIG: Still yours."))
+    msgbox(format("VIG: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecA_R5 {
+    lock
+    faceplayer
+    msgbox(format("VIG: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_A_R5, format("VIG: Right. That's the whole of it."))
+    msgbox(format("VIG: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelMarsh_SecB {
     trainerbattle_single(TRAINER_SKALD_MARSH_SEC_B,
         format("TOVA: Survey flag's ours. Everything past the flag is 'pending'. You're pending. Battle."),
-        format("TOVA: Pending, still."))
+        format("TOVA: Pending, still."),
+        ParcelMarsh_SecB_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MARSH_SEC_B_R2)) {
+        goto(ParcelMarsh_SecB_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MARSH_SEC_B_R3)) {
+        goto(ParcelMarsh_SecB_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MARSH_SEC_B_R4)) {
+        goto(ParcelMarsh_SecB_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MARSH_SEC_B_R5)) {
+        goto(ParcelMarsh_SecB_R5)
+    }
     msgbox(format("TOVA: There's an old woman in there. Past the water. The director knows. The director's not in a hurry. That's the strange part."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMarsh_SecB_FirstWin {
+    msgbox(format("TOVA: There's an old woman in there. Past the water. The director knows. The director's not in a hurry. That's the strange part."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecB_R2 {
+    lock
+    faceplayer
+    msgbox(format("TOVA: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TOVA: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_B_R2, format("TOVA: Noted. Properly, this time."))
+    msgbox(format("TOVA: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecB_R3 {
+    lock
+    faceplayer
+    msgbox(format("TOVA: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TOVA: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_B_R3, format("TOVA: Still yours."))
+    msgbox(format("TOVA: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecB_R4 {
+    lock
+    faceplayer
+    msgbox(format("TOVA: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TOVA: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_B_R4, format("TOVA: Still yours."))
+    msgbox(format("TOVA: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarsh_SecB_R5 {
+    lock
+    faceplayer
+    msgbox(format("TOVA: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TOVA: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MARSH_SEC_B_R5, format("TOVA: That's the one I wanted to see."))
+    msgbox(format("TOVA: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 

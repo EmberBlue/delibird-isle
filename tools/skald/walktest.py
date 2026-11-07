@@ -84,8 +84,10 @@ def main():
         held[:] = [(k, u) for k, u in held if u > frame]
     step(4400)
     core.memory.u16[probe] = (group << 8) | num; core.memory.u16[probe + 2] = sx; core.memory.u16[probe + 4] = sy
-    for i, f in enumerate(a.flag):
-        core.memory.u16[probe + 6 + 2 * i] = flags[f]
+    trainers = constants("include/constants/opponents.h", "TRAINER_")
+    tfs = constants("include/constants/flags.h", "TRAINER_FLAGS_START")["TRAINER_FLAGS_START"]
+    for i, f in enumerate(a.flag):   # FLAG_X, or TRAINER_X to mark that trainer as already defeated
+        core.memory.u16[probe + 6 + 2 * i] = flags[f] if f in flags else tfs + trainers[f]
     if a.item:
         core.memory.u16[probe + 20] = constants("include/constants/items.h", "ITEM_")[a.item]
     step(a.settle - 4400)
@@ -122,6 +124,9 @@ def main():
             print(f"  {c} = {(core.memory.u8[sb1 + flags_off + (flags[c] >> 3)] >> (flags[c] & 7)) & 1}")
         elif c in vars_:
             print(f"  {c} = {core.memory.u16[sb1 + vars_off + 2 * (vars_[c] - 0x4000)]}")
+        elif c in trainers:          # defeated flag
+            fid = tfs + trainers[c]
+            print(f"  {c} defeated = {(core.memory.u8[sb1 + flags_off + (fid >> 3)] >> (fid & 7)) & 1}")
         else:
             print(f"  {c}: unknown")
     if a.out: img.to_pil().convert("RGB").save(a.out)

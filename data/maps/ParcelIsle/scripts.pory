@@ -543,35 +543,410 @@ script ParcelIsle_CenterAide {
 script ParcelIsle_T_Brand {
     trainerbattle_single(TRAINER_SKALD_ISLE_BRAND,
         format("BRAND: Off the ferry crew. Nothing to do till the tide. Battle me, RANGER, the harbour's dull."),
-        format("BRAND: Tide's in. Figuratively."))
+        format("BRAND: Tide's in. Figuratively."),
+        ParcelIsle_T_Brand_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_ISLE_BRAND_R2)) {
+        goto(ParcelIsle_T_Brand_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_ISLE_BRAND_R3)) {
+        goto(ParcelIsle_T_Brand_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_ISLE_BRAND_R4)) {
+        goto(ParcelIsle_T_Brand_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_ISLE_BRAND_R5)) {
+        goto(ParcelIsle_T_Brand_R5)
+    }
     msgbox(format("BRAND: Three ferry routes now. DELIBIRD, the coast, the station. The coast one's full every run. Nobody comes back smiling."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Brand_FirstWin {
+    msgbox(format("BRAND: Three ferry routes now. DELIBIRD, the coast, the station. The coast one's full every run. Nobody comes back smiling."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Brand_R2 {
+    lock
+    faceplayer
+    msgbox(format("BRAND: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRAND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_BRAND_R2, format("BRAND: Right. That's the whole of it."))
+    msgbox(format("BRAND: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Brand_R3 {
+    lock
+    faceplayer
+    msgbox(format("BRAND: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRAND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_BRAND_R3, format("BRAND: Right. That's the whole of it."))
+    msgbox(format("BRAND: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Brand_R4 {
+    lock
+    faceplayer
+    msgbox(format("BRAND: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRAND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_BRAND_R4, format("BRAND: Still yours."))
+    msgbox(format("BRAND: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Brand_R5 {
+    lock
+    faceplayer
+    msgbox(format("BRAND: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRAND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_BRAND_R5, format("BRAND: Noted. Properly, this time."))
+    msgbox(format("BRAND: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelIsle_T_Svein {
     trainerbattle_single(TRAINER_SKALD_ISLE_SVEIN,
         format("SVEIN: Fishing the jetty. Not catching. There's a difference. Battle?"),
-        format("SVEIN: Caught something at last."))
+        format("SVEIN: Caught something at last."),
+        ParcelIsle_T_Svein_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_ISLE_SVEIN_R2)) {
+        goto(ParcelIsle_T_Svein_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_ISLE_SVEIN_R3)) {
+        goto(ParcelIsle_T_Svein_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_ISLE_SVEIN_R4)) {
+        goto(ParcelIsle_T_Svein_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_ISLE_SVEIN_R5)) {
+        goto(ParcelIsle_T_Svein_R5)
+    }
     msgbox(format("SVEIN: ANNI says the nets are fine and the sea is empty. I'm starting to believe her."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Svein_FirstWin {
+    msgbox(format("SVEIN: ANNI says the nets are fine and the sea is empty. I'm starting to believe her."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Svein_R2 {
+    lock
+    faceplayer
+    msgbox(format("SVEIN: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVEIN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_SVEIN_R2, format("SVEIN: That's the one I wanted to see."))
+    msgbox(format("SVEIN: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Svein_R3 {
+    lock
+    faceplayer
+    msgbox(format("SVEIN: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVEIN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_SVEIN_R3, format("SVEIN: Still yours."))
+    msgbox(format("SVEIN: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Svein_R4 {
+    lock
+    faceplayer
+    msgbox(format("SVEIN: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVEIN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_SVEIN_R4, format("SVEIN: That's the one I wanted to see."))
+    msgbox(format("SVEIN: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Svein_R5 {
+    lock
+    faceplayer
+    msgbox(format("SVEIN: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVEIN: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_SVEIN_R5, format("SVEIN: Still yours."))
+    msgbox(format("SVEIN: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelIsle_T_Tora {
     trainerbattle_single(TRAINER_SKALD_ISLE_TORA,
         format("TORA: New in town. Everyone's new in town eventually. Battle me so I know your name."),
-        format("TORA: Noted. The name, I mean."))
+        format("TORA: Noted. The name, I mean."),
+        ParcelIsle_T_Tora_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_ISLE_TORA_R2)) {
+        goto(ParcelIsle_T_Tora_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_ISLE_TORA_R3)) {
+        goto(ParcelIsle_T_Tora_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_ISLE_TORA_R4)) {
+        goto(ParcelIsle_T_Tora_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_ISLE_TORA_R5)) {
+        goto(ParcelIsle_T_Tora_R5)
+    }
     msgbox(format("TORA: The CORPS gets a new provisional every spring. Most of them go north and we hear about them on the radio. Mind you come back."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Tora_FirstWin {
+    msgbox(format("TORA: The CORPS gets a new provisional every spring. Most of them go north and we hear about them on the radio. Mind you come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Tora_R2 {
+    lock
+    faceplayer
+    msgbox(format("TORA: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_TORA_R2, format("TORA: …Again, then. Later."))
+    msgbox(format("TORA: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Tora_R3 {
+    lock
+    faceplayer
+    msgbox(format("TORA: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_TORA_R3, format("TORA: Still yours."))
+    msgbox(format("TORA: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Tora_R4 {
+    lock
+    faceplayer
+    msgbox(format("TORA: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_TORA_R4, format("TORA: Noted. Properly, this time."))
+    msgbox(format("TORA: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Tora_R5 {
+    lock
+    faceplayer
+    msgbox(format("TORA: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_TORA_R5, format("TORA: Right. That's the whole of it."))
+    msgbox(format("TORA: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelIsle_T_Jon {
     trainerbattle_single(TRAINER_SKALD_ISLE_JON,
         format("JON: The chandlery's closed, the hall's full of meetings, and I'm bored. Battle!"),
-        format("JON: Less bored now."))
+        format("JON: Less bored now."),
+        ParcelIsle_T_Jon_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_ISLE_JON_R2)) {
+        goto(ParcelIsle_T_Jon_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_ISLE_JON_R3)) {
+        goto(ParcelIsle_T_Jon_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_ISLE_JON_R4)) {
+        goto(ParcelIsle_T_Jon_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_ISLE_JON_R5)) {
+        goto(ParcelIsle_T_Jon_R5)
+    }
     msgbox(format("JON: My dad says the marsh north of FERNWICK smells like money. He means somebody's making some."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Jon_FirstWin {
+    msgbox(format("JON: My dad says the marsh north of FERNWICK smells like money. He means somebody's making some."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Jon_R2 {
+    lock
+    faceplayer
+    msgbox(format("JON: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JON: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_JON_R2, format("JON: Noted. Properly, this time."))
+    msgbox(format("JON: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Jon_R3 {
+    lock
+    faceplayer
+    msgbox(format("JON: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JON: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_JON_R3, format("JON: Right. That's the whole of it."))
+    msgbox(format("JON: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Jon_R4 {
+    lock
+    faceplayer
+    msgbox(format("JON: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JON: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_JON_R4, format("JON: Right. That's the whole of it."))
+    msgbox(format("JON: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Jon_R5 {
+    lock
+    faceplayer
+    msgbox(format("JON: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JON: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_JON_R5, format("JON: Still yours."))
+    msgbox(format("JON: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelIsle_T_Line {
     trainerbattle_single(TRAINER_SKALD_ISLE_LINE,
         format("LINE: Picnic on the quay. The gulls take everything. You can't take a battle off me though."),
-        format("LINE: You can, apparently."))
+        format("LINE: You can, apparently."),
+        ParcelIsle_T_Line_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_ISLE_LINE_R2)) {
+        goto(ParcelIsle_T_Line_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_ISLE_LINE_R3)) {
+        goto(ParcelIsle_T_Line_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_ISLE_LINE_R4)) {
+        goto(ParcelIsle_T_Line_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_ISLE_LINE_R5)) {
+        goto(ParcelIsle_T_Line_R5)
+    }
     msgbox(format("LINE: SIGRUN counts the gulls every morning. Fewer each year. The gulls don't know. The gulls just want my sandwich."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Line_FirstWin {
+    msgbox(format("LINE: SIGRUN counts the gulls every morning. Fewer each year. The gulls don't know. The gulls just want my sandwich."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Line_R2 {
+    lock
+    faceplayer
+    msgbox(format("LINE: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LINE: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_LINE_R2, format("LINE: Still yours."))
+    msgbox(format("LINE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Line_R3 {
+    lock
+    faceplayer
+    msgbox(format("LINE: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LINE: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_LINE_R3, format("LINE: Still yours."))
+    msgbox(format("LINE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Line_R4 {
+    lock
+    faceplayer
+    msgbox(format("LINE: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LINE: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_LINE_R4, format("LINE: Right. That's the whole of it."))
+    msgbox(format("LINE: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelIsle_T_Line_R5 {
+    lock
+    faceplayer
+    msgbox(format("LINE: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LINE: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ISLE_LINE_R5, format("LINE: That's the one I wanted to see."))
+    msgbox(format("LINE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }

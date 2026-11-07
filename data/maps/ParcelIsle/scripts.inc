@@ -861,41 +861,911 @@ ParcelIsle_CenterAide::
 
 ParcelIsle_T_Brand::
 # 544 "data/maps/ParcelIsle/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_ISLE_BRAND, ParcelIsle_T_Brand_Text_0, ParcelIsle_T_Brand_Text_1
-# 547 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_BRAND, ParcelIsle_T_Brand_Text_0, ParcelIsle_T_Brand_Text_1, ParcelIsle_T_Brand_FirstWin
+# 548 "data/maps/ParcelIsle/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 549 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelIsle_T_Brand_3
+ParcelIsle_T_Brand_1:
+# 552 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelIsle_T_Brand_8
+ParcelIsle_T_Brand_6:
+# 555 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelIsle_T_Brand_13
+ParcelIsle_T_Brand_11:
+# 558 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelIsle_T_Brand_18
+ParcelIsle_T_Brand_16:
+# 561 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_T_Brand_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelIsle_T_Brand_2:
+# 550 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Brand_R2
+	goto ParcelIsle_T_Brand_1
+
+ParcelIsle_T_Brand_3:
+# 549 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_BRAND_R2
+	goto_if 0, ParcelIsle_T_Brand_2
+	goto ParcelIsle_T_Brand_1
+
+ParcelIsle_T_Brand_7:
+# 553 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Brand_R3
+	goto ParcelIsle_T_Brand_6
+
+ParcelIsle_T_Brand_8:
+# 552 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_BRAND_R3
+	goto_if 0, ParcelIsle_T_Brand_7
+	goto ParcelIsle_T_Brand_6
+
+ParcelIsle_T_Brand_12:
+# 556 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Brand_R4
+	goto ParcelIsle_T_Brand_11
+
+ParcelIsle_T_Brand_13:
+# 555 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_BRAND_R4
+	goto_if 0, ParcelIsle_T_Brand_12
+	goto ParcelIsle_T_Brand_11
+
+ParcelIsle_T_Brand_17:
+# 559 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Brand_R5
+	goto ParcelIsle_T_Brand_16
+
+ParcelIsle_T_Brand_18:
+# 558 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_BRAND_R5
+	goto_if 0, ParcelIsle_T_Brand_17
+	goto ParcelIsle_T_Brand_16
+
+
+ParcelIsle_T_Brand_FirstWin::
+# 565 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_Text_2, MSGBOX_DEFAULT
+# 566 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Brand_R2::
+# 570 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 571 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 572 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R2_Text_0, MSGBOX_YESNO
+# 573 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Brand_R2_2
+# 578 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_BRAND_R2, ParcelIsle_T_Brand_R2_Text_2
+# 579 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R2_Text_3, MSGBOX_DEFAULT
+# 580 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Brand_R2_2:
+# 574 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R2_Text_1, MSGBOX_DEFAULT
+# 575 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Brand_R3::
+# 584 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 585 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 586 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R3_Text_0, MSGBOX_YESNO
+# 587 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Brand_R3_2
+# 592 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_BRAND_R3, ParcelIsle_T_Brand_R2_Text_2
+# 593 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R3_Text_1, MSGBOX_DEFAULT
+# 594 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Brand_R3_2:
+# 588 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R2_Text_1, MSGBOX_DEFAULT
+# 589 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Brand_R4::
+# 598 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 599 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 600 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R4_Text_0, MSGBOX_YESNO
+# 601 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Brand_R4_2
+# 606 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_BRAND_R4, ParcelIsle_T_Brand_R4_Text_1
+# 607 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R4_Text_2, MSGBOX_DEFAULT
+# 608 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Brand_R4_2:
+# 602 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R2_Text_1, MSGBOX_DEFAULT
+# 603 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Brand_R5::
+# 612 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 613 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 614 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R5_Text_0, MSGBOX_YESNO
+# 615 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Brand_R5_2
+# 620 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_BRAND_R5, ParcelIsle_T_Brand_R5_Text_1
+# 621 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R5_Text_2, MSGBOX_DEFAULT
+# 622 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Brand_R5_2:
+# 616 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_R2_Text_1, MSGBOX_DEFAULT
+# 617 "data/maps/ParcelIsle/scripts.pory"
+	release
 	end
 
 
 ParcelIsle_T_Svein::
-# 551 "data/maps/ParcelIsle/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_ISLE_SVEIN, ParcelIsle_T_Svein_Text_0, ParcelIsle_T_Svein_Text_1
-# 554 "data/maps/ParcelIsle/scripts.pory"
+# 626 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_SVEIN, ParcelIsle_T_Svein_Text_0, ParcelIsle_T_Svein_Text_1, ParcelIsle_T_Svein_FirstWin
+# 630 "data/maps/ParcelIsle/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 631 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelIsle_T_Svein_3
+ParcelIsle_T_Svein_1:
+# 634 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelIsle_T_Svein_8
+ParcelIsle_T_Svein_6:
+# 637 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelIsle_T_Svein_13
+ParcelIsle_T_Svein_11:
+# 640 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelIsle_T_Svein_18
+ParcelIsle_T_Svein_16:
+# 643 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_T_Svein_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelIsle_T_Svein_2:
+# 632 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Svein_R2
+	goto ParcelIsle_T_Svein_1
+
+ParcelIsle_T_Svein_3:
+# 631 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_SVEIN_R2
+	goto_if 0, ParcelIsle_T_Svein_2
+	goto ParcelIsle_T_Svein_1
+
+ParcelIsle_T_Svein_7:
+# 635 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Svein_R3
+	goto ParcelIsle_T_Svein_6
+
+ParcelIsle_T_Svein_8:
+# 634 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_SVEIN_R3
+	goto_if 0, ParcelIsle_T_Svein_7
+	goto ParcelIsle_T_Svein_6
+
+ParcelIsle_T_Svein_12:
+# 638 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Svein_R4
+	goto ParcelIsle_T_Svein_11
+
+ParcelIsle_T_Svein_13:
+# 637 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_SVEIN_R4
+	goto_if 0, ParcelIsle_T_Svein_12
+	goto ParcelIsle_T_Svein_11
+
+ParcelIsle_T_Svein_17:
+# 641 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Svein_R5
+	goto ParcelIsle_T_Svein_16
+
+ParcelIsle_T_Svein_18:
+# 640 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_SVEIN_R5
+	goto_if 0, ParcelIsle_T_Svein_17
+	goto ParcelIsle_T_Svein_16
+
+
+ParcelIsle_T_Svein_FirstWin::
+# 647 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_Text_2, MSGBOX_DEFAULT
+# 648 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Svein_R2::
+# 652 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 653 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 654 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R2_Text_0, MSGBOX_YESNO
+# 655 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Svein_R2_2
+# 660 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_SVEIN_R2, ParcelIsle_T_Svein_R2_Text_2
+# 661 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R2_Text_3, MSGBOX_DEFAULT
+# 662 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Svein_R2_2:
+# 656 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R2_Text_1, MSGBOX_DEFAULT
+# 657 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Svein_R3::
+# 666 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 667 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 668 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R3_Text_0, MSGBOX_YESNO
+# 669 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Svein_R3_2
+# 674 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_SVEIN_R3, ParcelIsle_T_Svein_R3_Text_1
+# 675 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R3_Text_2, MSGBOX_DEFAULT
+# 676 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Svein_R3_2:
+# 670 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R2_Text_1, MSGBOX_DEFAULT
+# 671 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Svein_R4::
+# 680 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 681 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 682 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R4_Text_0, MSGBOX_YESNO
+# 683 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Svein_R4_2
+# 688 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_SVEIN_R4, ParcelIsle_T_Svein_R2_Text_2
+# 689 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R4_Text_1, MSGBOX_DEFAULT
+# 690 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Svein_R4_2:
+# 684 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R2_Text_1, MSGBOX_DEFAULT
+# 685 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Svein_R5::
+# 694 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 695 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 696 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R5_Text_0, MSGBOX_YESNO
+# 697 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Svein_R5_2
+# 702 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_SVEIN_R5, ParcelIsle_T_Svein_R3_Text_1
+# 703 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R5_Text_1, MSGBOX_DEFAULT
+# 704 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Svein_R5_2:
+# 698 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_R2_Text_1, MSGBOX_DEFAULT
+# 699 "data/maps/ParcelIsle/scripts.pory"
+	release
 	end
 
 
 ParcelIsle_T_Tora::
-# 558 "data/maps/ParcelIsle/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_ISLE_TORA, ParcelIsle_T_Tora_Text_0, ParcelIsle_T_Tora_Text_1
-# 561 "data/maps/ParcelIsle/scripts.pory"
+# 708 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_TORA, ParcelIsle_T_Tora_Text_0, ParcelIsle_T_Tora_Text_1, ParcelIsle_T_Tora_FirstWin
+# 712 "data/maps/ParcelIsle/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 713 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelIsle_T_Tora_3
+ParcelIsle_T_Tora_1:
+# 716 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelIsle_T_Tora_8
+ParcelIsle_T_Tora_6:
+# 719 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelIsle_T_Tora_13
+ParcelIsle_T_Tora_11:
+# 722 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelIsle_T_Tora_18
+ParcelIsle_T_Tora_16:
+# 725 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_T_Tora_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelIsle_T_Tora_2:
+# 714 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Tora_R2
+	goto ParcelIsle_T_Tora_1
+
+ParcelIsle_T_Tora_3:
+# 713 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_TORA_R2
+	goto_if 0, ParcelIsle_T_Tora_2
+	goto ParcelIsle_T_Tora_1
+
+ParcelIsle_T_Tora_7:
+# 717 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Tora_R3
+	goto ParcelIsle_T_Tora_6
+
+ParcelIsle_T_Tora_8:
+# 716 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_TORA_R3
+	goto_if 0, ParcelIsle_T_Tora_7
+	goto ParcelIsle_T_Tora_6
+
+ParcelIsle_T_Tora_12:
+# 720 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Tora_R4
+	goto ParcelIsle_T_Tora_11
+
+ParcelIsle_T_Tora_13:
+# 719 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_TORA_R4
+	goto_if 0, ParcelIsle_T_Tora_12
+	goto ParcelIsle_T_Tora_11
+
+ParcelIsle_T_Tora_17:
+# 723 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Tora_R5
+	goto ParcelIsle_T_Tora_16
+
+ParcelIsle_T_Tora_18:
+# 722 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_TORA_R5
+	goto_if 0, ParcelIsle_T_Tora_17
+	goto ParcelIsle_T_Tora_16
+
+
+ParcelIsle_T_Tora_FirstWin::
+# 729 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_Text_2, MSGBOX_DEFAULT
+# 730 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Tora_R2::
+# 734 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 735 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 736 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R2_Text_0, MSGBOX_YESNO
+# 737 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Tora_R2_2
+# 742 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_TORA_R2, ParcelIsle_T_Tora_R2_Text_2
+# 743 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R2_Text_3, MSGBOX_DEFAULT
+# 744 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Tora_R2_2:
+# 738 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R2_Text_1, MSGBOX_DEFAULT
+# 739 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Tora_R3::
+# 748 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 749 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 750 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R3_Text_0, MSGBOX_YESNO
+# 751 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Tora_R3_2
+# 756 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_TORA_R3, ParcelIsle_T_Tora_R3_Text_1
+# 757 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R3_Text_2, MSGBOX_DEFAULT
+# 758 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Tora_R3_2:
+# 752 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R2_Text_1, MSGBOX_DEFAULT
+# 753 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Tora_R4::
+# 762 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 763 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 764 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R4_Text_0, MSGBOX_YESNO
+# 765 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Tora_R4_2
+# 770 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_TORA_R4, ParcelIsle_T_Tora_R4_Text_1
+# 771 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R4_Text_2, MSGBOX_DEFAULT
+# 772 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Tora_R4_2:
+# 766 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R2_Text_1, MSGBOX_DEFAULT
+# 767 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Tora_R5::
+# 776 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 777 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 778 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R5_Text_0, MSGBOX_YESNO
+# 779 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Tora_R5_2
+# 784 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_TORA_R5, ParcelIsle_T_Tora_R5_Text_1
+# 785 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R5_Text_2, MSGBOX_DEFAULT
+# 786 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Tora_R5_2:
+# 780 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_R2_Text_1, MSGBOX_DEFAULT
+# 781 "data/maps/ParcelIsle/scripts.pory"
+	release
 	end
 
 
 ParcelIsle_T_Jon::
-# 565 "data/maps/ParcelIsle/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_ISLE_JON, ParcelIsle_T_Jon_Text_0, ParcelIsle_T_Jon_Text_1
-# 568 "data/maps/ParcelIsle/scripts.pory"
+# 790 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_JON, ParcelIsle_T_Jon_Text_0, ParcelIsle_T_Jon_Text_1, ParcelIsle_T_Jon_FirstWin
+# 794 "data/maps/ParcelIsle/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 795 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelIsle_T_Jon_3
+ParcelIsle_T_Jon_1:
+# 798 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelIsle_T_Jon_8
+ParcelIsle_T_Jon_6:
+# 801 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelIsle_T_Jon_13
+ParcelIsle_T_Jon_11:
+# 804 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelIsle_T_Jon_18
+ParcelIsle_T_Jon_16:
+# 807 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_T_Jon_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelIsle_T_Jon_2:
+# 796 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Jon_R2
+	goto ParcelIsle_T_Jon_1
+
+ParcelIsle_T_Jon_3:
+# 795 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_JON_R2
+	goto_if 0, ParcelIsle_T_Jon_2
+	goto ParcelIsle_T_Jon_1
+
+ParcelIsle_T_Jon_7:
+# 799 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Jon_R3
+	goto ParcelIsle_T_Jon_6
+
+ParcelIsle_T_Jon_8:
+# 798 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_JON_R3
+	goto_if 0, ParcelIsle_T_Jon_7
+	goto ParcelIsle_T_Jon_6
+
+ParcelIsle_T_Jon_12:
+# 802 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Jon_R4
+	goto ParcelIsle_T_Jon_11
+
+ParcelIsle_T_Jon_13:
+# 801 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_JON_R4
+	goto_if 0, ParcelIsle_T_Jon_12
+	goto ParcelIsle_T_Jon_11
+
+ParcelIsle_T_Jon_17:
+# 805 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Jon_R5
+	goto ParcelIsle_T_Jon_16
+
+ParcelIsle_T_Jon_18:
+# 804 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_JON_R5
+	goto_if 0, ParcelIsle_T_Jon_17
+	goto ParcelIsle_T_Jon_16
+
+
+ParcelIsle_T_Jon_FirstWin::
+# 811 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_Text_2, MSGBOX_DEFAULT
+# 812 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Jon_R2::
+# 816 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 817 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 818 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R2_Text_0, MSGBOX_YESNO
+# 819 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Jon_R2_2
+# 824 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_JON_R2, ParcelIsle_T_Jon_R2_Text_2
+# 825 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R2_Text_3, MSGBOX_DEFAULT
+# 826 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Jon_R2_2:
+# 820 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R2_Text_1, MSGBOX_DEFAULT
+# 821 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Jon_R3::
+# 830 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 831 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 832 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R3_Text_0, MSGBOX_YESNO
+# 833 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Jon_R3_2
+# 838 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_JON_R3, ParcelIsle_T_Jon_R3_Text_1
+# 839 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R3_Text_2, MSGBOX_DEFAULT
+# 840 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Jon_R3_2:
+# 834 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R2_Text_1, MSGBOX_DEFAULT
+# 835 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Jon_R4::
+# 844 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 845 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 846 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R4_Text_0, MSGBOX_YESNO
+# 847 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Jon_R4_2
+# 852 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_JON_R4, ParcelIsle_T_Jon_R3_Text_1
+# 853 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R4_Text_1, MSGBOX_DEFAULT
+# 854 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Jon_R4_2:
+# 848 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R2_Text_1, MSGBOX_DEFAULT
+# 849 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Jon_R5::
+# 858 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 859 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 860 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R5_Text_0, MSGBOX_YESNO
+# 861 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Jon_R5_2
+# 866 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_JON_R5, ParcelIsle_T_Jon_R5_Text_1
+# 867 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R5_Text_2, MSGBOX_DEFAULT
+# 868 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Jon_R5_2:
+# 862 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_R2_Text_1, MSGBOX_DEFAULT
+# 863 "data/maps/ParcelIsle/scripts.pory"
+	release
 	end
 
 
 ParcelIsle_T_Line::
-# 572 "data/maps/ParcelIsle/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_ISLE_LINE, ParcelIsle_T_Line_Text_0, ParcelIsle_T_Line_Text_1
-# 575 "data/maps/ParcelIsle/scripts.pory"
+# 872 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_LINE, ParcelIsle_T_Line_Text_0, ParcelIsle_T_Line_Text_1, ParcelIsle_T_Line_FirstWin
+# 876 "data/maps/ParcelIsle/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 877 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelIsle_T_Line_3
+ParcelIsle_T_Line_1:
+# 880 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelIsle_T_Line_8
+ParcelIsle_T_Line_6:
+# 883 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelIsle_T_Line_13
+ParcelIsle_T_Line_11:
+# 886 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelIsle_T_Line_18
+ParcelIsle_T_Line_16:
+# 889 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_T_Line_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelIsle_T_Line_2:
+# 878 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Line_R2
+	goto ParcelIsle_T_Line_1
+
+ParcelIsle_T_Line_3:
+# 877 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_LINE_R2
+	goto_if 0, ParcelIsle_T_Line_2
+	goto ParcelIsle_T_Line_1
+
+ParcelIsle_T_Line_7:
+# 881 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Line_R3
+	goto ParcelIsle_T_Line_6
+
+ParcelIsle_T_Line_8:
+# 880 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_LINE_R3
+	goto_if 0, ParcelIsle_T_Line_7
+	goto ParcelIsle_T_Line_6
+
+ParcelIsle_T_Line_12:
+# 884 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Line_R4
+	goto ParcelIsle_T_Line_11
+
+ParcelIsle_T_Line_13:
+# 883 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_LINE_R4
+	goto_if 0, ParcelIsle_T_Line_12
+	goto ParcelIsle_T_Line_11
+
+ParcelIsle_T_Line_17:
+# 887 "data/maps/ParcelIsle/scripts.pory"
+	goto ParcelIsle_T_Line_R5
+	goto ParcelIsle_T_Line_16
+
+ParcelIsle_T_Line_18:
+# 886 "data/maps/ParcelIsle/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ISLE_LINE_R5
+	goto_if 0, ParcelIsle_T_Line_17
+	goto ParcelIsle_T_Line_16
+
+
+ParcelIsle_T_Line_FirstWin::
+# 893 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_Text_2, MSGBOX_DEFAULT
+# 894 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Line_R2::
+# 898 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 899 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 900 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R2_Text_0, MSGBOX_YESNO
+# 901 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Line_R2_2
+# 906 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_LINE_R2, ParcelIsle_T_Line_R2_Text_2
+# 907 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R2_Text_3, MSGBOX_DEFAULT
+# 908 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Line_R2_2:
+# 902 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R2_Text_1, MSGBOX_DEFAULT
+# 903 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Line_R3::
+# 912 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 913 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 914 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R3_Text_0, MSGBOX_YESNO
+# 915 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Line_R3_2
+# 920 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_LINE_R3, ParcelIsle_T_Line_R2_Text_2
+# 921 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R3_Text_1, MSGBOX_DEFAULT
+# 922 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Line_R3_2:
+# 916 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R2_Text_1, MSGBOX_DEFAULT
+# 917 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Line_R4::
+# 926 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 927 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 928 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R4_Text_0, MSGBOX_YESNO
+# 929 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Line_R4_2
+# 934 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_LINE_R4, ParcelIsle_T_Line_R4_Text_1
+# 935 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R4_Text_2, MSGBOX_DEFAULT
+# 936 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Line_R4_2:
+# 930 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R2_Text_1, MSGBOX_DEFAULT
+# 931 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
+ParcelIsle_T_Line_R5::
+# 940 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 941 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 942 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R5_Text_0, MSGBOX_YESNO
+# 943 "data/maps/ParcelIsle/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelIsle_T_Line_R5_2
+# 948 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_ISLE_LINE_R5, ParcelIsle_T_Line_R5_Text_1
+# 949 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R5_Text_2, MSGBOX_DEFAULT
+# 950 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_T_Line_R5_2:
+# 944 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_R2_Text_1, MSGBOX_DEFAULT
+# 945 "data/maps/ParcelIsle/scripts.pory"
+	release
 	end
 
 
@@ -1547,72 +2417,355 @@ ParcelIsle_T_Brand_Text_1:
 	.string "BRAND: Tide's in. Figuratively.$"
 
 ParcelIsle_T_Brand_Text_2:
-# 547 "data/maps/ParcelIsle/scripts.pory"
+# 561 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAND: Three ferry routes now.\n"
 	.string "DELIBIRD, the coast, the station. The\l"
 	.string "coast one's full every run. Nobody\l"
 	.string "comes back smiling.$"
 
+ParcelIsle_T_Brand_R2_Text_0:
+# 572 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Didn't think you'd come back\n"
+	.string "through. Good. Again?$"
+
+ParcelIsle_T_Brand_R2_Text_1:
+# 574 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Another time, then.$"
+
+ParcelIsle_T_Brand_R2_Text_2:
+# 578 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Right. That's the whole of it.$"
+
+ParcelIsle_T_Brand_R2_Text_3:
+# 579 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Come back with more clearances.\n"
+	.string "I'll have more for you.$"
+
+ParcelIsle_T_Brand_R3_Text_0:
+# 586 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: They say you don't lose any\n"
+	.string "more. Let's check?$"
+
+ParcelIsle_T_Brand_R3_Text_1:
+# 593 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Three. I'll be stronger when the\n"
+	.string "coast's done with you.$"
+
+ParcelIsle_T_Brand_R4_Text_0:
+# 600 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Nearly the top, they say. Not\n"
+	.string "past me. Again?$"
+
+ParcelIsle_T_Brand_R4_Text_1:
+# 606 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Still yours.$"
+
+ParcelIsle_T_Brand_R4_Text_2:
+# 607 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: When it's all filed, come and find\n"
+	.string "me. Once more.$"
+
+ParcelIsle_T_Brand_R5_Text_0:
+# 614 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: The region's different now.\n"
+	.string "Let's see if you are?$"
+
+ParcelIsle_T_Brand_R5_Text_1:
+# 620 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Noted. Properly, this time.$"
+
+ParcelIsle_T_Brand_R5_Text_2:
+# 621 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: That's all I've got. It was\n"
+	.string "enough to see it done.$"
+
 ParcelIsle_T_Svein_Text_0:
-# 552 "data/maps/ParcelIsle/scripts.pory"
+# 627 "data/maps/ParcelIsle/scripts.pory"
 	.string "SVEIN: Fishing the jetty. Not catching.\n"
 	.string "There's a difference. Battle?$"
 
 ParcelIsle_T_Svein_Text_1:
-# 553 "data/maps/ParcelIsle/scripts.pory"
+# 628 "data/maps/ParcelIsle/scripts.pory"
 	.string "SVEIN: Caught something at last.$"
 
 ParcelIsle_T_Svein_Text_2:
-# 554 "data/maps/ParcelIsle/scripts.pory"
+# 643 "data/maps/ParcelIsle/scripts.pory"
 	.string "SVEIN: ANNI says the nets are fine and\n"
 	.string "the sea is empty. I'm starting to\l"
 	.string "believe her.$"
 
+ParcelIsle_T_Svein_R2_Text_0:
+# 654 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: I kept the team up for this.\n"
+	.string "Again?$"
+
+ParcelIsle_T_Svein_R2_Text_1:
+# 656 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: Fine. Same spot.$"
+
+ParcelIsle_T_Svein_R2_Text_2:
+# 660 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: That's the one I wanted to see.$"
+
+ParcelIsle_T_Svein_R2_Text_3:
+# 661 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: Come back with more clearances.\n"
+	.string "I'll have more for you.$"
+
+ParcelIsle_T_Svein_R3_Text_0:
+# 668 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: I moved the whole team on. Let's\n"
+	.string "see if you have?$"
+
+ParcelIsle_T_Svein_R3_Text_1:
+# 674 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: Still yours.$"
+
+ParcelIsle_T_Svein_R3_Text_2:
+# 675 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: One more in me. After the high\n"
+	.string "ground.$"
+
+ParcelIsle_T_Svein_R4_Text_0:
+# 682 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: Seven stamps. I've one more\n"
+	.string "fight in me that's worth the name. Yes?$"
+
+ParcelIsle_T_Svein_R4_Text_1:
+# 689 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: When it's all filed, come and find\n"
+	.string "me. Once more.$"
+
+ParcelIsle_T_Svein_R5_Text_0:
+# 696 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: They read your name at the\n"
+	.string "hearing. I'd like to read it myself.\l"
+	.string "Battle?$"
+
+ParcelIsle_T_Svein_R5_Text_1:
+# 703 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: Five. Write that one down too.\n"
+	.string "I'll know you did.$"
+
 ParcelIsle_T_Tora_Text_0:
-# 559 "data/maps/ParcelIsle/scripts.pory"
+# 709 "data/maps/ParcelIsle/scripts.pory"
 	.string "TORA: New in town. Everyone's new in\n"
 	.string "town eventually. Battle me so I know\l"
 	.string "your name.$"
 
 ParcelIsle_T_Tora_Text_1:
-# 560 "data/maps/ParcelIsle/scripts.pory"
+# 710 "data/maps/ParcelIsle/scripts.pory"
 	.string "TORA: Noted. The name, I mean.$"
 
 ParcelIsle_T_Tora_Text_2:
-# 561 "data/maps/ParcelIsle/scripts.pory"
+# 725 "data/maps/ParcelIsle/scripts.pory"
 	.string "TORA: The CORPS gets a new provisional\n"
 	.string "every spring. Most of them go north and\l"
 	.string "we hear about them on the radio. Mind\l"
 	.string "you come back.$"
 
+ParcelIsle_T_Tora_R2_Text_0:
+# 736 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: Clearances or not, I want that\n"
+	.string "one back. Go?$"
+
+ParcelIsle_T_Tora_R2_Text_1:
+# 738 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: No hurry. The water keeps.$"
+
+ParcelIsle_T_Tora_R2_Text_2:
+# 742 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: …Again, then. Later.$"
+
+ParcelIsle_T_Tora_R2_Text_3:
+# 743 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: That's two to you. Get the next\n"
+	.string "stamp and come back.$"
+
+ParcelIsle_T_Tora_R3_Text_0:
+# 750 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: I moved the whole team on. Let's\n"
+	.string "see if you have?$"
+
+ParcelIsle_T_Tora_R3_Text_1:
+# 756 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: Still yours.$"
+
+ParcelIsle_T_Tora_R3_Text_2:
+# 757 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: Three. I'll be stronger when the\n"
+	.string "coast's done with you.$"
+
+ParcelIsle_T_Tora_R4_Text_0:
+# 764 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: I don't care about the paper. I\n"
+	.string "care about the one I lost. Go?$"
+
+ParcelIsle_T_Tora_R4_Text_1:
+# 770 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: Noted. Properly, this time.$"
+
+ParcelIsle_T_Tora_R4_Text_2:
+# 771 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: Four. There's one more, after.\n"
+	.string "Whatever after is.$"
+
+ParcelIsle_T_Tora_R5_Text_0:
+# 778 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: They read your name at the\n"
+	.string "hearing. I'd like to read it myself.\l"
+	.string "Battle?$"
+
+ParcelIsle_T_Tora_R5_Text_1:
+# 784 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: Right. That's the whole of it.$"
+
+ParcelIsle_T_Tora_R5_Text_2:
+# 785 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: That's all I've got. It was enough\n"
+	.string "to see it done.$"
+
 ParcelIsle_T_Jon_Text_0:
-# 566 "data/maps/ParcelIsle/scripts.pory"
+# 791 "data/maps/ParcelIsle/scripts.pory"
 	.string "JON: The chandlery's closed, the hall's\n"
 	.string "full of meetings, and I'm bored. Battle!$"
 
 ParcelIsle_T_Jon_Text_1:
-# 567 "data/maps/ParcelIsle/scripts.pory"
+# 792 "data/maps/ParcelIsle/scripts.pory"
 	.string "JON: Less bored now.$"
 
 ParcelIsle_T_Jon_Text_2:
-# 568 "data/maps/ParcelIsle/scripts.pory"
+# 807 "data/maps/ParcelIsle/scripts.pory"
 	.string "JON: My dad says the marsh north of\n"
 	.string "FERNWICK smells like money. He means\l"
 	.string "somebody's making some.$"
 
+ParcelIsle_T_Jon_R2_Text_0:
+# 818 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: Didn't think you'd come back\n"
+	.string "through. Good. Again?$"
+
+ParcelIsle_T_Jon_R2_Text_1:
+# 820 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: No hurry. The water keeps.$"
+
+ParcelIsle_T_Jon_R2_Text_2:
+# 824 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: Noted. Properly, this time.$"
+
+ParcelIsle_T_Jon_R2_Text_3:
+# 825 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: That's two to you. Get the next\n"
+	.string "stamp and come back.$"
+
+ParcelIsle_T_Jon_R3_Text_0:
+# 832 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: I've been training against the\n"
+	.string "lake. You're the test. Yes?$"
+
+ParcelIsle_T_Jon_R3_Text_1:
+# 838 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: Right. That's the whole of it.$"
+
+ParcelIsle_T_Jon_R3_Text_2:
+# 839 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: One more in me. After the high\n"
+	.string "ground.$"
+
+ParcelIsle_T_Jon_R4_Text_0:
+# 846 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: Nearly the top, they say. Not past\n"
+	.string "me. Again?$"
+
+ParcelIsle_T_Jon_R4_Text_1:
+# 853 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: Four. There's one more, after.\n"
+	.string "Whatever after is.$"
+
+ParcelIsle_T_Jon_R5_Text_0:
+# 860 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: The region's different now. Let's\n"
+	.string "see if you are?$"
+
+ParcelIsle_T_Jon_R5_Text_1:
+# 866 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: Still yours.$"
+
+ParcelIsle_T_Jon_R5_Text_2:
+# 867 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: That's all I've got. It was enough\n"
+	.string "to see it done.$"
+
 ParcelIsle_T_Line_Text_0:
-# 573 "data/maps/ParcelIsle/scripts.pory"
+# 873 "data/maps/ParcelIsle/scripts.pory"
 	.string "LINE: Picnic on the quay. The gulls take\n"
 	.string "everything. You can't take a battle off\l"
 	.string "me though.$"
 
 ParcelIsle_T_Line_Text_1:
-# 574 "data/maps/ParcelIsle/scripts.pory"
+# 874 "data/maps/ParcelIsle/scripts.pory"
 	.string "LINE: You can, apparently.$"
 
 ParcelIsle_T_Line_Text_2:
-# 575 "data/maps/ParcelIsle/scripts.pory"
+# 889 "data/maps/ParcelIsle/scripts.pory"
 	.string "LINE: SIGRUN counts the gulls every\n"
 	.string "morning. Fewer each year. The gulls\l"
 	.string "don't know. The gulls just want my\l"
 	.string "sandwich.$"
+
+ParcelIsle_T_Line_R2_Text_0:
+# 900 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: Clearances or not, I want that\n"
+	.string "one back. Go?$"
+
+ParcelIsle_T_Line_R2_Text_1:
+# 902 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: No hurry. The water keeps.$"
+
+ParcelIsle_T_Line_R2_Text_2:
+# 906 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: Still yours.$"
+
+ParcelIsle_T_Line_R2_Text_3:
+# 907 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: That's two to you. Get the next\n"
+	.string "stamp and come back.$"
+
+ParcelIsle_T_Line_R3_Text_0:
+# 914 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: I've been training against the\n"
+	.string "lake. You're the test. Yes?$"
+
+ParcelIsle_T_Line_R3_Text_1:
+# 921 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: Three. I'll be stronger when the\n"
+	.string "coast's done with you.$"
+
+ParcelIsle_T_Line_R4_Text_0:
+# 928 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: I don't care about the paper. I\n"
+	.string "care about the one I lost. Go?$"
+
+ParcelIsle_T_Line_R4_Text_1:
+# 934 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: Right. That's the whole of it.$"
+
+ParcelIsle_T_Line_R4_Text_2:
+# 935 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: Four. There's one more, after.\n"
+	.string "Whatever after is.$"
+
+ParcelIsle_T_Line_R5_Text_0:
+# 942 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: They read your name at the\n"
+	.string "hearing. I'd like to read it myself.\l"
+	.string "Battle?$"
+
+ParcelIsle_T_Line_R5_Text_1:
+# 948 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: That's the one I wanted to see.$"
+
+ParcelIsle_T_Line_R5_Text_2:
+# 949 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: That's all I've got. It was enough\n"
+	.string "to see it done.$"

@@ -53,10 +53,12 @@ full-strength rematch, repeatable; Perrin's last battle at his desk; the
 post-finale reaction pass).
 
 **Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~33,700 words
-of dialogue (quoted strings in `data/maps/Parcel*/scripts.pory`), 197 reachable
-Skald trainers (gyms 1–8 + 4 Mereholt gates + Heron + Cordelia + the Weather
-four + Perrin ×7 + 8 leader rematches + ~160 route/town trainers;
-TRAINERS_COUNT 1054), a real ending (epilogue, credits, post-game), seven
+of dialogue (quoted strings in `data/maps/Parcel*/scripts.pory`), 781 reachable
+Skald trainer battles (gyms 1–8 + 4 Mereholt gates + Heron + Cordelia + the
+Weather four + Perrin ×7 + 8 leader rematches + ~160 route/town trainers +
+**584 rematch tiers**: every simple route trainer fought again at tiers 2–5
+as the clearances come in, `tools/skald/rematch_tiers.py`; TRAINERS_COUNT
+1638), a real ending (epilogue, credits, post-game), the Field Notebook, seven
 side quests (Grettir's pond, the Corridor satchel, Hedda's mask, the beaver
 stump, the Highland egg, the Coast shell, Gaute's board), seven field HMs
 wired as real traversal, 8 Skald map sections on the region map with heal
@@ -122,13 +124,17 @@ out of sight lines and treat "reached the battle screen" as the pass.
 
 ## Known-open (honest list)
 
-- **Volume.** 197 reachable trainers vs the 1,000 target; ~33.7k words vs 100k. The
-  cheapest next wins: a trainer-dense optional area per zone (a "Corps
-  field exam" tower, the old Weather gauntlet style), Match Call rematch
-  tiers for the route trainers (each tier is a trainer id with a party;
-  check the save-block cost of `trainerRematches` first), more residents in
-  three story states per town, and more side quests (one per zone exists;
-  Grettir's pond and Hedda's mask are the templates).
+- **Volume.** 781 reachable trainer battles (197 distinct opponents + 584
+  rematch tiers) vs the 1,000 target; ~34k words vs 100k. The rematch tiers
+  are the custom "ledger" system, not Match Call (the save block has 28
+  bytes of headroom and the registered-flag range 0x15C–0x1A9 is boxed in
+  by our flags; `FREE_*` options in `include/config/save.h` would buy room
+  if Match Call is ever wanted). Cheapest next wins: a trainer-dense
+  optional area per zone (a "Corps field exam" tower, the old Weather
+  gauntlet style), more residents in three story states per town, and more
+  side quests (one per zone exists; Grettir's pond and Hedda's mask are the
+  templates). New simple trainers get their tiers by re-running
+  `python3 tools/skald/rematch_tiers.py` (idempotent).
 - **The post-game is thin.** Leader rematches and Perrin's last battle
   exist; the Weather station move, the Smeargle beat, and post-epilogue
   resident lines (the hearing's outcome, town by town) do not.

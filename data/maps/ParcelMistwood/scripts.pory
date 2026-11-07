@@ -151,28 +151,328 @@ script ParcelMistwood_Board {
 script ParcelMistwood_T_Simen {
     trainerbattle_single(TRAINER_SKALD_MW_SIMEN,
         format("SIMEN: Shh. There's a SILCOON about to open. Right there. Battle quietly."),
-        format("SIMEN: It opened. It's a BEAUTIFLY. Worth it."))
+        format("SIMEN: It opened. It's a BEAUTIFLY. Worth it."),
+        ParcelMistwood_T_Simen_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MW_SIMEN_R2)) {
+        goto(ParcelMistwood_T_Simen_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MW_SIMEN_R3)) {
+        goto(ParcelMistwood_T_Simen_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MW_SIMEN_R4)) {
+        goto(ParcelMistwood_T_Simen_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MW_SIMEN_R5)) {
+        goto(ParcelMistwood_T_Simen_R5)
+    }
     msgbox(format("SIMEN: Three snares I've found this spring. The warden says report them. I report them. The snares keep coming."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMistwood_T_Simen_FirstWin {
+    msgbox(format("SIMEN: Three snares I've found this spring. The warden says report them. I report them. The snares keep coming."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Simen_R2 {
+    lock
+    faceplayer
+    msgbox(format("SIMEN: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIMEN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SIMEN_R2, format("SIMEN: That's the one I wanted to see."))
+    msgbox(format("SIMEN: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Simen_R3 {
+    lock
+    faceplayer
+    msgbox(format("SIMEN: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIMEN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SIMEN_R3, format("SIMEN: Right. That's the whole of it."))
+    msgbox(format("SIMEN: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Simen_R4 {
+    lock
+    faceplayer
+    msgbox(format("SIMEN: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIMEN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SIMEN_R4, format("SIMEN: Noted. Properly, this time."))
+    msgbox(format("SIMEN: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Simen_R5 {
+    lock
+    faceplayer
+    msgbox(format("SIMEN: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIMEN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SIMEN_R5, format("SIMEN: …Again, then. Later."))
+    msgbox(format("SIMEN: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelMistwood_T_Hanna {
     trainerbattle_single(TRAINER_SKALD_MW_HANNA,
         format("HANNA: Lost in the galleries. Again. Battle me and then tell me which way's out."),
-        format("HANNA: North. It's always north."))
+        format("HANNA: North. It's always north."),
+        ParcelMistwood_T_Hanna_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MW_HANNA_R2)) {
+        goto(ParcelMistwood_T_Hanna_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MW_HANNA_R3)) {
+        goto(ParcelMistwood_T_Hanna_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MW_HANNA_R4)) {
+        goto(ParcelMistwood_T_Hanna_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MW_HANNA_R5)) {
+        goto(ParcelMistwood_T_Hanna_R5)
+    }
     msgbox(format("HANNA: HOOTHOOT only call from the big trees. There are fewer big trees every year. Fewer calls."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMistwood_T_Hanna_FirstWin {
+    msgbox(format("HANNA: HOOTHOOT only call from the big trees. There are fewer big trees every year. Fewer calls."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Hanna_R2 {
+    lock
+    faceplayer
+    msgbox(format("HANNA: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HANNA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_HANNA_R2, format("HANNA: That's the one I wanted to see."))
+    msgbox(format("HANNA: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Hanna_R3 {
+    lock
+    faceplayer
+    msgbox(format("HANNA: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HANNA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_HANNA_R3, format("HANNA: Still yours."))
+    msgbox(format("HANNA: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Hanna_R4 {
+    lock
+    faceplayer
+    msgbox(format("HANNA: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HANNA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_HANNA_R4, format("HANNA: Still yours."))
+    msgbox(format("HANNA: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Hanna_R5 {
+    lock
+    faceplayer
+    msgbox(format("HANNA: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HANNA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_HANNA_R5, format("HANNA: Noted. Properly, this time."))
+    msgbox(format("HANNA: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelMistwood_T_Vetle {
     trainerbattle_single(TRAINER_SKALD_MW_VETLE,
         format("VETLE: Camped by the gallery three nights. Something's been dragging snares past my tent. Battle, I'm jumpy."),
-        format("VETLE: Less jumpy. Thanks."))
+        format("VETLE: Less jumpy. Thanks."),
+        ParcelMistwood_T_Vetle_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MW_VETLE_R2)) {
+        goto(ParcelMistwood_T_Vetle_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MW_VETLE_R3)) {
+        goto(ParcelMistwood_T_Vetle_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MW_VETLE_R4)) {
+        goto(ParcelMistwood_T_Vetle_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MW_VETLE_R5)) {
+        goto(ParcelMistwood_T_Vetle_R5)
+    }
     msgbox(format("VETLE: The poachers come in from REEDMERE side. The warden knows. He's one man and the forest's a lot of forest."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMistwood_T_Vetle_FirstWin {
+    msgbox(format("VETLE: The poachers come in from REEDMERE side. The warden knows. He's one man and the forest's a lot of forest."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Vetle_R2 {
+    lock
+    faceplayer
+    msgbox(format("VETLE: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VETLE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_VETLE_R2, format("VETLE: That's the one I wanted to see."))
+    msgbox(format("VETLE: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Vetle_R3 {
+    lock
+    faceplayer
+    msgbox(format("VETLE: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VETLE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_VETLE_R3, format("VETLE: Right. That's the whole of it."))
+    msgbox(format("VETLE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Vetle_R4 {
+    lock
+    faceplayer
+    msgbox(format("VETLE: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VETLE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_VETLE_R4, format("VETLE: Still yours."))
+    msgbox(format("VETLE: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Vetle_R5 {
+    lock
+    faceplayer
+    msgbox(format("VETLE: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VETLE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_VETLE_R5, format("VETLE: Still yours."))
+    msgbox(format("VETLE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelMistwood_T_Selma {
     trainerbattle_single(TRAINER_SKALD_MW_SELMA,
         format("SELMA: The deadfall blocks the north corridor. I've waited two days for someone with CUT. Battle while we wait?"),
-        format("SELMA: You've got CUT, haven't you. Go on, then."))
+        format("SELMA: You've got CUT, haven't you. Go on, then."),
+        ParcelMistwood_T_Selma_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MW_SELMA_R2)) {
+        goto(ParcelMistwood_T_Selma_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MW_SELMA_R3)) {
+        goto(ParcelMistwood_T_Selma_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MW_SELMA_R4)) {
+        goto(ParcelMistwood_T_Selma_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MW_SELMA_R5)) {
+        goto(ParcelMistwood_T_Selma_R5)
+    }
     msgbox(format("SELMA: FERNWICK's past the deadfall. Big town. CORPS station. The HALL where TARN fails everybody."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMistwood_T_Selma_FirstWin {
+    msgbox(format("SELMA: FERNWICK's past the deadfall. Big town. CORPS station. The HALL where TARN fails everybody."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Selma_R2 {
+    lock
+    faceplayer
+    msgbox(format("SELMA: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SELMA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SELMA_R2, format("SELMA: Noted. Properly, this time."))
+    msgbox(format("SELMA: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Selma_R3 {
+    lock
+    faceplayer
+    msgbox(format("SELMA: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SELMA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SELMA_R3, format("SELMA: …Again, then. Later."))
+    msgbox(format("SELMA: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Selma_R4 {
+    lock
+    faceplayer
+    msgbox(format("SELMA: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SELMA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SELMA_R4, format("SELMA: …Again, then. Later."))
+    msgbox(format("SELMA: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMistwood_T_Selma_R5 {
+    lock
+    faceplayer
+    msgbox(format("SELMA: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SELMA: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MW_SELMA_R5, format("SELMA: …Fair."))
+    msgbox(format("SELMA: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }

@@ -233,8 +233,83 @@ script ParcelDelibird_CaveMouth {
 script ParcelDelibird_RevelerTrainer {
     trainerbattle_single(TRAINER_SKALD_REVELER,
         format("Noel: A Ranger! At Midwinter! You HAVE to battle me, it's tradition.\pLoser owes the winner cocoa. We don't keep score with money up here -- we keep it with cocoa."),
-        format("Noel: Awww. Fine, fine -- cocoa's on me!\nThat's the best way to lose anyhow."))
+        format("Noel: Awww. Fine, fine -- cocoa's on me!\nThat's the best way to lose anyhow."),
+        ParcelDelibird_RevelerTrainer_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_REVELER_R2)) {
+        goto(ParcelDelibird_RevelerTrainer_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_REVELER_R3)) {
+        goto(ParcelDelibird_RevelerTrainer_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_REVELER_R4)) {
+        goto(ParcelDelibird_RevelerTrainer_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_REVELER_R5)) {
+        goto(ParcelDelibird_RevelerTrainer_R5)
+    }
     msgbox(format("Noel: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_RevelerTrainer_FirstWin {
+    msgbox(format("Noel: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_RevelerTrainer_R2 {
+    lock
+    faceplayer
+    msgbox(format("NOEL: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NOEL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_REVELER_R2, format("NOEL: Still yours."))
+    msgbox(format("NOEL: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_RevelerTrainer_R3 {
+    lock
+    faceplayer
+    msgbox(format("NOEL: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NOEL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_REVELER_R3, format("NOEL: Still yours."))
+    msgbox(format("NOEL: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_RevelerTrainer_R4 {
+    lock
+    faceplayer
+    msgbox(format("NOEL: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NOEL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_REVELER_R4, format("NOEL: Still yours."))
+    msgbox(format("NOEL: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_RevelerTrainer_R5 {
+    lock
+    faceplayer
+    msgbox(format("NOEL: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NOEL: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_REVELER_R5, format("NOEL: …Fair."))
+    msgbox(format("NOEL: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 
@@ -352,29 +427,329 @@ script ParcelDelibird_Blankets {
 script ParcelDelibird_T_Hakon {
     trainerbattle_single(TRAINER_SKALD_DEL_HAKON,
         format("HAKON: Ferry's tied up till the festival ends. I've seen it eleven years running. Battle me, it's the only new thing today."),
-        format("HAKON: New thing: I lost."))
+        format("HAKON: New thing: I lost."),
+        ParcelDelibird_T_Hakon_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_DEL_HAKON_R2)) {
+        goto(ParcelDelibird_T_Hakon_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_DEL_HAKON_R3)) {
+        goto(ParcelDelibird_T_Hakon_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_DEL_HAKON_R4)) {
+        goto(ParcelDelibird_T_Hakon_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_DEL_HAKON_R5)) {
+        goto(ParcelDelibird_T_Hakon_R5)
+    }
     msgbox(format("HAKON: The gift square's lovely. The thaw line's moved up the slope again. You can see both from the quay."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_T_Hakon_FirstWin {
+    msgbox(format("HAKON: The gift square's lovely. The thaw line's moved up the slope again. You can see both from the quay."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Hakon_R2 {
+    lock
+    faceplayer
+    msgbox(format("HAKON: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HAKON: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_HAKON_R2, format("HAKON: …Fair."))
+    msgbox(format("HAKON: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Hakon_R3 {
+    lock
+    faceplayer
+    msgbox(format("HAKON: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HAKON: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_HAKON_R3, format("HAKON: …Fair."))
+    msgbox(format("HAKON: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Hakon_R4 {
+    lock
+    faceplayer
+    msgbox(format("HAKON: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HAKON: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_HAKON_R4, format("HAKON: Noted. Properly, this time."))
+    msgbox(format("HAKON: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Hakon_R5 {
+    lock
+    faceplayer
+    msgbox(format("HAKON: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HAKON: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_HAKON_R5, format("HAKON: That's the one I wanted to see."))
+    msgbox(format("HAKON: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelDelibird_T_Bjarne {
     trainerbattle_single(TRAINER_SKALD_DEL_BJARNE,
         format("BJARNE: The summit mouth's behind me. Cold up there. Proper cold. Last of it. Battle before you climb."),
-        format("BJARNE: Climb, then."))
+        format("BJARNE: Climb, then."),
+        ParcelDelibird_T_Bjarne_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_DEL_BJARNE_R2)) {
+        goto(ParcelDelibird_T_Bjarne_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_DEL_BJARNE_R3)) {
+        goto(ParcelDelibird_T_Bjarne_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_DEL_BJARNE_R4)) {
+        goto(ParcelDelibird_T_Bjarne_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_DEL_BJARNE_R5)) {
+        goto(ParcelDelibird_T_Bjarne_R5)
+    }
     msgbox(format("BJARNE: The cavern's the only place the old cold lives now. MEREHOLT put an officer in it. In the cold. Logging it."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_T_Bjarne_FirstWin {
+    msgbox(format("BJARNE: The cavern's the only place the old cold lives now. MEREHOLT put an officer in it. In the cold. Logging it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Bjarne_R2 {
+    lock
+    faceplayer
+    msgbox(format("BJARNE: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARNE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_BJARNE_R2, format("BJARNE: Noted. Properly, this time."))
+    msgbox(format("BJARNE: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Bjarne_R3 {
+    lock
+    faceplayer
+    msgbox(format("BJARNE: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARNE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_BJARNE_R3, format("BJARNE: …Fair."))
+    msgbox(format("BJARNE: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Bjarne_R4 {
+    lock
+    faceplayer
+    msgbox(format("BJARNE: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARNE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_BJARNE_R4, format("BJARNE: Still yours."))
+    msgbox(format("BJARNE: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Bjarne_R5 {
+    lock
+    faceplayer
+    msgbox(format("BJARNE: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARNE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_BJARNE_R5, format("BJARNE: That's the one I wanted to see."))
+    msgbox(format("BJARNE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelDelibird_T_Frida {
     trainerbattle_single(TRAINER_SKALD_DEL_FRIDA,
         format("FRIDA: My DELIBIRD was born on the summit. There won't be another. Battle?"),
-        format("FRIDA: Still the best bird on the island."))
+        format("FRIDA: Still the best bird on the island."),
+        ParcelDelibird_T_Frida_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_DEL_FRIDA_R2)) {
+        goto(ParcelDelibird_T_Frida_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_DEL_FRIDA_R3)) {
+        goto(ParcelDelibird_T_Frida_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_DEL_FRIDA_R4)) {
+        goto(ParcelDelibird_T_Frida_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_DEL_FRIDA_R5)) {
+        goto(ParcelDelibird_T_Frida_R5)
+    }
     msgbox(format("FRIDA: The festival's a gift economy. Give, take, give. MEREHOLT gives the banner. Guess what they take."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_T_Frida_FirstWin {
+    msgbox(format("FRIDA: The festival's a gift economy. Give, take, give. MEREHOLT gives the banner. Guess what they take."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Frida_R2 {
+    lock
+    faceplayer
+    msgbox(format("FRIDA: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRIDA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_FRIDA_R2, format("FRIDA: Right. That's the whole of it."))
+    msgbox(format("FRIDA: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Frida_R3 {
+    lock
+    faceplayer
+    msgbox(format("FRIDA: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRIDA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_FRIDA_R3, format("FRIDA: Still yours."))
+    msgbox(format("FRIDA: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Frida_R4 {
+    lock
+    faceplayer
+    msgbox(format("FRIDA: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRIDA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_FRIDA_R4, format("FRIDA: …Fair."))
+    msgbox(format("FRIDA: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Frida_R5 {
+    lock
+    faceplayer
+    msgbox(format("FRIDA: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRIDA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_FRIDA_R5, format("FRIDA: Noted. Properly, this time."))
+    msgbox(format("FRIDA: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelDelibird_T_Erlend {
     trainerbattle_single(TRAINER_SKALD_DEL_ERLEND,
         format("ERLEND: Cadet ERLEND, island posting. ILEX runs the gym here and nobody beats her. Spar, so I've something to report."),
-        format("ERLEND: Reported."))
+        format("ERLEND: Reported."),
+        ParcelDelibird_T_Erlend_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_DEL_ERLEND_R2)) {
+        goto(ParcelDelibird_T_Erlend_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_DEL_ERLEND_R3)) {
+        goto(ParcelDelibird_T_Erlend_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_DEL_ERLEND_R4)) {
+        goto(ParcelDelibird_T_Erlend_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_DEL_ERLEND_R5)) {
+        goto(ParcelDelibird_T_Erlend_R5)
+    }
     msgbox(format("ERLEND: ILEX's Skyline badge needs the whole island read. The summit, the shore. She doesn't sign for half."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_T_Erlend_FirstWin {
+    msgbox(format("ERLEND: ILEX's Skyline badge needs the whole island read. The summit, the shore. She doesn't sign for half."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Erlend_R2 {
+    lock
+    faceplayer
+    msgbox(format("ERLEND: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERLEND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_ERLEND_R2, format("ERLEND: Noted. Properly, this time."))
+    msgbox(format("ERLEND: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Erlend_R3 {
+    lock
+    faceplayer
+    msgbox(format("ERLEND: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERLEND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_ERLEND_R3, format("ERLEND: …Again, then. Later."))
+    msgbox(format("ERLEND: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Erlend_R4 {
+    lock
+    faceplayer
+    msgbox(format("ERLEND: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERLEND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_ERLEND_R4, format("ERLEND: …Again, then. Later."))
+    msgbox(format("ERLEND: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibird_T_Erlend_R5 {
+    lock
+    faceplayer
+    msgbox(format("ERLEND: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERLEND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DEL_ERLEND_R5, format("ERLEND: …Again, then. Later."))
+    msgbox(format("ERLEND: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 

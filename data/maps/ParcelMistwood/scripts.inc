@@ -195,33 +195,729 @@ ParcelMistwood_Board_2:
 
 ParcelMistwood_T_Simen::
 # 152 "data/maps/ParcelMistwood/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_MW_SIMEN, ParcelMistwood_T_Simen_Text_0, ParcelMistwood_T_Simen_Text_1
-# 155 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_SIMEN, ParcelMistwood_T_Simen_Text_0, ParcelMistwood_T_Simen_Text_1, ParcelMistwood_T_Simen_FirstWin
+# 156 "data/maps/ParcelMistwood/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 157 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelMistwood_T_Simen_3
+ParcelMistwood_T_Simen_1:
+# 160 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelMistwood_T_Simen_8
+ParcelMistwood_T_Simen_6:
+# 163 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelMistwood_T_Simen_13
+ParcelMistwood_T_Simen_11:
+# 166 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelMistwood_T_Simen_18
+ParcelMistwood_T_Simen_16:
+# 169 "data/maps/ParcelMistwood/scripts.pory"
 	msgbox ParcelMistwood_T_Simen_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelMistwood_T_Simen_2:
+# 158 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Simen_R2
+	goto ParcelMistwood_T_Simen_1
+
+ParcelMistwood_T_Simen_3:
+# 157 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SIMEN_R2
+	goto_if 0, ParcelMistwood_T_Simen_2
+	goto ParcelMistwood_T_Simen_1
+
+ParcelMistwood_T_Simen_7:
+# 161 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Simen_R3
+	goto ParcelMistwood_T_Simen_6
+
+ParcelMistwood_T_Simen_8:
+# 160 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SIMEN_R3
+	goto_if 0, ParcelMistwood_T_Simen_7
+	goto ParcelMistwood_T_Simen_6
+
+ParcelMistwood_T_Simen_12:
+# 164 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Simen_R4
+	goto ParcelMistwood_T_Simen_11
+
+ParcelMistwood_T_Simen_13:
+# 163 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SIMEN_R4
+	goto_if 0, ParcelMistwood_T_Simen_12
+	goto ParcelMistwood_T_Simen_11
+
+ParcelMistwood_T_Simen_17:
+# 167 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Simen_R5
+	goto ParcelMistwood_T_Simen_16
+
+ParcelMistwood_T_Simen_18:
+# 166 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SIMEN_R5
+	goto_if 0, ParcelMistwood_T_Simen_17
+	goto ParcelMistwood_T_Simen_16
+
+
+ParcelMistwood_T_Simen_FirstWin::
+# 173 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_Text_2, MSGBOX_DEFAULT
+# 174 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Simen_R2::
+# 178 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 179 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 180 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R2_Text_0, MSGBOX_YESNO
+# 181 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Simen_R2_2
+# 186 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SIMEN_R2, ParcelMistwood_T_Simen_R2_Text_2
+# 187 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R2_Text_3, MSGBOX_DEFAULT
+# 188 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Simen_R2_2:
+# 182 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R2_Text_1, MSGBOX_DEFAULT
+# 183 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Simen_R3::
+# 192 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 193 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 194 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R3_Text_0, MSGBOX_YESNO
+# 195 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Simen_R3_2
+# 200 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SIMEN_R3, ParcelMistwood_T_Simen_R3_Text_1
+# 201 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R3_Text_2, MSGBOX_DEFAULT
+# 202 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Simen_R3_2:
+# 196 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R2_Text_1, MSGBOX_DEFAULT
+# 197 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Simen_R4::
+# 206 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 207 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 208 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R4_Text_0, MSGBOX_YESNO
+# 209 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Simen_R4_2
+# 214 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SIMEN_R4, ParcelMistwood_T_Simen_R4_Text_1
+# 215 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R4_Text_2, MSGBOX_DEFAULT
+# 216 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Simen_R4_2:
+# 210 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R2_Text_1, MSGBOX_DEFAULT
+# 211 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Simen_R5::
+# 220 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 221 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 222 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R5_Text_0, MSGBOX_YESNO
+# 223 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Simen_R5_2
+# 228 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SIMEN_R5, ParcelMistwood_T_Simen_R5_Text_1
+# 229 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R5_Text_2, MSGBOX_DEFAULT
+# 230 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Simen_R5_2:
+# 224 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_R2_Text_1, MSGBOX_DEFAULT
+# 225 "data/maps/ParcelMistwood/scripts.pory"
+	release
 	end
 
 
 ParcelMistwood_T_Hanna::
-# 159 "data/maps/ParcelMistwood/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_MW_HANNA, ParcelMistwood_T_Hanna_Text_0, ParcelMistwood_T_Hanna_Text_1
-# 162 "data/maps/ParcelMistwood/scripts.pory"
+# 234 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_HANNA, ParcelMistwood_T_Hanna_Text_0, ParcelMistwood_T_Hanna_Text_1, ParcelMistwood_T_Hanna_FirstWin
+# 238 "data/maps/ParcelMistwood/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 239 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelMistwood_T_Hanna_3
+ParcelMistwood_T_Hanna_1:
+# 242 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelMistwood_T_Hanna_8
+ParcelMistwood_T_Hanna_6:
+# 245 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelMistwood_T_Hanna_13
+ParcelMistwood_T_Hanna_11:
+# 248 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelMistwood_T_Hanna_18
+ParcelMistwood_T_Hanna_16:
+# 251 "data/maps/ParcelMistwood/scripts.pory"
 	msgbox ParcelMistwood_T_Hanna_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelMistwood_T_Hanna_2:
+# 240 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Hanna_R2
+	goto ParcelMistwood_T_Hanna_1
+
+ParcelMistwood_T_Hanna_3:
+# 239 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_HANNA_R2
+	goto_if 0, ParcelMistwood_T_Hanna_2
+	goto ParcelMistwood_T_Hanna_1
+
+ParcelMistwood_T_Hanna_7:
+# 243 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Hanna_R3
+	goto ParcelMistwood_T_Hanna_6
+
+ParcelMistwood_T_Hanna_8:
+# 242 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_HANNA_R3
+	goto_if 0, ParcelMistwood_T_Hanna_7
+	goto ParcelMistwood_T_Hanna_6
+
+ParcelMistwood_T_Hanna_12:
+# 246 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Hanna_R4
+	goto ParcelMistwood_T_Hanna_11
+
+ParcelMistwood_T_Hanna_13:
+# 245 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_HANNA_R4
+	goto_if 0, ParcelMistwood_T_Hanna_12
+	goto ParcelMistwood_T_Hanna_11
+
+ParcelMistwood_T_Hanna_17:
+# 249 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Hanna_R5
+	goto ParcelMistwood_T_Hanna_16
+
+ParcelMistwood_T_Hanna_18:
+# 248 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_HANNA_R5
+	goto_if 0, ParcelMistwood_T_Hanna_17
+	goto ParcelMistwood_T_Hanna_16
+
+
+ParcelMistwood_T_Hanna_FirstWin::
+# 255 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_Text_2, MSGBOX_DEFAULT
+# 256 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Hanna_R2::
+# 260 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 261 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 262 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R2_Text_0, MSGBOX_YESNO
+# 263 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Hanna_R2_2
+# 268 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_HANNA_R2, ParcelMistwood_T_Hanna_R2_Text_2
+# 269 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R2_Text_3, MSGBOX_DEFAULT
+# 270 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Hanna_R2_2:
+# 264 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R2_Text_1, MSGBOX_DEFAULT
+# 265 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Hanna_R3::
+# 274 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 275 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 276 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R3_Text_0, MSGBOX_YESNO
+# 277 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Hanna_R3_2
+# 282 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_HANNA_R3, ParcelMistwood_T_Hanna_R3_Text_1
+# 283 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R3_Text_2, MSGBOX_DEFAULT
+# 284 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Hanna_R3_2:
+# 278 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R2_Text_1, MSGBOX_DEFAULT
+# 279 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Hanna_R4::
+# 288 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 289 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 290 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R4_Text_0, MSGBOX_YESNO
+# 291 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Hanna_R4_2
+# 296 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_HANNA_R4, ParcelMistwood_T_Hanna_R3_Text_1
+# 297 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R4_Text_1, MSGBOX_DEFAULT
+# 298 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Hanna_R4_2:
+# 292 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R2_Text_1, MSGBOX_DEFAULT
+# 293 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Hanna_R5::
+# 302 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 303 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 304 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R5_Text_0, MSGBOX_YESNO
+# 305 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Hanna_R5_2
+# 310 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_HANNA_R5, ParcelMistwood_T_Hanna_R5_Text_1
+# 311 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R5_Text_2, MSGBOX_DEFAULT
+# 312 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Hanna_R5_2:
+# 306 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_R2_Text_1, MSGBOX_DEFAULT
+# 307 "data/maps/ParcelMistwood/scripts.pory"
+	release
 	end
 
 
 ParcelMistwood_T_Vetle::
-# 166 "data/maps/ParcelMistwood/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_MW_VETLE, ParcelMistwood_T_Vetle_Text_0, ParcelMistwood_T_Vetle_Text_1
-# 169 "data/maps/ParcelMistwood/scripts.pory"
+# 316 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_VETLE, ParcelMistwood_T_Vetle_Text_0, ParcelMistwood_T_Vetle_Text_1, ParcelMistwood_T_Vetle_FirstWin
+# 320 "data/maps/ParcelMistwood/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 321 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelMistwood_T_Vetle_3
+ParcelMistwood_T_Vetle_1:
+# 324 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelMistwood_T_Vetle_8
+ParcelMistwood_T_Vetle_6:
+# 327 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelMistwood_T_Vetle_13
+ParcelMistwood_T_Vetle_11:
+# 330 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelMistwood_T_Vetle_18
+ParcelMistwood_T_Vetle_16:
+# 333 "data/maps/ParcelMistwood/scripts.pory"
 	msgbox ParcelMistwood_T_Vetle_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelMistwood_T_Vetle_2:
+# 322 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Vetle_R2
+	goto ParcelMistwood_T_Vetle_1
+
+ParcelMistwood_T_Vetle_3:
+# 321 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_VETLE_R2
+	goto_if 0, ParcelMistwood_T_Vetle_2
+	goto ParcelMistwood_T_Vetle_1
+
+ParcelMistwood_T_Vetle_7:
+# 325 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Vetle_R3
+	goto ParcelMistwood_T_Vetle_6
+
+ParcelMistwood_T_Vetle_8:
+# 324 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_VETLE_R3
+	goto_if 0, ParcelMistwood_T_Vetle_7
+	goto ParcelMistwood_T_Vetle_6
+
+ParcelMistwood_T_Vetle_12:
+# 328 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Vetle_R4
+	goto ParcelMistwood_T_Vetle_11
+
+ParcelMistwood_T_Vetle_13:
+# 327 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_VETLE_R4
+	goto_if 0, ParcelMistwood_T_Vetle_12
+	goto ParcelMistwood_T_Vetle_11
+
+ParcelMistwood_T_Vetle_17:
+# 331 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Vetle_R5
+	goto ParcelMistwood_T_Vetle_16
+
+ParcelMistwood_T_Vetle_18:
+# 330 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_VETLE_R5
+	goto_if 0, ParcelMistwood_T_Vetle_17
+	goto ParcelMistwood_T_Vetle_16
+
+
+ParcelMistwood_T_Vetle_FirstWin::
+# 337 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_Text_2, MSGBOX_DEFAULT
+# 338 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Vetle_R2::
+# 342 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 343 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 344 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R2_Text_0, MSGBOX_YESNO
+# 345 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Vetle_R2_2
+# 350 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_VETLE_R2, ParcelMistwood_T_Vetle_R2_Text_2
+# 351 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R2_Text_3, MSGBOX_DEFAULT
+# 352 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Vetle_R2_2:
+# 346 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R2_Text_1, MSGBOX_DEFAULT
+# 347 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Vetle_R3::
+# 356 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 357 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 358 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R3_Text_0, MSGBOX_YESNO
+# 359 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Vetle_R3_2
+# 364 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_VETLE_R3, ParcelMistwood_T_Vetle_R3_Text_1
+# 365 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R3_Text_2, MSGBOX_DEFAULT
+# 366 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Vetle_R3_2:
+# 360 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R2_Text_1, MSGBOX_DEFAULT
+# 361 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Vetle_R4::
+# 370 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 371 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 372 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R4_Text_0, MSGBOX_YESNO
+# 373 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Vetle_R4_2
+# 378 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_VETLE_R4, ParcelMistwood_T_Vetle_R4_Text_1
+# 379 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R4_Text_2, MSGBOX_DEFAULT
+# 380 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Vetle_R4_2:
+# 374 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R2_Text_1, MSGBOX_DEFAULT
+# 375 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Vetle_R5::
+# 384 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 385 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 386 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R5_Text_0, MSGBOX_YESNO
+# 387 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Vetle_R5_2
+# 392 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_VETLE_R5, ParcelMistwood_T_Vetle_R4_Text_1
+# 393 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R5_Text_1, MSGBOX_DEFAULT
+# 394 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Vetle_R5_2:
+# 388 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_R2_Text_1, MSGBOX_DEFAULT
+# 389 "data/maps/ParcelMistwood/scripts.pory"
+	release
 	end
 
 
 ParcelMistwood_T_Selma::
-# 173 "data/maps/ParcelMistwood/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_MW_SELMA, ParcelMistwood_T_Selma_Text_0, ParcelMistwood_T_Selma_Text_1
-# 176 "data/maps/ParcelMistwood/scripts.pory"
+# 398 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_SELMA, ParcelMistwood_T_Selma_Text_0, ParcelMistwood_T_Selma_Text_1, ParcelMistwood_T_Selma_FirstWin
+# 402 "data/maps/ParcelMistwood/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 403 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelMistwood_T_Selma_3
+ParcelMistwood_T_Selma_1:
+# 406 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelMistwood_T_Selma_8
+ParcelMistwood_T_Selma_6:
+# 409 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelMistwood_T_Selma_13
+ParcelMistwood_T_Selma_11:
+# 412 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelMistwood_T_Selma_18
+ParcelMistwood_T_Selma_16:
+# 415 "data/maps/ParcelMistwood/scripts.pory"
 	msgbox ParcelMistwood_T_Selma_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelMistwood_T_Selma_2:
+# 404 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Selma_R2
+	goto ParcelMistwood_T_Selma_1
+
+ParcelMistwood_T_Selma_3:
+# 403 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SELMA_R2
+	goto_if 0, ParcelMistwood_T_Selma_2
+	goto ParcelMistwood_T_Selma_1
+
+ParcelMistwood_T_Selma_7:
+# 407 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Selma_R3
+	goto ParcelMistwood_T_Selma_6
+
+ParcelMistwood_T_Selma_8:
+# 406 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SELMA_R3
+	goto_if 0, ParcelMistwood_T_Selma_7
+	goto ParcelMistwood_T_Selma_6
+
+ParcelMistwood_T_Selma_12:
+# 410 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Selma_R4
+	goto ParcelMistwood_T_Selma_11
+
+ParcelMistwood_T_Selma_13:
+# 409 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SELMA_R4
+	goto_if 0, ParcelMistwood_T_Selma_12
+	goto ParcelMistwood_T_Selma_11
+
+ParcelMistwood_T_Selma_17:
+# 413 "data/maps/ParcelMistwood/scripts.pory"
+	goto ParcelMistwood_T_Selma_R5
+	goto ParcelMistwood_T_Selma_16
+
+ParcelMistwood_T_Selma_18:
+# 412 "data/maps/ParcelMistwood/scripts.pory"
+	checktrainerflag TRAINER_SKALD_MW_SELMA_R5
+	goto_if 0, ParcelMistwood_T_Selma_17
+	goto ParcelMistwood_T_Selma_16
+
+
+ParcelMistwood_T_Selma_FirstWin::
+# 419 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_Text_2, MSGBOX_DEFAULT
+# 420 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Selma_R2::
+# 424 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 425 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 426 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R2_Text_0, MSGBOX_YESNO
+# 427 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Selma_R2_2
+# 432 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SELMA_R2, ParcelMistwood_T_Selma_R2_Text_2
+# 433 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R2_Text_3, MSGBOX_DEFAULT
+# 434 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Selma_R2_2:
+# 428 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R2_Text_1, MSGBOX_DEFAULT
+# 429 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Selma_R3::
+# 438 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 439 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 440 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R3_Text_0, MSGBOX_YESNO
+# 441 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Selma_R3_2
+# 446 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SELMA_R3, ParcelMistwood_T_Selma_R3_Text_1
+# 447 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R3_Text_2, MSGBOX_DEFAULT
+# 448 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Selma_R3_2:
+# 442 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R2_Text_1, MSGBOX_DEFAULT
+# 443 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Selma_R4::
+# 452 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 453 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 454 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R4_Text_0, MSGBOX_YESNO
+# 455 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Selma_R4_2
+# 460 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SELMA_R4, ParcelMistwood_T_Selma_R3_Text_1
+# 461 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R4_Text_1, MSGBOX_DEFAULT
+# 462 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Selma_R4_2:
+# 456 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R2_Text_1, MSGBOX_DEFAULT
+# 457 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+
+ParcelMistwood_T_Selma_R5::
+# 466 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 467 "data/maps/ParcelMistwood/scripts.pory"
+	faceplayer
+# 468 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R5_Text_0, MSGBOX_YESNO
+# 469 "data/maps/ParcelMistwood/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelMistwood_T_Selma_R5_2
+# 474 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_MW_SELMA_R5, ParcelMistwood_T_Selma_R5_Text_1
+# 475 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R5_Text_2, MSGBOX_DEFAULT
+# 476 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_T_Selma_R5_2:
+# 470 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_R2_Text_1, MSGBOX_DEFAULT
+# 471 "data/maps/ParcelMistwood/scripts.pory"
+	release
 	end
 
 
@@ -408,57 +1104,289 @@ ParcelMistwood_T_Simen_Text_1:
 	.string "Worth it.$"
 
 ParcelMistwood_T_Simen_Text_2:
-# 155 "data/maps/ParcelMistwood/scripts.pory"
+# 169 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SIMEN: Three snares I've found this\n"
 	.string "spring. The warden says report them. I\l"
 	.string "report them. The snares keep coming.$"
 
+ParcelMistwood_T_Simen_R2_Text_0:
+# 180 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: You again. I've had time to think\n"
+	.string "about last time. Go again?$"
+
+ParcelMistwood_T_Simen_R2_Text_1:
+# 182 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Later, then. I'm not going\n"
+	.string "anywhere.$"
+
+ParcelMistwood_T_Simen_R2_Text_2:
+# 186 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: That's the one I wanted to see.$"
+
+ParcelMistwood_T_Simen_R2_Text_3:
+# 187 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Come back with more clearances.\n"
+	.string "I'll have more for you.$"
+
+ParcelMistwood_T_Simen_R3_Text_0:
+# 194 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: I've been training against the\n"
+	.string "lake. You're the test. Yes?$"
+
+ParcelMistwood_T_Simen_R3_Text_1:
+# 200 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Right. That's the whole of it.$"
+
+ParcelMistwood_T_Simen_R3_Text_2:
+# 201 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Three. I'll be stronger when the\n"
+	.string "coast's done with you.$"
+
+ParcelMistwood_T_Simen_R4_Text_0:
+# 208 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Full strength, no excuses, mine\n"
+	.string "or yours. Rematch?$"
+
+ParcelMistwood_T_Simen_R4_Text_1:
+# 214 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Noted. Properly, this time.$"
+
+ParcelMistwood_T_Simen_R4_Text_2:
+# 215 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Four. There's one more, after.\n"
+	.string "Whatever after is.$"
+
+ParcelMistwood_T_Simen_R5_Text_0:
+# 222 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: They read your name at the\n"
+	.string "hearing. I'd like to read it myself.\l"
+	.string "Battle?$"
+
+ParcelMistwood_T_Simen_R5_Text_1:
+# 228 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: …Again, then. Later.$"
+
+ParcelMistwood_T_Simen_R5_Text_2:
+# 229 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: That's all I've got. It was\n"
+	.string "enough to see it done.$"
+
 ParcelMistwood_T_Hanna_Text_0:
-# 160 "data/maps/ParcelMistwood/scripts.pory"
+# 235 "data/maps/ParcelMistwood/scripts.pory"
 	.string "HANNA: Lost in the galleries. Again.\n"
 	.string "Battle me and then tell me which way's\l"
 	.string "out.$"
 
 ParcelMistwood_T_Hanna_Text_1:
-# 161 "data/maps/ParcelMistwood/scripts.pory"
+# 236 "data/maps/ParcelMistwood/scripts.pory"
 	.string "HANNA: North. It's always north.$"
 
 ParcelMistwood_T_Hanna_Text_2:
-# 162 "data/maps/ParcelMistwood/scripts.pory"
+# 251 "data/maps/ParcelMistwood/scripts.pory"
 	.string "HANNA: HOOTHOOT only call from the big\n"
 	.string "trees. There are fewer big trees every\l"
 	.string "year. Fewer calls.$"
 
+ParcelMistwood_T_Hanna_R2_Text_0:
+# 262 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: You again. I've had time to think\n"
+	.string "about last time. Go again?$"
+
+ParcelMistwood_T_Hanna_R2_Text_1:
+# 264 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: Later, then. I'm not going\n"
+	.string "anywhere.$"
+
+ParcelMistwood_T_Hanna_R2_Text_2:
+# 268 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: That's the one I wanted to see.$"
+
+ParcelMistwood_T_Hanna_R2_Text_3:
+# 269 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: That's two to you. Get the next\n"
+	.string "stamp and come back.$"
+
+ParcelMistwood_T_Hanna_R3_Text_0:
+# 276 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: I moved the whole team on. Let's\n"
+	.string "see if you have?$"
+
+ParcelMistwood_T_Hanna_R3_Text_1:
+# 282 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: Still yours.$"
+
+ParcelMistwood_T_Hanna_R3_Text_2:
+# 283 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: Three. I'll be stronger when the\n"
+	.string "coast's done with you.$"
+
+ParcelMistwood_T_Hanna_R4_Text_0:
+# 290 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: Seven stamps. I've one more\n"
+	.string "fight in me that's worth the name. Yes?$"
+
+ParcelMistwood_T_Hanna_R4_Text_1:
+# 297 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: When it's all filed, come and find\n"
+	.string "me. Once more.$"
+
+ParcelMistwood_T_Hanna_R5_Text_0:
+# 304 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: Last one. I've put everything\n"
+	.string "I've got into this team. Go?$"
+
+ParcelMistwood_T_Hanna_R5_Text_1:
+# 310 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: Noted. Properly, this time.$"
+
+ParcelMistwood_T_Hanna_R5_Text_2:
+# 311 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: That's all I've got. It was\n"
+	.string "enough to see it done.$"
+
 ParcelMistwood_T_Vetle_Text_0:
-# 167 "data/maps/ParcelMistwood/scripts.pory"
+# 317 "data/maps/ParcelMistwood/scripts.pory"
 	.string "VETLE: Camped by the gallery three\n"
 	.string "nights. Something's been dragging\l"
 	.string "snares past my tent. Battle, I'm jumpy.$"
 
 ParcelMistwood_T_Vetle_Text_1:
-# 168 "data/maps/ParcelMistwood/scripts.pory"
+# 318 "data/maps/ParcelMistwood/scripts.pory"
 	.string "VETLE: Less jumpy. Thanks.$"
 
 ParcelMistwood_T_Vetle_Text_2:
-# 169 "data/maps/ParcelMistwood/scripts.pory"
+# 333 "data/maps/ParcelMistwood/scripts.pory"
 	.string "VETLE: The poachers come in from\n"
 	.string "REEDMERE side. The warden knows. He's\l"
 	.string "one man and the forest's a lot of\l"
 	.string "forest.$"
 
+ParcelMistwood_T_Vetle_R2_Text_0:
+# 344 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: You again. I've had time to think\n"
+	.string "about last time. Go again?$"
+
+ParcelMistwood_T_Vetle_R2_Text_1:
+# 346 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Suit yourself. I'm here.$"
+
+ParcelMistwood_T_Vetle_R2_Text_2:
+# 350 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: That's the one I wanted to see.$"
+
+ParcelMistwood_T_Vetle_R2_Text_3:
+# 351 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Come back with more clearances.\n"
+	.string "I'll have more for you.$"
+
+ParcelMistwood_T_Vetle_R3_Text_0:
+# 358 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Word gets up the river. Half a\n"
+	.string "region signed off on you. Show me?$"
+
+ParcelMistwood_T_Vetle_R3_Text_1:
+# 364 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Right. That's the whole of it.$"
+
+ParcelMistwood_T_Vetle_R3_Text_2:
+# 365 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Three. I'll be stronger when the\n"
+	.string "coast's done with you.$"
+
+ParcelMistwood_T_Vetle_R4_Text_0:
+# 372 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Seven stamps. I've one more\n"
+	.string "fight in me that's worth the name. Yes?$"
+
+ParcelMistwood_T_Vetle_R4_Text_1:
+# 378 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Still yours.$"
+
+ParcelMistwood_T_Vetle_R4_Text_2:
+# 379 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Four. There's one more, after.\n"
+	.string "Whatever after is.$"
+
+ParcelMistwood_T_Vetle_R5_Text_0:
+# 386 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: They read your name at the\n"
+	.string "hearing. I'd like to read it myself.\l"
+	.string "Battle?$"
+
+ParcelMistwood_T_Vetle_R5_Text_1:
+# 393 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: That's all I've got. It was\n"
+	.string "enough to see it done.$"
+
 ParcelMistwood_T_Selma_Text_0:
-# 174 "data/maps/ParcelMistwood/scripts.pory"
+# 399 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SELMA: The deadfall blocks the north\n"
 	.string "corridor. I've waited two days for\l"
 	.string "someone with CUT. Battle while we wait?$"
 
 ParcelMistwood_T_Selma_Text_1:
-# 175 "data/maps/ParcelMistwood/scripts.pory"
+# 400 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SELMA: You've got CUT, haven't you. Go\n"
 	.string "on, then.$"
 
 ParcelMistwood_T_Selma_Text_2:
-# 176 "data/maps/ParcelMistwood/scripts.pory"
+# 415 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SELMA: FERNWICK's past the deadfall.\n"
 	.string "Big town. CORPS station. The HALL where\l"
 	.string "TARN fails everybody.$"
+
+ParcelMistwood_T_Selma_R2_Text_0:
+# 426 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: I kept the team up for this.\n"
+	.string "Again?$"
+
+ParcelMistwood_T_Selma_R2_Text_1:
+# 428 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: No hurry. The water keeps.$"
+
+ParcelMistwood_T_Selma_R2_Text_2:
+# 432 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: Noted. Properly, this time.$"
+
+ParcelMistwood_T_Selma_R2_Text_3:
+# 433 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: That's two to you. Get the next\n"
+	.string "stamp and come back.$"
+
+ParcelMistwood_T_Selma_R3_Text_0:
+# 440 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: They say you don't lose any\n"
+	.string "more. Let's check?$"
+
+ParcelMistwood_T_Selma_R3_Text_1:
+# 446 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: …Again, then. Later.$"
+
+ParcelMistwood_T_Selma_R3_Text_2:
+# 447 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: One more in me. After the high\n"
+	.string "ground.$"
+
+ParcelMistwood_T_Selma_R4_Text_0:
+# 454 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: Nearly the top, they say. Not\n"
+	.string "past me. Again?$"
+
+ParcelMistwood_T_Selma_R4_Text_1:
+# 461 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: Four. There's one more, after.\n"
+	.string "Whatever after is.$"
+
+ParcelMistwood_T_Selma_R5_Text_0:
+# 468 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: After everything, one more. For\n"
+	.string "the ledger. Yes?$"
+
+ParcelMistwood_T_Selma_R5_Text_1:
+# 474 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: …Fair.$"
+
+ParcelMistwood_T_Selma_R5_Text_2:
+# 475 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: Five. Write that one down too.\n"
+	.string "I'll know you did.$"

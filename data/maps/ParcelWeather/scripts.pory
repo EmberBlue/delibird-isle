@@ -30,29 +30,329 @@ script ParcelWeather_FirstEntry {
 script ParcelWeather_Rain {
     trainerbattle_single(TRAINER_SKALD_RAIN,
         format("MARLOWE: Hydrology Division. I don't forecast the rain, RANGER. I make it. Stand under this and learn."),
-        format("MARLOWE: …Hm. The model held. The team didn't. I hate when those come apart separately."))
+        format("MARLOWE: …Hm. The model held. The team didn't. I hate when those come apart separately."),
+        ParcelWeather_Rain_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_RAIN_R2)) {
+        goto(ParcelWeather_Rain_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_RAIN_R3)) {
+        goto(ParcelWeather_Rain_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_RAIN_R4)) {
+        goto(ParcelWeather_Rain_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_RAIN_R5)) {
+        goto(ParcelWeather_Rain_R5)
+    }
     msgbox(format("MARLOWE: We can drop a monsoon on a test plot to order. People see the demo and assume we can end a drought.\pWe can't. We can only move the misery to someone else's map. But the demo is what gets funded."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Rain_FirstWin {
+    msgbox(format("MARLOWE: We can drop a monsoon on a test plot to order. People see the demo and assume we can end a drought.\pWe can't. We can only move the misery to someone else's map. But the demo is what gets funded."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Rain_R2 {
+    lock
+    faceplayer
+    msgbox(format("MARLOWE: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MARLOWE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_RAIN_R2, format("MARLOWE: Right. That's the whole of it."))
+    msgbox(format("MARLOWE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Rain_R3 {
+    lock
+    faceplayer
+    msgbox(format("MARLOWE: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MARLOWE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_RAIN_R3, format("MARLOWE: Right. That's the whole of it."))
+    msgbox(format("MARLOWE: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Rain_R4 {
+    lock
+    faceplayer
+    msgbox(format("MARLOWE: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MARLOWE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_RAIN_R4, format("MARLOWE: Still yours."))
+    msgbox(format("MARLOWE: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Rain_R5 {
+    lock
+    faceplayer
+    msgbox(format("MARLOWE: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MARLOWE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_RAIN_R5, format("MARLOWE: Still yours."))
+    msgbox(format("MARLOWE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Sun {
     trainerbattle_single(TRAINER_SKALD_SUN,
         format("HELIO: Solar Forcing. I keep this plot in a permanent fine afternoon. Nothing dies of a fine afternoon. Until it does."),
-        format("HELIO: Bright work. You don't wilt. Most do, in my weather."))
+        format("HELIO: Bright work. You don't wilt. Most do, in my weather."),
+        ParcelWeather_Sun_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SUN_R2)) {
+        goto(ParcelWeather_Sun_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SUN_R3)) {
+        goto(ParcelWeather_Sun_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SUN_R4)) {
+        goto(ParcelWeather_Sun_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SUN_R5)) {
+        goto(ParcelWeather_Sun_R5)
+    }
     msgbox(format("HELIO: A little more sun, a longer season, a bigger yield. That's the pitch. They leave out the part where the soil cooks and the water leaves.\pPleasant is not the same as alive. I tell them. They like pleasant."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Sun_FirstWin {
+    msgbox(format("HELIO: A little more sun, a longer season, a bigger yield. That's the pitch. They leave out the part where the soil cooks and the water leaves.\pPleasant is not the same as alive. I tell them. They like pleasant."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sun_R2 {
+    lock
+    faceplayer
+    msgbox(format("HELIO: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HELIO: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUN_R2, format("HELIO: Right. That's the whole of it."))
+    msgbox(format("HELIO: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sun_R3 {
+    lock
+    faceplayer
+    msgbox(format("HELIO: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HELIO: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUN_R3, format("HELIO: Still yours."))
+    msgbox(format("HELIO: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sun_R4 {
+    lock
+    faceplayer
+    msgbox(format("HELIO: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HELIO: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUN_R4, format("HELIO: …Again, then. Later."))
+    msgbox(format("HELIO: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sun_R5 {
+    lock
+    faceplayer
+    msgbox(format("HELIO: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HELIO: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUN_R5, format("HELIO: Still yours."))
+    msgbox(format("HELIO: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Sand {
     trainerbattle_single(TRAINER_SKALD_SAND,
         format("DUNE: Aridity Division. This plot used to be marsh. I made it a desert in a season, for science. Watch your footing."),
-        format("DUNE: Grit, you've got. Fitting. It's the only thing that grows in my conditions."))
+        format("DUNE: Grit, you've got. Fitting. It's the only thing that grows in my conditions."),
+        ParcelWeather_Sand_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SAND_R2)) {
+        goto(ParcelWeather_Sand_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SAND_R3)) {
+        goto(ParcelWeather_Sand_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SAND_R4)) {
+        goto(ParcelWeather_Sand_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SAND_R5)) {
+        goto(ParcelWeather_Sand_R5)
+    }
     msgbox(format("DUNE: My job is proving a dried-out place can still 'support managed use'. It can support a sandstorm and a lawsuit, mostly.\pYou can take a wetland apart fast. Putting one back is not in my budget line."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Sand_FirstWin {
+    msgbox(format("DUNE: My job is proving a dried-out place can still 'support managed use'. It can support a sandstorm and a lawsuit, mostly.\pYou can take a wetland apart fast. Putting one back is not in my budget line."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sand_R2 {
+    lock
+    faceplayer
+    msgbox(format("DUNE: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DUNE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SAND_R2, format("DUNE: Still yours."))
+    msgbox(format("DUNE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sand_R3 {
+    lock
+    faceplayer
+    msgbox(format("DUNE: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DUNE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SAND_R3, format("DUNE: Noted. Properly, this time."))
+    msgbox(format("DUNE: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sand_R4 {
+    lock
+    faceplayer
+    msgbox(format("DUNE: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DUNE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SAND_R4, format("DUNE: Noted. Properly, this time."))
+    msgbox(format("DUNE: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Sand_R5 {
+    lock
+    faceplayer
+    msgbox(format("DUNE: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DUNE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SAND_R5, format("DUNE: Noted. Properly, this time."))
+    msgbox(format("DUNE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Ice {
     trainerbattle_single(TRAINER_SKALD_ICE,
         format("FROSK: Cryosphere Division. I keep one plot frozen while the world thaws. It costs a fortune. That's rather the point."),
-        format("FROSK: Cold-blooded battling. I approve. The warm-hearted ones never last my hail."))
+        format("FROSK: Cold-blooded battling. I approve. The warm-hearted ones never last my hail."),
+        ParcelWeather_Ice_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_ICE_R2)) {
+        goto(ParcelWeather_Ice_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_ICE_R3)) {
+        goto(ParcelWeather_Ice_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_ICE_R4)) {
+        goto(ParcelWeather_Ice_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_ICE_R5)) {
+        goto(ParcelWeather_Ice_R5)
+    }
     msgbox(format("FROSK: I can hold ice on a single square against the whole summer, if you pay the power bill.\pThat's what 'climate resilience' means once you read the invoice. A frozen plot for whoever can afford one."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Ice_FirstWin {
+    msgbox(format("FROSK: I can hold ice on a single square against the whole summer, if you pay the power bill.\pThat's what 'climate resilience' means once you read the invoice. A frozen plot for whoever can afford one."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ice_R2 {
+    lock
+    faceplayer
+    msgbox(format("FROSK: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FROSK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ICE_R2, format("FROSK: Still yours."))
+    msgbox(format("FROSK: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ice_R3 {
+    lock
+    faceplayer
+    msgbox(format("FROSK: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FROSK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ICE_R3, format("FROSK: That's the one I wanted to see."))
+    msgbox(format("FROSK: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ice_R4 {
+    lock
+    faceplayer
+    msgbox(format("FROSK: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FROSK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ICE_R4, format("FROSK: Right. That's the whole of it."))
+    msgbox(format("FROSK: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ice_R5 {
+    lock
+    faceplayer
+    msgbox(format("FROSK: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FROSK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_ICE_R5, format("FROSK: …Fair."))
+    msgbox(format("FROSK: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 
@@ -60,43 +360,493 @@ script ParcelWeather_Ice {
 script ParcelWeather_Ask {
     trainerbattle_single(TRAINER_SKALD_WEA_ASK,
         format("ASK: Breeder, Hydrology plot. My CASTFORM changes with the plot. So do I. Battle."),
-        format("ASK: Changed again."))
+        format("ASK: Changed again."),
+        ParcelWeather_Ask_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_ASK_R2)) {
+        goto(ParcelWeather_Ask_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_ASK_R3)) {
+        goto(ParcelWeather_Ask_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_ASK_R4)) {
+        goto(ParcelWeather_Ask_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_ASK_R5)) {
+        goto(ParcelWeather_Ask_R5)
+    }
     msgbox(format("ASK: CASTFORM's the station mascot. It becomes whatever sky you put it under. The director says that's the whole philosophy. He doesn't say it like a compliment."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Ask_FirstWin {
+    msgbox(format("ASK: CASTFORM's the station mascot. It becomes whatever sky you put it under. The director says that's the whole philosophy. He doesn't say it like a compliment."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ask_R2 {
+    lock
+    faceplayer
+    msgbox(format("ASK: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_ASK_R2, format("ASK: Right. That's the whole of it."))
+    msgbox(format("ASK: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ask_R3 {
+    lock
+    faceplayer
+    msgbox(format("ASK: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_ASK_R3, format("ASK: …Fair."))
+    msgbox(format("ASK: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ask_R4 {
+    lock
+    faceplayer
+    msgbox(format("ASK: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_ASK_R4, format("ASK: …Again, then. Later."))
+    msgbox(format("ASK: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ask_R5 {
+    lock
+    faceplayer
+    msgbox(format("ASK: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASK: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_ASK_R5, format("ASK: Noted. Properly, this time."))
+    msgbox(format("ASK: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Brit {
     trainerbattle_single(TRAINER_SKALD_WEA_BRIT,
         format("BRIT: Solar plot. We're at thirty-one days without rain, on purpose. Battle before the NUMEL overheats."),
-        format("BRIT: It overheated."))
+        format("BRIT: It overheated."),
+        ParcelWeather_Brit_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_BRIT_R2)) {
+        goto(ParcelWeather_Brit_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_BRIT_R3)) {
+        goto(ParcelWeather_Brit_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_BRIT_R4)) {
+        goto(ParcelWeather_Brit_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_BRIT_R5)) {
+        goto(ParcelWeather_Brit_R5)
+    }
     msgbox(format("BRIT: Day thirty-two tomorrow. The grass went brown on day nine. Nobody's written that down. It's not a result, it's a side effect."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Brit_FirstWin {
+    msgbox(format("BRIT: Day thirty-two tomorrow. The grass went brown on day nine. Nobody's written that down. It's not a result, it's a side effect."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Brit_R2 {
+    lock
+    faceplayer
+    msgbox(format("BRIT: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRIT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_BRIT_R2, format("BRIT: …Again, then. Later."))
+    msgbox(format("BRIT: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Brit_R3 {
+    lock
+    faceplayer
+    msgbox(format("BRIT: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRIT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_BRIT_R3, format("BRIT: …Fair."))
+    msgbox(format("BRIT: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Brit_R4 {
+    lock
+    faceplayer
+    msgbox(format("BRIT: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRIT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_BRIT_R4, format("BRIT: Right. That's the whole of it."))
+    msgbox(format("BRIT: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Brit_R5 {
+    lock
+    faceplayer
+    msgbox(format("BRIT: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BRIT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_BRIT_R5, format("BRIT: …Again, then. Later."))
+    msgbox(format("BRIT: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Cato {
     trainerbattle_single(TRAINER_SKALD_WEA_CATO,
         format("CATO: Aridity plot. I shovel sand onto a marsh for a living. Battle. Please."),
-        format("CATO: Thanks. Needed that."))
+        format("CATO: Thanks. Needed that."),
+        ParcelWeather_Cato_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_CATO_R2)) {
+        goto(ParcelWeather_Cato_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_CATO_R3)) {
+        goto(ParcelWeather_Cato_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_CATO_R4)) {
+        goto(ParcelWeather_Cato_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_CATO_R5)) {
+        goto(ParcelWeather_Cato_R5)
+    }
     msgbox(format("CATO: There were POLIWAG in this plot when I started. I don't know where they went. I know I'm not supposed to ask."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Cato_FirstWin {
+    msgbox(format("CATO: There were POLIWAG in this plot when I started. I don't know where they went. I know I'm not supposed to ask."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Cato_R2 {
+    lock
+    faceplayer
+    msgbox(format("CATO: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("CATO: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_CATO_R2, format("CATO: That's the one I wanted to see."))
+    msgbox(format("CATO: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Cato_R3 {
+    lock
+    faceplayer
+    msgbox(format("CATO: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("CATO: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_CATO_R3, format("CATO: Noted. Properly, this time."))
+    msgbox(format("CATO: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Cato_R4 {
+    lock
+    faceplayer
+    msgbox(format("CATO: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("CATO: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_CATO_R4, format("CATO: Right. That's the whole of it."))
+    msgbox(format("CATO: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Cato_R5 {
+    lock
+    faceplayer
+    msgbox(format("CATO: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("CATO: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_CATO_R5, format("CATO: Noted. Properly, this time."))
+    msgbox(format("CATO: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Dis {
     trainerbattle_single(TRAINER_SKALD_WEA_DIS,
         format("DIS: Cryosphere plot. We keep one square frozen. It's the most expensive square on the island. Battle."),
-        format("DIS: Expensive loss."))
+        format("DIS: Expensive loss."),
+        ParcelWeather_Dis_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_DIS_R2)) {
+        goto(ParcelWeather_Dis_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_DIS_R3)) {
+        goto(ParcelWeather_Dis_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_DIS_R4)) {
+        goto(ParcelWeather_Dis_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_DIS_R5)) {
+        goto(ParcelWeather_Dis_R5)
+    }
     msgbox(format("DIS: The power for the ice plot comes up from the coast works. The coast works run on the catch. So the frozen square is made of fish, if you follow it back."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Dis_FirstWin {
+    msgbox(format("DIS: The power for the ice plot comes up from the coast works. The coast works run on the catch. So the frozen square is made of fish, if you follow it back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Dis_R2 {
+    lock
+    faceplayer
+    msgbox(format("DIS: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DIS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_DIS_R2, format("DIS: Still yours."))
+    msgbox(format("DIS: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Dis_R3 {
+    lock
+    faceplayer
+    msgbox(format("DIS: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DIS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_DIS_R3, format("DIS: Noted. Properly, this time."))
+    msgbox(format("DIS: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Dis_R4 {
+    lock
+    faceplayer
+    msgbox(format("DIS: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DIS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_DIS_R4, format("DIS: …Again, then. Later."))
+    msgbox(format("DIS: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Dis_R5 {
+    lock
+    faceplayer
+    msgbox(format("DIS: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DIS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_DIS_R5, format("DIS: Noted. Properly, this time."))
+    msgbox(format("DIS: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Ebba {
     trainerbattle_single(TRAINER_SKALD_WEA_EBBA,
         format("EBBA: Corps liaison. I'm meant to observe. Observing's dull. Spar."),
-        format("EBBA: Observed."))
+        format("EBBA: Observed."),
+        ParcelWeather_Ebba_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_EBBA_R2)) {
+        goto(ParcelWeather_Ebba_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_EBBA_R3)) {
+        goto(ParcelWeather_Ebba_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_EBBA_R4)) {
+        goto(ParcelWeather_Ebba_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_EBBA_R5)) {
+        goto(ParcelWeather_Ebba_R5)
+    }
     msgbox(format("EBBA: HALE sent me to count what the station publishes against what it measures. Two different numbers. Every month."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Ebba_FirstWin {
+    msgbox(format("EBBA: HALE sent me to count what the station publishes against what it measures. Two different numbers. Every month."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ebba_R2 {
+    lock
+    faceplayer
+    msgbox(format("EBBA: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EBBA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_EBBA_R2, format("EBBA: Right. That's the whole of it."))
+    msgbox(format("EBBA: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ebba_R3 {
+    lock
+    faceplayer
+    msgbox(format("EBBA: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EBBA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_EBBA_R3, format("EBBA: That's the one I wanted to see."))
+    msgbox(format("EBBA: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ebba_R4 {
+    lock
+    faceplayer
+    msgbox(format("EBBA: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EBBA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_EBBA_R4, format("EBBA: Noted. Properly, this time."))
+    msgbox(format("EBBA: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Ebba_R5 {
+    lock
+    faceplayer
+    msgbox(format("EBBA: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EBBA: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_EBBA_R5, format("EBBA: Right. That's the whole of it."))
+    msgbox(format("EBBA: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Frode {
     trainerbattle_single(TRAINER_SKALD_WEA_FINN2,
         format("FRODE: I study the old ground under the plots. Pollen. Peat. What the weather WAS. Nobody funds what was. Battle."),
-        format("FRODE: What was, lost to what is."))
+        format("FRODE: What was, lost to what is."),
+        ParcelWeather_Frode_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_FINN2_R2)) {
+        goto(ParcelWeather_Frode_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_FINN2_R3)) {
+        goto(ParcelWeather_Frode_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_FINN2_R4)) {
+        goto(ParcelWeather_Frode_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_FINN2_R5)) {
+        goto(ParcelWeather_Frode_R5)
+    }
     msgbox(format("FRODE: The peat says this slope had a marsh for nine thousand years. The plot's had sand for one. Guess which one's in the brochure."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Frode_FirstWin {
+    msgbox(format("FRODE: The peat says this slope had a marsh for nine thousand years. The plot's had sand for one. Guess which one's in the brochure."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Frode_R2 {
+    lock
+    faceplayer
+    msgbox(format("FRODE: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRODE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_FINN2_R2, format("FRODE: That's the one I wanted to see."))
+    msgbox(format("FRODE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Frode_R3 {
+    lock
+    faceplayer
+    msgbox(format("FRODE: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRODE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_FINN2_R3, format("FRODE: Still yours."))
+    msgbox(format("FRODE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Frode_R4 {
+    lock
+    faceplayer
+    msgbox(format("FRODE: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRODE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_FINN2_R4, format("FRODE: …Again, then. Later."))
+    msgbox(format("FRODE: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Frode_R5 {
+    lock
+    faceplayer
+    msgbox(format("FRODE: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FRODE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_FINN2_R5, format("FRODE: …Again, then. Later."))
+    msgbox(format("FRODE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_Gaute {
@@ -125,8 +875,83 @@ script ParcelWeather_Gaute {
 script ParcelWeather_Hege {
     trainerbattle_single(TRAINER_SKALD_WEA_HEGE,
         format("HEGE: The bridge is the best place to think. The water doesn't care what the plots say. Battle me on it."),
-        format("HEGE: The water still doesn't care."))
+        format("HEGE: The water still doesn't care."),
+        ParcelWeather_Hege_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_HEGE_R2)) {
+        goto(ParcelWeather_Hege_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_HEGE_R3)) {
+        goto(ParcelWeather_Hege_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_HEGE_R4)) {
+        goto(ParcelWeather_Hege_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_HEGE_R5)) {
+        goto(ParcelWeather_Hege_R5)
+    }
     msgbox(format("HEGE: The director isn't a liar. That's what's hard. He knows exactly what the station is. He runs it anyway, so somebody honest does."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Hege_FirstWin {
+    msgbox(format("HEGE: The director isn't a liar. That's what's hard. He knows exactly what the station is. He runs it anyway, so somebody honest does."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Hege_R2 {
+    lock
+    faceplayer
+    msgbox(format("HEGE: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HEGE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_HEGE_R2, format("HEGE: …Again, then. Later."))
+    msgbox(format("HEGE: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Hege_R3 {
+    lock
+    faceplayer
+    msgbox(format("HEGE: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HEGE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_HEGE_R3, format("HEGE: That's the one I wanted to see."))
+    msgbox(format("HEGE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Hege_R4 {
+    lock
+    faceplayer
+    msgbox(format("HEGE: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HEGE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_HEGE_R4, format("HEGE: Noted. Properly, this time."))
+    msgbox(format("HEGE: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_Hege_R5 {
+    lock
+    faceplayer
+    msgbox(format("HEGE: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HEGE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_HEGE_R5, format("HEGE: …Fair."))
+    msgbox(format("HEGE: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 
@@ -162,21 +987,246 @@ script ParcelWeather_SignPlots {
 script ParcelWeather_T_Amund {
     trainerbattle_single(TRAINER_SKALD_WEA_AMUND,
         format("AMUND: Up the east slope. The frost plot's behind me. It hums. Battle."),
-        format("AMUND: Humming's louder than I am, apparently."))
+        format("AMUND: Humming's louder than I am, apparently."),
+        ParcelWeather_T_Amund_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_AMUND_R2)) {
+        goto(ParcelWeather_T_Amund_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_AMUND_R3)) {
+        goto(ParcelWeather_T_Amund_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_AMUND_R4)) {
+        goto(ParcelWeather_T_Amund_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_AMUND_R5)) {
+        goto(ParcelWeather_T_Amund_R5)
+    }
     msgbox(format("AMUND: One frozen square on a warming hill. I asked what it's for. 'Demonstration.' Of what? Nobody said."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_T_Amund_FirstWin {
+    msgbox(format("AMUND: One frozen square on a warming hill. I asked what it's for. 'Demonstration.' Of what? Nobody said."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Amund_R2 {
+    lock
+    faceplayer
+    msgbox(format("AMUND: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AMUND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_AMUND_R2, format("AMUND: Still yours."))
+    msgbox(format("AMUND: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Amund_R3 {
+    lock
+    faceplayer
+    msgbox(format("AMUND: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AMUND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_AMUND_R3, format("AMUND: That's the one I wanted to see."))
+    msgbox(format("AMUND: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Amund_R4 {
+    lock
+    faceplayer
+    msgbox(format("AMUND: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AMUND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_AMUND_R4, format("AMUND: Still yours."))
+    msgbox(format("AMUND: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Amund_R5 {
+    lock
+    faceplayer
+    msgbox(format("AMUND: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AMUND: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_AMUND_R5, format("AMUND: …Again, then. Later."))
+    msgbox(format("AMUND: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_T_Ragnhild {
     trainerbattle_single(TRAINER_SKALD_WEA_RAGNHILD,
         format("RAGNHILD: Breeder, east plots. CASTFORM for the demos, LUDICOLO for the rain. Battle."),
-        format("RAGNHILD: Rained on."))
+        format("RAGNHILD: Rained on."),
+        ParcelWeather_T_Ragnhild_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_RAGNHILD_R2)) {
+        goto(ParcelWeather_T_Ragnhild_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_RAGNHILD_R3)) {
+        goto(ParcelWeather_T_Ragnhild_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_RAGNHILD_R4)) {
+        goto(ParcelWeather_T_Ragnhild_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_RAGNHILD_R5)) {
+        goto(ParcelWeather_T_Ragnhild_R5)
+    }
     msgbox(format("RAGNHILD: The station publishes the plot weather. The real weather goes in a drawer. I've seen the drawer."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_T_Ragnhild_FirstWin {
+    msgbox(format("RAGNHILD: The station publishes the plot weather. The real weather goes in a drawer. I've seen the drawer."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Ragnhild_R2 {
+    lock
+    faceplayer
+    msgbox(format("RAGNHILD: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNHILD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_RAGNHILD_R2, format("RAGNHILD: …Fair."))
+    msgbox(format("RAGNHILD: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Ragnhild_R3 {
+    lock
+    faceplayer
+    msgbox(format("RAGNHILD: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNHILD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_RAGNHILD_R3, format("RAGNHILD: That's the one I wanted to see."))
+    msgbox(format("RAGNHILD: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Ragnhild_R4 {
+    lock
+    faceplayer
+    msgbox(format("RAGNHILD: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNHILD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_RAGNHILD_R4, format("RAGNHILD: Noted. Properly, this time."))
+    msgbox(format("RAGNHILD: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Ragnhild_R5 {
+    lock
+    faceplayer
+    msgbox(format("RAGNHILD: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNHILD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_RAGNHILD_R5, format("RAGNHILD: That's the one I wanted to see."))
+    msgbox(format("RAGNHILD: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
     end
 }
 script ParcelWeather_T_Oyvind {
     trainerbattle_single(TRAINER_SKALD_WEA_OYVIND,
         format("OYVIND: Instrument birds. XATU reads the sky better than the plots do. Battle before it tells me how this ends."),
-        format("OYVIND: It told me."))
+        format("OYVIND: It told me."),
+        ParcelWeather_T_Oyvind_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WEA_OYVIND_R2)) {
+        goto(ParcelWeather_T_Oyvind_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WEA_OYVIND_R3)) {
+        goto(ParcelWeather_T_Oyvind_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WEA_OYVIND_R4)) {
+        goto(ParcelWeather_T_Oyvind_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WEA_OYVIND_R5)) {
+        goto(ParcelWeather_T_Oyvind_R5)
+    }
     msgbox(format("OYVIND: XATU watches the real sky over the fence. The real sky's not for sale. The plots are."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_T_Oyvind_FirstWin {
+    msgbox(format("OYVIND: XATU watches the real sky over the fence. The real sky's not for sale. The plots are."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Oyvind_R2 {
+    lock
+    faceplayer
+    msgbox(format("OYVIND: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OYVIND: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_OYVIND_R2, format("OYVIND: Right. That's the whole of it."))
+    msgbox(format("OYVIND: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Oyvind_R3 {
+    lock
+    faceplayer
+    msgbox(format("OYVIND: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OYVIND: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_OYVIND_R3, format("OYVIND: …Fair."))
+    msgbox(format("OYVIND: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Oyvind_R4 {
+    lock
+    faceplayer
+    msgbox(format("OYVIND: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OYVIND: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_OYVIND_R4, format("OYVIND: That's the one I wanted to see."))
+    msgbox(format("OYVIND: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeather_T_Oyvind_R5 {
+    lock
+    faceplayer
+    msgbox(format("OYVIND: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OYVIND: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WEA_OYVIND_R5, format("OYVIND: Still yours."))
+    msgbox(format("OYVIND: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
     end
 }

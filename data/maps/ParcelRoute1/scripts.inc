@@ -523,75 +523,597 @@ ParcelRoute1_NoticeBoard::
 
 ParcelRoute1_T_Emil::
 # 354 "data/maps/ParcelRoute1/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_R1_EMIL, ParcelRoute1_T_Emil_Text_0, ParcelRoute1_T_Emil_Text_1
-# 357 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_R1_EMIL, ParcelRoute1_T_Emil_Text_0, ParcelRoute1_T_Emil_Text_1, ParcelRoute1_T_Emil_FirstWin
+# 358 "data/maps/ParcelRoute1/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 359 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelRoute1_T_Emil_3
+ParcelRoute1_T_Emil_1:
+# 362 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelRoute1_T_Emil_8
+ParcelRoute1_T_Emil_6:
+# 365 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelRoute1_T_Emil_13
+ParcelRoute1_T_Emil_11:
+# 368 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelRoute1_T_Emil_18
+ParcelRoute1_T_Emil_16:
+# 371 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_T_Emil_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelRoute1_T_Emil_2:
+# 360 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Emil_R2
+	goto ParcelRoute1_T_Emil_1
+
+ParcelRoute1_T_Emil_3:
+# 359 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_EMIL_R2
+	goto_if 0, ParcelRoute1_T_Emil_2
+	goto ParcelRoute1_T_Emil_1
+
+ParcelRoute1_T_Emil_7:
+# 363 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Emil_R3
+	goto ParcelRoute1_T_Emil_6
+
+ParcelRoute1_T_Emil_8:
+# 362 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_EMIL_R3
+	goto_if 0, ParcelRoute1_T_Emil_7
+	goto ParcelRoute1_T_Emil_6
+
+ParcelRoute1_T_Emil_12:
+# 366 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Emil_R4
+	goto ParcelRoute1_T_Emil_11
+
+ParcelRoute1_T_Emil_13:
+# 365 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_EMIL_R4
+	goto_if 0, ParcelRoute1_T_Emil_12
+	goto ParcelRoute1_T_Emil_11
+
+ParcelRoute1_T_Emil_17:
+# 369 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Emil_R5
+	goto ParcelRoute1_T_Emil_16
+
+ParcelRoute1_T_Emil_18:
+# 368 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_EMIL_R5
+	goto_if 0, ParcelRoute1_T_Emil_17
+	goto ParcelRoute1_T_Emil_16
+
+
+ParcelRoute1_T_Emil_FirstWin::
+# 375 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_Text_2, MSGBOX_DEFAULT
+# 376 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Emil_R2::
+# 380 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 381 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 382 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R2_Text_0, MSGBOX_YESNO
+# 383 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Emil_R2_2
+# 388 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_EMIL_R2, ParcelRoute1_T_Emil_R2_Text_2
+# 389 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R2_Text_3, MSGBOX_DEFAULT
+# 390 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Emil_R2_2:
+# 384 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R2_Text_1, MSGBOX_DEFAULT
+# 385 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Emil_R3::
+# 394 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 395 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 396 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R3_Text_0, MSGBOX_YESNO
+# 397 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Emil_R3_2
+# 402 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_EMIL_R3, ParcelRoute1_T_Emil_R3_Text_1
+# 403 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R3_Text_2, MSGBOX_DEFAULT
+# 404 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Emil_R3_2:
+# 398 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R2_Text_1, MSGBOX_DEFAULT
+# 399 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Emil_R4::
+# 408 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 409 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 410 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R4_Text_0, MSGBOX_YESNO
+# 411 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Emil_R4_2
+# 416 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_EMIL_R4, ParcelRoute1_T_Emil_R4_Text_1
+# 417 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R4_Text_2, MSGBOX_DEFAULT
+# 418 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Emil_R4_2:
+# 412 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R2_Text_1, MSGBOX_DEFAULT
+# 413 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Emil_R5::
+# 422 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 423 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 424 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R5_Text_0, MSGBOX_YESNO
+# 425 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Emil_R5_2
+# 430 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_EMIL_R5, ParcelRoute1_T_Emil_R4_Text_1
+# 431 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R5_Text_1, MSGBOX_DEFAULT
+# 432 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Emil_R5_2:
+# 426 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_R2_Text_1, MSGBOX_DEFAULT
+# 427 "data/maps/ParcelRoute1/scripts.pory"
+	release
 	end
 
 
 ParcelRoute1_T_Astrid::
-# 361 "data/maps/ParcelRoute1/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_R1_ASTRID, ParcelRoute1_T_Astrid_Text_0, ParcelRoute1_T_Astrid_Text_1
-# 364 "data/maps/ParcelRoute1/scripts.pory"
+# 436 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_R1_ASTRID, ParcelRoute1_T_Astrid_Text_0, ParcelRoute1_T_Astrid_Text_1, ParcelRoute1_T_Astrid_FirstWin
+# 440 "data/maps/ParcelRoute1/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 441 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelRoute1_T_Astrid_3
+ParcelRoute1_T_Astrid_1:
+# 444 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelRoute1_T_Astrid_8
+ParcelRoute1_T_Astrid_6:
+# 447 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelRoute1_T_Astrid_13
+ParcelRoute1_T_Astrid_11:
+# 450 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelRoute1_T_Astrid_18
+ParcelRoute1_T_Astrid_16:
+# 453 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_T_Astrid_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelRoute1_T_Astrid_2:
+# 442 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Astrid_R2
+	goto ParcelRoute1_T_Astrid_1
+
+ParcelRoute1_T_Astrid_3:
+# 441 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_ASTRID_R2
+	goto_if 0, ParcelRoute1_T_Astrid_2
+	goto ParcelRoute1_T_Astrid_1
+
+ParcelRoute1_T_Astrid_7:
+# 445 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Astrid_R3
+	goto ParcelRoute1_T_Astrid_6
+
+ParcelRoute1_T_Astrid_8:
+# 444 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_ASTRID_R3
+	goto_if 0, ParcelRoute1_T_Astrid_7
+	goto ParcelRoute1_T_Astrid_6
+
+ParcelRoute1_T_Astrid_12:
+# 448 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Astrid_R4
+	goto ParcelRoute1_T_Astrid_11
+
+ParcelRoute1_T_Astrid_13:
+# 447 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_ASTRID_R4
+	goto_if 0, ParcelRoute1_T_Astrid_12
+	goto ParcelRoute1_T_Astrid_11
+
+ParcelRoute1_T_Astrid_17:
+# 451 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Astrid_R5
+	goto ParcelRoute1_T_Astrid_16
+
+ParcelRoute1_T_Astrid_18:
+# 450 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_ASTRID_R5
+	goto_if 0, ParcelRoute1_T_Astrid_17
+	goto ParcelRoute1_T_Astrid_16
+
+
+ParcelRoute1_T_Astrid_FirstWin::
+# 457 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_Text_2, MSGBOX_DEFAULT
+# 458 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Astrid_R2::
+# 462 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 463 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 464 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R2_Text_0, MSGBOX_YESNO
+# 465 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Astrid_R2_2
+# 470 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_ASTRID_R2, ParcelRoute1_T_Astrid_R2_Text_2
+# 471 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R2_Text_3, MSGBOX_DEFAULT
+# 472 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Astrid_R2_2:
+# 466 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
+# 467 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Astrid_R3::
+# 476 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 477 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 478 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R3_Text_0, MSGBOX_YESNO
+# 479 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Astrid_R3_2
+# 484 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_ASTRID_R3, ParcelRoute1_T_Astrid_R3_Text_1
+# 485 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R3_Text_2, MSGBOX_DEFAULT
+# 486 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Astrid_R3_2:
+# 480 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
+# 481 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Astrid_R4::
+# 490 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 491 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 492 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R4_Text_0, MSGBOX_YESNO
+# 493 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Astrid_R4_2
+# 498 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_ASTRID_R4, ParcelRoute1_T_Astrid_R3_Text_1
+# 499 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R4_Text_1, MSGBOX_DEFAULT
+# 500 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Astrid_R4_2:
+# 494 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
+# 495 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Astrid_R5::
+# 504 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 505 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 506 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R5_Text_0, MSGBOX_YESNO
+# 507 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Astrid_R5_2
+# 512 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_ASTRID_R5, ParcelRoute1_T_Astrid_R5_Text_1
+# 513 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R5_Text_2, MSGBOX_DEFAULT
+# 514 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Astrid_R5_2:
+# 508 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
+# 509 "data/maps/ParcelRoute1/scripts.pory"
+	release
 	end
 
 
 ParcelRoute1_T_Mats::
-# 368 "data/maps/ParcelRoute1/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_R1_MATS, ParcelRoute1_T_Mats_Text_0, ParcelRoute1_T_Mats_Text_1
-# 371 "data/maps/ParcelRoute1/scripts.pory"
+# 518 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_R1_MATS, ParcelRoute1_T_Mats_Text_0, ParcelRoute1_T_Mats_Text_1, ParcelRoute1_T_Mats_FirstWin
+# 522 "data/maps/ParcelRoute1/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 523 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_ge ParcelRoute1_T_Mats_3
+ParcelRoute1_T_Mats_1:
+# 526 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_ge ParcelRoute1_T_Mats_8
+ParcelRoute1_T_Mats_6:
+# 529 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_ge ParcelRoute1_T_Mats_13
+ParcelRoute1_T_Mats_11:
+# 532 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_ge ParcelRoute1_T_Mats_18
+ParcelRoute1_T_Mats_16:
+# 535 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_T_Mats_Text_2, MSGBOX_DEFAULT
+	end
+
+ParcelRoute1_T_Mats_2:
+# 524 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Mats_R2
+	goto ParcelRoute1_T_Mats_1
+
+ParcelRoute1_T_Mats_3:
+# 523 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_MATS_R2
+	goto_if 0, ParcelRoute1_T_Mats_2
+	goto ParcelRoute1_T_Mats_1
+
+ParcelRoute1_T_Mats_7:
+# 527 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Mats_R3
+	goto ParcelRoute1_T_Mats_6
+
+ParcelRoute1_T_Mats_8:
+# 526 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_MATS_R3
+	goto_if 0, ParcelRoute1_T_Mats_7
+	goto ParcelRoute1_T_Mats_6
+
+ParcelRoute1_T_Mats_12:
+# 530 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Mats_R4
+	goto ParcelRoute1_T_Mats_11
+
+ParcelRoute1_T_Mats_13:
+# 529 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_MATS_R4
+	goto_if 0, ParcelRoute1_T_Mats_12
+	goto ParcelRoute1_T_Mats_11
+
+ParcelRoute1_T_Mats_17:
+# 533 "data/maps/ParcelRoute1/scripts.pory"
+	goto ParcelRoute1_T_Mats_R5
+	goto ParcelRoute1_T_Mats_16
+
+ParcelRoute1_T_Mats_18:
+# 532 "data/maps/ParcelRoute1/scripts.pory"
+	checktrainerflag TRAINER_SKALD_R1_MATS_R5
+	goto_if 0, ParcelRoute1_T_Mats_17
+	goto ParcelRoute1_T_Mats_16
+
+
+ParcelRoute1_T_Mats_FirstWin::
+# 539 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_Text_2, MSGBOX_DEFAULT
+# 540 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Mats_R2::
+# 544 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 545 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 546 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R2_Text_0, MSGBOX_YESNO
+# 547 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Mats_R2_2
+# 552 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_MATS_R2, ParcelRoute1_T_Mats_R2_Text_2
+# 553 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R2_Text_3, MSGBOX_DEFAULT
+# 554 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Mats_R2_2:
+# 548 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R2_Text_1, MSGBOX_DEFAULT
+# 549 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Mats_R3::
+# 558 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 559 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 560 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R3_Text_0, MSGBOX_YESNO
+# 561 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Mats_R3_2
+# 566 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_MATS_R3, ParcelRoute1_T_Mats_R3_Text_1
+# 567 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R3_Text_2, MSGBOX_DEFAULT
+# 568 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Mats_R3_2:
+# 562 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R2_Text_1, MSGBOX_DEFAULT
+# 563 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Mats_R4::
+# 572 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 573 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 574 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R4_Text_0, MSGBOX_YESNO
+# 575 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Mats_R4_2
+# 580 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_MATS_R4, ParcelRoute1_T_Mats_R4_Text_1
+# 581 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R4_Text_2, MSGBOX_DEFAULT
+# 582 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Mats_R4_2:
+# 576 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R2_Text_1, MSGBOX_DEFAULT
+# 577 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+
+ParcelRoute1_T_Mats_R5::
+# 586 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 587 "data/maps/ParcelRoute1/scripts.pory"
+	faceplayer
+# 588 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R5_Text_0, MSGBOX_YESNO
+# 589 "data/maps/ParcelRoute1/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelRoute1_T_Mats_R5_2
+# 594 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_R1_MATS_R5, ParcelRoute1_T_Mats_R5_Text_1
+# 595 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R5_Text_2, MSGBOX_DEFAULT
+# 596 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_T_Mats_R5_2:
+# 590 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_R2_Text_1, MSGBOX_DEFAULT
+# 591 "data/maps/ParcelRoute1/scripts.pory"
+	release
 	end
 
 
 ParcelRoute1_Epilogue::
-# 377 "data/maps/ParcelRoute1/scripts.pory"
+# 602 "data/maps/ParcelRoute1/scripts.pory"
 	lockall
-# 378 "data/maps/ParcelRoute1/scripts.pory"
+# 603 "data/maps/ParcelRoute1/scripts.pory"
 	delay 20
-# 379 "data/maps/ParcelRoute1/scripts.pory"
+# 604 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Epilogue_Text_0, MSGBOX_DEFAULT
-# 380 "data/maps/ParcelRoute1/scripts.pory"
+# 605 "data/maps/ParcelRoute1/scripts.pory"
 	closemessage
-# 381 "data/maps/ParcelRoute1/scripts.pory"
+# 606 "data/maps/ParcelRoute1/scripts.pory"
 	clearflag FLAG_TEMP_2
-# 382 "data/maps/ParcelRoute1/scripts.pory"
+# 607 "data/maps/ParcelRoute1/scripts.pory"
 	addobject 15
-# 383 "data/maps/ParcelRoute1/scripts.pory"
+# 608 "data/maps/ParcelRoute1/scripts.pory"
 	delay 30
-# 384 "data/maps/ParcelRoute1/scripts.pory"
+# 609 "data/maps/ParcelRoute1/scripts.pory"
 	applymovement 15, Movement_Epilogue_PoliwagDownstream
-# 385 "data/maps/ParcelRoute1/scripts.pory"
+# 610 "data/maps/ParcelRoute1/scripts.pory"
 	waitmovement 0
-# 386 "data/maps/ParcelRoute1/scripts.pory"
+# 611 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Epilogue_Text_1, MSGBOX_DEFAULT
-# 387 "data/maps/ParcelRoute1/scripts.pory"
+# 612 "data/maps/ParcelRoute1/scripts.pory"
 	closemessage
-# 388 "data/maps/ParcelRoute1/scripts.pory"
+# 613 "data/maps/ParcelRoute1/scripts.pory"
 	setvar VAR_SKALD_EPILOGUE, 0
-# 389 "data/maps/ParcelRoute1/scripts.pory"
+# 614 "data/maps/ParcelRoute1/scripts.pory"
 	setrespawn HEAL_LOCATION_PARCEL_FERNWICK
-# 390 "data/maps/ParcelRoute1/scripts.pory"
+# 615 "data/maps/ParcelRoute1/scripts.pory"
 	fadescreenspeed FADE_TO_BLACK, 24
-# 391 "data/maps/ParcelRoute1/scripts.pory"
+# 616 "data/maps/ParcelRoute1/scripts.pory"
 	special SkaldGameClear
-# 392 "data/maps/ParcelRoute1/scripts.pory"
+# 617 "data/maps/ParcelRoute1/scripts.pory"
 	waitstate
-# 393 "data/maps/ParcelRoute1/scripts.pory"
+# 618 "data/maps/ParcelRoute1/scripts.pory"
 	releaseall
 	end
 
 
-# 396 "data/maps/ParcelRoute1/scripts.pory"
+# 621 "data/maps/ParcelRoute1/scripts.pory"
 Movement_Epilogue_PoliwagDownstream:
-# 397 "data/maps/ParcelRoute1/scripts.pory"
+# 622 "data/maps/ParcelRoute1/scripts.pory"
 	delay_16
-# 398 "data/maps/ParcelRoute1/scripts.pory"
+# 623 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
-# 398 "data/maps/ParcelRoute1/scripts.pory"
+# 623 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
-# 398 "data/maps/ParcelRoute1/scripts.pory"
+# 623 "data/maps/ParcelRoute1/scripts.pory"
 	walk_down
 	step_end
 
@@ -795,47 +1317,221 @@ ParcelRoute1_T_Emil_Text_1:
 	.string "EMIL: Bad sign for me.$"
 
 ParcelRoute1_T_Emil_Text_2:
-# 357 "data/maps/ParcelRoute1/scripts.pory"
+# 371 "data/maps/ParcelRoute1/scripts.pory"
 	.string "EMIL: When there's too many of one\n"
 	.string "thing it means something that eats\l"
 	.string "them is gone. HALE told me that. HALE\l"
 	.string "tells everyone that.$"
 
+ParcelRoute1_T_Emil_R2_Text_0:
+# 382 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: Clearances or not, I want that\n"
+	.string "one back. Go?$"
+
+ParcelRoute1_T_Emil_R2_Text_1:
+# 384 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: Suit yourself. I'm here.$"
+
+ParcelRoute1_T_Emil_R2_Text_2:
+# 388 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: That's the one I wanted to see.$"
+
+ParcelRoute1_T_Emil_R2_Text_3:
+# 389 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: Come back with more clearances.\n"
+	.string "I'll have more for you.$"
+
+ParcelRoute1_T_Emil_R3_Text_0:
+# 396 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: I moved the whole team on. Let's\n"
+	.string "see if you have?$"
+
+ParcelRoute1_T_Emil_R3_Text_1:
+# 402 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: …Fair.$"
+
+ParcelRoute1_T_Emil_R3_Text_2:
+# 403 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: One more in me. After the high\n"
+	.string "ground.$"
+
+ParcelRoute1_T_Emil_R4_Text_0:
+# 410 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: Seven stamps. I've one more fight\n"
+	.string "in me that's worth the name. Yes?$"
+
+ParcelRoute1_T_Emil_R4_Text_1:
+# 416 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: Still yours.$"
+
+ParcelRoute1_T_Emil_R4_Text_2:
+# 417 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: When it's all filed, come and find\n"
+	.string "me. Once more.$"
+
+ParcelRoute1_T_Emil_R5_Text_0:
+# 424 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: They read your name at the\n"
+	.string "hearing. I'd like to read it myself.\l"
+	.string "Battle?$"
+
+ParcelRoute1_T_Emil_R5_Text_1:
+# 431 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: Five. Write that one down too. I'll\n"
+	.string "know you did.$"
+
 ParcelRoute1_T_Astrid_Text_0:
-# 362 "data/maps/ParcelRoute1/scripts.pory"
+# 437 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ASTRID: The river's low for spring. My\n"
 	.string "LOTAD can stand on the bottom. Battle\l"
 	.string "while it's still a river?$"
 
 ParcelRoute1_T_Astrid_Text_1:
-# 363 "data/maps/ParcelRoute1/scripts.pory"
+# 438 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ASTRID: Still a river. Just.$"
 
 ParcelRoute1_T_Astrid_Text_2:
-# 364 "data/maps/ParcelRoute1/scripts.pory"
+# 453 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ASTRID: The bridge scene with the\n"
 	.string "poachers? Everyone saw. Nobody did\l"
 	.string "anything. Then a RANGER did. That's you,\l"
 	.string "isn't it.$"
 
+ParcelRoute1_T_Astrid_R2_Text_0:
+# 464 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: Clearances or not, I want that\n"
+	.string "one back. Go?$"
+
+ParcelRoute1_T_Astrid_R2_Text_1:
+# 466 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: Another time, then.$"
+
+ParcelRoute1_T_Astrid_R2_Text_2:
+# 470 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: …Fair.$"
+
+ParcelRoute1_T_Astrid_R2_Text_3:
+# 471 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: Come back with more\n"
+	.string "clearances. I'll have more for you.$"
+
+ParcelRoute1_T_Astrid_R3_Text_0:
+# 478 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: Word gets up the river. Half a\n"
+	.string "region signed off on you. Show me?$"
+
+ParcelRoute1_T_Astrid_R3_Text_1:
+# 484 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: …Again, then. Later.$"
+
+ParcelRoute1_T_Astrid_R3_Text_2:
+# 485 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: One more in me. After the high\n"
+	.string "ground.$"
+
+ParcelRoute1_T_Astrid_R4_Text_0:
+# 492 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: I've watched you walk past\n"
+	.string "twice. Not a third time. Battle?$"
+
+ParcelRoute1_T_Astrid_R4_Text_1:
+# 499 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: When it's all filed, come and\n"
+	.string "find me. Once more.$"
+
+ParcelRoute1_T_Astrid_R5_Text_0:
+# 506 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: After everything, one more. For\n"
+	.string "the ledger. Yes?$"
+
+ParcelRoute1_T_Astrid_R5_Text_1:
+# 512 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: Still yours.$"
+
+ParcelRoute1_T_Astrid_R5_Text_2:
+# 513 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: That's all I've got. It was\n"
+	.string "enough to see it done.$"
+
 ParcelRoute1_T_Mats_Text_0:
-# 369 "data/maps/ParcelRoute1/scripts.pory"
+# 519 "data/maps/ParcelRoute1/scripts.pory"
 	.string "MATS: I'm walking to MISTWOOD. Everyone\n"
 	.string "says don't. Battle me and I'll say I beat\l"
 	.string "a RANGER first.$"
 
 ParcelRoute1_T_Mats_Text_1:
-# 370 "data/maps/ParcelRoute1/scripts.pory"
+# 520 "data/maps/ParcelRoute1/scripts.pory"
 	.string "MATS: I'll say I nearly beat one.$"
 
 ParcelRoute1_T_Mats_Text_2:
-# 371 "data/maps/ParcelRoute1/scripts.pory"
+# 535 "data/maps/ParcelRoute1/scripts.pory"
 	.string "MATS: SKELD at the post won't let you\n"
 	.string "through the deadfall without CUT. He's\l"
 	.string "not being mean. The deadfall's real.$"
 
+ParcelRoute1_T_Mats_R2_Text_0:
+# 546 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Didn't think you'd come back\n"
+	.string "through. Good. Again?$"
+
+ParcelRoute1_T_Mats_R2_Text_1:
+# 548 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Later, then. I'm not going\n"
+	.string "anywhere.$"
+
+ParcelRoute1_T_Mats_R2_Text_2:
+# 552 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Still yours.$"
+
+ParcelRoute1_T_Mats_R2_Text_3:
+# 553 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Come back with more clearances.\n"
+	.string "I'll have more for you.$"
+
+ParcelRoute1_T_Mats_R3_Text_0:
+# 560 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Three stamps, then five. Fine. Me\n"
+	.string "next?$"
+
+ParcelRoute1_T_Mats_R3_Text_1:
+# 566 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: …Fair.$"
+
+ParcelRoute1_T_Mats_R3_Text_2:
+# 567 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Three. I'll be stronger when the\n"
+	.string "coast's done with you.$"
+
+ParcelRoute1_T_Mats_R4_Text_0:
+# 574 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: I've watched you walk past twice.\n"
+	.string "Not a third time. Battle?$"
+
+ParcelRoute1_T_Mats_R4_Text_1:
+# 580 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: …Again, then. Later.$"
+
+ParcelRoute1_T_Mats_R4_Text_2:
+# 581 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: When it's all filed, come and find\n"
+	.string "me. Once more.$"
+
+ParcelRoute1_T_Mats_R5_Text_0:
+# 588 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: The region's different now. Let's\n"
+	.string "see if you are?$"
+
+ParcelRoute1_T_Mats_R5_Text_1:
+# 594 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Right. That's the whole of it.$"
+
+ParcelRoute1_T_Mats_R5_Text_2:
+# 595 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: Five. Write that one down too. I'll\n"
+	.string "know you did.$"
+
 ParcelRoute1_Epilogue_Text_0:
-# 379 "data/maps/ParcelRoute1/scripts.pory"
+# 604 "data/maps/ParcelRoute1/scripts.pory"
 	.string "The bridge on ROUTE 1. The first\n"
 	.string "morning, the whole crowd of them was\l"
 	.string "jammed up under it, going nowhere, and\l"
@@ -843,7 +1539,7 @@ ParcelRoute1_Epilogue_Text_0:
 	.string "them.$"
 
 ParcelRoute1_Epilogue_Text_1:
-# 386 "data/maps/ParcelRoute1/scripts.pory"
+# 611 "data/maps/ParcelRoute1/scripts.pory"
 	.string "One POLIWAG, in the middle of the\n"
 	.string "stream, going downstream at its own\l"
 	.string "pace. Nobody helping it. It has the\l"

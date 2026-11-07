@@ -226,3 +226,16 @@ quest is built, how the peer works) before they are asked six more times.
   Driven headlessly through the bag with the harness's new TAP/IDLE
   segments and `--item`. The Survey action at red-cloth points remains
   signposts.
+- **2026-11-07 (rematch tiers) — fix G's volume leg, the first 584.** Every
+  simple route/town trainer (146 of them) now has four rematch tiers
+  (`tools/skald/rematch_tiers.py`): talked to after the first battle, they
+  offer the lowest unfought tier the clearances unlock (tier 2 at three,
+  3 at five, 4 at seven, 5 after the epilogue; levels 22/32/42/57, the
+  first party evolved by the species data), each once, with a yes/no and
+  plain lines keyed to the tier (the stamps, the lake, the hearing). The
+  object scripts still open with `trainerbattle_single` because the
+  sight-approach path parses the trainer id out of the script's first
+  command, so the tier logic lives in the post-battle part behind
+  `SkaldRematchTier` (which also refuses a rematch in the same script run as
+  the first win). TRAINERS_COUNT 1638; 781 reachable battles. Not Match
+  Call: that needs save-block room and a flag range this hack has boxed in.
