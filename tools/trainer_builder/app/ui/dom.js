@@ -60,6 +60,8 @@
   }
 
   function download(text, name, type) {
+    // Hosts that sandbox the page (TB_NO_DOWNLOAD) block file saves; copy instead.
+    if (globalThis.TB_NO_DOWNLOAD) { copy(text, "Copied " + name + " (this page can't save files)"); return; }
     try {
       var blob = new Blob([text], { type: type || "text/plain" });
       var url = URL.createObjectURL(blob);

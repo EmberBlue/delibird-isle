@@ -85,6 +85,8 @@ def main():
         f.write(full)
     print("wrote %s (%.2f MB) from commit %s" % (args.output, os.path.getsize(args.output) / 1e6, data["meta"].get("commit")))
     if args.artifact:
+        # Sandboxed hosts block downloads; the app copies to the clipboard instead.
+        fragment = fragment.replace('<script>globalThis.TBDATA=', '<script>globalThis.TB_NO_DOWNLOAD=true;</script>\n<script>globalThis.TBDATA=', 1)
         with open(args.artifact, "w", encoding="utf-8") as f:
             f.write(fragment)
         print("wrote %s" % args.artifact)
