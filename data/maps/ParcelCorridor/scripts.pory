@@ -14,6 +14,8 @@ const LOCALID_COR_WORKER = 1
 const LOCALID_COR_WOOPER = 2
 const LOCALID_COR_MIRREN = 3
 
+const LOCALID_PERRIN = 23
+
 mapscripts ParcelCorridor_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelCorridor_OnTransition
 }
@@ -325,3 +327,37 @@ script ParcelCorridor_T_Elin {
     msgbox(format("ELIN: The cut was a forest in my mother's time. She remembers the trucks. I remember the stumps. My kids will remember grass."), MSGBOX_DEFAULT)
     end
 }
+
+// --- PERRIN, encounter 3 (the peer; §04) -------------------------------------------
+script ParcelCorridor_PerrinScene {
+    if (flag(FLAG_SKALD_PERRIN_3)) {
+        setvar(VAR_TEMP_5, 1)
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("PERRIN: WREN!"), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelCorridor_PerrinIn)
+    waitmovement(0)
+    msgbox(format("PERRIN: The basin's next. MIRREN says it's a mess. The FOUNDATION says it's 'in remediation'.\pI'm going with the people who have a plan. Battle, before you talk me out of it."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_PERRIN_3, format("PERRIN: You didn't talk me out of it."))
+    msgbox(format("PERRIN: You know the difference between us? You write down what's there. I write down what's possible.\pTheirs reads better in a report. Mine, I mean. Ours."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelCorridor_PerrinOut)
+    waitmovement(0)
+    removeobject(LOCALID_PERRIN)
+    setflag(FLAG_SKALD_PERRIN_3)
+    setvar(VAR_TEMP_5, 1)
+    releaseall
+    end
+}
+script ParcelCorridor_PerrinTalk {
+    lock
+    faceplayer
+    msgbox(format("PERRIN: Hang on, I'm coming to you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+movement Movement_ParcelCorridor_PerrinIn { walk_down * 2 }
+movement Movement_ParcelCorridor_PerrinOut { walk_up * 2 }

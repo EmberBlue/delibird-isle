@@ -283,3 +283,16 @@ Full institutional context in §05; thumbnail roster here.
   game-present).
 - *(Resolved: the exile-wetland is the keystone freshwater marsh at the heart
   of The Last Corridor, zone 8 — see §01.)*
+
+
+## Perrin — the peer (added 2026-11-07, built)
+
+A fellow provisional from Wren's cohort: friendly, quicker, a little vain, and
+the one who takes the Foundation path — Hollis in the making. Met and battled
+six times (Fernwick's south square, the Reedmere bridge, the Corridor's north
+exit, Elvsund's south road, the Haukfell foothills, the Coast quay), each
+time one rung further into the Foundation (outreach grant → part-time desk →
+liaison → relocation team → Coastal Holdings), and found at the window desk
+in Hollis's office after the finale, having typed the response. Not a rival
+trope: the rhyme's fourth leg. Sprite: the white-coated rich boy; parties
+built on Electrike/Numel (the two meadow partners nobody picks).

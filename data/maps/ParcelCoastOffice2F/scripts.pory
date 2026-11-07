@@ -1,5 +1,15 @@
 // ParcelCoastOffice2F -- Hollis Aune's office. The kindest threat in the game.
 mapscripts ParcelCoastOffice2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelCoastOffice2F_OnTransition
+}
+
+script ParcelCoastOffice2F_OnTransition {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        clearflag(FLAG_SKALD_PERRIN_DESK)
+    } else {
+        setflag(FLAG_SKALD_PERRIN_DESK)
+    }
+    end
 }
 script ParcelCoastOffice2F_Hollis {
     lock
@@ -27,6 +37,15 @@ script ParcelCoastOffice2F_Secretary {
     lock
     faceplayer
     msgbox(format("SECRETARY: Ms. AUNE sees everyone. Fishers, mayors, RANGERS. She remembers how they take their tea. She remembers everything. It's why they sent her."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCoastOffice2F_Perrin {
+    lock
+    faceplayer
+    msgbox(format("PERRIN: They gave me a desk. The one by the window. HOLLIS said I'd earned it.\pI read your filing. All of it. Twice. I typed the response. It's very good. It's the best thing I've ever written and it isn't true."), MSGBOX_DEFAULT)
+    msgbox(format("PERRIN: I'm not sorry. I'm not NOT sorry. Is that an answer?\pGo on. You've got a ferry. I've got a window."), MSGBOX_DEFAULT)
     release
     end
 }

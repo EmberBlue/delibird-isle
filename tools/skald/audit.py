@@ -227,7 +227,7 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
         other = all_maps.get(c["map"])
         if not other:
             warn(name, f"connection to unknown map {c['map']}"); continue
-        oj, olay, oW, oH, owords, _ = load_map(other)
+        oj, olay, oW, oH, owords, otiles = load_map(other)
         off, d = c["offset"], c["direction"]
         ok = False
         if d in ("right", "left"):
@@ -236,7 +236,9 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                 if 0 <= oy < oH:
                     x = W - 1 if d == "right" else 0
                     ox = 0 if d == "right" else oW - 1
-                    if decode(words[y * W + x])[1] == 0 and decode(owords[oy * oW + ox])[1] == 0:
+                    if decode(words[y * W + x])[1] == 0 and decode(owords[oy * oW + ox])[1] == 0 \
+                            and "WATER" not in BEH.get(tiles.get(decode(words[y * W + x])[0], ((), 0, 0))[1], "") \
+                            and "WATER" not in BEH.get(otiles.get(decode(owords[oy * oW + ox])[0], ((), 0, 0))[1], ""):
                         if not elev_ok(decode(words[y * W + x])[2], decode(owords[oy * oW + ox])[2]):
                             warn(name, f"connection {d} -> {c['map']}: edge ({x},{y}) elevation {decode(words[y * W + x])[2]} vs {decode(owords[oy * oW + ox])[2]} -- crossing blocked (set an edge tile to 0)")
                         ok = True; break
@@ -246,7 +248,9 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                 if 0 <= ox < oW:
                     y = H - 1 if d == "down" else 0
                     oy = 0 if d == "down" else oH - 1
-                    if decode(words[y * W + x])[1] == 0 and decode(owords[oy * oW + ox])[1] == 0:
+                    if decode(words[y * W + x])[1] == 0 and decode(owords[oy * oW + ox])[1] == 0 \
+                            and "WATER" not in BEH.get(tiles.get(decode(words[y * W + x])[0], ((), 0, 0))[1], "") \
+                            and "WATER" not in BEH.get(otiles.get(decode(owords[oy * oW + ox])[0], ((), 0, 0))[1], ""):
                         if not elev_ok(decode(words[y * W + x])[2], decode(owords[oy * oW + ox])[2]):
                             warn(name, f"connection {d} -> {c['map']}: edge ({x},{y}) elevation {decode(words[y * W + x])[2]} vs {decode(owords[oy * oW + ox])[2]} -- crossing blocked (set an edge tile to 0)")
                         ok = True; break

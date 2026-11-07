@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_PARCEL_RIVER",
-      "offset": -25,
+      "offset": -5,
       "direction": "up"
     }
   ],

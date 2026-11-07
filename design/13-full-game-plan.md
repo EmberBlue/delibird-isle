@@ -191,3 +191,14 @@ quest is built, how the peer works) before they are asked six more times.
   added (~29k total). All eight zones re-voiced plain. Remaining: volume
   (fix G and the 1,000-trainer target), the notebook UI (fix E), credits
   and the post-game (fix F's tail).
+- **2026-11-07 (later) — volume, the peer, side quests, the walk test.** 45
+  trainers added across every zone (182 reachable); PERRIN built as the peer
+  (fix C: six scripted encounters down the chain and the desk in Hollis's
+  office after the finale); seven side quests (Grettir's pond, the flow
+  survey pages, Hedda's count, the beaver stump, the Swinub egg, the shell,
+  the drawer) each paying in something the player wants (Net Balls, TM39,
+  Exp. Share, Amulet Coin, an egg, Dive Balls, Rare Candies);
+  `tools/skald/walktest.py` boots the ROM headless, spawns on any map,
+  walks, and reads the save block -- every connection and script warp in
+  the chain was crossed by it (it found a wrong Floodbasin→River offset and
+  the audit's habit of counting water as a crossing, both fixed).

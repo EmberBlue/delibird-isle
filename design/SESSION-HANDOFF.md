@@ -44,9 +44,12 @@ the cannery, the plaque, Hollis's tea, Harland = gym 6/Fly) and the
 battle, the Hollis choice, the final survey, Hale's coda) → the coast aide
 → the **boardroom coda** → the post-finale reaction pass.
 
-**Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~29,400 words
-of dialogue, 182 reachable Skald trainers (gyms 1–8 + 4 Mereholt gates + Heron +
-Cordelia + the Weather four + ~160 route/town trainers; TRAINERS_COUNT 1039), seven field HMs
+**Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~32,700 words
+of dialogue (quoted strings in `data/maps/Parcel*/scripts.pory`), 188 reachable
+Skald trainers (gyms 1–8 + 4 Mereholt gates + Heron + Cordelia + the Weather
+four + Perrin ×6 + ~160 route/town trainers; TRAINERS_COUNT 1045), seven
+side quests (Grettir's pond, the Corridor satchel, Hedda's mask, the beaver
+stump, the Highland egg, the Coast shell, Gaute's board), seven field HMs
 wired as real traversal, 8 Skald map sections on the region map with heal
 spots at Saltwick, Fernwick, Elvsund, Delibird, the Coast and the Station.
 The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the
@@ -83,13 +86,30 @@ The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the
    every 70 frames to 8000, capture ≥8600; walking: 16 frames per tile + a
    few for the turn) → **revert the spawn** (`grep -c "TEMP TEST" src/new_game.c` = 0) → commit.
 
+## Verified by walking (2026-11-07)
+
+`tools/skald/walktest.py` needs the TEMP probe hook in `src/new_game.c`
+(an `EWRAM_DATA u16 gProbe[4]` the harness pokes at frame 4400; the
+`WarpToTruck` branch reads it). With it, every connection and script warp
+below was crossed headlessly and the save block read back: Isle↔Meadow↔
+Route 1↔Mistwood↔Fernwick↔Reedmere↔Corridor↔Floodbasin↔Elvsund↔Haukfell
+(both ways), Coast/Station/Marsh/Delibird arrivals, Marsh→Fernwick,
+Cavern→Delibird. Also seen frame by frame (`--trace`): the Elvsund and
+Haukfell first-entry scenes, Perrin's Fernwick ambush up to the battle
+screen, and Grettir's quest talk (`--walk A`).
+Harness rules: a trigger scene fired mid-segment eats the rest of that
+segment, so walk onto the trigger as its own `--walk DIR:1` with
+`--dismiss 1800` (text prints at ~300 frames a page), then continue; the
+harness party is empty, so any trainer battle ends in a whiteout — spawn
+out of sight lines and treat "reached the battle screen" as the pass.
+
 ## Known-open (honest list)
 
-- **Volume.** 137 trainers vs the 1,000 target; ~29k words vs 100k. The
+- **Volume.** 188 reachable trainers vs the 1,000 target; ~32.7k words vs 100k. The
   cheapest next wins: a trainer-dense optional area per zone (a "Corps
   field exam" tower, the old Weather gauntlet style), more residents in
-  three story states per town, and side quests (2–4 per zone; Gunnar's
-  Surskit count and Dell's lure are the templates).
+  three story states per town, and more side quests (one per zone exists;
+  Grettir's pond and Hedda's mask are the templates).
 - **Not playtested end to end in an emulator** since the rebuilds: each zone
   was screenshot-checked at its arrival and one scene; the gym gates fire;
   the Floodbasin relief line fires. Walk the whole game with Script 1

@@ -3,7 +3,26 @@ mapscripts ParcelRiverHouse1_MapScripts {
 script ParcelRiverHouse1_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_BEAVER_DONE)) {
+        msgbox(format("OLD MAN: Fresh chips. Pale. I've said it to everyone in the valley. They nod. You're the one who went and looked."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_BEAVER_SEEN)) {
+        msgbox(format("OLD MAN: Fresh? FRESH? Cut to a point, chips still pale?\p…Fifty-one years. Here. I've carried this for luck since the pond went. It's brought me none. Maybe it's for carrying, not keeping."), MSGBOX_DEFAULT)
+        giveitem(ITEM_AMULET_COIN)
+        setflag(FLAG_SKALD_Q_BEAVER_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_BEAVER)) {
+        msgbox(format("OLD MAN: The clean reach, above the town, on the bank. A stump cut to a point. If it's there, it's there. If it isn't, don't spare me."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: The beaver pond. Above the town. We swam in it. The water was so still you could see the bottom.\pThen the trappers took the beavers and the Board took the pond. Nobody took the memory, I'll give them that."), MSGBOX_DEFAULT)
+    msgbox(format("OLD MAN: You walk the bank, don't you. The clean reach above the town. Look for a stump cut to a point, chips at the foot of it. Beaver sign.\pI'd give a lot to know. I'd give a lot to be wrong about it being gone."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_Q_BEAVER)
     release
     end
 }

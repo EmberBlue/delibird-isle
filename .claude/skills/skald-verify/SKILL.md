@@ -75,3 +75,21 @@ frames prove nothing about sprite visibility.
 - Fresh container: `python3 -m pip install --break-system-packages mgba pillow`
   (not `pip3`). Capture timing: 16 frames per tile plus a few for the turn;
   if a screenshot shows no dialogue, the walk fell one tile short.
+
+## Walk test (the real check for connections and warps)
+`tools/skald/walktest.py --spawn MAP_X:x,y --walk DIR:n [--walk ...] --expect MAP_Y`
+boots the ROM headless, pokes the spawn into `gProbe` (a TEMP hook in
+`src/new_game.c`: `EWRAM_DATA u16 gProbe[4]` read by `WarpToTruck`; add it,
+build, test, revert, `grep -c "TEMP TEST" src/new_game.c` = 0), walks, mashes
+B through any scene, and reads the live map and position out of the save
+block (`pos` at +0/+2; `location.x/y` at +8/+10 is only the warp target).
+A trigger scene fired mid-segment eats the rest of that segment: walk onto
+the trigger as its own `--walk DIR:1` with `--dismiss 1800` (a page of text
+prints in ~300 frames; the default 360 only clears a one-liner), then
+continue in the next segment. `--walk A` taps A to talk to whatever the
+player faces (turn first with `--walk LEFT:0` etc.). `--trace 150` saves a
+PNG every 150 frames from the first walk on — tile them and look; the video
+buffer must be set before `core.reset()` or every PNG is black. The harness
+party is empty, so any trainer battle ends in a whiteout: spawn out of
+sight lines and count "reached the battle screen" as the pass. The full
+list that was green on 2026-11-07 is the one in the handoff.

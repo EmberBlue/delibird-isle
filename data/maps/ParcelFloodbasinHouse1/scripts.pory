@@ -4,13 +4,36 @@ mapscripts ParcelFloodbasinHouse1_MapScripts {
 script ParcelFloodbasinHouse1_Hedda {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_HEDDA_DONE)) {
+        msgbox(format("HEDDA: Forty years I didn't ask. You asked in an afternoon. That's not a compliment, child. It's a confession."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_HEDDA)) {
+        setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+        setvar(VAR_0x8004, 17)
+        specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+        if (var(VAR_RESULT) == 2) {
+            msgbox(format("HEDDA: Greying scales at the piling. DISCHARGE LICENSED on the pipe. Licensed. By someone.\pI sold those fish for forty years and never once walked up to read a pipe."), MSGBOX_DEFAULT)
+            msgbox(format("HEDDA: Take this. My husband's. It shares what it's given with the ones that didn't earn it. Nobody else in this basin does."), MSGBOX_DEFAULT)
+            giveitem(ITEM_EXP_SHARE)
+            setflag(FLAG_SKALD_Q_HEDDA_DONE)
+            release
+            end
+        }
+        msgbox(format("HEDDA: The fish at the bridge piling. The plate on the old pump house, past the puddle field. Read both. Then tell me what they say. Plainly."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
         msgbox(format("HEDDA: The CORPS girl came through with her ledger. ILEX. She asked me what I used to catch. Nobody's asked me that in ten years.\pI told her. She wrote it all down. Every fish."), MSGBOX_DEFAULT)
         release
         end
     }
     msgbox(format("HEDDA: Sit, sit. PIPER's out in the puddles again, she'll be soaked.\pI fished the lower lake forty years. Stopped when the catch came up with sores. I still sell it. Don't look at me like that. What else is there?"), MSGBOX_DEFAULT)
-    msgbox(format("HEDDA: The councilman sends vouchers. The FOUNDATION sends a boat. The CORPS sends children with notebooks. No offence.\pNone of them send fish."), MSGBOX_DEFAULT)
+    msgbox(format("HEDDA: The councilman sends vouchers. The FOUNDATION sends a boat. The CORPS sends children with notebooks. No offence. None of them send fish."), MSGBOX_DEFAULT)
+    msgbox(format("HEDDA: Do an old woman a kindness, since you've got a notebook. The fish at the bridge piling, and the plate on the old pump house. Look at both. Then come and tell me what they say."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_Q_HEDDA)
     release
     end
 }

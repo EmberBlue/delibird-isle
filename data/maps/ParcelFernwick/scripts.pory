@@ -4,6 +4,8 @@
 // building on the terrace, the Certification Hall (Tarn) faces the square,
 // the Survey office is the school building. Plain voice throughout.
 
+const LOCALID_PERRIN = 21
+
 mapscripts ParcelFernwick_MapScripts {
 }
 
@@ -218,3 +220,51 @@ script ParcelFernwick_T_Thea {
     msgbox(format("THEA: Every cadet wants the Reedmere posting. The marsh is where things happen. Things aren't good, but they happen."), MSGBOX_DEFAULT)
     end
 }
+
+// --- Grettir's pond (side quest) -------------------------------------------------
+script ParcelFernwick_PondLook {
+    lock
+    if (flag(FLAG_SKALD_Q_GRETTIR) && !flag(FLAG_SKALD_Q_GRETTIR_SEEN)) {
+        msgbox(format("Still water over bare clay. Nothing. Nothing.\pThen a SURSKIT, skating out from the reeds the CORPS planted. Just the one. It found the pond on its own."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_GRETTIR_SEEN)
+        release
+        end
+    }
+    msgbox(format("The park pond. Still water. A SURSKIT skates across it and back."), MSGBOX_SIGN)
+    release
+    end
+}
+
+// --- PERRIN, encounter 1 (the peer; §04) -------------------------------------------
+script ParcelFernwick_PerrinScene {
+    if (flag(FLAG_SKALD_PERRIN_1)) {
+        setvar(VAR_TEMP_5, 1)
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("PERRIN: WREN!"), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelFernwick_PerrinIn)
+    waitmovement(0)
+    msgbox(format("PERRIN: There you are! WREN, right? I'm PERRIN. Same cohort, different dispatch. TARN passed me yesterday. Yes, PASSED, first go.\pEveryone keeps saying the CORPS doesn't do rankings. Let's find out."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_PERRIN_1, format("PERRIN: Huh. Okay. OKAY."))
+    msgbox(format("PERRIN: See you up the road. HALE's sending me to the landing too. The FOUNDATION's got an outreach grant for provisionals, did you know? You should apply. It pays."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelFernwick_PerrinOut)
+    waitmovement(0)
+    removeobject(LOCALID_PERRIN)
+    setflag(FLAG_SKALD_PERRIN_1)
+    setvar(VAR_TEMP_5, 1)
+    releaseall
+    end
+}
+script ParcelFernwick_PerrinTalk {
+    lock
+    faceplayer
+    msgbox(format("PERRIN: Hang on, I'm coming to you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+movement Movement_ParcelFernwick_PerrinIn { walk_down * 2 }
+movement Movement_ParcelFernwick_PerrinOut { walk_up * 2 }

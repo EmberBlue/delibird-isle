@@ -10,7 +10,19 @@ script ParcelCoastHouse1_Woman {
 script ParcelCoastHouse1_Boy {
     lock
     faceplayer
-    msgbox(format("BOY: I'm going to be a diver! GYDA says there's nothing down there to see. I'll see it anyway."), MSGBOX_DEFAULT)
+    if (flag(FLAG_SKALD_Q_SHELL_DONE)) {
+        msgbox(format("BOY: It's on the windowsill. Mum says it's the first real one in years. I'm going to find the second one myself."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_SHELL_FOUND)) {
+        msgbox(format("BOY: A SHELL! A real one! Whole! Mum, LOOK!\pYou can have these. They're for divers. I'm not one yet. You can give them back when I am."), MSGBOX_DEFAULT)
+        giveitem(ITEM_DIVE_BALL, 3)
+        setflag(FLAG_SKALD_Q_SHELL_DONE)
+        release
+        end
+    }
+    msgbox(format("BOY: I'm going to be a diver! GYDA says there's nothing down there to see. I'll see it anyway.\pI've never found a shell on our beach. Not one. Just drum rings. If you find one, that's proof there's something."), MSGBOX_DEFAULT)
     release
     end
 }

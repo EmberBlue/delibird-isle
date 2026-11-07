@@ -23,6 +23,12 @@ script ParcelWeatherInstitute1F_Tech2 {
     end
 }
 script ParcelWeatherInstitute1F_Board {
+    lock
     msgbox(format("STATION MISSION. 'To demonstrate that regional climate outcomes are manageable through targeted intervention.' Somebody has underlined 'demonstrate' in pencil and written: to whom?"), MSGBOX_SIGN)
+    if (flag(FLAG_SKALD_Q_DRAWER) && !flag(FLAG_SKALD_Q_DRAWER_SEEN)) {
+        msgbox(format("Under the board, a drawer. Inside: the over-the-fence log. Twelve months of the real sky, in pencil.\pRain up a third. Frost days down by half. Nobody signed it. Written down, with the date."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_DRAWER_SEEN)
+    }
+    release
     end
 }

@@ -486,6 +486,20 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ParcelRiver_T_Trygve",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PERRIN",
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "x": 16,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelRiver_PerrinTalk",
+      "flag": "FLAG_SKALD_PERRIN_4"
     }
   ],
   "warp_events": [
@@ -589,6 +603,42 @@
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelRiver_FirstEntry"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelRiver_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelRiver_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelRiver_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelRiver_PerrinScene"
     }
   ],
   "bg_events": [
@@ -679,6 +729,14 @@
       "elevation": 0,
       "item": "ITEM_ULTRA_BALL",
       "flag": "FLAG_SKALD_HIDDEN_RIV_ULTRA_BALL"
+    },
+    {
+      "type": "sign",
+      "x": 53,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiver_BeaverStump"
     }
   ]
 }

@@ -26,6 +26,8 @@ const LOCALID_WET_CROWD_2   = 12
 const LOCALID_WET_CROWD_3   = 13
 const LOCALID_WET_SURSKIT   = 14
 
+const LOCALID_PERRIN = 32
+
 mapscripts ParcelWetlands_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelWetlands_OnTransition
 }
@@ -549,3 +551,37 @@ script ParcelWetlands_T_Roar {
     msgbox(format("ROAR: There's a channel from the pool down past the landing. Whatever's in the pool ends up in the backwater. Think about that."), MSGBOX_DEFAULT)
     end
 }
+
+// --- PERRIN, encounter 2 (the peer; §04) -------------------------------------------
+script ParcelWetlands_PerrinScene {
+    if (flag(FLAG_SKALD_PERRIN_2)) {
+        setvar(VAR_TEMP_5, 1)
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("PERRIN: WREN!"), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelWetlands_PerrinIn)
+    waitmovement(0)
+    msgbox(format("PERRIN: WREN! The FOUNDATION office gave me a tour. Gauges on every channel! THAT's what reading water looks like, not scribbling in a notebook.\pBattle. I've been training. Properly."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_PERRIN_2, format("PERRIN: Fine. FINE."))
+    msgbox(format("PERRIN: Your notebook, my gauges. We'll see which one the hearing reads.\pThey offered me a desk, by the way. Part time. I said I'd think about it. I'm thinking about it."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelWetlands_PerrinOut)
+    waitmovement(0)
+    removeobject(LOCALID_PERRIN)
+    setflag(FLAG_SKALD_PERRIN_2)
+    setvar(VAR_TEMP_5, 1)
+    releaseall
+    end
+}
+script ParcelWetlands_PerrinTalk {
+    lock
+    faceplayer
+    msgbox(format("PERRIN: Hang on, I'm coming to you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+movement Movement_ParcelWetlands_PerrinIn { walk_left * 3 }
+movement Movement_ParcelWetlands_PerrinOut { walk_right * 3 }

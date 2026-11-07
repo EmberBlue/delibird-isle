@@ -20,6 +20,8 @@ const LOCALID_HL_HALE        = 4
 const LOCALID_HL_LOWLANDER   = 5
 const LOCALID_HL_GYM         = 8
 
+const LOCALID_PERRIN = 35
+
 mapscripts ParcelHighlands_MapScripts {
 }
 
@@ -178,6 +180,25 @@ script ParcelHighlands_Homesteader {
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
+        if (flag(FLAG_SKALDMERE_HIGHLAND_CERT) && !flag(FLAG_SKALD_HL_EGG_GIVEN)) {
+            msgbox(format("HOMESTEADER: You said it. SHIFTED. First one of your lot who didn't say 'transitioning'.\pTake this. The SWINUB laid it in the spring. There won't be another born up here. Hatch it somewhere with a winter."), MSGBOX_DEFAULT)
+            specialvar(VAR_RESULT, CalculatePlayerPartyCount)
+            if (var(VAR_RESULT) == 6) {
+                msgbox(format("HOMESTEADER: Your belt's full. Come back with room. It'll keep. It's the only thing up here that will."), MSGBOX_DEFAULT)
+                release
+                end
+            }
+            giveegg(SPECIES_SWINUB)
+            setflag(FLAG_SKALD_HL_EGG_GIVEN)
+            msgbox(format("HOMESTEADER: Don't name it after me. Name it after the slope."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        if (flag(FLAG_SKALD_HL_EGG_GIVEN)) {
+            msgbox(format("HOMESTEADER: Somewhere with a winter. You promised."), MSGBOX_DEFAULT)
+            release
+            end
+        }
         msgbox(format("HOMESTEADER: Another log. It'll sit crooked. Everything does, up here, now."), MSGBOX_DEFAULT)
         release
         end
@@ -420,3 +441,37 @@ script ParcelHighlands_T_Hedvig {
     msgbox(format("HEDVIG: The woman at the bore means every warm word. That's what makes her cold."), MSGBOX_DEFAULT)
     end
 }
+
+// --- PERRIN, encounter 5 (the peer; §04) -------------------------------------------
+script ParcelHighlands_PerrinScene {
+    if (flag(FLAG_SKALD_PERRIN_5)) {
+        setvar(VAR_TEMP_5, 1)
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("PERRIN: WREN!"), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelHighlands_PerrinIn)
+    waitmovement(0)
+    msgbox(format("PERRIN: HOLLIS says hello. HOLLIS says you're 'thorough'. She said it like a diagnosis.\pI'm on the relocation team. We moved eleven families down the hill this month. ELEVEN. What did your notebook move? Battle."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_PERRIN_5, format("PERRIN: …Eleven's still eleven."))
+    msgbox(format("PERRIN: The old woman won't go. I've been up to her door four times. She asks after you.\pNobody asks after me. That's not a complaint. I'm just saying it out loud once."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelHighlands_PerrinOut)
+    waitmovement(0)
+    removeobject(LOCALID_PERRIN)
+    setflag(FLAG_SKALD_PERRIN_5)
+    setvar(VAR_TEMP_5, 1)
+    releaseall
+    end
+}
+script ParcelHighlands_PerrinTalk {
+    lock
+    faceplayer
+    msgbox(format("PERRIN: Hang on, I'm coming to you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+movement Movement_ParcelHighlands_PerrinIn { walk_down * 2 }
+movement Movement_ParcelHighlands_PerrinOut { walk_up * 2 }

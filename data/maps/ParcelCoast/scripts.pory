@@ -19,6 +19,8 @@ const LOCALID_COAST_WORKER = 3
 const LOCALID_COAST_SAILOR = 6
 const LOCALID_COAST_AIDE   = 7
 
+const LOCALID_PERRIN = 33
+
 mapscripts ParcelCoast_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelCoast_HideAide
     MAP_SCRIPT_ON_FRAME_TABLE [
@@ -438,3 +440,51 @@ script ParcelCoast_T_Beate {
     msgbox(format("BEATE: The brochure says 'working harbour'. It is working. Something's working. It isn't the sea."), MSGBOX_DEFAULT)
     end
 }
+
+// --- the shell (side quest) ----------------------------------------------------------
+script ParcelCoast_Shell {
+    lock
+    if (!flag(FLAG_SKALD_Q_SHELL_FOUND)) {
+        msgbox(format("Half-buried in the sand between two drum rings: a shell. Whole. Pink inside.\pThe first one anyone has found on this beach in years. Taken."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_SHELL_FOUND)
+        release
+        end
+    }
+    msgbox(format("Sand. Drum rings. The hollow where a shell was."), MSGBOX_SIGN)
+    release
+    end
+}
+
+// --- PERRIN, encounter 6 (the peer; §04) -------------------------------------------
+script ParcelCoast_PerrinScene {
+    if (flag(FLAG_SKALD_PERRIN_6)) {
+        setvar(VAR_TEMP_5, 1)
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("PERRIN: WREN!"), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelCoast_PerrinIn)
+    waitmovement(0)
+    msgbox(format("PERRIN: Coastal Holdings liaison. New card, new coat. Don't look at me like that.\pOne last time, WREN. Then I'm done pretending we're on the same side. I never was. I just liked you."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_PERRIN_6, format("PERRIN: …Yeah. I know."))
+    msgbox(format("PERRIN: Write it true, then. Whatever it costs. I'll be upstairs, typing the response.\pI type well. HOLLIS says so."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelCoast_PerrinOut)
+    waitmovement(0)
+    removeobject(LOCALID_PERRIN)
+    setflag(FLAG_SKALD_PERRIN_6)
+    setvar(VAR_TEMP_5, 1)
+    releaseall
+    end
+}
+script ParcelCoast_PerrinTalk {
+    lock
+    faceplayer
+    msgbox(format("PERRIN: Hang on, I'm coming to you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+movement Movement_ParcelCoast_PerrinIn { walk_down * 2 }
+movement Movement_ParcelCoast_PerrinOut { walk_up * 2 }

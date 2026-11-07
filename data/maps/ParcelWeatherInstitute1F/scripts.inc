@@ -40,8 +40,27 @@ ParcelWeatherInstitute1F_Tech2::
 
 ParcelWeatherInstitute1F_Board::
 # 26 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	lock
+# 27 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Board_Text_0, MSGBOX_SIGN
+# 28 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_DRAWER, ParcelWeatherInstitute1F_Board_3
+ParcelWeatherInstitute1F_Board_1:
+# 32 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	release
 	end
+
+ParcelWeatherInstitute1F_Board_2:
+# 29 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Board_Text_1, MSGBOX_SIGN
+# 30 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	setflag FLAG_SKALD_Q_DRAWER_SEEN
+	goto ParcelWeatherInstitute1F_Board_1
+
+ParcelWeatherInstitute1F_Board_3:
+# 28 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_DRAWER_SEEN, ParcelWeatherInstitute1F_Board_2
+	goto ParcelWeatherInstitute1F_Board_1
 
 
 ParcelWeatherInstitute1F_Reception_Text_0:
@@ -65,10 +84,19 @@ ParcelWeatherInstitute1F_Tech2_Text_0:
 	.string "thinking.' They mostly sleep.$"
 
 ParcelWeatherInstitute1F_Board_Text_0:
-# 26 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 27 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "STATION MISSION. 'To demonstrate that\n"
 	.string "regional climate outcomes are\l"
 	.string "manageable through targeted\l"
 	.string "intervention.' Somebody has underlined\l"
 	.string "'demonstrate' in pencil and written: to\l"
 	.string "whom?$"
+
+ParcelWeatherInstitute1F_Board_Text_1:
+# 29 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "Under the board, a drawer. Inside: the\n"
+	.string "over-the-fence log. Twelve months of\l"
+	.string "the real sky, in pencil.\p"
+	.string "Rain up a third. Frost days down by half.\n"
+	.string "Nobody signed it. Written down, with the\l"
+	.string "date.$"

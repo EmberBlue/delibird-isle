@@ -4,11 +4,30 @@ mapscripts ParcelFernwickFisher_MapScripts {
 script ParcelFernwickFisher_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_GRETTIR_DONE)) {
+        msgbox(format("GRETTIR: One SURSKIT. On a pond the CORPS dug last spring. That's how it starts. That's always how it starts."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_GRETTIR_SEEN)) {
+        msgbox(format("GRETTIR: Well? …A SURSKIT. On the new pond. On its own.\pHuh. Take these. I'd stocked them for nothing worth catching. Now there might be."), MSGBOX_DEFAULT)
+        giveitem(ITEM_NET_BALL, 5)
+        setflag(FLAG_SKALD_Q_GRETTIR_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_GRETTIR)) {
+        msgbox(format("GRETTIR: The park pond. Go and look. Properly, at the water, not at the bench. Then tell me."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_ANNI_DONE)) {
         msgbox(format("GRETTIR: That's TOBIN's old rod! He lent it to you? Then you're the first. Bait's on the shelf. Advice is free.\pDon't wade past the second stake. The marsh doesn't give things back."), MSGBOX_DEFAULT)
     } else {
         msgbox(format("GRETTIR: Rods, bait, marsh advice. The advice is free: don't wade past the second stake.\pThe marsh doesn't give things back."), MSGBOX_DEFAULT)
     }
+    msgbox(format("GRETTIR: The CORPS dug a pond in the park. 'Habitat.' A hole with water in it, is what it is.\pGo and look at it for me. Properly. Tell me if anything's found it on its own. Nothing has, I'll bet you."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_Q_GRETTIR)
     release
     end
 }

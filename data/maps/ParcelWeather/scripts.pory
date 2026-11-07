@@ -103,7 +103,23 @@ script ParcelWeather_Gaute {
     trainerbattle_single(TRAINER_SKALD_WEA_GAUTE,
         format("GAUTE: I fly the instrument birds. SWELLOW with sensors. They hate it. Battle."),
         format("GAUTE: They'd have won."))
-    msgbox(format("GAUTE: The birds read the real sky, over the fence. The plots read the pretend sky. The director keeps both sets. He only publishes one."), MSGBOX_DEFAULT)
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_DRAWER_DONE)) {
+        msgbox(format("GAUTE: Two of us who've read the drawer. The director and you. I only fly the birds."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_DRAWER_SEEN)) {
+        msgbox(format("GAUTE: Rain up a third. Frost days halved. Nobody signed it. …Not mad, then.\pTake these. The director leaves them for people who've read the drawer. There's been two of us."), MSGBOX_DEFAULT)
+        giveitem(ITEM_RARE_CANDY, 2)
+        setflag(FLAG_SKALD_Q_DRAWER_DONE)
+        release
+        end
+    }
+    msgbox(format("GAUTE: The birds read the real sky, over the fence. The plots read the pretend sky. The director keeps both sets. He only publishes one.\pThe real one's in a drawer in the institute, ground floor, under the mission board. Read it. Then tell me I'm not mad."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_Q_DRAWER)
+    release
     end
 }
 script ParcelWeather_Hege {

@@ -21,6 +21,8 @@ const LOCALID_RIVER_ANGLER  = 5
 const LOCALID_RIV_DORSEY    = 6
 const LOCALID_RIV_AIDE      = 7
 
+const LOCALID_PERRIN = 34
+
 mapscripts ParcelRiver_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelRiver_OnTransition
 }
@@ -490,3 +492,51 @@ script ParcelRiver_T_Trygve {
     msgbox(format("TRYGVE: They want to put the straight channel through the clean reach. Phase 2. Where do they think the WHISCASH will go?"), MSGBOX_DEFAULT)
     end
 }
+
+// --- the beaver stump (side quest) --------------------------------------------------
+script ParcelRiver_BeaverStump {
+    lock
+    if (flag(FLAG_SKALD_Q_BEAVER) && !flag(FLAG_SKALD_Q_BEAVER_SEEN)) {
+        msgbox(format("A sapling stump on the bank, gnawed to a point. The chips at its foot are pale. Fresh.\pSomething is building above the town again. Written down, and the old man's name beside it."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_BEAVER_SEEN)
+        release
+        end
+    }
+    msgbox(format("A sapling stump on the bank, gnawed to a point."), MSGBOX_SIGN)
+    release
+    end
+}
+
+// --- PERRIN, encounter 4 (the peer; §04) -------------------------------------------
+script ParcelRiver_PerrinScene {
+    if (flag(FLAG_SKALD_PERRIN_4)) {
+        setvar(VAR_TEMP_5, 1)
+        end
+    }
+    lockall
+    playse(SE_PIN)
+    msgbox(format("PERRIN: WREN!"), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelRiver_PerrinIn)
+    waitmovement(0)
+    msgbox(format("PERRIN: DORSEY introduced me at the market! 'Our newest liaison.' LIAISON, WREN.\pPhase 2's going ahead, you know. Flood control. You can't argue with dry sheds. Battle!"), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_PERRIN_4, format("PERRIN: Okay. You CAN argue with it."))
+    msgbox(format("PERRIN: I took the desk. Part time's full time now. It's good work. It IS.\pHOLLIS asked about you. She asks about everyone. It's her best trick."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_PERRIN, Movement_ParcelRiver_PerrinOut)
+    waitmovement(0)
+    removeobject(LOCALID_PERRIN)
+    setflag(FLAG_SKALD_PERRIN_4)
+    setvar(VAR_TEMP_5, 1)
+    releaseall
+    end
+}
+script ParcelRiver_PerrinTalk {
+    lock
+    faceplayer
+    msgbox(format("PERRIN: Hang on, I'm coming to you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+movement Movement_ParcelRiver_PerrinIn { walk_down * 2 }
+movement Movement_ParcelRiver_PerrinOut { walk_up * 2 }

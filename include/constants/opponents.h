@@ -1205,7 +1205,19 @@
 
 #define TRAINER_SKALD_CAV_ASLAUG          1038
 
-#define TRAINERS_COUNT                      1039
+#define TRAINER_SKALD_PERRIN_1            1039
+
+#define TRAINER_SKALD_PERRIN_2            1040
+
+#define TRAINER_SKALD_PERRIN_3            1041
+
+#define TRAINER_SKALD_PERRIN_4            1042
+
+#define TRAINER_SKALD_PERRIN_5            1043
+
+#define TRAINER_SKALD_PERRIN_6            1044
+
+#define TRAINERS_COUNT                      1045
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS

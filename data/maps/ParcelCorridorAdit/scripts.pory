@@ -12,3 +12,16 @@ script ParcelCorridorAdit_Mark {
     msgbox(format("Survey marks chalked on the rock, one above the other. Dates. Water heights.\pThe oldest is the highest. The newest is a hand-span lower, and the hand that wrote it is not the same hand.\pUnder it, small: H."), MSGBOX_SIGN)
     end
 }
+
+script ParcelCorridorAdit_Satchel {
+    lock
+    if (flag(FLAG_SKALD_Q_FLOW) && !flag(FLAG_SKALD_Q_FLOW_FOUND)) {
+        msgbox(format("A survey satchel wedged in the rock, dry. Inside: FLOW SURVEY -- HOLLOWBEND SPUR -- PRE-CONSTRUCTION. Eleven pages.\pThe culvert bore in the plan is 1.2 metres. Taken."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_FLOW_FOUND)
+        release
+        end
+    }
+    msgbox(format("A crack in the rock where a satchel used to be wedged. Dry. Empty now."), MSGBOX_SIGN)
+    release
+    end
+}

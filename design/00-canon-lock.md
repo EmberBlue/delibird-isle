@@ -322,3 +322,7 @@ skeleton:
 - **§12 (living)** Implementation mapping onto pokeemerald-expansion; the
   pre-Skaldmere WIP audit (day/night, Parcel Isle map, Delibird assets) is the
   first open action.
+
+- **Resolved 2026-11-07 — the peer.** Perrin (§04) exists: a cohort-mate who
+  takes the Foundation path, battled six times, found at Hollis's desk in the
+  coda. He never changes the ending; he shows the other door.

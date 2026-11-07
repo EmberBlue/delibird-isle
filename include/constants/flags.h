@@ -733,17 +733,17 @@
 #define FLAG_SKALD_HIDDEN_CAV_NUGGET 0x2AE // Skaldmere: Marsh / Climate Station / Cavern
 #define FLAG_SKALD_ITEM_WEA_RARE_CANDY 0x2AF // Skaldmere: Marsh / Climate Station / Cavern
 #define FLAG_SKALD_ITEM_MARSH_FULL_RESTORE 0x2B0 // Skaldmere: Marsh / Climate Station / Cavern
-#define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
-#define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
-#define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
-#define FLAG_UNUSED_0x2B4  0x2B4 // Unused Flag
-#define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
-#define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
-#define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
+#define FLAG_SKALD_Q_GRETTIR 0x2B1 // Skaldmere: side quests
+#define FLAG_SKALD_Q_GRETTIR_DONE 0x2B2 // Skaldmere: side quests
+#define FLAG_SKALD_Q_GRETTIR_SEEN 0x2B3 // Skaldmere: side quests
+#define FLAG_SKALD_Q_FLOW 0x2B4 // Skaldmere: side quests
+#define FLAG_SKALD_Q_FLOW_FOUND 0x2B5 // Skaldmere: side quests
+#define FLAG_SKALD_Q_FLOW_DONE 0x2B6 // Skaldmere: side quests
+#define FLAG_SKALD_Q_HEDDA 0x2B7 // Skaldmere: side quests
+#define FLAG_SKALD_Q_HEDDA_DONE 0x2B8 // Skaldmere: side quests
+#define FLAG_SKALD_Q_BEAVER 0x2B9 // Skaldmere: side quests
+#define FLAG_SKALD_Q_BEAVER_SEEN 0x2BA // Skaldmere: side quests
+#define FLAG_SKALD_Q_BEAVER_DONE 0x2BB // Skaldmere: side quests
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC
@@ -1178,7 +1178,7 @@
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MASTER_BALL                 0x465 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B1F_MAX_ELIXIR                  0x466 // Unused Flag, leftover from the Ruby Magma hideout
 #define FLAG_ITEM_OLD_MAGMA_HIDEOUT_B2F_NEST_BALL                   0x467 // Unused Flag, leftover from the Ruby Magma hideout
-#define FLAG_UNUSED_0x468                                           0x468 // Unused Flag
+#define FLAG_SKALD_HL_EGG_GIVEN 0x468 // Skaldmere: side quests
 #define FLAG_ITEM_MT_PYRE_2F_ULTRA_BALL                             0x469
 #define FLAG_ITEM_MT_PYRE_4F_SEA_INCENSE                            0x46A
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_WEST_MAX_REVIVE                 0x46B
@@ -1186,9 +1186,9 @@
 #define FLAG_ITEM_MOSSDEEP_STEVENS_HOUSE_HM08                       0x46D // Unused Flag, leftover from R/S. HM08 is given to the player directly in Emerald
 #define FLAG_ITEM_ROUTE_119_NUGGET                                  0x46E
 #define FLAG_ITEM_ROUTE_104_POTION                                  0x46F
-#define FLAG_UNUSED_0x470                                           0x470 // Unused Flag
+#define FLAG_SKALD_Q_SHELL_FOUND 0x470 // Skaldmere: side quests
 #define FLAG_ITEM_ROUTE_103_PP_UP                                   0x471
-#define FLAG_UNUSED_0x472                                           0x472 // Unused Flag
+#define FLAG_SKALD_Q_SHELL_DONE 0x472 // Skaldmere: side quests
 #define FLAG_ITEM_ROUTE_108_STAR_PIECE                              0x473
 #define FLAG_ITEM_ROUTE_109_POTION                                  0x474
 #define FLAG_ITEM_ROUTE_110_ELIXIR                                  0x475
@@ -1222,18 +1222,18 @@
 #define FLAG_ITEM_SAFARI_ZONE_NORTH_EAST_NUGGET                     0x491
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
-#define FLAG_UNUSED_0x493                                           0x493 // Unused Flag
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
-#define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
+#define FLAG_SKALD_Q_DRAWER 0x493 // Skaldmere: side quests
+#define FLAG_SKALD_Q_DRAWER_SEEN 0x494 // Skaldmere: side quests
+#define FLAG_SKALD_Q_DRAWER_DONE 0x495 // Skaldmere: side quests
+#define FLAG_SKALD_PERRIN_1 0x496 // Skaldmere: Perrin, the peer
+#define FLAG_SKALD_PERRIN_2 0x497 // Skaldmere: Perrin, the peer
+#define FLAG_SKALD_PERRIN_3 0x498 // Skaldmere: Perrin, the peer
 
 #define FLAG_SKIP_INTRO                                             0x499 
-#define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
-#define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
-#define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
+#define FLAG_SKALD_PERRIN_4 0x49A // Skaldmere: Perrin, the peer
+#define FLAG_SKALD_PERRIN_5 0x49B // Skaldmere: Perrin, the peer
+#define FLAG_SKALD_PERRIN_6 0x49C // Skaldmere: Perrin, the peer
+#define FLAG_SKALD_PERRIN_DESK 0x49D // Skaldmere: Perrin, the peer
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag

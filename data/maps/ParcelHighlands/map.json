@@ -495,6 +495,20 @@
       "trainer_sight_or_berry_tree_id": "2",
       "script": "ParcelHighlands_T_Hedvig",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PERRIN",
+      "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
+      "x": 20,
+      "y": 70,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelHighlands_PerrinTalk",
+      "flag": "FLAG_SKALD_PERRIN_5"
     }
   ],
   "warp_events": [
@@ -673,6 +687,69 @@
       "var": "VAR_TEMP_4",
       "var_value": "0",
       "script": "ParcelHighlands_ValeGate"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 73,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelHighlands_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 73,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelHighlands_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 19,
+      "y": 73,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelHighlands_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 20,
+      "y": 73,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelHighlands_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 73,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelHighlands_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 22,
+      "y": 73,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelHighlands_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 23,
+      "y": 73,
+      "elevation": 0,
+      "var": "VAR_TEMP_5",
+      "var_value": "0",
+      "script": "ParcelHighlands_PerrinScene"
     }
   ],
   "bg_events": [

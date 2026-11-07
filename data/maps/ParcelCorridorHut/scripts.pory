@@ -24,7 +24,26 @@ script ParcelCorridorHut_Foreman {
 script ParcelCorridorHut_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_FLOW_DONE)) {
+        msgbox(format("CLERK: Eleven pages, filed with the CORPS station at FERNWICK. Somewhere they can't be unfiled. I didn't sign the cover sheet. You did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_FLOW_FOUND)) {
+        msgbox(format("CLERK: …Those are them. The flow survey. Pre-construction. The bore in the plan is twice what got built.\pI'll see they're filed. Take this; it was in the satchel's pocket and it isn't the company's."), MSGBOX_DEFAULT)
+        giveitem(ITEM_TM39)
+        setflag(FLAG_SKALD_Q_FLOW_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_FLOW)) {
+        msgbox(format("CLERK: The survey crew worked out of the old adit up the cut, before the FOUNDATION sealed it. If the pages are anywhere, they're in there. I never said that."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: I keep the paperwork. Spec sheet, schedule, the grate order. All in order.\pThe flow survey? That'd be county. Or the contractor. Everyone says that, don't they. It's always somewhere else."), MSGBOX_DEFAULT)
+    msgbox(format("CLERK: The folder's empty because the pages went somewhere. The survey crew worked out of the old adit before the FOUNDATION sealed it.\pIf a RANGER happened to find eleven pages in there, I never asked them to."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_Q_FLOW)
     release
     end
 }

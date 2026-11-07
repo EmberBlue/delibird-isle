@@ -19762,3 +19762,126 @@ Level: 31
 
 Piloswine
 Level: 31
+
+=== TRAINER_SKALD_PERRIN_1 ===
+Name: PERRIN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Electrike
+Level: 13
+
+Numel
+Level: 12
+
+=== TRAINER_SKALD_PERRIN_2 ===
+Name: PERRIN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Electrike
+Level: 15
+
+Numel
+Level: 14
+
+Zigzagoon
+Level: 13
+
+=== TRAINER_SKALD_PERRIN_3 ===
+Name: PERRIN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Electrike
+Level: 19
+
+Numel
+Level: 19
+
+Linoone
+Level: 18
+
+=== TRAINER_SKALD_PERRIN_4 ===
+Name: PERRIN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Electrike
+Level: 24
+
+Numel
+Level: 24
+
+Linoone
+Level: 23
+
+Swellow
+Level: 23
+
+=== TRAINER_SKALD_PERRIN_5 ===
+Name: PERRIN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Manectric
+Level: 28
+
+Numel
+Level: 28
+
+Linoone
+Level: 27
+
+Swellow
+Level: 28
+
+Kecleon
+Level: 27
+
+=== TRAINER_SKALD_PERRIN_6 ===
+Name: PERRIN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Manectric
+Level: 34
+
+Camerupt
+Level: 34
+
+Linoone
+Level: 32
+
+Swellow
+Level: 33
+
+Kecleon
+Level: 32
+
+Absol
+Level: 34

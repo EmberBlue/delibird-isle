@@ -38,20 +38,55 @@ ParcelCorridorHut_Clerk::
 # 26 "data/maps/ParcelCorridorHut/scripts.pory"
 	faceplayer
 # 27 "data/maps/ParcelCorridorHut/scripts.pory"
-	msgbox ParcelCorridorHut_Clerk_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALD_Q_FLOW_DONE, ParcelCorridorHut_Clerk_2
+# 32 "data/maps/ParcelCorridorHut/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_FLOW_FOUND, ParcelCorridorHut_Clerk_5
+# 39 "data/maps/ParcelCorridorHut/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_FLOW, ParcelCorridorHut_Clerk_8
+# 44 "data/maps/ParcelCorridorHut/scripts.pory"
+	msgbox ParcelCorridorHut_Clerk_Text_3, MSGBOX_DEFAULT
+# 45 "data/maps/ParcelCorridorHut/scripts.pory"
+	msgbox ParcelCorridorHut_Clerk_Text_4, MSGBOX_DEFAULT
+# 46 "data/maps/ParcelCorridorHut/scripts.pory"
+	setflag FLAG_SKALD_Q_FLOW
+# 47 "data/maps/ParcelCorridorHut/scripts.pory"
+	release
+	end
+
+ParcelCorridorHut_Clerk_2:
 # 28 "data/maps/ParcelCorridorHut/scripts.pory"
+	msgbox ParcelCorridorHut_Clerk_Text_0, MSGBOX_DEFAULT
+# 29 "data/maps/ParcelCorridorHut/scripts.pory"
+	release
+	end
+
+ParcelCorridorHut_Clerk_5:
+# 33 "data/maps/ParcelCorridorHut/scripts.pory"
+	msgbox ParcelCorridorHut_Clerk_Text_1, MSGBOX_DEFAULT
+# 34 "data/maps/ParcelCorridorHut/scripts.pory"
+	giveitem ITEM_TM39
+# 35 "data/maps/ParcelCorridorHut/scripts.pory"
+	setflag FLAG_SKALD_Q_FLOW_DONE
+# 36 "data/maps/ParcelCorridorHut/scripts.pory"
+	release
+	end
+
+ParcelCorridorHut_Clerk_8:
+# 40 "data/maps/ParcelCorridorHut/scripts.pory"
+	msgbox ParcelCorridorHut_Clerk_Text_2, MSGBOX_DEFAULT
+# 41 "data/maps/ParcelCorridorHut/scripts.pory"
 	release
 	end
 
 
 ParcelCorridorHut_Plans::
-# 33 "data/maps/ParcelCorridorHut/scripts.pory"
+# 52 "data/maps/ParcelCorridorHut/scripts.pory"
 	msgbox ParcelCorridorHut_Plans_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCorridorHut_Shelf::
-# 38 "data/maps/ParcelCorridorHut/scripts.pory"
+# 57 "data/maps/ParcelCorridorHut/scripts.pory"
 	msgbox ParcelCorridorHut_Shelf_Text_0, MSGBOX_SIGN
 	end
 
@@ -81,7 +116,31 @@ ParcelCorridorHut_Foreman_Text_2:
 	.string "the kettle's on.$"
 
 ParcelCorridorHut_Clerk_Text_0:
-# 27 "data/maps/ParcelCorridorHut/scripts.pory"
+# 28 "data/maps/ParcelCorridorHut/scripts.pory"
+	.string "CLERK: Eleven pages, filed with the\n"
+	.string "CORPS station at FERNWICK. Somewhere\l"
+	.string "they can't be unfiled. I didn't sign the\l"
+	.string "cover sheet. You did.$"
+
+ParcelCorridorHut_Clerk_Text_1:
+# 33 "data/maps/ParcelCorridorHut/scripts.pory"
+	.string "CLERK: …Those are them. The flow\n"
+	.string "survey. Pre-construction. The bore in\l"
+	.string "the plan is twice what got built.\p"
+	.string "I'll see they're filed. Take this; it was\n"
+	.string "in the satchel's pocket and it isn't the\l"
+	.string "company's.$"
+
+ParcelCorridorHut_Clerk_Text_2:
+# 40 "data/maps/ParcelCorridorHut/scripts.pory"
+	.string "CLERK: The survey crew worked out of\n"
+	.string "the old adit up the cut, before the\l"
+	.string "FOUNDATION sealed it. If the pages are\l"
+	.string "anywhere, they're in there. I never said\l"
+	.string "that.$"
+
+ParcelCorridorHut_Clerk_Text_3:
+# 44 "data/maps/ParcelCorridorHut/scripts.pory"
 	.string "CLERK: I keep the paperwork. Spec\n"
 	.string "sheet, schedule, the grate order. All in\l"
 	.string "order.\p"
@@ -89,8 +148,17 @@ ParcelCorridorHut_Clerk_Text_0:
 	.string "the contractor. Everyone says that,\l"
 	.string "don't they. It's always somewhere else.$"
 
+ParcelCorridorHut_Clerk_Text_4:
+# 45 "data/maps/ParcelCorridorHut/scripts.pory"
+	.string "CLERK: The folder's empty because the\n"
+	.string "pages went somewhere. The survey crew\l"
+	.string "worked out of the old adit before the\l"
+	.string "FOUNDATION sealed it.\p"
+	.string "If a RANGER happened to find eleven\n"
+	.string "pages in there, I never asked them to.$"
+
 ParcelCorridorHut_Plans_Text_0:
-# 33 "data/maps/ParcelCorridorHut/scripts.pory"
+# 52 "data/maps/ParcelCorridorHut/scripts.pory"
 	.string "HOLLOWBEND SPUR -- DRAINAGE WORKS.\n"
 	.string "Spec sheet, revision C.\p"
 	.string "Culvert: 1.2 m bore. A handwritten line\n"
@@ -98,7 +166,7 @@ ParcelCorridorHut_Plans_Text_0:
 	.string "initials are not the foreman's.$"
 
 ParcelCorridorHut_Shelf_Text_0:
-# 38 "data/maps/ParcelCorridorHut/scripts.pory"
+# 57 "data/maps/ParcelCorridorHut/scripts.pory"
 	.string "Invoices. Grate order, 12 units, due\n"
 	.string "next month.\p"
 	.string "A folder labelled FLOW SURVEY. It is\n"

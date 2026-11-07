@@ -114,92 +114,122 @@ ParcelWeather_Gaute::
 # 103 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_GAUTE, ParcelWeather_Gaute_Text_0, ParcelWeather_Gaute_Text_1
 # 106 "data/maps/ParcelWeather/scripts.pory"
+	lock
+# 107 "data/maps/ParcelWeather/scripts.pory"
+	faceplayer
+# 108 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_DRAWER_DONE, ParcelWeather_Gaute_2
+# 113 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_DRAWER_SEEN, ParcelWeather_Gaute_5
+# 120 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Gaute_Text_4, MSGBOX_DEFAULT
+# 121 "data/maps/ParcelWeather/scripts.pory"
+	setflag FLAG_SKALD_Q_DRAWER
+# 122 "data/maps/ParcelWeather/scripts.pory"
+	release
+	end
+
+ParcelWeather_Gaute_2:
+# 109 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Gaute_Text_2, MSGBOX_DEFAULT
+# 110 "data/maps/ParcelWeather/scripts.pory"
+	release
+	end
+
+ParcelWeather_Gaute_5:
+# 114 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Gaute_Text_3, MSGBOX_DEFAULT
+# 115 "data/maps/ParcelWeather/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 2
+# 116 "data/maps/ParcelWeather/scripts.pory"
+	setflag FLAG_SKALD_Q_DRAWER_DONE
+# 117 "data/maps/ParcelWeather/scripts.pory"
+	release
 	end
 
 
 ParcelWeather_Hege::
-# 110 "data/maps/ParcelWeather/scripts.pory"
+# 126 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_HEGE, ParcelWeather_Hege_Text_0, ParcelWeather_Hege_Text_1
-# 113 "data/maps/ParcelWeather/scripts.pory"
+# 129 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Hege_Text_2, MSGBOX_DEFAULT
 	end
 
 
 ParcelWeather_ReturnFerry::
-# 119 "data/maps/ParcelWeather/scripts.pory"
+# 135 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 120 "data/maps/ParcelWeather/scripts.pory"
+# 136 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 121 "data/maps/ParcelWeather/scripts.pory"
+# 137 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_ReturnFerry_Text_0, MSGBOX_YESNO
-# 122 "data/maps/ParcelWeather/scripts.pory"
+# 138 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_ReturnFerry_2
-# 127 "data/maps/ParcelWeather/scripts.pory"
+# 143 "data/maps/ParcelWeather/scripts.pory"
 	closemessage
-# 128 "data/maps/ParcelWeather/scripts.pory"
+# 144 "data/maps/ParcelWeather/scripts.pory"
 	playse SE_SHIP
-# 129 "data/maps/ParcelWeather/scripts.pory"
+# 145 "data/maps/ParcelWeather/scripts.pory"
 	delay 40
-# 130 "data/maps/ParcelWeather/scripts.pory"
+# 146 "data/maps/ParcelWeather/scripts.pory"
 	warp MAP_PARCEL_ISLE, 15, 31
-# 131 "data/maps/ParcelWeather/scripts.pory"
+# 147 "data/maps/ParcelWeather/scripts.pory"
 	waitstate
 	end
 
 ParcelWeather_ReturnFerry_2:
-# 123 "data/maps/ParcelWeather/scripts.pory"
+# 139 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_ReturnFerry_Text_1, MSGBOX_DEFAULT
-# 124 "data/maps/ParcelWeather/scripts.pory"
+# 140 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_ItemMaxEther::
-# 134 "data/maps/ParcelWeather/scripts.pory"
+# 150 "data/maps/ParcelWeather/scripts.pory"
 	finditem ITEM_MAX_ETHER
 	end
 
 
 ParcelWeather_ItemRareCandy::
-# 135 "data/maps/ParcelWeather/scripts.pory"
+# 151 "data/maps/ParcelWeather/scripts.pory"
 	finditem ITEM_RARE_CANDY
 	end
 
 
 ParcelWeather_SignGate::
-# 137 "data/maps/ParcelWeather/scripts.pory"
+# 153 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_SignGate_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_SignPlots::
-# 141 "data/maps/ParcelWeather/scripts.pory"
+# 157 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_SignPlots_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_T_Amund::
-# 147 "data/maps/ParcelWeather/scripts.pory"
+# 163 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_AMUND, ParcelWeather_T_Amund_Text_0, ParcelWeather_T_Amund_Text_1
-# 150 "data/maps/ParcelWeather/scripts.pory"
+# 166 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_Text_2, MSGBOX_DEFAULT
 	end
 
 
 ParcelWeather_T_Ragnhild::
-# 154 "data/maps/ParcelWeather/scripts.pory"
+# 170 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_RAGNHILD, ParcelWeather_T_Ragnhild_Text_0, ParcelWeather_T_Ragnhild_Text_1
-# 157 "data/maps/ParcelWeather/scripts.pory"
+# 173 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_Text_2, MSGBOX_DEFAULT
 	end
 
 
 ParcelWeather_T_Oyvind::
-# 161 "data/maps/ParcelWeather/scripts.pory"
+# 177 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_OYVIND, ParcelWeather_T_Oyvind_Text_0, ParcelWeather_T_Oyvind_Text_1
-# 164 "data/maps/ParcelWeather/scripts.pory"
+# 180 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_Text_2, MSGBOX_DEFAULT
 	end
 
@@ -422,42 +452,61 @@ ParcelWeather_Gaute_Text_1:
 	.string "GAUTE: They'd have won.$"
 
 ParcelWeather_Gaute_Text_2:
-# 106 "data/maps/ParcelWeather/scripts.pory"
+# 109 "data/maps/ParcelWeather/scripts.pory"
+	.string "GAUTE: Two of us who've read the\n"
+	.string "drawer. The director and you. I only fly\l"
+	.string "the birds.$"
+
+ParcelWeather_Gaute_Text_3:
+# 114 "data/maps/ParcelWeather/scripts.pory"
+	.string "GAUTE: Rain up a third. Frost days\n"
+	.string "halved. Nobody signed it. …Not mad,\l"
+	.string "then.\p"
+	.string "Take these. The director leaves them\n"
+	.string "for people who've read the drawer.\l"
+	.string "There's been two of us.$"
+
+ParcelWeather_Gaute_Text_4:
+# 120 "data/maps/ParcelWeather/scripts.pory"
 	.string "GAUTE: The birds read the real sky, over\n"
 	.string "the fence. The plots read the pretend\l"
 	.string "sky. The director keeps both sets. He\l"
-	.string "only publishes one.$"
+	.string "only publishes one.\p"
+	.string "The real one's in a drawer in the\n"
+	.string "institute, ground floor, under the\l"
+	.string "mission board. Read it. Then tell me I'm\l"
+	.string "not mad.$"
 
 ParcelWeather_Hege_Text_0:
-# 111 "data/maps/ParcelWeather/scripts.pory"
+# 127 "data/maps/ParcelWeather/scripts.pory"
 	.string "HEGE: The bridge is the best place to\n"
 	.string "think. The water doesn't care what the\l"
 	.string "plots say. Battle me on it.$"
 
 ParcelWeather_Hege_Text_1:
-# 112 "data/maps/ParcelWeather/scripts.pory"
+# 128 "data/maps/ParcelWeather/scripts.pory"
 	.string "HEGE: The water still doesn't care.$"
 
 ParcelWeather_Hege_Text_2:
-# 113 "data/maps/ParcelWeather/scripts.pory"
+# 129 "data/maps/ParcelWeather/scripts.pory"
 	.string "HEGE: The director isn't a liar. That's\n"
 	.string "what's hard. He knows exactly what the\l"
 	.string "station is. He runs it anyway, so\l"
 	.string "somebody honest does.$"
 
 ParcelWeather_ReturnFerry_Text_0:
-# 121 "data/maps/ParcelWeather/scripts.pory"
+# 137 "data/maps/ParcelWeather/scripts.pory"
 	.string "SAILOR: Back to SALTWICK, RANGER?\n"
 	.string "Honest air out there, at least.\l"
 	.string "Whatever they sell in here, it isn't\l"
 	.string "that.$"
 
 ParcelWeather_ReturnFerry_Text_1:
-# 123 "data/maps/ParcelWeather/scripts.pory"
+# 139 "data/maps/ParcelWeather/scripts.pory"
 	.string "SAILOR: Take your time. Mind the fans.$"
 
 ParcelWeather_SignGate_Text_0:
-# 137 "data/maps/ParcelWeather/scripts.pory"
+# 153 "data/maps/ParcelWeather/scripts.pory"
 	.string "MEREHOLT CLIMATE FUTURES --\n"
 	.string "ATMOSPHERIC DIVISION\p"
 	.string "Managing tomorrow's weather, today.\n"
@@ -466,56 +515,56 @@ ParcelWeather_SignGate_Text_0:
 	.string "demonstration.$"
 
 ParcelWeather_SignPlots_Text_0:
-# 141 "data/maps/ParcelWeather/scripts.pory"
+# 157 "data/maps/ParcelWeather/scripts.pory"
 	.string "TEST PLOTS. North-west: Aridity.\n"
 	.string "North-east: Solar Forcing. East slope:\l"
 	.string "Cryosphere. River: Hydrology.\p"
 	.string "The real sky is not a plot.$"
 
 ParcelWeather_T_Amund_Text_0:
-# 148 "data/maps/ParcelWeather/scripts.pory"
+# 164 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Up the east slope. The frost\n"
 	.string "plot's behind me. It hums. Battle.$"
 
 ParcelWeather_T_Amund_Text_1:
-# 149 "data/maps/ParcelWeather/scripts.pory"
+# 165 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Humming's louder than I am,\n"
 	.string "apparently.$"
 
 ParcelWeather_T_Amund_Text_2:
-# 150 "data/maps/ParcelWeather/scripts.pory"
+# 166 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: One frozen square on a warming\n"
 	.string "hill. I asked what it's for.\l"
 	.string "'Demonstration.' Of what? Nobody said.$"
 
 ParcelWeather_T_Ragnhild_Text_0:
-# 155 "data/maps/ParcelWeather/scripts.pory"
+# 171 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Breeder, east plots.\n"
 	.string "CASTFORM for the demos, LUDICOLO for\l"
 	.string "the rain. Battle.$"
 
 ParcelWeather_T_Ragnhild_Text_1:
-# 156 "data/maps/ParcelWeather/scripts.pory"
+# 172 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Rained on.$"
 
 ParcelWeather_T_Ragnhild_Text_2:
-# 157 "data/maps/ParcelWeather/scripts.pory"
+# 173 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: The station publishes the\n"
 	.string "plot weather. The real weather goes in a\l"
 	.string "drawer. I've seen the drawer.$"
 
 ParcelWeather_T_Oyvind_Text_0:
-# 162 "data/maps/ParcelWeather/scripts.pory"
+# 178 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Instrument birds. XATU reads\n"
 	.string "the sky better than the plots do.\l"
 	.string "Battle before it tells me how this ends.$"
 
 ParcelWeather_T_Oyvind_Text_1:
-# 163 "data/maps/ParcelWeather/scripts.pory"
+# 179 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: It told me.$"
 
 ParcelWeather_T_Oyvind_Text_2:
-# 164 "data/maps/ParcelWeather/scripts.pory"
+# 180 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: XATU watches the real sky over\n"
 	.string "the fence. The real sky's not for sale.\l"
 	.string "The plots are.$"
