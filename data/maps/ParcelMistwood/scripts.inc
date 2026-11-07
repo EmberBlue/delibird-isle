@@ -193,6 +193,38 @@ ParcelMistwood_Board_2:
 	goto ParcelMistwood_Board_1
 
 
+ParcelMistwood_T_Simen::
+# 152 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_SIMEN, ParcelMistwood_T_Simen_Text_0, ParcelMistwood_T_Simen_Text_1
+# 155 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Simen_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelMistwood_T_Hanna::
+# 159 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_HANNA, ParcelMistwood_T_Hanna_Text_0, ParcelMistwood_T_Hanna_Text_1
+# 162 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Hanna_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelMistwood_T_Vetle::
+# 166 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_VETLE, ParcelMistwood_T_Vetle_Text_0, ParcelMistwood_T_Vetle_Text_1
+# 169 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Vetle_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelMistwood_T_Selma::
+# 173 "data/maps/ParcelMistwood/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_MW_SELMA, ParcelMistwood_T_Selma_Text_0, ParcelMistwood_T_Selma_Text_1
+# 176 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_T_Selma_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelMistwood_Sanna_Text_0:
 # 16 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SANNA: I've got two WURMPLE. Two! You\n"
@@ -364,3 +396,69 @@ ParcelMistwood_Board_Text_1:
 	.string "Snares cleared: 0\p"
 	.string "The warden is inside. He is not in a good\n"
 	.string "mood.$"
+
+ParcelMistwood_T_Simen_Text_0:
+# 153 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Shh. There's a SILCOON about to\n"
+	.string "open. Right there. Battle quietly.$"
+
+ParcelMistwood_T_Simen_Text_1:
+# 154 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: It opened. It's a BEAUTIFLY.\n"
+	.string "Worth it.$"
+
+ParcelMistwood_T_Simen_Text_2:
+# 155 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SIMEN: Three snares I've found this\n"
+	.string "spring. The warden says report them. I\l"
+	.string "report them. The snares keep coming.$"
+
+ParcelMistwood_T_Hanna_Text_0:
+# 160 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: Lost in the galleries. Again.\n"
+	.string "Battle me and then tell me which way's\l"
+	.string "out.$"
+
+ParcelMistwood_T_Hanna_Text_1:
+# 161 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: North. It's always north.$"
+
+ParcelMistwood_T_Hanna_Text_2:
+# 162 "data/maps/ParcelMistwood/scripts.pory"
+	.string "HANNA: HOOTHOOT only call from the big\n"
+	.string "trees. There are fewer big trees every\l"
+	.string "year. Fewer calls.$"
+
+ParcelMistwood_T_Vetle_Text_0:
+# 167 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Camped by the gallery three\n"
+	.string "nights. Something's been dragging\l"
+	.string "snares past my tent. Battle, I'm jumpy.$"
+
+ParcelMistwood_T_Vetle_Text_1:
+# 168 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: Less jumpy. Thanks.$"
+
+ParcelMistwood_T_Vetle_Text_2:
+# 169 "data/maps/ParcelMistwood/scripts.pory"
+	.string "VETLE: The poachers come in from\n"
+	.string "REEDMERE side. The warden knows. He's\l"
+	.string "one man and the forest's a lot of\l"
+	.string "forest.$"
+
+ParcelMistwood_T_Selma_Text_0:
+# 174 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: The deadfall blocks the north\n"
+	.string "corridor. I've waited two days for\l"
+	.string "someone with CUT. Battle while we wait?$"
+
+ParcelMistwood_T_Selma_Text_1:
+# 175 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: You've got CUT, haven't you. Go\n"
+	.string "on, then.$"
+
+ParcelMistwood_T_Selma_Text_2:
+# 176 "data/maps/ParcelMistwood/scripts.pory"
+	.string "SELMA: FERNWICK's past the deadfall.\n"
+	.string "Big town. CORPS station. The HALL where\l"
+	.string "TARN fails everybody.$"

@@ -526,3 +526,26 @@ script ParcelWetlands_SignRoute {
     msgbox(format("REEDMERE\pNorth: the landing and the backwater.\nSouth: FERNWICK."), MSGBOX_SIGN)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelWetlands_T_Paul {
+    trainerbattle_single(TRAINER_SKALD_WET_PAUL,
+        format("PAUL: The reed beds are the best bug country in the district. Were. Battle."),
+        format("PAUL: Were."))
+    msgbox(format("PAUL: Half the reed beds went under the FOUNDATION's gauges. Gauges don't eat reeds. The boat traffic does."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWetlands_T_Sunniva {
+    trainerbattle_single(TRAINER_SKALD_WET_SUNNIVA,
+        format("SUNNIVA: Cadet SUNNIVA, plateau watch. HALE's orders: every provisional spars. Yes, even now."),
+        format("SUNNIVA: Logged. HALE will nod."))
+    msgbox(format("SUNNIVA: The office below has four gauges and we have one notebook. Guess which numbers get believed."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWetlands_T_Roar {
+    trainerbattle_single(TRAINER_SKALD_WET_ROAR,
+        format("ROAR: Fishing the upper pool off the bridge. Clean up here. Cleaner. Battle."),
+        format("ROAR: Scared the fish. Again."))
+    msgbox(format("ROAR: There's a channel from the pool down past the landing. Whatever's in the pool ends up in the backwater. Think about that."), MSGBOX_DEFAULT)
+    end
+}

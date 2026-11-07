@@ -1115,7 +1115,97 @@
 
 #define TRAINER_SKALD_CAV_TECH_B          993
 
-#define TRAINERS_COUNT                      994
+#define TRAINER_SKALD_ISLE_BRAND          994
+
+#define TRAINER_SKALD_ISLE_SVEIN          995
+
+#define TRAINER_SKALD_ISLE_TORA           996
+
+#define TRAINER_SKALD_ISLE_JON            997
+
+#define TRAINER_SKALD_ISLE_LINE           998
+
+#define TRAINER_SKALD_R1_EMIL             999
+
+#define TRAINER_SKALD_R1_ASTRID           1000
+
+#define TRAINER_SKALD_R1_MATS             1001
+
+#define TRAINER_SKALD_MW_SIMEN            1002
+
+#define TRAINER_SKALD_MW_HANNA            1003
+
+#define TRAINER_SKALD_MW_VETLE            1004
+
+#define TRAINER_SKALD_MW_SELMA            1005
+
+#define TRAINER_SKALD_FW_ELLA             1006
+
+#define TRAINER_SKALD_FW_HENRIK           1007
+
+#define TRAINER_SKALD_FW_STEINAR          1008
+
+#define TRAINER_SKALD_FW_MARTE            1009
+
+#define TRAINER_SKALD_FW_LEON             1010
+
+#define TRAINER_SKALD_FW_THEA             1011
+
+#define TRAINER_SKALD_DEL_HAKON           1012
+
+#define TRAINER_SKALD_DEL_BJARNE          1013
+
+#define TRAINER_SKALD_DEL_FRIDA           1014
+
+#define TRAINER_SKALD_DEL_ERLEND          1015
+
+#define TRAINER_SKALD_WET_PAUL            1016
+
+#define TRAINER_SKALD_WET_SUNNIVA         1017
+
+#define TRAINER_SKALD_WET_ROAR            1018
+
+#define TRAINER_SKALD_COR_VIDAR           1019
+
+#define TRAINER_SKALD_COR_HALLE           1020
+
+#define TRAINER_SKALD_COR_ELIN            1021
+
+#define TRAINER_SKALD_FLD_ANDERS          1022
+
+#define TRAINER_SKALD_FLD_ROALD           1023
+
+#define TRAINER_SKALD_FLD_STEIN           1024
+
+#define TRAINER_SKALD_RIV_AUD             1025
+
+#define TRAINER_SKALD_RIV_ESPEN           1026
+
+#define TRAINER_SKALD_RIV_TRYGVE          1027
+
+#define TRAINER_SKALD_HL_SNORRE           1028
+
+#define TRAINER_SKALD_HL_TORGEIR          1029
+
+#define TRAINER_SKALD_HL_HEDVIG           1030
+
+#define TRAINER_SKALD_COAST_HELGE         1031
+
+#define TRAINER_SKALD_COAST_ANTON         1032
+
+#define TRAINER_SKALD_COAST_BEATE         1033
+
+#define TRAINER_SKALD_WEA_AMUND           1034
+
+#define TRAINER_SKALD_WEA_RAGNHILD        1035
+
+#define TRAINER_SKALD_WEA_OYVIND          1036
+
+#define TRAINER_SKALD_CAV_BRYNJULF        1037
+
+#define TRAINER_SKALD_CAV_ASLAUG          1038
+
+#define TRAINERS_COUNT                      1039
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS

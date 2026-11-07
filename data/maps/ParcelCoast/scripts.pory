@@ -415,3 +415,26 @@ script ParcelCoast_Tore {
     msgbox(format("TORE: The ferry's FOUNDATION too. The one kindness on this coast and they own it. I'm not complaining. I'm just saying."), MSGBOX_DEFAULT)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelCoast_T_Helge {
+    trainerbattle_single(TRAINER_SKALD_COAST_HELGE,
+        format("HELGE: Quay crew. We tie up the fleet and count what's missing. Battle, it's quicker than counting."),
+        format("HELGE: Quicker, yes."))
+    msgbox(format("HELGE: Forty-one boats went out. Forty-one came back. The count's always right. It's the holds that are wrong."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCoast_T_Anton {
+    trainerbattle_single(TRAINER_SKALD_COAST_ANTON,
+        format("ANTON: The beach is the only bit of this coast that's free. Even the sand's got rings in it. Battle?"),
+        format("ANTON: Free, and lost."))
+    msgbox(format("ANTON: Drum rings. Fuel drums. They roll off the quay in storms. The crest's on all of them."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCoast_T_Beate {
+    trainerbattle_single(TRAINER_SKALD_COAST_BEATE,
+        format("BEATE: Up from the mainland for the fish. Everyone says the fish. Nobody says there's hardly any. Battle, darling."),
+        format("BEATE: Hardly any of that, either."))
+    msgbox(format("BEATE: The brochure says 'working harbour'. It is working. Something's working. It isn't the sea."), MSGBOX_DEFAULT)
+    end
+}

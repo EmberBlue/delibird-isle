@@ -248,6 +248,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelRoute1_Poliwag",
       "flag": "FLAG_TEMP_2"
+    },
+    {
+      "local_id": "LOCALID_T_R1_EMIL",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 21,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRoute1_T_Emil",
+      "flag": "FLAG_SKALD_NO_PARTNER_YET"
+    },
+    {
+      "local_id": "LOCALID_T_R1_ASTRID",
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 12,
+      "y": 41,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRoute1_T_Astrid",
+      "flag": "FLAG_SKALD_NO_PARTNER_YET"
+    },
+    {
+      "local_id": "LOCALID_T_R1_MATS",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 16,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRoute1_T_Mats",
+      "flag": "FLAG_SKALD_NO_PARTNER_YET"
     }
   ],
   "warp_events": [],

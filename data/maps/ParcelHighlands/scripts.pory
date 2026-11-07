@@ -397,3 +397,26 @@ script ParcelHighlands_Siri {
     msgbox(format("SIRI: The fall's loud this year. More melt. Every year the fall's loud and every year there's less snow to make it."), MSGBOX_DEFAULT)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelHighlands_T_Snorre {
+    trainerbattle_single(TRAINER_SKALD_HL_SNORRE,
+        format("SNORRE: The slide took the trail. I've been sitting here deciding whether to climb it. Battle first."),
+        format("SNORRE: Still deciding."))
+    msgbox(format("SNORRE: ILEX went up through the scree. Alone. She's older than me and she didn't stop to decide."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlands_T_Torgeir {
+    trainerbattle_single(TRAINER_SKALD_HL_TORGEIR,
+        format("TORGEIR: Cadet TORGEIR, the low stakes. I count what's come up the slope. Spar."),
+        format("TORGEIR: Counted."))
+    msgbox(format("TORGEIR: Every month something new arrives from the valley. Every month something old goes up to the band and doesn't come down."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlands_T_Hedvig {
+    trainerbattle_single(TRAINER_SKALD_HL_HEDVIG,
+        format("HEDVIG: ILEX measures the band in cloth. I measure it in what the mountain's thinking. It's thinking about leaving. Battle."),
+        format("HEDVIG: It's still thinking."))
+    msgbox(format("HEDVIG: The woman at the bore means every warm word. That's what makes her cold."), MSGBOX_DEFAULT)
+    end
+}

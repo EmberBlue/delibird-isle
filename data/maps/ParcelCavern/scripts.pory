@@ -103,3 +103,19 @@ script ParcelCavern_Leave {
     waitstate
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelCavern_T_Brynjulf {
+    trainerbattle_single(TRAINER_SKALD_CAV_BRYNJULF,
+        format("BRYNJULF: Deepwater core crew. The ice is shorter every season. Battle, it's warmer."),
+        format("BRYNJULF: Warmer. Briefly."))
+    msgbox(format("BRYNJULF: Twenty metres when they first cored it. Fourteen now. 'Accessible', the log says."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCavern_T_Aslaug {
+    trainerbattle_single(TRAINER_SKALD_CAV_ASLAUG,
+        format("ASLAUG: Cadet ASLAUG, posted to watch the posted. Spar. It passes the shift."),
+        format("ASLAUG: Shift passed."))
+    msgbox(format("ASLAUG: The DELIBIRD at the deep end never leaves. KELDA logged it as an asset. I logged it as a bird."), MSGBOX_DEFAULT)
+    end
+}

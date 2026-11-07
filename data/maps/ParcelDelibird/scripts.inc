@@ -488,6 +488,38 @@ ParcelDelibird_Blankets::
 	end
 
 
+ParcelDelibird_T_Hakon::
+# 349 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_DEL_HAKON, ParcelDelibird_T_Hakon_Text_0, ParcelDelibird_T_Hakon_Text_1
+# 352 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_T_Hakon_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelDelibird_T_Bjarne::
+# 356 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_DEL_BJARNE, ParcelDelibird_T_Bjarne_Text_0, ParcelDelibird_T_Bjarne_Text_1
+# 359 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_T_Bjarne_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelDelibird_T_Frida::
+# 363 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_DEL_FRIDA, ParcelDelibird_T_Frida_Text_0, ParcelDelibird_T_Frida_Text_1
+# 366 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_T_Frida_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelDelibird_T_Erlend::
+# 370 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_DEL_ERLEND, ParcelDelibird_T_Erlend_Text_0, ParcelDelibird_T_Erlend_Text_1
+# 373 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_T_Erlend_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelDelibird_FirstEntry_Text_0:
 # 48 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The boat noses in and the island takes\n"
@@ -1003,3 +1035,67 @@ ParcelDelibird_Blankets_Text_1:
 	.string "You learn not to read the corner.\p"
 	.string "The corner, small and tasteful, reads\n"
 	.string "MEREHOLT FOUNDATION.$"
+
+ParcelDelibird_T_Hakon_Text_0:
+# 350 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HAKON: Ferry's tied up till the festival\n"
+	.string "ends. I've seen it eleven years running.\l"
+	.string "Battle me, it's the only new thing today.$"
+
+ParcelDelibird_T_Hakon_Text_1:
+# 351 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HAKON: New thing: I lost.$"
+
+ParcelDelibird_T_Hakon_Text_2:
+# 352 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HAKON: The gift square's lovely. The\n"
+	.string "thaw line's moved up the slope again.\l"
+	.string "You can see both from the quay.$"
+
+ParcelDelibird_T_Bjarne_Text_0:
+# 357 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BJARNE: The summit mouth's behind me.\n"
+	.string "Cold up there. Proper cold. Last of it.\l"
+	.string "Battle before you climb.$"
+
+ParcelDelibird_T_Bjarne_Text_1:
+# 358 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BJARNE: Climb, then.$"
+
+ParcelDelibird_T_Bjarne_Text_2:
+# 359 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BJARNE: The cavern's the only place the\n"
+	.string "old cold lives now. MEREHOLT put an\l"
+	.string "officer in it. In the cold. Logging it.$"
+
+ParcelDelibird_T_Frida_Text_0:
+# 364 "data/maps/ParcelDelibird/scripts.pory"
+	.string "FRIDA: My DELIBIRD was born on the\n"
+	.string "summit. There won't be another. Battle?$"
+
+ParcelDelibird_T_Frida_Text_1:
+# 365 "data/maps/ParcelDelibird/scripts.pory"
+	.string "FRIDA: Still the best bird on the island.$"
+
+ParcelDelibird_T_Frida_Text_2:
+# 366 "data/maps/ParcelDelibird/scripts.pory"
+	.string "FRIDA: The festival's a gift economy.\n"
+	.string "Give, take, give. MEREHOLT gives the\l"
+	.string "banner. Guess what they take.$"
+
+ParcelDelibird_T_Erlend_Text_0:
+# 371 "data/maps/ParcelDelibird/scripts.pory"
+	.string "ERLEND: Cadet ERLEND, island posting.\n"
+	.string "ILEX runs the gym here and nobody\l"
+	.string "beats her. Spar, so I've something to\l"
+	.string "report.$"
+
+ParcelDelibird_T_Erlend_Text_1:
+# 372 "data/maps/ParcelDelibird/scripts.pory"
+	.string "ERLEND: Reported.$"
+
+ParcelDelibird_T_Erlend_Text_2:
+# 373 "data/maps/ParcelDelibird/scripts.pory"
+	.string "ERLEND: ILEX's Skyline badge needs the\n"
+	.string "whole island read. The summit, the\l"
+	.string "shore. She doesn't sign for half.$"

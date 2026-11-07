@@ -180,6 +180,30 @@ ParcelWeather_SignPlots::
 	end
 
 
+ParcelWeather_T_Amund::
+# 147 "data/maps/ParcelWeather/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_WEA_AMUND, ParcelWeather_T_Amund_Text_0, ParcelWeather_T_Amund_Text_1
+# 150 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_T_Amund_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelWeather_T_Ragnhild::
+# 154 "data/maps/ParcelWeather/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_WEA_RAGNHILD, ParcelWeather_T_Ragnhild_Text_0, ParcelWeather_T_Ragnhild_Text_1
+# 157 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_T_Ragnhild_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelWeather_T_Oyvind::
+# 161 "data/maps/ParcelWeather/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_WEA_OYVIND, ParcelWeather_T_Oyvind_Text_0, ParcelWeather_T_Oyvind_Text_1
+# 164 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_T_Oyvind_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelWeather_FirstEntry_Text_0:
 # 22 "data/maps/ParcelWeather/scripts.pory"
 	.string "A sign over the landing: MEREHOLT\n"
@@ -447,3 +471,51 @@ ParcelWeather_SignPlots_Text_0:
 	.string "North-east: Solar Forcing. East slope:\l"
 	.string "Cryosphere. River: Hydrology.\p"
 	.string "The real sky is not a plot.$"
+
+ParcelWeather_T_Amund_Text_0:
+# 148 "data/maps/ParcelWeather/scripts.pory"
+	.string "AMUND: Up the east slope. The frost\n"
+	.string "plot's behind me. It hums. Battle.$"
+
+ParcelWeather_T_Amund_Text_1:
+# 149 "data/maps/ParcelWeather/scripts.pory"
+	.string "AMUND: Humming's louder than I am,\n"
+	.string "apparently.$"
+
+ParcelWeather_T_Amund_Text_2:
+# 150 "data/maps/ParcelWeather/scripts.pory"
+	.string "AMUND: One frozen square on a warming\n"
+	.string "hill. I asked what it's for.\l"
+	.string "'Demonstration.' Of what? Nobody said.$"
+
+ParcelWeather_T_Ragnhild_Text_0:
+# 155 "data/maps/ParcelWeather/scripts.pory"
+	.string "RAGNHILD: Breeder, east plots.\n"
+	.string "CASTFORM for the demos, LUDICOLO for\l"
+	.string "the rain. Battle.$"
+
+ParcelWeather_T_Ragnhild_Text_1:
+# 156 "data/maps/ParcelWeather/scripts.pory"
+	.string "RAGNHILD: Rained on.$"
+
+ParcelWeather_T_Ragnhild_Text_2:
+# 157 "data/maps/ParcelWeather/scripts.pory"
+	.string "RAGNHILD: The station publishes the\n"
+	.string "plot weather. The real weather goes in a\l"
+	.string "drawer. I've seen the drawer.$"
+
+ParcelWeather_T_Oyvind_Text_0:
+# 162 "data/maps/ParcelWeather/scripts.pory"
+	.string "OYVIND: Instrument birds. XATU reads\n"
+	.string "the sky better than the plots do.\l"
+	.string "Battle before it tells me how this ends.$"
+
+ParcelWeather_T_Oyvind_Text_1:
+# 163 "data/maps/ParcelWeather/scripts.pory"
+	.string "OYVIND: It told me.$"
+
+ParcelWeather_T_Oyvind_Text_2:
+# 164 "data/maps/ParcelWeather/scripts.pory"
+	.string "OYVIND: XATU watches the real sky over\n"
+	.string "the fence. The real sky's not for sale.\l"
+	.string "The plots are.$"

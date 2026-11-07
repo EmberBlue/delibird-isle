@@ -637,6 +637,30 @@ Movement_FLD_FaceLeft:
 	face_left
 	step_end
 
+ParcelFloodbasin_T_Anders::
+# 427 "data/maps/ParcelFloodbasin/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FLD_ANDERS, ParcelFloodbasin_T_Anders_Text_0, ParcelFloodbasin_T_Anders_Text_1
+# 430 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_T_Anders_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelFloodbasin_T_Roald::
+# 434 "data/maps/ParcelFloodbasin/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FLD_ROALD, ParcelFloodbasin_T_Roald_Text_0, ParcelFloodbasin_T_Roald_Text_1
+# 437 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_T_Roald_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelFloodbasin_T_Stein::
+# 441 "data/maps/ParcelFloodbasin/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FLD_STEIN, ParcelFloodbasin_T_Stein_Text_0, ParcelFloodbasin_T_Stein_Text_1
+# 444 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_T_Stein_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelFloodbasin_FirstEntry_Text_0:
 # 55 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "The trees open onto a low, wide basin.\n"
@@ -1200,3 +1224,52 @@ ParcelFloodbasin_GymBreen_Text_0:
 # 417 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "BREEN: Cleared. The neck's open to you.\n"
 	.string "Mind the loads coming down.$"
+
+ParcelFloodbasin_T_Anders_Text_0:
+# 428 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "ANDERS: The MASQUERAIN by the lake\n"
+	.string "have wings like oil on water. Pretty.\l"
+	.string "Battle!$"
+
+ParcelFloodbasin_T_Anders_Text_1:
+# 429 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "ANDERS: Pretty and useless.$"
+
+ParcelFloodbasin_T_Anders_Text_2:
+# 430 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "ANDERS: Oil on water. I said it as a\n"
+	.string "compliment. Then I saw the lake.$"
+
+ParcelFloodbasin_T_Roald_Text_0:
+# 435 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "ROALD: Camped on the one dry rise in\n"
+	.string "the puddle field. Room for one. Battle\l"
+	.string "for it.$"
+
+ParcelFloodbasin_T_Roald_Text_1:
+# 436 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "ROALD: Room for two, I suppose.$"
+
+ParcelFloodbasin_T_Roald_Text_2:
+# 437 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "ROALD: The puddles join up in spring.\n"
+	.string "Then it's not a field. Then the\l"
+	.string "councilman's boat comes. Then the\l"
+	.string "puddles go. Then it's a field. It's a\l"
+	.string "cycle, he says.$"
+
+ParcelFloodbasin_T_Stein_Text_0:
+# 442 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "STEIN: You swam out here? Into THIS?\n"
+	.string "Battle. Then get out of the water,\l"
+	.string "seriously.$"
+
+ParcelFloodbasin_T_Stein_Text_1:
+# 443 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "STEIN: Seriously. Out.$"
+
+ParcelFloodbasin_T_Stein_Text_2:
+# 444 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "STEIN: I swim the lake for the\n"
+	.string "FOUNDATION. Sampling. The samples go to\l"
+	.string "the coast. The results don't come back.$"

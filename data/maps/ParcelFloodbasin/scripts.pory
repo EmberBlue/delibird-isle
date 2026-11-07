@@ -421,3 +421,26 @@ script ParcelFloodbasin_GymBreen {
 movement Movement_FLD_BreenApproach { walk_right * 2 }
 movement Movement_FLD_BreenAside { walk_left * 3 walk_down face_up }
 movement Movement_FLD_FaceLeft { face_left }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelFloodbasin_T_Anders {
+    trainerbattle_single(TRAINER_SKALD_FLD_ANDERS,
+        format("ANDERS: The MASQUERAIN by the lake have wings like oil on water. Pretty. Battle!"),
+        format("ANDERS: Pretty and useless."))
+    msgbox(format("ANDERS: Oil on water. I said it as a compliment. Then I saw the lake."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_T_Roald {
+    trainerbattle_single(TRAINER_SKALD_FLD_ROALD,
+        format("ROALD: Camped on the one dry rise in the puddle field. Room for one. Battle for it."),
+        format("ROALD: Room for two, I suppose."))
+    msgbox(format("ROALD: The puddles join up in spring. Then it's not a field. Then the councilman's boat comes. Then the puddles go. Then it's a field. It's a cycle, he says."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_T_Stein {
+    trainerbattle_single(TRAINER_SKALD_FLD_STEIN,
+        format("STEIN: You swam out here? Into THIS? Battle. Then get out of the water, seriously."),
+        format("STEIN: Seriously. Out."))
+    msgbox(format("STEIN: I swim the lake for the FOUNDATION. Sampling. The samples go to the coast. The results don't come back."), MSGBOX_DEFAULT)
+    end
+}

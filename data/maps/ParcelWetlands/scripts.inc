@@ -833,6 +833,30 @@ ParcelWetlands_SignRoute::
 	end
 
 
+ParcelWetlands_T_Paul::
+# 532 "data/maps/ParcelWetlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_WET_PAUL, ParcelWetlands_T_Paul_Text_0, ParcelWetlands_T_Paul_Text_1
+# 535 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_T_Paul_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelWetlands_T_Sunniva::
+# 539 "data/maps/ParcelWetlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_WET_SUNNIVA, ParcelWetlands_T_Sunniva_Text_0, ParcelWetlands_T_Sunniva_Text_1
+# 542 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_T_Sunniva_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelWetlands_T_Roar::
+# 546 "data/maps/ParcelWetlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_WET_ROAR, ParcelWetlands_T_Roar_Text_0, ParcelWetlands_T_Roar_Text_1
+# 549 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_T_Roar_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelWetlands_Harland_Text_0:
 # 72 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: They read your report out on\n"
@@ -1385,3 +1409,50 @@ ParcelWetlands_SignRoute_Text_0:
 	.string "REEDMERE\p"
 	.string "North: the landing and the backwater.\n"
 	.string "South: FERNWICK.$"
+
+ParcelWetlands_T_Paul_Text_0:
+# 533 "data/maps/ParcelWetlands/scripts.pory"
+	.string "PAUL: The reed beds are the best bug\n"
+	.string "country in the district. Were. Battle.$"
+
+ParcelWetlands_T_Paul_Text_1:
+# 534 "data/maps/ParcelWetlands/scripts.pory"
+	.string "PAUL: Were.$"
+
+ParcelWetlands_T_Paul_Text_2:
+# 535 "data/maps/ParcelWetlands/scripts.pory"
+	.string "PAUL: Half the reed beds went under the\n"
+	.string "FOUNDATION's gauges. Gauges don't eat\l"
+	.string "reeds. The boat traffic does.$"
+
+ParcelWetlands_T_Sunniva_Text_0:
+# 540 "data/maps/ParcelWetlands/scripts.pory"
+	.string "SUNNIVA: Cadet SUNNIVA, plateau watch.\n"
+	.string "HALE's orders: every provisional spars.\l"
+	.string "Yes, even now.$"
+
+ParcelWetlands_T_Sunniva_Text_1:
+# 541 "data/maps/ParcelWetlands/scripts.pory"
+	.string "SUNNIVA: Logged. HALE will nod.$"
+
+ParcelWetlands_T_Sunniva_Text_2:
+# 542 "data/maps/ParcelWetlands/scripts.pory"
+	.string "SUNNIVA: The office below has four\n"
+	.string "gauges and we have one notebook. Guess\l"
+	.string "which numbers get believed.$"
+
+ParcelWetlands_T_Roar_Text_0:
+# 547 "data/maps/ParcelWetlands/scripts.pory"
+	.string "ROAR: Fishing the upper pool off the\n"
+	.string "bridge. Clean up here. Cleaner. Battle.$"
+
+ParcelWetlands_T_Roar_Text_1:
+# 548 "data/maps/ParcelWetlands/scripts.pory"
+	.string "ROAR: Scared the fish. Again.$"
+
+ParcelWetlands_T_Roar_Text_2:
+# 549 "data/maps/ParcelWetlands/scripts.pory"
+	.string "ROAR: There's a channel from the pool\n"
+	.string "down past the landing. Whatever's in\l"
+	.string "the pool ends up in the backwater.\l"
+	.string "Think about that.$"

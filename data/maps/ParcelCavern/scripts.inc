@@ -143,6 +143,22 @@ ParcelCavern_Leave::
 	end
 
 
+ParcelCavern_T_Brynjulf::
+# 109 "data/maps/ParcelCavern/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CAV_BRYNJULF, ParcelCavern_T_Brynjulf_Text_0, ParcelCavern_T_Brynjulf_Text_1
+# 112 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_T_Brynjulf_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelCavern_T_Aslaug::
+# 116 "data/maps/ParcelCavern/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CAV_ASLAUG, ParcelCavern_T_Aslaug_Text_0, ParcelCavern_T_Aslaug_Text_1
+# 119 "data/maps/ParcelCavern/scripts.pory"
+	msgbox ParcelCavern_T_Aslaug_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelCavern_FirstEntry_Text_0:
 # 25 "data/maps/ParcelCavern/scripts.pory"
 	.string "Light blooms from the lamp and the\n"
@@ -258,3 +274,34 @@ ParcelCavern_Leave_Text_0:
 # 100 "data/maps/ParcelCavern/scripts.pory"
 	.string "The ladder up to the summit, and the\n"
 	.string "bright thin daylight beyond.$"
+
+ParcelCavern_T_Brynjulf_Text_0:
+# 110 "data/maps/ParcelCavern/scripts.pory"
+	.string "BRYNJULF: Deepwater core crew. The ice\n"
+	.string "is shorter every season. Battle, it's\l"
+	.string "warmer.$"
+
+ParcelCavern_T_Brynjulf_Text_1:
+# 111 "data/maps/ParcelCavern/scripts.pory"
+	.string "BRYNJULF: Warmer. Briefly.$"
+
+ParcelCavern_T_Brynjulf_Text_2:
+# 112 "data/maps/ParcelCavern/scripts.pory"
+	.string "BRYNJULF: Twenty metres when they\n"
+	.string "first cored it. Fourteen now.\l"
+	.string "'Accessible', the log says.$"
+
+ParcelCavern_T_Aslaug_Text_0:
+# 117 "data/maps/ParcelCavern/scripts.pory"
+	.string "ASLAUG: Cadet ASLAUG, posted to watch\n"
+	.string "the posted. Spar. It passes the shift.$"
+
+ParcelCavern_T_Aslaug_Text_1:
+# 118 "data/maps/ParcelCavern/scripts.pory"
+	.string "ASLAUG: Shift passed.$"
+
+ParcelCavern_T_Aslaug_Text_2:
+# 119 "data/maps/ParcelCavern/scripts.pory"
+	.string "ASLAUG: The DELIBIRD at the deep end\n"
+	.string "never leaves. KELDA logged it as an\l"
+	.string "asset. I logged it as a bird.$"

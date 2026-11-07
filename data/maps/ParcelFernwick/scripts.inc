@@ -230,6 +230,54 @@ ParcelFernwick_CitySign::
 	end
 
 
+ParcelFernwick_T_Ella::
+# 180 "data/maps/ParcelFernwick/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FW_ELLA, ParcelFernwick_T_Ella_Text_0, ParcelFernwick_T_Ella_Text_1
+# 183 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_T_Ella_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelFernwick_T_Henrik::
+# 187 "data/maps/ParcelFernwick/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FW_HENRIK, ParcelFernwick_T_Henrik_Text_0, ParcelFernwick_T_Henrik_Text_1
+# 190 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_T_Henrik_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelFernwick_T_Steinar::
+# 194 "data/maps/ParcelFernwick/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FW_STEINAR, ParcelFernwick_T_Steinar_Text_0, ParcelFernwick_T_Steinar_Text_1
+# 197 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_T_Steinar_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelFernwick_T_Marte::
+# 201 "data/maps/ParcelFernwick/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FW_MARTE, ParcelFernwick_T_Marte_Text_0, ParcelFernwick_T_Marte_Text_1
+# 204 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_T_Marte_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelFernwick_T_Leon::
+# 208 "data/maps/ParcelFernwick/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FW_LEON, ParcelFernwick_T_Leon_Text_0, ParcelFernwick_T_Leon_Text_1
+# 211 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_T_Leon_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelFernwick_T_Thea::
+# 215 "data/maps/ParcelFernwick/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_FW_THEA, ParcelFernwick_T_Thea_Text_0, ParcelFernwick_T_Thea_Text_1
+# 218 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_T_Thea_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelFernwick_GateWard_Text_0:
 # 20 "data/maps/ParcelFernwick/scripts.pory"
 	.string "WARD: Station checkpoint. Nobody goes\n"
@@ -406,3 +454,102 @@ ParcelFernwick_CitySign_Text_0:
 	.string "District seat, Saltmarsh Coast\p"
 	.string "A smaller plate: PROMENADE AND\n"
 	.string "FOUNTAIN BY THE MEREHOLT FOUNDATION.$"
+
+ParcelFernwick_T_Ella_Text_0:
+# 181 "data/maps/ParcelFernwick/scripts.pory"
+	.string "ELLA: The park pond's new. Nothing lives\n"
+	.string "in it yet. The CORPS says give it a year.\l"
+	.string "Battle?$"
+
+ParcelFernwick_T_Ella_Text_1:
+# 182 "data/maps/ParcelFernwick/scripts.pory"
+	.string "ELLA: A year, they said.$"
+
+ParcelFernwick_T_Ella_Text_2:
+# 183 "data/maps/ParcelFernwick/scripts.pory"
+	.string "ELLA: TARN failed my brother twice. He's\n"
+	.string "at the HALL every day anyway. That's\l"
+	.string "FERNWICK.$"
+
+ParcelFernwick_T_Henrik_Text_0:
+# 188 "data/maps/ParcelFernwick/scripts.pory"
+	.string "HENRIK: The district station sends\n"
+	.string "provisionals north and gets reports\l"
+	.string "back. Never the provisionals. Battle!$"
+
+ParcelFernwick_T_Henrik_Text_1:
+# 189 "data/maps/ParcelFernwick/scripts.pory"
+	.string "HENRIK: Some come back, then.$"
+
+ParcelFernwick_T_Henrik_Text_2:
+# 190 "data/maps/ParcelFernwick/scripts.pory"
+	.string "HENRIK: ILEX files everything at the\n"
+	.string "survey office. Everything. I asked her\l"
+	.string "what for. She said 'later'.$"
+
+ParcelFernwick_T_Steinar_Text_0:
+# 195 "data/maps/ParcelFernwick/scripts.pory"
+	.string "STEINAR: Down from the marsh road. The\n"
+	.string "plaza's the only flat ground in forty\l"
+	.string "miles. Battle for it.$"
+
+ParcelFernwick_T_Steinar_Text_1:
+# 196 "data/maps/ParcelFernwick/scripts.pory"
+	.string "STEINAR: Share the flat ground, then.$"
+
+ParcelFernwick_T_Steinar_Text_2:
+# 197 "data/maps/ParcelFernwick/scripts.pory"
+	.string "STEINAR: The north checkpoint's\n"
+	.string "WARD's. He doesn't bend. The marsh is\l"
+	.string "past him and the marsh is worse than he\l"
+	.string "is.$"
+
+ParcelFernwick_T_Marte_Text_0:
+# 202 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MARTE: South square's where the\n"
+	.string "MISTWOOD road comes in. Everyone comes\l"
+	.string "in tired. Easy battles.$"
+
+ParcelFernwick_T_Marte_Text_1:
+# 203 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MARTE: Not that tired, then.$"
+
+ParcelFernwick_T_Marte_Text_2:
+# 204 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MARTE: The CENTER's free for\n"
+	.string "provisionals. The MART isn't. The CORPS\l"
+	.string "pays for healing, not REPELS. Funny\l"
+	.string "priorities.$"
+
+ParcelFernwick_T_Leon_Text_0:
+# 209 "data/maps/ParcelFernwick/scripts.pory"
+	.string "LEON: The square's the only place in\n"
+	.string "FERNWICK with grass worth a bug.\l"
+	.string "Battle!$"
+
+ParcelFernwick_T_Leon_Text_1:
+# 210 "data/maps/ParcelFernwick/scripts.pory"
+	.string "LEON: Worth a bug. Not a battle.$"
+
+ParcelFernwick_T_Leon_Text_2:
+# 211 "data/maps/ParcelFernwick/scripts.pory"
+	.string "LEON: WURMPLE in the park, none by the\n"
+	.string "station. The station's all pavement.\l"
+	.string "Pavement's the point, my dad says.$"
+
+ParcelFernwick_T_Thea_Text_0:
+# 216 "data/maps/ParcelFernwick/scripts.pory"
+	.string "THEA: Cadet THEA, station duty. HALE\n"
+	.string "says spar every provisional who\l"
+	.string "crosses the plaza. You crossed it.$"
+
+ParcelFernwick_T_Thea_Text_1:
+# 217 "data/maps/ParcelFernwick/scripts.pory"
+	.string "THEA: HALE will want the score.$"
+
+ParcelFernwick_T_Thea_Text_2:
+# 218 "data/maps/ParcelFernwick/scripts.pory"
+	.string "THEA: Every cadet wants the Reedmere\n"
+	.string "posting. The marsh is where things\l"
+	.string "happen. Things aren't good, but they\l"
+	.string "happen.$"

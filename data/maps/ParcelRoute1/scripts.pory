@@ -345,3 +345,26 @@ script ParcelRoute1_NoticeBoard {
     msgbox(format("SKALDMERE CLIMATE CORPS\pMISTWOOD: snares have been found on the north track. Do not touch them. Report them at the RANGER POST in the woods.\pSigned: SKELD, Warden."), MSGBOX_SIGN)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelRoute1_T_Emil {
+    trainerbattle_single(TRAINER_SKALD_R1_EMIL,
+        format("EMIL: WURMPLE in every bush this year. My mum says that's a bad sign. Battle!"),
+        format("EMIL: Bad sign for me."))
+    msgbox(format("EMIL: When there's too many of one thing it means something that eats them is gone. HALE told me that. HALE tells everyone that."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRoute1_T_Astrid {
+    trainerbattle_single(TRAINER_SKALD_R1_ASTRID,
+        format("ASTRID: The river's low for spring. My LOTAD can stand on the bottom. Battle while it's still a river?"),
+        format("ASTRID: Still a river. Just."))
+    msgbox(format("ASTRID: The bridge scene with the poachers? Everyone saw. Nobody did anything. Then a RANGER did. That's you, isn't it."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRoute1_T_Mats {
+    trainerbattle_single(TRAINER_SKALD_R1_MATS,
+        format("MATS: I'm walking to MISTWOOD. Everyone says don't. Battle me and I'll say I beat a RANGER first."),
+        format("MATS: I'll say I nearly beat one."))
+    msgbox(format("MATS: SKELD at the post won't let you through the deadfall without CUT. He's not being mean. The deadfall's real."), MSGBOX_DEFAULT)
+    end
+}

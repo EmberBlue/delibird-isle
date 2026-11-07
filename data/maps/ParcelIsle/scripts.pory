@@ -538,3 +538,40 @@ script ParcelIsle_CenterAide {
     release
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelIsle_T_Brand {
+    trainerbattle_single(TRAINER_SKALD_ISLE_BRAND,
+        format("BRAND: Off the ferry crew. Nothing to do till the tide. Battle me, RANGER, the harbour's dull."),
+        format("BRAND: Tide's in. Figuratively."))
+    msgbox(format("BRAND: Three ferry routes now. DELIBIRD, the coast, the station. The coast one's full every run. Nobody comes back smiling."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Svein {
+    trainerbattle_single(TRAINER_SKALD_ISLE_SVEIN,
+        format("SVEIN: Fishing the jetty. Not catching. There's a difference. Battle?"),
+        format("SVEIN: Caught something at last."))
+    msgbox(format("SVEIN: ANNI says the nets are fine and the sea is empty. I'm starting to believe her."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Tora {
+    trainerbattle_single(TRAINER_SKALD_ISLE_TORA,
+        format("TORA: New in town. Everyone's new in town eventually. Battle me so I know your name."),
+        format("TORA: Noted. The name, I mean."))
+    msgbox(format("TORA: The CORPS gets a new provisional every spring. Most of them go north and we hear about them on the radio. Mind you come back."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Jon {
+    trainerbattle_single(TRAINER_SKALD_ISLE_JON,
+        format("JON: The chandlery's closed, the hall's full of meetings, and I'm bored. Battle!"),
+        format("JON: Less bored now."))
+    msgbox(format("JON: My dad says the marsh north of FERNWICK smells like money. He means somebody's making some."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelIsle_T_Line {
+    trainerbattle_single(TRAINER_SKALD_ISLE_LINE,
+        format("LINE: Picnic on the quay. The gulls take everything. You can't take a battle off me though."),
+        format("LINE: You can, apparently."))
+    msgbox(format("LINE: SIGRUN counts the gulls every morning. Fewer each year. The gulls don't know. The gulls just want my sandwich."), MSGBOX_DEFAULT)
+    end
+}

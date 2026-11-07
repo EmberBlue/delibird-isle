@@ -302,3 +302,26 @@ script ParcelCorridor_Turid {
     msgbox(format("TURID: The stakes north of here go right down to the water. Somebody measured it all. And then just left it."), MSGBOX_DEFAULT)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelCorridor_T_Vidar {
+    trainerbattle_single(TRAINER_SKALD_COR_VIDAR,
+        format("VIDAR: The plateau's the only place with a view. The view's the basin. The basin smells. Battle."),
+        format("VIDAR: Smells like losing."))
+    msgbox(format("VIDAR: North's the FLOODBASIN. There's a hamlet in it that floods every spring. The councilman sends vouchers. Every spring."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_T_Halle {
+    trainerbattle_single(TRAINER_SKALD_COR_HALLE,
+        format("HALLE: Survey stakes everywhere up here. Red cloth, bare, red cloth, bare. Battle me and I'll explain the colours."),
+        format("HALLE: Red's the CORPS. Bare's the FOUNDATION. That's the explanation."))
+    msgbox(format("HALLE: The bare stakes are on the clean ground. The red ones are where the water is. Somebody's measuring the wrong thing on purpose."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_T_Elin {
+    trainerbattle_single(TRAINER_SKALD_COR_ELIN,
+        format("ELIN: Picnic in the cut. The stumps make good tables. Battle before the ants."),
+        format("ELIN: Ants won."))
+    msgbox(format("ELIN: The cut was a forest in my mother's time. She remembers the trucks. I remember the stumps. My kids will remember grass."), MSGBOX_DEFAULT)
+    end
+}

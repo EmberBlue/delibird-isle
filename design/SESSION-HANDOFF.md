@@ -45,8 +45,8 @@ battle, the Hollis choice, the final survey, Hale's coda) → the coast aide
 → the **boardroom coda** → the post-finale reaction pass.
 
 **Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~29,400 words
-of dialogue, 137 Skald trainers (gyms 1–7 + 4 Mereholt gates + Heron +
-Cordelia + the Weather four + ~115 route/town trainers), seven field HMs
+of dialogue, 182 reachable Skald trainers (gyms 1–8 + 4 Mereholt gates + Heron +
+Cordelia + the Weather four + ~160 route/town trainers; TRAINERS_COUNT 1039), seven field HMs
 wired as real traversal, 8 Skald map sections on the region map with heal
 spots at Saltwick, Fernwick, Elvsund, Delibird, the Coast and the Station.
 The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the

@@ -174,3 +174,47 @@ script ParcelFernwick_CitySign {
     msgbox(format("FERNWICK\nDistrict seat, Saltmarsh Coast\pA smaller plate: PROMENADE AND FOUNTAIN BY THE MEREHOLT FOUNDATION."), MSGBOX_SIGN)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelFernwick_T_Ella {
+    trainerbattle_single(TRAINER_SKALD_FW_ELLA,
+        format("ELLA: The park pond's new. Nothing lives in it yet. The CORPS says give it a year. Battle?"),
+        format("ELLA: A year, they said."))
+    msgbox(format("ELLA: TARN failed my brother twice. He's at the HALL every day anyway. That's FERNWICK."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFernwick_T_Henrik {
+    trainerbattle_single(TRAINER_SKALD_FW_HENRIK,
+        format("HENRIK: The district station sends provisionals north and gets reports back. Never the provisionals. Battle!"),
+        format("HENRIK: Some come back, then."))
+    msgbox(format("HENRIK: ILEX files everything at the survey office. Everything. I asked her what for. She said 'later'."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFernwick_T_Steinar {
+    trainerbattle_single(TRAINER_SKALD_FW_STEINAR,
+        format("STEINAR: Down from the marsh road. The plaza's the only flat ground in forty miles. Battle for it."),
+        format("STEINAR: Share the flat ground, then."))
+    msgbox(format("STEINAR: The north checkpoint's WARD's. He doesn't bend. The marsh is past him and the marsh is worse than he is."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFernwick_T_Marte {
+    trainerbattle_single(TRAINER_SKALD_FW_MARTE,
+        format("MARTE: South square's where the MISTWOOD road comes in. Everyone comes in tired. Easy battles."),
+        format("MARTE: Not that tired, then."))
+    msgbox(format("MARTE: The CENTER's free for provisionals. The MART isn't. The CORPS pays for healing, not REPELS. Funny priorities."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFernwick_T_Leon {
+    trainerbattle_single(TRAINER_SKALD_FW_LEON,
+        format("LEON: The square's the only place in FERNWICK with grass worth a bug. Battle!"),
+        format("LEON: Worth a bug. Not a battle."))
+    msgbox(format("LEON: WURMPLE in the park, none by the station. The station's all pavement. Pavement's the point, my dad says."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFernwick_T_Thea {
+    trainerbattle_single(TRAINER_SKALD_FW_THEA,
+        format("THEA: Cadet THEA, station duty. HALE says spar every provisional who crosses the plaza. You crossed it."),
+        format("THEA: HALE will want the score."))
+    msgbox(format("THEA: Every cadet wants the Reedmere posting. The marsh is where things happen. Things aren't good, but they happen."), MSGBOX_DEFAULT)
+    end
+}

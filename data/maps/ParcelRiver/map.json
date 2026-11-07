@@ -444,6 +444,48 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelRiver_ItemTM19",
       "flag": "FLAG_SKALD_ITEM_RIV_TM19"
+    },
+    {
+      "local_id": "LOCALID_T_RIV_AUD",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 46,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiver_T_Aud",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_T_RIV_ESPEN",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 52,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "ParcelRiver_T_Espen",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_T_RIV_TRYGVE",
+      "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+      "x": 54,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiver_T_Trygve",
+      "flag": "0"
     }
   ],
   "warp_events": [

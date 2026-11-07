@@ -146,3 +146,33 @@ script ParcelMistwood_Board {
     }
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelMistwood_T_Simen {
+    trainerbattle_single(TRAINER_SKALD_MW_SIMEN,
+        format("SIMEN: Shh. There's a SILCOON about to open. Right there. Battle quietly."),
+        format("SIMEN: It opened. It's a BEAUTIFLY. Worth it."))
+    msgbox(format("SIMEN: Three snares I've found this spring. The warden says report them. I report them. The snares keep coming."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMistwood_T_Hanna {
+    trainerbattle_single(TRAINER_SKALD_MW_HANNA,
+        format("HANNA: Lost in the galleries. Again. Battle me and then tell me which way's out."),
+        format("HANNA: North. It's always north."))
+    msgbox(format("HANNA: HOOTHOOT only call from the big trees. There are fewer big trees every year. Fewer calls."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMistwood_T_Vetle {
+    trainerbattle_single(TRAINER_SKALD_MW_VETLE,
+        format("VETLE: Camped by the gallery three nights. Something's been dragging snares past my tent. Battle, I'm jumpy."),
+        format("VETLE: Less jumpy. Thanks."))
+    msgbox(format("VETLE: The poachers come in from REEDMERE side. The warden knows. He's one man and the forest's a lot of forest."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelMistwood_T_Selma {
+    trainerbattle_single(TRAINER_SKALD_MW_SELMA,
+        format("SELMA: The deadfall blocks the north corridor. I've waited two days for someone with CUT. Battle while we wait?"),
+        format("SELMA: You've got CUT, haven't you. Go on, then."))
+    msgbox(format("SELMA: FERNWICK's past the deadfall. Big town. CORPS station. The HALL where TARN fails everybody."), MSGBOX_DEFAULT)
+    end
+}

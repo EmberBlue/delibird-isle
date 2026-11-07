@@ -343,3 +343,33 @@ script ParcelDelibird_Blankets {
     release
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelDelibird_T_Hakon {
+    trainerbattle_single(TRAINER_SKALD_DEL_HAKON,
+        format("HAKON: Ferry's tied up till the festival ends. I've seen it eleven years running. Battle me, it's the only new thing today."),
+        format("HAKON: New thing: I lost."))
+    msgbox(format("HAKON: The gift square's lovely. The thaw line's moved up the slope again. You can see both from the quay."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_T_Bjarne {
+    trainerbattle_single(TRAINER_SKALD_DEL_BJARNE,
+        format("BJARNE: The summit mouth's behind me. Cold up there. Proper cold. Last of it. Battle before you climb."),
+        format("BJARNE: Climb, then."))
+    msgbox(format("BJARNE: The cavern's the only place the old cold lives now. MEREHOLT put an officer in it. In the cold. Logging it."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_T_Frida {
+    trainerbattle_single(TRAINER_SKALD_DEL_FRIDA,
+        format("FRIDA: My DELIBIRD was born on the summit. There won't be another. Battle?"),
+        format("FRIDA: Still the best bird on the island."))
+    msgbox(format("FRIDA: The festival's a gift economy. Give, take, give. MEREHOLT gives the banner. Guess what they take."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibird_T_Erlend {
+    trainerbattle_single(TRAINER_SKALD_DEL_ERLEND,
+        format("ERLEND: Cadet ERLEND, island posting. ILEX runs the gym here and nobody beats her. Spar, so I've something to report."),
+        format("ERLEND: Reported."))
+    msgbox(format("ERLEND: ILEX's Skyline badge needs the whole island read. The summit, the shore. She doesn't sign for half."), MSGBOX_DEFAULT)
+    end
+}

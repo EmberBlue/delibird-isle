@@ -514,6 +514,30 @@ ParcelRoute1_NoticeBoard::
 	end
 
 
+ParcelRoute1_T_Emil::
+# 351 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_R1_EMIL, ParcelRoute1_T_Emil_Text_0, ParcelRoute1_T_Emil_Text_1
+# 354 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Emil_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelRoute1_T_Astrid::
+# 358 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_R1_ASTRID, ParcelRoute1_T_Astrid_Text_0, ParcelRoute1_T_Astrid_Text_1
+# 361 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Astrid_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelRoute1_T_Mats::
+# 365 "data/maps/ParcelRoute1/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_R1_MATS, ParcelRoute1_T_Mats_Text_0, ParcelRoute1_T_Mats_Text_1
+# 368 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_T_Mats_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelRoute1_BridgeScene_Text_0:
 # 43 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A whole crowd of POLIWAG, jammed up\n"
@@ -703,3 +727,52 @@ ParcelRoute1_NoticeBoard_Text_0:
 	.string "Report them at the RANGER POST in the\l"
 	.string "woods.\p"
 	.string "Signed: SKELD, Warden.$"
+
+ParcelRoute1_T_Emil_Text_0:
+# 352 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: WURMPLE in every bush this year.\n"
+	.string "My mum says that's a bad sign. Battle!$"
+
+ParcelRoute1_T_Emil_Text_1:
+# 353 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: Bad sign for me.$"
+
+ParcelRoute1_T_Emil_Text_2:
+# 354 "data/maps/ParcelRoute1/scripts.pory"
+	.string "EMIL: When there's too many of one\n"
+	.string "thing it means something that eats\l"
+	.string "them is gone. HALE told me that. HALE\l"
+	.string "tells everyone that.$"
+
+ParcelRoute1_T_Astrid_Text_0:
+# 359 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: The river's low for spring. My\n"
+	.string "LOTAD can stand on the bottom. Battle\l"
+	.string "while it's still a river?$"
+
+ParcelRoute1_T_Astrid_Text_1:
+# 360 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: Still a river. Just.$"
+
+ParcelRoute1_T_Astrid_Text_2:
+# 361 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ASTRID: The bridge scene with the\n"
+	.string "poachers? Everyone saw. Nobody did\l"
+	.string "anything. Then a RANGER did. That's you,\l"
+	.string "isn't it.$"
+
+ParcelRoute1_T_Mats_Text_0:
+# 366 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: I'm walking to MISTWOOD. Everyone\n"
+	.string "says don't. Battle me and I'll say I beat\l"
+	.string "a RANGER first.$"
+
+ParcelRoute1_T_Mats_Text_1:
+# 367 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: I'll say I nearly beat one.$"
+
+ParcelRoute1_T_Mats_Text_2:
+# 368 "data/maps/ParcelRoute1/scripts.pory"
+	.string "MATS: SKELD at the post won't let you\n"
+	.string "through the deadfall without CUT. He's\l"
+	.string "not being mean. The deadfall's real.$"

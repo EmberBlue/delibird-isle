@@ -467,3 +467,26 @@ script ParcelRiver_SignMarket {
     msgbox(format("MARKET DAY\pEggs. Greens. Honey. Trout (limited). Councilman DORSEY will take questions at noon."), MSGBOX_SIGN)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelRiver_T_Aud {
+    trainerbattle_single(TRAINER_SKALD_RIV_AUD,
+        format("AUD: The high meadow's the last place the flowers come up on their own. Battle me among them."),
+        format("AUD: Among them, beaten."))
+    msgbox(format("AUD: Below the town they spray. Above the town they don't. You can draw the line with your nose."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_T_Espen {
+    trainerbattle_single(TRAINER_SKALD_RIV_ESPEN,
+        format("ESPEN: ELECTRIKE from the power line cut. Fastest thing on the farm. Battle!"),
+        format("ESPEN: Fast. Not fast enough."))
+    msgbox(format("ESPEN: The line goes to the Board office for the meters. The farm got nothing off it. Dad says we got the view."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_T_Trygve {
+    trainerbattle_single(TRAINER_SKALD_RIV_TRYGVE,
+        format("TRYGVE: One WHISCASH, out of the clean reach. Took three seasons. Battle it."),
+        format("TRYGVE: Three seasons, and that."))
+    msgbox(format("TRYGVE: They want to put the straight channel through the clean reach. Phase 2. Where do they think the WHISCASH will go?"), MSGBOX_DEFAULT)
+    end
+}

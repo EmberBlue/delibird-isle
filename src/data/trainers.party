@@ -19087,3 +19087,678 @@ Level: 30
 
 Sealeo
 Level: 30
+
+=== TRAINER_SKALD_ISLE_BRAND ===
+Name: BRAND
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 7
+
+Machop
+Level: 7
+
+=== TRAINER_SKALD_ISLE_SVEIN ===
+Name: SVEIN
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Magikarp
+Level: 6
+
+Goldeen
+Level: 8
+
+=== TRAINER_SKALD_ISLE_TORA ===
+Name: TORA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 7
+
+Wingull
+Level: 7
+
+=== TRAINER_SKALD_ISLE_JON ===
+Name: JON
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Poochyena
+Level: 7
+
+Taillow
+Level: 7
+
+=== TRAINER_SKALD_ISLE_LINE ===
+Name: LINE
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Shroomish
+Level: 8
+
+Lotad
+Level: 8
+
+=== TRAINER_SKALD_R1_EMIL ===
+Name: EMIL
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wurmple
+Level: 6
+
+Wurmple
+Level: 7
+
+=== TRAINER_SKALD_R1_ASTRID ===
+Name: ASTRID
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 7
+
+Lotad
+Level: 7
+
+=== TRAINER_SKALD_R1_MATS ===
+Name: MATS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Taillow
+Level: 8
+
+Poochyena
+Level: 7
+
+=== TRAINER_SKALD_MW_SIMEN ===
+Name: SIMEN
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Silcoon
+Level: 9
+
+Wurmple
+Level: 9
+
+=== TRAINER_SKALD_MW_HANNA ===
+Name: HANNA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Oddish
+Level: 9
+
+Hoothoot
+Level: 9
+
+=== TRAINER_SKALD_MW_VETLE ===
+Name: VETLE
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Shroomish
+Level: 9
+
+Seedot
+Level: 9
+
+=== TRAINER_SKALD_MW_SELMA ===
+Name: SELMA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 9
+
+Lotad
+Level: 10
+
+=== TRAINER_SKALD_FW_ELLA ===
+Name: ELLA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lotad
+Level: 12
+
+Shroomish
+Level: 12
+
+=== TRAINER_SKALD_FW_HENRIK ===
+Name: HENRIK
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 12
+
+Taillow
+Level: 12
+
+=== TRAINER_SKALD_FW_STEINAR ===
+Name: STEINAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 13
+
+Geodude
+Level: 13
+
+=== TRAINER_SKALD_FW_MARTE ===
+Name: MARTE
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 12
+
+Oddish
+Level: 12
+
+=== TRAINER_SKALD_FW_LEON ===
+Name: LEON
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wurmple
+Level: 11
+
+Silcoon
+Level: 12
+
+=== TRAINER_SKALD_FW_THEA ===
+Name: THEA
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wooper
+Level: 13
+
+Shroomish
+Level: 13
+
+=== TRAINER_SKALD_DEL_HAKON ===
+Name: HAKON
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 29
+
+Hariyama
+Level: 29
+
+=== TRAINER_SKALD_DEL_BJARNE ===
+Name: BJARNE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 29
+
+Piloswine
+Level: 30
+
+=== TRAINER_SKALD_DEL_FRIDA ===
+Name: FRIDA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delibird
+Level: 29
+
+Sneasel
+Level: 29
+
+=== TRAINER_SKALD_DEL_ERLEND ===
+Name: ERLEND
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 30
+
+Walrein
+Level: 30
+
+=== TRAINER_SKALD_WET_PAUL ===
+Name: PAUL
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Dustox
+Level: 13
+
+Beautifly
+Level: 13
+
+=== TRAINER_SKALD_WET_SUNNIVA ===
+Name: SUNNIVA
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 14
+
+Wooper
+Level: 13
+
+=== TRAINER_SKALD_WET_ROAR ===
+Name: ROAR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Barboach
+Level: 13
+
+Goldeen
+Level: 13
+
+=== TRAINER_SKALD_COR_VIDAR ===
+Name: VIDAR
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 16
+
+Swellow
+Level: 16
+
+=== TRAINER_SKALD_COR_HALLE ===
+Name: HALLE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machoke
+Level: 17
+
+Graveler
+Level: 16
+
+=== TRAINER_SKALD_COR_ELIN ===
+Name: ELIN
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Marill
+Level: 16
+
+Roselia
+Level: 16
+
+=== TRAINER_SKALD_FLD_ANDERS ===
+Name: ANDERS
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Dustox
+Level: 18
+
+Masquerain
+Level: 18
+
+=== TRAINER_SKALD_FLD_ROALD ===
+Name: ROALD
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Nuzleaf
+Level: 18
+
+Mightyena
+Level: 18
+
+=== TRAINER_SKALD_FLD_STEIN ===
+Name: STEIN
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tentacool
+Level: 19
+
+Quagsire
+Level: 19
+
+=== TRAINER_SKALD_RIV_AUD ===
+Name: AUD
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roselia
+Level: 22
+
+Gloom
+Level: 22
+
+=== TRAINER_SKALD_RIV_ESPEN ===
+Name: ESPEN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Electrike
+Level: 22
+
+Linoone
+Level: 22
+
+=== TRAINER_SKALD_RIV_TRYGVE ===
+Name: TRYGVE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Whiscash
+Level: 23
+
+Goldeen
+Level: 22
+
+=== TRAINER_SKALD_HL_SNORRE ===
+Name: SNORRE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 26
+
+Machoke
+Level: 26
+
+=== TRAINER_SKALD_HL_TORGEIR ===
+Name: TORGEIR
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swinub
+Level: 26
+
+Snorunt
+Level: 26
+
+=== TRAINER_SKALD_HL_HEDVIG ===
+Name: HEDVIG
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Kadabra
+Level: 27
+
+Snorunt
+Level: 26
+
+=== TRAINER_SKALD_COAST_HELGE ===
+Name: HELGE
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hariyama
+Level: 30
+
+Pelipper
+Level: 30
+
+=== TRAINER_SKALD_COAST_ANTON ===
+Name: ANTON
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wailmer
+Level: 29
+
+Marill
+Level: 29
+
+=== TRAINER_SKALD_COAST_BEATE ===
+Name: BEATE
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delcatty
+Level: 31
+
+Roselia
+Level: 30
+
+=== TRAINER_SKALD_WEA_AMUND ===
+Name: AMUND
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 34
+
+Camerupt
+Level: 34
+
+=== TRAINER_SKALD_WEA_RAGNHILD ===
+Name: RAGNHILD
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Castform
+Level: 34
+
+Ludicolo
+Level: 34
+
+=== TRAINER_SKALD_WEA_OYVIND ===
+Name: OYVIND
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 34
+
+Xatu
+Level: 35
+
+=== TRAINER_SKALD_CAV_BRYNJULF ===
+Name: BRYNJULF
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 30
+
+Glalie
+Level: 31
+
+=== TRAINER_SKALD_CAV_ASLAUG ===
+Name: ASLAUG
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sealeo
+Level: 31
+
+Piloswine
+Level: 31

@@ -722,6 +722,30 @@ ParcelRiver_SignMarket::
 	end
 
 
+ParcelRiver_T_Aud::
+# 473 "data/maps/ParcelRiver/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_RIV_AUD, ParcelRiver_T_Aud_Text_0, ParcelRiver_T_Aud_Text_1
+# 476 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_T_Aud_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelRiver_T_Espen::
+# 480 "data/maps/ParcelRiver/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_RIV_ESPEN, ParcelRiver_T_Espen_Text_0, ParcelRiver_T_Espen_Text_1
+# 483 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_T_Espen_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelRiver_T_Trygve::
+# 487 "data/maps/ParcelRiver/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_RIV_TRYGVE, ParcelRiver_T_Trygve_Text_0, ParcelRiver_T_Trygve_Text_1
+# 490 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_T_Trygve_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 46 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -1442,3 +1466,51 @@ ParcelRiver_SignMarket_Text_0:
 	.string "Eggs. Greens. Honey. Trout (limited).\n"
 	.string "Councilman DORSEY will take questions\l"
 	.string "at noon.$"
+
+ParcelRiver_T_Aud_Text_0:
+# 474 "data/maps/ParcelRiver/scripts.pory"
+	.string "AUD: The high meadow's the last place\n"
+	.string "the flowers come up on their own. Battle\l"
+	.string "me among them.$"
+
+ParcelRiver_T_Aud_Text_1:
+# 475 "data/maps/ParcelRiver/scripts.pory"
+	.string "AUD: Among them, beaten.$"
+
+ParcelRiver_T_Aud_Text_2:
+# 476 "data/maps/ParcelRiver/scripts.pory"
+	.string "AUD: Below the town they spray. Above\n"
+	.string "the town they don't. You can draw the\l"
+	.string "line with your nose.$"
+
+ParcelRiver_T_Espen_Text_0:
+# 481 "data/maps/ParcelRiver/scripts.pory"
+	.string "ESPEN: ELECTRIKE from the power line\n"
+	.string "cut. Fastest thing on the farm. Battle!$"
+
+ParcelRiver_T_Espen_Text_1:
+# 482 "data/maps/ParcelRiver/scripts.pory"
+	.string "ESPEN: Fast. Not fast enough.$"
+
+ParcelRiver_T_Espen_Text_2:
+# 483 "data/maps/ParcelRiver/scripts.pory"
+	.string "ESPEN: The line goes to the Board\n"
+	.string "office for the meters. The farm got\l"
+	.string "nothing off it. Dad says we got the\l"
+	.string "view.$"
+
+ParcelRiver_T_Trygve_Text_0:
+# 488 "data/maps/ParcelRiver/scripts.pory"
+	.string "TRYGVE: One WHISCASH, out of the clean\n"
+	.string "reach. Took three seasons. Battle it.$"
+
+ParcelRiver_T_Trygve_Text_1:
+# 489 "data/maps/ParcelRiver/scripts.pory"
+	.string "TRYGVE: Three seasons, and that.$"
+
+ParcelRiver_T_Trygve_Text_2:
+# 490 "data/maps/ParcelRiver/scripts.pory"
+	.string "TRYGVE: They want to put the straight\n"
+	.string "channel through the clean reach. Phase\l"
+	.string "2. Where do they think the WHISCASH will\l"
+	.string "go?$"

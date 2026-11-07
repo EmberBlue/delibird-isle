@@ -141,3 +141,26 @@ script ParcelWeather_SignPlots {
     msgbox(format("TEST PLOTS. North-west: Aridity. North-east: Solar Forcing. East slope: Cryosphere. River: Hydrology.\pThe real sky is not a plot."), MSGBOX_SIGN)
     end
 }
+
+// --- more trainers (2026-11 volume pass) ---------------------------------------
+script ParcelWeather_T_Amund {
+    trainerbattle_single(TRAINER_SKALD_WEA_AMUND,
+        format("AMUND: Up the east slope. The frost plot's behind me. It hums. Battle."),
+        format("AMUND: Humming's louder than I am, apparently."))
+    msgbox(format("AMUND: One frozen square on a warming hill. I asked what it's for. 'Demonstration.' Of what? Nobody said."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_T_Ragnhild {
+    trainerbattle_single(TRAINER_SKALD_WEA_RAGNHILD,
+        format("RAGNHILD: Breeder, east plots. CASTFORM for the demos, LUDICOLO for the rain. Battle."),
+        format("RAGNHILD: Rained on."))
+    msgbox(format("RAGNHILD: The station publishes the plot weather. The real weather goes in a drawer. I've seen the drawer."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_T_Oyvind {
+    trainerbattle_single(TRAINER_SKALD_WEA_OYVIND,
+        format("OYVIND: Instrument birds. XATU reads the sky better than the plots do. Battle before it tells me how this ends."),
+        format("OYVIND: It told me."))
+    msgbox(format("OYVIND: XATU watches the real sky over the fence. The real sky's not for sale. The plots are."), MSGBOX_DEFAULT)
+    end
+}

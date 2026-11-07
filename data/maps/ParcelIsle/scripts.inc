@@ -859,6 +859,46 @@ ParcelIsle_CenterAide::
 	end
 
 
+ParcelIsle_T_Brand::
+# 544 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_BRAND, ParcelIsle_T_Brand_Text_0, ParcelIsle_T_Brand_Text_1
+# 547 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Brand_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelIsle_T_Svein::
+# 551 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_SVEIN, ParcelIsle_T_Svein_Text_0, ParcelIsle_T_Svein_Text_1
+# 554 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Svein_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelIsle_T_Tora::
+# 558 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_TORA, ParcelIsle_T_Tora_Text_0, ParcelIsle_T_Tora_Text_1
+# 561 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Tora_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelIsle_T_Jon::
+# 565 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_JON, ParcelIsle_T_Jon_Text_0, ParcelIsle_T_Jon_Text_1
+# 568 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Jon_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelIsle_T_Line::
+# 572 "data/maps/ParcelIsle/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_ISLE_LINE, ParcelIsle_T_Line_Text_0, ParcelIsle_T_Line_Text_1
+# 575 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_T_Line_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAM: Hey! You're the mainlander, right?\n"
@@ -1495,3 +1535,84 @@ ParcelIsle_CenterAide_Text_0:
 	.string "RIN's up at the meadow, through the\n"
 	.string "north gate. Go get picked. Then come\l"
 	.string "back and I'll move.$"
+
+ParcelIsle_T_Brand_Text_0:
+# 545 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Off the ferry crew. Nothing to\n"
+	.string "do till the tide. Battle me, RANGER, the\l"
+	.string "harbour's dull.$"
+
+ParcelIsle_T_Brand_Text_1:
+# 546 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Tide's in. Figuratively.$"
+
+ParcelIsle_T_Brand_Text_2:
+# 547 "data/maps/ParcelIsle/scripts.pory"
+	.string "BRAND: Three ferry routes now.\n"
+	.string "DELIBIRD, the coast, the station. The\l"
+	.string "coast one's full every run. Nobody\l"
+	.string "comes back smiling.$"
+
+ParcelIsle_T_Svein_Text_0:
+# 552 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: Fishing the jetty. Not catching.\n"
+	.string "There's a difference. Battle?$"
+
+ParcelIsle_T_Svein_Text_1:
+# 553 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: Caught something at last.$"
+
+ParcelIsle_T_Svein_Text_2:
+# 554 "data/maps/ParcelIsle/scripts.pory"
+	.string "SVEIN: ANNI says the nets are fine and\n"
+	.string "the sea is empty. I'm starting to\l"
+	.string "believe her.$"
+
+ParcelIsle_T_Tora_Text_0:
+# 559 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: New in town. Everyone's new in\n"
+	.string "town eventually. Battle me so I know\l"
+	.string "your name.$"
+
+ParcelIsle_T_Tora_Text_1:
+# 560 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: Noted. The name, I mean.$"
+
+ParcelIsle_T_Tora_Text_2:
+# 561 "data/maps/ParcelIsle/scripts.pory"
+	.string "TORA: The CORPS gets a new provisional\n"
+	.string "every spring. Most of them go north and\l"
+	.string "we hear about them on the radio. Mind\l"
+	.string "you come back.$"
+
+ParcelIsle_T_Jon_Text_0:
+# 566 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: The chandlery's closed, the hall's\n"
+	.string "full of meetings, and I'm bored. Battle!$"
+
+ParcelIsle_T_Jon_Text_1:
+# 567 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: Less bored now.$"
+
+ParcelIsle_T_Jon_Text_2:
+# 568 "data/maps/ParcelIsle/scripts.pory"
+	.string "JON: My dad says the marsh north of\n"
+	.string "FERNWICK smells like money. He means\l"
+	.string "somebody's making some.$"
+
+ParcelIsle_T_Line_Text_0:
+# 573 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: Picnic on the quay. The gulls take\n"
+	.string "everything. You can't take a battle off\l"
+	.string "me though.$"
+
+ParcelIsle_T_Line_Text_1:
+# 574 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: You can, apparently.$"
+
+ParcelIsle_T_Line_Text_2:
+# 575 "data/maps/ParcelIsle/scripts.pory"
+	.string "LINE: SIGRUN counts the gulls every\n"
+	.string "morning. Fewer each year. The gulls\l"
+	.string "don't know. The gulls just want my\l"
+	.string "sandwich.$"

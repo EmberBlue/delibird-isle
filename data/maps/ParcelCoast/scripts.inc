@@ -635,6 +635,30 @@ ParcelCoast_Tore::
 	end
 
 
+ParcelCoast_T_Helge::
+# 421 "data/maps/ParcelCoast/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_COAST_HELGE, ParcelCoast_T_Helge_Text_0, ParcelCoast_T_Helge_Text_1
+# 424 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_T_Helge_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelCoast_T_Anton::
+# 428 "data/maps/ParcelCoast/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_COAST_ANTON, ParcelCoast_T_Anton_Text_0, ParcelCoast_T_Anton_Text_1
+# 431 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_T_Anton_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelCoast_T_Beate::
+# 435 "data/maps/ParcelCoast/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_COAST_BEATE, ParcelCoast_T_Beate_Text_0, ParcelCoast_T_Beate_Text_1
+# 438 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_T_Beate_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelCoast_FirstEntry_Text_0:
 # 45 "data/maps/ParcelCoast/scripts.pory"
 	.string "The ferry rounds the headland and the\n"
@@ -1274,3 +1298,52 @@ ParcelCoast_Tore_Text_2:
 	.string "one kindness on this coast and they\l"
 	.string "own it. I'm not complaining. I'm just\l"
 	.string "saying.$"
+
+ParcelCoast_T_Helge_Text_0:
+# 422 "data/maps/ParcelCoast/scripts.pory"
+	.string "HELGE: Quay crew. We tie up the fleet\n"
+	.string "and count what's missing. Battle, it's\l"
+	.string "quicker than counting.$"
+
+ParcelCoast_T_Helge_Text_1:
+# 423 "data/maps/ParcelCoast/scripts.pory"
+	.string "HELGE: Quicker, yes.$"
+
+ParcelCoast_T_Helge_Text_2:
+# 424 "data/maps/ParcelCoast/scripts.pory"
+	.string "HELGE: Forty-one boats went out.\n"
+	.string "Forty-one came back. The count's\l"
+	.string "always right. It's the holds that are\l"
+	.string "wrong.$"
+
+ParcelCoast_T_Anton_Text_0:
+# 429 "data/maps/ParcelCoast/scripts.pory"
+	.string "ANTON: The beach is the only bit of this\n"
+	.string "coast that's free. Even the sand's got\l"
+	.string "rings in it. Battle?$"
+
+ParcelCoast_T_Anton_Text_1:
+# 430 "data/maps/ParcelCoast/scripts.pory"
+	.string "ANTON: Free, and lost.$"
+
+ParcelCoast_T_Anton_Text_2:
+# 431 "data/maps/ParcelCoast/scripts.pory"
+	.string "ANTON: Drum rings. Fuel drums. They roll\n"
+	.string "off the quay in storms. The crest's on\l"
+	.string "all of them.$"
+
+ParcelCoast_T_Beate_Text_0:
+# 436 "data/maps/ParcelCoast/scripts.pory"
+	.string "BEATE: Up from the mainland for the\n"
+	.string "fish. Everyone says the fish. Nobody\l"
+	.string "says there's hardly any. Battle, darling.$"
+
+ParcelCoast_T_Beate_Text_1:
+# 437 "data/maps/ParcelCoast/scripts.pory"
+	.string "BEATE: Hardly any of that, either.$"
+
+ParcelCoast_T_Beate_Text_2:
+# 438 "data/maps/ParcelCoast/scripts.pory"
+	.string "BEATE: The brochure says 'working\n"
+	.string "harbour'. It is working. Something's\l"
+	.string "working. It isn't the sea.$"

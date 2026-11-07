@@ -504,6 +504,30 @@ ParcelCorridor_Turid::
 	end
 
 
+ParcelCorridor_T_Vidar::
+# 308 "data/maps/ParcelCorridor/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_COR_VIDAR, ParcelCorridor_T_Vidar_Text_0, ParcelCorridor_T_Vidar_Text_1
+# 311 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_T_Vidar_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelCorridor_T_Halle::
+# 315 "data/maps/ParcelCorridor/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_COR_HALLE, ParcelCorridor_T_Halle_Text_0, ParcelCorridor_T_Halle_Text_1
+# 318 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_T_Halle_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelCorridor_T_Elin::
+# 322 "data/maps/ParcelCorridor/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_COR_ELIN, ParcelCorridor_T_Elin_Text_0, ParcelCorridor_T_Elin_Text_1
+# 325 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_T_Elin_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelCorridor_Checkpoint_Text_0:
 # 43 "data/maps/ParcelCorridor/scripts.pory"
 	.string "MIRREN: Hold it.$"
@@ -933,3 +957,55 @@ ParcelCorridor_Turid_Text_2:
 	.string "TURID: The stakes north of here go\n"
 	.string "right down to the water. Somebody\l"
 	.string "measured it all. And then just left it.$"
+
+ParcelCorridor_T_Vidar_Text_0:
+# 309 "data/maps/ParcelCorridor/scripts.pory"
+	.string "VIDAR: The plateau's the only place\n"
+	.string "with a view. The view's the basin. The\l"
+	.string "basin smells. Battle.$"
+
+ParcelCorridor_T_Vidar_Text_1:
+# 310 "data/maps/ParcelCorridor/scripts.pory"
+	.string "VIDAR: Smells like losing.$"
+
+ParcelCorridor_T_Vidar_Text_2:
+# 311 "data/maps/ParcelCorridor/scripts.pory"
+	.string "VIDAR: North's the FLOODBASIN. There's\n"
+	.string "a hamlet in it that floods every spring.\l"
+	.string "The councilman sends vouchers. Every\l"
+	.string "spring.$"
+
+ParcelCorridor_T_Halle_Text_0:
+# 316 "data/maps/ParcelCorridor/scripts.pory"
+	.string "HALLE: Survey stakes everywhere up\n"
+	.string "here. Red cloth, bare, red cloth, bare.\l"
+	.string "Battle me and I'll explain the colours.$"
+
+ParcelCorridor_T_Halle_Text_1:
+# 317 "data/maps/ParcelCorridor/scripts.pory"
+	.string "HALLE: Red's the CORPS. Bare's the\n"
+	.string "FOUNDATION. That's the explanation.$"
+
+ParcelCorridor_T_Halle_Text_2:
+# 318 "data/maps/ParcelCorridor/scripts.pory"
+	.string "HALLE: The bare stakes are on the clean\n"
+	.string "ground. The red ones are where the\l"
+	.string "water is. Somebody's measuring the\l"
+	.string "wrong thing on purpose.$"
+
+ParcelCorridor_T_Elin_Text_0:
+# 323 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ELIN: Picnic in the cut. The stumps\n"
+	.string "make good tables. Battle before the\l"
+	.string "ants.$"
+
+ParcelCorridor_T_Elin_Text_1:
+# 324 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ELIN: Ants won.$"
+
+ParcelCorridor_T_Elin_Text_2:
+# 325 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ELIN: The cut was a forest in my\n"
+	.string "mother's time. She remembers the\l"
+	.string "trucks. I remember the stumps. My kids\l"
+	.string "will remember grass.$"

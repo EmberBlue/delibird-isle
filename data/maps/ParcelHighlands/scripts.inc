@@ -600,6 +600,30 @@ ParcelHighlands_Siri::
 	end
 
 
+ParcelHighlands_T_Snorre::
+# 403 "data/maps/ParcelHighlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_HL_SNORRE, ParcelHighlands_T_Snorre_Text_0, ParcelHighlands_T_Snorre_Text_1
+# 406 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_T_Snorre_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelHighlands_T_Torgeir::
+# 410 "data/maps/ParcelHighlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_HL_TORGEIR, ParcelHighlands_T_Torgeir_Text_0, ParcelHighlands_T_Torgeir_Text_1
+# 413 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_T_Torgeir_Text_2, MSGBOX_DEFAULT
+	end
+
+
+ParcelHighlands_T_Hedvig::
+# 417 "data/maps/ParcelHighlands/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_HL_HEDVIG, ParcelHighlands_T_Hedvig_Text_0, ParcelHighlands_T_Hedvig_Text_1
+# 420 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_T_Hedvig_Text_2, MSGBOX_DEFAULT
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 34 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -1215,3 +1239,53 @@ ParcelHighlands_Siri_Text_2:
 	.string "SIRI: The fall's loud this year. More\n"
 	.string "melt. Every year the fall's loud and\l"
 	.string "every year there's less snow to make it.$"
+
+ParcelHighlands_T_Snorre_Text_0:
+# 404 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SNORRE: The slide took the trail. I've\n"
+	.string "been sitting here deciding whether to\l"
+	.string "climb it. Battle first.$"
+
+ParcelHighlands_T_Snorre_Text_1:
+# 405 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SNORRE: Still deciding.$"
+
+ParcelHighlands_T_Snorre_Text_2:
+# 406 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SNORRE: ILEX went up through the\n"
+	.string "scree. Alone. She's older than me and\l"
+	.string "she didn't stop to decide.$"
+
+ParcelHighlands_T_Torgeir_Text_0:
+# 411 "data/maps/ParcelHighlands/scripts.pory"
+	.string "TORGEIR: Cadet TORGEIR, the low\n"
+	.string "stakes. I count what's come up the\l"
+	.string "slope. Spar.$"
+
+ParcelHighlands_T_Torgeir_Text_1:
+# 412 "data/maps/ParcelHighlands/scripts.pory"
+	.string "TORGEIR: Counted.$"
+
+ParcelHighlands_T_Torgeir_Text_2:
+# 413 "data/maps/ParcelHighlands/scripts.pory"
+	.string "TORGEIR: Every month something new\n"
+	.string "arrives from the valley. Every month\l"
+	.string "something old goes up to the band and\l"
+	.string "doesn't come down.$"
+
+ParcelHighlands_T_Hedvig_Text_0:
+# 418 "data/maps/ParcelHighlands/scripts.pory"
+	.string "HEDVIG: ILEX measures the band in\n"
+	.string "cloth. I measure it in what the\l"
+	.string "mountain's thinking. It's thinking\l"
+	.string "about leaving. Battle.$"
+
+ParcelHighlands_T_Hedvig_Text_1:
+# 419 "data/maps/ParcelHighlands/scripts.pory"
+	.string "HEDVIG: It's still thinking.$"
+
+ParcelHighlands_T_Hedvig_Text_2:
+# 420 "data/maps/ParcelHighlands/scripts.pory"
+	.string "HEDVIG: The woman at the bore means\n"
+	.string "every warm word. That's what makes her\l"
+	.string "cold.$"
