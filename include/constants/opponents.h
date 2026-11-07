@@ -1091,7 +1091,31 @@
 
 #define TRAINER_SKALD_COAST_TORE          981
 
-#define TRAINERS_COUNT                      982
+#define TRAINER_SKALD_WEA_ASK             982
+
+#define TRAINER_SKALD_WEA_BRIT            983
+
+#define TRAINER_SKALD_WEA_CATO            984
+
+#define TRAINER_SKALD_WEA_DIS             985
+
+#define TRAINER_SKALD_WEA_EBBA            986
+
+#define TRAINER_SKALD_WEA_FINN2           987
+
+#define TRAINER_SKALD_WEA_GAUTE           988
+
+#define TRAINER_SKALD_WEA_HEGE            989
+
+#define TRAINER_SKALD_MARSH_SEC_A         990
+
+#define TRAINER_SKALD_MARSH_SEC_B         991
+
+#define TRAINER_SKALD_CAV_TECH_A          992
+
+#define TRAINER_SKALD_CAV_TECH_B          993
+
+#define TRAINERS_COUNT                      994
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS

@@ -1,0 +1,18 @@
+// ParcelMarshHut -- Dr. Heron's hut on the west shore. The arrangements.
+mapscripts ParcelMarshHut_MapScripts {
+}
+script ParcelMarshHut_Politoed {
+    lock
+    faceplayer
+    msgbox(format("POLITOED: It watches the door the way she watches the water. It is not going anywhere either."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelMarshHut_Tally {
+    msgbox(format("Tally sheets, pinned in rows. One mark per POLIWAG per morning, in a hand you know from a hundred margins.\pThe columns get shorter toward the right. The last sheet has a date on it and nothing else yet."), MSGBOX_SIGN)
+    end
+}
+script ParcelMarshHut_Shelf {
+    msgbox(format("A shelf: a lamp, a tin of tea, a folded letter addressed to the Corps station at FERNWICK. 'To be opened when the count reaches zero.' It is sealed."), MSGBOX_SIGN)
+    end
+}

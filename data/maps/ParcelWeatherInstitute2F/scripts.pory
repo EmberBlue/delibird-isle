@@ -1,0 +1,46 @@
+// ParcelWeatherInstitute2F -- the Director's floor. VANE: gym 7, the weather
+// rocks, the Deepwater stamp, HM08.
+mapscripts ParcelWeatherInstitute2F_MapScripts {
+}
+script ParcelWeatherInstitute2F_Director {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
+        msgbox(format("VANE: The four are yours, and the station's models with them.\pWe found every knob on the sky and learned the wrong lesson from it. Don't you."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!defeated(TRAINER_SKALD_RAIN) || !defeated(TRAINER_SKALD_SUN) || !defeated(TRAINER_SKALD_SAND) || !defeated(TRAINER_SKALD_ICE)) {
+        msgbox(format("VANE: Not yet. Beat my four divisions first. I don't spend a battle on half a job. Rain, sun, sand, ice. All of them."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("VANE: All four. Good. They're the best minds I have, and you walked through every one.\pDirector, Climate Futures. We model the whole sky here. MEREHOLT pays us to insist it's a machine with knobs."), MSGBOX_DEFAULT)
+    msgbox(format("VANE: The trouble is, it was never a machine. It's a body. You can fever it; you can't tune it.\pBut 'we can manage it' is so much easier to fund than 'we have to stop'. So that's the line we sell."), MSGBOX_DEFAULT)
+    msgbox(format("VANE: You've read the real weather out there. The thaw. The bloom. The dredged sea. Now beat the man paid to call it adjustable. Show me you've earned the kit. All four skies. Right now."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_DIRECTOR, format("VANE: …Cleanly done. In any weather I could throw. That's the whole of the skill, in the end."))
+    msgbox(format("VANE: The weather rocks. They hold a sky longer in a fight. We used them to lie more convincingly. Maybe you'll use them for something else."), MSGBOX_DEFAULT)
+    giveitem(ITEM_DAMP_ROCK)
+    giveitem(ITEM_HEAT_ROCK)
+    giveitem(ITEM_SMOOTH_ROCK)
+    giveitem(ITEM_ICY_ROCK)
+    setflag(FLAG_BADGE07_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("VANE: And the stamp that rides with the kit. A Deepwater clearance. MEREHOLT's notion, not mine. It authorises the gear that goes under the water, not only over it."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM08)
+    setflag(FLAG_SKALDMERE_WEATHER_CLEARED)
+    msgbox(format("VANE: DIVE. Now go. Before I remember which side of this fence pays me."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeatherInstitute2F_Aide {
+    lock
+    faceplayer
+    msgbox(format("AIDE: The director keeps two logbooks. One for the Board. One for himself. He says the second one is for whoever comes after. I think he means you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeatherInstitute2F_Window {
+    msgbox(format("From the window: four plots, four skies, and past the fence the one real one, grey and ordinary and not for sale."), MSGBOX_SIGN)
+    end
+}

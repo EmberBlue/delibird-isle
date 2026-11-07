@@ -223,7 +223,7 @@ script ParcelDelibird_CaveMouth {
         end
     }
     closemessage
-    warp(MAP_PARCEL_CAVERN, 19, 30)
+    warp(MAP_PARCEL_CAVERN, 16, 10)
     waitstate
     end
 }

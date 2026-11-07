@@ -1,27 +1,19 @@
-// ParcelCavern -- §09 Delibird Isle's Crystal Cavern: the cold refuge, the
-// deepest cold the warming island has left. The two field moves the badges
-// have already taught you finally bite here, on the harder country:
-//   * FLASH (HM05, Mirren's badge) lights the dark -- the map is requires_flash,
-//     and the Delibird summit mouth won't let you in blind without it;
-//   * STRENGTH (HM04, Sluice's badge) shoulders a sheared slab of ceiling-ice
-//     off a side hollow, where an old surveyor's everfrost cache still waits.
-// A quiet §09 beat at the deep pool (a loss, not a boss). Rarer Ice encounters.
+// ParcelCavern -- the CRYSTAL CAVERN under Delibird Isle's summit (§09): old
+// blue ice, the one cold room left on the island. Rebuilt 2026-11 on the Shoal
+// Cave ice room (General + Cave, 20x30): sliding ice between pockets of cave
+// floor, Flash needed, KELDA's Deepwater audit at the mouth, the everfrost
+// cache behind a sheared slab (a Strength boulder), the last Delibird at the
+// deep end. Flag logic unchanged; words plain.
 
 const LOCALID_CAVERN_BOULDER  = 1
 const LOCALID_CAVERN_DELIBIRD = 2
+const LOCALID_CAVERN_GATE     = 3
 const LOCALID_CAVERN_CACHE    = 4
-// LOCALID_CAVERN_GATE is resolved from map.json object order via the generated
-// map_event_ids.h (Kelda is sight-triggered; no script references the id).
 
 mapscripts ParcelCavern_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_TEMP_0, 0: ParcelCavern_SetMapVar
+        VAR_TEMP_1, 0: ParcelCavern_FirstEntry
     ]
-}
-
-script ParcelCavern_SetMapVar {
-    setvar(VAR_TEMP_0, 1)
-    end
 }
 
 script ParcelCavern_FirstEntry {
@@ -30,16 +22,37 @@ script ParcelCavern_FirstEntry {
         end
     }
     lockall
-    msgbox(format("Light blooms from your Pokémon and the cavern answers it -- walls of old blue ice, crystal hung from the dark like frozen rain.\pThe air bites here. Truly bites. It is the only place on the whole island that still can."), MSGBOX_DEFAULT)
-    msgbox(format("This is the cold the festival is named for, all of it, retreated into one room under the mountain.\pWhat the island used to be, kept in a jar against the thaw. You walk softly. It feels like a held breath."), MSGBOX_DEFAULT)
+    msgbox(format("Light blooms from the lamp and the cavern answers it: walls of old blue ice, crystal hung from the dark like frozen rain.\pThe air bites here. Truly bites. It's the only place on the whole island that still does."), MSGBOX_DEFAULT)
+    msgbox(format("This is the cold the festival is named for, all of it, retreated into one room under the mountain. What the island used to be, kept in a jar against the thaw.\pThe floor is ice. Mind your feet."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_CAVERN_ARRIVAL)
     releaseall
     end
 }
 
-// the everfrost cache -- a sheared slab of ceiling-ice (the pushable boulder,
-// EventScript_StrengthBoulder) jams the mouth of a side hollow. Shoulder it
-// aside with STRENGTH (HM04, Sluice's badge) and this is what it kept shut.
+// --- KELDA's audit at the mouth (trigger on the two tiles off the ladder) --------------
+script ParcelCavern_Audit {
+    if (flag(FLAG_SKALDMERE_GATE_CAVERN)) {
+        setvar(VAR_TEMP_3, 1)
+        end
+    }
+    lockall
+    msgbox(format("KELDA: Deepwater Ops. Even the cold is logged down here, provisional.\pYou want clearance to read the heart of this place? Earn the audit first."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_GATE_CAVERN, format("KELDA: …Recorded. You read the cold; now the cold reads you."))
+    setflag(FLAG_SKALDMERE_GATE_CAVERN)
+    msgbox(format("KELDA: Cavern clearance, logged and filed. Deepwater keeps a close ledger. No one is granted the cold. You took it."), MSGBOX_DEFAULT)
+    setvar(VAR_TEMP_3, 1)
+    releaseall
+    end
+}
+script ParcelCavern_GateKelda {
+    lock
+    faceplayer
+    msgbox(format("KELDA: You're entered against your card. The everfrost is on MEREHOLT's books. And now, so is your competence to stand near it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- the everfrost cache behind the slab (Strength) ----------------------------------------
 script ParcelCavern_EverfrostCache {
     lock
     faceplayer
@@ -48,56 +61,45 @@ script ParcelCavern_EverfrostCache {
     giveitem(ITEM_RARE_CANDY, 2)
     setflag(FLAG_SKALDMERE_CAVERN_REWARD)
     removeobject(LOCALID_CAVERN_CACHE)
-    msgbox(format("In the hollow the slab kept shut: a knot of true everfrost, and supplies an old surveyor cached here and never came back for.\pYou take them, and note the date on the tin. It is older than you are."), MSGBOX_DEFAULT)
+    msgbox(format("In the hollow the slab kept shut: a knot of true everfrost, and supplies an old surveyor cached here and never came back for. The date on the tin is older than you are."), MSGBOX_DEFAULT)
     release
     end
 }
 
-// the §09 quiet beat -- the last Delibird of the cold, no boss, just a loss
+// --- the §09 quiet beat: the last Delibird of the cold ------------------------------------------
 script ParcelCavern_Delibird {
     lock
-    msgbox(format("A single Delibird sits at the lip of the deep pool, very still, watching the ice it can no longer count on.\pIt is not delivering anything. There is no one down here to deliver to. It has simply come to where the cold still is, the way the old come home."), MSGBOX_DEFAULT)
-    msgbox(format("It looks at you, and at the lamp, and seems to decide you are not the thaw.\pIt goes back to watching the water. You leave it the cold. It is the only gift the cavern has left to give, and it is giving it to a bird."), MSGBOX_DEFAULT)
+    msgbox(format("A single DELIBIRD sits at the deep end, very still, watching the ice it can no longer count on.\pIt isn't delivering anything. There's no one down here to deliver to. It looks at you, and at the lamp, and seems to decide you are not the thaw."), MSGBOX_DEFAULT)
+    msgbox(format("It goes back to watching the ice. You leave it the cold. It's the only gift the cavern has left to give, and it's giving it to one bird."), MSGBOX_DEFAULT)
     release
     end
 }
-
 script ParcelCavern_Heart {
-    msgbox(format("The deepest pool. The water here has not been warm in ten thousand years, and the islanders measure their winters against it.\pIt is a hand's-width lower than the old mark on the wall. You do not need a survey to read that one. You write it down anyway. That is the job."), MSGBOX_SIGN)
+    msgbox(format("The oldest ice, blue to black. A mark scratched on the wall at head height, and a newer one a hand's width lower. The islanders measure their winters against it. You don't need the notebook to read this one."), MSGBOX_SIGN)
+    end
+}
+script ParcelCavern_ItemIceHeal { finditem(ITEM_ICE_HEAL) end }
+
+script ParcelCavern_TechA {
+    trainerbattle_single(TRAINER_SKALD_CAV_TECH_A,
+        format("ROLF: Deepwater survey. We core the ice. The cores are getting shorter. Battle me, it's warmer than standing still."),
+        format("ROLF: Still cold."))
+    msgbox(format("ROLF: Twenty metres of ice when they first cored it. Fourteen now. Deepwater calls that 'accessible'."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCavern_TechB {
+    trainerbattle_single(TRAINER_SKALD_CAV_TECH_B,
+        format("UNN: Corps cadet, posted to watch the posted. KELDA watches me. I watch her. Spar, it passes the shift."),
+        format("UNN: Shift passed."))
+    msgbox(format("UNN: There's a DELIBIRD at the far end that never leaves. KELDA logged it as an asset. I logged it as a bird."), MSGBOX_DEFAULT)
     end
 }
 
 script ParcelCavern_Leave {
     lockall
-    msgbox(format("The mouth of the cavern, and the bright thin daylight of the summit beyond."), MSGBOX_DEFAULT)
+    msgbox(format("The ladder up to the summit, and the bright thin daylight beyond."), MSGBOX_DEFAULT)
     closemessage
     warp(MAP_PARCEL_DELIBIRD, 8, 4)
     waitstate
-    end
-}
-
-// --- Mereholt clearance checkpoint: the Deepwater audit (Kelda) -------------
-// Not a badge, not an HM. Mereholt's Deepwater Ops keeps an officer posted at
-// the cold heart of the cavern -- the one cold thing left is, of course, the
-// one thing the access regime has logged and assigned. Kelda audits who reads
-// the everfrost; beating her sets the Cavern clearance against your card.
-// Cold, competent, no warmth to spare. Posted at the heart sign (the audited
-// spot one tile south of the pool's measuring mark).
-script ParcelCavern_GateKelda {
-    trainerbattle_single(TRAINER_SKALD_GATE_CAVERN,
-        format("Kelda: Deepwater Ops. Even the cold is logged down here, provisional.\pYou want clearance to read the heart of this place? Earn the audit first."),
-        format("Kelda: …Recorded. You read the cold; now the cold reads you."),
-        ParcelCavern_GateKelda_Defeated)
-    lock
-    faceplayer
-    msgbox(format("Kelda: You're entered against your card. The everfrost is on Mereholt's books--\nand now, so is your competence to stand near it."), MSGBOX_DEFAULT)
-    release
-    end
-}
-
-script ParcelCavern_GateKelda_Defeated {
-    setflag(FLAG_SKALDMERE_GATE_CAVERN)
-    msgbox(format("Kelda: Cavern clearance: logged and filed. Deepwater keeps a close ledger.\pNo one is granted the cold. You took it."), MSGBOX_DEFAULT)
-    release
     end
 }

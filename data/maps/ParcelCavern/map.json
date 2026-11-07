@@ -8,7 +8,7 @@
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
   "allow_cycling": false,
-  "allow_escaping": false,
+  "allow_escaping": true,
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
@@ -17,8 +17,8 @@
     {
       "local_id": "LOCALID_CAVERN_BOULDER",
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
-      "x": 34,
-      "y": 18,
+      "x": 16,
+      "y": 23,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -31,10 +31,10 @@
     {
       "local_id": "LOCALID_CAVERN_DELIBIRD",
       "graphics_id": "OBJ_EVENT_GFX_SPECIES(DELIBIRD)",
-      "x": 19,
-      "y": 8,
+      "x": 5,
+      "y": 20,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -45,21 +45,21 @@
     {
       "local_id": "LOCALID_CAVERN_GATE",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
-      "x": 19,
-      "y": 17,
+      "x": 14,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelCavern_GateKelda",
       "flag": "0"
     },
     {
       "local_id": "LOCALID_CAVERN_CACHE",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 35,
+      "x": 15,
       "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -69,59 +69,74 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelCavern_EverfrostCache",
       "flag": "FLAG_SKALDMERE_CAVERN_REWARD"
+    },
+    {
+      "local_id": "LOCALID_CAVERN_TECH_A",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 8,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "2",
+      "script": "ParcelCavern_TechA",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_CAVERN_TECH_B",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 13,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelCavern_TechB",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_CAVERN_ICE_HEAL",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 6,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCavern_ItemIceHeal",
+      "flag": "FLAG_SKALD_ITEM_CAV_ICE_HEAL"
     }
   ],
   "warp_events": [],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 18,
-      "y": 29,
+      "x": 16,
+      "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_1",
+      "var": "VAR_TEMP_3",
       "var_value": "0",
-      "script": "ParcelCavern_FirstEntry"
+      "script": "ParcelCavern_Audit"
     },
     {
       "type": "trigger",
-      "x": 19,
-      "y": 29,
+      "x": 17,
+      "y": 11,
       "elevation": 0,
-      "var": "VAR_TEMP_1",
+      "var": "VAR_TEMP_3",
       "var_value": "0",
-      "script": "ParcelCavern_FirstEntry"
+      "script": "ParcelCavern_Audit"
     },
     {
       "type": "trigger",
-      "x": 20,
-      "y": 29,
-      "elevation": 0,
-      "var": "VAR_TEMP_1",
-      "var_value": "0",
-      "script": "ParcelCavern_FirstEntry"
-    },
-    {
-      "type": "trigger",
-      "x": 18,
-      "y": 32,
-      "elevation": 0,
-      "var": "VAR_TEMP_2",
-      "var_value": "0",
-      "script": "ParcelCavern_Leave"
-    },
-    {
-      "type": "trigger",
-      "x": 19,
-      "y": 32,
-      "elevation": 0,
-      "var": "VAR_TEMP_2",
-      "var_value": "0",
-      "script": "ParcelCavern_Leave"
-    },
-    {
-      "type": "trigger",
-      "x": 20,
-      "y": 32,
+      "x": 17,
+      "y": 10,
       "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
@@ -131,11 +146,19 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 19,
-      "y": 16,
+      "x": 3,
+      "y": 19,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCavern_Heart"
+    },
+    {
+      "type": "hidden_item",
+      "x": 17,
+      "y": 20,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_SKALD_HIDDEN_CAV_NUGGET"
     }
   ]
 }

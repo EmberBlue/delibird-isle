@@ -1,28 +1,16 @@
-// ParcelWeather -- the Mereholt Climate Station (the weather-division gauntlet).
-// A back-half optional challenge and the game's nearest thing to a gym: not a
-// type-gym but the concern's atmospheric-research arm. Four climatologists who
-// each model and command a weather, then the Director who commands all four. The
-// theme is the climate-management hubris -- "the sky is a machine with knobs" --
-// which is exactly the lie the rest of the game indicts. Clear the four, beat
-// the Director, take the division's kit (the weather rocks) and aim it true.
-// Reached by ferry from the dock town once the Coastal cert is earned.
+// ParcelWeather -- the MEREHOLT CLIMATE STATION (the Weather Institute and the
+// ground around it: Route 119's north third, General + Fortree). Reached by
+// the third ferry route (Coastal cert). Four climatologists each run a plot
+// of private weather on the slopes; VANE, the Director, waits upstairs in the
+// institute with the weather rocks, the Deepwater stamp (badge 7) and HM08.
+// Flag logic unchanged; words plain.
 
-const LOCALID_WS_RAIN     = 1
-const LOCALID_WS_SUN      = 2
-const LOCALID_WS_SAND     = 3
-const LOCALID_WS_ICE      = 4
-const LOCALID_WS_DIRECTOR = 5
-const LOCALID_WS_SAILOR   = 6
+const LOCALID_WS_SAILOR = 5
 
 mapscripts ParcelWeather_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_TEMP_0, 0: ParcelWeather_SetMapVar
+        VAR_TEMP_1, 0: ParcelWeather_FirstEntry
     ]
-}
-
-script ParcelWeather_SetMapVar {
-    setvar(VAR_TEMP_0, 1)
-    end
 }
 
 script ParcelWeather_FirstEntry {
@@ -31,105 +19,108 @@ script ParcelWeather_FirstEntry {
         end
     }
     lockall
-    msgbox(format("A walled compound, humming with fans and instruments. A sign over the gate:\pMEREHOLT CLIMATE FUTURES -- ATMOSPHERIC DIVISION.\nManaging tomorrow's weather, today."), MSGBOX_DEFAULT)
-    msgbox(format("Four test plots, four climatologists, each running their own private weather over a patch of ground. Rain on one, drought on the next, sand, frost.\pThey are very good at the small sky. They have decided that means they understand the big one."), MSGBOX_DEFAULT)
-    msgbox(format("You have spent a whole journey reading the real weather -- the thaw, the bloom, the failing marsh.\pThese are the people paid to call it adjustable. Beat them on their own plots. Then take what they know somewhere honest."), MSGBOX_DEFAULT)
+    msgbox(format("A sign over the landing: MEREHOLT CLIMATE FUTURES -- ATMOSPHERIC DIVISION. Managing tomorrow's weather, today.\pFans. Instruments. Four plots up the slope, each under its own private sky: rain on one, a fine afternoon on the next, sand, frost."), MSGBOX_DEFAULT)
+    msgbox(format("The whole journey has been the real weather. The thaw, the bloom, the failing marsh.\pThese are the people paid to call it adjustable. Beat them on their own plots. Then take what they know somewhere it might do some good."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_WEATHER_ARRIVAL)
     releaseall
     end
 }
 
-// --- the four divisions ---------------------------------------------------
+// --- the four divisions -------------------------------------------------------------------
 script ParcelWeather_Rain {
     trainerbattle_single(TRAINER_SKALD_RAIN,
-        format("Marlowe: Hydrology Division. I don't forecast the rain, Ranger.\nI make it. Stand under this and learn."),
-        format("Marlowe: …Hm. The model held. The team didn't. I hate when those come apart separately."))
-    msgbox(format("Marlowe: We can drop a monsoon on a test plot to order. People see the demo and assume we can end a drought.\pWe can't. We can only move the misery to someone else's map. But the demo is what gets funded."), MSGBOX_DEFAULT)
+        format("MARLOWE: Hydrology Division. I don't forecast the rain, RANGER. I make it. Stand under this and learn."),
+        format("MARLOWE: …Hm. The model held. The team didn't. I hate when those come apart separately."))
+    msgbox(format("MARLOWE: We can drop a monsoon on a test plot to order. People see the demo and assume we can end a drought.\pWe can't. We can only move the misery to someone else's map. But the demo is what gets funded."), MSGBOX_DEFAULT)
     end
 }
-
 script ParcelWeather_Sun {
     trainerbattle_single(TRAINER_SKALD_SUN,
-        format("Helio: Solar Forcing. I keep this plot in a permanent fine afternoon.\pNothing dies of a fine afternoon. Until it does."),
-        format("Helio: Bright work. You don't wilt. Most do, in my weather."))
-    msgbox(format("Helio: A little more sun, a longer season, a bigger yield -- that's the pitch. They leave out the part where the soil cooks and the water leaves.\pPleasant is not the same as alive. I tell them. They like the brochure better."), MSGBOX_DEFAULT)
+        format("HELIO: Solar Forcing. I keep this plot in a permanent fine afternoon. Nothing dies of a fine afternoon. Until it does."),
+        format("HELIO: Bright work. You don't wilt. Most do, in my weather."))
+    msgbox(format("HELIO: A little more sun, a longer season, a bigger yield. That's the pitch. They leave out the part where the soil cooks and the water leaves.\pPleasant is not the same as alive. I tell them. They like pleasant."), MSGBOX_DEFAULT)
     end
 }
-
 script ParcelWeather_Sand {
     trainerbattle_single(TRAINER_SKALD_SAND,
-        format("Dune: Aridity Division. This plot used to be marsh. I made it a desert in a season, for science.\pWatch your footing."),
-        format("Dune: Grit, you've got. Fitting. It's the only thing that grows in my conditions."))
-    msgbox(format("Dune: My job is proving a dried-out place can still 'support managed use.' It can support a sandstorm and a lawsuit, mostly.\pYou can take a wetland apart fast. Putting one back is not in my budget line."), MSGBOX_DEFAULT)
+        format("DUNE: Aridity Division. This plot used to be marsh. I made it a desert in a season, for science. Watch your footing."),
+        format("DUNE: Grit, you've got. Fitting. It's the only thing that grows in my conditions."))
+    msgbox(format("DUNE: My job is proving a dried-out place can still 'support managed use'. It can support a sandstorm and a lawsuit, mostly.\pYou can take a wetland apart fast. Putting one back is not in my budget line."), MSGBOX_DEFAULT)
     end
 }
-
 script ParcelWeather_Ice {
     trainerbattle_single(TRAINER_SKALD_ICE,
-        format("Frosk: Cryosphere Division. I keep one plot frozen while the world thaws.\pIt costs a fortune. That's rather the point."),
-        format("Frosk: Cold-blooded battling. I approve. The warm-hearted ones never last my hail."))
-    msgbox(format("Frosk: I can hold ice on a single square against the whole summer, if you pay the power bill.\pThat's what 'climate resilience' means once you read the invoice: a frozen plot for whoever can afford one, and the thaw for everyone else."), MSGBOX_DEFAULT)
+        format("FROSK: Cryosphere Division. I keep one plot frozen while the world thaws. It costs a fortune. That's rather the point."),
+        format("FROSK: Cold-blooded battling. I approve. The warm-hearted ones never last my hail."))
+    msgbox(format("FROSK: I can hold ice on a single square against the whole summer, if you pay the power bill.\pThat's what 'climate resilience' means once you read the invoice. A frozen plot for whoever can afford one."), MSGBOX_DEFAULT)
     end
 }
 
-// --- the Director (gated on the four; names the thesis; gives the reward) --
-script ParcelWeather_Director {
-    lock
-    faceplayer
-    if (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
-        msgbox(format("Vane: The four are yours, and the station's models with them.\pWe found every knob on the sky and learned the wrong lesson from it. Don't you."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    if (!defeated(TRAINER_SKALD_RAIN)) {
-        msgbox(format("Vane: Not yet. Beat my four divisions first. I don't spend a battle on half a job.\pRain, sun, sand, ice. All of them."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    if (!defeated(TRAINER_SKALD_SUN)) {
-        msgbox(format("Vane: Three of four. The Solar plot is still standing. Finish it."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    if (!defeated(TRAINER_SKALD_SAND)) {
-        msgbox(format("Vane: Close. The Aridity Division still holds. Then come back."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    if (!defeated(TRAINER_SKALD_ICE)) {
-        msgbox(format("Vane: All but the ice. Frosk is stubborn as the cold. Beat the cold, then me."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    msgbox(format("Vane: All four. Good -- they're the best minds I have, and you walked through every one.\pDirector, Climate Futures. We model the whole sky here: rain, sun, sand, ice, the lot. Mereholt pays us to insist the planet is a machine with knobs, and we have been very good at finding the knobs."), MSGBOX_DEFAULT)
-    msgbox(format("Vane: The trouble is, it was never a machine. It's a body. You can fever it; you can't tune it.\pBut 'we can manage it' is so much easier to fund than 'we have to stop.' So that is the line we sell."), MSGBOX_DEFAULT)
-    msgbox(format("Vane: You've read the real weather out there. The thaw. The bloom. The dredged sea. Now beat the people paid to call it adjustable -- and take what we know somewhere it might do some good."), MSGBOX_DEFAULT)
-    trainerbattle_single(TRAINER_SKALD_DIRECTOR,
-        format("Vane: Show me you've earned the kit. All four skies. Right now."),
-        format("Vane: …Cleanly done. In any weather I could throw. That's the whole of the skill, in the end."))
-    msgbox(format("Vane unclips four small stones from the division rack and presses them into your hand.\pVane: The weather rocks. They hold a sky longer in a fight. We used them to lie more convincingly.\pMaybe you'll use them to keep your feet in worse weather than this. Heaven knows it's coming."), MSGBOX_DEFAULT)
-    giveitem(ITEM_DAMP_ROCK)
-    giveitem(ITEM_HEAT_ROCK)
-    giveitem(ITEM_SMOOTH_ROCK)
-    giveitem(ITEM_ICY_ROCK)
-    // Gym 7: the Climate Station clearance (Badge 7 -> Dive). A Mereholt stamp
-    // bundled with the kit; Vane resents the paperwork, hands it over anyway.
-    setflag(FLAG_BADGE07_GET)
-    call(Common_EventScript_PlayGymBadgeFanfare)
-    msgbox(format("Vane: And the stamp that rides with the kit -- a Deepwater clearance. Mereholt's notion, not mine.\pIt authorizes the gear that goes under the water, not only over it. DIVE."), MSGBOX_DEFAULT)
-    giveitem(ITEM_HM08)
-    setflag(FLAG_SKALDMERE_WEATHER_CLEARED)
-    msgbox(format("Vane: Now go. Before I remember which side of this fence pays me."), MSGBOX_DEFAULT)
-    release
+// --- assistants -----------------------------------------------------------------------------
+script ParcelWeather_Ask {
+    trainerbattle_single(TRAINER_SKALD_WEA_ASK,
+        format("ASK: Breeder, Hydrology plot. My CASTFORM changes with the plot. So do I. Battle."),
+        format("ASK: Changed again."))
+    msgbox(format("ASK: CASTFORM's the station mascot. It becomes whatever sky you put it under. The director says that's the whole philosophy. He doesn't say it like a compliment."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Brit {
+    trainerbattle_single(TRAINER_SKALD_WEA_BRIT,
+        format("BRIT: Solar plot. We're at thirty-one days without rain, on purpose. Battle before the NUMEL overheats."),
+        format("BRIT: It overheated."))
+    msgbox(format("BRIT: Day thirty-two tomorrow. The grass went brown on day nine. Nobody's written that down. It's not a result, it's a side effect."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Cato {
+    trainerbattle_single(TRAINER_SKALD_WEA_CATO,
+        format("CATO: Aridity plot. I shovel sand onto a marsh for a living. Battle. Please."),
+        format("CATO: Thanks. Needed that."))
+    msgbox(format("CATO: There were POLIWAG in this plot when I started. I don't know where they went. I know I'm not supposed to ask."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Dis {
+    trainerbattle_single(TRAINER_SKALD_WEA_DIS,
+        format("DIS: Cryosphere plot. We keep one square frozen. It's the most expensive square on the island. Battle."),
+        format("DIS: Expensive loss."))
+    msgbox(format("DIS: The power for the ice plot comes up from the coast works. The coast works run on the catch. So the frozen square is made of fish, if you follow it back."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Ebba {
+    trainerbattle_single(TRAINER_SKALD_WEA_EBBA,
+        format("EBBA: Corps liaison. I'm meant to observe. Observing's dull. Spar."),
+        format("EBBA: Observed."))
+    msgbox(format("EBBA: HALE sent me to count what the station publishes against what it measures. Two different numbers. Every month."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Frode {
+    trainerbattle_single(TRAINER_SKALD_WEA_FINN2,
+        format("FRODE: I study the old ground under the plots. Pollen. Peat. What the weather WAS. Nobody funds what was. Battle."),
+        format("FRODE: What was, lost to what is."))
+    msgbox(format("FRODE: The peat says this slope had a marsh for nine thousand years. The plot's had sand for one. Guess which one's in the brochure."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Gaute {
+    trainerbattle_single(TRAINER_SKALD_WEA_GAUTE,
+        format("GAUTE: I fly the instrument birds. SWELLOW with sensors. They hate it. Battle."),
+        format("GAUTE: They'd have won."))
+    msgbox(format("GAUTE: The birds read the real sky, over the fence. The plots read the pretend sky. The director keeps both sets. He only publishes one."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelWeather_Hege {
+    trainerbattle_single(TRAINER_SKALD_WEA_HEGE,
+        format("HEGE: The bridge is the best place to think. The water doesn't care what the plots say. Battle me on it."),
+        format("HEGE: The water still doesn't care."))
+    msgbox(format("HEGE: The director isn't a liar. That's what's hard. He knows exactly what the station is. He runs it anyway, so somebody honest does."), MSGBOX_DEFAULT)
     end
 }
 
+// --- the ferry home, items, signs ------------------------------------------------------------
 script ParcelWeather_ReturnFerry {
     lock
     faceplayer
-    msgbox(format("Sailor: Back to the dock town, Ranger?\pHonest air out there, at least. Whatever they sell in here, it isn't that."), MSGBOX_YESNO)
+    msgbox(format("SAILOR: Back to SALTWICK, RANGER? Honest air out there, at least. Whatever they sell in here, it isn't that."), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 0) {
-        msgbox(format("Sailor: Take your time. Mind the fans."), MSGBOX_DEFAULT)
+        msgbox(format("SAILOR: Take your time. Mind the fans."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -138,5 +129,15 @@ script ParcelWeather_ReturnFerry {
     delay(40)
     warp(MAP_PARCEL_ISLE, 15, 31)
     waitstate
+    end
+}
+script ParcelWeather_ItemMaxEther { finditem(ITEM_MAX_ETHER) end }
+script ParcelWeather_ItemRareCandy { finditem(ITEM_RARE_CANDY) end }
+script ParcelWeather_SignGate {
+    msgbox(format("MEREHOLT CLIMATE FUTURES -- ATMOSPHERIC DIVISION\pManaging tomorrow's weather, today. Visitors report to the institute. Plots are live: do not enter a plot during a demonstration."), MSGBOX_SIGN)
+    end
+}
+script ParcelWeather_SignPlots {
+    msgbox(format("TEST PLOTS. North-west: Aridity. North-east: Solar Forcing. East slope: Cryosphere. River: Hydrology.\pThe real sky is not a plot."), MSGBOX_SIGN)
     end
 }

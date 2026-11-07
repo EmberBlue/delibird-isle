@@ -1,0 +1,66 @@
+{
+  "id": "MAP_PARCEL_WEATHER_INSTITUTE2_F",
+  "name": "ParcelWeatherInstitute2F",
+  "layout": "LAYOUT_ROUTE119_WEATHER_INSTITUTE_2F",
+  "music": "MUS_ROUTE119",
+  "region_map_section": "MAPSEC_SKALD_WEATHER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_INDOOR",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_WI2_DIRECTOR",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_5",
+      "x": 10,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelWeatherInstitute2F_Director",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_WI2_AIDE",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_1",
+      "x": 4,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelWeatherInstitute2F_Aide",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 17,
+      "y": 1,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_WEATHER_INSTITUTE1_F",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWeatherInstitute2F_Window"
+    }
+  ]
+}

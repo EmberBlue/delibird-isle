@@ -277,7 +277,7 @@ script ParcelIsle_FerryCaptain {
             closemessage
             playse(SE_SHIP)
             delay(40)
-            warp(MAP_PARCEL_WEATHER, 23, 36)
+            warp(MAP_PARCEL_WEATHER, 9, 34)
             waitstate
             end
         default:

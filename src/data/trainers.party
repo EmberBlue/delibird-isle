@@ -17129,13 +17129,13 @@ Double Battle: No
 AI: Basic Trainer / Try To Faint
 
 Politoed
-Level: 32
+Level: 40
 
 Quagsire
-Level: 32
+Level: 40
 
 Pelipper
-Level: 33
+Level: 42
 
 === TRAINER_SKALD_RAIN ===
 Name: MARLOWE
@@ -17414,13 +17414,13 @@ Double Battle: No
 AI: Basic Trainer / Try To Faint
 
 Lapras
-Level: 42
+Level: 30
 
 Lanturn
-Level: 43
+Level: 31
 
 Kingdra
-Level: 44
+Level: 32
 
 === TRAINER_SKALD_GATE_MARSH ===
 Name: AUNE
@@ -17432,16 +17432,16 @@ Double Battle: No
 AI: Basic Trainer / Try To Faint
 
 Gyarados
-Level: 52
+Level: 38
 
 Walrein
-Level: 53
+Level: 39
 
 Tyranitar
-Level: 54
+Level: 40
 
 Salamence
-Level: 55
+Level: 41
 
 
 === TRAINER_SKALD_CORDELIA ===
@@ -18907,3 +18907,183 @@ Level: 29
 
 Carvanha
 Level: 29
+
+=== TRAINER_SKALD_WEA_ASK ===
+Name: ASK
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Castform
+Level: 32
+
+Lotad
+Level: 32
+
+=== TRAINER_SKALD_WEA_BRIT ===
+Name: BRIT
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Castform
+Level: 32
+
+Numel
+Level: 32
+
+=== TRAINER_SKALD_WEA_CATO ===
+Name: CATO
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sandslash
+Level: 33
+
+Cacturne
+Level: 33
+
+=== TRAINER_SKALD_WEA_DIS ===
+Name: DIS
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Snorunt
+Level: 33
+
+Sealeo
+Level: 33
+
+=== TRAINER_SKALD_WEA_EBBA ===
+Name: EBBA
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 33
+
+Ludicolo
+Level: 34
+
+=== TRAINER_SKALD_WEA_FINN2 ===
+Name: FRODE
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tropius
+Level: 34
+
+Vibrava
+Level: 33
+
+=== TRAINER_SKALD_WEA_GAUTE ===
+Name: GAUTE
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swellow
+Level: 33
+
+Xatu
+Level: 34
+
+=== TRAINER_SKALD_WEA_HEGE ===
+Name: HEGE
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Kirlia
+Level: 33
+
+Claydol
+Level: 34
+
+=== TRAINER_SKALD_MARSH_SEC_A ===
+Name: VIG
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Mightyena
+Level: 36
+
+Golbat
+Level: 37
+
+=== TRAINER_SKALD_MARSH_SEC_B ===
+Name: TOVA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Manectric
+Level: 36
+
+Breloom
+Level: 37
+
+=== TRAINER_SKALD_CAV_TECH_A ===
+Name: ROLF
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Snorunt
+Level: 29
+
+Graveler
+Level: 30
+
+=== TRAINER_SKALD_CAV_TECH_B ===
+Name: UNN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sneasel
+Level: 30
+
+Sealeo
+Level: 30

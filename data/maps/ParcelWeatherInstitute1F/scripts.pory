@@ -1,0 +1,28 @@
+// ParcelWeatherInstitute1F -- the Climate Station's institute, ground floor.
+mapscripts ParcelWeatherInstitute1F_MapScripts {
+}
+script ParcelWeatherInstitute1F_Reception {
+    lock
+    faceplayer
+    msgbox(format("RECEPTION: The director is upstairs. He sees anyone who's beaten the four divisions, and nobody who hasn't. Those are his rules. They're the only rules here he made himself."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeatherInstitute1F_Tech1 {
+    lock
+    faceplayer
+    msgbox(format("TECHNICIAN: We publish the plot data monthly. The over-the-fence data goes in a drawer. The drawer is very full."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeatherInstitute1F_Tech2 {
+    lock
+    faceplayer
+    msgbox(format("TECHNICIAN: A CASTFORM in every office. Management's idea. 'Adaptive thinking.' They mostly sleep."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelWeatherInstitute1F_Board {
+    msgbox(format("STATION MISSION. 'To demonstrate that regional climate outcomes are manageable through targeted intervention.' Somebody has underlined 'demonstrate' in pencil and written: to whom?"), MSGBOX_SIGN)
+    end
+}

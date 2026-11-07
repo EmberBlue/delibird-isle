@@ -725,14 +725,14 @@
 #define FLAG_SKALD_HIDDEN_COAST_HEART_SCALE 0x2A6 // Skaldmere: the Mereholt Coast
 #define FLAG_SKALD_HIDDEN_COAST_NUGGET 0x2A7 // Skaldmere: the Mereholt Coast
 #define FLAG_SKALD_COAST_SHIFT_DONE 0x2A8 // Skaldmere: the Mereholt Coast
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
-#define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
-#define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
+#define FLAG_SKALD_HIDDEN_MARSH_RARE_CANDY 0x2A9 // Skaldmere: Marsh / Climate Station / Cavern
+#define FLAG_SKALD_MARSH_CHOICE_DONE 0x2AA // Skaldmere: Marsh / Climate Station / Cavern
+#define FLAG_SKALD_ITEM_WEA_MAX_ETHER 0x2AB // Skaldmere: Marsh / Climate Station / Cavern
+#define FLAG_SKALD_HIDDEN_WEA_PP_UP 0x2AC // Skaldmere: Marsh / Climate Station / Cavern
+#define FLAG_SKALD_ITEM_CAV_ICE_HEAL 0x2AD // Skaldmere: Marsh / Climate Station / Cavern
+#define FLAG_SKALD_HIDDEN_CAV_NUGGET 0x2AE // Skaldmere: Marsh / Climate Station / Cavern
+#define FLAG_SKALD_ITEM_WEA_RARE_CANDY 0x2AF // Skaldmere: Marsh / Climate Station / Cavern
+#define FLAG_SKALD_ITEM_MARSH_FULL_RESTORE 0x2B0 // Skaldmere: Marsh / Climate Station / Cavern
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag

@@ -170,7 +170,10 @@
     "ParcelCoastMart",
     "ParcelCoastHouse1",
     "ParcelCoastHouse2",
-    "ParcelCoastHouse3"
+    "ParcelCoastHouse3",
+    "ParcelWeatherInstitute1F",
+    "ParcelWeatherInstitute2F",
+    "ParcelMarshHut"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

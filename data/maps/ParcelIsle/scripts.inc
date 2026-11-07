@@ -444,7 +444,7 @@ ParcelIsle_FerryCaptain_8:
 # 279 "data/maps/ParcelIsle/scripts.pory"
 	delay 40
 # 280 "data/maps/ParcelIsle/scripts.pory"
-	warp MAP_PARCEL_WEATHER, 23, 36
+	warp MAP_PARCEL_WEATHER, 9, 34
 # 281 "data/maps/ParcelIsle/scripts.pory"
 	waitstate
 	end

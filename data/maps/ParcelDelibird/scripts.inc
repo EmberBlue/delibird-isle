@@ -296,7 +296,7 @@ ParcelDelibird_CaveMouth::
 # 225 "data/maps/ParcelDelibird/scripts.pory"
 	closemessage
 # 226 "data/maps/ParcelDelibird/scripts.pory"
-	warp MAP_PARCEL_CAVERN, 19, 30
+	warp MAP_PARCEL_CAVERN, 16, 10
 # 227 "data/maps/ParcelDelibird/scripts.pory"
 	waitstate
 	end

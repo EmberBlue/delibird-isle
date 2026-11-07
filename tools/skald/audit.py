@@ -27,6 +27,21 @@ DOOR_BEHAVIOURS = {0x69, 0x60, 0x61, 0x62, 0x63, 0x64, 0x65}  # animated/non-ani
 warns = []
 
 
+def _behaviour_names():
+    txt = (ROOT / 'include/constants/metatile_behaviors.h').read_text()
+    body = txt[txt.index('enum'):]
+    names, i = {}, 0
+    for line in body.splitlines():
+        m = re.match(r'\s*(MB_[A-Z0-9_]+)\s*(?:=\s*(\d+))?\s*,', line)
+        if m:
+            if m.group(2): i = int(m.group(2))
+            names[i] = m.group(1); i += 1
+    return names
+
+
+BEH = _behaviour_names()
+
+
 def warn(m, msg):
     warns.append(f"{m}: {msg}")
 
@@ -239,9 +254,15 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
             warn(name, f"connection {d} -> {c['map']} (offset {off}) has no aligned walkable pair")
     # reachability: flood-fill from every entry (warp tiles, connection edges, arrow tiles);
     # every object, warp and trigger must be reachable or adjacent to reachable ground
-    seeds = set()
+    # maps entered by script warps (ferries, Hale's walk, the summit mouth) have no
+    # warp/connection entrance of their own: seed from their arrival tiles
+    ARRIVALS = {"ParcelMarsh": [(37, 27)], "ParcelCavern": [(16, 10)], "ParcelWeather": [(9, 34)],
+                "ParcelCoast": [(30, 55), (31, 28)], "ParcelDelibird": [(9, 22), (8, 4)], "ParcelBoardroom": [(4, 2)]}
+    seeds = set(ARRIVALS.get(name, []))
     for e in mj.get("warp_events", []):
         seeds.add((e["x"], e["y"]))
+        for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):   # a door's threshold tile
+            seeds.add((e["x"] + dx, e["y"] + dy))
     for c in mj.get("connections", []) or []:
         d = c["direction"]
         if d in ("left", "right"):
@@ -250,11 +271,16 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
         else:
             y = 0 if d == "up" else H - 1
             seeds.update((x, y) for x in range(W) if walkable(x, y))
+    SURF_MAPS = {"ParcelMarsh", "ParcelCoast", "ParcelWeather", "ParcelHighlands", "ParcelFloodbasin", "ParcelRiver"}
+    def surfable(x, y):
+        mid, col, _ = decode(words[y * W + x])
+        return name in SURF_MAPS and col == 0 and "WATER" in BEH.get(tiles.get(mid, ((), 0, 0))[1], "") and "FALL" not in BEH.get(tiles.get(mid, ((), 0, 0))[1], "")
+    seeds = {(x, y) for x, y in seeds if 0 <= x < W and 0 <= y < H}
     if seeds:
         seen, stack = set(), [s for s in seeds if walkable(*s)]
         while stack:
             x, y = stack.pop()
-            if (x, y) in seen or not (0 <= x < W and 0 <= y < H) or not walkable(x, y):
+            if (x, y) in seen or not (0 <= x < W and 0 <= y < H) or not (walkable(x, y) or surfable(x, y)):
                 continue
             seen.add((x, y))
             stack += [(x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)]

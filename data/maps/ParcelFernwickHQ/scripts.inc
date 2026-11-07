@@ -195,7 +195,7 @@ ParcelFernwickHQ_Hale_29:
 # 51 "data/maps/ParcelFernwickHQ/scripts.pory"
 	closemessage
 # 52 "data/maps/ParcelFernwickHQ/scripts.pory"
-	warp MAP_PARCEL_MARSH, 28, 38
+	warp MAP_PARCEL_MARSH, 37, 27
 # 53 "data/maps/ParcelFernwickHQ/scripts.pory"
 	waitstate
 	end
