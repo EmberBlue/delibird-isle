@@ -18,6 +18,9 @@ const LOCALID_R1_POLIWAG3   = 16
 
 mapscripts ParcelRoute1_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelRoute1_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SKALD_EPILOGUE, 8: ParcelRoute1_Epilogue
+    ]
 }
 
 script ParcelRoute1_OnTransition {
@@ -367,4 +370,30 @@ script ParcelRoute1_T_Mats {
         format("MATS: I'll say I nearly beat one."))
     msgbox(format("MATS: SKELD at the post won't let you through the deadfall without CUT. He's not being mean. The deadfall's real."), MSGBOX_DEFAULT)
     end
+}
+
+// --- the epilogue, stop 8 of 8: the bridge, one POLIWAG, the credits ---
+script ParcelRoute1_Epilogue {
+    lockall
+    delay(20)
+    msgbox(format("The bridge on ROUTE 1. The first morning, the whole crowd of them was jammed up under it, going nowhere, and you thought something was chasing them."), MSGBOX_DEFAULT)
+    closemessage
+    clearflag(FLAG_TEMP_2)
+    addobject(LOCALID_R1_POLIWAG2)
+    delay(30)
+    applymovement(LOCALID_R1_POLIWAG2, Movement_Epilogue_PoliwagDownstream)
+    waitmovement(0)
+    msgbox(format("One POLIWAG, in the middle of the stream, going downstream at its own pace. Nobody helping it. It has the room.\pYou write it down."), MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_SKALD_EPILOGUE, 0)
+    setrespawn(HEAL_LOCATION_PARCEL_FERNWICK)
+    fadescreenspeed(FADE_TO_BLACK, 24)
+    special(SkaldGameClear)
+    waitstate
+    releaseall   // never reached: the credits take over and end in a soft reset
+    end
+}
+movement Movement_Epilogue_PoliwagDownstream {
+    delay_16
+    walk_down * 3
 }

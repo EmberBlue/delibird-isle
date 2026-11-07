@@ -44,8 +44,31 @@ script ParcelCoastOffice2F_Secretary {
 script ParcelCoastOffice2F_Perrin {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelCoastOffice2F_Perrin_Last)
+    }
     msgbox(format("PERRIN: They gave me a desk. The one by the window. HOLLIS said I'd earned it.\pI read your filing. All of it. Twice. I typed the response. It's very good. It's the best thing I've ever written and it isn't true."), MSGBOX_DEFAULT)
     msgbox(format("PERRIN: I'm not sorry. I'm not NOT sorry. Is that an answer?\pGo on. You've got a ferry. I've got a window."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- post-game: one more, for him, not the ranking ---
+script ParcelCoastOffice2F_Perrin_Last {
+    if (flag(FLAG_SKALD_PERRIN_7_DONE)) {
+        msgbox(format("PERRIN: I'm staying. Someone should be in here who's read it. That's me, now.\pThe window's good. You can see the ferry from it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("PERRIN: WREN. They put the hearing on the office speaker. HOLLIS listened to all of it with her tea going cold.\pOne more. Not for the ranking. For me. Please."), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PERRIN: Then later. I'll be at this desk. It's a good desk."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_PERRIN_7, format("PERRIN: …Okay. Okay. That one I'll keep."))
+    setflag(FLAG_SKALD_PERRIN_7_DONE)
+    msgbox(format("PERRIN: I'm staying. Someone should be in here who's read it. That's me, now.\pGo on. You've got a region. I've got a window."), MSGBOX_DEFAULT)
     release
     end
 }

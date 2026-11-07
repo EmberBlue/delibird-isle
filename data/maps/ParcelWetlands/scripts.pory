@@ -30,6 +30,9 @@ const LOCALID_PERRIN = 32
 
 mapscripts ParcelWetlands_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelWetlands_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SKALD_EPILOGUE, 1: ParcelWetlands_Epilogue
+    ]
 }
 
 script ParcelWetlands_OnTransition {
@@ -585,3 +588,15 @@ script ParcelWetlands_PerrinTalk {
 }
 movement Movement_ParcelWetlands_PerrinIn { walk_left * 3 }
 movement Movement_ParcelWetlands_PerrinOut { walk_right * 3 }
+
+// --- the epilogue, stop 1 of 8 (chained on VAR_SKALD_EPILOGUE from the boardroom stairs) ---
+script ParcelWetlands_Epilogue {
+    lockall
+    delay(20)
+    msgbox(format("REEDMERE. The channel runs under the landing the way it did the first week, and it doesn't smell of anything.\pThe works upstream hold a permit with a new page in it. A CORPS monitor sits on the bank with a jar and a clock. Nobody cut a ribbon for it."), MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_SKALD_EPILOGUE, 2)
+    warp(MAP_PARCEL_FLOODBASIN, 20, 90)
+    waitstate
+    end
+}

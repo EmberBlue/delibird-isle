@@ -27,6 +27,18 @@ def map_ids():
         if m: out[m.group(1)] = (int(m.group(3)), int(m.group(2)))   # (group, num)
     return out
 
+def constants(header, prefix, seed=None):
+    """#define NAME value, where value may be an expression over earlier names (FLAG_SYS_* etc.)."""
+    out = dict(seed or {})
+    for line in (ROOT / header).read_text().splitlines():
+        m = re.match(r"#define (\w+)\s+(.+?)\s*(//.*)?$", line)
+        if not m: continue
+        expr = re.sub(r"\b(\w+)\b", lambda w: str(out[w.group(1)]) if w.group(1) in out else w.group(1), m.group(2))
+        if re.fullmatch(r"[0-9a-fA-Fx+\-*/() ]+", expr):
+            try: out[m.group(1)] = int(eval(expr))
+            except Exception: pass
+    return {k: v for k, v in out.items() if k.startswith(prefix)}
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rom", default=str(ROOT / "pokeemerald.gba"))
@@ -37,11 +49,16 @@ def main():
     ap.add_argument("--out", help="optional PNG at the end")
     ap.add_argument("--trace", type=int, default=0, help="save a PNG every N frames once walking starts (next to --out)")
     ap.add_argument("--dismiss", type=int, default=360, help="frames of B-mashing after each segment (a long scene needs ~1500)")
+    ap.add_argument("--flag", action="append", default=[], help="FLAG_X to set before the new game (up to 5, repeatable)")
+    ap.add_argument("--check", action="append", default=[], help="FLAG_X or VAR_X to print at the end")
     a = ap.parse_args()
     syms, maps = symbols(), map_ids()
+    flags = constants("include/constants/flags.h", "FLAG_", constants("include/constants/opponents.h", ""))   # system flags count up from MAX_TRAINERS_COUNT
+    vars_ = constants("include/constants/vars.h", "VAR_")
     probe = syms["gProbe"]; sb1p = syms["gSaveBlock1Ptr"]
     mname, xy = a.spawn.split(":"); sx, sy = map(int, xy.split(","))
     group, num = maps[mname]
+    assert len(a.flag) <= 5, "at most 5 --flag"
     mgba.log.silence()
     core = mgba.core.load_path(a.rom)
     w, h = core.desired_video_dimensions(); img = mgba.image.Image(w, h)
@@ -66,6 +83,8 @@ def main():
         held[:] = [(k, u) for k, u in held if u > frame]
     step(4400)
     core.memory.u16[probe] = (group << 8) | num; core.memory.u16[probe + 2] = sx; core.memory.u16[probe + 4] = sy
+    for i, f in enumerate(a.flag):
+        core.memory.u16[probe + 6 + 2 * i] = flags[f]
     step(a.settle - 4400)
     def dismiss(frames):           # mash B: closes any scene text, harmless otherwise
         for f in range(0, frames, 45): presses[frame + f] = ("B", 8)
@@ -74,8 +93,11 @@ def main():
     tracing[0] = True
     for wspec in a.walk:
         d, n = (wspec.split(":") + ["1"])[:2]
-        if d.upper() == "A":        # talk / interact: tap A, then let the dismiss phase page through the text
-            step(8, "A"); step(30)
+        if d.upper() == "A":        # A[:n] -- tap A n times (talk, page through text, answer YES to a prompt)
+            for _ in range(int(n)):
+                step(8, "A"); step(37)
+        elif d.upper() == "WAIT":   # WAIT:n -- just mash B for n frames (a long scene, a chained warp sequence)
+            dismiss(int(n)); continue
         else:
             step(16 * int(n) + 12, d.upper()); step(30)
         dismiss(a.dismiss)          # a trigger's text, a leave prompt, an arrival on the other side
@@ -87,6 +109,14 @@ def main():
     name = next((k for k, v in maps.items() if v == (g, n)), f"({g},{n})")
     ok = (a.expect is None) or (name == a.expect)
     print(f"{'OK ' if ok else 'BAD'} spawn {mname}({sx},{sy}) walk {a.walk} -> {name} at ({x},{y})" + (f" expected {a.expect}" if not ok else ""))
+    flags_off, vars_off = core.memory.u16[probe + 16], core.memory.u16[probe + 18]   # written back by the hook
+    for c in a.check:
+        if c in flags:
+            print(f"  {c} = {(core.memory.u8[sb1 + flags_off + (flags[c] >> 3)] >> (flags[c] & 7)) & 1}")
+        elif c in vars_:
+            print(f"  {c} = {core.memory.u16[sb1 + vars_off + 2 * (vars_[c] - 0x4000)]}")
+        else:
+            print(f"  {c}: unknown")
     if a.out: img.to_pil().convert("RGB").save(a.out)
     sys.exit(0 if ok else 1)
 

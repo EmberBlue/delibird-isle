@@ -9,6 +9,9 @@ mapscripts ParcelRiverBoard_MapScripts {
 script ParcelRiverBoard_Sluice {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelRiverBoard_Sluice_Rematch)
+    }
     if (flag(FLAG_BADGE04_GET)) {
         if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
             msgbox(format("SLUICE: STRESSED. I read your filing. I'd have rated it the same, and I'd have been overruled.\pYou weren't. Interesting."), MSGBOX_DEFAULT)
@@ -53,5 +56,21 @@ script ParcelRiverBoard_Meterman {
 }
 script ParcelRiverBoard_Ledger {
     msgbox(format("THE ALLOCATION LEDGER. Plots 1-14, metered flow, rates. A column headed PHASE 2 -- UPSTREAM RESERVE. The reserve is the clean reach, allocated in full. To the Foundation."), MSGBOX_SIGN)
+    end
+}
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelRiverBoard_Sluice_Rematch {
+    lock
+    faceplayer
+    msgbox(format("SLUICE: The hearing rated your filing. I metered it. For once the rating and the meter agree.\pI'd like a balance read at full flow. No clearance on the end of it. Will you?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SLUICE: Noted. The ledger keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM4_R, format("SLUICE: …Balanced. Down to the drop, again."))
+    msgbox(format("SLUICE: Come back when the gauge moves. It will."), MSGBOX_DEFAULT)
+    release
     end
 }

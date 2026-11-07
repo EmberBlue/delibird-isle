@@ -79,10 +79,17 @@ frames prove nothing about sprite visibility.
 ## Walk test (the real check for connections and warps)
 `tools/skald/walktest.py --spawn MAP_X:x,y --walk DIR:n [--walk ...] --expect MAP_Y`
 boots the ROM headless, pokes the spawn into `gProbe` (a TEMP hook in
-`src/new_game.c`: `EWRAM_DATA u16 gProbe[4]` read by `WarpToTruck`; add it,
-build, test, revert, `grep -c "TEMP TEST" src/new_game.c` = 0), walks, mashes
-B through any scene, and reads the live map and position out of the save
-block (`pos` at +0/+2; `location.x/y` at +8/+10 is only the warp target).
+`src/new_game.c`: `python3 tools/skald/probe_hook.py --on` adds it, build,
+test, `--off` removes it, `grep -c "TEMP TEST" src/new_game.c` = 0 before
+the commit), walks, mashes B through any scene, and reads the live map and
+position out of the save block (`pos` at +0/+2; `location.x/y` at +8/+10
+is only the warp target). `--flag FLAG_X` (up to five) sets story flags
+before the new game, so any later state is one spawn away (the ending:
+`--spawn MAP_PARCEL_BOARDROOM:4,2 --flag FLAG_SKALDMERE_CORDELIA_DONE --walk
+LEFT:2 --walk WAIT:9000`); `--check FLAG_X|VAR_X` prints flags and vars at
+the end (the hook writes the save-block offsets back into `gProbe[8..9]`).
+`--walk A:n` taps A n times (answers YES to a prompt; pair with `--dismiss
+0` so the B-mash doesn't answer NO first).
 A trigger scene fired mid-segment eats the rest of that segment: walk onto
 the trigger as its own `--walk DIR:1` with `--dismiss 1800` (a page of text
 prints in ~300 frames; the default 360 only clears a one-liner), then

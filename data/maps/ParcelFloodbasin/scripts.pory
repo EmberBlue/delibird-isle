@@ -30,6 +30,9 @@ const LOCALID_FLD_VIL_FISHER   = 16
 
 mapscripts ParcelFloodbasin_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelFloodbasin_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SKALD_EPILOGUE, 2: ParcelFloodbasin_Epilogue
+    ]
 }
 
 script ParcelFloodbasin_OnTransition {
@@ -414,6 +417,9 @@ script ParcelFloodbasin_Checkpoint {
 script ParcelFloodbasin_GymBreen {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelFloodbasin_GymBreen_Rematch)
+    }
     msgbox(format("BREEN: Cleared. The neck's open to you. Mind the loads coming down."), MSGBOX_DEFAULT)
     release
     end
@@ -442,5 +448,33 @@ script ParcelFloodbasin_T_Stein {
         format("STEIN: You swam out here? Into THIS? Battle. Then get out of the water, seriously."),
         format("STEIN: Seriously. Out."))
     msgbox(format("STEIN: I swim the lake for the FOUNDATION. Sampling. The samples go to the coast. The results don't come back."), MSGBOX_DEFAULT)
+    end
+}
+
+// --- the epilogue, stop 2 of 8 ---
+script ParcelFloodbasin_Epilogue {
+    lockall
+    delay(20)
+    msgbox(format("LEIRVIK. The relief tent is gone. The sandbags are stacked where DORSEY's photographer stood.\pPhase 2 goes ahead. Dry sheds, like PERRIN said. The next pulse will come from somewhere, and now there's a page that says where."), MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_SKALD_EPILOGUE, 3)
+    warp(MAP_PARCEL_RIVER, 16, 30)
+    waitstate
+    end
+}
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelFloodbasin_GymBreen_Rematch {
+    lock
+    faceplayer
+    msgbox(format("BREEN: Carry weight, you said. I'm asking again, heavier.\pNothing to clear. Just me, the whole crew's worth. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BREEN: Mind the loads, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM3_R, format("BREEN: …Fine. You can carry it."))
+    msgbox(format("BREEN: Any time the loads are down. Mind them."), MSGBOX_DEFAULT)
+    release
     end
 }

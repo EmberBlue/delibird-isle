@@ -5,6 +5,9 @@ mapscripts ParcelWeatherInstitute2F_MapScripts {
 script ParcelWeatherInstitute2F_Director {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelWeatherInstitute2F_Director_Rematch)
+    }
     if (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
         msgbox(format("VANE: The four are yours, and the station's models with them.\pWe found every knob on the sky and learned the wrong lesson from it. Don't you."), MSGBOX_DEFAULT)
         release
@@ -42,5 +45,21 @@ script ParcelWeatherInstitute2F_Aide {
 }
 script ParcelWeatherInstitute2F_Window {
     msgbox(format("From the window: four plots, four skies, and past the fence the one real one, grey and ordinary and not for sale."), MSGBOX_SIGN)
+    end
+}
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelWeatherInstitute2F_Director_Rematch {
+    lock
+    faceplayer
+    msgbox(format("VANE: The hearing cited the station's models. Both logbooks. I'd like one more reading, in weather of my choosing, with nothing on the end of it.\pAll four of mine are watching. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VANE: The forecast holds. So does the offer."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_DIRECTOR_R, format("VANE: …Cleanly done. In any weather. I keep saying it."))
+    msgbox(format("VANE: Come back. The sky changes. So do I, slower."), MSGBOX_DEFAULT)
+    release
     end
 }

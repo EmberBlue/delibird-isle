@@ -42,12 +42,21 @@ the cannery, the plaque, Hollis's tea, Harland = gym 6/Fly) and the
 **Climate Station** (Vane = gym 7/Dive) → Hale walks you from Fernwick to
 **the Last Corridor** (the Marsh: Aune's gate, Heron's confession and
 battle, the Hollis choice, the final survey, Hale's coda) → the coast aide
-→ the **boardroom coda** → the post-finale reaction pass.
+→ the **boardroom coda** → **the ending** (the boardroom stairs start the
+epilogue: eight ON_FRAME vignettes chained on `VAR_SKALD_EPILOGUE` through
+Reedmere, Leirvik, Elvsund, Haukfell, Delibird, the Marsh without Heron,
+the Coast with Hale, and the Route 1 bridge with one Poliwag going
+downstream; then `special(SkaldGameClear)` heals, sets the game-clear flag,
+points "continue" at the Fernwick Center, saves, and rolls the Skaldmere
+credits into a soft reset) → **the post-game** (every leader offers a
+full-strength rematch, repeatable; Perrin's last battle at his desk; the
+post-finale reaction pass).
 
-**Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~32,700 words
-of dialogue (quoted strings in `data/maps/Parcel*/scripts.pory`), 188 reachable
+**Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~33,700 words
+of dialogue (quoted strings in `data/maps/Parcel*/scripts.pory`), 197 reachable
 Skald trainers (gyms 1–8 + 4 Mereholt gates + Heron + Cordelia + the Weather
-four + Perrin ×6 + ~160 route/town trainers; TRAINERS_COUNT 1045), seven
+four + Perrin ×7 + 8 leader rematches + ~160 route/town trainers;
+TRAINERS_COUNT 1054), a real ending (epilogue, credits, post-game), seven
 side quests (Grettir's pond, the Corridor satchel, Hedda's mask, the beaver
 stump, the Highland egg, the Coast shell, Gaute's board), seven field HMs
 wired as real traversal, 8 Skald map sections on the region map with heal
@@ -88,15 +97,23 @@ The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the
 
 ## Verified by walking (2026-11-07)
 
-`tools/skald/walktest.py` needs the TEMP probe hook in `src/new_game.c`
-(an `EWRAM_DATA u16 gProbe[4]` the harness pokes at frame 4400; the
-`WarpToTruck` branch reads it). With it, every connection and script warp
+`tools/skald/walktest.py` needs the TEMP probe hook in `src/new_game.c`:
+`python3 tools/skald/probe_hook.py --on` patches it (an `EWRAM_DATA u16
+gProbe[12]` the harness pokes at frame 4400: map, x, y, up to five flags to
+set; `WarpToTruck` reads it and writes back the save-block offsets of
+`flags` and `vars` so `--check FLAG_X|VAR_X` can read them), `--off`
+removes it before the commit. With it, every connection and script warp
 below was crossed headlessly and the save block read back: Isle↔Meadow↔
 Route 1↔Mistwood↔Fernwick↔Reedmere↔Corridor↔Floodbasin↔Elvsund↔Haukfell
 (both ways), Coast/Station/Marsh/Delibird arrivals, Marsh→Fernwick,
 Cavern→Delibird. Also seen frame by frame (`--trace`): the Elvsund and
 Haukfell first-entry scenes, Perrin's Fernwick ambush up to the battle
-screen, and Grettir's quest talk (`--walk A`).
+screen, Grettir's quest talk (`--walk A`), **the whole ending** (spawn in
+the boardroom with `--flag FLAG_SKALDMERE_CORDELIA_DONE`, walk onto the
+stairs, `--walk WAIT:9000`: all eight vignettes, the bridge Poliwag, the
+fade, the credits' first pages; `VAR_SKALD_EPILOGUE` read back 0), and
+Tarn's post-game rematch to "EXPERT TARN sent out Azumarill Lv58"
+(`--walk A:14 --dismiss 0` answers YES to the prompt).
 Harness rules: a trigger scene fired mid-segment eats the rest of that
 segment, so walk onto the trigger as its own `--walk DIR:1` with
 `--dismiss 1800` (text prints at ~300 frames a page), then continue; the
@@ -105,11 +122,16 @@ out of sight lines and treat "reached the battle screen" as the pass.
 
 ## Known-open (honest list)
 
-- **Volume.** 188 reachable trainers vs the 1,000 target; ~32.7k words vs 100k. The
+- **Volume.** 197 reachable trainers vs the 1,000 target; ~33.7k words vs 100k. The
   cheapest next wins: a trainer-dense optional area per zone (a "Corps
-  field exam" tower, the old Weather gauntlet style), more residents in
+  field exam" tower, the old Weather gauntlet style), Match Call rematch
+  tiers for the route trainers (each tier is a trainer id with a party;
+  check the save-block cost of `trainerRematches` first), more residents in
   three story states per town, and more side quests (one per zone exists;
   Grettir's pond and Hedda's mask are the templates).
+- **The post-game is thin.** Leader rematches and Perrin's last battle
+  exist; the Weather station move, the Smeargle beat, and post-epilogue
+  resident lines (the hearing's outcome, town by town) do not.
 - **Not playtested end to end in an emulator** since the rebuilds: each zone
   was screenshot-checked at its arrival and one scene; the gym gates fire;
   the Floodbasin relief line fires. Walk the whole game with Script 1

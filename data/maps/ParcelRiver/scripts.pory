@@ -25,6 +25,9 @@ const LOCALID_PERRIN = 34
 
 mapscripts ParcelRiver_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelRiver_OnTransition
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SKALD_EPILOGUE, 3: ParcelRiver_Epilogue
+    ]
 }
 
 script ParcelRiver_OnTransition {
@@ -540,3 +543,15 @@ script ParcelRiver_PerrinTalk {
 }
 movement Movement_ParcelRiver_PerrinIn { walk_down * 2 }
 movement Movement_ParcelRiver_PerrinOut { walk_up * 2 }
+
+// --- the epilogue, stop 3 of 8 ---
+script ParcelRiver_Epilogue {
+    lockall
+    delay(20)
+    msgbox(format("ELVSUND. Market day. The WATER BOARD notice on the pole has six names under it, and the sentence they argued about for two hours is in.\pRead the whole river before you judge any part of it. SLUICE keeps the gate. The crossing is still the crossing."), MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_SKALD_EPILOGUE, 4)
+    warp(MAP_PARCEL_HIGHLANDS, 20, 68)
+    waitstate
+    end
+}

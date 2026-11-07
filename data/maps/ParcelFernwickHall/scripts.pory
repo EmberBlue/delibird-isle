@@ -34,6 +34,9 @@ script ParcelFernwickHall_CadetB {
 }
 
 script ParcelFernwickHall_Tarn {
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelFernwickHall_Tarn_Rematch)
+    }
     trainerbattle_single(TRAINER_SKALD_GYM1,
         format("TARN: Tidewater Division. I examine.\pYou want the Forest Certification, provisional? Show me you can hold a line when the water's against you."),
         format("TARN: Hm. The current's yours, then."),
@@ -52,6 +55,22 @@ script ParcelFernwickHall_Tarn_Defeated {
     msgbox(format("TARN: Forest Certification, practical: passed. HALE signs the paper. I only say whether you can fight.\pYou can."), MSGBOX_DEFAULT)
     giveitem(ITEM_TM03)
     msgbox(format("TARN: WATER PULSE. Teach it to something. The marsh is mostly water, and most of it's against you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelFernwickHall_Tarn_Rematch {
+    lock
+    faceplayer
+    msgbox(format("TARN: The author of the record, in my hall. I read it.\pI examine; I don't sign. But I'd examine you once more, at full strength. The current's older than both of us. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TARN: Another day, then. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM1_R, format("TARN: …Still yours. The current, I mean."))
+    msgbox(format("TARN: Come back when you want the water against you again. It always is."), MSGBOX_DEFAULT)
     release
     end
 }

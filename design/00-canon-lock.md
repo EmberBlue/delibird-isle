@@ -199,6 +199,15 @@ skeleton:
   leash; same economic lever as on Harland). (§04)
 - ✅ **Ending note** → **clear-eyed grief** (bitter, cold, true; honesty chosen
   despite its cost). (§02)
+- ✅ **Ending shape (built 2026-11-07)** → after the boardroom coda, the
+  stairs start an epilogue: eight vignettes through the zones (the hearing's
+  outcome seen, not told: a review, an injunction, a listing, a delay), the
+  Marsh with Heron's count and **no Heron** (she does not survive the
+  publication, as §04 locks; nobody says the word), the Coast with Hale's
+  last line ("Ask if it was true. It was."), and the Route 1 bridge with
+  **one Poliwag going downstream on its own** (the prologue's beat 4,
+  rhymed). Then the credits; the post-game continues at Fernwick with the
+  leaders' rematches and Perrin at his desk. No branching, no second ending.
 - ✅ **The buried dishonesty** → the **noble lie** (fudged data to protect a
   habitat; later weaponized to destroy it). (§04)
 - ✅ **Climax knot** → **honesty has collateral** (exposing the greenwash exposes

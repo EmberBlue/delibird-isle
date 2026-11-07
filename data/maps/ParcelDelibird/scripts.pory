@@ -28,6 +28,7 @@ const LOCALID_DEL_FOLDER   = 14
 
 mapscripts ParcelDelibird_MapScripts {
     MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SKALD_EPILOGUE, 5: ParcelDelibird_Epilogue
         VAR_TEMP_0, 0: ParcelDelibird_SetMapVar
         VAR_TEMP_1, 0: ParcelDelibird_FirstEntry
     ]
@@ -245,6 +246,9 @@ script ParcelDelibird_RevelerTrainer {
 // Skyline clearance (Badge 8), which lights up HM07 Waterfall. Quiet, exact,
 // faintly unsettling. The dread is the player's to bring.
 script ParcelDelibird_GymIlex {
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelDelibird_GymIlex_Rematch)
+    }
     trainerbattle_single(TRAINER_SKALD_GYM8,
         format("Ilex stands a little apart from the lights, a folded square of red cloth in one hand, eyes on the high snowline above the cabins.\pIlex: Surveyor, Skaldmere Survey. I don't fix anything. I measure how fast it's going.\pIlex: You read places on the ground -- snares, residue, the catch on the pallet. I read them from above. The whole crescent of an island at once, before and after, change against change.\pIlex: A field hand should be able to do both. Show me you can hold a line of sight as steady as a line of evidence. From up here, looking down."),
         format("Ilex: Steady. You kept the frame. Few do, this high up."),
@@ -371,5 +375,33 @@ script ParcelDelibird_T_Erlend {
         format("ERLEND: Cadet ERLEND, island posting. ILEX runs the gym here and nobody beats her. Spar, so I've something to report."),
         format("ERLEND: Reported."))
     msgbox(format("ERLEND: ILEX's Skyline badge needs the whole island read. The summit, the shore. She doesn't sign for half."), MSGBOX_DEFAULT)
+    end
+}
+
+// --- the epilogue, stop 5 of 8 ---
+script ParcelDelibird_Epilogue {
+    lockall
+    delay(20)
+    msgbox(format("DELIBIRD ISLE. The thaw didn't stop because a hearing sat. The festival ground is a third mud.\pThe delivery list is up on the square again, longer than last year, and every house on it has a name beside it before noon."), MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_SKALD_EPILOGUE, 6)
+    warp(MAP_PARCEL_MARSH, 19, 9)
+    waitstate
+    end
+}
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelDelibird_GymIlex_Rematch {
+    lock
+    faceplayer
+    msgbox(format("Ilex: The snowline is lower than last Midwinter. I have the number now. It's in your record.\pThe Skyline is mine to read. Read it with me once more, from the top. Will you?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("Ilex: Then watch the snowline with me a while."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM8_R, format("Ilex: Steady. You still keep the frame."))
+    msgbox(format("Ilex: The cloth is in my pocket. Whenever you like."), MSGBOX_DEFAULT)
+    release
     end
 }

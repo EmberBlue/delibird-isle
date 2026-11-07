@@ -202,3 +202,17 @@ quest is built, how the peer works) before they are asked six more times.
   walks, and reads the save block -- every connection and script warp in
   the chain was crossed by it (it found a wrong Floodbasin→River offset and
   the audit's habit of counting water as a crossing, both fixed).
+- **2026-11-07 (later still) — the ending, landed (fix F's tail).** The
+  boardroom stairs start an epilogue: eight ON_FRAME vignettes chained on
+  `VAR_SKALD_EPILOGUE` (Reedmere's channel, Leirvik without the tent,
+  Elvsund's market, Haukfell's capped bore, Delibird's thaw, the Marsh with
+  Heron's count and no Heron, the Coast with Hale's last line, and the
+  Route 1 bridge with one Poliwag going downstream on its own), then
+  `special(SkaldGameClear)` (heal, FLAG_SYS_GAME_CLEAR, continue-warp to
+  the Fernwick Center, save, the credits -- rewritten in
+  `src/data/credits.h` as 27 pages: the cast by town, the engine, the
+  original game -- then the vanilla soft reset). Post-game: every leader
+  offers a repeatable full-strength rematch (levels 58–63, nine new trainer
+  ids) and Perrin asks for one more at his desk. The whole sequence was
+  walked headlessly and traced frame by frame. Open: the notebook UI (fix
+  E), post-epilogue resident lines, the Weather station move, volume.

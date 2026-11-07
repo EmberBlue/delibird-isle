@@ -19885,3 +19885,222 @@ Level: 32
 
 Absol
 Level: 34
+
+=== TRAINER_SKALD_GYM1_R ===
+Name: TARN
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 58
+
+Ludicolo
+Level: 58
+
+Pelipper
+Level: 59
+
+Lanturn
+Level: 59
+
+Kingdra
+Level: 61
+
+=== TRAINER_SKALD_GYM2_R ===
+Name: MIRREN
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 58
+
+Sandslash
+Level: 59
+
+Claydol
+Level: 60
+
+Steelix
+Level: 60
+
+Flygon
+Level: 61
+
+=== TRAINER_SKALD_GYM3_R ===
+Name: BREEN
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Probopass
+Level: 59
+
+Hariyama
+Level: 60
+
+Donphan
+Level: 60
+
+Aggron
+Level: 61
+
+Rhyperior
+Level: 61
+
+=== TRAINER_SKALD_GYM4_R ===
+Name: SLUICE
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Quagsire
+Level: 59
+
+Whiscash
+Level: 60
+
+Gastrodon
+Level: 60
+
+Seismitoad
+Level: 61
+
+Swampert
+Level: 62
+
+=== TRAINER_SKALD_GYM5_R ===
+Name: VALE
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Weavile
+Level: 60
+
+Glalie
+Level: 60
+
+Mamoswine
+Level: 61
+
+Lapras
+Level: 61
+
+Froslass
+Level: 62
+
+=== TRAINER_SKALD_GYM6_R ===
+Name: HARLAND
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gyarados
+Level: 61
+
+Sharpedo
+Level: 60
+
+Tentacruel
+Level: 60
+
+Wailord
+Level: 61
+
+Milotic
+Level: 63
+
+=== TRAINER_SKALD_DIRECTOR_R ===
+Name: VANE
+Class: Expert
+Pic: Expert M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Politoed
+Level: 61
+
+Ninetales
+Level: 61
+
+Abomasnow
+Level: 61
+
+Tyranitar
+Level: 62
+
+Walrein
+Level: 62
+
+=== TRAINER_SKALD_GYM8_R ===
+Name: ILEX
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swellow
+Level: 61
+
+Skarmory
+Level: 61
+
+Altaria
+Level: 62
+
+Staraptor
+Level: 62
+
+Togekiss
+Level: 63
+
+=== TRAINER_SKALD_PERRIN_7 ===
+Name: PERRIN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Manectric
+Level: 60
+
+Camerupt
+Level: 60
+
+Linoone
+Level: 58
+
+Swellow
+Level: 59
+
+Kecleon
+Level: 58
+
+Absol
+Level: 61

@@ -1217,7 +1217,20 @@
 
 #define TRAINER_SKALD_PERRIN_6            1044
 
-#define TRAINERS_COUNT                      1045
+// Post-game: the leaders' full-strength rematches (offered after the epilogue,
+// repeatable -- trainerbattle_no_intro never checks the defeated flag) and
+// Perrin's last battle at his desk.
+#define TRAINER_SKALD_GYM1_R              1045
+#define TRAINER_SKALD_GYM2_R              1046
+#define TRAINER_SKALD_GYM3_R              1047
+#define TRAINER_SKALD_GYM4_R              1048
+#define TRAINER_SKALD_GYM5_R              1049
+#define TRAINER_SKALD_GYM6_R              1050
+#define TRAINER_SKALD_DIRECTOR_R          1051
+#define TRAINER_SKALD_GYM8_R              1052
+#define TRAINER_SKALD_PERRIN_7            1053
+
+#define TRAINERS_COUNT                      1054
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS

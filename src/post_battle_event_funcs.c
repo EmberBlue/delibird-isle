@@ -5,9 +5,43 @@
 #include "hall_of_fame.h"
 #include "load_save.h"
 #include "overworld.h"
+#include "save.h"
 #include "script_pokemon_util.h"
 #include "tv.h"
 #include "constants/heal_locations.h"
+
+// Skaldmere's game clear: no Hall of Fame. The epilogue's last scene (the
+// Route 1 bridge) calls this after a fade to black. Heal, mark the clear,
+// point "continue" at Fernwick, save, and roll the credits; the credits end in
+// a soft reset, so the next continue lands at the Fernwick Center.
+void SkaldGameClear(void)
+{
+    HealPlayerParty();
+
+    if (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE)
+    {
+        gHasHallOfFameRecords = TRUE;
+    }
+    else
+    {
+        gHasHallOfFameRecords = FALSE;
+        FlagSet(FLAG_SYS_GAME_CLEAR);
+    }
+
+    if (GetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME) == 0)
+        SetGameStat(GAME_STAT_FIRST_HOF_PLAY_TIME, (gSaveBlock2Ptr->playTimeHours << 16) | (gSaveBlock2Ptr->playTimeMinutes << 8) | gSaveBlock2Ptr->playTimeSeconds);
+
+    SetContinueGameWarpStatus();
+    SetContinueGameWarpToHealLocation(HEAL_LOCATION_PARCEL_FERNWICK);
+
+    // If the save fails on damaged sectors, TrySavingData has already switched
+    // to the save-failed screen, which continues into this callback.
+    gGameContinueCallback = CB2_StartCreditsSequence;
+    if (TrySavingData(SAVE_NORMAL) == SAVE_STATUS_ERROR && gDamagedSaveSectors != 0)
+        return;
+
+    SetMainCallback2(CB2_StartCreditsSequence);
+}
 
 int GameClear(void)
 {

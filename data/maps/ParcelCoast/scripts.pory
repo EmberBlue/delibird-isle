@@ -24,6 +24,7 @@ const LOCALID_PERRIN = 33
 mapscripts ParcelCoast_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelCoast_HideAide
     MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SKALD_EPILOGUE, 7: ParcelCoast_Epilogue
         VAR_TEMP_1, 0: ParcelCoast_FirstEntry
     ]
 }
@@ -118,6 +119,9 @@ script ParcelCoast_Pilings {
 script ParcelCoast_GymHarland {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelCoast_GymHarland_Rematch)
+    }
     if (flag(FLAG_BADGE06_GET)) {
         if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
             msgbox(format("HARLAND: They read your file aloud at the quota hearing. Parts of it twice. My name's in it, where I put it.\pThe review grounds half the fleet two days a week now. The lawyers call it ruin. It'll pinch, right enough. Winters pinched anyway."), MSGBOX_DEFAULT)
@@ -488,3 +492,32 @@ script ParcelCoast_PerrinTalk {
 }
 movement Movement_ParcelCoast_PerrinIn { walk_down * 2 }
 movement Movement_ParcelCoast_PerrinOut { walk_up * 2 }
+
+// --- the epilogue, stop 7 of 8: the quay, with HALE where he always stands ---
+script ParcelCoast_Epilogue {
+    lockall
+    delay(20)
+    msgbox(format("MEREHOLT COAST. The cranes swing on schedule. The quota review runs to spring, and the boats go out under it and come back with what there is."), MSGBOX_DEFAULT)
+    msgbox(format("HALE: You want to know if it was worth it. Wrong verb. Ask if it was true.\pIt was. Go and rest. Then go and read something else. There's a lot of region left."), MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_SKALD_EPILOGUE, 8)
+    warp(MAP_PARCEL_ROUTE1, 8, 26)
+    waitstate
+    end
+}
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelCoast_GymHarland_Rematch {
+    lock
+    faceplayer
+    msgbox(format("HARLAND: They read you aloud at the hearing. I'd read you the old way, too. Boat's in, nets are dry, and the crew's been training on the dredge line out of spite.\pFull strength. Aye?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HARLAND: Tide's at six. Offer stands."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM6_R, format("HARLAND: …Aye. You read the water. Still."))
+    msgbox(format("HARLAND: Tide's at six. Any day you like."), MSGBOX_DEFAULT)
+    release
+    end
+}

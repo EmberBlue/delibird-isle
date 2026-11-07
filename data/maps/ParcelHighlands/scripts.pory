@@ -23,6 +23,9 @@ const LOCALID_HL_GYM         = 8
 const LOCALID_PERRIN = 35
 
 mapscripts ParcelHighlands_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_SKALD_EPILOGUE, 4: ParcelHighlands_Epilogue
+    ]
 }
 
 // --- first entry ------------------------------------------------------------------
@@ -311,6 +314,9 @@ script ParcelHighlands_ValeGate {
 script ParcelHighlands_GymVale {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelHighlands_GymVale_Rematch)
+    }
     msgbox(format("VALE: The ferry runs from the lowland landing. Take what you witnessed here with you. It's the only thing that leaves this slope unspoiled."), MSGBOX_DEFAULT)
     release
     end
@@ -475,3 +481,31 @@ script ParcelHighlands_PerrinTalk {
 }
 movement Movement_ParcelHighlands_PerrinIn { walk_down * 2 }
 movement Movement_ParcelHighlands_PerrinOut { walk_up * 2 }
+
+// --- the epilogue, stop 4 of 8 ---
+script ParcelHighlands_Epilogue {
+    lockall
+    delay(20)
+    msgbox(format("HAUKFELL. The bore is capped. Enjoined pending survey, and the survey is yours. The leases wait on it. The ground doesn't.\pThe warming centre stays open past midnight now. HOLLIS cut the ribbon. It's still warm."), MSGBOX_DEFAULT)
+    closemessage
+    setvar(VAR_SKALD_EPILOGUE, 5)
+    warp(MAP_PARCEL_DELIBIRD, 13, 13)
+    waitstate
+    end
+}
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelHighlands_GymVale_Rematch {
+    lock
+    faceplayer
+    msgbox(format("VALE: You went up with it signed, and the slope held. Mostly.\pI'd see what the cold made of you since. Full strength. Not a gate. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VALE: Then mind the slope."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM5_R, format("VALE: …Cleared. There's nothing above this to clear, so take that as the word."))
+    msgbox(format("VALE: The slope's here when you are."), MSGBOX_DEFAULT)
+    release
+    end
+}

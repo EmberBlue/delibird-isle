@@ -29,54 +29,77 @@ ParcelBoardroom_Arrival_2:
 
 
 ParcelBoardroom_Leave::
-# 37 "data/maps/ParcelBoardroom/scripts.pory"
-	lockall
-# 38 "data/maps/ParcelBoardroom/scripts.pory"
-	warp MAP_PARCEL_COAST, 31, 28
 # 39 "data/maps/ParcelBoardroom/scripts.pory"
+	lockall
+# 40 "data/maps/ParcelBoardroom/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_CORDELIA_DONE, ParcelBoardroom_Leave_3
+ParcelBoardroom_Leave_1:
+# 49 "data/maps/ParcelBoardroom/scripts.pory"
+	warp MAP_PARCEL_COAST, 31, 28
+# 50 "data/maps/ParcelBoardroom/scripts.pory"
 	waitstate
 	end
 
+ParcelBoardroom_Leave_2:
+# 41 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Leave_Text_0, MSGBOX_DEFAULT
+# 42 "data/maps/ParcelBoardroom/scripts.pory"
+	closemessage
+# 43 "data/maps/ParcelBoardroom/scripts.pory"
+	setflag FLAG_SKALDMERE_EPILOGUE_DONE
+# 44 "data/maps/ParcelBoardroom/scripts.pory"
+	setvar VAR_SKALD_EPILOGUE, 1
+# 45 "data/maps/ParcelBoardroom/scripts.pory"
+	warp MAP_PARCEL_WETLANDS, 18, 60
+# 46 "data/maps/ParcelBoardroom/scripts.pory"
+	waitstate
+	end
+
+ParcelBoardroom_Leave_3:
+# 40 "data/maps/ParcelBoardroom/scripts.pory"
+	goto_if_unset FLAG_SKALDMERE_EPILOGUE_DONE, ParcelBoardroom_Leave_2
+	goto ParcelBoardroom_Leave_1
+
 
 ParcelBoardroom_Cordelia::
-# 44 "data/maps/ParcelBoardroom/scripts.pory"
-	lock
-# 45 "data/maps/ParcelBoardroom/scripts.pory"
-	faceplayer
-# 46 "data/maps/ParcelBoardroom/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_CORDELIA_DONE, ParcelBoardroom_Cordelia_2
-# 51 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_1, MSGBOX_DEFAULT
-# 52 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_2, MSGBOX_DEFAULT
-# 53 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_3, MSGBOX_DEFAULT
-# 54 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_4, MSGBOX_DEFAULT
 # 55 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_5, MSGBOX_DEFAULT
+	lock
 # 56 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_6, MSGBOX_DEFAULT
+	faceplayer
 # 57 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_7, MSGBOX_DEFAULT
-# 58 "data/maps/ParcelBoardroom/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_CORDELIA, ParcelBoardroom_Cordelia_Text_8, ParcelBoardroom_Cordelia_Text_9
-# 61 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_10, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_CORDELIA_DONE, ParcelBoardroom_Cordelia_2
 # 62 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_11, MSGBOX_DEFAULT
+	msgbox ParcelBoardroom_Cordelia_Text_1, MSGBOX_DEFAULT
 # 63 "data/maps/ParcelBoardroom/scripts.pory"
-	msgbox ParcelBoardroom_Cordelia_Text_12, MSGBOX_DEFAULT
+	msgbox ParcelBoardroom_Cordelia_Text_2, MSGBOX_DEFAULT
 # 64 "data/maps/ParcelBoardroom/scripts.pory"
-	setflag FLAG_SKALDMERE_CORDELIA_DONE
+	msgbox ParcelBoardroom_Cordelia_Text_3, MSGBOX_DEFAULT
 # 65 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Cordelia_Text_4, MSGBOX_DEFAULT
+# 66 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Cordelia_Text_5, MSGBOX_DEFAULT
+# 67 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Cordelia_Text_6, MSGBOX_DEFAULT
+# 68 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Cordelia_Text_7, MSGBOX_DEFAULT
+# 69 "data/maps/ParcelBoardroom/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CORDELIA, ParcelBoardroom_Cordelia_Text_8, ParcelBoardroom_Cordelia_Text_9
+# 72 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Cordelia_Text_10, MSGBOX_DEFAULT
+# 73 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Cordelia_Text_11, MSGBOX_DEFAULT
+# 74 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Cordelia_Text_12, MSGBOX_DEFAULT
+# 75 "data/maps/ParcelBoardroom/scripts.pory"
+	setflag FLAG_SKALDMERE_CORDELIA_DONE
+# 76 "data/maps/ParcelBoardroom/scripts.pory"
 	release
 	end
 
 ParcelBoardroom_Cordelia_2:
-# 47 "data/maps/ParcelBoardroom/scripts.pory"
+# 58 "data/maps/ParcelBoardroom/scripts.pory"
 	msgbox ParcelBoardroom_Cordelia_Text_0, MSGBOX_DEFAULT
-# 48 "data/maps/ParcelBoardroom/scripts.pory"
+# 59 "data/maps/ParcelBoardroom/scripts.pory"
 	release
 	end
 
@@ -89,14 +112,22 @@ ParcelBoardroom_Arrival_Text_0:
 	.string "No board. No counsel. No second cup.\p"
 	.string "For this, she wanted no witnesses.$"
 
+ParcelBoardroom_Leave_Text_0:
+# 41 "data/maps/ParcelBoardroom/scripts.pory"
+	.string "The stairs. The lobby. The quay. Nobody\n"
+	.string "stops you on the way down.\p"
+	.string "The record is filed. What it does next,\n"
+	.string "it does without you. You go and look\l"
+	.string "anyway.$"
+
 ParcelBoardroom_Cordelia_Text_0:
-# 47 "data/maps/ParcelBoardroom/scripts.pory"
+# 58 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: The door is where you left it,\n"
 	.string "Ranger.\p"
 	.string "One of us still has a region to run.$"
 
 ParcelBoardroom_Cordelia_Text_1:
-# 51 "data/maps/ParcelBoardroom/scripts.pory"
+# 62 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia Brooke does not stand to\n"
 	.string "greet you. She finishes the line she is\l"
 	.string "writing, caps the pen, and squares the\l"
@@ -106,7 +137,7 @@ ParcelBoardroom_Cordelia_Text_1:
 	.string "way.$"
 
 ParcelBoardroom_Cordelia_Text_2:
-# 52 "data/maps/ParcelBoardroom/scripts.pory"
+# 63 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: You filed the truth. All of it,\n"
 	.string "I'm told. I've had it read to me twice --\l"
 	.string "once by the lawyers, once by the people\l"
@@ -120,7 +151,7 @@ ParcelBoardroom_Cordelia_Text_2:
 	.string "hearings run long.$"
 
 ParcelBoardroom_Cordelia_Text_3:
-# 53 "data/maps/ParcelBoardroom/scripts.pory"
+# 64 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: That is what you bought. I\n"
 	.string "wanted you to hear the price from me,\l"
 	.string "because nobody who celebrates you this\l"
@@ -136,7 +167,7 @@ ParcelBoardroom_Cordelia_Text_3:
 	.string "accounts.$"
 
 ParcelBoardroom_Cordelia_Text_4:
-# 54 "data/maps/ParcelBoardroom/scripts.pory"
+# 65 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: And you are owed one\n"
 	.string "correction, since we're keeping them.\p"
 	.string "You did not fight a company. Mereholt is\n"
@@ -149,7 +180,7 @@ ParcelBoardroom_Cordelia_Text_4:
 	.string "Ranger. And you have won a delay.$"
 
 ParcelBoardroom_Cordelia_Text_5:
-# 55 "data/maps/ParcelBoardroom/scripts.pory"
+# 66 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "For a moment the only sound is the\n"
 	.string "harbour below -- the cranes, swinging\l"
 	.string "weight through the cold air, on\l"
@@ -163,7 +194,7 @@ ParcelBoardroom_Cordelia_Text_5:
 	.string "regret.$"
 
 ParcelBoardroom_Cordelia_Text_6:
-# 56 "data/maps/ParcelBoardroom/scripts.pory"
+# 67 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: One item remains, and then the\n"
 	.string "door.\p"
 	.string "I have read eleven hundred pages about\n"
@@ -173,7 +204,7 @@ ParcelBoardroom_Cordelia_Text_6:
 	.string "I should like the primary source.$"
 
 ParcelBoardroom_Cordelia_Text_7:
-# 57 "data/maps/ParcelBoardroom/scripts.pory"
+# 68 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "She rises, and the room seems to rise\n"
 	.string "with her. From beside the desk,\l"
 	.string "unhurried, her partners come out to\l"
@@ -185,17 +216,17 @@ ParcelBoardroom_Cordelia_Text_7:
 	.string "losing in a room like this. Shall we?$"
 
 ParcelBoardroom_Cordelia_Text_8:
-# 59 "data/maps/ParcelBoardroom/scripts.pory"
+# 70 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: Gently, now.\n"
 	.string "This is still a boardroom.$"
 
 ParcelBoardroom_Cordelia_Text_9:
-# 60 "data/maps/ParcelBoardroom/scripts.pory"
+# 71 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: …There it is.\n"
 	.string "The thing the paper flattened.$"
 
 ParcelBoardroom_Cordelia_Text_10:
-# 61 "data/maps/ParcelBoardroom/scripts.pory"
+# 72 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "She recalls her partners the way a\n"
 	.string "person closes a ledger -- precisely,\l"
 	.string "without haste, finished.\p"
@@ -209,7 +240,7 @@ ParcelBoardroom_Cordelia_Text_10:
 	.string "who'll drink to you tonight.$"
 
 ParcelBoardroom_Cordelia_Text_11:
-# 62 "data/maps/ParcelBoardroom/scripts.pory"
+# 73 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "Cordelia: For what it is worth -- and\n"
 	.string "you may price this however you like -- I\l"
 	.string "read her model the year it was\l"
@@ -219,7 +250,7 @@ ParcelBoardroom_Cordelia_Text_11:
 	.string "We differ on the arithmetic.$"
 
 ParcelBoardroom_Cordelia_Text_12:
-# 63 "data/maps/ParcelBoardroom/scripts.pory"
+# 74 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "She turns her chair to the window, to\n"
 	.string "the harbour, to the cranes still\l"
 	.string "swinging on schedule.\p"

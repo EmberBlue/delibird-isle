@@ -32,9 +32,20 @@ script ParcelBoardroom_Arrival {
     end
 }
 
-// the stairs -- back down to the quay
+// the stairs -- back down to the quay. The first time down after Cordelia,
+// the stairs are the start of the epilogue: the world tour (one ON_FRAME
+// vignette per zone, chained on VAR_SKALD_EPILOGUE), the bridge, the credits.
 script ParcelBoardroom_Leave {
     lockall
+    if (flag(FLAG_SKALDMERE_CORDELIA_DONE) && !flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("The stairs. The lobby. The quay. Nobody stops you on the way down.\pThe record is filed. What it does next, it does without you. You go and look anyway."), MSGBOX_DEFAULT)
+        closemessage
+        setflag(FLAG_SKALDMERE_EPILOGUE_DONE)
+        setvar(VAR_SKALD_EPILOGUE, 1)
+        warp(MAP_PARCEL_WETLANDS, 18, 60)
+        waitstate
+        end
+    }
     warp(MAP_PARCEL_COAST, 31, 28)
     waitstate
     end

@@ -67,6 +67,9 @@ script ParcelCorridor_Checkpoint {
 script ParcelCorridor_Mirren {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        goto(ParcelCorridor_Mirren_Rematch)
+    }
     if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
         msgbox(format("MIRREN: You filed the basin as what it is. Half the division would have rounded up.\pGo on. The river's cleaner. For now."), MSGBOX_DEFAULT)
         release
@@ -361,3 +364,19 @@ script ParcelCorridor_PerrinTalk {
 }
 movement Movement_ParcelCorridor_PerrinIn { walk_down * 2 }
 movement Movement_ParcelCorridor_PerrinOut { walk_up * 2 }
+
+// --- post-game: the full-strength rematch, offered after the epilogue, repeatable ---
+script ParcelCorridor_Mirren_Rematch {
+    lock
+    faceplayer
+    msgbox(format("MIRREN: You filed the basin as what it is, and then you filed everything else the same way. Half the division is still rounding up.\pI don't round. Full strength, no gate, nothing signed at the end. Want it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("MIRREN: Suit yourself. The rock doesn't move."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM2_R, format("MIRREN: …Steady. Still."))
+    msgbox(format("MIRREN: Same time tomorrow, if you like. The rock doesn't move."), MSGBOX_DEFAULT)
+    release
+    end
+}
