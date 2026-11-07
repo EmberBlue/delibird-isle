@@ -14624,67 +14624,67 @@
           "map": "MAP_PARCEL_HIGHLANDS",
           "base_label": "sParcelHighlands",
           "land_mons": {
-            "encounter_rate": 18,
+            "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 16,
-                "max_level": 19,
-                "species": "SPECIES_ZIGZAGOON"
-              },
-              {
-                "min_level": 16,
-                "max_level": 19,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_GEODUDE"
               },
               {
-                "min_level": 16,
-                "max_level": 20,
-                "species": "SPECIES_ZUBAT"
-              },
-              {
-                "min_level": 17,
-                "max_level": 20,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_ZIGZAGOON"
               },
               {
-                "min_level": 16,
-                "max_level": 20,
+                "min_level": 23,
+                "max_level": 25,
                 "species": "SPECIES_MACHOP"
               },
               {
-                "min_level": 16,
-                "max_level": 19,
-                "species": "SPECIES_TAILLOW"
-              },
-              {
-                "min_level": 18,
-                "max_level": 21,
+                "min_level": 24,
+                "max_level": 26,
                 "species": "SPECIES_SWINUB"
               },
               {
-                "min_level": 18,
-                "max_level": 21,
-                "species": "SPECIES_GEODUDE"
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_TAILLOW"
               },
               {
-                "min_level": 20,
-                "max_level": 23,
-                "species": "SPECIES_LINOONE"
+                "min_level": 23,
+                "max_level": 25,
+                "species": "SPECIES_ZUBAT"
               },
               {
-                "min_level": 19,
-                "max_level": 22,
+                "min_level": 25,
+                "max_level": 27,
                 "species": "SPECIES_SNEASEL"
               },
               {
-                "min_level": 20,
-                "max_level": 23,
+                "min_level": 25,
+                "max_level": 27,
                 "species": "SPECIES_SNORUNT"
               },
               {
-                "min_level": 18,
-                "max_level": 21,
+                "min_level": 25,
+                "max_level": 27,
+                "species": "SPECIES_LINOONE"
+              },
+              {
+                "min_level": 24,
+                "max_level": 26,
                 "species": "SPECIES_NUMEL"
+              },
+              {
+                "min_level": 26,
+                "max_level": 26,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 26,
+                "species": "SPECIES_SWINUB"
               }
             ]
           },
@@ -14692,29 +14692,84 @@
             "encounter_rate": 4,
             "mons": [
               {
-                "min_level": 16,
-                "max_level": 19,
+                "min_level": 22,
+                "max_level": 26,
                 "species": "SPECIES_MARILL"
               },
               {
-                "min_level": 16,
+                "min_level": 24,
+                "max_level": 28,
+                "species": "SPECIES_SPHEAL"
+              },
+              {
+                "min_level": 22,
+                "max_level": 26,
+                "species": "SPECIES_GOLDEEN"
+              },
+              {
+                "min_level": 28,
+                "max_level": 32,
+                "species": "SPECIES_SEALEO"
+              },
+              {
+                "min_level": 22,
+                "max_level": 26,
+                "species": "SPECIES_TENTACOOL"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 15,
                 "max_level": 20,
-                "species": "SPECIES_WOOPER"
+                "species": "SPECIES_MAGIKARP"
               },
               {
-                "min_level": 16,
-                "max_level": 19,
-                "species": "SPECIES_SURSKIT"
+                "min_level": 15,
+                "max_level": 20,
+                "species": "SPECIES_GOLDEEN"
               },
               {
-                "min_level": 18,
-                "max_level": 22,
-                "species": "SPECIES_QUAGSIRE"
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_GOLDEEN"
               },
               {
-                "min_level": 18,
-                "max_level": 22,
-                "species": "SPECIES_POLIWAG"
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 20,
+                "max_level": 25,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_SPHEAL"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_CLAMPERL"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_SEAKING"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_RELICANTH"
               }
             ]
           }

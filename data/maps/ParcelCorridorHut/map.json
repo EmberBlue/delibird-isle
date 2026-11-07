@@ -65,7 +65,7 @@
       "type": "sign",
       "x": 7,
       "y": 1,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCorridorHut_Plans"
     },
@@ -73,7 +73,7 @@
       "type": "sign",
       "x": 1,
       "y": 1,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCorridorHut_Shelf"
     }

@@ -4534,10 +4534,10 @@
     {
       "id": "LAYOUT_PARCEL_HIGHLANDS",
       "name": "ParcelHighlands_Layout",
-      "width": 64,
-      "height": 56,
+      "width": 40,
+      "height": 80,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "secondary_tileset": "gTileset_leob_fallarbor",
       "border_filepath": "data/layouts/ParcelHighlands/border.bin",
       "blockdata_filepath": "data/layouts/ParcelHighlands/map.bin"
     },

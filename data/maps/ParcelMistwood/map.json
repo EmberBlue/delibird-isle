@@ -241,7 +241,7 @@
       "type": "hidden_item",
       "x": 8,
       "y": 21,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_ETHER",
       "flag": "FLAG_SKALD_HIDDEN_MISTWOOD_ETHER"
     }

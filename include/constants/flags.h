@@ -713,14 +713,14 @@
 #define FLAG_SKALD_Q_DELL 0x29A // Skaldmere: Elvsund (the River)
 #define FLAG_SKALD_Q_DELL_LURE 0x29B // Skaldmere: Elvsund (the River)
 #define FLAG_SKALD_Q_DELL_DONE 0x29C // Skaldmere: Elvsund (the River)
-#define FLAG_UNUSED_0x29D  0x29D // Unused Flag
-#define FLAG_UNUSED_0x29E  0x29E // Unused Flag
-#define FLAG_UNUSED_0x29F  0x29F // Unused Flag
-#define FLAG_UNUSED_0x2A0  0x2A0 // Unused Flag
-#define FLAG_UNUSED_0x2A1  0x2A1 // Unused Flag
-#define FLAG_UNUSED_0x2A2  0x2A2 // Unused Flag
-#define FLAG_UNUSED_0x2A3  0x2A3 // Unused Flag
-#define FLAG_UNUSED_0x2A4  0x2A4 // Unused Flag
+#define FLAG_SKALD_ITEM_HL_MAX_REPEL 0x29D // Skaldmere: Haukfell (the Highlands)
+#define FLAG_SKALD_HIDDEN_HL_NUGGET 0x29E // Skaldmere: Haukfell (the Highlands)
+#define FLAG_SKALD_HL_SLIDE_SCENE 0x29F // Skaldmere: Haukfell (the Highlands)
+#define FLAG_SKALD_ITEM_BORE_MAX_REVIVE 0x2A0 // Skaldmere: Haukfell (the Highlands)
+#define FLAG_SKALD_HIDDEN_BORE_STAR_PIECE 0x2A1 // Skaldmere: Haukfell (the Highlands)
+#define FLAG_SKALD_HL_CENTRE_SCENE 0x2A2 // Skaldmere: Haukfell (the Highlands)
+#define FLAG_SKALD_ITEM_HL_ICE_HEAL 0x2A3 // Skaldmere: Haukfell (the Highlands)
+#define FLAG_SKALD_HIDDEN_HL_RARE_CANDY 0x2A4 // Skaldmere: Haukfell (the Highlands)
 #define FLAG_UNUSED_0x2A5  0x2A5 // Unused Flag
 #define FLAG_UNUSED_0x2A6  0x2A6 // Unused Flag
 #define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag

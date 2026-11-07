@@ -157,7 +157,10 @@
     "ParcelRiverHouse1",
     "ParcelRiverHouse2",
     "ParcelRiverHouse3",
-    "ParcelRiverDepot"
+    "ParcelRiverDepot",
+    "ParcelHighlandsHomestead",
+    "ParcelHighlandsCentre",
+    "ParcelHighlandsBore"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

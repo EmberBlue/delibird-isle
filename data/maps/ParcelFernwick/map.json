@@ -308,7 +308,7 @@
       "type": "trigger",
       "x": 12,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -317,7 +317,7 @@
       "type": "trigger",
       "x": 13,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -326,7 +326,7 @@
       "type": "trigger",
       "x": 14,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -335,7 +335,7 @@
       "type": "trigger",
       "x": 15,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -344,7 +344,7 @@
       "type": "trigger",
       "x": 16,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -353,7 +353,7 @@
       "type": "trigger",
       "x": 17,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -362,7 +362,7 @@
       "type": "trigger",
       "x": 18,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -371,7 +371,7 @@
       "type": "trigger",
       "x": 19,
       "y": 59,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelFernwick_ToMistwood"
@@ -422,7 +422,7 @@
       "type": "hidden_item",
       "x": 7,
       "y": 22,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_SKALD_HIDDEN_FERNWICK_CANDY"
     }

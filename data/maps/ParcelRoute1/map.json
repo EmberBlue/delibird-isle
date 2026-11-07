@@ -256,7 +256,7 @@
       "type": "trigger",
       "x": 11,
       "y": 26,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelRoute1_BridgeScene"
@@ -283,7 +283,7 @@
       "type": "hidden_item",
       "x": 25,
       "y": 4,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_ANTIDOTE",
       "flag": "FLAG_SKALD_HIDDEN_ROUTE1_ANTIDOTE"
     }

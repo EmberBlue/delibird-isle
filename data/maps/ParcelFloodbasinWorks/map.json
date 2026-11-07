@@ -44,7 +44,7 @@
       "type": "sign",
       "x": 3,
       "y": 4,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasinWorks_Plate"
     },
@@ -52,7 +52,7 @@
       "type": "hidden_item",
       "x": 5,
       "y": 6,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_BIG_PEARL",
       "flag": "FLAG_SKALD_HIDDEN_WORKS_BIG_PEARL"
     }

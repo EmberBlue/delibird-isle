@@ -77,7 +77,7 @@
       "type": "trigger",
       "x": 18,
       "y": 29,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelCavern_FirstEntry"
@@ -86,7 +86,7 @@
       "type": "trigger",
       "x": 19,
       "y": 29,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelCavern_FirstEntry"
@@ -95,7 +95,7 @@
       "type": "trigger",
       "x": 20,
       "y": 29,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelCavern_FirstEntry"
@@ -104,7 +104,7 @@
       "type": "trigger",
       "x": 18,
       "y": 32,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelCavern_Leave"
@@ -113,7 +113,7 @@
       "type": "trigger",
       "x": 19,
       "y": 32,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelCavern_Leave"
@@ -122,7 +122,7 @@
       "type": "trigger",
       "x": 20,
       "y": 32,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_2",
       "var_value": "0",
       "script": "ParcelCavern_Leave"

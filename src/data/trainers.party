@@ -17092,11 +17092,14 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Sneasel
-Level: 19
+Graveler
+Level: 24
 
-Geodude
-Level: 20
+Nosepass
+Level: 24
+
+Sneasel
+Level: 25
 
 === TRAINER_SKALD_REVELER ===
 Name: NOEL
@@ -18481,3 +18484,213 @@ AI: Basic Trainer / Try To Faint
 
 Breloom
 Level: 22
+
+=== TRAINER_SKALD_HL_ASBJORN ===
+Name: ASBJORN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 23
+
+Machop
+Level: 24
+
+=== TRAINER_SKALD_HL_BRYNJAR ===
+Name: BRYNJAR
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Numel
+Level: 24
+
+Linoone
+Level: 24
+
+=== TRAINER_SKALD_HL_DAGNY ===
+Name: DAGNY
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swinub
+Level: 24
+
+Roselia
+Level: 24
+
+=== TRAINER_SKALD_HL_EIVIND ===
+Name: EIVIND
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 24
+
+Geodude
+Level: 24
+
+Graveler
+Level: 25
+
+=== TRAINER_SKALD_HL_FINN ===
+Name: FINN
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swellow
+Level: 25
+
+=== TRAINER_SKALD_HL_GRETE ===
+Name: GRETE
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swinub
+Level: 25
+
+Breloom
+Level: 25
+
+=== TRAINER_SKALD_HL_HAUK ===
+Name: HAUK
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Magneton
+Level: 25
+
+Nosepass
+Level: 25
+
+=== TRAINER_SKALD_HL_JARLE ===
+Name: JARLE
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Taillow
+Level: 24
+
+Swellow
+Level: 25
+
+=== TRAINER_SKALD_HL_KJERSTI ===
+Name: KJERSTI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Marill
+Level: 24
+
+Snorunt
+Level: 25
+
+=== TRAINER_SKALD_HL_LEIDULF ===
+Name: LEIDULF
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sandslash
+Level: 25
+
+Machoke
+Level: 25
+
+=== TRAINER_SKALD_HL_NORA ===
+Name: NORA
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Kirlia
+Level: 25
+
+Snorunt
+Level: 25
+
+=== TRAINER_SKALD_HL_PEDER ===
+Name: PEDER
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Ninjask
+Level: 25
+
+Sneasel
+Level: 25
+
+=== TRAINER_SKALD_HL_RUNA ===
+Name: RUNA
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sneasel
+Level: 26
+
+Lombre
+Level: 25
+
+=== TRAINER_SKALD_HL_SIRI ===
+Name: SIRI
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Swinub
+Level: 24
+
+Piloswine
+Level: 26

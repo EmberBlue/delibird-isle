@@ -133,7 +133,7 @@
       "type": "trigger",
       "x": 37,
       "y": 36,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelCoast_FirstEntry"
@@ -142,7 +142,7 @@
       "type": "trigger",
       "x": 38,
       "y": 36,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelCoast_FirstEntry"
@@ -151,7 +151,7 @@
       "type": "trigger",
       "x": 39,
       "y": 36,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelCoast_FirstEntry"

@@ -1,0 +1,15 @@
+// ParcelHighlandsBore -- Survey Station Six: the Foundation's bore into the freeze.
+mapscripts ParcelHighlandsBore_MapScripts {
+}
+script ParcelHighlandsBore_Geologist {
+    lock
+    faceplayer
+    msgbox(format("GEOLOGIST: Don't touch the housing, it's live. The bore's at ninety metres. The freeze starts at forty. Started at twelve, in the old logs.\pExploratory. Yes. We're exploring how fast forty becomes fifty."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsBore_ItemMaxRevive { finditem(ITEM_MAX_REVIVE) end }
+script ParcelHighlandsBore_Cores {
+    msgbox(format("Core samples racked by depth. The labels change colour at forty metres: ICE. Below that, a second set of labels in a different hand: GAS -- EST. YIELD. The second set is newer."), MSGBOX_SIGN)
+    end
+}

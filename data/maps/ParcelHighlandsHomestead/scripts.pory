@@ -1,0 +1,21 @@
+// ParcelHighlandsHomestead -- the homesteader's cabin, near corner sunk a hand's depth.
+mapscripts ParcelHighlandsHomestead_MapScripts {
+}
+script ParcelHighlandsHomestead_Grandson {
+    lock
+    faceplayer
+    msgbox(format("GRANDSON: I signed. The grant. Gran won't, so somebody has to carry the boxes down when the time comes.\pDon't tell her I've started packing. She knows. Don't tell her anyway."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsHomestead_Swinub {
+    lock
+    faceplayer
+    msgbox(format("SWINUB: It won't leave either. Gran says that's the only vote in the house that counts."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsHomestead_Corner {
+    msgbox(format("The floorboards slope to this corner. A marble on the table would roll here. There is a marble on the table. It has."), MSGBOX_SIGN)
+    end
+}

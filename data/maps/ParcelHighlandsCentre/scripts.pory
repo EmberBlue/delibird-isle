@@ -1,0 +1,48 @@
+// ParcelHighlandsCentre -- the Haukfell Warming Centre (Mereholt Foundation).
+// Forty beds, a stove, relocation advice. Opened Tuesday. The good beside the harm.
+mapscripts ParcelHighlandsCentre_MapScripts {
+}
+script ParcelHighlandsCentre_Host {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("HOST: Your survey says SHIFTED. Ours says 'transitioning'. The grants are paid out of 'transitioning'. Think about that before you pick a word."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("HOST: Welcome to the Warming Centre. Beds through the back, soup at six, the relocation desk is me.\pMs. AUNE opened us on Tuesday. She cut the ribbon herself and then she stayed to serve the soup. People don't forget that."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsCentre_OldMan {
+    lock
+    faceplayer
+    msgbox(format("OLD MAN: Came down from the north slope in the spring when the well went. Warm here. Soup's good.\pI'd go back up tomorrow if the ground would have me. It won't."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsCentre_Woman {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: The grant's real. The money came. The house we got in the valley is real too. It's just not ours. Nothing in it remembers us."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsCentre_Boy {
+    lock
+    faceplayer
+    msgbox(format("BOY: There's a stove! It's always on! At home the stove was only on at night. I like it here. Mum doesn't."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsCentre_Man {
+    lock
+    faceplayer
+    msgbox(format("MAN: Sign the relocation form, you get the grant. Don't sign, you get soup. The old woman up the hill gets soup delivered. Stubbornness has a menu."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsCentre_Board {
+    msgbox(format("RELOCATION NOTICE. Households on the north slope are eligible for the Haukfell Resilience Grant. Conditions: vacate by first snow; sign the geotechnical waiver; no claim against the Foundation's survey works.\pThirty-one signatures. One line left blank, in a hand that pressed hard."), MSGBOX_SIGN)
+    end
+}

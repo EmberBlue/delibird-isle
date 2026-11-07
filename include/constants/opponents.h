@@ -1035,7 +1035,35 @@
 
 #define TRAINER_SKALD_RIV_SIGURD          953
 
-#define TRAINERS_COUNT                      954
+#define TRAINER_SKALD_HL_ASBJORN          954
+
+#define TRAINER_SKALD_HL_BRYNJAR          955
+
+#define TRAINER_SKALD_HL_DAGNY            956
+
+#define TRAINER_SKALD_HL_EIVIND           957
+
+#define TRAINER_SKALD_HL_FINN             958
+
+#define TRAINER_SKALD_HL_GRETE            959
+
+#define TRAINER_SKALD_HL_HAUK             960
+
+#define TRAINER_SKALD_HL_JARLE            961
+
+#define TRAINER_SKALD_HL_KJERSTI          962
+
+#define TRAINER_SKALD_HL_LEIDULF          963
+
+#define TRAINER_SKALD_HL_NORA             964
+
+#define TRAINER_SKALD_HL_PEDER            965
+
+#define TRAINER_SKALD_HL_RUNA             966
+
+#define TRAINER_SKALD_HL_SIRI             967
+
+#define TRAINERS_COUNT                      968
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS
