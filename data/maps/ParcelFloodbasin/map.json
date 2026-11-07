@@ -509,7 +509,7 @@
       "type": "trigger",
       "x": 6,
       "y": 93,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelFloodbasin_FirstEntry"
@@ -518,7 +518,7 @@
       "type": "trigger",
       "x": 7,
       "y": 93,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelFloodbasin_FirstEntry"
@@ -527,7 +527,7 @@
       "type": "trigger",
       "x": 8,
       "y": 93,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelFloodbasin_FirstEntry"
@@ -536,7 +536,7 @@
       "type": "trigger",
       "x": 12,
       "y": 88,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_3",
       "var_value": "0",
       "script": "ParcelFloodbasin_ReliefScene"
@@ -545,7 +545,7 @@
       "type": "trigger",
       "x": 12,
       "y": 92,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_3",
       "var_value": "0",
       "script": "ParcelFloodbasin_ReliefScene"
@@ -554,7 +554,7 @@
       "type": "trigger",
       "x": 13,
       "y": 92,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_3",
       "var_value": "0",
       "script": "ParcelFloodbasin_ReliefScene"
@@ -563,7 +563,7 @@
       "type": "trigger",
       "x": 14,
       "y": 92,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_3",
       "var_value": "0",
       "script": "ParcelFloodbasin_ReliefScene"
@@ -572,7 +572,7 @@
       "type": "trigger",
       "x": 15,
       "y": 92,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_3",
       "var_value": "0",
       "script": "ParcelFloodbasin_ReliefScene"
@@ -581,10 +581,28 @@
       "type": "trigger",
       "x": 19,
       "y": 1,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_4",
       "var_value": "0",
       "script": "ParcelFloodbasin_Checkpoint"
+    },
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 92,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "0",
+      "script": "ParcelFloodbasin_ReliefScene"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 92,
+      "elevation": 0,
+      "var": "VAR_TEMP_3",
+      "var_value": "0",
+      "script": "ParcelFloodbasin_ReliefScene"
     }
   ],
   "bg_events": [
@@ -592,7 +610,7 @@
       "type": "sign",
       "x": 8,
       "y": 18,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasin_Discharge"
     },
@@ -600,7 +618,7 @@
       "type": "sign",
       "x": 14,
       "y": 14,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasin_Sheen"
     },
@@ -608,7 +626,7 @@
       "type": "sign",
       "x": 22,
       "y": 17,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasin_DeadReeds"
     },
@@ -616,7 +634,7 @@
       "type": "sign",
       "x": 33,
       "y": 17,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasin_BoothSign"
     },
@@ -624,7 +642,7 @@
       "type": "sign",
       "x": 19,
       "y": 91,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasin_SignHamlet"
     },
@@ -632,7 +650,7 @@
       "type": "hidden_item",
       "x": 39,
       "y": 86,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_RARE_CANDY",
       "flag": "FLAG_SKALD_HIDDEN_FLD_RARE_CANDY"
     },
@@ -640,7 +658,7 @@
       "type": "hidden_item",
       "x": 22,
       "y": 31,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_PP_UP",
       "flag": "FLAG_SKALD_HIDDEN_FLD_PP_UP"
     }

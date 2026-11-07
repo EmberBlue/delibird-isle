@@ -186,6 +186,12 @@
       "map": "MAP_PARCEL_FERNWICK",
       "x": 16,
       "y": 39
+    },
+    {
+      "id": "HEAL_LOCATION_PARCEL_RIVER",
+      "map": "MAP_PARCEL_RIVER",
+      "x": 22,
+      "y": 26
     }
   ]
 }

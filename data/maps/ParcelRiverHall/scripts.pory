@@ -1,0 +1,113 @@
+// ParcelRiverHall -- the Elvsund town hall. The water meeting: the first scene
+// where six people argue at once. Plays on entry once the four river tells are
+// read (CH3 bits 0-3), before the Watershed Certification.
+
+const LOCALID_RH_MAYOR   = 1
+const LOCALID_RH_HARLAND = 2
+const LOCALID_RH_FARMER  = 3
+const LOCALID_RH_DELL    = 4
+const LOCALID_RH_SLUICE  = 5
+const LOCALID_RH_DORSEY  = 6
+const LOCALID_RH_ILEX    = 7
+
+mapscripts ParcelRiverHall_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE [
+        VAR_TEMP_1, 0: ParcelRiverHall_Meeting
+    ]
+}
+
+script ParcelRiverHall_Meeting {
+    setvar(VAR_TEMP_1, 1)
+    if (flag(FLAG_SKALD_RIV_MEETING_DONE) || flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        end
+    }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 15)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) != 4) {
+        end
+    }
+    lockall
+    msgbox(format("MAYOR: --order. Order. The RANGER's here. Good. Sit anywhere, there's nowhere to sit.\pOne item. The Board's Phase 2. Upstream works. Everyone gets a say and then we vote and then the Board does what it was going to do anyway. FARMER."), MSGBOX_DEFAULT)
+    msgbox(format("FARMER: Fourteen plots metered since spring. Water that ran past my gate for nothing, I now pay for. Phase 2 puts a reserve on the clean reach. Whose reserve? Not mine."), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND: The cut took the pools. No pools, no fish. The Board says Phase 2 stops the floods. My gear's in the river every spring. I don't need a plan. I need the floods to stop."), MSGBOX_DEFAULT)
+    msgbox(format("DELL: Forty years. SEAKING by the armful. There's one left and OTTAR's got it. You can meter what you like, there's nothing left to meter."), MSGBOX_DEFAULT)
+    msgbox(format("SLUICE: Every drop is accounted. Phase 2 is a straightened mile and a reserve. The reserve is accounted to the FOUNDATION. That's not an opinion. It's the ledger."), MSGBOX_DEFAULT)
+    msgbox(format("DORSEY: Six farms lost gear last spring. Six. Phase 2 is flood control. I'm not here to argue ledgers, SLUICE. I'm here because when the water comes up, somebody has to have done something."), MSGBOX_DEFAULT)
+    msgbox(format("ILEX: The reach above the town is the last clean water on this river. Phase 2 cuts a straight channel through it. Flood control that finishes the slack water isn't relief. It's the end, scheduled."), MSGBOX_DEFAULT)
+    msgbox(format("MAYOR: RANGER. You've walked the bank, I'm told. Say your piece?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("{PLAYER}: The clean reach is the baseline. It's what the whole river was. Phase 2 removes it.\pRelieve what's reversible. The buffer strip. The bloom. Fish passage. Refuse the straightened mile. That's the survey. That's what I'll file."), MSGBOX_DEFAULT)
+        msgbox(format("DORSEY: …Noted. Loudly."), MSGBOX_DEFAULT)
+        msgbox(format("HARLAND: Write it so somebody with a pen believes it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("ILEX: Then I'll say it for the record. Relieve what's reversible. Refuse the straightened mile. The RANGER's survey will say the same; I've read the notebook."), MSGBOX_DEFAULT)
+        msgbox(format("DORSEY: Noted."), MSGBOX_DEFAULT)
+    }
+    msgbox(format("MAYOR: Vote. Hands. …Carried, against. The Board will proceed. It always proceeds.\pThank you all. Mind the step."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_RIV_MEETING_DONE)
+    releaseall
+    end
+}
+
+script ParcelRiverHall_Mayor {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_RIV_MEETING_DONE)) {
+        msgbox(format("MAYOR: Carried, against. Nine years I've been chairing votes the Board doesn't count.\pStill. It's in the minutes now. Your name's in the minutes."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAYOR: Water meeting at noon. Walk the bank first, RANGER. Everyone in this room has. Most of them twice."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHall_Harland {
+    lock
+    faceplayer
+    msgbox(format("HARLAND: I'm here because the mayor asked. I'd rather be on the water. There's less of it every year to be on."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHall_Farmer {
+    lock
+    faceplayer
+    msgbox(format("FARMER: Plot nine. Metered. You've seen the sign."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHall_Dell {
+    lock
+    faceplayer
+    msgbox(format("DELL: Forty years. I'll say it till somebody writes it down."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHall_Sluice {
+    lock
+    faceplayer
+    msgbox(format("SLUICE: The ledger doesn't vote. It just balances. Someone should tell the councilman."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHall_Dorsey {
+    lock
+    faceplayer
+    msgbox(format("DORSEY: I'd rather lose an argument in public than win one in a report. I say that a lot. I mean it every time."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHall_Ilex {
+    lock
+    faceplayer
+    msgbox(format("ILEX: I'll be at the bank, above the town. Come put a name on the river when you've read all of it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHall_Woman {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: I come to every meeting. Nothing changes. I keep coming. That's the only thing I can think of to do."), MSGBOX_DEFAULT)
+    release
+    end
+}

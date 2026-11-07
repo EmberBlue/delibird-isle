@@ -703,16 +703,16 @@
 #define FLAG_SKALD_FLD_RELIEF_DONE 0x290 // Skaldmere: the Floodbasin
 #define FLAG_SKALD_ITEM_WORKS_TM18 0x291 // Skaldmere: the Floodbasin
 #define FLAG_SKALD_HIDDEN_WORKS_BIG_PEARL 0x292 // Skaldmere: the Floodbasin
-#define FLAG_UNUSED_0x293  0x293 // Unused Flag
-#define FLAG_UNUSED_0x294  0x294 // Unused Flag
-#define FLAG_UNUSED_0x295  0x295 // Unused Flag
-#define FLAG_UNUSED_0x296  0x296 // Unused Flag
-#define FLAG_UNUSED_0x297  0x297 // Unused Flag
-#define FLAG_UNUSED_0x298  0x298 // Unused Flag
-#define FLAG_UNUSED_0x299  0x299 // Unused Flag
-#define FLAG_UNUSED_0x29A  0x29A // Unused Flag
-#define FLAG_UNUSED_0x29B  0x29B // Unused Flag
-#define FLAG_UNUSED_0x29C  0x29C // Unused Flag
+#define FLAG_SKALD_RIV_MEETING_DONE 0x293 // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_RIV_NIGHT_DONE 0x294 // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_ITEM_RIV_SUPER_REPEL 0x295 // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_ITEM_RIV_GREAT_BALL 0x296 // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_ITEM_RIV_TM19 0x297 // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_HIDDEN_RIV_RARE_CANDY 0x298 // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_HIDDEN_RIV_ULTRA_BALL 0x299 // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_Q_DELL 0x29A // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_Q_DELL_LURE 0x29B // Skaldmere: Elvsund (the River)
+#define FLAG_SKALD_Q_DELL_DONE 0x29C // Skaldmere: Elvsund (the River)
 #define FLAG_UNUSED_0x29D  0x29D // Unused Flag
 #define FLAG_UNUSED_0x29E  0x29E // Unused Flag
 #define FLAG_UNUSED_0x29F  0x29F // Unused Flag

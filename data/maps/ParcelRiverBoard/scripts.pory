@@ -1,0 +1,57 @@
+// ParcelRiverBoard -- the Elvsund Water Board office (a Mereholt Foundation
+// partnership). SLUICE audits here: gym 4, the Sluice clearance, HM04.
+
+const LOCALID_RB_SLUICE = 1
+
+mapscripts ParcelRiverBoard_MapScripts {
+}
+
+script ParcelRiverBoard_Sluice {
+    lock
+    faceplayer
+    if (flag(FLAG_BADGE04_GET)) {
+        if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+            msgbox(format("SLUICE: STRESSED. I read your filing. I'd have rated it the same, and I'd have been overruled.\pYou weren't. Interesting."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("SLUICE: Mind the cut upstream. The Board rated it an improvement. I metered it. The water disagrees with the rating."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("SLUICE: Sluice Division. Every drop that crosses this spine is metered, rated, and accounted to someone.\pYou want clearance to work this watershed? Show me you read a ledger as well as a current."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_GYM4, format("SLUICE: …Balanced. Down to the drop. The crossing's yours."))
+    setflag(FLAG_BADGE04_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("SLUICE: That's your Sluice clearance. Line item 04. It certifies you fit to move what the river leaves in the way. Signed, sealed, on the ledger."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM04)
+    msgbox(format("SLUICE: STRENGTH. Shoulders a boulder out of a channel where it has no business sitting.\pThe river drops plenty of those. So does the Board."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRiverBoard_Clerk {
+    lock
+    faceplayer
+    msgbox(format("CLERK: Allocations are posted. Objections are closed. The councilman's Phase 2 file is on the shelf and no, you can't read it. Ratepayers only. You're not a ratepayer."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverBoard_Ratepayer {
+    lock
+    faceplayer
+    msgbox(format("MAN: Plot nine. Metered since spring. I pay for water that used to run past my gate for nothing.\pThe FOUNDATION says the meters are fair. The FOUNDATION sells the meters."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverBoard_Meterman {
+    lock
+    faceplayer
+    msgbox(format("METER READER: Fourteen plots, fourteen meters, hourly. The readings go to the coast office. SLUICE keeps a copy. She's not supposed to. Don't tell her I said."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverBoard_Ledger {
+    msgbox(format("THE ALLOCATION LEDGER. Plots 1-14, metered flow, rates. A column headed PHASE 2 -- UPSTREAM RESERVE. The reserve is the clean reach, allocated in full. To the Foundation."), MSGBOX_SIGN)
+    end
+}

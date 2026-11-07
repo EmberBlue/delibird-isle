@@ -439,7 +439,7 @@
       "type": "trigger",
       "x": 20,
       "y": 40,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelWetlands_PoisonTrigger"
@@ -448,7 +448,7 @@
       "type": "trigger",
       "x": 21,
       "y": 40,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelWetlands_PoisonTrigger"
@@ -457,7 +457,7 @@
       "type": "trigger",
       "x": 22,
       "y": 40,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelWetlands_PoisonTrigger"
@@ -466,7 +466,7 @@
       "type": "trigger",
       "x": 30,
       "y": 31,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelWetlands_PoisonTrigger"
@@ -475,7 +475,7 @@
       "type": "trigger",
       "x": 31,
       "y": 31,
-      "elevation": 3,
+      "elevation": 0,
       "var": "VAR_TEMP_1",
       "var_value": "0",
       "script": "ParcelWetlands_PoisonTrigger"
@@ -486,7 +486,7 @@
       "type": "sign",
       "x": 5,
       "y": 49,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_ClueReeds"
     },
@@ -494,7 +494,7 @@
       "type": "sign",
       "x": 16,
       "y": 17,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_ClueCrate"
     },
@@ -502,7 +502,7 @@
       "type": "sign",
       "x": 26,
       "y": 34,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_ClueTag"
     },
@@ -510,7 +510,7 @@
       "type": "sign",
       "x": 25,
       "y": 26,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_EvResidue"
     },
@@ -518,7 +518,7 @@
       "type": "sign",
       "x": 22,
       "y": 11,
-      "elevation": 4,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_EvPipe"
     },
@@ -526,7 +526,7 @@
       "type": "sign",
       "x": 19,
       "y": 38,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_EvManifest"
     },
@@ -534,7 +534,7 @@
       "type": "sign",
       "x": 28,
       "y": 39,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_SignLanding"
     },
@@ -542,7 +542,7 @@
       "type": "sign",
       "x": 34,
       "y": 47,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_SignOffice"
     },
@@ -550,7 +550,7 @@
       "type": "sign",
       "x": 15,
       "y": 62,
-      "elevation": 3,
+      "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_SignRoute"
     },
@@ -558,7 +558,7 @@
       "type": "hidden_item",
       "x": 12,
       "y": 32,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_PEARL",
       "flag": "FLAG_SKALD_HIDDEN_WET_PEARL"
     },
@@ -566,7 +566,7 @@
       "type": "hidden_item",
       "x": 37,
       "y": 19,
-      "elevation": 3,
+      "elevation": 0,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_SKALD_HIDDEN_WET_HEART_SCALE"
     }

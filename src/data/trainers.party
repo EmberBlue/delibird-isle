@@ -17075,10 +17075,13 @@ Double Battle: No
 AI: Basic Trainer
 
 Goldeen
-Level: 13
+Level: 20
 
 Marill
-Level: 13
+Level: 20
+
+Seaking
+Level: 22
 
 === TRAINER_SKALD_SURVEYOR ===
 Name: KASS
@@ -18271,3 +18274,210 @@ Level: 18
 
 Nosepass
 Level: 18
+
+=== TRAINER_SKALD_RIV_ARNA ===
+Name: ARNA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roselia
+Level: 20
+
+Marill
+Level: 20
+
+=== TRAINER_SKALD_RIV_BOTOLV ===
+Name: BOTOLV
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 20
+
+Nuzleaf
+Level: 20
+
+=== TRAINER_SKALD_RIV_GUDRUN ===
+Name: GUDRUN
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Illumise
+Level: 20
+
+Oddish
+Level: 20
+
+=== TRAINER_SKALD_RIV_HAVARD ===
+Name: HAVARD
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Goldeen
+Level: 20
+
+Barboach
+Level: 20
+
+Marill
+Level: 21
+
+=== TRAINER_SKALD_RIV_IDUN ===
+Name: IDUN
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 21
+
+Roselia
+Level: 21
+
+=== TRAINER_SKALD_RIV_JOAR ===
+Name: JOAR
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Volbeat
+Level: 20
+
+Dustox
+Level: 20
+
+=== TRAINER_SKALD_RIV_KARI ===
+Name: KARI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gloom
+Level: 21
+
+Marill
+Level: 21
+
+=== TRAINER_SKALD_RIV_LARS ===
+Name: LARS
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 21
+
+Sandslash
+Level: 21
+
+=== TRAINER_SKALD_RIV_MARIT ===
+Name: MARIT
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Skitty
+Level: 20
+
+Plusle
+Level: 21
+
+=== TRAINER_SKALD_RIV_NJAL ===
+Name: NJAL
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Electrike
+Level: 21
+
+Zigzagoon
+Level: 20
+
+=== TRAINER_SKALD_RIV_OTTAR ===
+Name: OTTAR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Seaking
+Level: 22
+
+=== TRAINER_SKALD_RIV_PAAL ===
+Name: PAAL
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Mightyena
+Level: 21
+
+Swellow
+Level: 21
+
+=== TRAINER_SKALD_RIV_RAGNA ===
+Name: RAGNA
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Kirlia
+Level: 21
+
+Meditite
+Level: 21
+
+=== TRAINER_SKALD_RIV_SIGURD ===
+Name: SIGURD
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Breloom
+Level: 22

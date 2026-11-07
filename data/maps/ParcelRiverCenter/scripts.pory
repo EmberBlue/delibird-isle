@@ -1,0 +1,24 @@
+const LOCALID_RC_NURSE = 1
+mapscripts ParcelRiverCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelRiverCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+script ParcelRiverCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_PARCEL_RIVER)
+    end
+}
+script ParcelRiverCenter_Nurse {
+    setvar(VAR_0x800B, LOCALID_RC_NURSE)
+    call(Common_EventScript_PkmnCenterNurse)
+    waitmessage
+    waitbuttonpress
+    release
+    end
+}
+script ParcelRiverCenter_Trainer {
+    lock
+    faceplayer
+    msgbox(format("YOUNGSTER: Everyone's MARILL comes in itchy after the lower river. The nurse has a cream for it now. A CREAM. For a river."), MSGBOX_DEFAULT)
+    release
+    end
+}

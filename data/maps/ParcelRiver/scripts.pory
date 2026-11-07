@@ -1,19 +1,12 @@
-// ParcelRiver -- §01/§06 zone 4, Chapter 3 opener: "the river is stressed."
-//
-// Upstream of the Floodbasin -- the source, and the first place the harm wears
-// a local face. The river reads STRESSED, not Collapsing: a channelized cut
-// (hydrological alteration), a broken beaver-dam relic whose engineers are
-// gone (a wetland coming unbuilt), eutrophic runoff off the farmland -- and,
-// the point, a clean braided reach upstream that proves the river can still
-// come back. The window is open. It is also closing.
-//
-// Harland fishes here; the lever (§02/§05) runs through his boat payment -- a
-// Mereholt subsidiary holds the note, the same crest as the Foundation Water
-// Board that ordered the cut. He is misled, not evil; the cost, not the enemy.
-// Ilex works the bank as a field surveyor: the debrief and the Watershed
-// Certification happen here, in situ, because Chapter 3's lesson is judgment
-// on the ground -- which relief still works, and the discipline not to sign
-// off on the one that doesn't.
+// ParcelRiver -- ELVSUND and the farmland (§01/§06 zone 4, Chapter 3): "the
+// river is stressed." Rebuilt 2026-11 as a 60x40 composite: vanilla Route 117
+// (the farmland, the ponds, the depot) over Mauville (the market town), with
+// the river painted down the east side and two fenced plots and a farmhouse
+// east of town. The tells sit along the river bank, read from the water's
+// edge; HARLAND's boat is moored at the bank; ILEX works the upstream reach;
+// SLUICE audits from the Water Board office (gym 4, HM04); DORSEY holds the
+// crossroads on market day; the town meeting plays in the hall. Flag logic
+// unchanged; words plain.
 //
 // VAR_SKALDMERE_CH3_EVIDENCE bits (count 0..5 with mask 0x3F):
 //   0  channelized cut         1  broken dam relic
@@ -24,154 +17,190 @@
 const LOCALID_RIVER_ILEX    = 1
 const LOCALID_RIVER_HARLAND = 2
 const LOCALID_RIVER_FARMER  = 3
+const LOCALID_RIVER_ANGLER  = 5
+const LOCALID_RIV_DORSEY    = 6
+const LOCALID_RIV_AIDE      = 7
 
 mapscripts ParcelRiver_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_TEMP_0, 0: ParcelRiver_SetMapVar
-    ]
+    MAP_SCRIPT_ON_TRANSITION: ParcelRiver_OnTransition
 }
 
-script ParcelRiver_SetMapVar {
-    setvar(VAR_TEMP_0, 1)
+script ParcelRiver_OnTransition {
+    // Dorsey works the market until the Watershed Certification is signed.
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        setflag(FLAG_TEMP_2)
+    } else {
+        clearflag(FLAG_TEMP_2)
+    }
     end
 }
 
-// First entry: you climb out of the basin, following the channel up to where
-// the sickness starts -- and find it is not one wound but a watershed of them.
+// --- first entry ------------------------------------------------------------------
 script ParcelRiver_FirstEntry {
     setvar(VAR_TEMP_1, 1)
     if (flag(FLAG_SKALDMERE_RIVER_ARRIVAL)) {
         end
     }
     lockall
-    msgbox(format("The land lifts and the trees thin. The water that fouled the basin runs out of here -- clearer than below, but not clear.\pUpstream, somewhere, it is still right. You can almost see the line where it stops being right."), MSGBOX_DEFAULT)
-    msgbox(format("This is worked country. Nets dry on a far rail. A crop runs green right down to the bank. A boat sits low at a mooring.\pDoduo takes the bank ahead, and does not hurry."), MSGBOX_DEFAULT)
-    msgbox(format("Hale's note, folded in your kit:\pWATERSHED -- LIVING SYSTEM, ACTIVE USE.\nRead the whole river before you judge any part of it."), MSGBOX_DEFAULT)
+    bufferpartymonnick(0, 0)
+    msgbox(format("The land lifts and the trees thin. The water that fouled the basin runs out of here, clearer than below. Not clear."), MSGBOX_DEFAULT)
+    msgbox(format("Market stalls up the street. Nets on a rail. A crop running green right down to the bank. {STR_VAR_1} takes the road ahead and doesn't hurry."), MSGBOX_DEFAULT)
+    msgbox(format("HALE's note, folded in the kit: WATERSHED. LIVING SYSTEM, ACTIVE USE.\pRead the whole river before you judge any part of it."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_RIVER_ARRIVAL)
     releaseall
     end
 }
 
-// --- the survey: four ecological tells + the mask -------------------------
-// 0: the channelized cut -- hydrological alteration you can stand beside
+// --- the survey: four tells + the mask, along the bank ------------------------------
 script ParcelRiver_ChannelCut {
     lock
     setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
     setvar(VAR_0x8004, 0)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("The straightened cut. Measured."), MSGBOX_SIGN)
+        msgbox(format("The straightened mile. In the notebook."), MSGBOX_SIGN)
         release
         end
     }
-    msgbox(format("Here the river stops wandering and runs dead straight between graded banks. The water moves faster, and there is nowhere in it to rest.\pSomeone filed this as an improvement. The fish that lived in the slack water it erased did not get a vote."), MSGBOX_SIGN)
+    msgbox(format("Here the bank is cut straight as a rule, the bends dredged out, the slack water gone with them.\pBoard stakes every fifty paces. Nothing slows down here anymore, and nothing stays. Written down."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
     release
     end
 }
-
-// 1: the broken dam relic -- the keystone engineers, gone; a wetland unbuilding
 script ParcelRiver_DamRelic {
     lock
     setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
     setvar(VAR_0x8004, 1)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("The broken dam. Noted."), MSGBOX_SIGN)
+        msgbox(format("The old dam. In the notebook."), MSGBOX_SIGN)
         release
         end
     }
-    msgbox(format("A low ridge of cut timber lies across the old oxbow -- a dam, breached and never repaired. The ones that built it, and kept it whole, are not here anymore.\pThe pond it held has gone still and green. A wetland is a thing that gets BUILT, and tended. This one is coming unbuilt, quietly, with nobody to mend it."), MSGBOX_SIGN)
+    msgbox(format("A tangle of grey timber across the current, gapped in the middle. Not built. Chewed.\pThe engineers who kept it are gone from this reach; nothing has patched it in years. The pond it held is a channel now. Written down."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
     release
     end
 }
-
-// 2: the runoff bloom -- eutrophication; too much of an ordinary thing
 script ParcelRiver_RunoffStain {
     lock
     setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
     setvar(VAR_0x8004, 2)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("The runoff edge. Recorded."), MSGBOX_SIGN)
+        msgbox(format("The bloom. In the notebook."), MSGBOX_SIGN)
         release
         end
     }
-    msgbox(format("Where the cropland meets the water, the river greens -- a bloom, fed by whatever the rain rinses off the fields.\pThis is not poison the way the basin's pipe was poison. It is too much of an ordinary thing, all at once. It chokes a river just the same."), MSGBOX_SIGN)
+    msgbox(format("Below the plots the water goes green and thick, a scum of it against the bank where the field drain comes in.\pIt smells of fertiliser, sweet and wrong. Written down."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
     release
     end
 }
-
-// 3: the clean upstream reach -- the baseline; proof, and clock
 script ParcelRiver_CleanReach {
     lock
     setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
     setvar(VAR_0x8004, 3)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("The clean reach. Held against the rest."), MSGBOX_SIGN)
+        msgbox(format("The clean reach. The baseline. In the notebook."), MSGBOX_SIGN)
         release
         end
     }
-    msgbox(format("The braided reach above the cut still does it right -- splitting and rejoining over gravel bars, the water broken and bright and cold.\pMayflies lift off it in the chill. Fewer than there should be. But there. This reach is the proof the river can come back -- and it is the clock running on that proof."), MSGBOX_SIGN)
+    msgbox(format("Above the town the river braids over gravel, cold and quick and clear to the bottom. Larvae under every stone. A SURSKIT on the eddy.\pThis is what the whole river was. It is still here. Written down, and underlined."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
     release
     end
 }
-
-// 4: the irrigation board -- the §05 mask, signed by the hand that cut the river
 script ParcelRiver_IrrigationBoard {
     lock
     setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
     setvar(VAR_0x8004, 4)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("The Board's notice. In the notebook."), MSGBOX_SIGN)
+        release
+        end
+    }
+    msgbox(format("ELVSUND WATER BOARD -- a MEREHOLT FOUNDATION partnership.\pIRRIGATION ALLOCATION: plots 1-14, metered. CHANNEL IMPROVEMENT, PHASE 2: flood control works, upstream reach. Consultation closed.\pThe crest on the sign is the crest on the fertiliser sacks. Written down."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
-    msgbox(format("SKALDMERE WATER BOARD\nMEREHOLT FOUNDATION -- STEWARD MEMBER\pIRRIGATION AND WATERSHED HEALTH INITIATIVE\nSustainable use. Shared future.\pThe Board sets the water rights. The Board ordered the cut straightened. The Board's steward sells the fertilizer that greens the bank.\pThe paint is new. The signatures are the same."), MSGBOX_SIGN)
     release
     end
 }
 
-// 5: Harland -- the lever made local; the cost, named
+// --- HARLAND at the mooring (the lever, local) --------------------------------------
 script ParcelRiver_Harland {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        if (!flag(FLAG_SKALD_RIV_NIGHT_DONE)) {
+            msgbox(format("HARLAND: ILEX signed you off. Good.\pStay the night. On the boat. The river's different in the dark, and you've only read it in daylight."), MSGBOX_DEFAULT)
+            msgbox(format("Stay the night?"), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == 0) {
+                msgbox(format("HARLAND: Offer stands."), MSGBOX_DEFAULT)
+                release
+                end
+            }
+            closemessage
+            fadescreen(FADE_TO_BLACK)
+            msgbox(format("HARLAND: Hear that? That's the cut. Day and night, same note. Used to be the water had a dozen voices along here."), MSGBOX_DEFAULT)
+            msgbox(format("HARLAND: My father could tell the pools apart with his eyes shut. I can't. There aren't any."), MSGBOX_DEFAULT)
+            msgbox(format("HARLAND: The note on this boat comes due in spring. If the catch holds, I keep her. If it doesn't, a MEREHOLT outfit I've never met owns a boat my grandfather built.\pThat's what 'relief' bought me. I'm not blaming you. I'm telling you the price."), MSGBOX_DEFAULT)
+            msgbox(format("{PLAYER}: The upstream reach is still clean. ILEX says it can come back."), MSGBOX_DEFAULT)
+            msgbox(format("HARLAND: Then write it so somebody with a pen believes it. I've tried the other way.\pGo to sleep, RANGER. River's not going anywhere. Yet."), MSGBOX_DEFAULT)
+            closemessage
+            delay(60)
+            fadescreen(FADE_FROM_BLACK)
+            msgbox(format("HARLAND: Morning. Coffee's bad. Catch was four. Go on, you've got a mountain to climb, I hear."), MSGBOX_DEFAULT)
+            setflag(FLAG_SKALD_RIV_NIGHT_DONE)
+            release
+            end
+        }
+        msgbox(format("HARLAND: Catch was four. Same as yesterday. Go on."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("Harland works his line and says nothing more.\pThe water hasn't changed its mind either."), MSGBOX_DEFAULT)
+        msgbox(format("HARLAND: Read me right when you write it."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Harland doesn't turn from the water.\pHarland: You're the one with the notebook. Word came up the river ahead of you.\pCome to tell me the fishing's poor. As if I can't read my own water."), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND: You're the one with the notebook. Word came up the river ahead of you.\pCome to tell me the fishing's poor. As if I can't read my own water."), MSGBOX_DEFAULT)
     msgbox(format("{PLAYER}: The catch is down because the river is. The cut. The bloom off the fields."), MSGBOX_DEFAULT)
-    msgbox(format("Harland: I KNOW why it's down. Knew before you could walk.\pMy father fished this. His father helped build half that dam your people keep photographing -- back when building it was the work."), MSGBOX_DEFAULT)
-    msgbox(format("Harland: And the Board says straighten the cut, the floods stop taking my gear. The Foundation carries the note on the boat so I keep working while it all gets sorted.\pSo what is it you'd have me do. Tie up and starve on principle?"), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND: I KNOW why it's down. Knew before you could walk.\pMy father fished this. His father helped build half that old dam your people keep photographing, back when building it was the work."), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND: And the Board says straighten the cut and the floods stop taking my gear. The FOUNDATION carries the note on the boat so I keep working while it all gets sorted.\pSo what is it you'd have me do? Tie up and starve on principle?"), MSGBOX_DEFAULT)
     msgbox(format("{PLAYER}: …Who holds the note on the boat?"), MSGBOX_DEFAULT)
-    msgbox(format("Harland stops reeling.\pHarland: A Mereholt outfit. Coastal lending.\pSame crest as the fertilizer sacks. Same crest as the Board.\pHadn't set those side by side before. Don't care for how they line up."), MSGBOX_DEFAULT)
-    msgbox(format("Harland: Write your report, Ranger. Read me right when you do.\pI'm not your villain. I'm the man they'll send the bill to."), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND: A MEREHOLT outfit. Coastal lending.\pSame crest as the fertiliser sacks. Same crest as the Board. Hadn't set those side by side before. Don't care for how they line up."), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND: Write your report, RANGER. Read me right when you do.\pI'm not your villain. I'm the man they'll send the bill to."), MSGBOX_DEFAULT)
     special(SkaldmereCertTaskMark)
     release
     end
 }
 
-// --- the farmer: a real constraint, not a cartoon ---------------------------
+// --- the farmer: a real constraint, not a cartoon ------------------------------------
 script ParcelRiver_Farmer {
     lock
     faceplayer
-    msgbox(format("Farmer: Mind the rows, Ranger.\pThey tell me my runoff greens the water. Likely true. They also tell me grow more for less, or sell to the Foundation buyer at the Foundation's number."), MSGBOX_DEFAULT)
-    msgbox(format("Farmer: I'd put a buffer strip along the bank tomorrow. Costs me two rows and a season's yield.\pYou find me the one who'll pay for those two rows, and I'll dig it before you've walked home."), MSGBOX_DEFAULT)
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("FARMER: ILEX put a buffer strip in her report. Two rows. Named a fund that'd pay for it.\pI'll believe the fund when it's in my hand. But she wrote it down. Nobody else has."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("FARMER: Mind the rows, RANGER.\pThey tell me my runoff greens the water. Likely true. They also tell me grow more for less, or sell to the FOUNDATION buyer at the FOUNDATION's number."), MSGBOX_DEFAULT)
+    msgbox(format("FARMER: I'd put a buffer strip along the bank tomorrow. Costs me two rows and a season's yield.\pYou find me the one who'll pay for those two rows, and I'll dig it before you've walked home."), MSGBOX_DEFAULT)
     release
     end
 }
 
-// --- Ilex: the field debrief + the Watershed Certification ------------------
+// --- ILEX: the field debrief and the Watershed Certification ------------------------
 script ParcelRiver_Ilex {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
-        msgbox(format("Ilex: Stressed, not shifted. Hold that difference like a coal.\pMost of the river you'll meet from here has already chosen. This one hasn't. Yet."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: Stressed, not shifted. Hold that difference like a coal.\pMost of the country you'll meet from here has already chosen. This river hasn't. Yet."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -179,65 +208,262 @@ script ParcelRiver_Ilex {
     setvar(VAR_0x8004, 63)
     specialvar(VAR_RESULT, SkaldmereCertTaskCount)
     if (var(VAR_RESULT) == 6) {
-        msgbox(format("Ilex doesn't look up from the bank she's measuring.\pIlex: The cut. The broken dam. The bloom. The clean reach. The Board's sign. The man on the boat.\pPut a name on the river."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: The cut. The old dam. The bloom. The clean reach. The Board's sign. The man on the boat.\pPut a name on the river."), MSGBOX_DEFAULT)
         specialvar(VAR_RESULT, SkaldmereClassifyRiver)
-        msgbox(format("Ilex: STRESSED.\pThe engineers are thinning; the cut took the slack water; the bloom is climbing. But the sensitive guild is still in that upstream reach. The web hasn't simplified yet."), MSGBOX_DEFAULT)
-        msgbox(format("Ilex: Which means this is the rarest reading you will ever file.\pThe one where doing the right thing in time still does something."), MSGBOX_DEFAULT)
-        msgbox(format("{PLAYER}: So we intervene. Pull the cut, mend the dam --"), MSGBOX_DEFAULT)
-        msgbox(format("Ilex: Some of it. Not all of it, and not by signing the Board's plan.\pRelieve what's reversible -- the buffer strip, the bloom, the fish passage. Refuse what isn't dressed as relief: another straightened mile, another 'flood control' that finishes the slack water."), MSGBOX_DEFAULT)
-        msgbox(format("Ilex: A Stressed river doesn't need a hero. It needs someone who can tell the two apart and has the spine to say so out loud."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: STRESSED.\pThe engineers are thinning. The cut took the slack water. The bloom is climbing. But the sensitive guild is still in that upstream reach. The web hasn't simplified yet."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: Which means this is the rarest reading you will ever file. The one where doing the right thing in time still does something."), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: So we intervene. Pull the cut, mend the dam…"), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: Some of it. Not all of it, and not by signing the Board's plan.\pRelieve what's reversible: the buffer strip, the bloom, the fish passage. Refuse what isn't, dressed as relief: another straightened mile, another 'flood control' that finishes the slack water."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: A stressed river doesn't need a hero. It needs someone who can tell the two apart and has the spine to say so out loud. You said so in the hall. I heard you."), MSGBOX_DEFAULT)
         setvar(VAR_0x8004, 6)
         special(SkaldmereCertTaskMark)
-        msgbox(format("Ilex straightens, and for once signs something on the spot. No ceremony. A strip of red cloth, knotted to your kit.\pIlex: Watershed Certification. Hale would make you walk back for it. I won't.\pYou read the window. Now you keep it open."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: Watershed Certification. HALE would make you walk back for it. I won't.\pYou read the window. Now you keep it open."), MSGBOX_DEFAULT)
+        playfanfare(MUS_OBTAIN_BADGE)
+        waitfanfare
         setflag(FLAG_SKALDMERE_WATERSHED_CERT)
         giveitem(ITEM_SUPER_POTION, 5)
         giveitem(ITEM_REVIVE, 2)
         release
         end
     }
-    msgbox(format("Ilex kneels at the waterline, red cloth at her wrist.\pIlex: Don't classify a river from one bend. Walk it -- the cut, the old dam, the bloom off the fields, the clean water above. Read the Board's sign, and hear the man on the boat.\pThen come put a name to it."), MSGBOX_DEFAULT)
+    msgbox(format("ILEX: Don't classify a river from one bend. Walk the bank: the cut, the old dam, the bloom off the fields, the clean water above the town. Read the Board's sign. Hear the man on the boat.\pThen come put a name to it."), MSGBOX_DEFAULT)
     release
     end
 }
 
-script ParcelRiver_ItemPotion {
-    finditem(ITEM_HYPER_POTION)
-    end
-}
-
-// a river angler -- the decline, embodied; the Board's promises, doubted
-script ParcelRiver_AnglerTrainer {
-    trainerbattle_single(TRAINER_SKALD_ANGLER,
-        format("Dell: Forty years I worked this reach. Pulled Seaking out by the armful, once.\pNow look at it. Battle me -- I could use the distraction."),
-        format("Dell: Hah. You've still got the eye for it.\nWish the river did."))
-    msgbox(format("Dell: The Board swears the cut'll bring the fish back. The Board swears a lot of things.\pYou're the first one came up here to LOOK instead of promise. Means something."), MSGBOX_DEFAULT)
-    end
-}
-
-// --- Gym 4: the Sluice Division checkpoint (Sluice) -------------------------
-// Mereholt's watershed/sluice operations audits everyone who crosses the river
-// spine. Sluice isn't a believer -- she's an auditor: water is a rights ledger,
-// and the badge is line item 04, a clearance the Corps recognizes. Beating her
-// trips Strength (HM04) -- the field competence to move what the river drops.
-// No type-cliché; a gate worn as paperwork. (§02/§05 water-rights tone.)
-script ParcelRiver_GymSluice {
-    trainerbattle_single(TRAINER_SKALD_GYM4,
-        format("Sluice: Sluice Division. Every drop that crosses this spine is metered, rated, and accounted to someone.\pYou want clearance to work this watershed? Show me you read a ledger as well as a current."),
-        format("Sluice: …Balanced. Down to the drop. The crossing's yours."),
-        ParcelRiver_GymSluice_Defeated)
+// --- DORSEY on market day (the public face; gone after the cert) ------------------------
+script ParcelRiver_Dorsey {
     lock
     faceplayer
-    msgbox(format("Sluice: Mind the cut upstream. The Board rated it an improvement.\pI metered it. The water disagrees with the rating."), MSGBOX_DEFAULT)
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
+    setvar(VAR_0x8004, 63)
+    specialvar(VAR_RESULT, SkaldmereCertTaskCount)
+    if (var(VAR_RESULT) >= 4) {
+        msgbox(format("DORSEY: You've walked the bank. I can see it on your boots.\pPhase 2 is flood control, RANGER. Six farms lost gear last spring. The Board's plan stops that. Your ILEX calls it 'finishing the slack water'. I call it keeping people's sheds dry."), MSGBOX_DEFAULT)
+        msgbox(format("DORSEY: Come to the hall. There's a meeting. Say your piece in front of them, not behind my back. I'd rather lose an argument in public than win one in a report."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("DORSEY: RANGER! Market day. Best day to see ELVSUND. Eggs, trout, the first greens.\pTrout's down this year. The Board has a plan for that. Phase 2. You'll have seen the notice."), MSGBOX_DEFAULT)
+    msgbox(format("DORSEY: Walk the bank first, then come and tell me what you think. I mean that. I grew up two valleys over. My father's fields flooded every spring and nobody came.\pI came."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiver_Aide {
+    lock
+    faceplayer
+    msgbox(format("AIDE: Phase 2 consultation is closed, but the councilman takes questions on market days. Form a line. There is no line."), MSGBOX_DEFAULT)
     release
     end
 }
 
-script ParcelRiver_GymSluice_Defeated {
-    setflag(FLAG_BADGE04_GET)
-    call(Common_EventScript_PlayGymBadgeFanfare)
-    msgbox(format("Sluice: That's your Sluice clearance. Line item 04 -- it certifies you fit to move what the river leaves in the way.\pSigned, sealed, on the ledger."), MSGBOX_DEFAULT)
-    giveitem(ITEM_HM04)
-    msgbox(format("Sluice: STRENGTH. Shoulders a boulder out of a channel where it has no business sitting.\pThe river drops plenty of those. So does the Board."), MSGBOX_DEFAULT)
+// --- market day residents ------------------------------------------------------------------
+script ParcelRiver_VendorEggs {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: Eggs, greens, a jar of honey. The honey's from upstream, where the flowers still come. Buy something or move along, RANGER, I've a stall to mind."), MSGBOX_DEFAULT)
     release
+    end
+}
+script ParcelRiver_VendorFish {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: HARLAND's cousin. Four trout today. I sold them to the FOUNDATION buyer at his number because nobody else was buying.\pYour ILEX wrote 'fish passage' in her report. Tell her I'll hold her to it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: HARLAND's cousin. I sell what he catches. There's less to sell every spring and more people asking why.\pI tell them the Board has a plan. The Board always has a plan."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiver_OldMan {
+    lock
+    faceplayer
+    msgbox(format("OLD MAN: There was a pond above the town. Beaver-built. We swam in it as boys. Then the trappers, then the Board.\pNow it's a ditch with a stake every fifty paces. Progress, they call it. I call it a ditch."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiver_Girl {
+    lock
+    faceplayer
+    msgbox(format("GIRL: The councilman gave me a ribbon! It says PHASE 2 on it. I don't know what that is but it's blue."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiver_Boy {
+    lock
+    faceplayer
+    msgbox(format("BOY: Don't swim below the plots. Mum says the water's got green stuff in it that makes your skin go funny. Above the town's fine. Above the town's freezing."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiver_PondFisher {
+    lock
+    faceplayer
+    msgbox(format("FISHER: I fish the town pond now. Stocked. It's not the same, but it's not green either."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- DELL and his lure (side quest -> Super Rod) -------------------------------------------
+script ParcelRiver_AnglerTrainer {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_DELL_DONE)) {
+        msgbox(format("DELL: Forty years on this reach. You're the first one came up here to LOOK instead of promise. Means something."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_DELL_LURE)) {
+        msgbox(format("DELL: That's it! That's the one. My father's. Snagged it on the gravel above town thirty years back and never found it.\pYou went and looked. Nobody looks."), MSGBOX_DEFAULT)
+        msgbox(format("DELL: Take the rod. The good one. I'm done with the big water; my knees say so.\pSomebody ought to be pulling SEAKING out of this river who'll write down how many."), MSGBOX_DEFAULT)
+        giveitem(ITEM_SUPER_ROD)
+        setflag(FLAG_SKALD_Q_DELL_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_DELL)) {
+        msgbox(format("DELL: Above the town, on the gravel, where the water's still clear. A brass lure. You'd see it if anyone would."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    release
+    trainerbattle_single(TRAINER_SKALD_ANGLER,
+        format("DELL: Forty years I worked this reach. Pulled SEAKING out by the armful, once.\pNow look at it. Battle me. I could use the distraction."),
+        format("DELL: Hah. You've still got the eye for it. Wish the river did."))
+    msgbox(format("DELL: The Board swears the cut'll bring the fish back. The Board swears a lot of things.\pYou've got the eye. Do an old man a kindness. There's a brass lure on the gravel above town, my father's, lost thirty years. If anyone can spot it in that clear water, it's you."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_Q_DELL)
+    end
+}
+script ParcelRiver_Lure {
+    lock
+    if (flag(FLAG_SKALD_Q_DELL) && !flag(FLAG_SKALD_Q_DELL_LURE)) {
+        msgbox(format("Something glints on the gravel under the clear water. A brass lure, green with age, the hook long gone.\pFished out."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_DELL_LURE)
+        release
+        end
+    }
+    msgbox(format("Clear water over clean gravel. You can count the stones."), MSGBOX_SIGN)
+    release
+    end
+}
+
+// --- route trainers ----------------------------------------------------------------------------
+script ParcelRiver_Arna {
+    trainerbattle_single(TRAINER_SKALD_RIV_ARNA,
+        format("ARNA: The flower plots are the best picnic in the district. Shame about the smell off the river. Battle?"),
+        format("ARNA: Lovely. Now go away, I'm eating."))
+    msgbox(format("ARNA: ROSELIA only grow above the town now. Below it, nothing with a scent."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Botolv {
+    trainerbattle_single(TRAINER_SKALD_RIV_BOTOLV,
+        format("BOTOLV: Camped on the high meadow a week. Seen the Board's boat go up and down six times. Seen you once. Battle."),
+        format("BOTOLV: Once was enough."))
+    msgbox(format("BOTOLV: They're surveying the upstream reach. Stakes, every fifty paces. That's the clean bit. Why stake the clean bit?"), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Gudrun {
+    trainerbattle_single(TRAINER_SKALD_RIV_GUDRUN,
+        format("GUDRUN: ILLUMISE light up over the ponds at dusk. Fewer every summer. My mum says I imagine it. Battle me and tell me I don't."),
+        format("GUDRUN: You don't think I imagine it. Good."))
+    msgbox(format("GUDRUN: Twelve last summer. Seven this one. I count. Somebody has to."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Havard {
+    trainerbattle_single(TRAINER_SKALD_RIV_HAVARD,
+        format("HAVARD: Pond's stocked by the Board. Twice a year. You catch one, you thank the Board. Battle?"),
+        format("HAVARD: Don't thank me. Thank the Board."))
+    msgbox(format("HAVARD: Stocked fish don't breed. You know that, right? They put them in, we take them out. That's not a river. That's a shop."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Idun {
+    trainerbattle_single(TRAINER_SKALD_RIV_IDUN,
+        format("IDUN: Cadet IDUN. ILEX has me counting larvae under stones. Spar first. Then I'll show you my count."),
+        format("IDUN: Eighteen species above the town. Four below. That's my count."))
+    msgbox(format("IDUN: ILEX says don't call it dead until you've turned every stone. I turned every stone. It's not dead. Yet."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Joar {
+    trainerbattle_single(TRAINER_SKALD_RIV_JOAR,
+        format("JOAR: The plots have the best bugs. The farmer lets me in if I don't tread the rows. You're treading the rows."),
+        format("JOAR: Fine, tread them."))
+    msgbox(format("JOAR: VOLBEAT in the plots, none in the fields below. The fields below get the sacks with the crest on."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Kari {
+    trainerbattle_single(TRAINER_SKALD_RIV_KARI,
+        format("KARI: The puddles by the depot are the only wet ground the Board hasn't metered. Yet. Battle!"),
+        format("KARI: Metered that, didn't you."))
+    msgbox(format("KARI: The depot pays by weight. Nobody asks what's in the sacks they sell you for the weight."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Lars {
+    trainerbattle_single(TRAINER_SKALD_RIV_LARS,
+        format("LARS: The rocks by the pond are the only rocks for a mile. I'm a HIKER. I take what I can get. Battle."),
+        format("LARS: Take that, then."))
+    msgbox(format("LARS: The mountain's north, past the clean water. It's got proper rock. And a MEREHOLT office at the top of the pass, I hear."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Marit {
+    trainerbattle_single(TRAINER_SKALD_RIV_MARIT,
+        format("MARIT: I live on the farm. The field drain runs under my window. I know what the river smells like at night. Battle?"),
+        format("MARIT: Smells better than losing."))
+    msgbox(format("MARIT: Dad would dig the buffer strip tomorrow. Two rows. Nobody's paying for two rows."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Njal {
+    trainerbattle_single(TRAINER_SKALD_RIV_NJAL,
+        format("NJAL: ELECTRIKE from the power line cut, north of here. Fastest thing in the valley. Battle!"),
+        format("NJAL: Fast, not strong. Noted."))
+    msgbox(format("NJAL: They strung the line to the Board office last year. For the meters. The meters need power. The farms didn't."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Ottar {
+    trainerbattle_single(TRAINER_SKALD_RIV_OTTAR,
+        format("OTTAR: One SEAKING. Took me all spring. I'm not sharing the bank. Battle."),
+        format("OTTAR: Share, then."))
+    msgbox(format("OTTAR: DELL says the river used to give SEAKING by the armful. I believe him. I've seen the photographs."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Paal {
+    trainerbattle_single(TRAINER_SKALD_RIV_PAAL,
+        format("PAAL: The bank's a highway. Board boats, Corps cadets, now you. Battle, and then walk somewhere else."),
+        format("PAAL: Walk wherever you like."))
+    msgbox(format("PAAL: There's a man on a boat down by the plots who talks to nobody. HARLAND. He talked to a RANGER once. It didn't go well, I hear."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Ragna {
+    trainerbattle_single(TRAINER_SKALD_RIV_RAGNA,
+        format("RAGNA: The river's thoughts are loud here. Fast. Angry. Below the cut it stops thinking at all. Battle me."),
+        format("RAGNA: Your thoughts are loud too."))
+    msgbox(format("RAGNA: The councilman's thoughts are the loudest in the valley. He believes every word. That's the strange part."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiver_Sigurd {
+    trainerbattle_single(TRAINER_SKALD_RIV_SIGURD,
+        format("SIGURD: Cadet SIGURD, on the depot watch. HALE wants to know what goes in and what comes out. Spar."),
+        format("SIGURD: Good. The sacks go in. The money comes out. That's my report."))
+    msgbox(format("SIGURD: The depot buys at the FOUNDATION's number and sells the sacks at the FOUNDATION's number. Both numbers are the same man's."), MSGBOX_DEFAULT)
+    end
+}
+
+// --- items and signs ---------------------------------------------------------------------------
+script ParcelRiver_ItemPotion { finditem(ITEM_HYPER_POTION) end }
+script ParcelRiver_ItemSuperRepel { finditem(ITEM_SUPER_REPEL) end }
+script ParcelRiver_ItemGreatBall { finditem(ITEM_GREAT_BALL) end }
+script ParcelRiver_ItemTM19 { finditem(ITEM_TM19) end }
+
+script ParcelRiver_SignTown {
+    msgbox(format("ELVSUND\pMarket Thursdays. Boats moor at the east bank. The Water Board office is open to ratepayers."), MSGBOX_SIGN)
+    end
+}
+script ParcelRiver_SignBoard {
+    msgbox(format("ELVSUND WATER BOARD -- NOTICE\pChannel Improvement, Phase 2: works commence upstream of the town after the harvest. Consultation closed. Objections to the Board office. The office is closed for objections."), MSGBOX_SIGN)
+    end
+}
+script ParcelRiver_SignMarket {
+    msgbox(format("MARKET DAY\pEggs. Greens. Honey. Trout (limited). Councilman DORSEY will take questions at noon."), MSGBOX_SIGN)
     end
 }

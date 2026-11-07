@@ -1,0 +1,16 @@
+mapscripts ParcelRiverHouse1_MapScripts {
+}
+script ParcelRiverHouse1_OldMan {
+    lock
+    faceplayer
+    msgbox(format("OLD MAN: The beaver pond. Above the town. We swam in it. The water was so still you could see the bottom.\pThen the trappers took the beavers and the Board took the pond. Nobody took the memory, I'll give them that."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHouse1_OldWoman {
+    lock
+    faceplayer
+    msgbox(format("OLD WOMAN: He talks about the pond. Every day. I've stopped listening and started counting. Fifty-one years he's talked about that pond."), MSGBOX_DEFAULT)
+    release
+    end
+}

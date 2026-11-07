@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PARCEL_RIVER",
-      "offset": 0,
+      "offset": -30,
       "direction": "down"
     }
   ],

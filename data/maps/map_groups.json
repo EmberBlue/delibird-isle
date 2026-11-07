@@ -148,7 +148,16 @@
     "ParcelFloodbasinHouse1",
     "ParcelFloodbasinHouse2",
     "ParcelFloodbasinRelief",
-    "ParcelFloodbasinWorks"
+    "ParcelFloodbasinWorks",
+    "ParcelRiverBoard",
+    "ParcelRiverHall",
+    "ParcelRiverCenter",
+    "ParcelRiverMart",
+    "ParcelRiverBoatyard",
+    "ParcelRiverHouse1",
+    "ParcelRiverHouse2",
+    "ParcelRiverHouse3",
+    "ParcelRiverDepot"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

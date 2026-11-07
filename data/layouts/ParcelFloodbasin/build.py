@@ -35,14 +35,15 @@ def house(x, y):
 # and the top-left pocket is BREEN's checkpoint and the rubble to the River.
 
 # 1. the entry path from the Corridor: x 6-8, rows 93-99 (trees -> ground)
-rect(6, 93, 8, 99, GRASS, 0, 3)
+rect(6, 93, 8, 98, GRASS, 0, 5)      # the hamlet ground is elevation 5
+rect(6, 99, 8, 99, GRASS, 0, 0)      # edge tiles at 0: transition to the Corridor's level
 
 # 2. LEIRVIK: three houses on the open ground (doors at (15,91) (23,91) (34,91))
 house(14, 88); house(22, 88); house(33, 88)
 put(19, 91, SIGN, 1)
 
 # 3. the River exit: row 0 x 9-11 opened; the pocket widened at row 1 x 12-14
-rect(9, 0, 11, 0, GRASS, 0, 3)
+rect(9, 0, 11, 0, GRASS, 0, 0)      # edge tiles at 0: transition to the River's level
 rect(12, 1, 14, 1, GRASS, 0, 3)
 
 # ---- write ------------------------------------------------------------------

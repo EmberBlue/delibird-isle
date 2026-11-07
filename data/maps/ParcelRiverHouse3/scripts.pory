@@ -1,0 +1,21 @@
+mapscripts ParcelRiverHouse3_MapScripts {
+}
+script ParcelRiverHouse3_Mother {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MOTHER: Two rows. The CORPS woman wrote it in her report, with a fund named beside it. My husband's already measured the strip. He's never measured anything before it was paid for."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MOTHER: The drain runs under MARIT's window. She says she can smell the sacks in the water at night. I tell her it's the river. She says that's what she means."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverHouse3_Zigzagoon {
+    lock
+    faceplayer
+    msgbox(format("ZIGZAGOON: Zig! Zig!"), MSGBOX_DEFAULT)
+    release
+    end
+}

@@ -200,6 +200,14 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
     for sname, body in bodies.items():
         if re.search(r"^\s*lock(all)?\s*$", body, re.M) and not re.search(r"release(all)?|warp\(", body):
             warn(name, f"script {sname} locks without release/warp")
+    # coord/bg events: elevation 0 matches any player elevation; otherwise it must equal the tile's
+    for ev in (mj.get("coord_events") or []) + (mj.get("bg_events") or []):
+        if 0 <= ev["x"] < W and 0 <= ev["y"] < H:
+            te = decode(words[ev["y"] * W + ev["x"]])[2]
+            if ev["elevation"] not in (0, te):
+                warn(name, f"event at ({ev['x']},{ev['y']}) has elevation {ev['elevation']} but the tile is {te} (use 0)")
+    def elev_ok(a, b):
+        return a in (0, 15) or b in (0, 15) or a == b
     for c in mj.get("connections", []) or []:
         other = all_maps.get(c["map"])
         if not other:
@@ -214,6 +222,8 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                     x = W - 1 if d == "right" else 0
                     ox = 0 if d == "right" else oW - 1
                     if decode(words[y * W + x])[1] == 0 and decode(owords[oy * oW + ox])[1] == 0:
+                        if not elev_ok(decode(words[y * W + x])[2], decode(owords[oy * oW + ox])[2]):
+                            warn(name, f"connection {d} -> {c['map']}: edge ({x},{y}) elevation {decode(words[y * W + x])[2]} vs {decode(owords[oy * oW + ox])[2]} -- crossing blocked (set an edge tile to 0)")
                         ok = True; break
         else:
             for x in range(W):
@@ -222,6 +232,8 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                     y = H - 1 if d == "down" else 0
                     oy = 0 if d == "down" else oH - 1
                     if decode(words[y * W + x])[1] == 0 and decode(owords[oy * oW + ox])[1] == 0:
+                        if not elev_ok(decode(words[y * W + x])[2], decode(owords[oy * oW + ox])[2]):
+                            warn(name, f"connection {d} -> {c['map']}: edge ({x},{y}) elevation {decode(words[y * W + x])[2]} vs {decode(owords[oy * oW + ox])[2]} -- crossing blocked (set an edge tile to 0)")
                         ok = True; break
         if not ok:
             warn(name, f"connection {d} -> {c['map']} (offset {off}) has no aligned walkable pair")

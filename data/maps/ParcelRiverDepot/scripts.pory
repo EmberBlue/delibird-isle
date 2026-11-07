@@ -1,0 +1,22 @@
+// ParcelRiverDepot -- the Foundation produce depot (the Day Care building).
+// Buys at the Foundation's number. Sells the sacks with the crest.
+mapscripts ParcelRiverDepot_MapScripts {
+}
+script ParcelRiverDepot_Buyer {
+    lock
+    faceplayer
+    msgbox(format("BUYER: Produce by weight, paid same day, no haggling, no questions. That's the FOUNDATION offer. It's a good offer. Ask anyone who's taken it.\pFertiliser's on the pallet. Credit available against next season. Everyone takes the credit."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverDepot_Farmer {
+    lock
+    faceplayer
+    msgbox(format("FARMER: I sell here because the market pays less and the market's one day a week. The depot's every day. That's all. That's the whole reason. It's enough."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverDepot_Board {
+    msgbox(format("PRICES, POSTED. Trout: by weight, Foundation rate. Greens: Foundation rate. Eggs: Foundation rate.\pFERTILISER, FOUNDATION BLEND: credit terms available. The crest on the poster is the crest on the Board's notice."), MSGBOX_SIGN)
+    end
+}

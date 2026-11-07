@@ -4524,10 +4524,10 @@
     {
       "id": "LAYOUT_PARCEL_RIVER",
       "name": "ParcelRiver_Layout",
-      "width": 84,
-      "height": 44,
+      "width": 60,
+      "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/ParcelRiver/border.bin",
       "blockdata_filepath": "data/layouts/ParcelRiver/map.bin"
     },
