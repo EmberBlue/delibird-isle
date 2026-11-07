@@ -1215,3 +1215,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ParcelFernwickHouse3/scripts.inc"
 	.include "data/maps/ParcelWetlandsHarlandHouse/scripts.inc"
 	.include "data/maps/ParcelWetlandsOffice/scripts.inc"
+	.include "data/maps/ParcelCorridorHut/scripts.inc"
+	.include "data/maps/ParcelCorridorAdit/scripts.inc"

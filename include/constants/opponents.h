@@ -953,7 +953,33 @@
 
 #define TRAINER_SKALD_WET_SIV             912
 
-#define TRAINERS_COUNT                      913
+#define TRAINER_SKALD_COR_GEIR            913
+
+#define TRAINER_SKALD_COR_PER             914
+
+#define TRAINER_SKALD_COR_RUNE            915
+
+#define TRAINER_SKALD_COR_ELSE            916
+
+#define TRAINER_SKALD_COR_ULF             917
+
+#define TRAINER_SKALD_COR_GRO             918
+
+#define TRAINER_SKALD_COR_KNUT            919
+
+#define TRAINER_SKALD_COR_DAG             920
+
+#define TRAINER_SKALD_COR_ARNE            921
+
+#define TRAINER_SKALD_COR_SVEN            922
+
+#define TRAINER_SKALD_COR_OLAV            923
+
+#define TRAINER_SKALD_COR_INGA            924
+
+#define TRAINER_SKALD_COR_TURID           925
+
+#define TRAINERS_COUNT                      926
 // PINNED CEILING -- 2048 (raised from 1000 on 2026-09-25 for the full-game
 // build: the target is 1000+ Skald trainers on top of the inherited vanilla
 // table). Every change to this value shifts TRAINER_FLAGS_END -> SYSTEM_FLAGS

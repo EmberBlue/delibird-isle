@@ -688,13 +688,13 @@
 #define FLAG_SKALD_Q_GUNNAR 0x281 // Skaldmere: Reedmere (Wetlands)
 #define FLAG_SKALD_Q_GUNNAR_DONE 0x282 // Skaldmere: Reedmere (Wetlands)
 #define FLAG_SKALD_Q_GUNNAR_SEEN 0x283 // Skaldmere: Reedmere (Wetlands)
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
-#define FLAG_UNUSED_0x28A  0x28A // Unused Flag
+#define FLAG_SKALD_ITEM_COR_REPEL 0x284 // Skaldmere: the Corridor
+#define FLAG_SKALD_ITEM_COR_GREAT_BALL 0x285 // Skaldmere: the Corridor
+#define FLAG_SKALD_HIDDEN_COR_ETHER 0x286 // Skaldmere: the Corridor
+#define FLAG_SKALD_ITEM_ADIT_RARE_CANDY 0x287 // Skaldmere: the Corridor
+#define FLAG_SKALD_HIDDEN_ADIT_NUGGET 0x288 // Skaldmere: the Corridor
+#define FLAG_SKALD_ITEM_ADIT_ESCAPE_ROPE 0x289 // Skaldmere: the Corridor
+#define FLAG_SKALD_COR_CHECKPOINT_SCENE 0x28A // Skaldmere: the Corridor
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
 #define FLAG_UNUSED_0x28D  0x28D // Unused Flag

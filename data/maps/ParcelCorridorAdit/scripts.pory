@@ -1,0 +1,14 @@
+// ParcelCorridorAdit -- Mereholt Subsurface Survey Adit 3, under the plateau
+// east of the culvert. Pumped dry and abandoned; needs Flash. The first place
+// HM05 is for. One of the chalk marks on the wall is in Heron's hand.
+
+mapscripts ParcelCorridorAdit_MapScripts {
+}
+
+script ParcelCorridorAdit_ItemRareCandy { finditem(ITEM_RARE_CANDY) end }
+script ParcelCorridorAdit_ItemEscapeRope { finditem(ITEM_ESCAPE_ROPE) end }
+
+script ParcelCorridorAdit_Mark {
+    msgbox(format("Survey marks chalked on the rock, one above the other. Dates. Water heights.\pThe oldest is the highest. The newest is a hand-span lower, and the hand that wrote it is not the same hand.\pUnder it, small: H."), MSGBOX_SIGN)
+    end
+}

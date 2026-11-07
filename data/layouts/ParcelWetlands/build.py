@@ -28,8 +28,10 @@ def paste_from_r119(sx, sy, w, h, dx, dy):
         for i in range(w): words[(dy + j) * W + (dx + i)] = R119[(sy + j) * 40 + (sx + i)]
 
 GRASS, TALL, SIGN, DOOR = 1, 21, 3, 33
+CANOPY = 199   # Route 119's dense-forest fill; the Hoenn 2x2 tree blocks (468-477)
+               # render black under the Fortree secondary (no palette for them)
 def tree_block(x, y):
-    put(x, y, 468, 1); put(x + 1, y, 469, 1); put(x, y + 1, 476, 1); put(x + 1, y + 1, 477, 1)
+    rect(x, y, x + 1, y + 1, CANOPY, 1)
 
 # ---- edits ------------------------------------------------------------------
 # Reedmere: the backwater landing. The pond is the backwater; the house on its
@@ -60,9 +62,9 @@ rect(26, 48, 36, 48, GRASS, 0, e_land)
 # 4. the funnel from the reed beds into the landing: trees either side of x 20-22
 for x in (17, 23):
     tree_block(x, 40)
-put(19, 40, 468, 1); put(19, 41, 476, 1)
-put(25, 40, 469, 1); put(25, 41, 477, 1)
-put(37, 40, 468, 1); put(37, 41, 476, 1)
+rect(19, 40, 19, 41, CANOPY, 1)
+rect(25, 40, 25, 41, CANOPY, 1)
+rect(37, 40, 37, 41, CANOPY, 1)
 
 # 5. the route sign at the Fernwick funnel
 put(15, 62, SIGN, 1)

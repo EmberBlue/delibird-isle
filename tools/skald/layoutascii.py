@@ -68,8 +68,8 @@ def main():
             ch = CLS.get(beh)
             if ch is None:
                 ch = "#" if col else "."
-            elif ch in '"~,sbWD' and col and ch not in "~W":
-                ch = "#"
+            elif col and ch not in "~W":
+                ch = "#"      # solid regardless of behaviour (cave wall tops, blocked doors, ...)
             out.append(ch)
         print(f"{y:3d} " + "".join(out))
 

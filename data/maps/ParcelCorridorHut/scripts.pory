@@ -1,0 +1,40 @@
+// ParcelCorridorHut -- the Hollowbend drainage crew's site hut (the Route 116
+// house). The spec sheet is here. The flow data is not. That is the point.
+
+mapscripts ParcelCorridorHut_MapScripts {
+}
+
+script ParcelCorridorHut_Foreman {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 10)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("FOREMAN: One of my lads says a RANGER's been asking about flow data. Pre-construction.\pWe don't do pre-construction. We do construction. Somebody else does the before."), MSGBOX_DEFAULT)
+        msgbox(format("FOREMAN: Here's what I'll tell you for free. The culvert's on the drawing at twice the width it got built. Twice.\pSomebody signed the change. It wasn't me."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("FOREMAN: Crew hut. Mind the mud. If you're from MEREHOLT the invoices are on the shelf. If you're from the CORPS, the kettle's on."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCorridorHut_Clerk {
+    lock
+    faceplayer
+    msgbox(format("CLERK: I keep the paperwork. Spec sheet, schedule, the grate order. All in order.\pThe flow survey? That'd be county. Or the contractor. Everyone says that, don't they. It's always somewhere else."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCorridorHut_Plans {
+    msgbox(format("HOLLOWBEND SPUR -- DRAINAGE WORKS. Spec sheet, revision C.\pCulvert: 1.2 m bore. A handwritten line through it. 0.6 m. Initialled. The initials are not the foreman's."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCorridorHut_Shelf {
+    msgbox(format("Invoices. Grate order, 12 units, due next month.\pA folder labelled FLOW SURVEY. It is empty."), MSGBOX_SIGN)
+    end
+}

@@ -17858,3 +17858,204 @@ Level: 12
 
 Wingull
 Level: 12
+
+=== TRAINER_SKALD_COR_GEIR ===
+Name: GEIR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 14
+
+Machop
+Level: 15
+
+=== TRAINER_SKALD_COR_PER ===
+Name: PER
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Dustox
+Level: 15
+
+Beautifly
+Level: 15
+
+=== TRAINER_SKALD_COR_RUNE ===
+Name: RUNE
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 14
+
+Taillow
+Level: 15
+
+=== TRAINER_SKALD_COR_ELSE ===
+Name: ELSE
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Oddish
+Level: 15
+
+Shroomish
+Level: 15
+
+=== TRAINER_SKALD_COR_ULF ===
+Name: ULF
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Nincada
+Level: 15
+
+Wooper
+Level: 15
+
+=== TRAINER_SKALD_COR_GRO ===
+Name: GRO
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 15
+
+Lotad
+Level: 15
+
+=== TRAINER_SKALD_COR_KNUT ===
+Name: KNUT
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Poochyena
+Level: 15
+
+Zigzagoon
+Level: 15
+
+=== TRAINER_SKALD_COR_DAG ===
+Name: DAG
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 16
+
+Taillow
+Level: 16
+
+=== TRAINER_SKALD_COR_ARNE ===
+Name: ARNE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Goldeen
+Level: 15
+
+Barboach
+Level: 15
+
+Corphish
+Level: 16
+
+=== TRAINER_SKALD_COR_SVEN ===
+Name: SVEN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 15
+
+Geodude
+Level: 15
+
+Machop
+Level: 16
+
+=== TRAINER_SKALD_COR_OLAV ===
+Name: OLAV
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Taillow
+Level: 16
+
+Wingull
+Level: 16
+
+=== TRAINER_SKALD_COR_INGA ===
+Name: INGA
+Class: Psychic
+Pic: Psychic F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Ralts
+Level: 16
+
+Meditite
+Level: 16
+
+=== TRAINER_SKALD_COR_TURID ===
+Name: TURID
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Skitty
+Level: 16
+
+Oddish
+Level: 16

@@ -4504,10 +4504,10 @@
     {
       "id": "LAYOUT_PARCEL_CORRIDOR",
       "name": "ParcelCorridor_Layout",
-      "width": 70,
+      "width": 100,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "secondary_tileset": "gTileset_leob_rustboro",
       "border_filepath": "data/layouts/ParcelCorridor/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCorridor/map.bin"
     },

@@ -1,0 +1,74 @@
+{
+  "id": "MAP_PARCEL_CORRIDOR_ADIT",
+  "name": "ParcelCorridorAdit",
+  "layout": "LAYOUT_GRANITE_CAVE_STEVENS_ROOM",
+  "music": "MUS_ROUTE101",
+  "region_map_section": "MAPSEC_SKALD_CORRIDOR",
+  "requires_flash": true,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_ADIT_CANDY",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCorridorAdit_ItemRareCandy",
+      "flag": "FLAG_SKALD_ITEM_ADIT_RARE_CANDY"
+    },
+    {
+      "local_id": "LOCALID_ADIT_ROPE",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 10,
+      "y": 9,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelCorridorAdit_ItemEscapeRope",
+      "flag": "FLAG_SKALD_ITEM_ADIT_ESCAPE_ROPE"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 7,
+      "y": 3,
+      "elevation": 3,
+      "dest_map": "MAP_PARCEL_CORRIDOR",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 8,
+      "elevation": 3,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCorridorAdit_Mark"
+    },
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 10,
+      "elevation": 3,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_SKALD_HIDDEN_ADIT_NUGGET"
+    }
+  ]
+}

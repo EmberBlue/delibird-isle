@@ -1,21 +1,24 @@
 // ParcelCorridor -- the Old Service Cut / Hollowbend Spur (§08 Act V).
-// "The Corridor That Shrank": the thesis tutorial. Most damage is
-// procedural, not malicious; the failure state is agreement, not inaction.
-// Observe Only. No battles here, on purpose. Quoted dialogue is
-// canonical-verbatim from design/08-chapter-01.md.
+// "The Corridor That Shrank": most damage is procedural, not malicious; the
+// failure state is agreement, not inaction. Rebuilt 2026-11 on vanilla Route
+// 116 (General + Rustboro) with a stream cut through the old rock mass; the
+// road over it is the culvert. Flag logic unchanged; words plain.
 //
 // VAR_SKALDMERE_CH1_EVIDENCE bits (continued from Act IV):
 //   9  culvert read    10  worker exchange done
+// FLAG_TEMP_2 hides the worker after his exchange; FLAG_TEMP_3 hides the
+// far-side Wooper except during the scene. VAR_TEMP_1 guards the culvert
+// trigger, VAR_TEMP_2 the checkpoint trigger (both must leave 0 on every path).
 
 const LOCALID_COR_WORKER = 1
 const LOCALID_COR_WOOPER = 2
+const LOCALID_COR_MIRREN = 3
 
 mapscripts ParcelCorridor_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelCorridor_OnTransition
 }
 
 script ParcelCorridor_OnTransition {
-    // The worker is at the culvert until his exchange is done.
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 10)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
@@ -24,39 +27,88 @@ script ParcelCorridor_OnTransition {
     } else {
         clearflag(FLAG_TEMP_2)
     }
-    // The far-side Wooper appears during the culvert scene only.
     setflag(FLAG_TEMP_3)
     end
 }
 
-// --- the culvert scene (Doduo stops; the splash on the far side) ------------
+// --- MIRREN's checkpoint: the one-tile gate on the road -----------------------
+// Gym 2 (Mereholt Subsurface Survey). A trigger on the gate tile, so the
+// clearance can't be walked around; the battle is the conversation.
+script ParcelCorridor_Checkpoint {
+    if (flag(FLAG_BADGE02_GET)) {
+        setvar(VAR_TEMP_2, 1)
+        end
+    }
+    lockall
+    msgbox(format("MIRREN: Hold it."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_COR_MIRREN, Movement_COR_MirrenApproach)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_COR_FaceRight)
+    waitmovement(0)
+    msgbox(format("MIRREN: Subsurface Survey. I sign who goes past this cut and who doesn't.\pYou're the provisional. TARN passed you. TARN passes nobody, so either you're good or he's slipping."), MSGBOX_DEFAULT)
+    msgbox(format("MIRREN: Show me you can read anything at all."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_GYM2, format("MIRREN: …Steady under pressure. Noted."))
+    setflag(FLAG_BADGE02_GET)
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    msgbox(format("MIRREN: Subsurface clearance. It logs you fit to survey enclosed ground. Culverts. Adits. Anywhere the daylight stops.\pComes with the standard kit."), MSGBOX_DEFAULT)
+    giveitem(ITEM_HM05)
+    msgbox(format("MIRREN: FLASH. There's an old survey adit up the cut, past the stream. Pumped dry years ago. Nobody's been in since.\pIf you want to see what we left in there, now you can."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_COR_MIRREN, Movement_COR_MirrenBack)
+    waitmovement(0)
+    setvar(VAR_TEMP_2, 1)
+    releaseall
+    end
+}
+
+script ParcelCorridor_Mirren {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("MIRREN: You filed the basin as what it is. Half the division would have rounded up.\pGo on. The river's cleaner. For now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MIRREN: Cleared provisional. The basin's darker than this. Don't go in blind."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+movement Movement_COR_MirrenApproach { walk_left * 2 }
+movement Movement_COR_MirrenBack { walk_right * 2 face_left }
+movement Movement_COR_FaceRight { face_right }
+movement Movement_COR_FaceDown { face_down }
+
+// --- the culvert scene (the partner stops; the splash on the far side) -------
 script ParcelCorridor_CulvertScene {
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 9)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        // FREEZE FIX: disarm on the already-done path too, or the trigger
-        // re-fires every frame and pins the player to the road (same class
-        // as the Wetlands poison trigger).
         setvar(VAR_TEMP_1, 1)
         end
     }
     lockall
-    msgbox(format("Doduo stops.\pBoth heads fix on the same point: a culvert under the old road--concrete, narrow, functional."), MSGBOX_DEFAULT)
-    msgbox(format("Upstream of it, the channel is wide and braided.\nDownstream, it is one fast cut.\pYou kneel. You don't touch the water.\nYou listen."), MSGBOX_DEFAULT)
-    msgbox(format("The sound is sharper than it should be. Less layered. More forceful."), MSGBOX_DEFAULT)
+    bufferpartymonnick(0, 0)
+    msgbox(format("{STR_VAR_1} stops at the edge of the road and won't go on."), MSGBOX_DEFAULT)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_COR_FaceDown)
+    waitmovement(0)
+    msgbox(format("A culvert under the old road. Concrete. Narrow. Functional.\pUpstream, the channel is wide and braided. Downstream, it is one fast cut."), MSGBOX_DEFAULT)
+    msgbox(format("The water through the pipe sounds sharper than it should. Less layered. More forceful."), MSGBOX_DEFAULT)
     closemessage
     clearflag(FLAG_TEMP_3)
     addobject(LOCALID_COR_WOOPER)
     playse(SE_PIN)
     msgbox(format("A splash, on the far side."), MSGBOX_DEFAULT)
-    msgbox(format("Something small tries the current--once, twice--and retreats to the far bank.\pNot trapped.\nExcluded."), MSGBOX_DEFAULT)
-    applymovement(LOCALID_COR_WOOPER, Movement_WooperRetreat)
+    applymovement(LOCALID_COR_WOOPER, Movement_COR_WooperTry)
+    waitmovement(0)
+    msgbox(format("A WOOPER tries the current. Once. Twice.\pIt goes back to the far bank and stays there."), MSGBOX_DEFAULT)
+    msgbox(format("Not trapped. Excluded.\pThe corridor still exists. It's thinner. Written down: the pipe width, the drop, the time it tried."), MSGBOX_DEFAULT)
+    applymovement(LOCALID_COR_WOOPER, Movement_COR_WooperRetreat)
     waitmovement(0)
     removeobject(LOCALID_COR_WOOPER)
     setflag(FLAG_TEMP_3)
-    msgbox(format("The corridor still exists.\nBut it's thinner."), MSGBOX_DEFAULT)
-    msgbox(format("You feel the urge to widen the channel. Stack stones. Slow the flow.\pYou don't.\nYou remember the basin. You write it down instead."), MSGBOX_DEFAULT)
     setvar(VAR_0x8004, 9)
     special(SkaldmereCertTaskMark)
     setvar(VAR_TEMP_1, 1)
@@ -66,10 +118,14 @@ script ParcelCorridor_CulvertScene {
 
 script ParcelCorridor_FarSide {
     lock
-    msgbox(format("It watches the current from the far bank.\nIt does not try again."), MSGBOX_DEFAULT)
+    msgbox(format("It watches the current from the far bank. It does not try again."), MSGBOX_DEFAULT)
     release
     end
 }
+
+movement Movement_COR_WooperTry { face_left delay_16 walk_in_place_faster_left delay_16 face_down delay_8 face_left delay_16 walk_in_place_faster_left delay_16 }
+movement Movement_COR_WooperRetreat { face_right delay_16 walk_right }
+movement Movement_COR_WorkerLeave { walk_left * 7 }
 
 // --- the worker (where damage becomes policy) --------------------------------
 script ParcelCorridor_Worker {
@@ -79,101 +135,170 @@ script ParcelCorridor_Worker {
     setvar(VAR_0x8004, 9)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 0) {
-        msgbox(format("A man in an orange vest, clipboard in hand. He nods at the stream like it's a colleague.\pWorker: Quite a current through there, eh?"), MSGBOX_DEFAULT)
+        msgbox(format("WORKER: Quite a current through there, eh?\pHOLLOWBEND drainage works. Culvert's ours. Meets code."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("A man in an orange vest, clipboard in hand. He brightens--relieved to see a Ranger.\pWorker: Oh good. You're with the station, right?\nWe've been meaning to flag this."), MSGBOX_DEFAULT)
-    msgbox(format("Worker: Drainage specs met code, but wildlife keeps clogging it.\pWe're scheduled to install grates next month."), MSGBOX_DEFAULT)
-    msgbox(format("Grates would solve his problem.\pThis is the moment Ilex warned about--\nwhere damage becomes policy."), MSGBOX_DEFAULT)
-    msgbox(format("Worker: It meets regulation. But if you want, I can note that Rangers were consulted."), MSGBOX_DEFAULT)
-    msgbox(format("Note that Rangers were consulted?"), MSGBOX_YESNO)
+    msgbox(format("WORKER: Oh good. You're with the station, right? We've been meaning to flag this.\pDrainage specs met code, but wildlife keeps clogging it. We're scheduled to install grates next month."), MSGBOX_DEFAULT)
+    msgbox(format("WORKER: It meets regulation. But if you want, I can note that RANGERS were consulted."), MSGBOX_DEFAULT)
+    msgbox(format("Note that RANGERS were consulted?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("You start to nod--\pand stop.\pThe grates would solve HIS problem.\nThe failure state is not action. It is agreement."), MSGBOX_DEFAULT)
-        msgbox(format("{PLAYER}: …No.\pWho approved the design?"), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: …\pNo. Who approved the design?"), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("{PLAYER}: No.\pWho approved the design?"), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: No. Who approved the design?"), MSGBOX_DEFAULT)
     }
     msgbox(format("{PLAYER}: Do you have the pre-construction flow data?"), MSGBOX_DEFAULT)
-    msgbox(format("The worker shifts his weight.\pWorker: That'd be… county records, I think. Or the contractor."), MSGBOX_DEFAULT)
-    msgbox(format("{PLAYER}: Fixing it later might mean it's already too late.\pYou write all of it down: the specs, the schedule, the missing data, his crew number."), MSGBOX_DEFAULT)
-    msgbox(format("He scribbles something vague.\pWorker: …I'll note that the corridor width changed."), MSGBOX_DEFAULT)
-    msgbox(format("It's not enough.\nBut it's not nothing.\pHe leaves."), MSGBOX_DEFAULT)
+    msgbox(format("WORKER: That'd be… county records, I think. Or the contractor. It's in the hut, maybe. The spec sheet is."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: Grates would solve your problem. They wouldn't solve the WOOPER's.\pFixing it later might mean it's already too late."), MSGBOX_DEFAULT)
+    msgbox(format("WORKER: …I'll note that the corridor width changed."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: It's not enough."), MSGBOX_DEFAULT)
+    msgbox(format("WORKER: It's not nothing. Crew 14, if anyone asks who said it."), MSGBOX_DEFAULT)
     closemessage
-    applymovement(LOCALID_COR_WORKER, Movement_WorkerLeave)
+    applymovement(LOCALID_COR_WORKER, Movement_COR_WorkerLeave)
     waitmovement(0)
     removeobject(LOCALID_COR_WORKER)
     setvar(VAR_0x8004, 10)
     special(SkaldmereCertTaskMark)
     setflag(FLAG_TEMP_2)
-    msgbox(format("Turning back down the cut, you realize:\pyou were watched. Not by the worker.\nBy the system."), MSGBOX_DEFAULT)
-    msgbox(format("The report will move slowly. It will be questioned. Maybe ignored.\pBut it exists now.\nAnd that changes timelines."), MSGBOX_DEFAULT)
+    msgbox(format("Written down: the specs, the schedule, the missing data, the crew number.\pThe report will move slowly. It will be questioned. Maybe ignored. But it exists now."), MSGBOX_DEFAULT)
     release
     end
 }
 
 // --- observation points along the cut ----------------------------------------
 script ParcelCorridor_ObsStumps {
-    msgbox(format("Old stumps in a rough line, cut flat, gray with years.\pThe forest didn't thin here.\nIt was thinned."), MSGBOX_SIGN)
+    msgbox(format("Old stumps in a rough line, cut flat, grey with years.\pThe forest didn't thin here. It was thinned."), MSGBOX_SIGN)
     end
 }
 script ParcelCorridor_ObsMoss {
-    msgbox(format("The moss grows uneven--thick on the north faces, absent where the canopy used to hold the damp."), MSGBOX_SIGN)
+    msgbox(format("Moss thick on the north faces, gone where the canopy used to hold the damp."), MSGBOX_SIGN)
     end
 }
 script ParcelCorridor_ObsDrainage {
-    msgbox(format("A drainage cut, knife-straight.\nNothing in nature drains like this."), MSGBOX_SIGN)
+    msgbox(format("A drainage cut, knife-straight, running off under the trees.\pNothing in nature drains like this."), MSGBOX_SIGN)
     end
 }
 script ParcelCorridor_ObsRoad {
-    msgbox(format("A cracked service road, half-reclaimed by weeds.\pIt looks abandoned.\nIt isn't harmless."), MSGBOX_SIGN)
+    msgbox(format("A cracked service road, half-reclaimed by weeds.\pIt looks abandoned. It isn't harmless."), MSGBOX_SIGN)
     end
 }
 script ParcelCorridor_ObsCulvert {
-    msgbox(format("The culvert. Concrete, narrow, functional.\pUpstream: broad and braided.\nDownstream: a single fast channel."), MSGBOX_SIGN)
+    msgbox(format("The culvert. Concrete, narrow, functional.\pUpstream: broad and braided. Downstream: a single fast channel."), MSGBOX_SIGN)
     end
 }
 
-movement Movement_WooperRetreat {
-    face_right
-    delay_16
-    walk_right
-    step_end
+// --- signs ---------------------------------------------------------------------
+script ParcelCorridor_SignWest {
+    msgbox(format("HOLLOWBEND SPUR\pWest: REEDMERE landing.\nEast: the old service cut. Road closed to vehicles."), MSGBOX_SIGN)
+    end
 }
-movement Movement_WorkerLeave {
-    walk_left * 6
-    walk_down
-    step_end
+script ParcelCorridor_SignCheckpoint {
+    msgbox(format("MEREHOLT SUBSURFACE SURVEY\nCheckpoint\pClearance required beyond this point. Provisional RANGERS report to the officer on duty."), MSGBOX_SIGN)
+    end
 }
-
-
-script ParcelCorridor_ItemSuperPotion {
-    finditem(ITEM_SUPER_POTION)
+script ParcelCorridor_SignNorth {
+    msgbox(format("North: the FLOODBASIN. Corps survey stakes from here. Keep to the marked path."), MSGBOX_SIGN)
+    end
+}
+script ParcelCorridor_SignAdit {
+    msgbox(format("MEREHOLT SUBSURFACE SURVEY -- ADIT 3\pPumped dry. No lighting. Keep out."), MSGBOX_SIGN)
     end
 }
 
-// --- Gym 2: Mereholt Permafrost / Subsurface Survey checkpoint (Mirren) ------
-// Division clearance, not a trophy. Mirren reads the cut the way she reads a
-// cave: by what the dark hides. Beating her files the Subsurface clearance
-// (Badge 2), which the Corps logs as fit-for-enclosed-survey -- it releases
-// HM05 Flash. A checkpoint on the road before the up-neck to the basin.
-script ParcelCorridor_GymMirren {
-    trainerbattle_single(TRAINER_SKALD_GYM2,
-        format("Mirren: Subsurface Survey. I sign who goes past this cut and who doesn't.\pYou read rock for a living yet? Show me you read anything at all."),
-        format("Mirren: …Steady under pressure. Noted."),
-        ParcelCorridor_GymMirren_Defeated)
-    lock
-    faceplayer
-    msgbox(format("Mirren: Cleared provisional. The basin's darker than this.\pDon't go in blind."), MSGBOX_DEFAULT)
-    release
+// --- items -----------------------------------------------------------------------
+script ParcelCorridor_ItemSuperPotion { finditem(ITEM_SUPER_POTION) end }
+script ParcelCorridor_ItemRepel { finditem(ITEM_REPEL) end }
+script ParcelCorridor_ItemGreatBall { finditem(ITEM_GREAT_BALL) end }
+
+// --- route trainers ----------------------------------------------------------------
+script ParcelCorridor_Geir {
+    trainerbattle_single(TRAINER_SKALD_COR_GEIR,
+        format("GEIR: Nobody walks the cut anymore. Just me and the stumps. And you, apparently."),
+        format("GEIR: Stumps don't hit back. Noted."))
+    msgbox(format("GEIR: They logged this whole spur in one winter. The road was for the trucks. Then the trucks stopped coming."), MSGBOX_DEFAULT)
     end
 }
-script ParcelCorridor_GymMirren_Defeated {
-    setflag(FLAG_BADGE02_GET)
-    call(Common_EventScript_PlayGymBadgeFanfare)
-    msgbox(format("Mirren: Subsurface clearance. It logs you fit to survey enclosed ground.\pComes with the standard kit."), MSGBOX_DEFAULT)
-    giveitem(ITEM_HM05)
-    msgbox(format("Mirren: FLASH. Lights a cave or a culvert from the inside.\pYou'll want it where the daylight stops."), MSGBOX_DEFAULT)
-    release
+script ParcelCorridor_Per {
+    trainerbattle_single(TRAINER_SKALD_COR_PER,
+        format("PER: The moths only come out where the big trees are left. I counted. Battle?"),
+        format("PER: You counted better."))
+    msgbox(format("PER: Six DUSTOX in the old stand by the ledges. Zero in the cut. That's a number, isn't it? That's a finding."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Rune {
+    trainerbattle_single(TRAINER_SKALD_COR_RUNE,
+        format("RUNE: The ledges are the best bit. You can jump them. Can you jump me?"),
+        format("RUNE: Jumped."))
+    msgbox(format("RUNE: The CORPS cadets won't jump the ledges. 'Erosion.' It's a ledge!"), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Else {
+    trainerbattle_single(TRAINER_SKALD_COR_ELSE,
+        format("ELSE: Quiet, isn't it. Too quiet. Nothing lives in a cut like this except trainers."),
+        format("ELSE: And now one fewer."))
+    msgbox(format("ELSE: There used to be a stream through the grass here. You can still see where. Dry as a bone."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Ulf {
+    trainerbattle_single(TRAINER_SKALD_COR_ULF,
+        format("ULF: My NINCADA dug up a drainage pipe yesterday. A pipe! In the middle of nowhere!"),
+        format("ULF: It digs better than it fights."))
+    msgbox(format("ULF: Somebody drained this whole stretch on purpose. For a road nobody uses."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Gro {
+    trainerbattle_single(TRAINER_SKALD_COR_GRO,
+        format("GRO: I'm walking to FERNWICK the long way. The long way has more battles."),
+        format("GRO: Longer than I thought."))
+    msgbox(format("GRO: A woman in a MEREHOLT coat has the road blocked up ahead. She made me show my trainer card. It's a ROAD."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Knut {
+    trainerbattle_single(TRAINER_SKALD_COR_KNUT,
+        format("KNUT: POOCHYENA country. They came in when the trees came out. Mine's the biggest."),
+        format("KNUT: Not the biggest, then."))
+    msgbox(format("KNUT: Nothing but POOCHYENA and ZIGZAGOON in the cut now. Dad says there were MAWILE once. In the rocks."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Dag {
+    trainerbattle_single(TRAINER_SKALD_COR_DAG,
+        format("DAG: Cadet DAG. I'm supposed to be staking the path north. Spar first. HALE's orders."),
+        format("DAG: Fine. Stakes."))
+    msgbox(format("DAG: The basin's north, over the plateau. Follow the stakes with red cloth. The ones without cloth are MEREHOLT's."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Arne {
+    trainerbattle_single(TRAINER_SKALD_COR_ARNE,
+        format("ARNE: Below the culvert the water runs so fast nothing holds. Above it, I catch. Guess which side you're on."),
+        format("ARNE: The fast side."))
+    msgbox(format("ARNE: BARBOACH go up this stream in spring. Went. They can't get through the pipe. I told the crew. The crew told me it meets code."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Sven {
+    trainerbattle_single(TRAINER_SKALD_COR_SVEN,
+        format("SVEN: The plateau's mine. Well. MEREHOLT's. But I'm the one standing on it."),
+        format("SVEN: Standing on it a bit less."))
+    msgbox(format("SVEN: Survey stakes everywhere up here. Two kinds. Nobody will tell me what the second kind is for."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Olav {
+    trainerbattle_single(TRAINER_SKALD_COR_OLAV,
+        format("OLAV: TAILLOW nest in the cut banks now. They didn't used to. Is that good or bad? Battle me while you think."),
+        format("OLAV: Still thinking?"))
+    msgbox(format("OLAV: More TAILLOW, fewer of everything else. I think that's bad. I think it looks like good."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Inga {
+    trainerbattle_single(TRAINER_SKALD_COR_INGA,
+        format("INGA: I can feel the ground under the plateau. It's hollow. Can you feel it?"),
+        format("INGA: You feel it now."))
+    msgbox(format("INGA: Old workings. Adits. MEREHOLT pumped them dry and left. The hill remembers being wet."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridor_Turid {
+    trainerbattle_single(TRAINER_SKALD_COR_TURID,
+        format("TURID: You're going to the basin? Nobody goes to the basin. Battle me and I'll tell you why."),
+        format("TURID: Because it smells. That's why. Sweet, like something rotting."))
+    msgbox(format("TURID: The stakes north of here go right down to the water. Somebody measured it all. And then just left it."), MSGBOX_DEFAULT)
     end
 }

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PARCEL_CORRIDOR",
-      "offset": -4,
+      "offset": -65,
       "direction": "down"
     },
     {
