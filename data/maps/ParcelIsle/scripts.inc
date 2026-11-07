@@ -847,6 +847,18 @@ ParcelIsle_PreserveGateSign::
 	end
 
 
+ParcelIsle_CenterAide::
+# 535 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 536 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 537 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_CenterAide_Text_0, MSGBOX_DEFAULT
+# 538 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAM: Hey! You're the mainlander, right?\n"
@@ -1475,3 +1487,11 @@ ParcelIsle_PreserveGateSign_Text_0:
 	.string "No entry without a RANGER present.\p"
 	.string "The MEREHOLT FOUNDATION crest, cast in\n"
 	.string "bronze, very clean.$"
+
+ParcelIsle_CenterAide_Text_0:
+# 537 "data/maps/ParcelIsle/scripts.pory"
+	.string "MEDIC: Aid station's for POKéMON, and\n"
+	.string "you haven't got one yet.\p"
+	.string "RIN's up at the meadow, through the\n"
+	.string "north gate. Go get picked. Then come\l"
+	.string "back and I'll move.$"

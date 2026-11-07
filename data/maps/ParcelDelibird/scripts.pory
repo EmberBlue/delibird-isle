@@ -47,7 +47,8 @@ script ParcelDelibird_FirstEntry {
     lockall
     msgbox(format("The boat noses in and the island takes you by surprise. String lights, cabins the colours of sweets, woodsmoke and something baking.\pPeople wave. They don't know you, and they wave anyway."), MSGBOX_DEFAULT)
     msgbox(format("It is the warmest place you have set foot in since you started keeping the notebook.\pYou know, now, what the warmth is standing on. You climbed it. You couldn't fix it."), MSGBOX_DEFAULT)
-    msgbox(format("A banner over the square snaps in the wind:\nDELIBIRD ISLE MIDWINTER -- ALL WELCOME.\pSmaller, underneath: in partnership with the Mereholt Foundation.\pDoduo leans into your leg. You go up into the lights."), MSGBOX_DEFAULT)
+    bufferpartymonnick(0, 0)
+    msgbox(format("A banner over the square snaps in the wind:\nDELIBIRD ISLE MIDWINTER -- ALL WELCOME.\pSmaller, underneath: in partnership with the Mereholt Foundation.\p{STR_VAR_1} leans into your leg. You go up into the lights."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_DELIBIRD_ARRIVAL)
     releaseall
     end

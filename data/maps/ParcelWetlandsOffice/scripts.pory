@@ -1,0 +1,51 @@
+// ParcelWetlandsOffice -- the Mereholt Tidewater Division gauging office at
+// Reedmere (the Weather Institute building, reused). The polite face of the
+// development Dorsey keeps hinting at.
+
+mapscripts ParcelWetlandsOffice_MapScripts {
+}
+
+script ParcelWetlandsOffice_Clerk {
+    lock
+    faceplayer
+    if (defeated(TRAINER_SKALD_ENFORCER)) {
+        msgbox(format("CLERK: The councilman isn't here. The councilman isn't anywhere, apparently.\pI've been told to say the office is operating normally. The office is operating normally."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("CLERK: Welcome to the TIDEWATER DIVISION. We gauge every channel on the backwater, hourly.\pFlow, depth, turbidity. It's all public. Well. It's all filed."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlandsOffice_Tech {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("TECHNICIAN: The gauges didn't pick up anything. Nothing. A kill like that and the numbers are flat.\pEither the gauges are wrong or the gauges are where the water isn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("TECHNICIAN: Four gauges on the channels and one on the falls. Hourly. The readings go to the coast office.\pNo, I don't see them after that."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlandsOffice_Rep {
+    lock
+    faceplayer
+    msgbox(format("MEREHOLT REP: The FOUNDATION believes in partnership. Local hands, local jobs, local water.\pYou'll find we have nothing to hide here, RANGER. Nothing at all. Do have a brochure."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlandsOffice_Local {
+    lock
+    faceplayer
+    msgbox(format("FISHER: I came to ask about the boat loan. Been waiting an hour.\pThe councilman said to ask. The councilman isn't the one at the desk."), MSGBOX_DEFAULT)
+    release
+    end
+}

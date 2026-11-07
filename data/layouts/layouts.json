@@ -4494,10 +4494,10 @@
     {
       "id": "LAYOUT_PARCEL_WETLANDS",
       "name": "ParcelWetlands_Layout",
-      "width": 50,
-      "height": 44,
+      "width": 40,
+      "height": 68,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/ParcelWetlands/border.bin",
       "blockdata_filepath": "data/layouts/ParcelWetlands/map.bin"
     },

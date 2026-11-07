@@ -1,0 +1,53 @@
+// ParcelWetlandsHarlandHouse -- HARLAND's house on the Reedmere landing.
+// MAREN (his wife) and their boy, three story states.
+
+mapscripts ParcelWetlandsHarlandHouse_MapScripts {
+}
+
+script ParcelWetlandsHarlandHouse_Maren {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAREN: He won't say it, so I will. Thank you.\pHe's been out on the water every morning since the radio. Not fishing. Just out on it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (defeated(TRAINER_SKALD_ENFORCER)) {
+        msgbox(format("MAREN: He came in last night and sat at that table for an hour without a word.\pThat's HARLAND thinking. You don't see it often. Let him."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("MAREN: Don't mind what he shouted at you. He shouts at the weather.\pThe fish, though. We eat those fish. Our boy eats those fish."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAREN: You're the new provisional. HARLAND said. Well, he said 'another one.'\pSit if you want. There's tea. He'll be civil in here, it's my house."), MSGBOX_DEFAULT)
+    msgbox(format("MAREN: The councilman's been very good to us, you know. The boat loan. The office jobs.\pI don't know what the CORPS has ever done for the landing. That's not an accusation. I'm asking."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlandsHarlandHouse_Kid {
+    lock
+    faceplayer
+    if (defeated(TRAINER_SKALD_ENFORCER)) {
+        msgbox(format("BOY: Dad says you're all right. He said it like it hurt."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("BOY: Dad says the CORPS counts the fish wrong. I counted them. There's four. Is four wrong?"), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlandsHarlandHouse_Wooper {
+    lock
+    faceplayer
+    msgbox(format("WOOPER: Woop."), MSGBOX_DEFAULT)
+    release
+    end
+}

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PARCEL_WETLANDS",
-      "offset": -11,
+      "offset": -2,
       "direction": "left"
     },
     {

@@ -526,3 +526,15 @@ script ParcelIsle_PreserveGateSign {
     msgbox(format("MISTWOOD SHORE PRESERVE\nSkaldmere Climate Corps -- Holding Meadow\pNo entry without a RANGER present.\pThe MEREHOLT FOUNDATION crest, cast in bronze, very clean."), MSGBOX_SIGN)
     end
 }
+
+// --- the Center door, before you have a partner ------------------------------
+// A Corps medic stands on the step until FLAG_SYS_POKEMON_GET is set (the
+// object's flag hides him after the meadow). The aid station can't do
+// anything for an empty belt, and the engine has nothing to heal.
+script ParcelIsle_CenterAide {
+    lock
+    faceplayer
+    msgbox(format("MEDIC: Aid station's for POKéMON, and you haven't got one yet.\pRIN's up at the meadow, through the north gate. Go get picked. Then come back and I'll move."), MSGBOX_DEFAULT)
+    release
+    end
+}

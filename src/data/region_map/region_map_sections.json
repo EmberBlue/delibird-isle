@@ -1729,7 +1729,7 @@
     },
     {
       "id": "MAPSEC_PARCEL_ISLE",
-      "name": "THE DOCKS",
+      "name": "SALTWICK",
       "x": 6,
       "y": 12,
       "width": 1,
@@ -1737,7 +1737,7 @@
     },
     {
       "id": "MAPSEC_SKALD_BRIDGE",
-      "name": "LONG BRIDGE",
+      "name": "ROUTE 1",
       "x": 9,
       "y": 12,
       "width": 1,
@@ -1745,7 +1745,7 @@
     },
     {
       "id": "MAPSEC_SKALD_STATION",
-      "name": "FIELD STATION",
+      "name": "FERNWICK",
       "x": 16,
       "y": 8,
       "width": 1,
@@ -1753,7 +1753,7 @@
     },
     {
       "id": "MAPSEC_SKALD_WETLANDS",
-      "name": "THE WETLANDS",
+      "name": "REEDMERE",
       "x": 14,
       "y": 12,
       "width": 1,
@@ -1828,6 +1828,14 @@
       "name": "CLIMATE STN",
       "x": 20,
       "y": 12,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_MISTWOOD",
+      "name": "MISTWOOD",
+      "x": 11,
+      "y": 11,
       "width": 1,
       "height": 1
     }

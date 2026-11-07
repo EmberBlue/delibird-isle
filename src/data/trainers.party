@@ -16953,9 +16953,10 @@ Double Battle: No
 AI: Basic Trainer
 
 Lotad
-Level: 5
-- Astonish
-- Growl
+Level: 12
+
+Shroomish
+Level: 12
 
 === TRAINER_SKALD_ENFORCER ===
 Name: VOSS
@@ -16967,14 +16968,13 @@ Double Battle: No
 AI: Basic Trainer / Try To Faint
 
 Poochyena
-Level: 6
-- Tackle
-- Howl
+Level: 15
 
 Carvanha
-Level: 6
-- Aqua Jet
-- Leer
+Level: 15
+
+Croagunk
+Level: 16
 
 === TRAINER_SKALD_KID ===
 Name: TIMO
@@ -17024,14 +17024,13 @@ Double Battle: No
 AI: Basic Trainer
 
 Shroomish
-Level: 6
-- Absorb
-- Tackle
+Level: 13
 
 Lotad
-Level: 6
-- Absorb
-- Astonish
+Level: 13
+
+Geodude
+Level: 12
 
 === TRAINER_SKALD_REMEDIATOR ===
 Name: KOLE
@@ -17669,4 +17668,193 @@ Taillow
 Level: 11
 
 Shroomish
+Level: 12
+
+=== TRAINER_SKALD_WET_SELT ===
+Name: SELT
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Poochyena
+Level: 12
+
+Corphish
+Level: 13
+
+=== TRAINER_SKALD_WET_KALLE ===
+Name: KALLE
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wurmple
+Level: 10
+
+Silcoon
+Level: 11
+
+Cascoon
+Level: 11
+
+=== TRAINER_SKALD_WET_LIV ===
+Name: LIV
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Surskit
+Level: 12
+
+Lotad
+Level: 13
+
+=== TRAINER_SKALD_WET_TOKE ===
+Name: TOKE
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Nincada
+Level: 12
+
+Surskit
+Level: 12
+
+=== TRAINER_SKALD_WET_JORUN ===
+Name: JORUN
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wooper
+Level: 13
+
+Zigzagoon
+Level: 12
+
+=== TRAINER_SKALD_WET_STIAN ===
+Name: STIAN
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 12
+
+Taillow
+Level: 13
+
+=== TRAINER_SKALD_WET_ASTA ===
+Name: ASTA
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Shroomish
+Level: 13
+
+Poliwag
+Level: 13
+
+=== TRAINER_SKALD_WET_BJARTE ===
+Name: BJARTE
+Class: Pkmn Ranger
+Pic: Pokemon Ranger M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wooper
+Level: 13
+
+Lotad
+Level: 13
+
+=== TRAINER_SKALD_WET_ODD ===
+Name: ODD
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 13
+
+Machop
+Level: 13
+
+=== TRAINER_SKALD_WET_HAAKON ===
+Name: HAAKON
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Magikarp
+Level: 12
+
+Poliwag
+Level: 13
+
+Barboach
+Level: 12
+
+=== TRAINER_SKALD_WET_EIRIK ===
+Name: EIRIK
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Magikarp
+Level: 10
+
+Magikarp
+Level: 10
+
+Goldeen
+Level: 13
+
+=== TRAINER_SKALD_WET_SIV ===
+Name: SIV
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 12
+
+Wingull
 Level: 12

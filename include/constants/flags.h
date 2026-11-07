@@ -680,14 +680,14 @@
 #define FLAG_SKALD_ROUTE1_SCENE_DONE       0x279 // Skaldmere: the new opening stretch
 #define FLAG_SKALD_MEADOW_INTRO            0x27A // Skaldmere: the new opening stretch
 #define FLAG_SKALD_HIDDEN_FERNWICK_CANDY   0x27B // Skaldmere: Fernwick cliff-path hidden item
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
+#define FLAG_SKALD_ITEM_WET_GREAT_BALL 0x27C // Skaldmere: Reedmere (Wetlands)
+#define FLAG_SKALD_ITEM_WET_SUPER_POTION 0x27D // Skaldmere: Reedmere (Wetlands)
+#define FLAG_SKALD_ITEM_WET_NET_BALL 0x27E // Skaldmere: Reedmere (Wetlands)
+#define FLAG_SKALD_HIDDEN_WET_PEARL 0x27F // Skaldmere: Reedmere (Wetlands)
+#define FLAG_SKALD_HIDDEN_WET_HEART_SCALE 0x280 // Skaldmere: Reedmere (Wetlands)
+#define FLAG_SKALD_Q_GUNNAR 0x281 // Skaldmere: Reedmere (Wetlands)
+#define FLAG_SKALD_Q_GUNNAR_DONE 0x282 // Skaldmere: Reedmere (Wetlands)
+#define FLAG_SKALD_Q_GUNNAR_SEEN 0x283 // Skaldmere: Reedmere (Wetlands)
 #define FLAG_UNUSED_0x284  0x284 // Unused Flag
 #define FLAG_UNUSED_0x285  0x285 // Unused Flag
 #define FLAG_UNUSED_0x286  0x286 // Unused Flag

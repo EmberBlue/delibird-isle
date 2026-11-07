@@ -140,7 +140,9 @@
     "ParcelFernwickFisher",
     "ParcelFernwickHouse2",
     "ParcelFernwickFlats",
-    "ParcelFernwickHouse3"
+    "ParcelFernwickHouse3",
+    "ParcelWetlandsHarlandHouse",
+    "ParcelWetlandsOffice"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
