@@ -144,7 +144,11 @@
     "ParcelWetlandsHarlandHouse",
     "ParcelWetlandsOffice",
     "ParcelCorridorHut",
-    "ParcelCorridorAdit"
+    "ParcelCorridorAdit",
+    "ParcelFloodbasinHouse1",
+    "ParcelFloodbasinHouse2",
+    "ParcelFloodbasinRelief",
+    "ParcelFloodbasinWorks"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

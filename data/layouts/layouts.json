@@ -4514,10 +4514,10 @@
     {
       "id": "LAYOUT_PARCEL_FLOODBASIN",
       "name": "ParcelFloodbasin_Layout",
-      "width": 72,
-      "height": 44,
+      "width": 40,
+      "height": 100,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_leob_dewford",
+      "secondary_tileset": "gTileset_Fortree",
       "border_filepath": "data/layouts/ParcelFloodbasin/border.bin",
       "blockdata_filepath": "data/layouts/ParcelFloodbasin/map.bin"
     },

@@ -17042,15 +17042,13 @@ Double Battle: No
 AI: Basic Trainer / Try To Faint
 
 Wooper
-Level: 9
-- Water Gun
-- Tail Whip
-- Mud Sport
+Level: 18
+
+Grimer
+Level: 18
 
 Croagunk
-Level: 9
-- Astonish
-- Mud Slap
+Level: 19
 
 === TRAINER_SKALD_BASIN_KID ===
 Name: PIPER
@@ -17061,15 +17059,11 @@ Music: Male
 Double Battle: No
 AI: Basic Trainer
 
-Wurmple
-Level: 7
-- Tackle
-- String Shot
+Dustox
+Level: 16
 
 Surskit
-Level: 7
-- Bubble
-- Quick Attack
+Level: 16
 
 === TRAINER_SKALD_ANGLER ===
 Name: DELL
@@ -18059,3 +18053,221 @@ Level: 16
 
 Oddish
 Level: 16
+
+=== TRAINER_SKALD_FLD_ARVE ===
+Name: ARVE
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Dustox
+Level: 16
+
+Beautifly
+Level: 16
+
+=== TRAINER_SKALD_FLD_KAI ===
+Name: KAI
+Class: Ninja Boy
+Pic: Ninja Boy
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Nincada
+Level: 17
+
+Surskit
+Level: 17
+
+=== TRAINER_SKALD_FLD_SIGNE ===
+Name: SIGNE
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lotad
+Level: 17
+
+Oddish
+Level: 17
+
+Marill
+Level: 17
+
+=== TRAINER_SKALD_FLD_LEIF ===
+Name: LEIF
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Poochyena
+Level: 17
+
+Wooper
+Level: 18
+
+=== TRAINER_SKALD_FLD_TRULS ===
+Name: TRULS
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 17
+
+Taillow
+Level: 17
+
+=== TRAINER_SKALD_FLD_HALVOR ===
+Name: HALVOR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Barboach
+Level: 17
+
+Goldeen
+Level: 18
+
+Corphish
+Level: 18
+
+=== TRAINER_SKALD_FLD_MAJA ===
+Name: MAJA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Marill
+Level: 17
+
+Lotad
+Level: 18
+
+=== TRAINER_SKALD_FLD_BJORN ===
+Name: BJORN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 17
+
+Machop
+Level: 18
+
+=== TRAINER_SKALD_FLD_SOLVEIG ===
+Name: SOLVEIG
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 18
+
+Croagunk
+Level: 18
+
+=== TRAINER_SKALD_FLD_NILS ===
+Name: NILS
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wurmple
+Level: 15
+
+Silcoon
+Level: 16
+
+Dustox
+Level: 17
+
+=== TRAINER_SKALD_FLD_RANNVEIG ===
+Name: RANNVEIG
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Shroomish
+Level: 18
+
+Gloom
+Level: 18
+
+=== TRAINER_SKALD_FLD_EINAR ===
+Name: EINAR
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Mightyena
+Level: 18
+
+
+
+=== TRAINER_SKALD_FLD_STURLA ===
+Name: STURLA
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sandshrew
+Level: 17
+
+Nuzleaf
+Level: 18
+
+=== TRAINER_SKALD_FLD_OSKAR ===
+Name: OSKAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 18
+
+Nosepass
+Level: 18

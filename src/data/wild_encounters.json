@@ -14319,63 +14319,63 @@
             "encounter_rate": 20,
             "mons": [
               {
-                "min_level": 6,
-                "max_level": 9,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_WOOPER"
               },
               {
-                "min_level": 6,
-                "max_level": 9,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_POOCHYENA"
               },
               {
-                "min_level": 6,
-                "max_level": 9,
-                "species": "SPECIES_WURMPLE"
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_ODDISH"
               },
               {
-                "min_level": 7,
-                "max_level": 9,
-                "species": "SPECIES_POOCHYENA"
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_LOTAD"
               },
               {
-                "min_level": 6,
-                "max_level": 9,
+                "min_level": 16,
+                "max_level": 18,
                 "species": "SPECIES_POLIWAG"
               },
               {
-                "min_level": 7,
-                "max_level": 9,
-                "species": "SPECIES_WURMPLE"
+                "min_level": 17,
+                "max_level": 18,
+                "species": "SPECIES_SURSKIT"
               },
               {
-                "min_level": 7,
-                "max_level": 10,
-                "species": "SPECIES_POOCHYENA"
-              },
-              {
-                "min_level": 8,
-                "max_level": 10,
-                "species": "SPECIES_WOOPER"
-              },
-              {
-                "min_level": 8,
-                "max_level": 11,
+                "min_level": 17,
+                "max_level": 19,
                 "species": "SPECIES_CROAGUNK"
               },
               {
-                "min_level": 9,
-                "max_level": 11,
-                "species": "SPECIES_POOCHYENA"
+                "min_level": 17,
+                "max_level": 19,
+                "species": "SPECIES_GRIMER"
               },
               {
-                "min_level": 11,
-                "max_level": 13,
+                "min_level": 18,
+                "max_level": 18,
+                "species": "SPECIES_KECLEON"
+              },
+              {
+                "min_level": 18,
+                "max_level": 20,
                 "species": "SPECIES_MIGHTYENA"
               },
               {
-                "min_level": 7,
-                "max_level": 10,
+                "min_level": 19,
+                "max_level": 19,
+                "species": "SPECIES_ABSOL"
+              },
+              {
+                "min_level": 18,
+                "max_level": 19,
                 "species": "SPECIES_CROAGUNK"
               }
             ]
@@ -14407,6 +14407,61 @@
                 "min_level": 25,
                 "max_level": 35,
                 "species": "SPECIES_GYARADOS"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 10,
+                "max_level": 15,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_GOLDEEN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 15,
+                "max_level": 25,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_BARBOACH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_GOLDEEN"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_WHISCASH"
+              },
+              {
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_CORPHISH"
+              },
+              {
+                "min_level": 30,
+                "max_level": 35,
+                "species": "SPECIES_CORPHISH"
               }
             ]
           }

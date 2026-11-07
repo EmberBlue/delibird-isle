@@ -1,0 +1,17 @@
+// ParcelFloodbasinHouse2 -- a Leirvik family (the fisher outside is the husband).
+mapscripts ParcelFloodbasinHouse2_MapScripts {
+}
+script ParcelFloodbasinHouse2_Wife {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: Third flood this one. The water line's on the wall there, see. Every year a hand higher.\pWe signed the councilman's sheet. You sign the sheet, you get the vouchers. That's how it works now."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinHouse2_Boy {
+    lock
+    faceplayer
+    msgbox(format("BOY: I found a WOOPER with the wrong feet! Gran made me put it back in the puddle. It's still there. It doesn't go anywhere."), MSGBOX_DEFAULT)
+    release
+    end
+}

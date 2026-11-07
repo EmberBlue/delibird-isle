@@ -1,0 +1,27 @@
+// ParcelFloodbasinRelief -- the Foundation relief store in Leirvik. Vouchers
+// in, signatures out. The sheet is the point.
+mapscripts ParcelFloodbasinRelief_MapScripts {
+}
+script ParcelFloodbasinRelief_Aide {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("AIDE: The store's closing. Relief period's over. The councilman says the basin's recovering nicely.\pThe sheet goes to the coast office. Forty-one signatures. They like a full sheet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("AIDE: Residents only, RANGER. Fuel on the left, dry goods on the right. Sign the sheet.\pWhat's the sheet for? Records. The FOUNDATION believes in records."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinRelief_Woman {
+    lock
+    faceplayer
+    msgbox(format("WOMAN: I signed. Everyone signs. My neighbour wouldn't, and her roof's still got the tarp on."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinRelief_Sheet {
+    msgbox(format("RELIEF REGISTER -- LEIRVIK. Forty-one names. Beside each, a box ticked: 'I confirm that the Foundation's remediation of the basin is proceeding to my satisfaction.'\pThe box is ticked in the same pen on every line."), MSGBOX_SIGN)
+    end
+}

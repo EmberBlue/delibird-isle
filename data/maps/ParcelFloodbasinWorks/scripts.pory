@@ -1,0 +1,9 @@
+// ParcelFloodbasinWorks -- Mereholt Basin Works, Pump House 2. The pumps
+// stopped twenty years ago; the water came back. Surf to the dry floor.
+mapscripts ParcelFloodbasinWorks_MapScripts {
+}
+script ParcelFloodbasinWorks_ItemTM18 { finditem(ITEM_TM18) end }
+script ParcelFloodbasinWorks_Plate {
+    msgbox(format("A brass plate, green with damp: MEREHOLT BASIN WORKS -- PUMP HOUSE 2. DISCHARGE LICENSED.\pBelow it, scratched in by hand: WHERE DID YOU THINK IT WENT?"), MSGBOX_SIGN)
+    end
+}

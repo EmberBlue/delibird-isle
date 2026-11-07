@@ -1,59 +1,178 @@
-// ParcelFloodbasin -- §01/§06 zone 3, Chapter 2 opener: "the wetlands are
-// sick" (Hale at the chapter close). The first zone whose survey returns
-// something other than Reference. Legacy contamination resurfacing from a
-// decades-old Mereholt operation: the amphibian guild is the keystone AND
-// the indicator AND the loser. The Foundation outreach booth is the §05
-// mask, sitting next to the harm.
+// ParcelFloodbasin -- §01/§06 zone 3, Chapter 2: "the wetlands are sick".
+// Legacy contamination resurfacing from a decades-old Mereholt operation; the
+// amphibian guild is the keystone AND the indicator AND the loser. Rebuilt
+// 2026-11 on vanilla Route 120 (General + Fortree): you arrive from the
+// Corridor at the bottom-left, LEIRVIK (the hamlet) sits above the south
+// lake, the long bridge over the upper lake carries the tells, the old pump
+// house is the works door, and BREEN's checkpoint seals the rubble to the
+// River at the top-left. Flag logic unchanged; words plain.
 //
 // VAR_SKALDMERE_CH2_EVIDENCE bits:
 //   0  discharge pipe noted     1  sheen on the water      2  dead reed band
 //   3  deformed Wooper observed 4  sick apex (Karp) observed
-//   5  booth visited (the mask)
-//   6  classifier read complete
+//   5  booth visited (the mask) 6  classifier read complete (Ilex, Fernwick)
+// VAR_TEMP_1 guards the arrival trigger, VAR_TEMP_3 the relief scene,
+// VAR_TEMP_4 the checkpoint. FLAG_SKALD_FLD_RELIEF_DONE marks Dorsey's scene.
 
 const LOCALID_BASIN_REMEDIATOR = 1
 const LOCALID_BASIN_KID        = 2
 const LOCALID_BASIN_DEFORMED_WOOPER = 3
 const LOCALID_BASIN_SICK_KARP  = 4
+const LOCALID_BASIN_ITEM       = 5
+const LOCALID_FLOODBASIN_GYM   = 6
+const LOCALID_FLD_DORSEY       = 10
+const LOCALID_FLD_AIDE_1       = 11
+const LOCALID_FLD_AIDE_2       = 12
+const LOCALID_FLD_VIL_OLDWOMAN = 13
+const LOCALID_FLD_VIL_MAN      = 14
+const LOCALID_FLD_VIL_GIRL     = 15
+const LOCALID_FLD_VIL_FISHER   = 16
 
 mapscripts ParcelFloodbasin_MapScripts {
-    MAP_SCRIPT_ON_FRAME_TABLE [
-        VAR_TEMP_0, 0: ParcelFloodbasin_SetMapVar
-    ]
+    MAP_SCRIPT_ON_TRANSITION: ParcelFloodbasin_OnTransition
 }
 
-script ParcelFloodbasin_SetMapVar {
-    setvar(VAR_TEMP_0, 1)
+script ParcelFloodbasin_OnTransition {
+    // Dorsey and his aides hold the relief line until the Wetland
+    // Certification is signed; after that the line is gone and the hamlet is
+    // just a hamlet again. FLAG_TEMP_2 hides them.
+    if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        setflag(FLAG_TEMP_2)
+    } else {
+        clearflag(FLAG_TEMP_2)
+    }
     end
 }
 
-// First entry: the rain, the smell, Hale's brief made real.
+// --- first entry: the rain, the smell ------------------------------------------
 script ParcelFloodbasin_FirstEntry {
     setvar(VAR_TEMP_1, 1)
     if (flag(FLAG_SKALDMERE_FLOODBASIN_ARRIVAL)) {
         end
     }
     lockall
+    bufferpartymonnick(0, 0)
     msgbox(format("The trees open onto a low, wide basin. Rain ticks on the reeds.\pSomething is wrong with the smell."), MSGBOX_DEFAULT)
-    msgbox(format("Doduo walks on, but slower. One head sweeps the ground.\nThe other watches the water."), MSGBOX_DEFAULT)
-    msgbox(format("Hale's brief, on paper:\pLEGACY CONTAMINATION -- OWNERSHIP UNCONTESTED -- ACTIVE REMEDIATION CITED.\nWalk the upstream. Read it for yourself."), MSGBOX_DEFAULT)
+    msgbox(format("{STR_VAR_1} walks on, but slower, and keeps to the middle of the path."), MSGBOX_DEFAULT)
+    msgbox(format("HALE's brief, on paper: LEGACY CONTAMINATION. OWNERSHIP UNCONTESTED. ACTIVE REMEDIATION CITED.\pWalk the upstream. Read it for yourself."), MSGBOX_DEFAULT)
+    msgbox(format("Voices, off to the east. A lot of them. Somebody is giving a speech in the rain."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_FLOODBASIN_ARRIVAL)
     releaseall
     end
 }
 
-// --- the five observation points ------------------------------------------
+// --- the relief line: Dorsey's first big scene ---------------------------------
+// He is good at this. That is the horror. Triggered on the hamlet's entries.
+script ParcelFloodbasin_ReliefScene {
+    if (flag(FLAG_SKALD_FLD_RELIEF_DONE) || flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        setvar(VAR_TEMP_3, 1)
+        end
+    }
+    lockall
+    msgbox(format("DORSEY: --and the Council hears you. Third flood in two years. You've been patient. Patience should be paid for."), MSGBOX_DEFAULT)
+    msgbox(format("DORSEY: Fuel vouchers. Dry goods. The FOUNDATION's boat runs to FERNWICK twice a day until the road's clear. Nobody pays.\pMRS. ASKE. Your roof. I haven't forgotten. Thursday."), MSGBOX_DEFAULT)
+    msgbox(format("OLD WOMAN: Bless you, councilman. Bless you."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_FLD_DORSEY, Movement_FLD_DorseyLookUp)
+    waitmovement(0)
+    msgbox(format("DORSEY: And there's our RANGER. Good. Come down, come down. Witness this. That's your job, isn't it? Witnessing."), MSGBOX_DEFAULT)
+    msgbox(format("DORSEY: The CORPS sends a report. I send a boat.\pNo, don't argue, I'm not blaming you. I'm telling you what people remember. They remember the boat."), MSGBOX_DEFAULT)
+    msgbox(format("DORSEY: The water goes down by Thursday. It always does. Then the smell goes. Then they forget, until the next one.\pThat's the basin. That's just the basin."), MSGBOX_DEFAULT)
+    msgbox(format("GIRL: Mister DORSEY, is the water bad? Gran says don't touch it."), MSGBOX_DEFAULT)
+    msgbox(format("DORSEY: Your gran's right, sweetheart. Not until it's gone down. Here. Take two, one for your brother."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_FLD_DORSEY, Movement_FLD_DorseyFaceDown)
+    waitmovement(0)
+    msgbox(format("DORSEY: Walk the basin, RANGER. Read your stakes. When you're done, the booth by the bridge will have the remediation file ready for you. All of it. We've nothing to hide."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_FLD_RELIEF_DONE)
+    setvar(VAR_TEMP_3, 1)
+    releaseall
+    end
+}
+
+movement Movement_FLD_DorseyLookUp { face_up delay_16 }
+movement Movement_FLD_DorseyFaceDown { face_down }
+
+script ParcelFloodbasin_Dorsey {
+    lock
+    faceplayer
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("DORSEY: I heard KOLE lost his temper. He's young. I'll have a word.\pYou'll write that the FOUNDATION's man was uncooperative. Write also that the FOUNDATION's boat ran twice a day. Both are true."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("DORSEY: Vouchers are for residents, RANGER. You've got a CORPS stipend. Try the booth by the bridge if you want paperwork."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_Aide1 {
+    lock
+    faceplayer
+    msgbox(format("AIDE: Fuel vouchers on the left, dry goods on the right. Sign the sheet. Yes, the FOUNDATION keeps the sheet. For the records."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_Aide2 {
+    lock
+    faceplayer
+    msgbox(format("AIDE: Forty-one households. Forty-one signatures. The councilman likes a full sheet."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_VilOldWoman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_FLD_RELIEF_DONE)) {
+        msgbox(format("MRS. ASKE: He knows my name. Eleven years on the Council and he knows my name.\pThe CORPS man before you didn't. I'm not saying that to be unkind."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MRS. ASKE: Wait your turn, dear. We've all been flooded."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_VilMan {
+    lock
+    faceplayer
+    msgbox(format("MAN: Three floods. Three times the vouchers. Nobody's asked why the water comes up brown now.\pI asked. I got vouchers."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_VilGirl {
+    lock
+    faceplayer
+    msgbox(format("GIRL: My brother found a WOOPER with the wrong feet. Gran made him put it back. It didn't go anywhere. It just sat."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasin_VilFisher {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("FISHER: Vouchers stopped. Boat stopped. Water's the same.\pYour lot wrote something down, I hear. Does writing it down dry anything out?"), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("FISHER: I don't fish the lake anymore. I fish the top lake, past the bridge. The water's clearer up there.\pClearer. Not clear."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- the five observation points ------------------------------------------------
 script ParcelFloodbasin_Discharge {
     lock
     setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
     setvar(VAR_0x8004, 0)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("The discharge pipe. Noted."), MSGBOX_SIGN)
+        msgbox(format("The discharge pipe. In the notebook."), MSGBOX_SIGN)
         release
         end
     }
-    msgbox(format("A concrete pipe, half-buried, mouth fouled with brown crust.\pStamped:\nDISCHARGE -- AUTHORIZED USE ONLY.\pThe authorization is decades old.\nThe crust is fresher than that."), MSGBOX_SIGN)
+    msgbox(format("A concrete pipe in the bank, mouth fouled with brown crust. Stamped: DISCHARGE -- AUTHORIZED USE ONLY.\pThe authorization is decades old. The crust is fresher than that. Written down."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
     release
     end
@@ -64,11 +183,11 @@ script ParcelFloodbasin_Sheen {
     setvar(VAR_0x8004, 1)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("The sheen. Documented."), MSGBOX_SIGN)
+        msgbox(format("The sheen. In the notebook."), MSGBOX_SIGN)
         release
         end
     }
-    msgbox(format("A faint iridescence crawls on the surface, bending the rain wrong.\pIt is not new. The cattails downstream of it carry the same stain at their bases."), MSGBOX_SIGN)
+    msgbox(format("A faint iridescence crawls on the lake, bending the rain wrong.\pIt is not new. The cattails downstream carry the same stain at their bases. Written down."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
     release
     end
@@ -83,19 +202,19 @@ script ParcelFloodbasin_DeadReeds {
         release
         end
     }
-    msgbox(format("A band of dead reeds along the south bank. Straw-pale.\pAround them, the reeds are fine. The kill line is exactly the height of the floodwater six months ago."), MSGBOX_SIGN)
+    msgbox(format("A band of dead reeds along the bank, straw-pale. The reeds above and below it are fine.\pThe kill line is exactly the height of the flood six months ago. Written down."), MSGBOX_SIGN)
     special(SkaldmereCertTaskMark)
     release
     end
 }
 
-// --- the visible indicators (Pokémon, not bg signs) -----------------------
+// --- the visible indicators (Pokémon, not signs) ---------------------------------
 script ParcelFloodbasin_DeformedWooper {
     lock
     setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
     setvar(VAR_0x8004, 3)
     special(SkaldmereCertTaskMark)
-    msgbox(format("A Wooper, low to the ground. Two left feet.\pIt does not flinch.\pIt has been the way it is since it hatched, and that is recent."), MSGBOX_DEFAULT)
+    msgbox(format("A WOOPER, low in the puddle. Two left feet.\pIt doesn't flinch. It has been like this since it hatched, and that was recent. Written down."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -104,14 +223,14 @@ script ParcelFloodbasin_SickKarp {
     setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
     setvar(VAR_0x8004, 4)
     special(SkaldmereCertTaskMark)
-    msgbox(format("A grown Magikarp lists against the bank, scales graying.\pIt was not in the pipe. It was at the top of the food web.\pPoison climbs."), MSGBOX_DEFAULT)
+    msgbox(format("A grown MAGIKARP lists against the bridge piling, scales greying.\pIt was never in the pipe. It was at the top of the food web. Poison climbs. Written down."), MSGBOX_DEFAULT)
     release
     end
 }
 
-// --- the mask: the outreach booth -----------------------------------------
+// --- the mask: the outreach booth ---------------------------------------------------
 script ParcelFloodbasin_BoothSign {
-    msgbox(format("MEREHOLT FOUNDATION COMMUNITY OUTREACH\pRemediation underway.\nPlease report concerns to your local representative.\pThe paint is wet from the rain.\nThe sign is older."), MSGBOX_SIGN)
+    msgbox(format("MEREHOLT FOUNDATION COMMUNITY OUTREACH\pRemediation underway. Please report concerns to your local representative.\pThe paint is wet from the rain. The sign is older."), MSGBOX_SIGN)
     end
 }
 
@@ -122,65 +241,183 @@ script ParcelFloodbasin_Remediator {
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
     if (var(VAR_RESULT) == 1) {
-        msgbox(format("Kole adjusts his clipboard. He has been adjusting his clipboard for an hour."), MSGBOX_DEFAULT)
+        msgbox(format("KOLE: Write up whatever you write up."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Kole: Oh--Ranger! Welcome to the active remediation site.\pWe've been at it… some time now. Foundation does great work."), MSGBOX_DEFAULT)
+    msgbox(format("KOLE: Oh. RANGER! Welcome to the active remediation site.\pWe've been at it… some time now. The FOUNDATION does great work."), MSGBOX_DEFAULT)
     msgbox(format("{PLAYER}: When was the last reading?"), MSGBOX_DEFAULT)
-    msgbox(format("Kole: …Quarter or two. We're due."), MSGBOX_DEFAULT)
+    msgbox(format("KOLE: …A quarter or two. We're due."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: The councilman said you'd have the remediation file for me."), MSGBOX_DEFAULT)
+    msgbox(format("KOLE: Did he. Well. It's at the office. The coast office."), MSGBOX_DEFAULT)
     msgbox(format("{PLAYER}: Who signed off on the discharge stamp on that pipe?"), MSGBOX_DEFAULT)
-    msgbox(format("Kole, more carefully:\pKole: You'd have to ask the office. I just check the boxes."), MSGBOX_DEFAULT)
-    msgbox(format("{PLAYER}: I'm asking. The Wooper has two left feet."), MSGBOX_DEFAULT)
+    msgbox(format("KOLE: You'd have to ask the office. I just check the boxes."), MSGBOX_DEFAULT)
+    msgbox(format("{PLAYER}: I'm asking. The WOOPER has two left feet."), MSGBOX_DEFAULT)
     closemessage
     delay(30)
-    msgbox(format("Kole's voice goes flat.\pKole: Move along, Ranger.\nThis isn't your patch."), MSGBOX_DEFAULT)
+    msgbox(format("KOLE: Move along, RANGER. This isn't your patch."), MSGBOX_DEFAULT)
     trainerbattle_single(TRAINER_SKALD_REMEDIATOR,
-        format("Kole: --tch. Fine. We'll do this the loud way."),
-        format("Kole: Hmph."))
-    msgbox(format("Kole: Write up whatever you write up.\pThis river ran sick before you got here.\nIt will run sick after."), MSGBOX_DEFAULT)
-    msgbox(format("He goes back to his clipboard.\pHe does not pick up a pen."), MSGBOX_DEFAULT)
+        format("KOLE: Tch. Fine. We'll do this the loud way."),
+        format("KOLE: Hmph."))
+    msgbox(format("KOLE: Write up whatever you write up.\pThis basin ran sick before you got here. It'll run sick after."), MSGBOX_DEFAULT)
     special(SkaldmereCertTaskMark)
     release
     end
 }
 
-// --- the wild-card kid trainer (worldbuilding) ----------------------------
+// --- PIPER (the kid) and the route trainers ---------------------------------------------
 script ParcelFloodbasin_BasinKidTrainer {
     trainerbattle_single(TRAINER_SKALD_BASIN_KID,
-        format("Piper: Gran fishes here. Used to. Wanna battle?"),
-        format("Piper: Ohh. You're good!"))
-    msgbox(format("Piper: She doesn't eat what she catches anymore.\pSells it to the people who don't ask."), MSGBOX_DEFAULT)
+        format("PIPER: Gran fishes here. Used to. Wanna battle?"),
+        format("PIPER: Ohh. You're good!"))
+    msgbox(format("PIPER: She doesn't eat what she catches anymore. Sells it to the people who don't ask."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Arve {
+    trainerbattle_single(TRAINER_SKALD_FLD_ARVE,
+        format("ARVE: The DUSTOX here have spots in the wrong places. I've been drawing them. Battle first."),
+        format("ARVE: Drawn and beaten."))
+    msgbox(format("ARVE: Wrong spots, extra spots, no spots. All in the same field. My teacher says that's just variety."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Kai {
+    trainerbattle_single(TRAINER_SKALD_FLD_KAI,
+        format("KAI: Nobody sees me in the tall grass. Nobody except you, apparently."),
+        format("KAI: Seen and beaten."))
+    msgbox(format("KAI: The grass by the top lake is the tallest. It's also the only grass that smells like that."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Signe {
+    trainerbattle_single(TRAINER_SKALD_FLD_SIGNE,
+        format("SIGNE: A picnic in the rain is still a picnic. A battle in the rain is still a battle."),
+        format("SIGNE: Soggy on both counts."))
+    msgbox(format("SIGNE: I don't let my MARILL in the lower lake. It came out itchy once. Just once was enough."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Leif {
+    trainerbattle_single(TRAINER_SKALD_FLD_LEIF,
+        format("LEIF: I camp on the high ground. The low ground floods. Everybody knows. Battle?"),
+        format("LEIF: Should've camped higher."))
+    msgbox(format("LEIF: Every year the high ground's a bit higher. The water, I mean. Not the ground."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Truls {
+    trainerbattle_single(TRAINER_SKALD_FLD_TRULS,
+        format("TRULS: You walked right into my sight line. Rookie."),
+        format("TRULS: …Not a rookie."))
+    msgbox(format("TRULS: The councilman's boat goes past twice a day. Nobody's ever asked what it brings back."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Halvor {
+    trainerbattle_single(TRAINER_SKALD_FLD_HALVOR,
+        format("HALVOR: The pond's got a boardwalk because the pond used to be a field. Think about that. Then battle me."),
+        format("HALVOR: Thought about it, did you."))
+    msgbox(format("HALVOR: My father planted this field. I fish it. That's the basin in one family."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Maja {
+    trainerbattle_single(TRAINER_SKALD_FLD_MAJA,
+        format("MAJA: The puddles never dry out here anymore. My MARILL loves it. I don't. Battle!"),
+        format("MAJA: MARILL still loves it."))
+    msgbox(format("MAJA: The puddles have a shine on them in the morning. Rainbow colours. Gran says don't look at it too long."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Bjorn {
+    trainerbattle_single(TRAINER_SKALD_FLD_BJORN,
+        format("BJORN: The pump house door's open again. I didn't open it. Did you? Battle me and we'll call it even."),
+        format("BJORN: Even, then."))
+    msgbox(format("BJORN: MEREHOLT pumped this whole basin for twenty years. Then they stopped. Then the water came back. Then the smell."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Solveig {
+    trainerbattle_single(TRAINER_SKALD_FLD_SOLVEIG,
+        format("SOLVEIG: Cadet SOLVEIG. HALE said a provisional would come through. Spar. Then I'll tell you where the stakes are."),
+        format("SOLVEIG: Good. The stakes."))
+    msgbox(format("SOLVEIG: Red cloth stakes are ours. The bare ones are the FOUNDATION's. They put theirs on the clean bank. We put ours where the water is."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Nils {
+    trainerbattle_single(TRAINER_SKALD_FLD_NILS,
+        format("NILS: The north meadow's the only dry bit. Everyone comes up here. Everyone battles."),
+        format("NILS: Everyone loses to you, apparently."))
+    msgbox(format("NILS: My WURMPLE won't eat the reeds from the low ground. Only the high. I thought they ate anything."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Rannveig {
+    trainerbattle_single(TRAINER_SKALD_FLD_RANNVEIG,
+        format("RANNVEIG: My GLOOM smells better than the basin does. That's a low bar. Battle?"),
+        format("RANNVEIG: Still smells better."))
+    msgbox(format("RANNVEIG: The road north is a haul road. Trucks come down it at night. Nobody's told us what they haul."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Einar {
+    trainerbattle_single(TRAINER_SKALD_FLD_EINAR,
+        format("EINAR: My MIGHTYENA's the strongest thing in the basin. Prove me wrong."),
+        format("EINAR: …Proved."))
+    msgbox(format("EINAR: Strongest thing in the basin. Not saying much, these days."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Sturla {
+    trainerbattle_single(TRAINER_SKALD_FLD_STURLA,
+        format("STURLA: I came for the NUZLEAF. Stayed for the rain. Nobody stays for the rain. Battle."),
+        format("STURLA: Should've left with the NUZLEAF."))
+    msgbox(format("STURLA: It rains here more than it used to. Not more days. More water. Ask anyone with a roof."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasin_Oskar {
+    trainerbattle_single(TRAINER_SKALD_FLD_OSKAR,
+        format("OSKAR: The puddle field used to be the best grazing in the district. Now it's the best puddles. Battle."),
+        format("OSKAR: Best puddles. Worst battle."))
+    msgbox(format("OSKAR: The ground here doesn't drain anymore. Something underneath it is full."), MSGBOX_DEFAULT)
     end
 }
 
-script ParcelFloodbasin_ItemRevive {
-    finditem(ITEM_REVIVE)
+// --- items and signs -------------------------------------------------------------------
+script ParcelFloodbasin_ItemRevive { finditem(ITEM_REVIVE) end }
+script ParcelFloodbasin_ItemSuperPotion { finditem(ITEM_SUPER_POTION) end }
+script ParcelFloodbasin_ItemGreatBall { finditem(ITEM_GREAT_BALL) end }
+
+script ParcelFloodbasin_SignHamlet {
+    msgbox(format("LEIRVIK\pFlood line marked on the chapel wall. Boat times posted at the relief store."), MSGBOX_SIGN)
     end
 }
 
-// --- Gym 3: Mereholt Logistics / Quarry & Roadworks checkpoint (Breen) -------
-// Access control wearing a hard hat. Breen runs the haul road and decides who
-// it carries. Beating him files the Quarry clearance (Badge 3), logged as
-// fit-to-move-earth -- it releases HM06 Rock Smash. A checkpoint on the
-// up-road below the River neck.
-script ParcelFloodbasin_GymBreen {
-    trainerbattle_single(TRAINER_SKALD_GYM3,
-        format("Breen: Logistics. This is a haul road, not a hiking trail.\pNobody moves up to the river neck on my road without clearing me first."),
-        format("Breen: …Fine. You can carry weight. Move up."),
-        ParcelFloodbasin_GymBreen_Defeated)
-    lock
-    faceplayer
-    msgbox(format("Breen: Cleared. The neck's open to you.\pMind the loads coming down -- they don't stop for paperwork."), MSGBOX_DEFAULT)
-    release
-    end
-}
-script ParcelFloodbasin_GymBreen_Defeated {
+// --- Gym 3: Mereholt Logistics / Quarry & Roadworks checkpoint (BREEN) -------------------
+// The haul road to the river neck. A trigger on the one-tile passage, so the
+// clearance can't be walked around; the rubble past him needs HM06.
+script ParcelFloodbasin_Checkpoint {
+    if (flag(FLAG_BADGE03_GET)) {
+        setvar(VAR_TEMP_4, 1)
+        end
+    }
+    lockall
+    msgbox(format("BREEN: Stop there."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_FLOODBASIN_GYM, Movement_FLD_BreenApproach)
+    waitmovement(0)
+    applymovement(OBJ_EVENT_ID_PLAYER, Movement_FLD_FaceLeft)
+    waitmovement(0)
+    msgbox(format("BREEN: Logistics. This is a haul road, not a hiking trail. Nobody moves up to the river neck on my road without clearing me first.\pMIRREN cleared you? MIRREN clears anyone who can read. I need people who can carry."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_GYM3, format("BREEN: …Fine. You can carry weight. Move up."))
     setflag(FLAG_BADGE03_GET)
     call(Common_EventScript_PlayGymBadgeFanfare)
-    msgbox(format("Breen: Quarry clearance. Logs you fit to move earth on division ground.\pTool's bonded to it. Standard issue."), MSGBOX_DEFAULT)
+    msgbox(format("BREEN: Quarry clearance. Logs you fit to move earth on division ground. Tool's bonded to it."), MSGBOX_DEFAULT)
     giveitem(ITEM_HM06)
-    msgbox(format("Breen: ROCK SMASH. Breaks the rubble that blocks a road.\pThere's plenty of it where you're headed."), MSGBOX_DEFAULT)
+    msgbox(format("BREEN: ROCK SMASH. The slide past me's been there since spring. Nobody's cleared it because nobody's needed to go up.\pMind the loads coming down. They don't stop for paperwork."), MSGBOX_DEFAULT)
+    closemessage
+    applymovement(LOCALID_FLOODBASIN_GYM, Movement_FLD_BreenAside)
+    waitmovement(0)
+    setvar(VAR_TEMP_4, 1)
+    releaseall
+    end
+}
+script ParcelFloodbasin_GymBreen {
+    lock
+    faceplayer
+    msgbox(format("BREEN: Cleared. The neck's open to you. Mind the loads coming down."), MSGBOX_DEFAULT)
     release
     end
 }
+movement Movement_FLD_BreenApproach { walk_right * 2 }
+movement Movement_FLD_BreenAside { walk_left * 3 walk_down face_up }
+movement Movement_FLD_FaceLeft { face_left }

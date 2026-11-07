@@ -695,14 +695,14 @@
 #define FLAG_SKALD_HIDDEN_ADIT_NUGGET 0x288 // Skaldmere: the Corridor
 #define FLAG_SKALD_ITEM_ADIT_ESCAPE_ROPE 0x289 // Skaldmere: the Corridor
 #define FLAG_SKALD_COR_CHECKPOINT_SCENE 0x28A // Skaldmere: the Corridor
-#define FLAG_UNUSED_0x28B  0x28B // Unused Flag
-#define FLAG_UNUSED_0x28C  0x28C // Unused Flag
-#define FLAG_UNUSED_0x28D  0x28D // Unused Flag
-#define FLAG_UNUSED_0x28E  0x28E // Unused Flag
-#define FLAG_UNUSED_0x28F  0x28F // Unused Flag
-#define FLAG_UNUSED_0x290  0x290 // Unused Flag
-#define FLAG_UNUSED_0x291  0x291 // Unused Flag
-#define FLAG_UNUSED_0x292  0x292 // Unused Flag
+#define FLAG_SKALD_ITEM_FLD_REVIVE 0x28B // Skaldmere: the Floodbasin
+#define FLAG_SKALD_ITEM_FLD_SUPER_POTION 0x28C // Skaldmere: the Floodbasin
+#define FLAG_SKALD_ITEM_FLD_GREAT_BALL 0x28D // Skaldmere: the Floodbasin
+#define FLAG_SKALD_HIDDEN_FLD_RARE_CANDY 0x28E // Skaldmere: the Floodbasin
+#define FLAG_SKALD_HIDDEN_FLD_PP_UP 0x28F // Skaldmere: the Floodbasin
+#define FLAG_SKALD_FLD_RELIEF_DONE 0x290 // Skaldmere: the Floodbasin
+#define FLAG_SKALD_ITEM_WORKS_TM18 0x291 // Skaldmere: the Floodbasin
+#define FLAG_SKALD_HIDDEN_WORKS_BIG_PEARL 0x292 // Skaldmere: the Floodbasin
 #define FLAG_UNUSED_0x293  0x293 // Unused Flag
 #define FLAG_UNUSED_0x294  0x294 // Unused Flag
 #define FLAG_UNUSED_0x295  0x295 // Unused Flag

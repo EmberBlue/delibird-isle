@@ -1,0 +1,27 @@
+// ParcelFloodbasinHouse1 -- GRAN HEDDA's house in Leirvik (PIPER's gran).
+mapscripts ParcelFloodbasinHouse1_MapScripts {
+}
+script ParcelFloodbasinHouse1_Hedda {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("HEDDA: The CORPS girl came through with her ledger. ILEX. She asked me what I used to catch. Nobody's asked me that in ten years.\pI told her. She wrote it all down. Every fish."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("HEDDA: Sit, sit. PIPER's out in the puddles again, she'll be soaked.\pI fished the lower lake forty years. Stopped when the catch came up with sores. I still sell it. Don't look at me like that. What else is there?"), MSGBOX_DEFAULT)
+    msgbox(format("HEDDA: The councilman sends vouchers. The FOUNDATION sends a boat. The CORPS sends children with notebooks. No offence.\pNone of them send fish."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinHouse1_Karp {
+    lock
+    faceplayer
+    msgbox(format("The MAGIKARP in the washtub flops once and goes still. Its scales are the right colour. HEDDA checks them every morning."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinHouse1_Chart {
+    msgbox(format("A catch log, in pencil, going back decades. The columns thin out around twenty years ago and never fill back in.\pThe last page: 'Sold 4. Ate 0.'"), MSGBOX_SIGN)
+    end
+}
