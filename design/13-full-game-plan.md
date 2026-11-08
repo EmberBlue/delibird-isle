@@ -332,4 +332,15 @@ quest is built, how the peer works) before they are asked six more times.
   Fernwick pond bank painting the line where the water was (ON_TRANSITION
   hide flag; YES/NO; Lv 45; "It is not Sketch. It does not try to be.").
   Wild SMEARGLE at 1% in the hide and the marsh.
+- **2026-11-08 — the third story state (fix D's "three states"), zones
+  1–3.** Sixty-four residents of Saltwick, Fernwick, Reedmere and the
+  Corridor crew hut gained a mid-game line that fires after the Watershed
+  certification and before the finale: the Elvsund water meeting reaches the
+  coast — six people stood up and the Board wrote down what they said; the
+  minutes pass hand to hand by lamp oil; the soil cores ride north in a crate
+  marked EVIDENCE; the dredge crew is stood down "pending review"; Hale
+  sleeps four hours in a chair; the reed cutter posts a number to the
+  weather. Inserted as the branch after the post-finale one (or as the
+  second leg of an if/elif chain), only in scripts without quest or story
+  logic of their own. ~51,000 hand-written words.
 

@@ -25,6 +25,11 @@ script ParcelIsleHarbourOffice_Osk {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OSK: I filed the same three forms for six years. This week they sent me a fourth.\pIt's called an 'impact acknowledgement'. Nobody can tell me what it acknowledges."), MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OSK: Two manifests this month I've never written before. 'Evidence, three crates.' And 'relief, returned, empty.'\pIf you want to know what a region's doing, don't ask the papers. Ask what moved."), MSGBOX_DEFAULT)
+        release
+        end
     } else {
         msgbox(format("OSK: I do the manifests. Everything off the boat, everything onto it.\pIf you want to know what a town runs on, don't ask the mayor. Ask the manifest."), MSGBOX_DEFAULT)
     }

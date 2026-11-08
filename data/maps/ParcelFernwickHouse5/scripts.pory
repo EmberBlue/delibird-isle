@@ -47,6 +47,11 @@ script ParcelFernwickHouse5_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: He took one of the old notebooks out of the chest last night. The river one. He read it with the Board's minutes beside it.\pHe said the numbers matched. Then he said that was the worst thing he'd heard all year."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: He keeps his old notebooks in the chest. Every page is a river that isn't there now."), MSGBOX_DEFAULT)
     release
     end

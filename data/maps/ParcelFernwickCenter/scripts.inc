@@ -32,8 +32,10 @@ ParcelFernwickCenter_Trainer::
 # 22 "data/maps/ParcelFernwickCenter/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickCenter_Trainer_2
 # 27 "data/maps/ParcelFernwickCenter/scripts.pory"
-	msgbox ParcelFernwickCenter_Trainer_Text_1, MSGBOX_DEFAULT
-# 28 "data/maps/ParcelFernwickCenter/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickCenter_Trainer_5
+# 32 "data/maps/ParcelFernwickCenter/scripts.pory"
+	msgbox ParcelFernwickCenter_Trainer_Text_2, MSGBOX_DEFAULT
+# 33 "data/maps/ParcelFernwickCenter/scripts.pory"
 	release
 	end
 
@@ -41,6 +43,13 @@ ParcelFernwickCenter_Trainer_2:
 # 23 "data/maps/ParcelFernwickCenter/scripts.pory"
 	msgbox ParcelFernwickCenter_Trainer_Text_0, MSGBOX_DEFAULT
 # 24 "data/maps/ParcelFernwickCenter/scripts.pory"
+	release
+	end
+
+ParcelFernwickCenter_Trainer_5:
+# 28 "data/maps/ParcelFernwickCenter/scripts.pory"
+	msgbox ParcelFernwickCenter_Trainer_Text_1, MSGBOX_DEFAULT
+# 29 "data/maps/ParcelFernwickCenter/scripts.pory"
 	release
 	end
 
@@ -53,7 +62,15 @@ ParcelFernwickCenter_Trainer_Text_0:
 	.string "WOOPER says nothing. It's a WOOPER.$"
 
 ParcelFernwickCenter_Trainer_Text_1:
-# 27 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 28 "data/maps/ParcelFernwickCenter/scripts.pory"
+	.string "BOY: My WOOPER's fine now. The nurse\n"
+	.string "says the ones from upstream are fine\l"
+	.string "and the ones from the landing aren't.\p"
+	.string "She's started writing down which is\n"
+	.string "which. She never did that before.$"
+
+ParcelFernwickCenter_Trainer_Text_2:
+# 32 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "BOY: The nurse healed my WOOPER. Then\n"
 	.string "it got sick again.\p"
 	.string "It's a WOOPER thing, apparently.$"

@@ -11,6 +11,11 @@ script ParcelWetlandsHouse1_Fisher {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("FISHER: I still fish upstream of it. But the dredge crew's stood down and the discharge has a number on it now, like the river's water has.\pNumbers don't clean a channel. They do make it harder to pretend it's clean."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: Landing's been sick since the discharge. I fish upstream of it now. Upstream of it is a long way."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelWetlandsHouse1_Woman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: A CORPS monitor sits on the bank with a jar. I bring him tea. He says the jar's getting clearer. I'll believe the children's feet before the jar."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: The children still swim off the landing. But the councilman's boat hasn't been out since the river meeting.\pFunny what children notice. They've stopped waving at the boat. Nobody told them to."), MSGBOX_DEFAULT)
         release
         end
     }

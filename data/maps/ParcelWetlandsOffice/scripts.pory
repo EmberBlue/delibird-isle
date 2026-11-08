@@ -13,6 +13,11 @@ script ParcelWetlandsOffice_Clerk {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("CLERK: The councilman is in the basin, I'm told. Then the river. Then the coast. He's everywhere except here.\pThe office is operating normally. I've said that so often the words have stopped meaning anything. That's probably normal too."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (defeated(TRAINER_SKALD_ENFORCER)) {
         msgbox(format("CLERK: The councilman isn't here. The councilman isn't anywhere, apparently.\pI've been told to say the office is operating normally. The office is operating normally."), MSGBOX_DEFAULT)
         release
@@ -28,6 +33,11 @@ script ParcelWetlandsOffice_Tech {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("TECHNICIAN: The gauges picked it up this time. The new ones. The old ones were set to miss it; the hearing said so in better words. I've recalibrated. I sleep now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("TECHNICIAN: I pulled the gauge logs for the week of the kill. Flat. Then I pulled the river Board's logs, because they're public now, and theirs aren't flat.\pSame make of gauge. Different water, or different hands. I've put in for a transfer to find out which."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -52,6 +62,11 @@ script ParcelWetlandsOffice_Rep {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MEREHOLT REP: The FOUNDATION welcomes the river community's engagement. Partnership is a process.\pWe have revised the brochure. The new one has fewer numbers in it. Do take one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MEREHOLT REP: The FOUNDATION believes in partnership. Local hands, local jobs, local water.\pYou'll find we have nothing to hide here, RANGER. Nothing at all. Do have a brochure."), MSGBOX_DEFAULT)
     release
     end
@@ -62,6 +77,11 @@ script ParcelWetlandsOffice_Local {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: The boat loan came through. Not from the councilman. From a fund the review set up. I waited an hour for the wrong man for a year. The right one was a form."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("FISHER: Still waiting on the boat loan. The councilman's at the river, they say, explaining a sheet of numbers to people who can read.\pI can read. I'm just not on the sheet. Yet."), MSGBOX_DEFAULT)
         release
         end
     }

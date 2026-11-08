@@ -10,11 +10,13 @@ ParcelIsleMooreHouse_Runa::
 # 9 "data/maps/ParcelIsleMooreHouse/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleMooreHouse_Runa_2
 # 11 "data/maps/ParcelIsleMooreHouse/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_GATE_ISLE, ParcelIsleMooreHouse_Runa_3
-# 14 "data/maps/ParcelIsleMooreHouse/scripts.pory"
-	msgbox ParcelIsleMooreHouse_Runa_Text_2, MSGBOX_DEFAULT
-ParcelIsleMooreHouse_Runa_1:
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleMooreHouse_Runa_3
+# 13 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_GATE_ISLE, ParcelIsleMooreHouse_Runa_4
 # 16 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	msgbox ParcelIsleMooreHouse_Runa_Text_3, MSGBOX_DEFAULT
+ParcelIsleMooreHouse_Runa_1:
+# 18 "data/maps/ParcelIsleMooreHouse/scripts.pory"
 	release
 	end
 
@@ -28,6 +30,11 @@ ParcelIsleMooreHouse_Runa_3:
 	msgbox ParcelIsleMooreHouse_Runa_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsleMooreHouse_Runa_1
 
+ParcelIsleMooreHouse_Runa_4:
+# 14 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	msgbox ParcelIsleMooreHouse_Runa_Text_2, MSGBOX_DEFAULT
+	goto ParcelIsleMooreHouse_Runa_1
+
 
 ParcelIsleMooreHouse_Runa_Text_0:
 # 10 "data/maps/ParcelIsleMooreHouse/scripts.pory"
@@ -39,13 +46,21 @@ ParcelIsleMooreHouse_Runa_Text_0:
 
 ParcelIsleMooreHouse_Runa_Text_1:
 # 12 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	.string "RUNA: My brother logged a mainland\n"
+	.string "ferry. First in a year. Full of reporters,\l"
+	.string "going north to look at a river.\p"
+	.string "He wrote it in the good ink. Then he sat\n"
+	.string "with the book open a while.$"
+
+ParcelIsleMooreHouse_Runa_Text_2:
+# 14 "data/maps/ParcelIsleMooreHouse/scripts.pory"
 	.string "RUNA: You beat him on the lane? He won't\n"
 	.string "say it, so I will: he was pleased.\p"
 	.string "He logs the ones who beat him in a\n"
 	.string "different ink.$"
 
-ParcelIsleMooreHouse_Runa_Text_2:
-# 14 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+ParcelIsleMooreHouse_Runa_Text_3:
+# 16 "data/maps/ParcelIsleMooreHouse/scripts.pory"
 	.string "RUNA: My brother's the harbour-master.\n"
 	.string "Every hull, every hand. He'll tell you\l"
 	.string "himself, he tells everyone.\p"

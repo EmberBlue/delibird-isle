@@ -10,11 +10,13 @@ ParcelWetlandsOffice_Clerk::
 # 11 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsOffice_Clerk_2
 # 16 "data/maps/ParcelWetlandsOffice/scripts.pory"
-	checktrainerflag TRAINER_SKALD_ENFORCER
-	goto_if 1, ParcelWetlandsOffice_Clerk_5
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlandsOffice_Clerk_5
 # 21 "data/maps/ParcelWetlandsOffice/scripts.pory"
-	msgbox ParcelWetlandsOffice_Clerk_Text_2, MSGBOX_DEFAULT
-# 22 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ENFORCER
+	goto_if 1, ParcelWetlandsOffice_Clerk_8
+# 26 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Clerk_Text_3, MSGBOX_DEFAULT
+# 27 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
@@ -32,82 +34,116 @@ ParcelWetlandsOffice_Clerk_5:
 	release
 	end
 
+ParcelWetlandsOffice_Clerk_8:
+# 22 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Clerk_Text_2, MSGBOX_DEFAULT
+# 23 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	release
+	end
+
 
 ParcelWetlandsOffice_Tech::
-# 27 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 32 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	lock
-# 28 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 33 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	faceplayer
-# 29 "data/maps/ParcelWetlandsOffice/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsOffice_Tech_2
 # 34 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsOffice_Tech_2
+# 39 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlandsOffice_Tech_5
+# 44 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE
-# 35 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 45 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	setvar VAR_0x8004, 5
-# 36 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 46 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 37 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 47 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	compare VAR_RESULT, 1
-	goto_if_eq ParcelWetlandsOffice_Tech_5
-# 42 "data/maps/ParcelWetlandsOffice/scripts.pory"
-	msgbox ParcelWetlandsOffice_Tech_Text_2, MSGBOX_DEFAULT
-# 43 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	goto_if_eq ParcelWetlandsOffice_Tech_8
+# 52 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Tech_Text_3, MSGBOX_DEFAULT
+# 53 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
 ParcelWetlandsOffice_Tech_2:
-# 30 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 35 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	msgbox ParcelWetlandsOffice_Tech_Text_0, MSGBOX_DEFAULT
-# 31 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 36 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
 ParcelWetlandsOffice_Tech_5:
-# 38 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 40 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	msgbox ParcelWetlandsOffice_Tech_Text_1, MSGBOX_DEFAULT
-# 39 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 41 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	release
+	end
+
+ParcelWetlandsOffice_Tech_8:
+# 48 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Tech_Text_2, MSGBOX_DEFAULT
+# 49 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
 
 ParcelWetlandsOffice_Rep::
-# 48 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 58 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	lock
-# 49 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 59 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	faceplayer
-# 50 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 60 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsOffice_Rep_2
-# 55 "data/maps/ParcelWetlandsOffice/scripts.pory"
-	msgbox ParcelWetlandsOffice_Rep_Text_1, MSGBOX_DEFAULT
-# 56 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 65 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlandsOffice_Rep_5
+# 70 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Rep_Text_2, MSGBOX_DEFAULT
+# 71 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
 ParcelWetlandsOffice_Rep_2:
-# 51 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 61 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	msgbox ParcelWetlandsOffice_Rep_Text_0, MSGBOX_DEFAULT
-# 52 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 62 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	release
+	end
+
+ParcelWetlandsOffice_Rep_5:
+# 66 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Rep_Text_1, MSGBOX_DEFAULT
+# 67 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
 
 ParcelWetlandsOffice_Local::
-# 61 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 76 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	lock
-# 62 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 77 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	faceplayer
-# 63 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 78 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsOffice_Local_2
-# 68 "data/maps/ParcelWetlandsOffice/scripts.pory"
-	msgbox ParcelWetlandsOffice_Local_Text_1, MSGBOX_DEFAULT
-# 69 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 83 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlandsOffice_Local_5
+# 88 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Local_Text_2, MSGBOX_DEFAULT
+# 89 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
 ParcelWetlandsOffice_Local_2:
-# 64 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 79 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	msgbox ParcelWetlandsOffice_Local_Text_0, MSGBOX_DEFAULT
-# 65 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 80 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	release
+	end
+
+ParcelWetlandsOffice_Local_5:
+# 84 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Local_Text_1, MSGBOX_DEFAULT
+# 85 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	release
 	end
 
@@ -122,14 +158,24 @@ ParcelWetlandsOffice_Clerk_Text_0:
 
 ParcelWetlandsOffice_Clerk_Text_1:
 # 17 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "CLERK: The councilman is in the basin,\n"
+	.string "I'm told. Then the river. Then the coast.\l"
+	.string "He's everywhere except here.\p"
+	.string "The office is operating normally. I've\n"
+	.string "said that so often the words have\l"
+	.string "stopped meaning anything. That's\l"
+	.string "probably normal too.$"
+
+ParcelWetlandsOffice_Clerk_Text_2:
+# 22 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "CLERK: The councilman isn't here. The\n"
 	.string "councilman isn't anywhere, apparently.\p"
 	.string "I've been told to say the office is\n"
 	.string "operating normally. The office is\l"
 	.string "operating normally.$"
 
-ParcelWetlandsOffice_Clerk_Text_2:
-# 21 "data/maps/ParcelWetlandsOffice/scripts.pory"
+ParcelWetlandsOffice_Clerk_Text_3:
+# 26 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "CLERK: Welcome to the TIDEWATER\n"
 	.string "DIVISION. We gauge every channel on\l"
 	.string "the backwater, hourly.\p"
@@ -137,7 +183,7 @@ ParcelWetlandsOffice_Clerk_Text_2:
 	.string "Well. It's all filed.$"
 
 ParcelWetlandsOffice_Tech_Text_0:
-# 30 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 35 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "TECHNICIAN: The gauges picked it up\n"
 	.string "this time. The new ones. The old ones\l"
 	.string "were set to miss it; the hearing said so\l"
@@ -145,22 +191,32 @@ ParcelWetlandsOffice_Tech_Text_0:
 	.string "sleep now.$"
 
 ParcelWetlandsOffice_Tech_Text_1:
-# 38 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 40 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "TECHNICIAN: I pulled the gauge logs for\n"
+	.string "the week of the kill. Flat. Then I pulled\l"
+	.string "the river Board's logs, because they're\l"
+	.string "public now, and theirs aren't flat.\p"
+	.string "Same make of gauge. Different water, or\n"
+	.string "different hands. I've put in for a\l"
+	.string "transfer to find out which.$"
+
+ParcelWetlandsOffice_Tech_Text_2:
+# 48 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "TECHNICIAN: The gauges didn't pick up\n"
 	.string "anything. Nothing. A kill like that and\l"
 	.string "the numbers are flat.\p"
 	.string "Either the gauges are wrong or the\n"
 	.string "gauges are where the water isn't.$"
 
-ParcelWetlandsOffice_Tech_Text_2:
-# 42 "data/maps/ParcelWetlandsOffice/scripts.pory"
+ParcelWetlandsOffice_Tech_Text_3:
+# 52 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "TECHNICIAN: Four gauges on the\n"
 	.string "channels and one on the falls. Hourly.\l"
 	.string "The readings go to the coast office.\p"
 	.string "No, I don't see them after that.$"
 
 ParcelWetlandsOffice_Rep_Text_0:
-# 51 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 61 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "MEREHOLT REP: The FOUNDATION believes\n"
 	.string "in partnership. We've a new partnership\l"
 	.string "page: local hands, local jobs, local\l"
@@ -169,7 +225,16 @@ ParcelWetlandsOffice_Rep_Text_0:
 	.string "It's a start.$"
 
 ParcelWetlandsOffice_Rep_Text_1:
-# 55 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 66 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "MEREHOLT REP: The FOUNDATION welcomes\n"
+	.string "the river community's engagement.\l"
+	.string "Partnership is a process.\p"
+	.string "We have revised the brochure. The new\n"
+	.string "one has fewer numbers in it. Do take\l"
+	.string "one.$"
+
+ParcelWetlandsOffice_Rep_Text_2:
+# 70 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "MEREHOLT REP: The FOUNDATION believes\n"
 	.string "in partnership. Local hands, local jobs,\l"
 	.string "local water.\p"
@@ -178,7 +243,7 @@ ParcelWetlandsOffice_Rep_Text_1:
 	.string "brochure.$"
 
 ParcelWetlandsOffice_Local_Text_0:
-# 64 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 79 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "FISHER: The boat loan came through.\n"
 	.string "Not from the councilman. From a fund\l"
 	.string "the review set up. I waited an hour for\l"
@@ -186,7 +251,16 @@ ParcelWetlandsOffice_Local_Text_0:
 	.string "was a form.$"
 
 ParcelWetlandsOffice_Local_Text_1:
-# 68 "data/maps/ParcelWetlandsOffice/scripts.pory"
+# 84 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "FISHER: Still waiting on the boat loan.\n"
+	.string "The councilman's at the river, they say,\l"
+	.string "explaining a sheet of numbers to people\l"
+	.string "who can read.\p"
+	.string "I can read. I'm just not on the sheet.\n"
+	.string "Yet.$"
+
+ParcelWetlandsOffice_Local_Text_2:
+# 88 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "FISHER: I came to ask about the boat\n"
 	.string "loan. Been waiting an hour.\p"
 	.string "The councilman said to ask. The\n"

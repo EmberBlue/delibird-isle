@@ -11,6 +11,11 @@ script ParcelFernwickHouse6_Man {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: Rangers back from the basin eat like they've been digging, because they have. Sandbags.\pI've started putting sugar in the pot without being asked. Nobody's objected."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: I cook for the District Station. Rangers eat like people who've walked all day, because they have."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelFernwickHouse6_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Dad says you fed a whole region a truth. He says that's cooking."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("GIRL: Dad says the river people fed the whole meeting from one pot and nobody went home hungry or quiet.\pThat IS the same job. I told you."), MSGBOX_DEFAULT)
         release
         end
     }

@@ -10,11 +10,13 @@ ParcelIsleNetLoft_Grette::
 # 10 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleNetLoft_Grette_2
 # 12 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleNetLoft_Grette_3
-# 15 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	msgbox ParcelIsleNetLoft_Grette_Text_2, MSGBOX_DEFAULT
-ParcelIsleNetLoft_Grette_1:
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleNetLoft_Grette_3
+# 14 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleNetLoft_Grette_4
 # 17 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	msgbox ParcelIsleNetLoft_Grette_Text_3, MSGBOX_DEFAULT
+ParcelIsleNetLoft_Grette_1:
+# 19 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	release
 	end
 
@@ -28,21 +30,26 @@ ParcelIsleNetLoft_Grette_3:
 	msgbox ParcelIsleNetLoft_Grette_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsleNetLoft_Grette_1
 
+ParcelIsleNetLoft_Grette_4:
+# 15 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	msgbox ParcelIsleNetLoft_Grette_Text_2, MSGBOX_DEFAULT
+	goto ParcelIsleNetLoft_Grette_1
+
 
 ParcelIsleNetLoft_Zigzagoon::
-# 22 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	lock
-# 23 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	faceplayer
 # 24 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	waitse
+	lock
 # 25 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
+	faceplayer
 # 26 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	msgbox ParcelIsleNetLoft_Zigzagoon_Text_0, MSGBOX_DEFAULT
+	waitse
 # 27 "data/maps/ParcelIsleNetLoft/scripts.pory"
-	waitmoncry
+	playmoncry SPECIES_ZIGZAGOON, CRY_MODE_NORMAL
 # 28 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	msgbox ParcelIsleNetLoft_Zigzagoon_Text_0, MSGBOX_DEFAULT
+# 29 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	waitmoncry
+# 30 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	release
 	end
 
@@ -57,6 +64,15 @@ ParcelIsleNetLoft_Grette_Text_0:
 
 ParcelIsleNetLoft_Grette_Text_1:
 # 13 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	.string "GRETTE: The river minutes read like a\n"
+	.string "net. Every hole tells you what went\l"
+	.string "through.\p"
+	.string "Six holes, six names, and the Board's\n"
+	.string "numbers caught in the mesh. Somebody's\l"
+	.string "been reading in mesh. About time.$"
+
+ParcelIsleNetLoft_Grette_Text_2:
+# 15 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	.string "GRETTE: A net's a survey. Every hole\n"
 	.string "tells you what went through and what\l"
 	.string "didn't.\p"
@@ -64,8 +80,8 @@ ParcelIsleNetLoft_Grette_Text_1:
 	.string "fifty years. You've got a notebook.\l"
 	.string "Same thing, slower.$"
 
-ParcelIsleNetLoft_Grette_Text_2:
-# 15 "data/maps/ParcelIsleNetLoft/scripts.pory"
+ParcelIsleNetLoft_Grette_Text_3:
+# 17 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	.string "GRETTE: Mind the ZIGZAGOON. He thinks\n"
 	.string "the nets are for him.\p"
 	.string "Sixty years I've made nets for this\n"
@@ -73,6 +89,6 @@ ParcelIsleNetLoft_Grette_Text_2:
 	.string "less in them and more holes. Work it out.$"
 
 ParcelIsleNetLoft_Zigzagoon_Text_0:
-# 26 "data/maps/ParcelIsleNetLoft/scripts.pory"
+# 28 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	.string "ZIGZAGOON is tangled in a net and\n"
 	.string "completely happy about it.$"

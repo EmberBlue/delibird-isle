@@ -10,11 +10,13 @@ ParcelIsleOldCoupleHouse_Aud::
 # 10 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleOldCoupleHouse_Aud_2
 # 12 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleOldCoupleHouse_Aud_3
-# 15 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
-	msgbox ParcelIsleOldCoupleHouse_Aud_Text_2, MSGBOX_DEFAULT
-ParcelIsleOldCoupleHouse_Aud_1:
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleOldCoupleHouse_Aud_3
+# 14 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleOldCoupleHouse_Aud_4
 # 17 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_Aud_Text_3, MSGBOX_DEFAULT
+ParcelIsleOldCoupleHouse_Aud_1:
+# 19 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	release
 	end
 
@@ -28,31 +30,43 @@ ParcelIsleOldCoupleHouse_Aud_3:
 	msgbox ParcelIsleOldCoupleHouse_Aud_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsleOldCoupleHouse_Aud_1
 
+ParcelIsleOldCoupleHouse_Aud_4:
+# 15 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_Aud_Text_2, MSGBOX_DEFAULT
+	goto ParcelIsleOldCoupleHouse_Aud_1
+
 
 ParcelIsleOldCoupleHouse_Sten::
-# 22 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
-	lock
-# 23 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
-	faceplayer
 # 24 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleOldCoupleHouse_Sten_2
+	lock
+# 25 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	faceplayer
 # 26 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleOldCoupleHouse_Sten_3
-# 29 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
-	msgbox ParcelIsleOldCoupleHouse_Sten_Text_2, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleOldCoupleHouse_Sten_2
+# 28 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleOldCoupleHouse_Sten_3
+# 30 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleOldCoupleHouse_Sten_4
+# 33 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_Sten_Text_3, MSGBOX_DEFAULT
 ParcelIsleOldCoupleHouse_Sten_1:
-# 31 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+# 35 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	release
 	end
 
 ParcelIsleOldCoupleHouse_Sten_2:
-# 25 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+# 27 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	msgbox ParcelIsleOldCoupleHouse_Sten_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsleOldCoupleHouse_Sten_1
 
 ParcelIsleOldCoupleHouse_Sten_3:
-# 27 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+# 29 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	msgbox ParcelIsleOldCoupleHouse_Sten_Text_1, MSGBOX_DEFAULT
+	goto ParcelIsleOldCoupleHouse_Sten_1
+
+ParcelIsleOldCoupleHouse_Sten_4:
+# 31 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_Sten_Text_2, MSGBOX_DEFAULT
 	goto ParcelIsleOldCoupleHouse_Sten_1
 
 
@@ -68,14 +82,23 @@ ParcelIsleOldCoupleHouse_Aud_Text_0:
 
 ParcelIsleOldCoupleHouse_Aud_Text_1:
 # 13 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	.string "AUD: The river village stood up to the\n"
+	.string "Board. In a hall. With tea, they say. You\l"
+	.string "can't stand up to anybody properly\l"
+	.string "without tea.\p"
+	.string "She'd have liked that. Thursdays. She\n"
+	.string "never missed one until she did.$"
+
+ParcelIsleOldCoupleHouse_Aud_Text_2:
+# 15 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	.string "AUD: She took tea here every Thursday\n"
 	.string "for years. Never said a word about her\l"
 	.string "work. Talked about the gulls.\p"
 	.string "The last Thursday, she washed her own\n"
 	.string "cup. She'd never done that.$"
 
-ParcelIsleOldCoupleHouse_Aud_Text_2:
-# 15 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+ParcelIsleOldCoupleHouse_Aud_Text_3:
+# 17 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	.string "AUD: Sit down, you're letting the fog in!\n"
 	.string "Oh, it's already in. It lives here.\p"
 	.string "You're the young one from the letters.\n"
@@ -83,7 +106,7 @@ ParcelIsleOldCoupleHouse_Aud_Text_2:
 	.string "knows. Nobody says.$"
 
 ParcelIsleOldCoupleHouse_Sten_Text_0:
-# 25 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+# 27 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	.string "STEN: Thirty years on the RANGERS'\n"
 	.string "boat. I rowed HALE out to his first\l"
 	.string "survey. Rowed the old Director to his\l"
@@ -93,15 +116,24 @@ ParcelIsleOldCoupleHouse_Sten_Text_0:
 	.string "either of them what they were counting.$"
 
 ParcelIsleOldCoupleHouse_Sten_Text_1:
-# 27 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+# 29 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	.string "STEN: The currents are still wrong. But\n"
+	.string "a river stood up to a Board, and that's a\l"
+	.string "current too, of a kind.\p"
+	.string "AUD says I'm being poetic. I'm being\n"
+	.string "accurate. It's the same thing done\l"
+	.string "slowly.$"
+
+ParcelIsleOldCoupleHouse_Sten_Text_2:
+# 31 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	.string "STEN: They built the bridge the year\n"
 	.string "the marsh road flooded. A temporary\l"
 	.string "bridge. That was twenty-two years ago.\p"
 	.string "Everything on this coast is temporary\n"
 	.string "if you wait long enough.$"
 
-ParcelIsleOldCoupleHouse_Sten_Text_2:
-# 29 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+ParcelIsleOldCoupleHouse_Sten_Text_3:
+# 33 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	.string "STEN: AUD will talk your ear off. Let\n"
 	.string "her. I'm the quiet one. It's an\l"
 	.string "arrangement.\p"

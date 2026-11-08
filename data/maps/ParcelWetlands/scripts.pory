@@ -239,6 +239,11 @@ script ParcelWetlands_Crowd1 {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: He's fine. He's been fine for weeks. I still watch him drink.\pThey say the river people made the Board say numbers out loud. I'd like somebody to say ours out loud. To my face, in this town."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: My husband drank from that channel this morning. He's fine. He's fine, isn't he?"), MSGBOX_DEFAULT)
     release
     end
@@ -251,6 +256,11 @@ script ParcelWetlands_Crowd2 {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: Somebody did it, and somebody's name is on a sheet in the river hall now, under 'allocation.'\pNot ours yet. But I've seen how a sheet starts. It starts with one village that won't sit down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Somebody did this. Water doesn't go bad on its own in a night.\pAnd I don't see anybody from the CORPS writing THAT down."), MSGBOX_DEFAULT)
     release
     end
@@ -260,6 +270,11 @@ script ParcelWetlands_Crowd3 {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Dad says it wasn't your fault. He says it like it cost him. He also says you wrote it down. He says that like it cost him more."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: Dad doesn't say it's your fault any more. He says it's 'the allocation.'\pI don't know what that is. Is it worse than you?"), MSGBOX_DEFAULT)
         release
         end
     }

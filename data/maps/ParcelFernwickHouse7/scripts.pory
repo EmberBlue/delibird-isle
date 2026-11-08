@@ -11,6 +11,11 @@ script ParcelFernwickHouse7_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: They've stood the dredge crew down at REEDMERE. My sister says the landing's quiet in a different way now.\pNot the sick quiet. The waiting kind. She's thinking about going back. I'm not. Not yet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: We moved here from REEDMERE when the water turned. The house smells of marsh when it rains. I don't mind."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelFernwickHouse7_Man {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: The map's been corrected. First time in eleven years. Your name's on the correction slip."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: Drove the basin relief twice and the river minutes once. The minutes weighed more than the sandbags, the way HALE carried them.\pThe map's still wrong about three zones. Getting it wrong about fewer, maybe."), MSGBOX_DEFAULT)
         release
         end
     }

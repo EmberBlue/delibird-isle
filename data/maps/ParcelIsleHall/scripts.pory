@@ -10,6 +10,8 @@ script ParcelIsleHall_Brenna {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BRENNA: We voted. Twelve to nine, to back your report at the hearing.\pNine is a lot of nine in a town this size. I'll be buying nine people drinks for a year. That's what chairing is."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BRENNA: We're calling the next meeting. Somebody had to, and the river shamed us into it.\pThe FOUNDATION's asked to send a speaker. I've said yes. Members first. Guests after. They can be a guest."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("BRENNA: A RANGER! Then you'll want the quota minutes. They're on the board.\pRead fast. The FOUNDATION reads them slower, but they read them first."), MSGBOX_DEFAULT)
     } else {
@@ -24,6 +26,8 @@ script ParcelIsleHall_Ivar {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("IVAR: My berth is 'pending'. PENDING! And she's over there counting votes like it's a catch.\pI'm not angry at you. I decided that. It's taking effort."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("IVAR: The river people stood up and the Board blinked, fine. Different river. Different Board.\pBut I'll say this once, where JORUNN can't hear: I read the minutes twice."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("IVAR: RANGER! Good. Tell her the basin's fine. The Council says it's fine!\pShe'll listen to you. You've got the knot."), MSGBOX_DEFAULT)
     } else {
@@ -38,6 +42,8 @@ script ParcelIsleHall_Jorunn {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("JORUNN: I'm not smiling. I'm counting. Twelve to nine.\pHe thinks I won. Nobody won. I'd rather have the herring than the vote."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("JORUNN: He read the minutes twice. I saw him. He thinks I didn't.\pSix fishers stood up and the numbers came out on paper, in public. Ours would too. He knows. That's why he's quiet."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("JORUNN: Tell HIM the herring's thin. He was on the boat! He knows!\pHe just wants somebody else to say it so it isn't him."), MSGBOX_DEFAULT)
     } else {
@@ -52,6 +58,8 @@ script ParcelIsleHall_Bard {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BARD: The notes from the night she sat with the ones who didn't clap. They were yours all along, in the margins.\pShe was writing to you before she'd ever met you. I've lived long enough to see a thing like that. Not sure I wanted to."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BARD: The scientist's talk was 'Resilience.' The river meeting had a word in it too, they tell me. 'Allocation.' Smaller word. Does more.\pI've written it on the board under hers. Nobody's rubbed it out."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("BARD: After her talk she came back and sat with the ones who hadn't clapped. Me among them.\pShe wrote down every complaint. I never saw the notes. I've always wondered who did."), MSGBOX_DEFAULT)
     } else {
@@ -66,6 +74,11 @@ script ParcelIsleHall_Kid {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("Dad says the hearing was boring.\pDad listened to the whole thing on the wireless. Every single minute."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("Dad says the river people had a meeting where everyone talked and it was over by dark.\pDad says that's impossible. Dad says it twice a day."), MSGBOX_DEFAULT)
         release
         end
     }

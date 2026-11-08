@@ -11,6 +11,11 @@ script ParcelWetlandsHouse2_OldMan {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OLD MAN: The reeds came back at eight years this time. Not twelve. I wrote eight down and sent it to the river hall, because somebody said they were collecting.\pSixty years cutting reed and I've never sent a number anywhere. It felt like posting a letter to the weather."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: I cut reed for thatch. Twelve-year rounds, like the mill wood. The reeds don't come back on the twelve now. Eight, maybe."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelWetlandsHouse2_Boy {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Forty-nine! I'm the clicker now. GUNNAR says I'm 'very accurate'."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: GUNNAR says the river people counted their frogs in front of everybody. With a clicker, like ours!\pForty-four. I'm going to count again when the water's colder. GUNNAR says colder is when it matters."), MSGBOX_DEFAULT)
         release
         end
     }

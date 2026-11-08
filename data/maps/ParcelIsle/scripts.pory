@@ -92,6 +92,8 @@ script ParcelIsle_HeavyCoat {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BRAM: The schedule board's got a date on it again. First time in a year!\pI'd say things are looking up, but I've been wrong before."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BRAM: Mainland papers came in with the ferry. The river's on page two. Page two! Nothing from up here's been on page two since the wreck.\pYour name's not in it. The knot is, near enough. 'A Corps provisional.'"), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("BRAM: So you're a RANGER now. Provisional, but still.\pTake it from a ferry hand: the knot on your pack means more around here than the badge does."), MSGBOX_DEFAULT)
     } else {
@@ -330,6 +332,8 @@ script ParcelIsle_LogisticsClerk {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("PELL: Half my manifests are on hold. The other half are lawyers.\pI used to log trucks. Now I log the absence of trucks. It's the same form!"), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("PELL: Three crates of soil cores, FERNWICK to the river, marked EVIDENCE. I've logged a lot of things. Never that word.\pAnd two trucks of sandbags back from the basin, empty. Empty is a manifest too."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
         msgbox(format("PELL: Relief convoy for the basin. Three trucks, FOUNDATION crest, Council seal.\pRelief for what? Don't ask me. I log what moves."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
@@ -347,6 +351,8 @@ script ParcelIsle_KidA {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("EBBA: NILS says you wrote everything down. Even the frogs!\pAre we in it? We saw them first!"), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("EBBA: NILS says the frogs in the river got counted by the WHOLE VILLAGE and it went in a book.\pOurs only got counted by us. Does ours count less? NILS says counting is counting."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
         msgbox(format("EBBA: You saw them too! On the bridge! Going the wrong way!\pNILS said you'd say we made it up. You didn't."), MSGBOX_DEFAULT)
     } else {
@@ -361,6 +367,8 @@ script ParcelIsle_KidB {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("NILS: What's the word? For when a place is running out?\pEBBA says you've got a word for it now. I want the word."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("NILS: Counting is counting. Twelve this week, in the inlet. I wrote the date like you do.\pEBBA wants to send it to the river. I said they've got their own frogs. She said that's the point."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
         msgbox(format("NILS: Gran says the POLIWAG have always done that. Gran says a lot of things have always done that.\pI counted anyway. Fourteen. Less than last time."), MSGBOX_DEFAULT)
     } else {
@@ -376,6 +384,8 @@ script ParcelIsle_OldMan {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HALVAR: Somebody finally said it out loud. In writing, with a name at the bottom.\pIt'll cost you. It'll cost everyone. Forty years on that bridge and it never once occurred to me that the cost was the point."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("HALVAR: Six people stood up in a river hall and the Board wrote down what they said. In my forty years that happened never.\pHALE will say it's procedure. It isn't. It's weather turning. Watch the water here. It'll know first."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("HALVAR: HALE signed for you? HALE doesn't sign for anyone! He didn't sign for me, and I ran his station before he did.\pWatch him. Not because he's wrong. Because he's tired."), MSGBOX_DEFAULT)
     } else {
@@ -449,6 +459,8 @@ script ParcelIsle_Neighbor {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MARIT: I told you to forget I said anything, that first day. I'm not saying it now.\pShe wrote about you because she knew you'd do this. I think she was sorry. I think she knew that too."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MARIT: The river story came up the coast on the ferry before the papers did. Fishwives are faster than print.\pThey say a Corps provisional read the Board's own numbers back to them. I said I know who that is. Then I shut my mouth, for once."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_LAB_SEEN)) {
         msgbox(format("MARIT: You've been in the annex. People come out of there quiet.\pShe left it tidy. That's what nobody says. Ransacked places aren't tidy."), MSGBOX_DEFAULT)
     } else {
@@ -474,6 +486,8 @@ script ParcelIsle_Innkeeper {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("LIV: Two lawyers and a reporter in the good rooms. Mom's charging them double and apologizing for it.\pYour room's still yours. She won't let anyone else have it."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("LIV: Mom's making the big pot on Thursdays now, for whoever's off the ferry. Rangers, mostly. One from the basin cried into it.\pShe says the scientist would've approved. She says it to the pot, not to me."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("LIV: Mom says RANGERS eat like they get paid in weather. She made the big pot.\pShe hasn't made the big pot since the scientist left."), MSGBOX_DEFAULT)
     } else {
@@ -489,6 +503,8 @@ script ParcelIsle_ChandlerBrother {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OSSIAN: KIT's sold more rope this week than all winter. Everyone suddenly wants to tie something down.\pMe, I sit. Turns out sitting was the wrong way to be right."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OSSIAN: KIT's had a run on lamp oil. People reading late. Minutes from the river, passed hand to hand.\pI've read them. I sit. Reading is a kind of sitting."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("OSSIAN: KIT's got the RANGER stock in now. REPELS, the good POTIONS. Says the RANGERS pay on time, unlike some.\pShe means the fleet. She won't say the fleet."), MSGBOX_DEFAULT)
     } else {
@@ -543,6 +559,11 @@ script ParcelIsle_CenterAide {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MEDIC: Aid station's for POKéMON. Yours look like they've walked a region. They have. Leave them with me an hour."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MEDIC: The aid station's been busier. Not with injuries. With rangers coming down off the ferry to sit a minute before they walk home.\pThe basin and the river, mostly. I don't ask. I put the kettle on."), MSGBOX_DEFAULT)
         release
         end
     }

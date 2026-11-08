@@ -10,11 +10,13 @@ ParcelIsleHall_Brenna::
 # 11 "data/maps/ParcelIsleHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Brenna_2
 # 13 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Brenna_3
-# 16 "data/maps/ParcelIsleHall/scripts.pory"
-	msgbox ParcelIsleHall_Brenna_Text_2, MSGBOX_DEFAULT
-ParcelIsleHall_Brenna_1:
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleHall_Brenna_3
+# 15 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Brenna_4
 # 18 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Brenna_Text_3, MSGBOX_DEFAULT
+ParcelIsleHall_Brenna_1:
+# 20 "data/maps/ParcelIsleHall/scripts.pory"
 	release
 	end
 
@@ -28,126 +30,161 @@ ParcelIsleHall_Brenna_3:
 	msgbox ParcelIsleHall_Brenna_Text_1, MSGBOX_DEFAULT
 	goto ParcelIsleHall_Brenna_1
 
+ParcelIsleHall_Brenna_4:
+# 16 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Brenna_Text_2, MSGBOX_DEFAULT
+	goto ParcelIsleHall_Brenna_1
+
 
 ParcelIsleHall_Ivar::
-# 23 "data/maps/ParcelIsleHall/scripts.pory"
-	lock
-# 24 "data/maps/ParcelIsleHall/scripts.pory"
-	faceplayer
 # 25 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Ivar_2
+	lock
+# 26 "data/maps/ParcelIsleHall/scripts.pory"
+	faceplayer
 # 27 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Ivar_3
-# 30 "data/maps/ParcelIsleHall/scripts.pory"
-	msgbox ParcelIsleHall_Ivar_Text_2, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Ivar_2
+# 29 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleHall_Ivar_3
+# 31 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Ivar_4
+# 34 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Ivar_Text_3, MSGBOX_DEFAULT
 ParcelIsleHall_Ivar_1:
-# 32 "data/maps/ParcelIsleHall/scripts.pory"
+# 36 "data/maps/ParcelIsleHall/scripts.pory"
 	release
 	end
 
 ParcelIsleHall_Ivar_2:
-# 26 "data/maps/ParcelIsleHall/scripts.pory"
+# 28 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Ivar_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsleHall_Ivar_1
 
 ParcelIsleHall_Ivar_3:
-# 28 "data/maps/ParcelIsleHall/scripts.pory"
+# 30 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Ivar_Text_1, MSGBOX_DEFAULT
+	goto ParcelIsleHall_Ivar_1
+
+ParcelIsleHall_Ivar_4:
+# 32 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Ivar_Text_2, MSGBOX_DEFAULT
 	goto ParcelIsleHall_Ivar_1
 
 
 ParcelIsleHall_Jorunn::
-# 37 "data/maps/ParcelIsleHall/scripts.pory"
-	lock
-# 38 "data/maps/ParcelIsleHall/scripts.pory"
-	faceplayer
-# 39 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Jorunn_2
 # 41 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Jorunn_3
-# 44 "data/maps/ParcelIsleHall/scripts.pory"
-	msgbox ParcelIsleHall_Jorunn_Text_2, MSGBOX_DEFAULT
+	lock
+# 42 "data/maps/ParcelIsleHall/scripts.pory"
+	faceplayer
+# 43 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Jorunn_2
+# 45 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleHall_Jorunn_3
+# 47 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Jorunn_4
+# 50 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Jorunn_Text_3, MSGBOX_DEFAULT
 ParcelIsleHall_Jorunn_1:
-# 46 "data/maps/ParcelIsleHall/scripts.pory"
+# 52 "data/maps/ParcelIsleHall/scripts.pory"
 	release
 	end
 
 ParcelIsleHall_Jorunn_2:
-# 40 "data/maps/ParcelIsleHall/scripts.pory"
+# 44 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Jorunn_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsleHall_Jorunn_1
 
 ParcelIsleHall_Jorunn_3:
-# 42 "data/maps/ParcelIsleHall/scripts.pory"
+# 46 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Jorunn_Text_1, MSGBOX_DEFAULT
+	goto ParcelIsleHall_Jorunn_1
+
+ParcelIsleHall_Jorunn_4:
+# 48 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Jorunn_Text_2, MSGBOX_DEFAULT
 	goto ParcelIsleHall_Jorunn_1
 
 
 ParcelIsleHall_Bard::
-# 51 "data/maps/ParcelIsleHall/scripts.pory"
+# 57 "data/maps/ParcelIsleHall/scripts.pory"
 	lock
-# 52 "data/maps/ParcelIsleHall/scripts.pory"
-	faceplayer
-# 53 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Bard_2
-# 55 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Bard_3
 # 58 "data/maps/ParcelIsleHall/scripts.pory"
-	msgbox ParcelIsleHall_Bard_Text_2, MSGBOX_DEFAULT
+	faceplayer
+# 59 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Bard_2
+# 61 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleHall_Bard_3
+# 63 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Bard_4
+# 66 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Bard_Text_3, MSGBOX_DEFAULT
 ParcelIsleHall_Bard_1:
-# 60 "data/maps/ParcelIsleHall/scripts.pory"
+# 68 "data/maps/ParcelIsleHall/scripts.pory"
 	release
 	end
 
 ParcelIsleHall_Bard_2:
-# 54 "data/maps/ParcelIsleHall/scripts.pory"
+# 60 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Bard_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsleHall_Bard_1
 
 ParcelIsleHall_Bard_3:
-# 56 "data/maps/ParcelIsleHall/scripts.pory"
+# 62 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Bard_Text_1, MSGBOX_DEFAULT
+	goto ParcelIsleHall_Bard_1
+
+ParcelIsleHall_Bard_4:
+# 64 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Bard_Text_2, MSGBOX_DEFAULT
 	goto ParcelIsleHall_Bard_1
 
 
 ParcelIsleHall_Kid::
-# 65 "data/maps/ParcelIsleHall/scripts.pory"
-	lock
-# 66 "data/maps/ParcelIsleHall/scripts.pory"
-	faceplayer
-# 67 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Kid_2
-# 72 "data/maps/ParcelIsleHall/scripts.pory"
-	msgbox ParcelIsleHall_Kid_Text_1, MSGBOX_DEFAULT
 # 73 "data/maps/ParcelIsleHall/scripts.pory"
+	lock
+# 74 "data/maps/ParcelIsleHall/scripts.pory"
+	faceplayer
+# 75 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Kid_2
+# 80 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleHall_Kid_5
+# 85 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Kid_Text_2, MSGBOX_DEFAULT
+# 86 "data/maps/ParcelIsleHall/scripts.pory"
 	release
 	end
 
 ParcelIsleHall_Kid_2:
-# 68 "data/maps/ParcelIsleHall/scripts.pory"
+# 76 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Kid_Text_0, MSGBOX_DEFAULT
-# 69 "data/maps/ParcelIsleHall/scripts.pory"
+# 77 "data/maps/ParcelIsleHall/scripts.pory"
+	release
+	end
+
+ParcelIsleHall_Kid_5:
+# 81 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Kid_Text_1, MSGBOX_DEFAULT
+# 82 "data/maps/ParcelIsleHall/scripts.pory"
 	release
 	end
 
 
 ParcelIsleHall_Minutes::
-# 78 "data/maps/ParcelIsleHall/scripts.pory"
+# 91 "data/maps/ParcelIsleHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Minutes_2
-# 80 "data/maps/ParcelIsleHall/scripts.pory"
+# 93 "data/maps/ParcelIsleHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Minutes_3
-# 83 "data/maps/ParcelIsleHall/scripts.pory"
+# 96 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Minutes_Text_2, MSGBOX_SIGN
 ParcelIsleHall_Minutes_1:
 	end
 
 ParcelIsleHall_Minutes_2:
-# 79 "data/maps/ParcelIsleHall/scripts.pory"
+# 92 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Minutes_Text_0, MSGBOX_SIGN
 	goto ParcelIsleHall_Minutes_1
 
 ParcelIsleHall_Minutes_3:
-# 81 "data/maps/ParcelIsleHall/scripts.pory"
+# 94 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Minutes_Text_1, MSGBOX_SIGN
 	goto ParcelIsleHall_Minutes_1
 
@@ -162,13 +199,22 @@ ParcelIsleHall_Brenna_Text_0:
 
 ParcelIsleHall_Brenna_Text_1:
 # 14 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "BRENNA: We're calling the next meeting.\n"
+	.string "Somebody had to, and the river shamed\l"
+	.string "us into it.\p"
+	.string "The FOUNDATION's asked to send a\n"
+	.string "speaker. I've said yes. Members first.\l"
+	.string "Guests after. They can be a guest.$"
+
+ParcelIsleHall_Brenna_Text_2:
+# 16 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "BRENNA: A RANGER! Then you'll want the\n"
 	.string "quota minutes. They're on the board.\p"
 	.string "Read fast. The FOUNDATION reads them\n"
 	.string "slower, but they read them first.$"
 
-ParcelIsleHall_Brenna_Text_2:
-# 16 "data/maps/ParcelIsleHall/scripts.pory"
+ParcelIsleHall_Brenna_Text_3:
+# 18 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "BRENNA: Members and guests. You're a\n"
 	.string "guest. Sit anywhere the members aren't.\p"
 	.string "We're between meetings. We're always\n"
@@ -176,7 +222,7 @@ ParcelIsleHall_Brenna_Text_2:
 	.string "the one who calls the next one.$"
 
 ParcelIsleHall_Ivar_Text_0:
-# 26 "data/maps/ParcelIsleHall/scripts.pory"
+# 28 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "IVAR: My berth is 'pending'. PENDING!\n"
 	.string "And she's over there counting votes\l"
 	.string "like it's a catch.\p"
@@ -184,42 +230,58 @@ ParcelIsleHall_Ivar_Text_0:
 	.string "It's taking effort.$"
 
 ParcelIsleHall_Ivar_Text_1:
-# 28 "data/maps/ParcelIsleHall/scripts.pory"
+# 30 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "IVAR: The river people stood up and the\n"
+	.string "Board blinked, fine. Different river.\l"
+	.string "Different Board.\p"
+	.string "But I'll say this once, where JORUNN\n"
+	.string "can't hear: I read the minutes twice.$"
+
+ParcelIsleHall_Ivar_Text_2:
+# 32 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "IVAR: RANGER! Good. Tell her the basin's\n"
 	.string "fine. The Council says it's fine!\p"
 	.string "She'll listen to you. You've got the\n"
 	.string "knot.$"
 
-ParcelIsleHall_Ivar_Text_2:
-# 30 "data/maps/ParcelIsleHall/scripts.pory"
+ParcelIsleHall_Ivar_Text_3:
+# 34 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "IVAR: The dredge widened the channel!\n"
 	.string "More boats in, bigger boats!\p"
 	.string "You don't fix a town by making it\n"
 	.string "smaller. Tell her that.$"
 
 ParcelIsleHall_Jorunn_Text_0:
-# 40 "data/maps/ParcelIsleHall/scripts.pory"
+# 44 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "JORUNN: I'm not smiling. I'm counting.\n"
 	.string "Twelve to nine.\p"
 	.string "He thinks I won. Nobody won. I'd rather\n"
 	.string "have the herring than the vote.$"
 
 ParcelIsleHall_Jorunn_Text_1:
-# 42 "data/maps/ParcelIsleHall/scripts.pory"
+# 46 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "JORUNN: He read the minutes twice. I\n"
+	.string "saw him. He thinks I didn't.\p"
+	.string "Six fishers stood up and the numbers\n"
+	.string "came out on paper, in public. Ours would\l"
+	.string "too. He knows. That's why he's quiet.$"
+
+ParcelIsleHall_Jorunn_Text_2:
+# 48 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "JORUNN: Tell HIM the herring's thin. He\n"
 	.string "was on the boat! He knows!\p"
 	.string "He just wants somebody else to say it\n"
 	.string "so it isn't him.$"
 
-ParcelIsleHall_Jorunn_Text_2:
-# 44 "data/maps/ParcelIsleHall/scripts.pory"
+ParcelIsleHall_Jorunn_Text_3:
+# 50 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "JORUNN: More boats, less fish. Do the\n"
 	.string "math. He won't do the math.\p"
 	.string "I did it on the back of the quota form.\n"
 	.string "It doesn't come out.$"
 
 ParcelIsleHall_Bard_Text_0:
-# 54 "data/maps/ParcelIsleHall/scripts.pory"
+# 60 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "BARD: The notes from the night she sat\n"
 	.string "with the ones who didn't clap. They were\l"
 	.string "yours all along, in the margins.\p"
@@ -229,7 +291,16 @@ ParcelIsleHall_Bard_Text_0:
 	.string "to.$"
 
 ParcelIsleHall_Bard_Text_1:
-# 56 "data/maps/ParcelIsleHall/scripts.pory"
+# 62 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "BARD: The scientist's talk was\n"
+	.string "'Resilience.' The river meeting had a\l"
+	.string "word in it too, they tell me. 'Allocation.'\l"
+	.string "Smaller word. Does more.\p"
+	.string "I've written it on the board under hers.\n"
+	.string "Nobody's rubbed it out.$"
+
+ParcelIsleHall_Bard_Text_2:
+# 64 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "BARD: After her talk she came back and\n"
 	.string "sat with the ones who hadn't clapped.\l"
 	.string "Me among them.\p"
@@ -237,8 +308,8 @@ ParcelIsleHall_Bard_Text_1:
 	.string "saw the notes. I've always wondered who\l"
 	.string "did.$"
 
-ParcelIsleHall_Bard_Text_2:
-# 58 "data/maps/ParcelIsleHall/scripts.pory"
+ParcelIsleHall_Bard_Text_3:
+# 66 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "BARD: The scientist gave a talk in here\n"
 	.string "once. 'Resilience.' Big word for a small\l"
 	.string "room.\p"
@@ -246,18 +317,26 @@ ParcelIsleHall_Bard_Text_2:
 	.string "half.$"
 
 ParcelIsleHall_Kid_Text_0:
-# 68 "data/maps/ParcelIsleHall/scripts.pory"
+# 76 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "Dad says the hearing was boring.\p"
 	.string "Dad listened to the whole thing on the\n"
 	.string "wireless. Every single minute.$"
 
 ParcelIsleHall_Kid_Text_1:
-# 72 "data/maps/ParcelIsleHall/scripts.pory"
+# 81 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "Dad says the river people had a meeting\n"
+	.string "where everyone talked and it was over\l"
+	.string "by dark.\p"
+	.string "Dad says that's impossible. Dad says it\n"
+	.string "twice a day.$"
+
+ParcelIsleHall_Kid_Text_2:
+# 85 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "Dad says the meeting's boring.\p"
 	.string "Dad is AT the meeting. Every single time.$"
 
 ParcelIsleHall_Minutes_Text_0:
-# 79 "data/maps/ParcelIsleHall/scripts.pory"
+# 92 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "CO-OP MINUTES (extraordinary)\p"
 	.string "Motion: appear at the regional hearing\n"
 	.string "in support of the filed record. CARRIED,\l"
@@ -267,7 +346,7 @@ ParcelIsleHall_Minutes_Text_0:
 	.string "Chair's note: nobody stayed for tea.$"
 
 ParcelIsleHall_Minutes_Text_1:
-# 81 "data/maps/ParcelIsleHall/scripts.pory"
+# 94 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "CO-OP MINUTES\p"
 	.string "Item 3: the quota. MEREHOLT COASTAL\n"
 	.string "proposes a 'sustainable harvest' figure\l"
@@ -277,7 +356,7 @@ ParcelIsleHall_Minutes_Text_1:
 	.string "grant. Carried, with thanks.$"
 
 ParcelIsleHall_Minutes_Text_2:
-# 83 "data/maps/ParcelIsleHall/scripts.pory"
+# 96 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "CO-OP MINUTES\p"
 	.string "Item 1: the channel dredge is complete.\n"
 	.string "Item 2: the FOUNDATION's storm-relief\l"

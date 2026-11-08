@@ -35,6 +35,11 @@ script ParcelFernwickMart_Customer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("YOUNGSTER: REPELS are off sale. The marsh has fewer WOOPER than it did.\pThat's good, right? The clerk says it's good. He said it like a question."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("YOUNGSTER: REPELS are on sale. The marsh has a lot of WOOPER.\pA LOT."), MSGBOX_DEFAULT)
     release
     end

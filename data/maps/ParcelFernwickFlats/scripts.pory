@@ -9,6 +9,11 @@ script ParcelFernwickFlats_Man {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: Two of us got sent to the basin for the relief line and came back not talking. Not sulking. Thinking.\pSix rangers, one bathroom, and now a queue for the kettle as well."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Corps housing. Six rangers, one bathroom.\pWe reduce harm. We do not reduce queues."), MSGBOX_DEFAULT)
     release
     end
@@ -19,6 +24,11 @@ script ParcelFernwickFlats_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Daddy came home from the hearing and said 'we reduced some harm'. Then he laughed. I didn't know the job had laughing in it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("GIRL: Daddy came back from the river smelling like a meeting. That's a smell. Coffee and paper.\pHe said six people stood up. I asked if he did. He said he was holding the door. That counts."), MSGBOX_DEFAULT)
         release
         end
     }

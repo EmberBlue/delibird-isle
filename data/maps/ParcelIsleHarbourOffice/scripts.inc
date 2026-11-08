@@ -43,10 +43,12 @@ ParcelIsleHarbourOffice_Osk::
 	faceplayer
 # 26 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHarbourOffice_Osk_2
-# 29 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
-	msgbox ParcelIsleHarbourOffice_Osk_Text_1, MSGBOX_DEFAULT
 ParcelIsleHarbourOffice_Osk_1:
-# 31 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+# 29 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleHarbourOffice_Osk_5
+# 34 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	msgbox ParcelIsleHarbourOffice_Osk_Text_2, MSGBOX_DEFAULT
+# 36 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
 	release
 	end
 
@@ -54,6 +56,13 @@ ParcelIsleHarbourOffice_Osk_2:
 # 27 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
 	msgbox ParcelIsleHarbourOffice_Osk_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsleHarbourOffice_Osk_1
+
+ParcelIsleHarbourOffice_Osk_5:
+# 30 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	msgbox ParcelIsleHarbourOffice_Osk_Text_1, MSGBOX_DEFAULT
+# 31 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	release
+	end
 
 
 ParcelIsleHarbourOffice_Dagny_Text_0:
@@ -101,7 +110,16 @@ ParcelIsleHarbourOffice_Osk_Text_0:
 	.string "acknowledges.$"
 
 ParcelIsleHarbourOffice_Osk_Text_1:
-# 29 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+# 30 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	.string "OSK: Two manifests this month I've\n"
+	.string "never written before. 'Evidence, three\l"
+	.string "crates.' And 'relief, returned, empty.'\p"
+	.string "If you want to know what a region's\n"
+	.string "doing, don't ask the papers. Ask what\l"
+	.string "moved.$"
+
+ParcelIsleHarbourOffice_Osk_Text_2:
+# 34 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
 	.string "OSK: I do the manifests. Everything off\n"
 	.string "the boat, everything onto it.\p"
 	.string "If you want to know what a town runs\n"

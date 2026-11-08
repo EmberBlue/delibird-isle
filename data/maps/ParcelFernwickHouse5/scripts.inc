@@ -73,8 +73,10 @@ ParcelFernwickHouse5_Woman::
 # 45 "data/maps/ParcelFernwickHouse5/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse5_Woman_2
 # 50 "data/maps/ParcelFernwickHouse5/scripts.pory"
-	msgbox ParcelFernwickHouse5_Woman_Text_1, MSGBOX_DEFAULT
-# 51 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse5_Woman_5
+# 55 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	msgbox ParcelFernwickHouse5_Woman_Text_2, MSGBOX_DEFAULT
+# 56 "data/maps/ParcelFernwickHouse5/scripts.pory"
 	release
 	end
 
@@ -82,6 +84,13 @@ ParcelFernwickHouse5_Woman_2:
 # 46 "data/maps/ParcelFernwickHouse5/scripts.pory"
 	msgbox ParcelFernwickHouse5_Woman_Text_0, MSGBOX_DEFAULT
 # 47 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	release
+	end
+
+ParcelFernwickHouse5_Woman_5:
+# 51 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	msgbox ParcelFernwickHouse5_Woman_Text_1, MSGBOX_DEFAULT
+# 52 "data/maps/ParcelFernwickHouse5/scripts.pory"
 	release
 	end
 
@@ -141,7 +150,17 @@ ParcelFernwickHouse5_Woman_Text_0:
 	.string "that.$"
 
 ParcelFernwickHouse5_Woman_Text_1:
-# 50 "data/maps/ParcelFernwickHouse5/scripts.pory"
+# 51 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	.string "WOMAN: He took one of the old\n"
+	.string "notebooks out of the chest last night.\l"
+	.string "The river one. He read it with the\l"
+	.string "Board's minutes beside it.\p"
+	.string "He said the numbers matched. Then he\n"
+	.string "said that was the worst thing he'd\l"
+	.string "heard all year.$"
+
+ParcelFernwickHouse5_Woman_Text_2:
+# 55 "data/maps/ParcelFernwickHouse5/scripts.pory"
 	.string "WOMAN: He keeps his old notebooks in\n"
 	.string "the chest. Every page is a river that\l"
 	.string "isn't there now.$"

@@ -9,6 +9,8 @@ script ParcelIsleOldCoupleHouse_Aud {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AUD: She sat right where you're standing and read me your letters. Not the words, she'd never. Just that they'd come.\pI think you were the only person she was ever honest with. And you were a child, far away."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("AUD: The river village stood up to the Board. In a hall. With tea, they say. You can't stand up to anybody properly without tea.\pShe'd have liked that. Thursdays. She never missed one until she did."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("AUD: She took tea here every Thursday for years. Never said a word about her work. Talked about the gulls.\pThe last Thursday, she washed her own cup. She'd never done that."), MSGBOX_DEFAULT)
     } else {
@@ -23,6 +25,8 @@ script ParcelIsleOldCoupleHouse_Sten {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("STEN: Thirty years on the RANGERS' boat. I rowed HALE out to his first survey. Rowed the old Director to his last, the day he took the FOUNDATION job.\pSame boat. Same oars. Never once asked either of them what they were counting."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("STEN: The currents are still wrong. But a river stood up to a Board, and that's a current too, of a kind.\pAUD says I'm being poetic. I'm being accurate. It's the same thing done slowly."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("STEN: They built the bridge the year the marsh road flooded. A temporary bridge. That was twenty-two years ago.\pEverything on this coast is temporary if you wait long enough."), MSGBOX_DEFAULT)
     } else {

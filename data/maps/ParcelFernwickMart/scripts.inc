@@ -55,8 +55,10 @@ ParcelFernwickMart_Customer::
 # 33 "data/maps/ParcelFernwickMart/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickMart_Customer_2
 # 38 "data/maps/ParcelFernwickMart/scripts.pory"
-	msgbox ParcelFernwickMart_Customer_Text_1, MSGBOX_DEFAULT
-# 39 "data/maps/ParcelFernwickMart/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickMart_Customer_5
+# 43 "data/maps/ParcelFernwickMart/scripts.pory"
+	msgbox ParcelFernwickMart_Customer_Text_2, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelFernwickMart/scripts.pory"
 	release
 	end
 
@@ -64,6 +66,13 @@ ParcelFernwickMart_Customer_2:
 # 34 "data/maps/ParcelFernwickMart/scripts.pory"
 	msgbox ParcelFernwickMart_Customer_Text_0, MSGBOX_DEFAULT
 # 35 "data/maps/ParcelFernwickMart/scripts.pory"
+	release
+	end
+
+ParcelFernwickMart_Customer_5:
+# 39 "data/maps/ParcelFernwickMart/scripts.pory"
+	msgbox ParcelFernwickMart_Customer_Text_1, MSGBOX_DEFAULT
+# 40 "data/maps/ParcelFernwickMart/scripts.pory"
 	release
 	end
 
@@ -76,7 +85,14 @@ ParcelFernwickMart_Customer_Text_0:
 	.string "WOOPER are fine about it.$"
 
 ParcelFernwickMart_Customer_Text_1:
-# 38 "data/maps/ParcelFernwickMart/scripts.pory"
+# 39 "data/maps/ParcelFernwickMart/scripts.pory"
+	.string "YOUNGSTER: REPELS are off sale. The\n"
+	.string "marsh has fewer WOOPER than it did.\p"
+	.string "That's good, right? The clerk says it's\n"
+	.string "good. He said it like a question.$"
+
+ParcelFernwickMart_Customer_Text_2:
+# 43 "data/maps/ParcelFernwickMart/scripts.pory"
 	.string "YOUNGSTER: REPELS are on sale. The\n"
 	.string "marsh has a lot of WOOPER.\p"
 	.string "A LOT.$"

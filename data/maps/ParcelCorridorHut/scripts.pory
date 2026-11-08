@@ -12,6 +12,11 @@ script ParcelCorridorHut_Foreman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("FOREMAN: The lads say the river Board got made to read its own figures out. Good. Somebody should make ours read the culvert drawing.\pTwice the width on paper. I've said it to you. I'd say it to a hall."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 10)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)

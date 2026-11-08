@@ -11,6 +11,11 @@ script ParcelFernwickHouse4_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: The river report filled the second drawer on its own. I've asked for a cabinet.\pThe Survey's never asked for a cabinet. ILEX signed the form without reading it. ILEX reads everything."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: I file the field reports at the Survey office. Yours come in thicker than anyone's. I've started a second drawer."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelFernwickHouse4_Boy {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Dad read your name in the paper and said 'wet on purpose'. He was smiling when he said it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: Dad says you went to the river and made the Board count out loud.\pI didn't know you could make grown-ups count. I'm going to try it on Dad."), MSGBOX_DEFAULT)
         release
         end
     }

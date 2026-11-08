@@ -10,8 +10,10 @@ ParcelFernwickHouse4_Woman::
 # 9 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_Woman_2
 # 14 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	msgbox ParcelFernwickHouse4_Woman_Text_1, MSGBOX_DEFAULT
-# 15 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse4_Woman_5
+# 19 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Woman_Text_2, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	release
 	end
 
@@ -22,24 +24,40 @@ ParcelFernwickHouse4_Woman_2:
 	release
 	end
 
+ParcelFernwickHouse4_Woman_5:
+# 15 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Woman_Text_1, MSGBOX_DEFAULT
+# 16 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	release
+	end
+
 
 ParcelFernwickHouse4_Boy::
-# 20 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 25 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	lock
-# 21 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 26 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	faceplayer
-# 22 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_Boy_2
 # 27 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	msgbox ParcelFernwickHouse4_Boy_Text_1, MSGBOX_DEFAULT
-# 28 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_Boy_2
+# 32 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse4_Boy_5
+# 37 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Boy_Text_2, MSGBOX_DEFAULT
+# 38 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	release
 	end
 
 ParcelFernwickHouse4_Boy_2:
-# 23 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 28 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	msgbox ParcelFernwickHouse4_Boy_Text_0, MSGBOX_DEFAULT
-# 24 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 29 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	release
+	end
+
+ParcelFernwickHouse4_Boy_5:
+# 33 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Boy_Text_1, MSGBOX_DEFAULT
+# 34 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	release
 	end
 
@@ -52,19 +70,35 @@ ParcelFernwickHouse4_Woman_Text_0:
 	.string "said. I'd counted twelve.$"
 
 ParcelFernwickHouse4_Woman_Text_1:
-# 14 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 15 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "WOMAN: The river report filled the\n"
+	.string "second drawer on its own. I've asked for\l"
+	.string "a cabinet.\p"
+	.string "The Survey's never asked for a cabinet.\n"
+	.string "ILEX signed the form without reading\l"
+	.string "it. ILEX reads everything.$"
+
+ParcelFernwickHouse4_Woman_Text_2:
+# 19 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "WOMAN: I file the field reports at the\n"
 	.string "Survey office. Yours come in thicker\l"
 	.string "than anyone's. I've started a second\l"
 	.string "drawer.$"
 
 ParcelFernwickHouse4_Boy_Text_0:
-# 23 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 28 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "BOY: Dad read your name in the paper\n"
 	.string "and said 'wet on purpose'. He was smiling\l"
 	.string "when he said it.$"
 
 ParcelFernwickHouse4_Boy_Text_1:
-# 27 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 33 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "BOY: Dad says you went to the river and\n"
+	.string "made the Board count out loud.\p"
+	.string "I didn't know you could make grown-ups\n"
+	.string "count. I'm going to try it on Dad.$"
+
+ParcelFernwickHouse4_Boy_Text_2:
+# 37 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "BOY: Dad says the rangers are the ones\n"
 	.string "who get wet on purpose.$"

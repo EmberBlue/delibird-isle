@@ -13,6 +13,11 @@ script ParcelFernwickHQ_Reception {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("RECEPTION: HALE slept. Four hours, in the chair. First time since you went north.\pDon't tell him I noticed. He thinks nobody notices anything in this building. It's a building full of rangers."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("RECEPTION: Welcome to the District Station. HALE's the one who looks like he hasn't slept.\pHe hasn't."), MSGBOX_DEFAULT)
     release
     end
@@ -23,6 +28,11 @@ script ParcelFernwickHQ_Ranger {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RANGER: 'We don't win. We reduce harm.' HALE put the poster back up. He didn't say anything. He just put it back up."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("RANGER: The poster's still down. But he's pinned up the river minutes where it was.\pSix names in the margin, in his hand. Not ours. Theirs. The ones who stood up."), MSGBOX_DEFAULT)
         release
         end
     }

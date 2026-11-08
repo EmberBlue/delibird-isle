@@ -10,8 +10,10 @@ ParcelFernwickHouse6_Man::
 # 9 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse6_Man_2
 # 14 "data/maps/ParcelFernwickHouse6/scripts.pory"
-	msgbox ParcelFernwickHouse6_Man_Text_1, MSGBOX_DEFAULT
-# 15 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse6_Man_5
+# 19 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	msgbox ParcelFernwickHouse6_Man_Text_2, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	release
 	end
 
@@ -22,24 +24,40 @@ ParcelFernwickHouse6_Man_2:
 	release
 	end
 
+ParcelFernwickHouse6_Man_5:
+# 15 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	msgbox ParcelFernwickHouse6_Man_Text_1, MSGBOX_DEFAULT
+# 16 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	release
+	end
+
 
 ParcelFernwickHouse6_Girl::
-# 20 "data/maps/ParcelFernwickHouse6/scripts.pory"
+# 25 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	lock
-# 21 "data/maps/ParcelFernwickHouse6/scripts.pory"
+# 26 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	faceplayer
-# 22 "data/maps/ParcelFernwickHouse6/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse6_Girl_2
 # 27 "data/maps/ParcelFernwickHouse6/scripts.pory"
-	msgbox ParcelFernwickHouse6_Girl_Text_1, MSGBOX_DEFAULT
-# 28 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse6_Girl_2
+# 32 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse6_Girl_5
+# 37 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	msgbox ParcelFernwickHouse6_Girl_Text_2, MSGBOX_DEFAULT
+# 38 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	release
 	end
 
 ParcelFernwickHouse6_Girl_2:
-# 23 "data/maps/ParcelFernwickHouse6/scripts.pory"
+# 28 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	msgbox ParcelFernwickHouse6_Girl_Text_0, MSGBOX_DEFAULT
-# 24 "data/maps/ParcelFernwickHouse6/scripts.pory"
+# 29 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	release
+	end
+
+ParcelFernwickHouse6_Girl_5:
+# 33 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	msgbox ParcelFernwickHouse6_Girl_Text_1, MSGBOX_DEFAULT
+# 34 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	release
 	end
 
@@ -51,17 +69,32 @@ ParcelFernwickHouse6_Man_Text_0:
 	.string "day. They have.$"
 
 ParcelFernwickHouse6_Man_Text_1:
-# 14 "data/maps/ParcelFernwickHouse6/scripts.pory"
+# 15 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	.string "MAN: Rangers back from the basin eat\n"
+	.string "like they've been digging, because they\l"
+	.string "have. Sandbags.\p"
+	.string "I've started putting sugar in the pot\n"
+	.string "without being asked. Nobody's objected.$"
+
+ParcelFernwickHouse6_Man_Text_2:
+# 19 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	.string "MAN: I cook for the District Station.\n"
 	.string "Rangers eat like people who've walked\l"
 	.string "all day, because they have.$"
 
 ParcelFernwickHouse6_Girl_Text_0:
-# 23 "data/maps/ParcelFernwickHouse6/scripts.pory"
+# 28 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	.string "GIRL: Dad says you fed a whole region a\n"
 	.string "truth. He says that's cooking.$"
 
 ParcelFernwickHouse6_Girl_Text_1:
-# 27 "data/maps/ParcelFernwickHouse6/scripts.pory"
+# 33 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	.string "GIRL: Dad says the river people fed the\n"
+	.string "whole meeting from one pot and nobody\l"
+	.string "went home hungry or quiet.\p"
+	.string "That IS the same job. I told you.$"
+
+ParcelFernwickHouse6_Girl_Text_2:
+# 37 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	.string "GIRL: I'm going to be a ranger. Or a\n"
 	.string "cook. Dad says they're the same job.$"

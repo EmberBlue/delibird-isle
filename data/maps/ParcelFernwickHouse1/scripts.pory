@@ -9,6 +9,11 @@ script ParcelFernwickHouse1_Man {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: My brother's crew got stood down. He came to dinner. He talked. First time in a year the table had three voices on it.\pHe's angry at the wrong people still, but he's angry out loud, and that's a start."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: My brother works the marsh dredge. My sister works for the Corps.\pDinner at ours is very quiet."), MSGBOX_DEFAULT)
     release
     end

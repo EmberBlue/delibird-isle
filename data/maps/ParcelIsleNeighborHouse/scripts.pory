@@ -15,6 +15,11 @@ script ParcelIsleNeighborHouse_Man {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("A man at the stove. The kettle has nearly made up its mind.\pMan: The river village stood up to the Board, they say. Words carry over water.\pThese ones carried a long way to get here. Means somebody meant them."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("A man at the stove, minding a kettle that is in no hurry.\pMan: Evening."), MSGBOX_DEFAULT)
     msgbox(format("You wait. The kettle ticks.\pMan: …She talks enough for the both of us. It's not that I don't.\pIt's that the town is small, and words carry over water."), MSGBOX_DEFAULT)
     release

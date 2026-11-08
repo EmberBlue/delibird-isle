@@ -100,6 +100,11 @@ script ParcelFernwick_Ranger {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RANGER: Half the station's been called to the hearings as witnesses. The other half is covering their shifts.\pHALE's doing both."), MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("RANGER: HALE's inside. He's got the river minutes open on the desk and he's read them four times.\pHe keeps saying 'six people stood up.' Like he can't believe a room would do that."), MSGBOX_DEFAULT)
+        release
+        end
     } else {
         msgbox(format("RANGER: District Station. HALE's inside, if you're the one he keeps mentioning.\pHe mentions you a lot, for a man who doesn't talk."), MSGBOX_DEFAULT)
     }
@@ -115,6 +120,11 @@ script ParcelFernwick_OldMan {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OLD MAN: They say the river village had a meeting where six people spoke and nobody shouted. Six! In this town we can't get two to agree on the tide.\pPaperwork did that. Yours, I'm told."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: This was a fishing village before the Corps put the station here.\pNow it's a fishing village with paperwork."), MSGBOX_DEFAULT)
     release
     end
@@ -125,6 +135,11 @@ script ParcelFernwick_Woman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: TARN smiled. I saw it. Tidewater regulation or not, he smiled when they read your name on the wireless. Half a second. Don't tell him I told you."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: TARN read the river minutes aloud in the Hall. To the cadets. The whole thing, in that voice.\pOne of them cried. He said that was the correct response and carried on."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -145,6 +160,11 @@ script ParcelFernwick_Boy {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: The MEREHOLT guy came through with new boots and nobody asked where he got them.\pI'm gonna be a RANGER. Just a RANGER. You can get wet in any boots."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: I'm gonna be a RANGER when I grow up! Or a fisherman.\pOr a MEREHOLT guy. They have the best boots."), MSGBOX_DEFAULT)
     release
     end
@@ -155,6 +175,11 @@ script ParcelFernwick_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The pond's still ducks. WINGULL. But GRETTIR says a POLIWAG came up the channel. One. He's watching for it. I'm watching GRETTIR."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("GIRL: A man from the river said the water there has names on it now. Like, who gets how much.\pCan we put names on our pond? I'd put POLIWAG. They'd have to come back if their name was on it."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -171,6 +196,11 @@ script ParcelFernwick_Fisher {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("FISHER: Water's still low. But the dredge crew got told to hold at the landing, and nobody told them why.\pI know why. Everybody who reads knows why. You wrote it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: The marsh water's been low since spring. You can walk to places you used to row to.\pThat's not good, whatever the Council says."), MSGBOX_DEFAULT)
     release
     end
@@ -181,6 +211,11 @@ script ParcelFernwick_Scientist {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SURVEYOR: Forty years of measuring and nobody cared. Now the lawyers want the numbers by Thursday.\pWe don't have a Thursday setting."), MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("SURVEYOR: Forty years of measuring, and this is the first autumn anyone's asked for the numbers before the argument instead of after.\pILEX says it's you. I say it's the numbers. We're both right, which she hates."), MSGBOX_DEFAULT)
+        release
+        end
     } else {
         msgbox(format("SURVEYOR: We measure. That's all we do. Forty years of measuring.\pILEX is inside. She'll tell you it's boring. She's lying."), MSGBOX_DEFAULT)
     }
@@ -193,6 +228,11 @@ script ParcelFernwick_Gentleman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GENTLEMAN: MEREHOLT paid for the fountain. It still says so. The hearing didn't take the plaques down. I'd have liked it to. Then I thought: let them stay. They say exactly what they say."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("GENTLEMAN: The plate on the fountain has been polished. Twice this month. Somebody up the coast is nervous about plates.\pI find I read the small ones more carefully than I used to."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -209,6 +249,11 @@ script ParcelFernwick_Clerk {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("CLERK: Day rate's down. First time in three years. Half the marsh crew's been stood down 'pending review.'\pPending your review, is what they mean. Nobody's said it to my face. They say it to the fountain."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: Day rate at the marsh works is up again. Don't ask what the work is.\pNobody asks. That's the deal."), MSGBOX_DEFAULT)
     release
     end
@@ -219,6 +264,11 @@ script ParcelFernwick_Mother {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MOTHER: My boy still wants to be a RANGER. I've stopped saying RANGERS don't get paid. They don't. But somebody read one out at a hearing and the whole town went quiet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MOTHER: My boy's stopped saying the MEREHOLT part. He heard the men at the fountain talking about the river meeting.\pHe asked me what an allocation was. I had to ask the clerk."), MSGBOX_DEFAULT)
         release
         end
     }

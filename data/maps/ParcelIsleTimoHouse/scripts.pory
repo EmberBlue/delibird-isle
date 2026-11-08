@@ -15,6 +15,11 @@ script ParcelIsleTimoHouse_Gran {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("Gran: Timo's asking me what an allocation is. He heard it off the ferry hands.\pI told him it's when somebody decides who gets the water. He said that's not fair. I said now you're ready for the other answer."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Gran: Timo's out by the water again, I expect. Battling strangers off the ferry.\pGran: I tell him, don't go past the bridge. He asks why. I tell him, because I said so.\pHe's too young for the other answer."), MSGBOX_DEFAULT)
     msgbox(format("Gran: You've been past it, haven't you. It's on your boots.\pCome back through when you can. He listens to you lot more than he listens to me."), MSGBOX_DEFAULT)
     release

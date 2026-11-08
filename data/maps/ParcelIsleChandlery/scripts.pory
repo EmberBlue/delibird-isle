@@ -40,6 +40,11 @@ script ParcelIsleChandlery_Hjalmar {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HJALMAR: Rope, lamp oil, and gossip. KIT sells two of those.\pThe third is free now, and it's all anyone's buying."), MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("HJALMAR: Rope, lamp oil, and the river minutes. KIT sells two of those. The third she lends, and it comes back with thumbprints.\pI've stood here two hours today. Worth every minute."), MSGBOX_DEFAULT)
+        release
+        end
     } else {
         msgbox(format("HJALMAR: Rope, lamp oil, and gossip. KIT sells two of those.\pThe third you get by standing here long enough. I've been here an hour."), MSGBOX_DEFAULT)
     }

@@ -9,10 +9,12 @@ ParcelFernwickHouse3_OldWoman::
 	faceplayer
 # 7 "data/maps/ParcelFernwickHouse3/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse3_OldWoman_2
-# 10 "data/maps/ParcelFernwickHouse3/scripts.pory"
-	msgbox ParcelFernwickHouse3_OldWoman_Text_1, MSGBOX_DEFAULT
 ParcelFernwickHouse3_OldWoman_1:
-# 12 "data/maps/ParcelFernwickHouse3/scripts.pory"
+# 10 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse3_OldWoman_5
+# 15 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	msgbox ParcelFernwickHouse3_OldWoman_Text_2, MSGBOX_DEFAULT
+# 17 "data/maps/ParcelFernwickHouse3/scripts.pory"
 	release
 	end
 
@@ -20,6 +22,13 @@ ParcelFernwickHouse3_OldWoman_2:
 # 8 "data/maps/ParcelFernwickHouse3/scripts.pory"
 	msgbox ParcelFernwickHouse3_OldWoman_Text_0, MSGBOX_DEFAULT
 	goto ParcelFernwickHouse3_OldWoman_1
+
+ParcelFernwickHouse3_OldWoman_5:
+# 11 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	msgbox ParcelFernwickHouse3_OldWoman_Text_1, MSGBOX_DEFAULT
+# 12 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	release
+	end
 
 
 ParcelFernwickHouse3_OldWoman_Text_0:
@@ -30,7 +39,17 @@ ParcelFernwickHouse3_OldWoman_Text_0:
 	.string "was you.$"
 
 ParcelFernwickHouse3_OldWoman_Text_1:
-# 10 "data/maps/ParcelFernwickHouse3/scripts.pory"
+# 11 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	.string "OLD WOMAN: Somebody from the river\n"
+	.string "bought bread here on the way to the\l"
+	.string "coast. Said the whole village had stood\l"
+	.string "up to the Board.\p"
+	.string "I thought about the scientist's bread\n"
+	.string "again. She never stood up to anything\l"
+	.string "in my shop. She just bought it and went.$"
+
+ParcelFernwickHouse3_OldWoman_Text_2:
+# 15 "data/maps/ParcelFernwickHouse3/scripts.pory"
 	.string "OLD WOMAN: The scientist came through\n"
 	.string "here on her way somewhere. Bought\l"
 	.string "bread. Didn't say where she was going.\p"

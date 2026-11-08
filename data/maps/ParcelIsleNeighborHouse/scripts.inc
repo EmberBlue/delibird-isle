@@ -10,10 +10,12 @@ ParcelIsleNeighborHouse_Man::
 # 13 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleNeighborHouse_Man_2
 # 18 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
-	msgbox ParcelIsleNeighborHouse_Man_Text_1, MSGBOX_DEFAULT
-# 19 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleNeighborHouse_Man_5
+# 23 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	msgbox ParcelIsleNeighborHouse_Man_Text_2, MSGBOX_DEFAULT
-# 20 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+# 24 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+	msgbox ParcelIsleNeighborHouse_Man_Text_3, MSGBOX_DEFAULT
+# 25 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	release
 	end
 
@@ -24,15 +26,22 @@ ParcelIsleNeighborHouse_Man_2:
 	release
 	end
 
+ParcelIsleNeighborHouse_Man_5:
+# 19 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+	msgbox ParcelIsleNeighborHouse_Man_Text_1, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+	release
+	end
+
 
 ParcelIsleNeighborHouse_Schedules::
-# 25 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+# 30 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	msgbox ParcelIsleNeighborHouse_Schedules_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsleNeighborHouse_Drawer::
-# 30 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+# 35 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	msgbox ParcelIsleNeighborHouse_Drawer_Text_0, MSGBOX_SIGN
 	end
 
@@ -47,13 +56,22 @@ ParcelIsleNeighborHouse_Man_Text_0:
 	.string "put down.$"
 
 ParcelIsleNeighborHouse_Man_Text_1:
-# 18 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+# 19 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+	.string "A man at the stove. The kettle has\n"
+	.string "nearly made up its mind.\p"
+	.string "Man: The river village stood up to the\n"
+	.string "Board, they say. Words carry over water.\p"
+	.string "These ones carried a long way to get\n"
+	.string "here. Means somebody meant them.$"
+
+ParcelIsleNeighborHouse_Man_Text_2:
+# 23 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	.string "A man at the stove, minding a kettle\n"
 	.string "that is in no hurry.\p"
 	.string "Man: Evening.$"
 
-ParcelIsleNeighborHouse_Man_Text_2:
-# 19 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+ParcelIsleNeighborHouse_Man_Text_3:
+# 24 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	.string "You wait. The kettle ticks.\p"
 	.string "Man: …She talks enough for the both of\n"
 	.string "us. It's not that I don't.\p"
@@ -61,7 +79,7 @@ ParcelIsleNeighborHouse_Man_Text_2:
 	.string "carry over water.$"
 
 ParcelIsleNeighborHouse_Schedules_Text_0:
-# 25 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+# 30 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	.string "Ferry schedules, years of them, pinned\n"
 	.string "up in layers like sediment.\p"
 	.string "The older ones are dense with sailings.\n"
@@ -69,7 +87,7 @@ ParcelIsleNeighborHouse_Schedules_Text_0:
 	.string "The blank spaces are recent, too.$"
 
 ParcelIsleNeighborHouse_Drawer_Text_0:
-# 30 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
+# 35 "data/maps/ParcelIsleNeighborHouse/scripts.pory"
 	.string "A writing drawer, locked. The keyhole is\n"
 	.string "bright from use.\p"
 	.string "Whoever writes here writes often -- and\n"

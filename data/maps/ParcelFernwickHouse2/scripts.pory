@@ -9,6 +9,11 @@ script ParcelFernwickHouse2_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: HALE came by. Stood in the kitchen and didn't say anything for a while, then said the river people stood up.\pHe said it like news from a war. Have a biscuit. He wouldn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: HALE was born in this house. He'd hate that I told you.\pHe hates most things I tell people. Have a biscuit."), MSGBOX_DEFAULT)
     release
     end

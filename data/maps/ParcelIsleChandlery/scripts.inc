@@ -72,10 +72,12 @@ ParcelIsleChandlery_Hjalmar::
 	faceplayer
 # 41 "data/maps/ParcelIsleChandlery/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleChandlery_Hjalmar_2
-# 44 "data/maps/ParcelIsleChandlery/scripts.pory"
-	msgbox ParcelIsleChandlery_Hjalmar_Text_1, MSGBOX_DEFAULT
 ParcelIsleChandlery_Hjalmar_1:
-# 46 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 44 "data/maps/ParcelIsleChandlery/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleChandlery_Hjalmar_5
+# 49 "data/maps/ParcelIsleChandlery/scripts.pory"
+	msgbox ParcelIsleChandlery_Hjalmar_Text_2, MSGBOX_DEFAULT
+# 51 "data/maps/ParcelIsleChandlery/scripts.pory"
 	release
 	end
 
@@ -83,6 +85,13 @@ ParcelIsleChandlery_Hjalmar_2:
 # 42 "data/maps/ParcelIsleChandlery/scripts.pory"
 	msgbox ParcelIsleChandlery_Hjalmar_Text_0, MSGBOX_DEFAULT
 	goto ParcelIsleChandlery_Hjalmar_1
+
+ParcelIsleChandlery_Hjalmar_5:
+# 45 "data/maps/ParcelIsleChandlery/scripts.pory"
+	msgbox ParcelIsleChandlery_Hjalmar_Text_1, MSGBOX_DEFAULT
+# 46 "data/maps/ParcelIsleChandlery/scripts.pory"
+	release
+	end
 
 
 ParcelIsleChandlery_Kit_Text_0:
@@ -119,7 +128,16 @@ ParcelIsleChandlery_Hjalmar_Text_0:
 	.string "anyone's buying.$"
 
 ParcelIsleChandlery_Hjalmar_Text_1:
-# 44 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 45 "data/maps/ParcelIsleChandlery/scripts.pory"
+	.string "HJALMAR: Rope, lamp oil, and the river\n"
+	.string "minutes. KIT sells two of those. The\l"
+	.string "third she lends, and it comes back with\l"
+	.string "thumbprints.\p"
+	.string "I've stood here two hours today. Worth\n"
+	.string "every minute.$"
+
+ParcelIsleChandlery_Hjalmar_Text_2:
+# 49 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "HJALMAR: Rope, lamp oil, and gossip. KIT\n"
 	.string "sells two of those.\p"
 	.string "The third you get by standing here long\n"

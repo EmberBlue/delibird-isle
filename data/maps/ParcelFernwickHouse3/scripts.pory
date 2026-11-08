@@ -6,6 +6,11 @@ script ParcelFernwickHouse3_OldWoman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD WOMAN: So that's where she went. The marsh. I sold her the bread for it.\pI'm glad somebody found her. I'm glad it was you."), MSGBOX_DEFAULT)
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OLD WOMAN: Somebody from the river bought bread here on the way to the coast. Said the whole village had stood up to the Board.\pI thought about the scientist's bread again. She never stood up to anything in my shop. She just bought it and went."), MSGBOX_DEFAULT)
+        release
+        end
     } else {
         msgbox(format("OLD WOMAN: The scientist came through here on her way somewhere. Bought bread. Didn't say where she was going.\pI've thought about that bread a lot."), MSGBOX_DEFAULT)
     }

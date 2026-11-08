@@ -13,6 +13,11 @@ script ParcelFernwickHall_Greeter {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("GREETER: Two cadets failed this week and TARN passed one of them anyway. He said she'd read the river minutes without being told to.\pHe's never passed anyone for reading. He's never passed anyone for anything."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_BADGE01_GET)) {
         msgbox(format("GREETER: You passed! Nobody passes first time. Well, somebody just did. Go tell HALE before TARN changes his mind."), MSGBOX_DEFAULT)
     } else {

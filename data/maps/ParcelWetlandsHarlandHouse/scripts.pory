@@ -12,6 +12,11 @@ script ParcelWetlandsHarlandHouse_Maren {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAREN: HARLAND went to the river meeting. Stood at the back. Didn't speak. Came home and said six people did it for him.\pHe's still got the boat loan papers in the drawer. He hasn't signed them. That's new."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (defeated(TRAINER_SKALD_ENFORCER)) {
         msgbox(format("MAREN: He came in last night and sat at that table for an hour without a word.\pThat's HARLAND thinking. You don't see it often. Let him."), MSGBOX_DEFAULT)
         release
@@ -36,6 +41,11 @@ script ParcelWetlandsHarlandHouse_Kid {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Dad went to the hearing. He came back and said you're all right. He said it like it didn't hurt this time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: Dad went to the river for the meeting. He came back and counted the fish with me. Five.\pHe said five is a number you can say out loud now. I don't know what that means. He seemed to."), MSGBOX_DEFAULT)
         release
         end
     }

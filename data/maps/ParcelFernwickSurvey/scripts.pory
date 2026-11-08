@@ -13,6 +13,11 @@ script ParcelFernwickSurvey_Clerk {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("CLERK: The soil cores went to the river. On a truck. Forty years in the basement and they rode to a meeting in a crate marked EVIDENCE.\pI labelled the crate myself. I've never labelled anything evidence. I liked it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: Forty years of soil cores in the basement. Nobody ever asked to see them.\pNobody, until this month."), MSGBOX_DEFAULT)
     release
     end

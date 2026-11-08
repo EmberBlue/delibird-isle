@@ -24,6 +24,11 @@ script ParcelFernwickCenter_Trainer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: My WOOPER's fine now. The nurse says the ones from upstream are fine and the ones from the landing aren't.\pShe's started writing down which is which. She never did that before."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: The nurse healed my WOOPER. Then it got sick again.\pIt's a WOOPER thing, apparently."), MSGBOX_DEFAULT)
     release
     end

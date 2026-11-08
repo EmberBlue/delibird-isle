@@ -10,10 +10,12 @@ ParcelIsleTimoHouse_Gran::
 # 12 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleTimoHouse_Gran_2
 # 18 "data/maps/ParcelIsleTimoHouse/scripts.pory"
-	msgbox ParcelIsleTimoHouse_Gran_Text_2, MSGBOX_DEFAULT
-# 19 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleTimoHouse_Gran_5
+# 23 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	msgbox ParcelIsleTimoHouse_Gran_Text_3, MSGBOX_DEFAULT
-# 20 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+# 24 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	msgbox ParcelIsleTimoHouse_Gran_Text_4, MSGBOX_DEFAULT
+# 25 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	release
 	end
 
@@ -26,9 +28,16 @@ ParcelIsleTimoHouse_Gran_2:
 	release
 	end
 
+ParcelIsleTimoHouse_Gran_5:
+# 19 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	msgbox ParcelIsleTimoHouse_Gran_Text_2, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	release
+	end
+
 
 ParcelIsleTimoHouse_Drawing::
-# 25 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+# 30 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	msgbox ParcelIsleTimoHouse_Drawing_Text_0, MSGBOX_SIGN
 	end
 
@@ -50,7 +59,17 @@ ParcelIsleTimoHouse_Gran_Text_1:
 	.string "never going to be us that did.$"
 
 ParcelIsleTimoHouse_Gran_Text_2:
-# 18 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+# 19 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	.string "Gran: Timo's asking me what an\n"
+	.string "allocation is. He heard it off the ferry\l"
+	.string "hands.\p"
+	.string "I told him it's when somebody decides\n"
+	.string "who gets the water. He said that's not\l"
+	.string "fair. I said now you're ready for the\l"
+	.string "other answer.$"
+
+ParcelIsleTimoHouse_Gran_Text_3:
+# 23 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	.string "Gran: Timo's out by the water again, I\n"
 	.string "expect. Battling strangers off the\l"
 	.string "ferry.\p"
@@ -59,8 +78,8 @@ ParcelIsleTimoHouse_Gran_Text_2:
 	.string "I said so.\p"
 	.string "He's too young for the other answer.$"
 
-ParcelIsleTimoHouse_Gran_Text_3:
-# 19 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+ParcelIsleTimoHouse_Gran_Text_4:
+# 24 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	.string "Gran: You've been past it, haven't you.\n"
 	.string "It's on your boots.\p"
 	.string "Come back through when you can. He\n"
@@ -68,7 +87,7 @@ ParcelIsleTimoHouse_Gran_Text_3:
 	.string "to me.$"
 
 ParcelIsleTimoHouse_Drawing_Text_0:
-# 25 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+# 30 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	.string "A crayon drawing, pinned low on the wall\n"
 	.string "at a kid's eye height.\p"
 	.string "A bridge. A river. A row of round blue\n"

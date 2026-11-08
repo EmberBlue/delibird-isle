@@ -56,11 +56,13 @@ post-finale reaction pass).
 areas and the two new Delibird Isle maps, 78 interiors: fifteen houses
 painted into Fernwick, Elvsund, Leirvik, Haukfell, Reedmere and the Coast
 plus the breakwater's lifeguard hut, each with residents in two story
-states), ~74,400 words in `data/maps/Parcel*/scripts.pory` (of which
-~26.1k are the generated rematch-tier lines; **~48,300 hand-written**,
-every named resident with a post-finale line, Dorsey in zones 2–6, sixteen
-side quests incl. Marta's three-door relief round, the notebook's "Her
-notes" page), **1,071 reachable Skald trainer battles** (gyms 1–8 + 4
+states), ~77,200 words in `data/maps/Parcel*/scripts.pory` (of which
+~26.2k are the generated rematch-tier lines; **~51,000 hand-written**,
+every named resident with a post-finale line, the residents of Saltwick,
+Fernwick and Reedmere in **three story states** (a mid-game line after the
+Watershed cert: the river meeting reaches the coast), Dorsey in zones 2–6,
+sixteen side quests incl. Marta's three-door relief round, the Sketch
+thread, the notebook's "Her notes" page), **1,071 reachable Skald trainer battles** (gyms 1–8 + 4
 Mereholt gates + Heron + Cordelia + the Weather four + Perrin ×7 + 8 leader
 rematches + ~218 route/town/side-area trainers + **816 rematch tiers**:
 every simple trainer fought again at tiers 2–5 as the clearances come in,
