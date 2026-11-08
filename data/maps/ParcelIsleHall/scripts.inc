@@ -116,29 +116,38 @@ ParcelIsleHall_Kid::
 # 66 "data/maps/ParcelIsleHall/scripts.pory"
 	faceplayer
 # 67 "data/maps/ParcelIsleHall/scripts.pory"
-	msgbox ParcelIsleHall_Kid_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Kid_2
+# 72 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Kid_Text_1, MSGBOX_DEFAULT
+# 73 "data/maps/ParcelIsleHall/scripts.pory"
+	release
+	end
+
+ParcelIsleHall_Kid_2:
 # 68 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Kid_Text_0, MSGBOX_DEFAULT
+# 69 "data/maps/ParcelIsleHall/scripts.pory"
 	release
 	end
 
 
 ParcelIsleHall_Minutes::
-# 73 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Minutes_2
-# 75 "data/maps/ParcelIsleHall/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Minutes_3
 # 78 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleHall_Minutes_2
+# 80 "data/maps/ParcelIsleHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsleHall_Minutes_3
+# 83 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Minutes_Text_2, MSGBOX_SIGN
 ParcelIsleHall_Minutes_1:
 	end
 
 ParcelIsleHall_Minutes_2:
-# 74 "data/maps/ParcelIsleHall/scripts.pory"
+# 79 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Minutes_Text_0, MSGBOX_SIGN
 	goto ParcelIsleHall_Minutes_1
 
 ParcelIsleHall_Minutes_3:
-# 76 "data/maps/ParcelIsleHall/scripts.pory"
+# 81 "data/maps/ParcelIsleHall/scripts.pory"
 	msgbox ParcelIsleHall_Minutes_Text_1, MSGBOX_SIGN
 	goto ParcelIsleHall_Minutes_1
 
@@ -237,12 +246,18 @@ ParcelIsleHall_Bard_Text_2:
 	.string "half.$"
 
 ParcelIsleHall_Kid_Text_0:
-# 67 "data/maps/ParcelIsleHall/scripts.pory"
+# 68 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "Dad says the hearing was boring.\p"
+	.string "Dad listened to the whole thing on the\n"
+	.string "wireless. Every single minute.$"
+
+ParcelIsleHall_Kid_Text_1:
+# 72 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "Dad says the meeting's boring.\p"
 	.string "Dad is AT the meeting. Every single time.$"
 
 ParcelIsleHall_Minutes_Text_0:
-# 74 "data/maps/ParcelIsleHall/scripts.pory"
+# 79 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "CO-OP MINUTES (extraordinary)\p"
 	.string "Motion: appear at the regional hearing\n"
 	.string "in support of the filed record. CARRIED,\l"
@@ -252,7 +267,7 @@ ParcelIsleHall_Minutes_Text_0:
 	.string "Chair's note: nobody stayed for tea.$"
 
 ParcelIsleHall_Minutes_Text_1:
-# 76 "data/maps/ParcelIsleHall/scripts.pory"
+# 81 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "CO-OP MINUTES\p"
 	.string "Item 3: the quota. MEREHOLT COASTAL\n"
 	.string "proposes a 'sustainable harvest' figure\l"
@@ -262,7 +277,7 @@ ParcelIsleHall_Minutes_Text_1:
 	.string "grant. Carried, with thanks.$"
 
 ParcelIsleHall_Minutes_Text_2:
-# 78 "data/maps/ParcelIsleHall/scripts.pory"
+# 83 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "CO-OP MINUTES\p"
 	.string "Item 1: the channel dredge is complete.\n"
 	.string "Item 2: the FOUNDATION's storm-relief\l"

@@ -5,6 +5,11 @@ mapscripts ParcelRiverDepot_MapScripts {
 script ParcelRiverDepot_Buyer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BUYER: Produce by weight, same day, no haggling. The review put a floor under the price. I pay the floor. Head office hates the floor. I don't mind it. It's a floor."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BUYER: Produce by weight, paid same day, no haggling, no questions. That's the FOUNDATION offer. It's a good offer. Ask anyone who's taken it.\pFertiliser's on the pallet. Credit available against next season. Everyone takes the credit."), MSGBOX_DEFAULT)
     release
     end
@@ -12,6 +17,11 @@ script ParcelRiverDepot_Buyer {
 script ParcelRiverDepot_Farmer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FARMER: The depot's every day and now it pays the floor. The market pays more again. I split between them. Having a choice is the thing. I'd forgotten the thing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FARMER: I sell here because the market pays less and the market's one day a week. The depot's every day. That's all. That's the whole reason. It's enough."), MSGBOX_DEFAULT)
     release
     end

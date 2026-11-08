@@ -9,6 +9,11 @@ mapscripts ParcelMistwoodPost_MapScripts {
 script ParcelMistwoodPost_Skeld {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SKELD: Certified, read, and filed. I sent the paperwork to the hearing myself. Forty forms. They read one. It was the right one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_MISTWOOD_CUT_GIVEN)) {
         if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
             msgbox(format("SKELD: Certified now, are you. Good. Means I can send you the paperwork instead of doing it."), MSGBOX_DEFAULT)

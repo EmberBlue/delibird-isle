@@ -234,6 +234,11 @@ script ParcelWetlands_DeadFish {
 script ParcelWetlands_Crowd1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: My husband drank from that channel the morning it went bad. He's fine. The monitor on the bank says the channel's fine too, now. I'll drink from it before he does. Then we'll know."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: My husband drank from that channel this morning. He's fine. He's fine, isn't he?"), MSGBOX_DEFAULT)
     release
     end
@@ -241,6 +246,11 @@ script ParcelWetlands_Crowd1 {
 script ParcelWetlands_Crowd2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: Somebody did this, I said. The hearing said who. A permit page says how much they're allowed to do now. It's a number. I can argue with a number. I couldn't argue with a night."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Somebody did this. Water doesn't go bad on its own in a night.\pAnd I don't see anybody from the CORPS writing THAT down."), MSGBOX_DEFAULT)
     release
     end
@@ -248,6 +258,11 @@ script ParcelWetlands_Crowd2 {
 script ParcelWetlands_Crowd3 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: Dad says it wasn't your fault. He says it like it cost him. He also says you wrote it down. He says that like it cost him more."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: Dad says it's your fault. Is it your fault?"), MSGBOX_DEFAULT)
     release
     end
@@ -366,6 +381,11 @@ script ParcelWetlands_Enforcer {
 script ParcelWetlands_Gunnar {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GUNNAR: Twice as far out, I said. The count's coming back in. Not to where it was. In. You wrote it down and now I write it down and the boy writes it down. Three of us. That's a survey."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_GUNNAR_DONE)) {
         msgbox(format("GUNNAR: Twice as far out. You remember that for me, when you write your reports."), MSGBOX_DEFAULT)
         release

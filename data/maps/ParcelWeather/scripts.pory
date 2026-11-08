@@ -959,6 +959,11 @@ script ParcelWeather_Hege_R5 {
 script ParcelWeather_ReturnFerry {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SAILOR: Back to SALTWICK? The station's logbooks are in the review, both of them. VANE handed them over himself. Honest air out there, and now a bit in here too."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SAILOR: Back to SALTWICK, RANGER? Honest air out there, at least. Whatever they sell in here, it isn't that."), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 0) {
         msgbox(format("SAILOR: Take your time. Mind the fans."), MSGBOX_DEFAULT)

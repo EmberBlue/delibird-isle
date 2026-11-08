@@ -17,6 +17,11 @@ script ParcelCoastHearing_Clerk {
 script ParcelCoastHearing_Waiter1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: Nine objections, nine carbon copies, and the tenth one got read into the record. I've kept the chair warm nine years. It was worth the sitting."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: I've sat in this chair every season for nine years. Nine objections. I keep the carbon copies. Nobody else has them."), MSGBOX_DEFAULT)
     release
     end
@@ -24,6 +29,11 @@ script ParcelCoastHearing_Waiter1 {
 script ParcelCoastHearing_Waiter2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: They changed the size rule back. Nobody told us when they changed it the first time. This time there was a notice, in the hall, in big letters. Progress is a notice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: My husband's boat was grounded for an undersize catch. The size changed the week before. Nobody told the fish."), MSGBOX_DEFAULT)
     release
     end

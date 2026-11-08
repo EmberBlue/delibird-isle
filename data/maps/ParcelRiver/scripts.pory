@@ -137,6 +137,11 @@ script ParcelRiver_IrrigationBoard {
 script ParcelRiver_Harland {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("HARLAND: ILEX signed you off, and I signed under you at the hearing. The river's in the review with the coast. Both or neither, I told them. They took both."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
         if (!flag(FLAG_SKALD_RIV_NIGHT_DONE)) {
             msgbox(format("HARLAND: ILEX signed you off. Good.\pStay the night. On the boat. The river's different in the dark, and you've only read it in daylight."), MSGBOX_DEFAULT)
@@ -189,6 +194,11 @@ script ParcelRiver_Harland {
 script ParcelRiver_Farmer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FARMER: ILEX's buffer strip, two rows, got written into the allocation. The fund paid. I didn't believe the fund. I believed it when the cheque cleared. The strip's going in. Two rows."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
         msgbox(format("FARMER: ILEX put a buffer strip in her report. Two rows. Named a fund that'd pay for it.\pI'll believe the fund when it's in my hand. But she wrote it down. Nobody else has."), MSGBOX_DEFAULT)
         release
@@ -204,6 +214,11 @@ script ParcelRiver_Farmer {
 script ParcelRiver_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("ILEX: Stressed, not shifted, and the hearing kept the difference. I held it like a coal for you. Now you hold it for the next one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
         msgbox(format("ILEX: Stressed, not shifted. Hold that difference like a coal.\pMost of the country you'll meet from here has already chosen. This river hasn't. Yet."), MSGBOX_DEFAULT)
         release
@@ -240,6 +255,11 @@ script ParcelRiver_Ilex {
 script ParcelRiver_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DORSEY: Phase 2 goes ahead. Six farms kept dry. You'd have done it too, RANGER, with a different word on the sign. I've stopped saying 'flood control'. I say 'the sluice'. It's the same sluice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH3_EVIDENCE)
     setvar(VAR_0x8004, 63)
     specialvar(VAR_RESULT, SkaldmereCertTaskCount)
@@ -257,6 +277,11 @@ script ParcelRiver_Dorsey {
 script ParcelRiver_Aide {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("AIDE: Phase 2 consultation reopened by order. The councilman takes questions every market day now, not just when it suits. Form a line. There is one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("AIDE: Phase 2 consultation is closed, but the councilman takes questions on market days. Form a line. There is no line."), MSGBOX_DEFAULT)
     release
     end
@@ -266,6 +291,11 @@ script ParcelRiver_Aide {
 script ParcelRiver_VendorEggs {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: Eggs, greens, honey. The honey's from upstream, where the flowers still come. More of them this year, the beekeeper says. He says it like he doesn't believe it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: Eggs, greens, a jar of honey. The honey's from upstream, where the flowers still come. Buy something or move along, RANGER, I've a stall to mind."), MSGBOX_DEFAULT)
     release
     end
@@ -273,6 +303,11 @@ script ParcelRiver_VendorEggs {
 script ParcelRiver_VendorFish {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: HARLAND's cousin. Six trout today. Sold two to the FOUNDATION buyer at my number, not his. First time. He paid it. He looked surprised to be paying it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
         msgbox(format("MAN: HARLAND's cousin. Four trout today. I sold them to the FOUNDATION buyer at his number because nobody else was buying.\pYour ILEX wrote 'fish passage' in her report. Tell her I'll hold her to it."), MSGBOX_DEFAULT)
         release
@@ -285,6 +320,11 @@ script ParcelRiver_VendorFish {
 script ParcelRiver_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: The pond above the town. The allocation gives the beaver reach a flow. Beavers don't read allocations, but water does. I'll walk up and look. Every day, till I see one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: There was a pond above the town. Beaver-built. We swam in it as boys. Then the trappers, then the Board.\pNow it's a ditch with a stake every fifty paces. Progress, they call it. I call it a ditch."), MSGBOX_DEFAULT)
     release
     end
@@ -292,6 +332,11 @@ script ParcelRiver_OldMan {
 script ParcelRiver_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: The councilman gave me a ribbon. PHASE 2, in blue. Mum put it in a drawer after the hearing. She said it's history now. I don't know what that means but it's still blue."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("GIRL: The councilman gave me a ribbon! It says PHASE 2 on it. I don't know what that is but it's blue."), MSGBOX_DEFAULT)
     release
     end
@@ -299,6 +344,11 @@ script ParcelRiver_Girl {
 script ParcelRiver_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: Mum says I can swim below the plots again by summer. The green stuff's going. She says a ranger wrote it down and then men came and measured. I asked if writing works. She said 'sometimes'."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: Don't swim below the plots. Mum says the water's got green stuff in it that makes your skin go funny. Above the town's fine. Above the town's freezing."), MSGBOX_DEFAULT)
     release
     end
@@ -306,6 +356,11 @@ script ParcelRiver_Boy {
 script ParcelRiver_PondFisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: I fish the town pond. Stocked. The river's getting better below the plots, they say. I'll fish it when I believe them. Not yet. Soon, maybe."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: I fish the town pond now. Stocked. It's not the same, but it's not green either."), MSGBOX_DEFAULT)
     release
     end

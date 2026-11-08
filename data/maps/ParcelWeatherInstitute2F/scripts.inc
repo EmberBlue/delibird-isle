@@ -84,40 +84,49 @@ ParcelWeatherInstitute2F_Aide::
 # 41 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	faceplayer
 # 42 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
-	msgbox ParcelWeatherInstitute2F_Aide_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute2F_Aide_2
+# 47 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	msgbox ParcelWeatherInstitute2F_Aide_Text_1, MSGBOX_DEFAULT
+# 48 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	release
+	end
+
+ParcelWeatherInstitute2F_Aide_2:
 # 43 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	msgbox ParcelWeatherInstitute2F_Aide_Text_0, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	release
 	end
 
 
 ParcelWeatherInstitute2F_Window::
-# 47 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 52 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Window_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeatherInstitute2F_Director_Rematch::
-# 53 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 58 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	lock
-# 54 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 59 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	faceplayer
-# 55 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 60 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Director_Rematch_Text_0, MSGBOX_YESNO
-# 56 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 61 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeatherInstitute2F_Director_Rematch_2
-# 61 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 66 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DIRECTOR_R, ParcelWeatherInstitute2F_Director_Rematch_Text_2
-# 62 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 67 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Director_Rematch_Text_3, MSGBOX_DEFAULT
-# 63 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 68 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	release
 	end
 
 ParcelWeatherInstitute2F_Director_Rematch_2:
-# 57 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 62 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Director_Rematch_Text_1, MSGBOX_DEFAULT
-# 58 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 63 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	release
 	end
 
@@ -189,20 +198,27 @@ ParcelWeatherInstitute2F_Director_Text_8:
 	.string "which side of this fence pays me.$"
 
 ParcelWeatherInstitute2F_Aide_Text_0:
-# 42 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 43 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	.string "AIDE: The director's second logbook\n"
+	.string "went into the record. The one he said\l"
+	.string "was for whoever comes after. It was for\l"
+	.string "you, it turns out. He's started a third.$"
+
+ParcelWeatherInstitute2F_Aide_Text_1:
+# 47 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "AIDE: The director keeps two logbooks.\n"
 	.string "One for the Board. One for himself. He\l"
 	.string "says the second one is for whoever\l"
 	.string "comes after. I think he means you.$"
 
 ParcelWeatherInstitute2F_Window_Text_0:
-# 47 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 52 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "From the window: four plots, four skies,\n"
 	.string "and past the fence the one real one,\l"
 	.string "grey and ordinary and not for sale.$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_0:
-# 55 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 60 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: The hearing cited the station's\n"
 	.string "models. Both logbooks. I'd like one more\l"
 	.string "reading, in weather of my choosing, with\l"
@@ -210,16 +226,16 @@ ParcelWeatherInstitute2F_Director_Rematch_Text_0:
 	.string "All four of mine are watching. Yes?$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_1:
-# 57 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 62 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: The forecast holds. So does the\n"
 	.string "offer.$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_2:
-# 61 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 66 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: …Cleanly done. In any weather. I\n"
 	.string "keep saying it.$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_3:
-# 62 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 67 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: Come back. The sky changes. So do\n"
 	.string "I, slower.$"

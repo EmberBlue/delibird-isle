@@ -664,6 +664,11 @@ script ParcelWetlandsHide_Asta_R5 {
 script ParcelWetlandsHide_Warden {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WARDEN: DR. HERON's line is still on the wall. Somebody's written under it, in a steady hand: 'Counted. Written down.' I didn't see who. I've left it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WARDEN: The hide was DR. HERON's idea, twenty years back. Sit still long enough and the place tells you what it is.\pShe wrote that on the wall inside. It's still there. So are the counts, hers and everyone's since."), MSGBOX_DEFAULT)
     release
     end

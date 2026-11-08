@@ -8,6 +8,11 @@ mapscripts ParcelFernwickSurvey_MapScripts {
 script ParcelFernwickSurvey_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CLERK: Forty years of soil cores in the basement, and the hearing wanted the cores from the marsh. I carried them up myself. They're heavier than paper. They were read anyway."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: Forty years of soil cores in the basement. Nobody ever asked to see them.\pNobody, until this month."), MSGBOX_DEFAULT)
     release
     end
@@ -16,6 +21,11 @@ script ParcelFernwickSurvey_Clerk {
 script ParcelFernwickSurvey_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("ILEX: It's filed. It's read. HALE signed it in front of me, and he didn't smile, and his hand was steady. That's the version I'll remember."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
         setvar(VAR_0x8004, 6)

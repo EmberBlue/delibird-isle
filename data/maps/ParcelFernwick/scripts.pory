@@ -69,6 +69,11 @@ script ParcelFernwick_Ranger {
 script ParcelFernwick_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: A fishing village before the station, a fishing village with paperwork after, and now a fishing village in a hearing transcript. I read my own name in it. Page forty. I said 'the water's low'. I did say that."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: This was a fishing village before the Corps put the station here.\pNow it's a fishing village with paperwork."), MSGBOX_DEFAULT)
     release
     end
@@ -77,6 +82,11 @@ script ParcelFernwick_OldMan {
 script ParcelFernwick_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: TARN smiled. I saw it. Tidewater regulation or not, he smiled when they read your name on the wireless. Half a second. Don't tell him I told you."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_BADGE01_GET)) {
         msgbox(format("WOMAN: You passed TARN's exam? He didn't smile, did he. He never smiles. I think it's a Tidewater regulation."), MSGBOX_DEFAULT)
     } else {
@@ -89,6 +99,11 @@ script ParcelFernwick_Woman {
 script ParcelFernwick_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: I'm gonna be a RANGER! Not a MEREHOLT guy. Their boots are still the best. But the RANGER's name was on the radio."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: I'm gonna be a RANGER when I grow up! Or a fisherman.\pOr a MEREHOLT guy. They have the best boots."), MSGBOX_DEFAULT)
     release
     end
@@ -97,6 +112,11 @@ script ParcelFernwick_Boy {
 script ParcelFernwick_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: The pond's still ducks. WINGULL. But GRETTIR says a POLIWAG came up the channel. One. He's watching for it. I'm watching GRETTIR."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("GIRL: The pond used to have POLIWAG in it! Now it just has ducks.\pWell. WINGULL. Same thing."), MSGBOX_DEFAULT)
     release
     end
@@ -105,6 +125,11 @@ script ParcelFernwick_Girl {
 script ParcelFernwick_Fisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: Marsh water's still low. Your paper didn't raise it. It put a number on the discharge upstream, and a man with a jar. I'll row where I can and walk where I can't. Same as before. Less angry."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: The marsh water's been low since spring. You can walk to places you used to row to.\pThat's not good, whatever the Council says."), MSGBOX_DEFAULT)
     release
     end
@@ -125,6 +150,11 @@ script ParcelFernwick_Scientist {
 script ParcelFernwick_Gentleman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GENTLEMAN: MEREHOLT paid for the fountain. It still says so. The hearing didn't take the plaques down. I'd have liked it to. Then I thought: let them stay. They say exactly what they say."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("GENTLEMAN: MEREHOLT paid for the fountain. It says so on the fountain.\pIt says so on most things around here, if you read the small plates."), MSGBOX_DEFAULT)
     release
     end
@@ -133,6 +163,11 @@ script ParcelFernwick_Gentleman {
 script ParcelFernwick_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CLERK: Day rate at the marsh works is down. Nobody asks what the work is now either. The deal's the same. The pay's not. Funny how the deal's the bit nobody renegotiates."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: Day rate at the marsh works is up again. Don't ask what the work is.\pNobody asks. That's the deal."), MSGBOX_DEFAULT)
     release
     end
@@ -141,6 +176,11 @@ script ParcelFernwick_Clerk {
 script ParcelFernwick_Mother {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MOTHER: My boy still wants to be a RANGER. I've stopped saying RANGERS don't get paid. They don't. But somebody read one out at a hearing and the whole town went quiet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MOTHER: My boy wants to be a RANGER. I told him RANGERS don't get paid.\pHe said that's fine, he'll be a MEREHOLT guy on weekends."), MSGBOX_DEFAULT)
     release
     end

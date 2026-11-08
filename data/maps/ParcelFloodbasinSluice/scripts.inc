@@ -1464,20 +1464,29 @@ ParcelFloodbasinSluice_Surveyor::
 # 666 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelFloodbasinSluice/scripts.pory"
-	msgbox ParcelFloodbasinSluice_Surveyor_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinSluice_Surveyor_2
+# 672 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Surveyor_Text_1, MSGBOX_DEFAULT
+# 673 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	release
+	end
+
+ParcelFloodbasinSluice_Surveyor_2:
 # 668 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Surveyor_Text_0, MSGBOX_DEFAULT
+# 669 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	release
 	end
 
 
 ParcelFloodbasinSluice_Sign::
-# 672 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 677 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	msgbox ParcelFloodbasinSluice_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFloodbasinSluice_ItemHyperPotion::
-# 675 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 680 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	finditem ITEM_HYPER_POTION
 	end
 
@@ -2051,7 +2060,14 @@ ParcelFloodbasinSluice_Grim_R5_Text_1:
 	.string "to see it done.$"
 
 ParcelFloodbasinSluice_Surveyor_Text_0:
-# 667 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 668 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "SURVEYOR: Phase 2 goes ahead. Sluice\n"
+	.string "gates here. The weir above is 'deferred'.\l"
+	.string "I measure what I'm told. There's less to\l"
+	.string "measure now, and I'm told it kindly.$"
+
+ParcelFloodbasinSluice_Surveyor_Text_1:
+# 672 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "SURVEYOR: Phase 2. Sluice gates here, a\n"
 	.string "weir above, a reservoir where the ford\l"
 	.string "was. 'Flood control.'\p"
@@ -2059,7 +2075,7 @@ ParcelFloodbasinSluice_Surveyor_Text_0:
 	.string "river measures the rest.$"
 
 ParcelFloodbasinSluice_Sign_Text_0:
-# 672 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 677 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "UPPER SLUICE (proposed). WATER BOARD /\n"
 	.string "MEREHOLT CIVIL. Works commence on\l"
 	.string "approval.$"

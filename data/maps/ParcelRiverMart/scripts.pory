@@ -30,6 +30,11 @@ ParcelRiverMart_Items::
 script ParcelRiverMart_Customer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: NET BALLS are still in. The river's full of things you'd want to catch before they're gone. Fewer of them going now, the clerk says. She says it like a question."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: NET BALLS are in. The river's full of things you'd want to catch before they're gone."), MSGBOX_DEFAULT)
     release
     end

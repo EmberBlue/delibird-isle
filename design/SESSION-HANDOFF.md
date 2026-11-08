@@ -55,9 +55,10 @@ post-finale reaction pass).
 **Numbers (2026-11-08):** **100 maps** (22 outdoor incl. six side areas, 78
 interiors: fifteen new houses painted into Fernwick, Elvsund, Leirvik,
 Haukfell, Reedmere and the Coast plus the breakwater's lifeguard hut, each
-with residents in two story states), ~65,900 words in
+with residents in two story states), ~69,900 words in
 `data/maps/Parcel*/scripts.pory` (of which ~24.9k are the generated
-rematch-tier lines; **~41,000 hand-written**), **1,021
+rematch-tier lines; **~45,000 hand-written**, every named resident now
+with a post-finale line), **1,021
 reachable Skald trainer battles** (gyms 1–8 + 4 Mereholt gates + Heron +
 Cordelia + the Weather four + Perrin ×7 + 8 leader rematches + ~208
 route/town/side-area trainers + **776 rematch tiers**: every simple trainer

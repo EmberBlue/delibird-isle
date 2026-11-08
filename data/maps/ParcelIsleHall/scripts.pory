@@ -64,6 +64,11 @@ script ParcelIsleHall_Bard {
 script ParcelIsleHall_Kid {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Dad says the hearing was boring.\pDad listened to the whole thing on the wireless. Every single minute."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Dad says the meeting's boring.\pDad is AT the meeting. Every single time."), MSGBOX_DEFAULT)
     release
     end

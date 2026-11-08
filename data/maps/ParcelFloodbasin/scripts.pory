@@ -99,6 +99,11 @@ movement Movement_FLD_DorseyFaceDown { face_down }
 script ParcelFloodbasin_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DORSEY: You'll write that the FOUNDATION's man was courteous after the hearing. I was. I am. Phase 2 goes ahead, RANGER. Dry sheds. You'd have built them too. You'd just have built them slower."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
@@ -114,6 +119,11 @@ script ParcelFloodbasin_Dorsey {
 script ParcelFloodbasin_Aide1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("AIDE: Fuel vouchers are finished. The relief sheet went to the hearing as an exhibit. Forty-one signatures. The councilman's name was the forty-second. I'd not noticed that before."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("AIDE: Fuel vouchers on the left, dry goods on the right. Sign the sheet. Yes, the FOUNDATION keeps the sheet. For the records."), MSGBOX_DEFAULT)
     release
     end
@@ -121,6 +131,11 @@ script ParcelFloodbasin_Aide1 {
 script ParcelFloodbasin_Aide2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("AIDE: Forty-one households. The hearing asked how many were consulted on Phase 2. I said forty-one signed. They said that wasn't the question. It wasn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("AIDE: Forty-one households. Forty-one signatures. The councilman likes a full sheet."), MSGBOX_DEFAULT)
     release
     end
@@ -128,6 +143,11 @@ script ParcelFloodbasin_Aide2 {
 script ParcelFloodbasin_VilOldWoman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MRS. ASKE: He knows my name. He said it at the hearing, into a microphone, as an example of local partnership. Eleven years, and I was an example."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_FLD_RELIEF_DONE)) {
         msgbox(format("MRS. ASKE: He knows my name. Eleven years on the Council and he knows my name.\pThe CORPS man before you didn't. I'm not saying that to be unkind."), MSGBOX_DEFAULT)
         release
@@ -140,6 +160,11 @@ script ParcelFloodbasin_VilOldWoman {
 script ParcelFloodbasin_VilMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: Three floods, three times the vouchers, and the water still comes up brown. Your paper says why. In the hearing they read the why aloud. The water didn't change colour. I did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Three floods. Three times the vouchers. Nobody's asked why the water comes up brown now.\pI asked. I got vouchers."), MSGBOX_DEFAULT)
     release
     end
@@ -147,6 +172,11 @@ script ParcelFloodbasin_VilMan {
 script ParcelFloodbasin_VilGirl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: The WOOPER with the wrong feet is still in the puddle. A CORPS lady came and drew it. She said it's in a report now. It doesn't know. It's a WOOPER."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("GIRL: My brother found a WOOPER with the wrong feet. Gran made him put it back. It didn't go anywhere. It just sat."), MSGBOX_DEFAULT)
     release
     end
@@ -154,6 +184,11 @@ script ParcelFloodbasin_VilGirl {
 script ParcelFloodbasin_VilFisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: Does writing fix anything, I asked you. The vouchers are still stopped. The boat's still stopped. But a Board man came and measured the water instead of telling me about it. Writing did that."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
         msgbox(format("FISHER: Vouchers stopped. Boat stopped. Water's the same.\pYour lot wrote something down, I hear. Does writing it down dry anything out?"), MSGBOX_DEFAULT)
         release

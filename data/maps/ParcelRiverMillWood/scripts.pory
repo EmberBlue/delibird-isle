@@ -664,6 +664,11 @@ script ParcelRiverMillWood_Jens_R5 {
 script ParcelRiverMillWood_Sawyer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SAWYER: The Board's paper says one stand a year again. The wood's paper agrees for once. I read both. The race ran an hour last week. The miller stood in it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SAWYER: Coppice wood. Twelve-year round, one stand a year, and the mill never wanted for timber in forty years.\pThe Board's paper says take three stands this year. The wood's paper says no. I read the wood's."), MSGBOX_DEFAULT)
     release
     end

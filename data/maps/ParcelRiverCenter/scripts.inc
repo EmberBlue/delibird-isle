@@ -32,14 +32,30 @@ ParcelRiverCenter_Trainer::
 # 20 "data/maps/ParcelRiverCenter/scripts.pory"
 	faceplayer
 # 21 "data/maps/ParcelRiverCenter/scripts.pory"
-	msgbox ParcelRiverCenter_Trainer_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverCenter_Trainer_2
+# 26 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_Trainer_Text_1, MSGBOX_DEFAULT
+# 27 "data/maps/ParcelRiverCenter/scripts.pory"
+	release
+	end
+
+ParcelRiverCenter_Trainer_2:
 # 22 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_Trainer_Text_0, MSGBOX_DEFAULT
+# 23 "data/maps/ParcelRiverCenter/scripts.pory"
 	release
 	end
 
 
 ParcelRiverCenter_Trainer_Text_0:
-# 21 "data/maps/ParcelRiverCenter/scripts.pory"
+# 22 "data/maps/ParcelRiverCenter/scripts.pory"
+	.string "YOUNGSTER: The MARILL don't come in\n"
+	.string "itchy from the lower river so much. The\l"
+	.string "nurse still has the cream. She says keep\l"
+	.string "it. Water has a memory, she says.$"
+
+ParcelRiverCenter_Trainer_Text_1:
+# 26 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "YOUNGSTER: Everyone's MARILL comes in\n"
 	.string "itchy after the lower river. The nurse\l"
 	.string "has a cream for it now. A CREAM. For a\l"

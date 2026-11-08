@@ -1464,14 +1464,23 @@ ParcelHighlandsTarn_Cadet::
 # 666 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelHighlandsTarn/scripts.pory"
-	msgbox ParcelHighlandsTarn_Cadet_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsTarn_Cadet_2
+# 672 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_Cadet_Text_1, MSGBOX_DEFAULT
+# 673 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	release
+	end
+
+ParcelHighlandsTarn_Cadet_2:
 # 668 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_Cadet_Text_0, MSGBOX_DEFAULT
+# 669 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	release
 	end
 
 
 ParcelHighlandsTarn_ItemNeverMeltIce::
-# 671 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 676 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	finditem ITEM_NEVER_MELT_ICE
 	end
 
@@ -2057,7 +2066,14 @@ ParcelHighlandsTarn_Randi_R5_Text_1:
 	.string "enough to see it done.$"
 
 ParcelHighlandsTarn_Cadet_Text_0:
-# 667 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 668 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "CADET: VALE said 'learn the cold'. The\n"
+	.string "hearing cited her gate log. She came up\l"
+	.string "here to read it to us. In the cold. It's a\l"
+	.string "good log.$"
+
+ParcelHighlandsTarn_Cadet_Text_1:
+# 672 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "CADET: VALE said 'learn the cold'. I've\n"
 	.string "learnt it. Can I go down now?\p"
 	.string "She said no. She says it kindly, which is\n"

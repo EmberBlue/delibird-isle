@@ -5,6 +5,11 @@ mapscripts ParcelFloodbasinRelief_MapScripts {
 script ParcelFloodbasinRelief_Aide {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("AIDE: The store's closed. The sheet's an exhibit. The councilman says the basin's recovering nicely. The hearing said 'recovering' is not a measurement. I liked that. I shouldn't have."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
         msgbox(format("AIDE: The store's closing. Relief period's over. The councilman says the basin's recovering nicely.\pThe sheet goes to the coast office. Forty-one signatures. They like a full sheet."), MSGBOX_DEFAULT)
         release
@@ -17,6 +22,11 @@ script ParcelFloodbasinRelief_Aide {
 script ParcelFloodbasinRelief_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: I signed. My neighbour didn't. Her roof's still got the tarp on, and now the Board's paying for a new one because she didn't sign. I'm not bitter. I'm confused. Same thing, round here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: I signed. Everyone signs. My neighbour wouldn't, and her roof's still got the tarp on."), MSGBOX_DEFAULT)
     release
     end

@@ -16,6 +16,11 @@ script ParcelCoastUnion_Chair {
 script ParcelCoastUnion_Fisher1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: HARLAND spoke for the river and the coast both, in one breath. The hearing let him. Nine minutes. I timed it. Best nine minutes this hall's had."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: HARLAND came down from the river to fish the coast because the river was done. Now the coast's done. There's nowhere further down."), MSGBOX_DEFAULT)
     release
     end
@@ -23,6 +28,11 @@ script ParcelCoastUnion_Fisher1 {
 script ParcelCoastUnion_Fisher2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: The Board's model said six years. The review threw the model out and said 'we don't know'. I'll take 'we don't know'. It's the first true thing they've said about the stock."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: The Board's model says the stock recovers in six years if we hold the quota. It said that six years ago."), MSGBOX_DEFAULT)
     release
     end

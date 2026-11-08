@@ -6,6 +6,11 @@ mapscripts ParcelCoastOffice1F_MapScripts {
 script ParcelCoastOffice1F_Reception {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("RECEPTION: Welcome to the MEREHOLT FOUNDATION. The exhibit is closed for revision. Ms. AUNE is upstairs. She said if a RANGER came, to send you up, and to say nothing clever."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("RECEPTION: Welcome to the MEREHOLT FOUNDATION. The exhibit is free. Ms. AUNE is upstairs; she's expecting a RANGER. Do take a brochure."), MSGBOX_DEFAULT)
     release
     end
@@ -13,6 +18,11 @@ script ParcelCoastOffice1F_Reception {
 script ParcelCoastOffice1F_Visitor {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: I come in for the warm. The model on the wall's been taken down. There's a lighter patch where it was. I understand the patch."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: I come in for the warm. They don't mind. The model on the wall's very clever. I don't understand a word of it and there's fewer fish every year, so I suppose it's working."), MSGBOX_DEFAULT)
     release
     end

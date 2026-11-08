@@ -3,6 +3,11 @@ mapscripts ParcelCoastHouse2_MapScripts {
 script ParcelCoastHouse2_Skipper {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SKIPPER: Sold the boat the year the dredge came. The lending company's got forty boats tied up now and no quota to run them. I sat in my window and didn't gloat. Much."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SKIPPER: Sold the boat to the lending company the year the dredge came. Took the money. Bought this house. Best decision I ever made and I've never forgiven myself for it."), MSGBOX_DEFAULT)
     release
     end
@@ -10,6 +15,11 @@ script ParcelCoastHouse2_Skipper {
 script ParcelCoastHouse2_Wife {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WIFE: He went down to the union hall. First time in six years he's gone anywhere but the window. Came back with ink on his fingers. He'd signed something. He wouldn't say what."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WIFE: He stands at the window and watches the boats go out. Forty years he went out. Now he watches. Watching's harder, he says."), MSGBOX_DEFAULT)
     release
     end

@@ -53,14 +53,30 @@ ParcelFernwickMart_Customer::
 # 32 "data/maps/ParcelFernwickMart/scripts.pory"
 	faceplayer
 # 33 "data/maps/ParcelFernwickMart/scripts.pory"
-	msgbox ParcelFernwickMart_Customer_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickMart_Customer_2
+# 38 "data/maps/ParcelFernwickMart/scripts.pory"
+	msgbox ParcelFernwickMart_Customer_Text_1, MSGBOX_DEFAULT
+# 39 "data/maps/ParcelFernwickMart/scripts.pory"
+	release
+	end
+
+ParcelFernwickMart_Customer_2:
 # 34 "data/maps/ParcelFernwickMart/scripts.pory"
+	msgbox ParcelFernwickMart_Customer_Text_0, MSGBOX_DEFAULT
+# 35 "data/maps/ParcelFernwickMart/scripts.pory"
 	release
 	end
 
 
 ParcelFernwickMart_Customer_Text_0:
-# 33 "data/maps/ParcelFernwickMart/scripts.pory"
+# 34 "data/maps/ParcelFernwickMart/scripts.pory"
+	.string "YOUNGSTER: REPELS are still on sale.\n"
+	.string "The marsh still has a lot of WOOPER.\l"
+	.string "Some things the hearing didn't fix. The\l"
+	.string "WOOPER are fine about it.$"
+
+ParcelFernwickMart_Customer_Text_1:
+# 38 "data/maps/ParcelFernwickMart/scripts.pory"
 	.string "YOUNGSTER: REPELS are on sale. The\n"
 	.string "marsh has a lot of WOOPER.\p"
 	.string "A LOT.$"

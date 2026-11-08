@@ -19,6 +19,11 @@ script ParcelFernwickCenter_Nurse {
 script ParcelFernwickCenter_Trainer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: The nurse healed my WOOPER. It stayed healed this time. She says the water in the channel is better. The WOOPER says nothing. It's a WOOPER."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: The nurse healed my WOOPER. Then it got sick again.\pIt's a WOOPER thing, apparently."), MSGBOX_DEFAULT)
     release
     end

@@ -664,6 +664,11 @@ script ParcelCoastBreakwater_Holger_R5 {
 script ParcelCoastBreakwater_Beachcomber {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BEACHCOMBER: Fewer tins this month. Three, with the crest. I lined them up anyway. A short line is still a line. Somebody should keep it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BEACHCOMBER: Every tide brings something with the crest on it. I line them up along the wall.\pThe CORPS girl photographed the line for her file. It's longer now than in the photograph."), MSGBOX_DEFAULT)
     release
     end

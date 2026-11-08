@@ -90,6 +90,11 @@ movement Movement_MeadowPushBack {
 script ParcelMeadow_Rin {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("RIN: Look at you. Read in a hearing. The meadow's the same. Seven in the paddock, and the one you took is the one who'll be remembered. Don't tell the others."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("RIN: Look at you, all certified. The meadow's quieter without your partner in it. Don't tell it I said that."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SYS_POKEMON_GET)) {

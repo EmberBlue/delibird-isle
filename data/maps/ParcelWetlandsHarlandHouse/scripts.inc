@@ -57,11 +57,13 @@ ParcelWetlandsHarlandHouse_Kid::
 # 36 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	faceplayer
 # 37 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
-	checktrainerflag TRAINER_SKALD_ENFORCER
-	goto_if 1, ParcelWetlandsHarlandHouse_Kid_2
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHarlandHouse_Kid_2
 # 42 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
-	msgbox ParcelWetlandsHarlandHouse_Kid_Text_1, MSGBOX_DEFAULT
-# 43 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	checktrainerflag TRAINER_SKALD_ENFORCER
+	goto_if 1, ParcelWetlandsHarlandHouse_Kid_5
+# 47 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	msgbox ParcelWetlandsHarlandHouse_Kid_Text_2, MSGBOX_DEFAULT
+# 48 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	release
 	end
 
@@ -72,15 +74,22 @@ ParcelWetlandsHarlandHouse_Kid_2:
 	release
 	end
 
+ParcelWetlandsHarlandHouse_Kid_5:
+# 43 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	msgbox ParcelWetlandsHarlandHouse_Kid_Text_1, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	release
+	end
+
 
 ParcelWetlandsHarlandHouse_Wooper::
-# 48 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+# 53 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	lock
-# 49 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+# 54 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	faceplayer
-# 50 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+# 55 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	msgbox ParcelWetlandsHarlandHouse_Wooper_Text_0, MSGBOX_DEFAULT
-# 51 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+# 56 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	release
 	end
 
@@ -126,15 +135,21 @@ ParcelWetlandsHarlandHouse_Maren_Text_4:
 
 ParcelWetlandsHarlandHouse_Kid_Text_0:
 # 38 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	.string "BOY: Dad went to the hearing. He came\n"
+	.string "back and said you're all right. He said it\l"
+	.string "like it didn't hurt this time.$"
+
+ParcelWetlandsHarlandHouse_Kid_Text_1:
+# 43 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	.string "BOY: Dad says you're all right. He said\n"
 	.string "it like it hurt.$"
 
-ParcelWetlandsHarlandHouse_Kid_Text_1:
-# 42 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+ParcelWetlandsHarlandHouse_Kid_Text_2:
+# 47 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	.string "BOY: Dad says the CORPS counts the\n"
 	.string "fish wrong. I counted them. There's\l"
 	.string "four. Is four wrong?$"
 
 ParcelWetlandsHarlandHouse_Wooper_Text_0:
-# 50 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+# 55 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	.string "WOOPER: Woop.$"

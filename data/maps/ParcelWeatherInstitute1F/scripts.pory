@@ -4,6 +4,11 @@ mapscripts ParcelWeatherInstitute1F_MapScripts {
 script ParcelWeatherInstitute1F_Reception {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("RECEPTION: The director is upstairs. He sees anyone now. He says the four divisions were the easy part. Go up."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("RECEPTION: The director is upstairs. He sees anyone who's beaten the four divisions, and nobody who hasn't. Those are his rules. They're the only rules here he made himself."), MSGBOX_DEFAULT)
     release
     end
@@ -11,6 +16,11 @@ script ParcelWeatherInstitute1F_Reception {
 script ParcelWeatherInstitute1F_Tech1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("TECHNICIAN: The drawer's open. The over-the-fence data went to the review in three boxes. We publish it monthly now, next to the plot data. The drawer's for sandwiches."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("TECHNICIAN: We publish the plot data monthly. The over-the-fence data goes in a drawer. The drawer is very full."), MSGBOX_DEFAULT)
     release
     end
@@ -18,6 +28,11 @@ script ParcelWeatherInstitute1F_Tech1 {
 script ParcelWeatherInstitute1F_Tech2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("TECHNICIAN: A CASTFORM in every office, still. 'Adaptive thinking.' One of them changed form during the hearing broadcast. Rain. Nobody's explained it. Nobody wants to."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("TECHNICIAN: A CASTFORM in every office. Management's idea. 'Adaptive thinking.' They mostly sleep."), MSGBOX_DEFAULT)
     release
     end

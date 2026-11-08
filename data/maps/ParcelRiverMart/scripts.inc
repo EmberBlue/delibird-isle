@@ -59,14 +59,31 @@ ParcelRiverMart_Customer::
 # 32 "data/maps/ParcelRiverMart/scripts.pory"
 	faceplayer
 # 33 "data/maps/ParcelRiverMart/scripts.pory"
-	msgbox ParcelRiverMart_Customer_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverMart_Customer_2
+# 38 "data/maps/ParcelRiverMart/scripts.pory"
+	msgbox ParcelRiverMart_Customer_Text_1, MSGBOX_DEFAULT
+# 39 "data/maps/ParcelRiverMart/scripts.pory"
+	release
+	end
+
+ParcelRiverMart_Customer_2:
 # 34 "data/maps/ParcelRiverMart/scripts.pory"
+	msgbox ParcelRiverMart_Customer_Text_0, MSGBOX_DEFAULT
+# 35 "data/maps/ParcelRiverMart/scripts.pory"
 	release
 	end
 
 
 ParcelRiverMart_Customer_Text_0:
-# 33 "data/maps/ParcelRiverMart/scripts.pory"
+# 34 "data/maps/ParcelRiverMart/scripts.pory"
+	.string "WOMAN: NET BALLS are still in. The\n"
+	.string "river's full of things you'd want to\l"
+	.string "catch before they're gone. Fewer of\l"
+	.string "them going now, the clerk says. She says\l"
+	.string "it like a question.$"
+
+ParcelRiverMart_Customer_Text_1:
+# 38 "data/maps/ParcelRiverMart/scripts.pory"
 	.string "WOMAN: NET BALLS are in. The river's full\n"
 	.string "of things you'd want to catch before\l"
 	.string "they're gone.$"

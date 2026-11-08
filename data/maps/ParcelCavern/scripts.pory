@@ -47,6 +47,11 @@ script ParcelCavern_Audit {
 script ParcelCavern_GateKelda {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("KELDA: The everfrost is still on MEREHOLT's books. The books are under review. I hold a gate for a page that's being rewritten. I'll hold it properly anyway."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("KELDA: You're entered against your card. The everfrost is on MEREHOLT's books. And now, so is your competence to stand near it."), MSGBOX_DEFAULT)
     release
     end

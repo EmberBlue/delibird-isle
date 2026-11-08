@@ -4,6 +4,11 @@ mapscripts ParcelFernwickHouse1_MapScripts {
 script ParcelFernwickHouse1_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: My brother's dredge is idle pending survey. My sister wrote the survey. Dinner at ours is louder now. That's better. I think it's better."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: My brother works the marsh dredge. My sister works for the Corps.\pDinner at ours is very quiet."), MSGBOX_DEFAULT)
     release
     end

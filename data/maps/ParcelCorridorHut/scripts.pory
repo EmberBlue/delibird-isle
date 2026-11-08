@@ -7,6 +7,11 @@ mapscripts ParcelCorridorHut_MapScripts {
 script ParcelCorridorHut_Foreman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FOREMAN: Pre-construction flow data. Turns out we do do it, now. Eleven pages of it, every month, to FERNWICK. One of my lads drew the chart. He's proud of it. I let him be."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 10)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
@@ -24,6 +29,11 @@ script ParcelCorridorHut_Foreman {
 script ParcelCorridorHut_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CLERK: Eleven pages, filed where they couldn't be unfiled. They weren't. They were read. I didn't sign them. I'm thinking I should have."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_FLOW_DONE)) {
         msgbox(format("CLERK: Eleven pages, filed with the CORPS station at FERNWICK. Somewhere they can't be unfiled. I didn't sign the cover sheet. You did."), MSGBOX_DEFAULT)
         release

@@ -55,14 +55,30 @@ ParcelCoastMart_Customer::
 # 30 "data/maps/ParcelCoastMart/scripts.pory"
 	faceplayer
 # 31 "data/maps/ParcelCoastMart/scripts.pory"
-	msgbox ParcelCoastMart_Customer_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastMart_Customer_2
+# 36 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_Customer_Text_1, MSGBOX_DEFAULT
+# 37 "data/maps/ParcelCoastMart/scripts.pory"
+	release
+	end
+
+ParcelCoastMart_Customer_2:
 # 32 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_Customer_Text_0, MSGBOX_DEFAULT
+# 33 "data/maps/ParcelCoastMart/scripts.pory"
 	release
 	end
 
 
 ParcelCoastMart_Customer_Text_0:
-# 31 "data/maps/ParcelCoastMart/scripts.pory"
+# 32 "data/maps/ParcelCoastMart/scripts.pory"
+	.string "SAILOR: DIVE BALLS. Bought one. The\n"
+	.string "clerk asked what for. I said the review\l"
+	.string "says there's a nursery on the bottom. I\l"
+	.string "want to see a nursery.$"
+
+ParcelCoastMart_Customer_Text_1:
+# 36 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "SAILOR: DIVE BALLS. For what, I asked.\n"
 	.string "The clerk said for the fish. I said\l"
 	.string "there's no fish. She said that's not her\l"

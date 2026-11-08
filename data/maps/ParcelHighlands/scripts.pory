@@ -170,6 +170,11 @@ script ParcelHighlands_Hollis {
 script ParcelHighlands_HollisTech {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("TECHNICIAN: Core samples stopped. The bore's capped pending survey. The bore log said 'exploratory' for two years. The hearing read the word aloud and the room laughed. Not kindly."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("TECHNICIAN: Core samples go down to the coast office twice a week. The bore log says 'exploratory'. The bore log's a form. Forms say what's printed on them."), MSGBOX_DEFAULT)
     release
     end
@@ -179,6 +184,11 @@ script ParcelHighlands_HollisTech {
 script ParcelHighlands_Homesteader {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("HOMESTEADER: SHIFTED, you wrote, and the hearing wrote it after you. The ground didn't hear. The leases did. Pending survey, they say. I'll be here for the survey."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
@@ -218,6 +228,11 @@ script ParcelHighlands_Homesteader {
 script ParcelHighlands_Hale {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("HALE: You kept the record and the record kept the mountain, for a season. That's the whole of the work up here. Seasons. One at a time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
         msgbox(format("HALE: You kept the record. That's the whole of the work up here.\pSomeday someone reads it and knows exactly what was lost, and when, and who was smiling while it went."), MSGBOX_DEFAULT)
         release

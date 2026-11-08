@@ -103,6 +103,11 @@ script ParcelDelibird_Elder {
 script ParcelDelibird_Fisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Tomas: The floor slopes a little more every year and the hearing didn't change that. It changed who's counting. Me, now. I've a book."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
         msgbox(format("Tomas: Warm through, thanks to you. Mind the corner of my cabin -- the floor slopes to the sea a little more each winter.\pUsed to be level. I remember it level."), MSGBOX_DEFAULT)
         release
@@ -126,6 +131,11 @@ script ParcelDelibird_Fisher {
 script ParcelDelibird_Giver {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Villager: Pass it on someday. Whoever's cold next. The hearing didn't put a coat on anyone. We did. We'll keep doing it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_DELIBIRD_GIVER)) {
         msgbox(format("Villager: Pass it on someday, that's all. To whoever's cold next."), MSGBOX_DEFAULT)
         release
@@ -143,6 +153,11 @@ script ParcelDelibird_Giver {
 script ParcelDelibird_Relief {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Villager: Bailed dry. It'll be back by the thaw moon, higher. Your filing says so, in better words than mine. It's good to be in a filing. It's like being counted."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_DELIBIRD_RELIEF)) {
         msgbox(format("Villager: Bailed dry for now. It'll be back by the thaw moon. It always comes back a little higher.\pThanks for the arms, Ranger."), MSGBOX_DEFAULT)
         release
@@ -184,6 +199,11 @@ script ParcelDelibird_BannerSign {
 script ParcelDelibird_ReturnFerry {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Sailor: Back to the mainland, Ranger? The island will be here, for a while yet. Your paper didn't change the ice. It changed what the ice is called in a room far away. That's something."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Sailor: Back to the mainland, Ranger? Whenever you're ready.\pThe island will be here. For a while yet, it'll be here."), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 0) {
         msgbox(format("Sailor: Stay for the lights, then. They're worth it."), MSGBOX_DEFAULT)
@@ -353,6 +373,11 @@ script ParcelDelibird_GymIlex_Defeated {
 script ParcelDelibird_SquareKeeper {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Keeper: The shelf thins and fills. Somebody put a MEREHOLT blanket on it last week. Folded in thirds. Nobody said anything. That's the ledger working."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_DEL_GIFT_SQUARE)) {
         msgbox(format("Keeper: The shelf thins and fills, thins and fills.\pNobody keeps the ledger, so nobody's ever behind."), MSGBOX_DEFAULT)
         release

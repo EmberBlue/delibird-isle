@@ -32,14 +32,30 @@ ParcelCoastCenter_Trainer::
 # 20 "data/maps/ParcelCoastCenter/scripts.pory"
 	faceplayer
 # 21 "data/maps/ParcelCoastCenter/scripts.pory"
-	msgbox ParcelCoastCenter_Trainer_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastCenter_Trainer_2
+# 26 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_Trainer_Text_1, MSGBOX_DEFAULT
+# 27 "data/maps/ParcelCoastCenter/scripts.pory"
+	release
+	end
+
+ParcelCoastCenter_Trainer_2:
 # 22 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_Trainer_Text_0, MSGBOX_DEFAULT
+# 23 "data/maps/ParcelCoastCenter/scripts.pory"
 	release
 	end
 
 
 ParcelCoastCenter_Trainer_Text_0:
-# 21 "data/maps/ParcelCoastCenter/scripts.pory"
+# 22 "data/maps/ParcelCoastCenter/scripts.pory"
+	.string "SAILOR: The WINGULL came in today\n"
+	.string "without hooks in them. Three. The nurse\l"
+	.string "didn't know what to do with a well bird.\l"
+	.string "Neither did I.$"
+
+ParcelCoastCenter_Trainer_Text_1:
+# 26 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "SAILOR: Half the WINGULL in here come\n"
 	.string "in with hooks in them. The other half\l"
 	.string "come in with nothing in them. Starved.\l"

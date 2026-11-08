@@ -1464,50 +1464,59 @@ ParcelRiverMillWood_Sawyer::
 # 666 "data/maps/ParcelRiverMillWood/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelRiverMillWood/scripts.pory"
-	msgbox ParcelRiverMillWood_Sawyer_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverMillWood_Sawyer_2
+# 672 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Sawyer_Text_1, MSGBOX_DEFAULT
+# 673 "data/maps/ParcelRiverMillWood/scripts.pory"
+	release
+	end
+
+ParcelRiverMillWood_Sawyer_2:
 # 668 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Sawyer_Text_0, MSGBOX_DEFAULT
+# 669 "data/maps/ParcelRiverMillWood/scripts.pory"
 	release
 	end
 
 
 ParcelRiverMillWood_SignEdge::
-# 672 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 677 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_SignEdge_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverMillWood_SignRace::
-# 676 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 681 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_SignRace_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverMillWood_ItemGreatBall::
-# 679 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 684 "data/maps/ParcelRiverMillWood/scripts.pory"
 	finditem ITEM_GREAT_BALL
 	end
 
 
 ParcelRiverMillWood_ItemEther::
-# 680 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 685 "data/maps/ParcelRiverMillWood/scripts.pory"
 	finditem ITEM_ETHER
 	end
 
 
 ParcelRiverMillWood_ItemParalyzeHeal::
-# 681 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 686 "data/maps/ParcelRiverMillWood/scripts.pory"
 	finditem ITEM_PARALYZE_HEAL
 	end
 
 
 ParcelRiverMillWood_DeadEndNorth::
-# 683 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 688 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_DeadEndNorth_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverMillWood_DeadEndSouth::
-# 687 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 692 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_DeadEndSouth_Text_0, MSGBOX_SIGN
 	end
 
@@ -2107,7 +2116,15 @@ ParcelRiverMillWood_Jens_R5_Text_2:
 	.string "to see it done.$"
 
 ParcelRiverMillWood_Sawyer_Text_0:
-# 667 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 668 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "SAWYER: The Board's paper says one\n"
+	.string "stand a year again. The wood's paper\l"
+	.string "agrees for once. I read both. The race\l"
+	.string "ran an hour last week. The miller stood\l"
+	.string "in it.$"
+
+ParcelRiverMillWood_Sawyer_Text_1:
+# 672 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "SAWYER: Coppice wood. Twelve-year\n"
 	.string "round, one stand a year, and the mill\l"
 	.string "never wanted for timber in forty years.\p"
@@ -2116,24 +2133,24 @@ ParcelRiverMillWood_Sawyer_Text_0:
 	.string "no. I read the wood's.$"
 
 ParcelRiverMillWood_SignEdge_Text_0:
-# 672 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 677 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "ELVSUND MILL WOOD. Coppice cut on a\n"
 	.string "twelve-year round.\p"
 	.string "Take what fell. Leave what stands.$"
 
 ParcelRiverMillWood_SignRace_Text_0:
-# 676 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 681 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "The mill race starts here. The wheel has\n"
 	.string "been still since the Board metered the\l"
 	.string "water.$"
 
 ParcelRiverMillWood_DeadEndNorth_Text_0:
-# 683 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 688 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "The track runs out in brush. Nobody has\n"
 	.string "cut it since the mill slowed.$"
 
 ParcelRiverMillWood_DeadEndSouth_Text_0:
-# 687 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 692 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "The old race track. Grown over to the\n"
 	.string "knee. The water it fed doesn't come this\l"
 	.string "way now.$"

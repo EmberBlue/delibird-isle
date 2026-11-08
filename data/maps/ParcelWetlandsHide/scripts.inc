@@ -1464,34 +1464,43 @@ ParcelWetlandsHide_Warden::
 # 666 "data/maps/ParcelWetlandsHide/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelWetlandsHide/scripts.pory"
-	msgbox ParcelWetlandsHide_Warden_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHide_Warden_2
+# 672 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_Warden_Text_1, MSGBOX_DEFAULT
+# 673 "data/maps/ParcelWetlandsHide/scripts.pory"
+	release
+	end
+
+ParcelWetlandsHide_Warden_2:
 # 668 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_Warden_Text_0, MSGBOX_DEFAULT
+# 669 "data/maps/ParcelWetlandsHide/scripts.pory"
 	release
 	end
 
 
 ParcelWetlandsHide_Sign::
-# 672 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 677 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlandsHide_SignEast::
-# 676 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 681 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_SignEast_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlandsHide_ItemGreatBall::
-# 679 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 684 "data/maps/ParcelWetlandsHide/scripts.pory"
 	finditem ITEM_GREAT_BALL
 	end
 
 
 ParcelWetlandsHide_Leave::
-# 681 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 686 "data/maps/ParcelWetlandsHide/scripts.pory"
 	warp MAP_PARCEL_WETLANDS, 3, 27
-# 682 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 687 "data/maps/ParcelWetlandsHide/scripts.pory"
 	waitstate
 	end
 
@@ -2082,7 +2091,14 @@ ParcelWetlandsHide_Asta_R5_Text_2:
 	.string "to see it done.$"
 
 ParcelWetlandsHide_Warden_Text_0:
-# 667 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 668 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "WARDEN: DR. HERON's line is still on the\n"
+	.string "wall. Somebody's written under it, in a\l"
+	.string "steady hand: 'Counted. Written down.' I\l"
+	.string "didn't see who. I've left it.$"
+
+ParcelWetlandsHide_Warden_Text_1:
+# 672 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "WARDEN: The hide was DR. HERON's idea,\n"
 	.string "twenty years back. Sit still long enough\l"
 	.string "and the place tells you what it is.\p"
@@ -2091,11 +2107,11 @@ ParcelWetlandsHide_Warden_Text_0:
 	.string "everyone's since.$"
 
 ParcelWetlandsHide_Sign_Text_0:
-# 672 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 677 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "REEDMERE HIDE. Sit still. Count. Write it\n"
 	.string "down.$"
 
 ParcelWetlandsHide_SignEast_Text_0:
-# 676 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 681 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "The backwater landing is east along the\n"
 	.string "bank. Keep to the boards.$"

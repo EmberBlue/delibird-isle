@@ -4,6 +4,11 @@ mapscripts ParcelFernwickHouse2_MapScripts {
 script ParcelFernwickHouse2_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: HALE was born in this house and he came by for the first time in a year. He ate a biscuit. He said the hearing was 'adequate'. From HALE that's a parade."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: HALE was born in this house. He'd hate that I told you.\pHe hates most things I tell people. Have a biscuit."), MSGBOX_DEFAULT)
     release
     end

@@ -241,6 +241,11 @@ script ParcelIsle_FerrySign {
 script ParcelIsle_FerryCaptain {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CAPTAIN: Passage out, RANGER? Any time. Any weather. You've paid for the ferry for life, the harbour office says. I'd have taken you anyway."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (!flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
         msgbox(format("CAPTAIN: Passage out? Not in this cold, not without a reason.\pCome back when the RANGERS have sent you up the mountains. You'll know when."), MSGBOX_DEFAULT)
         release
@@ -534,6 +539,11 @@ script ParcelIsle_PreserveGateSign {
 script ParcelIsle_CenterAide {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MEDIC: Aid station's for POKéMON. Yours look like they've walked a region. They have. Leave them with me an hour."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MEDIC: Aid station's for POKéMON, and you haven't got one yet.\pRIN's up at the meadow, through the north gate. Go get picked. Then come back and I'll move."), MSGBOX_DEFAULT)
     release
     end

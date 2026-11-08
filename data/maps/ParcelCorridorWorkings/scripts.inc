@@ -1464,20 +1464,29 @@ ParcelCorridorWorkings_Miner::
 # 666 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	msgbox ParcelCorridorWorkings_Miner_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridorWorkings_Miner_2
+# 672 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_Miner_Text_1, MSGBOX_DEFAULT
+# 673 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	release
+	end
+
+ParcelCorridorWorkings_Miner_2:
 # 668 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_Miner_Text_0, MSGBOX_DEFAULT
+# 669 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	release
 	end
 
 
 ParcelCorridorWorkings_ItemRevive::
-# 671 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 676 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	finditem ITEM_REVIVE
 	end
 
 
 ParcelCorridorWorkings_ItemHardStone::
-# 672 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 677 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	finditem ITEM_HARD_STONE
 	end
 
@@ -2070,7 +2079,14 @@ ParcelCorridorWorkings_Lise_R5_Text_2:
 	.string "to see it done.$"
 
 ParcelCorridorWorkings_Miner_Text_0:
-# 667 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 668 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "MINER: They logged it a quarry; now it's\n"
+	.string "logged 'pending'. I carried the closure\l"
+	.string "sign in '98. I'd carry it again. Nobody's\l"
+	.string "asked. I've got it in the shed.$"
+
+ParcelCorridorWorkings_Miner_Text_1:
+# 672 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "MINER: Closed in '98. The CORPS signed\n"
 	.string "the closure; I carried the sign. The\l"
 	.string "road crew took the sign down for the\l"

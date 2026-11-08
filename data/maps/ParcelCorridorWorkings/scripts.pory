@@ -664,6 +664,11 @@ script ParcelCorridorWorkings_Lise_R5 {
 script ParcelCorridorWorkings_Miner {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MINER: They logged it a quarry; now it's logged 'pending'. I carried the closure sign in '98. I'd carry it again. Nobody's asked. I've got it in the shed."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MINER: Closed in '98. The CORPS signed the closure; I carried the sign. The road crew took the sign down for the ballast and nobody signed that.\pEight of them in here now with lamps and opinions. Mind the props."), MSGBOX_DEFAULT)
     release
     end

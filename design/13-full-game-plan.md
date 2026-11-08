@@ -278,3 +278,13 @@ quest is built, how the peer works) before they are asked six more times.
   true thing forty times a day). Houses go in with the General house block
   through each zone's build.py; the audit's reachability caught the three
   old objects the new walls landed on. 41,000 hand-written words.
+- **2026-11-08 — the reaction pass.** Every named resident who lacked one
+  (136 of them, from Saltwick's ferry captain to the Station's second
+  technician) now has a post-finale line as the first branch of their
+  script, each tied to the hearing's outcome as it reaches their town: the
+  cod that come in different sizes, the review's inspector who weighs them
+  herself, the forty-second signature on the relief sheet, the bore log's
+  'exploratory' read aloud to laughter, the meter reader whose voice held,
+  the drawer that's for sandwiches now, Hale sleeping a whole night, the
+  poster going back up. Dorsey keeps his courtesy and his sluice. 45,000
+  hand-written words (69,900 with the generated rematch lines).

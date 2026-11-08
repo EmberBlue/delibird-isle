@@ -36,6 +36,11 @@ script ParcelCoastOffice2F_Hollis {
 script ParcelCoastOffice2F_Secretary {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SECRETARY: Ms. AUNE still sees everyone. Fewer come. She remembers how each of them took their tea. She has started making it herself."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SECRETARY: Ms. AUNE sees everyone. Fishers, mayors, RANGERS. She remembers how they take their tea. She remembers everything. It's why they sent her."), MSGBOX_DEFAULT)
     release
     end

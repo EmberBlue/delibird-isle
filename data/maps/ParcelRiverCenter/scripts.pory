@@ -18,6 +18,11 @@ script ParcelRiverCenter_Nurse {
 script ParcelRiverCenter_Trainer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("YOUNGSTER: The MARILL don't come in itchy from the lower river so much. The nurse still has the cream. She says keep it. Water has a memory, she says."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("YOUNGSTER: Everyone's MARILL comes in itchy after the lower river. The nurse has a cream for it now. A CREAM. For a river."), MSGBOX_DEFAULT)
     release
     end

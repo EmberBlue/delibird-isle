@@ -29,26 +29,44 @@ ParcelCoastUnion_Fisher1::
 # 18 "data/maps/ParcelCoastUnion/scripts.pory"
 	faceplayer
 # 19 "data/maps/ParcelCoastUnion/scripts.pory"
-	msgbox ParcelCoastUnion_Fisher1_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Fisher1_2
+# 24 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Fisher1_Text_1, MSGBOX_DEFAULT
+# 25 "data/maps/ParcelCoastUnion/scripts.pory"
+	release
+	end
+
+ParcelCoastUnion_Fisher1_2:
 # 20 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Fisher1_Text_0, MSGBOX_DEFAULT
+# 21 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 
 ParcelCoastUnion_Fisher2::
-# 24 "data/maps/ParcelCoastUnion/scripts.pory"
+# 29 "data/maps/ParcelCoastUnion/scripts.pory"
 	lock
-# 25 "data/maps/ParcelCoastUnion/scripts.pory"
+# 30 "data/maps/ParcelCoastUnion/scripts.pory"
 	faceplayer
-# 26 "data/maps/ParcelCoastUnion/scripts.pory"
+# 31 "data/maps/ParcelCoastUnion/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Fisher2_2
+# 36 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Fisher2_Text_1, MSGBOX_DEFAULT
+# 37 "data/maps/ParcelCoastUnion/scripts.pory"
+	release
+	end
+
+ParcelCoastUnion_Fisher2_2:
+# 32 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Fisher2_Text_0, MSGBOX_DEFAULT
-# 27 "data/maps/ParcelCoastUnion/scripts.pory"
+# 33 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 
 ParcelCoastUnion_Board::
-# 31 "data/maps/ParcelCoastUnion/scripts.pory"
+# 41 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Board_Text_0, MSGBOX_SIGN
 	end
 
@@ -72,20 +90,35 @@ ParcelCoastUnion_Chair_Text_1:
 	.string "mortgaged.$"
 
 ParcelCoastUnion_Fisher1_Text_0:
-# 19 "data/maps/ParcelCoastUnion/scripts.pory"
+# 20 "data/maps/ParcelCoastUnion/scripts.pory"
+	.string "FISHER: HARLAND spoke for the river\n"
+	.string "and the coast both, in one breath. The\l"
+	.string "hearing let him. Nine minutes. I timed it.\l"
+	.string "Best nine minutes this hall's had.$"
+
+ParcelCoastUnion_Fisher1_Text_1:
+# 24 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: HARLAND came down from the\n"
 	.string "river to fish the coast because the\l"
 	.string "river was done. Now the coast's done.\l"
 	.string "There's nowhere further down.$"
 
 ParcelCoastUnion_Fisher2_Text_0:
-# 26 "data/maps/ParcelCoastUnion/scripts.pory"
+# 32 "data/maps/ParcelCoastUnion/scripts.pory"
+	.string "FISHER: The Board's model said six\n"
+	.string "years. The review threw the model out\l"
+	.string "and said 'we don't know'. I'll take 'we\l"
+	.string "don't know'. It's the first true thing\l"
+	.string "they've said about the stock.$"
+
+ParcelCoastUnion_Fisher2_Text_1:
+# 36 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: The Board's model says the\n"
 	.string "stock recovers in six years if we hold\l"
 	.string "the quota. It said that six years ago.$"
 
 ParcelCoastUnion_Board_Text_0:
-# 31 "data/maps/ParcelCoastUnion/scripts.pory"
+# 41 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "MINUTES. Motion to request an\n"
 	.string "independent stock survey: proposed,\l"
 	.string "seconded, deferred. Deferred. Deferred.\l"

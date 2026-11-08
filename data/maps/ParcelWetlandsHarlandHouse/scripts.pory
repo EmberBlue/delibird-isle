@@ -34,6 +34,11 @@ script ParcelWetlandsHarlandHouse_Maren {
 script ParcelWetlandsHarlandHouse_Kid {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: Dad went to the hearing. He came back and said you're all right. He said it like it didn't hurt this time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (defeated(TRAINER_SKALD_ENFORCER)) {
         msgbox(format("BOY: Dad says you're all right. He said it like it hurt."), MSGBOX_DEFAULT)
         release

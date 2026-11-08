@@ -8,6 +8,11 @@ mapscripts ParcelFernwickHQ_MapScripts {
 script ParcelFernwickHQ_Reception {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("RECEPTION: HALE slept. A whole night. I know because he came in and didn't look like that. Don't tell him I noticed."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("RECEPTION: Welcome to the District Station. HALE's the one who looks like he hasn't slept.\pHe hasn't."), MSGBOX_DEFAULT)
     release
     end
@@ -16,6 +21,11 @@ script ParcelFernwickHQ_Reception {
 script ParcelFernwickHQ_Ranger {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("RANGER: 'We don't win. We reduce harm.' HALE put the poster back up. He didn't say anything. He just put it back up."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("RANGER: 'We don't win. We reduce harm.' It was on a poster in here.\pHALE took the poster down. Said posters don't reduce anything."), MSGBOX_DEFAULT)
     release
     end

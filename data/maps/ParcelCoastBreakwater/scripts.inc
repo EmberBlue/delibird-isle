@@ -1464,26 +1464,35 @@ ParcelCoastBreakwater_Beachcomber::
 # 666 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelCoastBreakwater/scripts.pory"
-	msgbox ParcelCoastBreakwater_Beachcomber_Text_0, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastBreakwater_Beachcomber_2
+# 672 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Beachcomber_Text_1, MSGBOX_DEFAULT
+# 673 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
+ParcelCoastBreakwater_Beachcomber_2:
 # 668 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Beachcomber_Text_0, MSGBOX_DEFAULT
+# 669 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	release
 	end
 
 
 ParcelCoastBreakwater_Sign::
-# 672 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 677 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	msgbox ParcelCoastBreakwater_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastBreakwater_SignHouse::
-# 676 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 681 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	msgbox ParcelCoastBreakwater_SignHouse_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastBreakwater_ItemPPUp::
-# 679 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 684 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	finditem ITEM_PP_UP
 	end
 
@@ -2067,7 +2076,14 @@ ParcelCoastBreakwater_Holger_R5_Text_2:
 	.string "I'll know you did.$"
 
 ParcelCoastBreakwater_Beachcomber_Text_0:
-# 667 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 668 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "BEACHCOMBER: Fewer tins this month.\n"
+	.string "Three, with the crest. I lined them up\l"
+	.string "anyway. A short line is still a line.\l"
+	.string "Somebody should keep it.$"
+
+ParcelCoastBreakwater_Beachcomber_Text_1:
+# 672 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "BEACHCOMBER: Every tide brings\n"
 	.string "something with the crest on it. I line\l"
 	.string "them up along the wall.\p"
@@ -2076,12 +2092,12 @@ ParcelCoastBreakwater_Beachcomber_Text_0:
 	.string "photograph.$"
 
 ParcelCoastBreakwater_Sign_Text_0:
-# 672 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 677 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "MEREHOLT BREAKWATER. Beach closed to\n"
 	.string "bathing pending water quality review.\l"
 	.string "-- Harbour Office$"
 
 ParcelCoastBreakwater_SignHouse_Text_0:
-# 676 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 681 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "Lifeguard hut. Closed for the season.\n"
 	.string "The season was last year.$"

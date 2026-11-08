@@ -36,6 +36,11 @@ script ParcelRiverBoard_Sluice {
 script ParcelRiverBoard_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CLERK: Allocations reposted with six names under them. Objections reopened. The Phase 2 file came off the shelf and into the hearing. You can read it now. Everyone can. Nobody asks."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: Allocations are posted. Objections are closed. The councilman's Phase 2 file is on the shelf and no, you can't read it. Ratepayers only. You're not a ratepayer."), MSGBOX_DEFAULT)
     release
     end
@@ -43,6 +48,11 @@ script ParcelRiverBoard_Clerk {
 script ParcelRiverBoard_Ratepayer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: Plot nine. Metered, still. The rate came down a page. I pay for water that used to be free and now it's cheaper. I'm told that's a win. I'm trying to feel it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Plot nine. Metered since spring. I pay for water that used to run past my gate for nothing.\pThe FOUNDATION says the meters are fair. The FOUNDATION sells the meters."), MSGBOX_DEFAULT)
     release
     end
@@ -50,6 +60,11 @@ script ParcelRiverBoard_Ratepayer {
 script ParcelRiverBoard_Meterman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("METER READER: Fourteen plots, fourteen meters, hourly, and the readings go to SLUICE first now, not the coast office. She reads them herself. She's a slow reader. Deliberately."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("METER READER: Fourteen plots, fourteen meters, hourly. The readings go to the coast office. SLUICE keeps a copy. She's not supposed to. Don't tell her I said."), MSGBOX_DEFAULT)
     release
     end

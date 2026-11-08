@@ -3,6 +3,11 @@ mapscripts ParcelRiverBoatyard_MapScripts {
 script ParcelRiverBoatyard_Wright {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOATWRIGHT: HARLAND's boat was in the hearing transcript. His grandfather built it in this shed. I'm not saying I cried. The apprentice says I did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOATWRIGHT: I built HARLAND's boat. His grandfather built the one before it, in this shed.\pNow a coastal lender holds the paper on her. I built a boat and they bought a man. Funny old trade."), MSGBOX_DEFAULT)
     release
     end
@@ -10,6 +15,11 @@ script ParcelRiverBoatyard_Wright {
 script ParcelRiverBoatyard_Apprentice {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("APPRENTICE: Somebody ordered a boat. A whole boat. First in four years. The review grounded the big fleet and the small ones are worth building again. I'm learning the keel."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("APPRENTICE: Nobody orders boats. They order repairs. You don't need a new boat for four trout."), MSGBOX_DEFAULT)
     release
     end

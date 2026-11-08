@@ -4,6 +4,11 @@ mapscripts ParcelFernwickFisher_MapScripts {
 script ParcelFernwickFisher_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GRETTIR: A POLIWAG. In the CORPS pond. One. I've told nobody but you and the girl who watches me. That's how it starts. That's always how it starts."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_GRETTIR_DONE)) {
         msgbox(format("GRETTIR: One SURSKIT. On a pond the CORPS dug last spring. That's how it starts. That's always how it starts."), MSGBOX_DEFAULT)
         release

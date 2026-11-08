@@ -136,6 +136,11 @@ movement Movement_COR_WorkerLeave { walk_left * 7 }
 script ParcelCorridor_Worker {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WORKER: Culvert still meets code. The code changed. Now it meets the old code. We've a new drawing. Nobody's said who pays for the new culvert. Nobody will, for a while."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 9)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)

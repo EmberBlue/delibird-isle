@@ -8,6 +8,11 @@ mapscripts ParcelWetlandsOffice_MapScripts {
 script ParcelWetlandsOffice_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CLERK: The councilman is here. He's in the back room with a man from the Board and a monitoring schedule. I've been told to say the office is open. It is. That's new."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (defeated(TRAINER_SKALD_ENFORCER)) {
         msgbox(format("CLERK: The councilman isn't here. The councilman isn't anywhere, apparently.\pI've been told to say the office is operating normally. The office is operating normally."), MSGBOX_DEFAULT)
         release
@@ -21,6 +26,11 @@ script ParcelWetlandsOffice_Clerk {
 script ParcelWetlandsOffice_Tech {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("TECHNICIAN: The gauges picked it up this time. The new ones. The old ones were set to miss it; the hearing said so in better words. I've recalibrated. I sleep now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     setvar(VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE)
     setvar(VAR_0x8004, 5)
     specialvar(VAR_RESULT, SkaldmereCertTaskGet)
@@ -37,6 +47,11 @@ script ParcelWetlandsOffice_Tech {
 script ParcelWetlandsOffice_Rep {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MEREHOLT REP: The FOUNDATION believes in partnership. We've a new partnership page: local hands, local jobs, local water, and a local monitor who isn't ours. I'm reading it aloud to people. It's a start."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MEREHOLT REP: The FOUNDATION believes in partnership. Local hands, local jobs, local water.\pYou'll find we have nothing to hide here, RANGER. Nothing at all. Do have a brochure."), MSGBOX_DEFAULT)
     release
     end
@@ -45,6 +60,11 @@ script ParcelWetlandsOffice_Rep {
 script ParcelWetlandsOffice_Local {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: The boat loan came through. Not from the councilman. From a fund the review set up. I waited an hour for the wrong man for a year. The right one was a form."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: I came to ask about the boat loan. Been waiting an hour.\pThe councilman said to ask. The councilman isn't the one at the desk."), MSGBOX_DEFAULT)
     release
     end
