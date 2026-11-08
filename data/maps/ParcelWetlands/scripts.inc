@@ -3915,6 +3915,14 @@ ParcelWetlands_Epilogue::
 	end
 
 
+ParcelWetlands_ToHide::
+# 1881 "data/maps/ParcelWetlands/scripts.pory"
+	warp MAP_PARCEL_WETLANDS_HIDE, 47, 10
+# 1882 "data/maps/ParcelWetlands/scripts.pory"
+	waitstate
+	end
+
+
 ParcelWetlands_Harland_Text_0:
 # 77 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: They read your report out on\n"

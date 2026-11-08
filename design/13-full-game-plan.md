@@ -255,3 +255,16 @@ quest is built, how the peer works) before they are asked six more times.
   Also learned: arrow-warp exit tiles need warp events at elevation 0.
   Remaining areas: Reedmere hide, Leirvik upper sluice, Haukfell tarn,
   Mereholt breakwater.
+- **2026-11-08 — the other four areas; 1,000 battles crossed.** The
+  Reedmere hide (Route 102; a warden who remembers Heron's line on the wall,
+  birders counting what's left, 14–16), the Leirvik upper sluice (Route
+  118 as a true connection across the basin's open west edge; the ford
+  where Phase 2 would start, six on the near bank at 22–24, two across the
+  river at 32–33 for the Surf return, a Board surveyor), the Haukfell tarn
+  (Shoal Cave's entrance room; the cold water the bore drilled into, eight
+  at 30–33, a cadet learning the cold; mouth west of the bore door) and the
+  Mereholt breakwater (Route 109 as the vanilla Slateport connection; the
+  closed beach, tins with the crest, swimmers over the dredge line, a
+  fisherman on the far island who isn't in the quota, 33–38). Each trainer
+  got its tiers: 32 trainers, 160 battles. 84 maps, 1,021 reachable
+  battles, TRAINERS_COUNT 1878.

@@ -4650,6 +4650,46 @@
       "secondary_tileset": "gTileset_leob_rustboro",
       "border_filepath": "data/layouts/ParcelRiverMillWood/border.bin",
       "blockdata_filepath": "data/layouts/ParcelRiverMillWood/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_WETLANDS_HIDE",
+      "name": "ParcelWetlandsHide_Layout",
+      "width": 50,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_petalburg",
+      "border_filepath": "data/layouts/ParcelWetlandsHide/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelWetlandsHide/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_FLOODBASIN_SLUICE",
+      "name": "ParcelFloodbasinSluice_Layout",
+      "width": 80,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/ParcelFloodbasinSluice/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelFloodbasinSluice/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_HIGHLANDS_TARN",
+      "name": "ParcelHighlandsTarn_Layout",
+      "width": 35,
+      "height": 35,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ParcelHighlandsTarn/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelHighlandsTarn/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_COAST_BREAKWATER",
+      "name": "ParcelCoastBreakwater_Layout",
+      "width": 40,
+      "height": 63,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_slateport",
+      "border_filepath": "data/layouts/ParcelCoastBreakwater/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelCoastBreakwater/map.bin"
     }
   ]
 }

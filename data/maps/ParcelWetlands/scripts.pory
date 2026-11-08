@@ -1875,3 +1875,10 @@ script ParcelWetlands_Epilogue {
     waitstate
     end
 }
+
+// --- the bird hide (side area), off the west edge ---
+script ParcelWetlands_ToHide {
+    warp(MAP_PARCEL_WETLANDS_HIDE, 47, 10)
+    waitstate
+    end
+}

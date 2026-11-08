@@ -1,0 +1,671 @@
+// ParcelHighlandsTarn -- the tarn under Haukfell (Shoal Cave's entrance room): the cold water the
+// bore drilled into and called groundwater. Eight trainers at 30-33, a cadet learning the cold,
+// the mouth on the Highlands at (24,37) west of the bore door.
+
+mapscripts ParcelHighlandsTarn_MapScripts {
+}
+
+script ParcelHighlandsTarn_Arnfinn {
+    trainerbattle_single(TRAINER_SKALD_TRN_ARNFINN,
+        format("ARNFINN: The tarn's under the hill. Cold enough to stop a clock. You'll want to be warm for this. Battle."),
+        format("ARNFINN: …Warm enough."),
+        ParcelHighlandsTarn_Arnfinn_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_ARNFINN_R2)) {
+        goto(ParcelHighlandsTarn_Arnfinn_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_ARNFINN_R3)) {
+        goto(ParcelHighlandsTarn_Arnfinn_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_ARNFINN_R4)) {
+        goto(ParcelHighlandsTarn_Arnfinn_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_ARNFINN_R5)) {
+        goto(ParcelHighlandsTarn_Arnfinn_R5)
+    }
+    msgbox(format("ARNFINN: VALE sends the cadets up here to learn cold. Most learn it in an hour and go down."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Arnfinn_FirstWin {
+    msgbox(format("ARNFINN: VALE sends the cadets up here to learn cold. Most learn it in an hour and go down."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Arnfinn_R2 {
+    lock
+    faceplayer
+    msgbox(format("ARNFINN: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ARNFINN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ARNFINN_R2, format("ARNFINN: Still yours."))
+    msgbox(format("ARNFINN: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Arnfinn_R3 {
+    lock
+    faceplayer
+    msgbox(format("ARNFINN: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ARNFINN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ARNFINN_R3, format("ARNFINN: That's the one I wanted to see."))
+    msgbox(format("ARNFINN: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Arnfinn_R4 {
+    lock
+    faceplayer
+    msgbox(format("ARNFINN: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ARNFINN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ARNFINN_R4, format("ARNFINN: …Again, then. Later."))
+    msgbox(format("ARNFINN: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Arnfinn_R5 {
+    lock
+    faceplayer
+    msgbox(format("ARNFINN: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ARNFINN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ARNFINN_R5, format("ARNFINN: Right. That's the whole of it."))
+    msgbox(format("ARNFINN: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Halvard {
+    trainerbattle_single(TRAINER_SKALD_TRN_HALVARD,
+        format("HALVARD: Ice scour on the walls, head height. The tarn was higher once. Much. Fight."),
+        format("HALVARD: …Scoured."),
+        ParcelHighlandsTarn_Halvard_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_HALVARD_R2)) {
+        goto(ParcelHighlandsTarn_Halvard_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_HALVARD_R3)) {
+        goto(ParcelHighlandsTarn_Halvard_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_HALVARD_R4)) {
+        goto(ParcelHighlandsTarn_Halvard_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_HALVARD_R5)) {
+        goto(ParcelHighlandsTarn_Halvard_R5)
+    }
+    msgbox(format("HALVARD: Everything in this region was higher, colder or wetter once. The hard part is which ones are coming back."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Halvard_FirstWin {
+    msgbox(format("HALVARD: Everything in this region was higher, colder or wetter once. The hard part is which ones are coming back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Halvard_R2 {
+    lock
+    faceplayer
+    msgbox(format("HALVARD: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALVARD: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_HALVARD_R2, format("HALVARD: …Again, then. Later."))
+    msgbox(format("HALVARD: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Halvard_R3 {
+    lock
+    faceplayer
+    msgbox(format("HALVARD: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALVARD: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_HALVARD_R3, format("HALVARD: That's the one I wanted to see."))
+    msgbox(format("HALVARD: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Halvard_R4 {
+    lock
+    faceplayer
+    msgbox(format("HALVARD: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALVARD: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_HALVARD_R4, format("HALVARD: Noted. Properly, this time."))
+    msgbox(format("HALVARD: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Halvard_R5 {
+    lock
+    faceplayer
+    msgbox(format("HALVARD: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALVARD: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_HALVARD_R5, format("HALVARD: …Again, then. Later."))
+    msgbox(format("HALVARD: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Dagrun {
+    trainerbattle_single(TRAINER_SKALD_TRN_DAGRUN,
+        format("DAGRUN: I train in the cold on purpose. You're in it by accident. Let's see which is worth more."),
+        format("DAGRUN: …Accident, then."),
+        ParcelHighlandsTarn_Dagrun_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_DAGRUN_R2)) {
+        goto(ParcelHighlandsTarn_Dagrun_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_DAGRUN_R3)) {
+        goto(ParcelHighlandsTarn_Dagrun_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_DAGRUN_R4)) {
+        goto(ParcelHighlandsTarn_Dagrun_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_DAGRUN_R5)) {
+        goto(ParcelHighlandsTarn_Dagrun_R5)
+    }
+    msgbox(format("DAGRUN: The warming centre is open all night now. HOLLIS cut the ribbon. Good tea. Watch her."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Dagrun_FirstWin {
+    msgbox(format("DAGRUN: The warming centre is open all night now. HOLLIS cut the ribbon. Good tea. Watch her."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Dagrun_R2 {
+    lock
+    faceplayer
+    msgbox(format("DAGRUN: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DAGRUN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_DAGRUN_R2, format("DAGRUN: …Fair."))
+    msgbox(format("DAGRUN: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Dagrun_R3 {
+    lock
+    faceplayer
+    msgbox(format("DAGRUN: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DAGRUN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_DAGRUN_R3, format("DAGRUN: Still yours."))
+    msgbox(format("DAGRUN: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Dagrun_R4 {
+    lock
+    faceplayer
+    msgbox(format("DAGRUN: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DAGRUN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_DAGRUN_R4, format("DAGRUN: …Fair."))
+    msgbox(format("DAGRUN: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Dagrun_R5 {
+    lock
+    faceplayer
+    msgbox(format("DAGRUN: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("DAGRUN: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_DAGRUN_R5, format("DAGRUN: That's the one I wanted to see."))
+    msgbox(format("DAGRUN: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Gunnvor {
+    trainerbattle_single(TRAINER_SKALD_TRN_GUNNVOR,
+        format("GUNNVOR: Found the bore's test hole. Through the roof, there. They drilled into the tarn and called it 'groundwater'. Fight."),
+        format("GUNNVOR: …Groundwater."),
+        ParcelHighlandsTarn_Gunnvor_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_GUNNVOR_R2)) {
+        goto(ParcelHighlandsTarn_Gunnvor_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_GUNNVOR_R3)) {
+        goto(ParcelHighlandsTarn_Gunnvor_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_GUNNVOR_R4)) {
+        goto(ParcelHighlandsTarn_Gunnvor_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_GUNNVOR_R5)) {
+        goto(ParcelHighlandsTarn_Gunnvor_R5)
+    }
+    msgbox(format("GUNNVOR: The leases are enjoined pending survey. The survey's you. No pressure."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Gunnvor_FirstWin {
+    msgbox(format("GUNNVOR: The leases are enjoined pending survey. The survey's you. No pressure."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Gunnvor_R2 {
+    lock
+    faceplayer
+    msgbox(format("GUNNVOR: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GUNNVOR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_GUNNVOR_R2, format("GUNNVOR: Right. That's the whole of it."))
+    msgbox(format("GUNNVOR: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Gunnvor_R3 {
+    lock
+    faceplayer
+    msgbox(format("GUNNVOR: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GUNNVOR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_GUNNVOR_R3, format("GUNNVOR: Right. That's the whole of it."))
+    msgbox(format("GUNNVOR: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Gunnvor_R4 {
+    lock
+    faceplayer
+    msgbox(format("GUNNVOR: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GUNNVOR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_GUNNVOR_R4, format("GUNNVOR: …Fair."))
+    msgbox(format("GUNNVOR: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Gunnvor_R5 {
+    lock
+    faceplayer
+    msgbox(format("GUNNVOR: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GUNNVOR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_GUNNVOR_R5, format("GUNNVOR: Still yours."))
+    msgbox(format("GUNNVOR: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Jorund {
+    trainerbattle_single(TRAINER_SKALD_TRN_JORUND,
+        format("JORUND: Bones in the sand. Old DELIBIRD, by the bills. They wintered here when the island froze through. Battle."),
+        format("JORUND: …Still wintering."),
+        ParcelHighlandsTarn_Jorund_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_JORUND_R2)) {
+        goto(ParcelHighlandsTarn_Jorund_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_JORUND_R3)) {
+        goto(ParcelHighlandsTarn_Jorund_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_JORUND_R4)) {
+        goto(ParcelHighlandsTarn_Jorund_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_JORUND_R5)) {
+        goto(ParcelHighlandsTarn_Jorund_R5)
+    }
+    msgbox(format("JORUND: The island doesn't freeze through now. The bones are the only ones who remember it did."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Jorund_FirstWin {
+    msgbox(format("JORUND: The island doesn't freeze through now. The bones are the only ones who remember it did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Jorund_R2 {
+    lock
+    faceplayer
+    msgbox(format("JORUND: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JORUND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_JORUND_R2, format("JORUND: That's the one I wanted to see."))
+    msgbox(format("JORUND: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Jorund_R3 {
+    lock
+    faceplayer
+    msgbox(format("JORUND: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JORUND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_JORUND_R3, format("JORUND: …Fair."))
+    msgbox(format("JORUND: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Jorund_R4 {
+    lock
+    faceplayer
+    msgbox(format("JORUND: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JORUND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_JORUND_R4, format("JORUND: Noted. Properly, this time."))
+    msgbox(format("JORUND: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Jorund_R5 {
+    lock
+    faceplayer
+    msgbox(format("JORUND: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JORUND: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_JORUND_R5, format("JORUND: …Fair."))
+    msgbox(format("JORUND: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Roar {
+    trainerbattle_single(TRAINER_SKALD_TRN_ROAR,
+        format("ROAR: The tarn's edge. Don't drink it. It's older than the hill and it tastes it. Battle."),
+        format("ROAR: …Older than me."),
+        ParcelHighlandsTarn_Roar_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_ROAR_R2)) {
+        goto(ParcelHighlandsTarn_Roar_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_ROAR_R3)) {
+        goto(ParcelHighlandsTarn_Roar_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_ROAR_R4)) {
+        goto(ParcelHighlandsTarn_Roar_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_ROAR_R5)) {
+        goto(ParcelHighlandsTarn_Roar_R5)
+    }
+    msgbox(format("ROAR: It's three degrees in summer. The bore pumps it out at three degrees and calls it a resource."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Roar_FirstWin {
+    msgbox(format("ROAR: It's three degrees in summer. The bore pumps it out at three degrees and calls it a resource."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Roar_R2 {
+    lock
+    faceplayer
+    msgbox(format("ROAR: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROAR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ROAR_R2, format("ROAR: …Again, then. Later."))
+    msgbox(format("ROAR: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Roar_R3 {
+    lock
+    faceplayer
+    msgbox(format("ROAR: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROAR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ROAR_R3, format("ROAR: That's the one I wanted to see."))
+    msgbox(format("ROAR: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Roar_R4 {
+    lock
+    faceplayer
+    msgbox(format("ROAR: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROAR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ROAR_R4, format("ROAR: That's the one I wanted to see."))
+    msgbox(format("ROAR: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Roar_R5 {
+    lock
+    faceplayer
+    msgbox(format("ROAR: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ROAR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_ROAR_R5, format("ROAR: Still yours."))
+    msgbox(format("ROAR: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Sigbjorn {
+    trainerbattle_single(TRAINER_SKALD_TRN_SIGBJORN,
+        format("SIGBJORN: I carry the cadets down when they stop talking. Nobody carries me. Fight."),
+        format("SIGBJORN: …Carry on, then."),
+        ParcelHighlandsTarn_Sigbjorn_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_SIGBJORN_R2)) {
+        goto(ParcelHighlandsTarn_Sigbjorn_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_SIGBJORN_R3)) {
+        goto(ParcelHighlandsTarn_Sigbjorn_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_SIGBJORN_R4)) {
+        goto(ParcelHighlandsTarn_Sigbjorn_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_SIGBJORN_R5)) {
+        goto(ParcelHighlandsTarn_Sigbjorn_R5)
+    }
+    msgbox(format("SIGBJORN: Cold doesn't care about clearances. Neither does the tarn."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Sigbjorn_FirstWin {
+    msgbox(format("SIGBJORN: Cold doesn't care about clearances. Neither does the tarn."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Sigbjorn_R2 {
+    lock
+    faceplayer
+    msgbox(format("SIGBJORN: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGBJORN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_SIGBJORN_R2, format("SIGBJORN: Right. That's the whole of it."))
+    msgbox(format("SIGBJORN: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Sigbjorn_R3 {
+    lock
+    faceplayer
+    msgbox(format("SIGBJORN: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGBJORN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_SIGBJORN_R3, format("SIGBJORN: Still yours."))
+    msgbox(format("SIGBJORN: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Sigbjorn_R4 {
+    lock
+    faceplayer
+    msgbox(format("SIGBJORN: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGBJORN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_SIGBJORN_R4, format("SIGBJORN: Right. That's the whole of it."))
+    msgbox(format("SIGBJORN: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Sigbjorn_R5 {
+    lock
+    faceplayer
+    msgbox(format("SIGBJORN: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGBJORN: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_SIGBJORN_R5, format("SIGBJORN: Right. That's the whole of it."))
+    msgbox(format("SIGBJORN: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Randi {
+    trainerbattle_single(TRAINER_SKALD_TRN_RANDI,
+        format("RANDI: I sketch the ice lines. They're a calendar nobody wrote. Battle, quickly, my fingers are going."),
+        format("RANDI: …Fingers held."),
+        ParcelHighlandsTarn_Randi_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_TRN_RANDI_R2)) {
+        goto(ParcelHighlandsTarn_Randi_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_TRN_RANDI_R3)) {
+        goto(ParcelHighlandsTarn_Randi_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_TRN_RANDI_R4)) {
+        goto(ParcelHighlandsTarn_Randi_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_TRN_RANDI_R5)) {
+        goto(ParcelHighlandsTarn_Randi_R5)
+    }
+    msgbox(format("RANDI: Fourteen lines, fourteen high years. Then nothing for thirty. The nothing is the part that matters."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelHighlandsTarn_Randi_FirstWin {
+    msgbox(format("RANDI: Fourteen lines, fourteen high years. Then nothing for thirty. The nothing is the part that matters."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Randi_R2 {
+    lock
+    faceplayer
+    msgbox(format("RANDI: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANDI: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_RANDI_R2, format("RANDI: Still yours."))
+    msgbox(format("RANDI: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Randi_R3 {
+    lock
+    faceplayer
+    msgbox(format("RANDI: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANDI: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_RANDI_R3, format("RANDI: Noted. Properly, this time."))
+    msgbox(format("RANDI: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Randi_R4 {
+    lock
+    faceplayer
+    msgbox(format("RANDI: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANDI: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_RANDI_R4, format("RANDI: Right. That's the whole of it."))
+    msgbox(format("RANDI: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Randi_R5 {
+    lock
+    faceplayer
+    msgbox(format("RANDI: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANDI: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_TRN_RANDI_R5, format("RANDI: Still yours."))
+    msgbox(format("RANDI: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_Cadet {
+    lock
+    faceplayer
+    msgbox(format("CADET: VALE said 'learn the cold'. I've learnt it. Can I go down now?\pShe said no. She says it kindly, which is worse."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelHighlandsTarn_ItemNeverMeltIce { finditem(ITEM_NEVER_MELT_ICE) end }

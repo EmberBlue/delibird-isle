@@ -1,0 +1,675 @@
+// ParcelFloodbasinSluice -- the upper sluice: the old ford where Phase 2 would start (Route 118),
+// west of Leirvik across the basin's open edge. Six trainers at 22-24 on the near bank, two at
+// 32-33 on the far bank (Surf), a Board surveyor, the proposal sign.
+
+mapscripts ParcelFloodbasinSluice_MapScripts {
+}
+
+script ParcelFloodbasinSluice_Nils {
+    trainerbattle_single(TRAINER_SKALD_SLU_NILS,
+        format("NILS: The crossing's the old ford. The Board put a gauge on it and called it a sluice. Battle."),
+        format("NILS: …Gauged."),
+        ParcelFloodbasinSluice_Nils_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_NILS_R2)) {
+        goto(ParcelFloodbasinSluice_Nils_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_NILS_R3)) {
+        goto(ParcelFloodbasinSluice_Nils_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_NILS_R4)) {
+        goto(ParcelFloodbasinSluice_Nils_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_NILS_R5)) {
+        goto(ParcelFloodbasinSluice_Nils_R5)
+    }
+    msgbox(format("NILS: Water's two hands lower than the gauge says normal. The gauge was set in a wet year."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Nils_FirstWin {
+    msgbox(format("NILS: Water's two hands lower than the gauge says normal. The gauge was set in a wet year."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Nils_R2 {
+    lock
+    faceplayer
+    msgbox(format("NILS: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NILS: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_NILS_R2, format("NILS: …Again, then. Later."))
+    msgbox(format("NILS: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Nils_R3 {
+    lock
+    faceplayer
+    msgbox(format("NILS: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NILS: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_NILS_R3, format("NILS: …Again, then. Later."))
+    msgbox(format("NILS: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Nils_R4 {
+    lock
+    faceplayer
+    msgbox(format("NILS: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NILS: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_NILS_R4, format("NILS: That's the one I wanted to see."))
+    msgbox(format("NILS: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Nils_R5 {
+    lock
+    faceplayer
+    msgbox(format("NILS: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("NILS: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_NILS_R5, format("NILS: …Again, then. Later."))
+    msgbox(format("NILS: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Sverre {
+    trainerbattle_single(TRAINER_SKALD_SLU_SVERRE,
+        format("SVERRE: Phase 2 starts here. Survey stakes to the river. I pulled three up. They put five back. Fight."),
+        format("SVERRE: …Five, then."),
+        ParcelFloodbasinSluice_Sverre_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_SVERRE_R2)) {
+        goto(ParcelFloodbasinSluice_Sverre_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_SVERRE_R3)) {
+        goto(ParcelFloodbasinSluice_Sverre_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_SVERRE_R4)) {
+        goto(ParcelFloodbasinSluice_Sverre_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_SVERRE_R5)) {
+        goto(ParcelFloodbasinSluice_Sverre_R5)
+    }
+    msgbox(format("SVERRE: The fill they want comes out of the hill above the Corridor. Everybody's hole is somebody else's hill."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Sverre_FirstWin {
+    msgbox(format("SVERRE: The fill they want comes out of the hill above the Corridor. Everybody's hole is somebody else's hill."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Sverre_R2 {
+    lock
+    faceplayer
+    msgbox(format("SVERRE: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVERRE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SVERRE_R2, format("SVERRE: Noted. Properly, this time."))
+    msgbox(format("SVERRE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Sverre_R3 {
+    lock
+    faceplayer
+    msgbox(format("SVERRE: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVERRE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SVERRE_R3, format("SVERRE: Noted. Properly, this time."))
+    msgbox(format("SVERRE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Sverre_R4 {
+    lock
+    faceplayer
+    msgbox(format("SVERRE: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVERRE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SVERRE_R4, format("SVERRE: …Fair."))
+    msgbox(format("SVERRE: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Sverre_R5 {
+    lock
+    faceplayer
+    msgbox(format("SVERRE: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SVERRE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SVERRE_R5, format("SVERRE: Noted. Properly, this time."))
+    msgbox(format("SVERRE: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Elin {
+    trainerbattle_single(TRAINER_SKALD_SLU_ELIN,
+        format("ELIN: The PELIPPER nest on the far bank. They'll move when the works start. Birds don't do notice periods. Battle!"),
+        format("ELIN: …Noted."),
+        ParcelFloodbasinSluice_Elin_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_ELIN_R2)) {
+        goto(ParcelFloodbasinSluice_Elin_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_ELIN_R3)) {
+        goto(ParcelFloodbasinSluice_Elin_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_ELIN_R4)) {
+        goto(ParcelFloodbasinSluice_Elin_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_ELIN_R5)) {
+        goto(ParcelFloodbasinSluice_Elin_R5)
+    }
+    msgbox(format("ELIN: I asked DORSEY where the birds go. He said 'elsewhere'. He said it kindly."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Elin_FirstWin {
+    msgbox(format("ELIN: I asked DORSEY where the birds go. He said 'elsewhere'. He said it kindly."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Elin_R2 {
+    lock
+    faceplayer
+    msgbox(format("ELIN: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ELIN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ELIN_R2, format("ELIN: That's the one I wanted to see."))
+    msgbox(format("ELIN: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Elin_R3 {
+    lock
+    faceplayer
+    msgbox(format("ELIN: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ELIN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ELIN_R3, format("ELIN: That's the one I wanted to see."))
+    msgbox(format("ELIN: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Elin_R4 {
+    lock
+    faceplayer
+    msgbox(format("ELIN: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ELIN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ELIN_R4, format("ELIN: Noted. Properly, this time."))
+    msgbox(format("ELIN: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Elin_R5 {
+    lock
+    faceplayer
+    msgbox(format("ELIN: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ELIN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ELIN_R5, format("ELIN: …Fair."))
+    msgbox(format("ELIN: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Erik {
+    trainerbattle_single(TRAINER_SKALD_SLU_ERIK,
+        format("ERIK: I camp here every spring to see the ford run. This year I'm early. The ford ran in winter. Fight."),
+        format("ERIK: …Still early."),
+        ParcelFloodbasinSluice_Erik_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_ERIK_R2)) {
+        goto(ParcelFloodbasinSluice_Erik_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_ERIK_R3)) {
+        goto(ParcelFloodbasinSluice_Erik_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_ERIK_R4)) {
+        goto(ParcelFloodbasinSluice_Erik_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_ERIK_R5)) {
+        goto(ParcelFloodbasinSluice_Erik_R5)
+    }
+    msgbox(format("ERIK: When the sluice goes in, the ford's done. You can't camp by a thing that's done."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Erik_FirstWin {
+    msgbox(format("ERIK: When the sluice goes in, the ford's done. You can't camp by a thing that's done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Erik_R2 {
+    lock
+    faceplayer
+    msgbox(format("ERIK: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERIK: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ERIK_R2, format("ERIK: Right. That's the whole of it."))
+    msgbox(format("ERIK: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Erik_R3 {
+    lock
+    faceplayer
+    msgbox(format("ERIK: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERIK: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ERIK_R3, format("ERIK: Right. That's the whole of it."))
+    msgbox(format("ERIK: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Erik_R4 {
+    lock
+    faceplayer
+    msgbox(format("ERIK: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERIK: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ERIK_R4, format("ERIK: Right. That's the whole of it."))
+    msgbox(format("ERIK: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Erik_R5 {
+    lock
+    faceplayer
+    msgbox(format("ERIK: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ERIK: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ERIK_R5, format("ERIK: Noted. Properly, this time."))
+    msgbox(format("ERIK: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Siri {
+    trainerbattle_single(TRAINER_SKALD_SLU_SIRI,
+        format("SIRI: You're the ranger from the basin. Everyone says. Battle, so I can say I did."),
+        format("SIRI: …Now I can say it."),
+        ParcelFloodbasinSluice_Siri_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_SIRI_R2)) {
+        goto(ParcelFloodbasinSluice_Siri_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_SIRI_R3)) {
+        goto(ParcelFloodbasinSluice_Siri_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_SIRI_R4)) {
+        goto(ParcelFloodbasinSluice_Siri_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_SIRI_R5)) {
+        goto(ParcelFloodbasinSluice_Siri_R5)
+    }
+    msgbox(format("SIRI: The relief tent handed out blankets with MEREHOLT on them. Warm blankets. I kept mine."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Siri_FirstWin {
+    msgbox(format("SIRI: The relief tent handed out blankets with MEREHOLT on them. Warm blankets. I kept mine."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Siri_R2 {
+    lock
+    faceplayer
+    msgbox(format("SIRI: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIRI: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SIRI_R2, format("SIRI: Still yours."))
+    msgbox(format("SIRI: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Siri_R3 {
+    lock
+    faceplayer
+    msgbox(format("SIRI: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIRI: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SIRI_R3, format("SIRI: Noted. Properly, this time."))
+    msgbox(format("SIRI: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Siri_R4 {
+    lock
+    faceplayer
+    msgbox(format("SIRI: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIRI: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SIRI_R4, format("SIRI: Right. That's the whole of it."))
+    msgbox(format("SIRI: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Siri_R5 {
+    lock
+    faceplayer
+    msgbox(format("SIRI: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIRI: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_SIRI_R5, format("SIRI: Still yours."))
+    msgbox(format("SIRI: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Bjarte {
+    trainerbattle_single(TRAINER_SKALD_SLU_BJARTE,
+        format("BJARTE: Fish from the sluice side and you fish downstream of the Board. Everything is. Battle."),
+        format("BJARTE: …Downstream of you, now."),
+        ParcelFloodbasinSluice_Bjarte_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_BJARTE_R2)) {
+        goto(ParcelFloodbasinSluice_Bjarte_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_BJARTE_R3)) {
+        goto(ParcelFloodbasinSluice_Bjarte_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_BJARTE_R4)) {
+        goto(ParcelFloodbasinSluice_Bjarte_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_BJARTE_R5)) {
+        goto(ParcelFloodbasinSluice_Bjarte_R5)
+    }
+    msgbox(format("BJARTE: My father fished the ford. Barefoot. You can't put your foot in it now without a form."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Bjarte_FirstWin {
+    msgbox(format("BJARTE: My father fished the ford. Barefoot. You can't put your foot in it now without a form."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Bjarte_R2 {
+    lock
+    faceplayer
+    msgbox(format("BJARTE: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARTE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_BJARTE_R2, format("BJARTE: Still yours."))
+    msgbox(format("BJARTE: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Bjarte_R3 {
+    lock
+    faceplayer
+    msgbox(format("BJARTE: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARTE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_BJARTE_R3, format("BJARTE: That's the one I wanted to see."))
+    msgbox(format("BJARTE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Bjarte_R4 {
+    lock
+    faceplayer
+    msgbox(format("BJARTE: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARTE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_BJARTE_R4, format("BJARTE: …Fair."))
+    msgbox(format("BJARTE: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Bjarte_R5 {
+    lock
+    faceplayer
+    msgbox(format("BJARTE: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJARTE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_BJARTE_R5, format("BJARTE: …Again, then. Later."))
+    msgbox(format("BJARTE: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Odd {
+    trainerbattle_single(TRAINER_SKALD_SLU_ODD,
+        format("ODD: Nobody comes this side without Surf. So you're the one. Full strength."),
+        format("ODD: …The one."),
+        ParcelFloodbasinSluice_Odd_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_ODD_R2)) {
+        goto(ParcelFloodbasinSluice_Odd_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_ODD_R3)) {
+        goto(ParcelFloodbasinSluice_Odd_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_ODD_R4)) {
+        goto(ParcelFloodbasinSluice_Odd_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_ODD_R5)) {
+        goto(ParcelFloodbasinSluice_Odd_R5)
+    }
+    msgbox(format("ODD: The far side of a river is where things get left alone. Not for long now."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Odd_FirstWin {
+    msgbox(format("ODD: The far side of a river is where things get left alone. Not for long now."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Odd_R2 {
+    lock
+    faceplayer
+    msgbox(format("ODD: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ODD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ODD_R2, format("ODD: …Again, then. Later."))
+    msgbox(format("ODD: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Odd_R3 {
+    lock
+    faceplayer
+    msgbox(format("ODD: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ODD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ODD_R3, format("ODD: Still yours."))
+    msgbox(format("ODD: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Odd_R4 {
+    lock
+    faceplayer
+    msgbox(format("ODD: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ODD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ODD_R4, format("ODD: Still yours."))
+    msgbox(format("ODD: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Odd_R5 {
+    lock
+    faceplayer
+    msgbox(format("ODD: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ODD: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_ODD_R5, format("ODD: That's the one I wanted to see."))
+    msgbox(format("ODD: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Grim {
+    trainerbattle_single(TRAINER_SKALD_SLU_GRIM,
+        format("GRIM: Stones in the river bed. Worked stones. Somebody built a weir here before the Board was a word. Battle."),
+        format("GRIM: …Older than me too."),
+        ParcelFloodbasinSluice_Grim_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SLU_GRIM_R2)) {
+        goto(ParcelFloodbasinSluice_Grim_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SLU_GRIM_R3)) {
+        goto(ParcelFloodbasinSluice_Grim_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SLU_GRIM_R4)) {
+        goto(ParcelFloodbasinSluice_Grim_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SLU_GRIM_R5)) {
+        goto(ParcelFloodbasinSluice_Grim_R5)
+    }
+    msgbox(format("GRIM: Every sluice is the third sluice on the same river. Nobody writes down the first two."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelFloodbasinSluice_Grim_FirstWin {
+    msgbox(format("GRIM: Every sluice is the third sluice on the same river. Nobody writes down the first two."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Grim_R2 {
+    lock
+    faceplayer
+    msgbox(format("GRIM: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GRIM: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_GRIM_R2, format("GRIM: …Again, then. Later."))
+    msgbox(format("GRIM: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Grim_R3 {
+    lock
+    faceplayer
+    msgbox(format("GRIM: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GRIM: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_GRIM_R3, format("GRIM: …Fair."))
+    msgbox(format("GRIM: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Grim_R4 {
+    lock
+    faceplayer
+    msgbox(format("GRIM: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GRIM: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_GRIM_R4, format("GRIM: Still yours."))
+    msgbox(format("GRIM: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Grim_R5 {
+    lock
+    faceplayer
+    msgbox(format("GRIM: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GRIM: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SLU_GRIM_R5, format("GRIM: …Fair."))
+    msgbox(format("GRIM: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Surveyor {
+    lock
+    faceplayer
+    msgbox(format("SURVEYOR: Phase 2. Sluice gates here, a weir above, a reservoir where the ford was. 'Flood control.'\pI measure what I'm told to measure. The river measures the rest."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelFloodbasinSluice_Sign {
+    msgbox(format("UPPER SLUICE (proposed). WATER BOARD / MEREHOLT CIVIL. Works commence on approval."), MSGBOX_SIGN)
+    end
+}
+script ParcelFloodbasinSluice_ItemHyperPotion { finditem(ITEM_HYPER_POTION) end }

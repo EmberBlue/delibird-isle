@@ -553,6 +553,24 @@
       "var": "VAR_TEMP_5",
       "var_value": "0",
       "script": "ParcelWetlands_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "0",
+      "script": "ParcelWetlands_ToHide"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_TEMP_6",
+      "var_value": "0",
+      "script": "ParcelWetlands_ToHide"
     }
   ],
   "bg_events": [

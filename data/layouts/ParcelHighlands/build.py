@@ -49,6 +49,10 @@ put(22, 70, SIGN, 1)        # the centre's banner board
 # 3. the pool above the fall is reached only by the fall: close its east bank
 rect(11, 5, 11, 7, 199, 1)
 
+# the tarn cave's mouth west of the bore (Fallarbor brown cave entrance; bottom walkable at the floor's elevation)
+put(24, 36, 0x259, 1, 0)
+put(24, 37, 0x261, 0, 3)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelHighlands: wrote {W}x{H} map.bin")

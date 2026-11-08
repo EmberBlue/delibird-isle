@@ -52,17 +52,20 @@ credits into a soft reset) → **the post-game** (every leader offers a
 full-strength rematch, repeatable; Perrin's last battle at his desk; the
 post-finale reaction pass).
 
-**Numbers (2026-11-07):** 80 maps (18 outdoor incl. the two side areas, 62
-interiors), ~58,400 words in `data/maps/Parcel*/scripts.pory` (of which
-~24k are the generated rematch-tier lines; ~34k are hand-written), 861
-reachable Skald trainer battles (gyms 1–8 + 4 Mereholt gates + Heron +
-Cordelia + the Weather four + Perrin ×7 + 8 leader rematches + ~176
-route/town/side-area trainers + **648 rematch tiers**: every simple trainer
+**Numbers (2026-11-08):** 84 maps (22 outdoor incl. six side areas, 62
+interiors), ~64,000 words in `data/maps/Parcel*/scripts.pory` (of which
+~27k are the generated rematch-tier lines; ~37k are hand-written), **1,021
+reachable Skald trainer battles** (gyms 1–8 + 4 Mereholt gates + Heron +
+Cordelia + the Weather four + Perrin ×7 + 8 leader rematches + ~208
+route/town/side-area trainers + **776 rematch tiers**: every simple trainer
 fought again at tiers 2–5 as the clearances come in,
-`tools/skald/rematch_tiers.py`; TRAINERS_COUNT 1718), a real ending
-(epilogue, credits, post-game), the Field Notebook, two side areas (the
-Hollowbend old workings off the Corridor's east plaza, the Elvsund mill
-wood off the river town's west edge), seven
+`tools/skald/rematch_tiers.py`; TRAINERS_COUNT 1878), a real ending
+(epilogue, credits, post-game), the Field Notebook, six side areas (the
+Reedmere hide west of the landing, the Hollowbend old workings off the
+Corridor's east plaza, the Leirvik upper sluice across the basin's west
+edge, the Elvsund mill wood off the river town's west edge, the Haukfell
+tarn under the slope west of the bore, the Mereholt breakwater south of
+the quay), seven
 side quests (Grettir's pond, the Corridor satchel, Hedda's mask, the beaver
 stump, the Highland egg, the Coast shell, Gaute's board), seven field HMs
 wired as real traversal, 8 Skald map sections on the region map with heal
@@ -119,7 +122,12 @@ the boardroom with `--flag FLAG_SKALDMERE_CORDELIA_DONE`, walk onto the
 stairs, `--walk WAIT:9000`: all eight vignettes, the bridge Poliwag, the
 fade, the credits' first pages; `VAR_SKALD_EPILOGUE` read back 0), and
 Tarn's post-game rematch to "EXPERT TARN sent out Azumarill Lv58"
-(`--walk A:14 --dismiss 0` answers YES to the prompt).
+(`--walk A:14 --dismiss 0` answers YES to the prompt). The six side areas
+were each entered and left (the hide and the mill wood by step triggers and
+door tiles, the sluice and the breakwater by true connections, the workings
+and the tarn by cave mouths), Kalle's tier-2 rematch was taken to the battle
+screen, and the ten interiors numbered 128–137 were entered by their doors
+after the `u8` map-number fix.
 Harness rules: a trigger scene fired mid-segment eats the rest of that
 segment, so walk onto the trigger as its own `--walk DIR:1` with
 `--dismiss 1800` (text prints at ~300 frames a page), then continue; the

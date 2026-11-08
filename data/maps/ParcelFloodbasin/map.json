@@ -22,6 +22,11 @@
       "map": "MAP_PARCEL_RIVER",
       "offset": -5,
       "direction": "up"
+    },
+    {
+      "map": "MAP_PARCEL_FLOODBASIN_SLUICE",
+      "offset": 47,
+      "direction": "left"
     }
   ],
   "object_events": [

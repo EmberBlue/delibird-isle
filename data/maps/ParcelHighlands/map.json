@@ -532,6 +532,13 @@
       "elevation": 0,
       "dest_map": "MAP_PARCEL_HIGHLANDS_BORE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 37,
+      "elevation": 3,
+      "dest_map": "MAP_PARCEL_HIGHLANDS_TARN",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

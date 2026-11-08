@@ -175,7 +175,11 @@
     "ParcelWeatherInstitute2F",
     "ParcelMarshHut",
     "ParcelCorridorWorkings",
-    "ParcelRiverMillWood"
+    "ParcelRiverMillWood",
+    "ParcelWetlandsHide",
+    "ParcelFloodbasinSluice",
+    "ParcelHighlandsTarn",
+    "ParcelCoastBreakwater"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

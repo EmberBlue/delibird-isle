@@ -30217,3 +30217,2403 @@ Level: 56
 
 Slaking
 Level: 57
+
+=== TRAINER_SKALD_HID_ASLAK ===
+Name: ASLAK
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 15
+
+Taillow
+Level: 15
+
+=== TRAINER_SKALD_HID_HJALTE ===
+Name: HJALTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Magikarp
+Level: 14
+
+Goldeen
+Level: 15
+
+=== TRAINER_SKALD_HID_RAGNA ===
+Name: RAGNA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lotad
+Level: 15
+
+Marill
+Level: 15
+
+=== TRAINER_SKALD_HID_VEMUND ===
+Name: VEMUND
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Surskit
+Level: 14
+
+Wurmple
+Level: 14
+
+=== TRAINER_SKALD_HID_SINDRE ===
+Name: SINDRE
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 15
+
+Poochyena
+Level: 15
+
+=== TRAINER_SKALD_HID_UNNI ===
+Name: UNNI
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 16
+
+Swablu
+Level: 15
+
+=== TRAINER_SKALD_HID_TORVALD ===
+Name: TORVALD
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Barboach
+Level: 16
+
+Marill
+Level: 15
+
+=== TRAINER_SKALD_HID_ASTA ===
+Name: ASTA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Oddish
+Level: 15
+
+Shroomish
+Level: 15
+
+=== TRAINER_SKALD_SLU_NILS ===
+Name: NILS
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Barboach
+Level: 22
+
+Goldeen
+Level: 22
+
+=== TRAINER_SKALD_SLU_SVERRE ===
+Name: SVERRE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 23
+
+Machop
+Level: 22
+
+=== TRAINER_SKALD_SLU_ELIN ===
+Name: ELIN
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 22
+
+Pelipper
+Level: 24
+
+=== TRAINER_SKALD_SLU_ERIK ===
+Name: ERIK
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Zigzagoon
+Level: 22
+
+Linoone
+Level: 24
+
+=== TRAINER_SKALD_SLU_SIRI ===
+Name: SIRI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roselia
+Level: 23
+
+Skitty
+Level: 22
+
+=== TRAINER_SKALD_SLU_BJARTE ===
+Name: BJARTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Carvanha
+Level: 23
+
+Magikarp
+Level: 22
+
+=== TRAINER_SKALD_SLU_ODD ===
+Name: ODD
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machoke
+Level: 33
+
+Hariyama
+Level: 32
+
+=== TRAINER_SKALD_SLU_GRIM ===
+Name: GRIM
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 33
+
+Sandslash
+Level: 32
+
+=== TRAINER_SKALD_TRN_ARNFINN ===
+Name: ARNFINN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 31
+
+Swinub
+Level: 30
+
+=== TRAINER_SKALD_TRN_HALVARD ===
+Name: HALVARD
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sableye
+Level: 31
+
+Lairon
+Level: 31
+
+=== TRAINER_SKALD_TRN_DAGRUN ===
+Name: DAGRUN
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Medicham
+Level: 32
+
+Hariyama
+Level: 31
+
+=== TRAINER_SKALD_TRN_GUNNVOR ===
+Name: GUNNVOR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 33
+
+Nosepass
+Level: 31
+
+=== TRAINER_SKALD_TRN_JORUND ===
+Name: JORUND
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 32
+
+Golbat
+Level: 31
+
+=== TRAINER_SKALD_TRN_ROAR ===
+Name: ROAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Piloswine
+Level: 33
+
+Mightyena
+Level: 31
+
+=== TRAINER_SKALD_TRN_SIGBJORN ===
+Name: SIGBJORN
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hariyama
+Level: 33
+
+Machoke
+Level: 32
+
+=== TRAINER_SKALD_TRN_RANDI ===
+Name: RANDI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 32
+
+Lombre
+Level: 31
+
+=== TRAINER_SKALD_BRK_ANSGAR ===
+Name: ANSGAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 35
+
+Machoke
+Level: 34
+
+=== TRAINER_SKALD_BRK_KASPER ===
+Name: KASPER
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Marill
+Level: 33
+
+Wailmer
+Level: 34
+
+=== TRAINER_SKALD_BRK_EMMA ===
+Name: EMMA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 34
+
+Corphish
+Level: 33
+
+=== TRAINER_SKALD_BRK_VIDAR ===
+Name: VIDAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tentacruel
+Level: 35
+
+Sharpedo
+Level: 34
+
+=== TRAINER_SKALD_BRK_LINNEA ===
+Name: LINNEA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 35
+
+Pelipper
+Level: 34
+
+=== TRAINER_SKALD_BRK_STIG ===
+Name: STIG
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 36
+
+Wailmer
+Level: 35
+
+=== TRAINER_SKALD_BRK_TONE ===
+Name: TONE
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gorebyss
+Level: 36
+
+Pelipper
+Level: 35
+
+=== TRAINER_SKALD_BRK_HOLGER ===
+Name: HOLGER
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wailord
+Level: 38
+
+Crawdaunt
+Level: 36
+
+=== TRAINER_SKALD_BRK_ANSGAR_R2 ===
+Name: ANSGAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 21
+
+Machoke
+Level: 22
+
+=== TRAINER_SKALD_BRK_ANSGAR_R3 ===
+Name: ANSGAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 31
+
+Machoke
+Level: 32
+
+=== TRAINER_SKALD_BRK_ANSGAR_R4 ===
+Name: ANSGAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 41
+
+Machamp
+Level: 42
+
+=== TRAINER_SKALD_BRK_ANSGAR_R5 ===
+Name: ANSGAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 56
+
+Machamp
+Level: 57
+
+=== TRAINER_SKALD_BRK_KASPER_R2 ===
+Name: KASPER
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 21
+
+Wailmer
+Level: 22
+
+=== TRAINER_SKALD_BRK_KASPER_R3 ===
+Name: KASPER
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 31
+
+Wailmer
+Level: 32
+
+=== TRAINER_SKALD_BRK_KASPER_R4 ===
+Name: KASPER
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 41
+
+Wailord
+Level: 42
+
+=== TRAINER_SKALD_BRK_KASPER_R5 ===
+Name: KASPER
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 56
+
+Wailord
+Level: 57
+
+=== TRAINER_SKALD_BRK_EMMA_R2 ===
+Name: EMMA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 21
+
+Corphish
+Level: 22
+
+=== TRAINER_SKALD_BRK_EMMA_R3 ===
+Name: EMMA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 31
+
+Crawdaunt
+Level: 32
+
+=== TRAINER_SKALD_BRK_EMMA_R4 ===
+Name: EMMA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 41
+
+Crawdaunt
+Level: 42
+
+=== TRAINER_SKALD_BRK_EMMA_R5 ===
+Name: EMMA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 56
+
+Crawdaunt
+Level: 57
+
+=== TRAINER_SKALD_BRK_VIDAR_R2 ===
+Name: VIDAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tentacruel
+Level: 21
+
+Sharpedo
+Level: 22
+
+=== TRAINER_SKALD_BRK_VIDAR_R3 ===
+Name: VIDAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tentacruel
+Level: 31
+
+Sharpedo
+Level: 32
+
+=== TRAINER_SKALD_BRK_VIDAR_R4 ===
+Name: VIDAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tentacruel
+Level: 41
+
+Sharpedo
+Level: 42
+
+=== TRAINER_SKALD_BRK_VIDAR_R5 ===
+Name: VIDAR
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Tentacruel
+Level: 56
+
+Sharpedo
+Level: 57
+
+=== TRAINER_SKALD_BRK_LINNEA_R2 ===
+Name: LINNEA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 21
+
+Pelipper
+Level: 22
+
+=== TRAINER_SKALD_BRK_LINNEA_R3 ===
+Name: LINNEA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 31
+
+Pelipper
+Level: 32
+
+=== TRAINER_SKALD_BRK_LINNEA_R4 ===
+Name: LINNEA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Ludicolo
+Level: 41
+
+Pelipper
+Level: 42
+
+=== TRAINER_SKALD_BRK_LINNEA_R5 ===
+Name: LINNEA
+Class: Tuber F
+Pic: Tuber F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Ludicolo
+Level: 56
+
+Pelipper
+Level: 57
+
+=== TRAINER_SKALD_BRK_STIG_R2 ===
+Name: STIG
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 21
+
+Wailmer
+Level: 22
+
+=== TRAINER_SKALD_BRK_STIG_R3 ===
+Name: STIG
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 31
+
+Wailmer
+Level: 32
+
+=== TRAINER_SKALD_BRK_STIG_R4 ===
+Name: STIG
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 41
+
+Wailord
+Level: 42
+
+=== TRAINER_SKALD_BRK_STIG_R5 ===
+Name: STIG
+Class: Swimmer M
+Pic: Swimmer M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 56
+
+Wailord
+Level: 57
+
+=== TRAINER_SKALD_BRK_TONE_R2 ===
+Name: TONE
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gorebyss
+Level: 21
+
+Pelipper
+Level: 22
+
+=== TRAINER_SKALD_BRK_TONE_R3 ===
+Name: TONE
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gorebyss
+Level: 31
+
+Pelipper
+Level: 32
+
+=== TRAINER_SKALD_BRK_TONE_R4 ===
+Name: TONE
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gorebyss
+Level: 41
+
+Pelipper
+Level: 42
+
+=== TRAINER_SKALD_BRK_TONE_R5 ===
+Name: TONE
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gorebyss
+Level: 56
+
+Pelipper
+Level: 57
+
+=== TRAINER_SKALD_BRK_HOLGER_R2 ===
+Name: HOLGER
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wailord
+Level: 21
+
+Crawdaunt
+Level: 22
+
+=== TRAINER_SKALD_BRK_HOLGER_R3 ===
+Name: HOLGER
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wailord
+Level: 31
+
+Crawdaunt
+Level: 32
+
+=== TRAINER_SKALD_BRK_HOLGER_R4 ===
+Name: HOLGER
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wailord
+Level: 41
+
+Crawdaunt
+Level: 42
+
+=== TRAINER_SKALD_BRK_HOLGER_R5 ===
+Name: HOLGER
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wailord
+Level: 56
+
+Crawdaunt
+Level: 57
+
+=== TRAINER_SKALD_SLU_NILS_R2 ===
+Name: NILS
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Barboach
+Level: 21
+
+Goldeen
+Level: 22
+
+=== TRAINER_SKALD_SLU_NILS_R3 ===
+Name: NILS
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Whiscash
+Level: 31
+
+Goldeen
+Level: 32
+
+=== TRAINER_SKALD_SLU_NILS_R4 ===
+Name: NILS
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Whiscash
+Level: 41
+
+Seaking
+Level: 42
+
+=== TRAINER_SKALD_SLU_NILS_R5 ===
+Name: NILS
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Whiscash
+Level: 56
+
+Seaking
+Level: 57
+
+=== TRAINER_SKALD_SLU_SVERRE_R2 ===
+Name: SVERRE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Geodude
+Level: 21
+
+Machop
+Level: 22
+
+=== TRAINER_SKALD_SLU_SVERRE_R3 ===
+Name: SVERRE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 31
+
+Machoke
+Level: 32
+
+=== TRAINER_SKALD_SLU_SVERRE_R4 ===
+Name: SVERRE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 41
+
+Machamp
+Level: 42
+
+=== TRAINER_SKALD_SLU_SVERRE_R5 ===
+Name: SVERRE
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 56
+
+Machamp
+Level: 57
+
+=== TRAINER_SKALD_SLU_ELIN_R2 ===
+Name: ELIN
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 21
+
+Pelipper
+Level: 22
+
+=== TRAINER_SKALD_SLU_ELIN_R3 ===
+Name: ELIN
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 31
+
+Pelipper
+Level: 32
+
+=== TRAINER_SKALD_SLU_ELIN_R4 ===
+Name: ELIN
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 41
+
+Pelipper
+Level: 42
+
+=== TRAINER_SKALD_SLU_ELIN_R5 ===
+Name: ELIN
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 56
+
+Pelipper
+Level: 57
+
+=== TRAINER_SKALD_SLU_ERIK_R2 ===
+Name: ERIK
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 21
+
+Linoone
+Level: 22
+
+=== TRAINER_SKALD_SLU_ERIK_R3 ===
+Name: ERIK
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 31
+
+Linoone
+Level: 32
+
+=== TRAINER_SKALD_SLU_ERIK_R4 ===
+Name: ERIK
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 41
+
+Linoone
+Level: 42
+
+=== TRAINER_SKALD_SLU_ERIK_R5 ===
+Name: ERIK
+Class: Camper
+Pic: Camper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 56
+
+Linoone
+Level: 57
+
+=== TRAINER_SKALD_SLU_SIRI_R2 ===
+Name: SIRI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roselia
+Level: 21
+
+Skitty
+Level: 22
+
+=== TRAINER_SKALD_SLU_SIRI_R3 ===
+Name: SIRI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roselia
+Level: 31
+
+Skitty
+Level: 32
+
+=== TRAINER_SKALD_SLU_SIRI_R4 ===
+Name: SIRI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roserade
+Level: 41
+
+Delcatty
+Level: 42
+
+=== TRAINER_SKALD_SLU_SIRI_R5 ===
+Name: SIRI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Roserade
+Level: 56
+
+Delcatty
+Level: 57
+
+=== TRAINER_SKALD_SLU_BJARTE_R2 ===
+Name: BJARTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Carvanha
+Level: 21
+
+Gyarados
+Level: 22
+
+=== TRAINER_SKALD_SLU_BJARTE_R3 ===
+Name: BJARTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 31
+
+Gyarados
+Level: 32
+
+=== TRAINER_SKALD_SLU_BJARTE_R4 ===
+Name: BJARTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 41
+
+Gyarados
+Level: 42
+
+=== TRAINER_SKALD_SLU_BJARTE_R5 ===
+Name: BJARTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sharpedo
+Level: 56
+
+Gyarados
+Level: 57
+
+=== TRAINER_SKALD_SLU_ODD_R2 ===
+Name: ODD
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machoke
+Level: 21
+
+Hariyama
+Level: 22
+
+=== TRAINER_SKALD_SLU_ODD_R3 ===
+Name: ODD
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machoke
+Level: 31
+
+Hariyama
+Level: 32
+
+=== TRAINER_SKALD_SLU_ODD_R4 ===
+Name: ODD
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machamp
+Level: 41
+
+Hariyama
+Level: 42
+
+=== TRAINER_SKALD_SLU_ODD_R5 ===
+Name: ODD
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Machamp
+Level: 56
+
+Hariyama
+Level: 57
+
+=== TRAINER_SKALD_SLU_GRIM_R2 ===
+Name: GRIM
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 21
+
+Sandslash
+Level: 22
+
+=== TRAINER_SKALD_SLU_GRIM_R3 ===
+Name: GRIM
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 31
+
+Sandslash
+Level: 32
+
+=== TRAINER_SKALD_SLU_GRIM_R4 ===
+Name: GRIM
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 41
+
+Sandslash
+Level: 42
+
+=== TRAINER_SKALD_SLU_GRIM_R5 ===
+Name: GRIM
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 56
+
+Sandslash
+Level: 57
+
+=== TRAINER_SKALD_TRN_ARNFINN_R2 ===
+Name: ARNFINN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 21
+
+Swinub
+Level: 22
+
+=== TRAINER_SKALD_TRN_ARNFINN_R3 ===
+Name: ARNFINN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 31
+
+Swinub
+Level: 32
+
+=== TRAINER_SKALD_TRN_ARNFINN_R4 ===
+Name: ARNFINN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 41
+
+Mamoswine
+Level: 42
+
+=== TRAINER_SKALD_TRN_ARNFINN_R5 ===
+Name: ARNFINN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 56
+
+Mamoswine
+Level: 57
+
+=== TRAINER_SKALD_TRN_HALVARD_R2 ===
+Name: HALVARD
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sableye
+Level: 21
+
+Lairon
+Level: 22
+
+=== TRAINER_SKALD_TRN_HALVARD_R3 ===
+Name: HALVARD
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sableye
+Level: 31
+
+Lairon
+Level: 32
+
+=== TRAINER_SKALD_TRN_HALVARD_R4 ===
+Name: HALVARD
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sableye
+Level: 41
+
+Aggron
+Level: 42
+
+=== TRAINER_SKALD_TRN_HALVARD_R5 ===
+Name: HALVARD
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Sableye
+Level: 56
+
+Aggron
+Level: 57
+
+=== TRAINER_SKALD_TRN_DAGRUN_R2 ===
+Name: DAGRUN
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Medicham
+Level: 21
+
+Hariyama
+Level: 22
+
+=== TRAINER_SKALD_TRN_DAGRUN_R3 ===
+Name: DAGRUN
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Medicham
+Level: 31
+
+Hariyama
+Level: 32
+
+=== TRAINER_SKALD_TRN_DAGRUN_R4 ===
+Name: DAGRUN
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Medicham
+Level: 41
+
+Hariyama
+Level: 42
+
+=== TRAINER_SKALD_TRN_DAGRUN_R5 ===
+Name: DAGRUN
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Medicham
+Level: 56
+
+Hariyama
+Level: 57
+
+=== TRAINER_SKALD_TRN_GUNNVOR_R2 ===
+Name: GUNNVOR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 21
+
+Nosepass
+Level: 22
+
+=== TRAINER_SKALD_TRN_GUNNVOR_R3 ===
+Name: GUNNVOR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 31
+
+Nosepass
+Level: 32
+
+=== TRAINER_SKALD_TRN_GUNNVOR_R4 ===
+Name: GUNNVOR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 41
+
+Probopass
+Level: 42
+
+=== TRAINER_SKALD_TRN_GUNNVOR_R5 ===
+Name: GUNNVOR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 56
+
+Probopass
+Level: 57
+
+=== TRAINER_SKALD_TRN_JORUND_R2 ===
+Name: JORUND
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 21
+
+Golbat
+Level: 22
+
+=== TRAINER_SKALD_TRN_JORUND_R3 ===
+Name: JORUND
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 31
+
+Golbat
+Level: 32
+
+=== TRAINER_SKALD_TRN_JORUND_R4 ===
+Name: JORUND
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 41
+
+Crobat
+Level: 42
+
+=== TRAINER_SKALD_TRN_JORUND_R5 ===
+Name: JORUND
+Class: Ruin Maniac
+Pic: Ruin Maniac
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Claydol
+Level: 56
+
+Crobat
+Level: 57
+
+=== TRAINER_SKALD_TRN_ROAR_R2 ===
+Name: ROAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Piloswine
+Level: 21
+
+Mightyena
+Level: 22
+
+=== TRAINER_SKALD_TRN_ROAR_R3 ===
+Name: ROAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Piloswine
+Level: 31
+
+Mightyena
+Level: 32
+
+=== TRAINER_SKALD_TRN_ROAR_R4 ===
+Name: ROAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Mamoswine
+Level: 41
+
+Mightyena
+Level: 42
+
+=== TRAINER_SKALD_TRN_ROAR_R5 ===
+Name: ROAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Mamoswine
+Level: 56
+
+Mightyena
+Level: 57
+
+=== TRAINER_SKALD_TRN_SIGBJORN_R2 ===
+Name: SIGBJORN
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hariyama
+Level: 21
+
+Machoke
+Level: 22
+
+=== TRAINER_SKALD_TRN_SIGBJORN_R3 ===
+Name: SIGBJORN
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hariyama
+Level: 31
+
+Machoke
+Level: 32
+
+=== TRAINER_SKALD_TRN_SIGBJORN_R4 ===
+Name: SIGBJORN
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hariyama
+Level: 41
+
+Machamp
+Level: 42
+
+=== TRAINER_SKALD_TRN_SIGBJORN_R5 ===
+Name: SIGBJORN
+Class: Black Belt
+Pic: Black Belt
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Hariyama
+Level: 56
+
+Machamp
+Level: 57
+
+=== TRAINER_SKALD_TRN_RANDI_R2 ===
+Name: RANDI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 21
+
+Lombre
+Level: 22
+
+=== TRAINER_SKALD_TRN_RANDI_R3 ===
+Name: RANDI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 31
+
+Lombre
+Level: 32
+
+=== TRAINER_SKALD_TRN_RANDI_R4 ===
+Name: RANDI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 41
+
+Ludicolo
+Level: 42
+
+=== TRAINER_SKALD_TRN_RANDI_R5 ===
+Name: RANDI
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 56
+
+Ludicolo
+Level: 57
+
+=== TRAINER_SKALD_HID_ASLAK_R2 ===
+Name: ASLAK
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 21
+
+Swellow
+Level: 22
+
+=== TRAINER_SKALD_HID_ASLAK_R3 ===
+Name: ASLAK
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 31
+
+Swellow
+Level: 32
+
+=== TRAINER_SKALD_HID_ASLAK_R4 ===
+Name: ASLAK
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 41
+
+Swellow
+Level: 42
+
+=== TRAINER_SKALD_HID_ASLAK_R5 ===
+Name: ASLAK
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 56
+
+Swellow
+Level: 57
+
+=== TRAINER_SKALD_HID_HJALTE_R2 ===
+Name: HJALTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gyarados
+Level: 21
+
+Goldeen
+Level: 22
+
+=== TRAINER_SKALD_HID_HJALTE_R3 ===
+Name: HJALTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gyarados
+Level: 31
+
+Goldeen
+Level: 32
+
+=== TRAINER_SKALD_HID_HJALTE_R4 ===
+Name: HJALTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gyarados
+Level: 41
+
+Seaking
+Level: 42
+
+=== TRAINER_SKALD_HID_HJALTE_R5 ===
+Name: HJALTE
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gyarados
+Level: 56
+
+Seaking
+Level: 57
+
+=== TRAINER_SKALD_HID_RAGNA_R2 ===
+Name: RAGNA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 21
+
+Azumarill
+Level: 22
+
+=== TRAINER_SKALD_HID_RAGNA_R3 ===
+Name: RAGNA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Lombre
+Level: 31
+
+Azumarill
+Level: 32
+
+=== TRAINER_SKALD_HID_RAGNA_R4 ===
+Name: RAGNA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Ludicolo
+Level: 41
+
+Azumarill
+Level: 42
+
+=== TRAINER_SKALD_HID_RAGNA_R5 ===
+Name: RAGNA
+Class: Lass
+Pic: Lass
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Ludicolo
+Level: 56
+
+Azumarill
+Level: 57
+
+=== TRAINER_SKALD_HID_VEMUND_R2 ===
+Name: VEMUND
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Surskit
+Level: 21
+
+Beautifly
+Level: 22
+
+=== TRAINER_SKALD_HID_VEMUND_R3 ===
+Name: VEMUND
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Masquerain
+Level: 31
+
+Beautifly
+Level: 32
+
+=== TRAINER_SKALD_HID_VEMUND_R4 ===
+Name: VEMUND
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Masquerain
+Level: 41
+
+Beautifly
+Level: 42
+
+=== TRAINER_SKALD_HID_VEMUND_R5 ===
+Name: VEMUND
+Class: Bug Catcher
+Pic: Bug Catcher
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Masquerain
+Level: 56
+
+Beautifly
+Level: 57
+
+=== TRAINER_SKALD_HID_SINDRE_R2 ===
+Name: SINDRE
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 21
+
+Mightyena
+Level: 22
+
+=== TRAINER_SKALD_HID_SINDRE_R3 ===
+Name: SINDRE
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 31
+
+Mightyena
+Level: 32
+
+=== TRAINER_SKALD_HID_SINDRE_R4 ===
+Name: SINDRE
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 41
+
+Mightyena
+Level: 42
+
+=== TRAINER_SKALD_HID_SINDRE_R5 ===
+Name: SINDRE
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Linoone
+Level: 56
+
+Mightyena
+Level: 57
+
+=== TRAINER_SKALD_HID_UNNI_R2 ===
+Name: UNNI
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 21
+
+Swablu
+Level: 22
+
+=== TRAINER_SKALD_HID_UNNI_R3 ===
+Name: UNNI
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 31
+
+Swablu
+Level: 32
+
+=== TRAINER_SKALD_HID_UNNI_R4 ===
+Name: UNNI
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 41
+
+Altaria
+Level: 42
+
+=== TRAINER_SKALD_HID_UNNI_R5 ===
+Name: UNNI
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 56
+
+Altaria
+Level: 57
+
+=== TRAINER_SKALD_HID_TORVALD_R2 ===
+Name: TORVALD
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Barboach
+Level: 21
+
+Azumarill
+Level: 22
+
+=== TRAINER_SKALD_HID_TORVALD_R3 ===
+Name: TORVALD
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Whiscash
+Level: 31
+
+Azumarill
+Level: 32
+
+=== TRAINER_SKALD_HID_TORVALD_R4 ===
+Name: TORVALD
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Whiscash
+Level: 41
+
+Azumarill
+Level: 42
+
+=== TRAINER_SKALD_HID_TORVALD_R5 ===
+Name: TORVALD
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Whiscash
+Level: 56
+
+Azumarill
+Level: 57
+
+=== TRAINER_SKALD_HID_ASTA_R2 ===
+Name: ASTA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gloom
+Level: 21
+
+Shroomish
+Level: 22
+
+=== TRAINER_SKALD_HID_ASTA_R3 ===
+Name: ASTA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Gloom
+Level: 31
+
+Breloom
+Level: 32
+
+=== TRAINER_SKALD_HID_ASTA_R4 ===
+Name: ASTA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Vileplume
+Level: 41
+
+Breloom
+Level: 42
+
+=== TRAINER_SKALD_HID_ASTA_R5 ===
+Name: ASTA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Vileplume
+Level: 56
+
+Breloom
+Level: 57

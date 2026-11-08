@@ -262,7 +262,8 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
     # warp/connection entrance of their own: seed from their arrival tiles
     ARRIVALS = {"ParcelMarsh": [(37, 27)], "ParcelCavern": [(16, 10)], "ParcelWeather": [(9, 34)],
                 "ParcelCoast": [(30, 55), (31, 28)], "ParcelDelibird": [(9, 22), (8, 4)], "ParcelBoardroom": [(4, 2)],
-                "ParcelCorridorWorkings": [(18, 21)], "ParcelRiverMillWood": [(36, 37)]}
+                "ParcelCorridorWorkings": [(18, 21)], "ParcelRiverMillWood": [(36, 37)],
+                "ParcelWetlandsHide": [(47, 10)]}
     seeds = set(ARRIVALS.get(name, []))
     for e in mj.get("warp_events", []):
         seeds.add((e["x"], e["y"]))
@@ -276,7 +277,7 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
         else:
             y = 0 if d == "up" else H - 1
             seeds.update((x, y) for x in range(W) if walkable(x, y))
-    SURF_MAPS = {"ParcelMarsh", "ParcelCoast", "ParcelWeather", "ParcelHighlands", "ParcelFloodbasin", "ParcelRiver"}
+    SURF_MAPS = {"ParcelMarsh", "ParcelCoast", "ParcelWeather", "ParcelHighlands", "ParcelFloodbasin", "ParcelRiver", "ParcelFloodbasinSluice", "ParcelCoastBreakwater"}
     def surfable(x, y):
         mid, col, _ = decode(words[y * W + x])
         return name in SURF_MAPS and col == 0 and "WATER" in BEH.get(tiles.get(mid, ((), 0, 0))[1], "") and "FALL" not in BEH.get(tiles.get(mid, ((), 0, 0))[1], "")
