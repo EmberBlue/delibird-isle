@@ -565,6 +565,13 @@
       "elevation": 0,
       "dest_map": "MAP_PARCEL_RIVER_DEPOT",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 1,
+      "y": 28,
+      "elevation": 3,
+      "dest_map": "MAP_PARCEL_RIVER_MILL_WOOD",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -639,6 +646,24 @@
       "var": "VAR_TEMP_5",
       "var_value": "0",
       "script": "ParcelRiver_PerrinScene"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelRiver_ToMillWood"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 29,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "ParcelRiver_ToMillWood"
     }
   ],
   "bg_events": [

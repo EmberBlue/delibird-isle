@@ -4630,6 +4630,26 @@
       "secondary_tileset": "gTileset_leob_rustboro",
       "border_filepath": "data/layouts/ParcelFernwick/border.bin",
       "blockdata_filepath": "data/layouts/ParcelFernwick/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_CORRIDOR_WORKINGS",
+      "name": "ParcelCorridorWorkings_Layout",
+      "width": 32,
+      "height": 24,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/ParcelCorridorWorkings/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelCorridorWorkings/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_RIVER_MILL_WOOD",
+      "name": "ParcelRiverMillWood_Layout",
+      "width": 48,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_rustboro",
+      "border_filepath": "data/layouts/ParcelRiverMillWood/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelRiverMillWood/map.bin"
     }
   ]
 }

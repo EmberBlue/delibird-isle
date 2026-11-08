@@ -1,0 +1,689 @@
+// ParcelRiverMillWood -- the Elvsund mill wood: the coppice that fed the mill race, west of the
+// river town (Petalburg Woods). Eight trainers, a sawyer, two signs; in and out by the
+// south-east track from Elvsund's west edge (0,28-29).
+
+mapscripts ParcelRiverMillWood_MapScripts {
+}
+
+script ParcelRiverMillWood_Halle {
+    trainerbattle_single(TRAINER_SKALD_MWD_HALLE,
+        format("HALLE: This stand is twelve years old. The beetles know it to the week. Battle!"),
+        format("HALLE: To the week."),
+        ParcelRiverMillWood_Halle_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_HALLE_R2)) {
+        goto(ParcelRiverMillWood_Halle_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_HALLE_R3)) {
+        goto(ParcelRiverMillWood_Halle_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_HALLE_R4)) {
+        goto(ParcelRiverMillWood_Halle_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_HALLE_R5)) {
+        goto(ParcelRiverMillWood_Halle_R5)
+    }
+    msgbox(format("HALLE: Cut on a round and the wood never runs out. Cut it all once and you get one winter."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Halle_FirstWin {
+    msgbox(format("HALLE: Cut on a round and the wood never runs out. Cut it all once and you get one winter."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Halle_R2 {
+    lock
+    faceplayer
+    msgbox(format("HALLE: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALLE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_HALLE_R2, format("HALLE: Still yours."))
+    msgbox(format("HALLE: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Halle_R3 {
+    lock
+    faceplayer
+    msgbox(format("HALLE: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALLE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_HALLE_R3, format("HALLE: Noted. Properly, this time."))
+    msgbox(format("HALLE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Halle_R4 {
+    lock
+    faceplayer
+    msgbox(format("HALLE: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALLE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_HALLE_R4, format("HALLE: …Fair."))
+    msgbox(format("HALLE: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Halle_R5 {
+    lock
+    faceplayer
+    msgbox(format("HALLE: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("HALLE: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_HALLE_R5, format("HALLE: That's the one I wanted to see."))
+    msgbox(format("HALLE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Petter {
+    trainerbattle_single(TRAINER_SKALD_MWD_PETTER,
+        format("PETTER: NINCADA under every stump. I count them for the mill book. Don't step on the stumps. Fight!"),
+        format("PETTER: You stepped round them. Good."),
+        ParcelRiverMillWood_Petter_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_PETTER_R2)) {
+        goto(ParcelRiverMillWood_Petter_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_PETTER_R3)) {
+        goto(ParcelRiverMillWood_Petter_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_PETTER_R4)) {
+        goto(ParcelRiverMillWood_Petter_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_PETTER_R5)) {
+        goto(ParcelRiverMillWood_Petter_R5)
+    }
+    msgbox(format("PETTER: The mill book has columns for timber and columns for bugs. The bugs are the only column that's gone up."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Petter_FirstWin {
+    msgbox(format("PETTER: The mill book has columns for timber and columns for bugs. The bugs are the only column that's gone up."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Petter_R2 {
+    lock
+    faceplayer
+    msgbox(format("PETTER: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PETTER: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_PETTER_R2, format("PETTER: Right. That's the whole of it."))
+    msgbox(format("PETTER: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Petter_R3 {
+    lock
+    faceplayer
+    msgbox(format("PETTER: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PETTER: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_PETTER_R3, format("PETTER: Right. That's the whole of it."))
+    msgbox(format("PETTER: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Petter_R4 {
+    lock
+    faceplayer
+    msgbox(format("PETTER: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PETTER: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_PETTER_R4, format("PETTER: That's the one I wanted to see."))
+    msgbox(format("PETTER: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Petter_R5 {
+    lock
+    faceplayer
+    msgbox(format("PETTER: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PETTER: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_PETTER_R5, format("PETTER: …Again, then. Later."))
+    msgbox(format("PETTER: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Ingrid {
+    trainerbattle_single(TRAINER_SKALD_MWD_INGRID,
+        format("INGRID: Mill's quiet. Nothing to do but this. Go on."),
+        format("INGRID: Still quiet."),
+        ParcelRiverMillWood_Ingrid_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_INGRID_R2)) {
+        goto(ParcelRiverMillWood_Ingrid_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_INGRID_R3)) {
+        goto(ParcelRiverMillWood_Ingrid_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_INGRID_R4)) {
+        goto(ParcelRiverMillWood_Ingrid_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_INGRID_R5)) {
+        goto(ParcelRiverMillWood_Ingrid_R5)
+    }
+    msgbox(format("INGRID: The race hasn't turned the wheel since the Board metered the water. My father oils it anyway."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Ingrid_FirstWin {
+    msgbox(format("INGRID: The race hasn't turned the wheel since the Board metered the water. My father oils it anyway."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Ingrid_R2 {
+    lock
+    faceplayer
+    msgbox(format("INGRID: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("INGRID: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_INGRID_R2, format("INGRID: Noted. Properly, this time."))
+    msgbox(format("INGRID: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Ingrid_R3 {
+    lock
+    faceplayer
+    msgbox(format("INGRID: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("INGRID: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_INGRID_R3, format("INGRID: …Fair."))
+    msgbox(format("INGRID: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Ingrid_R4 {
+    lock
+    faceplayer
+    msgbox(format("INGRID: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("INGRID: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_INGRID_R4, format("INGRID: That's the one I wanted to see."))
+    msgbox(format("INGRID: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Ingrid_R5 {
+    lock
+    faceplayer
+    msgbox(format("INGRID: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("INGRID: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_INGRID_R5, format("INGRID: Still yours."))
+    msgbox(format("INGRID: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Espen {
+    trainerbattle_single(TRAINER_SKALD_MWD_ESPEN,
+        format("ESPEN: I know every track in here. Race you to the mill. No, battle first!"),
+        format("ESPEN: Then race you."),
+        ParcelRiverMillWood_Espen_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_ESPEN_R2)) {
+        goto(ParcelRiverMillWood_Espen_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_ESPEN_R3)) {
+        goto(ParcelRiverMillWood_Espen_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_ESPEN_R4)) {
+        goto(ParcelRiverMillWood_Espen_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_ESPEN_R5)) {
+        goto(ParcelRiverMillWood_Espen_R5)
+    }
+    msgbox(format("ESPEN: The far track's grown over. That's the one to the old race. Nobody uses it."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Espen_FirstWin {
+    msgbox(format("ESPEN: The far track's grown over. That's the one to the old race. Nobody uses it."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Espen_R2 {
+    lock
+    faceplayer
+    msgbox(format("ESPEN: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESPEN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_ESPEN_R2, format("ESPEN: Still yours."))
+    msgbox(format("ESPEN: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Espen_R3 {
+    lock
+    faceplayer
+    msgbox(format("ESPEN: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESPEN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_ESPEN_R3, format("ESPEN: That's the one I wanted to see."))
+    msgbox(format("ESPEN: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Espen_R4 {
+    lock
+    faceplayer
+    msgbox(format("ESPEN: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESPEN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_ESPEN_R4, format("ESPEN: Noted. Properly, this time."))
+    msgbox(format("ESPEN: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Espen_R5 {
+    lock
+    faceplayer
+    msgbox(format("ESPEN: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESPEN: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_ESPEN_R5, format("ESPEN: Still yours."))
+    msgbox(format("ESPEN: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Solveig {
+    trainerbattle_single(TRAINER_SKALD_MWD_SOLVEIG,
+        format("SOLVEIG: I came for the quiet. You're the third today. Battle, since you're here."),
+        format("SOLVEIG: Quiet again, nearly."),
+        ParcelRiverMillWood_Solveig_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_SOLVEIG_R2)) {
+        goto(ParcelRiverMillWood_Solveig_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_SOLVEIG_R3)) {
+        goto(ParcelRiverMillWood_Solveig_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_SOLVEIG_R4)) {
+        goto(ParcelRiverMillWood_Solveig_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_SOLVEIG_R5)) {
+        goto(ParcelRiverMillWood_Solveig_R5)
+    }
+    msgbox(format("SOLVEIG: You can hear the river through the trees if you stand still. It sounds lower than last year."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Solveig_FirstWin {
+    msgbox(format("SOLVEIG: You can hear the river through the trees if you stand still. It sounds lower than last year."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Solveig_R2 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_SOLVEIG_R2, format("SOLVEIG: …Fair."))
+    msgbox(format("SOLVEIG: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Solveig_R3 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_SOLVEIG_R3, format("SOLVEIG: …Again, then. Later."))
+    msgbox(format("SOLVEIG: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Solveig_R4 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_SOLVEIG_R4, format("SOLVEIG: …Fair."))
+    msgbox(format("SOLVEIG: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Solveig_R5 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_SOLVEIG_R5, format("SOLVEIG: Still yours."))
+    msgbox(format("SOLVEIG: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Audun {
+    trainerbattle_single(TRAINER_SKALD_MWD_AUDUN,
+        format("AUDUN: Charcoal pits under the moss. Old ones. The whole wood was fuel once. Battle!"),
+        format("AUDUN: Cooling off."),
+        ParcelRiverMillWood_Audun_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_AUDUN_R2)) {
+        goto(ParcelRiverMillWood_Audun_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_AUDUN_R3)) {
+        goto(ParcelRiverMillWood_Audun_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_AUDUN_R4)) {
+        goto(ParcelRiverMillWood_Audun_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_AUDUN_R5)) {
+        goto(ParcelRiverMillWood_Audun_R5)
+    }
+    msgbox(format("AUDUN: They burned the wood for the forge and planted it back for the mill. The forge is gone. The mill's going. The wood's still here."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Audun_FirstWin {
+    msgbox(format("AUDUN: They burned the wood for the forge and planted it back for the mill. The forge is gone. The mill's going. The wood's still here."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Audun_R2 {
+    lock
+    faceplayer
+    msgbox(format("AUDUN: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AUDUN: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_AUDUN_R2, format("AUDUN: That's the one I wanted to see."))
+    msgbox(format("AUDUN: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Audun_R3 {
+    lock
+    faceplayer
+    msgbox(format("AUDUN: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AUDUN: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_AUDUN_R3, format("AUDUN: That's the one I wanted to see."))
+    msgbox(format("AUDUN: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Audun_R4 {
+    lock
+    faceplayer
+    msgbox(format("AUDUN: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AUDUN: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_AUDUN_R4, format("AUDUN: …Again, then. Later."))
+    msgbox(format("AUDUN: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Audun_R5 {
+    lock
+    faceplayer
+    msgbox(format("AUDUN: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("AUDUN: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_AUDUN_R5, format("AUDUN: Right. That's the whole of it."))
+    msgbox(format("AUDUN: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Folke {
+    trainerbattle_single(TRAINER_SKALD_MWD_FOLKE,
+        format("FOLKE: Marking the next cut. Orange paint stays, blue goes. Don't lean on the orange ones. Fight."),
+        format("FOLKE: Orange ones held."),
+        ParcelRiverMillWood_Folke_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_FOLKE_R2)) {
+        goto(ParcelRiverMillWood_Folke_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_FOLKE_R3)) {
+        goto(ParcelRiverMillWood_Folke_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_FOLKE_R4)) {
+        goto(ParcelRiverMillWood_Folke_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_FOLKE_R5)) {
+        goto(ParcelRiverMillWood_Folke_R5)
+    }
+    msgbox(format("FOLKE: The Board wants the blue ones this year AND next year's. I only have one tin of blue."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Folke_FirstWin {
+    msgbox(format("FOLKE: The Board wants the blue ones this year AND next year's. I only have one tin of blue."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Folke_R2 {
+    lock
+    faceplayer
+    msgbox(format("FOLKE: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FOLKE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_FOLKE_R2, format("FOLKE: Still yours."))
+    msgbox(format("FOLKE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Folke_R3 {
+    lock
+    faceplayer
+    msgbox(format("FOLKE: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FOLKE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_FOLKE_R3, format("FOLKE: …Fair."))
+    msgbox(format("FOLKE: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Folke_R4 {
+    lock
+    faceplayer
+    msgbox(format("FOLKE: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FOLKE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_FOLKE_R4, format("FOLKE: Noted. Properly, this time."))
+    msgbox(format("FOLKE: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Folke_R5 {
+    lock
+    faceplayer
+    msgbox(format("FOLKE: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("FOLKE: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_FOLKE_R5, format("FOLKE: …Again, then. Later."))
+    msgbox(format("FOLKE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Jens {
+    trainerbattle_single(TRAINER_SKALD_MWD_JENS,
+        format("JENS: Camped a week. Seen a KECLEON twice, maybe. Maybe once. Battle while I think."),
+        format("JENS: Twice. Definitely twice."),
+        ParcelRiverMillWood_Jens_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_MWD_JENS_R2)) {
+        goto(ParcelRiverMillWood_Jens_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_MWD_JENS_R3)) {
+        goto(ParcelRiverMillWood_Jens_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_MWD_JENS_R4)) {
+        goto(ParcelRiverMillWood_Jens_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_MWD_JENS_R5)) {
+        goto(ParcelRiverMillWood_Jens_R5)
+    }
+    msgbox(format("JENS: The wood has more in it than the mill book says. The book only counts what sells."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelRiverMillWood_Jens_FirstWin {
+    msgbox(format("JENS: The wood has more in it than the mill book says. The book only counts what sells."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Jens_R2 {
+    lock
+    faceplayer
+    msgbox(format("JENS: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JENS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_JENS_R2, format("JENS: That's the one I wanted to see."))
+    msgbox(format("JENS: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Jens_R3 {
+    lock
+    faceplayer
+    msgbox(format("JENS: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JENS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_JENS_R3, format("JENS: …Fair."))
+    msgbox(format("JENS: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Jens_R4 {
+    lock
+    faceplayer
+    msgbox(format("JENS: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JENS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_JENS_R4, format("JENS: Still yours."))
+    msgbox(format("JENS: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Jens_R5 {
+    lock
+    faceplayer
+    msgbox(format("JENS: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("JENS: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_MWD_JENS_R5, format("JENS: Noted. Properly, this time."))
+    msgbox(format("JENS: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_Sawyer {
+    lock
+    faceplayer
+    msgbox(format("SAWYER: Coppice wood. Twelve-year round, one stand a year, and the mill never wanted for timber in forty years.\pThe Board's paper says take three stands this year. The wood's paper says no. I read the wood's."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelRiverMillWood_SignEdge {
+    msgbox(format("ELVSUND MILL WOOD. Coppice cut on a twelve-year round.\pTake what fell. Leave what stands."), MSGBOX_SIGN)
+    end
+}
+script ParcelRiverMillWood_SignRace {
+    msgbox(format("The mill race starts here. The wheel has been still since the Board metered the water."), MSGBOX_SIGN)
+    end
+}
+script ParcelRiverMillWood_ItemGreatBall { finditem(ITEM_GREAT_BALL) end }
+script ParcelRiverMillWood_ItemEther { finditem(ITEM_ETHER) end }
+script ParcelRiverMillWood_ItemParalyzeHeal { finditem(ITEM_PARALYZE_HEAL) end }
+script ParcelRiverMillWood_DeadEndNorth {
+    msgbox(format("The track runs out in brush. Nobody has cut it since the mill slowed."), MSGBOX_SIGN)
+    end
+}
+script ParcelRiverMillWood_DeadEndSouth {
+    msgbox(format("The old race track. Grown over to the knee. The water it fed doesn't come this way now."), MSGBOX_SIGN)
+    end
+}

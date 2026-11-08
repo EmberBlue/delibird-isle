@@ -1,0 +1,253 @@
+{
+  "id": "MAP_PARCEL_RIVER_MILL_WOOD",
+  "name": "ParcelRiverMillWood",
+  "layout": "LAYOUT_PARCEL_RIVER_MILL_WOOD",
+  "music": "MUS_PETALBURG_WOODS",
+  "region_map_section": "MAPSEC_SKALD_RIVER",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [],
+  "object_events": [
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 4,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Halle",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
+      "x": 7,
+      "y": 32,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Petter",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_LASS",
+      "x": 26,
+      "y": 17,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Ingrid",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 15,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Espen",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 33,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Solveig",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
+      "x": 30,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Audun",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 36,
+      "y": 35,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Folke",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 20,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelRiverMillWood_Jens",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 13,
+      "y": 24,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelRiverMillWood_Sawyer",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 45,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelRiverMillWood_ItemGreatBall",
+      "flag": "FLAG_SKALD_ITEM_MWD_GREAT_BALL"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelRiverMillWood_ItemEther",
+      "flag": "FLAG_SKALD_ITEM_MWD_ETHER"
+    },
+    {
+      "local_id": "LOCALID_COR_WORKER",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 26,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelRiverMillWood_ItemParalyzeHeal",
+      "flag": "FLAG_SKALD_ITEM_MWD_PARALYZE_HEAL"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 36,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_RIVER",
+      "dest_warp_id": "9"
+    },
+    {
+      "x": 37,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_RIVER",
+      "dest_warp_id": "9"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 32,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiverMillWood_SignEdge"
+    },
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiverMillWood_SignRace"
+    },
+    {
+      "type": "sign",
+      "x": 14,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiverMillWood_DeadEndNorth"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiverMillWood_DeadEndNorth"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiverMillWood_DeadEndSouth"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiverMillWood_DeadEndSouth"
+    }
+  ]
+}

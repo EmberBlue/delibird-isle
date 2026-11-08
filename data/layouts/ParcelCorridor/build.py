@@ -60,6 +60,10 @@ rect(71, 0, 73, 4, MTN_TOP, 0, e_top)
 # 6. the route sign at the west entry
 put(3, 7, SIGN, 1)
 
+# the old workings' mouth on the east plaza (General cave entrance; bottom walkable at the floor's elevation)
+put(78, 5, 0x09F, 1, 0)
+put(78, 6, 0x0A7, 0, 3)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelCorridor: wrote {W}x{H} map.bin")

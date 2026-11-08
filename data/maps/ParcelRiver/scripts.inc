@@ -3827,6 +3827,14 @@ ParcelRiver_Epilogue::
 	end
 
 
+ParcelRiver_ToMillWood::
+# 1836 "data/maps/ParcelRiver/scripts.pory"
+	warp MAP_PARCEL_RIVER_MILL_WOOD, 36, 37
+# 1837 "data/maps/ParcelRiver/scripts.pory"
+	waitstate
+	end
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 51 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"

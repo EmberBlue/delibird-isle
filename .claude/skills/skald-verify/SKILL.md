@@ -105,3 +105,12 @@ buffer must be set before `core.reset()` or every PNG is black. The harness
 party is empty, so any trainer battle ends in a whiteout: spawn out of
 sight lines and count "reached the battle screen" as the pass. The full
 list that was green on 2026-11-07 is the one in the handoff.
+
+## Two traps the harness found (2026-11-07)
+- A map whose number in its group is ≥ 128 used to load a garbage header
+  (signed map numbers); fixed to `u8`, but a group tops out at 255 maps, so
+  watch `include/constants/map_groups.h` as maps are added. Symptom: black
+  screen, `gMain.state` 0, callback `CB2_NewGame`, no game code in the PC
+  samples (read `core.cpu.pc` and `gMain` straight out of the emulator).
+- Door-class exit tiles (cave mouths, track ends, ladders) take warp events on
+  both sides; a step trigger never fires on them because the tile is solid.

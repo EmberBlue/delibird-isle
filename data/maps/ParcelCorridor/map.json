@@ -362,6 +362,13 @@
       "elevation": 0,
       "dest_map": "MAP_PARCEL_CORRIDOR_ADIT",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 78,
+      "y": 6,
+      "elevation": 3,
+      "dest_map": "MAP_PARCEL_CORRIDOR_WORKINGS",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

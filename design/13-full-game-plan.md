@@ -239,3 +239,19 @@ quest is built, how the peer works) before they are asked six more times.
   `SkaldRematchTier` (which also refuses a rematch in the same script run as
   the first win). TRAINERS_COUNT 1638; 781 reachable battles. Not Match
   Call: that needs save-block room and a flag range this hack has boxed in.
+- **2026-11-07 (side areas, and a game-breaking bug) — two of six optional
+  areas.** The Hollowbend old workings (Altering Cave base; a cave mouth on
+  the Corridor's east plaza; eight miners, hikers and a ruin maniac at
+  17–20; a miner who carried the closure sign) and the Elvsund mill wood
+  (Petalburg Woods base on the upgraded Rustboro set; a track off the river
+  town's west edge; eight at 24–26, a sawyer, two signs, coppice and the
+  still mill race). Each new simple trainer got its four tiers, so 80 new
+  battles. Building them exposed a latent bug: map numbers were signed
+  bytes, so the 128th map in the group and every one after it -- the
+  Coast's union hall, hearing room, Center, Mart and three houses, both
+  Climate Station floors (Vane's gym!), the Marsh hut -- hung the game on a
+  black screen when entered through a door. `WarpData`, `HealLocation` and
+  the warp-setting functions are `u8` now and all ten doors were walked.
+  Also learned: arrow-warp exit tiles need warp events at elevation 0.
+  Remaining areas: Reedmere hide, Leirvik upper sluice, Haukfell tarn,
+  Mereholt breakwater.

@@ -282,6 +282,24 @@ heal the party; 3 route trainers; 4 item pickups.
 
 ## Map & tileset work — hard-won facts (do not rediscover)
 
+- **Map numbers ≥ 128 hung the game (fixed 2026-11-07).** `struct WarpData`,
+  `struct HealLocation` and every `SetWarpDestination`-family parameter were
+  `s8`; the 128th map in `gMapGroup_TownsAndRoutes` became map number −128,
+  `Overworld_GetMapHeaderByGroupAndId` read a garbage header and the loader
+  spun forever on a black screen (the Coast's union hall, hearing room,
+  Center, Mart, three houses, both Climate Station floors and the Marsh hut
+  were all unreachable through their doors). They are `u8` now; a group can
+  hold 255 maps. Past that, start a second group in `map_groups.json`
+  (`newmap.py` appends to TownsAndRoutes). The harness showed it: `gMain.state`
+  stuck at 0 with `CB2_NewGame`, only interrupt code in the PC samples, and
+  `gMapHeader` full of ARM opcodes.
+- **Exit tiles that are door-class metatiles (cave mouths, the woods' track
+  ends, ladders, arrow warps) need warp events, not step triggers.** The
+  player cannot step onto them from inside; the warp fires by pressing into
+  the tile, and the destination warp event's tile supplies the arrival spot.
+  A step trigger with a `warp` command is only for plain path tiles (the
+  River's west edge into the mill wood).
+
 - **This fork uses the triple-layer metatile system.**
   `NUM_TILES_PER_METATILE == 12` (`include/fieldmap.h`): each metatile is
   **24 bytes** — three layers (bottom, middle, top) × 4 quad tiles.

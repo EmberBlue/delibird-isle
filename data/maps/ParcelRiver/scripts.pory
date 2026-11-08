@@ -1830,3 +1830,10 @@ script ParcelRiver_Epilogue {
     waitstate
     end
 }
+
+// --- the mill wood (side area), off the west edge ---
+script ParcelRiver_ToMillWood {
+    warp(MAP_PARCEL_RIVER_MILL_WOOD, 36, 37)
+    waitstate
+    end
+}

@@ -261,7 +261,8 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
     # maps entered by script warps (ferries, Hale's walk, the summit mouth) have no
     # warp/connection entrance of their own: seed from their arrival tiles
     ARRIVALS = {"ParcelMarsh": [(37, 27)], "ParcelCavern": [(16, 10)], "ParcelWeather": [(9, 34)],
-                "ParcelCoast": [(30, 55), (31, 28)], "ParcelDelibird": [(9, 22), (8, 4)], "ParcelBoardroom": [(4, 2)]}
+                "ParcelCoast": [(30, 55), (31, 28)], "ParcelDelibird": [(9, 22), (8, 4)], "ParcelBoardroom": [(4, 2)],
+                "ParcelCorridorWorkings": [(18, 21)], "ParcelRiverMillWood": [(36, 37)]}
     seeds = set(ARRIVALS.get(name, []))
     for e in mj.get("warp_events", []):
         seeds.add((e["x"], e["y"]))
@@ -322,6 +323,10 @@ def main():
     rm = (ROOT / "src/region_map.c").read_text()
     fly_secs = set(re.findall(r"\[(MAPSEC_\w+)\]\s*=", rm))
     opp = (ROOT / "include/constants/opponents.h").read_text()
+    groups = json.loads((ROOT / "data/maps/map_groups.json").read_text())
+    for gname, members in groups.items():
+        if gname.startswith("gMapGroup") and len(members) > 255:
+            print(f"WARN {gname}: {len(members)} maps; map numbers are u8 -- start a new group")
     trainer_ids = set(re.findall(r"#define (TRAINER_SKALD_\w+)", opp))
     party_ids = set(re.findall(r"^=== (TRAINER_SKALD_\w+) ===", (ROOT / "src/data/trainers.party").read_text(), re.M))
     tc = int(re.search(r"#define TRAINERS_COUNT\s+(\d+)", opp).group(1))

@@ -1,0 +1,672 @@
+// ParcelCorridorWorkings -- the Hollowbend old workings: a gallery the Corps closed in '98 and the
+// road crew reopened for ballast. One room (Altering Cave), eight trainers, the mouth on the
+// Corridor's east plaza at (78,6). Flash-dark.
+
+mapscripts ParcelCorridorWorkings_MapScripts {
+}
+
+script ParcelCorridorWorkings_Olav {
+    trainerbattle_single(TRAINER_SKALD_WRK_OLAV,
+        format("OLAV: Ballast crew. The road eats rock, and this hole had rock going spare. Mind the props. Battle."),
+        format("OLAV: …Props held. Fair."),
+        ParcelCorridorWorkings_Olav_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_OLAV_R2)) {
+        goto(ParcelCorridorWorkings_Olav_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_OLAV_R3)) {
+        goto(ParcelCorridorWorkings_Olav_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_OLAV_R4)) {
+        goto(ParcelCorridorWorkings_Olav_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_OLAV_R5)) {
+        goto(ParcelCorridorWorkings_Olav_R5)
+    }
+    msgbox(format("OLAV: They logged this gallery closed. Then they logged it a quarry. Same book, two pages."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Olav_FirstWin {
+    msgbox(format("OLAV: They logged this gallery closed. Then they logged it a quarry. Same book, two pages."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Olav_R2 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_OLAV_R2, format("OLAV: That's the one I wanted to see."))
+    msgbox(format("OLAV: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Olav_R3 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_OLAV_R3, format("OLAV: …Fair."))
+    msgbox(format("OLAV: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Olav_R4 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: Full strength, no excuses, mine or yours. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_OLAV_R4, format("OLAV: Still yours."))
+    msgbox(format("OLAV: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Olav_R5 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_OLAV_R5, format("OLAV: Right. That's the whole of it."))
+    msgbox(format("OLAV: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Sigurd {
+    trainerbattle_single(TRAINER_SKALD_WRK_SIGURD,
+        format("SIGURD: Deeper than it looks. Everything is, down here. Go on."),
+        format("SIGURD: Deep enough."),
+        ParcelCorridorWorkings_Sigurd_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_SIGURD_R2)) {
+        goto(ParcelCorridorWorkings_Sigurd_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_SIGURD_R3)) {
+        goto(ParcelCorridorWorkings_Sigurd_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_SIGURD_R4)) {
+        goto(ParcelCorridorWorkings_Sigurd_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_SIGURD_R5)) {
+        goto(ParcelCorridorWorkings_Sigurd_R5)
+    }
+    msgbox(format("SIGURD: Water comes in on the left side after rain. The road crew didn't ask where it goes out."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Sigurd_FirstWin {
+    msgbox(format("SIGURD: Water comes in on the left side after rain. The road crew didn't ask where it goes out."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Sigurd_R2 {
+    lock
+    faceplayer
+    msgbox(format("SIGURD: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGURD: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_SIGURD_R2, format("SIGURD: …Again, then. Later."))
+    msgbox(format("SIGURD: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Sigurd_R3 {
+    lock
+    faceplayer
+    msgbox(format("SIGURD: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGURD: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_SIGURD_R3, format("SIGURD: Noted. Properly, this time."))
+    msgbox(format("SIGURD: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Sigurd_R4 {
+    lock
+    faceplayer
+    msgbox(format("SIGURD: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGURD: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_SIGURD_R4, format("SIGURD: Noted. Properly, this time."))
+    msgbox(format("SIGURD: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Sigurd_R5 {
+    lock
+    faceplayer
+    msgbox(format("SIGURD: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SIGURD: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_SIGURD_R5, format("SIGURD: Still yours."))
+    msgbox(format("SIGURD: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Rannveig {
+    trainerbattle_single(TRAINER_SKALD_WRK_RANNVEIG,
+        format("RANNVEIG: I train where the air is thin. Makes the lungs honest. You, now."),
+        format("RANNVEIG: …Honest."),
+        ParcelCorridorWorkings_Rannveig_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_RANNVEIG_R2)) {
+        goto(ParcelCorridorWorkings_Rannveig_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_RANNVEIG_R3)) {
+        goto(ParcelCorridorWorkings_Rannveig_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_RANNVEIG_R4)) {
+        goto(ParcelCorridorWorkings_Rannveig_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_RANNVEIG_R5)) {
+        goto(ParcelCorridorWorkings_Rannveig_R5)
+    }
+    msgbox(format("RANNVEIG: The miners say the walls talk after dark. The walls are settling. Nothing talks."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Rannveig_FirstWin {
+    msgbox(format("RANNVEIG: The miners say the walls talk after dark. The walls are settling. Nothing talks."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Rannveig_R2 {
+    lock
+    faceplayer
+    msgbox(format("RANNVEIG: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANNVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_RANNVEIG_R2, format("RANNVEIG: Right. That's the whole of it."))
+    msgbox(format("RANNVEIG: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Rannveig_R3 {
+    lock
+    faceplayer
+    msgbox(format("RANNVEIG: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANNVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_RANNVEIG_R3, format("RANNVEIG: Noted. Properly, this time."))
+    msgbox(format("RANNVEIG: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Rannveig_R4 {
+    lock
+    faceplayer
+    msgbox(format("RANNVEIG: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANNVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_RANNVEIG_R4, format("RANNVEIG: Right. That's the whole of it."))
+    msgbox(format("RANNVEIG: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Rannveig_R5 {
+    lock
+    faceplayer
+    msgbox(format("RANNVEIG: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RANNVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_RANNVEIG_R5, format("RANNVEIG: Noted. Properly, this time."))
+    msgbox(format("RANNVEIG: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Torgeir {
+    trainerbattle_single(TRAINER_SKALD_WRK_TORGEIR,
+        format("TORGEIR: Stand still a second. There. Feel it? The whole hill's breathing. Battle while it does."),
+        format("TORGEIR: It breathes out, too."),
+        ParcelCorridorWorkings_Torgeir_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_TORGEIR_R2)) {
+        goto(ParcelCorridorWorkings_Torgeir_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_TORGEIR_R3)) {
+        goto(ParcelCorridorWorkings_Torgeir_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_TORGEIR_R4)) {
+        goto(ParcelCorridorWorkings_Torgeir_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_TORGEIR_R5)) {
+        goto(ParcelCorridorWorkings_Torgeir_R5)
+    }
+    msgbox(format("TORGEIR: They'll bore the far side for the Phase 2 fill. A hill with holes on both sides isn't a hill for long."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Torgeir_FirstWin {
+    msgbox(format("TORGEIR: They'll bore the far side for the Phase 2 fill. A hill with holes on both sides isn't a hill for long."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Torgeir_R2 {
+    lock
+    faceplayer
+    msgbox(format("TORGEIR: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORGEIR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_TORGEIR_R2, format("TORGEIR: That's the one I wanted to see."))
+    msgbox(format("TORGEIR: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Torgeir_R3 {
+    lock
+    faceplayer
+    msgbox(format("TORGEIR: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORGEIR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_TORGEIR_R3, format("TORGEIR: That's the one I wanted to see."))
+    msgbox(format("TORGEIR: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Torgeir_R4 {
+    lock
+    faceplayer
+    msgbox(format("TORGEIR: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORGEIR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_TORGEIR_R4, format("TORGEIR: …Fair."))
+    msgbox(format("TORGEIR: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Torgeir_R5 {
+    lock
+    faceplayer
+    msgbox(format("TORGEIR: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORGEIR: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_TORGEIR_R5, format("TORGEIR: That's the one I wanted to see."))
+    msgbox(format("TORGEIR: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Einar {
+    trainerbattle_single(TRAINER_SKALD_WRK_EINAR,
+        format("EINAR: Scratches on the north wall. Old. Not mining marks. Don't touch them. Fight."),
+        format("EINAR: …Still standing. Good."),
+        ParcelCorridorWorkings_Einar_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_EINAR_R2)) {
+        goto(ParcelCorridorWorkings_Einar_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_EINAR_R3)) {
+        goto(ParcelCorridorWorkings_Einar_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_EINAR_R4)) {
+        goto(ParcelCorridorWorkings_Einar_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_EINAR_R5)) {
+        goto(ParcelCorridorWorkings_Einar_R5)
+    }
+    msgbox(format("EINAR: Somebody was in this hill before the CORPS, before the road, before anyone wrote things down. They wrote on the wall anyway."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Einar_FirstWin {
+    msgbox(format("EINAR: Somebody was in this hill before the CORPS, before the road, before anyone wrote things down. They wrote on the wall anyway."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Einar_R2 {
+    lock
+    faceplayer
+    msgbox(format("EINAR: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EINAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_EINAR_R2, format("EINAR: …Again, then. Later."))
+    msgbox(format("EINAR: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Einar_R3 {
+    lock
+    faceplayer
+    msgbox(format("EINAR: I moved the whole team on. Let's see if you have?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EINAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_EINAR_R3, format("EINAR: Still yours."))
+    msgbox(format("EINAR: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Einar_R4 {
+    lock
+    faceplayer
+    msgbox(format("EINAR: I don't care about the paper. I care about the one I lost. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EINAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_EINAR_R4, format("EINAR: Noted. Properly, this time."))
+    msgbox(format("EINAR: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Einar_R5 {
+    lock
+    faceplayer
+    msgbox(format("EINAR: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("EINAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_EINAR_R5, format("EINAR: Right. That's the whole of it."))
+    msgbox(format("EINAR: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Bjorg {
+    trainerbattle_single(TRAINER_SKALD_WRK_BJORG,
+        format("BJORG: Ore cart's rusted to the rail. I sit on it. It's a good seat. Battle for it."),
+        format("BJORG: Seat's yours."),
+        ParcelCorridorWorkings_Bjorg_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_BJORG_R2)) {
+        goto(ParcelCorridorWorkings_Bjorg_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_BJORG_R3)) {
+        goto(ParcelCorridorWorkings_Bjorg_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_BJORG_R4)) {
+        goto(ParcelCorridorWorkings_Bjorg_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_BJORG_R5)) {
+        goto(ParcelCorridorWorkings_Bjorg_R5)
+    }
+    msgbox(format("BJORG: The seam ran out in two years. The road wants ten. Somebody's sums are off."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Bjorg_FirstWin {
+    msgbox(format("BJORG: The seam ran out in two years. The road wants ten. Somebody's sums are off."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Bjorg_R2 {
+    lock
+    faceplayer
+    msgbox(format("BJORG: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJORG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_BJORG_R2, format("BJORG: Noted. Properly, this time."))
+    msgbox(format("BJORG: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Bjorg_R3 {
+    lock
+    faceplayer
+    msgbox(format("BJORG: Word gets up the river. Half a region signed off on you. Show me?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJORG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_BJORG_R3, format("BJORG: …Again, then. Later."))
+    msgbox(format("BJORG: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Bjorg_R4 {
+    lock
+    faceplayer
+    msgbox(format("BJORG: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJORG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_BJORG_R4, format("BJORG: That's the one I wanted to see."))
+    msgbox(format("BJORG: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Bjorg_R5 {
+    lock
+    faceplayer
+    msgbox(format("BJORG: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BJORG: Another time, then."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_BJORG_R5, format("BJORG: …Fair."))
+    msgbox(format("BJORG: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Knut {
+    trainerbattle_single(TRAINER_SKALD_WRK_KNUT,
+        format("KNUT: Echo's good in here. Try it. No? Then this."),
+        format("KNUT: …Echo of that one, too."),
+        ParcelCorridorWorkings_Knut_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_KNUT_R2)) {
+        goto(ParcelCorridorWorkings_Knut_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_KNUT_R3)) {
+        goto(ParcelCorridorWorkings_Knut_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_KNUT_R4)) {
+        goto(ParcelCorridorWorkings_Knut_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_KNUT_R5)) {
+        goto(ParcelCorridorWorkings_Knut_R5)
+    }
+    msgbox(format("KNUT: Don't shout. The props are older than you."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Knut_FirstWin {
+    msgbox(format("KNUT: Don't shout. The props are older than you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Knut_R2 {
+    lock
+    faceplayer
+    msgbox(format("KNUT: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("KNUT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_KNUT_R2, format("KNUT: …Again, then. Later."))
+    msgbox(format("KNUT: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Knut_R3 {
+    lock
+    faceplayer
+    msgbox(format("KNUT: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("KNUT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_KNUT_R3, format("KNUT: Right. That's the whole of it."))
+    msgbox(format("KNUT: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Knut_R4 {
+    lock
+    faceplayer
+    msgbox(format("KNUT: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("KNUT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_KNUT_R4, format("KNUT: …Fair."))
+    msgbox(format("KNUT: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Knut_R5 {
+    lock
+    faceplayer
+    msgbox(format("KNUT: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("KNUT: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_KNUT_R5, format("KNUT: That's the one I wanted to see."))
+    msgbox(format("KNUT: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Lise {
+    trainerbattle_single(TRAINER_SKALD_WRK_LISE,
+        format("LISE: Lamp's going. Fight me before it does. I don't want to walk out in the dark."),
+        format("LISE: Lamp held. So did you."),
+        ParcelCorridorWorkings_Lise_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_WRK_LISE_R2)) {
+        goto(ParcelCorridorWorkings_Lise_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_WRK_LISE_R3)) {
+        goto(ParcelCorridorWorkings_Lise_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_WRK_LISE_R4)) {
+        goto(ParcelCorridorWorkings_Lise_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_WRK_LISE_R5)) {
+        goto(ParcelCorridorWorkings_Lise_R5)
+    }
+    msgbox(format("LISE: Dark places tell you how much you brought. Most people bring too little."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelCorridorWorkings_Lise_FirstWin {
+    msgbox(format("LISE: Dark places tell you how much you brought. Most people bring too little."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Lise_R2 {
+    lock
+    faceplayer
+    msgbox(format("LISE: Back this way? I've not been idle. Rematch?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LISE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_LISE_R2, format("LISE: Noted. Properly, this time."))
+    msgbox(format("LISE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Lise_R3 {
+    lock
+    faceplayer
+    msgbox(format("LISE: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LISE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_LISE_R3, format("LISE: That's the one I wanted to see."))
+    msgbox(format("LISE: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Lise_R4 {
+    lock
+    faceplayer
+    msgbox(format("LISE: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LISE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_LISE_R4, format("LISE: Right. That's the whole of it."))
+    msgbox(format("LISE: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Lise_R5 {
+    lock
+    faceplayer
+    msgbox(format("LISE: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LISE: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_WRK_LISE_R5, format("LISE: …Again, then. Later."))
+    msgbox(format("LISE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_Miner {
+    lock
+    faceplayer
+    msgbox(format("MINER: Closed in '98. The CORPS signed the closure; I carried the sign. The road crew took the sign down for the ballast and nobody signed that.\pEight of them in here now with lamps and opinions. Mind the props."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelCorridorWorkings_ItemRevive { finditem(ITEM_REVIVE) end }
+script ParcelCorridorWorkings_ItemHardStone { finditem(ITEM_HARD_STONE) end }

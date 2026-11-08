@@ -52,13 +52,17 @@ credits into a soft reset) → **the post-game** (every leader offers a
 full-strength rematch, repeatable; Perrin's last battle at his desk; the
 post-finale reaction pass).
 
-**Numbers (2026-11-07):** 78 maps (16 outdoor, 62 interiors), ~33,700 words
-of dialogue (quoted strings in `data/maps/Parcel*/scripts.pory`), 781 reachable
-Skald trainer battles (gyms 1–8 + 4 Mereholt gates + Heron + Cordelia + the
-Weather four + Perrin ×7 + 8 leader rematches + ~160 route/town trainers +
-**584 rematch tiers**: every simple route trainer fought again at tiers 2–5
-as the clearances come in, `tools/skald/rematch_tiers.py`; TRAINERS_COUNT
-1638), a real ending (epilogue, credits, post-game), the Field Notebook, seven
+**Numbers (2026-11-07):** 80 maps (18 outdoor incl. the two side areas, 62
+interiors), ~58,400 words in `data/maps/Parcel*/scripts.pory` (of which
+~24k are the generated rematch-tier lines; ~34k are hand-written), 861
+reachable Skald trainer battles (gyms 1–8 + 4 Mereholt gates + Heron +
+Cordelia + the Weather four + Perrin ×7 + 8 leader rematches + ~176
+route/town/side-area trainers + **648 rematch tiers**: every simple trainer
+fought again at tiers 2–5 as the clearances come in,
+`tools/skald/rematch_tiers.py`; TRAINERS_COUNT 1718), a real ending
+(epilogue, credits, post-game), the Field Notebook, two side areas (the
+Hollowbend old workings off the Corridor's east plaza, the Elvsund mill
+wood off the river town's west edge), seven
 side quests (Grettir's pond, the Corridor satchel, Hedda's mask, the beaver
 stump, the Highland egg, the Coast shell, Gaute's board), seven field HMs
 wired as real traversal, 8 Skald map sections on the region map with heal
