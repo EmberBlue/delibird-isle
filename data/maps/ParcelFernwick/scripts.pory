@@ -758,3 +758,12 @@ script ParcelFernwick_PerrinTalk {
 }
 movement Movement_ParcelFernwick_PerrinIn { walk_down * 2 }
 movement Movement_ParcelFernwick_PerrinOut { walk_up * 2 }
+
+script ParcelFernwick_PondPage {
+    if (!flag(FLAG_SKALD_Q_PAGE)) {
+        end
+    }
+    msgbox(format("Under the pond's edge, a page gone to pulp. One line still legible, in a square hand:\p'Marsh page. 28 pairs. The low years start here.'"), MSGBOX_SIGN)
+    setflag(FLAG_SKALD_Q_PAGE_FOUND)
+    end
+}

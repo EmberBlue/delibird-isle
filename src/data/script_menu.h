@@ -801,6 +801,7 @@ static const struct MenuAction sSkaldNotebookOptions[] =
     {COMPOUND_STRING("Certifications")},
     {COMPOUND_STRING("Side work")},
     {COMPOUND_STRING("Margins")},
+    {COMPOUND_STRING("Her notes")},
     {COMPOUND_STRING("Close")},
 };
 

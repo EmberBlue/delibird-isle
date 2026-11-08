@@ -1196,6 +1196,35 @@
 #define FLAG_ITEM_ROUTE_113_HYPER_POTION                            0x477
 #define FLAG_ITEM_ROUTE_115_HEAL_POWDER                             0x478
 #define FLAG_SKALD_PERRIN_7_DONE                                    0x479 // Skaldmere: Perrin's last battle at his desk, fought once
+
+// Skaldmere: scene and side-quest flags aliased onto item flags of vanilla maps this hack never
+// visits (the flag table itself is full). Each alias is used only here.
+#define FLAG_SKALD_DORSEY_HL               FLAG_ITEM_ROUTE_116_X_SPECIAL
+#define FLAG_SKALD_DORSEY_CO               FLAG_ITEM_ROUTE_104_PP_UP
+#define FLAG_SKALD_Q_PAGE                  FLAG_ITEM_ROUTE_105_IRON
+#define FLAG_SKALD_Q_PAGE_FOUND            FLAG_ITEM_ROUTE_106_PROTEIN
+#define FLAG_SKALD_Q_PAGE_DONE             FLAG_ITEM_ROUTE_110_RARE_CANDY
+#define FLAG_SKALD_Q_DUSK                  FLAG_ITEM_ROUTE_110_DIRE_HIT
+#define FLAG_SKALD_Q_DUSK_FOUND            FLAG_ITEM_ROUTE_111_TM_SANDSTORM
+#define FLAG_SKALD_Q_DUSK_DONE             FLAG_ITEM_ROUTE_111_STARDUST
+#define FLAG_SKALD_Q_SIGN_SEEN             FLAG_ITEM_ROUTE_111_HP_UP
+#define FLAG_SKALD_Q_SIGN                  FLAG_ITEM_ROUTE_112_NUGGET
+#define FLAG_SKALD_Q_SIGN_DONE             FLAG_ITEM_ROUTE_113_MAX_ETHER
+#define FLAG_SKALD_Q_ROOF                  FLAG_ITEM_ROUTE_113_SUPER_REPEL
+#define FLAG_SKALD_Q_ROOF_FOUND            FLAG_ITEM_ROUTE_114_RARE_CANDY
+#define FLAG_SKALD_Q_ROOF_DONE             FLAG_ITEM_ROUTE_114_PROTEIN
+#define FLAG_SKALD_Q_HIVES                 FLAG_ITEM_ROUTE_115_SUPER_POTION
+#define FLAG_SKALD_Q_HIVES_FOUND           FLAG_ITEM_ROUTE_115_TM_FOCUS_PUNCH
+#define FLAG_SKALD_Q_HIVES_DONE            FLAG_ITEM_ROUTE_115_IRON
+#define FLAG_SKALD_Q_MAREEP                FLAG_ITEM_ROUTE_116_ETHER
+#define FLAG_SKALD_Q_MAREEP_FOUND          FLAG_ITEM_ROUTE_116_REPEL
+#define FLAG_SKALD_Q_MAREEP_DONE           FLAG_ITEM_ROUTE_116_HP_UP
+#define FLAG_SKALD_Q_TINS                  FLAG_ITEM_ROUTE_117_GREAT_BALL
+#define FLAG_SKALD_Q_TINS_FOUND            FLAG_ITEM_ROUTE_117_REVIVE
+#define FLAG_SKALD_Q_TINS_DONE             FLAG_ITEM_ROUTE_119_SUPER_REPEL
+#define FLAG_SKALD_Q_CASTFORM              FLAG_ITEM_ROUTE_119_ZINC
+#define FLAG_SKALD_Q_CASTFORM_FOUND        FLAG_ITEM_ROUTE_119_ELIXIR_1
+#define FLAG_SKALD_Q_CASTFORM_DONE         FLAG_ITEM_ROUTE_119_LEAF_STONE
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C

@@ -1874,3 +1874,12 @@ script ParcelHighlands_GymVale_Rematch {
     release
     end
 }
+
+script ParcelHighlands_Mareep {
+    if (!flag(FLAG_SKALD_Q_MAREEP)) {
+        end
+    }
+    msgbox(format("A MAREEP on the scree above the slide, legs braced, wool full of grit. It looks at you.\pIt is not coming down. It is, very definitely, standing."), MSGBOX_SIGN)
+    setflag(FLAG_SKALD_Q_MAREEP_FOUND)
+    end
+}

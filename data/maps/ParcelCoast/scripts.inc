@@ -3855,6 +3855,38 @@ ParcelCoast_GymHarland_Rematch_2:
 	end
 
 
+ParcelCoast_Dorsey::
+# 1852 "data/maps/ParcelCoast/scripts.pory"
+	lock
+# 1853 "data/maps/ParcelCoast/scripts.pory"
+	faceplayer
+# 1854 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Dorsey_2
+# 1859 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALD_DORSEY_CO, ParcelCoast_Dorsey_5
+# 1864 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Dorsey_Text_2, MSGBOX_DEFAULT
+# 1865 "data/maps/ParcelCoast/scripts.pory"
+	setflag FLAG_SKALD_DORSEY_CO
+# 1866 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Dorsey_2:
+# 1855 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Dorsey_Text_0, MSGBOX_DEFAULT
+# 1856 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Dorsey_5:
+# 1860 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Dorsey_Text_1, MSGBOX_DEFAULT
+# 1861 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+
 ParcelCoast_FirstEntry_Text_0:
 # 48 "data/maps/ParcelCoast/scripts.pory"
 	.string "The ferry rounds the headland and the\n"
@@ -5655,3 +5687,33 @@ ParcelCoast_GymHarland_Rematch_Text_2:
 ParcelCoast_GymHarland_Rematch_Text_3:
 # 1845 "data/maps/ParcelCoast/scripts.pory"
 	.string "HARLAND: Tide's at six. Any day you like.$"
+
+ParcelCoast_Dorsey_Text_0:
+# 1855 "data/maps/ParcelCoast/scripts.pory"
+	.string "DORSEY: Development that listens. I\n"
+	.string "said it at the hearing. They wrote down\l"
+	.string "'listens' in quotes. I've seen the\l"
+	.string "transcript.\p"
+	.string "The quotes are fair.$"
+
+ParcelCoast_Dorsey_Text_1:
+# 1860 "data/maps/ParcelCoast/scripts.pory"
+	.string "DORSEY: You'll find the hearing room up\n"
+	.string "the street when the time comes. I'll be\l"
+	.string "in it. I sit on the review board's local\l"
+	.string "panel. Somebody from here should.\p"
+	.string "I know what that looks like. Revolving\n"
+	.string "door. The door revolves because the\l"
+	.string "building only has one.$"
+
+ParcelCoast_Dorsey_Text_2:
+# 1864 "data/maps/ParcelCoast/scripts.pory"
+	.string "DORSEY: --six berths, a cold store, and\n"
+	.string "forty jobs that weren't here in spring.\l"
+	.string "And a plaque, because people like to see\l"
+	.string "a thing has a date on it.\p"
+	.string "RANGER. The coast too. You're thorough;\n"
+	.string "HOLLIS said so. Witness the quay. Write\l"
+	.string "'forty'. It's a true number.\p"
+	.string "They're all true numbers. That has never\n"
+	.string "been the problem.$"

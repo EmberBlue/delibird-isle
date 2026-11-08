@@ -8,12 +8,15 @@ ParcelFloodbasinRelief_Aide::
 # 7 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	faceplayer
 # 8 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinRelief_Aide_2
-# 13 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelFloodbasinRelief_Aide_5
-# 18 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	msgbox ParcelFloodbasinRelief_Aide_Text_2, MSGBOX_DEFAULT
-# 19 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_ROOF_FOUND, ParcelFloodbasinRelief_Aide_3
+ParcelFloodbasinRelief_Aide_1:
+# 15 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinRelief_Aide_7
+# 20 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelFloodbasinRelief_Aide_10
+# 25 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Aide_Text_3, MSGBOX_DEFAULT
+# 26 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	release
 	end
 
@@ -21,54 +24,79 @@ ParcelFloodbasinRelief_Aide_2:
 # 9 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	msgbox ParcelFloodbasinRelief_Aide_Text_0, MSGBOX_DEFAULT
 # 10 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	giveitem ITEM_RARE_CANDY
+# 11 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	setflag FLAG_SKALD_Q_ROOF_DONE
+# 12 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	release
 	end
 
-ParcelFloodbasinRelief_Aide_5:
-# 14 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+ParcelFloodbasinRelief_Aide_3:
+# 8 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_ROOF_DONE, ParcelFloodbasinRelief_Aide_2
+	goto ParcelFloodbasinRelief_Aide_1
+
+ParcelFloodbasinRelief_Aide_7:
+# 16 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	msgbox ParcelFloodbasinRelief_Aide_Text_1, MSGBOX_DEFAULT
-# 15 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 17 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	release
+	end
+
+ParcelFloodbasinRelief_Aide_10:
+# 21 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Aide_Text_2, MSGBOX_DEFAULT
+# 22 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	release
 	end
 
 
 ParcelFloodbasinRelief_Woman::
-# 23 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	lock
-# 24 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	faceplayer
-# 25 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinRelief_Woman_2
 # 30 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	msgbox ParcelFloodbasinRelief_Woman_Text_1, MSGBOX_DEFAULT
+	lock
 # 31 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	faceplayer
+# 32 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinRelief_Woman_2
+# 37 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Woman_Text_1, MSGBOX_DEFAULT
+# 38 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	release
 	end
 
 ParcelFloodbasinRelief_Woman_2:
-# 26 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 33 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	msgbox ParcelFloodbasinRelief_Woman_Text_0, MSGBOX_DEFAULT
-# 27 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 34 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	release
 	end
 
 
 ParcelFloodbasinRelief_Sheet::
-# 35 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 42 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	msgbox ParcelFloodbasinRelief_Sheet_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFloodbasinRelief_Aide_Text_0:
 # 9 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	.string "AIDE: MRS. ASKE's roof. It's on the\n"
+	.string "sheet. It's been on the sheet for four\l"
+	.string "weeks.\p"
+	.string "I'll put it at the top. I'm not supposed\n"
+	.string "to re-order the sheet. Take this and\l"
+	.string "don't tell the councilman I can read.$"
+
+ParcelFloodbasinRelief_Aide_Text_1:
+# 16 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "AIDE: The store's closed. The sheet's\n"
 	.string "an exhibit. The councilman says the\l"
 	.string "basin's recovering nicely. The hearing\l"
 	.string "said 'recovering' is not a measurement.\l"
 	.string "I liked that. I shouldn't have.$"
 
-ParcelFloodbasinRelief_Aide_Text_1:
-# 14 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+ParcelFloodbasinRelief_Aide_Text_2:
+# 21 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "AIDE: The store's closing. Relief\n"
 	.string "period's over. The councilman says the\l"
 	.string "basin's recovering nicely.\p"
@@ -76,8 +104,8 @@ ParcelFloodbasinRelief_Aide_Text_1:
 	.string "Forty-one signatures. They like a full\l"
 	.string "sheet.$"
 
-ParcelFloodbasinRelief_Aide_Text_2:
-# 18 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+ParcelFloodbasinRelief_Aide_Text_3:
+# 25 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "AIDE: Residents only, RANGER. Fuel on\n"
 	.string "the left, dry goods on the right. Sign\l"
 	.string "the sheet.\p"
@@ -85,7 +113,7 @@ ParcelFloodbasinRelief_Aide_Text_2:
 	.string "FOUNDATION believes in records.$"
 
 ParcelFloodbasinRelief_Woman_Text_0:
-# 26 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 33 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "WOMAN: I signed. My neighbour didn't.\n"
 	.string "Her roof's still got the tarp on, and now\l"
 	.string "the Board's paying for a new one\l"
@@ -93,13 +121,13 @@ ParcelFloodbasinRelief_Woman_Text_0:
 	.string "I'm confused. Same thing, round here.$"
 
 ParcelFloodbasinRelief_Woman_Text_1:
-# 30 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 37 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "WOMAN: I signed. Everyone signs. My\n"
 	.string "neighbour wouldn't, and her roof's still\l"
 	.string "got the tarp on.$"
 
 ParcelFloodbasinRelief_Sheet_Text_0:
-# 35 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 42 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "RELIEF REGISTER -- LEIRVIK. Forty-one\n"
 	.string "names. Beside each, a box ticked: 'I\l"
 	.string "confirm that the Foundation's\l"

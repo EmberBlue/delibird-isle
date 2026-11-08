@@ -664,6 +664,29 @@ script ParcelWetlandsHide_Asta_R5 {
 script ParcelWetlandsHide_Warden {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_DUSK_DONE)) {
+        msgbox(format("WARDEN: Eleven. It's in the book in your hand, not mine. Next year we'll see if it's twelve or ten. That's the whole job. Next year."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_DUSK_FOUND)) {
+        msgbox(format("WARDEN: Eleven. RAGNA was right and I was tired. Write eleven.\pTake these. The CORPS sent a box for the hide and nobody here catches anything."), MSGBOX_DEFAULT)
+        giveitem(ITEM_NET_BALL, 5)
+        setflag(FLAG_SKALD_Q_DUSK_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_DUSK)) {
+        msgbox(format("WARDEN: The reed cut on the far bank of the pond. Stand there. Count what comes in. Don't count twice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(format("WARDEN: The herons come at dusk. RAGNA counts eleven; I count nine. We need a third pair of eyes, and yours are paid to count.\pStand by the reed cut on the far bank and count what comes in."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_DUSK)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WARDEN: DR. HERON's line is still on the wall. Somebody's written under it, in a steady hand: 'Counted. Written down.' I didn't see who. I've left it."), MSGBOX_DEFAULT)
         release
@@ -685,5 +708,14 @@ script ParcelWetlandsHide_ItemGreatBall { finditem(ITEM_GREAT_BALL) end }
 script ParcelWetlandsHide_Leave {
     warp(MAP_PARCEL_WETLANDS, 3, 27)
     waitstate
+    end
+}
+
+script ParcelWetlandsHide_DuskCount {
+    if (!flag(FLAG_SKALD_Q_DUSK)) {
+        end
+    }
+    msgbox(format("The herons come in low over the reeds. One. Two. Three.\pEleven. The twelfth doesn't come. You count again. Eleven."), MSGBOX_SIGN)
+    setflag(FLAG_SKALD_Q_DUSK_FOUND)
     end
 }

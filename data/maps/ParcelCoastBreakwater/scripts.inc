@@ -1464,10 +1464,18 @@ ParcelCoastBreakwater_Beachcomber::
 # 666 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelCoastBreakwater/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastBreakwater_Beachcomber_2
+	goto_if_set FLAG_SKALD_Q_TINS_DONE, ParcelCoastBreakwater_Beachcomber_2
 # 672 "data/maps/ParcelCoastBreakwater/scripts.pory"
-	msgbox ParcelCoastBreakwater_Beachcomber_Text_1, MSGBOX_DEFAULT
-# 673 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TINS_FOUND, ParcelCoastBreakwater_Beachcomber_5
+# 679 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TINS, ParcelCoastBreakwater_Beachcomber_8
+# 684 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COAST_ARRIVAL, ParcelCoastBreakwater_Beachcomber_11
+# 690 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastBreakwater_Beachcomber_14
+# 695 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Beachcomber_Text_5, MSGBOX_DEFAULT
+# 696 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	release
 	end
 
@@ -1478,22 +1486,90 @@ ParcelCoastBreakwater_Beachcomber_2:
 	release
 	end
 
+ParcelCoastBreakwater_Beachcomber_5:
+# 673 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Beachcomber_Text_1, MSGBOX_DEFAULT
+# 674 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	giveitem ITEM_NUGGET
+# 675 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	setflag FLAG_SKALD_Q_TINS_DONE
+# 676 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
+ParcelCoastBreakwater_Beachcomber_8:
+# 680 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Beachcomber_Text_2, MSGBOX_DEFAULT
+# 681 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
+ParcelCoastBreakwater_Beachcomber_11:
+# 685 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Beachcomber_Text_3, MSGBOX_DEFAULT
+# 686 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	setflag FLAG_SKALD_Q_TINS
+# 687 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
+ParcelCoastBreakwater_Beachcomber_14:
+# 691 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Beachcomber_Text_4, MSGBOX_DEFAULT
+# 692 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
 
 ParcelCoastBreakwater_Sign::
-# 677 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 700 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	msgbox ParcelCoastBreakwater_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastBreakwater_SignHouse::
-# 681 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 704 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	msgbox ParcelCoastBreakwater_SignHouse_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastBreakwater_ItemPPUp::
-# 684 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 707 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	finditem ITEM_PP_UP
+	end
+
+
+ParcelCoastBreakwater_Dorsey::
+# 711 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	lock
+# 712 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	faceplayer
+# 713 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastBreakwater_Dorsey_2
+# 718 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Dorsey_Text_1, MSGBOX_DEFAULT
+# 719 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
+ParcelCoastBreakwater_Dorsey_2:
+# 714 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Dorsey_Text_0, MSGBOX_DEFAULT
+# 715 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
+
+ParcelCoastBreakwater_Tins::
+# 724 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_TINS, ParcelCoastBreakwater_Tins_2
+# 727 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Tins_Text_0, MSGBOX_SIGN
+# 728 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	setflag FLAG_SKALD_Q_TINS_FOUND
+	end
+
+ParcelCoastBreakwater_Tins_2:
 	end
 
 
@@ -2077,13 +2153,42 @@ ParcelCoastBreakwater_Holger_R5_Text_2:
 
 ParcelCoastBreakwater_Beachcomber_Text_0:
 # 668 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "BEACHCOMBER: Thirty-one. I've written\n"
+	.string "it on the wall in chalk. The tide will\l"
+	.string "have it by spring. That's all right. It\l"
+	.string "was true in between.$"
+
+ParcelCoastBreakwater_Beachcomber_Text_1:
+# 673 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "BEACHCOMBER: Thirty-one. I had\n"
+	.string "twenty-nine. My eyes.\p"
+	.string "Here. The FOUNDATION's own coin for the\n"
+	.string "FOUNDATION's own tins. I find those\l"
+	.string "too.$"
+
+ParcelCoastBreakwater_Beachcomber_Text_2:
+# 680 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "BEACHCOMBER: The rocks past the hut.\n"
+	.string "Start at the wall end. Don't skip the\l"
+	.string "crushed ones; crushed is still a tin.$"
+
+ParcelCoastBreakwater_Beachcomber_Text_3:
+# 685 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "BEACHCOMBER: Count the line for me. My\n"
+	.string "eyes aren't what they were and the\l"
+	.string "CORPS girl's photograph is out of date.\p"
+	.string "Start at the wall end, past the hut, and\n"
+	.string "don't skip the crushed ones.$"
+
+ParcelCoastBreakwater_Beachcomber_Text_4:
+# 691 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "BEACHCOMBER: Fewer tins this month.\n"
 	.string "Three, with the crest. I lined them up\l"
 	.string "anyway. A short line is still a line.\l"
 	.string "Somebody should keep it.$"
 
-ParcelCoastBreakwater_Beachcomber_Text_1:
-# 672 "data/maps/ParcelCoastBreakwater/scripts.pory"
+ParcelCoastBreakwater_Beachcomber_Text_5:
+# 695 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "BEACHCOMBER: Every tide brings\n"
 	.string "something with the crest on it. I line\l"
 	.string "them up along the wall.\p"
@@ -2092,12 +2197,38 @@ ParcelCoastBreakwater_Beachcomber_Text_1:
 	.string "photograph.$"
 
 ParcelCoastBreakwater_Sign_Text_0:
-# 677 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 700 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "MEREHOLT BREAKWATER. Beach closed to\n"
 	.string "bathing pending water quality review.\l"
 	.string "-- Harbour Office$"
 
 ParcelCoastBreakwater_SignHouse_Text_0:
-# 681 "data/maps/ParcelCoastBreakwater/scripts.pory"
+# 704 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "Lifeguard hut. Closed for the season.\n"
 	.string "The season was last year.$"
+
+ParcelCoastBreakwater_Dorsey_Text_0:
+# 714 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "DORSEY: The review kept the beach shut\n"
+	.string "and reopened the breakwater side. Half\l"
+	.string "a beach. I signed that too.\p"
+	.string "First thing I've signed in years that\n"
+	.string "I'd put my name on twice.$"
+
+ParcelCoastBreakwater_Dorsey_Text_1:
+# 718 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "DORSEY: I come down here when the\n"
+	.string "office is loud. The bathing sign is mine.\l"
+	.string "I signed the closure.\p"
+	.string "Nobody signs a beach open, RANGER. You\n"
+	.string "only ever sign them shut.\p"
+	.string "I keep a tin from this beach on my desk.\n"
+	.string "Crest up. I tell visitors it's what we\l"
+	.string "make. It's what washes back.$"
+
+ParcelCoastBreakwater_Tins_Text_0:
+# 727 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "Tins along the rock, crest up, each with\n"
+	.string "a tide line of salt. Thirty-one. Two\l"
+	.string "crushed flat, counted anyway.\p"
+	.string "The newest still has its label.$"

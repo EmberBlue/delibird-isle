@@ -71,3 +71,18 @@ script ParcelHighlandsCentre_Board {
     msgbox(format("RELOCATION NOTICE. Households on the north slope are eligible for the Haukfell Resilience Grant. Conditions: vacate by first snow; sign the geotechnical waiver; no claim against the Foundation's survey works.\pThirty-one signatures. One line left blank, in a hand that pressed hard."), MSGBOX_SIGN)
     end
 }
+
+// --- Councilman DORSEY (fix B, zone 5): the public appearance, then the private moment ---
+script ParcelHighlandsCentre_Dorsey {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_DORSEY_HL)) {
+        msgbox(format("DORSEY: Sit. Nobody's listening; they're at the soup.\pThe old woman up the track won't sign. My mother wouldn't either. We carried her out in the end, my brother and I, with the roof already going.\pI'm quicker about it now. Quicker isn't kinder. I know the difference, RANGER. I've just stopped being able to afford it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("DORSEY: --and the grant is yours the day you sign. The valley houses are warm, the school's a bus ride, and nobody winters on a slope that's moving.\pRANGER. You've come up as well. Good. Witness this one too: the FOUNDATION moving people before the mountain does.\pWrite that word. 'Before.' It's the only one that matters up here."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_DORSEY_HL)
+    release
+    end
+}

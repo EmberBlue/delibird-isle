@@ -214,6 +214,14 @@ static const u8 sNbQ_Beaver[]  = _("The beaver stump: ");
 static const u8 sNbQ_Egg[]     = _("The SWINUB egg: ");
 static const u8 sNbQ_Shell[]   = _("The shell: ");
 static const u8 sNbQ_Drawer[]  = _("GAUTE's drawer: ");
+static const u8 sNbQ_Page[]    = _("The captain's page: ");
+static const u8 sNbQ_Dusk[]    = _("The dusk count: ");
+static const u8 sNbQ_Sign[]    = _("The closure sign: ");
+static const u8 sNbQ_Roof[]    = _("MRS. ASKE's roof: ");
+static const u8 sNbQ_Hives[]   = _("The beekeeper: ");
+static const u8 sNbQ_Mareep[]  = _("The shepherd's MAREEP: ");
+static const u8 sNbQ_Tins[]    = _("The line of tins: ");
+static const u8 sNbQ_Cast[]    = _("The office CASTFORM: ");
 static const struct NbQuest sNbQuests[] =
 {
     {sNbQ_Anni,    FLAG_SKALD_Q_ANNI_NET,    FLAG_SKALD_Q_ANNI_DONE},
@@ -228,6 +236,14 @@ static const struct NbQuest sNbQuests[] =
     {sNbQ_Egg,     0,                        FLAG_SKALD_HL_EGG_GIVEN},
     {sNbQ_Shell,   FLAG_SKALD_Q_SHELL_FOUND, FLAG_SKALD_Q_SHELL_DONE},
     {sNbQ_Drawer,  FLAG_SKALD_Q_DRAWER,      FLAG_SKALD_Q_DRAWER_DONE},
+    {sNbQ_Page,    FLAG_SKALD_Q_PAGE,        FLAG_SKALD_Q_PAGE_DONE},
+    {sNbQ_Dusk,    FLAG_SKALD_Q_DUSK,        FLAG_SKALD_Q_DUSK_DONE},
+    {sNbQ_Sign,    FLAG_SKALD_Q_SIGN,        FLAG_SKALD_Q_SIGN_DONE},
+    {sNbQ_Roof,    FLAG_SKALD_Q_ROOF,        FLAG_SKALD_Q_ROOF_DONE},
+    {sNbQ_Hives,   FLAG_SKALD_Q_HIVES,       FLAG_SKALD_Q_HIVES_DONE},
+    {sNbQ_Mareep,  FLAG_SKALD_Q_MAREEP,      FLAG_SKALD_Q_MAREEP_DONE},
+    {sNbQ_Tins,    FLAG_SKALD_Q_TINS,        FLAG_SKALD_Q_TINS_DONE},
+    {sNbQ_Cast,    FLAG_SKALD_Q_CASTFORM,    FLAG_SKALD_Q_CASTFORM_DONE},
 };
 
 static const u8 sNb_Margins_None[]  = _("The margins are in her hand, in a\nshorthand you can't read yet.\pIt gets easier the more of the\nregion you've read yourself.");
@@ -243,6 +259,14 @@ static const u8 *const sNbMargins[NB_MAX_BADGES] =
     COMPOUND_STRING("A model is a promise about tomorrow\nmade by someone leaving today."),
     COMPOUND_STRING("If you can't fix it, write it down.\nSomeone will need to know it was there."),
 };
+static const u8 sNb_Notes_None[]   = _("Her field notes are in the same\nshorthand as the margins. Nothing\pof them reads yet. Earn the first\ncertification and look again.");
+static const u8 sNb_Notes_Head[]   = _("HER FIELD NOTES, decoded:\p");
+static const u8 sNb_Note_Forest[]  = _("FERNWICK, spring. 28 pairs of WINGULL\non the pond, 3 POLIWAG in the channel.\pAsk who dug the channel straight. Nobody\ndigs a channel straight for the frogs.");
+static const u8 sNb_Note_Wetland[] = _("\pThe basin, after the first pulse.\nBrown water, not grey: that's soil from\pupstream, not the lake. Count the\nstakes. A stake is a promise.");
+static const u8 sNb_Note_Water[]   = _("\pELVSUND. Six voices at the hall and\none ledger. The ledger wins because it\pdoesn't get tired. Make friends with it.\nSLUICE keeps it honest. Keep SLUICE.");
+static const u8 sNb_Note_High[]    = _("\pHAUKFELL. The ground moved two metres\nthis year. I wrote SHIFTED. The grant\poffice wrote 'transitioning'. One of us\ngets paid for the word.");
+static const u8 sNb_Note_Coast[]   = _("\pThe coast. Eleven fish, one length.\nA reef is a nursery is a shelf is a line.\pWatch the nouns change; the thing\ndoesn't. Drink HOLLIS's tea. Write anyway.");
+static const u8 sNb_Note_Marsh[]   = _("\pThe marsh. 41. 41. 39. 40.\nIf you can read this page you've read\pall of them. Then you know what I\ndidn't say. Say it. -- H.");
 static const u8 sNb_Margins_Last[]  = _("\pUnder the last of hers, the first\nline in your own hand, from the marsh:\pCOLLAPSING. Keystone failing.\nIt's true. That's all it has to be.");
 
 static void NbAppendFlagState(u16 doneFlag, u16 startFlag, const u8 *doneWord)
@@ -315,6 +339,20 @@ void SkaldNotebookBuffer(void)
             StringAppend(gStringVar4, sNbQuests[i].name);
             NbAppendFlagState(sNbQuests[i].doneFlag, sNbQuests[i].startFlag, sNb_Done);
         }
+        break;
+    case 4:
+        if (!FlagGet(FLAG_SKALDMERE_FOREST_CERT))
+        {
+            StringCopy(gStringVar4, sNb_Notes_None);
+            break;
+        }
+        StringCopy(gStringVar4, sNb_Notes_Head);
+        StringAppend(gStringVar4, sNb_Note_Forest);
+        if (FlagGet(FLAG_SKALDMERE_WETLAND_CERT))   StringAppend(gStringVar4, sNb_Note_Wetland);
+        if (FlagGet(FLAG_SKALDMERE_WATERSHED_CERT)) StringAppend(gStringVar4, sNb_Note_Water);
+        if (FlagGet(FLAG_SKALDMERE_HIGHLAND_CERT))  StringAppend(gStringVar4, sNb_Note_High);
+        if (FlagGet(FLAG_SKALDMERE_COASTAL_CERT))   StringAppend(gStringVar4, sNb_Note_Coast);
+        if (FlagGet(FLAG_SKALDMERE_FINALE_DONE))    StringAppend(gStringVar4, sNb_Note_Marsh);
         break;
     default:
         if (NbBadgeCount() == 0)

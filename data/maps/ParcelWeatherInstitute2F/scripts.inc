@@ -131,6 +131,19 @@ ParcelWeatherInstitute2F_Director_Rematch_2:
 	end
 
 
+ParcelWeatherInstitute2F_Castform::
+# 73 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_CASTFORM, ParcelWeatherInstitute2F_Castform_2
+# 76 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	msgbox ParcelWeatherInstitute2F_Castform_Text_0, MSGBOX_SIGN
+# 77 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	setflag FLAG_SKALD_Q_CASTFORM_FOUND
+	end
+
+ParcelWeatherInstitute2F_Castform_2:
+	end
+
+
 ParcelWeatherInstitute2F_Director_Text_0:
 # 12 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: The four are yours, and the\n"
@@ -239,3 +252,10 @@ ParcelWeatherInstitute2F_Director_Rematch_Text_3:
 # 67 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: Come back. The sky changes. So do\n"
 	.string "I, slower.$"
+
+ParcelWeatherInstitute2F_Castform_Text_0:
+# 76 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	.string "Under the director's second desk, a\n"
+	.string "CASTFORM, asleep in its rain form.\p"
+	.string "It has been raining very gently on a box\n"
+	.string "of files for some time.$"

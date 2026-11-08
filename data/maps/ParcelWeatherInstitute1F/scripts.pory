@@ -28,6 +28,29 @@ script ParcelWeatherInstitute1F_Tech1 {
 script ParcelWeatherInstitute1F_Tech2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_CASTFORM_DONE)) {
+        msgbox(format("TECHNICIAN: Back at its desk. Rain form, still. It rains very gently on my in-tray now. I've moved the in-tray."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_CASTFORM_FOUND)) {
+        msgbox(format("TECHNICIAN: Under the director's desk. Of course. Rain form. Of course.\pTake this. Management sends them for 'morale'. This is the most morale I've had all year."), MSGBOX_DEFAULT)
+        giveitem(ITEM_RARE_CANDY)
+        setflag(FLAG_SKALD_Q_CASTFORM_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_CASTFORM)) {
+        msgbox(format("TECHNICIAN: Upstairs. It went up the back stair during the storm drill. Look under things. It likes under things."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WEATHER_ARRIVAL)) {
+        msgbox(format("TECHNICIAN: Ours is missing. The CASTFORM. It went up the back stair during the storm drill and nobody's seen it since.\pIf you're going up to the director anyway. Look under things."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_CASTFORM)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("TECHNICIAN: A CASTFORM in every office, still. 'Adaptive thinking.' One of them changed form during the hearing broadcast. Rain. Nobody's explained it. Nobody wants to."), MSGBOX_DEFAULT)
         release

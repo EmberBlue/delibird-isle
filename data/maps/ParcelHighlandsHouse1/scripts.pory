@@ -6,6 +6,29 @@ mapscripts ParcelHighlandsHouse1_MapScripts {
 script ParcelHighlandsHouse1_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_MAREEP_DONE)) {
+        msgbox(format("MAN: Standing. You said standing. She'll come down when the slope stops frightening her, or she won't. Either way I know where she is. That's most of shepherding."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_MAREEP_FOUND)) {
+        msgbox(format("MAN: Standing? Legs braced? That's her. Good.\pTake these. The FOUNDATION sent a box for the relocations. I've no use for them where I'm not going."), MSGBOX_DEFAULT)
+        giveitem(ITEM_HYPER_POTION, 3)
+        setflag(FLAG_SKALD_Q_MAREEP_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_MAREEP)) {
+        msgbox(format("MAN: Above the slide, on the scree. Don't bring her down. Just tell me she's standing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_ARRIVAL)) {
+        msgbox(format("MAN: One of the MAREEP went up after the old grazing. The slope's moving and I can't go up on these knees.\pIf you see her, don't bring her down. Just tell me she's standing."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_MAREEP)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: The leases are enjoined. The slope doesn't know. It'll keep moving at its own speed. So will I."), MSGBOX_DEFAULT)
         release

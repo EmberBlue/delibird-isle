@@ -5,6 +5,13 @@ mapscripts ParcelFloodbasinRelief_MapScripts {
 script ParcelFloodbasinRelief_Aide {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_ROOF_FOUND) && !flag(FLAG_SKALD_Q_ROOF_DONE)) {
+        msgbox(format("AIDE: MRS. ASKE's roof. It's on the sheet. It's been on the sheet for four weeks.\pI'll put it at the top. I'm not supposed to re-order the sheet. Take this and don't tell the councilman I can read."), MSGBOX_DEFAULT)
+        giveitem(ITEM_RARE_CANDY)
+        setflag(FLAG_SKALD_Q_ROOF_DONE)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AIDE: The store's closed. The sheet's an exhibit. The councilman says the basin's recovering nicely. The hearing said 'recovering' is not a measurement. I liked that. I shouldn't have."), MSGBOX_DEFAULT)
         release

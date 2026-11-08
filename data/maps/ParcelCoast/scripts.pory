@@ -1846,3 +1846,23 @@ script ParcelCoast_GymHarland_Rematch {
     release
     end
 }
+
+// --- Councilman DORSEY (fix B, zone 6): the quay ---
+script ParcelCoast_Dorsey {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DORSEY: Development that listens. I said it at the hearing. They wrote down 'listens' in quotes. I've seen the transcript.\pThe quotes are fair."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_DORSEY_CO)) {
+        msgbox(format("DORSEY: You'll find the hearing room up the street when the time comes. I'll be in it. I sit on the review board's local panel. Somebody from here should.\pI know what that looks like. Revolving door. The door revolves because the building only has one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("DORSEY: --six berths, a cold store, and forty jobs that weren't here in spring. And a plaque, because people like to see a thing has a date on it.\pRANGER. The coast too. You're thorough; HOLLIS said so. Witness the quay. Write 'forty'. It's a true number.\pThey're all true numbers. That has never been the problem."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_DORSEY_CO)
+    release
+    end
+}

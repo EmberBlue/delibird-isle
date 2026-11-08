@@ -291,6 +291,29 @@ script ParcelRiver_Aide {
 script ParcelRiver_VendorEggs {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_HIVES_DONE)) {
+        msgbox(format("WOMAN: He came down the next morning with six jars and no apology. I took the jars. Buy something or move along, RANGER. I've a stall."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_HIVES_FOUND)) {
+        msgbox(format("WOMAN: Asleep! Against a hive! I'll give him asleep.\pHere. Three jars. Don't pay. You've earned honey, which is more than most people manage."), MSGBOX_DEFAULT)
+        giveitem(ITEM_HONEY, 3)
+        setflag(FLAG_SKALD_Q_HIVES_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_HIVES)) {
+        msgbox(format("WOMAN: Up the bank, above the plots, where the flowers still come. Six hives. If he's not there, he's in the river, and I'll want to know that too."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_RIVER_ARRIVAL)) {
+        msgbox(format("WOMAN: The honey's from upstream, where the flowers still come. The beekeeper's not been down in a fortnight. His hives are on the bank above the plots.\pI can't leave the stall. You've legs."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_HIVES)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: Eggs, greens, honey. The honey's from upstream, where the flowers still come. More of them this year, the beekeeper says. He says it like he doesn't believe it."), MSGBOX_DEFAULT)
         release
@@ -1890,5 +1913,14 @@ script ParcelRiver_Epilogue {
 script ParcelRiver_ToMillWood {
     warp(MAP_PARCEL_RIVER_MILL_WOOD, 36, 37)
     waitstate
+    end
+}
+
+script ParcelRiver_Hives {
+    if (!flag(FLAG_SKALD_Q_HIVES)) {
+        end
+    }
+    msgbox(format("Six hives on the bank, humming. The beekeeper is asleep against the end one with a smoker in his lap, perfectly well.\pThe flowers are out all along the bank."), MSGBOX_SIGN)
+    setflag(FLAG_SKALD_Q_HIVES_FOUND)
     end
 }

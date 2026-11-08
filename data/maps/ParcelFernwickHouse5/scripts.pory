@@ -6,6 +6,29 @@ mapscripts ParcelFernwickHouse5_MapScripts {
 script ParcelFernwickHouse5_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_PAGE_DONE)) {
+        msgbox(format("OLD MAN: Twenty-eight pairs. It's back in the book, pulp and all. A book with a hole in it is a book with a hole in it. Mine's whole."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_PAGE_FOUND)) {
+        msgbox(format("OLD MAN: You found it. Twenty-eight pairs. I remember writing that. I remember not believing it.\pTake this. I've no use for it now, and HALE won't take presents."), MSGBOX_DEFAULT)
+        giveitem(ITEM_PP_UP)
+        setflag(FLAG_SKALD_Q_PAGE_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_PAGE)) {
+        msgbox(format("OLD MAN: The marsh page. The pond's edge, the far bank, where the CORPS dug. If it's anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("OLD MAN: One page is missing from the '98 book. The marsh page. I dropped it at the pond the day I retired and the CORPS dug the pond out over it last spring.\pIf you're passing the far bank. You'll know it; it'll be the only paper in the water."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_PAGE)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: HALE came by after the hearing. Didn't say much. Sat in that chair for an hour. That's him saying a lot."), MSGBOX_DEFAULT)
         release

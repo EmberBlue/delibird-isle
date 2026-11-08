@@ -143,6 +143,27 @@ script ParcelFloodbasin_Aide2 {
 script ParcelFloodbasin_VilOldWoman {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_ROOF_DONE)) {
+        msgbox(format("MRS. ASKE: They came Tuesday. Not Thursday. Tuesday. Eleven years and it took a stranger looking at a tarp."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_ROOF_FOUND)) {
+        msgbox(format("MRS. ASKE: You looked? Then go and tell the aide you looked. Say it like you mean to write it down. They move faster for the writing down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_ROOF)) {
+        msgbox(format("MRS. ASKE: The house behind the third one, dear. Blue tarp. You can't miss it. Everyone misses it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_FLD_RELIEF_DONE)) {
+        msgbox(format("MRS. ASKE: Thursday, he said. It's been four Thursdays. The tarp's on the house behind the third one.\pGo and look at it, dear. And then go and tell the aide you looked."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_ROOF)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MRS. ASKE: He knows my name. He said it at the hearing, into a microphone, as an example of local partnership. Eleven years, and I was an example."), MSGBOX_DEFAULT)
         release
@@ -1861,5 +1882,14 @@ script ParcelFloodbasin_GymBreen_Rematch {
     trainerbattle_no_intro(TRAINER_SKALD_GYM3_R, format("BREEN: …Fine. You can carry it."))
     msgbox(format("BREEN: Any time the loads are down. Mind them."), MSGBOX_DEFAULT)
     release
+    end
+}
+
+script ParcelFloodbasin_TarpRoof {
+    if (!flag(FLAG_SKALD_Q_ROOF)) {
+        end
+    }
+    msgbox(format("A blue tarp weighted with stones over half a roof. Four Thursdays of weather on it.\pThe stones have shifted. Somebody re-stacks them every morning."), MSGBOX_SIGN)
+    setflag(FLAG_SKALD_Q_ROOF_FOUND)
     end
 }

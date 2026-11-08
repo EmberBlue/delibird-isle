@@ -1492,6 +1492,19 @@ Movement_ParcelFernwick_PerrinOut:
 	walk_up
 	step_end
 
+ParcelFernwick_PondPage::
+# 763 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_PAGE, ParcelFernwick_PondPage_2
+# 766 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PondPage_Text_0, MSGBOX_SIGN
+# 767 "data/maps/ParcelFernwick/scripts.pory"
+	setflag FLAG_SKALD_Q_PAGE_FOUND
+	end
+
+ParcelFernwick_PondPage_2:
+	end
+
+
 ParcelFernwick_GateWard_Text_0:
 # 22 "data/maps/ParcelFernwick/scripts.pory"
 	.string "WARD: Station checkpoint. Nobody goes\n"
@@ -2211,3 +2224,11 @@ ParcelFernwick_PerrinScene_Text_3:
 ParcelFernwick_PerrinTalk_Text_0:
 # 755 "data/maps/ParcelFernwick/scripts.pory"
 	.string "PERRIN: Hang on, I'm coming to you.$"
+
+ParcelFernwick_PondPage_Text_0:
+# 766 "data/maps/ParcelFernwick/scripts.pory"
+	.string "Under the pond's edge, a page gone to\n"
+	.string "pulp. One line still legible, in a square\l"
+	.string "hand:\p"
+	.string "'Marsh page. 28 pairs. The low years\n"
+	.string "start here.'$"

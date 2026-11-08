@@ -122,6 +122,29 @@ ParcelHighlandsCentre_Board::
 	end
 
 
+ParcelHighlandsCentre_Dorsey::
+# 77 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	lock
+# 78 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	faceplayer
+# 79 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALD_DORSEY_HL, ParcelHighlandsCentre_Dorsey_2
+# 84 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Dorsey_Text_1, MSGBOX_DEFAULT
+# 85 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	setflag FLAG_SKALD_DORSEY_HL
+# 86 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	release
+	end
+
+ParcelHighlandsCentre_Dorsey_2:
+# 80 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Dorsey_Text_0, MSGBOX_DEFAULT
+# 81 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	release
+	end
+
+
 ParcelHighlandsCentre_Host_Text_0:
 # 9 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "HOST: Your survey said SHIFTED. Ours\n"
@@ -215,3 +238,30 @@ ParcelHighlandsCentre_Board_Text_0:
 	.string "the Foundation's survey works.\p"
 	.string "Thirty-one signatures. One line left\n"
 	.string "blank, in a hand that pressed hard.$"
+
+ParcelHighlandsCentre_Dorsey_Text_0:
+# 80 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "DORSEY: Sit. Nobody's listening; they're\n"
+	.string "at the soup.\p"
+	.string "The old woman up the track won't sign.\n"
+	.string "My mother wouldn't either. We carried\l"
+	.string "her out in the end, my brother and I,\l"
+	.string "with the roof already going.\p"
+	.string "I'm quicker about it now. Quicker isn't\n"
+	.string "kinder. I know the difference, RANGER.\l"
+	.string "I've just stopped being able to afford\l"
+	.string "it.$"
+
+ParcelHighlandsCentre_Dorsey_Text_1:
+# 84 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "DORSEY: --and the grant is yours the\n"
+	.string "day you sign. The valley houses are\l"
+	.string "warm, the school's a bus ride, and\l"
+	.string "nobody winters on a slope that's\l"
+	.string "moving.\p"
+	.string "RANGER. You've come up as well. Good.\n"
+	.string "Witness this one too: the FOUNDATION\l"
+	.string "moving people before the mountain\l"
+	.string "does.\p"
+	.string "Write that word. 'Before.' It's the only\n"
+	.string "one that matters up here.$"

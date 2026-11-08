@@ -68,3 +68,12 @@ script ParcelWeatherInstitute2F_Director_Rematch {
     release
     end
 }
+
+script ParcelWeatherInstitute2F_Castform {
+    if (!flag(FLAG_SKALD_Q_CASTFORM)) {
+        end
+    }
+    msgbox(format("Under the director's second desk, a CASTFORM, asleep in its rain form.\pIt has been raining very gently on a box of files for some time."), MSGBOX_SIGN)
+    setflag(FLAG_SKALD_Q_CASTFORM_FOUND)
+    end
+}

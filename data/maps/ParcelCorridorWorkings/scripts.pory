@@ -664,12 +664,29 @@ script ParcelCorridorWorkings_Lise_R5 {
 script ParcelCorridorWorkings_Miner {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_SIGN_DONE)) {
+        msgbox(format("MINER: The sign's in the file. Exhibit one, the clerk says. Thirty years I carried it and it took a ranger to carry it the last hundred yards."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_SIGN)) {
+        msgbox(format("MINER: You've got the sign. The crew hut, up the cut. Give it to the clerk, not the foreman. The clerk reads."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_SIGN_SEEN)) {
+        msgbox(format("MINER: The closure sign. 1998, CORPS stamp, my name on the back. It's in my shed behind the hut and the clerk wants it for the Phase 2 file.\pMy knees won't carry it up the cut. You carry it."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_SIGN)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MINER: They logged it a quarry; now it's logged 'pending'. I carried the closure sign in '98. I'd carry it again. Nobody's asked. I've got it in the shed."), MSGBOX_DEFAULT)
         release
         end
     }
     msgbox(format("MINER: Closed in '98. The CORPS signed the closure; I carried the sign. The road crew took the sign down for the ballast and nobody signed that.\pEight of them in here now with lamps and opinions. Mind the props."), MSGBOX_DEFAULT)
+    setflag(FLAG_SKALD_Q_SIGN_SEEN)
     release
     end
 }

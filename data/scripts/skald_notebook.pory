@@ -23,8 +23,12 @@ script Skald_EventScript_FieldNotebook {
                 setvar(VAR_0x8004, 3)
                 special(SkaldNotebookBuffer)
                 msgbox(gStringVar4, MSGBOX_DEFAULT)
+            case 4:
+                setvar(VAR_0x8004, 4)
+                special(SkaldNotebookBuffer)
+                msgbox(gStringVar4, MSGBOX_DEFAULT)
         }
-    } while (var(VAR_RESULT) < 4)
+    } while (var(VAR_RESULT) < 5)
     closemessage
     releaseall
     end

@@ -29,6 +29,13 @@ script ParcelCorridorHut_Foreman {
 script ParcelCorridorHut_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_SIGN) && !flag(FLAG_SKALD_Q_SIGN_DONE)) {
+        msgbox(format("CLERK: The closure sign. 1998, CORPS stamp, the miner's name on the back. That goes in the Phase 2 file as exhibit one. Nobody can say the gallery wasn't closed now.\pTake these for the carrying. The foreman keeps them for the lads; the lads don't read either."), MSGBOX_DEFAULT)
+        giveitem(ITEM_REVIVE, 2)
+        setflag(FLAG_SKALD_Q_SIGN_DONE)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CLERK: Eleven pages, filed where they couldn't be unfiled. They weren't. They were read. I didn't sign them. I'm thinking I should have."), MSGBOX_DEFAULT)
         release

@@ -14,13 +14,15 @@ Skald_EventScript_FieldNotebook_3:
 	case 2, Skald_EventScript_FieldNotebook_8
 # 22 "data/scripts/skald_notebook.pory"
 	case 3, Skald_EventScript_FieldNotebook_9
+# 26 "data/scripts/skald_notebook.pory"
+	case 4, Skald_EventScript_FieldNotebook_10
 Skald_EventScript_FieldNotebook_2:
-# 27 "data/scripts/skald_notebook.pory"
-	compare VAR_RESULT, 4
+# 31 "data/scripts/skald_notebook.pory"
+	compare VAR_RESULT, 5
 	goto_if_lt Skald_EventScript_FieldNotebook_3
-# 28 "data/scripts/skald_notebook.pory"
+# 32 "data/scripts/skald_notebook.pory"
 	closemessage
-# 29 "data/scripts/skald_notebook.pory"
+# 33 "data/scripts/skald_notebook.pory"
 	releaseall
 	end
 
@@ -57,6 +59,15 @@ Skald_EventScript_FieldNotebook_9:
 # 24 "data/scripts/skald_notebook.pory"
 	special SkaldNotebookBuffer
 # 25 "data/scripts/skald_notebook.pory"
+	msgbox gStringVar4, MSGBOX_DEFAULT
+	goto Skald_EventScript_FieldNotebook_2
+
+Skald_EventScript_FieldNotebook_10:
+# 27 "data/scripts/skald_notebook.pory"
+	setvar VAR_0x8004, 4
+# 28 "data/scripts/skald_notebook.pory"
+	special SkaldNotebookBuffer
+# 29 "data/scripts/skald_notebook.pory"
 	msgbox gStringVar4, MSGBOX_DEFAULT
 	goto Skald_EventScript_FieldNotebook_2
 

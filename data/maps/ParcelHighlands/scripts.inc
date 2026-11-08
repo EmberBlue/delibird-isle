@@ -3955,6 +3955,19 @@ ParcelHighlands_GymVale_Rematch_2:
 	end
 
 
+ParcelHighlands_Mareep::
+# 1879 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_MAREEP, ParcelHighlands_Mareep_2
+# 1882 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Mareep_Text_0, MSGBOX_SIGN
+# 1883 "data/maps/ParcelHighlands/scripts.pory"
+	setflag FLAG_SKALD_Q_MAREEP_FOUND
+	end
+
+ParcelHighlands_Mareep_2:
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 39 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -5740,3 +5753,11 @@ ParcelHighlands_GymVale_Rematch_Text_2:
 ParcelHighlands_GymVale_Rematch_Text_3:
 # 1873 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: The slope's here when you are.$"
+
+ParcelHighlands_Mareep_Text_0:
+# 1882 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A MAREEP on the scree above the slide,\n"
+	.string "legs braced, wool full of grit. It looks\l"
+	.string "at you.\p"
+	.string "It is not coming down. It is, very\n"
+	.string "definitely, standing.$"

@@ -664,6 +664,29 @@ script ParcelCoastBreakwater_Holger_R5 {
 script ParcelCoastBreakwater_Beachcomber {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_TINS_DONE)) {
+        msgbox(format("BEACHCOMBER: Thirty-one. I've written it on the wall in chalk. The tide will have it by spring. That's all right. It was true in between."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_TINS_FOUND)) {
+        msgbox(format("BEACHCOMBER: Thirty-one. I had twenty-nine. My eyes.\pHere. The FOUNDATION's own coin for the FOUNDATION's own tins. I find those too."), MSGBOX_DEFAULT)
+        giveitem(ITEM_NUGGET)
+        setflag(FLAG_SKALD_Q_TINS_DONE)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_Q_TINS)) {
+        msgbox(format("BEACHCOMBER: The rocks past the hut. Start at the wall end. Don't skip the crushed ones; crushed is still a tin."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COAST_ARRIVAL)) {
+        msgbox(format("BEACHCOMBER: Count the line for me. My eyes aren't what they were and the CORPS girl's photograph is out of date.\pStart at the wall end, past the hut, and don't skip the crushed ones."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_TINS)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BEACHCOMBER: Fewer tins this month. Three, with the crest. I lined them up anyway. A short line is still a line. Somebody should keep it."), MSGBOX_DEFAULT)
         release
@@ -682,3 +705,26 @@ script ParcelCoastBreakwater_SignHouse {
     end
 }
 script ParcelCoastBreakwater_ItemPPUp { finditem(ITEM_PP_UP) end }
+
+// --- DORSEY, off the clock, by the sign he signed ---
+script ParcelCoastBreakwater_Dorsey {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DORSEY: The review kept the beach shut and reopened the breakwater side. Half a beach. I signed that too.\pFirst thing I've signed in years that I'd put my name on twice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("DORSEY: I come down here when the office is loud. The bathing sign is mine. I signed the closure.\pNobody signs a beach open, RANGER. You only ever sign them shut.\pI keep a tin from this beach on my desk. Crest up. I tell visitors it's what we make. It's what washes back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCoastBreakwater_Tins {
+    if (!flag(FLAG_SKALD_Q_TINS)) {
+        end
+    }
+    msgbox(format("Tins along the rock, crest up, each with a tide line of salt. Thirty-one. Two crushed flat, counted anyway.\pThe newest still has its label."), MSGBOX_SIGN)
+    setflag(FLAG_SKALD_Q_TINS_FOUND)
+    end
+}

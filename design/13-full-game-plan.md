@@ -288,3 +288,20 @@ quest is built, how the peer works) before they are asked six more times.
   the drawer that's for sandwiches now, Hale sleeping a whole night, the
   poster going back up. Dorsey keeps his courtesy and his sluice. 45,000
   hand-written words (69,900 with the generated rematch lines).
+- **2026-11-08 — Dorsey in zones 5 and 6 (fix B complete), eight more side
+  quests, Heron's notes.** Dorsey stands in the Haukfell warming centre
+  (the grant speech; then, privately, the mother he carried out with the
+  roof already going) and on the Coast quay (forty true numbers; then the
+  review board's local panel and the door that revolves because the
+  building only has one), with a third, off-duty moment by the bathing
+  sign he signed on the breakwater. Eight quests, one per zone, each on a
+  resident the player already knows: the captain's missing marsh page in
+  the Fernwick pond, the hide's dusk count, the miner's closure sign
+  carried to the crew hut as exhibit one, Mrs. Aske's tarp roof moved to
+  the top of the sheet, the beekeeper asleep against his hive, the
+  shepherd's MAREEP standing on the scree, the beachcomber's thirty-one
+  tins, the Station's CASTFORM raining on a box of files. Flags for all of
+  it are aliased onto item flags of vanilla maps the hack never visits (the
+  flag table is otherwise full). The Field Notebook gained "Her notes":
+  one of Heron's survey notes decodes per certification, the marsh one
+  after the finale. Fifteen side quests in all; 46,400 hand-written words.

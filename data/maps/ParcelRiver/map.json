@@ -790,6 +790,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelRiver_BeaverStump"
+    },
+    {
+      "type": "sign",
+      "x": 50,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiver_Hives"
     }
   ]
 }
