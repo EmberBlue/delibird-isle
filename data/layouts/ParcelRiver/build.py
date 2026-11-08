@@ -58,6 +58,13 @@ for y in range(36, 40):
         mid = get(x, y); col = (words[y * W + x] >> 10) & 3
         if mid >= 512: put(x, y, 199 if col else GRASS, col, 3)   # 199 = canopy; the 2x2 tree ids have no palette here
 
+
+# houses added 2026-11-08 (interiors with residents)
+house(30, 8)
+house(3, 27)
+house(22, 27)
+house(13, 20)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelRiver: wrote {W}x{H} map.bin")

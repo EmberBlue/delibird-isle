@@ -1,0 +1,30 @@
+// ParcelFernwickHouse4 -- a house in Fernwick: residents in two story states (before / after the hearing).
+
+mapscripts ParcelFernwickHouse4_MapScripts {
+}
+
+script ParcelFernwickHouse4_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: The hearing asked for every page. I carried them to the coast myself. Eleven hundred, their clerk said. I'd counted twelve."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: I file the field reports at the Survey office. Yours come in thicker than anyone's. I've started a second drawer."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHouse4_Boy {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: Dad read your name in the paper and said 'wet on purpose'. He was smiling when he said it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("BOY: Dad says the rangers are the ones who get wet on purpose."), MSGBOX_DEFAULT)
+    release
+    end
+}

@@ -549,6 +549,13 @@
       "elevation": 0,
       "dest_map": "MAP_PARCEL_FLOODBASIN_WORKS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 87,
+      "elevation": 0,
+      "dest_map": "MAP_PARCEL_FLOODBASIN_HOUSE3",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

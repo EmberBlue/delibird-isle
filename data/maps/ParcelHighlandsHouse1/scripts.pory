@@ -1,0 +1,30 @@
+// ParcelHighlandsHouse1 -- a house in Highlands: residents in two story states (before / after the hearing).
+
+mapscripts ParcelHighlandsHouse1_MapScripts {
+}
+
+script ParcelHighlandsHouse1_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: The leases are enjoined. The slope doesn't know. It'll keep moving at its own speed. So will I."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: Sheep on the high ground until the ground stopped being ground. Now they graze the lower slope and I watch the upper one move."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelHighlandsHouse1_Girl {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: Grandad went to the warming centre. He had the cocoa. He said it was good, and then he was quiet for a long time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("GIRL: The warming centre has cocoa. HOLLIS said we could have as much as we liked. Grandad said nothing's as much as you like."), MSGBOX_DEFAULT)
+    release
+    end
+}

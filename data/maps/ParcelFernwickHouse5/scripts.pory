@@ -1,0 +1,30 @@
+// ParcelFernwickHouse5 -- a house in Fernwick: residents in two story states (before / after the hearing).
+
+mapscripts ParcelFernwickHouse5_MapScripts {
+}
+
+script ParcelFernwickHouse5_OldMan {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: HALE came by after the hearing. Didn't say much. Sat in that chair for an hour. That's him saying a lot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("OLD MAN: Thirty years in the CORPS. We counted everything and saved less than we counted.\pHALE was my cadet. He still stands like one."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHouse5_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: He got the notebooks out and read your filing against them. Then he put them away and said 'good'. Just that."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: He keeps his old notebooks in the chest. Every page is a river that isn't there now."), MSGBOX_DEFAULT)
+    release
+    end
+}

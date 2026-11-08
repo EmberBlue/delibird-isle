@@ -1,0 +1,30 @@
+// ParcelRiverHouse6 -- a house in River: residents in two story states (before / after the hearing).
+
+mapscripts ParcelRiverHouse6_MapScripts {
+}
+
+script ParcelRiverHouse6_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: SLUICE had me re-read every gauge on the spine after the hearing. Same numbers. She wanted them in my hand, not the Board's."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: Meter reader for the WATER BOARD. I read what the river does. The Board reads what I write. Different things, sometimes."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRiverHouse6_Girl {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: The river's budget got bigger! Dad says it's not money. I said I know, Dad."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("GIRL: Dad says the river has a budget. I said rivers don't have money. He said that's the problem."), MSGBOX_DEFAULT)
+    release
+    end
+}

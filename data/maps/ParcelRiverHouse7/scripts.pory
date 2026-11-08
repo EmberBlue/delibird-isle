@@ -1,0 +1,30 @@
+// ParcelRiverHouse7 -- a house in River: residents in two story states (before / after the hearing).
+
+mapscripts ParcelRiverHouse7_MapScripts {
+}
+
+script ParcelRiverHouse7_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: HARLAND spoke at the hearing for the river people too. His name was in it where he put it. So's mine, under his."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: I net the slow water below the town. Ten years ago the net came up heavy. Now it comes up honest."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRiverHouse7_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: Mended the net for the review season. Smaller mesh, she says. Let the small ones through. We've learnt that the slow way."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: My wife fishes; I mend. The holes in the net are the same size every year. The fish aren't."), MSGBOX_DEFAULT)
+    release
+    end
+}

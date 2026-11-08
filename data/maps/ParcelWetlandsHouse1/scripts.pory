@@ -1,0 +1,30 @@
+// ParcelWetlandsHouse1 -- a house in Wetlands: residents in two story states (before / after the hearing).
+
+mapscripts ParcelWetlandsHouse1_MapScripts {
+}
+
+script ParcelWetlandsHouse1_Fisher {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: The works' permit has a new page. I read it at the office. The discharge has a number on it now. A number you can argue with."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("FISHER: Landing's been sick since the discharge. I fish upstream of it now. Upstream of it is a long way."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlandsHouse1_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: A CORPS monitor sits on the bank with a jar. I bring him tea. He says the jar's getting clearer. I'll believe the children's feet before the jar."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: The children aren't to swim off the landing. They do anyway. We did."), MSGBOX_DEFAULT)
+    release
+    end
+}

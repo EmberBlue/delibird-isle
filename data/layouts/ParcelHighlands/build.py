@@ -53,6 +53,11 @@ rect(11, 5, 11, 7, 199, 1)
 put(24, 36, 0x259, 1, 0)
 put(24, 37, 0x261, 0, 3)
 
+
+# houses added 2026-11-08 (interiors with residents)
+house(10, 64)
+house(24, 58)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelHighlands: wrote {W}x{H} map.bin")

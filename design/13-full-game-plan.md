@@ -268,3 +268,13 @@ quest is built, how the peer works) before they are asked six more times.
   fisherman on the far island who isn't in the quota, 33–38). Each trainer
   got its tiers: 32 trainers, 160 battles. 84 maps, 1,021 reachable
   battles, TRAINERS_COUNT 1878.
+- **2026-11-08 — 100 maps.** Fifteen houses painted into the towns (four in
+  Fernwick, four in Elvsund, one in Leirvik, two in Haukfell, two in
+  Reedmere, two on the Coast) and the breakwater's lifeguard hut, every
+  one an enterable interior on a vanilla house layout with two or three
+  residents who speak before and after the hearing (a retired ranger who
+  was Hale's captain, the miller whose race ran for an hour, the cannery
+  sorter whose eleven-fish line was read aloud, the lifeguard who says a
+  true thing forty times a day). Houses go in with the General house block
+  through each zone's build.py; the audit's reachability caught the three
+  old objects the new walls landed on. 41,000 hand-written words.

@@ -1,0 +1,43 @@
+// ParcelCoastBreakwaterHut -- a house in CoastBreakwater: residents in two story states (before / after the hearing).
+
+mapscripts ParcelCoastBreakwaterHut_MapScripts {
+}
+
+script ParcelCoastBreakwaterHut_Lifeguard {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("LIFEGUARD: Closed 'pending review'. The review's running, so the sign stays, and so do I. It's good work, saying a true thing forty times a day."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("LIFEGUARD: Beach is closed to bathing. I'm paid to sit here and say so. I say so about forty times a day. You're forty-one."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCoastBreakwaterHut_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: The TUBERS came back when the review posted the readings. Mums read the readings. Mums are the whole economy of a beach."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: I sold ices here for twenty summers. Now I sell them to the lifeguard. He's my only customer and he's on a diet."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCoastBreakwaterHut_Tuber {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("TUBER: The readings say it's fine on the breakwater side! Mum read them. I'm swimming. Properly. Watch."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("TUBER: I'm not swimming. I'm standing in the water. That's different. The sign says BATHING."), MSGBOX_DEFAULT)
+    release
+    end
+}

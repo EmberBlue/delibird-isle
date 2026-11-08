@@ -1,0 +1,30 @@
+// ParcelWetlandsHouse2 -- a house in Wetlands: residents in two story states (before / after the hearing).
+
+mapscripts ParcelWetlandsHouse2_MapScripts {
+}
+
+script ParcelWetlandsHouse2_OldMan {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: GUNNAR's SURSKIT count went up this month. First time. He told everyone. He told me twice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("OLD MAN: I cut reed for thatch. Twelve-year rounds, like the mill wood. The reeds don't come back on the twelve now. Eight, maybe."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelWetlandsHouse2_Boy {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: Forty-nine! I'm the clicker now. GUNNAR says I'm 'very accurate'."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("BOY: I helped GUNNAR count. He let me hold the clicker. Forty-four!"), MSGBOX_DEFAULT)
+    release
+    end
+}

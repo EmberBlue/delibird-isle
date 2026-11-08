@@ -1,0 +1,30 @@
+// ParcelHighlandsHouse2 -- a house in Highlands: residents in two story states (before / after the hearing).
+
+mapscripts ParcelHighlandsHouse2_MapScripts {
+}
+
+script ParcelHighlandsHouse2_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: The bore's capped. He's on half wage pending survey. He sleeps at night now. I'll take the half."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: Bore crew's wife. He's paid by MEREHOLT and fed by me, and I know which of us he'd keep."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelHighlandsHouse2_Boy {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: The ranger found the tarn under the hill. Dad says he knew. I asked why he didn't say. He said that's the whole question, son."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("BOY: Dad says the hill's full of water that's older than the town. I asked if it's older than Grandad. He said older than everything."), MSGBOX_DEFAULT)
+    release
+    end
+}

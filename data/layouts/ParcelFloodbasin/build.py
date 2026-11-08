@@ -46,6 +46,10 @@ put(19, 91, SIGN, 1)
 rect(9, 0, 11, 0, GRASS, 0, 0)      # edge tiles at 0: transition to the River's level
 rect(12, 1, 14, 1, GRASS, 0, 3)
 
+
+# houses added 2026-11-08 (interiors with residents)
+house(18, 84)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelFloodbasin: wrote {W}x{H} map.bin")

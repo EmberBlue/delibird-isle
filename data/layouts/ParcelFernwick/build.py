@@ -72,6 +72,19 @@ for x, y in [(13, 55), (18, 55), (13, 57), (18, 57)]:
 # 4. a hedge of trees to break the long east pavement (rows 47-53 x=30-35)
 tree_block(32, 49); tree_block(34, 51)
 
+
+HOUSE = [[8, 9, 9, 10], [16, 17, 17, 18], [24, 25, 11, 26], [32, 33, 19, 34]]   # General's small house; 33 is the door
+def house(x, y):
+    for j, row in enumerate(HOUSE):
+        for i, mid in enumerate(row):
+            put(x + i, y + j, mid, 0 if mid == 33 else 1, 0)
+
+# houses added 2026-11-08 (interiors with residents)
+house(20, 39)
+house(11, 46)
+house(20, 46)
+house(19, 8)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelFernwick: wrote {W}x{H} map.bin")

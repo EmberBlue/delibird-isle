@@ -1,0 +1,30 @@
+// ParcelRiverHouse5 -- a house in River: residents in two story states (before / after the hearing).
+
+mapscripts ParcelRiverHouse5_MapScripts {
+}
+
+script ParcelRiverHouse5_OldMan {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: The allocation gives the race a trickle in spring. A trickle turns a wheel if you've the patience. I've the patience."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("OLD MAN: I ran the mill until the race went dry. The wood's still there. The race is still there. The water isn't."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRiverHouse5_OldWoman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD WOMAN: He came back from the mill wet to the knee and grinning. The race ran an hour. One hour, in forty years of waiting."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("OLD WOMAN: My husband walks to the mill every morning to oil a wheel that doesn't turn. I pack him a lunch. It's a marriage."), MSGBOX_DEFAULT)
+    release
+    end
+}

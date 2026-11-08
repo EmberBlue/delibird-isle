@@ -1,0 +1,30 @@
+// ParcelCoastHouse4 -- a house in Coast: residents in two story states (before / after the hearing).
+
+mapscripts ParcelCoastHouse4_MapScripts {
+}
+
+script ParcelCoastHouse4_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: The line's on half days under the review. Half days, full pay; HARLAND's union saw to that. I've a garden now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: Cannery line, six to two. The tins come down faster than the fish come in. Somebody's filling tins with sea."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCoastHouse4_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: They read the eleven-fish line at the hearing. My line. I sorted them. Nobody asked my name. That's fine. It was true."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: I sort the catch. Eleven fish, every one the same length. I didn't need a ranger to tell me. I needed one to write it down."), MSGBOX_DEFAULT)
+    release
+    end
+}

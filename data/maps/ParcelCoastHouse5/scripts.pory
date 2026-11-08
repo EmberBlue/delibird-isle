@@ -1,0 +1,30 @@
+// ParcelCoastHouse5 -- a house in Coast: residents in two story states (before / after the hearing).
+
+mapscripts ParcelCoastHouse5_MapScripts {
+}
+
+script ParcelCoastHouse5_OldMan {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: The review grounds half the fleet to spring. The reef won't come back in a spring. But it'll know we stopped."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("OLD MAN: Fished the dredge line before it was a line. It was a reef. Then it was a resource. Now it's a line."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelCoastHouse5_Girl {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: Grandad cried at the hearing on the radio. Then he said 'good'. Both at once."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("GIRL: Grandad takes me to see the boats not go out. He says it's important to look at it."), MSGBOX_DEFAULT)
+    release
+    end
+}

@@ -69,6 +69,17 @@ rect(37, 40, 37, 41, CANOPY, 1)
 # 5. the route sign at the Fernwick funnel
 put(15, 62, SIGN, 1)
 
+
+HOUSE = [[8, 9, 9, 10], [16, 17, 17, 18], [24, 25, 11, 26], [32, 33, 19, 34]]   # General's small house; 33 is the door
+def house(x, y):
+    for j, row in enumerate(HOUSE):
+        for i, mid in enumerate(row):
+            put(x + i, y + j, mid, 0 if mid == 33 else 1, 0)
+
+# houses added 2026-11-08 (interiors with residents)
+house(24, 57)
+house(10, 57)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelWetlands: wrote {W}x{H} map.bin")

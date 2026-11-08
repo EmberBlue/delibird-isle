@@ -1,0 +1,30 @@
+// ParcelFloodbasinHouse3 -- a house in Floodbasin: residents in two story states (before / after the hearing).
+
+mapscripts ParcelFloodbasinHouse3_MapScripts {
+}
+
+script ParcelFloodbasinHouse3_OldWoman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD WOMAN: Phase 2 goes ahead. Dry sheds. My door frame gets a third line or it doesn't. The paper says it doesn't. The paper wasn't here in '09."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("OLD WOMAN: The pulse came through this house twice. Once in '09, once the spring you came. Both water lines are on the door frame. Look."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFloodbasinHouse3_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: I kept the blanket. MEREHOLT on it. It's warm. I'm not giving back a warm blanket to make a point."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: We stacked the sandbags where the photographer stood. DORSEY shook my hand in front of the camera. It was a good handshake. I'll give him that."), MSGBOX_DEFAULT)
+    release
+    end
+}

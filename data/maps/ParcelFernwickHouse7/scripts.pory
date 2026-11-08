@@ -1,0 +1,30 @@
+// ParcelFernwickHouse7 -- a house in Fernwick: residents in two story states (before / after the hearing).
+
+mapscripts ParcelFernwickHouse7_MapScripts {
+}
+
+script ParcelFernwickHouse7_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: They say the works have a new page in their permit. I'd like to go home. Not yet. The nose knows before the paper does."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: We moved here from REEDMERE when the water turned. The house smells of marsh when it rains. I don't mind."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHouse7_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: The map's been corrected. First time in eleven years. Your name's on the correction slip."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: I drive the station truck. Eight zones, one truck, and a map that's wrong about three of them."), MSGBOX_DEFAULT)
+    release
+    end
+}

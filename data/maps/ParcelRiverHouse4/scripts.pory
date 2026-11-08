@@ -1,0 +1,30 @@
+// ParcelRiverHouse4 -- a house in River: residents in two story states (before / after the hearing).
+
+mapscripts ParcelRiverHouse4_MapScripts {
+}
+
+script ParcelRiverHouse4_Woman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: The Board posted the allocations with six names under them. I read mine twice. It's fair. First time I've written 'fair' on a form."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("WOMAN: Fish on market day, vegetables the rest. The river gives both and the Board meters both."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelRiverHouse4_Boy {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: Nineteen stalls today! I counted twice, like the ranger does."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("BOY: I count the stalls. Twenty-two on a good day. Fourteen this spring."), MSGBOX_DEFAULT)
+    release
+    end
+}

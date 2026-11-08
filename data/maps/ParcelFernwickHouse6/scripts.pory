@@ -1,0 +1,30 @@
+// ParcelFernwickHouse6 -- a house in Fernwick: residents in two story states (before / after the hearing).
+
+mapscripts ParcelFernwickHouse6_MapScripts {
+}
+
+script ParcelFernwickHouse6_Man {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: Fed the hearing's clerks for a week. They eat like people who sit all day. They have."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("MAN: I cook for the District Station. Rangers eat like people who've walked all day, because they have."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelFernwickHouse6_Girl {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: Dad says you fed a whole region a truth. He says that's cooking."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("GIRL: I'm going to be a ranger. Or a cook. Dad says they're the same job."), MSGBOX_DEFAULT)
+    release
+    end
+}
