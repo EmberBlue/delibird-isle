@@ -250,8 +250,18 @@ This wound is **load-bearing.**
 
 ### OPEN (remaining details)
 
-- Whether Wren ever bonds with a Smeargle again — likely *no* during the main
-  game; a possible late-game beat. **Defer.**
+- ~~Whether Wren ever bonds with a Smeargle again~~ **Resolved (built
+  2026-11-08).** Not during the main game. After the record is filed and
+  the epilogue has run, a SMEARGLE sits on the Fernwick pond bank painting
+  the line where the water *was*; it can be left there, or it can come
+  (`ParcelFernwick_Smeargle`, Lv 45). "It is not Sketch. It does not try to
+  be." The thread it closes runs through the game as private narration:
+  the boards at Saltwick, the moment the partner decides in the meadow,
+  Hale noticing the older notebook, the discharge pipe at Reedmere, Ilex's
+  "learned to look from a brush", and Heron's confession — she kept the
+  eleven-page letter Wren wrote the winter Sketch stopped painting, and
+  answered it with a model. Wild SMEARGLE are the rarest slot at the
+  Reedmere hide and in the Keystone Marsh.
 
 ## Human antagonists (grounded, never cartoon)
 

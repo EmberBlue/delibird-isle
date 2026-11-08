@@ -467,38 +467,40 @@ ParcelMeadow_Recognition::
 # 284 "data/maps/ParcelMeadow/scripts.pory"
 	msgbox ParcelMeadow_Recognition_Text_1, MSGBOX_DEFAULT
 # 285 "data/maps/ParcelMeadow/scripts.pory"
-	closemessage
-# 286 "data/maps/ParcelMeadow/scripts.pory"
-	delay 40
-# 287 "data/maps/ParcelMeadow/scripts.pory"
 	msgbox ParcelMeadow_Recognition_Text_2, MSGBOX_DEFAULT
-# 288 "data/maps/ParcelMeadow/scripts.pory"
+# 286 "data/maps/ParcelMeadow/scripts.pory"
 	closemessage
-# 289 "data/maps/ParcelMeadow/scripts.pory"
-	playse SE_BALL_THROW
-# 290 "data/maps/ParcelMeadow/scripts.pory"
-	delay 30
-# 291 "data/maps/ParcelMeadow/scripts.pory"
-	playse SE_BALL
-# 292 "data/maps/ParcelMeadow/scripts.pory"
-	delay 30
-# 293 "data/maps/ParcelMeadow/scripts.pory"
+# 287 "data/maps/ParcelMeadow/scripts.pory"
+	delay 40
+# 288 "data/maps/ParcelMeadow/scripts.pory"
 	msgbox ParcelMeadow_Recognition_Text_3, MSGBOX_DEFAULT
+# 289 "data/maps/ParcelMeadow/scripts.pory"
+	closemessage
+# 290 "data/maps/ParcelMeadow/scripts.pory"
+	playse SE_BALL_THROW
+# 291 "data/maps/ParcelMeadow/scripts.pory"
+	delay 30
+# 292 "data/maps/ParcelMeadow/scripts.pory"
+	playse SE_BALL
+# 293 "data/maps/ParcelMeadow/scripts.pory"
+	delay 30
 # 294 "data/maps/ParcelMeadow/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
+	msgbox ParcelMeadow_Recognition_Text_4, MSGBOX_DEFAULT
 # 295 "data/maps/ParcelMeadow/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 296 "data/maps/ParcelMeadow/scripts.pory"
 	waitfanfare
 	return
 
 
 ParcelMeadow_AfterRecognition::
-# 300 "data/maps/ParcelMeadow/scripts.pory"
-	setflag FLAG_SYS_POKEMON_GET
 # 301 "data/maps/ParcelMeadow/scripts.pory"
-	clearflag FLAG_SKALD_NO_PARTNER_YET
+	setflag FLAG_SYS_POKEMON_GET
 # 302 "data/maps/ParcelMeadow/scripts.pory"
-	msgbox ParcelMeadow_AfterRecognition_Text_0, MSGBOX_DEFAULT
+	clearflag FLAG_SKALD_NO_PARTNER_YET
 # 303 "data/maps/ParcelMeadow/scripts.pory"
+	msgbox ParcelMeadow_AfterRecognition_Text_0, MSGBOX_DEFAULT
+# 304 "data/maps/ParcelMeadow/scripts.pory"
 	msgbox ParcelMeadow_AfterRecognition_Text_1, MSGBOX_DEFAULT
 	return
 
@@ -731,18 +733,25 @@ ParcelMeadow_Recognition_Text_1:
 	.string "RIN: Don't move! It's deciding!$"
 
 ParcelMeadow_Recognition_Text_2:
-# 287 "data/maps/ParcelMeadow/scripts.pory"
+# 285 "data/maps/ParcelMeadow/scripts.pory"
+	.string "The last time something small decided\n"
+	.string "about you, it had a tail that painted.\p"
+	.string "You hold very still. You find that you\n"
+	.string "are allowed to.$"
+
+ParcelMeadow_Recognition_Text_3:
+# 288 "data/maps/ParcelMeadow/scripts.pory"
 	.string "RIN: ...Well. That's not how it usually\n"
 	.string "goes.\p"
 	.string "Here! Catch!$"
 
-ParcelMeadow_Recognition_Text_3:
-# 293 "data/maps/ParcelMeadow/scripts.pory"
+ParcelMeadow_Recognition_Text_4:
+# 294 "data/maps/ParcelMeadow/scripts.pory"
 	.string "It walked straight into the Ball. No\n"
 	.string "shaking. No fuss.$"
 
 ParcelMeadow_AfterRecognition_Text_0:
-# 302 "data/maps/ParcelMeadow/scripts.pory"
+# 303 "data/maps/ParcelMeadow/scripts.pory"
 	.string "RIN: Congratulations, I guess! Now it's\n"
 	.string "your problem.\p"
 	.string "HALE's at the station. Take the track\n"
@@ -751,7 +760,7 @@ ParcelMeadow_AfterRecognition_Text_0:
 	.string "decided.$"
 
 ParcelMeadow_AfterRecognition_Text_1:
-# 303 "data/maps/ParcelMeadow/scripts.pory"
+# 304 "data/maps/ParcelMeadow/scripts.pory"
 	.string "RIN: Oh, and there's grass out there.\n"
 	.string "Real POKéMON, not meadow POKéMON.\l"
 	.string "Yours will want to fight them. Let it.$"

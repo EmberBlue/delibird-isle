@@ -15411,9 +15411,9 @@
                 "species": "SPECIES_QUAGSIRE"
               },
               {
-                "min_level": 31,
+                "min_level": 32,
                 "max_level": 34,
-                "species": "SPECIES_MARILL"
+                "species": "SPECIES_SMEARGLE"
               }
             ]
           },
@@ -15787,8 +15787,8 @@
               },
               {
                 "min_level": 15,
-                "max_level": 15,
-                "species": "SPECIES_ODDISH"
+                "max_level": 16,
+                "species": "SPECIES_SMEARGLE"
               }
             ]
           },

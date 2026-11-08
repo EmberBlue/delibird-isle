@@ -371,6 +371,7 @@ script ParcelDelibird_GymIlex {
     lock
     faceplayer
     msgbox(format("Ilex turns the red cloth over once, then pockets it.\pIlex: The snowline I'm watching is lower than last Midwinter. I'll have the number before the festival packs up.\pIlex: Numbers don't save a place. They just make it impossible to say later that nobody knew. Carry that with the badge."), MSGBOX_DEFAULT)
+    msgbox(format("Ilex: You hold a pen like somebody who learned to look from a brush. I won't ask.\pRed cloth is red cloth, whoever ties it."), MSGBOX_DEFAULT)
     release
     end
 }

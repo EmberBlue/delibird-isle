@@ -52,6 +52,8 @@ script ParcelIsle_Arrival {
     closemessage
     applymovement(LOCALID_HEAVYCOAT, Movement_BramBack)
     waitmovement(0)
+    msgbox(format("You stand a moment on the boards. The fog has the smell of a wet place at dusk, and for one breath you are nine years old and somebody small is painting the water beside you.\pYou shoulder the pack. You came empty on purpose."), MSGBOX_DEFAULT)
+    closemessage
     setflag(FLAG_SKALDMERE_ARRIVAL_INTRO)
     releaseall
     end

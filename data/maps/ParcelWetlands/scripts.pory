@@ -304,6 +304,7 @@ script ParcelWetlands_EvPipe {
         end
     }
     msgbox(format("A broken discharge pipe, half-buried under the falls. The break is old. The staining inside it is not.\pPhotographed where it lies."), MSGBOX_SIGN)
+    msgbox(format("You have stood over a pipe like this before, at the edge of a marsh nobody called a habitat, beside a friend who had already stopped painting.\pYou did not have the word then. You write it now. It is no comfort. You write it anyway."), MSGBOX_DEFAULT)
     special(SkaldmereCertTaskMark)
     call(ParcelWetlands_CheckEvidenceDone)
     release

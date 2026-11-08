@@ -199,6 +199,10 @@ skeleton:
   Summit, Shoreline Cliffs, Crystal Cavern); the named elder who carries the
   Delibird-guardian lore is **Marta**; the festival's trigger is the finished
   relief round, not a calendar. (§09 *Built*, 2026-11-08)
+- ✅ **Sketch in the game** → the memory runs as private narration from the
+  Saltwick boards to Heron's confession (she kept the letter), and the late
+  Smeargle beat is post-game at the Fernwick pond: a SMEARGLE that is not
+  Sketch and does not try to be. (§04, 2026-11-08)
 - ✅ **Mentor's lever** → a **buried dishonesty** + the **concern's money** (doubled
   leash; same economic lever as on Harland). (§04)
 - ✅ **Ending note** → **clear-eyed grief** (bitter, cold, true; honesty chosen

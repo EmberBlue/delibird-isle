@@ -282,6 +282,7 @@ script ParcelMeadow_Recognition {
     delay(40)
     msgbox(format("...\p...\pIt's coming over."), MSGBOX_DEFAULT)
     msgbox(format("RIN: Don't move! It's deciding!"), MSGBOX_DEFAULT)
+    msgbox(format("The last time something small decided about you, it had a tail that painted.\pYou hold very still. You find that you are allowed to."), MSGBOX_DEFAULT)
     closemessage
     delay(40)
     msgbox(format("RIN: ...Well. That's not how it usually goes.\pHere! Catch!"), MSGBOX_DEFAULT)

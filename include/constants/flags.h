@@ -1238,6 +1238,9 @@
 #define FLAG_SKALD_HIDDEN_SUM_B            FLAG_ITEM_ROUTE_124_RED_SHARD
 #define FLAG_SKALD_HIDDEN_CLF_A            FLAG_ITEM_ROUTE_124_BLUE_SHARD
 #define FLAG_SKALD_HIDDEN_CLF_B            FLAG_ITEM_ROUTE_121_CARBOS
+// the late Smeargle beat (§04 'the memory', resolved post-game at the Fernwick pond)
+#define FLAG_SKALD_SMEARGLE_HIDDEN         FLAG_ITEM_ROUTE_123_ULTRA_BALL
+#define FLAG_SKALD_SMEARGLE_DONE           FLAG_ITEM_ROUTE_126_GREEN_SHARD
 #define FLAG_ITEM_ROUTE_116_POTION                                  0x47A
 #define FLAG_ITEM_ROUTE_119_ELIXIR_2                                0x47B
 #define FLAG_ITEM_ROUTE_120_REVIVE                                  0x47C

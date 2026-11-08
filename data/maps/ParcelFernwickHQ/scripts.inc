@@ -72,8 +72,10 @@ ParcelFernwickHQ_Hale::
 # 136 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Hale_Text_33, MSGBOX_DEFAULT
 # 137 "data/maps/ParcelFernwickHQ/scripts.pory"
-	setflag FLAG_SKALDMERE_STATION_BRIEF
+	msgbox ParcelFernwickHQ_Hale_Text_34, MSGBOX_DEFAULT
 # 138 "data/maps/ParcelFernwickHQ/scripts.pory"
+	setflag FLAG_SKALDMERE_STATION_BRIEF
+# 139 "data/maps/ParcelFernwickHQ/scripts.pory"
 	release
 	end
 
@@ -518,6 +520,13 @@ ParcelFernwickHQ_Hale_Text_32:
 
 ParcelFernwickHQ_Hale_Text_33:
 # 136 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "HALE: You keep one of your own, I see.\n"
+	.string "Older than you are, by the binding.\p"
+	.string "Good. Keep both. Two hands on a page is\n"
+	.string "how a thing gets remembered right.$"
+
+ParcelFernwickHQ_Hale_Text_34:
+# 137 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "HALE: The Certification Hall is across\n"
 	.string "the boulevard. TARN runs the practical.\l"
 	.string "Pass it and you're a provisional for\l"

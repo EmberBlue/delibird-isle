@@ -133,6 +133,7 @@ script ParcelFernwickHQ_Hale {
     giveitem(ITEM_POKE_BALL, 5)
     msgbox(format("HALE: And this came care of the Station, addressed to you, in her hand. Nobody's opened it.\pHer field notebook. Keep it on you. Read it when you can; it'll tell you where you are."), MSGBOX_DEFAULT)
     giveitem(ITEM_FIELD_NOTEBOOK)
+    msgbox(format("HALE: You keep one of your own, I see. Older than you are, by the binding.\pGood. Keep both. Two hands on a page is how a thing gets remembered right."), MSGBOX_DEFAULT)
     msgbox(format("HALE: The Certification Hall is across the boulevard. TARN runs the practical. Pass it and you're a provisional for real.\pThen we'll talk about the marsh."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_STATION_BRIEF)
     release

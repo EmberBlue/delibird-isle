@@ -4,9 +4,50 @@
 // building on the terrace, the Certification Hall (Tarn) faces the square,
 // the Survey office is the school building. Plain voice throughout.
 
-const LOCALID_PERRIN = 21
+const LOCALID_PERRIN   = 21
+const LOCALID_FW_SMEARGLE = 22
 
 mapscripts ParcelFernwick_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelFernwick_OnTransition
+}
+
+// The late Smeargle beat (§04 "the memory"): only after the record is filed
+// and the epilogue has run does a SMEARGLE sit on the pond bank. Hidden
+// otherwise; gone once it has decided.
+script ParcelFernwick_OnTransition {
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && !flag(FLAG_SKALD_SMEARGLE_DONE)) {
+        clearflag(FLAG_SKALD_SMEARGLE_HIDDEN)
+    } else {
+        setflag(FLAG_SKALD_SMEARGLE_HIDDEN)
+    }
+    end
+}
+
+script ParcelFernwick_Smeargle {
+    lock
+    faceplayer
+    msgbox(format("A SMEARGLE sits on the bank with its tail in the pond. It is not painting the water. It is painting the line where the water was, a hand higher, in a colour that is not in the pond.\pIt looks at you. It looks at the notebook under your arm. It goes back to the line."), MSGBOX_DEFAULT)
+    msgbox(format("You know this stillness. You have been waiting most of your life to be allowed to stand in it again.\pIt finishes the line. It does not look up. It leaves the tail in the water, waiting, the way they do when they are asking."), MSGBOX_DEFAULT)
+    msgbox(format("Let it come?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("You leave it the bank and the line. Some records are better kept by the one making them.\pIt will be here. It has decided that much."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    givemon(SPECIES_SMEARGLE, 45)
+    if (var(VAR_RESULT) == MON_CANT_GIVE) {
+        msgbox(format("There is no room for it, in the party or the boxes. It seems to know. It goes back to the line.\pMake room, and come back."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    playse(SE_PIN)
+    msgbox(format("WREN received SMEARGLE."), MSGBOX_DEFAULT)
+    msgbox(format("It is not Sketch. It does not try to be.\pIt paints the first page of the notebook you brought from Johto -- the one with the marsh plant nobody else could name -- then sets its tail down beside the page, and waits for the next one."), MSGBOX_DEFAULT)
+    closemessage
+    setflag(FLAG_SKALD_SMEARGLE_DONE)
+    removeobject(LOCALID_FW_SMEARGLE)
+    release
+    end
 }
 
 // South road -> back into Mistwood (different primary tileset: warp, not connection).

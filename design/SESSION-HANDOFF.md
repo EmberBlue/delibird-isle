@@ -126,7 +126,9 @@ staircases → Ingrid's hut, the five summit trainers pre-flagged) and the
 whole Cliffs route (cliff top → Rune → the east stairs → Tomas), with
 `FLAG_SKALD_DEL_RUNE_DONE`, `FLAG_SKALDMERE_DELIBIRD_DELIVERED`,
 `FLAG_SKALD_DEL_INGRID_DONE` and Marta's `FLAG_SKALDMERE_DELIBIRD_GIFT`
-(the lighting scene) all read back 1. Also seen frame by frame (`--trace`): the Elvsund and
+(the lighting scene) all read back 1; the post-game SMEARGLE at the Fernwick
+pond (talk, YES, `FLAG_SKALD_SMEARGLE_DONE`), the Saltwick arrival scene
+with its new last line, and Ilex's re-talk. Also seen frame by frame (`--trace`): the Elvsund and
 Haukfell first-entry scenes, Perrin's Fernwick ambush up to the battle
 screen, Grettir's quest talk (`--walk A`), **the whole ending** (spawn in
 the boardroom with `--flag FLAG_SKALDMERE_CORDELIA_DONE`, walk onto the
@@ -158,9 +160,12 @@ out of sight lines and treat "reached the battle screen" as the pass.
   side quests (one per zone exists; Grettir's pond and Hedda's mask are the
   templates). New simple trainers get their tiers by re-running
   `python3 tools/skald/rematch_tiers.py` (idempotent).
-- **The post-game is thin.** Leader rematches and Perrin's last battle
-  exist; the Weather station move, the Smeargle beat, and post-epilogue
-  resident lines (the hearing's outcome, town by town) do not.
+- **The post-game** has the leader rematches, Perrin's last battle, the
+  post-finale resident lines, and the late Smeargle beat (the Fernwick pond,
+  after the epilogue; `ParcelFernwick_Smeargle`). The "Weather station
+  move" in §13 F is superseded: the Climate Station is zone 7's gym in the
+  main path. **The Sketch thread** (§04's locked memory) now runs as private
+  narration from the Saltwick boards to Heron's confession.
 - **Not playtested end to end in an emulator** since the rebuilds: each zone
   was screenshot-checked at its arrival and one scene; the gym gates fire;
   the Floodbasin relief line fires. Walk the whole game with Script 1

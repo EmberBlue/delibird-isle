@@ -321,3 +321,15 @@ quest is built, how the peer works) before they are asked six more times.
   has the cold specialists), six item balls, four hidden presents, Einar's
   forty-year list, Kari's sledge run, two map sections. 102 maps, 1,071
   reachable battles, ~48,300 hand-written words (~74,400 with the tiers).
+- **2026-11-08 — the Sketch thread (§04's locked memory, finally in the
+  game) and the late Smeargle beat (fix F's last open item).** Six private
+  touches in Wren's narration — the boards at Saltwick ("you came empty on
+  purpose"), the meadow partner's decision ("the last time something small
+  decided about you, it had a tail that painted"), Hale noticing the older
+  notebook, the Reedmere discharge pipe, Ilex's brush line, and Heron's
+  confession: the eleven-page letter Wren wrote the winter Sketch stopped
+  painting, answered with a model. Post-game, a SMEARGLE sits on the
+  Fernwick pond bank painting the line where the water was (ON_TRANSITION
+  hide flag; YES/NO; Lv 45; "It is not Sketch. It does not try to be.").
+  Wild SMEARGLE at 1% in the hide and the marsh.
+
