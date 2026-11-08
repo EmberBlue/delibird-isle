@@ -1,0 +1,502 @@
+// ParcelDelibirdSummit -- the Snowy Summit (§09 / §13 fix A). Three terraces
+// above the Holiday Village: the drunken forest and its slump pond, the snow
+// stakes, the summit tarn. The name is the point: there is almost no snow. The
+// thaw is read here the way the culvert was read in §08 -- in the ground, in
+// the stakes, in what people say when they think they are talking about
+// something else. Ingrid, at the top, carries one of Marta's three parcels.
+// Trainers are 28-32 (zone 6); their rematch tiers come from rematch_tiers.py.
+
+const LOCALID_SUM_INGRID = 1
+const LOCALID_SUM_KARI   = 2
+
+mapscripts ParcelDelibirdSummit_MapScripts {
+}
+
+// --- Ingrid, the watcher: the summit parcel ------------------------------------
+script ParcelDelibirdSummit_Ingrid {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Ingrid: You said it to their faces. ILEX read me the part about the stakes. My stakes, in a hearing, in the capital.\pThe paint is still three winters bare. But it is on the record now, and the record outlasts paint."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_DEL_INGRID_DONE)) {
+        msgbox(format("Ingrid: The lamp's lit. Tell Marta it's lit. She'll know what I mean by it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
+        msgbox(format("An old woman in a canvas coat repaints a date on a wooden stake. She does not look up until the brush is clean.\pIngrid: From Marta. Lamp oil, and the good tea, and a note I'm not to read till dark. Set it down by the hut."), MSGBOX_DEFAULT)
+        msgbox(format("Ingrid: Sixty years the stakes were painted to the snowline on Midwinter morning. I paint the date now, and the line stays where it was.\pThe line is the only thing on this island that isn't moving."), MSGBOX_DEFAULT)
+        msgbox(format("Ingrid: Take this. It fell out of the sky, near enough -- a bird dropped it by the stakes and looked at me as if I'd asked."), MSGBOX_DEFAULT)
+        giveitem(ITEM_RARE_CANDY)
+        setflag(FLAG_SKALD_DEL_INGRID_DONE)
+        msgbox(format("Ingrid: Go down careful. The stairs are new and the ground under them isn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Ingrid: Watcher. Not warden, not keeper. I watch. The stakes are what I watch.\pThe top stake is where the snow should start. It never did, this year. Nor last. Marta sends oil up when she can spare it. The lamp is company, nights."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- Kari, by the pond that was her sledge run ---------------------------------
+script ParcelDelibirdSummit_Kari {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Kari: They put a rope round my pond. Dad says it's for the little ones.\pI'm little. I think it's for everybody."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Kari: The pond wasn't here last Midwinter. My sledge run went right where the middle is.\pGran says keep off it. There's nothing to keep off.\pThe trees are leaning. Dad says they're sad. I think they're just leaning."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- environmental storytelling: the thaw, read like a culvert ------------------
+script ParcelDelibirdSummit_PeakSign {
+    msgbox(format("From the peak you can see the whole crescent of the island at once -- and the meltwater pooling in the high hollows where the snowpack should still be holding.\pThis is the cold the festival is named for. There is less of it than there was last Midwinter. There will be less next.\pIt is the most beautiful view in Skaldmere. You write down why it won't last."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibirdSummit_StakesSign {
+    msgbox(format("SNOW STAKES\pPainted to the snowline every Midwinter morning for sixty years. The lowest stake has been bare three winters. The one above it, two.\pSomeone has painted this year's date on the top stake and left the line where it was."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibirdSummit_PondSign {
+    msgbox(format("The ground here has let go. A pond nobody dug. Trees leaning away from each other like people who have stopped speaking.\pA child's sledge has been wedged up in the fork of the nearest tree, out of the wet, as if someone expected to need it again."), MSGBOX_SIGN)
+    end
+}
+
+// --- items -------------------------------------------------------------------
+script ParcelDelibirdSummit_ItemMaxRevive {
+    finditem(ITEM_MAX_REVIVE)
+    end
+}
+script ParcelDelibirdSummit_ItemHyperPotion {
+    finditem(ITEM_HYPER_POTION)
+    end
+}
+script ParcelDelibirdSummit_ItemRareCandy {
+    finditem(ITEM_RARE_CANDY)
+    end
+}
+
+// --- trainers (28-32) ---------------------------------------------------------
+script ParcelDelibirdSummit_T_Ragnar {
+    trainerbattle_single(TRAINER_SKALD_SUM_RAGNAR,
+        format("RAGNAR: Twenty years I've climbed this on Midwinter morning. Used to be on skis. Now it's boots, and mud to the ankle.\pBattle me before the mud gets you too."),
+        format("RAGNAR: Good footing."),
+        ParcelDelibirdSummit_T_Ragnar_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SUM_RAGNAR_R2)) {
+        goto(ParcelDelibirdSummit_T_Ragnar_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SUM_RAGNAR_R3)) {
+        goto(ParcelDelibirdSummit_T_Ragnar_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SUM_RAGNAR_R4)) {
+        goto(ParcelDelibirdSummit_T_Ragnar_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SUM_RAGNAR_R5)) {
+        goto(ParcelDelibirdSummit_T_Ragnar_R5)
+    }
+    msgbox(format("RAGNAR: The stairs are cut where the old snow slope was. We didn't need stairs when there was snow."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdSummit_T_Ragnar_FirstWin {
+    msgbox(format("RAGNAR: The stairs are cut where the old snow slope was. We didn't need stairs when there was snow."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Ragnar_R2 {
+    lock
+    faceplayer
+    msgbox(format("RAGNAR: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_RAGNAR_R2, format("RAGNAR: Noted. Properly, this time."))
+    msgbox(format("RAGNAR: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Ragnar_R3 {
+    lock
+    faceplayer
+    msgbox(format("RAGNAR: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_RAGNAR_R3, format("RAGNAR: That's the one I wanted to see."))
+    msgbox(format("RAGNAR: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Ragnar_R4 {
+    lock
+    faceplayer
+    msgbox(format("RAGNAR: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_RAGNAR_R4, format("RAGNAR: That's the one I wanted to see."))
+    msgbox(format("RAGNAR: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Ragnar_R5 {
+    lock
+    faceplayer
+    msgbox(format("RAGNAR: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("RAGNAR: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_RAGNAR_R5, format("RAGNAR: Noted. Properly, this time."))
+    msgbox(format("RAGNAR: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdSummit_T_Eskil {
+    trainerbattle_single(TRAINER_SKALD_SUM_ESKIL,
+        format("ESKIL: Hush. The DELIBIRD nest on the far side of the stakes. Fewer every year.\pIf you must make noise, make it a battle."),
+        format("ESKIL: Loud enough."),
+        ParcelDelibirdSummit_T_Eskil_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SUM_ESKIL_R2)) {
+        goto(ParcelDelibirdSummit_T_Eskil_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SUM_ESKIL_R3)) {
+        goto(ParcelDelibirdSummit_T_Eskil_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SUM_ESKIL_R4)) {
+        goto(ParcelDelibirdSummit_T_Eskil_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SUM_ESKIL_R5)) {
+        goto(ParcelDelibirdSummit_T_Eskil_R5)
+    }
+    msgbox(format("ESKIL: They cache food in the snow for the hard months. There's less snow to cache in, so they're learning the rocks.\pClever birds. Cleverer than us, maybe. We're still caching in the snow."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdSummit_T_Eskil_FirstWin {
+    msgbox(format("ESKIL: They cache food in the snow for the hard months. There's less snow to cache in, so they're learning the rocks.\pClever birds. Cleverer than us, maybe. We're still caching in the snow."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Eskil_R2 {
+    lock
+    faceplayer
+    msgbox(format("ESKIL: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESKIL: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_ESKIL_R2, format("ESKIL: …Again, then. Later."))
+    msgbox(format("ESKIL: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Eskil_R3 {
+    lock
+    faceplayer
+    msgbox(format("ESKIL: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESKIL: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_ESKIL_R3, format("ESKIL: Noted. Properly, this time."))
+    msgbox(format("ESKIL: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Eskil_R4 {
+    lock
+    faceplayer
+    msgbox(format("ESKIL: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESKIL: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_ESKIL_R4, format("ESKIL: …Again, then. Later."))
+    msgbox(format("ESKIL: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Eskil_R5 {
+    lock
+    faceplayer
+    msgbox(format("ESKIL: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ESKIL: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_ESKIL_R5, format("ESKIL: Right. That's the whole of it."))
+    msgbox(format("ESKIL: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdSummit_T_Liv {
+    trainerbattle_single(TRAINER_SKALD_SUM_LIV,
+        format("LIV: Cadet LIV, Skaldmere Survey, snow gauge detail. The gauge reads zero. It has read zero since I was posted.\pA battle would at least be a number."),
+        format("LIV: That's a number."),
+        ParcelDelibirdSummit_T_Liv_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SUM_LIV_R2)) {
+        goto(ParcelDelibirdSummit_T_Liv_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SUM_LIV_R3)) {
+        goto(ParcelDelibirdSummit_T_Liv_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SUM_LIV_R4)) {
+        goto(ParcelDelibirdSummit_T_Liv_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SUM_LIV_R5)) {
+        goto(ParcelDelibirdSummit_T_Liv_R5)
+    }
+    msgbox(format("LIV: ILEX says write the zero down anyway. A zero is data.\pNobody believes you until there are twenty of them in a row."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdSummit_T_Liv_FirstWin {
+    msgbox(format("LIV: ILEX says write the zero down anyway. A zero is data.\pNobody believes you until there are twenty of them in a row."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Liv_R2 {
+    lock
+    faceplayer
+    msgbox(format("LIV: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LIV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_LIV_R2, format("LIV: Noted. Properly, this time."))
+    msgbox(format("LIV: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Liv_R3 {
+    lock
+    faceplayer
+    msgbox(format("LIV: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LIV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_LIV_R3, format("LIV: …Again, then. Later."))
+    msgbox(format("LIV: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Liv_R4 {
+    lock
+    faceplayer
+    msgbox(format("LIV: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LIV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_LIV_R4, format("LIV: …Again, then. Later."))
+    msgbox(format("LIV: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Liv_R5 {
+    lock
+    faceplayer
+    msgbox(format("LIV: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("LIV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_LIV_R5, format("LIV: That's the one I wanted to see."))
+    msgbox(format("LIV: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdSummit_T_Birgitta {
+    trainerbattle_single(TRAINER_SKALD_SUM_BIRGITTA,
+        format("BIRGITTA: I taught every child on this island to ski on this slope. Watch your step -- there is nothing to ski on.\pLet me see what you've learned instead."),
+        format("BIRGITTA: Well taught, by someone."),
+        ParcelDelibirdSummit_T_Birgitta_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SUM_BIRGITTA_R2)) {
+        goto(ParcelDelibirdSummit_T_Birgitta_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SUM_BIRGITTA_R3)) {
+        goto(ParcelDelibirdSummit_T_Birgitta_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SUM_BIRGITTA_R4)) {
+        goto(ParcelDelibirdSummit_T_Birgitta_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SUM_BIRGITTA_R5)) {
+        goto(ParcelDelibirdSummit_T_Birgitta_R5)
+    }
+    msgbox(format("BIRGITTA: The young ones will remember a green summit at Midwinter and think it normal.\pThat is the part I cannot forgive. Not the thaw. The forgetting."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdSummit_T_Birgitta_FirstWin {
+    msgbox(format("BIRGITTA: The young ones will remember a green summit at Midwinter and think it normal.\pThat is the part I cannot forgive. Not the thaw. The forgetting."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Birgitta_R2 {
+    lock
+    faceplayer
+    msgbox(format("BIRGITTA: Clearances or not, I want that one back. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BIRGITTA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_BIRGITTA_R2, format("BIRGITTA: Still yours."))
+    msgbox(format("BIRGITTA: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Birgitta_R3 {
+    lock
+    faceplayer
+    msgbox(format("BIRGITTA: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BIRGITTA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_BIRGITTA_R3, format("BIRGITTA: …Again, then. Later."))
+    msgbox(format("BIRGITTA: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Birgitta_R4 {
+    lock
+    faceplayer
+    msgbox(format("BIRGITTA: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BIRGITTA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_BIRGITTA_R4, format("BIRGITTA: That's the one I wanted to see."))
+    msgbox(format("BIRGITTA: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Birgitta_R5 {
+    lock
+    faceplayer
+    msgbox(format("BIRGITTA: I heard what you filed. Then show me what filed it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("BIRGITTA: Later, then. I'm not going anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_BIRGITTA_R5, format("BIRGITTA: …Again, then. Later."))
+    msgbox(format("BIRGITTA: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdSummit_T_Torvald {
+    trainerbattle_single(TRAINER_SKALD_SUM_TORVALD,
+        format("TORVALD: The tarn's new. Three winters. INGRID says the ground under it was ice since before the island had a name.\pYou want the top, you come through me first."),
+        format("TORVALD: Go on up, then."),
+        ParcelDelibirdSummit_T_Torvald_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_SUM_TORVALD_R2)) {
+        goto(ParcelDelibirdSummit_T_Torvald_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_SUM_TORVALD_R3)) {
+        goto(ParcelDelibirdSummit_T_Torvald_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_SUM_TORVALD_R4)) {
+        goto(ParcelDelibirdSummit_T_Torvald_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_SUM_TORVALD_R5)) {
+        goto(ParcelDelibirdSummit_T_Torvald_R5)
+    }
+    msgbox(format("TORVALD: Look at the tarn and tell me you can see the bottom. You can.\pThat's the problem. There's no bottom to it that isn't us."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdSummit_T_Torvald_FirstWin {
+    msgbox(format("TORVALD: Look at the tarn and tell me you can see the bottom. You can.\pThat's the problem. There's no bottom to it that isn't us."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Torvald_R2 {
+    lock
+    faceplayer
+    msgbox(format("TORVALD: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORVALD: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_TORVALD_R2, format("TORVALD: That's the one I wanted to see."))
+    msgbox(format("TORVALD: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Torvald_R3 {
+    lock
+    faceplayer
+    msgbox(format("TORVALD: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORVALD: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_TORVALD_R3, format("TORVALD: …Fair."))
+    msgbox(format("TORVALD: Three. I'll be stronger when the coast's done with you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Torvald_R4 {
+    lock
+    faceplayer
+    msgbox(format("TORVALD: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORVALD: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_TORVALD_R4, format("TORVALD: …Again, then. Later."))
+    msgbox(format("TORVALD: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdSummit_T_Torvald_R5 {
+    lock
+    faceplayer
+    msgbox(format("TORVALD: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("TORVALD: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_SUM_TORVALD_R5, format("TORVALD: Noted. Properly, this time."))
+    msgbox(format("TORVALD: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}

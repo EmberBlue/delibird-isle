@@ -1,0 +1,60 @@
+legend johtogeneral__azaleatown
+size 30 36
+# Snowy Summit (Delibird Isle, zone 6). Three terraces climbing north from the
+# village trail (x 3-5 on the south edge): the drunken forest and the slump pond,
+# the snow stakes and the stake-field pond, the summit tarn with Ingrid's hut and
+# the last patches of snow. The north face drops to the sea.
+# Anchors: e peak sign, N Ingrid, 9 Birgitta, J Torvald, L/t/y items, Y/d hidden,
+# o stakes sign, > Liv, 7 Eskil, V Kari, b pond sign, < Ragnar.
+anchor e $
+anchor N .
+anchor 9 .
+anchor J .
+anchor L .
+anchor Y v
+anchor o $
+anchor > .
+anchor 7 .
+anchor t .
+anchor V .
+anchor b $
+anchor < .
+anchor y .
+anchor d .
+---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  # 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  # 1
+~~~~~/::::::::::::::::::?~~~~~  # 2
+~~~~~DFFFFFFFFFFFFFFFFFFG~~~~~  # 3
+~~~~XHKKKKKKKKKKKKKKKKKKMX~~~~  # 4
+~~XX.1u2.......e......h##.XX~~  # 5
+~~X..3Y4.q^^w.....,...###..X~~  # 6
+~~X.,....{OO}.......J..N.L.X~~  # 7
+~~X....,.a==z............P#X~~  # 8
+~~XR#......1u,..1uu2.,..,##X~~  # 9
+~~X##....9.3v4..3vv4.......X~~  # 10
+~~XABBTBBBBBBBBBBBBBBBBBBBCX~~  # 11
+~~XHKK|KKKKKKKKKKKKKKKKKKKMX~~  # 12
+~~X..12.......q^^^w....,.t.X~~  # 13
+~~X..34..7.,..{OIO}.12.....X~~  # 14
+~~X...........a===z.34..P#.X~~  # 15
+~~X.+.+.+.+.+o..........##.X~~  # 16
+~~X......,---------------..X~~  # 17
+~~X.ggggg..................X~~  # 18
+~~XR#gggg.......>..,......,X~~  # 19
+~~X##gggg..................X~~  # 20
+~~XABBBBBBBBBBBBBBBBBBTBBBCX~~  # 21
+~~XHKKKKKKKKKKKKKKKKKK|KKKMX~~  # 22
+~~X.....W#....W#...W#....y.X~~  # 23
+~~X.W#..##....##...##......X~~  # 24
+~~X.##.......b.............X~~  # 25
+~~Xd...,.q^^w....,.......W#X~~  # 26
+~~X......{IO}V...W#.,....##X~~  # 27
+~~X..W#..a==z....##.....,..X~~  # 28
+~~X..##-----.......---W#...X~~  # 29
+~~X@.......W#.,.......##...X~~  # 30
+~~X...,....##.....ggggggP#.X~~  # 31
+~~X.....<.........gggggg##.X~~  # 32
+~~X...XXXXXXXXXXXXXXXXXXXXXX~~  # 33
+~~X...XXXXXXXXXXXXXXXXXXXXXX~~  # 34
+~~X...XXXXXXXXXXXXXXXXXXXXXX~~  # 35

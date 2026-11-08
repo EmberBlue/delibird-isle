@@ -1838,6 +1838,22 @@
       "y": 11,
       "width": 1,
       "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_SUMMIT",
+      "name": "SNOWY SUMMIT",
+      "x": 22,
+      "y": 4,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "id": "MAPSEC_SKALD_CLIFFS",
+      "name": "SHORELINE CLIFFS",
+      "x": 23,
+      "y": 5,
+      "width": 1,
+      "height": 1
     }
   ]
 }

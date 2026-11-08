@@ -52,19 +52,19 @@ credits into a soft reset) → **the post-game** (every leader offers a
 full-strength rematch, repeatable; Perrin's last battle at his desk; the
 post-finale reaction pass).
 
-**Numbers (2026-11-08):** **100 maps** (22 outdoor incl. six side areas, 78
-interiors: fifteen new houses painted into Fernwick, Elvsund, Leirvik,
-Haukfell, Reedmere and the Coast plus the breakwater's lifeguard hut, each
-with residents in two story states), ~71,300 words in
-`data/maps/Parcel*/scripts.pory` (of which ~24.9k are the generated
-rematch-tier lines; **~46,400 hand-written**, every named resident now
-with a post-finale line, Dorsey in zones 2–6, fifteen side quests, the
-notebook's "Her notes" page), **1,021
-reachable Skald trainer battles** (gyms 1–8 + 4 Mereholt gates + Heron +
-Cordelia + the Weather four + Perrin ×7 + 8 leader rematches + ~208
-route/town/side-area trainers + **776 rematch tiers**: every simple trainer
-fought again at tiers 2–5 as the clearances come in,
-`tools/skald/rematch_tiers.py`; TRAINERS_COUNT 1878), a real ending
+**Numbers (2026-11-08, evening):** **102 maps** (24 outdoor incl. six side
+areas and the two new Delibird Isle maps, 78 interiors: fifteen houses
+painted into Fernwick, Elvsund, Leirvik, Haukfell, Reedmere and the Coast
+plus the breakwater's lifeguard hut, each with residents in two story
+states), ~74,400 words in `data/maps/Parcel*/scripts.pory` (of which
+~26.1k are the generated rematch-tier lines; **~48,300 hand-written**,
+every named resident with a post-finale line, Dorsey in zones 2–6, sixteen
+side quests incl. Marta's three-door relief round, the notebook's "Her
+notes" page), **1,071 reachable Skald trainer battles** (gyms 1–8 + 4
+Mereholt gates + Heron + Cordelia + the Weather four + Perrin ×7 + 8 leader
+rematches + ~218 route/town/side-area trainers + **816 rematch tiers**:
+every simple trainer fought again at tiers 2–5 as the clearances come in,
+`tools/skald/rematch_tiers.py`; TRAINERS_COUNT 1928), a real ending
 (epilogue, credits, post-game), the Field Notebook, six side areas (the
 Reedmere hide west of the landing, the Hollowbend old workings off the
 Corridor's east plaza, the Leirvik upper sluice across the basin's west
@@ -120,7 +120,13 @@ removes it before the commit. With it, every connection and script warp
 below was crossed headlessly and the save block read back: Isle↔Meadow↔
 Route 1↔Mistwood↔Fernwick↔Reedmere↔Corridor↔Floodbasin↔Elvsund↔Haukfell
 (both ways), Coast/Station/Marsh/Delibird arrivals, Marsh→Fernwick,
-Cavern→Delibird. Also seen frame by frame (`--trace`): the Elvsund and
+Cavern→Delibird, **Delibird village→Summit (north belt, x 3–5) and
+village→Cliffs (rows 10–12)**, the whole Summit route (trail → both
+staircases → Ingrid's hut, the five summit trainers pre-flagged) and the
+whole Cliffs route (cliff top → Rune → the east stairs → Tomas), with
+`FLAG_SKALD_DEL_RUNE_DONE`, `FLAG_SKALDMERE_DELIBIRD_DELIVERED`,
+`FLAG_SKALD_DEL_INGRID_DONE` and Marta's `FLAG_SKALDMERE_DELIBIRD_GIFT`
+(the lighting scene) all read back 1. Also seen frame by frame (`--trace`): the Elvsund and
 Haukfell first-entry scenes, Perrin's Fernwick ambush up to the battle
 screen, Grettir's quest talk (`--walk A`), **the whole ending** (spawn in
 the boardroom with `--flag FLAG_SKALDMERE_CORDELIA_DONE`, walk onto the
@@ -161,8 +167,16 @@ out of sight lines and treat "reached the battle screen" as the pass.
   (debug menu → Scripts) when there is time; the connection offsets and
   the ferry/Hale warps were audited, not walked.
 - `ParcelStation` and `ParcelBridge` are retired (unreachable); delete when
-  nothing references them. The old Delibird summit-mouth pocket at (3–6,3–4)
-  is sealed (cosmetic).
+  nothing references them.
+- **Delibird Isle is a real island now** (§09 *Built*): `ParcelDelibird`
+  connects north to `ParcelDelibirdSummit` (x 3–5 through the tree belt;
+  the old sealed pocket is the trailhead) and east to `ParcelDelibirdCliffs`
+  (rows 10–12). Both are drawn canvases on the Johto legend
+  (`tools/skald/legends/johtogeneral__azaleatown.json`); the summit's snow
+  patches are thirteen metatiles `tools/skald/snowtiles.py` adds to the
+  AzaleaTown tileset. The village's own map is now `build.py` over
+  `base.bin` (its sea tile had a rock pair on every tile and its border was
+  a wall piece; both fixed).
 - The **Field Notebook** is a Key Item now (`ITEM_FIELD_NOTEBOOK`, given in
   Hale's first brief): Assignment (where the story wants you next, from
   Hale's own flag logic), Certifications, Side work, Margins (Heron's
@@ -170,6 +184,13 @@ out of sight lines and treat "reached the battle screen" as the pass.
   finale). Pages are built in `src/survey_scripting.c` (`SkaldNotebookBuffer`)
   and shown by `data/scripts/skald_notebook.pory`. The **survey action** at
   red-cloth points (§13 fix E's other half) is still signposts.
+- **Harness lessons (2026-11-08):** `--walk DIR:n` holds the key for
+  16n+12 frames, so an unobstructed segment moves **n+1** tiles — plan
+  routes against walls/objects or pass n−1. **Sighted trainer approaches
+  cannot be probed**: `CheckForTrainersWantingBattle` returns early when
+  the party is empty, and the harness party is empty; verify trainer wiring
+  through the talk path (post-battle line with the TRAINER_ flag set)
+  instead. A `giveitem` scene needs `WAIT:3000` before its flag reads back.
 - Vanilla trainers 0–861 still exist in the data (unreachable); ids are
   pinned, `MAX_TRAINERS_COUNT` 2048 must not move.
 - Title screen, "they" pronouns, `Parcel*` folder names (placeholders; the

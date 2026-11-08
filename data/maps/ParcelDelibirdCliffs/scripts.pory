@@ -1,0 +1,524 @@
+// ParcelDelibirdCliffs -- the Shoreline Cliffs (§09 / §13 fix A). The warming
+// edge of Delibird Isle: a grass cliff-top running east from the village to the
+// point beacon, and the beach below it, where species that should not be this
+// far north yet are (range shift, §06). Two of Marta's three parcels land here:
+// Tomas at the cliff foot, Rune at the beacon. Play the warmth straight; the
+// dread is in the names on Einar's list. Trainers are 28-32 (zone 6).
+
+const LOCALID_CLF_TOMAS = 1
+const LOCALID_CLF_RUNE  = 2
+const LOCALID_CLF_EINAR = 3
+
+mapscripts ParcelDelibirdCliffs_MapScripts {
+}
+
+// --- Tomas: the first door on the round ------------------------------------------
+script ParcelDelibirdCliffs_Tomas {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Tomas: The floor slopes a little more every year and the hearing didn't change that. It changed who's counting.\pMe, now. I've a book."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
+        msgbox(format("Tomas: Warm through, thanks to you. Mind the corner of my cabin -- the floor slopes to the sea a little more each winter.\pUsed to be level. I remember it level."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
+        msgbox(format("An old fisher straightens, slow, by a cabin whose seaward corner has settled into the sand.\pTomas: From Marta? You carried this all the way down the cliff for an old man you've never met."), MSGBOX_DEFAULT)
+        msgbox(format("Tomas: That's the island in you already, and you only just landed.\pHere -- take this for the road. No, take it. That's how it works. You'll learn."), MSGBOX_DEFAULT)
+        giveitem(ITEM_HYPER_POTION)
+        setflag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)
+        msgbox(format("Tomas: Now go on with the rest of the round. Marta will have a bird ready for you when it's done. She always does.\pIt's how she says thank you. Don't refuse it -- that's the one rude thing you can do here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("Tomas: Moved the cabin down here when the green went soft under it. The sand's honest, at least. It tells you when it's moving.\pCold off the water today. There's coffee in the square if you've come up short. Up here you never go without."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- Rune: the point beacon --------------------------------------------------------
+script ParcelDelibirdCliffs_Rune {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Rune: The beacon's in your record, is it? Good.\pIt's a long time since anyone wrote the point down for anything but wrecks."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALD_DEL_RUNE_DONE)) {
+        msgbox(format("Rune: Tea's on. Marta's tea. You can taste the island in it, she says.\pI say you can taste the peat smoke, and that's the same thing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
+        msgbox(format("An old man polishes a brass fitting on the beacon housing. It does not need polishing.\pRune: From Marta. The good tea and a blanket for the night watch. She never forgets the point. Nobody else remembers it."), MSGBOX_DEFAULT)
+        msgbox(format("Rune: Four generations my family lit a fire here for the boats. Now it's a bulb, and MEREHOLT paid for the bulb, and the boats have radar.\pI polish it anyway. A thing kept is a thing kept."), MSGBOX_DEFAULT)
+        msgbox(format("Rune: Take that -- it's what the old lamp used to flash with. Careful of the edge going back.\pThe edge is a different place every spring."), MSGBOX_DEFAULT)
+        giveitem(ITEM_BRIGHT_POWDER)
+        setflag(FLAG_SKALD_DEL_RUNE_DONE)
+        release
+        end
+    }
+    msgbox(format("Rune: The point beacon. Lit every night, fire or bulb, for as long as there've been boats stupid enough to need it.\pThe cliff under us has lost a boat's length since my father's day. We'll move the housing back again next year. It's what we do."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- Einar: forty years of a shore, and a new name on the list ------------------
+script ParcelDelibirdCliffs_Einar {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Einar: Your paper has my list in it. Forty years of a shore, in a footnote.\pI'll take a footnote. Footnotes are where the truth gets kept while the main text is still arguing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("A man with binoculars does not lower them.\pEinar: CORSOLA. In the shallows off the point. Forty years I've kept the list for this shore and I had never once written that name.\pNow it's every tide. The water's warm enough for them. It isn't supposed to be warm enough for them.\pThat is the whole of what I know, and it took forty years."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// --- signs -------------------------------------------------------------------------
+script ParcelDelibirdCliffs_TrailSign {
+    msgbox(format("SHORELINE CLIFFS\pThe beach is by the stairs at either end. Tomas's cabin is below the east stairs. The point beacon is past the rocks.\pMind the edge. It is not where the map says."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibirdCliffs_BeaconSign {
+    msgbox(format("THE POINT BEACON\pKept by the Reikvold family, four generations. Fire, then oil, then the bulb.\pSmaller, newer, bolted on: LIGHTING UPGRADE FUNDED BY THE MEREHOLT FOUNDATION."), MSGBOX_SIGN)
+    end
+}
+
+// --- items ---------------------------------------------------------------------------
+script ParcelDelibirdCliffs_ItemMaxRepel {
+    finditem(ITEM_MAX_REPEL)
+    end
+}
+script ParcelDelibirdCliffs_ItemBigPearl {
+    finditem(ITEM_BIG_PEARL)
+    end
+}
+script ParcelDelibirdCliffs_ItemUltraBall {
+    finditem(ITEM_ULTRA_BALL)
+    end
+}
+
+// --- trainers (28-32) ------------------------------------------------------------------
+script ParcelDelibirdCliffs_T_Solveig {
+    trainerbattle_single(TRAINER_SKALD_CLF_SOLVEIG,
+        format("SOLVEIG: A picnic on the cliffs at Midwinter! Gran would have called me mad. Gran never had a Midwinter you could sit out in.\pBattle while the tea brews?"),
+        format("SOLVEIG: Tea's ready anyway."),
+        ParcelDelibirdCliffs_T_Solveig_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CLF_SOLVEIG_R2)) {
+        goto(ParcelDelibirdCliffs_T_Solveig_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CLF_SOLVEIG_R3)) {
+        goto(ParcelDelibirdCliffs_T_Solveig_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CLF_SOLVEIG_R4)) {
+        goto(ParcelDelibirdCliffs_T_Solveig_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CLF_SOLVEIG_R5)) {
+        goto(ParcelDelibirdCliffs_T_Solveig_R5)
+    }
+    msgbox(format("SOLVEIG: It's lovely. That's the awful part.\pIt's genuinely lovely up here now."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdCliffs_T_Solveig_FirstWin {
+    msgbox(format("SOLVEIG: It's lovely. That's the awful part.\pIt's genuinely lovely up here now."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Solveig_R2 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_SOLVEIG_R2, format("SOLVEIG: …Fair."))
+    msgbox(format("SOLVEIG: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Solveig_R3 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: They say you don't lose any more. Let's check?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_SOLVEIG_R3, format("SOLVEIG: …Fair."))
+    msgbox(format("SOLVEIG: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Solveig_R4 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_SOLVEIG_R4, format("SOLVEIG: Right. That's the whole of it."))
+    msgbox(format("SOLVEIG: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Solveig_R5 {
+    lock
+    faceplayer
+    msgbox(format("SOLVEIG: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("SOLVEIG: Suit yourself. I'm here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_SOLVEIG_R5, format("SOLVEIG: …Again, then. Later."))
+    msgbox(format("SOLVEIG: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdCliffs_T_Olav {
+    trainerbattle_single(TRAINER_SKALD_CLF_OLAV,
+        format("OLAV: Hold still. WINGULL count. Three hundred and -- never mind, you've put them up.\pBattle, since you've cost me the number."),
+        format("OLAV: Fair's fair."),
+        ParcelDelibirdCliffs_T_Olav_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CLF_OLAV_R2)) {
+        goto(ParcelDelibirdCliffs_T_Olav_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CLF_OLAV_R3)) {
+        goto(ParcelDelibirdCliffs_T_Olav_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CLF_OLAV_R4)) {
+        goto(ParcelDelibirdCliffs_T_Olav_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CLF_OLAV_R5)) {
+        goto(ParcelDelibirdCliffs_T_Olav_R5)
+    }
+    msgbox(format("OLAV: The gulls are fine. The gulls are always fine.\pIt's the ones you don't see any more that tell you anything."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdCliffs_T_Olav_FirstWin {
+    msgbox(format("OLAV: The gulls are fine. The gulls are always fine.\pIt's the ones you don't see any more that tell you anything."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Olav_R2 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: I kept the team up for this. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_OLAV_R2, format("OLAV: …Again, then. Later."))
+    msgbox(format("OLAV: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Olav_R3 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_OLAV_R3, format("OLAV: That's the one I wanted to see."))
+    msgbox(format("OLAV: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Olav_R4 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_OLAV_R4, format("OLAV: …Fair."))
+    msgbox(format("OLAV: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Olav_R5 {
+    lock
+    faceplayer
+    msgbox(format("OLAV: They read your name at the hearing. I'd like to read it myself. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("OLAV: No hurry. The water keeps."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_OLAV_R5, format("OLAV: Noted. Properly, this time."))
+    msgbox(format("OLAV: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdCliffs_T_Geir {
+    trainerbattle_single(TRAINER_SKALD_CLF_GEIR,
+        format("GEIR: CORSOLA on the line. In this water. My father fished this tide line fifty years and never saw one north of the Coast.\pBattle while I think about that."),
+        format("GEIR: Hm. Caught, properly."),
+        ParcelDelibirdCliffs_T_Geir_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CLF_GEIR_R2)) {
+        goto(ParcelDelibirdCliffs_T_Geir_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CLF_GEIR_R3)) {
+        goto(ParcelDelibirdCliffs_T_Geir_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CLF_GEIR_R4)) {
+        goto(ParcelDelibirdCliffs_T_Geir_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CLF_GEIR_R5)) {
+        goto(ParcelDelibirdCliffs_T_Geir_R5)
+    }
+    msgbox(format("GEIR: New fish in the pots and the old ones gone north. Same work, different names.\pI'd rather the old names."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdCliffs_T_Geir_FirstWin {
+    msgbox(format("GEIR: New fish in the pots and the old ones gone north. Same work, different names.\pI'd rather the old names."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Geir_R2 {
+    lock
+    faceplayer
+    msgbox(format("GEIR: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GEIR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_GEIR_R2, format("GEIR: That's the one I wanted to see."))
+    msgbox(format("GEIR: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Geir_R3 {
+    lock
+    faceplayer
+    msgbox(format("GEIR: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GEIR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_GEIR_R3, format("GEIR: Noted. Properly, this time."))
+    msgbox(format("GEIR: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Geir_R4 {
+    lock
+    faceplayer
+    msgbox(format("GEIR: I've watched you walk past twice. Not a third time. Battle?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GEIR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_GEIR_R4, format("GEIR: …Fair."))
+    msgbox(format("GEIR: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Geir_R5 {
+    lock
+    faceplayer
+    msgbox(format("GEIR: After everything, one more. For the ledger. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("GEIR: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_GEIR_R5, format("GEIR: That's the one I wanted to see."))
+    msgbox(format("GEIR: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdCliffs_T_Pelle {
+    trainerbattle_single(TRAINER_SKALD_CLF_PELLE,
+        format("PELLE: I'm swimming at MIDWINTER! Dad says when he was little the sea had ice on it here. Ice!\pBattle me, I'm warm enough!"),
+        format("PELLE: Brrr. Lost."),
+        ParcelDelibirdCliffs_T_Pelle_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CLF_PELLE_R2)) {
+        goto(ParcelDelibirdCliffs_T_Pelle_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CLF_PELLE_R3)) {
+        goto(ParcelDelibirdCliffs_T_Pelle_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CLF_PELLE_R4)) {
+        goto(ParcelDelibirdCliffs_T_Pelle_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CLF_PELLE_R5)) {
+        goto(ParcelDelibirdCliffs_T_Pelle_R5)
+    }
+    msgbox(format("PELLE: Dad doesn't swim. He stands at the edge and looks at the water like it owes him something."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdCliffs_T_Pelle_FirstWin {
+    msgbox(format("PELLE: Dad doesn't swim. He stands at the edge and looks at the water like it owes him something."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Pelle_R2 {
+    lock
+    faceplayer
+    msgbox(format("PELLE: You again. I've had time to think about last time. Go again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PELLE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_PELLE_R2, format("PELLE: That's the one I wanted to see."))
+    msgbox(format("PELLE: That's two to you. Get the next stamp and come back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Pelle_R3 {
+    lock
+    faceplayer
+    msgbox(format("PELLE: I've been training against the lake. You're the test. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PELLE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_PELLE_R3, format("PELLE: …Again, then. Later."))
+    msgbox(format("PELLE: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Pelle_R4 {
+    lock
+    faceplayer
+    msgbox(format("PELLE: Nearly the top, they say. Not past me. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PELLE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_PELLE_R4, format("PELLE: That's the one I wanted to see."))
+    msgbox(format("PELLE: When it's all filed, come and find me. Once more."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Pelle_R5 {
+    lock
+    faceplayer
+    msgbox(format("PELLE: The region's different now. Let's see if you are?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("PELLE: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_PELLE_R5, format("PELLE: …Fair."))
+    msgbox(format("PELLE: That's all I've got. It was enough to see it done."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdCliffs_T_Astrid {
+    trainerbattle_single(TRAINER_SKALD_CLF_ASTRID,
+        format("ASTRID: Out here the water's the same every year. It's the land that changes.\pYou've got a board under you, you've got a battle."),
+        format("ASTRID: Good current on you."),
+        ParcelDelibirdCliffs_T_Astrid_FirstWin)
+    specialvar(VAR_RESULT, SkaldRematchTier)
+    if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_CLF_ASTRID_R2)) {
+        goto(ParcelDelibirdCliffs_T_Astrid_R2)
+    }
+    if (var(VAR_RESULT) >= 3 && !defeated(TRAINER_SKALD_CLF_ASTRID_R3)) {
+        goto(ParcelDelibirdCliffs_T_Astrid_R3)
+    }
+    if (var(VAR_RESULT) >= 4 && !defeated(TRAINER_SKALD_CLF_ASTRID_R4)) {
+        goto(ParcelDelibirdCliffs_T_Astrid_R4)
+    }
+    if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_CLF_ASTRID_R5)) {
+        goto(ParcelDelibirdCliffs_T_Astrid_R5)
+    }
+    msgbox(format("ASTRID: I used to have to watch for ice floes off the point. Now I watch for the tour boats.\pI'd take the floes back."), MSGBOX_DEFAULT)
+    end
+}
+script ParcelDelibirdCliffs_T_Astrid_FirstWin {
+    msgbox(format("ASTRID: I used to have to watch for ice floes off the point. Now I watch for the tour boats.\pI'd take the floes back."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Astrid_R2 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: Didn't think you'd come back through. Good. Again?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_ASTRID_R2, format("ASTRID: Still yours."))
+    msgbox(format("ASTRID: Come back with more clearances. I'll have more for you."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Astrid_R3 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: Three stamps, then five. Fine. Me next?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_ASTRID_R3, format("ASTRID: …Fair."))
+    msgbox(format("ASTRID: One more in me. After the high ground."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Astrid_R4 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: Seven stamps. I've one more fight in me that's worth the name. Yes?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_ASTRID_R4, format("ASTRID: Right. That's the whole of it."))
+    msgbox(format("ASTRID: Four. There's one more, after. Whatever after is."), MSGBOX_DEFAULT)
+    release
+    end
+}
+script ParcelDelibirdCliffs_T_Astrid_R5 {
+    lock
+    faceplayer
+    msgbox(format("ASTRID: Last one. I've put everything I've got into this team. Go?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("ASTRID: Fine. Same spot."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_CLF_ASTRID_R5, format("ASTRID: Noted. Properly, this time."))
+    msgbox(format("ASTRID: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
+    release
+    end
+}

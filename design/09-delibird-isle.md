@@ -1,6 +1,6 @@
 # 09 — Delibird Isle (Zone 6)
 
-> Status: **DRAFT** (the *frame* is locked — zone 6, mandatory mid-game
+> Status: **FIRMED** (built 2026-11-08 — see *Built* below; the *frame* is locked — zone 6, mandatory mid-game
 > chapter, festival cheer over a permafrost crisis, the thesis in miniature,
 > the give-vs-take motif. The *side-content specifics* below — gift exchange,
 > delivery questline, festival staging — are revisable and partly inherited
@@ -109,6 +109,39 @@ island; a **Ranger commendation** for the delivery mini-mission.
 | "Delibird deliver supplies during storms" | storm-relief lore; the storms are worsening (§06) |
 | Help fix the village flooding | permafrost thaw, **irreversible** (§06); reduce harm, don't win |
 | A relaxing side-island | the **title location** — the game's thesis in miniature (§00) |
+
+## Built (2026-11-08) — the island as it plays
+
+The four areas of the geography table exist as four maps, drawn on the
+Johto tilesets (`gTileset_JohtoGeneral` + `gTileset_AzaleaTown`):
+
+| Area | Map | What is there |
+|------|-----|---------------|
+| Holiday Village | `ParcelDelibird` | the gift square, the warming hut, Marta's parcels, the relief line, Ilex (Gym 8), the notice board, two trailheads (north: x 3–5; east: rows 10–12) |
+| Snowy Summit | `ParcelDelibirdSummit` (north connection) | three terraces: the drunken forest and the slump pond (Kari), the snow stakes and the stake-field pond (Cadet Liv's zero gauge, Eskil's thinning nest), the summit tarn with Ingrid's hut and the last patches of snow; the peak sign |
+| Shoreline Cliffs | `ParcelDelibirdCliffs` (east connection) | the cliff top to the point beacon (Rune, Einar's forty-year list with CORSOLA on it), stairs at both ends, the warm beach below with Tomas's cabin at the cliff foot, a Tuber swimming at Midwinter, a Swimmer off the point |
+| Crystal Cavern | `ParcelCavern` | unchanged (Kelda, the everfrost) |
+
+**The thaw drawn, not told.** The Johto tilesets have no snow, which is the
+point: the Summit is grass, bare rock, thaw ponds and *thirteen snow-patch
+metatiles added for it* (`tools/skald/snowtiles.py`) — the last snow on a
+summit named for it. Stakes painted to a snowline that is three winters
+bare; a pond where a sledge run was; a drowned trunk in the tarn.
+
+**The relief round (the delivery questline, §13 fix A).** Marta hands
+three parcels at once: Tomas under the cliffs, Ingrid at the stakes, Rune
+at the beacon — three doors across two maps, in any order. All three home,
+she gives the Delibird (Lv 28) and the square is lit at dusk in a short
+scene (the festival night, played straight: "Nobody cheers. They stand in
+it."). The round is in the Field Notebook's side work. Flags:
+`FLAG_SKALDMERE_DELIBIRD_PARCEL / DELIVERED` (Tomas) /
+`FLAG_SKALD_DEL_INGRID_DONE / RUNE_DONE / FLAG_SKALDMERE_DELIBIRD_GIFT`.
+
+**Resolved from the Open list below:** the named elder who carries the
+guardian lore is **Marta**; the festival trigger is the completed round,
+not a calendar. Level band 28–32 (village and cavern wild tables lifted to
+match); ten new trainers with rematch tiers; two map sections (SNOWY
+SUMMIT, SHORELINE CLIFFS) that fly home to the village.
 
 ## Open
 

@@ -32617,3 +32617,843 @@ Level: 56
 
 Breloom
 Level: 57
+
+=== TRAINER_SKALD_SUM_RAGNAR ===
+Name: RAGNAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 29
+
+Piloswine
+Level: 30
+
+=== TRAINER_SKALD_SUM_ESKIL ===
+Name: ESKIL
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delibird
+Level: 30
+
+Swellow
+Level: 30
+
+=== TRAINER_SKALD_SUM_LIV ===
+Name: LIV
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Snorunt
+Level: 29
+
+Stantler
+Level: 30
+
+Sneasel
+Level: 30
+
+=== TRAINER_SKALD_SUM_BIRGITTA ===
+Name: BIRGITTA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 31
+
+Piloswine
+Level: 31
+
+Absol
+Level: 32
+
+=== TRAINER_SKALD_SUM_TORVALD ===
+Name: TORVALD
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golbat
+Level: 30
+
+Graveler
+Level: 30
+
+Sealeo
+Level: 31
+
+=== TRAINER_SKALD_CLF_SOLVEIG ===
+Name: SOLVEIG
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delcatty
+Level: 29
+
+Pelipper
+Level: 30
+
+=== TRAINER_SKALD_CLF_OLAV ===
+Name: OLAV
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 29
+
+Pelipper
+Level: 30
+
+Swellow
+Level: 30
+
+=== TRAINER_SKALD_CLF_GEIR ===
+Name: GEIR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Krabby
+Level: 29
+
+Corsola
+Level: 30
+
+Kingler
+Level: 31
+
+=== TRAINER_SKALD_CLF_PELLE ===
+Name: PELLE
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Marill
+Level: 28
+
+Spheal
+Level: 29
+
+=== TRAINER_SKALD_CLF_ASTRID ===
+Name: ASTRID
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Staryu
+Level: 30
+
+Lapras
+Level: 31
+
+Tentacruel
+Level: 31
+
+=== TRAINER_SKALD_CLF_SOLVEIG_R2 ===
+Name: SOLVEIG
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delcatty
+Level: 21
+
+Pelipper
+Level: 22
+
+=== TRAINER_SKALD_CLF_SOLVEIG_R3 ===
+Name: SOLVEIG
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delcatty
+Level: 31
+
+Pelipper
+Level: 32
+
+=== TRAINER_SKALD_CLF_SOLVEIG_R4 ===
+Name: SOLVEIG
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delcatty
+Level: 41
+
+Pelipper
+Level: 42
+
+=== TRAINER_SKALD_CLF_SOLVEIG_R5 ===
+Name: SOLVEIG
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delcatty
+Level: 56
+
+Pelipper
+Level: 57
+
+=== TRAINER_SKALD_CLF_OLAV_R2 ===
+Name: OLAV
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Wingull
+Level: 21
+
+Pelipper
+Level: 22
+
+Swellow
+Level: 23
+
+=== TRAINER_SKALD_CLF_OLAV_R3 ===
+Name: OLAV
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 31
+
+Pelipper
+Level: 32
+
+Swellow
+Level: 33
+
+=== TRAINER_SKALD_CLF_OLAV_R4 ===
+Name: OLAV
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 41
+
+Pelipper
+Level: 42
+
+Swellow
+Level: 43
+
+=== TRAINER_SKALD_CLF_OLAV_R5 ===
+Name: OLAV
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Pelipper
+Level: 56
+
+Pelipper
+Level: 57
+
+Swellow
+Level: 58
+
+=== TRAINER_SKALD_CLF_GEIR_R2 ===
+Name: GEIR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Krabby
+Level: 21
+
+Corsola
+Level: 22
+
+Kingler
+Level: 23
+
+=== TRAINER_SKALD_CLF_GEIR_R3 ===
+Name: GEIR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Kingler
+Level: 31
+
+Corsola
+Level: 32
+
+Kingler
+Level: 33
+
+=== TRAINER_SKALD_CLF_GEIR_R4 ===
+Name: GEIR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Kingler
+Level: 41
+
+Corsola
+Level: 42
+
+Kingler
+Level: 43
+
+=== TRAINER_SKALD_CLF_GEIR_R5 ===
+Name: GEIR
+Class: Fisherman
+Pic: Fisherman
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Kingler
+Level: 56
+
+Corsola
+Level: 57
+
+Kingler
+Level: 58
+
+=== TRAINER_SKALD_CLF_PELLE_R2 ===
+Name: PELLE
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 21
+
+Spheal
+Level: 22
+
+=== TRAINER_SKALD_CLF_PELLE_R3 ===
+Name: PELLE
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 31
+
+Sealeo
+Level: 32
+
+=== TRAINER_SKALD_CLF_PELLE_R4 ===
+Name: PELLE
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 41
+
+Sealeo
+Level: 42
+
+=== TRAINER_SKALD_CLF_PELLE_R5 ===
+Name: PELLE
+Class: Tuber M
+Pic: Tuber M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Azumarill
+Level: 56
+
+Walrein
+Level: 57
+
+=== TRAINER_SKALD_CLF_ASTRID_R2 ===
+Name: ASTRID
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Staryu
+Level: 21
+
+Lapras
+Level: 22
+
+Tentacruel
+Level: 23
+
+=== TRAINER_SKALD_CLF_ASTRID_R3 ===
+Name: ASTRID
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Staryu
+Level: 31
+
+Lapras
+Level: 32
+
+Tentacruel
+Level: 33
+
+=== TRAINER_SKALD_CLF_ASTRID_R4 ===
+Name: ASTRID
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Starmie
+Level: 41
+
+Lapras
+Level: 42
+
+Tentacruel
+Level: 43
+
+=== TRAINER_SKALD_CLF_ASTRID_R5 ===
+Name: ASTRID
+Class: Swimmer F
+Pic: Swimmer F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Starmie
+Level: 56
+
+Lapras
+Level: 57
+
+Tentacruel
+Level: 58
+
+=== TRAINER_SKALD_SUM_RAGNAR_R2 ===
+Name: RAGNAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 21
+
+Piloswine
+Level: 22
+
+=== TRAINER_SKALD_SUM_RAGNAR_R3 ===
+Name: RAGNAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Graveler
+Level: 31
+
+Piloswine
+Level: 32
+
+=== TRAINER_SKALD_SUM_RAGNAR_R4 ===
+Name: RAGNAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 41
+
+Mamoswine
+Level: 42
+
+=== TRAINER_SKALD_SUM_RAGNAR_R5 ===
+Name: RAGNAR
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golem
+Level: 56
+
+Mamoswine
+Level: 57
+
+=== TRAINER_SKALD_SUM_ESKIL_R2 ===
+Name: ESKIL
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delibird
+Level: 21
+
+Swellow
+Level: 22
+
+=== TRAINER_SKALD_SUM_ESKIL_R3 ===
+Name: ESKIL
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delibird
+Level: 31
+
+Swellow
+Level: 32
+
+=== TRAINER_SKALD_SUM_ESKIL_R4 ===
+Name: ESKIL
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delibird
+Level: 41
+
+Swellow
+Level: 42
+
+=== TRAINER_SKALD_SUM_ESKIL_R5 ===
+Name: ESKIL
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Delibird
+Level: 56
+
+Swellow
+Level: 57
+
+=== TRAINER_SKALD_SUM_LIV_R2 ===
+Name: LIV
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Snorunt
+Level: 21
+
+Stantler
+Level: 22
+
+Sneasel
+Level: 23
+
+=== TRAINER_SKALD_SUM_LIV_R3 ===
+Name: LIV
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Snorunt
+Level: 31
+
+Stantler
+Level: 32
+
+Sneasel
+Level: 33
+
+=== TRAINER_SKALD_SUM_LIV_R4 ===
+Name: LIV
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Froslass
+Level: 41
+
+Wyrdeer
+Level: 42
+
+Weavile
+Level: 43
+
+=== TRAINER_SKALD_SUM_LIV_R5 ===
+Name: LIV
+Class: Pkmn Ranger
+Pic: Pokemon Ranger F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 56
+
+Wyrdeer
+Level: 57
+
+Weavile
+Level: 58
+
+=== TRAINER_SKALD_SUM_BIRGITTA_R2 ===
+Name: BIRGITTA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 21
+
+Piloswine
+Level: 22
+
+Absol
+Level: 23
+
+=== TRAINER_SKALD_SUM_BIRGITTA_R3 ===
+Name: BIRGITTA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 31
+
+Piloswine
+Level: 32
+
+Absol
+Level: 33
+
+=== TRAINER_SKALD_SUM_BIRGITTA_R4 ===
+Name: BIRGITTA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 41
+
+Mamoswine
+Level: 42
+
+Absol
+Level: 43
+
+=== TRAINER_SKALD_SUM_BIRGITTA_R5 ===
+Name: BIRGITTA
+Class: Expert
+Pic: Expert F
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Glalie
+Level: 56
+
+Mamoswine
+Level: 57
+
+Absol
+Level: 58
+
+=== TRAINER_SKALD_SUM_TORVALD_R2 ===
+Name: TORVALD
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golbat
+Level: 21
+
+Graveler
+Level: 22
+
+Sealeo
+Level: 23
+
+=== TRAINER_SKALD_SUM_TORVALD_R3 ===
+Name: TORVALD
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Golbat
+Level: 31
+
+Graveler
+Level: 32
+
+Sealeo
+Level: 33
+
+=== TRAINER_SKALD_SUM_TORVALD_R4 ===
+Name: TORVALD
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Crobat
+Level: 41
+
+Golem
+Level: 42
+
+Sealeo
+Level: 43
+
+=== TRAINER_SKALD_SUM_TORVALD_R5 ===
+Name: TORVALD
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer / Try To Faint
+
+Crobat
+Level: 56
+
+Golem
+Level: 57
+
+Walrein
+Level: 58

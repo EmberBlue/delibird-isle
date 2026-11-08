@@ -22,6 +22,14 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
    interior exit warps' dest_warp_id = the exterior warp's INDEX (order matters).
 6. Build ritual: rm stale .o files (see skald-verify) then `make -j modern`.
 
+## Delibird Isle (Johto tilesets)
+- Legend `tools/skald/legends/johtogeneral__azaleatown.json` (sea 473, not
+  265 which carries a rock pair; cliff strips A B C over H K M, stairs T over
+  |; ponds solid; snow patches are the 13 metatiles `tools/skald/snowtiles.py`
+  adds to AzaleaTown, 564-575 + 601). The three island outdoor maps share the
+  primary, so they are seamless connections. Compose canvases with a small
+  placement script if the map is big (see the git log for the island commit).
+
 ## Flags & vars
 - Claim only a `FLAG_UNUSED_*` whose define greps unreferenced outside flags.h.
 - NEVER change MAX_TRAINERS_COUNT (pinned 2048 since 2026-09-25 — moving it shifts

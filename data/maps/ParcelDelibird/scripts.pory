@@ -17,7 +17,7 @@
 const LOCALID_DEL_ELDER    = 1
 const LOCALID_DEL_DELIBIRD = 2
 const LOCALID_DEL_GIVER    = 3
-const LOCALID_DEL_FISHER   = 4
+const LOCALID_DEL_KETIL    = 4   // was the fisher; Tomas moved down under the cliffs
 const LOCALID_DEL_RELIEF   = 5
 const LOCALID_DEL_SAILOR   = 6
 const LOCALID_DEL_GYM      = 7   // Ilex: Gym 8, the aerial-survey competency test
@@ -73,56 +73,65 @@ script ParcelDelibird_Elder {
         release
         end
     }
-    if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
-        msgbox(format("Elder: Tomas got his blanket, then. Bless you.\pCome here. There's a thing we do for someone who carries for a stranger without being asked twice."), MSGBOX_DEFAULT)
-        msgbox(format("Elder: We raise Delibird here. Have for longer than the records. In a hard winter they carry food cabin to cabin -- they find the door that needs it. Nobody trained that into them. It's just what they are."), MSGBOX_DEFAULT)
-        msgbox(format("Elder: This one took to you off the boat. Take it. It'll deliver for you the way it delivered for us.\pThe storms are worse now. We'll need more of that, not less."), MSGBOX_DEFAULT)
-        playse(SE_PIN)
-        givemon(SPECIES_DELIBIRD, 22)
-        setflag(FLAG_SKALDMERE_DELIBIRD_GIFT)
-        msgbox(format("WREN received DELIBIRD.\pIt shifts its little sack to one side and looks at you, ready to be useful."), MSGBOX_DEFAULT)
-        msgbox(format("Elder, quieter:\pElder: There's a paper from the Foundation says we should think about relocating the festival. Somewhere it won't flood.\pWe held it here anyway. While there's a here.\pTell your people we said thank you, and no."), MSGBOX_DEFAULT)
-        release
-        end
-    }
     if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
-        msgbox(format("Elder: Old Tomas keeps to the south shore, by the water. The blanket's for him -- his cabin's the one with the cold corner.\pGo on. Reciprocity doesn't keep."), MSGBOX_DEFAULT)
+        if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED) && flag(FLAG_SKALD_DEL_INGRID_DONE) && flag(FLAG_SKALD_DEL_RUNE_DONE)) {
+            goto(ParcelDelibird_Elder_RoundDone)
+        }
+        msgbox(format("Elder: Still carrying? Good. Who's waiting on you, then."), MSGBOX_DEFAULT)
+        if (!flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
+            msgbox(format("Elder: Tomas. The shore trail east, past the tall grass, then the stairs down to the sand. His cabin's the one with the cold corner."), MSGBOX_DEFAULT)
+        }
+        if (!flag(FLAG_SKALD_DEL_INGRID_DONE)) {
+            msgbox(format("Elder: Ingrid. The summit trail, up past the cave mouth, two sets of stairs. She's at the stakes. She's always at the stakes."), MSGBOX_DEFAULT)
+        }
+        if (!flag(FLAG_SKALD_DEL_RUNE_DONE)) {
+            msgbox(format("Elder: Rune. Along the cliff top past the rocks, out to the point. You'll see the beacon before you see him."), MSGBOX_DEFAULT)
+        }
+        msgbox(format("Elder: Go on. Reciprocity doesn't keep."), MSGBOX_DEFAULT)
         release
         end
     }
     msgbox(format("An old woman sorts folded blankets into oilcloth parcels, quick and sure, a Delibird stacking them at her elbow.\pElder: Ranger, is it? Then make yourself useful in the good way, not the clipboard way."), MSGBOX_DEFAULT)
     msgbox(format("Elder: The island runs on this -- you give before you're asked, and the island gives back before you need. It's not charity. It's how a cold place keeps everyone alive through a bad season.\pThe opposite of the people who only ever take from it."), MSGBOX_DEFAULT)
-    msgbox(format("Elder: Here. A storm-relief parcel for old Tomas, down on the south shore. Carry it for me?"), MSGBOX_DEFAULT)
+    msgbox(format("Elder: The relief round. Three doors the bird can't reach, the way its wings are this winter.\pOld Tomas, under the cliffs on the east shore -- his cabin's the one with the cold corner. Ingrid, up at the snow stakes on the summit -- lamp oil and tea. And Rune, out at the point beacon past the cliffs.\pCarry them for me?"), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_DELIBIRD_PARCEL)
-    msgbox(format("You take the parcel. It is heavier than a blanket should be. There's food in it too."), MSGBOX_DEFAULT)
+    msgbox(format("You take the parcels. They are heavier than blankets should be. There is food in all three."), MSGBOX_DEFAULT)
     release
     end
 }
 
-// the delivery target: reciprocity in action
-script ParcelDelibird_Fisher {
+// all three doors: the Delibird, and the lighting of the square
+script ParcelDelibird_Elder_RoundDone {
+    msgbox(format("Elder: Tomas has his blanket, Ingrid her oil, Rune his tea. Three doors, on foot, in a day. Bless you.\pCome here. There's a thing we do for someone who carries for strangers without being asked twice."), MSGBOX_DEFAULT)
+    msgbox(format("Elder: We raise Delibird here. Have for longer than the records. In a hard winter they carry food cabin to cabin -- they find the door that needs it. Nobody trained that into them. It's just what they are."), MSGBOX_DEFAULT)
+    msgbox(format("Elder: This one took to you off the boat. Take it. It'll deliver for you the way it delivered for us.\pThe storms are worse now. We'll need more of that, not less."), MSGBOX_DEFAULT)
+    playse(SE_PIN)
+    givemon(SPECIES_DELIBIRD, 28)
+    setflag(FLAG_SKALDMERE_DELIBIRD_GIFT)
+    msgbox(format("WREN received DELIBIRD.\pIt shifts its little sack to one side and looks at you, ready to be useful."), MSGBOX_DEFAULT)
+    msgbox(format("Elder, quieter:\pElder: There's a paper from the Foundation says we should think about relocating the festival. Somewhere it won't flood.\pWe held it here anyway. While there's a here.\pTell your people we said thank you, and no."), MSGBOX_DEFAULT)
+    msgbox(format("Elder: Stay a minute. We light the square when the round comes home. We always have."), MSGBOX_DEFAULT)
+    closemessage
+    fadescreen(FADE_TO_BLACK)
+    delay(30)
+    msgbox(format("Dusk. The stringer climbs her ladder one last time and the lights come on along the eaves, cabin by cabin, until the whole square is lit and the dark is pushed back to the tree line.\pNobody cheers. They stand in it. A child says the word pretty and is not told to hush.\pBehind the lights, up the slope, the wet ground shines back at them. Nobody looks up there. You do."), MSGBOX_DEFAULT)
+    closemessage
+    fadescreen(FADE_FROM_BLACK)
+    msgbox(format("Elder: There. That's the festival. The rest is cocoa."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+// Ketil, mending nets where Tomas's cabin used to stand
+script ParcelDelibird_Ketil {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Tomas: The floor slopes a little more every year and the hearing didn't change that. It changed who's counting. Me, now. I've a book."), MSGBOX_DEFAULT)
+        msgbox(format("Ketil: I mend nets. The nets are the same. What comes up in them isn't.\pThat's in your paper, I'm told, in better words than mine."), MSGBOX_DEFAULT)
         release
         end
     }
-    if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
-        msgbox(format("Tomas: Warm through, thanks to you. Mind the corner of my cabin -- the floor slopes to the sea a little more each winter.\pUsed to be level. I remember it level."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
-        msgbox(format("An old fisher straightens, slow, by a cabin whose seaward corner has settled into the sand.\pTomas: From Marta? You carried this all the way down for an old man you've never met."), MSGBOX_DEFAULT)
-        msgbox(format("Tomas: That's the island in you already, and you only just landed.\pHere -- take this for the road. No, take it. That's how it works. You'll learn."), MSGBOX_DEFAULT)
-        giveitem(ITEM_HYPER_POTION)
-        setflag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)
-        msgbox(format("Tomas: Now go tell Marta I'm fine. She'll have a bird ready for you. She always does.\pIt's how she says thank you. Don't refuse it -- that's the one rude thing you can do here."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    msgbox(format("Tomas: Cold off the water today. There's coffee in the square if you've come up short.\pUp here you never go without. We see to that ourselves."), MSGBOX_DEFAULT)
+    msgbox(format("Ketil: Tomas took his cabin down under the cliffs when the green went soft under it. East trail, past the tall grass, then the stairs.\pMind him. He'll try to give you something. Let him."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -185,8 +194,18 @@ script ParcelDelibird_SlumpSign {
     end
 }
 
-script ParcelDelibird_SummitSign {
-    msgbox(format("From the peak you can see the whole crescent of the island at once -- and the meltwater pooling in the high hollows where the snowpack should still be holding.\pThis is the cold the festival is named for. There is less of it than there was last Midwinter. There will be less next.\pIt is the most beautiful view in Skaldmere. You write down why it won't last."), MSGBOX_SIGN)
+script ParcelDelibird_Notice {
+    msgbox(format("DELIBIRD ISLE MIDWINTER -- PROGRAMME\pThe giving table, all day. The relief round, when Marta says. The lighting, at dusk, when the round is home.\pVolunteers see Marta. Everyone is a volunteer."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_SummitTrailSign {
+    msgbox(format("SUMMIT TRAIL\pThe snow stakes and the tarn. Two sets of stairs. Ingrid is at the top; she does not come down for Midwinter.\pThe snowline marker has been removed for repainting."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_ShoreTrailSign {
+    msgbox(format("SHORE TRAIL\pTo the cliffs, the beach and the point beacon. Tomas's cabin is below the east stairs.\pThe path along the edge is checked each spring. The edge is not."), MSGBOX_SIGN)
     end
 }
 
@@ -533,7 +552,7 @@ script ParcelDelibird_T_Hakon_R5 {
 }
 script ParcelDelibird_T_Bjarne {
     trainerbattle_single(TRAINER_SKALD_DEL_BJARNE,
-        format("BJARNE: The summit mouth's behind me. Cold up there. Proper cold. Last of it. Battle before you climb."),
+        format("BJARNE: The summit trail's up past the cave mouth. Cold up there. Proper cold. Last of it. Battle before you climb."),
         format("BJARNE: Climb, then."),
         ParcelDelibird_T_Bjarne_FirstWin)
     specialvar(VAR_RESULT, SkaldRematchTier)

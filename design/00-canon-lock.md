@@ -195,6 +195,10 @@ skeleton:
 - ✅ **Climax shape** → reckoning of testimony, bittersweet, no legendary. (§02)
 - ✅ **Finale structure** → single authored bittersweet ending (no branching). (§02)
 - ✅ **Mascot device** → recurring motifs only (Smeargle=record, Delibird=give).
+- ✅ **Delibird Isle's geography** → built as four maps (village, Snowy
+  Summit, Shoreline Cliffs, Crystal Cavern); the named elder who carries the
+  Delibird-guardian lore is **Marta**; the festival's trigger is the finished
+  relief round, not a calendar. (§09 *Built*, 2026-11-08)
 - ✅ **Mentor's lever** → a **buried dishonesty** + the **concern's money** (doubled
   leash; same economic lever as on Harland). (§04)
 - ✅ **Ending note** → **clear-eyed grief** (bitter, cold, true; honesty chosen

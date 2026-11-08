@@ -195,7 +195,9 @@
     "ParcelWetlandsHouse2",
     "ParcelCoastHouse4",
     "ParcelCoastHouse5",
-    "ParcelCoastBreakwaterHut"
+    "ParcelCoastBreakwaterHut",
+    "ParcelDelibirdSummit",
+    "ParcelDelibirdCliffs"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

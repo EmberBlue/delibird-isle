@@ -1,0 +1,208 @@
+{
+  "id": "MAP_PARCEL_DELIBIRD_SUMMIT",
+  "name": "ParcelDelibirdSummit",
+  "layout": "LAYOUT_PARCEL_DELIBIRD_SUMMIT",
+  "music": "MUS_ROUTE113",
+  "region_map_section": "MAPSEC_SKALD_SUMMIT",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_PARCEL_DELIBIRD",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
+  "object_events": [
+    {
+      "local_id": "LOCALID_SUM_INGRID",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 23,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibirdSummit_Ingrid",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SUM_KARI",
+      "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+      "x": 13,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibirdSummit_Kari",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_T_SUM_RAGNAR",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 8,
+      "y": 32,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ParcelDelibirdSummit_T_Ragnar",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_T_SUM_ESKIL",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+      "x": 9,
+      "y": 14,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ParcelDelibirdSummit_T_Eskil",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_T_SUM_LIV",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 16,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "ParcelDelibirdSummit_T_Liv",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_T_SUM_BIRGITTA",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "x": 9,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelDelibirdSummit_T_Birgitta",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_T_SUM_TORVALD",
+      "graphics_id": "OBJ_EVENT_GFX_HIKER",
+      "x": 20,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "3",
+      "script": "ParcelDelibirdSummit_T_Torvald",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_SUM_ITEM_A",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 25,
+      "y": 7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibirdSummit_ItemMaxRevive",
+      "flag": "FLAG_SKALD_ITEM_SUM_A"
+    },
+    {
+      "local_id": "LOCALID_SUM_ITEM_B",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 25,
+      "y": 13,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibirdSummit_ItemHyperPotion",
+      "flag": "FLAG_SKALD_ITEM_SUM_B"
+    },
+    {
+      "local_id": "LOCALID_SUM_ITEM_C",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 25,
+      "y": 23,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelDelibirdSummit_ItemRareCandy",
+      "flag": "FLAG_SKALD_ITEM_SUM_C"
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelDelibirdSummit_PeakSign"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 16,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelDelibirdSummit_StakesSign"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelDelibirdSummit_PondSign"
+    },
+    {
+      "type": "hidden_item",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "item": "ITEM_NUGGET",
+      "flag": "FLAG_SKALD_HIDDEN_SUM_A"
+    },
+    {
+      "type": "hidden_item",
+      "x": 3,
+      "y": 26,
+      "elevation": 0,
+      "item": "ITEM_SITRUS_BERRY",
+      "flag": "FLAG_SKALD_HIDDEN_SUM_B"
+    }
+  ]
+}

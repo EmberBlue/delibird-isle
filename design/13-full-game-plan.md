@@ -305,3 +305,19 @@ quest is built, how the peer works) before they are asked six more times.
   flag table is otherwise full). The Field Notebook gained "Her notes":
   one of Heron's survey notes decodes per certification, the marsh one
   after the finale. Fifteen side quests in all; 46,400 hand-written words.
+- **2026-11-08 — Delibird Isle as a real island (fix A for Ch5).** Two new
+  outdoor maps on the Johto tilesets: the **Snowy Summit** north of the
+  village (three terraces of grass, rock and thaw ponds climbing to a tarn
+  and Ingrid's hut; the tilesets have no snow, so thirteen snow-patch
+  metatiles were added for the last of it) and the **Shoreline Cliffs**
+  east of it (the cliff top to the point beacon, stairs down to a warm
+  beach with Tomas's cabin at the cliff foot). The village's north belt
+  and east ring open onto them as seamless connections; the village sea
+  lost its rock-pair tile and the border tile (a wall piece) became water.
+  The delivery quest is now **Marta's relief round**: three parcels, three
+  doors across the island, then the Delibird and the lighting of the
+  square at dusk. Ten trainers at 28–32 with rematch tiers, two encounter
+  tables (the warming edge has CORSOLA and STARYU in the surf; the summit
+  has the cold specialists), six item balls, four hidden presents, Einar's
+  forty-year list, Kari's sledge run, two map sections. 102 maps, 1,071
+  reachable battles, ~48,300 hand-written words (~74,400 with the tiers).

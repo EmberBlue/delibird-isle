@@ -222,6 +222,7 @@ static const u8 sNbQ_Hives[]   = _("The beekeeper: ");
 static const u8 sNbQ_Mareep[]  = _("The shepherd's MAREEP: ");
 static const u8 sNbQ_Tins[]    = _("The line of tins: ");
 static const u8 sNbQ_Cast[]    = _("The office CASTFORM: ");
+static const u8 sNbQ_Round[]   = _("Marta's relief round: ");
 static const struct NbQuest sNbQuests[] =
 {
     {sNbQ_Anni,    FLAG_SKALD_Q_ANNI_NET,    FLAG_SKALD_Q_ANNI_DONE},
@@ -244,6 +245,7 @@ static const struct NbQuest sNbQuests[] =
     {sNbQ_Mareep,  FLAG_SKALD_Q_MAREEP,      FLAG_SKALD_Q_MAREEP_DONE},
     {sNbQ_Tins,    FLAG_SKALD_Q_TINS,        FLAG_SKALD_Q_TINS_DONE},
     {sNbQ_Cast,    FLAG_SKALD_Q_CASTFORM,    FLAG_SKALD_Q_CASTFORM_DONE},
+    {sNbQ_Round,   FLAG_SKALDMERE_DELIBIRD_PARCEL, FLAG_SKALDMERE_DELIBIRD_GIFT},
 };
 
 static const u8 sNb_Margins_None[]  = _("The margins are in her hand, in a\nshorthand you can't read yet.\pIt gets easier the more of the\nregion you've read yourself.");

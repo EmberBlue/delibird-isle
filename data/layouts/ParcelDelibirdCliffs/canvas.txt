@@ -1,0 +1,45 @@
+legend johtogeneral__azaleatown
+size 34 20
+# Shoreline Cliffs (Delibird Isle, zone 6). A grass cliff-top running east from the
+# village's east trail (rows 4-6 on the west edge) to the beacon point, a two-row
+# cliff with stairs at both ends, and the warm beach below: Tomas's cabin at the
+# cliff foot, the tide line, sea stacks. The warming edge: species that should not
+# be this far north yet are.
+# Anchors: u Rune, m beacon sign, v Einar, l Solveig, r Olav, j trail sign, 5 item,
+# 0 hidden, * Tomas, 1 Geir, 2 Pelle, 3 Astrid, 4/6 items, 8 hidden.
+anchor u .
+anchor m $
+anchor v .
+anchor l .
+anchor r .
+anchor j $
+anchor 5 .
+anchor 0 .
+anchor * s
+anchor 1 V
+anchor 2 s
+anchor 3 ~
+anchor 4 s
+anchor 6 s
+anchor 8 s
+---
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  # 0
+~/:::::::::::::::::::::::::::::::?  # 1
+~HKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKM  # 2
+X.x...,....ggggg....R#......h##..X  # 3
+..,........ggggg....##..v...###.Q.  # 4
+........l........,...........u....  # 5
+...........................m...0..  # 6
+X..j.@....,.......r.....,.......5.  # 7
+~Xx......@......X.........x......X  # 8
+[ABBTBBBBBBBBBBBBBBBBBBBBBBTBBBBBC  # 9
+[HKK|KKKKKKKKKKKKKKKKKKKKKK|KKKKKM  # 10
+~X......................h##......X  # 11
+~Xyttttttttttttttttttttt###tttttYX  # 12
+~<sssssssssssssssssssssss*sssssss>  # 13
+~<s6ssssss8ssssssssssssssssssssss>  # 14
+~<ssssssssssss2ssssssssssssssssss>  # 15
+~<sssssssssssssssssssssssssssss4s>  # 16
+~JVVVVV1VVVVVVVVVVVVVVVVVVVVVVVVVL  # 17
+~~~%~~~~U#~~~~~~~~~~~~~~~~%~~~~~~~  # 18
+~~~~~~~~~~~~~%~~~~~~3~~~~~~~~~~%~~  # 19

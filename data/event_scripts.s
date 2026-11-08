@@ -1269,3 +1269,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ParcelCoastHouse4/scripts.inc"
 	.include "data/maps/ParcelCoastHouse5/scripts.inc"
 	.include "data/maps/ParcelCoastBreakwaterHut/scripts.inc"
+	.include "data/maps/ParcelDelibirdSummit/scripts.inc"
+	.include "data/maps/ParcelDelibirdCliffs/scripts.inc"

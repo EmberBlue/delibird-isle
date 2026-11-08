@@ -114,3 +114,14 @@ list that was green on 2026-11-07 is the one in the handoff.
   samples (read `core.cpu.pc` and `gMain` straight out of the emulator).
 - Door-class exit tiles (cave mouths, track ends, ladders) take warp events on
   both sides; a step trigger never fires on them because the tile is solid.
+
+## Harness gotchas (2026-11-08)
+- `--walk DIR:n` moves n+1 tiles when nothing stops the player (the key is
+  held 16n+12 frames). Route against obstacles or pass n−1; `DIR:0` is one
+  step.
+- Sight battles never fire in the harness: `CheckForTrainersWantingBattle`
+  bails when the party is empty. Test a trainer through the talk path with
+  its `TRAINER_` flag pre-set (the post-battle line proves the wiring), or
+  run a `givemon` scene first (Marta's round) and then walk into a line.
+- A flag set after `giveitem` needs ~3000 frames of dismissal before it
+  reads back; `--dismiss 1200` is too short.

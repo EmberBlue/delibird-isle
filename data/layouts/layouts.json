@@ -4690,6 +4690,26 @@
       "secondary_tileset": "gTileset_leob_slateport",
       "border_filepath": "data/layouts/ParcelCoastBreakwater/border.bin",
       "blockdata_filepath": "data/layouts/ParcelCoastBreakwater/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_DELIBIRD_SUMMIT",
+      "name": "ParcelDelibirdSummit_Layout",
+      "width": 30,
+      "height": 36,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_AzaleaTown",
+      "border_filepath": "data/layouts/ParcelDelibirdSummit/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelDelibirdSummit/map.bin"
+    },
+    {
+      "id": "LAYOUT_PARCEL_DELIBIRD_CLIFFS",
+      "name": "ParcelDelibirdCliffs_Layout",
+      "width": 34,
+      "height": 20,
+      "primary_tileset": "gTileset_JohtoGeneral",
+      "secondary_tileset": "gTileset_AzaleaTown",
+      "border_filepath": "data/layouts/ParcelDelibirdCliffs/border.bin",
+      "blockdata_filepath": "data/layouts/ParcelDelibirdCliffs/map.bin"
     }
   ]
 }
