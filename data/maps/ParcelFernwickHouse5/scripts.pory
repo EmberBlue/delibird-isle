@@ -56,3 +56,13 @@ script ParcelFernwickHouse5_Woman {
     release
     end
 }
+
+script ParcelFernwickHouse5_ReadDresser {
+    msgbox(format("On the dresser, a pen with a bitten end and a pair of reading glasses folded over it, waiting."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse5_ReadDrawer {
+    msgbox(format("The chest. Old notebooks in the top drawer, each one a river.\pYou don't open them. You know what a page full of a place that isn't there feels like under your hand."), MSGBOX_SIGN)
+    end
+}

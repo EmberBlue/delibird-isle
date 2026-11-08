@@ -38,3 +38,13 @@ script ParcelWetlandsHouse2_Boy {
     release
     end
 }
+
+script ParcelWetlandsHouse2_ReadDresser {
+    msgbox(format("A reed knife on the dresser, and a notebook: TWELVE. Then EIGHT, with a line under it, and a river hall address on the facing page."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWetlandsHouse2_ReadDrawer {
+    msgbox(format("GUNNAR's spare clicker, in the drawer, on a ribbon. Forty-four, it still says. Nobody has pressed it since."), MSGBOX_SIGN)
+    end
+}

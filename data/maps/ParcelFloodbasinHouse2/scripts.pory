@@ -35,3 +35,13 @@ script ParcelFloodbasinHouse2_Boy {
     release
     end
 }
+
+script ParcelFloodbasinHouse2_ReadDresser {
+    msgbox(format("The water line on the wall runs behind the dresser. Somebody has written the year beside each line in pencil. Three lines.\pThe pencil is kept on the dresser."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFloodbasinHouse2_ReadDrawer {
+    msgbox(format("A drawer of relief vouchers, unspent, in rubber bands.\pSigning gets you the vouchers. Nobody said you had to use them."), MSGBOX_SIGN)
+    end
+}

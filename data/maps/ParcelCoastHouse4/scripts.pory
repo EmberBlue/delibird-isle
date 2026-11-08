@@ -38,3 +38,13 @@ script ParcelCoastHouse4_Man {
     release
     end
 }
+
+script ParcelCoastHouse4_ReadDresser {
+    msgbox(format("Two alarm clocks on the dresser, set an hour apart. Six to two, and the other shift."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHouse4_ReadDrawer {
+    msgbox(format("A drawer of gutting gloves, every pair mended at the same finger.\pThe fish are all one size. So is the work."), MSGBOX_SIGN)
+    end
+}

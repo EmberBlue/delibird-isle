@@ -62,6 +62,24 @@ ParcelFernwickHouse6_Girl_5:
 	end
 
 
+ParcelFernwickHouse6_ReadDresser::
+# 43 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	msgbox ParcelFernwickHouse6_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse6_ReadShelf::
+# 48 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	msgbox ParcelFernwickHouse6_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse6_ReadPantry::
+# 53 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	msgbox ParcelFernwickHouse6_ReadPantry_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHouse6_Man_Text_0:
 # 10 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	.string "MAN: Fed the hearing's clerks for a\n"
@@ -98,3 +116,21 @@ ParcelFernwickHouse6_Girl_Text_2:
 # 37 "data/maps/ParcelFernwickHouse6/scripts.pory"
 	.string "GIRL: I'm going to be a ranger. Or a\n"
 	.string "cook. Dad says they're the same job.$"
+
+ParcelFernwickHouse6_ReadDresser_Text_0:
+# 43 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	.string "A cook's apron on the dresser, washed\n"
+	.string "thin. Embroidered on the pocket, badly,\l"
+	.string "by a child: RANGER.$"
+
+ParcelFernwickHouse6_ReadShelf_Text_0:
+# 48 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	.string "Cookbooks, and between them the\n"
+	.string "District Station duty roster, so he\l"
+	.string "knows how many to feed. Tonight's\l"
+	.string "number is circled twice.$"
+
+ParcelFernwickHouse6_ReadPantry_Text_0:
+# 53 "data/maps/ParcelFernwickHouse6/scripts.pory"
+	.string "A sugar jar with a note taped to it: FOR\n"
+	.string "THE BASIN LOT. NO ARGUMENTS.$"

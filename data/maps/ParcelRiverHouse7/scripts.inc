@@ -62,6 +62,18 @@ ParcelRiverHouse7_Man_5:
 	end
 
 
+ParcelRiverHouse7_ReadDresser::
+# 43 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverHouse7_ReadDrawer::
+# 48 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverHouse7_Woman_Text_0:
 # 10 "data/maps/ParcelRiverHouse7/scripts.pory"
 	.string "WOMAN: HARLAND spoke at the hearing\n"
@@ -104,3 +116,15 @@ ParcelRiverHouse7_Man_Text_2:
 	.string "MAN: My wife fishes; I mend. The holes in\n"
 	.string "the net are the same size every year.\l"
 	.string "The fish aren't.$"
+
+ParcelRiverHouse7_ReadDresser_Text_0:
+# 43 "data/maps/ParcelRiverHouse7/scripts.pory"
+	.string "A net needle on the dresser and a reel\n"
+	.string "of twine. The holes are the same size\l"
+	.string "every year. The twine runs out faster.$"
+
+ParcelRiverHouse7_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelRiverHouse7/scripts.pory"
+	.string "A drawer of weights for a net: river\n"
+	.string "stones, drilled. Lighter ones at the\l"
+	.string "front now. The slow water isn't as slow.$"

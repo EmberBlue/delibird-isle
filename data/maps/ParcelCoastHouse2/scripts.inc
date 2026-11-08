@@ -62,6 +62,24 @@ ParcelCoastHouse2_Wife_5:
 	end
 
 
+ParcelCoastHouse2_ReadDresser::
+# 39 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastHouse2_ReadShelf::
+# 44 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastHouse2_ReadPantry::
+# 49 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_ReadPantry_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastHouse2_Skipper_Text_0:
 # 7 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "SKIPPER: Sold the boat the year the\n"
@@ -112,3 +130,21 @@ ParcelCoastHouse2_Wife_Text_2:
 	.string "watches the boats go out. Forty years\l"
 	.string "he went out. Now he watches. Watching's\l"
 	.string "harder, he says.$"
+
+ParcelCoastHouse2_ReadDresser_Text_0:
+# 39 "data/maps/ParcelCoastHouse2/scripts.pory"
+	.string "A skipper's cap on the dresser, brushed.\n"
+	.string "Beside it a cheque stub, forty years old\l"
+	.string "by the date, for a boat.\p"
+	.string "The ink has gone brown. The cap has not.$"
+
+ParcelCoastHouse2_ReadShelf_Text_0:
+# 44 "data/maps/ParcelCoastHouse2/scripts.pory"
+	.string "Tide tables, forty years of them, in\n"
+	.string "order. The last ten have nothing\l"
+	.string "underlined.$"
+
+ParcelCoastHouse2_ReadPantry_Text_0:
+# 49 "data/maps/ParcelCoastHouse2/scripts.pory"
+	.string "Tins with the crest. Tins without. The\n"
+	.string "ones without are at the front.$"

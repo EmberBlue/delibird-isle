@@ -354,4 +354,13 @@ quest is built, how the peer works) before they are asked six more times.
   column, Harland's handshake on his own quay, the model coming off the
   Foundation's wall "for updating"). Every town now moves in three states.
   ~54,400 hand-written words.
+- **2026-11-08 — readable furniture.** Seventy-six sign events on the
+  dressers, shelves, drawers, fridges, pantries, a bed and two pots of
+  thirty-seven house interiors, each text written for its residents: the
+  skipper's cheque stub gone brown beside a brushed cap, Hale's tide table
+  with HIGH in a child's hand, the miller's oiled key for a lock that is
+  never turned, the relief vouchers in rubber bands, the boat-loan papers in
+  the drawer that doesn't close with the pen on top of them, a child's
+  mittens in sizes that were never worn. Three taken on screen.
+  ~56,100 hand-written words.
 

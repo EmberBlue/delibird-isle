@@ -50,6 +50,24 @@ ParcelFernwickHouse2_Zigzagoon::
 	end
 
 
+ParcelFernwickHouse2_ReadShelf::
+# 34 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	msgbox ParcelFernwickHouse2_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse2_ReadFridge::
+# 39 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	msgbox ParcelFernwickHouse2_ReadFridge_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse2_ReadDresser::
+# 44 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	msgbox ParcelFernwickHouse2_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHouse2_Woman_Text_0:
 # 8 "data/maps/ParcelFernwickHouse2/scripts.pory"
 	.string "WOMAN: HALE was born in this house and\n"
@@ -78,3 +96,25 @@ ParcelFernwickHouse2_Zigzagoon_Text_0:
 # 27 "data/maps/ParcelFernwickHouse2/scripts.pory"
 	.string "ZIGZAGOON is investigating your boots.\n"
 	.string "Thoroughly.$"
+
+ParcelFernwickHouse2_ReadShelf_Text_0:
+# 34 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	.string "Tide tables going back to before the\n"
+	.string "station. One winter's table has a child's\l"
+	.string "handwriting in the margin: HIGH.\p"
+	.string "Somebody small learned to read the\n"
+	.string "water here.$"
+
+ParcelFernwickHouse2_ReadFridge_Text_0:
+# 39 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	.string "A biscuit tin on top of the fridge,\n"
+	.string "dented. The dent is older than you. The\l"
+	.string "biscuits are not.$"
+
+ParcelFernwickHouse2_ReadDresser_Text_0:
+# 44 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	.string "A photograph on the dresser: a boy on\n"
+	.string "the quay with a notebook too big for\l"
+	.string "him, scowling at whoever held the\l"
+	.string "camera.\p"
+	.string "The scowl hasn't changed.$"

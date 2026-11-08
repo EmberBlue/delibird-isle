@@ -17,3 +17,13 @@ script ParcelCoastHouse3_Clerk {
     release
     end
 }
+
+script ParcelCoastHouse3_ReadDresser {
+    msgbox(format("A view of the harbour, framed, on the dresser. The frame is better than the photograph. The photograph is older than the flat."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHouse3_ReadDrawer {
+    msgbox(format("A locked drawer. Behind the lock, by the shape of it, a ledger.\pThe clerk said she wouldn't tell you the day. The drawer knows it."), MSGBOX_SIGN)
+    end
+}

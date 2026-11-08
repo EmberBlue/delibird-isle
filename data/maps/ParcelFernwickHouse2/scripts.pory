@@ -29,3 +29,18 @@ script ParcelFernwickHouse2_Zigzagoon {
     release
     end
 }
+
+script ParcelFernwickHouse2_ReadShelf {
+    msgbox(format("Tide tables going back to before the station. One winter's table has a child's handwriting in the margin: HIGH.\pSomebody small learned to read the water here."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse2_ReadFridge {
+    msgbox(format("A biscuit tin on top of the fridge, dented. The dent is older than you. The biscuits are not."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse2_ReadDresser {
+    msgbox(format("A photograph on the dresser: a boy on the quay with a notebook too big for him, scowling at whoever held the camera.\pThe scowl hasn't changed."), MSGBOX_SIGN)
+    end
+}

@@ -54,6 +54,18 @@ ParcelIsleNetLoft_Zigzagoon::
 	end
 
 
+ParcelIsleNetLoft_ReadDresser::
+# 35 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	msgbox ParcelIsleNetLoft_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsleNetLoft_ReadTally::
+# 40 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	msgbox ParcelIsleNetLoft_ReadTally_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleNetLoft_Grette_Text_0:
 # 11 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	.string "GRETTE: Sixty blankets. FOUNDATION\n"
@@ -92,3 +104,16 @@ ParcelIsleNetLoft_Zigzagoon_Text_0:
 # 28 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	.string "ZIGZAGOON is tangled in a net and\n"
 	.string "completely happy about it.$"
+
+ParcelIsleNetLoft_ReadDresser_Text_0:
+# 35 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	.string "Net needles in a row on the dresser,\n"
+	.string "worn to the shape of one hand. Sixty\l"
+	.string "years. One hand.$"
+
+ParcelIsleNetLoft_ReadTally_Text_0:
+# 40 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	.string "A tally of nets mended, chalked on the\n"
+	.string "side of the cupboard. The marks get\l"
+	.string "closer together each year.\p"
+	.string "More holes, she said.$"

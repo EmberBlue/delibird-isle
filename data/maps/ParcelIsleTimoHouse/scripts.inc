@@ -42,6 +42,12 @@ ParcelIsleTimoHouse_Drawing::
 	end
 
 
+ParcelIsleTimoHouse_ReadDrawer::
+# 35 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	msgbox ParcelIsleTimoHouse_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleTimoHouse_Gran_Text_0:
 # 13 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	.string "Gran: Past the bridge, was it. All the\n"
@@ -95,3 +101,10 @@ ParcelIsleTimoHouse_Drawing_Text_0:
 	.string "eyes.\p"
 	.string "The frogs are all smiling. Every one of\n"
 	.string "them.$"
+
+ParcelIsleTimoHouse_ReadDrawer_Text_0:
+# 35 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	.string "A drawer of a boy's treasures: a bottle\n"
+	.string "cap, a gull feather, a stone from past\l"
+	.string "the bridge.\p"
+	.string "Gran knows about the stone.$"

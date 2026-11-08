@@ -34,3 +34,13 @@ script ParcelRiverHouse2_Girl {
     release
     end
 }
+
+script ParcelRiverHouse2_ReadDresser {
+    msgbox(format("A Board meter reader's badge on the dresser, and a child's drawing of a river with numbers in it instead of fish."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverHouse2_ReadShelf {
+    msgbox(format("Board ledgers, one per year. The current one is at home instead of at the Board. That is new, and it is not an accident."), MSGBOX_SIGN)
+    end
+}

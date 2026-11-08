@@ -53,6 +53,12 @@ ParcelTownLodging_Letter::
 	end
 
 
+ParcelTownLodging_ReadDresser::
+# 41 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelTownLodging_Keeper_Text_0:
 # 11 "data/maps/ParcelTownLodging/scripts.pory"
 	.string "Keeper: The scientist's room is paid\n"
@@ -101,3 +107,10 @@ ParcelTownLodging_Letter_Text_3:
 ParcelTownLodging_Letter_Text_4:
 # 35 "data/maps/ParcelTownLodging/scripts.pory"
 	.string "The letter is dated three weeks ago.$"
+
+ParcelTownLodging_ReadDresser_Text_0:
+# 41 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "A card with your name on it, in an\n"
+	.string "innkeeper's hand, propped against the\l"
+	.string "mirror. Three weeks old. Dusted around\l"
+	.string "every week.$"

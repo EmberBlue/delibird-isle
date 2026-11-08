@@ -35,3 +35,13 @@ script ParcelIsleOldCoupleHouse_Sten {
     release
     end
 }
+
+script ParcelIsleOldCoupleHouse_ReadDresser {
+    msgbox(format("A tea service for two, and a third cup, washed and put away at the back. It has not been used since a Thursday."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsleOldCoupleHouse_ReadShelf {
+    msgbox(format("Sten's tide notes, in a hand that does not waste ink. The last page says: currents wrong. AUD says not. Wrong."), MSGBOX_SIGN)
+    end
+}

@@ -38,3 +38,13 @@ script ParcelFloodbasinHouse3_Man {
     release
     end
 }
+
+script ParcelFloodbasinHouse3_ReadDresser {
+    msgbox(format("A newspaper photograph on the dresser: a councilman shaking a man's hand in front of sandbags. The man in the photograph lives here.\pHe has not cut it out. He has not thrown it away."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFloodbasinHouse3_ReadDrawer {
+    msgbox(format("The top drawer sticks. It has stuck since the second flood. Everything in this house has a before and an after."), MSGBOX_SIGN)
+    end
+}

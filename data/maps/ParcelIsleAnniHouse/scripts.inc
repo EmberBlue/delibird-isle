@@ -29,6 +29,18 @@ ParcelIsleAnniHouse_Piet_3:
 	goto ParcelIsleAnniHouse_Piet_1
 
 
+ParcelIsleAnniHouse_ReadBed::
+# 22 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	msgbox ParcelIsleAnniHouse_ReadBed_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsleAnniHouse_ReadShelf::
+# 27 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	msgbox ParcelIsleAnniHouse_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleAnniHouse_Piet_Text_0:
 # 11 "data/maps/ParcelIsleAnniHouse/scripts.pory"
 	.string "PIET: Mom read the frog part out loud.\n"
@@ -53,3 +65,17 @@ ParcelIsleAnniHouse_Piet_Text_2:
 	.string "it's the fog's fault.\p"
 	.string "Mom says the fog's been here longer\n"
 	.string "than the doctor.$"
+
+ParcelIsleAnniHouse_ReadBed_Text_0:
+# 22 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	.string "A child's bed with the blanket turned\n"
+	.string "back and a book face down on the pillow.\l"
+	.string "The book is about boats. The pillow is\l"
+	.string "damp.$"
+
+ParcelIsleAnniHouse_ReadShelf_Text_0:
+# 27 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	.string "A shelf of medicines in a row, with the\n"
+	.string "doctor's note weighted under the first\l"
+	.string "bottle. 'Fog.'\p"
+	.string "Underlined, by somebody else.$"

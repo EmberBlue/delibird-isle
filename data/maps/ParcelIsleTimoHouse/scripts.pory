@@ -30,3 +30,8 @@ script ParcelIsleTimoHouse_Drawing {
     msgbox(format("A crayon drawing, pinned low on the wall at a kid's eye height.\pA bridge. A river. A row of round blue somethings on the bank, with big happy eyes.\pThe frogs are all smiling. Every one of them."), MSGBOX_SIGN)
     end
 }
+
+script ParcelIsleTimoHouse_ReadDrawer {
+    msgbox(format("A drawer of a boy's treasures: a bottle cap, a gull feather, a stone from past the bridge.\pGran knows about the stone."), MSGBOX_SIGN)
+    end
+}

@@ -32,6 +32,18 @@ ParcelCoastHouse3_Clerk_5:
 	end
 
 
+ParcelCoastHouse3_ReadDresser::
+# 22 "data/maps/ParcelCoastHouse3/scripts.pory"
+	msgbox ParcelCoastHouse3_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastHouse3_ReadDrawer::
+# 27 "data/maps/ParcelCoastHouse3/scripts.pory"
+	msgbox ParcelCoastHouse3_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastHouse3_Clerk_Text_0:
 # 7 "data/maps/ParcelCoastHouse3/scripts.pory"
 	.string "CLERK: The exact day the numbers\n"
@@ -57,3 +69,17 @@ ParcelCoastHouse3_Clerk_Text_2:
 	.string "day the numbers started going down. I\l"
 	.string "won't. I like my flat. It has a view of\l"
 	.string "the harbour.$"
+
+ParcelCoastHouse3_ReadDresser_Text_0:
+# 22 "data/maps/ParcelCoastHouse3/scripts.pory"
+	.string "A view of the harbour, framed, on the\n"
+	.string "dresser. The frame is better than the\l"
+	.string "photograph. The photograph is older\l"
+	.string "than the flat.$"
+
+ParcelCoastHouse3_ReadDrawer_Text_0:
+# 27 "data/maps/ParcelCoastHouse3/scripts.pory"
+	.string "A locked drawer. Behind the lock, by the\n"
+	.string "shape of it, a ledger.\p"
+	.string "The clerk said she wouldn't tell you the\n"
+	.string "day. The drawer knows it.$"

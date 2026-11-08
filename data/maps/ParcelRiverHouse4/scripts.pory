@@ -38,3 +38,13 @@ script ParcelRiverHouse4_Boy {
     release
     end
 }
+
+script ParcelRiverHouse4_ReadDresser {
+    msgbox(format("A chalk slate on the dresser: STALLS. Twenty-two, rubbed out. Fourteen, rubbed out. Nineteen. The chalk is nearly gone."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverHouse4_ReadDrawer {
+    msgbox(format("Market scales in the drawer, and a Board water receipt under them. Fish on one side of the scale, metered water on the other."), MSGBOX_SIGN)
+    end
+}

@@ -89,6 +89,12 @@ ParcelMistwoodPost_Map::
 	end
 
 
+ParcelMistwoodPost_ReadShelf::
+# 52 "data/maps/ParcelMistwoodPost/scripts.pory"
+	msgbox ParcelMistwoodPost_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMistwoodPost_Skeld_Text_0:
 # 13 "data/maps/ParcelMistwoodPost/scripts.pory"
 	.string "SKELD: Certified, read, and filed. I sent\n"
@@ -168,3 +174,10 @@ ParcelMistwoodPost_Map_Text_0:
 	.string "the top gallery.\p"
 	.string "And a fourth mark, up at the north\n"
 	.string "track: DEADFALL. LONG WAY ROUND.$"
+
+ParcelMistwoodPost_ReadShelf_Text_0:
+# 52 "data/maps/ParcelMistwoodPost/scripts.pory"
+	.string "Ranger regulations, three volumes. A\n"
+	.string "bookmark in the second, at 'snare\l"
+	.string "clearance requires two officers'.\p"
+	.string "The bookmark is a length of snare wire.$"

@@ -56,3 +56,13 @@ script ParcelHighlandsHouse1_Girl {
     release
     end
 }
+
+script ParcelHighlandsHouse1_ReadDresser {
+    msgbox(format("A mug on the dresser with the FOUNDATION crest, washed and put upside down. A child's mug beside it, right way up, with cocoa rings inside."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelHighlandsHouse1_ReadDrawer {
+    msgbox(format("A drawer of mittens, in pairs, by size. The smallest pairs have never been worn. There was no snow to wear them in."), MSGBOX_SIGN)
+    end
+}

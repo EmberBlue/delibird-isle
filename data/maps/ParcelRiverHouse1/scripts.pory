@@ -48,3 +48,13 @@ script ParcelRiverHouse1_OldWoman {
     release
     end
 }
+
+script ParcelRiverHouse1_ReadDresser {
+    msgbox(format("On the dresser, a jar of pale wood chips, cut to a point. The old man carries one. The rest live here, for when he loses it."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverHouse1_ReadDrawer {
+    msgbox(format("A drawer of the old woman's counting: fifty-one years, in tally marks, on the backs of seed packets."), MSGBOX_SIGN)
+    end
+}

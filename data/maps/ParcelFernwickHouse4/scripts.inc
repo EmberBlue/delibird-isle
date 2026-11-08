@@ -62,6 +62,18 @@ ParcelFernwickHouse4_Boy_5:
 	end
 
 
+ParcelFernwickHouse4_ReadDresser::
+# 43 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse4_ReadDrawer::
+# 48 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHouse4_Woman_Text_0:
 # 10 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "WOMAN: The hearing asked for every\n"
@@ -102,3 +114,15 @@ ParcelFernwickHouse4_Boy_Text_2:
 # 37 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "BOY: Dad says the rangers are the ones\n"
 	.string "who get wet on purpose.$"
+
+ParcelFernwickHouse4_ReadDresser_Text_0:
+# 43 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "A Survey office lanyard hung on the\n"
+	.string "mirror, and a second-drawer key on a\l"
+	.string "ribbon beside it. The ribbon is new.$"
+
+ParcelFernwickHouse4_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "A boy's boots drying on newspaper. The\n"
+	.string "newspaper is a river report. The boots\l"
+	.string "are wet on purpose.$"

@@ -62,6 +62,18 @@ ParcelFloodbasinHouse2_Boy_5:
 	end
 
 
+ParcelFloodbasinHouse2_ReadDresser::
+# 40 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	msgbox ParcelFloodbasinHouse2_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFloodbasinHouse2_ReadDrawer::
+# 45 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	msgbox ParcelFloodbasinHouse2_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasinHouse2_Wife_Text_0:
 # 8 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
 	.string "WOMAN: Third flood, and the Board man\n"
@@ -110,3 +122,18 @@ ParcelFloodbasinHouse2_Boy_Text_2:
 	.string "feet! Gran made me put it back in the\l"
 	.string "puddle. It's still there. It doesn't go\l"
 	.string "anywhere.$"
+
+ParcelFloodbasinHouse2_ReadDresser_Text_0:
+# 40 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	.string "The water line on the wall runs behind\n"
+	.string "the dresser. Somebody has written the\l"
+	.string "year beside each line in pencil. Three\l"
+	.string "lines.\p"
+	.string "The pencil is kept on the dresser.$"
+
+ParcelFloodbasinHouse2_ReadDrawer_Text_0:
+# 45 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	.string "A drawer of relief vouchers, unspent, in\n"
+	.string "rubber bands.\p"
+	.string "Signing gets you the vouchers. Nobody\n"
+	.string "said you had to use them.$"

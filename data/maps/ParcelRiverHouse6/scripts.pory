@@ -38,3 +38,13 @@ script ParcelRiverHouse6_Girl {
     release
     end
 }
+
+script ParcelRiverHouse6_ReadDresser {
+    msgbox(format("A first sheet of meter readings on the dresser, the real one, kept at home. SLUICE's idea.\pFourteen plots. The word MELTWATER, written small."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverHouse6_ReadShelf {
+    msgbox(format("A child's arithmetic book, open at a page about budgets. In the margin, in a child's hand: RIVERS DON'T HAVE MONEY."), MSGBOX_SIGN)
+    end
+}

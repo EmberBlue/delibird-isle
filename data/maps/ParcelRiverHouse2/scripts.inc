@@ -62,6 +62,18 @@ ParcelRiverHouse2_Girl_5:
 	end
 
 
+ParcelRiverHouse2_ReadDresser::
+# 39 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverHouse2_ReadShelf::
+# 44 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverHouse2_Woman_Text_0:
 # 7 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "WOMAN: My husband reads the meters for\n"
@@ -106,3 +118,15 @@ ParcelRiverHouse2_Girl_Text_2:
 	.string "GIRL: Dad says the river's a ledger. I\n"
 	.string "thought a ledger was a book. The river\l"
 	.string "isn't a book. I checked.$"
+
+ParcelRiverHouse2_ReadDresser_Text_0:
+# 39 "data/maps/ParcelRiverHouse2/scripts.pory"
+	.string "A Board meter reader's badge on the\n"
+	.string "dresser, and a child's drawing of a river\l"
+	.string "with numbers in it instead of fish.$"
+
+ParcelRiverHouse2_ReadShelf_Text_0:
+# 44 "data/maps/ParcelRiverHouse2/scripts.pory"
+	.string "Board ledgers, one per year. The current\n"
+	.string "one is at home instead of at the Board.\l"
+	.string "That is new, and it is not an accident.$"

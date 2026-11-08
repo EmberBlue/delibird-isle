@@ -41,3 +41,13 @@ script ParcelCoastHouse1_Boy {
     release
     end
 }
+
+script ParcelCoastHouse1_ReadDresser {
+    msgbox(format("Three pay slips in a row on the dresser, each with the same crest in the corner. Somebody has lined up the crests so they all face the same way."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHouse1_ReadDrawer {
+    msgbox(format("The top drawer holds a child's diving mask, still in its box, and a shell on a bed of cotton wool.\pThe box has been opened and closed a great many times."), MSGBOX_SIGN)
+    end
+}

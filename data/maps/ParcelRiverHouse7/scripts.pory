@@ -38,3 +38,13 @@ script ParcelRiverHouse7_Man {
     release
     end
 }
+
+script ParcelRiverHouse7_ReadDresser {
+    msgbox(format("A net needle on the dresser and a reel of twine. The holes are the same size every year. The twine runs out faster."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverHouse7_ReadDrawer {
+    msgbox(format("A drawer of weights for a net: river stones, drilled. Lighter ones at the front now. The slow water isn't as slow."), MSGBOX_SIGN)
+    end
+}

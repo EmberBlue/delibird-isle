@@ -31,6 +31,24 @@ ParcelFernwickHouse3_OldWoman_5:
 	end
 
 
+ParcelFernwickHouse3_ReadShelf::
+# 22 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	msgbox ParcelFernwickHouse3_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse3_ReadFridge::
+# 27 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	msgbox ParcelFernwickHouse3_ReadFridge_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse3_ReadDresser::
+# 32 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	msgbox ParcelFernwickHouse3_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHouse3_OldWoman_Text_0:
 # 8 "data/maps/ParcelFernwickHouse3/scripts.pory"
 	.string "OLD WOMAN: So that's where she went.\n"
@@ -54,3 +72,22 @@ ParcelFernwickHouse3_OldWoman_Text_2:
 	.string "here on her way somewhere. Bought\l"
 	.string "bread. Didn't say where she was going.\p"
 	.string "I've thought about that bread a lot.$"
+
+ParcelFernwickHouse3_ReadShelf_Text_0:
+# 22 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	.string "Recipe books, and one field guide to\n"
+	.string "marsh plants that does not belong with\l"
+	.string "them. A receipt marks a page.\p"
+	.string "One loaf. Paid in coin.$"
+
+ParcelFernwickHouse3_ReadFridge_Text_0:
+# 27 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	.string "Bread, under a cloth. Today's. She bakes\n"
+	.string "whether or not anyone is coming\l"
+	.string "through.$"
+
+ParcelFernwickHouse3_ReadDresser_Text_0:
+# 32 "data/maps/ParcelFernwickHouse3/scripts.pory"
+	.string "A dresser of good plates. One has been\n"
+	.string "moved to the front and turned so its\l"
+	.string "chip faces the wall.$"

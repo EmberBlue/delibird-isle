@@ -70,6 +70,18 @@ ParcelIsleOldCoupleHouse_Sten_4:
 	goto ParcelIsleOldCoupleHouse_Sten_1
 
 
+ParcelIsleOldCoupleHouse_ReadDresser::
+# 40 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsleOldCoupleHouse_ReadShelf::
+# 45 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleOldCoupleHouse_Aud_Text_0:
 # 11 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	.string "AUD: She sat right where you're\n"
@@ -139,3 +151,15 @@ ParcelIsleOldCoupleHouse_Sten_Text_3:
 	.string "arrangement.\p"
 	.string "The currents are wrong, by the way.\n"
 	.string "She'll say they're not. They're wrong.$"
+
+ParcelIsleOldCoupleHouse_ReadDresser_Text_0:
+# 40 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	.string "A tea service for two, and a third cup,\n"
+	.string "washed and put away at the back. It has\l"
+	.string "not been used since a Thursday.$"
+
+ParcelIsleOldCoupleHouse_ReadShelf_Text_0:
+# 45 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	.string "Sten's tide notes, in a hand that does\n"
+	.string "not waste ink. The last page says:\l"
+	.string "currents wrong. AUD says not. Wrong.$"

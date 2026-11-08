@@ -38,3 +38,18 @@ script ParcelFernwickHouse7_Man {
     release
     end
 }
+
+script ParcelFernwickHouse7_ReadDresser {
+    msgbox(format("A dresser from another house. You can tell by the water line on its legs, a hand above the floor.\pIt came from REEDMERE. So did the line."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse7_ReadDrawer {
+    msgbox(format("The station truck's logbook, kept at home where the station can't lose it. Eight zones.\pThe mileage to three of them is crossed out and rewritten."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse7_ReadPots {
+    msgbox(format("Two pots of marsh reed, grown indoors. They should not grow indoors. They do."), MSGBOX_SIGN)
+    end
+}

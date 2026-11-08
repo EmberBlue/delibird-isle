@@ -62,6 +62,18 @@ ParcelWetlandsHouse2_Boy_5:
 	end
 
 
+ParcelWetlandsHouse2_ReadDresser::
+# 43 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlandsHouse2_ReadDrawer::
+# 48 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlandsHouse2_OldMan_Text_0:
 # 10 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: GUNNAR's SURSKIT count went\n"
@@ -104,3 +116,16 @@ ParcelWetlandsHouse2_Boy_Text_2:
 # 37 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "BOY: I helped GUNNAR count. He let me\n"
 	.string "hold the clicker. Forty-four!$"
+
+ParcelWetlandsHouse2_ReadDresser_Text_0:
+# 43 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	.string "A reed knife on the dresser, and a\n"
+	.string "notebook: TWELVE. Then EIGHT, with a\l"
+	.string "line under it, and a river hall address\l"
+	.string "on the facing page.$"
+
+ParcelWetlandsHouse2_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	.string "GUNNAR's spare clicker, in the drawer,\n"
+	.string "on a ribbon. Forty-four, it still says.\l"
+	.string "Nobody has pressed it since.$"

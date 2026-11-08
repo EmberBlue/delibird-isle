@@ -24,3 +24,13 @@ script ParcelRiverHouse3_Zigzagoon {
     release
     end
 }
+
+script ParcelRiverHouse3_ReadDresser {
+    msgbox(format("A tape measure on the dresser, pulled out to two rows' width and left. He measured the strip before the fund paid.\pHe has never done that before."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverHouse3_ReadDrawer {
+    msgbox(format("Seed packets in the drawer, sorted, the ones for the strip at the front. Hedge, alder, sedge. None of them is a crop."), MSGBOX_SIGN)
+    end
+}

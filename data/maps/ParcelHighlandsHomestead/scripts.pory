@@ -29,3 +29,8 @@ script ParcelHighlandsHomestead_Corner {
     msgbox(format("The floorboards slope to this corner. A marble on the table would roll here. There is a marble on the table. It has."), MSGBOX_SIGN)
     end
 }
+
+script ParcelHighlandsHomestead_ReadShelf {
+    msgbox(format("A shelf of ledgers: lambing, shearing, the weather. The weather ledger is the thickest.\pThe last entry says: ground soft at the gate. March. Underlined."), MSGBOX_SIGN)
+    end
+}

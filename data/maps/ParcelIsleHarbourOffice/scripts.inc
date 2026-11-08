@@ -65,6 +65,18 @@ ParcelIsleHarbourOffice_Osk_5:
 	end
 
 
+ParcelIsleHarbourOffice_ReadCounter::
+# 41 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	msgbox ParcelIsleHarbourOffice_ReadCounter_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsleHarbourOffice_ReadShelf::
+# 46 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	msgbox ParcelIsleHarbourOffice_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleHarbourOffice_Dagny_Text_0:
 # 11 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
 	.string "DAGNY: I've been asked, in writing, to\n"
@@ -125,3 +137,18 @@ ParcelIsleHarbourOffice_Osk_Text_2:
 	.string "If you want to know what a town runs\n"
 	.string "on, don't ask the mayor. Ask the\l"
 	.string "manifest.$"
+
+ParcelIsleHarbourOffice_ReadCounter_Text_0:
+# 41 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	.string "Manifests on the counter, weighted\n"
+	.string "with a shackle. Fuel, crates,\l"
+	.string "passengers.\p"
+	.string "Your name is on one of them: PASSENGER,\n"
+	.string "ONE, ISLAND STOP.$"
+
+ParcelIsleHarbourOffice_ReadShelf_Text_0:
+# 46 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	.string "A shelf of bound manifests, every month\n"
+	.string "for thirty years. You could read the\l"
+	.string "town's whole life off them. Osk already\l"
+	.string "has.$"

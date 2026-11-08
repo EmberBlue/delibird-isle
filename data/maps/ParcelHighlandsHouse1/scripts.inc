@@ -95,6 +95,18 @@ ParcelHighlandsHouse1_Girl_5:
 	end
 
 
+ParcelHighlandsHouse1_ReadDresser::
+# 61 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	msgbox ParcelHighlandsHouse1_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelHighlandsHouse1_ReadDrawer::
+# 66 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	msgbox ParcelHighlandsHouse1_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelHighlandsHouse1_Man_Text_0:
 # 10 "data/maps/ParcelHighlandsHouse1/scripts.pory"
 	.string "MAN: Standing. You said standing. She'll\n"
@@ -159,3 +171,16 @@ ParcelHighlandsHouse1_Girl_Text_2:
 	.string "HOLLIS said we could have as much as we\l"
 	.string "liked. Grandad said nothing's as much as\l"
 	.string "you like.$"
+
+ParcelHighlandsHouse1_ReadDresser_Text_0:
+# 61 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	.string "A mug on the dresser with the\n"
+	.string "FOUNDATION crest, washed and put\l"
+	.string "upside down. A child's mug beside it,\l"
+	.string "right way up, with cocoa rings inside.$"
+
+ParcelHighlandsHouse1_ReadDrawer_Text_0:
+# 66 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	.string "A drawer of mittens, in pairs, by size.\n"
+	.string "The smallest pairs have never been\l"
+	.string "worn. There was no snow to wear them in.$"

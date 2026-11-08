@@ -87,6 +87,12 @@ ParcelFloodbasinRelief_Sheet::
 	end
 
 
+ParcelFloodbasinRelief_ReadDresser::
+# 52 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasinRelief_Aide_Text_0:
 # 9 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "AIDE: MRS. ASKE's roof. It's on the\n"
@@ -153,3 +159,11 @@ ParcelFloodbasinRelief_Sheet_Text_0:
 	.string "to my satisfaction.'\p"
 	.string "The box is ticked in the same pen on\n"
 	.string "every line.$"
+
+ParcelFloodbasinRelief_ReadDresser_Text_0:
+# 52 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	.string "A stack of blankets with the crest. The\n"
+	.string "top one has been unfolded and refolded\l"
+	.string "badly by someone who wanted to see if\l"
+	.string "they were real.\p"
+	.string "They are.$"

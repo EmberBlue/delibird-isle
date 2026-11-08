@@ -62,6 +62,18 @@ ParcelFloodbasinHouse3_Man_5:
 	end
 
 
+ParcelFloodbasinHouse3_ReadDresser::
+# 43 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	msgbox ParcelFloodbasinHouse3_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFloodbasinHouse3_ReadDrawer::
+# 48 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	msgbox ParcelFloodbasinHouse3_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasinHouse3_OldWoman_Text_0:
 # 10 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
 	.string "OLD WOMAN: Phase 2 goes ahead. Dry\n"
@@ -107,3 +119,18 @@ ParcelFloodbasinHouse3_Man_Text_2:
 	.string "photographer stood. DORSEY shook my\l"
 	.string "hand in front of the camera. It was a\l"
 	.string "good handshake. I'll give him that.$"
+
+ParcelFloodbasinHouse3_ReadDresser_Text_0:
+# 43 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	.string "A newspaper photograph on the dresser:\n"
+	.string "a councilman shaking a man's hand in\l"
+	.string "front of sandbags. The man in the\l"
+	.string "photograph lives here.\p"
+	.string "He has not cut it out. He has not thrown\n"
+	.string "it away.$"
+
+ParcelFloodbasinHouse3_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	.string "The top drawer sticks. It has stuck\n"
+	.string "since the second flood. Everything in\l"
+	.string "this house has a before and an after.$"

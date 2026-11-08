@@ -18,3 +18,18 @@ script ParcelFernwickHouse1_Man {
     release
     end
 }
+
+script ParcelFernwickHouse1_ReadCounter {
+    msgbox(format("Three plates set, three chairs, one radio. The radio is set to the weather, which is the only thing everyone in this house agrees to listen to."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse1_ReadFridge {
+    msgbox(format("A list on the fridge: DO NOT DISCUSS. The list is empty.\pSomebody wrote the heading, and nobody has dared add to it."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse1_ReadShelf {
+    msgbox(format("A shelf of Corps field guides and a shelf of dredging manuals, spine to spine. Neither side has been dusted. Both have been read."), MSGBOX_SIGN)
+    end
+}

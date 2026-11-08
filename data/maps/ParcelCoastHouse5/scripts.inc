@@ -62,6 +62,24 @@ ParcelCoastHouse5_Girl_5:
 	end
 
 
+ParcelCoastHouse5_ReadDresser::
+# 43 "data/maps/ParcelCoastHouse5/scripts.pory"
+	msgbox ParcelCoastHouse5_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastHouse5_ReadDrawer::
+# 48 "data/maps/ParcelCoastHouse5/scripts.pory"
+	msgbox ParcelCoastHouse5_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastHouse5_ReadPots::
+# 53 "data/maps/ParcelCoastHouse5/scripts.pory"
+	msgbox ParcelCoastHouse5_ReadPots_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastHouse5_OldMan_Text_0:
 # 10 "data/maps/ParcelCoastHouse5/scripts.pory"
 	.string "OLD MAN: The review grounds half the\n"
@@ -104,3 +122,25 @@ ParcelCoastHouse5_Girl_Text_2:
 	.string "GIRL: Grandad takes me to see the\n"
 	.string "boats not go out. He says it's important\l"
 	.string "to look at it.$"
+
+ParcelCoastHouse5_ReadDresser_Text_0:
+# 43 "data/maps/ParcelCoastHouse5/scripts.pory"
+	.string "A chart of the dredge line on the\n"
+	.string "dresser, hand-drawn, with a reef\l"
+	.string "pencilled under it in the shape it used\l"
+	.string "to be.\p"
+	.string "The pencil is newer than the ink.$"
+
+ParcelCoastHouse5_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelCoastHouse5/scripts.pory"
+	.string "A child's drawing in the top drawer:\n"
+	.string "boats, lined up, not going out. Every\l"
+	.string "boat has a face.\p"
+	.string "None of them is smiling and none is sad.\n"
+	.string "They're waiting.$"
+
+ParcelCoastHouse5_ReadPots_Text_0:
+# 53 "data/maps/ParcelCoastHouse5/scripts.pory"
+	.string "Two pots of sea-pink, kept alive\n"
+	.string "indoors. The old man waters them from a\l"
+	.string "tin that says FOUNDATION.$"

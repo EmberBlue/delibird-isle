@@ -75,6 +75,18 @@ ParcelCoastHouse1_Boy_8:
 	end
 
 
+ParcelCoastHouse1_ReadDresser::
+# 46 "data/maps/ParcelCoastHouse1/scripts.pory"
+	msgbox ParcelCoastHouse1_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastHouse1_ReadDrawer::
+# 51 "data/maps/ParcelCoastHouse1/scripts.pory"
+	msgbox ParcelCoastHouse1_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastHouse1_Woman_Text_0:
 # 7 "data/maps/ParcelCoastHouse1/scripts.pory"
 	.string "WOMAN: Husband on half days, son's boat\n"
@@ -133,3 +145,18 @@ ParcelCoastHouse1_Boy_Text_3:
 	.string "I've never found a shell on our beach.\n"
 	.string "Not one. Just drum rings. If you find\l"
 	.string "one, that's proof there's something.$"
+
+ParcelCoastHouse1_ReadDresser_Text_0:
+# 46 "data/maps/ParcelCoastHouse1/scripts.pory"
+	.string "Three pay slips in a row on the dresser,\n"
+	.string "each with the same crest in the corner.\l"
+	.string "Somebody has lined up the crests so\l"
+	.string "they all face the same way.$"
+
+ParcelCoastHouse1_ReadDrawer_Text_0:
+# 51 "data/maps/ParcelCoastHouse1/scripts.pory"
+	.string "The top drawer holds a child's diving\n"
+	.string "mask, still in its box, and a shell on a\l"
+	.string "bed of cotton wool.\p"
+	.string "The box has been opened and closed a\n"
+	.string "great many times.$"

@@ -36,6 +36,18 @@ ParcelIsleMooreHouse_Runa_4:
 	goto ParcelIsleMooreHouse_Runa_1
 
 
+ParcelIsleMooreHouse_ReadDresser::
+# 23 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	msgbox ParcelIsleMooreHouse_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsleMooreHouse_ReadShelf::
+# 28 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	msgbox ParcelIsleMooreHouse_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleMooreHouse_Runa_Text_0:
 # 10 "data/maps/ParcelIsleMooreHouse/scripts.pory"
 	.string "RUNA: He came home last night and sat\n"
@@ -67,3 +79,16 @@ ParcelIsleMooreHouse_Runa_Text_3:
 	.string "He hasn't logged a mainland ferry in a\n"
 	.string "year. He still opens the book every\l"
 	.string "morning.$"
+
+ParcelIsleMooreHouse_ReadDresser_Text_0:
+# 23 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	.string "The harbour-master's spare cap on the\n"
+	.string "dresser, the badge polished to nothing.\l"
+	.string "Runa polishes it. He wouldn't.$"
+
+ParcelIsleMooreHouse_ReadShelf_Text_0:
+# 28 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	.string "Harbour logs, bound by year. The thin\n"
+	.string "ones are recent. A new one has been\l"
+	.string "started this month. It is thicker\l"
+	.string "already.$"

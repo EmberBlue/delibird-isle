@@ -38,3 +38,13 @@ script ParcelRiverHouse5_OldWoman {
     release
     end
 }
+
+script ParcelRiverHouse5_ReadDresser {
+    msgbox(format("A mill key on the dresser, oiled. The lock it fits has not been turned in years. The key has."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverHouse5_ReadDrawer {
+    msgbox(format("Two lunch tins in the drawer. One has been in use for forty years. The other is new."), MSGBOX_SIGN)
+    end
+}

@@ -95,6 +95,18 @@ ParcelFernwickHouse5_Woman_5:
 	end
 
 
+ParcelFernwickHouse5_ReadDresser::
+# 61 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	msgbox ParcelFernwickHouse5_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse5_ReadDrawer::
+# 66 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	msgbox ParcelFernwickHouse5_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHouse5_OldMan_Text_0:
 # 10 "data/maps/ParcelFernwickHouse5/scripts.pory"
 	.string "OLD MAN: Twenty-eight pairs. It's back\n"
@@ -164,3 +176,17 @@ ParcelFernwickHouse5_Woman_Text_2:
 	.string "WOMAN: He keeps his old notebooks in\n"
 	.string "the chest. Every page is a river that\l"
 	.string "isn't there now.$"
+
+ParcelFernwickHouse5_ReadDresser_Text_0:
+# 61 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	.string "On the dresser, a pen with a bitten end\n"
+	.string "and a pair of reading glasses folded\l"
+	.string "over it, waiting.$"
+
+ParcelFernwickHouse5_ReadDrawer_Text_0:
+# 66 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	.string "The chest. Old notebooks in the top\n"
+	.string "drawer, each one a river.\p"
+	.string "You don't open them. You know what a\n"
+	.string "page full of a place that isn't there\l"
+	.string "feels like under your hand.$"

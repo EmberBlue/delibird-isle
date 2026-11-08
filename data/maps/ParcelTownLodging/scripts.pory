@@ -36,3 +36,8 @@ script ParcelTownLodging_Letter {
     release
     end
 }
+
+script ParcelTownLodging_ReadDresser {
+    msgbox(format("A card with your name on it, in an innkeeper's hand, propped against the mirror. Three weeks old. Dusted around every week."), MSGBOX_SIGN)
+    end
+}

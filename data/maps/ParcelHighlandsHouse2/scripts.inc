@@ -62,6 +62,24 @@ ParcelHighlandsHouse2_Boy_5:
 	end
 
 
+ParcelHighlandsHouse2_ReadDresser::
+# 43 "data/maps/ParcelHighlandsHouse2/scripts.pory"
+	msgbox ParcelHighlandsHouse2_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelHighlandsHouse2_ReadShelf::
+# 48 "data/maps/ParcelHighlandsHouse2/scripts.pory"
+	msgbox ParcelHighlandsHouse2_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelHighlandsHouse2_ReadPantry::
+# 53 "data/maps/ParcelHighlandsHouse2/scripts.pory"
+	msgbox ParcelHighlandsHouse2_ReadPantry_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelHighlandsHouse2_Woman_Text_0:
 # 10 "data/maps/ParcelHighlandsHouse2/scripts.pory"
 	.string "WOMAN: The bore's capped. He's on half\n"
@@ -104,3 +122,22 @@ ParcelHighlandsHouse2_Boy_Text_2:
 	.string "that's older than the town. I asked if\l"
 	.string "it's older than Grandad. He said older\l"
 	.string "than everything.$"
+
+ParcelHighlandsHouse2_ReadDresser_Text_0:
+# 43 "data/maps/ParcelHighlandsHouse2/scripts.pory"
+	.string "A bore crew payslip on the dresser, and\n"
+	.string "under it a bill for the same amount from\l"
+	.string "the valley store. The two have been laid\l"
+	.string "together on purpose.$"
+
+ParcelHighlandsHouse2_ReadShelf_Text_0:
+# 48 "data/maps/ParcelHighlandsHouse2/scripts.pory"
+	.string "A geology primer with a child's bookmark\n"
+	.string "in it: a strip of core-sample tape. The\l"
+	.string "page is about ice.$"
+
+ParcelHighlandsHouse2_ReadPantry_Text_0:
+# 53 "data/maps/ParcelHighlandsHouse2/scripts.pory"
+	.string "Jars of preserved bilberries, dated. The\n"
+	.string "dates stop two summers ago. The slope\l"
+	.string "where they grew is in the valley now.$"

@@ -50,6 +50,12 @@ ParcelHighlandsHomestead_Corner::
 	end
 
 
+ParcelHighlandsHomestead_ReadShelf::
+# 34 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	msgbox ParcelHighlandsHomestead_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelHighlandsHomestead_Grandson_Text_0:
 # 8 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	.string "GRANDSON: I signed. Gran didn't. The\n"
@@ -87,3 +93,11 @@ ParcelHighlandsHomestead_Corner_Text_0:
 	.string "The floorboards slope to this corner. A\n"
 	.string "marble on the table would roll here.\l"
 	.string "There is a marble on the table. It has.$"
+
+ParcelHighlandsHomestead_ReadShelf_Text_0:
+# 34 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	.string "A shelf of ledgers: lambing, shearing,\n"
+	.string "the weather. The weather ledger is the\l"
+	.string "thickest.\p"
+	.string "The last entry says: ground soft at the\n"
+	.string "gate. March. Underlined.$"

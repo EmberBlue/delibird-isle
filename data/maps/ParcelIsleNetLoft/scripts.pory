@@ -30,3 +30,13 @@ script ParcelIsleNetLoft_Zigzagoon {
     release
     end
 }
+
+script ParcelIsleNetLoft_ReadDresser {
+    msgbox(format("Net needles in a row on the dresser, worn to the shape of one hand. Sixty years. One hand."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsleNetLoft_ReadTally {
+    msgbox(format("A tally of nets mended, chalked on the side of the cupboard. The marks get closer together each year.\pMore holes, she said."), MSGBOX_SIGN)
+    end
+}

@@ -44,6 +44,18 @@ ParcelRiverHouse3_Zigzagoon::
 	end
 
 
+ParcelRiverHouse3_ReadDresser::
+# 29 "data/maps/ParcelRiverHouse3/scripts.pory"
+	msgbox ParcelRiverHouse3_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverHouse3_ReadDrawer::
+# 34 "data/maps/ParcelRiverHouse3/scripts.pory"
+	msgbox ParcelRiverHouse3_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverHouse3_Mother_Text_0:
 # 7 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "MOTHER: Two rows. The fund paid for the\n"
@@ -71,3 +83,17 @@ ParcelRiverHouse3_Mother_Text_2:
 ParcelRiverHouse3_Zigzagoon_Text_0:
 # 23 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "ZIGZAGOON: Zig! Zig!$"
+
+ParcelRiverHouse3_ReadDresser_Text_0:
+# 29 "data/maps/ParcelRiverHouse3/scripts.pory"
+	.string "A tape measure on the dresser, pulled\n"
+	.string "out to two rows' width and left. He\l"
+	.string "measured the strip before the fund\l"
+	.string "paid.\p"
+	.string "He has never done that before.$"
+
+ParcelRiverHouse3_ReadDrawer_Text_0:
+# 34 "data/maps/ParcelRiverHouse3/scripts.pory"
+	.string "Seed packets in the drawer, sorted, the\n"
+	.string "ones for the strip at the front. Hedge,\l"
+	.string "alder, sedge. None of them is a crop.$"

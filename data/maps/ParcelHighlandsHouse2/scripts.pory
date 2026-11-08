@@ -38,3 +38,18 @@ script ParcelHighlandsHouse2_Boy {
     release
     end
 }
+
+script ParcelHighlandsHouse2_ReadDresser {
+    msgbox(format("A bore crew payslip on the dresser, and under it a bill for the same amount from the valley store. The two have been laid together on purpose."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelHighlandsHouse2_ReadShelf {
+    msgbox(format("A geology primer with a child's bookmark in it: a strip of core-sample tape. The page is about ice."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelHighlandsHouse2_ReadPantry {
+    msgbox(format("Jars of preserved bilberries, dated. The dates stop two summers ago. The slope where they grew is in the valley now."), MSGBOX_SIGN)
+    end
+}

@@ -38,3 +38,18 @@ script ParcelCoastHouse5_Girl {
     release
     end
 }
+
+script ParcelCoastHouse5_ReadDresser {
+    msgbox(format("A chart of the dredge line on the dresser, hand-drawn, with a reef pencilled under it in the shape it used to be.\pThe pencil is newer than the ink."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHouse5_ReadDrawer {
+    msgbox(format("A child's drawing in the top drawer: boats, lined up, not going out. Every boat has a face.\pNone of them is smiling and none is sad. They're waiting."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHouse5_ReadPots {
+    msgbox(format("Two pots of sea-pink, kept alive indoors. The old man waters them from a tin that says FOUNDATION."), MSGBOX_SIGN)
+    end
+}

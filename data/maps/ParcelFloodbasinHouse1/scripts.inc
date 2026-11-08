@@ -96,6 +96,12 @@ ParcelFloodbasinHouse1_Chart::
 	end
 
 
+ParcelFloodbasinHouse1_ReadDresser::
+# 58 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
+	msgbox ParcelFloodbasinHouse1_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasinHouse1_Hedda_Text_0:
 # 8 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
 	.string "HEDDA: Forty years I didn't ask. You\n"
@@ -178,3 +184,10 @@ ParcelFloodbasinHouse1_Chart_Text_0:
 	.string "decades. The columns thin out around\l"
 	.string "twenty years ago and never fill back in.\p"
 	.string "The last page: 'Sold 4. Ate 0.'$"
+
+ParcelFloodbasinHouse1_ReadDresser_Text_0:
+# 58 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
+	.string "A fishwife's scales on the dresser,\n"
+	.string "brass, polished. Forty years of selling\l"
+	.string "fish, and she never once weighed the\l"
+	.string "water.$"

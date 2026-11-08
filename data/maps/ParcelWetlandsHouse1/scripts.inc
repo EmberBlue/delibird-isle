@@ -62,6 +62,18 @@ ParcelWetlandsHouse1_Woman_5:
 	end
 
 
+ParcelWetlandsHouse1_ReadDresser::
+# 43 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	msgbox ParcelWetlandsHouse1_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlandsHouse1_ReadDrawer::
+# 48 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	msgbox ParcelWetlandsHouse1_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlandsHouse1_Fisher_Text_0:
 # 10 "data/maps/ParcelWetlandsHouse1/scripts.pory"
 	.string "FISHER: The works' permit has a new\n"
@@ -104,3 +116,17 @@ ParcelWetlandsHouse1_Woman_Text_2:
 # 37 "data/maps/ParcelWetlandsHouse1/scripts.pory"
 	.string "WOMAN: The children aren't to swim off\n"
 	.string "the landing. They do anyway. We did.$"
+
+ParcelWetlandsHouse1_ReadDresser_Text_0:
+# 43 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	.string "A map of the backwater on the dresser\n"
+	.string "with a line drawn across it: UPSTREAM OF\l"
+	.string "IT. Everything below the line has been\l"
+	.string "shaded in.$"
+
+ParcelWetlandsHouse1_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	.string "Children's swimming things in the\n"
+	.string "drawer, damp. Nobody has told them to\l"
+	.string "stop. Nobody has put the things away\l"
+	.string "either.$"

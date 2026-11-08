@@ -62,6 +62,24 @@ ParcelFernwickHouse7_Man_5:
 	end
 
 
+ParcelFernwickHouse7_ReadDresser::
+# 43 "data/maps/ParcelFernwickHouse7/scripts.pory"
+	msgbox ParcelFernwickHouse7_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse7_ReadDrawer::
+# 48 "data/maps/ParcelFernwickHouse7/scripts.pory"
+	msgbox ParcelFernwickHouse7_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHouse7_ReadPots::
+# 53 "data/maps/ParcelFernwickHouse7/scripts.pory"
+	msgbox ParcelFernwickHouse7_ReadPots_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHouse7_Woman_Text_0:
 # 10 "data/maps/ParcelFernwickHouse7/scripts.pory"
 	.string "WOMAN: They say the works have a new\n"
@@ -104,3 +122,23 @@ ParcelFernwickHouse7_Man_Text_2:
 	.string "MAN: I drive the station truck. Eight\n"
 	.string "zones, one truck, and a map that's wrong\l"
 	.string "about three of them.$"
+
+ParcelFernwickHouse7_ReadDresser_Text_0:
+# 43 "data/maps/ParcelFernwickHouse7/scripts.pory"
+	.string "A dresser from another house. You can\n"
+	.string "tell by the water line on its legs, a\l"
+	.string "hand above the floor.\p"
+	.string "It came from REEDMERE. So did the line.$"
+
+ParcelFernwickHouse7_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelFernwickHouse7/scripts.pory"
+	.string "The station truck's logbook, kept at\n"
+	.string "home where the station can't lose it.\l"
+	.string "Eight zones.\p"
+	.string "The mileage to three of them is crossed\n"
+	.string "out and rewritten.$"
+
+ParcelFernwickHouse7_ReadPots_Text_0:
+# 53 "data/maps/ParcelFernwickHouse7/scripts.pory"
+	.string "Two pots of marsh reed, grown indoors.\n"
+	.string "They should not grow indoors. They do.$"

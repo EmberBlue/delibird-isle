@@ -38,3 +38,13 @@ script ParcelWetlandsHouse1_Woman {
     release
     end
 }
+
+script ParcelWetlandsHouse1_ReadDresser {
+    msgbox(format("A map of the backwater on the dresser with a line drawn across it: UPSTREAM OF IT. Everything below the line has been shaded in."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWetlandsHouse1_ReadDrawer {
+    msgbox(format("Children's swimming things in the drawer, damp. Nobody has told them to stop. Nobody has put the things away either."), MSGBOX_SIGN)
+    end
+}

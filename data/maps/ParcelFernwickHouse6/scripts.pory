@@ -38,3 +38,18 @@ script ParcelFernwickHouse6_Girl {
     release
     end
 }
+
+script ParcelFernwickHouse6_ReadDresser {
+    msgbox(format("A cook's apron on the dresser, washed thin. Embroidered on the pocket, badly, by a child: RANGER."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse6_ReadShelf {
+    msgbox(format("Cookbooks, and between them the District Station duty roster, so he knows how many to feed. Tonight's number is circled twice."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse6_ReadPantry {
+    msgbox(format("A sugar jar with a note taped to it: FOR THE BASIN LOT. NO ARGUMENTS."), MSGBOX_SIGN)
+    end
+}

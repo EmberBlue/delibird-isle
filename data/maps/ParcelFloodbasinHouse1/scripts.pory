@@ -53,3 +53,8 @@ script ParcelFloodbasinHouse1_Chart {
     msgbox(format("A catch log, in pencil, going back decades. The columns thin out around twenty years ago and never fill back in.\pThe last page: 'Sold 4. Ate 0.'"), MSGBOX_SIGN)
     end
 }
+
+script ParcelFloodbasinHouse1_ReadDresser {
+    msgbox(format("A fishwife's scales on the dresser, brass, polished. Forty years of selling fish, and she never once weighed the water."), MSGBOX_SIGN)
+    end
+}

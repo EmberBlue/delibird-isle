@@ -62,6 +62,18 @@ ParcelRiverHouse6_Girl_5:
 	end
 
 
+ParcelRiverHouse6_ReadDresser::
+# 43 "data/maps/ParcelRiverHouse6/scripts.pory"
+	msgbox ParcelRiverHouse6_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverHouse6_ReadShelf::
+# 48 "data/maps/ParcelRiverHouse6/scripts.pory"
+	msgbox ParcelRiverHouse6_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverHouse6_Man_Text_0:
 # 10 "data/maps/ParcelRiverHouse6/scripts.pory"
 	.string "MAN: SLUICE had me re-read every gauge\n"
@@ -104,3 +116,17 @@ ParcelRiverHouse6_Girl_Text_2:
 	.string "GIRL: Dad says the river has a budget. I\n"
 	.string "said rivers don't have money. He said\l"
 	.string "that's the problem.$"
+
+ParcelRiverHouse6_ReadDresser_Text_0:
+# 43 "data/maps/ParcelRiverHouse6/scripts.pory"
+	.string "A first sheet of meter readings on the\n"
+	.string "dresser, the real one, kept at home.\l"
+	.string "SLUICE's idea.\p"
+	.string "Fourteen plots. The word MELTWATER,\n"
+	.string "written small.$"
+
+ParcelRiverHouse6_ReadShelf_Text_0:
+# 48 "data/maps/ParcelRiverHouse6/scripts.pory"
+	.string "A child's arithmetic book, open at a\n"
+	.string "page about budgets. In the margin, in a\l"
+	.string "child's hand: RIVERS DON'T HAVE MONEY.$"

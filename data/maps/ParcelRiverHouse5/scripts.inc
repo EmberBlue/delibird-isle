@@ -62,6 +62,18 @@ ParcelRiverHouse5_OldWoman_5:
 	end
 
 
+ParcelRiverHouse5_ReadDresser::
+# 43 "data/maps/ParcelRiverHouse5/scripts.pory"
+	msgbox ParcelRiverHouse5_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverHouse5_ReadDrawer::
+# 48 "data/maps/ParcelRiverHouse5/scripts.pory"
+	msgbox ParcelRiverHouse5_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverHouse5_OldMan_Text_0:
 # 10 "data/maps/ParcelRiverHouse5/scripts.pory"
 	.string "OLD MAN: The allocation gives the race\n"
@@ -107,3 +119,15 @@ ParcelRiverHouse5_OldWoman_Text_2:
 	.string "every morning to oil a wheel that\l"
 	.string "doesn't turn. I pack him a lunch. It's a\l"
 	.string "marriage.$"
+
+ParcelRiverHouse5_ReadDresser_Text_0:
+# 43 "data/maps/ParcelRiverHouse5/scripts.pory"
+	.string "A mill key on the dresser, oiled. The lock\n"
+	.string "it fits has not been turned in years.\l"
+	.string "The key has.$"
+
+ParcelRiverHouse5_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelRiverHouse5/scripts.pory"
+	.string "Two lunch tins in the drawer. One has\n"
+	.string "been in use for forty years. The other\l"
+	.string "is new.$"

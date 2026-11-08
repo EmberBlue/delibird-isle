@@ -88,6 +88,18 @@ ParcelRiverHouse1_OldWoman_5:
 	end
 
 
+ParcelRiverHouse1_ReadDresser::
+# 53 "data/maps/ParcelRiverHouse1/scripts.pory"
+	msgbox ParcelRiverHouse1_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverHouse1_ReadDrawer::
+# 58 "data/maps/ParcelRiverHouse1/scripts.pory"
+	msgbox ParcelRiverHouse1_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverHouse1_OldMan_Text_0:
 # 7 "data/maps/ParcelRiverHouse1/scripts.pory"
 	.string "OLD MAN: Fresh chips, pale, and the\n"
@@ -159,3 +171,15 @@ ParcelRiverHouse1_OldWoman_Text_2:
 	.string "Every day. I've stopped listening and\l"
 	.string "started counting. Fifty-one years he's\l"
 	.string "talked about that pond.$"
+
+ParcelRiverHouse1_ReadDresser_Text_0:
+# 53 "data/maps/ParcelRiverHouse1/scripts.pory"
+	.string "On the dresser, a jar of pale wood chips,\n"
+	.string "cut to a point. The old man carries one.\l"
+	.string "The rest live here, for when he loses it.$"
+
+ParcelRiverHouse1_ReadDrawer_Text_0:
+# 58 "data/maps/ParcelRiverHouse1/scripts.pory"
+	.string "A drawer of the old woman's counting:\n"
+	.string "fifty-one years, in tally marks, on the\l"
+	.string "backs of seed packets.$"

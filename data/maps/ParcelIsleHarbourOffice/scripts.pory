@@ -36,3 +36,13 @@ script ParcelIsleHarbourOffice_Osk {
     release
     end
 }
+
+script ParcelIsleHarbourOffice_ReadCounter {
+    msgbox(format("Manifests on the counter, weighted with a shackle. Fuel, crates, passengers.\pYour name is on one of them: PASSENGER, ONE, ISLAND STOP."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsleHarbourOffice_ReadShelf {
+    msgbox(format("A shelf of bound manifests, every month for thirty years. You could read the town's whole life off them. Osk already has."), MSGBOX_SIGN)
+    end
+}

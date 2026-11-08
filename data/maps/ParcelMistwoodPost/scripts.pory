@@ -47,3 +47,8 @@ script ParcelMistwoodPost_Map {
     msgbox(format("A hand-drawn map of MISTWOOD, pinned up. Three red circles: the west wall, the nook past the clearing, the far end of the top gallery.\pAnd a fourth mark, up at the north track: DEADFALL. LONG WAY ROUND."), MSGBOX_SIGN)
     end
 }
+
+script ParcelMistwoodPost_ReadShelf {
+    msgbox(format("Ranger regulations, three volumes. A bookmark in the second, at 'snare clearance requires two officers'.\pThe bookmark is a length of snare wire."), MSGBOX_SIGN)
+    end
+}

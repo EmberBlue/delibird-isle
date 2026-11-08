@@ -38,3 +38,13 @@ script ParcelFernwickHouse4_Boy {
     release
     end
 }
+
+script ParcelFernwickHouse4_ReadDresser {
+    msgbox(format("A Survey office lanyard hung on the mirror, and a second-drawer key on a ribbon beside it. The ribbon is new."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse4_ReadDrawer {
+    msgbox(format("A boy's boots drying on newspaper. The newspaper is a river report. The boots are wet on purpose."), MSGBOX_SIGN)
+    end
+}

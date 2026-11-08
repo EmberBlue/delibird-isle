@@ -17,3 +17,13 @@ script ParcelIsleAnniHouse_Piet {
     release
     end
 }
+
+script ParcelIsleAnniHouse_ReadBed {
+    msgbox(format("A child's bed with the blanket turned back and a book face down on the pillow. The book is about boats. The pillow is damp."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsleAnniHouse_ReadShelf {
+    msgbox(format("A shelf of medicines in a row, with the doctor's note weighted under the first bottle. 'Fog.'\pUnderlined, by somebody else."), MSGBOX_SIGN)
+    end
+}

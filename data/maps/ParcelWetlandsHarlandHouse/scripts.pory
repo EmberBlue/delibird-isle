@@ -66,3 +66,13 @@ script ParcelWetlandsHarlandHouse_Wooper {
     release
     end
 }
+
+script ParcelWetlandsHarlandHouse_ReadDresser {
+    msgbox(format("The boat loan papers, in the dresser drawer that doesn't close. Unsigned. The pen is on top of them."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWetlandsHarlandHouse_ReadDrawer {
+    msgbox(format("A WOOPER's water dish beside the drawers, and a child's chart taped above it: FISH. Four.\pThen, in a different pencil: five."), MSGBOX_SIGN)
+    end
+}

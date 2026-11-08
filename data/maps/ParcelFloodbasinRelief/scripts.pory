@@ -47,3 +47,8 @@ script ParcelFloodbasinRelief_Sheet {
     msgbox(format("RELIEF REGISTER -- LEIRVIK. Forty-one names. Beside each, a box ticked: 'I confirm that the Foundation's remediation of the basin is proceeding to my satisfaction.'\pThe box is ticked in the same pen on every line."), MSGBOX_SIGN)
     end
 }
+
+script ParcelFloodbasinRelief_ReadDresser {
+    msgbox(format("A stack of blankets with the crest. The top one has been unfolded and refolded badly by someone who wanted to see if they were real.\pThey are."), MSGBOX_SIGN)
+    end
+}

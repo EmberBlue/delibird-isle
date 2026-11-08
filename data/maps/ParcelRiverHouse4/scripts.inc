@@ -62,6 +62,18 @@ ParcelRiverHouse4_Boy_5:
 	end
 
 
+ParcelRiverHouse4_ReadDresser::
+# 43 "data/maps/ParcelRiverHouse4/scripts.pory"
+	msgbox ParcelRiverHouse4_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverHouse4_ReadDrawer::
+# 48 "data/maps/ParcelRiverHouse4/scripts.pory"
+	msgbox ParcelRiverHouse4_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverHouse4_Woman_Text_0:
 # 10 "data/maps/ParcelRiverHouse4/scripts.pory"
 	.string "WOMAN: The Board posted the\n"
@@ -103,3 +115,17 @@ ParcelRiverHouse4_Boy_Text_2:
 # 37 "data/maps/ParcelRiverHouse4/scripts.pory"
 	.string "BOY: I count the stalls. Twenty-two on\n"
 	.string "a good day. Fourteen this spring.$"
+
+ParcelRiverHouse4_ReadDresser_Text_0:
+# 43 "data/maps/ParcelRiverHouse4/scripts.pory"
+	.string "A chalk slate on the dresser: STALLS.\n"
+	.string "Twenty-two, rubbed out. Fourteen,\l"
+	.string "rubbed out. Nineteen. The chalk is\l"
+	.string "nearly gone.$"
+
+ParcelRiverHouse4_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelRiverHouse4/scripts.pory"
+	.string "Market scales in the drawer, and a Board\n"
+	.string "water receipt under them. Fish on one\l"
+	.string "side of the scale, metered water on the\l"
+	.string "other.$"

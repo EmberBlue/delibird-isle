@@ -17,3 +17,18 @@ script ParcelFernwickHouse3_OldWoman {
     release
     end
 }
+
+script ParcelFernwickHouse3_ReadShelf {
+    msgbox(format("Recipe books, and one field guide to marsh plants that does not belong with them. A receipt marks a page.\pOne loaf. Paid in coin."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse3_ReadFridge {
+    msgbox(format("Bread, under a cloth. Today's. She bakes whether or not anyone is coming through."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHouse3_ReadDresser {
+    msgbox(format("A dresser of good plates. One has been moved to the front and turned so its chip faces the wall."), MSGBOX_SIGN)
+    end
+}

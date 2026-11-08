@@ -34,3 +34,18 @@ script ParcelCoastHouse2_Wife {
     release
     end
 }
+
+script ParcelCoastHouse2_ReadDresser {
+    msgbox(format("A skipper's cap on the dresser, brushed. Beside it a cheque stub, forty years old by the date, for a boat.\pThe ink has gone brown. The cap has not."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHouse2_ReadShelf {
+    msgbox(format("Tide tables, forty years of them, in order. The last ten have nothing underlined."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHouse2_ReadPantry {
+    msgbox(format("Tins with the crest. Tins without. The ones without are at the front."), MSGBOX_SIGN)
+    end
+}

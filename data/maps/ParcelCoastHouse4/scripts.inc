@@ -62,6 +62,18 @@ ParcelCoastHouse4_Man_5:
 	end
 
 
+ParcelCoastHouse4_ReadDresser::
+# 43 "data/maps/ParcelCoastHouse4/scripts.pory"
+	msgbox ParcelCoastHouse4_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastHouse4_ReadDrawer::
+# 48 "data/maps/ParcelCoastHouse4/scripts.pory"
+	msgbox ParcelCoastHouse4_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastHouse4_Woman_Text_0:
 # 10 "data/maps/ParcelCoastHouse4/scripts.pory"
 	.string "WOMAN: The line's on half days under the\n"
@@ -107,3 +119,15 @@ ParcelCoastHouse4_Man_Text_2:
 	.string "every one the same length. I didn't need\l"
 	.string "a ranger to tell me. I needed one to\l"
 	.string "write it down.$"
+
+ParcelCoastHouse4_ReadDresser_Text_0:
+# 43 "data/maps/ParcelCoastHouse4/scripts.pory"
+	.string "Two alarm clocks on the dresser, set an\n"
+	.string "hour apart. Six to two, and the other\l"
+	.string "shift.$"
+
+ParcelCoastHouse4_ReadDrawer_Text_0:
+# 48 "data/maps/ParcelCoastHouse4/scripts.pory"
+	.string "A drawer of gutting gloves, every pair\n"
+	.string "mended at the same finger.\p"
+	.string "The fish are all one size. So is the work.$"

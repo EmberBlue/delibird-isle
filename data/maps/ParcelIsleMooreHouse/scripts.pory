@@ -18,3 +18,13 @@ script ParcelIsleMooreHouse_Runa {
     release
     end
 }
+
+script ParcelIsleMooreHouse_ReadDresser {
+    msgbox(format("The harbour-master's spare cap on the dresser, the badge polished to nothing. Runa polishes it. He wouldn't."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsleMooreHouse_ReadShelf {
+    msgbox(format("Harbour logs, bound by year. The thin ones are recent. A new one has been started this month. It is thicker already."), MSGBOX_SIGN)
+    end
+}

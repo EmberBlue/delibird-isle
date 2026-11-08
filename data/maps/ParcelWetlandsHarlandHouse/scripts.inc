@@ -112,6 +112,18 @@ ParcelWetlandsHarlandHouse_Wooper::
 	end
 
 
+ParcelWetlandsHarlandHouse_ReadDresser::
+# 71 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	msgbox ParcelWetlandsHarlandHouse_ReadDresser_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlandsHarlandHouse_ReadDrawer::
+# 76 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	msgbox ParcelWetlandsHarlandHouse_ReadDrawer_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlandsHarlandHouse_Maren_Text_0:
 # 11 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	.string "MAREN: He won't say it, so I will. Thank\n"
@@ -190,3 +202,16 @@ ParcelWetlandsHarlandHouse_Kid_Text_3:
 ParcelWetlandsHarlandHouse_Wooper_Text_0:
 # 65 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
 	.string "WOOPER: Woop.$"
+
+ParcelWetlandsHarlandHouse_ReadDresser_Text_0:
+# 71 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	.string "The boat loan papers, in the dresser\n"
+	.string "drawer that doesn't close. Unsigned.\l"
+	.string "The pen is on top of them.$"
+
+ParcelWetlandsHarlandHouse_ReadDrawer_Text_0:
+# 76 "data/maps/ParcelWetlandsHarlandHouse/scripts.pory"
+	.string "A WOOPER's water dish beside the\n"
+	.string "drawers, and a child's chart taped\l"
+	.string "above it: FISH. Four.\p"
+	.string "Then, in a different pencil: five.$"
