@@ -10,8 +10,10 @@ ParcelCoastHouse3_Clerk::
 # 6 "data/maps/ParcelCoastHouse3/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse3_Clerk_2
 # 11 "data/maps/ParcelCoastHouse3/scripts.pory"
-	msgbox ParcelCoastHouse3_Clerk_Text_1, MSGBOX_DEFAULT
-# 12 "data/maps/ParcelCoastHouse3/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse3_Clerk_5
+# 16 "data/maps/ParcelCoastHouse3/scripts.pory"
+	msgbox ParcelCoastHouse3_Clerk_Text_2, MSGBOX_DEFAULT
+# 17 "data/maps/ParcelCoastHouse3/scripts.pory"
 	release
 	end
 
@@ -19,6 +21,13 @@ ParcelCoastHouse3_Clerk_2:
 # 7 "data/maps/ParcelCoastHouse3/scripts.pory"
 	msgbox ParcelCoastHouse3_Clerk_Text_0, MSGBOX_DEFAULT
 # 8 "data/maps/ParcelCoastHouse3/scripts.pory"
+	release
+	end
+
+ParcelCoastHouse3_Clerk_5:
+# 12 "data/maps/ParcelCoastHouse3/scripts.pory"
+	msgbox ParcelCoastHouse3_Clerk_Text_1, MSGBOX_DEFAULT
+# 13 "data/maps/ParcelCoastHouse3/scripts.pory"
 	release
 	end
 
@@ -33,7 +42,16 @@ ParcelCoastHouse3_Clerk_Text_0:
 	.string "both of us.$"
 
 ParcelCoastHouse3_Clerk_Text_1:
-# 11 "data/maps/ParcelCoastHouse3/scripts.pory"
+# 12 "data/maps/ParcelCoastHouse3/scripts.pory"
+	.string "CLERK: I file the catch logs. I know the\n"
+	.string "day the numbers turned. Today a survey\l"
+	.string "came in that knows the same day, from\l"
+	.string "the fish's side of it.\p"
+	.string "I still like my flat. I've started\n"
+	.string "keeping a copy, though. Of the day.$"
+
+ParcelCoastHouse3_Clerk_Text_2:
+# 16 "data/maps/ParcelCoastHouse3/scripts.pory"
 	.string "CLERK: I file the catch logs at the\n"
 	.string "coast office. I could tell you the exact\l"
 	.string "day the numbers started going down. I\l"

@@ -11,6 +11,11 @@ script ParcelRiverHouse7_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("WOMAN: The net comes up honest and cold now. Meltwater, they say, off HAUKFELL. The fish don't like it either.\pHonest and cold. That's most of what this valley's got this year."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: I net the slow water below the town. Ten years ago the net came up heavy. Now it comes up honest."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelRiverHouse7_Man {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Mended the net for the review season. Smaller mesh, she says. Let the small ones through. We've learnt that the slow way."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("MAN: Mended a net for a HAUKFELL man who'd never held one. He's moving down to the valley house and wants to fish. I didn't tell him about the fish.\pThe holes in the net are the same size. He'll find out what comes through on his own."), MSGBOX_DEFAULT)
         release
         end
     }

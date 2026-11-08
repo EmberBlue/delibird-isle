@@ -34,8 +34,10 @@ ParcelRiverCenter_Trainer::
 # 21 "data/maps/ParcelRiverCenter/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverCenter_Trainer_2
 # 26 "data/maps/ParcelRiverCenter/scripts.pory"
-	msgbox ParcelRiverCenter_Trainer_Text_1, MSGBOX_DEFAULT
-# 27 "data/maps/ParcelRiverCenter/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverCenter_Trainer_5
+# 31 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_Trainer_Text_2, MSGBOX_DEFAULT
+# 32 "data/maps/ParcelRiverCenter/scripts.pory"
 	release
 	end
 
@@ -43,6 +45,13 @@ ParcelRiverCenter_Trainer_2:
 # 22 "data/maps/ParcelRiverCenter/scripts.pory"
 	msgbox ParcelRiverCenter_Trainer_Text_0, MSGBOX_DEFAULT
 # 23 "data/maps/ParcelRiverCenter/scripts.pory"
+	release
+	end
+
+ParcelRiverCenter_Trainer_5:
+# 27 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_Trainer_Text_1, MSGBOX_DEFAULT
+# 28 "data/maps/ParcelRiverCenter/scripts.pory"
 	release
 	end
 
@@ -55,7 +64,17 @@ ParcelRiverCenter_Trainer_Text_0:
 	.string "it. Water has a memory, she says.$"
 
 ParcelRiverCenter_Trainer_Text_1:
-# 26 "data/maps/ParcelRiverCenter/scripts.pory"
+# 27 "data/maps/ParcelRiverCenter/scripts.pory"
+	.string "YOUNGSTER: The nurse's cream is for the\n"
+	.string "itch from the lower river. Now there's a\l"
+	.string "SWINUB in here from HAUKFELL with no\l"
+	.string "itch and no cold either.\p"
+	.string "It just lies by the stove. She says\n"
+	.string "that's a mountain thing. She says\l"
+	.string "everything's a thing.$"
+
+ParcelRiverCenter_Trainer_Text_2:
+# 31 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "YOUNGSTER: Everyone's MARILL comes in\n"
 	.string "itchy after the lower river. The nurse\l"
 	.string "has a cream for it now. A CREAM. For a\l"

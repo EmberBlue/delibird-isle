@@ -58,6 +58,11 @@ script ParcelRiverHall_Mayor {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("MAYOR: Carried, against, and the Board didn't count it, and then HAUKFELL's ground let go and suddenly everyone's asking what 'flood control' means when the water's coming from above.\pIt's in the minutes. Nine years, and this is the first year the minutes travelled."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_RIV_MEETING_DONE)) {
         msgbox(format("MAYOR: Carried, against. Nine years I've been chairing votes the Board doesn't count.\pStill. It's in the minutes now. Your name's in the minutes."), MSGBOX_DEFAULT)
         release
@@ -84,6 +89,11 @@ script ParcelRiverHall_Farmer {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FARMER: Plot nine. Metered. The sign's still up. The number on it is lower."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("FARMER: Plot nine. Metered. The hill's melting into my allocation and I'm charged for it by the litre."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -144,6 +154,11 @@ script ParcelRiverHall_Woman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: I came to every meeting and nothing changed, and then one meeting was read into a hearing and something did. I'm still coming. Now I know why."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("WOMAN: I came to every meeting and nothing changed, and then one changed, and now there's a family from HAUKFELL in the back row who've never been to a meeting in their lives.\pI showed them where the tea is. That's the only thing I can think of to do. It's more than it was."), MSGBOX_DEFAULT)
         release
         end
     }

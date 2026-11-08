@@ -66,8 +66,10 @@ ParcelRiverHouse1_OldWoman::
 # 37 "data/maps/ParcelRiverHouse1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse1_OldWoman_2
 # 42 "data/maps/ParcelRiverHouse1/scripts.pory"
-	msgbox ParcelRiverHouse1_OldWoman_Text_1, MSGBOX_DEFAULT
-# 43 "data/maps/ParcelRiverHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHouse1_OldWoman_5
+# 47 "data/maps/ParcelRiverHouse1/scripts.pory"
+	msgbox ParcelRiverHouse1_OldWoman_Text_2, MSGBOX_DEFAULT
+# 48 "data/maps/ParcelRiverHouse1/scripts.pory"
 	release
 	end
 
@@ -75,6 +77,13 @@ ParcelRiverHouse1_OldWoman_2:
 # 38 "data/maps/ParcelRiverHouse1/scripts.pory"
 	msgbox ParcelRiverHouse1_OldWoman_Text_0, MSGBOX_DEFAULT
 # 39 "data/maps/ParcelRiverHouse1/scripts.pory"
+	release
+	end
+
+ParcelRiverHouse1_OldWoman_5:
+# 43 "data/maps/ParcelRiverHouse1/scripts.pory"
+	msgbox ParcelRiverHouse1_OldWoman_Text_1, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelRiverHouse1/scripts.pory"
 	release
 	end
 
@@ -136,7 +145,16 @@ ParcelRiverHouse1_OldWoman_Text_0:
 	.string "beaver. He's happier than I've seen him.$"
 
 ParcelRiverHouse1_OldWoman_Text_1:
-# 42 "data/maps/ParcelRiverHouse1/scripts.pory"
+# 43 "data/maps/ParcelRiverHouse1/scripts.pory"
+	.string "OLD WOMAN: He's stopped talking about\n"
+	.string "the pond. He talks about HAUKFELL now.\l"
+	.string "The ground that let go. He says that's a\l"
+	.string "pond too, a slow one.\p"
+	.string "Fifty-one years of one pond, and now a\n"
+	.string "second. I've started counting again.$"
+
+ParcelRiverHouse1_OldWoman_Text_2:
+# 47 "data/maps/ParcelRiverHouse1/scripts.pory"
 	.string "OLD WOMAN: He talks about the pond.\n"
 	.string "Every day. I've stopped listening and\l"
 	.string "started counting. Fifty-one years he's\l"

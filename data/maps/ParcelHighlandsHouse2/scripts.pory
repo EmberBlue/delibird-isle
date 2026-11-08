@@ -11,6 +11,11 @@ script ParcelHighlandsHouse2_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: He's been sent to the coast for a month. 'Marine survey.' Same crew, same drill, different water.\pI know which of us he'd keep. I'm less sure which of us is keeping him."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: Bore crew's wife. He's paid by MEREHOLT and fed by me, and I know which of us he'd keep."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelHighlandsHouse2_Boy {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: The ranger found the tarn under the hill. Dad says he knew. I asked why he didn't say. He said that's the whole question, son."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("BOY: Dad's drilling the sea now! He says the water under the sea is older than the water under the hill.\pI asked if it's older than Grandad. He said everything is. Grandad didn't laugh that time."), MSGBOX_DEFAULT)
         release
         end
     }

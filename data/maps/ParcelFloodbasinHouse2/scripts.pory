@@ -9,6 +9,11 @@ script ParcelFloodbasinHouse2_Wife {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: We signed the sheet. Then the river people stood up and didn't sign anything, and got their numbers read out instead.\pI've been thinking about which of us got the better deal. The water line's still a hand higher. The thinking's new."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: Third flood this one. The water line's on the wall there, see. Every year a hand higher.\pWe signed the councilman's sheet. You sign the sheet, you get the vouchers. That's how it works now."), MSGBOX_DEFAULT)
     release
     end
@@ -18,6 +23,11 @@ script ParcelFloodbasinHouse2_Boy {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: The WOOPER with the wrong feet is famous now! A lady drew it! It still doesn't go anywhere."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: The WOOPER's still there! A ranger from the river drew a picture of its feet and said the word 'specimen'.\pI don't know what that is, but she said it like it was important. The WOOPER didn't mind."), MSGBOX_DEFAULT)
         release
         end
     }

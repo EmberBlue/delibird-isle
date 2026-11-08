@@ -669,6 +669,11 @@ script ParcelRiverMillWood_Sawyer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("SAWYER: The Board's paper said three stands. Then HAUKFELL's ground went and the Board's paper said five -- timber for the warming centre, for the relocation houses.\pGood cause. The wood's paper still says one. I'm cutting two and not sleeping."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SAWYER: Coppice wood. Twelve-year round, one stand a year, and the mill never wanted for timber in forty years.\pThe Board's paper says take three stands this year. The wood's paper says no. I read the wood's."), MSGBOX_DEFAULT)
     release
     end

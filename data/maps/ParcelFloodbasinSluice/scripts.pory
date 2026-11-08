@@ -669,6 +669,11 @@ script ParcelFloodbasinSluice_Surveyor {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("SURVEYOR: The river hall carried a vote against Phase 2. The Board doesn't count that vote. I've been told to keep measuring.\pSo I measure. I've started writing the vote in the margin of the field sheet, though. The river measures the rest."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SURVEYOR: Phase 2. Sluice gates here, a weir above, a reservoir where the ford was. 'Flood control.'\pI measure what I'm told to measure. The river measures the rest."), MSGBOX_DEFAULT)
     release
     end

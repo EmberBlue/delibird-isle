@@ -8,6 +8,11 @@ script ParcelRiverHouse2_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("WOMAN: He came home with the readings and told me what they said. First time in eleven years. Meltwater, all fourteen plots.\pI didn't ask. He told me. That's a different marriage. I'm not sure yet which I prefer."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: My husband reads the meters for the Board. Good wage. Steady. I don't ask what the readings say. He doesn't tell me. That's a marriage."), MSGBOX_DEFAULT)
     release
     end
@@ -17,6 +22,11 @@ script ParcelRiverHouse2_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Dad read the river's ledger to a room full of people. I went. It's still not a book. It was a book for one afternoon."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("GIRL: Dad says the river's a ledger and now the mountain's writing in it. I asked if mountains can write. He said they can't spell, but they're very loud."), MSGBOX_DEFAULT)
         release
         end
     }

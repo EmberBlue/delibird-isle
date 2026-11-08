@@ -35,6 +35,11 @@ script ParcelRiverMart_Customer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("WOMAN: NET BALLS are in, and REPELS, and a shelf of blankets with the crest that the clerk doesn't charge for.\pFree blankets in a shop. You don't need to catch anything to know what that means."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: NET BALLS are in. The river's full of things you'd want to catch before they're gone."), MSGBOX_DEFAULT)
     release
     end

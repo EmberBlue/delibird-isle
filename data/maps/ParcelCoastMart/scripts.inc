@@ -57,8 +57,10 @@ ParcelCoastMart_Customer::
 # 31 "data/maps/ParcelCoastMart/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastMart_Customer_2
 # 36 "data/maps/ParcelCoastMart/scripts.pory"
-	msgbox ParcelCoastMart_Customer_Text_1, MSGBOX_DEFAULT
-# 37 "data/maps/ParcelCoastMart/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastMart_Customer_5
+# 41 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_Customer_Text_2, MSGBOX_DEFAULT
+# 42 "data/maps/ParcelCoastMart/scripts.pory"
 	release
 	end
 
@@ -66,6 +68,13 @@ ParcelCoastMart_Customer_2:
 # 32 "data/maps/ParcelCoastMart/scripts.pory"
 	msgbox ParcelCoastMart_Customer_Text_0, MSGBOX_DEFAULT
 # 33 "data/maps/ParcelCoastMart/scripts.pory"
+	release
+	end
+
+ParcelCoastMart_Customer_5:
+# 37 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_Customer_Text_1, MSGBOX_DEFAULT
+# 38 "data/maps/ParcelCoastMart/scripts.pory"
 	release
 	end
 
@@ -78,7 +87,16 @@ ParcelCoastMart_Customer_Text_0:
 	.string "want to see a nursery.$"
 
 ParcelCoastMart_Customer_Text_1:
-# 36 "data/maps/ParcelCoastMart/scripts.pory"
+# 37 "data/maps/ParcelCoastMart/scripts.pory"
+	.string "SAILOR: DIVE BALLS, still. For the fish,\n"
+	.string "still. The clerk says the ranger's\l"
+	.string "survey has the word 'urchin' in it twelve\l"
+	.string "times.\p"
+	.string "I said twelve's a lot. She said that's\n"
+	.string "what the survey said about the urchins.$"
+
+ParcelCoastMart_Customer_Text_2:
+# 41 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "SAILOR: DIVE BALLS. For what, I asked.\n"
 	.string "The clerk said for the fish. I said\l"
 	.string "there's no fish. She said that's not her\l"

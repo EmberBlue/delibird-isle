@@ -1466,8 +1466,10 @@ ParcelFloodbasinSluice_Surveyor::
 # 667 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinSluice_Surveyor_2
 # 672 "data/maps/ParcelFloodbasinSluice/scripts.pory"
-	msgbox ParcelFloodbasinSluice_Surveyor_Text_1, MSGBOX_DEFAULT
-# 673 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasinSluice_Surveyor_5
+# 677 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Surveyor_Text_2, MSGBOX_DEFAULT
+# 678 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	release
 	end
 
@@ -1478,15 +1480,22 @@ ParcelFloodbasinSluice_Surveyor_2:
 	release
 	end
 
+ParcelFloodbasinSluice_Surveyor_5:
+# 673 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Surveyor_Text_1, MSGBOX_DEFAULT
+# 674 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	release
+	end
+
 
 ParcelFloodbasinSluice_Sign::
-# 677 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 682 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	msgbox ParcelFloodbasinSluice_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFloodbasinSluice_ItemHyperPotion::
-# 680 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 685 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	finditem ITEM_HYPER_POTION
 	end
 
@@ -2067,7 +2076,17 @@ ParcelFloodbasinSluice_Surveyor_Text_0:
 	.string "measure now, and I'm told it kindly.$"
 
 ParcelFloodbasinSluice_Surveyor_Text_1:
-# 672 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 673 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "SURVEYOR: The river hall carried a vote\n"
+	.string "against Phase 2. The Board doesn't\l"
+	.string "count that vote. I've been told to keep\l"
+	.string "measuring.\p"
+	.string "So I measure. I've started writing the\n"
+	.string "vote in the margin of the field sheet,\l"
+	.string "though. The river measures the rest.$"
+
+ParcelFloodbasinSluice_Surveyor_Text_2:
+# 677 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "SURVEYOR: Phase 2. Sluice gates here, a\n"
 	.string "weir above, a reservoir where the ford\l"
 	.string "was. 'Flood control.'\p"
@@ -2075,7 +2094,7 @@ ParcelFloodbasinSluice_Surveyor_Text_1:
 	.string "river measures the rest.$"
 
 ParcelFloodbasinSluice_Sign_Text_0:
-# 677 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+# 682 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "UPPER SLUICE (proposed). WATER BOARD /\n"
 	.string "MEREHOLT CIVIL. Works commence on\l"
 	.string "approval.$"

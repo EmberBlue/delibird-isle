@@ -10,8 +10,10 @@ ParcelCoastHouse1_Woman::
 # 6 "data/maps/ParcelCoastHouse1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse1_Woman_2
 # 11 "data/maps/ParcelCoastHouse1/scripts.pory"
-	msgbox ParcelCoastHouse1_Woman_Text_1, MSGBOX_DEFAULT
-# 12 "data/maps/ParcelCoastHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse1_Woman_5
+# 16 "data/maps/ParcelCoastHouse1/scripts.pory"
+	msgbox ParcelCoastHouse1_Woman_Text_2, MSGBOX_DEFAULT
+# 17 "data/maps/ParcelCoastHouse1/scripts.pory"
 	release
 	end
 
@@ -22,46 +24,53 @@ ParcelCoastHouse1_Woman_2:
 	release
 	end
 
+ParcelCoastHouse1_Woman_5:
+# 12 "data/maps/ParcelCoastHouse1/scripts.pory"
+	msgbox ParcelCoastHouse1_Woman_Text_1, MSGBOX_DEFAULT
+# 13 "data/maps/ParcelCoastHouse1/scripts.pory"
+	release
+	end
+
 
 ParcelCoastHouse1_Boy::
-# 16 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 21 "data/maps/ParcelCoastHouse1/scripts.pory"
 	lock
-# 17 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 22 "data/maps/ParcelCoastHouse1/scripts.pory"
 	faceplayer
-# 18 "data/maps/ParcelCoastHouse1/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse1_Boy_2
 # 23 "data/maps/ParcelCoastHouse1/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_SHELL_DONE, ParcelCoastHouse1_Boy_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse1_Boy_2
 # 28 "data/maps/ParcelCoastHouse1/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SHELL_DONE, ParcelCoastHouse1_Boy_5
+# 33 "data/maps/ParcelCoastHouse1/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_SHELL_FOUND, ParcelCoastHouse1_Boy_8
-# 35 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 40 "data/maps/ParcelCoastHouse1/scripts.pory"
 	msgbox ParcelCoastHouse1_Boy_Text_3, MSGBOX_DEFAULT
-# 36 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 41 "data/maps/ParcelCoastHouse1/scripts.pory"
 	release
 	end
 
 ParcelCoastHouse1_Boy_2:
-# 19 "data/maps/ParcelCoastHouse1/scripts.pory"
-	msgbox ParcelCoastHouse1_Boy_Text_0, MSGBOX_DEFAULT
-# 20 "data/maps/ParcelCoastHouse1/scripts.pory"
-	release
-	end
-
-ParcelCoastHouse1_Boy_5:
 # 24 "data/maps/ParcelCoastHouse1/scripts.pory"
-	msgbox ParcelCoastHouse1_Boy_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelCoastHouse1_Boy_Text_0, MSGBOX_DEFAULT
 # 25 "data/maps/ParcelCoastHouse1/scripts.pory"
 	release
 	end
 
-ParcelCoastHouse1_Boy_8:
+ParcelCoastHouse1_Boy_5:
 # 29 "data/maps/ParcelCoastHouse1/scripts.pory"
-	msgbox ParcelCoastHouse1_Boy_Text_2, MSGBOX_DEFAULT
+	msgbox ParcelCoastHouse1_Boy_Text_1, MSGBOX_DEFAULT
 # 30 "data/maps/ParcelCoastHouse1/scripts.pory"
+	release
+	end
+
+ParcelCoastHouse1_Boy_8:
+# 34 "data/maps/ParcelCoastHouse1/scripts.pory"
+	msgbox ParcelCoastHouse1_Boy_Text_2, MSGBOX_DEFAULT
+# 35 "data/maps/ParcelCoastHouse1/scripts.pory"
 	giveitem ITEM_DIVE_BALL, 3
-# 31 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 36 "data/maps/ParcelCoastHouse1/scripts.pory"
 	setflag FLAG_SKALD_Q_SHELL_DONE
-# 32 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 37 "data/maps/ParcelCoastHouse1/scripts.pory"
 	release
 	end
 
@@ -76,7 +85,17 @@ ParcelCoastHouse1_Woman_Text_0:
 	.string "talked about fish.$"
 
 ParcelCoastHouse1_Woman_Text_1:
-# 11 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 12 "data/maps/ParcelCoastHouse1/scripts.pory"
+	.string "WOMAN: Three wages, one crest, and this\n"
+	.string "week the crest is nervous. My daughter\l"
+	.string "says the desk's been rewriting\l"
+	.string "brochures since the ranger's survey\l"
+	.string "went to the Board.\p"
+	.string "Arithmetic's still arithmetic. But\n"
+	.string "somebody's checking the sums for once.$"
+
+ParcelCoastHouse1_Woman_Text_2:
+# 16 "data/maps/ParcelCoastHouse1/scripts.pory"
 	.string "WOMAN: My husband's on the cannery\n"
 	.string "line, my son's on the boats, my\l"
 	.string "daughter's at the FOUNDATION desk.\l"
@@ -85,7 +104,7 @@ ParcelCoastHouse1_Woman_Text_1:
 	.string "arithmetic.$"
 
 ParcelCoastHouse1_Boy_Text_0:
-# 19 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 24 "data/maps/ParcelCoastHouse1/scripts.pory"
 	.string "BOY: GYDA says the water's clearer off\n"
 	.string "the breakwater. I'm going to dive it\l"
 	.string "when I'm old enough. Mum says that's the\l"
@@ -93,13 +112,13 @@ ParcelCoastHouse1_Boy_Text_0:
 	.string "for.$"
 
 ParcelCoastHouse1_Boy_Text_1:
-# 24 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 29 "data/maps/ParcelCoastHouse1/scripts.pory"
 	.string "BOY: It's on the windowsill. Mum says\n"
 	.string "it's the first real one in years. I'm\l"
 	.string "going to find the second one myself.$"
 
 ParcelCoastHouse1_Boy_Text_2:
-# 29 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 34 "data/maps/ParcelCoastHouse1/scripts.pory"
 	.string "BOY: A SHELL! A real one! Whole! Mum,\n"
 	.string "LOOK!\p"
 	.string "You can have these. They're for divers.\n"
@@ -107,7 +126,7 @@ ParcelCoastHouse1_Boy_Text_2:
 	.string "when I am.$"
 
 ParcelCoastHouse1_Boy_Text_3:
-# 35 "data/maps/ParcelCoastHouse1/scripts.pory"
+# 40 "data/maps/ParcelCoastHouse1/scripts.pory"
 	.string "BOY: I'm going to be a diver! GYDA says\n"
 	.string "there's nothing down there to see. I'll\l"
 	.string "see it anyway.\p"

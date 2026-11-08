@@ -8,6 +8,11 @@ script ParcelCoastHouse1_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: Three wages, one crest, and this week the crest is nervous. My daughter says the desk's been rewriting brochures since the ranger's survey went to the Board.\pArithmetic's still arithmetic. But somebody's checking the sums for once."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: My husband's on the cannery line, my son's on the boats, my daughter's at the FOUNDATION desk. Three wages, one crest. If it goes, we go with it. That's not loyalty. That's arithmetic."), MSGBOX_DEFAULT)
     release
     end

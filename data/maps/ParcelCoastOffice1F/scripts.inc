@@ -10,8 +10,10 @@ ParcelCoastOffice1F_Reception::
 # 9 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice1F_Reception_2
 # 14 "data/maps/ParcelCoastOffice1F/scripts.pory"
-	msgbox ParcelCoastOffice1F_Reception_Text_1, MSGBOX_DEFAULT
-# 15 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastOffice1F_Reception_5
+# 19 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	msgbox ParcelCoastOffice1F_Reception_Text_2, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	release
 	end
 
@@ -22,60 +24,76 @@ ParcelCoastOffice1F_Reception_2:
 	release
 	end
 
+ParcelCoastOffice1F_Reception_5:
+# 15 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	msgbox ParcelCoastOffice1F_Reception_Text_1, MSGBOX_DEFAULT
+# 16 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	release
+	end
+
 
 ParcelCoastOffice1F_Visitor::
-# 19 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 24 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	lock
-# 20 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 25 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	faceplayer
-# 21 "data/maps/ParcelCoastOffice1F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice1F_Visitor_2
 # 26 "data/maps/ParcelCoastOffice1F/scripts.pory"
-	msgbox ParcelCoastOffice1F_Visitor_Text_1, MSGBOX_DEFAULT
-# 27 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice1F_Visitor_2
+# 31 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastOffice1F_Visitor_5
+# 36 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	msgbox ParcelCoastOffice1F_Visitor_Text_2, MSGBOX_DEFAULT
+# 37 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice1F_Visitor_2:
-# 22 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 27 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	msgbox ParcelCoastOffice1F_Visitor_Text_0, MSGBOX_DEFAULT
-# 23 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 28 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	release
+	end
+
+ParcelCoastOffice1F_Visitor_5:
+# 32 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	msgbox ParcelCoastOffice1F_Visitor_Text_1, MSGBOX_DEFAULT
+# 33 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	release
 	end
 
 
 ParcelCoastOffice1F_Plaque::
-# 31 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 41 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	lock
-# 32 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 42 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH6_EVIDENCE
-# 33 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 43 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	setvar VAR_0x8004, 4
-# 34 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 44 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 35 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 45 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelCoastOffice1F_Plaque_2
-# 40 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 50 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	msgbox ParcelCoastOffice1F_Plaque_Text_1, MSGBOX_SIGN
-# 41 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 51 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	msgbox ParcelCoastOffice1F_Plaque_Text_2, MSGBOX_SIGN
-# 42 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 52 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	special SkaldmereCertTaskMark
-# 43 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 53 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice1F_Plaque_2:
-# 36 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 46 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	msgbox ParcelCoastOffice1F_Plaque_Text_0, MSGBOX_SIGN
-# 37 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 47 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	release
 	end
 
 
 ParcelCoastOffice1F_Model::
-# 47 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 57 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	msgbox ParcelCoastOffice1F_Model_Text_0, MSGBOX_SIGN
 	end
 
@@ -89,21 +107,40 @@ ParcelCoastOffice1F_Reception_Text_0:
 	.string "say nothing clever.$"
 
 ParcelCoastOffice1F_Reception_Text_1:
-# 14 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 15 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	.string "RECEPTION: Welcome to the MEREHOLT\n"
+	.string "FOUNDATION. The exhibit is closed for\l"
+	.string "'updating'. Ms. AUNE is upstairs. The\l"
+	.string "brochures are being reprinted.\p"
+	.string "Do take the old one. It's a collector's\n"
+	.string "item now, the way things are going.$"
+
+ParcelCoastOffice1F_Reception_Text_2:
+# 19 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "RECEPTION: Welcome to the MEREHOLT\n"
 	.string "FOUNDATION. The exhibit is free. Ms.\l"
 	.string "AUNE is upstairs; she's expecting a\l"
 	.string "RANGER. Do take a brochure.$"
 
 ParcelCoastOffice1F_Visitor_Text_0:
-# 22 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 27 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "MAN: I come in for the warm. The model\n"
 	.string "on the wall's been taken down. There's a\l"
 	.string "lighter patch where it was. I\l"
 	.string "understand the patch.$"
 
 ParcelCoastOffice1F_Visitor_Text_1:
-# 26 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 32 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	.string "MAN: I come in for the warm. Today\n"
+	.string "they're taking the model off the wall.\l"
+	.string "'Updating.' I asked what was wrong with\l"
+	.string "it. The young man said nothing's wrong\l"
+	.string "with it.\p"
+	.string "Fewer fish every year and the model's\n"
+	.string "fine. I'll miss it. It was very clever.$"
+
+ParcelCoastOffice1F_Visitor_Text_2:
+# 36 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "MAN: I come in for the warm. They don't\n"
 	.string "mind. The model on the wall's very\l"
 	.string "clever. I don't understand a word of it\l"
@@ -111,12 +148,12 @@ ParcelCoastOffice1F_Visitor_Text_1:
 	.string "suppose it's working.$"
 
 ParcelCoastOffice1F_Plaque_Text_0:
-# 36 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 46 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "The plaque. In the notebook, with the\n"
 	.string "name underlined twice.$"
 
 ParcelCoastOffice1F_Plaque_Text_1:
-# 40 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 50 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "SUSTAINABLE HARVEST FRAMEWORK --\n"
 	.string "MEREHOLT COASTAL FISHERIES. Yield\l"
 	.string "curves. Age-class diagrams. The\l"
@@ -126,7 +163,7 @@ ParcelCoastOffice1F_Plaque_Text_1:
 	.string "of DR. E. HERON, with thanks.$"
 
 ParcelCoastOffice1F_Plaque_Text_2:
-# 41 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 51 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "The hand in the diagrams is the hand in\n"
 	.string "the notebook's margins. The same\l"
 	.string "abbreviations. The same way of drawing\l"
@@ -135,7 +172,7 @@ ParcelCoastOffice1F_Plaque_Text_2:
 	.string "citation. Written down.$"
 
 ParcelCoastOffice1F_Model_Text_0:
-# 47 "data/maps/ParcelCoastOffice1F/scripts.pory"
+# 57 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "A scale model of the harbour under\n"
 	.string "glass. Tiny boats. A tiny cannery. The\l"
 	.string "sea painted the blue it used to be. No\l"

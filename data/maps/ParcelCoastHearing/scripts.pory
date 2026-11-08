@@ -10,6 +10,11 @@ script ParcelCoastHearing_Clerk {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("CLERK: Objections in writing, to the Board. One came in today that wasn't an objection. It was a survey, with a card number on it.\pThe Board reads everything. I've put yours on top. I'm not supposed to have a top."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: Quota hearings are seasonal. Next session after the harvest. Objections in writing, to the Board. The Board reads them. The Board's very good at reading."), MSGBOX_DEFAULT)
     release
     end
@@ -22,6 +27,11 @@ script ParcelCoastHearing_Waiter1 {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("FISHER: Nine seasons, nine objections, nine carbons. Today a ranger's survey went in the same tray as mine.\pFirst time I've had company in the tray. I've started a tenth. Might as well have it ready."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: I've sat in this chair every season for nine years. Nine objections. I keep the carbon copies. Nobody else has them."), MSGBOX_DEFAULT)
     release
     end
@@ -31,6 +41,11 @@ script ParcelCoastHearing_Waiter2 {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: They changed the size rule back. Nobody told us when they changed it the first time. This time there was a notice, in the hall, in big letters. Progress is a notice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: The size changed the week before and nobody told the fish. Your survey says the fish are all one size now, so maybe the fish told the size.\pMy husband laughed when I said that. First time since the grounding."), MSGBOX_DEFAULT)
         release
         end
     }

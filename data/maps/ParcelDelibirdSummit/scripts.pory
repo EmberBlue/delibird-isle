@@ -50,6 +50,11 @@ script ParcelDelibirdSummit_Kari {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("Kari: Gran says the sea by the coast is sick and the ranger wrote it in a book. Is my pond in the book?\pI want it in the book. Not because it's sick. Because it was my sledge run first."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Kari: The pond wasn't here last Midwinter. My sledge run went right where the middle is.\pGran says keep off it. There's nothing to keep off.\pThe trees are leaning. Dad says they're sad. I think they're just leaning."), MSGBOX_DEFAULT)
     release
     end

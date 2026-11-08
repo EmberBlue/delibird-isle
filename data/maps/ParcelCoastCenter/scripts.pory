@@ -23,6 +23,11 @@ script ParcelCoastCenter_Trainer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("SAILOR: The nurse read your survey to the waiting room. The hooks, the starving. She said 'coastal thing', and then she said 'that's not a diagnosis, is it.'\pFirst time I've heard her say what something isn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SAILOR: Half the WINGULL in here come in with hooks in them. The other half come in with nothing in them. Starved. The nurse says it's a coastal thing."), MSGBOX_DEFAULT)
     release
     end

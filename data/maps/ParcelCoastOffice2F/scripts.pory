@@ -41,6 +41,11 @@ script ParcelCoastOffice2F_Secretary {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("SECRETARY: Ms. AUNE remembers how everyone takes their tea. She remembered yours before you came up the stairs.\pShe's had the coast survey on her desk since it was filed. She hasn't moved it. She moves everything."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SECRETARY: Ms. AUNE sees everyone. Fishers, mayors, RANGERS. She remembers how they take their tea. She remembers everything. It's why they sent her."), MSGBOX_DEFAULT)
     release
     end

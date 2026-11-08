@@ -104,8 +104,10 @@ ParcelDelibirdCliffs_Einar::
 # 75 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibirdCliffs_Einar_2
 # 80 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	msgbox ParcelDelibirdCliffs_Einar_Text_1, MSGBOX_DEFAULT
-# 81 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelDelibirdCliffs_Einar_5
+# 85 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_Einar_Text_2, MSGBOX_DEFAULT
+# 86 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
@@ -116,943 +118,950 @@ ParcelDelibirdCliffs_Einar_2:
 	release
 	end
 
+ParcelDelibirdCliffs_Einar_5:
+# 81 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_Einar_Text_1, MSGBOX_DEFAULT
+# 82 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	release
+	end
+
 
 ParcelDelibirdCliffs_TrailSign::
-# 87 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 92 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_TrailSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelDelibirdCliffs_BeaconSign::
-# 92 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 97 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_BeaconSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelDelibirdCliffs_ItemMaxRepel::
-# 98 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 103 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	finditem ITEM_MAX_REPEL
 	end
 
 
 ParcelDelibirdCliffs_ItemBigPearl::
-# 102 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 107 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	finditem ITEM_BIG_PEARL
 	end
 
 
 ParcelDelibirdCliffs_ItemUltraBall::
-# 106 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 111 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	finditem ITEM_ULTRA_BALL
 	end
 
 
 ParcelDelibirdCliffs_T_Solveig::
-# 112 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_CLF_SOLVEIG, ParcelDelibirdCliffs_T_Solveig_Text_0, ParcelDelibirdCliffs_T_Solveig_Text_1, ParcelDelibirdCliffs_T_Solveig_FirstWin
-# 116 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	specialvar VAR_RESULT, SkaldRematchTier
 # 117 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CLF_SOLVEIG, ParcelDelibirdCliffs_T_Solveig_Text_0, ParcelDelibirdCliffs_T_Solveig_Text_1, ParcelDelibirdCliffs_T_Solveig_FirstWin
+# 121 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 122 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibirdCliffs_T_Solveig_3
 ParcelDelibirdCliffs_T_Solveig_1:
-# 120 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 125 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibirdCliffs_T_Solveig_8
 ParcelDelibirdCliffs_T_Solveig_6:
-# 123 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 128 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibirdCliffs_T_Solveig_13
 ParcelDelibirdCliffs_T_Solveig_11:
-# 126 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 131 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibirdCliffs_T_Solveig_18
 ParcelDelibirdCliffs_T_Solveig_16:
-# 129 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 134 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibirdCliffs_T_Solveig_2:
-# 118 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 123 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Solveig_R2
 	goto ParcelDelibirdCliffs_T_Solveig_1
 
 ParcelDelibirdCliffs_T_Solveig_3:
-# 117 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 122 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_SOLVEIG_R2
 	goto_if 0, ParcelDelibirdCliffs_T_Solveig_2
 	goto ParcelDelibirdCliffs_T_Solveig_1
 
 ParcelDelibirdCliffs_T_Solveig_7:
-# 121 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 126 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Solveig_R3
 	goto ParcelDelibirdCliffs_T_Solveig_6
 
 ParcelDelibirdCliffs_T_Solveig_8:
-# 120 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 125 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_SOLVEIG_R3
 	goto_if 0, ParcelDelibirdCliffs_T_Solveig_7
 	goto ParcelDelibirdCliffs_T_Solveig_6
 
 ParcelDelibirdCliffs_T_Solveig_12:
-# 124 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 129 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Solveig_R4
 	goto ParcelDelibirdCliffs_T_Solveig_11
 
 ParcelDelibirdCliffs_T_Solveig_13:
-# 123 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 128 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_SOLVEIG_R4
 	goto_if 0, ParcelDelibirdCliffs_T_Solveig_12
 	goto ParcelDelibirdCliffs_T_Solveig_11
 
 ParcelDelibirdCliffs_T_Solveig_17:
-# 127 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 132 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Solveig_R5
 	goto ParcelDelibirdCliffs_T_Solveig_16
 
 ParcelDelibirdCliffs_T_Solveig_18:
-# 126 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 131 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_SOLVEIG_R5
 	goto_if 0, ParcelDelibirdCliffs_T_Solveig_17
 	goto ParcelDelibirdCliffs_T_Solveig_16
 
 
 ParcelDelibirdCliffs_T_Solveig_FirstWin::
-# 133 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 138 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_Text_2, MSGBOX_DEFAULT
-# 134 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 139 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Solveig_R2::
-# 138 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 143 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 139 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 144 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 140 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 145 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R2_Text_0, MSGBOX_YESNO
-# 141 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 146 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Solveig_R2_2
-# 146 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 151 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_SOLVEIG_R2, ParcelDelibirdCliffs_T_Solveig_R2_Text_2
-# 147 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 152 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R2_Text_3, MSGBOX_DEFAULT
-# 148 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 153 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Solveig_R2_2:
-# 142 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 147 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R2_Text_1, MSGBOX_DEFAULT
-# 143 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 148 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Solveig_R3::
-# 152 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 157 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 153 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 158 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 154 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 159 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R3_Text_0, MSGBOX_YESNO
-# 155 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 160 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Solveig_R3_2
-# 160 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 165 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_SOLVEIG_R3, ParcelDelibirdCliffs_T_Solveig_R2_Text_2
-# 161 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 166 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R3_Text_1, MSGBOX_DEFAULT
-# 162 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 167 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Solveig_R3_2:
-# 156 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 161 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R2_Text_1, MSGBOX_DEFAULT
-# 157 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 162 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Solveig_R4::
-# 166 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 171 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 167 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 172 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 168 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 173 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R4_Text_0, MSGBOX_YESNO
-# 169 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 174 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Solveig_R4_2
-# 174 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 179 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_SOLVEIG_R4, ParcelDelibirdCliffs_T_Solveig_R4_Text_1
-# 175 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 180 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R4_Text_2, MSGBOX_DEFAULT
-# 176 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 181 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Solveig_R4_2:
-# 170 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 175 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R2_Text_1, MSGBOX_DEFAULT
-# 171 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 176 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Solveig_R5::
-# 180 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 185 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 181 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 186 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 182 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 187 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R5_Text_0, MSGBOX_YESNO
-# 183 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 188 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Solveig_R5_2
-# 188 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 193 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_SOLVEIG_R5, ParcelDelibirdCliffs_T_Solveig_R5_Text_1
-# 189 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 194 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R5_Text_2, MSGBOX_DEFAULT
-# 190 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 195 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Solveig_R5_2:
-# 184 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 189 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Solveig_R2_Text_1, MSGBOX_DEFAULT
-# 185 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 190 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Olav::
-# 195 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_CLF_OLAV, ParcelDelibirdCliffs_T_Olav_Text_0, ParcelDelibirdCliffs_T_Olav_Text_1, ParcelDelibirdCliffs_T_Olav_FirstWin
-# 199 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	specialvar VAR_RESULT, SkaldRematchTier
 # 200 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CLF_OLAV, ParcelDelibirdCliffs_T_Olav_Text_0, ParcelDelibirdCliffs_T_Olav_Text_1, ParcelDelibirdCliffs_T_Olav_FirstWin
+# 204 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 205 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibirdCliffs_T_Olav_3
 ParcelDelibirdCliffs_T_Olav_1:
-# 203 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 208 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibirdCliffs_T_Olav_8
 ParcelDelibirdCliffs_T_Olav_6:
-# 206 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 211 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibirdCliffs_T_Olav_13
 ParcelDelibirdCliffs_T_Olav_11:
-# 209 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 214 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibirdCliffs_T_Olav_18
 ParcelDelibirdCliffs_T_Olav_16:
-# 212 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 217 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibirdCliffs_T_Olav_2:
-# 201 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 206 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Olav_R2
 	goto ParcelDelibirdCliffs_T_Olav_1
 
 ParcelDelibirdCliffs_T_Olav_3:
-# 200 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 205 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_OLAV_R2
 	goto_if 0, ParcelDelibirdCliffs_T_Olav_2
 	goto ParcelDelibirdCliffs_T_Olav_1
 
 ParcelDelibirdCliffs_T_Olav_7:
-# 204 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 209 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Olav_R3
 	goto ParcelDelibirdCliffs_T_Olav_6
 
 ParcelDelibirdCliffs_T_Olav_8:
-# 203 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 208 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_OLAV_R3
 	goto_if 0, ParcelDelibirdCliffs_T_Olav_7
 	goto ParcelDelibirdCliffs_T_Olav_6
 
 ParcelDelibirdCliffs_T_Olav_12:
-# 207 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 212 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Olav_R4
 	goto ParcelDelibirdCliffs_T_Olav_11
 
 ParcelDelibirdCliffs_T_Olav_13:
-# 206 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 211 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_OLAV_R4
 	goto_if 0, ParcelDelibirdCliffs_T_Olav_12
 	goto ParcelDelibirdCliffs_T_Olav_11
 
 ParcelDelibirdCliffs_T_Olav_17:
-# 210 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 215 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Olav_R5
 	goto ParcelDelibirdCliffs_T_Olav_16
 
 ParcelDelibirdCliffs_T_Olav_18:
-# 209 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 214 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_OLAV_R5
 	goto_if 0, ParcelDelibirdCliffs_T_Olav_17
 	goto ParcelDelibirdCliffs_T_Olav_16
 
 
 ParcelDelibirdCliffs_T_Olav_FirstWin::
-# 216 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 221 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_Text_2, MSGBOX_DEFAULT
-# 217 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 222 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Olav_R2::
-# 221 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 226 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 222 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 227 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 223 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 228 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R2_Text_0, MSGBOX_YESNO
-# 224 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 229 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Olav_R2_2
-# 229 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 234 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_OLAV_R2, ParcelDelibirdCliffs_T_Olav_R2_Text_2
-# 230 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 235 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R2_Text_3, MSGBOX_DEFAULT
-# 231 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 236 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Olav_R2_2:
-# 225 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 230 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R2_Text_1, MSGBOX_DEFAULT
-# 226 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 231 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Olav_R3::
-# 235 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 240 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 236 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 241 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 237 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 242 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R3_Text_0, MSGBOX_YESNO
-# 238 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 243 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Olav_R3_2
-# 243 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 248 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_OLAV_R3, ParcelDelibirdCliffs_T_Olav_R3_Text_1
-# 244 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 249 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R3_Text_2, MSGBOX_DEFAULT
-# 245 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 250 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Olav_R3_2:
-# 239 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 244 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R2_Text_1, MSGBOX_DEFAULT
-# 240 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 245 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Olav_R4::
-# 249 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 254 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 250 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 255 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 251 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 256 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R4_Text_0, MSGBOX_YESNO
-# 252 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 257 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Olav_R4_2
-# 257 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 262 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_OLAV_R4, ParcelDelibirdCliffs_T_Olav_R4_Text_1
-# 258 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 263 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R4_Text_2, MSGBOX_DEFAULT
-# 259 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 264 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Olav_R4_2:
-# 253 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 258 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R2_Text_1, MSGBOX_DEFAULT
-# 254 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 259 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Olav_R5::
-# 263 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 268 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 264 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 269 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 265 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 270 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R5_Text_0, MSGBOX_YESNO
-# 266 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 271 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Olav_R5_2
-# 271 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 276 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_OLAV_R5, ParcelDelibirdCliffs_T_Olav_R5_Text_1
-# 272 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 277 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R5_Text_2, MSGBOX_DEFAULT
-# 273 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 278 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Olav_R5_2:
-# 267 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 272 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Olav_R2_Text_1, MSGBOX_DEFAULT
-# 268 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 273 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Geir::
-# 278 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_CLF_GEIR, ParcelDelibirdCliffs_T_Geir_Text_0, ParcelDelibirdCliffs_T_Geir_Text_1, ParcelDelibirdCliffs_T_Geir_FirstWin
-# 282 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	specialvar VAR_RESULT, SkaldRematchTier
 # 283 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CLF_GEIR, ParcelDelibirdCliffs_T_Geir_Text_0, ParcelDelibirdCliffs_T_Geir_Text_1, ParcelDelibirdCliffs_T_Geir_FirstWin
+# 287 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 288 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibirdCliffs_T_Geir_3
 ParcelDelibirdCliffs_T_Geir_1:
-# 286 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 291 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibirdCliffs_T_Geir_8
 ParcelDelibirdCliffs_T_Geir_6:
-# 289 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 294 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibirdCliffs_T_Geir_13
 ParcelDelibirdCliffs_T_Geir_11:
-# 292 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 297 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibirdCliffs_T_Geir_18
 ParcelDelibirdCliffs_T_Geir_16:
-# 295 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 300 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibirdCliffs_T_Geir_2:
-# 284 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 289 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Geir_R2
 	goto ParcelDelibirdCliffs_T_Geir_1
 
 ParcelDelibirdCliffs_T_Geir_3:
-# 283 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 288 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_GEIR_R2
 	goto_if 0, ParcelDelibirdCliffs_T_Geir_2
 	goto ParcelDelibirdCliffs_T_Geir_1
 
 ParcelDelibirdCliffs_T_Geir_7:
-# 287 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 292 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Geir_R3
 	goto ParcelDelibirdCliffs_T_Geir_6
 
 ParcelDelibirdCliffs_T_Geir_8:
-# 286 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 291 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_GEIR_R3
 	goto_if 0, ParcelDelibirdCliffs_T_Geir_7
 	goto ParcelDelibirdCliffs_T_Geir_6
 
 ParcelDelibirdCliffs_T_Geir_12:
-# 290 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 295 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Geir_R4
 	goto ParcelDelibirdCliffs_T_Geir_11
 
 ParcelDelibirdCliffs_T_Geir_13:
-# 289 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 294 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_GEIR_R4
 	goto_if 0, ParcelDelibirdCliffs_T_Geir_12
 	goto ParcelDelibirdCliffs_T_Geir_11
 
 ParcelDelibirdCliffs_T_Geir_17:
-# 293 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 298 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Geir_R5
 	goto ParcelDelibirdCliffs_T_Geir_16
 
 ParcelDelibirdCliffs_T_Geir_18:
-# 292 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 297 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_GEIR_R5
 	goto_if 0, ParcelDelibirdCliffs_T_Geir_17
 	goto ParcelDelibirdCliffs_T_Geir_16
 
 
 ParcelDelibirdCliffs_T_Geir_FirstWin::
-# 299 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 304 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_Text_2, MSGBOX_DEFAULT
-# 300 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 305 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Geir_R2::
-# 304 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 309 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 305 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 310 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 306 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 311 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R2_Text_0, MSGBOX_YESNO
-# 307 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 312 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Geir_R2_2
-# 312 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 317 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_GEIR_R2, ParcelDelibirdCliffs_T_Geir_R2_Text_2
-# 313 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 318 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R2_Text_3, MSGBOX_DEFAULT
-# 314 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 319 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Geir_R2_2:
-# 308 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 313 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R2_Text_1, MSGBOX_DEFAULT
-# 309 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 314 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Geir_R3::
-# 318 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 323 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 319 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 324 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 320 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 325 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R3_Text_0, MSGBOX_YESNO
-# 321 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 326 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Geir_R3_2
-# 326 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 331 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_GEIR_R3, ParcelDelibirdCliffs_T_Geir_R3_Text_1
-# 327 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 332 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R3_Text_2, MSGBOX_DEFAULT
-# 328 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 333 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Geir_R3_2:
-# 322 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 327 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R2_Text_1, MSGBOX_DEFAULT
-# 323 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 328 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Geir_R4::
-# 332 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 337 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 333 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 338 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 334 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 339 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R4_Text_0, MSGBOX_YESNO
-# 335 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 340 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Geir_R4_2
-# 340 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 345 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_GEIR_R4, ParcelDelibirdCliffs_T_Geir_R4_Text_1
-# 341 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 346 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R4_Text_2, MSGBOX_DEFAULT
-# 342 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 347 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Geir_R4_2:
-# 336 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 341 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R2_Text_1, MSGBOX_DEFAULT
-# 337 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 342 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Geir_R5::
-# 346 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 351 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 347 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 352 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 348 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 353 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R5_Text_0, MSGBOX_YESNO
-# 349 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 354 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Geir_R5_2
-# 354 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 359 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_GEIR_R5, ParcelDelibirdCliffs_T_Geir_R2_Text_2
-# 355 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 360 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R5_Text_1, MSGBOX_DEFAULT
-# 356 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 361 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Geir_R5_2:
-# 350 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 355 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Geir_R2_Text_1, MSGBOX_DEFAULT
-# 351 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 356 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Pelle::
-# 361 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_CLF_PELLE, ParcelDelibirdCliffs_T_Pelle_Text_0, ParcelDelibirdCliffs_T_Pelle_Text_1, ParcelDelibirdCliffs_T_Pelle_FirstWin
-# 365 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	specialvar VAR_RESULT, SkaldRematchTier
 # 366 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CLF_PELLE, ParcelDelibirdCliffs_T_Pelle_Text_0, ParcelDelibirdCliffs_T_Pelle_Text_1, ParcelDelibirdCliffs_T_Pelle_FirstWin
+# 370 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 371 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibirdCliffs_T_Pelle_3
 ParcelDelibirdCliffs_T_Pelle_1:
-# 369 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 374 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibirdCliffs_T_Pelle_8
 ParcelDelibirdCliffs_T_Pelle_6:
-# 372 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 377 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibirdCliffs_T_Pelle_13
 ParcelDelibirdCliffs_T_Pelle_11:
-# 375 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 380 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibirdCliffs_T_Pelle_18
 ParcelDelibirdCliffs_T_Pelle_16:
-# 378 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 383 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibirdCliffs_T_Pelle_2:
-# 367 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 372 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Pelle_R2
 	goto ParcelDelibirdCliffs_T_Pelle_1
 
 ParcelDelibirdCliffs_T_Pelle_3:
-# 366 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 371 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_PELLE_R2
 	goto_if 0, ParcelDelibirdCliffs_T_Pelle_2
 	goto ParcelDelibirdCliffs_T_Pelle_1
 
 ParcelDelibirdCliffs_T_Pelle_7:
-# 370 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 375 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Pelle_R3
 	goto ParcelDelibirdCliffs_T_Pelle_6
 
 ParcelDelibirdCliffs_T_Pelle_8:
-# 369 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 374 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_PELLE_R3
 	goto_if 0, ParcelDelibirdCliffs_T_Pelle_7
 	goto ParcelDelibirdCliffs_T_Pelle_6
 
 ParcelDelibirdCliffs_T_Pelle_12:
-# 373 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 378 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Pelle_R4
 	goto ParcelDelibirdCliffs_T_Pelle_11
 
 ParcelDelibirdCliffs_T_Pelle_13:
-# 372 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 377 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_PELLE_R4
 	goto_if 0, ParcelDelibirdCliffs_T_Pelle_12
 	goto ParcelDelibirdCliffs_T_Pelle_11
 
 ParcelDelibirdCliffs_T_Pelle_17:
-# 376 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 381 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Pelle_R5
 	goto ParcelDelibirdCliffs_T_Pelle_16
 
 ParcelDelibirdCliffs_T_Pelle_18:
-# 375 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 380 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_PELLE_R5
 	goto_if 0, ParcelDelibirdCliffs_T_Pelle_17
 	goto ParcelDelibirdCliffs_T_Pelle_16
 
 
 ParcelDelibirdCliffs_T_Pelle_FirstWin::
-# 382 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 387 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_Text_2, MSGBOX_DEFAULT
-# 383 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 388 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Pelle_R2::
-# 387 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 392 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 388 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 393 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 389 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 394 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R2_Text_0, MSGBOX_YESNO
-# 390 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 395 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Pelle_R2_2
-# 395 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 400 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_PELLE_R2, ParcelDelibirdCliffs_T_Pelle_R2_Text_2
-# 396 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 401 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R2_Text_3, MSGBOX_DEFAULT
-# 397 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 402 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Pelle_R2_2:
-# 391 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 396 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R2_Text_1, MSGBOX_DEFAULT
-# 392 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 397 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Pelle_R3::
-# 401 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 406 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 402 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 407 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 403 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 408 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R3_Text_0, MSGBOX_YESNO
-# 404 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 409 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Pelle_R3_2
-# 409 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 414 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_PELLE_R3, ParcelDelibirdCliffs_T_Pelle_R3_Text_1
-# 410 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 415 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R3_Text_2, MSGBOX_DEFAULT
-# 411 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 416 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Pelle_R3_2:
-# 405 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 410 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R2_Text_1, MSGBOX_DEFAULT
-# 406 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 411 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Pelle_R4::
-# 415 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 420 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 416 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 421 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 417 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 422 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R4_Text_0, MSGBOX_YESNO
-# 418 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 423 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Pelle_R4_2
-# 423 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 428 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_PELLE_R4, ParcelDelibirdCliffs_T_Pelle_R2_Text_2
-# 424 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 429 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R4_Text_1, MSGBOX_DEFAULT
-# 425 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 430 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Pelle_R4_2:
-# 419 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 424 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R2_Text_1, MSGBOX_DEFAULT
-# 420 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 425 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Pelle_R5::
-# 429 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 434 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 430 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 435 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 431 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 436 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R5_Text_0, MSGBOX_YESNO
-# 432 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 437 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Pelle_R5_2
-# 437 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 442 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_PELLE_R5, ParcelDelibirdCliffs_T_Pelle_R5_Text_1
-# 438 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 443 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R5_Text_2, MSGBOX_DEFAULT
-# 439 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 444 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Pelle_R5_2:
-# 433 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 438 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Pelle_R2_Text_1, MSGBOX_DEFAULT
-# 434 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 439 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Astrid::
-# 444 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_CLF_ASTRID, ParcelDelibirdCliffs_T_Astrid_Text_0, ParcelDelibirdCliffs_T_Astrid_Text_1, ParcelDelibirdCliffs_T_Astrid_FirstWin
-# 448 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	specialvar VAR_RESULT, SkaldRematchTier
 # 449 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_CLF_ASTRID, ParcelDelibirdCliffs_T_Astrid_Text_0, ParcelDelibirdCliffs_T_Astrid_Text_1, ParcelDelibirdCliffs_T_Astrid_FirstWin
+# 453 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	specialvar VAR_RESULT, SkaldRematchTier
+# 454 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibirdCliffs_T_Astrid_3
 ParcelDelibirdCliffs_T_Astrid_1:
-# 452 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 457 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibirdCliffs_T_Astrid_8
 ParcelDelibirdCliffs_T_Astrid_6:
-# 455 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 460 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibirdCliffs_T_Astrid_13
 ParcelDelibirdCliffs_T_Astrid_11:
-# 458 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 463 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibirdCliffs_T_Astrid_18
 ParcelDelibirdCliffs_T_Astrid_16:
-# 461 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 466 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibirdCliffs_T_Astrid_2:
-# 450 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 455 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Astrid_R2
 	goto ParcelDelibirdCliffs_T_Astrid_1
 
 ParcelDelibirdCliffs_T_Astrid_3:
-# 449 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 454 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_ASTRID_R2
 	goto_if 0, ParcelDelibirdCliffs_T_Astrid_2
 	goto ParcelDelibirdCliffs_T_Astrid_1
 
 ParcelDelibirdCliffs_T_Astrid_7:
-# 453 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 458 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Astrid_R3
 	goto ParcelDelibirdCliffs_T_Astrid_6
 
 ParcelDelibirdCliffs_T_Astrid_8:
-# 452 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 457 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_ASTRID_R3
 	goto_if 0, ParcelDelibirdCliffs_T_Astrid_7
 	goto ParcelDelibirdCliffs_T_Astrid_6
 
 ParcelDelibirdCliffs_T_Astrid_12:
-# 456 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 461 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Astrid_R4
 	goto ParcelDelibirdCliffs_T_Astrid_11
 
 ParcelDelibirdCliffs_T_Astrid_13:
-# 455 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 460 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_ASTRID_R4
 	goto_if 0, ParcelDelibirdCliffs_T_Astrid_12
 	goto ParcelDelibirdCliffs_T_Astrid_11
 
 ParcelDelibirdCliffs_T_Astrid_17:
-# 459 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 464 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	goto ParcelDelibirdCliffs_T_Astrid_R5
 	goto ParcelDelibirdCliffs_T_Astrid_16
 
 ParcelDelibirdCliffs_T_Astrid_18:
-# 458 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 463 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	checktrainerflag TRAINER_SKALD_CLF_ASTRID_R5
 	goto_if 0, ParcelDelibirdCliffs_T_Astrid_17
 	goto ParcelDelibirdCliffs_T_Astrid_16
 
 
 ParcelDelibirdCliffs_T_Astrid_FirstWin::
-# 465 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 470 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_Text_2, MSGBOX_DEFAULT
-# 466 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 471 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Astrid_R2::
-# 470 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 475 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 471 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 476 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 472 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 477 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R2_Text_0, MSGBOX_YESNO
-# 473 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 478 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Astrid_R2_2
-# 478 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 483 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_ASTRID_R2, ParcelDelibirdCliffs_T_Astrid_R2_Text_2
-# 479 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 484 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R2_Text_3, MSGBOX_DEFAULT
-# 480 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 485 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Astrid_R2_2:
-# 474 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 479 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
-# 475 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 480 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Astrid_R3::
-# 484 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 489 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 485 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 490 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 486 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 491 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R3_Text_0, MSGBOX_YESNO
-# 487 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 492 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Astrid_R3_2
-# 492 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 497 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_ASTRID_R3, ParcelDelibirdCliffs_T_Astrid_R3_Text_1
-# 493 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 498 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R3_Text_2, MSGBOX_DEFAULT
-# 494 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 499 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Astrid_R3_2:
-# 488 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 493 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
-# 489 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 494 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Astrid_R4::
-# 498 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 503 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 499 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 504 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 500 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 505 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R4_Text_0, MSGBOX_YESNO
-# 501 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 506 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Astrid_R4_2
-# 506 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 511 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_ASTRID_R4, ParcelDelibirdCliffs_T_Astrid_R4_Text_1
-# 507 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 512 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R4_Text_2, MSGBOX_DEFAULT
-# 508 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 513 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Astrid_R4_2:
-# 502 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 507 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
-# 503 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 508 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 
 ParcelDelibirdCliffs_T_Astrid_R5::
-# 512 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 517 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	lock
-# 513 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 518 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	faceplayer
-# 514 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 519 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R5_Text_0, MSGBOX_YESNO
-# 515 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 520 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibirdCliffs_T_Astrid_R5_2
-# 520 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 525 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_CLF_ASTRID_R5, ParcelDelibirdCliffs_T_Astrid_R5_Text_1
-# 521 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 526 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R5_Text_2, MSGBOX_DEFAULT
-# 522 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 527 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
 ParcelDelibirdCliffs_T_Astrid_R5_2:
-# 516 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 521 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	msgbox ParcelDelibirdCliffs_T_Astrid_R2_Text_1, MSGBOX_DEFAULT
-# 517 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 522 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	release
 	end
 
@@ -1167,7 +1176,16 @@ ParcelDelibirdCliffs_Einar_Text_0:
 	.string "main text is still arguing.$"
 
 ParcelDelibirdCliffs_Einar_Text_1:
-# 80 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 81 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "Einar: The coast counted its catch out\n"
+	.string "loud, I hear. All one age. I've been\l"
+	.string "saying it about the gulls for ten years.\p"
+	.string "Nobody counts the gulls. The gulls are\n"
+	.string "fine. The gulls are always fine, until\l"
+	.string "the list says otherwise.$"
+
+ParcelDelibirdCliffs_Einar_Text_2:
+# 85 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "A man with binoculars does not lower\n"
 	.string "them.\p"
 	.string "Einar: CORSOLA. In the shallows off the\n"
@@ -1181,7 +1199,7 @@ ParcelDelibirdCliffs_Einar_Text_1:
 	.string "took forty years.$"
 
 ParcelDelibirdCliffs_TrailSign_Text_0:
-# 87 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 92 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SHORELINE CLIFFS\p"
 	.string "The beach is by the stairs at either\n"
 	.string "end. Tomas's cabin is below the east\l"
@@ -1191,7 +1209,7 @@ ParcelDelibirdCliffs_TrailSign_Text_0:
 	.string "says.$"
 
 ParcelDelibirdCliffs_BeaconSign_Text_0:
-# 92 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 97 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "THE POINT BEACON\p"
 	.string "Kept by the Reikvold family, four\n"
 	.string "generations. Fire, then oil, then the\l"
@@ -1201,7 +1219,7 @@ ParcelDelibirdCliffs_BeaconSign_Text_0:
 	.string "FOUNDATION.$"
 
 ParcelDelibirdCliffs_T_Solveig_Text_0:
-# 113 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 118 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: A picnic on the cliffs at\n"
 	.string "Midwinter! Gran would have called me\l"
 	.string "mad. Gran never had a Midwinter you\l"
@@ -1209,152 +1227,152 @@ ParcelDelibirdCliffs_T_Solveig_Text_0:
 	.string "Battle while the tea brews?$"
 
 ParcelDelibirdCliffs_T_Solveig_Text_1:
-# 114 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 119 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: Tea's ready anyway.$"
 
 ParcelDelibirdCliffs_T_Solveig_Text_2:
-# 129 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 134 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: It's lovely. That's the awful\n"
 	.string "part.\p"
 	.string "It's genuinely lovely up here now.$"
 
 ParcelDelibirdCliffs_T_Solveig_R2_Text_0:
-# 140 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 145 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelDelibirdCliffs_T_Solveig_R2_Text_1:
-# 142 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 147 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: Suit yourself. I'm here.$"
 
 ParcelDelibirdCliffs_T_Solveig_R2_Text_2:
-# 146 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 151 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: …Fair.$"
 
 ParcelDelibirdCliffs_T_Solveig_R2_Text_3:
-# 147 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 152 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelDelibirdCliffs_T_Solveig_R3_Text_0:
-# 154 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 159 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelDelibirdCliffs_T_Solveig_R3_Text_1:
-# 161 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 166 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelDelibirdCliffs_T_Solveig_R4_Text_0:
-# 168 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 173 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelDelibirdCliffs_T_Solveig_R4_Text_1:
-# 174 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 179 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: Right. That's the whole of it.$"
 
 ParcelDelibirdCliffs_T_Solveig_R4_Text_2:
-# 175 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 180 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelDelibirdCliffs_T_Solveig_R5_Text_0:
-# 182 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 187 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelDelibirdCliffs_T_Solveig_R5_Text_1:
-# 188 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 193 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: …Again, then. Later.$"
 
 ParcelDelibirdCliffs_T_Solveig_R5_Text_2:
-# 189 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 194 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SOLVEIG: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelDelibirdCliffs_T_Olav_Text_0:
-# 196 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 201 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: Hold still. WINGULL count. Three\n"
 	.string "hundred and -- never mind, you've put\l"
 	.string "them up.\p"
 	.string "Battle, since you've cost me the number.$"
 
 ParcelDelibirdCliffs_T_Olav_Text_1:
-# 197 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 202 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: Fair's fair.$"
 
 ParcelDelibirdCliffs_T_Olav_Text_2:
-# 212 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 217 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: The gulls are fine. The gulls are\n"
 	.string "always fine.\p"
 	.string "It's the ones you don't see any more\n"
 	.string "that tell you anything.$"
 
 ParcelDelibirdCliffs_T_Olav_R2_Text_0:
-# 223 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 228 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelDelibirdCliffs_T_Olav_R2_Text_1:
-# 225 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 230 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: No hurry. The water keeps.$"
 
 ParcelDelibirdCliffs_T_Olav_R2_Text_2:
-# 229 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 234 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: …Again, then. Later.$"
 
 ParcelDelibirdCliffs_T_Olav_R2_Text_3:
-# 230 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 235 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelDelibirdCliffs_T_Olav_R3_Text_0:
-# 237 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 242 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelDelibirdCliffs_T_Olav_R3_Text_1:
-# 243 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 248 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: That's the one I wanted to see.$"
 
 ParcelDelibirdCliffs_T_Olav_R3_Text_2:
-# 244 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 249 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelDelibirdCliffs_T_Olav_R4_Text_0:
-# 251 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 256 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: I've watched you walk past twice.\n"
 	.string "Not a third time. Battle?$"
 
 ParcelDelibirdCliffs_T_Olav_R4_Text_1:
-# 257 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 262 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: …Fair.$"
 
 ParcelDelibirdCliffs_T_Olav_R4_Text_2:
-# 258 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 263 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelDelibirdCliffs_T_Olav_R5_Text_0:
-# 265 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 270 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelDelibirdCliffs_T_Olav_R5_Text_1:
-# 271 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 276 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: Noted. Properly, this time.$"
 
 ParcelDelibirdCliffs_T_Olav_R5_Text_2:
-# 272 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 277 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "OLAV: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelDelibirdCliffs_T_Geir_Text_0:
-# 279 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 284 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: CORSOLA on the line. In this\n"
 	.string "water. My father fished this tide line\l"
 	.string "fifty years and never saw one north of\l"
@@ -1362,219 +1380,219 @@ ParcelDelibirdCliffs_T_Geir_Text_0:
 	.string "Battle while I think about that.$"
 
 ParcelDelibirdCliffs_T_Geir_Text_1:
-# 280 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 285 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: Hm. Caught, properly.$"
 
 ParcelDelibirdCliffs_T_Geir_Text_2:
-# 295 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 300 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: New fish in the pots and the old\n"
 	.string "ones gone north. Same work, different\l"
 	.string "names.\p"
 	.string "I'd rather the old names.$"
 
 ParcelDelibirdCliffs_T_Geir_R2_Text_0:
-# 306 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 311 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelDelibirdCliffs_T_Geir_R2_Text_1:
-# 308 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 313 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: Fine. Same spot.$"
 
 ParcelDelibirdCliffs_T_Geir_R2_Text_2:
-# 312 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 317 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: That's the one I wanted to see.$"
 
 ParcelDelibirdCliffs_T_Geir_R2_Text_3:
-# 313 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 318 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelDelibirdCliffs_T_Geir_R3_Text_0:
-# 320 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 325 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelDelibirdCliffs_T_Geir_R3_Text_1:
-# 326 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 331 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: Noted. Properly, this time.$"
 
 ParcelDelibirdCliffs_T_Geir_R3_Text_2:
-# 327 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 332 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelDelibirdCliffs_T_Geir_R4_Text_0:
-# 334 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 339 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: I've watched you walk past twice.\n"
 	.string "Not a third time. Battle?$"
 
 ParcelDelibirdCliffs_T_Geir_R4_Text_1:
-# 340 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 345 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: …Fair.$"
 
 ParcelDelibirdCliffs_T_Geir_R4_Text_2:
-# 341 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 346 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelDelibirdCliffs_T_Geir_R5_Text_0:
-# 348 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 353 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelDelibirdCliffs_T_Geir_R5_Text_1:
-# 355 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 360 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "GEIR: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelDelibirdCliffs_T_Pelle_Text_0:
-# 362 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 367 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: I'm swimming at MIDWINTER! Dad\n"
 	.string "says when he was little the sea had ice\l"
 	.string "on it here. Ice!\p"
 	.string "Battle me, I'm warm enough!$"
 
 ParcelDelibirdCliffs_T_Pelle_Text_1:
-# 363 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 368 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: Brrr. Lost.$"
 
 ParcelDelibirdCliffs_T_Pelle_Text_2:
-# 378 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 383 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: Dad doesn't swim. He stands at\n"
 	.string "the edge and looks at the water like it\l"
 	.string "owes him something.$"
 
 ParcelDelibirdCliffs_T_Pelle_R2_Text_0:
-# 389 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 394 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelDelibirdCliffs_T_Pelle_R2_Text_1:
-# 391 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 396 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: Fine. Same spot.$"
 
 ParcelDelibirdCliffs_T_Pelle_R2_Text_2:
-# 395 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 400 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: That's the one I wanted to see.$"
 
 ParcelDelibirdCliffs_T_Pelle_R2_Text_3:
-# 396 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 401 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelDelibirdCliffs_T_Pelle_R3_Text_0:
-# 403 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 408 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelDelibirdCliffs_T_Pelle_R3_Text_1:
-# 409 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 414 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: …Again, then. Later.$"
 
 ParcelDelibirdCliffs_T_Pelle_R3_Text_2:
-# 410 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 415 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelDelibirdCliffs_T_Pelle_R4_Text_0:
-# 417 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 422 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelDelibirdCliffs_T_Pelle_R4_Text_1:
-# 424 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 429 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelDelibirdCliffs_T_Pelle_R5_Text_0:
-# 431 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 436 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelDelibirdCliffs_T_Pelle_R5_Text_1:
-# 437 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 442 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: …Fair.$"
 
 ParcelDelibirdCliffs_T_Pelle_R5_Text_2:
-# 438 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 443 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "PELLE: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelDelibirdCliffs_T_Astrid_Text_0:
-# 445 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 450 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Out here the water's the same\n"
 	.string "every year. It's the land that changes.\p"
 	.string "You've got a board under you, you've got\n"
 	.string "a battle.$"
 
 ParcelDelibirdCliffs_T_Astrid_Text_1:
-# 446 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 451 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Good current on you.$"
 
 ParcelDelibirdCliffs_T_Astrid_Text_2:
-# 461 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 466 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: I used to have to watch for ice\n"
 	.string "floes off the point. Now I watch for the\l"
 	.string "tour boats.\p"
 	.string "I'd take the floes back.$"
 
 ParcelDelibirdCliffs_T_Astrid_R2_Text_0:
-# 472 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 477 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelDelibirdCliffs_T_Astrid_R2_Text_1:
-# 474 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 479 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Fine. Same spot.$"
 
 ParcelDelibirdCliffs_T_Astrid_R2_Text_2:
-# 478 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 483 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Still yours.$"
 
 ParcelDelibirdCliffs_T_Astrid_R2_Text_3:
-# 479 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 484 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelDelibirdCliffs_T_Astrid_R3_Text_0:
-# 486 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 491 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Three stamps, then five. Fine.\n"
 	.string "Me next?$"
 
 ParcelDelibirdCliffs_T_Astrid_R3_Text_1:
-# 492 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 497 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: …Fair.$"
 
 ParcelDelibirdCliffs_T_Astrid_R3_Text_2:
-# 493 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 498 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelDelibirdCliffs_T_Astrid_R4_Text_0:
-# 500 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 505 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelDelibirdCliffs_T_Astrid_R4_Text_1:
-# 506 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 511 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Right. That's the whole of it.$"
 
 ParcelDelibirdCliffs_T_Astrid_R4_Text_2:
-# 507 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 512 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelDelibirdCliffs_T_Astrid_R5_Text_0:
-# 514 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 519 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelDelibirdCliffs_T_Astrid_R5_Text_1:
-# 520 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 525 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Noted. Properly, this time.$"
 
 ParcelDelibirdCliffs_T_Astrid_R5_Text_2:
-# 521 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+# 526 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Five. Write that one down too.\n"
 	.string "I'll know you did.$"

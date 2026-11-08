@@ -11,6 +11,11 @@ script ParcelCoastHouse5_OldMan {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("OLD MAN: A reef, then a resource, then a line. You wrote 'line' and the Board read 'line', and nobody can say 'resource' with a straight face this week.\pThat's not a reef back. It's a word back. Start there."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: Fished the dredge line before it was a line. It was a reef. Then it was a resource. Now it's a line."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelCoastHouse5_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Grandad cried at the hearing on the radio. Then he said 'good'. Both at once."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("GIRL: Grandad took me to see the boats not go out, and today a lady from the FOUNDATION was watching them not go out too.\pGrandad said: good. Now there's two of us looking. He didn't say it to her."), MSGBOX_DEFAULT)
         release
         end
     }

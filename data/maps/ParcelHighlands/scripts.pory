@@ -175,6 +175,11 @@ script ParcelHighlands_HollisTech {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("TECHNICIAN: The coast office sent the bore log back with a note: 'exploratory' is to stay 'exploratory'. Somebody's lawyer read your coast report.\pCore samples still go down twice a week. I've started photographing them before they go. Forms say what's printed. Photographs don't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("TECHNICIAN: Core samples go down to the coast office twice a week. The bore log says 'exploratory'. The bore log's a form. Forms say what's printed on them."), MSGBOX_DEFAULT)
     release
     end

@@ -343,4 +343,15 @@ quest is built, how the peer works) before they are asked six more times.
   weather. Inserted as the branch after the post-finale one (or as the
   second leg of an if/elif chain), only in scripts without quest or story
   logic of their own. ~51,000 hand-written words.
+- **2026-11-08 — the third story state, zones 4–6 (fix D complete).**
+  Eighty-five more residents: Leirvik hears the river hall's vote against
+  Phase 2 (vouchers "suspended", a pencil line on the door frame for a day
+  with no water); Elvsund hears Haukfell's ground let go (meltwater on all
+  fourteen meters, a hill farmer ordering a boat, the sawyer cutting two
+  stands and not sleeping); Haukfell, the island and the Coast hear the
+  coast survey (the bore log's 'exploratory' to stay 'exploratory', the
+  cannery line held a day "pending the ranger", the inspector's second
+  column, Harland's handshake on his own quay, the model coming off the
+  Foundation's wall "for updating"). Every town now moves in three states.
+  ~54,400 hand-written words.
 

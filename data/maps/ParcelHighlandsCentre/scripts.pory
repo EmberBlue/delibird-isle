@@ -27,6 +27,11 @@ script ParcelHighlandsCentre_OldMan {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("OLD MAN: A fisherman from the coast came up to the centre. Lost his boat to the lending company. Said the soup here's better than the quay's.\pSame crest on his bowl as mine. We didn't talk about it. We ate."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: Came down from the north slope in the spring when the well went. Warm here. Soup's good.\pI'd go back up tomorrow if the ground would have me. It won't."), MSGBOX_DEFAULT)
     release
     end
@@ -36,6 +41,11 @@ script ParcelHighlandsCentre_Woman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: The grant's real, the house in the valley is real, and now the house we left is 'subject to review'. I don't know whose it is. I know it's not ours. That hasn't changed."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: The valley house came with a letter from the coast office saying the FOUNDATION 'values our resilience'.\pA woman on the coast told the ranger the fish are all one size. I read that in a paper. I'm all one size too, now. Resilient."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -51,6 +61,11 @@ script ParcelHighlandsCentre_Boy {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("BOY: A boy from the coast says their beach is closed and the lifeguard just sits there. Our stove's always on and their beach is always shut.\pHe says it's the same man's fault. I said the same man can't be everywhere. He said you'd be surprised."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: There's a stove! It's always on! At home the stove was only on at night. I like it here. Mum doesn't."), MSGBOX_DEFAULT)
     release
     end
@@ -60,6 +75,11 @@ script ParcelHighlandsCentre_Man {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Sign the form, get the grant. Don't sign, get soup. The old woman up the hill got soup for a year, and now she's got a page in a hearing. I signed. I've got a house. Hers is the page I'd rather have."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("MAN: Soup or grant. Now there's a third option: the coast office is hiring 'community liaisons'. Sign the form, get a lanyard.\pThe old woman up the hill got offered one. She asked if it came with soup."), MSGBOX_DEFAULT)
         release
         end
     }

@@ -73,8 +73,10 @@ ParcelHighlandsHouse1_Girl::
 # 45 "data/maps/ParcelHighlandsHouse1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsHouse1_Girl_2
 # 50 "data/maps/ParcelHighlandsHouse1/scripts.pory"
-	msgbox ParcelHighlandsHouse1_Girl_Text_1, MSGBOX_DEFAULT
-# 51 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsHouse1_Girl_5
+# 55 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	msgbox ParcelHighlandsHouse1_Girl_Text_2, MSGBOX_DEFAULT
+# 56 "data/maps/ParcelHighlandsHouse1/scripts.pory"
 	release
 	end
 
@@ -82,6 +84,13 @@ ParcelHighlandsHouse1_Girl_2:
 # 46 "data/maps/ParcelHighlandsHouse1/scripts.pory"
 	msgbox ParcelHighlandsHouse1_Girl_Text_0, MSGBOX_DEFAULT
 # 47 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	release
+	end
+
+ParcelHighlandsHouse1_Girl_5:
+# 51 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	msgbox ParcelHighlandsHouse1_Girl_Text_1, MSGBOX_DEFAULT
+# 52 "data/maps/ParcelHighlandsHouse1/scripts.pory"
 	release
 	end
 
@@ -137,7 +146,15 @@ ParcelHighlandsHouse1_Girl_Text_0:
 	.string "time.$"
 
 ParcelHighlandsHouse1_Girl_Text_1:
-# 50 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+# 51 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	.string "GIRL: HOLLIS went down to the coast.\n"
+	.string "The cocoa stopped the day after.\l"
+	.string "Grandad said nothing's as much as you\l"
+	.string "like, and then he said 'told you' very\l"
+	.string "quietly.$"
+
+ParcelHighlandsHouse1_Girl_Text_2:
+# 55 "data/maps/ParcelHighlandsHouse1/scripts.pory"
 	.string "GIRL: The warming centre has cocoa.\n"
 	.string "HOLLIS said we could have as much as we\l"
 	.string "liked. Grandad said nothing's as much as\l"

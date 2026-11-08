@@ -9,6 +9,11 @@ script ParcelCoastCannery_Foreman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("FOREMAN: Half speed, and this morning head office said hold the line a day 'pending the ranger's report'. Pending YOUR report. We've never been pending anything.\pThe line's quiet. You can hear the water running in the pipes. It's not a nice sound."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FOREMAN: Mind the line. We're at half speed; there's not the fish to run it full. Head office says run it anyway. So we run it. Water's cheap."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelCoastCannery_Line {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WORKER: Same size, same size, same size, and today the inspector stopped the line to look at one. First time in a year the line's stopped for a fish.\pIt was the same size as the others. She looked anyway. She said that's what you did. Looked."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WORKER: Every fish I gut's the same size. Used to be you'd get a big one and the whole line would stop to look. Nobody's stopped in a year."), MSGBOX_DEFAULT)
     release
     end
@@ -30,6 +40,11 @@ script ParcelCoastCannery_Inspector {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("INSPECTOR: Every landing weighed, every weight logged, every log to the review now, not the coast office. Same numbers. Different reader. That's the whole change. It's enough."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("INSPECTOR: Every landing weighed. Every weight logged. Every log to the coast office. The numbers are still perfect.\pI read your survey. I've started a second column. What the numbers add up to. It's not my department. It's a column."), MSGBOX_DEFAULT)
         release
         end
     }

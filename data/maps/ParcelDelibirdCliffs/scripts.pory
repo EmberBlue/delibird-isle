@@ -77,6 +77,11 @@ script ParcelDelibirdCliffs_Einar {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("Einar: The coast counted its catch out loud, I hear. All one age. I've been saying it about the gulls for ten years.\pNobody counts the gulls. The gulls are fine. The gulls are always fine, until the list says otherwise."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("A man with binoculars does not lower them.\pEinar: CORSOLA. In the shallows off the point. Forty years I've kept the list for this shore and I had never once written that name.\pNow it's every tide. The water's warm enough for them. It isn't supposed to be warm enough for them.\pThat is the whole of what I know, and it took forty years."), MSGBOX_DEFAULT)
     release
     end

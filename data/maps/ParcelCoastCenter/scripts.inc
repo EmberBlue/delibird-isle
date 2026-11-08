@@ -34,8 +34,10 @@ ParcelCoastCenter_Trainer::
 # 21 "data/maps/ParcelCoastCenter/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastCenter_Trainer_2
 # 26 "data/maps/ParcelCoastCenter/scripts.pory"
-	msgbox ParcelCoastCenter_Trainer_Text_1, MSGBOX_DEFAULT
-# 27 "data/maps/ParcelCoastCenter/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastCenter_Trainer_5
+# 31 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_Trainer_Text_2, MSGBOX_DEFAULT
+# 32 "data/maps/ParcelCoastCenter/scripts.pory"
 	release
 	end
 
@@ -43,6 +45,13 @@ ParcelCoastCenter_Trainer_2:
 # 22 "data/maps/ParcelCoastCenter/scripts.pory"
 	msgbox ParcelCoastCenter_Trainer_Text_0, MSGBOX_DEFAULT
 # 23 "data/maps/ParcelCoastCenter/scripts.pory"
+	release
+	end
+
+ParcelCoastCenter_Trainer_5:
+# 27 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_Trainer_Text_1, MSGBOX_DEFAULT
+# 28 "data/maps/ParcelCoastCenter/scripts.pory"
 	release
 	end
 
@@ -55,7 +64,17 @@ ParcelCoastCenter_Trainer_Text_0:
 	.string "Neither did I.$"
 
 ParcelCoastCenter_Trainer_Text_1:
-# 26 "data/maps/ParcelCoastCenter/scripts.pory"
+# 27 "data/maps/ParcelCoastCenter/scripts.pory"
+	.string "SAILOR: The nurse read your survey to\n"
+	.string "the waiting room. The hooks, the\l"
+	.string "starving. She said 'coastal thing', and\l"
+	.string "then she said 'that's not a diagnosis, is\l"
+	.string "it.'\p"
+	.string "First time I've heard her say what\n"
+	.string "something isn't.$"
+
+ParcelCoastCenter_Trainer_Text_2:
+# 31 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "SAILOR: Half the WINGULL in here come\n"
 	.string "in with hooks in them. The other half\l"
 	.string "come in with nothing in them. Starved.\l"

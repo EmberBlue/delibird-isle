@@ -34,6 +34,11 @@ script ParcelFloodbasinRelief_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: My neighbour still won't sign, and her roof's still got the tarp, and now she's got a letter from the river hall thanking her for 'standing'.\pShe didn't stand anywhere. She sat under a tarp. She's framed the letter."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: I signed. Everyone signs. My neighbour wouldn't, and her roof's still got the tarp on."), MSGBOX_DEFAULT)
     release
     end

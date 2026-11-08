@@ -41,6 +41,11 @@ script ParcelRiverBoard_Clerk {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("CLERK: Allocations are posted. The Phase 2 file has gone to the coast office 'for review'. You still can't read it. Nobody can; it's on a truck.\pThe HAUKFELL relocation forms are on the shelf where it was. Ratepayers only. There are fewer ratepayers."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: Allocations are posted. Objections are closed. The councilman's Phase 2 file is on the shelf and no, you can't read it. Ratepayers only. You're not a ratepayer."), MSGBOX_DEFAULT)
     release
     end
@@ -53,6 +58,11 @@ script ParcelRiverBoard_Ratepayer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("MAN: Plot nine. Metered. And now the bore crew's wife is at the counter paying for water off a hill that's melting into the river.\pThe FOUNDATION sells the meters and drills the hill. I'd admire it if I weren't paying for both."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Plot nine. Metered since spring. I pay for water that used to run past my gate for nothing.\pThe FOUNDATION says the meters are fair. The FOUNDATION sells the meters."), MSGBOX_DEFAULT)
     release
     end
@@ -62,6 +72,11 @@ script ParcelRiverBoard_Meterman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("METER READER: Fourteen plots, fourteen meters, hourly, and the readings go to SLUICE first now, not the coast office. She reads them herself. She's a slow reader. Deliberately."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("METER READER: Readings went up this month. All fourteen. SLUICE says it's meltwater off the high ground. The coast office says it's seasonal.\pThe ledger doesn't say anything. It just balances, and it balanced higher."), MSGBOX_DEFAULT)
         release
         end
     }

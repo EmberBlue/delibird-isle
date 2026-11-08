@@ -10,8 +10,10 @@ ParcelCoastHouse2_Skipper::
 # 6 "data/maps/ParcelCoastHouse2/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse2_Skipper_2
 # 11 "data/maps/ParcelCoastHouse2/scripts.pory"
-	msgbox ParcelCoastHouse2_Skipper_Text_1, MSGBOX_DEFAULT
-# 12 "data/maps/ParcelCoastHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse2_Skipper_5
+# 16 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Skipper_Text_2, MSGBOX_DEFAULT
+# 17 "data/maps/ParcelCoastHouse2/scripts.pory"
 	release
 	end
 
@@ -22,24 +24,40 @@ ParcelCoastHouse2_Skipper_2:
 	release
 	end
 
+ParcelCoastHouse2_Skipper_5:
+# 12 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Skipper_Text_1, MSGBOX_DEFAULT
+# 13 "data/maps/ParcelCoastHouse2/scripts.pory"
+	release
+	end
+
 
 ParcelCoastHouse2_Wife::
-# 16 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 21 "data/maps/ParcelCoastHouse2/scripts.pory"
 	lock
-# 17 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 22 "data/maps/ParcelCoastHouse2/scripts.pory"
 	faceplayer
-# 18 "data/maps/ParcelCoastHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse2_Wife_2
 # 23 "data/maps/ParcelCoastHouse2/scripts.pory"
-	msgbox ParcelCoastHouse2_Wife_Text_1, MSGBOX_DEFAULT
-# 24 "data/maps/ParcelCoastHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse2_Wife_2
+# 28 "data/maps/ParcelCoastHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse2_Wife_5
+# 33 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Wife_Text_2, MSGBOX_DEFAULT
+# 34 "data/maps/ParcelCoastHouse2/scripts.pory"
 	release
 	end
 
 ParcelCoastHouse2_Wife_2:
-# 19 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 24 "data/maps/ParcelCoastHouse2/scripts.pory"
 	msgbox ParcelCoastHouse2_Wife_Text_0, MSGBOX_DEFAULT
-# 20 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 25 "data/maps/ParcelCoastHouse2/scripts.pory"
+	release
+	end
+
+ParcelCoastHouse2_Wife_5:
+# 29 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Wife_Text_1, MSGBOX_DEFAULT
+# 30 "data/maps/ParcelCoastHouse2/scripts.pory"
 	release
 	end
 
@@ -53,7 +71,18 @@ ParcelCoastHouse2_Skipper_Text_0:
 	.string "gloat. Much.$"
 
 ParcelCoastHouse2_Skipper_Text_1:
-# 11 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 12 "data/maps/ParcelCoastHouse2/scripts.pory"
+	.string "SKIPPER: Sold the boat the year the\n"
+	.string "dredge came. Took the money. Today\l"
+	.string "HARLAND lost on his own quay to a\l"
+	.string "ranger and shook hands after, and I\l"
+	.string "thought: that's what a man does who\l"
+	.string "still has a boat to stand on.\p"
+	.string "Best decision I ever made. I still\n"
+	.string "haven't forgiven it.$"
+
+ParcelCoastHouse2_Skipper_Text_2:
+# 16 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "SKIPPER: Sold the boat to the lending\n"
 	.string "company the year the dredge came. Took\l"
 	.string "the money. Bought this house. Best\l"
@@ -61,7 +90,7 @@ ParcelCoastHouse2_Skipper_Text_1:
 	.string "forgiven myself for it.$"
 
 ParcelCoastHouse2_Wife_Text_0:
-# 19 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 24 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "WIFE: He went down to the union hall.\n"
 	.string "First time in six years he's gone\l"
 	.string "anywhere but the window. Came back with\l"
@@ -69,7 +98,16 @@ ParcelCoastHouse2_Wife_Text_0:
 	.string "something. He wouldn't say what.$"
 
 ParcelCoastHouse2_Wife_Text_1:
-# 23 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 29 "data/maps/ParcelCoastHouse2/scripts.pory"
+	.string "WIFE: He watched the boats go out this\n"
+	.string "morning, and then he watched a ranger\l"
+	.string "walk off the quay with HARLAND's badge.\p"
+	.string "He said 'good'. Just that. Forty years\n"
+	.string "out, and the first 'good' I've heard from\l"
+	.string "the window.$"
+
+ParcelCoastHouse2_Wife_Text_2:
+# 33 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "WIFE: He stands at the window and\n"
 	.string "watches the boats go out. Forty years\l"
 	.string "he went out. Now he watches. Watching's\l"

@@ -11,6 +11,11 @@ script ParcelRiverHouse4_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("WOMAN: Fish on market day, vegetables the rest, and now blankets with a crest from a van. The Board meters the water and the FOUNDATION hands out the wool.\pI took a blanket. It's a good blanket. I know what I took it with."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: Fish on market day, vegetables the rest. The river gives both and the Board meters both."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelRiverHouse4_Boy {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Nineteen stalls today! I counted twice, like the ranger does."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("BOY: Fourteen stalls this spring, and now nineteen, because the hill people set up on the end with nothing on the table.\pI count them anyway. Mum says an empty stall still counts. I don't know. I counted it."), MSGBOX_DEFAULT)
         release
         end
     }

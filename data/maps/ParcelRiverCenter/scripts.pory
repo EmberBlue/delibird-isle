@@ -23,6 +23,11 @@ script ParcelRiverCenter_Trainer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("YOUNGSTER: The nurse's cream is for the itch from the lower river. Now there's a SWINUB in here from HAUKFELL with no itch and no cold either.\pIt just lies by the stove. She says that's a mountain thing. She says everything's a thing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("YOUNGSTER: Everyone's MARILL comes in itchy after the lower river. The nurse has a cream for it now. A CREAM. For a river."), MSGBOX_DEFAULT)
     release
     end

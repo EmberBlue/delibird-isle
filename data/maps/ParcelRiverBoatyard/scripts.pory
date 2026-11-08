@@ -8,6 +8,11 @@ script ParcelRiverBoatyard_Wright {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("BOATWRIGHT: A man from HAUKFELL asked me to build him a boat. He's never lived near water. He said the water's coming to him, so he'll want one.\pI built HARLAND's boat for a river. I'm not sure what I'd build for a hill."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOATWRIGHT: I built HARLAND's boat. His grandfather built the one before it, in this shed.\pNow a coastal lender holds the paper on her. I built a boat and they bought a man. Funny old trade."), MSGBOX_DEFAULT)
     release
     end
@@ -17,6 +22,11 @@ script ParcelRiverBoatyard_Apprentice {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("APPRENTICE: Somebody ordered a boat. A whole boat. First in four years. The review grounded the big fleet and the small ones are worth building again. I'm learning the keel."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("APPRENTICE: First new order in two years and it's from a hill farmer who's never seen a boat. Master says build it anyway.\pHe says people who order boats before they need them are the only customers worth having."), MSGBOX_DEFAULT)
         release
         end
     }

@@ -8,6 +8,11 @@ script ParcelCoastHouse3_Clerk {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("CLERK: I file the catch logs. I know the day the numbers turned. Today a survey came in that knows the same day, from the fish's side of it.\pI still like my flat. I've started keeping a copy, though. Of the day."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CLERK: I file the catch logs at the coast office. I could tell you the exact day the numbers started going down. I won't. I like my flat. It has a view of the harbour."), MSGBOX_DEFAULT)
     release
     end

@@ -59,8 +59,10 @@ ParcelFloodbasinRelief_Woman::
 # 32 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinRelief_Woman_2
 # 37 "data/maps/ParcelFloodbasinRelief/scripts.pory"
-	msgbox ParcelFloodbasinRelief_Woman_Text_1, MSGBOX_DEFAULT
-# 38 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasinRelief_Woman_5
+# 42 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Woman_Text_2, MSGBOX_DEFAULT
+# 43 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	release
 	end
 
@@ -71,9 +73,16 @@ ParcelFloodbasinRelief_Woman_2:
 	release
 	end
 
+ParcelFloodbasinRelief_Woman_5:
+# 38 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Woman_Text_1, MSGBOX_DEFAULT
+# 39 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	release
+	end
+
 
 ParcelFloodbasinRelief_Sheet::
-# 42 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 47 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	msgbox ParcelFloodbasinRelief_Sheet_Text_0, MSGBOX_SIGN
 	end
 
@@ -121,13 +130,22 @@ ParcelFloodbasinRelief_Woman_Text_0:
 	.string "I'm confused. Same thing, round here.$"
 
 ParcelFloodbasinRelief_Woman_Text_1:
-# 37 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 38 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	.string "WOMAN: My neighbour still won't sign,\n"
+	.string "and her roof's still got the tarp, and\l"
+	.string "now she's got a letter from the river\l"
+	.string "hall thanking her for 'standing'.\p"
+	.string "She didn't stand anywhere. She sat\n"
+	.string "under a tarp. She's framed the letter.$"
+
+ParcelFloodbasinRelief_Woman_Text_2:
+# 42 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "WOMAN: I signed. Everyone signs. My\n"
 	.string "neighbour wouldn't, and her roof's still\l"
 	.string "got the tarp on.$"
 
 ParcelFloodbasinRelief_Sheet_Text_0:
-# 42 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+# 47 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "RELIEF REGISTER -- LEIRVIK. Forty-one\n"
 	.string "names. Beside each, a box ticked: 'I\l"
 	.string "confirm that the Foundation's\l"

@@ -66,8 +66,10 @@ ParcelCoastOffice2F_Secretary::
 # 39 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice2F_Secretary_2
 # 44 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	msgbox ParcelCoastOffice2F_Secretary_Text_1, MSGBOX_DEFAULT
-# 45 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastOffice2F_Secretary_5
+# 49 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_Secretary_Text_2, MSGBOX_DEFAULT
+# 50 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
@@ -78,58 +80,65 @@ ParcelCoastOffice2F_Secretary_2:
 	release
 	end
 
+ParcelCoastOffice2F_Secretary_5:
+# 45 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_Secretary_Text_1, MSGBOX_DEFAULT
+# 46 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	release
+	end
+
 
 ParcelCoastOffice2F_Perrin::
-# 50 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 55 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	lock
-# 51 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 56 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	faceplayer
-# 52 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 57 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastOffice2F_Perrin_2
 ParcelCoastOffice2F_Perrin_1:
-# 55 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 60 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Text_0, MSGBOX_DEFAULT
-# 56 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 61 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Text_1, MSGBOX_DEFAULT
-# 57 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 62 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Perrin_2:
-# 53 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 58 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	goto ParcelCoastOffice2F_Perrin_Last
 	goto ParcelCoastOffice2F_Perrin_1
 
 
 ParcelCoastOffice2F_Perrin_Last::
-# 63 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	goto_if_set FLAG_SKALD_PERRIN_7_DONE, ParcelCoastOffice2F_Perrin_Last_2
 # 68 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALD_PERRIN_7_DONE, ParcelCoastOffice2F_Perrin_Last_2
+# 73 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_1, MSGBOX_YESNO
-# 69 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 74 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoastOffice2F_Perrin_Last_5
-# 74 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 79 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_PERRIN_7, ParcelCoastOffice2F_Perrin_Last_Text_3
-# 75 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 80 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	setflag FLAG_SKALD_PERRIN_7_DONE
-# 76 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 81 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_4, MSGBOX_DEFAULT
-# 77 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 82 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Perrin_Last_2:
-# 64 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 69 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_0, MSGBOX_DEFAULT
-# 65 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 70 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Perrin_Last_5:
-# 70 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 75 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_2, MSGBOX_DEFAULT
-# 71 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 76 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
@@ -201,14 +210,24 @@ ParcelCoastOffice2F_Secretary_Text_0:
 	.string "has started making it herself.$"
 
 ParcelCoastOffice2F_Secretary_Text_1:
-# 44 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 45 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "SECRETARY: Ms. AUNE remembers how\n"
+	.string "everyone takes their tea. She\l"
+	.string "remembered yours before you came up\l"
+	.string "the stairs.\p"
+	.string "She's had the coast survey on her desk\n"
+	.string "since it was filed. She hasn't moved it.\l"
+	.string "She moves everything.$"
+
+ParcelCoastOffice2F_Secretary_Text_2:
+# 49 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "SECRETARY: Ms. AUNE sees everyone.\n"
 	.string "Fishers, mayors, RANGERS. She remembers\l"
 	.string "how they take their tea. She remembers\l"
 	.string "everything. It's why they sent her.$"
 
 ParcelCoastOffice2F_Perrin_Text_0:
-# 55 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 60 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: They gave me a desk. The one by\n"
 	.string "the window. HOLLIS said I'd earned it.\p"
 	.string "I read your filing. All of it. Twice. I\n"
@@ -217,21 +236,21 @@ ParcelCoastOffice2F_Perrin_Text_0:
 	.string "isn't true.$"
 
 ParcelCoastOffice2F_Perrin_Text_1:
-# 56 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 61 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: I'm not sorry. I'm not NOT sorry.\n"
 	.string "Is that an answer?\p"
 	.string "Go on. You've got a ferry. I've got a\n"
 	.string "window.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_0:
-# 64 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 69 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: I'm staying. Someone should be\n"
 	.string "in here who's read it. That's me, now.\p"
 	.string "The window's good. You can see the\n"
 	.string "ferry from it.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_1:
-# 68 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 73 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: WREN. They put the hearing on\n"
 	.string "the office speaker. HOLLIS listened to\l"
 	.string "all of it with her tea going cold.\p"
@@ -239,16 +258,16 @@ ParcelCoastOffice2F_Perrin_Last_Text_1:
 	.string "Please.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_2:
-# 70 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 75 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: Then later. I'll be at this desk.\n"
 	.string "It's a good desk.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_3:
-# 74 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 79 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: …Okay. Okay. That one I'll keep.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_4:
-# 76 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 81 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: I'm staying. Someone should be\n"
 	.string "in here who's read it. That's me, now.\p"
 	.string "Go on. You've got a region. I've got a\n"

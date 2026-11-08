@@ -357,8 +357,10 @@ ParcelCoast_Worker::
 # 223 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Worker_2
 # 228 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Worker_Text_1, MSGBOX_DEFAULT
-# 229 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Worker_5
+# 233 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Worker_Text_2, MSGBOX_DEFAULT
+# 234 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
@@ -369,3520 +371,3590 @@ ParcelCoast_Worker_2:
 	release
 	end
 
+ParcelCoast_Worker_5:
+# 229 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Worker_Text_1, MSGBOX_DEFAULT
+# 230 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
 
 ParcelCoast_Vendor1::
-# 233 "data/maps/ParcelCoast/scripts.pory"
+# 238 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 234 "data/maps/ParcelCoast/scripts.pory"
+# 239 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 235 "data/maps/ParcelCoast/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Vendor1_2
 # 240 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Vendor1_Text_1, MSGBOX_DEFAULT
-# 241 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Vendor1_2
+# 245 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Vendor1_5
+# 250 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor1_Text_2, MSGBOX_DEFAULT
+# 251 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Vendor1_2:
-# 236 "data/maps/ParcelCoast/scripts.pory"
+# 241 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Vendor1_Text_0, MSGBOX_DEFAULT
-# 237 "data/maps/ParcelCoast/scripts.pory"
+# 242 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Vendor1_5:
+# 246 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor1_Text_1, MSGBOX_DEFAULT
+# 247 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Vendor2::
-# 245 "data/maps/ParcelCoast/scripts.pory"
+# 255 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 246 "data/maps/ParcelCoast/scripts.pory"
+# 256 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 247 "data/maps/ParcelCoast/scripts.pory"
+# 257 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Vendor2_2
-# 252 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Vendor2_Text_1, MSGBOX_DEFAULT
-# 253 "data/maps/ParcelCoast/scripts.pory"
+# 262 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Vendor2_5
+# 267 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor2_Text_2, MSGBOX_DEFAULT
+# 268 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Vendor2_2:
-# 248 "data/maps/ParcelCoast/scripts.pory"
+# 258 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Vendor2_Text_0, MSGBOX_DEFAULT
-# 249 "data/maps/ParcelCoast/scripts.pory"
+# 259 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Vendor2_5:
+# 263 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor2_Text_1, MSGBOX_DEFAULT
+# 264 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Vendor3::
-# 257 "data/maps/ParcelCoast/scripts.pory"
+# 272 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 258 "data/maps/ParcelCoast/scripts.pory"
+# 273 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 259 "data/maps/ParcelCoast/scripts.pory"
+# 274 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Vendor3_2
-# 264 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Vendor3_Text_1, MSGBOX_DEFAULT
-# 265 "data/maps/ParcelCoast/scripts.pory"
+# 279 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Vendor3_5
+# 284 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor3_Text_2, MSGBOX_DEFAULT
+# 285 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Vendor3_2:
-# 260 "data/maps/ParcelCoast/scripts.pory"
+# 275 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Vendor3_Text_0, MSGBOX_DEFAULT
-# 261 "data/maps/ParcelCoast/scripts.pory"
+# 276 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Vendor3_5:
+# 280 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor3_Text_1, MSGBOX_DEFAULT
+# 281 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Vendor4::
-# 269 "data/maps/ParcelCoast/scripts.pory"
+# 289 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 270 "data/maps/ParcelCoast/scripts.pory"
+# 290 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 271 "data/maps/ParcelCoast/scripts.pory"
+# 291 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Vendor4_2
-# 276 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Vendor4_Text_1, MSGBOX_DEFAULT
-# 277 "data/maps/ParcelCoast/scripts.pory"
+# 296 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Vendor4_5
+# 301 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor4_Text_2, MSGBOX_DEFAULT
+# 302 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Vendor4_2:
-# 272 "data/maps/ParcelCoast/scripts.pory"
+# 292 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Vendor4_Text_0, MSGBOX_DEFAULT
-# 273 "data/maps/ParcelCoast/scripts.pory"
+# 293 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Vendor4_5:
+# 297 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Vendor4_Text_1, MSGBOX_DEFAULT
+# 298 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Girl::
-# 281 "data/maps/ParcelCoast/scripts.pory"
+# 306 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 282 "data/maps/ParcelCoast/scripts.pory"
+# 307 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 283 "data/maps/ParcelCoast/scripts.pory"
+# 308 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Girl_2
-# 288 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Girl_Text_1, MSGBOX_DEFAULT
-# 289 "data/maps/ParcelCoast/scripts.pory"
+# 313 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Girl_5
+# 318 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Girl_Text_2, MSGBOX_DEFAULT
+# 319 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Girl_2:
-# 284 "data/maps/ParcelCoast/scripts.pory"
+# 309 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Girl_Text_0, MSGBOX_DEFAULT
-# 285 "data/maps/ParcelCoast/scripts.pory"
+# 310 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Girl_5:
+# 314 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Girl_Text_1, MSGBOX_DEFAULT
+# 315 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Docker::
-# 293 "data/maps/ParcelCoast/scripts.pory"
+# 323 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 294 "data/maps/ParcelCoast/scripts.pory"
+# 324 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 295 "data/maps/ParcelCoast/scripts.pory"
+# 325 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Docker_2
-# 300 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Docker_Text_1, MSGBOX_DEFAULT
-# 301 "data/maps/ParcelCoast/scripts.pory"
+# 330 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Docker_5
+# 335 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Docker_Text_2, MSGBOX_DEFAULT
+# 336 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Docker_2:
-# 296 "data/maps/ParcelCoast/scripts.pory"
+# 326 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Docker_Text_0, MSGBOX_DEFAULT
-# 297 "data/maps/ParcelCoast/scripts.pory"
+# 327 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_Docker_5:
+# 331 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Docker_Text_1, MSGBOX_DEFAULT
+# 332 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_GullMan::
-# 305 "data/maps/ParcelCoast/scripts.pory"
+# 340 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 306 "data/maps/ParcelCoast/scripts.pory"
+# 341 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 307 "data/maps/ParcelCoast/scripts.pory"
+# 342 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_GullMan_2
-# 312 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_GullMan_Text_1, MSGBOX_DEFAULT
-# 313 "data/maps/ParcelCoast/scripts.pory"
+# 347 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_GullMan_5
+# 352 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_GullMan_Text_2, MSGBOX_DEFAULT
+# 353 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_GullMan_2:
-# 308 "data/maps/ParcelCoast/scripts.pory"
+# 343 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_GullMan_Text_0, MSGBOX_DEFAULT
-# 309 "data/maps/ParcelCoast/scripts.pory"
+# 344 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_GullMan_5:
+# 348 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_GullMan_Text_1, MSGBOX_DEFAULT
+# 349 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_ReturnFerry::
-# 319 "data/maps/ParcelCoast/scripts.pory"
+# 359 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 320 "data/maps/ParcelCoast/scripts.pory"
+# 360 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 321 "data/maps/ParcelCoast/scripts.pory"
+# 361 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_ReturnFerry_2
-# 326 "data/maps/ParcelCoast/scripts.pory"
+# 366 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_ReturnFerry_Text_1, MSGBOX_YESNO
-# 327 "data/maps/ParcelCoast/scripts.pory"
+# 367 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_ReturnFerry_5
-# 332 "data/maps/ParcelCoast/scripts.pory"
+# 372 "data/maps/ParcelCoast/scripts.pory"
 	closemessage
-# 333 "data/maps/ParcelCoast/scripts.pory"
+# 373 "data/maps/ParcelCoast/scripts.pory"
 	playse SE_SHIP
-# 334 "data/maps/ParcelCoast/scripts.pory"
+# 374 "data/maps/ParcelCoast/scripts.pory"
 	delay 40
-# 335 "data/maps/ParcelCoast/scripts.pory"
+# 375 "data/maps/ParcelCoast/scripts.pory"
 	warp MAP_PARCEL_ISLE, 15, 31
-# 336 "data/maps/ParcelCoast/scripts.pory"
+# 376 "data/maps/ParcelCoast/scripts.pory"
 	waitstate
 	end
 
 ParcelCoast_ReturnFerry_2:
-# 322 "data/maps/ParcelCoast/scripts.pory"
+# 362 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_ReturnFerry_Text_0, MSGBOX_DEFAULT
-# 323 "data/maps/ParcelCoast/scripts.pory"
+# 363 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_ReturnFerry_5:
-# 328 "data/maps/ParcelCoast/scripts.pory"
+# 368 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_ReturnFerry_Text_2, MSGBOX_DEFAULT
-# 329 "data/maps/ParcelCoast/scripts.pory"
+# 369 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_MereholtAide::
-# 342 "data/maps/ParcelCoast/scripts.pory"
+# 382 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 343 "data/maps/ParcelCoast/scripts.pory"
+# 383 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 344 "data/maps/ParcelCoast/scripts.pory"
+# 384 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_CORDELIA_DONE, ParcelCoast_MereholtAide_2
-# 349 "data/maps/ParcelCoast/scripts.pory"
+# 389 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_MereholtAide_Text_1, MSGBOX_DEFAULT
-# 350 "data/maps/ParcelCoast/scripts.pory"
+# 390 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_MereholtAide_Text_2, MSGBOX_YESNO
-# 351 "data/maps/ParcelCoast/scripts.pory"
+# 391 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_MereholtAide_5
-# 356 "data/maps/ParcelCoast/scripts.pory"
+# 396 "data/maps/ParcelCoast/scripts.pory"
 	closemessage
-# 357 "data/maps/ParcelCoast/scripts.pory"
+# 397 "data/maps/ParcelCoast/scripts.pory"
 	warp MAP_PARCEL_BOARDROOM, 4, 2
-# 358 "data/maps/ParcelCoast/scripts.pory"
+# 398 "data/maps/ParcelCoast/scripts.pory"
 	waitstate
 	end
 
 ParcelCoast_MereholtAide_2:
-# 345 "data/maps/ParcelCoast/scripts.pory"
+# 385 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_MereholtAide_Text_0, MSGBOX_DEFAULT
-# 346 "data/maps/ParcelCoast/scripts.pory"
+# 386 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_MereholtAide_5:
-# 352 "data/maps/ParcelCoast/scripts.pory"
+# 392 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_MereholtAide_Text_3, MSGBOX_DEFAULT
-# 353 "data/maps/ParcelCoast/scripts.pory"
+# 393 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_ItemA::
-# 363 "data/maps/ParcelCoast/scripts.pory"
+# 403 "data/maps/ParcelCoast/scripts.pory"
 	finditem ITEM_PEARL
 	end
 
 
 ParcelCoast_ItemB::
-# 364 "data/maps/ParcelCoast/scripts.pory"
+# 404 "data/maps/ParcelCoast/scripts.pory"
 	finditem ITEM_BIG_PEARL
 	end
 
 
 ParcelCoast_ItemMaxElixir::
-# 365 "data/maps/ParcelCoast/scripts.pory"
+# 405 "data/maps/ParcelCoast/scripts.pory"
 	finditem ITEM_MAX_ELIXIR
 	end
 
 
 ParcelCoast_SignQuay::
-# 367 "data/maps/ParcelCoast/scripts.pory"
+# 407 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_SignQuay_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoast_SignMarket::
-# 371 "data/maps/ParcelCoast/scripts.pory"
+# 411 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_SignMarket_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoast_Brage::
-# 377 "data/maps/ParcelCoast/scripts.pory"
+# 417 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_BRAGE, ParcelCoast_Brage_Text_0, ParcelCoast_Brage_Text_1, ParcelCoast_Brage_FirstWin
-# 381 "data/maps/ParcelCoast/scripts.pory"
+# 421 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 382 "data/maps/ParcelCoast/scripts.pory"
+# 422 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Brage_3
 ParcelCoast_Brage_1:
-# 385 "data/maps/ParcelCoast/scripts.pory"
+# 425 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Brage_8
 ParcelCoast_Brage_6:
-# 388 "data/maps/ParcelCoast/scripts.pory"
+# 428 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Brage_13
 ParcelCoast_Brage_11:
-# 391 "data/maps/ParcelCoast/scripts.pory"
+# 431 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Brage_18
 ParcelCoast_Brage_16:
-# 394 "data/maps/ParcelCoast/scripts.pory"
+# 434 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Brage_2:
-# 383 "data/maps/ParcelCoast/scripts.pory"
+# 423 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Brage_R2
 	goto ParcelCoast_Brage_1
 
 ParcelCoast_Brage_3:
-# 382 "data/maps/ParcelCoast/scripts.pory"
+# 422 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BRAGE_R2
 	goto_if 0, ParcelCoast_Brage_2
 	goto ParcelCoast_Brage_1
 
 ParcelCoast_Brage_7:
-# 386 "data/maps/ParcelCoast/scripts.pory"
+# 426 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Brage_R3
 	goto ParcelCoast_Brage_6
 
 ParcelCoast_Brage_8:
-# 385 "data/maps/ParcelCoast/scripts.pory"
+# 425 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BRAGE_R3
 	goto_if 0, ParcelCoast_Brage_7
 	goto ParcelCoast_Brage_6
 
 ParcelCoast_Brage_12:
-# 389 "data/maps/ParcelCoast/scripts.pory"
+# 429 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Brage_R4
 	goto ParcelCoast_Brage_11
 
 ParcelCoast_Brage_13:
-# 388 "data/maps/ParcelCoast/scripts.pory"
+# 428 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BRAGE_R4
 	goto_if 0, ParcelCoast_Brage_12
 	goto ParcelCoast_Brage_11
 
 ParcelCoast_Brage_17:
-# 392 "data/maps/ParcelCoast/scripts.pory"
+# 432 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Brage_R5
 	goto ParcelCoast_Brage_16
 
 ParcelCoast_Brage_18:
-# 391 "data/maps/ParcelCoast/scripts.pory"
+# 431 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BRAGE_R5
 	goto_if 0, ParcelCoast_Brage_17
 	goto ParcelCoast_Brage_16
 
 
 ParcelCoast_Brage_FirstWin::
-# 398 "data/maps/ParcelCoast/scripts.pory"
+# 438 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_Text_2, MSGBOX_DEFAULT
-# 399 "data/maps/ParcelCoast/scripts.pory"
+# 439 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Brage_R2::
-# 403 "data/maps/ParcelCoast/scripts.pory"
+# 443 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 404 "data/maps/ParcelCoast/scripts.pory"
+# 444 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 405 "data/maps/ParcelCoast/scripts.pory"
+# 445 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R2_Text_0, MSGBOX_YESNO
-# 406 "data/maps/ParcelCoast/scripts.pory"
+# 446 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Brage_R2_2
-# 411 "data/maps/ParcelCoast/scripts.pory"
+# 451 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BRAGE_R2, ParcelCoast_Brage_R2_Text_2
-# 412 "data/maps/ParcelCoast/scripts.pory"
+# 452 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R2_Text_3, MSGBOX_DEFAULT
-# 413 "data/maps/ParcelCoast/scripts.pory"
+# 453 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Brage_R2_2:
-# 407 "data/maps/ParcelCoast/scripts.pory"
+# 447 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R2_Text_1, MSGBOX_DEFAULT
-# 408 "data/maps/ParcelCoast/scripts.pory"
+# 448 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Brage_R3::
-# 417 "data/maps/ParcelCoast/scripts.pory"
+# 457 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 418 "data/maps/ParcelCoast/scripts.pory"
+# 458 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 419 "data/maps/ParcelCoast/scripts.pory"
+# 459 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R3_Text_0, MSGBOX_YESNO
-# 420 "data/maps/ParcelCoast/scripts.pory"
+# 460 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Brage_R3_2
-# 425 "data/maps/ParcelCoast/scripts.pory"
+# 465 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BRAGE_R3, ParcelCoast_Brage_R3_Text_1
-# 426 "data/maps/ParcelCoast/scripts.pory"
+# 466 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R3_Text_2, MSGBOX_DEFAULT
-# 427 "data/maps/ParcelCoast/scripts.pory"
+# 467 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Brage_R3_2:
-# 421 "data/maps/ParcelCoast/scripts.pory"
+# 461 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R2_Text_1, MSGBOX_DEFAULT
-# 422 "data/maps/ParcelCoast/scripts.pory"
+# 462 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Brage_R4::
-# 431 "data/maps/ParcelCoast/scripts.pory"
+# 471 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 432 "data/maps/ParcelCoast/scripts.pory"
+# 472 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 433 "data/maps/ParcelCoast/scripts.pory"
+# 473 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R4_Text_0, MSGBOX_YESNO
-# 434 "data/maps/ParcelCoast/scripts.pory"
+# 474 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Brage_R4_2
-# 439 "data/maps/ParcelCoast/scripts.pory"
+# 479 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BRAGE_R4, ParcelCoast_Brage_R2_Text_2
-# 440 "data/maps/ParcelCoast/scripts.pory"
+# 480 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R4_Text_1, MSGBOX_DEFAULT
-# 441 "data/maps/ParcelCoast/scripts.pory"
+# 481 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Brage_R4_2:
-# 435 "data/maps/ParcelCoast/scripts.pory"
+# 475 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R2_Text_1, MSGBOX_DEFAULT
-# 436 "data/maps/ParcelCoast/scripts.pory"
+# 476 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Brage_R5::
-# 445 "data/maps/ParcelCoast/scripts.pory"
+# 485 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 446 "data/maps/ParcelCoast/scripts.pory"
+# 486 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 447 "data/maps/ParcelCoast/scripts.pory"
+# 487 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R5_Text_0, MSGBOX_YESNO
-# 448 "data/maps/ParcelCoast/scripts.pory"
+# 488 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Brage_R5_2
-# 453 "data/maps/ParcelCoast/scripts.pory"
+# 493 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BRAGE_R5, ParcelCoast_Brage_R5_Text_1
-# 454 "data/maps/ParcelCoast/scripts.pory"
+# 494 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R5_Text_2, MSGBOX_DEFAULT
-# 455 "data/maps/ParcelCoast/scripts.pory"
+# 495 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Brage_R5_2:
-# 449 "data/maps/ParcelCoast/scripts.pory"
+# 489 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Brage_R2_Text_1, MSGBOX_DEFAULT
-# 450 "data/maps/ParcelCoast/scripts.pory"
+# 490 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Frod::
-# 459 "data/maps/ParcelCoast/scripts.pory"
+# 499 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_FROD, ParcelCoast_Frod_Text_0, ParcelCoast_Frod_Text_1, ParcelCoast_Frod_FirstWin
-# 463 "data/maps/ParcelCoast/scripts.pory"
+# 503 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 464 "data/maps/ParcelCoast/scripts.pory"
+# 504 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Frod_3
 ParcelCoast_Frod_1:
-# 467 "data/maps/ParcelCoast/scripts.pory"
+# 507 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Frod_8
 ParcelCoast_Frod_6:
-# 470 "data/maps/ParcelCoast/scripts.pory"
+# 510 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Frod_13
 ParcelCoast_Frod_11:
-# 473 "data/maps/ParcelCoast/scripts.pory"
+# 513 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Frod_18
 ParcelCoast_Frod_16:
-# 476 "data/maps/ParcelCoast/scripts.pory"
+# 516 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Frod_2:
-# 465 "data/maps/ParcelCoast/scripts.pory"
+# 505 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Frod_R2
 	goto ParcelCoast_Frod_1
 
 ParcelCoast_Frod_3:
-# 464 "data/maps/ParcelCoast/scripts.pory"
+# 504 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_FROD_R2
 	goto_if 0, ParcelCoast_Frod_2
 	goto ParcelCoast_Frod_1
 
 ParcelCoast_Frod_7:
-# 468 "data/maps/ParcelCoast/scripts.pory"
+# 508 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Frod_R3
 	goto ParcelCoast_Frod_6
 
 ParcelCoast_Frod_8:
-# 467 "data/maps/ParcelCoast/scripts.pory"
+# 507 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_FROD_R3
 	goto_if 0, ParcelCoast_Frod_7
 	goto ParcelCoast_Frod_6
 
 ParcelCoast_Frod_12:
-# 471 "data/maps/ParcelCoast/scripts.pory"
+# 511 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Frod_R4
 	goto ParcelCoast_Frod_11
 
 ParcelCoast_Frod_13:
-# 470 "data/maps/ParcelCoast/scripts.pory"
+# 510 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_FROD_R4
 	goto_if 0, ParcelCoast_Frod_12
 	goto ParcelCoast_Frod_11
 
 ParcelCoast_Frod_17:
-# 474 "data/maps/ParcelCoast/scripts.pory"
+# 514 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Frod_R5
 	goto ParcelCoast_Frod_16
 
 ParcelCoast_Frod_18:
-# 473 "data/maps/ParcelCoast/scripts.pory"
+# 513 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_FROD_R5
 	goto_if 0, ParcelCoast_Frod_17
 	goto ParcelCoast_Frod_16
 
 
 ParcelCoast_Frod_FirstWin::
-# 480 "data/maps/ParcelCoast/scripts.pory"
+# 520 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_Text_2, MSGBOX_DEFAULT
-# 481 "data/maps/ParcelCoast/scripts.pory"
+# 521 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Frod_R2::
-# 485 "data/maps/ParcelCoast/scripts.pory"
+# 525 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 486 "data/maps/ParcelCoast/scripts.pory"
+# 526 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 487 "data/maps/ParcelCoast/scripts.pory"
+# 527 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R2_Text_0, MSGBOX_YESNO
-# 488 "data/maps/ParcelCoast/scripts.pory"
+# 528 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Frod_R2_2
-# 493 "data/maps/ParcelCoast/scripts.pory"
+# 533 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_FROD_R2, ParcelCoast_Frod_R2_Text_2
-# 494 "data/maps/ParcelCoast/scripts.pory"
+# 534 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R2_Text_3, MSGBOX_DEFAULT
-# 495 "data/maps/ParcelCoast/scripts.pory"
+# 535 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Frod_R2_2:
-# 489 "data/maps/ParcelCoast/scripts.pory"
+# 529 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R2_Text_1, MSGBOX_DEFAULT
-# 490 "data/maps/ParcelCoast/scripts.pory"
+# 530 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Frod_R3::
-# 499 "data/maps/ParcelCoast/scripts.pory"
+# 539 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 500 "data/maps/ParcelCoast/scripts.pory"
+# 540 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 501 "data/maps/ParcelCoast/scripts.pory"
+# 541 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R3_Text_0, MSGBOX_YESNO
-# 502 "data/maps/ParcelCoast/scripts.pory"
+# 542 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Frod_R3_2
-# 507 "data/maps/ParcelCoast/scripts.pory"
+# 547 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_FROD_R3, ParcelCoast_Frod_R2_Text_2
-# 508 "data/maps/ParcelCoast/scripts.pory"
+# 548 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R3_Text_1, MSGBOX_DEFAULT
-# 509 "data/maps/ParcelCoast/scripts.pory"
+# 549 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Frod_R3_2:
-# 503 "data/maps/ParcelCoast/scripts.pory"
+# 543 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R2_Text_1, MSGBOX_DEFAULT
-# 504 "data/maps/ParcelCoast/scripts.pory"
+# 544 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Frod_R4::
-# 513 "data/maps/ParcelCoast/scripts.pory"
+# 553 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 514 "data/maps/ParcelCoast/scripts.pory"
+# 554 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 515 "data/maps/ParcelCoast/scripts.pory"
+# 555 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R4_Text_0, MSGBOX_YESNO
-# 516 "data/maps/ParcelCoast/scripts.pory"
+# 556 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Frod_R4_2
-# 521 "data/maps/ParcelCoast/scripts.pory"
+# 561 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_FROD_R4, ParcelCoast_Frod_R4_Text_1
-# 522 "data/maps/ParcelCoast/scripts.pory"
+# 562 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R4_Text_2, MSGBOX_DEFAULT
-# 523 "data/maps/ParcelCoast/scripts.pory"
+# 563 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Frod_R4_2:
-# 517 "data/maps/ParcelCoast/scripts.pory"
+# 557 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R2_Text_1, MSGBOX_DEFAULT
-# 518 "data/maps/ParcelCoast/scripts.pory"
+# 558 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Frod_R5::
-# 527 "data/maps/ParcelCoast/scripts.pory"
+# 567 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 528 "data/maps/ParcelCoast/scripts.pory"
+# 568 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 529 "data/maps/ParcelCoast/scripts.pory"
+# 569 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R5_Text_0, MSGBOX_YESNO
-# 530 "data/maps/ParcelCoast/scripts.pory"
+# 570 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Frod_R5_2
-# 535 "data/maps/ParcelCoast/scripts.pory"
+# 575 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_FROD_R5, ParcelCoast_Frod_R5_Text_1
-# 536 "data/maps/ParcelCoast/scripts.pory"
+# 576 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R5_Text_2, MSGBOX_DEFAULT
-# 537 "data/maps/ParcelCoast/scripts.pory"
+# 577 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Frod_R5_2:
-# 531 "data/maps/ParcelCoast/scripts.pory"
+# 571 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Frod_R2_Text_1, MSGBOX_DEFAULT
-# 532 "data/maps/ParcelCoast/scripts.pory"
+# 572 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Gyda::
-# 541 "data/maps/ParcelCoast/scripts.pory"
+# 581 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_GYDA, ParcelCoast_Gyda_Text_0, ParcelCoast_Gyda_Text_1, ParcelCoast_Gyda_FirstWin
-# 545 "data/maps/ParcelCoast/scripts.pory"
+# 585 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 546 "data/maps/ParcelCoast/scripts.pory"
+# 586 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Gyda_3
 ParcelCoast_Gyda_1:
-# 549 "data/maps/ParcelCoast/scripts.pory"
+# 589 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Gyda_8
 ParcelCoast_Gyda_6:
-# 552 "data/maps/ParcelCoast/scripts.pory"
+# 592 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Gyda_13
 ParcelCoast_Gyda_11:
-# 555 "data/maps/ParcelCoast/scripts.pory"
+# 595 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Gyda_18
 ParcelCoast_Gyda_16:
-# 558 "data/maps/ParcelCoast/scripts.pory"
+# 598 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Gyda_2:
-# 547 "data/maps/ParcelCoast/scripts.pory"
+# 587 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Gyda_R2
 	goto ParcelCoast_Gyda_1
 
 ParcelCoast_Gyda_3:
-# 546 "data/maps/ParcelCoast/scripts.pory"
+# 586 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_GYDA_R2
 	goto_if 0, ParcelCoast_Gyda_2
 	goto ParcelCoast_Gyda_1
 
 ParcelCoast_Gyda_7:
-# 550 "data/maps/ParcelCoast/scripts.pory"
+# 590 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Gyda_R3
 	goto ParcelCoast_Gyda_6
 
 ParcelCoast_Gyda_8:
-# 549 "data/maps/ParcelCoast/scripts.pory"
+# 589 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_GYDA_R3
 	goto_if 0, ParcelCoast_Gyda_7
 	goto ParcelCoast_Gyda_6
 
 ParcelCoast_Gyda_12:
-# 553 "data/maps/ParcelCoast/scripts.pory"
+# 593 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Gyda_R4
 	goto ParcelCoast_Gyda_11
 
 ParcelCoast_Gyda_13:
-# 552 "data/maps/ParcelCoast/scripts.pory"
+# 592 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_GYDA_R4
 	goto_if 0, ParcelCoast_Gyda_12
 	goto ParcelCoast_Gyda_11
 
 ParcelCoast_Gyda_17:
-# 556 "data/maps/ParcelCoast/scripts.pory"
+# 596 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Gyda_R5
 	goto ParcelCoast_Gyda_16
 
 ParcelCoast_Gyda_18:
-# 555 "data/maps/ParcelCoast/scripts.pory"
+# 595 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_GYDA_R5
 	goto_if 0, ParcelCoast_Gyda_17
 	goto ParcelCoast_Gyda_16
 
 
 ParcelCoast_Gyda_FirstWin::
-# 562 "data/maps/ParcelCoast/scripts.pory"
+# 602 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_Text_2, MSGBOX_DEFAULT
-# 563 "data/maps/ParcelCoast/scripts.pory"
+# 603 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Gyda_R2::
-# 567 "data/maps/ParcelCoast/scripts.pory"
+# 607 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 568 "data/maps/ParcelCoast/scripts.pory"
+# 608 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 569 "data/maps/ParcelCoast/scripts.pory"
+# 609 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R2_Text_0, MSGBOX_YESNO
-# 570 "data/maps/ParcelCoast/scripts.pory"
+# 610 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Gyda_R2_2
-# 575 "data/maps/ParcelCoast/scripts.pory"
+# 615 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_GYDA_R2, ParcelCoast_Gyda_R2_Text_2
-# 576 "data/maps/ParcelCoast/scripts.pory"
+# 616 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R2_Text_3, MSGBOX_DEFAULT
-# 577 "data/maps/ParcelCoast/scripts.pory"
+# 617 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Gyda_R2_2:
-# 571 "data/maps/ParcelCoast/scripts.pory"
+# 611 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R2_Text_1, MSGBOX_DEFAULT
-# 572 "data/maps/ParcelCoast/scripts.pory"
+# 612 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Gyda_R3::
-# 581 "data/maps/ParcelCoast/scripts.pory"
+# 621 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 582 "data/maps/ParcelCoast/scripts.pory"
+# 622 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 583 "data/maps/ParcelCoast/scripts.pory"
+# 623 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R3_Text_0, MSGBOX_YESNO
-# 584 "data/maps/ParcelCoast/scripts.pory"
+# 624 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Gyda_R3_2
-# 589 "data/maps/ParcelCoast/scripts.pory"
+# 629 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_GYDA_R3, ParcelCoast_Gyda_R3_Text_1
-# 590 "data/maps/ParcelCoast/scripts.pory"
+# 630 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R3_Text_2, MSGBOX_DEFAULT
-# 591 "data/maps/ParcelCoast/scripts.pory"
+# 631 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Gyda_R3_2:
-# 585 "data/maps/ParcelCoast/scripts.pory"
+# 625 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R2_Text_1, MSGBOX_DEFAULT
-# 586 "data/maps/ParcelCoast/scripts.pory"
+# 626 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Gyda_R4::
-# 595 "data/maps/ParcelCoast/scripts.pory"
+# 635 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 596 "data/maps/ParcelCoast/scripts.pory"
+# 636 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 597 "data/maps/ParcelCoast/scripts.pory"
+# 637 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R4_Text_0, MSGBOX_YESNO
-# 598 "data/maps/ParcelCoast/scripts.pory"
+# 638 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Gyda_R4_2
-# 603 "data/maps/ParcelCoast/scripts.pory"
+# 643 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_GYDA_R4, ParcelCoast_Gyda_R3_Text_1
-# 604 "data/maps/ParcelCoast/scripts.pory"
+# 644 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R4_Text_1, MSGBOX_DEFAULT
-# 605 "data/maps/ParcelCoast/scripts.pory"
+# 645 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Gyda_R4_2:
-# 599 "data/maps/ParcelCoast/scripts.pory"
+# 639 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R2_Text_1, MSGBOX_DEFAULT
-# 600 "data/maps/ParcelCoast/scripts.pory"
+# 640 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Gyda_R5::
-# 609 "data/maps/ParcelCoast/scripts.pory"
+# 649 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 610 "data/maps/ParcelCoast/scripts.pory"
+# 650 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 611 "data/maps/ParcelCoast/scripts.pory"
+# 651 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R5_Text_0, MSGBOX_YESNO
-# 612 "data/maps/ParcelCoast/scripts.pory"
+# 652 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Gyda_R5_2
-# 617 "data/maps/ParcelCoast/scripts.pory"
+# 657 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_GYDA_R5, ParcelCoast_Gyda_R3_Text_1
-# 618 "data/maps/ParcelCoast/scripts.pory"
+# 658 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R5_Text_1, MSGBOX_DEFAULT
-# 619 "data/maps/ParcelCoast/scripts.pory"
+# 659 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Gyda_R5_2:
-# 613 "data/maps/ParcelCoast/scripts.pory"
+# 653 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Gyda_R2_Text_1, MSGBOX_DEFAULT
-# 614 "data/maps/ParcelCoast/scripts.pory"
+# 654 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Hroar::
-# 623 "data/maps/ParcelCoast/scripts.pory"
+# 663 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_HROAR, ParcelCoast_Hroar_Text_0, ParcelCoast_Hroar_Text_1, ParcelCoast_Hroar_FirstWin
-# 627 "data/maps/ParcelCoast/scripts.pory"
+# 667 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 628 "data/maps/ParcelCoast/scripts.pory"
+# 668 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Hroar_3
 ParcelCoast_Hroar_1:
-# 631 "data/maps/ParcelCoast/scripts.pory"
+# 671 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Hroar_8
 ParcelCoast_Hroar_6:
-# 634 "data/maps/ParcelCoast/scripts.pory"
+# 674 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Hroar_13
 ParcelCoast_Hroar_11:
-# 637 "data/maps/ParcelCoast/scripts.pory"
+# 677 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Hroar_18
 ParcelCoast_Hroar_16:
-# 640 "data/maps/ParcelCoast/scripts.pory"
+# 680 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Hroar_2:
-# 629 "data/maps/ParcelCoast/scripts.pory"
+# 669 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Hroar_R2
 	goto ParcelCoast_Hroar_1
 
 ParcelCoast_Hroar_3:
-# 628 "data/maps/ParcelCoast/scripts.pory"
+# 668 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HROAR_R2
 	goto_if 0, ParcelCoast_Hroar_2
 	goto ParcelCoast_Hroar_1
 
 ParcelCoast_Hroar_7:
-# 632 "data/maps/ParcelCoast/scripts.pory"
+# 672 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Hroar_R3
 	goto ParcelCoast_Hroar_6
 
 ParcelCoast_Hroar_8:
-# 631 "data/maps/ParcelCoast/scripts.pory"
+# 671 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HROAR_R3
 	goto_if 0, ParcelCoast_Hroar_7
 	goto ParcelCoast_Hroar_6
 
 ParcelCoast_Hroar_12:
-# 635 "data/maps/ParcelCoast/scripts.pory"
+# 675 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Hroar_R4
 	goto ParcelCoast_Hroar_11
 
 ParcelCoast_Hroar_13:
-# 634 "data/maps/ParcelCoast/scripts.pory"
+# 674 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HROAR_R4
 	goto_if 0, ParcelCoast_Hroar_12
 	goto ParcelCoast_Hroar_11
 
 ParcelCoast_Hroar_17:
-# 638 "data/maps/ParcelCoast/scripts.pory"
+# 678 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Hroar_R5
 	goto ParcelCoast_Hroar_16
 
 ParcelCoast_Hroar_18:
-# 637 "data/maps/ParcelCoast/scripts.pory"
+# 677 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HROAR_R5
 	goto_if 0, ParcelCoast_Hroar_17
 	goto ParcelCoast_Hroar_16
 
 
 ParcelCoast_Hroar_FirstWin::
-# 644 "data/maps/ParcelCoast/scripts.pory"
+# 684 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_Text_2, MSGBOX_DEFAULT
-# 645 "data/maps/ParcelCoast/scripts.pory"
+# 685 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Hroar_R2::
-# 649 "data/maps/ParcelCoast/scripts.pory"
+# 689 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 650 "data/maps/ParcelCoast/scripts.pory"
+# 690 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 651 "data/maps/ParcelCoast/scripts.pory"
+# 691 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R2_Text_0, MSGBOX_YESNO
-# 652 "data/maps/ParcelCoast/scripts.pory"
+# 692 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Hroar_R2_2
-# 657 "data/maps/ParcelCoast/scripts.pory"
+# 697 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HROAR_R2, ParcelCoast_Hroar_R2_Text_2
-# 658 "data/maps/ParcelCoast/scripts.pory"
+# 698 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R2_Text_3, MSGBOX_DEFAULT
-# 659 "data/maps/ParcelCoast/scripts.pory"
+# 699 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Hroar_R2_2:
-# 653 "data/maps/ParcelCoast/scripts.pory"
+# 693 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R2_Text_1, MSGBOX_DEFAULT
-# 654 "data/maps/ParcelCoast/scripts.pory"
+# 694 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Hroar_R3::
-# 663 "data/maps/ParcelCoast/scripts.pory"
+# 703 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 664 "data/maps/ParcelCoast/scripts.pory"
+# 704 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 665 "data/maps/ParcelCoast/scripts.pory"
+# 705 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R3_Text_0, MSGBOX_YESNO
-# 666 "data/maps/ParcelCoast/scripts.pory"
+# 706 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Hroar_R3_2
-# 671 "data/maps/ParcelCoast/scripts.pory"
+# 711 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HROAR_R3, ParcelCoast_Hroar_R2_Text_2
-# 672 "data/maps/ParcelCoast/scripts.pory"
+# 712 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R3_Text_1, MSGBOX_DEFAULT
-# 673 "data/maps/ParcelCoast/scripts.pory"
+# 713 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Hroar_R3_2:
-# 667 "data/maps/ParcelCoast/scripts.pory"
+# 707 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R2_Text_1, MSGBOX_DEFAULT
-# 668 "data/maps/ParcelCoast/scripts.pory"
+# 708 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Hroar_R4::
-# 677 "data/maps/ParcelCoast/scripts.pory"
+# 717 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 678 "data/maps/ParcelCoast/scripts.pory"
+# 718 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 679 "data/maps/ParcelCoast/scripts.pory"
+# 719 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R4_Text_0, MSGBOX_YESNO
-# 680 "data/maps/ParcelCoast/scripts.pory"
+# 720 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Hroar_R4_2
-# 685 "data/maps/ParcelCoast/scripts.pory"
+# 725 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HROAR_R4, ParcelCoast_Hroar_R4_Text_1
-# 686 "data/maps/ParcelCoast/scripts.pory"
+# 726 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R4_Text_2, MSGBOX_DEFAULT
-# 687 "data/maps/ParcelCoast/scripts.pory"
+# 727 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Hroar_R4_2:
-# 681 "data/maps/ParcelCoast/scripts.pory"
+# 721 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R2_Text_1, MSGBOX_DEFAULT
-# 682 "data/maps/ParcelCoast/scripts.pory"
+# 722 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Hroar_R5::
-# 691 "data/maps/ParcelCoast/scripts.pory"
+# 731 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 692 "data/maps/ParcelCoast/scripts.pory"
+# 732 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 693 "data/maps/ParcelCoast/scripts.pory"
+# 733 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R5_Text_0, MSGBOX_YESNO
-# 694 "data/maps/ParcelCoast/scripts.pory"
+# 734 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Hroar_R5_2
-# 699 "data/maps/ParcelCoast/scripts.pory"
+# 739 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HROAR_R5, ParcelCoast_Hroar_R5_Text_1
-# 700 "data/maps/ParcelCoast/scripts.pory"
+# 740 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R5_Text_2, MSGBOX_DEFAULT
-# 701 "data/maps/ParcelCoast/scripts.pory"
+# 741 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Hroar_R5_2:
-# 695 "data/maps/ParcelCoast/scripts.pory"
+# 735 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Hroar_R2_Text_1, MSGBOX_DEFAULT
-# 696 "data/maps/ParcelCoast/scripts.pory"
+# 736 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Jorid::
-# 705 "data/maps/ParcelCoast/scripts.pory"
+# 745 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_JORID, ParcelCoast_Jorid_Text_0, ParcelCoast_Jorid_Text_1, ParcelCoast_Jorid_FirstWin
-# 709 "data/maps/ParcelCoast/scripts.pory"
+# 749 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 710 "data/maps/ParcelCoast/scripts.pory"
+# 750 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Jorid_3
 ParcelCoast_Jorid_1:
-# 713 "data/maps/ParcelCoast/scripts.pory"
+# 753 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Jorid_8
 ParcelCoast_Jorid_6:
-# 716 "data/maps/ParcelCoast/scripts.pory"
+# 756 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Jorid_13
 ParcelCoast_Jorid_11:
-# 719 "data/maps/ParcelCoast/scripts.pory"
+# 759 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Jorid_18
 ParcelCoast_Jorid_16:
-# 722 "data/maps/ParcelCoast/scripts.pory"
+# 762 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Jorid_2:
-# 711 "data/maps/ParcelCoast/scripts.pory"
+# 751 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Jorid_R2
 	goto ParcelCoast_Jorid_1
 
 ParcelCoast_Jorid_3:
-# 710 "data/maps/ParcelCoast/scripts.pory"
+# 750 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_JORID_R2
 	goto_if 0, ParcelCoast_Jorid_2
 	goto ParcelCoast_Jorid_1
 
 ParcelCoast_Jorid_7:
-# 714 "data/maps/ParcelCoast/scripts.pory"
+# 754 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Jorid_R3
 	goto ParcelCoast_Jorid_6
 
 ParcelCoast_Jorid_8:
-# 713 "data/maps/ParcelCoast/scripts.pory"
+# 753 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_JORID_R3
 	goto_if 0, ParcelCoast_Jorid_7
 	goto ParcelCoast_Jorid_6
 
 ParcelCoast_Jorid_12:
-# 717 "data/maps/ParcelCoast/scripts.pory"
+# 757 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Jorid_R4
 	goto ParcelCoast_Jorid_11
 
 ParcelCoast_Jorid_13:
-# 716 "data/maps/ParcelCoast/scripts.pory"
+# 756 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_JORID_R4
 	goto_if 0, ParcelCoast_Jorid_12
 	goto ParcelCoast_Jorid_11
 
 ParcelCoast_Jorid_17:
-# 720 "data/maps/ParcelCoast/scripts.pory"
+# 760 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Jorid_R5
 	goto ParcelCoast_Jorid_16
 
 ParcelCoast_Jorid_18:
-# 719 "data/maps/ParcelCoast/scripts.pory"
+# 759 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_JORID_R5
 	goto_if 0, ParcelCoast_Jorid_17
 	goto ParcelCoast_Jorid_16
 
 
 ParcelCoast_Jorid_FirstWin::
-# 726 "data/maps/ParcelCoast/scripts.pory"
+# 766 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_Text_2, MSGBOX_DEFAULT
-# 727 "data/maps/ParcelCoast/scripts.pory"
+# 767 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Jorid_R2::
-# 731 "data/maps/ParcelCoast/scripts.pory"
+# 771 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 732 "data/maps/ParcelCoast/scripts.pory"
+# 772 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 733 "data/maps/ParcelCoast/scripts.pory"
+# 773 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R2_Text_0, MSGBOX_YESNO
-# 734 "data/maps/ParcelCoast/scripts.pory"
+# 774 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Jorid_R2_2
-# 739 "data/maps/ParcelCoast/scripts.pory"
+# 779 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_JORID_R2, ParcelCoast_Jorid_R2_Text_2
-# 740 "data/maps/ParcelCoast/scripts.pory"
+# 780 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R2_Text_3, MSGBOX_DEFAULT
-# 741 "data/maps/ParcelCoast/scripts.pory"
+# 781 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Jorid_R2_2:
-# 735 "data/maps/ParcelCoast/scripts.pory"
+# 775 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R2_Text_1, MSGBOX_DEFAULT
-# 736 "data/maps/ParcelCoast/scripts.pory"
+# 776 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Jorid_R3::
-# 745 "data/maps/ParcelCoast/scripts.pory"
+# 785 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 746 "data/maps/ParcelCoast/scripts.pory"
+# 786 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 747 "data/maps/ParcelCoast/scripts.pory"
+# 787 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R3_Text_0, MSGBOX_YESNO
-# 748 "data/maps/ParcelCoast/scripts.pory"
+# 788 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Jorid_R3_2
-# 753 "data/maps/ParcelCoast/scripts.pory"
+# 793 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_JORID_R3, ParcelCoast_Jorid_R3_Text_1
-# 754 "data/maps/ParcelCoast/scripts.pory"
+# 794 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R3_Text_2, MSGBOX_DEFAULT
-# 755 "data/maps/ParcelCoast/scripts.pory"
+# 795 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Jorid_R3_2:
-# 749 "data/maps/ParcelCoast/scripts.pory"
+# 789 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R2_Text_1, MSGBOX_DEFAULT
-# 750 "data/maps/ParcelCoast/scripts.pory"
+# 790 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Jorid_R4::
-# 759 "data/maps/ParcelCoast/scripts.pory"
+# 799 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 760 "data/maps/ParcelCoast/scripts.pory"
+# 800 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 761 "data/maps/ParcelCoast/scripts.pory"
+# 801 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R4_Text_0, MSGBOX_YESNO
-# 762 "data/maps/ParcelCoast/scripts.pory"
+# 802 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Jorid_R4_2
-# 767 "data/maps/ParcelCoast/scripts.pory"
+# 807 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_JORID_R4, ParcelCoast_Jorid_R4_Text_1
-# 768 "data/maps/ParcelCoast/scripts.pory"
+# 808 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R4_Text_2, MSGBOX_DEFAULT
-# 769 "data/maps/ParcelCoast/scripts.pory"
+# 809 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Jorid_R4_2:
-# 763 "data/maps/ParcelCoast/scripts.pory"
+# 803 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R2_Text_1, MSGBOX_DEFAULT
-# 764 "data/maps/ParcelCoast/scripts.pory"
+# 804 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Jorid_R5::
-# 773 "data/maps/ParcelCoast/scripts.pory"
+# 813 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 774 "data/maps/ParcelCoast/scripts.pory"
+# 814 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 775 "data/maps/ParcelCoast/scripts.pory"
+# 815 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R5_Text_0, MSGBOX_YESNO
-# 776 "data/maps/ParcelCoast/scripts.pory"
+# 816 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Jorid_R5_2
-# 781 "data/maps/ParcelCoast/scripts.pory"
+# 821 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_JORID_R5, ParcelCoast_Jorid_R4_Text_1
-# 782 "data/maps/ParcelCoast/scripts.pory"
+# 822 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R5_Text_1, MSGBOX_DEFAULT
-# 783 "data/maps/ParcelCoast/scripts.pory"
+# 823 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Jorid_R5_2:
-# 777 "data/maps/ParcelCoast/scripts.pory"
+# 817 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Jorid_R2_Text_1, MSGBOX_DEFAULT
-# 778 "data/maps/ParcelCoast/scripts.pory"
+# 818 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ketil::
-# 787 "data/maps/ParcelCoast/scripts.pory"
+# 827 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_KETIL, ParcelCoast_Ketil_Text_0, ParcelCoast_Ketil_Text_1, ParcelCoast_Ketil_FirstWin
-# 791 "data/maps/ParcelCoast/scripts.pory"
+# 831 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 792 "data/maps/ParcelCoast/scripts.pory"
+# 832 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Ketil_3
 ParcelCoast_Ketil_1:
-# 795 "data/maps/ParcelCoast/scripts.pory"
+# 835 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Ketil_8
 ParcelCoast_Ketil_6:
-# 798 "data/maps/ParcelCoast/scripts.pory"
+# 838 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Ketil_13
 ParcelCoast_Ketil_11:
-# 801 "data/maps/ParcelCoast/scripts.pory"
+# 841 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Ketil_18
 ParcelCoast_Ketil_16:
-# 804 "data/maps/ParcelCoast/scripts.pory"
+# 844 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Ketil_2:
-# 793 "data/maps/ParcelCoast/scripts.pory"
+# 833 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ketil_R2
 	goto ParcelCoast_Ketil_1
 
 ParcelCoast_Ketil_3:
-# 792 "data/maps/ParcelCoast/scripts.pory"
+# 832 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_KETIL_R2
 	goto_if 0, ParcelCoast_Ketil_2
 	goto ParcelCoast_Ketil_1
 
 ParcelCoast_Ketil_7:
-# 796 "data/maps/ParcelCoast/scripts.pory"
+# 836 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ketil_R3
 	goto ParcelCoast_Ketil_6
 
 ParcelCoast_Ketil_8:
-# 795 "data/maps/ParcelCoast/scripts.pory"
+# 835 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_KETIL_R3
 	goto_if 0, ParcelCoast_Ketil_7
 	goto ParcelCoast_Ketil_6
 
 ParcelCoast_Ketil_12:
-# 799 "data/maps/ParcelCoast/scripts.pory"
+# 839 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ketil_R4
 	goto ParcelCoast_Ketil_11
 
 ParcelCoast_Ketil_13:
-# 798 "data/maps/ParcelCoast/scripts.pory"
+# 838 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_KETIL_R4
 	goto_if 0, ParcelCoast_Ketil_12
 	goto ParcelCoast_Ketil_11
 
 ParcelCoast_Ketil_17:
-# 802 "data/maps/ParcelCoast/scripts.pory"
+# 842 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ketil_R5
 	goto ParcelCoast_Ketil_16
 
 ParcelCoast_Ketil_18:
-# 801 "data/maps/ParcelCoast/scripts.pory"
+# 841 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_KETIL_R5
 	goto_if 0, ParcelCoast_Ketil_17
 	goto ParcelCoast_Ketil_16
 
 
 ParcelCoast_Ketil_FirstWin::
-# 808 "data/maps/ParcelCoast/scripts.pory"
+# 848 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_Text_2, MSGBOX_DEFAULT
-# 809 "data/maps/ParcelCoast/scripts.pory"
+# 849 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ketil_R2::
-# 813 "data/maps/ParcelCoast/scripts.pory"
+# 853 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 814 "data/maps/ParcelCoast/scripts.pory"
+# 854 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 815 "data/maps/ParcelCoast/scripts.pory"
+# 855 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R2_Text_0, MSGBOX_YESNO
-# 816 "data/maps/ParcelCoast/scripts.pory"
+# 856 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ketil_R2_2
-# 821 "data/maps/ParcelCoast/scripts.pory"
+# 861 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_KETIL_R2, ParcelCoast_Ketil_R2_Text_2
-# 822 "data/maps/ParcelCoast/scripts.pory"
+# 862 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R2_Text_3, MSGBOX_DEFAULT
-# 823 "data/maps/ParcelCoast/scripts.pory"
+# 863 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ketil_R2_2:
-# 817 "data/maps/ParcelCoast/scripts.pory"
+# 857 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R2_Text_1, MSGBOX_DEFAULT
-# 818 "data/maps/ParcelCoast/scripts.pory"
+# 858 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ketil_R3::
-# 827 "data/maps/ParcelCoast/scripts.pory"
+# 867 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 828 "data/maps/ParcelCoast/scripts.pory"
+# 868 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 829 "data/maps/ParcelCoast/scripts.pory"
+# 869 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R3_Text_0, MSGBOX_YESNO
-# 830 "data/maps/ParcelCoast/scripts.pory"
+# 870 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ketil_R3_2
-# 835 "data/maps/ParcelCoast/scripts.pory"
+# 875 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_KETIL_R3, ParcelCoast_Ketil_R3_Text_1
-# 836 "data/maps/ParcelCoast/scripts.pory"
+# 876 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R3_Text_2, MSGBOX_DEFAULT
-# 837 "data/maps/ParcelCoast/scripts.pory"
+# 877 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ketil_R3_2:
-# 831 "data/maps/ParcelCoast/scripts.pory"
+# 871 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R2_Text_1, MSGBOX_DEFAULT
-# 832 "data/maps/ParcelCoast/scripts.pory"
+# 872 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ketil_R4::
-# 841 "data/maps/ParcelCoast/scripts.pory"
+# 881 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 842 "data/maps/ParcelCoast/scripts.pory"
+# 882 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 843 "data/maps/ParcelCoast/scripts.pory"
+# 883 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R4_Text_0, MSGBOX_YESNO
-# 844 "data/maps/ParcelCoast/scripts.pory"
+# 884 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ketil_R4_2
-# 849 "data/maps/ParcelCoast/scripts.pory"
+# 889 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_KETIL_R4, ParcelCoast_Ketil_R4_Text_1
-# 850 "data/maps/ParcelCoast/scripts.pory"
+# 890 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R4_Text_2, MSGBOX_DEFAULT
-# 851 "data/maps/ParcelCoast/scripts.pory"
+# 891 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ketil_R4_2:
-# 845 "data/maps/ParcelCoast/scripts.pory"
+# 885 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R2_Text_1, MSGBOX_DEFAULT
-# 846 "data/maps/ParcelCoast/scripts.pory"
+# 886 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ketil_R5::
-# 855 "data/maps/ParcelCoast/scripts.pory"
+# 895 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 856 "data/maps/ParcelCoast/scripts.pory"
+# 896 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 857 "data/maps/ParcelCoast/scripts.pory"
+# 897 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R5_Text_0, MSGBOX_YESNO
-# 858 "data/maps/ParcelCoast/scripts.pory"
+# 898 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ketil_R5_2
-# 863 "data/maps/ParcelCoast/scripts.pory"
+# 903 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_KETIL_R5, ParcelCoast_Ketil_R5_Text_1
-# 864 "data/maps/ParcelCoast/scripts.pory"
+# 904 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R5_Text_2, MSGBOX_DEFAULT
-# 865 "data/maps/ParcelCoast/scripts.pory"
+# 905 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ketil_R5_2:
-# 859 "data/maps/ParcelCoast/scripts.pory"
+# 899 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ketil_R2_Text_1, MSGBOX_DEFAULT
-# 860 "data/maps/ParcelCoast/scripts.pory"
+# 900 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Liva::
-# 869 "data/maps/ParcelCoast/scripts.pory"
+# 909 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_LIVA, ParcelCoast_Liva_Text_0, ParcelCoast_Liva_Text_1, ParcelCoast_Liva_FirstWin
-# 873 "data/maps/ParcelCoast/scripts.pory"
+# 913 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 874 "data/maps/ParcelCoast/scripts.pory"
+# 914 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Liva_3
 ParcelCoast_Liva_1:
-# 877 "data/maps/ParcelCoast/scripts.pory"
+# 917 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Liva_8
 ParcelCoast_Liva_6:
-# 880 "data/maps/ParcelCoast/scripts.pory"
+# 920 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Liva_13
 ParcelCoast_Liva_11:
-# 883 "data/maps/ParcelCoast/scripts.pory"
+# 923 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Liva_18
 ParcelCoast_Liva_16:
-# 886 "data/maps/ParcelCoast/scripts.pory"
+# 926 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Liva_2:
-# 875 "data/maps/ParcelCoast/scripts.pory"
+# 915 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Liva_R2
 	goto ParcelCoast_Liva_1
 
 ParcelCoast_Liva_3:
-# 874 "data/maps/ParcelCoast/scripts.pory"
+# 914 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_LIVA_R2
 	goto_if 0, ParcelCoast_Liva_2
 	goto ParcelCoast_Liva_1
 
 ParcelCoast_Liva_7:
-# 878 "data/maps/ParcelCoast/scripts.pory"
+# 918 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Liva_R3
 	goto ParcelCoast_Liva_6
 
 ParcelCoast_Liva_8:
-# 877 "data/maps/ParcelCoast/scripts.pory"
+# 917 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_LIVA_R3
 	goto_if 0, ParcelCoast_Liva_7
 	goto ParcelCoast_Liva_6
 
 ParcelCoast_Liva_12:
-# 881 "data/maps/ParcelCoast/scripts.pory"
+# 921 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Liva_R4
 	goto ParcelCoast_Liva_11
 
 ParcelCoast_Liva_13:
-# 880 "data/maps/ParcelCoast/scripts.pory"
+# 920 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_LIVA_R4
 	goto_if 0, ParcelCoast_Liva_12
 	goto ParcelCoast_Liva_11
 
 ParcelCoast_Liva_17:
-# 884 "data/maps/ParcelCoast/scripts.pory"
+# 924 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Liva_R5
 	goto ParcelCoast_Liva_16
 
 ParcelCoast_Liva_18:
-# 883 "data/maps/ParcelCoast/scripts.pory"
+# 923 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_LIVA_R5
 	goto_if 0, ParcelCoast_Liva_17
 	goto ParcelCoast_Liva_16
 
 
 ParcelCoast_Liva_FirstWin::
-# 890 "data/maps/ParcelCoast/scripts.pory"
+# 930 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_Text_2, MSGBOX_DEFAULT
-# 891 "data/maps/ParcelCoast/scripts.pory"
+# 931 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Liva_R2::
-# 895 "data/maps/ParcelCoast/scripts.pory"
+# 935 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 896 "data/maps/ParcelCoast/scripts.pory"
+# 936 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 897 "data/maps/ParcelCoast/scripts.pory"
+# 937 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R2_Text_0, MSGBOX_YESNO
-# 898 "data/maps/ParcelCoast/scripts.pory"
+# 938 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Liva_R2_2
-# 903 "data/maps/ParcelCoast/scripts.pory"
+# 943 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_LIVA_R2, ParcelCoast_Liva_R2_Text_2
-# 904 "data/maps/ParcelCoast/scripts.pory"
+# 944 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R2_Text_3, MSGBOX_DEFAULT
-# 905 "data/maps/ParcelCoast/scripts.pory"
+# 945 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Liva_R2_2:
-# 899 "data/maps/ParcelCoast/scripts.pory"
+# 939 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R2_Text_1, MSGBOX_DEFAULT
-# 900 "data/maps/ParcelCoast/scripts.pory"
+# 940 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Liva_R3::
-# 909 "data/maps/ParcelCoast/scripts.pory"
+# 949 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 910 "data/maps/ParcelCoast/scripts.pory"
+# 950 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 911 "data/maps/ParcelCoast/scripts.pory"
+# 951 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R3_Text_0, MSGBOX_YESNO
-# 912 "data/maps/ParcelCoast/scripts.pory"
+# 952 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Liva_R3_2
-# 917 "data/maps/ParcelCoast/scripts.pory"
+# 957 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_LIVA_R3, ParcelCoast_Liva_R3_Text_1
-# 918 "data/maps/ParcelCoast/scripts.pory"
+# 958 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R3_Text_2, MSGBOX_DEFAULT
-# 919 "data/maps/ParcelCoast/scripts.pory"
+# 959 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Liva_R3_2:
-# 913 "data/maps/ParcelCoast/scripts.pory"
+# 953 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R2_Text_1, MSGBOX_DEFAULT
-# 914 "data/maps/ParcelCoast/scripts.pory"
+# 954 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Liva_R4::
-# 923 "data/maps/ParcelCoast/scripts.pory"
+# 963 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 924 "data/maps/ParcelCoast/scripts.pory"
+# 964 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 925 "data/maps/ParcelCoast/scripts.pory"
+# 965 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R4_Text_0, MSGBOX_YESNO
-# 926 "data/maps/ParcelCoast/scripts.pory"
+# 966 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Liva_R4_2
-# 931 "data/maps/ParcelCoast/scripts.pory"
+# 971 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_LIVA_R4, ParcelCoast_Liva_R4_Text_1
-# 932 "data/maps/ParcelCoast/scripts.pory"
+# 972 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R4_Text_2, MSGBOX_DEFAULT
-# 933 "data/maps/ParcelCoast/scripts.pory"
+# 973 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Liva_R4_2:
-# 927 "data/maps/ParcelCoast/scripts.pory"
+# 967 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R2_Text_1, MSGBOX_DEFAULT
-# 928 "data/maps/ParcelCoast/scripts.pory"
+# 968 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Liva_R5::
-# 937 "data/maps/ParcelCoast/scripts.pory"
+# 977 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 938 "data/maps/ParcelCoast/scripts.pory"
+# 978 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 939 "data/maps/ParcelCoast/scripts.pory"
+# 979 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R5_Text_0, MSGBOX_YESNO
-# 940 "data/maps/ParcelCoast/scripts.pory"
+# 980 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Liva_R5_2
-# 945 "data/maps/ParcelCoast/scripts.pory"
+# 985 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_LIVA_R5, ParcelCoast_Liva_R5_Text_1
-# 946 "data/maps/ParcelCoast/scripts.pory"
+# 986 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R5_Text_2, MSGBOX_DEFAULT
-# 947 "data/maps/ParcelCoast/scripts.pory"
+# 987 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Liva_R5_2:
-# 941 "data/maps/ParcelCoast/scripts.pory"
+# 981 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Liva_R2_Text_1, MSGBOX_DEFAULT
-# 942 "data/maps/ParcelCoast/scripts.pory"
+# 982 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Magnus::
-# 951 "data/maps/ParcelCoast/scripts.pory"
+# 991 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_MAGNUS, ParcelCoast_Magnus_Text_0, ParcelCoast_Magnus_Text_1, ParcelCoast_Magnus_FirstWin
-# 955 "data/maps/ParcelCoast/scripts.pory"
+# 995 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 956 "data/maps/ParcelCoast/scripts.pory"
+# 996 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Magnus_3
 ParcelCoast_Magnus_1:
-# 959 "data/maps/ParcelCoast/scripts.pory"
+# 999 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Magnus_8
 ParcelCoast_Magnus_6:
-# 962 "data/maps/ParcelCoast/scripts.pory"
+# 1002 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Magnus_13
 ParcelCoast_Magnus_11:
-# 965 "data/maps/ParcelCoast/scripts.pory"
+# 1005 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Magnus_18
 ParcelCoast_Magnus_16:
-# 968 "data/maps/ParcelCoast/scripts.pory"
+# 1008 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Magnus_2:
-# 957 "data/maps/ParcelCoast/scripts.pory"
+# 997 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Magnus_R2
 	goto ParcelCoast_Magnus_1
 
 ParcelCoast_Magnus_3:
-# 956 "data/maps/ParcelCoast/scripts.pory"
+# 996 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_MAGNUS_R2
 	goto_if 0, ParcelCoast_Magnus_2
 	goto ParcelCoast_Magnus_1
 
 ParcelCoast_Magnus_7:
-# 960 "data/maps/ParcelCoast/scripts.pory"
+# 1000 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Magnus_R3
 	goto ParcelCoast_Magnus_6
 
 ParcelCoast_Magnus_8:
-# 959 "data/maps/ParcelCoast/scripts.pory"
+# 999 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_MAGNUS_R3
 	goto_if 0, ParcelCoast_Magnus_7
 	goto ParcelCoast_Magnus_6
 
 ParcelCoast_Magnus_12:
-# 963 "data/maps/ParcelCoast/scripts.pory"
+# 1003 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Magnus_R4
 	goto ParcelCoast_Magnus_11
 
 ParcelCoast_Magnus_13:
-# 962 "data/maps/ParcelCoast/scripts.pory"
+# 1002 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_MAGNUS_R4
 	goto_if 0, ParcelCoast_Magnus_12
 	goto ParcelCoast_Magnus_11
 
 ParcelCoast_Magnus_17:
-# 966 "data/maps/ParcelCoast/scripts.pory"
+# 1006 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Magnus_R5
 	goto ParcelCoast_Magnus_16
 
 ParcelCoast_Magnus_18:
-# 965 "data/maps/ParcelCoast/scripts.pory"
+# 1005 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_MAGNUS_R5
 	goto_if 0, ParcelCoast_Magnus_17
 	goto ParcelCoast_Magnus_16
 
 
 ParcelCoast_Magnus_FirstWin::
-# 972 "data/maps/ParcelCoast/scripts.pory"
+# 1012 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_Text_2, MSGBOX_DEFAULT
-# 973 "data/maps/ParcelCoast/scripts.pory"
+# 1013 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Magnus_R2::
-# 977 "data/maps/ParcelCoast/scripts.pory"
+# 1017 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 978 "data/maps/ParcelCoast/scripts.pory"
+# 1018 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 979 "data/maps/ParcelCoast/scripts.pory"
+# 1019 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R2_Text_0, MSGBOX_YESNO
-# 980 "data/maps/ParcelCoast/scripts.pory"
+# 1020 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Magnus_R2_2
-# 985 "data/maps/ParcelCoast/scripts.pory"
+# 1025 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_MAGNUS_R2, ParcelCoast_Magnus_R2_Text_2
-# 986 "data/maps/ParcelCoast/scripts.pory"
+# 1026 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R2_Text_3, MSGBOX_DEFAULT
-# 987 "data/maps/ParcelCoast/scripts.pory"
+# 1027 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Magnus_R2_2:
-# 981 "data/maps/ParcelCoast/scripts.pory"
+# 1021 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R2_Text_1, MSGBOX_DEFAULT
-# 982 "data/maps/ParcelCoast/scripts.pory"
+# 1022 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Magnus_R3::
-# 991 "data/maps/ParcelCoast/scripts.pory"
+# 1031 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 992 "data/maps/ParcelCoast/scripts.pory"
+# 1032 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 993 "data/maps/ParcelCoast/scripts.pory"
+# 1033 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R3_Text_0, MSGBOX_YESNO
-# 994 "data/maps/ParcelCoast/scripts.pory"
+# 1034 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Magnus_R3_2
-# 999 "data/maps/ParcelCoast/scripts.pory"
+# 1039 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_MAGNUS_R3, ParcelCoast_Magnus_R3_Text_1
-# 1000 "data/maps/ParcelCoast/scripts.pory"
+# 1040 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R3_Text_2, MSGBOX_DEFAULT
-# 1001 "data/maps/ParcelCoast/scripts.pory"
+# 1041 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Magnus_R3_2:
-# 995 "data/maps/ParcelCoast/scripts.pory"
+# 1035 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R2_Text_1, MSGBOX_DEFAULT
-# 996 "data/maps/ParcelCoast/scripts.pory"
+# 1036 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Magnus_R4::
-# 1005 "data/maps/ParcelCoast/scripts.pory"
+# 1045 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1006 "data/maps/ParcelCoast/scripts.pory"
+# 1046 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1007 "data/maps/ParcelCoast/scripts.pory"
+# 1047 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R4_Text_0, MSGBOX_YESNO
-# 1008 "data/maps/ParcelCoast/scripts.pory"
+# 1048 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Magnus_R4_2
-# 1013 "data/maps/ParcelCoast/scripts.pory"
+# 1053 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_MAGNUS_R4, ParcelCoast_Magnus_R4_Text_1
-# 1014 "data/maps/ParcelCoast/scripts.pory"
+# 1054 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R4_Text_2, MSGBOX_DEFAULT
-# 1015 "data/maps/ParcelCoast/scripts.pory"
+# 1055 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Magnus_R4_2:
-# 1009 "data/maps/ParcelCoast/scripts.pory"
+# 1049 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R2_Text_1, MSGBOX_DEFAULT
-# 1010 "data/maps/ParcelCoast/scripts.pory"
+# 1050 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Magnus_R5::
-# 1019 "data/maps/ParcelCoast/scripts.pory"
+# 1059 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1020 "data/maps/ParcelCoast/scripts.pory"
+# 1060 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1021 "data/maps/ParcelCoast/scripts.pory"
+# 1061 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R5_Text_0, MSGBOX_YESNO
-# 1022 "data/maps/ParcelCoast/scripts.pory"
+# 1062 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Magnus_R5_2
-# 1027 "data/maps/ParcelCoast/scripts.pory"
+# 1067 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_MAGNUS_R5, ParcelCoast_Magnus_R5_Text_1
-# 1028 "data/maps/ParcelCoast/scripts.pory"
+# 1068 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R5_Text_2, MSGBOX_DEFAULT
-# 1029 "data/maps/ParcelCoast/scripts.pory"
+# 1069 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Magnus_R5_2:
-# 1023 "data/maps/ParcelCoast/scripts.pory"
+# 1063 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Magnus_R2_Text_1, MSGBOX_DEFAULT
-# 1024 "data/maps/ParcelCoast/scripts.pory"
+# 1064 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Nikolai::
-# 1033 "data/maps/ParcelCoast/scripts.pory"
+# 1073 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_NIKOLAI, ParcelCoast_Nikolai_Text_0, ParcelCoast_Nikolai_Text_1, ParcelCoast_Nikolai_FirstWin
-# 1037 "data/maps/ParcelCoast/scripts.pory"
+# 1077 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1038 "data/maps/ParcelCoast/scripts.pory"
+# 1078 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Nikolai_3
 ParcelCoast_Nikolai_1:
-# 1041 "data/maps/ParcelCoast/scripts.pory"
+# 1081 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Nikolai_8
 ParcelCoast_Nikolai_6:
-# 1044 "data/maps/ParcelCoast/scripts.pory"
+# 1084 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Nikolai_13
 ParcelCoast_Nikolai_11:
-# 1047 "data/maps/ParcelCoast/scripts.pory"
+# 1087 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Nikolai_18
 ParcelCoast_Nikolai_16:
-# 1050 "data/maps/ParcelCoast/scripts.pory"
+# 1090 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Nikolai_2:
-# 1039 "data/maps/ParcelCoast/scripts.pory"
+# 1079 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Nikolai_R2
 	goto ParcelCoast_Nikolai_1
 
 ParcelCoast_Nikolai_3:
-# 1038 "data/maps/ParcelCoast/scripts.pory"
+# 1078 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_NIKOLAI_R2
 	goto_if 0, ParcelCoast_Nikolai_2
 	goto ParcelCoast_Nikolai_1
 
 ParcelCoast_Nikolai_7:
-# 1042 "data/maps/ParcelCoast/scripts.pory"
+# 1082 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Nikolai_R3
 	goto ParcelCoast_Nikolai_6
 
 ParcelCoast_Nikolai_8:
-# 1041 "data/maps/ParcelCoast/scripts.pory"
+# 1081 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_NIKOLAI_R3
 	goto_if 0, ParcelCoast_Nikolai_7
 	goto ParcelCoast_Nikolai_6
 
 ParcelCoast_Nikolai_12:
-# 1045 "data/maps/ParcelCoast/scripts.pory"
+# 1085 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Nikolai_R4
 	goto ParcelCoast_Nikolai_11
 
 ParcelCoast_Nikolai_13:
-# 1044 "data/maps/ParcelCoast/scripts.pory"
+# 1084 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_NIKOLAI_R4
 	goto_if 0, ParcelCoast_Nikolai_12
 	goto ParcelCoast_Nikolai_11
 
 ParcelCoast_Nikolai_17:
-# 1048 "data/maps/ParcelCoast/scripts.pory"
+# 1088 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Nikolai_R5
 	goto ParcelCoast_Nikolai_16
 
 ParcelCoast_Nikolai_18:
-# 1047 "data/maps/ParcelCoast/scripts.pory"
+# 1087 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_NIKOLAI_R5
 	goto_if 0, ParcelCoast_Nikolai_17
 	goto ParcelCoast_Nikolai_16
 
 
 ParcelCoast_Nikolai_FirstWin::
-# 1054 "data/maps/ParcelCoast/scripts.pory"
+# 1094 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_Text_2, MSGBOX_DEFAULT
-# 1055 "data/maps/ParcelCoast/scripts.pory"
+# 1095 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Nikolai_R2::
-# 1059 "data/maps/ParcelCoast/scripts.pory"
+# 1099 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1060 "data/maps/ParcelCoast/scripts.pory"
+# 1100 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1061 "data/maps/ParcelCoast/scripts.pory"
+# 1101 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R2_Text_0, MSGBOX_YESNO
-# 1062 "data/maps/ParcelCoast/scripts.pory"
+# 1102 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Nikolai_R2_2
-# 1067 "data/maps/ParcelCoast/scripts.pory"
+# 1107 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_NIKOLAI_R2, ParcelCoast_Nikolai_R2_Text_2
-# 1068 "data/maps/ParcelCoast/scripts.pory"
+# 1108 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R2_Text_3, MSGBOX_DEFAULT
-# 1069 "data/maps/ParcelCoast/scripts.pory"
+# 1109 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Nikolai_R2_2:
-# 1063 "data/maps/ParcelCoast/scripts.pory"
+# 1103 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R2_Text_1, MSGBOX_DEFAULT
-# 1064 "data/maps/ParcelCoast/scripts.pory"
+# 1104 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Nikolai_R3::
-# 1073 "data/maps/ParcelCoast/scripts.pory"
+# 1113 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1074 "data/maps/ParcelCoast/scripts.pory"
+# 1114 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1075 "data/maps/ParcelCoast/scripts.pory"
+# 1115 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R3_Text_0, MSGBOX_YESNO
-# 1076 "data/maps/ParcelCoast/scripts.pory"
+# 1116 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Nikolai_R3_2
-# 1081 "data/maps/ParcelCoast/scripts.pory"
+# 1121 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_NIKOLAI_R3, ParcelCoast_Nikolai_R2_Text_2
-# 1082 "data/maps/ParcelCoast/scripts.pory"
+# 1122 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R3_Text_1, MSGBOX_DEFAULT
-# 1083 "data/maps/ParcelCoast/scripts.pory"
+# 1123 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Nikolai_R3_2:
-# 1077 "data/maps/ParcelCoast/scripts.pory"
+# 1117 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R2_Text_1, MSGBOX_DEFAULT
-# 1078 "data/maps/ParcelCoast/scripts.pory"
+# 1118 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Nikolai_R4::
-# 1087 "data/maps/ParcelCoast/scripts.pory"
+# 1127 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1088 "data/maps/ParcelCoast/scripts.pory"
+# 1128 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1089 "data/maps/ParcelCoast/scripts.pory"
+# 1129 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R4_Text_0, MSGBOX_YESNO
-# 1090 "data/maps/ParcelCoast/scripts.pory"
+# 1130 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Nikolai_R4_2
-# 1095 "data/maps/ParcelCoast/scripts.pory"
+# 1135 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_NIKOLAI_R4, ParcelCoast_Nikolai_R4_Text_1
-# 1096 "data/maps/ParcelCoast/scripts.pory"
+# 1136 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R4_Text_2, MSGBOX_DEFAULT
-# 1097 "data/maps/ParcelCoast/scripts.pory"
+# 1137 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Nikolai_R4_2:
-# 1091 "data/maps/ParcelCoast/scripts.pory"
+# 1131 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R2_Text_1, MSGBOX_DEFAULT
-# 1092 "data/maps/ParcelCoast/scripts.pory"
+# 1132 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Nikolai_R5::
-# 1101 "data/maps/ParcelCoast/scripts.pory"
+# 1141 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1102 "data/maps/ParcelCoast/scripts.pory"
+# 1142 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1103 "data/maps/ParcelCoast/scripts.pory"
+# 1143 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R5_Text_0, MSGBOX_YESNO
-# 1104 "data/maps/ParcelCoast/scripts.pory"
+# 1144 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Nikolai_R5_2
-# 1109 "data/maps/ParcelCoast/scripts.pory"
+# 1149 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_NIKOLAI_R5, ParcelCoast_Nikolai_R5_Text_1
-# 1110 "data/maps/ParcelCoast/scripts.pory"
+# 1150 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R5_Text_2, MSGBOX_DEFAULT
-# 1111 "data/maps/ParcelCoast/scripts.pory"
+# 1151 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Nikolai_R5_2:
-# 1105 "data/maps/ParcelCoast/scripts.pory"
+# 1145 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Nikolai_R2_Text_1, MSGBOX_DEFAULT
-# 1106 "data/maps/ParcelCoast/scripts.pory"
+# 1146 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Oda::
-# 1115 "data/maps/ParcelCoast/scripts.pory"
+# 1155 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_ODA, ParcelCoast_Oda_Text_0, ParcelCoast_Oda_Text_1, ParcelCoast_Oda_FirstWin
-# 1119 "data/maps/ParcelCoast/scripts.pory"
+# 1159 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1120 "data/maps/ParcelCoast/scripts.pory"
+# 1160 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Oda_3
 ParcelCoast_Oda_1:
-# 1123 "data/maps/ParcelCoast/scripts.pory"
+# 1163 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Oda_8
 ParcelCoast_Oda_6:
-# 1126 "data/maps/ParcelCoast/scripts.pory"
+# 1166 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Oda_13
 ParcelCoast_Oda_11:
-# 1129 "data/maps/ParcelCoast/scripts.pory"
+# 1169 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Oda_18
 ParcelCoast_Oda_16:
-# 1132 "data/maps/ParcelCoast/scripts.pory"
+# 1172 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Oda_2:
-# 1121 "data/maps/ParcelCoast/scripts.pory"
+# 1161 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Oda_R2
 	goto ParcelCoast_Oda_1
 
 ParcelCoast_Oda_3:
-# 1120 "data/maps/ParcelCoast/scripts.pory"
+# 1160 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ODA_R2
 	goto_if 0, ParcelCoast_Oda_2
 	goto ParcelCoast_Oda_1
 
 ParcelCoast_Oda_7:
-# 1124 "data/maps/ParcelCoast/scripts.pory"
+# 1164 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Oda_R3
 	goto ParcelCoast_Oda_6
 
 ParcelCoast_Oda_8:
-# 1123 "data/maps/ParcelCoast/scripts.pory"
+# 1163 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ODA_R3
 	goto_if 0, ParcelCoast_Oda_7
 	goto ParcelCoast_Oda_6
 
 ParcelCoast_Oda_12:
-# 1127 "data/maps/ParcelCoast/scripts.pory"
+# 1167 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Oda_R4
 	goto ParcelCoast_Oda_11
 
 ParcelCoast_Oda_13:
-# 1126 "data/maps/ParcelCoast/scripts.pory"
+# 1166 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ODA_R4
 	goto_if 0, ParcelCoast_Oda_12
 	goto ParcelCoast_Oda_11
 
 ParcelCoast_Oda_17:
-# 1130 "data/maps/ParcelCoast/scripts.pory"
+# 1170 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Oda_R5
 	goto ParcelCoast_Oda_16
 
 ParcelCoast_Oda_18:
-# 1129 "data/maps/ParcelCoast/scripts.pory"
+# 1169 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ODA_R5
 	goto_if 0, ParcelCoast_Oda_17
 	goto ParcelCoast_Oda_16
 
 
 ParcelCoast_Oda_FirstWin::
-# 1136 "data/maps/ParcelCoast/scripts.pory"
+# 1176 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_Text_2, MSGBOX_DEFAULT
-# 1137 "data/maps/ParcelCoast/scripts.pory"
+# 1177 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Oda_R2::
-# 1141 "data/maps/ParcelCoast/scripts.pory"
+# 1181 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1142 "data/maps/ParcelCoast/scripts.pory"
+# 1182 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1143 "data/maps/ParcelCoast/scripts.pory"
+# 1183 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R2_Text_0, MSGBOX_YESNO
-# 1144 "data/maps/ParcelCoast/scripts.pory"
+# 1184 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Oda_R2_2
-# 1149 "data/maps/ParcelCoast/scripts.pory"
+# 1189 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ODA_R2, ParcelCoast_Oda_R2_Text_2
-# 1150 "data/maps/ParcelCoast/scripts.pory"
+# 1190 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R2_Text_3, MSGBOX_DEFAULT
-# 1151 "data/maps/ParcelCoast/scripts.pory"
+# 1191 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Oda_R2_2:
-# 1145 "data/maps/ParcelCoast/scripts.pory"
+# 1185 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R2_Text_1, MSGBOX_DEFAULT
-# 1146 "data/maps/ParcelCoast/scripts.pory"
+# 1186 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Oda_R3::
-# 1155 "data/maps/ParcelCoast/scripts.pory"
+# 1195 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1156 "data/maps/ParcelCoast/scripts.pory"
+# 1196 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1157 "data/maps/ParcelCoast/scripts.pory"
+# 1197 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R3_Text_0, MSGBOX_YESNO
-# 1158 "data/maps/ParcelCoast/scripts.pory"
+# 1198 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Oda_R3_2
-# 1163 "data/maps/ParcelCoast/scripts.pory"
+# 1203 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ODA_R3, ParcelCoast_Oda_R2_Text_2
-# 1164 "data/maps/ParcelCoast/scripts.pory"
+# 1204 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R3_Text_1, MSGBOX_DEFAULT
-# 1165 "data/maps/ParcelCoast/scripts.pory"
+# 1205 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Oda_R3_2:
-# 1159 "data/maps/ParcelCoast/scripts.pory"
+# 1199 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R2_Text_1, MSGBOX_DEFAULT
-# 1160 "data/maps/ParcelCoast/scripts.pory"
+# 1200 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Oda_R4::
-# 1169 "data/maps/ParcelCoast/scripts.pory"
+# 1209 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1170 "data/maps/ParcelCoast/scripts.pory"
+# 1210 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1171 "data/maps/ParcelCoast/scripts.pory"
+# 1211 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R4_Text_0, MSGBOX_YESNO
-# 1172 "data/maps/ParcelCoast/scripts.pory"
+# 1212 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Oda_R4_2
-# 1177 "data/maps/ParcelCoast/scripts.pory"
+# 1217 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ODA_R4, ParcelCoast_Oda_R4_Text_1
-# 1178 "data/maps/ParcelCoast/scripts.pory"
+# 1218 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R4_Text_2, MSGBOX_DEFAULT
-# 1179 "data/maps/ParcelCoast/scripts.pory"
+# 1219 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Oda_R4_2:
-# 1173 "data/maps/ParcelCoast/scripts.pory"
+# 1213 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R2_Text_1, MSGBOX_DEFAULT
-# 1174 "data/maps/ParcelCoast/scripts.pory"
+# 1214 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Oda_R5::
-# 1183 "data/maps/ParcelCoast/scripts.pory"
+# 1223 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1184 "data/maps/ParcelCoast/scripts.pory"
+# 1224 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1185 "data/maps/ParcelCoast/scripts.pory"
+# 1225 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R5_Text_0, MSGBOX_YESNO
-# 1186 "data/maps/ParcelCoast/scripts.pory"
+# 1226 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Oda_R5_2
-# 1191 "data/maps/ParcelCoast/scripts.pory"
+# 1231 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ODA_R5, ParcelCoast_Oda_R5_Text_1
-# 1192 "data/maps/ParcelCoast/scripts.pory"
+# 1232 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R5_Text_2, MSGBOX_DEFAULT
-# 1193 "data/maps/ParcelCoast/scripts.pory"
+# 1233 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Oda_R5_2:
-# 1187 "data/maps/ParcelCoast/scripts.pory"
+# 1227 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Oda_R2_Text_1, MSGBOX_DEFAULT
-# 1188 "data/maps/ParcelCoast/scripts.pory"
+# 1228 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Petter::
-# 1197 "data/maps/ParcelCoast/scripts.pory"
+# 1237 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_PETTER, ParcelCoast_Petter_Text_0, ParcelCoast_Petter_Text_1, ParcelCoast_Petter_FirstWin
-# 1201 "data/maps/ParcelCoast/scripts.pory"
+# 1241 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1202 "data/maps/ParcelCoast/scripts.pory"
+# 1242 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Petter_3
 ParcelCoast_Petter_1:
-# 1205 "data/maps/ParcelCoast/scripts.pory"
+# 1245 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Petter_8
 ParcelCoast_Petter_6:
-# 1208 "data/maps/ParcelCoast/scripts.pory"
+# 1248 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Petter_13
 ParcelCoast_Petter_11:
-# 1211 "data/maps/ParcelCoast/scripts.pory"
+# 1251 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Petter_18
 ParcelCoast_Petter_16:
-# 1214 "data/maps/ParcelCoast/scripts.pory"
+# 1254 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Petter_2:
-# 1203 "data/maps/ParcelCoast/scripts.pory"
+# 1243 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Petter_R2
 	goto ParcelCoast_Petter_1
 
 ParcelCoast_Petter_3:
-# 1202 "data/maps/ParcelCoast/scripts.pory"
+# 1242 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_PETTER_R2
 	goto_if 0, ParcelCoast_Petter_2
 	goto ParcelCoast_Petter_1
 
 ParcelCoast_Petter_7:
-# 1206 "data/maps/ParcelCoast/scripts.pory"
+# 1246 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Petter_R3
 	goto ParcelCoast_Petter_6
 
 ParcelCoast_Petter_8:
-# 1205 "data/maps/ParcelCoast/scripts.pory"
+# 1245 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_PETTER_R3
 	goto_if 0, ParcelCoast_Petter_7
 	goto ParcelCoast_Petter_6
 
 ParcelCoast_Petter_12:
-# 1209 "data/maps/ParcelCoast/scripts.pory"
+# 1249 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Petter_R4
 	goto ParcelCoast_Petter_11
 
 ParcelCoast_Petter_13:
-# 1208 "data/maps/ParcelCoast/scripts.pory"
+# 1248 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_PETTER_R4
 	goto_if 0, ParcelCoast_Petter_12
 	goto ParcelCoast_Petter_11
 
 ParcelCoast_Petter_17:
-# 1212 "data/maps/ParcelCoast/scripts.pory"
+# 1252 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Petter_R5
 	goto ParcelCoast_Petter_16
 
 ParcelCoast_Petter_18:
-# 1211 "data/maps/ParcelCoast/scripts.pory"
+# 1251 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_PETTER_R5
 	goto_if 0, ParcelCoast_Petter_17
 	goto ParcelCoast_Petter_16
 
 
 ParcelCoast_Petter_FirstWin::
-# 1218 "data/maps/ParcelCoast/scripts.pory"
+# 1258 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_Text_2, MSGBOX_DEFAULT
-# 1219 "data/maps/ParcelCoast/scripts.pory"
+# 1259 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Petter_R2::
-# 1223 "data/maps/ParcelCoast/scripts.pory"
+# 1263 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1224 "data/maps/ParcelCoast/scripts.pory"
+# 1264 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1225 "data/maps/ParcelCoast/scripts.pory"
+# 1265 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R2_Text_0, MSGBOX_YESNO
-# 1226 "data/maps/ParcelCoast/scripts.pory"
+# 1266 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Petter_R2_2
-# 1231 "data/maps/ParcelCoast/scripts.pory"
+# 1271 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_PETTER_R2, ParcelCoast_Petter_R2_Text_2
-# 1232 "data/maps/ParcelCoast/scripts.pory"
+# 1272 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R2_Text_3, MSGBOX_DEFAULT
-# 1233 "data/maps/ParcelCoast/scripts.pory"
+# 1273 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Petter_R2_2:
-# 1227 "data/maps/ParcelCoast/scripts.pory"
+# 1267 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R2_Text_1, MSGBOX_DEFAULT
-# 1228 "data/maps/ParcelCoast/scripts.pory"
+# 1268 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Petter_R3::
-# 1237 "data/maps/ParcelCoast/scripts.pory"
+# 1277 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1238 "data/maps/ParcelCoast/scripts.pory"
+# 1278 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1239 "data/maps/ParcelCoast/scripts.pory"
+# 1279 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R3_Text_0, MSGBOX_YESNO
-# 1240 "data/maps/ParcelCoast/scripts.pory"
+# 1280 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Petter_R3_2
-# 1245 "data/maps/ParcelCoast/scripts.pory"
+# 1285 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_PETTER_R3, ParcelCoast_Petter_R3_Text_1
-# 1246 "data/maps/ParcelCoast/scripts.pory"
+# 1286 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R3_Text_2, MSGBOX_DEFAULT
-# 1247 "data/maps/ParcelCoast/scripts.pory"
+# 1287 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Petter_R3_2:
-# 1241 "data/maps/ParcelCoast/scripts.pory"
+# 1281 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R2_Text_1, MSGBOX_DEFAULT
-# 1242 "data/maps/ParcelCoast/scripts.pory"
+# 1282 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Petter_R4::
-# 1251 "data/maps/ParcelCoast/scripts.pory"
+# 1291 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1252 "data/maps/ParcelCoast/scripts.pory"
+# 1292 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1253 "data/maps/ParcelCoast/scripts.pory"
+# 1293 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R4_Text_0, MSGBOX_YESNO
-# 1254 "data/maps/ParcelCoast/scripts.pory"
+# 1294 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Petter_R4_2
-# 1259 "data/maps/ParcelCoast/scripts.pory"
+# 1299 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_PETTER_R4, ParcelCoast_Petter_R4_Text_1
-# 1260 "data/maps/ParcelCoast/scripts.pory"
+# 1300 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R4_Text_2, MSGBOX_DEFAULT
-# 1261 "data/maps/ParcelCoast/scripts.pory"
+# 1301 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Petter_R4_2:
-# 1255 "data/maps/ParcelCoast/scripts.pory"
+# 1295 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R2_Text_1, MSGBOX_DEFAULT
-# 1256 "data/maps/ParcelCoast/scripts.pory"
+# 1296 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Petter_R5::
-# 1265 "data/maps/ParcelCoast/scripts.pory"
+# 1305 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1266 "data/maps/ParcelCoast/scripts.pory"
+# 1306 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1267 "data/maps/ParcelCoast/scripts.pory"
+# 1307 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R5_Text_0, MSGBOX_YESNO
-# 1268 "data/maps/ParcelCoast/scripts.pory"
+# 1308 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Petter_R5_2
-# 1273 "data/maps/ParcelCoast/scripts.pory"
+# 1313 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_PETTER_R5, ParcelCoast_Petter_R3_Text_1
-# 1274 "data/maps/ParcelCoast/scripts.pory"
+# 1314 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R5_Text_1, MSGBOX_DEFAULT
-# 1275 "data/maps/ParcelCoast/scripts.pory"
+# 1315 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Petter_R5_2:
-# 1269 "data/maps/ParcelCoast/scripts.pory"
+# 1309 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Petter_R2_Text_1, MSGBOX_DEFAULT
-# 1270 "data/maps/ParcelCoast/scripts.pory"
+# 1310 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ragnar::
-# 1279 "data/maps/ParcelCoast/scripts.pory"
+# 1319 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_RAGNAR, ParcelCoast_Ragnar_Text_0, ParcelCoast_Ragnar_Text_1, ParcelCoast_Ragnar_FirstWin
-# 1283 "data/maps/ParcelCoast/scripts.pory"
+# 1323 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1284 "data/maps/ParcelCoast/scripts.pory"
+# 1324 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Ragnar_3
 ParcelCoast_Ragnar_1:
-# 1287 "data/maps/ParcelCoast/scripts.pory"
+# 1327 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Ragnar_8
 ParcelCoast_Ragnar_6:
-# 1290 "data/maps/ParcelCoast/scripts.pory"
+# 1330 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Ragnar_13
 ParcelCoast_Ragnar_11:
-# 1293 "data/maps/ParcelCoast/scripts.pory"
+# 1333 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Ragnar_18
 ParcelCoast_Ragnar_16:
-# 1296 "data/maps/ParcelCoast/scripts.pory"
+# 1336 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Ragnar_2:
-# 1285 "data/maps/ParcelCoast/scripts.pory"
+# 1325 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ragnar_R2
 	goto ParcelCoast_Ragnar_1
 
 ParcelCoast_Ragnar_3:
-# 1284 "data/maps/ParcelCoast/scripts.pory"
+# 1324 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_RAGNAR_R2
 	goto_if 0, ParcelCoast_Ragnar_2
 	goto ParcelCoast_Ragnar_1
 
 ParcelCoast_Ragnar_7:
-# 1288 "data/maps/ParcelCoast/scripts.pory"
+# 1328 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ragnar_R3
 	goto ParcelCoast_Ragnar_6
 
 ParcelCoast_Ragnar_8:
-# 1287 "data/maps/ParcelCoast/scripts.pory"
+# 1327 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_RAGNAR_R3
 	goto_if 0, ParcelCoast_Ragnar_7
 	goto ParcelCoast_Ragnar_6
 
 ParcelCoast_Ragnar_12:
-# 1291 "data/maps/ParcelCoast/scripts.pory"
+# 1331 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ragnar_R4
 	goto ParcelCoast_Ragnar_11
 
 ParcelCoast_Ragnar_13:
-# 1290 "data/maps/ParcelCoast/scripts.pory"
+# 1330 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_RAGNAR_R4
 	goto_if 0, ParcelCoast_Ragnar_12
 	goto ParcelCoast_Ragnar_11
 
 ParcelCoast_Ragnar_17:
-# 1294 "data/maps/ParcelCoast/scripts.pory"
+# 1334 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Ragnar_R5
 	goto ParcelCoast_Ragnar_16
 
 ParcelCoast_Ragnar_18:
-# 1293 "data/maps/ParcelCoast/scripts.pory"
+# 1333 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_RAGNAR_R5
 	goto_if 0, ParcelCoast_Ragnar_17
 	goto ParcelCoast_Ragnar_16
 
 
 ParcelCoast_Ragnar_FirstWin::
-# 1300 "data/maps/ParcelCoast/scripts.pory"
+# 1340 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_Text_2, MSGBOX_DEFAULT
-# 1301 "data/maps/ParcelCoast/scripts.pory"
+# 1341 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ragnar_R2::
-# 1305 "data/maps/ParcelCoast/scripts.pory"
+# 1345 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1306 "data/maps/ParcelCoast/scripts.pory"
+# 1346 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1307 "data/maps/ParcelCoast/scripts.pory"
+# 1347 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R2_Text_0, MSGBOX_YESNO
-# 1308 "data/maps/ParcelCoast/scripts.pory"
+# 1348 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ragnar_R2_2
-# 1313 "data/maps/ParcelCoast/scripts.pory"
+# 1353 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_RAGNAR_R2, ParcelCoast_Ragnar_R2_Text_2
-# 1314 "data/maps/ParcelCoast/scripts.pory"
+# 1354 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R2_Text_3, MSGBOX_DEFAULT
-# 1315 "data/maps/ParcelCoast/scripts.pory"
+# 1355 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ragnar_R2_2:
-# 1309 "data/maps/ParcelCoast/scripts.pory"
+# 1349 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R2_Text_1, MSGBOX_DEFAULT
-# 1310 "data/maps/ParcelCoast/scripts.pory"
+# 1350 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ragnar_R3::
-# 1319 "data/maps/ParcelCoast/scripts.pory"
+# 1359 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1320 "data/maps/ParcelCoast/scripts.pory"
+# 1360 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1321 "data/maps/ParcelCoast/scripts.pory"
+# 1361 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R3_Text_0, MSGBOX_YESNO
-# 1322 "data/maps/ParcelCoast/scripts.pory"
+# 1362 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ragnar_R3_2
-# 1327 "data/maps/ParcelCoast/scripts.pory"
+# 1367 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_RAGNAR_R3, ParcelCoast_Ragnar_R3_Text_1
-# 1328 "data/maps/ParcelCoast/scripts.pory"
+# 1368 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R3_Text_2, MSGBOX_DEFAULT
-# 1329 "data/maps/ParcelCoast/scripts.pory"
+# 1369 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ragnar_R3_2:
-# 1323 "data/maps/ParcelCoast/scripts.pory"
+# 1363 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R2_Text_1, MSGBOX_DEFAULT
-# 1324 "data/maps/ParcelCoast/scripts.pory"
+# 1364 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ragnar_R4::
-# 1333 "data/maps/ParcelCoast/scripts.pory"
+# 1373 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1334 "data/maps/ParcelCoast/scripts.pory"
+# 1374 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1335 "data/maps/ParcelCoast/scripts.pory"
+# 1375 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R4_Text_0, MSGBOX_YESNO
-# 1336 "data/maps/ParcelCoast/scripts.pory"
+# 1376 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ragnar_R4_2
-# 1341 "data/maps/ParcelCoast/scripts.pory"
+# 1381 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_RAGNAR_R4, ParcelCoast_Ragnar_R4_Text_1
-# 1342 "data/maps/ParcelCoast/scripts.pory"
+# 1382 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R4_Text_2, MSGBOX_DEFAULT
-# 1343 "data/maps/ParcelCoast/scripts.pory"
+# 1383 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ragnar_R4_2:
-# 1337 "data/maps/ParcelCoast/scripts.pory"
+# 1377 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R2_Text_1, MSGBOX_DEFAULT
-# 1338 "data/maps/ParcelCoast/scripts.pory"
+# 1378 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Ragnar_R5::
-# 1347 "data/maps/ParcelCoast/scripts.pory"
+# 1387 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1348 "data/maps/ParcelCoast/scripts.pory"
+# 1388 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1349 "data/maps/ParcelCoast/scripts.pory"
+# 1389 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R5_Text_0, MSGBOX_YESNO
-# 1350 "data/maps/ParcelCoast/scripts.pory"
+# 1390 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Ragnar_R5_2
-# 1355 "data/maps/ParcelCoast/scripts.pory"
+# 1395 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_RAGNAR_R5, ParcelCoast_Ragnar_R3_Text_1
-# 1356 "data/maps/ParcelCoast/scripts.pory"
+# 1396 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R5_Text_1, MSGBOX_DEFAULT
-# 1357 "data/maps/ParcelCoast/scripts.pory"
+# 1397 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Ragnar_R5_2:
-# 1351 "data/maps/ParcelCoast/scripts.pory"
+# 1391 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Ragnar_R2_Text_1, MSGBOX_DEFAULT
-# 1352 "data/maps/ParcelCoast/scripts.pory"
+# 1392 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Solvor::
-# 1361 "data/maps/ParcelCoast/scripts.pory"
+# 1401 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_SOLVOR, ParcelCoast_Solvor_Text_0, ParcelCoast_Solvor_Text_1, ParcelCoast_Solvor_FirstWin
-# 1365 "data/maps/ParcelCoast/scripts.pory"
+# 1405 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1366 "data/maps/ParcelCoast/scripts.pory"
+# 1406 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Solvor_3
 ParcelCoast_Solvor_1:
-# 1369 "data/maps/ParcelCoast/scripts.pory"
+# 1409 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Solvor_8
 ParcelCoast_Solvor_6:
-# 1372 "data/maps/ParcelCoast/scripts.pory"
+# 1412 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Solvor_13
 ParcelCoast_Solvor_11:
-# 1375 "data/maps/ParcelCoast/scripts.pory"
+# 1415 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Solvor_18
 ParcelCoast_Solvor_16:
-# 1378 "data/maps/ParcelCoast/scripts.pory"
+# 1418 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Solvor_2:
-# 1367 "data/maps/ParcelCoast/scripts.pory"
+# 1407 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Solvor_R2
 	goto ParcelCoast_Solvor_1
 
 ParcelCoast_Solvor_3:
-# 1366 "data/maps/ParcelCoast/scripts.pory"
+# 1406 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_SOLVOR_R2
 	goto_if 0, ParcelCoast_Solvor_2
 	goto ParcelCoast_Solvor_1
 
 ParcelCoast_Solvor_7:
-# 1370 "data/maps/ParcelCoast/scripts.pory"
+# 1410 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Solvor_R3
 	goto ParcelCoast_Solvor_6
 
 ParcelCoast_Solvor_8:
-# 1369 "data/maps/ParcelCoast/scripts.pory"
+# 1409 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_SOLVOR_R3
 	goto_if 0, ParcelCoast_Solvor_7
 	goto ParcelCoast_Solvor_6
 
 ParcelCoast_Solvor_12:
-# 1373 "data/maps/ParcelCoast/scripts.pory"
+# 1413 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Solvor_R4
 	goto ParcelCoast_Solvor_11
 
 ParcelCoast_Solvor_13:
-# 1372 "data/maps/ParcelCoast/scripts.pory"
+# 1412 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_SOLVOR_R4
 	goto_if 0, ParcelCoast_Solvor_12
 	goto ParcelCoast_Solvor_11
 
 ParcelCoast_Solvor_17:
-# 1376 "data/maps/ParcelCoast/scripts.pory"
+# 1416 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Solvor_R5
 	goto ParcelCoast_Solvor_16
 
 ParcelCoast_Solvor_18:
-# 1375 "data/maps/ParcelCoast/scripts.pory"
+# 1415 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_SOLVOR_R5
 	goto_if 0, ParcelCoast_Solvor_17
 	goto ParcelCoast_Solvor_16
 
 
 ParcelCoast_Solvor_FirstWin::
-# 1382 "data/maps/ParcelCoast/scripts.pory"
+# 1422 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_Text_2, MSGBOX_DEFAULT
-# 1383 "data/maps/ParcelCoast/scripts.pory"
+# 1423 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Solvor_R2::
-# 1387 "data/maps/ParcelCoast/scripts.pory"
+# 1427 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1388 "data/maps/ParcelCoast/scripts.pory"
+# 1428 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1389 "data/maps/ParcelCoast/scripts.pory"
+# 1429 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R2_Text_0, MSGBOX_YESNO
-# 1390 "data/maps/ParcelCoast/scripts.pory"
+# 1430 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Solvor_R2_2
-# 1395 "data/maps/ParcelCoast/scripts.pory"
+# 1435 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_SOLVOR_R2, ParcelCoast_Solvor_R2_Text_2
-# 1396 "data/maps/ParcelCoast/scripts.pory"
+# 1436 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R2_Text_3, MSGBOX_DEFAULT
-# 1397 "data/maps/ParcelCoast/scripts.pory"
+# 1437 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Solvor_R2_2:
-# 1391 "data/maps/ParcelCoast/scripts.pory"
+# 1431 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R2_Text_1, MSGBOX_DEFAULT
-# 1392 "data/maps/ParcelCoast/scripts.pory"
+# 1432 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Solvor_R3::
-# 1401 "data/maps/ParcelCoast/scripts.pory"
+# 1441 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1402 "data/maps/ParcelCoast/scripts.pory"
+# 1442 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1403 "data/maps/ParcelCoast/scripts.pory"
+# 1443 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R3_Text_0, MSGBOX_YESNO
-# 1404 "data/maps/ParcelCoast/scripts.pory"
+# 1444 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Solvor_R3_2
-# 1409 "data/maps/ParcelCoast/scripts.pory"
+# 1449 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_SOLVOR_R3, ParcelCoast_Solvor_R3_Text_1
-# 1410 "data/maps/ParcelCoast/scripts.pory"
+# 1450 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R3_Text_2, MSGBOX_DEFAULT
-# 1411 "data/maps/ParcelCoast/scripts.pory"
+# 1451 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Solvor_R3_2:
-# 1405 "data/maps/ParcelCoast/scripts.pory"
+# 1445 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R2_Text_1, MSGBOX_DEFAULT
-# 1406 "data/maps/ParcelCoast/scripts.pory"
+# 1446 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Solvor_R4::
-# 1415 "data/maps/ParcelCoast/scripts.pory"
+# 1455 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1416 "data/maps/ParcelCoast/scripts.pory"
+# 1456 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1417 "data/maps/ParcelCoast/scripts.pory"
+# 1457 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R4_Text_0, MSGBOX_YESNO
-# 1418 "data/maps/ParcelCoast/scripts.pory"
+# 1458 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Solvor_R4_2
-# 1423 "data/maps/ParcelCoast/scripts.pory"
+# 1463 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_SOLVOR_R4, ParcelCoast_Solvor_R3_Text_1
-# 1424 "data/maps/ParcelCoast/scripts.pory"
+# 1464 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R4_Text_1, MSGBOX_DEFAULT
-# 1425 "data/maps/ParcelCoast/scripts.pory"
+# 1465 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Solvor_R4_2:
-# 1419 "data/maps/ParcelCoast/scripts.pory"
+# 1459 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R2_Text_1, MSGBOX_DEFAULT
-# 1420 "data/maps/ParcelCoast/scripts.pory"
+# 1460 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Solvor_R5::
-# 1429 "data/maps/ParcelCoast/scripts.pory"
+# 1469 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1430 "data/maps/ParcelCoast/scripts.pory"
+# 1470 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1431 "data/maps/ParcelCoast/scripts.pory"
+# 1471 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R5_Text_0, MSGBOX_YESNO
-# 1432 "data/maps/ParcelCoast/scripts.pory"
+# 1472 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Solvor_R5_2
-# 1437 "data/maps/ParcelCoast/scripts.pory"
+# 1477 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_SOLVOR_R5, ParcelCoast_Solvor_R5_Text_1
-# 1438 "data/maps/ParcelCoast/scripts.pory"
+# 1478 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R5_Text_2, MSGBOX_DEFAULT
-# 1439 "data/maps/ParcelCoast/scripts.pory"
+# 1479 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Solvor_R5_2:
-# 1433 "data/maps/ParcelCoast/scripts.pory"
+# 1473 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Solvor_R2_Text_1, MSGBOX_DEFAULT
-# 1434 "data/maps/ParcelCoast/scripts.pory"
+# 1474 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Tore::
-# 1443 "data/maps/ParcelCoast/scripts.pory"
+# 1483 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_TORE, ParcelCoast_Tore_Text_0, ParcelCoast_Tore_Text_1, ParcelCoast_Tore_FirstWin
-# 1447 "data/maps/ParcelCoast/scripts.pory"
+# 1487 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1448 "data/maps/ParcelCoast/scripts.pory"
+# 1488 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_Tore_3
 ParcelCoast_Tore_1:
-# 1451 "data/maps/ParcelCoast/scripts.pory"
+# 1491 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_Tore_8
 ParcelCoast_Tore_6:
-# 1454 "data/maps/ParcelCoast/scripts.pory"
+# 1494 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_Tore_13
 ParcelCoast_Tore_11:
-# 1457 "data/maps/ParcelCoast/scripts.pory"
+# 1497 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_Tore_18
 ParcelCoast_Tore_16:
-# 1460 "data/maps/ParcelCoast/scripts.pory"
+# 1500 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_Tore_2:
-# 1449 "data/maps/ParcelCoast/scripts.pory"
+# 1489 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Tore_R2
 	goto ParcelCoast_Tore_1
 
 ParcelCoast_Tore_3:
-# 1448 "data/maps/ParcelCoast/scripts.pory"
+# 1488 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_TORE_R2
 	goto_if 0, ParcelCoast_Tore_2
 	goto ParcelCoast_Tore_1
 
 ParcelCoast_Tore_7:
-# 1452 "data/maps/ParcelCoast/scripts.pory"
+# 1492 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Tore_R3
 	goto ParcelCoast_Tore_6
 
 ParcelCoast_Tore_8:
-# 1451 "data/maps/ParcelCoast/scripts.pory"
+# 1491 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_TORE_R3
 	goto_if 0, ParcelCoast_Tore_7
 	goto ParcelCoast_Tore_6
 
 ParcelCoast_Tore_12:
-# 1455 "data/maps/ParcelCoast/scripts.pory"
+# 1495 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Tore_R4
 	goto ParcelCoast_Tore_11
 
 ParcelCoast_Tore_13:
-# 1454 "data/maps/ParcelCoast/scripts.pory"
+# 1494 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_TORE_R4
 	goto_if 0, ParcelCoast_Tore_12
 	goto ParcelCoast_Tore_11
 
 ParcelCoast_Tore_17:
-# 1458 "data/maps/ParcelCoast/scripts.pory"
+# 1498 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_Tore_R5
 	goto ParcelCoast_Tore_16
 
 ParcelCoast_Tore_18:
-# 1457 "data/maps/ParcelCoast/scripts.pory"
+# 1497 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_TORE_R5
 	goto_if 0, ParcelCoast_Tore_17
 	goto ParcelCoast_Tore_16
 
 
 ParcelCoast_Tore_FirstWin::
-# 1464 "data/maps/ParcelCoast/scripts.pory"
+# 1504 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_Text_2, MSGBOX_DEFAULT
-# 1465 "data/maps/ParcelCoast/scripts.pory"
+# 1505 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Tore_R2::
-# 1469 "data/maps/ParcelCoast/scripts.pory"
+# 1509 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1470 "data/maps/ParcelCoast/scripts.pory"
+# 1510 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1471 "data/maps/ParcelCoast/scripts.pory"
+# 1511 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R2_Text_0, MSGBOX_YESNO
-# 1472 "data/maps/ParcelCoast/scripts.pory"
+# 1512 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Tore_R2_2
-# 1477 "data/maps/ParcelCoast/scripts.pory"
+# 1517 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_TORE_R2, ParcelCoast_Tore_R2_Text_2
-# 1478 "data/maps/ParcelCoast/scripts.pory"
+# 1518 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R2_Text_3, MSGBOX_DEFAULT
-# 1479 "data/maps/ParcelCoast/scripts.pory"
+# 1519 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Tore_R2_2:
-# 1473 "data/maps/ParcelCoast/scripts.pory"
+# 1513 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R2_Text_1, MSGBOX_DEFAULT
-# 1474 "data/maps/ParcelCoast/scripts.pory"
+# 1514 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Tore_R3::
-# 1483 "data/maps/ParcelCoast/scripts.pory"
+# 1523 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1484 "data/maps/ParcelCoast/scripts.pory"
+# 1524 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1485 "data/maps/ParcelCoast/scripts.pory"
+# 1525 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R3_Text_0, MSGBOX_YESNO
-# 1486 "data/maps/ParcelCoast/scripts.pory"
+# 1526 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Tore_R3_2
-# 1491 "data/maps/ParcelCoast/scripts.pory"
+# 1531 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_TORE_R3, ParcelCoast_Tore_R3_Text_1
-# 1492 "data/maps/ParcelCoast/scripts.pory"
+# 1532 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R3_Text_2, MSGBOX_DEFAULT
-# 1493 "data/maps/ParcelCoast/scripts.pory"
+# 1533 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Tore_R3_2:
-# 1487 "data/maps/ParcelCoast/scripts.pory"
+# 1527 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R2_Text_1, MSGBOX_DEFAULT
-# 1488 "data/maps/ParcelCoast/scripts.pory"
+# 1528 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Tore_R4::
-# 1497 "data/maps/ParcelCoast/scripts.pory"
+# 1537 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1498 "data/maps/ParcelCoast/scripts.pory"
+# 1538 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1499 "data/maps/ParcelCoast/scripts.pory"
+# 1539 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R4_Text_0, MSGBOX_YESNO
-# 1500 "data/maps/ParcelCoast/scripts.pory"
+# 1540 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Tore_R4_2
-# 1505 "data/maps/ParcelCoast/scripts.pory"
+# 1545 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_TORE_R4, ParcelCoast_Tore_R4_Text_1
-# 1506 "data/maps/ParcelCoast/scripts.pory"
+# 1546 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R4_Text_2, MSGBOX_DEFAULT
-# 1507 "data/maps/ParcelCoast/scripts.pory"
+# 1547 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Tore_R4_2:
-# 1501 "data/maps/ParcelCoast/scripts.pory"
+# 1541 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R2_Text_1, MSGBOX_DEFAULT
-# 1502 "data/maps/ParcelCoast/scripts.pory"
+# 1542 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Tore_R5::
-# 1511 "data/maps/ParcelCoast/scripts.pory"
+# 1551 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1512 "data/maps/ParcelCoast/scripts.pory"
+# 1552 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1513 "data/maps/ParcelCoast/scripts.pory"
+# 1553 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R5_Text_0, MSGBOX_YESNO
-# 1514 "data/maps/ParcelCoast/scripts.pory"
+# 1554 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_Tore_R5_2
-# 1519 "data/maps/ParcelCoast/scripts.pory"
+# 1559 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_TORE_R5, ParcelCoast_Tore_R2_Text_2
-# 1520 "data/maps/ParcelCoast/scripts.pory"
+# 1560 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R5_Text_1, MSGBOX_DEFAULT
-# 1521 "data/maps/ParcelCoast/scripts.pory"
+# 1561 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Tore_R5_2:
-# 1515 "data/maps/ParcelCoast/scripts.pory"
+# 1555 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Tore_R2_Text_1, MSGBOX_DEFAULT
-# 1516 "data/maps/ParcelCoast/scripts.pory"
+# 1556 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Helge::
-# 1527 "data/maps/ParcelCoast/scripts.pory"
+# 1567 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_HELGE, ParcelCoast_T_Helge_Text_0, ParcelCoast_T_Helge_Text_1, ParcelCoast_T_Helge_FirstWin
-# 1531 "data/maps/ParcelCoast/scripts.pory"
+# 1571 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1532 "data/maps/ParcelCoast/scripts.pory"
+# 1572 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_T_Helge_3
 ParcelCoast_T_Helge_1:
-# 1535 "data/maps/ParcelCoast/scripts.pory"
+# 1575 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_T_Helge_8
 ParcelCoast_T_Helge_6:
-# 1538 "data/maps/ParcelCoast/scripts.pory"
+# 1578 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_T_Helge_13
 ParcelCoast_T_Helge_11:
-# 1541 "data/maps/ParcelCoast/scripts.pory"
+# 1581 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_T_Helge_18
 ParcelCoast_T_Helge_16:
-# 1544 "data/maps/ParcelCoast/scripts.pory"
+# 1584 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_T_Helge_2:
-# 1533 "data/maps/ParcelCoast/scripts.pory"
+# 1573 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Helge_R2
 	goto ParcelCoast_T_Helge_1
 
 ParcelCoast_T_Helge_3:
-# 1532 "data/maps/ParcelCoast/scripts.pory"
+# 1572 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HELGE_R2
 	goto_if 0, ParcelCoast_T_Helge_2
 	goto ParcelCoast_T_Helge_1
 
 ParcelCoast_T_Helge_7:
-# 1536 "data/maps/ParcelCoast/scripts.pory"
+# 1576 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Helge_R3
 	goto ParcelCoast_T_Helge_6
 
 ParcelCoast_T_Helge_8:
-# 1535 "data/maps/ParcelCoast/scripts.pory"
+# 1575 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HELGE_R3
 	goto_if 0, ParcelCoast_T_Helge_7
 	goto ParcelCoast_T_Helge_6
 
 ParcelCoast_T_Helge_12:
-# 1539 "data/maps/ParcelCoast/scripts.pory"
+# 1579 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Helge_R4
 	goto ParcelCoast_T_Helge_11
 
 ParcelCoast_T_Helge_13:
-# 1538 "data/maps/ParcelCoast/scripts.pory"
+# 1578 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HELGE_R4
 	goto_if 0, ParcelCoast_T_Helge_12
 	goto ParcelCoast_T_Helge_11
 
 ParcelCoast_T_Helge_17:
-# 1542 "data/maps/ParcelCoast/scripts.pory"
+# 1582 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Helge_R5
 	goto ParcelCoast_T_Helge_16
 
 ParcelCoast_T_Helge_18:
-# 1541 "data/maps/ParcelCoast/scripts.pory"
+# 1581 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_HELGE_R5
 	goto_if 0, ParcelCoast_T_Helge_17
 	goto ParcelCoast_T_Helge_16
 
 
 ParcelCoast_T_Helge_FirstWin::
-# 1548 "data/maps/ParcelCoast/scripts.pory"
+# 1588 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_Text_2, MSGBOX_DEFAULT
-# 1549 "data/maps/ParcelCoast/scripts.pory"
+# 1589 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Helge_R2::
-# 1553 "data/maps/ParcelCoast/scripts.pory"
+# 1593 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1554 "data/maps/ParcelCoast/scripts.pory"
+# 1594 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1555 "data/maps/ParcelCoast/scripts.pory"
+# 1595 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R2_Text_0, MSGBOX_YESNO
-# 1556 "data/maps/ParcelCoast/scripts.pory"
+# 1596 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Helge_R2_2
-# 1561 "data/maps/ParcelCoast/scripts.pory"
+# 1601 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HELGE_R2, ParcelCoast_T_Helge_R2_Text_2
-# 1562 "data/maps/ParcelCoast/scripts.pory"
+# 1602 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R2_Text_3, MSGBOX_DEFAULT
-# 1563 "data/maps/ParcelCoast/scripts.pory"
+# 1603 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Helge_R2_2:
-# 1557 "data/maps/ParcelCoast/scripts.pory"
+# 1597 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R2_Text_1, MSGBOX_DEFAULT
-# 1558 "data/maps/ParcelCoast/scripts.pory"
+# 1598 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Helge_R3::
-# 1567 "data/maps/ParcelCoast/scripts.pory"
+# 1607 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1568 "data/maps/ParcelCoast/scripts.pory"
+# 1608 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1569 "data/maps/ParcelCoast/scripts.pory"
+# 1609 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R3_Text_0, MSGBOX_YESNO
-# 1570 "data/maps/ParcelCoast/scripts.pory"
+# 1610 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Helge_R3_2
-# 1575 "data/maps/ParcelCoast/scripts.pory"
+# 1615 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HELGE_R3, ParcelCoast_T_Helge_R3_Text_1
-# 1576 "data/maps/ParcelCoast/scripts.pory"
+# 1616 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R3_Text_2, MSGBOX_DEFAULT
-# 1577 "data/maps/ParcelCoast/scripts.pory"
+# 1617 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Helge_R3_2:
-# 1571 "data/maps/ParcelCoast/scripts.pory"
+# 1611 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R2_Text_1, MSGBOX_DEFAULT
-# 1572 "data/maps/ParcelCoast/scripts.pory"
+# 1612 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Helge_R4::
-# 1581 "data/maps/ParcelCoast/scripts.pory"
+# 1621 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1582 "data/maps/ParcelCoast/scripts.pory"
+# 1622 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1583 "data/maps/ParcelCoast/scripts.pory"
+# 1623 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R4_Text_0, MSGBOX_YESNO
-# 1584 "data/maps/ParcelCoast/scripts.pory"
+# 1624 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Helge_R4_2
-# 1589 "data/maps/ParcelCoast/scripts.pory"
+# 1629 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HELGE_R4, ParcelCoast_T_Helge_R4_Text_1
-# 1590 "data/maps/ParcelCoast/scripts.pory"
+# 1630 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R4_Text_2, MSGBOX_DEFAULT
-# 1591 "data/maps/ParcelCoast/scripts.pory"
+# 1631 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Helge_R4_2:
-# 1585 "data/maps/ParcelCoast/scripts.pory"
+# 1625 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R2_Text_1, MSGBOX_DEFAULT
-# 1586 "data/maps/ParcelCoast/scripts.pory"
+# 1626 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Helge_R5::
-# 1595 "data/maps/ParcelCoast/scripts.pory"
+# 1635 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1596 "data/maps/ParcelCoast/scripts.pory"
+# 1636 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1597 "data/maps/ParcelCoast/scripts.pory"
+# 1637 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R5_Text_0, MSGBOX_YESNO
-# 1598 "data/maps/ParcelCoast/scripts.pory"
+# 1638 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Helge_R5_2
-# 1603 "data/maps/ParcelCoast/scripts.pory"
+# 1643 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_HELGE_R5, ParcelCoast_T_Helge_R4_Text_1
-# 1604 "data/maps/ParcelCoast/scripts.pory"
+# 1644 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R5_Text_1, MSGBOX_DEFAULT
-# 1605 "data/maps/ParcelCoast/scripts.pory"
+# 1645 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Helge_R5_2:
-# 1599 "data/maps/ParcelCoast/scripts.pory"
+# 1639 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Helge_R2_Text_1, MSGBOX_DEFAULT
-# 1600 "data/maps/ParcelCoast/scripts.pory"
+# 1640 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Anton::
-# 1609 "data/maps/ParcelCoast/scripts.pory"
+# 1649 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_ANTON, ParcelCoast_T_Anton_Text_0, ParcelCoast_T_Anton_Text_1, ParcelCoast_T_Anton_FirstWin
-# 1613 "data/maps/ParcelCoast/scripts.pory"
+# 1653 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1614 "data/maps/ParcelCoast/scripts.pory"
+# 1654 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_T_Anton_3
 ParcelCoast_T_Anton_1:
-# 1617 "data/maps/ParcelCoast/scripts.pory"
+# 1657 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_T_Anton_8
 ParcelCoast_T_Anton_6:
-# 1620 "data/maps/ParcelCoast/scripts.pory"
+# 1660 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_T_Anton_13
 ParcelCoast_T_Anton_11:
-# 1623 "data/maps/ParcelCoast/scripts.pory"
+# 1663 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_T_Anton_18
 ParcelCoast_T_Anton_16:
-# 1626 "data/maps/ParcelCoast/scripts.pory"
+# 1666 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_T_Anton_2:
-# 1615 "data/maps/ParcelCoast/scripts.pory"
+# 1655 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Anton_R2
 	goto ParcelCoast_T_Anton_1
 
 ParcelCoast_T_Anton_3:
-# 1614 "data/maps/ParcelCoast/scripts.pory"
+# 1654 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ANTON_R2
 	goto_if 0, ParcelCoast_T_Anton_2
 	goto ParcelCoast_T_Anton_1
 
 ParcelCoast_T_Anton_7:
-# 1618 "data/maps/ParcelCoast/scripts.pory"
+# 1658 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Anton_R3
 	goto ParcelCoast_T_Anton_6
 
 ParcelCoast_T_Anton_8:
-# 1617 "data/maps/ParcelCoast/scripts.pory"
+# 1657 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ANTON_R3
 	goto_if 0, ParcelCoast_T_Anton_7
 	goto ParcelCoast_T_Anton_6
 
 ParcelCoast_T_Anton_12:
-# 1621 "data/maps/ParcelCoast/scripts.pory"
+# 1661 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Anton_R4
 	goto ParcelCoast_T_Anton_11
 
 ParcelCoast_T_Anton_13:
-# 1620 "data/maps/ParcelCoast/scripts.pory"
+# 1660 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ANTON_R4
 	goto_if 0, ParcelCoast_T_Anton_12
 	goto ParcelCoast_T_Anton_11
 
 ParcelCoast_T_Anton_17:
-# 1624 "data/maps/ParcelCoast/scripts.pory"
+# 1664 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Anton_R5
 	goto ParcelCoast_T_Anton_16
 
 ParcelCoast_T_Anton_18:
-# 1623 "data/maps/ParcelCoast/scripts.pory"
+# 1663 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_ANTON_R5
 	goto_if 0, ParcelCoast_T_Anton_17
 	goto ParcelCoast_T_Anton_16
 
 
 ParcelCoast_T_Anton_FirstWin::
-# 1630 "data/maps/ParcelCoast/scripts.pory"
+# 1670 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_Text_2, MSGBOX_DEFAULT
-# 1631 "data/maps/ParcelCoast/scripts.pory"
+# 1671 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Anton_R2::
-# 1635 "data/maps/ParcelCoast/scripts.pory"
+# 1675 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1636 "data/maps/ParcelCoast/scripts.pory"
+# 1676 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1637 "data/maps/ParcelCoast/scripts.pory"
+# 1677 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R2_Text_0, MSGBOX_YESNO
-# 1638 "data/maps/ParcelCoast/scripts.pory"
+# 1678 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Anton_R2_2
-# 1643 "data/maps/ParcelCoast/scripts.pory"
+# 1683 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ANTON_R2, ParcelCoast_T_Anton_R2_Text_2
-# 1644 "data/maps/ParcelCoast/scripts.pory"
+# 1684 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R2_Text_3, MSGBOX_DEFAULT
-# 1645 "data/maps/ParcelCoast/scripts.pory"
+# 1685 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Anton_R2_2:
-# 1639 "data/maps/ParcelCoast/scripts.pory"
+# 1679 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R2_Text_1, MSGBOX_DEFAULT
-# 1640 "data/maps/ParcelCoast/scripts.pory"
+# 1680 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Anton_R3::
-# 1649 "data/maps/ParcelCoast/scripts.pory"
+# 1689 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1650 "data/maps/ParcelCoast/scripts.pory"
+# 1690 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1651 "data/maps/ParcelCoast/scripts.pory"
+# 1691 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R3_Text_0, MSGBOX_YESNO
-# 1652 "data/maps/ParcelCoast/scripts.pory"
+# 1692 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Anton_R3_2
-# 1657 "data/maps/ParcelCoast/scripts.pory"
+# 1697 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ANTON_R3, ParcelCoast_T_Anton_R3_Text_1
-# 1658 "data/maps/ParcelCoast/scripts.pory"
+# 1698 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R3_Text_2, MSGBOX_DEFAULT
-# 1659 "data/maps/ParcelCoast/scripts.pory"
+# 1699 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Anton_R3_2:
-# 1653 "data/maps/ParcelCoast/scripts.pory"
+# 1693 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R2_Text_1, MSGBOX_DEFAULT
-# 1654 "data/maps/ParcelCoast/scripts.pory"
+# 1694 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Anton_R4::
-# 1663 "data/maps/ParcelCoast/scripts.pory"
+# 1703 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1664 "data/maps/ParcelCoast/scripts.pory"
+# 1704 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1665 "data/maps/ParcelCoast/scripts.pory"
+# 1705 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R4_Text_0, MSGBOX_YESNO
-# 1666 "data/maps/ParcelCoast/scripts.pory"
+# 1706 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Anton_R4_2
-# 1671 "data/maps/ParcelCoast/scripts.pory"
+# 1711 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ANTON_R4, ParcelCoast_T_Anton_R4_Text_1
-# 1672 "data/maps/ParcelCoast/scripts.pory"
+# 1712 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R4_Text_2, MSGBOX_DEFAULT
-# 1673 "data/maps/ParcelCoast/scripts.pory"
+# 1713 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Anton_R4_2:
-# 1667 "data/maps/ParcelCoast/scripts.pory"
+# 1707 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R2_Text_1, MSGBOX_DEFAULT
-# 1668 "data/maps/ParcelCoast/scripts.pory"
+# 1708 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Anton_R5::
-# 1677 "data/maps/ParcelCoast/scripts.pory"
+# 1717 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1678 "data/maps/ParcelCoast/scripts.pory"
+# 1718 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1679 "data/maps/ParcelCoast/scripts.pory"
+# 1719 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R5_Text_0, MSGBOX_YESNO
-# 1680 "data/maps/ParcelCoast/scripts.pory"
+# 1720 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Anton_R5_2
-# 1685 "data/maps/ParcelCoast/scripts.pory"
+# 1725 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_ANTON_R5, ParcelCoast_T_Anton_R3_Text_1
-# 1686 "data/maps/ParcelCoast/scripts.pory"
+# 1726 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R5_Text_1, MSGBOX_DEFAULT
-# 1687 "data/maps/ParcelCoast/scripts.pory"
+# 1727 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Anton_R5_2:
-# 1681 "data/maps/ParcelCoast/scripts.pory"
+# 1721 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Anton_R2_Text_1, MSGBOX_DEFAULT
-# 1682 "data/maps/ParcelCoast/scripts.pory"
+# 1722 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Beate::
-# 1691 "data/maps/ParcelCoast/scripts.pory"
+# 1731 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_COAST_BEATE, ParcelCoast_T_Beate_Text_0, ParcelCoast_T_Beate_Text_1, ParcelCoast_T_Beate_FirstWin
-# 1695 "data/maps/ParcelCoast/scripts.pory"
+# 1735 "data/maps/ParcelCoast/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1696 "data/maps/ParcelCoast/scripts.pory"
+# 1736 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelCoast_T_Beate_3
 ParcelCoast_T_Beate_1:
-# 1699 "data/maps/ParcelCoast/scripts.pory"
+# 1739 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelCoast_T_Beate_8
 ParcelCoast_T_Beate_6:
-# 1702 "data/maps/ParcelCoast/scripts.pory"
+# 1742 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelCoast_T_Beate_13
 ParcelCoast_T_Beate_11:
-# 1705 "data/maps/ParcelCoast/scripts.pory"
+# 1745 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelCoast_T_Beate_18
 ParcelCoast_T_Beate_16:
-# 1708 "data/maps/ParcelCoast/scripts.pory"
+# 1748 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelCoast_T_Beate_2:
-# 1697 "data/maps/ParcelCoast/scripts.pory"
+# 1737 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Beate_R2
 	goto ParcelCoast_T_Beate_1
 
 ParcelCoast_T_Beate_3:
-# 1696 "data/maps/ParcelCoast/scripts.pory"
+# 1736 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BEATE_R2
 	goto_if 0, ParcelCoast_T_Beate_2
 	goto ParcelCoast_T_Beate_1
 
 ParcelCoast_T_Beate_7:
-# 1700 "data/maps/ParcelCoast/scripts.pory"
+# 1740 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Beate_R3
 	goto ParcelCoast_T_Beate_6
 
 ParcelCoast_T_Beate_8:
-# 1699 "data/maps/ParcelCoast/scripts.pory"
+# 1739 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BEATE_R3
 	goto_if 0, ParcelCoast_T_Beate_7
 	goto ParcelCoast_T_Beate_6
 
 ParcelCoast_T_Beate_12:
-# 1703 "data/maps/ParcelCoast/scripts.pory"
+# 1743 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Beate_R4
 	goto ParcelCoast_T_Beate_11
 
 ParcelCoast_T_Beate_13:
-# 1702 "data/maps/ParcelCoast/scripts.pory"
+# 1742 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BEATE_R4
 	goto_if 0, ParcelCoast_T_Beate_12
 	goto ParcelCoast_T_Beate_11
 
 ParcelCoast_T_Beate_17:
-# 1706 "data/maps/ParcelCoast/scripts.pory"
+# 1746 "data/maps/ParcelCoast/scripts.pory"
 	goto ParcelCoast_T_Beate_R5
 	goto ParcelCoast_T_Beate_16
 
 ParcelCoast_T_Beate_18:
-# 1705 "data/maps/ParcelCoast/scripts.pory"
+# 1745 "data/maps/ParcelCoast/scripts.pory"
 	checktrainerflag TRAINER_SKALD_COAST_BEATE_R5
 	goto_if 0, ParcelCoast_T_Beate_17
 	goto ParcelCoast_T_Beate_16
 
 
 ParcelCoast_T_Beate_FirstWin::
-# 1712 "data/maps/ParcelCoast/scripts.pory"
+# 1752 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_Text_2, MSGBOX_DEFAULT
-# 1713 "data/maps/ParcelCoast/scripts.pory"
+# 1753 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Beate_R2::
-# 1717 "data/maps/ParcelCoast/scripts.pory"
+# 1757 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1718 "data/maps/ParcelCoast/scripts.pory"
+# 1758 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1719 "data/maps/ParcelCoast/scripts.pory"
+# 1759 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R2_Text_0, MSGBOX_YESNO
-# 1720 "data/maps/ParcelCoast/scripts.pory"
+# 1760 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Beate_R2_2
-# 1725 "data/maps/ParcelCoast/scripts.pory"
+# 1765 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BEATE_R2, ParcelCoast_T_Beate_R2_Text_2
-# 1726 "data/maps/ParcelCoast/scripts.pory"
+# 1766 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R2_Text_3, MSGBOX_DEFAULT
-# 1727 "data/maps/ParcelCoast/scripts.pory"
+# 1767 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Beate_R2_2:
-# 1721 "data/maps/ParcelCoast/scripts.pory"
+# 1761 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R2_Text_1, MSGBOX_DEFAULT
-# 1722 "data/maps/ParcelCoast/scripts.pory"
+# 1762 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Beate_R3::
-# 1731 "data/maps/ParcelCoast/scripts.pory"
+# 1771 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1732 "data/maps/ParcelCoast/scripts.pory"
+# 1772 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1733 "data/maps/ParcelCoast/scripts.pory"
+# 1773 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R3_Text_0, MSGBOX_YESNO
-# 1734 "data/maps/ParcelCoast/scripts.pory"
+# 1774 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Beate_R3_2
-# 1739 "data/maps/ParcelCoast/scripts.pory"
+# 1779 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BEATE_R3, ParcelCoast_T_Beate_R3_Text_1
-# 1740 "data/maps/ParcelCoast/scripts.pory"
+# 1780 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R3_Text_2, MSGBOX_DEFAULT
-# 1741 "data/maps/ParcelCoast/scripts.pory"
+# 1781 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Beate_R3_2:
-# 1735 "data/maps/ParcelCoast/scripts.pory"
+# 1775 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R2_Text_1, MSGBOX_DEFAULT
-# 1736 "data/maps/ParcelCoast/scripts.pory"
+# 1776 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Beate_R4::
-# 1745 "data/maps/ParcelCoast/scripts.pory"
+# 1785 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1746 "data/maps/ParcelCoast/scripts.pory"
+# 1786 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1747 "data/maps/ParcelCoast/scripts.pory"
+# 1787 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R4_Text_0, MSGBOX_YESNO
-# 1748 "data/maps/ParcelCoast/scripts.pory"
+# 1788 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Beate_R4_2
-# 1753 "data/maps/ParcelCoast/scripts.pory"
+# 1793 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BEATE_R4, ParcelCoast_T_Beate_R4_Text_1
-# 1754 "data/maps/ParcelCoast/scripts.pory"
+# 1794 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R4_Text_2, MSGBOX_DEFAULT
-# 1755 "data/maps/ParcelCoast/scripts.pory"
+# 1795 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Beate_R4_2:
-# 1749 "data/maps/ParcelCoast/scripts.pory"
+# 1789 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R2_Text_1, MSGBOX_DEFAULT
-# 1750 "data/maps/ParcelCoast/scripts.pory"
+# 1790 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_T_Beate_R5::
-# 1759 "data/maps/ParcelCoast/scripts.pory"
+# 1799 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1760 "data/maps/ParcelCoast/scripts.pory"
+# 1800 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1761 "data/maps/ParcelCoast/scripts.pory"
+# 1801 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R5_Text_0, MSGBOX_YESNO
-# 1762 "data/maps/ParcelCoast/scripts.pory"
+# 1802 "data/maps/ParcelCoast/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoast_T_Beate_R5_2
-# 1767 "data/maps/ParcelCoast/scripts.pory"
+# 1807 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_COAST_BEATE_R5, ParcelCoast_T_Beate_R3_Text_1
-# 1768 "data/maps/ParcelCoast/scripts.pory"
+# 1808 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R5_Text_1, MSGBOX_DEFAULT
-# 1769 "data/maps/ParcelCoast/scripts.pory"
+# 1809 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_T_Beate_R5_2:
-# 1763 "data/maps/ParcelCoast/scripts.pory"
+# 1803 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_T_Beate_R2_Text_1, MSGBOX_DEFAULT
-# 1764 "data/maps/ParcelCoast/scripts.pory"
+# 1804 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_Shell::
-# 1775 "data/maps/ParcelCoast/scripts.pory"
+# 1815 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1776 "data/maps/ParcelCoast/scripts.pory"
+# 1816 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_SHELL_FOUND, ParcelCoast_Shell_2
-# 1782 "data/maps/ParcelCoast/scripts.pory"
+# 1822 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Shell_Text_1, MSGBOX_SIGN
-# 1783 "data/maps/ParcelCoast/scripts.pory"
+# 1823 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Shell_2:
-# 1777 "data/maps/ParcelCoast/scripts.pory"
+# 1817 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Shell_Text_0, MSGBOX_SIGN
-# 1778 "data/maps/ParcelCoast/scripts.pory"
+# 1818 "data/maps/ParcelCoast/scripts.pory"
 	setflag FLAG_SKALD_Q_SHELL_FOUND
-# 1779 "data/maps/ParcelCoast/scripts.pory"
+# 1819 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 
 ParcelCoast_PerrinScene::
-# 1789 "data/maps/ParcelCoast/scripts.pory"
+# 1829 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALD_PERRIN_6, ParcelCoast_PerrinScene_2
-# 1793 "data/maps/ParcelCoast/scripts.pory"
+# 1833 "data/maps/ParcelCoast/scripts.pory"
 	lockall
-# 1794 "data/maps/ParcelCoast/scripts.pory"
+# 1834 "data/maps/ParcelCoast/scripts.pory"
 	playse SE_PIN
-# 1795 "data/maps/ParcelCoast/scripts.pory"
+# 1835 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PerrinScene_Text_0, MSGBOX_DEFAULT
-# 1796 "data/maps/ParcelCoast/scripts.pory"
+# 1836 "data/maps/ParcelCoast/scripts.pory"
 	closemessage
-# 1797 "data/maps/ParcelCoast/scripts.pory"
+# 1837 "data/maps/ParcelCoast/scripts.pory"
 	applymovement 33, Movement_ParcelCoast_PerrinIn
-# 1798 "data/maps/ParcelCoast/scripts.pory"
+# 1838 "data/maps/ParcelCoast/scripts.pory"
 	waitmovement 0
-# 1799 "data/maps/ParcelCoast/scripts.pory"
+# 1839 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PerrinScene_Text_1, MSGBOX_DEFAULT
-# 1800 "data/maps/ParcelCoast/scripts.pory"
+# 1840 "data/maps/ParcelCoast/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_PERRIN_6, ParcelCoast_PerrinScene_Text_2
-# 1801 "data/maps/ParcelCoast/scripts.pory"
+# 1841 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PerrinScene_Text_3, MSGBOX_DEFAULT
-# 1802 "data/maps/ParcelCoast/scripts.pory"
+# 1842 "data/maps/ParcelCoast/scripts.pory"
 	closemessage
-# 1803 "data/maps/ParcelCoast/scripts.pory"
+# 1843 "data/maps/ParcelCoast/scripts.pory"
 	applymovement 33, Movement_ParcelCoast_PerrinOut
-# 1804 "data/maps/ParcelCoast/scripts.pory"
+# 1844 "data/maps/ParcelCoast/scripts.pory"
 	waitmovement 0
-# 1805 "data/maps/ParcelCoast/scripts.pory"
+# 1845 "data/maps/ParcelCoast/scripts.pory"
 	removeobject 33
-# 1806 "data/maps/ParcelCoast/scripts.pory"
+# 1846 "data/maps/ParcelCoast/scripts.pory"
 	setflag FLAG_SKALD_PERRIN_6
-# 1807 "data/maps/ParcelCoast/scripts.pory"
+# 1847 "data/maps/ParcelCoast/scripts.pory"
 	setvar VAR_TEMP_5, 1
-# 1808 "data/maps/ParcelCoast/scripts.pory"
+# 1848 "data/maps/ParcelCoast/scripts.pory"
 	releaseall
 	end
 
 ParcelCoast_PerrinScene_2:
-# 1790 "data/maps/ParcelCoast/scripts.pory"
+# 1830 "data/maps/ParcelCoast/scripts.pory"
 	setvar VAR_TEMP_5, 1
 	end
 
 
 ParcelCoast_PerrinTalk::
-# 1812 "data/maps/ParcelCoast/scripts.pory"
-	lock
-# 1813 "data/maps/ParcelCoast/scripts.pory"
-	faceplayer
-# 1814 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PerrinTalk_Text_0, MSGBOX_DEFAULT
-# 1815 "data/maps/ParcelCoast/scripts.pory"
-	release
-	end
-
-
-# 1818 "data/maps/ParcelCoast/scripts.pory"
-Movement_ParcelCoast_PerrinIn:
-# 1818 "data/maps/ParcelCoast/scripts.pory"
-	walk_down
-# 1818 "data/maps/ParcelCoast/scripts.pory"
-	walk_down
-	step_end
-
-# 1819 "data/maps/ParcelCoast/scripts.pory"
-Movement_ParcelCoast_PerrinOut:
-# 1819 "data/maps/ParcelCoast/scripts.pory"
-	walk_up
-# 1819 "data/maps/ParcelCoast/scripts.pory"
-	walk_up
-	step_end
-
-ParcelCoast_Epilogue::
-# 1823 "data/maps/ParcelCoast/scripts.pory"
-	lockall
-# 1824 "data/maps/ParcelCoast/scripts.pory"
-	delay 20
-# 1825 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Epilogue_Text_0, MSGBOX_DEFAULT
-# 1826 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Epilogue_Text_1, MSGBOX_DEFAULT
-# 1827 "data/maps/ParcelCoast/scripts.pory"
-	closemessage
-# 1828 "data/maps/ParcelCoast/scripts.pory"
-	setvar VAR_SKALD_EPILOGUE, 8
-# 1829 "data/maps/ParcelCoast/scripts.pory"
-	warp MAP_PARCEL_ROUTE1, 8, 26
-# 1830 "data/maps/ParcelCoast/scripts.pory"
-	waitstate
-	end
-
-
-ParcelCoast_GymHarland_Rematch::
-# 1836 "data/maps/ParcelCoast/scripts.pory"
-	lock
-# 1837 "data/maps/ParcelCoast/scripts.pory"
-	faceplayer
-# 1838 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_GymHarland_Rematch_Text_0, MSGBOX_YESNO
-# 1839 "data/maps/ParcelCoast/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq ParcelCoast_GymHarland_Rematch_2
-# 1844 "data/maps/ParcelCoast/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_GYM6_R, ParcelCoast_GymHarland_Rematch_Text_2
-# 1845 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_GymHarland_Rematch_Text_3, MSGBOX_DEFAULT
-# 1846 "data/maps/ParcelCoast/scripts.pory"
-	release
-	end
-
-ParcelCoast_GymHarland_Rematch_2:
-# 1840 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_GymHarland_Rematch_Text_1, MSGBOX_DEFAULT
-# 1841 "data/maps/ParcelCoast/scripts.pory"
-	release
-	end
-
-
-ParcelCoast_Dorsey::
 # 1852 "data/maps/ParcelCoast/scripts.pory"
 	lock
 # 1853 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
 # 1854 "data/maps/ParcelCoast/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Dorsey_2
+	msgbox ParcelCoast_PerrinTalk_Text_0, MSGBOX_DEFAULT
+# 1855 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+
+# 1858 "data/maps/ParcelCoast/scripts.pory"
+Movement_ParcelCoast_PerrinIn:
+# 1858 "data/maps/ParcelCoast/scripts.pory"
+	walk_down
+# 1858 "data/maps/ParcelCoast/scripts.pory"
+	walk_down
+	step_end
+
 # 1859 "data/maps/ParcelCoast/scripts.pory"
-	goto_if_set FLAG_SKALD_DORSEY_CO, ParcelCoast_Dorsey_5
+Movement_ParcelCoast_PerrinOut:
+# 1859 "data/maps/ParcelCoast/scripts.pory"
+	walk_up
+# 1859 "data/maps/ParcelCoast/scripts.pory"
+	walk_up
+	step_end
+
+ParcelCoast_Epilogue::
+# 1863 "data/maps/ParcelCoast/scripts.pory"
+	lockall
 # 1864 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_Dorsey_Text_2, MSGBOX_DEFAULT
+	delay 20
 # 1865 "data/maps/ParcelCoast/scripts.pory"
-	setflag FLAG_SKALD_DORSEY_CO
+	msgbox ParcelCoast_Epilogue_Text_0, MSGBOX_DEFAULT
 # 1866 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Epilogue_Text_1, MSGBOX_DEFAULT
+# 1867 "data/maps/ParcelCoast/scripts.pory"
+	closemessage
+# 1868 "data/maps/ParcelCoast/scripts.pory"
+	setvar VAR_SKALD_EPILOGUE, 8
+# 1869 "data/maps/ParcelCoast/scripts.pory"
+	warp MAP_PARCEL_ROUTE1, 8, 26
+# 1870 "data/maps/ParcelCoast/scripts.pory"
+	waitstate
+	end
+
+
+ParcelCoast_GymHarland_Rematch::
+# 1876 "data/maps/ParcelCoast/scripts.pory"
+	lock
+# 1877 "data/maps/ParcelCoast/scripts.pory"
+	faceplayer
+# 1878 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_GymHarland_Rematch_Text_0, MSGBOX_YESNO
+# 1879 "data/maps/ParcelCoast/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelCoast_GymHarland_Rematch_2
+# 1884 "data/maps/ParcelCoast/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_GYM6_R, ParcelCoast_GymHarland_Rematch_Text_2
+# 1885 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_GymHarland_Rematch_Text_3, MSGBOX_DEFAULT
+# 1886 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_GymHarland_Rematch_2:
+# 1880 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_GymHarland_Rematch_Text_1, MSGBOX_DEFAULT
+# 1881 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+
+ParcelCoast_Dorsey::
+# 1892 "data/maps/ParcelCoast/scripts.pory"
+	lock
+# 1893 "data/maps/ParcelCoast/scripts.pory"
+	faceplayer
+# 1894 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Dorsey_2
+# 1899 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALD_DORSEY_CO, ParcelCoast_Dorsey_5
+# 1904 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Dorsey_Text_2, MSGBOX_DEFAULT
+# 1905 "data/maps/ParcelCoast/scripts.pory"
+	setflag FLAG_SKALD_DORSEY_CO
+# 1906 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Dorsey_2:
-# 1855 "data/maps/ParcelCoast/scripts.pory"
+# 1895 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Dorsey_Text_0, MSGBOX_DEFAULT
-# 1856 "data/maps/ParcelCoast/scripts.pory"
+# 1896 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Dorsey_5:
-# 1860 "data/maps/ParcelCoast/scripts.pory"
+# 1900 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Dorsey_Text_1, MSGBOX_DEFAULT
-# 1861 "data/maps/ParcelCoast/scripts.pory"
+# 1901 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
@@ -4196,7 +4268,16 @@ ParcelCoast_Worker_Text_0:
 	.string "spoke. Two minutes. He was good.$"
 
 ParcelCoast_Worker_Text_1:
-# 228 "data/maps/ParcelCoast/scripts.pory"
+# 229 "data/maps/ParcelCoast/scripts.pory"
+	.string "WORKER: You named it. The whole quay\n"
+	.string "knew by the tide after. COLLAPSING.\l"
+	.string "We've known for years; we'd just never\l"
+	.string "heard it said by somebody with a card.\p"
+	.string "There's people in the frame, RANGER. You\n"
+	.string "put us in it. That's fair. Keep us in it.$"
+
+ParcelCoast_Worker_Text_2:
+# 233 "data/maps/ParcelCoast/scripts.pory"
 	.string "WORKER: Four generations my family's\n"
 	.string "worked this quay. Good work. Honest\l"
 	.string "work.\p"
@@ -4206,55 +4287,94 @@ ParcelCoast_Worker_Text_1:
 	.string "to haul, or we don't eat.$"
 
 ParcelCoast_Vendor1_Text_0:
-# 236 "data/maps/ParcelCoast/scripts.pory"
+# 241 "data/maps/ParcelCoast/scripts.pory"
 	.string "WOMAN: Cod. Different sizes today. The\n"
 	.string "review's inspector weighs them herself.\l"
 	.string "Customers ask why they're not tidy. I\l"
 	.string "tell them. First time I've told them.$"
 
 ParcelCoast_Vendor1_Text_1:
-# 240 "data/maps/ParcelCoast/scripts.pory"
+# 246 "data/maps/ParcelCoast/scripts.pory"
+	.string "WOMAN: Cod, iced this morning. All one\n"
+	.string "size. A customer asked why today, first\l"
+	.string "time ever.\p"
+	.string "I said ask the ranger. She said the\n"
+	.string "ranger already did. I sold her two\l"
+	.string "anyway.$"
+
+ParcelCoast_Vendor1_Text_2:
+# 250 "data/maps/ParcelCoast/scripts.pory"
 	.string "WOMAN: Cod, iced this morning. All the\n"
 	.string "same size, aren't they. Customers like\l"
 	.string "that. Tidy. Nobody asks why there's no\l"
 	.string "big ones.$"
 
 ParcelCoast_Vendor2_Text_0:
-# 248 "data/maps/ParcelCoast/scripts.pory"
+# 258 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAN: Urchin roe's off the list. The\n"
 	.string "review says the bottom's a nursery, not\l"
 	.string "a shelf. Nothing else down there to sell.\l"
 	.string "That was the point, wasn't it.$"
 
 ParcelCoast_Vendor2_Text_1:
-# 252 "data/maps/ParcelCoast/scripts.pory"
+# 263 "data/maps/ParcelCoast/scripts.pory"
+	.string "MAN: Urchin roe. The FOUNDATION buyer\n"
+	.string "didn't come this morning. First morning\l"
+	.string "in a year.\p"
+	.string "You wrote 'urchins' in your survey, I\n"
+	.string "hear. Funny how a word gets to a buyer\l"
+	.string "before it gets to a fisherman.$"
+
+ParcelCoast_Vendor2_Text_2:
+# 267 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAN: Urchin roe! The FOUNDATION found\n"
 	.string "a market for it overseas. Clever.\l"
 	.string "There's nothing else down there to sell.$"
 
 ParcelCoast_Vendor3_Text_0:
-# 260 "data/maps/ParcelCoast/scripts.pory"
+# 275 "data/maps/ParcelCoast/scripts.pory"
 	.string "WOMAN: Ice is still FOUNDATION ice.\n"
 	.string "Fuel's still FOUNDATION fuel. The rent\l"
 	.string "went down a page in the review. I sell\l"
 	.string "fish. I noticed the page.$"
 
 ParcelCoast_Vendor3_Text_1:
-# 264 "data/maps/ParcelCoast/scripts.pory"
+# 280 "data/maps/ParcelCoast/scripts.pory"
+	.string "WOMAN: FOUNDATION ice, FOUNDATION\n"
+	.string "fuel, FOUNDATION rent, and today a\l"
+	.string "FOUNDATION man came round asking what\l"
+	.string "the ranger bought.\p"
+	.string "I said fish. He wrote it down.\n"
+	.string "Everybody's writing things down this\l"
+	.string "week. I liked it better when it was just\l"
+	.string "you.$"
+
+ParcelCoast_Vendor3_Text_2:
+# 284 "data/maps/ParcelCoast/scripts.pory"
 	.string "WOMAN: Ice is FOUNDATION ice. Fuel's\n"
 	.string "FOUNDATION fuel. The stall rent goes to\l"
 	.string "a FOUNDATION company. I sell fish.\l"
 	.string "That's the only bit of this that's mine.$"
 
 ParcelCoast_Vendor4_Text_0:
-# 272 "data/maps/ParcelCoast/scripts.pory"
+# 292 "data/maps/ParcelCoast/scripts.pory"
 	.string "OLD MAN: WAILMER in the harbour mouth\n"
 	.string "yesterday. One. My father would have\l"
 	.string "laughed at one. I stood on the quay and\l"
 	.string "watched it like a boy.$"
 
 ParcelCoast_Vendor4_Text_1:
-# 276 "data/maps/ParcelCoast/scripts.pory"
+# 297 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Walk across the harbour on the\n"
+	.string "backs of the WAILMER. My father said it.\l"
+	.string "Now it's in a ranger's book, with a date\l"
+	.string "beside it.\p"
+	.string "First time anybody's written down what\n"
+	.string "my father said. He'd have hated the\l"
+	.string "date. He'd have liked the rest.$"
+
+ParcelCoast_Vendor4_Text_2:
+# 301 "data/maps/ParcelCoast/scripts.pory"
 	.string "OLD MAN: Fifty years ago you could walk\n"
 	.string "across the harbour on the backs of the\l"
 	.string "WAILMER. My father said that. His\l"
@@ -4262,40 +4382,68 @@ ParcelCoast_Vendor4_Text_1:
 	.string "keep saying it.$"
 
 ParcelCoast_Girl_Text_0:
-# 284 "data/maps/ParcelCoast/scripts.pory"
+# 309 "data/maps/ParcelCoast/scripts.pory"
 	.string "GIRL: The gulls dived today. Mum\n"
 	.string "stopped on the quay to watch. She\l"
 	.string "didn't say anything. She held my hand\l"
 	.string "very tight.$"
 
 ParcelCoast_Girl_Text_1:
-# 288 "data/maps/ParcelCoast/scripts.pory"
+# 314 "data/maps/ParcelCoast/scripts.pory"
+	.string "GIRL: The gulls still don't dive. But a\n"
+	.string "man from the FOUNDATION stood on the\l"
+	.string "quay and watched them not dive for an\l"
+	.string "hour.\p"
+	.string "Mum says that's new. Watching's new.\n"
+	.string "I've been watching for ages.$"
+
+ParcelCoast_Girl_Text_2:
+# 318 "data/maps/ParcelCoast/scripts.pory"
 	.string "GIRL: The gulls follow the boats in but\n"
 	.string "they don't dive anymore. Mum says they\l"
 	.string "know something we don't.$"
 
 ParcelCoast_Docker_Text_0:
-# 296 "data/maps/ParcelCoast/scripts.pory"
+# 326 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: Cannery's on half days. Half\n"
 	.string "days, full pay. HARLAND's lot argued it\l"
 	.string "in the union hall for a week. I slept in a\l"
 	.string "bed in daylight. Strange thing.$"
 
 ParcelCoast_Docker_Text_1:
-# 300 "data/maps/ParcelCoast/scripts.pory"
+# 331 "data/maps/ParcelCoast/scripts.pory"
+	.string "DOCKER: Two shifts, seven days, and\n"
+	.string "this morning head office rang the\l"
+	.string "cannery twice. The cannery never stops.\l"
+	.string "The phone never rang.\p"
+	.string "You wrote something. I don't know what.\n"
+	.string "The phone knows.$"
+
+ParcelCoast_Docker_Text_2:
+# 335 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: Two shifts a day, seven days.\n"
 	.string "The cannery never stops. The fish stop.\l"
 	.string "The cannery doesn't.$"
 
 ParcelCoast_GullMan_Text_0:
-# 308 "data/maps/ParcelCoast/scripts.pory"
+# 343 "data/maps/ParcelCoast/scripts.pory"
 	.string "OLD MAN: I count the boats out and the\n"
 	.string "boats in. Half the number now, by order.\l"
 	.string "The crates per boat went up. Nobody\l"
 	.string "asked me. I'm telling you anyway.$"
 
 ParcelCoast_GullMan_Text_1:
-# 312 "data/maps/ParcelCoast/scripts.pory"
+# 348 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Boats out, boats in. Same\n"
+	.string "number. Crates, fewer. And now\l"
+	.string "somebody's counted the counting: your\l"
+	.string "survey has my crates in it.\p"
+	.string "Nobody asked me to count. Somebody\n"
+	.string "read it anyway. That's all a counter\l"
+	.string "wants, in the end.$"
+
+ParcelCoast_GullMan_Text_2:
+# 352 "data/maps/ParcelCoast/scripts.pory"
 	.string "OLD MAN: I count the boats out and the\n"
 	.string "boats in. Same number. I count the\l"
 	.string "crates. Fewer every month. Nobody\l"
@@ -4303,32 +4451,32 @@ ParcelCoast_GullMan_Text_1:
 	.string "gulls either.$"
 
 ParcelCoast_ReturnFerry_Text_0:
-# 322 "data/maps/ParcelCoast/scripts.pory"
+# 362 "data/maps/ParcelCoast/scripts.pory"
 	.string "SAILOR: Back to SALTWICK, RANGER? Go\n"
 	.string "on. They'll want to see the one who did\l"
 	.string "it. Don't let them buy you a drink.\l"
 	.string "They'll try.$"
 
 ParcelCoast_ReturnFerry_Text_1:
-# 326 "data/maps/ParcelCoast/scripts.pory"
+# 366 "data/maps/ParcelCoast/scripts.pory"
 	.string "SAILOR: Back to SALTWICK, RANGER?\n"
 	.string "Can't say I blame you. Nothing to do\l"
 	.string "here but watch them take it.$"
 
 ParcelCoast_ReturnFerry_Text_2:
-# 328 "data/maps/ParcelCoast/scripts.pory"
+# 368 "data/maps/ParcelCoast/scripts.pory"
 	.string "SAILOR: I'll wait. The catch isn't going\n"
 	.string "anywhere. Less of it every run, but it\l"
 	.string "isn't going anywhere.$"
 
 ParcelCoast_MereholtAide_Text_0:
-# 345 "data/maps/ParcelCoast/scripts.pory"
+# 385 "data/maps/ParcelCoast/scripts.pory"
 	.string "AIDE: No message came down. She said\n"
 	.string "you would already have everything she'd\l"
 	.string "say.$"
 
 ParcelCoast_MereholtAide_Text_1:
-# 349 "data/maps/ParcelCoast/scripts.pory"
+# 389 "data/maps/ParcelCoast/scripts.pory"
 	.string "AIDE: Ms. BROOKE is up from the mainland\n"
 	.string "office. She has asked for you. By name,\l"
 	.string "no title on it.\p"
@@ -4336,16 +4484,16 @@ ParcelCoast_MereholtAide_Text_1:
 	.string "would.$"
 
 ParcelCoast_MereholtAide_Text_2:
-# 350 "data/maps/ParcelCoast/scripts.pory"
+# 390 "data/maps/ParcelCoast/scripts.pory"
 	.string "Go up?$"
 
 ParcelCoast_MereholtAide_Text_3:
-# 352 "data/maps/ParcelCoast/scripts.pory"
+# 392 "data/maps/ParcelCoast/scripts.pory"
 	.string "AIDE: She'll wait. She prices patience\n"
 	.string "like everything else. Accurately.$"
 
 ParcelCoast_SignQuay_Text_0:
-# 367 "data/maps/ParcelCoast/scripts.pory"
+# 407 "data/maps/ParcelCoast/scripts.pory"
 	.string "MEREHOLT COASTAL WORKS -- LIGHTHOUSE\n"
 	.string "QUAY\p"
 	.string "Ferry to SALTWICK, twice daily. Landing\n"
@@ -4353,7 +4501,7 @@ ParcelCoast_SignQuay_Text_0:
 	.string "quay. The quay is for the fleet.$"
 
 ParcelCoast_SignMarket_Text_0:
-# 371 "data/maps/ParcelCoast/scripts.pory"
+# 411 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISH MARKET\p"
 	.string "Stalls 1-12 let by MEREHOLT COASTAL\n"
 	.string "HOLDINGS. Catch to be weighed at the\l"
@@ -4362,1273 +4510,1273 @@ ParcelCoast_SignMarket_Text_0:
 	.string "the Board says this month.$"
 
 ParcelCoast_Brage_Text_0:
-# 378 "data/maps/ParcelCoast/scripts.pory"
+# 418 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Off the boats, on the beach,\n"
 	.string "nothing to do till the tide. Battle me,\l"
 	.string "RANGER, I'm bored of losing at cards.$"
 
 ParcelCoast_Brage_Text_1:
-# 379 "data/maps/ParcelCoast/scripts.pory"
+# 419 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Lost at that too.$"
 
 ParcelCoast_Brage_Text_2:
-# 394 "data/maps/ParcelCoast/scripts.pory"
+# 434 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Ten years on the trawlers. We\n"
 	.string "used to come in with the deck awash.\l"
 	.string "Now you can see the planks the whole\l"
 	.string "trip home.$"
 
 ParcelCoast_Brage_R2_Text_0:
-# 405 "data/maps/ParcelCoast/scripts.pory"
+# 445 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelCoast_Brage_R2_Text_1:
-# 407 "data/maps/ParcelCoast/scripts.pory"
+# 447 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Another time, then.$"
 
 ParcelCoast_Brage_R2_Text_2:
-# 411 "data/maps/ParcelCoast/scripts.pory"
+# 451 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: …Fair.$"
 
 ParcelCoast_Brage_R2_Text_3:
-# 412 "data/maps/ParcelCoast/scripts.pory"
+# 452 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelCoast_Brage_R3_Text_0:
-# 419 "data/maps/ParcelCoast/scripts.pory"
+# 459 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelCoast_Brage_R3_Text_1:
-# 425 "data/maps/ParcelCoast/scripts.pory"
+# 465 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Still yours.$"
 
 ParcelCoast_Brage_R3_Text_2:
-# 426 "data/maps/ParcelCoast/scripts.pory"
+# 466 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_Brage_R4_Text_0:
-# 433 "data/maps/ParcelCoast/scripts.pory"
+# 473 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelCoast_Brage_R4_Text_1:
-# 440 "data/maps/ParcelCoast/scripts.pory"
+# 480 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelCoast_Brage_R5_Text_0:
-# 447 "data/maps/ParcelCoast/scripts.pory"
+# 487 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelCoast_Brage_R5_Text_1:
-# 453 "data/maps/ParcelCoast/scripts.pory"
+# 493 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Right. That's the whole of it.$"
 
 ParcelCoast_Brage_R5_Text_2:
-# 454 "data/maps/ParcelCoast/scripts.pory"
+# 494 "data/maps/ParcelCoast/scripts.pory"
 	.string "BRAGE: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelCoast_Frod_Text_0:
-# 460 "data/maps/ParcelCoast/scripts.pory"
+# 500 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: SHARPEDO off the beach. Never\n"
 	.string "used to be. Nothing else to eat so they\l"
 	.string "come in close. Battle.$"
 
 ParcelCoast_Frod_Text_1:
-# 461 "data/maps/ParcelCoast/scripts.pory"
+# 501 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Close enough.$"
 
 ParcelCoast_Frod_Text_2:
-# 476 "data/maps/ParcelCoast/scripts.pory"
+# 516 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: When the big fish are gone, the\n"
 	.string "sharks eat whatever's left and then\l"
 	.string "they eat each other. That's not a\l"
 	.string "saying. That's this beach.$"
 
 ParcelCoast_Frod_R2_Text_0:
-# 487 "data/maps/ParcelCoast/scripts.pory"
+# 527 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelCoast_Frod_R2_Text_1:
-# 489 "data/maps/ParcelCoast/scripts.pory"
+# 529 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelCoast_Frod_R2_Text_2:
-# 493 "data/maps/ParcelCoast/scripts.pory"
+# 533 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: …Again, then. Later.$"
 
 ParcelCoast_Frod_R2_Text_3:
-# 494 "data/maps/ParcelCoast/scripts.pory"
+# 534 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelCoast_Frod_R3_Text_0:
-# 501 "data/maps/ParcelCoast/scripts.pory"
+# 541 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelCoast_Frod_R3_Text_1:
-# 508 "data/maps/ParcelCoast/scripts.pory"
+# 548 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_Frod_R4_Text_0:
-# 515 "data/maps/ParcelCoast/scripts.pory"
+# 555 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelCoast_Frod_R4_Text_1:
-# 521 "data/maps/ParcelCoast/scripts.pory"
+# 561 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Right. That's the whole of it.$"
 
 ParcelCoast_Frod_R4_Text_2:
-# 522 "data/maps/ParcelCoast/scripts.pory"
+# 562 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_Frod_R5_Text_0:
-# 529 "data/maps/ParcelCoast/scripts.pory"
+# 569 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelCoast_Frod_R5_Text_1:
-# 535 "data/maps/ParcelCoast/scripts.pory"
+# 575 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: Still yours.$"
 
 ParcelCoast_Frod_R5_Text_2:
-# 536 "data/maps/ParcelCoast/scripts.pory"
+# 576 "data/maps/ParcelCoast/scripts.pory"
 	.string "FROD: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelCoast_Gyda_Text_0:
-# 542 "data/maps/ParcelCoast/scripts.pory"
+# 582 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: You swam out past the dredge\n"
 	.string "line! Nobody does that. Battle, then I'll\l"
 	.string "show you what's down there.$"
 
 ParcelCoast_Gyda_Text_1:
-# 543 "data/maps/ParcelCoast/scripts.pory"
+# 583 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: Nothing. That's what's down\n"
 	.string "there. Nothing.$"
 
 ParcelCoast_Gyda_Text_2:
-# 558 "data/maps/ParcelCoast/scripts.pory"
+# 598 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: I dive the barren for the\n"
 	.string "FOUNDATION. Counting urchins. There's a\l"
 	.string "bonus if the number goes down. It never\l"
 	.string "goes down.$"
 
 ParcelCoast_Gyda_R2_Text_0:
-# 569 "data/maps/ParcelCoast/scripts.pory"
+# 609 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelCoast_Gyda_R2_Text_1:
-# 571 "data/maps/ParcelCoast/scripts.pory"
+# 611 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelCoast_Gyda_R2_Text_2:
-# 575 "data/maps/ParcelCoast/scripts.pory"
+# 615 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: That's the one I wanted to see.$"
 
 ParcelCoast_Gyda_R2_Text_3:
-# 576 "data/maps/ParcelCoast/scripts.pory"
+# 616 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelCoast_Gyda_R3_Text_0:
-# 583 "data/maps/ParcelCoast/scripts.pory"
+# 623 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: They say you don't lose any more.\n"
 	.string "Let's check?$"
 
 ParcelCoast_Gyda_R3_Text_1:
-# 589 "data/maps/ParcelCoast/scripts.pory"
+# 629 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: …Again, then. Later.$"
 
 ParcelCoast_Gyda_R3_Text_2:
-# 590 "data/maps/ParcelCoast/scripts.pory"
+# 630 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelCoast_Gyda_R4_Text_0:
-# 597 "data/maps/ParcelCoast/scripts.pory"
+# 637 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: I've watched you walk past twice.\n"
 	.string "Not a third time. Battle?$"
 
 ParcelCoast_Gyda_R4_Text_1:
-# 604 "data/maps/ParcelCoast/scripts.pory"
+# 644 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelCoast_Gyda_R5_Text_0:
-# 611 "data/maps/ParcelCoast/scripts.pory"
+# 651 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelCoast_Gyda_R5_Text_1:
-# 618 "data/maps/ParcelCoast/scripts.pory"
+# 658 "data/maps/ParcelCoast/scripts.pory"
 	.string "GYDA: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelCoast_Hroar_Text_0:
-# 624 "data/maps/ParcelCoast/scripts.pory"
+# 664 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: The inlet's mine. Been swimming\n"
 	.string "it since I was six. Battle for it.$"
 
 ParcelCoast_Hroar_Text_1:
-# 625 "data/maps/ParcelCoast/scripts.pory"
+# 665 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: Yours, then. Mind the drums.$"
 
 ParcelCoast_Hroar_Text_2:
-# 640 "data/maps/ParcelCoast/scripts.pory"
+# 680 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: There's fuel drums on the bottom\n"
 	.string "of the inlet with the crest on. Nobody\l"
 	.string "put them there. They just arrived.$"
 
 ParcelCoast_Hroar_R2_Text_0:
-# 651 "data/maps/ParcelCoast/scripts.pory"
+# 691 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelCoast_Hroar_R2_Text_1:
-# 653 "data/maps/ParcelCoast/scripts.pory"
+# 693 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: Suit yourself. I'm here.$"
 
 ParcelCoast_Hroar_R2_Text_2:
-# 657 "data/maps/ParcelCoast/scripts.pory"
+# 697 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: That's the one I wanted to see.$"
 
 ParcelCoast_Hroar_R2_Text_3:
-# 658 "data/maps/ParcelCoast/scripts.pory"
+# 698 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelCoast_Hroar_R3_Text_0:
-# 665 "data/maps/ParcelCoast/scripts.pory"
+# 705 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelCoast_Hroar_R3_Text_1:
-# 672 "data/maps/ParcelCoast/scripts.pory"
+# 712 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelCoast_Hroar_R4_Text_0:
-# 679 "data/maps/ParcelCoast/scripts.pory"
+# 719 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelCoast_Hroar_R4_Text_1:
-# 685 "data/maps/ParcelCoast/scripts.pory"
+# 725 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: Noted. Properly, this time.$"
 
 ParcelCoast_Hroar_R4_Text_2:
-# 686 "data/maps/ParcelCoast/scripts.pory"
+# 726 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_Hroar_R5_Text_0:
-# 693 "data/maps/ParcelCoast/scripts.pory"
+# 733 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelCoast_Hroar_R5_Text_1:
-# 699 "data/maps/ParcelCoast/scripts.pory"
+# 739 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: Still yours.$"
 
 ParcelCoast_Hroar_R5_Text_2:
-# 700 "data/maps/ParcelCoast/scripts.pory"
+# 740 "data/maps/ParcelCoast/scripts.pory"
 	.string "HROAR: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelCoast_Jorid_Text_0:
-# 706 "data/maps/ParcelCoast/scripts.pory"
+# 746 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: The beach is for playing! Nobody\n"
 	.string "plays here anymore. They work. Battle\l"
 	.string "me, that's nearly playing.$"
 
 ParcelCoast_Jorid_Text_1:
-# 707 "data/maps/ParcelCoast/scripts.pory"
+# 747 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Nearly.$"
 
 ParcelCoast_Jorid_Text_2:
-# 722 "data/maps/ParcelCoast/scripts.pory"
+# 762 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Mum says the beach used to have\n"
 	.string "shells. I've never found a shell. Just\l"
 	.string "the drum rings.$"
 
 ParcelCoast_Jorid_R2_Text_0:
-# 733 "data/maps/ParcelCoast/scripts.pory"
+# 773 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelCoast_Jorid_R2_Text_1:
-# 735 "data/maps/ParcelCoast/scripts.pory"
+# 775 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Fine. Same spot.$"
 
 ParcelCoast_Jorid_R2_Text_2:
-# 739 "data/maps/ParcelCoast/scripts.pory"
+# 779 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Noted. Properly, this time.$"
 
 ParcelCoast_Jorid_R2_Text_3:
-# 740 "data/maps/ParcelCoast/scripts.pory"
+# 780 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelCoast_Jorid_R3_Text_0:
-# 747 "data/maps/ParcelCoast/scripts.pory"
+# 787 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelCoast_Jorid_R3_Text_1:
-# 753 "data/maps/ParcelCoast/scripts.pory"
+# 793 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Right. That's the whole of it.$"
 
 ParcelCoast_Jorid_R3_Text_2:
-# 754 "data/maps/ParcelCoast/scripts.pory"
+# 794 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_Jorid_R4_Text_0:
-# 761 "data/maps/ParcelCoast/scripts.pory"
+# 801 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelCoast_Jorid_R4_Text_1:
-# 767 "data/maps/ParcelCoast/scripts.pory"
+# 807 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: …Fair.$"
 
 ParcelCoast_Jorid_R4_Text_2:
-# 768 "data/maps/ParcelCoast/scripts.pory"
+# 808 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_Jorid_R5_Text_0:
-# 775 "data/maps/ParcelCoast/scripts.pory"
+# 815 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelCoast_Jorid_R5_Text_1:
-# 782 "data/maps/ParcelCoast/scripts.pory"
+# 822 "data/maps/ParcelCoast/scripts.pory"
 	.string "JORID: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelCoast_Ketil_Text_0:
-# 788 "data/maps/ParcelCoast/scripts.pory"
+# 828 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: FOUNDATION security. Off duty.\n"
 	.string "On duty I'd ask for your pass. Off duty\l"
 	.string "I'll just beat you.$"
 
 ParcelCoast_Ketil_Text_1:
-# 789 "data/maps/ParcelCoast/scripts.pory"
+# 829 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: On duty tomorrow. Don't be here.$"
 
 ParcelCoast_Ketil_Text_2:
-# 804 "data/maps/ParcelCoast/scripts.pory"
+# 844 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: The office has a floor nobody\n"
 	.string "goes to. Top one. The boardroom. I've\l"
 	.string "seen the lift go up. Never seen it come\l"
 	.string "down with anyone smiling.$"
 
 ParcelCoast_Ketil_R2_Text_0:
-# 815 "data/maps/ParcelCoast/scripts.pory"
+# 855 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelCoast_Ketil_R2_Text_1:
-# 817 "data/maps/ParcelCoast/scripts.pory"
+# 857 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: No hurry. The water keeps.$"
 
 ParcelCoast_Ketil_R2_Text_2:
-# 821 "data/maps/ParcelCoast/scripts.pory"
+# 861 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: Noted. Properly, this time.$"
 
 ParcelCoast_Ketil_R2_Text_3:
-# 822 "data/maps/ParcelCoast/scripts.pory"
+# 862 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelCoast_Ketil_R3_Text_0:
-# 829 "data/maps/ParcelCoast/scripts.pory"
+# 869 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelCoast_Ketil_R3_Text_1:
-# 835 "data/maps/ParcelCoast/scripts.pory"
+# 875 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: Still yours.$"
 
 ParcelCoast_Ketil_R3_Text_2:
-# 836 "data/maps/ParcelCoast/scripts.pory"
+# 876 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_Ketil_R4_Text_0:
-# 843 "data/maps/ParcelCoast/scripts.pory"
+# 883 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelCoast_Ketil_R4_Text_1:
-# 849 "data/maps/ParcelCoast/scripts.pory"
+# 889 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: That's the one I wanted to see.$"
 
 ParcelCoast_Ketil_R4_Text_2:
-# 850 "data/maps/ParcelCoast/scripts.pory"
+# 890 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelCoast_Ketil_R5_Text_0:
-# 857 "data/maps/ParcelCoast/scripts.pory"
+# 897 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelCoast_Ketil_R5_Text_1:
-# 863 "data/maps/ParcelCoast/scripts.pory"
+# 903 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: …Fair.$"
 
 ParcelCoast_Ketil_R5_Text_2:
-# 864 "data/maps/ParcelCoast/scripts.pory"
+# 904 "data/maps/ParcelCoast/scripts.pory"
 	.string "KETIL: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelCoast_Liva_Text_0:
-# 870 "data/maps/ParcelCoast/scripts.pory"
+# 910 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: I came up from the mainland for\n"
 	.string "the FOUNDATION's graduate scheme.\l"
 	.string "Sustainable harvest modelling. Battle?$"
 
 ParcelCoast_Liva_Text_1:
-# 871 "data/maps/ParcelCoast/scripts.pory"
+# 911 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: The model didn't predict that.$"
 
 ParcelCoast_Liva_Text_2:
-# 886 "data/maps/ParcelCoast/scripts.pory"
+# 926 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: The model's beautiful. Elegant.\n"
 	.string "Every term in it is true. It's just that\l"
 	.string "the fish didn't read it.$"
 
 ParcelCoast_Liva_R2_Text_0:
-# 897 "data/maps/ParcelCoast/scripts.pory"
+# 937 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelCoast_Liva_R2_Text_1:
-# 899 "data/maps/ParcelCoast/scripts.pory"
+# 939 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Another time, then.$"
 
 ParcelCoast_Liva_R2_Text_2:
-# 903 "data/maps/ParcelCoast/scripts.pory"
+# 943 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: That's the one I wanted to see.$"
 
 ParcelCoast_Liva_R2_Text_3:
-# 904 "data/maps/ParcelCoast/scripts.pory"
+# 944 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelCoast_Liva_R3_Text_0:
-# 911 "data/maps/ParcelCoast/scripts.pory"
+# 951 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelCoast_Liva_R3_Text_1:
-# 917 "data/maps/ParcelCoast/scripts.pory"
+# 957 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Right. That's the whole of it.$"
 
 ParcelCoast_Liva_R3_Text_2:
-# 918 "data/maps/ParcelCoast/scripts.pory"
+# 958 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelCoast_Liva_R4_Text_0:
-# 925 "data/maps/ParcelCoast/scripts.pory"
+# 965 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Full strength, no excuses, mine or\n"
 	.string "yours. Rematch?$"
 
 ParcelCoast_Liva_R4_Text_1:
-# 931 "data/maps/ParcelCoast/scripts.pory"
+# 971 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Still yours.$"
 
 ParcelCoast_Liva_R4_Text_2:
-# 932 "data/maps/ParcelCoast/scripts.pory"
+# 972 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_Liva_R5_Text_0:
-# 939 "data/maps/ParcelCoast/scripts.pory"
+# 979 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: I heard what you filed. Then show\n"
 	.string "me what filed it?$"
 
 ParcelCoast_Liva_R5_Text_1:
-# 945 "data/maps/ParcelCoast/scripts.pory"
+# 985 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: …Fair.$"
 
 ParcelCoast_Liva_R5_Text_2:
-# 946 "data/maps/ParcelCoast/scripts.pory"
+# 986 "data/maps/ParcelCoast/scripts.pory"
 	.string "LIVA: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelCoast_Magnus_Text_0:
-# 952 "data/maps/ParcelCoast/scripts.pory"
+# 992 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Director, Coastal Holdings.\n"
 	.string "You're the RANGER with the notebook.\l"
 	.string "Humour me. I collect strong trainers\l"
 	.string "the way I collect quotas.$"
 
 ParcelCoast_Magnus_Text_1:
-# 953 "data/maps/ParcelCoast/scripts.pory"
+# 993 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Well. You're not for sale, at any\n"
 	.string "rate.$"
 
 ParcelCoast_Magnus_Text_2:
-# 968 "data/maps/ParcelCoast/scripts.pory"
+# 1008 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Write what you like. We own the\n"
 	.string "ice, the fuel, the stalls, the boats'\l"
 	.string "paper and the hearing hall. A report is a\l"
 	.string "piece of paper. We own the paper.$"
 
 ParcelCoast_Magnus_R2_Text_0:
-# 979 "data/maps/ParcelCoast/scripts.pory"
+# 1019 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelCoast_Magnus_R2_Text_1:
-# 981 "data/maps/ParcelCoast/scripts.pory"
+# 1021 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Fine. Same spot.$"
 
 ParcelCoast_Magnus_R2_Text_2:
-# 985 "data/maps/ParcelCoast/scripts.pory"
+# 1025 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Right. That's the whole of it.$"
 
 ParcelCoast_Magnus_R2_Text_3:
-# 986 "data/maps/ParcelCoast/scripts.pory"
+# 1026 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelCoast_Magnus_R3_Text_0:
-# 993 "data/maps/ParcelCoast/scripts.pory"
+# 1033 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelCoast_Magnus_R3_Text_1:
-# 999 "data/maps/ParcelCoast/scripts.pory"
+# 1039 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: …Again, then. Later.$"
 
 ParcelCoast_Magnus_R3_Text_2:
-# 1000 "data/maps/ParcelCoast/scripts.pory"
+# 1040 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_Magnus_R4_Text_0:
-# 1007 "data/maps/ParcelCoast/scripts.pory"
+# 1047 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelCoast_Magnus_R4_Text_1:
-# 1013 "data/maps/ParcelCoast/scripts.pory"
+# 1053 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: …Fair.$"
 
 ParcelCoast_Magnus_R4_Text_2:
-# 1014 "data/maps/ParcelCoast/scripts.pory"
+# 1054 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelCoast_Magnus_R5_Text_0:
-# 1021 "data/maps/ParcelCoast/scripts.pory"
+# 1061 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelCoast_Magnus_R5_Text_1:
-# 1027 "data/maps/ParcelCoast/scripts.pory"
+# 1067 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: Noted. Properly, this time.$"
 
 ParcelCoast_Magnus_R5_Text_2:
-# 1028 "data/maps/ParcelCoast/scripts.pory"
+# 1068 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAGNUS: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelCoast_Nikolai_Text_0:
-# 1034 "data/maps/ParcelCoast/scripts.pory"
+# 1074 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Father says the coast is an\n"
 	.string "investment. I say it smells. Battle me\l"
 	.string "and I'll tell Father you were rude.$"
 
 ParcelCoast_Nikolai_Text_1:
-# 1035 "data/maps/ParcelCoast/scripts.pory"
+# 1075 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Father won't care. Father\n"
 	.string "never cares.$"
 
 ParcelCoast_Nikolai_Text_2:
-# 1050 "data/maps/ParcelCoast/scripts.pory"
+# 1090 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: We have a house on the\n"
 	.string "mainland and a house here. The one here\l"
 	.string "is for 'optics'. I looked that up. It\l"
 	.string "means being seen.$"
 
 ParcelCoast_Nikolai_R2_Text_0:
-# 1061 "data/maps/ParcelCoast/scripts.pory"
+# 1101 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelCoast_Nikolai_R2_Text_1:
-# 1063 "data/maps/ParcelCoast/scripts.pory"
+# 1103 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Suit yourself. I'm here.$"
 
 ParcelCoast_Nikolai_R2_Text_2:
-# 1067 "data/maps/ParcelCoast/scripts.pory"
+# 1107 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Right. That's the whole of it.$"
 
 ParcelCoast_Nikolai_R2_Text_3:
-# 1068 "data/maps/ParcelCoast/scripts.pory"
+# 1108 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelCoast_Nikolai_R3_Text_0:
-# 1075 "data/maps/ParcelCoast/scripts.pory"
+# 1115 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: I moved the whole team on.\n"
 	.string "Let's see if you have?$"
 
 ParcelCoast_Nikolai_R3_Text_1:
-# 1082 "data/maps/ParcelCoast/scripts.pory"
+# 1122 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Three. I'll be stronger when\n"
 	.string "the coast's done with you.$"
 
 ParcelCoast_Nikolai_R4_Text_0:
-# 1089 "data/maps/ParcelCoast/scripts.pory"
+# 1129 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: I don't care about the paper.\n"
 	.string "I care about the one I lost. Go?$"
 
 ParcelCoast_Nikolai_R4_Text_1:
-# 1095 "data/maps/ParcelCoast/scripts.pory"
+# 1135 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: …Again, then. Later.$"
 
 ParcelCoast_Nikolai_R4_Text_2:
-# 1096 "data/maps/ParcelCoast/scripts.pory"
+# 1136 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelCoast_Nikolai_R5_Text_0:
-# 1103 "data/maps/ParcelCoast/scripts.pory"
+# 1143 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelCoast_Nikolai_R5_Text_1:
-# 1109 "data/maps/ParcelCoast/scripts.pory"
+# 1149 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: …Fair.$"
 
 ParcelCoast_Nikolai_R5_Text_2:
-# 1110 "data/maps/ParcelCoast/scripts.pory"
+# 1150 "data/maps/ParcelCoast/scripts.pory"
 	.string "NIKOLAI: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelCoast_Oda_Text_0:
-# 1116 "data/maps/ParcelCoast/scripts.pory"
+# 1156 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: The market's quaint, isn't it. All\n"
 	.string "these little stalls. I'm here for the\l"
 	.string "roe. Battle, darling?$"
 
 ParcelCoast_Oda_Text_1:
-# 1117 "data/maps/ParcelCoast/scripts.pory"
+# 1157 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: Not as quaint as I thought.$"
 
 ParcelCoast_Oda_Text_2:
-# 1132 "data/maps/ParcelCoast/scripts.pory"
+# 1172 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: Everyone on the mainland eats this\n"
 	.string "roe. It's on every menu. Nobody asks\l"
 	.string "what the urchins were eating before\l"
 	.string "there was nothing else.$"
 
 ParcelCoast_Oda_R2_Text_0:
-# 1143 "data/maps/ParcelCoast/scripts.pory"
+# 1183 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: I kept the team up for this. Again?$"
 
 ParcelCoast_Oda_R2_Text_1:
-# 1145 "data/maps/ParcelCoast/scripts.pory"
+# 1185 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: Fine. Same spot.$"
 
 ParcelCoast_Oda_R2_Text_2:
-# 1149 "data/maps/ParcelCoast/scripts.pory"
+# 1189 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: Still yours.$"
 
 ParcelCoast_Oda_R2_Text_3:
-# 1150 "data/maps/ParcelCoast/scripts.pory"
+# 1190 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelCoast_Oda_R3_Text_0:
-# 1157 "data/maps/ParcelCoast/scripts.pory"
+# 1197 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelCoast_Oda_R3_Text_1:
-# 1164 "data/maps/ParcelCoast/scripts.pory"
+# 1204 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelCoast_Oda_R4_Text_0:
-# 1171 "data/maps/ParcelCoast/scripts.pory"
+# 1211 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: I've watched you walk past twice.\n"
 	.string "Not a third time. Battle?$"
 
 ParcelCoast_Oda_R4_Text_1:
-# 1177 "data/maps/ParcelCoast/scripts.pory"
+# 1217 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: …Fair.$"
 
 ParcelCoast_Oda_R4_Text_2:
-# 1178 "data/maps/ParcelCoast/scripts.pory"
+# 1218 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_Oda_R5_Text_0:
-# 1185 "data/maps/ParcelCoast/scripts.pory"
+# 1225 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelCoast_Oda_R5_Text_1:
-# 1191 "data/maps/ParcelCoast/scripts.pory"
+# 1231 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: That's the one I wanted to see.$"
 
 ParcelCoast_Oda_R5_Text_2:
-# 1192 "data/maps/ParcelCoast/scripts.pory"
+# 1232 "data/maps/ParcelCoast/scripts.pory"
 	.string "ODA: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelCoast_Petter_Text_0:
-# 1198 "data/maps/ParcelCoast/scripts.pory"
+# 1238 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Cannery night shift. I sleep on\n"
 	.string "the quay. You woke me. Battle.$"
 
 ParcelCoast_Petter_Text_1:
-# 1199 "data/maps/ParcelCoast/scripts.pory"
+# 1239 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Going back to sleep.$"
 
 ParcelCoast_Petter_Text_2:
-# 1214 "data/maps/ParcelCoast/scripts.pory"
+# 1254 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Two shifts a day and the cans\n"
 	.string "are half empty. They put more water in.\l"
 	.string "You can taste the quota in the tin.$"
 
 ParcelCoast_Petter_R2_Text_0:
-# 1225 "data/maps/ParcelCoast/scripts.pory"
+# 1265 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelCoast_Petter_R2_Text_1:
-# 1227 "data/maps/ParcelCoast/scripts.pory"
+# 1267 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Another time, then.$"
 
 ParcelCoast_Petter_R2_Text_2:
-# 1231 "data/maps/ParcelCoast/scripts.pory"
+# 1271 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: …Fair.$"
 
 ParcelCoast_Petter_R2_Text_3:
-# 1232 "data/maps/ParcelCoast/scripts.pory"
+# 1272 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelCoast_Petter_R3_Text_0:
-# 1239 "data/maps/ParcelCoast/scripts.pory"
+# 1279 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelCoast_Petter_R3_Text_1:
-# 1245 "data/maps/ParcelCoast/scripts.pory"
+# 1285 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Still yours.$"
 
 ParcelCoast_Petter_R3_Text_2:
-# 1246 "data/maps/ParcelCoast/scripts.pory"
+# 1286 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_Petter_R4_Text_0:
-# 1253 "data/maps/ParcelCoast/scripts.pory"
+# 1293 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Full strength, no excuses, mine\n"
 	.string "or yours. Rematch?$"
 
 ParcelCoast_Petter_R4_Text_1:
-# 1259 "data/maps/ParcelCoast/scripts.pory"
+# 1299 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Noted. Properly, this time.$"
 
 ParcelCoast_Petter_R4_Text_2:
-# 1260 "data/maps/ParcelCoast/scripts.pory"
+# 1300 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelCoast_Petter_R5_Text_0:
-# 1267 "data/maps/ParcelCoast/scripts.pory"
+# 1307 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelCoast_Petter_R5_Text_1:
-# 1274 "data/maps/ParcelCoast/scripts.pory"
+# 1314 "data/maps/ParcelCoast/scripts.pory"
 	.string "PETTER: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelCoast_Ragnar_Text_0:
-# 1280 "data/maps/ParcelCoast/scripts.pory"
+# 1320 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: One GYARADOS. Took me a\n"
 	.string "lifetime off this quay. Last one in the\l"
 	.string "harbour, maybe. Battle it.$"
 
 ParcelCoast_Ragnar_Text_1:
-# 1281 "data/maps/ParcelCoast/scripts.pory"
+# 1321 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: It's still the last one.$"
 
 ParcelCoast_Ragnar_Text_2:
-# 1296 "data/maps/ParcelCoast/scripts.pory"
+# 1336 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: HARLAND's cousin, river side. He\n"
 	.string "talks about you. Doesn't say good or\l"
 	.string "bad. Just talks. For HARLAND that's a\l"
 	.string "speech.$"
 
 ParcelCoast_Ragnar_R2_Text_0:
-# 1307 "data/maps/ParcelCoast/scripts.pory"
+# 1347 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelCoast_Ragnar_R2_Text_1:
-# 1309 "data/maps/ParcelCoast/scripts.pory"
+# 1349 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: Suit yourself. I'm here.$"
 
 ParcelCoast_Ragnar_R2_Text_2:
-# 1313 "data/maps/ParcelCoast/scripts.pory"
+# 1353 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: Still yours.$"
 
 ParcelCoast_Ragnar_R2_Text_3:
-# 1314 "data/maps/ParcelCoast/scripts.pory"
+# 1354 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelCoast_Ragnar_R3_Text_0:
-# 1321 "data/maps/ParcelCoast/scripts.pory"
+# 1361 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: I moved the whole team on.\n"
 	.string "Let's see if you have?$"
 
 ParcelCoast_Ragnar_R3_Text_1:
-# 1327 "data/maps/ParcelCoast/scripts.pory"
+# 1367 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: That's the one I wanted to see.$"
 
 ParcelCoast_Ragnar_R3_Text_2:
-# 1328 "data/maps/ParcelCoast/scripts.pory"
+# 1368 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelCoast_Ragnar_R4_Text_0:
-# 1335 "data/maps/ParcelCoast/scripts.pory"
+# 1375 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelCoast_Ragnar_R4_Text_1:
-# 1341 "data/maps/ParcelCoast/scripts.pory"
+# 1381 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: …Fair.$"
 
 ParcelCoast_Ragnar_R4_Text_2:
-# 1342 "data/maps/ParcelCoast/scripts.pory"
+# 1382 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelCoast_Ragnar_R5_Text_0:
-# 1349 "data/maps/ParcelCoast/scripts.pory"
+# 1389 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelCoast_Ragnar_R5_Text_1:
-# 1356 "data/maps/ParcelCoast/scripts.pory"
+# 1396 "data/maps/ParcelCoast/scripts.pory"
 	.string "RAGNAR: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelCoast_Solvor_Text_0:
-# 1362 "data/maps/ParcelCoast/scripts.pory"
+# 1402 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: My AZUMARILL loves the\n"
 	.string "harbour! Well. Loved. It won't go in the\l"
 	.string "water now. Battle?$"
 
 ParcelCoast_Solvor_Text_1:
-# 1363 "data/maps/ParcelCoast/scripts.pory"
+# 1403 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: It still won't go in.$"
 
 ParcelCoast_Solvor_Text_2:
-# 1378 "data/maps/ParcelCoast/scripts.pory"
+# 1418 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: It came out itchy, same as the\n"
 	.string "MARILL at ELVSUND. The same itch, two\l"
 	.string "hundred miles apart. That's not two\l"
 	.string "problems.$"
 
 ParcelCoast_Solvor_R2_Text_0:
-# 1389 "data/maps/ParcelCoast/scripts.pory"
+# 1429 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelCoast_Solvor_R2_Text_1:
-# 1391 "data/maps/ParcelCoast/scripts.pory"
+# 1431 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Suit yourself. I'm here.$"
 
 ParcelCoast_Solvor_R2_Text_2:
-# 1395 "data/maps/ParcelCoast/scripts.pory"
+# 1435 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: …Fair.$"
 
 ParcelCoast_Solvor_R2_Text_3:
-# 1396 "data/maps/ParcelCoast/scripts.pory"
+# 1436 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelCoast_Solvor_R3_Text_0:
-# 1403 "data/maps/ParcelCoast/scripts.pory"
+# 1443 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Three stamps, then five. Fine.\n"
 	.string "Me next?$"
 
 ParcelCoast_Solvor_R3_Text_1:
-# 1409 "data/maps/ParcelCoast/scripts.pory"
+# 1449 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Noted. Properly, this time.$"
 
 ParcelCoast_Solvor_R3_Text_2:
-# 1410 "data/maps/ParcelCoast/scripts.pory"
+# 1450 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelCoast_Solvor_R4_Text_0:
-# 1417 "data/maps/ParcelCoast/scripts.pory"
+# 1457 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelCoast_Solvor_R4_Text_1:
-# 1424 "data/maps/ParcelCoast/scripts.pory"
+# 1464 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelCoast_Solvor_R5_Text_0:
-# 1431 "data/maps/ParcelCoast/scripts.pory"
+# 1471 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelCoast_Solvor_R5_Text_1:
-# 1437 "data/maps/ParcelCoast/scripts.pory"
+# 1477 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Right. That's the whole of it.$"
 
 ParcelCoast_Solvor_R5_Text_2:
-# 1438 "data/maps/ParcelCoast/scripts.pory"
+# 1478 "data/maps/ParcelCoast/scripts.pory"
 	.string "SOLVOR: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelCoast_Tore_Text_0:
-# 1444 "data/maps/ParcelCoast/scripts.pory"
+# 1484 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Ferry crew. We run twice a day\n"
 	.string "whether anyone rides or not. Mostly\l"
 	.string "not. Battle me, it passes the time.$"
 
 ParcelCoast_Tore_Text_1:
-# 1445 "data/maps/ParcelCoast/scripts.pory"
+# 1485 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Time passed.$"
 
 ParcelCoast_Tore_Text_2:
-# 1460 "data/maps/ParcelCoast/scripts.pory"
+# 1500 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: The ferry's FOUNDATION too. The\n"
 	.string "one kindness on this coast and they\l"
 	.string "own it. I'm not complaining. I'm just\l"
 	.string "saying.$"
 
 ParcelCoast_Tore_R2_Text_0:
-# 1471 "data/maps/ParcelCoast/scripts.pory"
+# 1511 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelCoast_Tore_R2_Text_1:
-# 1473 "data/maps/ParcelCoast/scripts.pory"
+# 1513 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelCoast_Tore_R2_Text_2:
-# 1477 "data/maps/ParcelCoast/scripts.pory"
+# 1517 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Still yours.$"
 
 ParcelCoast_Tore_R2_Text_3:
-# 1478 "data/maps/ParcelCoast/scripts.pory"
+# 1518 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelCoast_Tore_R3_Text_0:
-# 1485 "data/maps/ParcelCoast/scripts.pory"
+# 1525 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelCoast_Tore_R3_Text_1:
-# 1491 "data/maps/ParcelCoast/scripts.pory"
+# 1531 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Noted. Properly, this time.$"
 
 ParcelCoast_Tore_R3_Text_2:
-# 1492 "data/maps/ParcelCoast/scripts.pory"
+# 1532 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelCoast_Tore_R4_Text_0:
-# 1499 "data/maps/ParcelCoast/scripts.pory"
+# 1539 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelCoast_Tore_R4_Text_1:
-# 1505 "data/maps/ParcelCoast/scripts.pory"
+# 1545 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: …Fair.$"
 
 ParcelCoast_Tore_R4_Text_2:
-# 1506 "data/maps/ParcelCoast/scripts.pory"
+# 1546 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_Tore_R5_Text_0:
-# 1513 "data/maps/ParcelCoast/scripts.pory"
+# 1553 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelCoast_Tore_R5_Text_1:
-# 1520 "data/maps/ParcelCoast/scripts.pory"
+# 1560 "data/maps/ParcelCoast/scripts.pory"
 	.string "TORE: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelCoast_T_Helge_Text_0:
-# 1528 "data/maps/ParcelCoast/scripts.pory"
+# 1568 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Quay crew. We tie up the fleet\n"
 	.string "and count what's missing. Battle, it's\l"
 	.string "quicker than counting.$"
 
 ParcelCoast_T_Helge_Text_1:
-# 1529 "data/maps/ParcelCoast/scripts.pory"
+# 1569 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Quicker, yes.$"
 
 ParcelCoast_T_Helge_Text_2:
-# 1544 "data/maps/ParcelCoast/scripts.pory"
+# 1584 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Forty-one boats went out.\n"
 	.string "Forty-one came back. The count's\l"
 	.string "always right. It's the holds that are\l"
 	.string "wrong.$"
 
 ParcelCoast_T_Helge_R2_Text_0:
-# 1555 "data/maps/ParcelCoast/scripts.pory"
+# 1595 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelCoast_T_Helge_R2_Text_1:
-# 1557 "data/maps/ParcelCoast/scripts.pory"
+# 1597 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Fine. Same spot.$"
 
 ParcelCoast_T_Helge_R2_Text_2:
-# 1561 "data/maps/ParcelCoast/scripts.pory"
+# 1601 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Right. That's the whole of it.$"
 
 ParcelCoast_T_Helge_R2_Text_3:
-# 1562 "data/maps/ParcelCoast/scripts.pory"
+# 1602 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelCoast_T_Helge_R3_Text_0:
-# 1569 "data/maps/ParcelCoast/scripts.pory"
+# 1609 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelCoast_T_Helge_R3_Text_1:
-# 1575 "data/maps/ParcelCoast/scripts.pory"
+# 1615 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: …Again, then. Later.$"
 
 ParcelCoast_T_Helge_R3_Text_2:
-# 1576 "data/maps/ParcelCoast/scripts.pory"
+# 1616 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_T_Helge_R4_Text_0:
-# 1583 "data/maps/ParcelCoast/scripts.pory"
+# 1623 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelCoast_T_Helge_R4_Text_1:
-# 1589 "data/maps/ParcelCoast/scripts.pory"
+# 1629 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: That's the one I wanted to see.$"
 
 ParcelCoast_T_Helge_R4_Text_2:
-# 1590 "data/maps/ParcelCoast/scripts.pory"
+# 1630 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_T_Helge_R5_Text_0:
-# 1597 "data/maps/ParcelCoast/scripts.pory"
+# 1637 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelCoast_T_Helge_R5_Text_1:
-# 1604 "data/maps/ParcelCoast/scripts.pory"
+# 1644 "data/maps/ParcelCoast/scripts.pory"
 	.string "HELGE: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelCoast_T_Anton_Text_0:
-# 1610 "data/maps/ParcelCoast/scripts.pory"
+# 1650 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: The beach is the only bit of this\n"
 	.string "coast that's free. Even the sand's got\l"
 	.string "rings in it. Battle?$"
 
 ParcelCoast_T_Anton_Text_1:
-# 1611 "data/maps/ParcelCoast/scripts.pory"
+# 1651 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Free, and lost.$"
 
 ParcelCoast_T_Anton_Text_2:
-# 1626 "data/maps/ParcelCoast/scripts.pory"
+# 1666 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Drum rings. Fuel drums. They roll\n"
 	.string "off the quay in storms. The crest's on\l"
 	.string "all of them.$"
 
 ParcelCoast_T_Anton_R2_Text_0:
-# 1637 "data/maps/ParcelCoast/scripts.pory"
+# 1677 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Back this way? I've not been\n"
 	.string "idle. Rematch?$"
 
 ParcelCoast_T_Anton_R2_Text_1:
-# 1639 "data/maps/ParcelCoast/scripts.pory"
+# 1679 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Fine. Same spot.$"
 
 ParcelCoast_T_Anton_R2_Text_2:
-# 1643 "data/maps/ParcelCoast/scripts.pory"
+# 1683 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: …Fair.$"
 
 ParcelCoast_T_Anton_R2_Text_3:
-# 1644 "data/maps/ParcelCoast/scripts.pory"
+# 1684 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelCoast_T_Anton_R3_Text_0:
-# 1651 "data/maps/ParcelCoast/scripts.pory"
+# 1691 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelCoast_T_Anton_R3_Text_1:
-# 1657 "data/maps/ParcelCoast/scripts.pory"
+# 1697 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Noted. Properly, this time.$"
 
 ParcelCoast_T_Anton_R3_Text_2:
-# 1658 "data/maps/ParcelCoast/scripts.pory"
+# 1698 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_T_Anton_R4_Text_0:
-# 1665 "data/maps/ParcelCoast/scripts.pory"
+# 1705 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelCoast_T_Anton_R4_Text_1:
-# 1671 "data/maps/ParcelCoast/scripts.pory"
+# 1711 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: …Again, then. Later.$"
 
 ParcelCoast_T_Anton_R4_Text_2:
-# 1672 "data/maps/ParcelCoast/scripts.pory"
+# 1712 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_T_Anton_R5_Text_0:
-# 1679 "data/maps/ParcelCoast/scripts.pory"
+# 1719 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelCoast_T_Anton_R5_Text_1:
-# 1686 "data/maps/ParcelCoast/scripts.pory"
+# 1726 "data/maps/ParcelCoast/scripts.pory"
 	.string "ANTON: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelCoast_T_Beate_Text_0:
-# 1692 "data/maps/ParcelCoast/scripts.pory"
+# 1732 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Up from the mainland for the\n"
 	.string "fish. Everyone says the fish. Nobody\l"
 	.string "says there's hardly any. Battle, darling.$"
 
 ParcelCoast_T_Beate_Text_1:
-# 1693 "data/maps/ParcelCoast/scripts.pory"
+# 1733 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Hardly any of that, either.$"
 
 ParcelCoast_T_Beate_Text_2:
-# 1708 "data/maps/ParcelCoast/scripts.pory"
+# 1748 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: The brochure says 'working\n"
 	.string "harbour'. It is working. Something's\l"
 	.string "working. It isn't the sea.$"
 
 ParcelCoast_T_Beate_R2_Text_0:
-# 1719 "data/maps/ParcelCoast/scripts.pory"
+# 1759 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelCoast_T_Beate_R2_Text_1:
-# 1721 "data/maps/ParcelCoast/scripts.pory"
+# 1761 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Another time, then.$"
 
 ParcelCoast_T_Beate_R2_Text_2:
-# 1725 "data/maps/ParcelCoast/scripts.pory"
+# 1765 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Still yours.$"
 
 ParcelCoast_T_Beate_R2_Text_3:
-# 1726 "data/maps/ParcelCoast/scripts.pory"
+# 1766 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelCoast_T_Beate_R3_Text_0:
-# 1733 "data/maps/ParcelCoast/scripts.pory"
+# 1773 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelCoast_T_Beate_R3_Text_1:
-# 1739 "data/maps/ParcelCoast/scripts.pory"
+# 1779 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: …Fair.$"
 
 ParcelCoast_T_Beate_R3_Text_2:
-# 1740 "data/maps/ParcelCoast/scripts.pory"
+# 1780 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelCoast_T_Beate_R4_Text_0:
-# 1747 "data/maps/ParcelCoast/scripts.pory"
+# 1787 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelCoast_T_Beate_R4_Text_1:
-# 1753 "data/maps/ParcelCoast/scripts.pory"
+# 1793 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: That's the one I wanted to see.$"
 
 ParcelCoast_T_Beate_R4_Text_2:
-# 1754 "data/maps/ParcelCoast/scripts.pory"
+# 1794 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelCoast_T_Beate_R5_Text_0:
-# 1761 "data/maps/ParcelCoast/scripts.pory"
+# 1801 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelCoast_T_Beate_R5_Text_1:
-# 1768 "data/maps/ParcelCoast/scripts.pory"
+# 1808 "data/maps/ParcelCoast/scripts.pory"
 	.string "BEATE: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelCoast_Shell_Text_0:
-# 1777 "data/maps/ParcelCoast/scripts.pory"
+# 1817 "data/maps/ParcelCoast/scripts.pory"
 	.string "Half-buried in the sand between two\n"
 	.string "drum rings: a shell. Whole. Pink inside.\p"
 	.string "The first one anyone has found on this\n"
 	.string "beach in years. Taken.$"
 
 ParcelCoast_Shell_Text_1:
-# 1782 "data/maps/ParcelCoast/scripts.pory"
+# 1822 "data/maps/ParcelCoast/scripts.pory"
 	.string "Sand. Drum rings. The hollow where a\n"
 	.string "shell was.$"
 
 ParcelCoast_PerrinScene_Text_0:
-# 1795 "data/maps/ParcelCoast/scripts.pory"
+# 1835 "data/maps/ParcelCoast/scripts.pory"
 	.string "PERRIN: WREN!$"
 
 ParcelCoast_PerrinScene_Text_1:
-# 1799 "data/maps/ParcelCoast/scripts.pory"
+# 1839 "data/maps/ParcelCoast/scripts.pory"
 	.string "PERRIN: Coastal Holdings liaison. New\n"
 	.string "card, new coat. Don't look at me like\l"
 	.string "that.\p"
@@ -5637,29 +5785,29 @@ ParcelCoast_PerrinScene_Text_1:
 	.string "never was. I just liked you.$"
 
 ParcelCoast_PerrinScene_Text_2:
-# 1800 "data/maps/ParcelCoast/scripts.pory"
+# 1840 "data/maps/ParcelCoast/scripts.pory"
 	.string "PERRIN: …Yeah. I know.$"
 
 ParcelCoast_PerrinScene_Text_3:
-# 1801 "data/maps/ParcelCoast/scripts.pory"
+# 1841 "data/maps/ParcelCoast/scripts.pory"
 	.string "PERRIN: Write it true, then. Whatever it\n"
 	.string "costs. I'll be upstairs, typing the\l"
 	.string "response.\p"
 	.string "I type well. HOLLIS says so.$"
 
 ParcelCoast_PerrinTalk_Text_0:
-# 1814 "data/maps/ParcelCoast/scripts.pory"
+# 1854 "data/maps/ParcelCoast/scripts.pory"
 	.string "PERRIN: Hang on, I'm coming to you.$"
 
 ParcelCoast_Epilogue_Text_0:
-# 1825 "data/maps/ParcelCoast/scripts.pory"
+# 1865 "data/maps/ParcelCoast/scripts.pory"
 	.string "MEREHOLT COAST. The cranes swing on\n"
 	.string "schedule. The quota review runs to\l"
 	.string "spring, and the boats go out under it\l"
 	.string "and come back with what there is.$"
 
 ParcelCoast_Epilogue_Text_1:
-# 1826 "data/maps/ParcelCoast/scripts.pory"
+# 1866 "data/maps/ParcelCoast/scripts.pory"
 	.string "HALE: You want to know if it was worth\n"
 	.string "it. Wrong verb. Ask if it was true.\p"
 	.string "It was. Go and rest. Then go and read\n"
@@ -5667,7 +5815,7 @@ ParcelCoast_Epilogue_Text_1:
 	.string "left.$"
 
 ParcelCoast_GymHarland_Rematch_Text_0:
-# 1838 "data/maps/ParcelCoast/scripts.pory"
+# 1878 "data/maps/ParcelCoast/scripts.pory"
 	.string "HARLAND: They read you aloud at the\n"
 	.string "hearing. I'd read you the old way, too.\l"
 	.string "Boat's in, nets are dry, and the crew's\l"
@@ -5676,20 +5824,20 @@ ParcelCoast_GymHarland_Rematch_Text_0:
 	.string "Full strength. Aye?$"
 
 ParcelCoast_GymHarland_Rematch_Text_1:
-# 1840 "data/maps/ParcelCoast/scripts.pory"
+# 1880 "data/maps/ParcelCoast/scripts.pory"
 	.string "HARLAND: Tide's at six. Offer stands.$"
 
 ParcelCoast_GymHarland_Rematch_Text_2:
-# 1844 "data/maps/ParcelCoast/scripts.pory"
+# 1884 "data/maps/ParcelCoast/scripts.pory"
 	.string "HARLAND: …Aye. You read the water.\n"
 	.string "Still.$"
 
 ParcelCoast_GymHarland_Rematch_Text_3:
-# 1845 "data/maps/ParcelCoast/scripts.pory"
+# 1885 "data/maps/ParcelCoast/scripts.pory"
 	.string "HARLAND: Tide's at six. Any day you like.$"
 
 ParcelCoast_Dorsey_Text_0:
-# 1855 "data/maps/ParcelCoast/scripts.pory"
+# 1895 "data/maps/ParcelCoast/scripts.pory"
 	.string "DORSEY: Development that listens. I\n"
 	.string "said it at the hearing. They wrote down\l"
 	.string "'listens' in quotes. I've seen the\l"
@@ -5697,7 +5845,7 @@ ParcelCoast_Dorsey_Text_0:
 	.string "The quotes are fair.$"
 
 ParcelCoast_Dorsey_Text_1:
-# 1860 "data/maps/ParcelCoast/scripts.pory"
+# 1900 "data/maps/ParcelCoast/scripts.pory"
 	.string "DORSEY: You'll find the hearing room up\n"
 	.string "the street when the time comes. I'll be\l"
 	.string "in it. I sit on the review board's local\l"
@@ -5707,7 +5855,7 @@ ParcelCoast_Dorsey_Text_1:
 	.string "building only has one.$"
 
 ParcelCoast_Dorsey_Text_2:
-# 1864 "data/maps/ParcelCoast/scripts.pory"
+# 1904 "data/maps/ParcelCoast/scripts.pory"
 	.string "DORSEY: --six berths, a cold store, and\n"
 	.string "forty jobs that weren't here in spring.\l"
 	.string "And a plaque, because people like to see\l"

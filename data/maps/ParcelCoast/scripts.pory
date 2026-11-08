@@ -225,6 +225,11 @@ script ParcelCoast_Worker {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WORKER: You named it. The whole quay knew by the tide after. COLLAPSING. We've known for years; we'd just never heard it said by somebody with a card.\pThere's people in the frame, RANGER. You put us in it. That's fair. Keep us in it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WORKER: Four generations my family's worked this quay. Good work. Honest work.\pDon't let that badge let you forget there's people in the frame, RANGER. We didn't dredge it. We haul what we're told to haul, or we don't eat."), MSGBOX_DEFAULT)
     release
     end
@@ -234,6 +239,11 @@ script ParcelCoast_Vendor1 {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: Cod. Different sizes today. The review's inspector weighs them herself. Customers ask why they're not tidy. I tell them. First time I've told them."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: Cod, iced this morning. All one size. A customer asked why today, first time ever.\pI said ask the ranger. She said the ranger already did. I sold her two anyway."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -249,6 +259,11 @@ script ParcelCoast_Vendor2 {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("MAN: Urchin roe. The FOUNDATION buyer didn't come this morning. First morning in a year.\pYou wrote 'urchins' in your survey, I hear. Funny how a word gets to a buyer before it gets to a fisherman."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Urchin roe! The FOUNDATION found a market for it overseas. Clever. There's nothing else down there to sell."), MSGBOX_DEFAULT)
     release
     end
@@ -258,6 +273,11 @@ script ParcelCoast_Vendor3 {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: Ice is still FOUNDATION ice. Fuel's still FOUNDATION fuel. The rent went down a page in the review. I sell fish. I noticed the page."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: FOUNDATION ice, FOUNDATION fuel, FOUNDATION rent, and today a FOUNDATION man came round asking what the ranger bought.\pI said fish. He wrote it down. Everybody's writing things down this week. I liked it better when it was just you."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -273,6 +293,11 @@ script ParcelCoast_Vendor4 {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("OLD MAN: Walk across the harbour on the backs of the WAILMER. My father said it. Now it's in a ranger's book, with a date beside it.\pFirst time anybody's written down what my father said. He'd have hated the date. He'd have liked the rest."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: Fifty years ago you could walk across the harbour on the backs of the WAILMER. My father said that. His father said it to him. Somebody has to keep saying it."), MSGBOX_DEFAULT)
     release
     end
@@ -282,6 +307,11 @@ script ParcelCoast_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The gulls dived today. Mum stopped on the quay to watch. She didn't say anything. She held my hand very tight."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("GIRL: The gulls still don't dive. But a man from the FOUNDATION stood on the quay and watched them not dive for an hour.\pMum says that's new. Watching's new. I've been watching for ages."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -297,6 +327,11 @@ script ParcelCoast_Docker {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("DOCKER: Two shifts, seven days, and this morning head office rang the cannery twice. The cannery never stops. The phone never rang.\pYou wrote something. I don't know what. The phone knows."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("DOCKER: Two shifts a day, seven days. The cannery never stops. The fish stop. The cannery doesn't."), MSGBOX_DEFAULT)
     release
     end
@@ -306,6 +341,11 @@ script ParcelCoast_GullMan {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: I count the boats out and the boats in. Half the number now, by order. The crates per boat went up. Nobody asked me. I'm telling you anyway."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("OLD MAN: Boats out, boats in. Same number. Crates, fewer. And now somebody's counted the counting: your survey has my crates in it.\pNobody asked me to count. Somebody read it anyway. That's all a counter wants, in the end."), MSGBOX_DEFAULT)
         release
         end
     }

@@ -9,6 +9,11 @@ script ParcelHighlandsBore_Geologist {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("GEOLOGIST: Fifty-two metres to the freeze this week. The coast office asked me to round it to fifty. I wrote fifty-two and 'rounded by request' beside it.\pYou put a quay full of fishermen on paper, I hear. I can manage a number."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("GEOLOGIST: Don't touch the housing, it's live. The bore's at ninety metres. The freeze starts at forty. Started at twelve, in the old logs.\pExploratory. Yes. We're exploring how fast forty becomes fifty."), MSGBOX_DEFAULT)
     release
     end

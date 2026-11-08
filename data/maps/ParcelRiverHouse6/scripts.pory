@@ -11,6 +11,11 @@ script ParcelRiverHouse6_Man {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("MAN: Readings are up, all fourteen plots. The Board wrote 'seasonal'. I wrote 'meltwater, HAUKFELL'. The Board reads what I write, then writes over it.\pI've started keeping the first sheet. SLUICE's idea. She's full of them."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Meter reader for the WATER BOARD. I read what the river does. The Board reads what I write. Different things, sometimes."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelRiverHouse6_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The river's budget got bigger! Dad says it's not money. I said I know, Dad."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("GIRL: Dad says the mountain's spending the river's budget. I said that's stealing. He said it's accounting. I said that's the same thing. He laughed, but not the good laugh."), MSGBOX_DEFAULT)
         release
         end
     }

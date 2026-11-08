@@ -8,6 +8,11 @@ script ParcelCoastHouse2_Skipper {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("SKIPPER: Sold the boat the year the dredge came. Took the money. Today HARLAND lost on his own quay to a ranger and shook hands after, and I thought: that's what a man does who still has a boat to stand on.\pBest decision I ever made. I still haven't forgiven it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SKIPPER: Sold the boat to the lending company the year the dredge came. Took the money. Bought this house. Best decision I ever made and I've never forgiven myself for it."), MSGBOX_DEFAULT)
     release
     end
@@ -17,6 +22,11 @@ script ParcelCoastHouse2_Wife {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WIFE: He went down to the union hall. First time in six years he's gone anywhere but the window. Came back with ink on his fingers. He'd signed something. He wouldn't say what."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WIFE: He watched the boats go out this morning, and then he watched a ranger walk off the quay with HARLAND's badge.\pHe said 'good'. Just that. Forty years out, and the first 'good' I've heard from the window."), MSGBOX_DEFAULT)
         release
         end
     }

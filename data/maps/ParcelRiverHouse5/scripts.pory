@@ -11,6 +11,11 @@ script ParcelRiverHouse5_OldMan {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("OLD MAN: They say the ground up at HAUKFELL lets go in the spring the way the race let go of its water. No noise. Just gone one morning.\pI oil a wheel that doesn't turn. Those people oil a house that moves. We should talk."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: I ran the mill until the race went dry. The wood's still there. The race is still there. The water isn't."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelRiverHouse5_OldWoman {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD WOMAN: He came back from the mill wet to the knee and grinning. The race ran an hour. One hour, in forty years of waiting."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("OLD WOMAN: I packed him two lunches today. One for the mill, one for the man from HAUKFELL who sits by the dry race and doesn't say anything.\pMy husband doesn't say anything either. They get on."), MSGBOX_DEFAULT)
         release
         end
     }

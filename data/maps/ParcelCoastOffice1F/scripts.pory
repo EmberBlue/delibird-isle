@@ -11,6 +11,11 @@ script ParcelCoastOffice1F_Reception {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("RECEPTION: Welcome to the MEREHOLT FOUNDATION. The exhibit is closed for 'updating'. Ms. AUNE is upstairs. The brochures are being reprinted.\pDo take the old one. It's a collector's item now, the way things are going."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("RECEPTION: Welcome to the MEREHOLT FOUNDATION. The exhibit is free. Ms. AUNE is upstairs; she's expecting a RANGER. Do take a brochure."), MSGBOX_DEFAULT)
     release
     end
@@ -20,6 +25,11 @@ script ParcelCoastOffice1F_Visitor {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: I come in for the warm. The model on the wall's been taken down. There's a lighter patch where it was. I understand the patch."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("MAN: I come in for the warm. Today they're taking the model off the wall. 'Updating.' I asked what was wrong with it. The young man said nothing's wrong with it.\pFewer fish every year and the model's fine. I'll miss it. It was very clever."), MSGBOX_DEFAULT)
         release
         end
     }

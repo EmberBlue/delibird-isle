@@ -11,6 +11,11 @@ script ParcelCoastBreakwaterHut_Lifeguard {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("LIFEGUARD: Beach is closed to bathing. You're the first one today who already knew why.\pThe coast office sent a new sign. Same words, bigger letters. I'm paid to sit by the bigger letters now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("LIFEGUARD: Beach is closed to bathing. I'm paid to sit here and say so. I say so about forty times a day. You're forty-one."), MSGBOX_DEFAULT)
     release
     end
@@ -24,6 +29,11 @@ script ParcelCoastBreakwaterHut_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: Twenty summers of ices, and this is the first week a stranger's asked me what the beach was like before.\pI told him. He wrote it down. Not you -- a man with a crest. I don't know what he's going to do with my twenty summers."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: I sold ices here for twenty summers. Now I sell them to the lifeguard. He's my only customer and he's on a diet."), MSGBOX_DEFAULT)
     release
     end
@@ -34,6 +44,11 @@ script ParcelCoastBreakwaterHut_Tuber {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("TUBER: The readings say it's fine on the breakwater side! Mum read them. I'm swimming. Properly. Watch."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("TUBER: I'm standing in the water. Still not swimming. A ranger wrote down that the water's sick and the lifeguard says that's why.\pI asked if standing counts. He said standing's fine. Standing's always fine. That's the problem, he said."), MSGBOX_DEFAULT)
         release
         end
     }

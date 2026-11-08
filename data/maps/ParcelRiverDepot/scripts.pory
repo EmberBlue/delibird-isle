@@ -10,6 +10,11 @@ script ParcelRiverDepot_Buyer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("BUYER: Credit's extended to next season for everyone, no questions. The FOUNDATION's being generous. The FOUNDATION's always generous the season after a hard one.\pFertiliser's on the pallet. The HAUKFELL grant forms are on the counter. Both good offers."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BUYER: Produce by weight, paid same day, no haggling, no questions. That's the FOUNDATION offer. It's a good offer. Ask anyone who's taken it.\pFertiliser's on the pallet. Credit available against next season. Everyone takes the credit."), MSGBOX_DEFAULT)
     release
     end
@@ -19,6 +24,11 @@ script ParcelRiverDepot_Farmer {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FARMER: The depot's every day and now it pays the floor. The market pays more again. I split between them. Having a choice is the thing. I'd forgotten the thing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("FARMER: Sold to the depot again. The market's one day a week, and the hill people are coming down to it with nothing to sell and no money to buy.\pI gave a sack away last week. First time. Felt like something. Don't know what."), MSGBOX_DEFAULT)
         release
         end
     }

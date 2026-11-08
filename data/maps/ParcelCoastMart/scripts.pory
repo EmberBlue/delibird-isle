@@ -33,6 +33,11 @@ script ParcelCoastMart_Customer {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("SAILOR: DIVE BALLS, still. For the fish, still. The clerk says the ranger's survey has the word 'urchin' in it twelve times.\pI said twelve's a lot. She said that's what the survey said about the urchins."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("SAILOR: DIVE BALLS. For what, I asked. The clerk said for the fish. I said there's no fish. She said that's not her department."), MSGBOX_DEFAULT)
     release
     end

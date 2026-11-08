@@ -124,6 +124,11 @@ script ParcelFloodbasin_Aide1 {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("AIDE: Vouchers are suspended pending the coast office's review. I'm to say 'suspended', not 'stopped'.\pThe sheet's still here. Nobody's come to sign it since the river hall voted. Nobody's come to collect it either."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("AIDE: Fuel vouchers on the left, dry goods on the right. Sign the sheet. Yes, the FOUNDATION keeps the sheet. For the records."), MSGBOX_DEFAULT)
     release
     end
@@ -133,6 +138,11 @@ script ParcelFloodbasin_Aide2 {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AIDE: Forty-one households. The hearing asked how many were consulted on Phase 2. I said forty-one signed. They said that wasn't the question. It wasn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("AIDE: Forty-one signatures, and the councilman hasn't looked at the sheet once since he came back from the river.\pHe looks at the bridge instead. I don't know what he sees there. Water, I expect."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -186,6 +196,11 @@ script ParcelFloodbasin_VilMan {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: Three floods, three times the vouchers, and the fourth time I asked why the water's brown, somebody up the river asked it for me. In a hall. With the Board sitting there.\pNo vouchers for that. Better than vouchers."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("MAN: Three floods. Three times the vouchers. Nobody's asked why the water comes up brown now.\pI asked. I got vouchers."), MSGBOX_DEFAULT)
     release
     end
@@ -195,6 +210,11 @@ script ParcelFloodbasin_VilGirl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The WOOPER with the wrong feet is still in the puddle. A CORPS lady came and drew it. She said it's in a report now. It doesn't know. It's a WOOPER."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("GIRL: The WOOPER with the wrong feet is still in the puddle. A lady from the river came and drew it. Drew it! In a book!\pShe said it's going in a report. I said it's going in a puddle. We were both right."), MSGBOX_DEFAULT)
         release
         end
     }

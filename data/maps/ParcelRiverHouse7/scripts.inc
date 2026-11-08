@@ -10,8 +10,10 @@ ParcelRiverHouse7_Woman::
 # 9 "data/maps/ParcelRiverHouse7/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse7_Woman_2
 # 14 "data/maps/ParcelRiverHouse7/scripts.pory"
-	msgbox ParcelRiverHouse7_Woman_Text_1, MSGBOX_DEFAULT
-# 15 "data/maps/ParcelRiverHouse7/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHouse7_Woman_5
+# 19 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_Woman_Text_2, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelRiverHouse7/scripts.pory"
 	release
 	end
 
@@ -22,24 +24,40 @@ ParcelRiverHouse7_Woman_2:
 	release
 	end
 
+ParcelRiverHouse7_Woman_5:
+# 15 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_Woman_Text_1, MSGBOX_DEFAULT
+# 16 "data/maps/ParcelRiverHouse7/scripts.pory"
+	release
+	end
+
 
 ParcelRiverHouse7_Man::
-# 20 "data/maps/ParcelRiverHouse7/scripts.pory"
+# 25 "data/maps/ParcelRiverHouse7/scripts.pory"
 	lock
-# 21 "data/maps/ParcelRiverHouse7/scripts.pory"
+# 26 "data/maps/ParcelRiverHouse7/scripts.pory"
 	faceplayer
-# 22 "data/maps/ParcelRiverHouse7/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse7_Man_2
 # 27 "data/maps/ParcelRiverHouse7/scripts.pory"
-	msgbox ParcelRiverHouse7_Man_Text_1, MSGBOX_DEFAULT
-# 28 "data/maps/ParcelRiverHouse7/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse7_Man_2
+# 32 "data/maps/ParcelRiverHouse7/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHouse7_Man_5
+# 37 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_Man_Text_2, MSGBOX_DEFAULT
+# 38 "data/maps/ParcelRiverHouse7/scripts.pory"
 	release
 	end
 
 ParcelRiverHouse7_Man_2:
-# 23 "data/maps/ParcelRiverHouse7/scripts.pory"
+# 28 "data/maps/ParcelRiverHouse7/scripts.pory"
 	msgbox ParcelRiverHouse7_Man_Text_0, MSGBOX_DEFAULT
-# 24 "data/maps/ParcelRiverHouse7/scripts.pory"
+# 29 "data/maps/ParcelRiverHouse7/scripts.pory"
+	release
+	end
+
+ParcelRiverHouse7_Man_5:
+# 33 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_Man_Text_1, MSGBOX_DEFAULT
+# 34 "data/maps/ParcelRiverHouse7/scripts.pory"
 	release
 	end
 
@@ -51,20 +69,38 @@ ParcelRiverHouse7_Woman_Text_0:
 	.string "it where he put it. So's mine, under his.$"
 
 ParcelRiverHouse7_Woman_Text_1:
-# 14 "data/maps/ParcelRiverHouse7/scripts.pory"
+# 15 "data/maps/ParcelRiverHouse7/scripts.pory"
+	.string "WOMAN: The net comes up honest and\n"
+	.string "cold now. Meltwater, they say, off\l"
+	.string "HAUKFELL. The fish don't like it either.\p"
+	.string "Honest and cold. That's most of what\n"
+	.string "this valley's got this year.$"
+
+ParcelRiverHouse7_Woman_Text_2:
+# 19 "data/maps/ParcelRiverHouse7/scripts.pory"
 	.string "WOMAN: I net the slow water below the\n"
 	.string "town. Ten years ago the net came up\l"
 	.string "heavy. Now it comes up honest.$"
 
 ParcelRiverHouse7_Man_Text_0:
-# 23 "data/maps/ParcelRiverHouse7/scripts.pory"
+# 28 "data/maps/ParcelRiverHouse7/scripts.pory"
 	.string "MAN: Mended the net for the review\n"
 	.string "season. Smaller mesh, she says. Let the\l"
 	.string "small ones through. We've learnt that\l"
 	.string "the slow way.$"
 
 ParcelRiverHouse7_Man_Text_1:
-# 27 "data/maps/ParcelRiverHouse7/scripts.pory"
+# 33 "data/maps/ParcelRiverHouse7/scripts.pory"
+	.string "MAN: Mended a net for a HAUKFELL man\n"
+	.string "who'd never held one. He's moving down\l"
+	.string "to the valley house and wants to fish. I\l"
+	.string "didn't tell him about the fish.\p"
+	.string "The holes in the net are the same size.\n"
+	.string "He'll find out what comes through on his\l"
+	.string "own.$"
+
+ParcelRiverHouse7_Man_Text_2:
+# 37 "data/maps/ParcelRiverHouse7/scripts.pory"
 	.string "MAN: My wife fishes; I mend. The holes in\n"
 	.string "the net are the same size every year.\l"
 	.string "The fish aren't.$"

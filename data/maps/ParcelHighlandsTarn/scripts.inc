@@ -1466,8 +1466,10 @@ ParcelHighlandsTarn_Cadet::
 # 667 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsTarn_Cadet_2
 # 672 "data/maps/ParcelHighlandsTarn/scripts.pory"
-	msgbox ParcelHighlandsTarn_Cadet_Text_1, MSGBOX_DEFAULT
-# 673 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsTarn_Cadet_5
+# 677 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_Cadet_Text_2, MSGBOX_DEFAULT
+# 678 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	release
 	end
 
@@ -1478,9 +1480,16 @@ ParcelHighlandsTarn_Cadet_2:
 	release
 	end
 
+ParcelHighlandsTarn_Cadet_5:
+# 673 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_Cadet_Text_1, MSGBOX_DEFAULT
+# 674 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	release
+	end
+
 
 ParcelHighlandsTarn_ItemNeverMeltIce::
-# 676 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 681 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	finditem ITEM_NEVER_MELT_ICE
 	end
 
@@ -2073,7 +2082,16 @@ ParcelHighlandsTarn_Cadet_Text_0:
 	.string "good log.$"
 
 ParcelHighlandsTarn_Cadet_Text_1:
-# 672 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 673 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "CADET: VALE went down to the coast for\n"
+	.string "the hearing and left me the cold. I've\l"
+	.string "learnt it twice over.\p"
+	.string "She sent a postcard. It says 'colder\n"
+	.string "here'. There's nothing on the front but\l"
+	.string "water.$"
+
+ParcelHighlandsTarn_Cadet_Text_2:
+# 677 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "CADET: VALE said 'learn the cold'. I've\n"
 	.string "learnt it. Can I go down now?\p"
 	.string "She said no. She says it kindly, which is\n"

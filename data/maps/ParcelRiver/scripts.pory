@@ -282,6 +282,11 @@ script ParcelRiver_Aide {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("AIDE: The councilman's up at HAUKFELL this week. The warming centre. He takes questions there now; nobody forms a line there either.\pPhase 2 consultation remains closed. I'm to say 'remains'."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("AIDE: Phase 2 consultation is closed, but the councilman takes questions on market days. Form a line. There is no line."), MSGBOX_DEFAULT)
     release
     end
@@ -348,6 +353,11 @@ script ParcelRiver_OldMan {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("OLD MAN: They say the ground up at HAUKFELL has let go. Houses carried down a slope by hand. I swam in a beaver pond as a boy; those people skated on ground that's water now.\pA ditch I can live beside. That, I couldn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD MAN: There was a pond above the town. Beaver-built. We swam in it as boys. Then the trappers, then the Board.\pNow it's a ditch with a stake every fifty paces. Progress, they call it. I call it a ditch."), MSGBOX_DEFAULT)
     release
     end
@@ -357,6 +367,11 @@ script ParcelRiver_Girl {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The councilman gave me a ribbon. PHASE 2, in blue. Mum put it in a drawer after the hearing. She said it's history now. I don't know what that means but it's still blue."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("GIRL: The councilman's up the mountain giving out blankets with the same crest as my ribbon!\pMum says the blankets are real. She said it like the ribbon isn't. It IS. It's blue."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -372,6 +387,11 @@ script ParcelRiver_Boy {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("BOY: A boy from HAUKFELL came down to stay with his aunt. He says the ground there goes soft and the trees lean.\pHe says it like it's normal. I told him the green water's normal. He didn't believe me either."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("BOY: Don't swim below the plots. Mum says the water's got green stuff in it that makes your skin go funny. Above the town's fine. Above the town's freezing."), MSGBOX_DEFAULT)
     release
     end
@@ -381,6 +401,11 @@ script ParcelRiver_PondFisher {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: I fish the town pond. Stocked. The river's getting better below the plots, they say. I'll fish it when I believe them. Not yet. Soon, maybe."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("FISHER: Stocked pond, stocked fish. Up at HAUKFELL they've got a stocked house now, they tell me. A grant and a house in the valley.\pSame thing. Not the same. The fish know. The people know."), MSGBOX_DEFAULT)
         release
         end
     }

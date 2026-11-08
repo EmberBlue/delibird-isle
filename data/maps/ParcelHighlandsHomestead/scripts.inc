@@ -10,8 +10,10 @@ ParcelHighlandsHomestead_Grandson::
 # 7 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsHomestead_Grandson_2
 # 12 "data/maps/ParcelHighlandsHomestead/scripts.pory"
-	msgbox ParcelHighlandsHomestead_Grandson_Text_1, MSGBOX_DEFAULT
-# 13 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsHomestead_Grandson_5
+# 17 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	msgbox ParcelHighlandsHomestead_Grandson_Text_2, MSGBOX_DEFAULT
+# 18 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	release
 	end
 
@@ -22,21 +24,28 @@ ParcelHighlandsHomestead_Grandson_2:
 	release
 	end
 
+ParcelHighlandsHomestead_Grandson_5:
+# 13 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	msgbox ParcelHighlandsHomestead_Grandson_Text_1, MSGBOX_DEFAULT
+# 14 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	release
+	end
+
 
 ParcelHighlandsHomestead_Swinub::
-# 17 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 22 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	lock
-# 18 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 23 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	faceplayer
-# 19 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 24 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	msgbox ParcelHighlandsHomestead_Swinub_Text_0, MSGBOX_DEFAULT
-# 20 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 25 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	release
 	end
 
 
 ParcelHighlandsHomestead_Corner::
-# 24 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 29 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	msgbox ParcelHighlandsHomestead_Corner_Text_0, MSGBOX_SIGN
 	end
 
@@ -50,7 +59,17 @@ ParcelHighlandsHomestead_Grandson_Text_0:
 	.string "face every morning.$"
 
 ParcelHighlandsHomestead_Grandson_Text_1:
-# 12 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 13 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	.string "GRANDSON: Gran heard what the coast\n"
+	.string "people said about the catch. All one\l"
+	.string "size. She said that's what they want us\l"
+	.string "to be, down in the valley houses. All one\l"
+	.string "size.\p"
+	.string "She's unpacked a box. Just one. Don't\n"
+	.string "tell her I noticed.$"
+
+ParcelHighlandsHomestead_Grandson_Text_2:
+# 17 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	.string "GRANDSON: I signed. The grant. Gran\n"
 	.string "won't, so somebody has to carry the\l"
 	.string "boxes down when the time comes.\p"
@@ -58,13 +77,13 @@ ParcelHighlandsHomestead_Grandson_Text_1:
 	.string "knows. Don't tell her anyway.$"
 
 ParcelHighlandsHomestead_Swinub_Text_0:
-# 19 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 24 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	.string "SWINUB: It won't leave either. Gran\n"
 	.string "says that's the only vote in the house\l"
 	.string "that counts.$"
 
 ParcelHighlandsHomestead_Corner_Text_0:
-# 24 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+# 29 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	.string "The floorboards slope to this corner. A\n"
 	.string "marble on the table would roll here.\l"
 	.string "There is a marble on the table. It has.$"

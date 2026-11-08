@@ -21,6 +21,11 @@ script ParcelCoastUnion_Fisher1 {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("FISHER: HARLAND lost. On the quay, to a ranger, and shook hands, and then he came in here and said: it's written now. Like that settled something.\pForty-one notes with the lender. Forty-one men who heard him say it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("FISHER: HARLAND came down from the river to fish the coast because the river was done. Now the coast's done. There's nowhere further down."), MSGBOX_DEFAULT)
     release
     end
@@ -30,6 +35,11 @@ script ParcelCoastUnion_Fisher2 {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: The Board's model said six years. The review threw the model out and said 'we don't know'. I'll take 'we don't know'. It's the first true thing they've said about the stock."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("FISHER: The Board's model said six years, six years ago. Your survey says COLLAPSING, this year.\pOne of those is a date you can check. The hall voted to put yours on the notice board. The lender's man was in the room. He didn't object. He wrote it down."), MSGBOX_DEFAULT)
         release
         end
     }

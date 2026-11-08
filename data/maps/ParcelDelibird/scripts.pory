@@ -131,6 +131,11 @@ script ParcelDelibird_Ketil {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("Ketil: The coast paper came over on the ferry. The catch all one size, and a ranger who wrote it down in front of the cannery.\pTomas read it twice. He said that's the island in you. Then he said mind the stairs."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Ketil: Tomas took his cabin down under the cliffs when the green went soft under it. East trail, past the tall grass, then the stairs.\pMind him. He'll try to give you something. Let him."), MSGBOX_DEFAULT)
     release
     end

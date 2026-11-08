@@ -61,8 +61,10 @@ ParcelRiverMart_Customer::
 # 33 "data/maps/ParcelRiverMart/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverMart_Customer_2
 # 38 "data/maps/ParcelRiverMart/scripts.pory"
-	msgbox ParcelRiverMart_Customer_Text_1, MSGBOX_DEFAULT
-# 39 "data/maps/ParcelRiverMart/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverMart_Customer_5
+# 43 "data/maps/ParcelRiverMart/scripts.pory"
+	msgbox ParcelRiverMart_Customer_Text_2, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelRiverMart/scripts.pory"
 	release
 	end
 
@@ -70,6 +72,13 @@ ParcelRiverMart_Customer_2:
 # 34 "data/maps/ParcelRiverMart/scripts.pory"
 	msgbox ParcelRiverMart_Customer_Text_0, MSGBOX_DEFAULT
 # 35 "data/maps/ParcelRiverMart/scripts.pory"
+	release
+	end
+
+ParcelRiverMart_Customer_5:
+# 39 "data/maps/ParcelRiverMart/scripts.pory"
+	msgbox ParcelRiverMart_Customer_Text_1, MSGBOX_DEFAULT
+# 40 "data/maps/ParcelRiverMart/scripts.pory"
 	release
 	end
 
@@ -83,7 +92,16 @@ ParcelRiverMart_Customer_Text_0:
 	.string "it like a question.$"
 
 ParcelRiverMart_Customer_Text_1:
-# 38 "data/maps/ParcelRiverMart/scripts.pory"
+# 39 "data/maps/ParcelRiverMart/scripts.pory"
+	.string "WOMAN: NET BALLS are in, and REPELS,\n"
+	.string "and a shelf of blankets with the crest\l"
+	.string "that the clerk doesn't charge for.\p"
+	.string "Free blankets in a shop. You don't need\n"
+	.string "to catch anything to know what that\l"
+	.string "means.$"
+
+ParcelRiverMart_Customer_Text_2:
+# 43 "data/maps/ParcelRiverMart/scripts.pory"
 	.string "WOMAN: NET BALLS are in. The river's full\n"
 	.string "of things you'd want to catch before\l"
 	.string "they're gone.$"

@@ -11,6 +11,11 @@ script ParcelFloodbasinHouse3_OldWoman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OLD WOMAN: Two water lines on the door frame, and now a third mark, in pencil: the day the river hall voted against Phase 2.\pNo water that day. I marked it anyway. Some lines you make on purpose."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("OLD WOMAN: The pulse came through this house twice. Once in '09, once the spring you came. Both water lines are on the door frame. Look."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelFloodbasinHouse3_Man {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: I kept the blanket. MEREHOLT on it. It's warm. I'm not giving back a warm blanket to make a point."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: DORSEY came back from the river and didn't shake anybody's hand. First time I've seen him not.\pHe stood where the sandbags were and looked at the bridge a long while. Good handshake, that man. I'd still take it. I'd think first now."), MSGBOX_DEFAULT)
         release
         end
     }

@@ -11,6 +11,11 @@ script ParcelCoastHouse4_Woman {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("WOMAN: Six to two, and the line stopped for a day. 'Pending the ranger.' The tins stopped coming down.\pYou don't know how loud a cannery is until it's quiet. Then you don't know how to feel about either."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("WOMAN: Cannery line, six to two. The tins come down faster than the fish come in. Somebody's filling tins with sea."), MSGBOX_DEFAULT)
     release
     end
@@ -21,6 +26,11 @@ script ParcelCoastHouse4_Man {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: They read the eleven-fish line at the hearing. My line. I sorted them. Nobody asked my name. That's fine. It was true."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("MAN: Eleven fish, every one the same length. I needed a ranger to write it down, and now it's written, and I'm the one who sorted them, so my name's near it.\pI don't mind. I counted them. They're mine too."), MSGBOX_DEFAULT)
         release
         end
     }

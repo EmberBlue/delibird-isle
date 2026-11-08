@@ -9,6 +9,11 @@ script ParcelHighlandsHomestead_Grandson {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("GRANDSON: Gran heard what the coast people said about the catch. All one size. She said that's what they want us to be, down in the valley houses. All one size.\pShe's unpacked a box. Just one. Don't tell her I noticed."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("GRANDSON: I signed. The grant. Gran won't, so somebody has to carry the boxes down when the time comes.\pDon't tell her I've started packing. She knows. Don't tell her anyway."), MSGBOX_DEFAULT)
     release
     end

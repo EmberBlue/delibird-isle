@@ -1466,8 +1466,10 @@ ParcelRiverMillWood_Sawyer::
 # 667 "data/maps/ParcelRiverMillWood/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverMillWood_Sawyer_2
 # 672 "data/maps/ParcelRiverMillWood/scripts.pory"
-	msgbox ParcelRiverMillWood_Sawyer_Text_1, MSGBOX_DEFAULT
-# 673 "data/maps/ParcelRiverMillWood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverMillWood_Sawyer_5
+# 677 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Sawyer_Text_2, MSGBOX_DEFAULT
+# 678 "data/maps/ParcelRiverMillWood/scripts.pory"
 	release
 	end
 
@@ -1478,45 +1480,52 @@ ParcelRiverMillWood_Sawyer_2:
 	release
 	end
 
+ParcelRiverMillWood_Sawyer_5:
+# 673 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Sawyer_Text_1, MSGBOX_DEFAULT
+# 674 "data/maps/ParcelRiverMillWood/scripts.pory"
+	release
+	end
+
 
 ParcelRiverMillWood_SignEdge::
-# 677 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 682 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_SignEdge_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverMillWood_SignRace::
-# 681 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 686 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_SignRace_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverMillWood_ItemGreatBall::
-# 684 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 689 "data/maps/ParcelRiverMillWood/scripts.pory"
 	finditem ITEM_GREAT_BALL
 	end
 
 
 ParcelRiverMillWood_ItemEther::
-# 685 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 690 "data/maps/ParcelRiverMillWood/scripts.pory"
 	finditem ITEM_ETHER
 	end
 
 
 ParcelRiverMillWood_ItemParalyzeHeal::
-# 686 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 691 "data/maps/ParcelRiverMillWood/scripts.pory"
 	finditem ITEM_PARALYZE_HEAL
 	end
 
 
 ParcelRiverMillWood_DeadEndNorth::
-# 688 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 693 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_DeadEndNorth_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverMillWood_DeadEndSouth::
-# 692 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 697 "data/maps/ParcelRiverMillWood/scripts.pory"
 	msgbox ParcelRiverMillWood_DeadEndSouth_Text_0, MSGBOX_SIGN
 	end
 
@@ -2124,7 +2133,17 @@ ParcelRiverMillWood_Sawyer_Text_0:
 	.string "in it.$"
 
 ParcelRiverMillWood_Sawyer_Text_1:
-# 672 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 673 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "SAWYER: The Board's paper said three\n"
+	.string "stands. Then HAUKFELL's ground went\l"
+	.string "and the Board's paper said five --\l"
+	.string "timber for the warming centre, for the\l"
+	.string "relocation houses.\p"
+	.string "Good cause. The wood's paper still says\n"
+	.string "one. I'm cutting two and not sleeping.$"
+
+ParcelRiverMillWood_Sawyer_Text_2:
+# 677 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "SAWYER: Coppice wood. Twelve-year\n"
 	.string "round, one stand a year, and the mill\l"
 	.string "never wanted for timber in forty years.\p"
@@ -2133,24 +2152,24 @@ ParcelRiverMillWood_Sawyer_Text_1:
 	.string "no. I read the wood's.$"
 
 ParcelRiverMillWood_SignEdge_Text_0:
-# 677 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 682 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "ELVSUND MILL WOOD. Coppice cut on a\n"
 	.string "twelve-year round.\p"
 	.string "Take what fell. Leave what stands.$"
 
 ParcelRiverMillWood_SignRace_Text_0:
-# 681 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 686 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "The mill race starts here. The wheel has\n"
 	.string "been still since the Board metered the\l"
 	.string "water.$"
 
 ParcelRiverMillWood_DeadEndNorth_Text_0:
-# 688 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 693 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "The track runs out in brush. Nobody has\n"
 	.string "cut it since the mill slowed.$"
 
 ParcelRiverMillWood_DeadEndSouth_Text_0:
-# 692 "data/maps/ParcelRiverMillWood/scripts.pory"
+# 697 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "The old race track. Grown over to the\n"
 	.string "knee. The water it fed doesn't come this\l"
 	.string "way now.$"

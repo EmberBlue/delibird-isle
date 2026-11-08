@@ -669,6 +669,11 @@ script ParcelHighlandsTarn_Cadet {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("CADET: VALE went down to the coast for the hearing and left me the cold. I've learnt it twice over.\pShe sent a postcard. It says 'colder here'. There's nothing on the front but water."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("CADET: VALE said 'learn the cold'. I've learnt it. Can I go down now?\pShe said no. She says it kindly, which is worse."), MSGBOX_DEFAULT)
     release
     end

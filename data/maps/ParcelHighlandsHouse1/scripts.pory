@@ -47,6 +47,11 @@ script ParcelHighlandsHouse1_Girl {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("GIRL: HOLLIS went down to the coast. The cocoa stopped the day after. Grandad said nothing's as much as you like, and then he said 'told you' very quietly."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("GIRL: The warming centre has cocoa. HOLLIS said we could have as much as we liked. Grandad said nothing's as much as you like."), MSGBOX_DEFAULT)
     release
     end
