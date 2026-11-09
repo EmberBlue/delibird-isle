@@ -675,6 +675,14 @@
       "elevation": 0,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_SKALD_HIDDEN_WET_HEART_SCALE"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWetlands_ReedCount"
     }
   ]
 }

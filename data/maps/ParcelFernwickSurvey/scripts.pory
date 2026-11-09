@@ -8,8 +8,28 @@ mapscripts ParcelFernwickSurvey_MapScripts {
 script ParcelFernwickSurvey_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_CRATE) && !flag(FLAG_SKALD_Q_CRATE_DONE)) {
+        if (flag(FLAG_SKALD_Q_CRATE_FOUND)) {
+            msgbox(format("CLERK: There it is. Forty years of basement, one word, one boot print. I'll keep the boot print."), MSGBOX_DEFAULT)
+            msgbox(format("CLERK: Take this. Survey issue, from the drawer nobody opens. It steadied forty years of surveyors. It can steady one more."), MSGBOX_DEFAULT)
+            giveitem(ITEM_FOCUS_BAND)
+            setflag(FLAG_SKALD_Q_CRATE_DONE)
+            msgbox(format("CLERK: Chain of custody. That's the whole trick, you know. Not finding a thing. Being able to say where it's been."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("CLERK: The river hall floor. A label the size of your hand. EVIDENCE, in my writing. You'll know my writing; it's the only neat one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CLERK: Forty years of soil cores in the basement, and the hearing wanted the cores from the marsh. I carried them up myself. They're heavier than paper. They were read anyway."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!flag(FLAG_SKALD_Q_CRATE_DONE)) {
+        msgbox(format("CLERK: The soil cores came back from the river. Forty years of them, in the crate marked EVIDENCE. The crate came back. The label didn't.\pI need that label. Chain of custody. Without it the cores are just mud in boxes, which is what they always were, but now it matters.\pIt'll be on the floor of the river hall where they stacked the crates. Nobody there reads floors."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_CRATE)
         release
         end
     }

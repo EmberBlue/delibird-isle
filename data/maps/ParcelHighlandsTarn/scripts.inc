@@ -1494,6 +1494,27 @@ ParcelHighlandsTarn_ItemNeverMeltIce::
 	end
 
 
+ParcelHighlandsTarn_CoreTag::
+# 684 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CORE, ParcelHighlandsTarn_CoreTag_3
+ParcelHighlandsTarn_CoreTag_1:
+# 689 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_CoreTag_Text_1, MSGBOX_SIGN
+	end
+
+ParcelHighlandsTarn_CoreTag_2:
+# 685 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_CoreTag_Text_0, MSGBOX_SIGN
+# 686 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	setflag FLAG_SKALD_Q_CORE_FOUND
+	end
+
+ParcelHighlandsTarn_CoreTag_3:
+# 684 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_CORE_FOUND, ParcelHighlandsTarn_CoreTag_2
+	goto ParcelHighlandsTarn_CoreTag_1
+
+
 ParcelHighlandsTarn_Arnfinn_Text_0:
 # 10 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "ARNFINN: The tarn's under the hill. Cold\n"
@@ -2096,3 +2117,17 @@ ParcelHighlandsTarn_Cadet_Text_2:
 	.string "learnt it. Can I go down now?\p"
 	.string "She said no. She says it kindly, which is\n"
 	.string "worse.$"
+
+ParcelHighlandsTarn_CoreTag_Text_0:
+# 685 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "At the edge of the old water line, half\n"
+	.string "under a stone, a brass tag stamped\l"
+	.string "48-50. Somebody's thumb has worn the\l"
+	.string "stamp smooth on one side.\p"
+	.string "The tag is colder than the cave.$"
+
+ParcelHighlandsTarn_CoreTag_Text_1:
+# 689 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "The old water line in the cave, a pale\n"
+	.string "band on the rock, a hand above the\l"
+	.string "water that is there now.$"

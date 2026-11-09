@@ -382,8 +382,25 @@ script ParcelIsle_KidB {
 script ParcelIsle_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_HALVAR) && !flag(FLAG_SKALD_Q_HALVAR_DONE)) {
+        if (flag(FLAG_SKALD_Q_HALVAR_FOUND)) {
+            msgbox(format("HALVAR: ...Well. There it is. Twenty-two years in the water and it's cleaner than I am.\pBlow it? No. Let it be. Some things you keep because they're quiet now."), MSGBOX_DEFAULT)
+            msgbox(format("HALVAR: Here. This came off my first partner's collar. She was a loud one too. Take it; the whistle and the bell don't need to be in the same drawer."), MSGBOX_DEFAULT)
+            giveitem(ITEM_SOOTHE_BELL)
+            setflag(FLAG_SKALD_Q_HALVAR_DONE)
+            msgbox(format("HALVAR: Low water gave it back. Mark that in your book. Low water gives things back right before it takes the rest."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("HALVAR: The inlet, by the bridge. Low water. Look where the light goes flat on the stones."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HALVAR: Somebody finally said it out loud. In writing, with a name at the bottom.\pIt'll cost you. It'll cost everyone. Forty years on that bridge and it never once occurred to me that the cost was the point."), MSGBOX_DEFAULT)
+    } elif (!flag(FLAG_SKALD_Q_HALVAR_DONE)) {
+        msgbox(format("HALVAR: Forty years on that bridge and I lost one thing in all of it. A whistle. Corps issue, brass, on a lanyard. Went over the rail into the inlet the night the marsh road flooded.\pLow water this year. Lowest I've seen. If it's ever going to show, it's now.\pHave a look along the inlet by the bridge, would you. Humour an old man."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_HALVAR)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
         msgbox(format("HALVAR: Six people stood up in a river hall and the Board wrote down what they said. In my forty years that happened never.\pHALE will say it's procedure. It isn't. It's weather turning. Watch the water here. It'll know first."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {

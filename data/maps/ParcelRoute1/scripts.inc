@@ -1117,6 +1117,27 @@ Movement_Epilogue_PoliwagDownstream:
 	walk_down
 	step_end
 
+ParcelRoute1_Whistle::
+# 627 "data/maps/ParcelRoute1/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_HALVAR, ParcelRoute1_Whistle_3
+ParcelRoute1_Whistle_1:
+# 632 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Whistle_Text_1, MSGBOX_SIGN
+	end
+
+ParcelRoute1_Whistle_2:
+# 628 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Whistle_Text_0, MSGBOX_SIGN
+# 629 "data/maps/ParcelRoute1/scripts.pory"
+	setflag FLAG_SKALD_Q_HALVAR_FOUND
+	end
+
+ParcelRoute1_Whistle_3:
+# 627 "data/maps/ParcelRoute1/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_HALVAR_FOUND, ParcelRoute1_Whistle_2
+	goto ParcelRoute1_Whistle_1
+
+
 ParcelRoute1_BridgeScene_Text_0:
 # 46 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A whole crowd of POLIWAG, jammed up\n"
@@ -1545,3 +1566,17 @@ ParcelRoute1_Epilogue_Text_1:
 	.string "pace. Nobody helping it. It has the\l"
 	.string "room.\p"
 	.string "You write it down.$"
+
+ParcelRoute1_Whistle_Text_0:
+# 628 "data/maps/ParcelRoute1/scripts.pory"
+	.string "Something glints in the shallows where\n"
+	.string "the water has drawn back from the\l"
+	.string "stones. A brass whistle on a rotted\l"
+	.string "lanyard, green with the inlet.\p"
+	.string "You fish it out. It still has a pea in it.$"
+
+ParcelRoute1_Whistle_Text_1:
+# 632 "data/maps/ParcelRoute1/scripts.pory"
+	.string "The inlet by the bridge, drawn back from\n"
+	.string "its stones. Low water. Things show in\l"
+	.string "low water that were never meant to.$"

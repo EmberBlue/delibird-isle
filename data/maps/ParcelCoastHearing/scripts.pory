@@ -22,8 +22,28 @@ script ParcelCoastHearing_Clerk {
 script ParcelCoastHearing_Waiter1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_CARBON) && !flag(FLAG_SKALD_Q_CARBON_DONE)) {
+        if (flag(FLAG_SKALD_Q_CARBON_FOUND)) {
+            msgbox(format("FISHER: That's it. Year four. One sentence. I didn't know you were allowed more than one."), MSGBOX_DEFAULT)
+            msgbox(format("FISHER: Nine again. Here -- my wife packs me a lunch for every hearing and I never eat it. Nerves. Take it; it keeps better than I do."), MSGBOX_DEFAULT)
+            giveitem(ITEM_LEFTOVERS)
+            setflag(FLAG_SKALD_Q_CARBON_DONE)
+            msgbox(format("FISHER: Nine carbons and a ranger's survey in the same tray. First time the tray's had company."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("FISHER: Blue carbon. 'OBJECTION' in capitals. Somewhere on this floor."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: Nine objections, nine carbon copies, and the tenth one got read into the record. I've kept the chair warm nine years. It was worth the sitting."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!flag(FLAG_SKALD_Q_CARBON_DONE)) {
+        msgbox(format("FISHER: Nine seasons, nine objections, nine carbons. Eight, this morning. The fourth year's gone. It was in the folder and now it isn't.\pIt fell out in here somewhere. The benches, the clerk's table, under the chairs. A blue carbon, my handwriting, 'OBJECTION' at the top in capitals, because I didn't know how to do it then.\pFind it for me? I can't lose a year. I've got too few of them in here as it is."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_CARBON)
         release
         end
     }
@@ -55,5 +75,15 @@ script ParcelCoastHearing_Waiter2 {
 }
 script ParcelCoastHearing_Notice {
     msgbox(format("QUOTA REVIEW BOARD -- members: MEREHOLT COASTAL HOLDINGS (3), the FOUNDATION (2), the Union (1), the Council (1). Quorum: four. The Union seat has been vacant for two years."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastHearing_Carbon {
+    if (flag(FLAG_SKALD_Q_CARBON) && !flag(FLAG_SKALD_Q_CARBON_FOUND)) {
+        msgbox(format("Behind the clerk's bench, folded small where a shoe pushed it: a blue carbon copy. OBJECTION, in capitals, pressed hard enough to tear.\pThe objection is one sentence long. It is about the size of a fish."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_CARBON_FOUND)
+        end
+    }
+    msgbox(format("The clerk's bench. Behind it, the floor where nine seasons of chairs have scraped the same two lines."), MSGBOX_SIGN)
     end
 }

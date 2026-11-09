@@ -45,8 +45,28 @@ script ParcelDelibirdSummit_Ingrid {
 script ParcelDelibirdSummit_Kari {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_SLEDGE) && !flag(FLAG_SKALD_Q_SLEDGE_DONE)) {
+        if (flag(FLAG_SKALD_Q_SLEDGE_FOUND)) {
+            msgbox(format("Kari: You got it! It's got moss on it. It didn't have moss.\pThere's nowhere to use it. Gran says there will be, up the top, if the snow comes back. Gran says 'if' now. She used to say 'when'."), MSGBOX_DEFAULT)
+            msgbox(format("Kari: Here. Gran gave me this for being brave about the pond. I wasn't brave. I was just here. You should have it; you climbed."), MSGBOX_DEFAULT)
+            giveitem(ITEM_SHELL_BELL)
+            setflag(FLAG_SKALD_Q_SLEDGE_DONE)
+            msgbox(format("Kari: I'm going to keep the sledge inside. Dad says that's silly. I say the tree was silly."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("Kari: The tree by the pond. The fork. You can see the runner sticking out."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("Kari: They put a rope round my pond. Dad says it's for the little ones.\pI'm little. I think it's for everybody."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!flag(FLAG_SKALD_Q_SLEDGE_DONE)) {
+        msgbox(format("Kari: My sledge is up in the tree. Dad put it there, out of the wet, when the pond came. He says it's safe there. I can see it from here.\pIt's not safe. It's just high.\pCan you get it down? You're tall. I'm not allowed to climb since the ground went soft."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_SLEDGE)
         release
         end
     }
@@ -503,5 +523,15 @@ script ParcelDelibirdSummit_T_Torvald_R5 {
     trainerbattle_no_intro(TRAINER_SKALD_SUM_TORVALD_R5, format("TORVALD: Noted. Properly, this time."))
     msgbox(format("TORVALD: Five. Write that one down too. I'll know you did."), MSGBOX_DEFAULT)
     release
+    end
+}
+
+script ParcelDelibirdSummit_Sledge {
+    if (flag(FLAG_SKALD_Q_SLEDGE) && !flag(FLAG_SKALD_Q_SLEDGE_FOUND)) {
+        msgbox(format("A child's sledge wedged in the fork of the leaning tree, runners up, out of the wet. The tree has leaned further since it was put there; the sledge is nearly level now.\pYou work it loose. It is lighter than it looks. A name is burned into the slat: KARI."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_SLEDGE_FOUND)
+        end
+    }
+    msgbox(format("A leaning tree with something wedged in its fork, out of the wet. A child's sledge, by the runners."), MSGBOX_SIGN)
     end
 }

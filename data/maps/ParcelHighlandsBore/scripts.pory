@@ -4,8 +4,28 @@ mapscripts ParcelHighlandsBore_MapScripts {
 script ParcelHighlandsBore_Geologist {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_CORE) && !flag(FLAG_SKALD_Q_CORE_DONE)) {
+        if (flag(FLAG_SKALD_Q_CORE_FOUND)) {
+            msgbox(format("GEOLOGIST: 48-50. That's the core where the ice turns to mud, the one they most want unlabelled."), MSGBOX_DEFAULT)
+            msgbox(format("GEOLOGIST: It's labelled. Thank you. Here -- the housing's spare lining. It stops a drill bit going dull on hard ground. Put it on something you want to stay sharp."), MSGBOX_DEFAULT)
+            giveitem(ITEM_METAL_COAT)
+            setflag(FLAG_SKALD_Q_CORE_DONE)
+            msgbox(format("GEOLOGIST: Fifty-two metres. I wrote it. Now the one core that proves it has a name again."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("GEOLOGIST: The tarn cave. A brass tag, 48-50. I had it in my hand at the old water line."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GEOLOGIST: Housing's dead. Capped at ninety metres. The freeze starts at forty and now nobody's drilling through it. I'm on half pay to watch a cap. It's the best job I've had here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!flag(FLAG_SKALD_Q_CORE_DONE)) {
+        msgbox(format("GEOLOGIST: Fifty-two metres and a missing tag. The core from forty-eight to fifty is labelled, bagged, and the tag is not on it.\pI dropped it in the tarn cave when I went down to check the old water line. A brass tag, stamped 48-50. Without it the coast office gets to call that core 'unlabelled', and 'unlabelled' is a word that means 'forget it'.\pThe cave's up the slope, west of the bore. I'd go myself, but I'm not allowed off the housing while it's live."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_CORE)
         release
         end
     }

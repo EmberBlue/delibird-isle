@@ -6,8 +6,28 @@ mapscripts ParcelWetlandsHouse2_MapScripts {
 script ParcelWetlandsHouse2_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_REED) && !flag(FLAG_SKALD_Q_REED_DONE)) {
+        if (flag(FLAG_SKALD_Q_REED_FOUND)) {
+            msgbox(format("OLD MAN: Nineteen. There were forty in that bed when I was your age. Fifty-one when my father cut it.\pNineteen goes to the river hall in your writing, not mine. Yours gets read."), MSGBOX_DEFAULT)
+            msgbox(format("OLD MAN: Take this. Found it in the beds years back; the heron that owned it was quicker than me. It'll be quicker than whatever you're facing, too."), MSGBOX_DEFAULT)
+            giveitem(ITEM_QUICK_CLAW)
+            setflag(FLAG_SKALD_Q_REED_DONE)
+            msgbox(format("OLD MAN: Eight years to come back, and nineteen stands. Write both. One without the other is a lie by halves."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("OLD MAN: West of the landing, the reed bed past the pond. Taller than you. Count them."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: GUNNAR's SURSKIT count went up this month. First time. He told everyone. He told me twice."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!flag(FLAG_SKALD_Q_REED_DONE)) {
+        msgbox(format("OLD MAN: Twelve-year rounds, I told you. Eight, now. I've said eight to the river hall and the river hall wants it counted, not said.\pMy knees won't do the beds any more. Go and count the stands still standing in the bed west of the landing, past the pond. Count the ones taller than you. That's the rule. Taller than a person is a stand."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_REED)
         release
         end
     }

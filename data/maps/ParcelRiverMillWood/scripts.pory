@@ -664,6 +664,14 @@ script ParcelRiverMillWood_Jens_R5 {
 script ParcelRiverMillWood_Sawyer {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_PLANK) && !flag(FLAG_SKALD_Q_PLANK_HAVE)) {
+        msgbox(format("SAWYER: A keel plank for a hill farmer's boat. Hm.\pThe Board's paper wants five stands. This plank came off the one stand I'd cut anyway, twelve winters ago, and it's been drying under the eaves since. It's the only seasoned timber in the valley that isn't on a Board invoice."), MSGBOX_DEFAULT)
+        msgbox(format("SAWYER: Take it to him. Tell him it's the last of the old round. He'll know what that means for the next one."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_PLANK_HAVE)
+        msgbox(format("You shoulder the plank. It smells of a summer that happened before you were born."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SAWYER: The Board's paper says one stand a year again. The wood's paper agrees for once. I read both. The race ran an hour last week. The miller stood in it."), MSGBOX_DEFAULT)
         release

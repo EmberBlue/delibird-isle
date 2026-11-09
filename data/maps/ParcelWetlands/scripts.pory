@@ -1918,3 +1918,13 @@ script ParcelWetlands_ToHide {
     waitstate
     end
 }
+
+script ParcelWetlands_ReedCount {
+    if (flag(FLAG_SKALD_Q_REED) && !flag(FLAG_SKALD_Q_REED_FOUND)) {
+        msgbox(format("You walk the bed the way he said, counting the stands that top your head. Most don't.\pNineteen. You walk it again to be sure. Nineteen."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_REED_FOUND)
+        end
+    }
+    msgbox(format("A reed bed. The stands lean the way the wind went last. Fewer top your head than you'd expect."), MSGBOX_SIGN)
+    end
+}

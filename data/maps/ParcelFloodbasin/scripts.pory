@@ -191,8 +191,37 @@ script ParcelFloodbasin_VilOldWoman {
 script ParcelFloodbasin_VilMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_BROWN) && !flag(FLAG_SKALD_Q_BROWN_DONE)) {
+        if (flag(FLAG_SKALD_Q_BROWN_A) && flag(FLAG_SKALD_Q_BROWN_B) && flag(FLAG_SKALD_Q_BROWN_C)) {
+            msgbox(format("MAN: Three. You held them up to the light the way I would've if I'd had the vials.\pBrown's just mud. Mud don't shine. That shine's the thing nobody asks about, and now it's in three bottles with my name on the sheet as the one who asked."), MSGBOX_DEFAULT)
+            msgbox(format("MAN: Here. Came up with the brown water the third flood and I've kept it dry since. Yours."), MSGBOX_DEFAULT)
+            giveitem(ITEM_MAX_ELIXIR)
+            setflag(FLAG_SKALD_Q_BROWN_DONE)
+            msgbox(format("MAN: Vouchers are for asking quietly. Bottles are for asking out loud."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("MAN: The marks. A scrape off each one."), MSGBOX_DEFAULT)
+        if (!flag(FLAG_SKALD_Q_BROWN_A)) {
+            msgbox(format("MAN: The first is on the house beside the relief tent."), MSGBOX_DEFAULT)
+        }
+        if (!flag(FLAG_SKALD_Q_BROWN_B)) {
+            msgbox(format("MAN: The second is on the hamlet wall, the house by the lane."), MSGBOX_DEFAULT)
+        }
+        if (!flag(FLAG_SKALD_Q_BROWN_C)) {
+            msgbox(format("MAN: The third is on the house with the tarp roof. Highest of the three."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Three floods, three times the vouchers, and the water still comes up brown. Your paper says why. In the hearing they read the why aloud. The water didn't change colour. I did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!flag(FLAG_SKALD_Q_BROWN_DONE)) {
+        msgbox(format("MAN: The water comes up brown and nobody's asked why but me, and I got vouchers for asking. You've got vials. I've seen the belt.\pThree flood marks on the hamlet. Take a scrape off each one. If it's mud it's mud. If it's the other thing, somebody's going to have to say so.\pThe marks are the brown lines on the walls. You can't miss them. Everybody misses them."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_BROWN)
         release
         end
     }
@@ -1911,5 +1940,35 @@ script ParcelFloodbasin_TarpRoof {
     }
     msgbox(format("A blue tarp weighted with stones over half a roof. Four Thursdays of weather on it.\pThe stones have shifted. Somebody re-stacks them every morning."), MSGBOX_SIGN)
     setflag(FLAG_SKALD_Q_ROOF_FOUND)
+    end
+}
+
+script ParcelFloodbasin_MarkA {
+    if (flag(FLAG_SKALD_Q_BROWN) && !flag(FLAG_SKALD_Q_BROWN_A)) {
+        msgbox(format("A brown line a hand above the sill, on the house beside the relief tent. You scrape it into a vial. It smells of the lake, and of something that is not the lake.\pSample one."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_BROWN_A)
+        end
+    }
+    msgbox(format("A brown line on the wall, a hand above the sill. The flood's signature."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFloodbasin_MarkB {
+    if (flag(FLAG_SKALD_Q_BROWN) && !flag(FLAG_SKALD_Q_BROWN_B)) {
+        msgbox(format("The second mark, on the hamlet wall, higher than the first. The scrape comes away greasy.\pSample two."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_BROWN_B)
+        end
+    }
+    msgbox(format("A brown line on the hamlet wall, higher than the one by the tent."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFloodbasin_MarkC {
+    if (flag(FLAG_SKALD_Q_BROWN) && !flag(FLAG_SKALD_Q_BROWN_C)) {
+        msgbox(format("The third mark, on the house with the tarp roof, highest of all. Under the brown there is a sheen like the one on the water by the booth.\pSample three."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_BROWN_C)
+        end
+    }
+    msgbox(format("A brown line under the tarp roof's eaves, highest of the three."), MSGBOX_SIGN)
     end
 }

@@ -3,8 +3,28 @@ mapscripts ParcelRiverBoatyard_MapScripts {
 script ParcelRiverBoatyard_Wright {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_PLANK) && !flag(FLAG_SKALD_Q_PLANK_DONE)) {
+        if (flag(FLAG_SKALD_Q_PLANK_HAVE)) {
+            msgbox(format("BOATWRIGHT: Seasoned. Twelve years under the eaves; you can hear it when you knock. That's a keel."), MSGBOX_DEFAULT)
+            msgbox(format("BOATWRIGHT: The hill man paid a deposit in coin. Old coin, from a jar. Here -- the first one out of the jar. Keep it on a partner and the next jar fills faster. That's a boatyard superstition. We have a lot of them."), MSGBOX_DEFAULT)
+            giveitem(ITEM_AMULET_COIN)
+            setflag(FLAG_SKALD_Q_PLANK_DONE)
+            msgbox(format("BOATWRIGHT: A boat built for water that hasn't arrived yet. My grandfather would have laughed. Then he'd have built it."), MSGBOX_DEFAULT)
+            release
+            end
+        }
+        msgbox(format("BOATWRIGHT: The mill wood, west of the market. The sawyer. A keel plank, seasoned."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOATWRIGHT: HARLAND's boat was in the hearing transcript. His grandfather built it in this shed. I'm not saying I cried. The apprentice says I did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (!flag(FLAG_SKALD_Q_PLANK_DONE)) {
+        msgbox(format("BOATWRIGHT: First new boat in two years, for a man off a hill. I'll build it right or not at all, and right means a seasoned plank for the keel, not the green stuff the depot sells.\pThe sawyer in the mill wood seasons his own. He won't sell to the depot. He might hand one to you.\pAsk him for a keel plank. Say it's for a hill farmer who's never seen the water. He'll understand that better than I do."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_PLANK)
         release
         end
     }

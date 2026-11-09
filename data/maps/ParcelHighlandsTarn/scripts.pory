@@ -679,3 +679,13 @@ script ParcelHighlandsTarn_Cadet {
     end
 }
 script ParcelHighlandsTarn_ItemNeverMeltIce { finditem(ITEM_NEVER_MELT_ICE) end }
+
+script ParcelHighlandsTarn_CoreTag {
+    if (flag(FLAG_SKALD_Q_CORE) && !flag(FLAG_SKALD_Q_CORE_FOUND)) {
+        msgbox(format("At the edge of the old water line, half under a stone, a brass tag stamped 48-50. Somebody's thumb has worn the stamp smooth on one side.\pThe tag is colder than the cave."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_CORE_FOUND)
+        end
+    }
+    msgbox(format("The old water line in the cave, a pale band on the rock, a hand above the water that is there now."), MSGBOX_SIGN)
+    end
+}

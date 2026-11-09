@@ -166,3 +166,13 @@ script ParcelRiverHall_Woman {
     release
     end
 }
+
+script ParcelRiverHall_CrateLabel {
+    if (flag(FLAG_SKALD_Q_CRATE) && !flag(FLAG_SKALD_Q_CRATE_FOUND)) {
+        msgbox(format("Under the edge of the trestle table, a crate label on a loop of string: SKALDMERE SURVEY -- SOIL CORES 1-40 -- EVIDENCE. The writing is very neat.\pA boot has been on it. The ink held."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_CRATE_FOUND)
+        end
+    }
+    msgbox(format("Under the trestle table: dust, a chair leg mended with wire, and the marks where crates were stacked for the meeting."), MSGBOX_SIGN)
+    end
+}

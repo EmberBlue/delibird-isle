@@ -363,4 +363,19 @@ quest is built, how the peer works) before they are asked six more times.
   the drawer that doesn't close with the pen on top of them, a child's
   mittens in sizes that were never worn. Three taken on screen.
   ~56,100 hand-written words.
+- **2026-11-08 — eight more side quests, one per zone (twenty-four in all).**
+  Halvar's Corps whistle, twenty-two years in the inlet, given back by low
+  water (Soothe Bell); the Survey clerk's crate label on the river hall floor
+  -- chain of custody (Focus Band); the reed cutter's count, nineteen stands
+  taller than a person where there were fifty-one (Quick Claw); three
+  scrapes off Leirvik's flood marks, and the shine under the brown (Max
+  Elixir); a seasoned keel plank from the sawyer's one stand for a boat
+  built for water that hasn't arrived (Amulet Coin); the geologist's brass
+  tag 48-50 found at the tarn cave's old water line (Metal Coat); Kari's
+  sledge worked loose from the leaning tree (Shell Bell); the nine-season
+  objector's fourth carbon behind the clerk's bench (Leftovers). A started
+  quest always resolves, even after the finale; the offer is the second leg
+  after the post-finale line. The notebook's Side work page now lists open
+  quests and a finished count, so it stays inside gStringVar4 at any length.
+  ~58,000 hand-written words.
 

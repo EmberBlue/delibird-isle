@@ -3988,6 +3988,27 @@ ParcelWetlands_ToHide::
 	end
 
 
+ParcelWetlands_ReedCount::
+# 1923 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_REED, ParcelWetlands_ReedCount_3
+ParcelWetlands_ReedCount_1:
+# 1928 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_ReedCount_Text_1, MSGBOX_SIGN
+	end
+
+ParcelWetlands_ReedCount_2:
+# 1924 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_ReedCount_Text_0, MSGBOX_SIGN
+# 1925 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_REED_FOUND
+	end
+
+ParcelWetlands_ReedCount_3:
+# 1923 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_REED_FOUND, ParcelWetlands_ReedCount_2
+	goto ParcelWetlands_ReedCount_1
+
+
 ParcelWetlands_Harland_Text_0:
 # 77 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: They read your report out on\n"
@@ -5669,3 +5690,17 @@ ParcelWetlands_Epilogue_Text_0:
 	.string "new page in it. A CORPS monitor sits on\l"
 	.string "the bank with a jar and a clock. Nobody\l"
 	.string "cut a ribbon for it.$"
+
+ParcelWetlands_ReedCount_Text_0:
+# 1924 "data/maps/ParcelWetlands/scripts.pory"
+	.string "You walk the bed the way he said,\n"
+	.string "counting the stands that top your\l"
+	.string "head. Most don't.\p"
+	.string "Nineteen. You walk it again to be sure.\n"
+	.string "Nineteen.$"
+
+ParcelWetlands_ReedCount_Text_1:
+# 1928 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A reed bed. The stands lean the way the\n"
+	.string "wind went last. Fewer top your head\l"
+	.string "than you'd expect.$"

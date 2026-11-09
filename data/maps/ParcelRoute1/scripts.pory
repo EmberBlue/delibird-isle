@@ -622,3 +622,13 @@ movement Movement_Epilogue_PoliwagDownstream {
     delay_16
     walk_down * 3
 }
+
+script ParcelRoute1_Whistle {
+    if (flag(FLAG_SKALD_Q_HALVAR) && !flag(FLAG_SKALD_Q_HALVAR_FOUND)) {
+        msgbox(format("Something glints in the shallows where the water has drawn back from the stones. A brass whistle on a rotted lanyard, green with the inlet.\pYou fish it out. It still has a pea in it."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_HALVAR_FOUND)
+        end
+    }
+    msgbox(format("The inlet by the bridge, drawn back from its stones. Low water. Things show in low water that were never meant to."), MSGBOX_SIGN)
+    end
+}

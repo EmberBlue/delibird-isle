@@ -279,6 +279,27 @@ ParcelRiverHall_Woman_5:
 	end
 
 
+ParcelRiverHall_CrateLabel::
+# 171 "data/maps/ParcelRiverHall/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CRATE, ParcelRiverHall_CrateLabel_3
+ParcelRiverHall_CrateLabel_1:
+# 176 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_CrateLabel_Text_1, MSGBOX_SIGN
+	end
+
+ParcelRiverHall_CrateLabel_2:
+# 172 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_CrateLabel_Text_0, MSGBOX_SIGN
+# 173 "data/maps/ParcelRiverHall/scripts.pory"
+	setflag FLAG_SKALD_Q_CRATE_FOUND
+	end
+
+ParcelRiverHall_CrateLabel_3:
+# 171 "data/maps/ParcelRiverHall/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_CRATE_FOUND, ParcelRiverHall_CrateLabel_2
+	goto ParcelRiverHall_CrateLabel_1
+
+
 ParcelRiverHall_Meeting_Text_0:
 # 31 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "MAYOR: --order. Order. The RANGER's\n"
@@ -515,3 +536,18 @@ ParcelRiverHall_Woman_Text_2:
 	.string "WOMAN: I come to every meeting. Nothing\n"
 	.string "changes. I keep coming. That's the only\l"
 	.string "thing I can think of to do.$"
+
+ParcelRiverHall_CrateLabel_Text_0:
+# 172 "data/maps/ParcelRiverHall/scripts.pory"
+	.string "Under the edge of the trestle table, a\n"
+	.string "crate label on a loop of string:\l"
+	.string "SKALDMERE SURVEY -- SOIL CORES 1-40\l"
+	.string "-- EVIDENCE. The writing is very neat.\p"
+	.string "A boot has been on it. The ink held.$"
+
+ParcelRiverHall_CrateLabel_Text_1:
+# 176 "data/maps/ParcelRiverHall/scripts.pory"
+	.string "Under the trestle table: dust, a chair\n"
+	.string "leg mended with wire, and the marks\l"
+	.string "where crates were stacked for the\l"
+	.string "meeting.$"

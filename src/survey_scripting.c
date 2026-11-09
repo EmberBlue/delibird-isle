@@ -201,6 +201,10 @@ static const u8 sNb_Page[]             = _("\p");
 static const u8 sNb_Quests_Head[]      = _("SIDE WORK\n");
 static const u8 sNb_Done[]             = _("done");
 static const u8 sNb_Started[]          = _("open");
+static const u8 sNb_Quests_NoneOpen[]  = _("Nothing open. Ask around.");
+static const u8 sNb_Quests_Finished[]  = _("\pFinished: ");
+static const u8 sNb_Quests_Of[]        = _(" of ");
+static const u8 sNb_Quests_Dot[]       = _(".");
 struct NbQuest { const u8 *name; u16 startFlag; u16 doneFlag; };
 static const u8 sNbQ_Anni[]    = _("ANNI's net: ");
 static const u8 sNbQ_Sigrun[]  = _("SIGRUN's gulls: ");
@@ -223,6 +227,14 @@ static const u8 sNbQ_Mareep[]  = _("The shepherd's MAREEP: ");
 static const u8 sNbQ_Tins[]    = _("The line of tins: ");
 static const u8 sNbQ_Cast[]    = _("The office CASTFORM: ");
 static const u8 sNbQ_Round[]   = _("Marta's relief round: ");
+static const u8 sNbQ_Halvar[]  = _("HALVAR's whistle: ");
+static const u8 sNbQ_Crate[]   = _("The crate label: ");
+static const u8 sNbQ_Reed[]    = _("The reed count: ");
+static const u8 sNbQ_Brown[]   = _("The brown water: ");
+static const u8 sNbQ_Plank[]   = _("The keel plank: ");
+static const u8 sNbQ_Core[]    = _("Core tag 48-50: ");
+static const u8 sNbQ_Sledge[]  = _("KARI's sledge: ");
+static const u8 sNbQ_Carbon[]  = _("The fourth carbon: ");
 static const struct NbQuest sNbQuests[] =
 {
     {sNbQ_Anni,    FLAG_SKALD_Q_ANNI_NET,    FLAG_SKALD_Q_ANNI_DONE},
@@ -246,6 +258,14 @@ static const struct NbQuest sNbQuests[] =
     {sNbQ_Tins,    FLAG_SKALD_Q_TINS,        FLAG_SKALD_Q_TINS_DONE},
     {sNbQ_Cast,    FLAG_SKALD_Q_CASTFORM,    FLAG_SKALD_Q_CASTFORM_DONE},
     {sNbQ_Round,   FLAG_SKALDMERE_DELIBIRD_PARCEL, FLAG_SKALDMERE_DELIBIRD_GIFT},
+    {sNbQ_Halvar,  FLAG_SKALD_Q_HALVAR,      FLAG_SKALD_Q_HALVAR_DONE},
+    {sNbQ_Crate,   FLAG_SKALD_Q_CRATE,       FLAG_SKALD_Q_CRATE_DONE},
+    {sNbQ_Reed,    FLAG_SKALD_Q_REED,        FLAG_SKALD_Q_REED_DONE},
+    {sNbQ_Brown,   FLAG_SKALD_Q_BROWN,       FLAG_SKALD_Q_BROWN_DONE},
+    {sNbQ_Plank,   FLAG_SKALD_Q_PLANK,       FLAG_SKALD_Q_PLANK_DONE},
+    {sNbQ_Core,    FLAG_SKALD_Q_CORE,        FLAG_SKALD_Q_CORE_DONE},
+    {sNbQ_Sledge,  FLAG_SKALD_Q_SLEDGE,      FLAG_SKALD_Q_SLEDGE_DONE},
+    {sNbQ_Carbon,  FLAG_SKALD_Q_CARBON,      FLAG_SKALD_Q_CARBON_DONE},
 };
 
 static const u8 sNb_Margins_None[]  = _("The margins are in her hand, in a\nshorthand you can't read yet.\pIt gets easier the more of the\nregion you've read yourself.");
@@ -333,15 +353,39 @@ void SkaldNotebookBuffer(void)
         StringAppend(gStringVar4, sNb_Of8);
         break;
     case 2:
+    {
+        // Open quests in full, then a count of the finished ones: the list is
+        // long enough now that printing every entry could overrun gStringVar4.
+        u32 open = 0, done = 0;
         StringCopy(gStringVar4, sNb_Quests_Head);
         for (i = 0; i < ARRAY_COUNT(sNbQuests); i++)
         {
-            if (i != 0)
-                StringAppend(gStringVar4, (i & 1) ? sNb_Newline : sNb_Page);
+            if (FlagGet(sNbQuests[i].doneFlag))
+            {
+                done++;
+                continue;
+            }
+            if (sNbQuests[i].startFlag != 0 && !FlagGet(sNbQuests[i].startFlag))
+                continue;
+            if (open >= 14)
+                continue;
+            if (open)
+                StringAppend(gStringVar4, (open & 1) ? sNb_Newline : sNb_Page);
             StringAppend(gStringVar4, sNbQuests[i].name);
-            NbAppendFlagState(sNbQuests[i].doneFlag, sNbQuests[i].startFlag, sNb_Done);
+            StringAppend(gStringVar4, sNb_Started);
+            open++;
         }
+        if (open == 0)
+            StringAppend(gStringVar4, sNb_Quests_NoneOpen);
+        StringAppend(gStringVar4, sNb_Quests_Finished);
+        ConvertIntToDecimalStringN(gStringVar1, done, STR_CONV_MODE_LEFT_ALIGN, 2);
+        StringAppend(gStringVar4, gStringVar1);
+        StringAppend(gStringVar4, sNb_Quests_Of);
+        ConvertIntToDecimalStringN(gStringVar1, ARRAY_COUNT(sNbQuests), STR_CONV_MODE_LEFT_ALIGN, 2);
+        StringAppend(gStringVar4, gStringVar1);
+        StringAppend(gStringVar4, sNb_Quests_Dot);
         break;
+    }
     case 4:
         if (!FlagGet(FLAG_SKALDMERE_FOREST_CERT))
         {
