@@ -44,3 +44,13 @@ script ParcelRiverMart_Customer {
     release
     end
 }
+
+script ParcelRiverMart_ReadShelf {
+    msgbox(format("NET BALLS, and a shelf of river cream. The cream sells better."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverMart_ReadBlankets {
+    msgbox(format("Blankets with the crest, free. A sign says TAKE ONE. Someone has added, smaller: AND THINK ABOUT IT."), MSGBOX_SIGN)
+    end
+}

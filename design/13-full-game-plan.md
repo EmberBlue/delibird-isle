@@ -378,4 +378,16 @@ quest is built, how the peer works) before they are asked six more times.
   after the post-finale line. The notebook's Side work page now lists open
   quests and a finished count, so it stays inside gStringVar4 at any length.
   ~58,000 hand-written words.
+- **2026-11-09 — readables in the public rooms.** Thirty-five more sign
+  events in sixteen public interiors: each Center's leaflet rack and wall
+  map (the marsh's old shoreline pencilled a finger-width out; the reef in
+  blue from memory; plot nine circled), each Mart's shelves (REPELS by the
+  crate, NO REFUNDS ON WOOPER; a tin turned crest to the wall), the HQ's
+  specimen case and duty ledger (WREN -- FIELD, and nothing after it), the
+  Survey office blackboard and the soft-paged field guide with one plant
+  ringed, the Flats' fridge note, the boatyard's steaming rib, Hollis's desk
+  with the survey squared to its edge, the boardroom's framed recovery model
+  signed in a younger version of the hand from the margins, the breakwater
+  hut's bench of initials, the Tidewater office's fifth gauge drawn where
+  the falls are not. ~58,800 hand-written words.
 

@@ -77,6 +77,18 @@ ParcelFernwickMart_Customer_5:
 	end
 
 
+ParcelFernwickMart_ReadShelf::
+# 49 "data/maps/ParcelFernwickMart/scripts.pory"
+	msgbox ParcelFernwickMart_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickMart_ReadKit::
+# 54 "data/maps/ParcelFernwickMart/scripts.pory"
+	msgbox ParcelFernwickMart_ReadKit_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickMart_Customer_Text_0:
 # 34 "data/maps/ParcelFernwickMart/scripts.pory"
 	.string "YOUNGSTER: REPELS are still on sale.\n"
@@ -96,3 +108,15 @@ ParcelFernwickMart_Customer_Text_2:
 	.string "YOUNGSTER: REPELS are on sale. The\n"
 	.string "marsh has a lot of WOOPER.\p"
 	.string "A LOT.$"
+
+ParcelFernwickMart_ReadShelf_Text_0:
+# 49 "data/maps/ParcelFernwickMart/scripts.pory"
+	.string "Top shelf: REPELS, by the crate. A\n"
+	.string "handwritten sign: FOR THE MARSH. NO\l"
+	.string "REFUNDS ON WOOPER.$"
+
+ParcelFernwickMart_ReadKit_Text_0:
+# 54 "data/maps/ParcelFernwickMart/scripts.pory"
+	.string "The middle shelf is Corps field kit:\n"
+	.string "vials, labels, a flow gauge with a\l"
+	.string "cracked face marked AS SEEN.$"

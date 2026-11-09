@@ -79,6 +79,18 @@ ParcelCoastMart_Customer_5:
 	end
 
 
+ParcelCoastMart_ReadShelf::
+# 47 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastMart_ReadTins::
+# 52 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_ReadTins_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastMart_Customer_Text_0:
 # 32 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "SAILOR: DIVE BALLS. Bought one. The\n"
@@ -101,3 +113,15 @@ ParcelCoastMart_Customer_Text_2:
 	.string "The clerk said for the fish. I said\l"
 	.string "there's no fish. She said that's not her\l"
 	.string "department.$"
+
+ParcelCoastMart_ReadShelf_Text_0:
+# 47 "data/maps/ParcelCoastMart/scripts.pory"
+	.string "Top shelf: DIVE BALLS, a full case. The\n"
+	.string "price tag has been changed three times,\l"
+	.string "downward.$"
+
+ParcelCoastMart_ReadTins_Text_0:
+# 52 "data/maps/ParcelCoastMart/scripts.pory"
+	.string "Tins. The crest on every one. The clerk\n"
+	.string "has turned one so the crest faces the\l"
+	.string "wall, and left it like that.$"

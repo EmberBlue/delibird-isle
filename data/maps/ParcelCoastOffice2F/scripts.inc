@@ -143,6 +143,24 @@ ParcelCoastOffice2F_Perrin_Last_5:
 	end
 
 
+ParcelCoastOffice2F_ReadModel::
+# 87 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_ReadModel_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastOffice2F_ReadDesk::
+# 92 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_ReadDesk_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastOffice2F_ReadBoat::
+# 97 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_ReadBoat_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastOffice2F_Hollis_Text_0:
 # 18 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "HOLLIS: The conservation programme is\n"
@@ -272,3 +290,26 @@ ParcelCoastOffice2F_Perrin_Last_Text_4:
 	.string "in here who's read it. That's me, now.\p"
 	.string "Go on. You've got a region. I've got a\n"
 	.string "window.$"
+
+ParcelCoastOffice2F_ReadModel_Text_0:
+# 87 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "A model under glass: the harbour as the\n"
+	.string "FOUNDATION plans it. Six berths, a cold\l"
+	.string "store, a wind turbine where the union\l"
+	.string "hall is.$"
+
+ParcelCoastOffice2F_ReadDesk_Text_0:
+# 92 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "A desk with nothing on it but a tea tray\n"
+	.string "and your coast survey, squared to the\l"
+	.string "edge. The tea is still warm.\p"
+	.string "The survey has been read. The corners\n"
+	.string "say so.$"
+
+ParcelCoastOffice2F_ReadBoat_Text_0:
+# 97 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "A model of a fishing boat, the old kind,\n"
+	.string "high in the bow. The card: 'Traditional\l"
+	.string "fleet, heritage display.'\p"
+	.string "The real one is tied up at the quay,\n"
+	.string "owned by a lender.$"

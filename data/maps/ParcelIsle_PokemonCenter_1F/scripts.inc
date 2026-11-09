@@ -38,9 +38,34 @@ ParcelIsle_PokemonCenter_1F_EventScript_Fisher::
 	end
 
 
+ParcelIsle_PokemonCenter_1F_ReadRack::
+# 35 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
+	msgbox ParcelIsle_PokemonCenter_1F_ReadRack_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsle_PokemonCenter_1F_ReadMap::
+# 40 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
+	msgbox ParcelIsle_PokemonCenter_1F_ReadMap_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsle_PokemonCenter_1F_EventScript_Fisher_Text_0:
 # 29 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
 	.string "Aid's free for provisionals. Corps\n"
 	.string "covers it.\p"
 	.string "You'll need it--the bridge corridor\n"
 	.string "doesn't forgive a tired team.$"
+
+ParcelIsle_PokemonCenter_1F_ReadRack_Text_0:
+# 35 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
+	.string "Leaflets: FERRY TIMES. Each one out of\n"
+	.string "date; nobody has thrown them away. The\l"
+	.string "newest says SERVICE SUSPENDED in a\l"
+	.string "hand that pressed hard.$"
+
+ParcelIsle_PokemonCenter_1F_ReadMap_Text_0:
+# 40 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
+	.string "A chart of the strait, the island, the\n"
+	.string "bridge. A thumbtack where the lab is.\l"
+	.string "Nobody has moved it.$"

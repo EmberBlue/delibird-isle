@@ -44,3 +44,13 @@ script ParcelFernwickMart_Customer {
     release
     end
 }
+
+script ParcelFernwickMart_ReadShelf {
+    msgbox(format("Top shelf: REPELS, by the crate. A handwritten sign: FOR THE MARSH. NO REFUNDS ON WOOPER."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickMart_ReadKit {
+    msgbox(format("The middle shelf is Corps field kit: vials, labels, a flow gauge with a cracked face marked AS SEEN."), MSGBOX_SIGN)
+    end
+}

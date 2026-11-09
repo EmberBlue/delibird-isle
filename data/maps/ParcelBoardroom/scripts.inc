@@ -104,6 +104,18 @@ ParcelBoardroom_Cordelia_2:
 	end
 
 
+ParcelBoardroom_ReadCase::
+# 81 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_ReadCase_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelBoardroom_ReadFrame::
+# 86 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_ReadFrame_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelBoardroom_Arrival_Text_0:
 # 29 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "The boardroom runs the whole length of\n"
@@ -259,3 +271,19 @@ ParcelBoardroom_Cordelia_Text_12:
 	.string "between you and it.\p"
 	.string "The meeting is over. Nobody says so. It\n"
 	.string "is over anyway.$"
+
+ParcelBoardroom_ReadCase_Text_0:
+# 81 "data/maps/ParcelBoardroom/scripts.pory"
+	.string "A core sample under glass, labelled\n"
+	.string "EXPLORATORY, HAUKFELL. The ice in it\l"
+	.string "has long since gone to water and been\l"
+	.string "wiped away.\p"
+	.string "The label stayed.$"
+
+ParcelBoardroom_ReadFrame_Text_0:
+# 86 "data/maps/ParcelBoardroom/scripts.pory"
+	.string "The recovery model, framed. Forty years\n"
+	.string "of curves, rising.\p"
+	.string "The signature at the bottom is the one\n"
+	.string "from the margins of your notebook,\l"
+	.string "younger.$"

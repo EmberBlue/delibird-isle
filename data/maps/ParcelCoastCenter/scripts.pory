@@ -32,3 +32,13 @@ script ParcelCoastCenter_Trainer {
     release
     end
 }
+
+script ParcelCoastCenter_ReadRack {
+    msgbox(format("Leaflets for the cannery's health plan, FOUNDATION crest on every page. Under them, a handwritten card: HOOK REMOVAL, FREE, ASK THE NURSE."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastCenter_ReadMap {
+    msgbox(format("A chart of the coast with the dredge line marked in red. Somebody has added the old reef in blue, from memory.\pThe blue is in a different hand from the red."), MSGBOX_SIGN)
+    end
+}

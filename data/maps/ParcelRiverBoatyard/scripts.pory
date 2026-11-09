@@ -54,3 +54,13 @@ script ParcelRiverBoatyard_Apprentice {
     release
     end
 }
+
+script ParcelRiverBoatyard_ReadBench {
+    msgbox(format("A boat's rib clamped to the bench, steaming. The grandfather's tools hang above it, each on its own nail, each nail with a name scratched beside it."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverBoatyard_ReadHulls {
+    msgbox(format("Hulls on frames, waiting for repairs. Each has a tag with a name and a date. The dates are getting further apart."), MSGBOX_SIGN)
+    end
+}

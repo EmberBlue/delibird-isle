@@ -42,3 +42,13 @@ script ParcelCoastMart_Customer {
     release
     end
 }
+
+script ParcelCoastMart_ReadShelf {
+    msgbox(format("Top shelf: DIVE BALLS, a full case. The price tag has been changed three times, downward."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastMart_ReadTins {
+    msgbox(format("Tins. The crest on every one. The clerk has turned one so the crest faces the wall, and left it like that."), MSGBOX_SIGN)
+    end
+}

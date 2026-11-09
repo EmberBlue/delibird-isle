@@ -56,3 +56,18 @@ script ParcelCoastBreakwaterHut_Tuber {
     release
     end
 }
+
+script ParcelCoastBreakwaterHut_ReadCounter {
+    msgbox(format("The ices counter. Twenty flavours on the board, three in the freezer. The lifeguard's diet is written on a card and pinned where he can see it from his chair."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastBreakwaterHut_ReadRings {
+    msgbox(format("A rack of life rings with the FOUNDATION crest. New. The old ones, cork and canvas, are in a heap behind, still good."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastBreakwaterHut_ReadBench {
+    msgbox(format("A bench facing the sea. Initials cut into it, and dates, twenty summers deep. The last date is six years old."), MSGBOX_SIGN)
+    end
+}

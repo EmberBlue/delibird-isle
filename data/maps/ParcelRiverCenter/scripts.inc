@@ -56,6 +56,18 @@ ParcelRiverCenter_Trainer_5:
 	end
 
 
+ParcelRiverCenter_ReadRack::
+# 37 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_ReadRack_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverCenter_ReadMap::
+# 42 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_ReadMap_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverCenter_Trainer_Text_0:
 # 22 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "YOUNGSTER: The MARILL don't come in\n"
@@ -79,3 +91,17 @@ ParcelRiverCenter_Trainer_Text_2:
 	.string "itchy after the lower river. The nurse\l"
 	.string "has a cream for it now. A CREAM. For a\l"
 	.string "river.$"
+
+ParcelRiverCenter_ReadRack_Text_0:
+# 37 "data/maps/ParcelRiverCenter/scripts.pory"
+	.string "Leaflets from the WATER BOARD on\n"
+	.string "'Responsible Allocation'. The stack\l"
+	.string "hasn't gone down.\p"
+	.string "Beside it, a jar of the nurse's cream,\n"
+	.string "labelled LOWER RIVER, with a spoon.$"
+
+ParcelRiverCenter_ReadMap_Text_0:
+# 42 "data/maps/ParcelRiverCenter/scripts.pory"
+	.string "A map of the valley with the fourteen\n"
+	.string "metered plots inked in. Plot nine is\l"
+	.string "circled. Nobody will say who circled it.$"

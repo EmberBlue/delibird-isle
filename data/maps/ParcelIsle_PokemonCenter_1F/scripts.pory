@@ -30,3 +30,13 @@ script ParcelIsle_PokemonCenter_1F_EventScript_Fisher {
     release
     end
 }
+
+script ParcelIsle_PokemonCenter_1F_ReadRack {
+    msgbox(format("Leaflets: FERRY TIMES. Each one out of date; nobody has thrown them away. The newest says SERVICE SUSPENDED in a hand that pressed hard."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsle_PokemonCenter_1F_ReadMap {
+    msgbox(format("A chart of the strait, the island, the bridge. A thumbtack where the lab is. Nobody has moved it."), MSGBOX_SIGN)
+    end
+}

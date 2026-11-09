@@ -89,3 +89,18 @@ script ParcelWetlandsOffice_Local {
     release
     end
 }
+
+script ParcelWetlandsOffice_ReadBinders {
+    msgbox(format("Binders: CHANNEL GAUGE READINGS, by month. Every one the same thickness. Flat numbers take up as much room as the other kind."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWetlandsOffice_ReadTerminal {
+    msgbox(format("A terminal. Four channel gauges and one on the falls, all reading NORMAL.\pThe fifth gauge is drawn on the screen in a place the falls are not."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWetlandsOffice_ReadGaugeDesk {
+    msgbox(format("The gauge desk. Under the blotter, the corner of a hand-drawn map: where the gauges are, and in red, where the water actually goes."), MSGBOX_SIGN)
+    end
+}

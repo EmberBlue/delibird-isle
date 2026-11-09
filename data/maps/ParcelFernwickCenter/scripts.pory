@@ -33,3 +33,13 @@ script ParcelFernwickCenter_Trainer {
     release
     end
 }
+
+script ParcelFernwickCenter_ReadRack {
+    msgbox(format("Leaflets: SURVEY CERTIFICATION -- PRACTICAL EXAMS WEEKLY. Under it, in pen: ask for TARN. Don't smile."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickCenter_ReadMap {
+    msgbox(format("A map of the district. Someone has drawn the marsh's old shoreline on it in pencil, a finger-width out from the printed one."), MSGBOX_SIGN)
+    end
+}

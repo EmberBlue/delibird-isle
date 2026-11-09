@@ -94,6 +94,18 @@ ParcelIsleChandlery_Hjalmar_5:
 	end
 
 
+ParcelIsleChandlery_ReadShelf::
+# 56 "data/maps/ParcelIsleChandlery/scripts.pory"
+	msgbox ParcelIsleChandlery_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsleChandlery_ReadLamps::
+# 61 "data/maps/ParcelIsleChandlery/scripts.pory"
+	msgbox ParcelIsleChandlery_ReadLamps_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleChandlery_Kit_Text_0:
 # 10 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "KIT: I've sold more rope this week than\n"
@@ -142,3 +154,16 @@ ParcelIsleChandlery_Hjalmar_Text_2:
 	.string "sells two of those.\p"
 	.string "The third you get by standing here long\n"
 	.string "enough. I've been here an hour.$"
+
+ParcelIsleChandlery_ReadShelf_Text_0:
+# 56 "data/maps/ParcelIsleChandlery/scripts.pory"
+	.string "Rope by the fathom, lamp oil by the gill,\n"
+	.string "and a shelf of RANGER stock -- REPELS,\l"
+	.string "POTIONS -- that KIT dusts more often\l"
+	.string "than the rope.$"
+
+ParcelIsleChandlery_ReadLamps_Text_0:
+# 61 "data/maps/ParcelIsleChandlery/scripts.pory"
+	.string "A crate of fog lamps. A card on it: THE\n"
+	.string "BOAT REMEMBERS US WHEN IT REMEMBERS\l"
+	.string "US.$"

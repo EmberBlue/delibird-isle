@@ -268,6 +268,18 @@ ParcelFernwickHQ_Hale_38:
 	end
 
 
+ParcelFernwickHQ_ReadCase::
+# 154 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_ReadCase_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickHQ_ReadCounter::
+# 159 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_ReadCounter_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHQ_Reception_Text_0:
 # 12 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "RECEPTION: HALE slept. A whole night. I\n"
@@ -567,3 +579,18 @@ ParcelFernwickHQ_Hale_Text_34:
 	.string "Pass it and you're a provisional for\l"
 	.string "real.\p"
 	.string "Then we'll talk about the marsh.$"
+
+ParcelFernwickHQ_ReadCase_Text_0:
+# 154 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "Under the glass, a surveyor's red cloth,\n"
+	.string "forty years old, the dye gone to rust.\l"
+	.string "The card says: FIRST STAKE, KEYSTONE\l"
+	.string "MARSH. No name.$"
+
+ParcelFernwickHQ_ReadCounter_Text_0:
+# 159 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "The duty counter. A ledger of who is\n"
+	.string "where: eight names, eight zones. One\l"
+	.string "line reads WREN -- FIELD, and nothing\l"
+	.string "after it.\p"
+	.string "Hale's hand.$"

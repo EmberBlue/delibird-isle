@@ -92,6 +92,24 @@ ParcelCoastBreakwaterHut_Tuber_5:
 	end
 
 
+ParcelCoastBreakwaterHut_ReadCounter::
+# 61 "data/maps/ParcelCoastBreakwaterHut/scripts.pory"
+	msgbox ParcelCoastBreakwaterHut_ReadCounter_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastBreakwaterHut_ReadRings::
+# 66 "data/maps/ParcelCoastBreakwaterHut/scripts.pory"
+	msgbox ParcelCoastBreakwaterHut_ReadRings_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastBreakwaterHut_ReadBench::
+# 71 "data/maps/ParcelCoastBreakwaterHut/scripts.pory"
+	msgbox ParcelCoastBreakwaterHut_ReadBench_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastBreakwaterHut_Lifeguard_Text_0:
 # 10 "data/maps/ParcelCoastBreakwaterHut/scripts.pory"
 	.string "LIFEGUARD: Closed 'pending review'. The\n"
@@ -159,3 +177,24 @@ ParcelCoastBreakwaterHut_Tuber_Text_2:
 	.string "TUBER: I'm not swimming. I'm standing in\n"
 	.string "the water. That's different. The sign\l"
 	.string "says BATHING.$"
+
+ParcelCoastBreakwaterHut_ReadCounter_Text_0:
+# 61 "data/maps/ParcelCoastBreakwaterHut/scripts.pory"
+	.string "The ices counter. Twenty flavours on\n"
+	.string "the board, three in the freezer. The\l"
+	.string "lifeguard's diet is written on a card\l"
+	.string "and pinned where he can see it from his\l"
+	.string "chair.$"
+
+ParcelCoastBreakwaterHut_ReadRings_Text_0:
+# 66 "data/maps/ParcelCoastBreakwaterHut/scripts.pory"
+	.string "A rack of life rings with the\n"
+	.string "FOUNDATION crest. New. The old ones,\l"
+	.string "cork and canvas, are in a heap behind,\l"
+	.string "still good.$"
+
+ParcelCoastBreakwaterHut_ReadBench_Text_0:
+# 71 "data/maps/ParcelCoastBreakwaterHut/scripts.pory"
+	.string "A bench facing the sea. Initials cut\n"
+	.string "into it, and dates, twenty summers deep.\l"
+	.string "The last date is six years old.$"

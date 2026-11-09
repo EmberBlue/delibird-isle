@@ -56,6 +56,18 @@ ParcelCoastCenter_Trainer_5:
 	end
 
 
+ParcelCoastCenter_ReadRack::
+# 37 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_ReadRack_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastCenter_ReadMap::
+# 42 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_ReadMap_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastCenter_Trainer_Text_0:
 # 22 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "SAILOR: The WINGULL came in today\n"
@@ -79,3 +91,18 @@ ParcelCoastCenter_Trainer_Text_2:
 	.string "in with hooks in them. The other half\l"
 	.string "come in with nothing in them. Starved.\l"
 	.string "The nurse says it's a coastal thing.$"
+
+ParcelCoastCenter_ReadRack_Text_0:
+# 37 "data/maps/ParcelCoastCenter/scripts.pory"
+	.string "Leaflets for the cannery's health plan,\n"
+	.string "FOUNDATION crest on every page. Under\l"
+	.string "them, a handwritten card: HOOK REMOVAL,\l"
+	.string "FREE, ASK THE NURSE.$"
+
+ParcelCoastCenter_ReadMap_Text_0:
+# 42 "data/maps/ParcelCoastCenter/scripts.pory"
+	.string "A chart of the coast with the dredge\n"
+	.string "line marked in red. Somebody has added\l"
+	.string "the old reef in blue, from memory.\p"
+	.string "The blue is in a different hand from the\n"
+	.string "red.$"

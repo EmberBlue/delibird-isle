@@ -105,6 +105,18 @@ ParcelRiverBoatyard_Apprentice_5:
 	end
 
 
+ParcelRiverBoatyard_ReadBench::
+# 59 "data/maps/ParcelRiverBoatyard/scripts.pory"
+	msgbox ParcelRiverBoatyard_ReadBench_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverBoatyard_ReadHulls::
+# 64 "data/maps/ParcelRiverBoatyard/scripts.pory"
+	msgbox ParcelRiverBoatyard_ReadHulls_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverBoatyard_Wright_Text_0:
 # 8 "data/maps/ParcelRiverBoatyard/scripts.pory"
 	.string "BOATWRIGHT: Seasoned. Twelve years\n"
@@ -195,3 +207,16 @@ ParcelRiverBoatyard_Apprentice_Text_2:
 	.string "APPRENTICE: Nobody orders boats. They\n"
 	.string "order repairs. You don't need a new boat\l"
 	.string "for four trout.$"
+
+ParcelRiverBoatyard_ReadBench_Text_0:
+# 59 "data/maps/ParcelRiverBoatyard/scripts.pory"
+	.string "A boat's rib clamped to the bench,\n"
+	.string "steaming. The grandfather's tools hang\l"
+	.string "above it, each on its own nail, each nail\l"
+	.string "with a name scratched beside it.$"
+
+ParcelRiverBoatyard_ReadHulls_Text_0:
+# 64 "data/maps/ParcelRiverBoatyard/scripts.pory"
+	.string "Hulls on frames, waiting for repairs.\n"
+	.string "Each has a tag with a name and a date.\l"
+	.string "The dates are getting further apart.$"

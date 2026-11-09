@@ -76,3 +76,13 @@ script ParcelBoardroom_Cordelia {
     release
     end
 }
+
+script ParcelBoardroom_ReadCase {
+    msgbox(format("A core sample under glass, labelled EXPLORATORY, HAUKFELL. The ice in it has long since gone to water and been wiped away.\pThe label stayed."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelBoardroom_ReadFrame {
+    msgbox(format("The recovery model, framed. Forty years of curves, rising.\pThe signature at the bottom is the one from the margins of your notebook, younger."), MSGBOX_SIGN)
+    end
+}

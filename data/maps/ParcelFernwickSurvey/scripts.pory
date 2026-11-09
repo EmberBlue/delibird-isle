@@ -81,3 +81,13 @@ script ParcelFernwickSurvey_Ilex {
     release
     end
 }
+
+script ParcelFernwickSurvey_ReadBoard {
+    msgbox(format("The blackboard, in a surveyor's chalk: READ THE PLACE. THEN READ IT AGAIN. THEN WRITE WHAT IS THERE.\pUnder it, smaller, someone has added: NOT WHAT YOU HOPED."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickSurvey_ReadDesk {
+    msgbox(format("An open field guide on a pupil's desk, forty years old. The marsh-plant pages have been read until they're soft.\pOne plant is ringed, with a date beside it, and a place you know the name of."), MSGBOX_SIGN)
+    end
+}

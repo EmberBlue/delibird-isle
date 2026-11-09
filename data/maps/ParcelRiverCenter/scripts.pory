@@ -32,3 +32,13 @@ script ParcelRiverCenter_Trainer {
     release
     end
 }
+
+script ParcelRiverCenter_ReadRack {
+    msgbox(format("Leaflets from the WATER BOARD on 'Responsible Allocation'. The stack hasn't gone down.\pBeside it, a jar of the nurse's cream, labelled LOWER RIVER, with a spoon."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverCenter_ReadMap {
+    msgbox(format("A map of the valley with the fourteen metered plots inked in. Plot nine is circled. Nobody will say who circled it."), MSGBOX_SIGN)
+    end
+}

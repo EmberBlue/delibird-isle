@@ -51,3 +51,13 @@ script ParcelIsleChandlery_Hjalmar {
     release
     end
 }
+
+script ParcelIsleChandlery_ReadShelf {
+    msgbox(format("Rope by the fathom, lamp oil by the gill, and a shelf of RANGER stock -- REPELS, POTIONS -- that KIT dusts more often than the rope."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsleChandlery_ReadLamps {
+    msgbox(format("A crate of fog lamps. A card on it: THE BOAT REMEMBERS US WHEN IT REMEMBERS US."), MSGBOX_SIGN)
+    end
+}

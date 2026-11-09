@@ -148,6 +148,24 @@ ParcelWetlandsOffice_Local_5:
 	end
 
 
+ParcelWetlandsOffice_ReadBinders::
+# 94 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_ReadBinders_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlandsOffice_ReadTerminal::
+# 99 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_ReadTerminal_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlandsOffice_ReadGaugeDesk::
+# 104 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_ReadGaugeDesk_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlandsOffice_Clerk_Text_0:
 # 12 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "CLERK: The councilman is here. He's in\n"
@@ -265,3 +283,24 @@ ParcelWetlandsOffice_Local_Text_2:
 	.string "loan. Been waiting an hour.\p"
 	.string "The councilman said to ask. The\n"
 	.string "councilman isn't the one at the desk.$"
+
+ParcelWetlandsOffice_ReadBinders_Text_0:
+# 94 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "Binders: CHANNEL GAUGE READINGS, by\n"
+	.string "month. Every one the same thickness.\l"
+	.string "Flat numbers take up as much room as\l"
+	.string "the other kind.$"
+
+ParcelWetlandsOffice_ReadTerminal_Text_0:
+# 99 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "A terminal. Four channel gauges and one\n"
+	.string "on the falls, all reading NORMAL.\p"
+	.string "The fifth gauge is drawn on the screen\n"
+	.string "in a place the falls are not.$"
+
+ParcelWetlandsOffice_ReadGaugeDesk_Text_0:
+# 104 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "The gauge desk. Under the blotter, the\n"
+	.string "corner of a hand-drawn map: where the\l"
+	.string "gauges are, and in red, where the water\l"
+	.string "actually goes.$"

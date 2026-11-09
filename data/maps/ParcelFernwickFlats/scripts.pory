@@ -36,3 +36,13 @@ script ParcelFernwickFlats_Girl {
     release
     end
 }
+
+script ParcelFernwickFlats_ReadFridge {
+    msgbox(format("Six names on the fridge, six shelves, one note: WHOEVER TOOK THE BASIN LOT'S SUGAR, THE COOK KNOWS."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickFlats_ReadBunk {
+    msgbox(format("Six bunks, one bathroom. Each bunk has a boot print on the wall at the same height, where a ranger lies down without taking the boots off first."), MSGBOX_SIGN)
+    end
+}

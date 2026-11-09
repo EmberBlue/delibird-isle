@@ -62,6 +62,18 @@ ParcelFernwickFlats_Girl_5:
 	end
 
 
+ParcelFernwickFlats_ReadFridge::
+# 41 "data/maps/ParcelFernwickFlats/scripts.pory"
+	msgbox ParcelFernwickFlats_ReadFridge_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickFlats_ReadBunk::
+# 46 "data/maps/ParcelFernwickFlats/scripts.pory"
+	msgbox ParcelFernwickFlats_ReadBunk_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickFlats_Man_Text_0:
 # 8 "data/maps/ParcelFernwickFlats/scripts.pory"
 	.string "MAN: Corps housing. Six rangers, one\n"
@@ -106,3 +118,16 @@ ParcelFernwickFlats_Girl_Text_2:
 	.string "GIRL: Daddy's a RANGER. He says he\n"
 	.string "doesn't win, he reduces harm.\p"
 	.string "I told him that's a weird job.$"
+
+ParcelFernwickFlats_ReadFridge_Text_0:
+# 41 "data/maps/ParcelFernwickFlats/scripts.pory"
+	.string "Six names on the fridge, six shelves,\n"
+	.string "one note: WHOEVER TOOK THE BASIN LOT'S\l"
+	.string "SUGAR, THE COOK KNOWS.$"
+
+ParcelFernwickFlats_ReadBunk_Text_0:
+# 46 "data/maps/ParcelFernwickFlats/scripts.pory"
+	.string "Six bunks, one bathroom. Each bunk has\n"
+	.string "a boot print on the wall at the same\l"
+	.string "height, where a ranger lies down without\l"
+	.string "taking the boots off first.$"

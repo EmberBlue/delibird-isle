@@ -147,6 +147,18 @@ ParcelFernwickSurvey_Ilex_11:
 	end
 
 
+ParcelFernwickSurvey_ReadBoard::
+# 86 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	msgbox ParcelFernwickSurvey_ReadBoard_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickSurvey_ReadDesk::
+# 91 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	msgbox ParcelFernwickSurvey_ReadDesk_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickSurvey_Clerk_Text_0:
 # 13 "data/maps/ParcelFernwickSurvey/scripts.pory"
 	.string "CLERK: There it is. Forty years of\n"
@@ -266,3 +278,19 @@ ParcelFernwickSurvey_Ilex_Text_7:
 	.string "place properly.\p"
 	.string "Reading is the whole job. The battles\n"
 	.string "are just how you get there.$"
+
+ParcelFernwickSurvey_ReadBoard_Text_0:
+# 86 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	.string "The blackboard, in a surveyor's chalk:\n"
+	.string "READ THE PLACE. THEN READ IT AGAIN.\l"
+	.string "THEN WRITE WHAT IS THERE.\p"
+	.string "Under it, smaller, someone has added:\n"
+	.string "NOT WHAT YOU HOPED.$"
+
+ParcelFernwickSurvey_ReadDesk_Text_0:
+# 91 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	.string "An open field guide on a pupil's desk,\n"
+	.string "forty years old. The marsh-plant pages\l"
+	.string "have been read until they're soft.\p"
+	.string "One plant is ringed, with a date beside\n"
+	.string "it, and a place you know the name of.$"

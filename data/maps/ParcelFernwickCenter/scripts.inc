@@ -54,6 +54,18 @@ ParcelFernwickCenter_Trainer_5:
 	end
 
 
+ParcelFernwickCenter_ReadRack::
+# 38 "data/maps/ParcelFernwickCenter/scripts.pory"
+	msgbox ParcelFernwickCenter_ReadRack_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwickCenter_ReadMap::
+# 43 "data/maps/ParcelFernwickCenter/scripts.pory"
+	msgbox ParcelFernwickCenter_ReadMap_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickCenter_Trainer_Text_0:
 # 23 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "BOY: The nurse healed my WOOPER. It\n"
@@ -74,3 +86,16 @@ ParcelFernwickCenter_Trainer_Text_2:
 	.string "BOY: The nurse healed my WOOPER. Then\n"
 	.string "it got sick again.\p"
 	.string "It's a WOOPER thing, apparently.$"
+
+ParcelFernwickCenter_ReadRack_Text_0:
+# 38 "data/maps/ParcelFernwickCenter/scripts.pory"
+	.string "Leaflets: SURVEY CERTIFICATION --\n"
+	.string "PRACTICAL EXAMS WEEKLY. Under it, in\l"
+	.string "pen: ask for TARN. Don't smile.$"
+
+ParcelFernwickCenter_ReadMap_Text_0:
+# 43 "data/maps/ParcelFernwickCenter/scripts.pory"
+	.string "A map of the district. Someone has\n"
+	.string "drawn the marsh's old shoreline on it in\l"
+	.string "pencil, a finger-width out from the\l"
+	.string "printed one.$"

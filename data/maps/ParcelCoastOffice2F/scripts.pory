@@ -82,3 +82,18 @@ script ParcelCoastOffice2F_Perrin_Last {
     release
     end
 }
+
+script ParcelCoastOffice2F_ReadModel {
+    msgbox(format("A model under glass: the harbour as the FOUNDATION plans it. Six berths, a cold store, a wind turbine where the union hall is."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastOffice2F_ReadDesk {
+    msgbox(format("A desk with nothing on it but a tea tray and your coast survey, squared to the edge. The tea is still warm.\pThe survey has been read. The corners say so."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastOffice2F_ReadBoat {
+    msgbox(format("A model of a fishing boat, the old kind, high in the bow. The card: 'Traditional fleet, heritage display.'\pThe real one is tied up at the quay, owned by a lender."), MSGBOX_SIGN)
+    end
+}

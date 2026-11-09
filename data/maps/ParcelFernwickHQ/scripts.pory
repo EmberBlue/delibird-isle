@@ -149,3 +149,13 @@ script ParcelFernwickHQ_Hale {
     release
     end
 }
+
+script ParcelFernwickHQ_ReadCase {
+    msgbox(format("Under the glass, a surveyor's red cloth, forty years old, the dye gone to rust. The card says: FIRST STAKE, KEYSTONE MARSH. No name."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwickHQ_ReadCounter {
+    msgbox(format("The duty counter. A ledger of who is where: eight names, eight zones. One line reads WREN -- FIELD, and nothing after it.\pHale's hand."), MSGBOX_SIGN)
+    end
+}

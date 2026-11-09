@@ -83,6 +83,18 @@ ParcelRiverMart_Customer_5:
 	end
 
 
+ParcelRiverMart_ReadShelf::
+# 49 "data/maps/ParcelRiverMart/scripts.pory"
+	msgbox ParcelRiverMart_ReadShelf_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverMart_ReadBlankets::
+# 54 "data/maps/ParcelRiverMart/scripts.pory"
+	msgbox ParcelRiverMart_ReadBlankets_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverMart_Customer_Text_0:
 # 34 "data/maps/ParcelRiverMart/scripts.pory"
 	.string "WOMAN: NET BALLS are still in. The\n"
@@ -105,3 +117,14 @@ ParcelRiverMart_Customer_Text_2:
 	.string "WOMAN: NET BALLS are in. The river's full\n"
 	.string "of things you'd want to catch before\l"
 	.string "they're gone.$"
+
+ParcelRiverMart_ReadShelf_Text_0:
+# 49 "data/maps/ParcelRiverMart/scripts.pory"
+	.string "NET BALLS, and a shelf of river cream.\n"
+	.string "The cream sells better.$"
+
+ParcelRiverMart_ReadBlankets_Text_0:
+# 54 "data/maps/ParcelRiverMart/scripts.pory"
+	.string "Blankets with the crest, free. A sign\n"
+	.string "says TAKE ONE. Someone has added,\l"
+	.string "smaller: AND THINK ABOUT IT.$"
