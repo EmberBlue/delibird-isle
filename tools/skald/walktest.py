@@ -327,6 +327,7 @@ def main():
             import route
             target = n
             still = 0
+            nopath = 0
             blocked = set()             # tiles that refused a step (an NPC who moved): re-plan around them
             DXY = {"RIGHT": (1, 0), "LEFT": (-1, 0), "DOWN": (0, 1), "UP": (0, -1)}
             for attempt in range(60):
@@ -370,6 +371,11 @@ def main():
                             break
                     break
                 if not runs:
+                    # a scene may have an NPC standing in the way for now (an examiner who walked up and
+                    # has not walked back yet): B through it and plan again before giving up
+                    nopath += 1
+                    if nopath <= 3:
+                        dismiss(1500); blocked.clear(); continue
                     print(f"  GOTO: no path from ({px},{py}) on {mdir} to {target}"); break
                 rd, rk = runs[0]
                 print(f"  GOTO {target}: at ({px},{py}) {rd} x{rk} (frame {frame})", flush=True)
