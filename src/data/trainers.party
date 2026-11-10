@@ -17212,7 +17212,7 @@ Level: 35
 === TRAINER_SKALD_DIRECTOR ===
 Name: VANE
 Class: Expert
-Pic: Expert M
+Pic: Skald Vane
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17251,7 +17251,7 @@ Level: 16
 === TRAINER_SKALD_GYM2 ===
 Name: MIRREN
 Class: Expert
-Pic: Expert M
+Pic: Skald Mirren
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17269,7 +17269,7 @@ Level: 19
 === TRAINER_SKALD_GYM3 ===
 Name: BREEN
 Class: Expert
-Pic: Expert M
+Pic: Skald Breen
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17290,7 +17290,7 @@ Level: 23
 === TRAINER_SKALD_GYM4 ===
 Name: SLUICE
 Class: Expert
-Pic: Expert F
+Pic: Skald Sluice
 Gender: Female
 Music: Female
 Double Battle: No
@@ -17308,7 +17308,7 @@ Level: 26
 === TRAINER_SKALD_GYM5 ===
 Name: VALE
 Class: Expert
-Pic: Expert F
+Pic: Skald Vale
 Gender: Female
 Music: Female
 Double Battle: No
@@ -17329,7 +17329,7 @@ Level: 31
 === TRAINER_SKALD_GYM6 ===
 Name: HARLAND
 Class: Expert
-Pic: Expert M
+Pic: Skald Harland
 Gender: Male
 Music: Male
 Double Battle: No
@@ -17350,7 +17350,7 @@ Level: 37
 === TRAINER_SKALD_GYM8 ===
 Name: ILEX
 Class: Expert
-Pic: Expert F
+Pic: Skald Ilex
 Gender: Female
 Music: Female
 Double Battle: No
@@ -17447,7 +17447,7 @@ Level: 41
 === TRAINER_SKALD_CORDELIA ===
 Name: CORDELIA
 Class: Lady
-Pic: Elite Four Glacia
+Pic: Skald Cordelia
 Gender: Female
 Music: Female
 Items: Full Restore / Full Restore
@@ -19913,7 +19913,7 @@ Level: 61
 === TRAINER_SKALD_GYM2_R ===
 Name: MIRREN
 Class: Expert
-Pic: Expert M
+Pic: Skald Mirren
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19937,7 +19937,7 @@ Level: 61
 === TRAINER_SKALD_GYM3_R ===
 Name: BREEN
 Class: Expert
-Pic: Expert M
+Pic: Skald Breen
 Gender: Male
 Music: Male
 Double Battle: No
@@ -19961,7 +19961,7 @@ Level: 61
 === TRAINER_SKALD_GYM4_R ===
 Name: SLUICE
 Class: Expert
-Pic: Expert F
+Pic: Skald Sluice
 Gender: Female
 Music: Female
 Double Battle: No
@@ -19985,7 +19985,7 @@ Level: 62
 === TRAINER_SKALD_GYM5_R ===
 Name: VALE
 Class: Expert
-Pic: Expert F
+Pic: Skald Vale
 Gender: Female
 Music: Female
 Double Battle: No
@@ -20009,7 +20009,7 @@ Level: 62
 === TRAINER_SKALD_GYM6_R ===
 Name: HARLAND
 Class: Expert
-Pic: Expert M
+Pic: Skald Harland
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20033,7 +20033,7 @@ Level: 63
 === TRAINER_SKALD_DIRECTOR_R ===
 Name: VANE
 Class: Expert
-Pic: Expert M
+Pic: Skald Vane
 Gender: Male
 Music: Male
 Double Battle: No
@@ -20057,7 +20057,7 @@ Level: 62
 === TRAINER_SKALD_GYM8_R ===
 Name: ILEX
 Class: Expert
-Pic: Expert F
+Pic: Skald Ilex
 Gender: Female
 Music: Female
 Double Battle: No

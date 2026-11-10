@@ -294,6 +294,17 @@ replaces is gone from the tree).
   pattern rule in `spritesheet_rules.mk`, and the palette table in
   `event_object_movement.c`; the 22 map objects point at them (Ilex used to
   be three different stock sprites across six maps).
+- **Leader battle sprites** — `leader_pics.py`. The eight leaders and
+  Cordelia fight with stock pictures on their own palettes, matched to the
+  overworld sprites: MIRREN/BREEN (Expert M, olive/red hakama), SLUICE/VALE
+  (Expert F, olive/red), ILEX (Pokémon Ranger F in Survey olive, dark hair),
+  HARLAND (Fisherman, navy oilskin), VANE (Gentleman in grey with a charcoal
+  hat), CORDELIA (Glacia's picture in charcoal with silver hair and teal).
+  TARN keeps stock Expert M. `TRAINER_PIC_SKALD_*` (94-101) pair the stock
+  `gTrainerFrontPic_*` with `gTrainerPalette_Skald*` in
+  `src/data/graphics/trainers.h`; `trainers.party` says `Pic: Skald Mirren`
+  etc. on all 15 leader entries (first fights and rematches). Checked in
+  battle by tracing the Mirren exam (`walktest.py --trace 100`).
 - **UI** — `ui_frames.py`. The dialogue box keeps its shape with ice/slate/
   dark-slate border colours (palette 13-15 of `message_box.png`; text
   colours untouched), and window frame 1 (the default menu border) is a
@@ -367,10 +378,11 @@ replaces is gone from the tree).
   are the real ones: Saltwick, Fernwick, Reedmere, Hollowbend Spur, Leirvik,
   Elvsund, Haukfell, Mereholt Coast, the Climate Station). The title screen
   stopped being a placeholder on 2026-11-10 (see "Art" below).
-- Art still vanilla: trainer battle sprites (the eight leaders fight as stock
-  classes), building exteriors, the overworld tileset palettes (a cooler
-  northern retint was considered and deferred: three primary tilesets and a
-  dozen secondaries would all need the same hand).
+- Art still vanilla: building exteriors, route trainers' battle pictures
+  (the leaders have their own palettes; everyone else is a stock class), the
+  overworld tileset palettes (a cooler northern retint was considered and
+  deferred: three primary tilesets and a dozen secondaries would all need
+  the same hand), trainer class names ("EXPERT MIRREN" could be "SURVEYOR").
 
 ## Top gotchas from this session (full list in §12)
 

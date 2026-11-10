@@ -676,6 +676,12 @@ quest is built, how the peer works) before they are asked six more times.
   SLUICE/VALE) no longer do (`tools/skald/cast_sprites.py`; all nine
   walked to and screenshotted in their maps). The dialogue box border went
   from Emerald teal to ice and slate and the default menu frame was redrawn
-  to match (`tools/skald/ui_frames.py`). Deferred: trainer battle sprites,
-  a northern retint of the outdoor tileset palettes, building exteriors.
+  to match (`tools/skald/ui_frames.py`). Then the battle screen caught up:
+  the eight leaders and Cordelia fight on their own palettes over stock
+  pictures (`tools/skald/leader_pics.py`) -- olive and red hakama for the
+  Survey's old examiners, ILEX as a ranger in Survey olive, HARLAND in a
+  navy oilskin, VANE grey-suited, CORDELIA in charcoal and silver -- so the
+  person in the battle matches the person on the map; checked by tracing
+  the Mirren exam frame by frame. Deferred: a northern retint of the
+  outdoor tileset palettes, building exteriors, custom trainer classes.
 

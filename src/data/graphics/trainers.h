@@ -229,6 +229,16 @@ const u16 gTrainerPalette_PokemonRangerM[] = INCBIN_U16("graphics/trainers/front
 const u32 gTrainerFrontPic_PokemonRangerF[] = INCBIN_U32("graphics/trainers/front_pics/pokemon_ranger_f.4bpp.lz");
 const u16 gTrainerPalette_PokemonRangerF[] = INCBIN_U16("graphics/trainers/front_pics/pokemon_ranger_f.gbapal");
 
+// Skaldmere leaders: stock pictures, palettes from tools/skald/leader_pics.py
+const u16 gTrainerPalette_SkaldMirren[] = INCBIN_U16("graphics/trainers/palettes/skald_mirren.gbapal");
+const u16 gTrainerPalette_SkaldBreen[] = INCBIN_U16("graphics/trainers/palettes/skald_breen.gbapal");
+const u16 gTrainerPalette_SkaldSluice[] = INCBIN_U16("graphics/trainers/palettes/skald_sluice.gbapal");
+const u16 gTrainerPalette_SkaldVale[] = INCBIN_U16("graphics/trainers/palettes/skald_vale.gbapal");
+const u16 gTrainerPalette_SkaldIlex[] = INCBIN_U16("graphics/trainers/palettes/skald_ilex.gbapal");
+const u16 gTrainerPalette_SkaldHarland[] = INCBIN_U16("graphics/trainers/palettes/skald_harland.gbapal");
+const u16 gTrainerPalette_SkaldVane[] = INCBIN_U16("graphics/trainers/palettes/skald_vane.gbapal");
+const u16 gTrainerPalette_SkaldCordelia[] = INCBIN_U16("graphics/trainers/palettes/skald_cordelia.gbapal");
+
 const u32 gTrainerFrontPic_MagmaLeaderMaxie[] = INCBIN_U32("graphics/trainers/front_pics/magma_leader_maxie.4bpp.lz");
 const u16 gTrainerPalette_MagmaLeaderMaxie[] = INCBIN_U16("graphics/trainers/front_pics/magma_leader_maxie.gbapal");
 
@@ -392,6 +402,15 @@ const struct TrainerSprite gTrainerSprites[] =
     TRAINER_SPRITE(TRAINER_PIC_BUG_CATCHER, gTrainerFrontPic_BugCatcher, gTrainerPalette_BugCatcher),
     TRAINER_SPRITE(TRAINER_PIC_POKEMON_RANGER_M, gTrainerFrontPic_PokemonRangerM, gTrainerPalette_PokemonRangerM),
     TRAINER_SPRITE(TRAINER_PIC_POKEMON_RANGER_F, gTrainerFrontPic_PokemonRangerF, gTrainerPalette_PokemonRangerF),
+    // Skaldmere leaders (stock pictures on their own palettes)
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_MIRREN, gTrainerFrontPic_ExpertM, gTrainerPalette_SkaldMirren),
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_BREEN, gTrainerFrontPic_ExpertM, gTrainerPalette_SkaldBreen),
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_SLUICE, gTrainerFrontPic_ExpertF, gTrainerPalette_SkaldSluice),
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_VALE, gTrainerFrontPic_ExpertF, gTrainerPalette_SkaldVale),
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_ILEX, gTrainerFrontPic_PokemonRangerF, gTrainerPalette_SkaldIlex),
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_HARLAND, gTrainerFrontPic_Fisherman, gTrainerPalette_SkaldHarland),
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_VANE, gTrainerFrontPic_Gentleman, gTrainerPalette_SkaldVane),
+    TRAINER_SPRITE(TRAINER_PIC_SKALD_CORDELIA, gTrainerFrontPic_EliteFourGlacia, gTrainerPalette_SkaldCordelia, -4, 4, 0x1B0),
     TRAINER_SPRITE(TRAINER_PIC_MAGMA_LEADER_MAXIE, gTrainerFrontPic_MagmaLeaderMaxie, gTrainerPalette_MagmaLeaderMaxie),
     TRAINER_SPRITE(TRAINER_PIC_LASS, gTrainerFrontPic_Lass, gTrainerPalette_Lass),
     TRAINER_SPRITE(TRAINER_PIC_YOUNG_COUPLE, gTrainerFrontPic_YoungCouple, gTrainerPalette_YoungCouple),

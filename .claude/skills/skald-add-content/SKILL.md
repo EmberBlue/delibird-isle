@@ -69,8 +69,17 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 ## Art (title screen, cast sprites, UI frames)
 - Every custom graphic is generated: `tools/skald/title_art.py` (title layers),
   `tools/skald/cast_sprites.py` (nine cast sheets + two faction palettes),
-  `tools/skald/ui_frames.py` (dialogue border colours, menu frame 1). Edit the
-  generator, re-run it, rebuild; the PNG/.pal/.bin outputs are what's committed.
+  `tools/skald/leader_pics.py` (battle palettes for the leaders over stock
+  pictures), `tools/skald/ui_frames.py` (dialogue border colours, menu frame 1).
+  Edit the generator, re-run it, rebuild; the PNG/.pal/.bin outputs are what's
+  committed.
+- A leader's battle picture: a palette-only variant needs a JASC `.pal` in
+  `graphics/trainers/palettes/`, a `TRAINER_PIC_SKALD_X` (bump
+  `TRAINER_PIC_COUNT`), a `gTrainerPalette_SkaldX` INCBIN and a
+  `TRAINER_SPRITE(TRAINER_PIC_SKALD_X, gTrainerFrontPic_<Stock>, gTrainerPalette_SkaldX)`
+  row in `src/data/graphics/trainers.h`, then `Pic: Skald X` on every one of
+  that trainer's `.party` entries (rematches too). To see it, trace the fight:
+  `walktest.py ... --walk A:300 --trace 100` and look at the frames.
 - New overworld sprite: 144x32 nine-frame indexed PNG (16 colours, index 0
   transparent, skin at 1-4, white 14, black 15) under
   `graphics/object_events/pics/people/skald/` (the pattern rule in

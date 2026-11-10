@@ -109,7 +109,16 @@
 #define TRAINER_PIC_RS_BRENDAN            91
 #define TRAINER_PIC_RS_MAY                92
 #define TRAINER_PIC_ALOLA_ACEROLA         93
-#define TRAINER_PIC_COUNT                 94
+// Skaldmere leaders: stock pictures on their own palettes (tools/skald/leader_pics.py)
+#define TRAINER_PIC_SKALD_MIRREN          94
+#define TRAINER_PIC_SKALD_BREEN           95
+#define TRAINER_PIC_SKALD_SLUICE          96
+#define TRAINER_PIC_SKALD_VALE            97
+#define TRAINER_PIC_SKALD_ILEX            98
+#define TRAINER_PIC_SKALD_HARLAND         99
+#define TRAINER_PIC_SKALD_VANE            100
+#define TRAINER_PIC_SKALD_CORDELIA        101
+#define TRAINER_PIC_COUNT                 102
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)
 #define TRAINER_BACK_PIC_BRENDAN                0
