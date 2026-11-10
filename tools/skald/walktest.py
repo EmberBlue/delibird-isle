@@ -230,7 +230,9 @@ def main():
             def in_party():
                 c = cb2()
                 return c != CB["CB2_BagMenuRun"] and c not in field_cbs
-            item_s, slot_s = n.split(",")
+            # TEACHHM:item,slot[,forget] -- forget = which move (1-4) to give up when the mon knows four
+            item_s, slot_s, *rest = n.split(",")
+            forget_slot = int(rest[0]) if rest else 1
             # 'last' = the newest party member (gPlayerPartyCount), e.g. a lent swimmer
             slot = core.memory.u8[syms["gPlayerPartyCount"]] if slot_s == "last" else int(slot_s)
             item_name = f"ITEM_{item_s.upper()}" if not item_s.isdigit() else None
@@ -301,15 +303,21 @@ def main():
                     if cur == slot - 1: break
                     step(8, "UP" if 0 <= cur < 6 and cur > slot - 1 else "DOWN"); step(30)
                 party_cb = cb2()                     # the party menu's own callback (static, so read here)
+                forget_moved = False
                 step(8, "A"); step(300)
                 for _ in range(40):
                     c = cb2()
                     if not in_party(): break
                     if c == party_cb:                # the learn text, "delete a move?" (A = YES), "Poof!", ...
                         step(8, "A"); step(300)
-                    else:                            # the move-forget screen: A takes the highlighted move,
-                        step(8, "A"); step(150)      # but an HM move "can't be forgotten now" -- then try
-                        if cb2() == c:               # the next one down
+                    else:                            # the move-forget screen: go to the move to give up
+                        if not forget_moved:         # (HMs are forgettable in Skaldmere, so choose with care:
+                            step(90)                 # the first move may be the ROCK SMASH the road still needs)
+                            for _ in range(forget_slot - 1):
+                                step(8, "DOWN"); step(40)
+                            forget_moved = True
+                        step(8, "A"); step(150)
+                        if cb2() == c:               # refused (an engine that protects HMs): try the next one down
                             step(8, "DOWN"); step(40)
             for _ in range(10):
                 if cb2() == CB["CB2_Overworld"]: break
