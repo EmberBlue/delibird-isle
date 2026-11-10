@@ -51,7 +51,7 @@ seg s22 s21 - --walk DOWN:0 --walk TALK:2 --walk WAIT:500 --walk DOWN:0 --walk W
   --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_CORRIDOR
 seg s23 s22 - --walk GOTOEDGE:left --walk LEFT:0 --walk WAIT:600 --expect MAP_PARCEL_WETLANDS
 seg s24 s23 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_FERNWICK
-seg s25 s24 FLAG_SKALDMERE_WETLAND_CERT --walk GOTOWARP:4 --walk WAIT:400 --walk GOTO:6,4 --walk UP:0 --walk TALK:5 --walk WAIT:600 \
+seg s25 s24 FLAG_SKALDMERE_WETLAND_CERT --walk GOTOWARP:4 --walk WAIT:400 --walk GOTO:7,3 --walk LEFT:0 --walk TALK:8 --walk WAIT:600 \
   --walk GOTOWARP:0 --walk WAIT:400 --walk GOTOWARP:1 --walk WAIT:400 --walk GOTO:6,7 --walk UP:0 --walk TALK:20 --walk WAIT:900 \
   --check VAR_SKALDMERE_CH2_EVIDENCE --check FLAG_SKALDMERE_WETLAND_CERT --expect MAP_PARCEL_FERNWICK_HQ
 echo "=== chapter 2 complete $(date +%H:%M:%S)"
