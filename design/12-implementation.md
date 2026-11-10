@@ -447,6 +447,36 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   Options choices.
 - **Harness menus**: `TAP:START` then `IDLE:n`; `WAIT:n` mashes B and
   closes whatever opened.
+- **`gTileset_General` is `data/tilesets/primary/leob_general`** — tiles,
+  palettes, metatiles and attributes all (headers.h). `primary/general` is
+  the untouched vanilla copy (same tiles and palettes, fewer metatiles)
+  and nothing in the ROM reads it. `audit.tileset_dir` used to resolve
+  symbols by substring and so returned the wrong folder for General; it
+  matches whole words now. Edit the folder the header names, never the
+  one the name suggests.
+- **Restyling a building kit** (`tools/skald/kit_restyle.py`, idempotent):
+  a kit's look is its palette entries, and entries are shared. Before
+  changing one, `python3 tools/skald/pal_tool.py mask MAP out.png P:I` shows
+  every pixel that would move; `info MAP` lists each entry's share of the
+  map and the metatiles using it. Three outcomes: an entry only buildings
+  use is rewritten in the `.pal` (most roofs and walls); an entry shared
+  with something that must stay (General's yellow wall ramp is also the
+  sand) is left alone and the building's *tiles* are remapped pixel by
+  pixel onto entries that already hold the wanted colours; an entry shared
+  by two buildings that must differ (the cottage and the Pokémon Center
+  both on General's red ramp) is rewritten for one, and the other's tiles
+  are duplicated into unreferenced tile slots and repointed at a palette
+  with free entries (palette 4 has six). Free entries and free tile slots
+  are computed, not assumed: count every cell of the primary and of every
+  secondary the layouts pair with it, and keep duplicates below the
+  animated tiles (General's animations land at 432+). Secondary metatiles
+  may use primary palettes (0-5) and primary tiles; the cottage's tiles
+  are also the Slateport/Petalburg/Dewford kits' cottage tiles, so a pixel
+  remap restyles all of them at once (and `leob_petalburg` uses three of
+  them under its palette 10, on metatiles no map places).
+- **`tiles.png` edits**: keep the PNG 4-bit indexed (`im.save(p, bits=4)`);
+  `tiles.4bpp.lz` and `.gbapal` are build outputs (git-ignored) and follow
+  the PNG and `.pal` by timestamp.
 
 ## RAM budget (the binding constraint)
 

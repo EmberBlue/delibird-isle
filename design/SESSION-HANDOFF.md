@@ -351,6 +351,25 @@ replaces is gone from the tree).
   dark-slate border colours (palette 13-15 of `message_box.png`; text
   colours untouched), and window frame 1 (the default menu border) is a
   slate band with an ice rule.
+- **Building kits** — `kit_restyle.py`. Every town was a stock building kit
+  (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
+  wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the
+  Coast, Azalea on Delibird) and General's own red-roofed cottage stood in
+  all of them. The metatiles and maps are unchanged; the palette entries
+  the roofs and walls use were rewritten so the kits read as one region:
+  slate roofs everywhere, falu-red timber on the fishing coasts (Saltwick,
+  Delibird), ochre render in Fernwick, white render on the river and in
+  the General cottage, the Climate Station in white and slate. General's
+  red ramp (palette 1, 11-14) is shared by the cottage, the Coast's halls
+  and the Pokémon Center, so the ramp went slate and the Center alone got
+  its red back: its 23 roof tiles are duplicated into unreferenced tile
+  slots and pointed at palette 4 (the water palette, six entries unused),
+  where the red lives. The cottage's yellow walls share their ramp with
+  the sand, so those nine tiles were remapped pixel by pixel onto the
+  white-render shades (1-4) every primary palette carries. All of it is
+  one idempotent script; `pal_tool.py` is the renderer that made it safe
+  (every visible pixel knows its palette entry; `mask` shows exactly what
+  an entry change would touch). Checked in-emulator in eight towns.
 - Verified in-emulator: the title at three moments, all nine sprites in
   their maps via `walktest.py --out`, a dialogue box. `TAP:START` did not
   open the start menu under the harness, so frame 1 was checked from its
@@ -393,10 +412,11 @@ replaces is gone from the tree).
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to
-  the Climate Station grounds and Route 1 (`relocate.py`). Delete the three
-  maps when nothing references them.
-- `ParcelStation` and `ParcelBridge` are retired (unreachable); delete when
-  nothing references them.
+  the Climate Station grounds and Route 1 (`relocate.py`). **Do not delete
+  them:** they are maps 61 and 62 of the 162-map `gMapGroup_TownsAndRoutes`
+  group, so removing them would renumber every later Skaldmere map and
+  break existing saves (a save stores its map by group and number). They
+  stay as unreachable stubs; the two audit warnings they cause are known.
 - **Delibird Isle is a real island now** (§09 *Built*): `ParcelDelibird`
   connects north to `ParcelDelibirdSummit` (x 3–5 through the tree belt;
   the old sealed pocket is the trailhead) and east to `ParcelDelibirdCliffs`
@@ -437,12 +457,13 @@ replaces is gone from the tree).
   are the real ones: Saltwick, Fernwick, Reedmere, Hollowbend Spur, Leirvik,
   Elvsund, Haukfell, Mereholt Coast, the Climate Station). The title screen
   stopped being a placeholder on 2026-11-10 (see "Art" below).
-- Art still vanilla: building exteriors, route trainers' battle pictures
-  (the leaders have their own palettes; everyone else is a stock class), the
-  overworld tileset palettes (a cooler northern retint was considered and
-  deferred: three primary tilesets and a dozen secondaries would all need
-  the same hand), the "they" avatar (a third player sprite set), the
-  building exteriors.
+- Art still vanilla: route trainers' battle pictures (the leaders have
+  their own palettes; everyone else is a stock class), the overworld
+  tileset palettes (a cooler northern grade; with `pal_tool.py` rendering
+  any map from data in a second, the "same hand across fifteen tilesets"
+  problem is now a script, not a deferral), and the player avatars
+  (Brendan/May as shipped; the "they" avatar would be a third sprite set).
+  Building exteriors stopped being vanilla on 2026-11-10 (see Art).
 
 ## Top gotchas from this session (full list in §12)
 

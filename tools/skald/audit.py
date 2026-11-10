@@ -53,7 +53,8 @@ def tileset_dir(sym):
         return None
     mt = re.search(r"\.metatiles\s*=\s*(\w+)", m.group(1)).group(1)
     for line in (ROOT / "src/data/tilesets/metatiles.h").read_text().splitlines():
-        if mt in line and "INCBIN" in line:
+        # whole-word match: gMetatiles_General must not resolve to gMetatiles_GeneralHub
+        if re.search(rf"\b{re.escape(mt)}\b", line) and "INCBIN" in line:
             p = re.search(r'"([^"]+)"', line).group(1)
             return ROOT / Path(p).parent
     return None

@@ -69,6 +69,12 @@ boardroom) against a fresh probe ROM; a pair of standing NPCs can block a
 one-tile path that the audit does not model. Both runs are background jobs of
 twenty to thirty minutes; the logs are the record.
 
+See a whole map without booting: `python3 tools/skald/pal_tool.py render
+ParcelFernwick out.png` draws it from tile data (seconds, exact colours).
+Before touching any tileset palette, `mask MAP out.png P:I,I` paints every
+pixel that entry reaches; a change is safe only when the magenta is all
+yours. The emulator is still the final word (`walktest.py --spawn ... --out`).
+
 Region map gotcha: `graphics/pokenav/region_map/map.bin` is an **8-bit affine
 tilemap (64x64 bytes, no flips)**, not a 16-bit text tilemap. A 16-bit file
 of the same 4096 bytes renders as vertical stripes in the PokéNav. Decode it

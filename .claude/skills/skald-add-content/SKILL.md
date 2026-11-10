@@ -75,6 +75,14 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   lettered in the stock 6px-pitch label font; it reads the *stock* label images
   as glyph sources, so `git checkout` them before re-running). Edit the
   generator, re-run it, rebuild; the PNG/.pal/.bin outputs are what's committed.
+- Buildings: the town kits are restyled by `tools/skald/kit_restyle.py`
+  (slate roofs; walls per town). A map on a kit already in its `SPEC` needs
+  nothing. A new kit: `python3 tools/skald/pal_tool.py info MAP` to find the
+  roof/wall entries, `mask MAP out.png P:I` to see what else they touch, then a
+  `SPEC` entry and re-run (idempotent). `gTileset_General` is
+  `data/tilesets/primary/leob_general`, not `general`. Never put a new cottage
+  or hall on General's palette 5 yellows (they are the sand) or expect the
+  Pokémon Center's red on palette 1 (it lives on palette 4's free entries).
 - A new fly town: `FLAG_VISITED_PARCEL_X` (alias an unreachable Hoenn visited
   flag in `flags.h`), `setflag` it in the map's `MAP_SCRIPT_ON_TRANSITION`, add
   the `MAPSEC_` case to `GetMapsecType()` in `src/region_map.c`, a row in

@@ -797,4 +797,17 @@ quest is built, how the peer works) before they are asked six more times.
   TOGEKISS. The national dex stays off; nothing in the code indexes a
   specific regional number. Same day, the regression after all the
   passes: sweep 252 OK / 0 BAD, spine all fifteen flags.
+- **2026-11-10 — the towns stop being Hoenn's kits.** Rendering every
+  town straight from its tile data showed what the player sees: Saltwick
+  was FireRed's Vermilion with orange Kanto roofs, Fernwick was Rustboro,
+  Elvsund Mauville, Haukfell Fallarbor, Mereholt Slateport, and General's
+  red-roofed, yellow-walled cottage stood in all of them. One pass over
+  the palette entries (`tools/skald/kit_restyle.py`): slate roofs across
+  the region, falu-red timber in the two fishing towns, ochre in the
+  Survey's town, white render on the river and for every cottage, the
+  Climate Station in white and slate. The Pokémon Center keeps its red
+  roof (duplicated tiles on the water palette's free entries) and the
+  Mart its blue, so wayfinding is untouched. Checked in the emulator in
+  eight towns. The renderer (`pal_tool.py`) that made this safe is in the
+  tree; the outdoor colour grade it now makes possible is the next pass.
 
