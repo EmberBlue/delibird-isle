@@ -124,8 +124,13 @@ static const u8 sCreditsText_PokeemeraldExpansion[] = _("pokeemerald-expansion")
 static const u8 sCreditsText_RomHackingHideout[] = _("Rom Hacking Hideout");
 static const u8 sCreditsText_Decompilation[] = _("Decompilation");
 static const u8 sCreditsText_Pret[] = _("pret");
-static const u8 sCreditsText_Tilesets[] = _("FireRed Tileset Port");
-static const u8 sCreditsText_Liamjd14[] = _("Liamjd14");
+static const u8 sCreditsText_Tilesets[] = _("Tilesets");
+static const u8 sCreditsText_Liamjd14[] = _("FireRed port: Liamjd14");
+static const u8 sCreditsText_Leob[] = _("ORAS tiles: leob0505");
+static const u8 sCreditsText_HnS[] = _("Johto tiles: Heart & Soul");
+static const u8 sCreditsText_HnSArtists[] = _("Kertra, Ekat99, Alistair");
+static const u8 sCreditsText_JohtoRedrawn[] = _("Johto Redrawn Team");
+static const u8 sCreditsText_TeamAqua[] = _("Team Aqua's Asset Repo");
 static const u8 sCreditsText_Tools[] = _("Tools");
 static const u8 sCreditsText_Poryscript[] = _("poryscript");
 static const u8 sCreditsText_Porytiles[] = _("porytiles");
@@ -241,6 +246,11 @@ static const struct CreditsEntry sCreditsEntry_Decompilation = { 0, TRUE, sCredi
 static const struct CreditsEntry sCreditsEntry_Pret = { 0, FALSE, sCreditsText_Pret};
 static const struct CreditsEntry sCreditsEntry_Tilesets = { 0, TRUE, sCreditsText_Tilesets};
 static const struct CreditsEntry sCreditsEntry_Liamjd14 = { 0, FALSE, sCreditsText_Liamjd14};
+static const struct CreditsEntry sCreditsEntry_Leob = { 0, FALSE, sCreditsText_Leob};
+static const struct CreditsEntry sCreditsEntry_HnS = { 0, FALSE, sCreditsText_HnS};
+static const struct CreditsEntry sCreditsEntry_HnSArtists = { 0, FALSE, sCreditsText_HnSArtists};
+static const struct CreditsEntry sCreditsEntry_JohtoRedrawn = { 0, FALSE, sCreditsText_JohtoRedrawn};
+static const struct CreditsEntry sCreditsEntry_TeamAqua = { 0, FALSE, sCreditsText_TeamAqua};
 static const struct CreditsEntry sCreditsEntry_Tools = { 0, TRUE, sCreditsText_Tools};
 static const struct CreditsEntry sCreditsEntry_Poryscript = { 0, FALSE, sCreditsText_Poryscript};
 static const struct CreditsEntry sCreditsEntry_Porytiles = { 0, FALSE, sCreditsText_Porytiles};
@@ -402,25 +412,25 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Tova,
     },
     [PAGE_ENGINE] = {
-        _,
         &sCreditsEntry_Engine,
         &sCreditsEntry_PokeemeraldExpansion,
         &sCreditsEntry_RomHackingHideout,
-        _,
-    },
-    [PAGE_DECOMP] = {
         &sCreditsEntry_Decompilation,
         &sCreditsEntry_Pret,
-        _,
+    },
+    [PAGE_DECOMP] = {
         &sCreditsEntry_Tilesets,
         &sCreditsEntry_Liamjd14,
+        &sCreditsEntry_Leob,
+        &sCreditsEntry_HnS,
+        &sCreditsEntry_HnSArtists,
     },
     [PAGE_TOOLS] = {
         &sCreditsEntry_Tools,
         &sCreditsEntry_Poryscript,
         &sCreditsEntry_Porytiles,
         &sCreditsEntry_Mgba,
-        _,
+        &sCreditsEntry_TeamAqua,
     },
     [PAGE_ORIGINAL] = {
         &sCreditsEntry_OriginalGame,

@@ -527,11 +527,28 @@ replaces is gone from the tree).
   WREN. In-world documents (minutes, ledgers, plaques) keep ordinary
   capitalisation on purpose. Institution words (Survey, Corps, Board,
   Foundation) are still mixed across the game; a pass over those is open.
-- **Tileset credits**: `CREDITS.md` and the in-game credits name the
-  FireRed Tileset Port (Liamjd14). The Johto-style set under the three
-  Delibird maps (`johtogeneral`, `azaleatown`) and the `leob_*` working
-  copies of Emerald's sets have no recorded source in the history. Find
-  and credit the Johto set's artist before any public release.
+- **Tileset credits (settled 2026-11-10, by cloning the sources):** the
+  `leob_*` kits are leob0505's ORAS-inspired tilesets (palettes 0-5 are
+  byte-identical to lbsbezerra/pokeemerald-modern-oras; the 2025-08-09
+  commit "Added leob ORAS tilesets" is the import). The Johto set under
+  the three Delibird maps is Pokémon Heart & Soul's `johto_general` /
+  `kanto_general` (over 60 % of our tiles verbatim; HnS credits Crystal
+  Advance / Kertra, Ekat99, TheDeadHeroAlistair, Johto Redrawn Team and
+  asks for the chain to be kept). Both are in `CREDITS.md` and on the
+  in-game tileset page. Public GitHub is reachable through the session's
+  git proxy (`git clone` works; `codeload` zips and the github.com HTML
+  do not), so community tilesets can be fetched directly: Team Aqua's
+  Asset Repo (TeamAquasHideout/Team-Aquas-Asset-Repo, "free to use and
+  edit by default" with credit) is cloned sparse in the scratchpad's
+  `incoming/` with leob0505's and Heart & Soul's `data/tilesets`. Its
+  candidates for Skaldmere: *Emerald Slide / Vanilla With Snow* (Ryu,
+  Archie, Pawkkie: three snow palettes for General), *Shady Forest*
+  secondary (dark conifers, lamps, logs; Ekat99, Heartlessdragoon,
+  Vurtax and the list in its credits.md, port by Rahtak), *Bright
+  General* (Flurmimon art, Bivurnum port: a full General recreation),
+  *Alternative General* (porytiles source with new trees and stairs),
+  Droid779's snow tiles and Roger Wrightshoe's tree sheets (raw PNGs).
+  Anything ported gets its artists in `CREDITS.md` and the credits page.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to

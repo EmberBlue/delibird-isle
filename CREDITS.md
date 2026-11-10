@@ -73,17 +73,26 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 - [kidkatt](https://www.deviantart.com/kidkatt)
 
 ## Skaldmere map art (delibird-isle)
-The game's maps draw on three tileset families, all checked into this repository. Nothing was
-taken from another released hack.
-- **Emerald's own tilesets** (95 maps), recoloured and restyled in this project. The ROM reads
-  them from the `leob_*` folders under `data/tilesets/`: the same tiles as vanilla with more
-  metatiles. Who prepared those folders is not recorded in this repository's history.
+The game's maps draw on these tileset families, all checked into this repository. Nothing was
+taken from a released ROM hack's binary; every set below is a published decomp resource.
+- **leob0505's ORAS-inspired tilesets** for Emerald decomp hacks: the `leob_*` folders under
+  `data/tilesets/` (General and the town kits; 95 maps), restyled and regraded in this project.
+  Source: [lbsbezerra/pokeemerald-modern-oras](https://github.com/lbsbezerra/pokeemerald-modern-oras)
+  and the "LeoB ORAS" entry of Team Aqua's Asset Repo. Free with credit, per the author.
 - **[FireRed Tileset Port](https://github.com/Liamjd14/Firered-Tileset-Port)** by Liamjd14, the
   `frp_*` tilesets, vendored as the `extern/Firered-Tileset-Port` submodule (Saltwick, the
   Holding Meadow, Route 1, Mistwood).
-- **The Johto-style set** (`johtogeneral`, `azaleatown`) used by the three Delibird Isle maps.
-  Its author is not recorded anywhere in this repository's history. Identify and credit the
-  artist before any public release.
+- **Pokémon Heart & Soul's Johto tilesets**: `johtogeneral` and `azaleatown` (the three Delibird
+  Isle maps) match the `johto_general` / `kanto_general` sheets of
+  [PokemonHnS-Development/pokemonHnS](https://github.com/PokemonHnS-Development/pokemonHnS) tile
+  for tile (over 60 % verbatim; the rest are this project's snow and festival tiles). Heart & Soul
+  is open source and asks for its credit chain to be kept: Pokémon Heart & Soul (tilesets by
+  Crystal Advance / Kertra, Ekat99, TheDeadHeroAlistair, the Johto Redrawn Team).
+- **[Team Aqua's Asset Repo](https://github.com/TeamAquasHideout/Team-Aquas-Asset-Repo)**
+  (maintained by Pawkkie, PCG06, Archie): assets are free to use and edit with credit. Anything
+  ported from it is listed here with its own artists when it lands.
+- The spruce and fir trees, the title screen, the cast sprites and the UI frames are original
+  to this project (see `tools/skald/`).
 
 ## Resources
 - [Sugimori Palettes and Sprites](https://www.pokecommunity.com/showthread.php?t=336945)
