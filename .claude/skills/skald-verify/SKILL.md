@@ -70,6 +70,22 @@ boardroom) against a fresh probe ROM; a pair of standing NPCs can block a
 one-tile path that the audit does not model. Both runs are background jobs of
 twenty to thirty minutes; the logs are the record.
 
+A continuous playthrough in segments: `walktest.py --save-state f.state` at the
+end of one run and `--load-state f.state` (no `--spawn`) at the start of the
+next keep the real game state across runs. With a party, add `--fight`: it sets
+the save's text speed to FAST and battle style to SET (no "switch POKéMON?"
+prompt), and whenever `gMain.inBattle` is set it mashes A (with a B every fifth
+tap) until the battle ends. `--walk GOTO:x,y`, `GOTOEDGE:up` and `GOTOWARP:n`
+plan on the live map with `tools/skald/route.py` and re-plan from the real
+position after every run, so a trainer walking over, a scene moving the player
+or a wanderer in the way only costs a re-plan; a tile that refuses a step twice
+is treated as solid. `--walk TALK:n` is A, a long wait for the text, then n more
+spaced A presses (a YES/NO takes the default YES). Start the chain from the
+real new game: `--spawn MAP_PARCEL_FERRY:4,6 --party SPECIES_MEWTWO --walk
+WAIT:4500` lands on Saltwick's pier with the opening played. The harness holds
+a direction for 16n+12 frames, so `DIR:n` moves n+1 tiles (route.py already
+prints n-1).
+
 See a whole map without booting: `python3 tools/skald/pal_tool.py render
 ParcelFernwick out.png` draws it from tile data (seconds, exact colours).
 Before touching any tileset palette, `mask MAP out.png P:I,I` paints every

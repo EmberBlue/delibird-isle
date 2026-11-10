@@ -29,6 +29,16 @@ def map_ids():
         if m: out[m.group(1)] = (int(m.group(3)), int(m.group(2)))   # (group, num)
     return out
 
+_folders = {}
+def map_folders():
+    """MAP_X constant -> data/maps folder name (from each map.json's id)."""
+    if not _folders:
+        import json
+        for p in (ROOT / "data/maps").iterdir():
+            if (p / "map.json").exists():
+                _folders[json.loads((p / "map.json").read_text()).get("id")] = p.name
+    return _folders
+
 def constants(header, prefix, seed=None):
     """#define NAME value, where value may be an expression over earlier names (FLAG_SYS_* etc.)."""
     out = dict(seed or {})
@@ -45,7 +55,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rom", default=str(ROOT / "pokeemerald.gba"))
     ap.add_argument("--map", help="the .map symbol file of that ROM (default: pokeemerald.map beside the sources)")
-    ap.add_argument("--spawn", required=True, help="MAP_X:x,y")
+    ap.add_argument("--spawn", help="MAP_X:x,y (required unless --load-state)")
     ap.add_argument("--walk", action="append", default=[], help="DIR:tiles (repeatable); 'A' taps A to talk to whatever the player faces")
     ap.add_argument("--expect")
     ap.add_argument("--settle", type=int, default=8600)
@@ -57,14 +67,21 @@ def main():
     ap.add_argument("--item", help="ITEM_X to put in the bag before the new game")
     ap.add_argument("--party", help="SPECIES_X given at level 100 before the new game, so battles can be won by mashing A")
     ap.add_argument("--var", action="append", default=[], help="VAR_X=value to set before the new game (up to 2, repeatable)")
+    ap.add_argument("--fight", action="store_true", help="after each segment, while gMain.inBattle: mash A (FIGHT, first move) until the battle ends -- for a continuous run with a party")
+    ap.add_argument("--load-state", help="resume from a savestate written by --save-state instead of booting a new game (--spawn is then ignored; pass any)")
+    ap.add_argument("--save-state", help="write the emulator state at the end, so the next run can --load-state it (a continuous playthrough in segments)")
     a = ap.parse_args()
     if a.map: MAPFILE[0] = Path(a.map)
     syms, maps = symbols(), map_ids()
     flags = constants("include/constants/flags.h", "FLAG_", constants("include/constants/opponents.h", ""))   # system flags count up from MAX_TRAINERS_COUNT
     vars_ = constants("include/constants/vars.h", "VAR_")
     probe = syms["gProbe"]; sb1p = syms["gSaveBlock1Ptr"]
-    mname, xy = a.spawn.split(":"); sx, sy = map(int, xy.split(","))
-    group, num = maps[mname]
+    if a.spawn:
+        mname, xy = a.spawn.split(":"); sx, sy = map(int, xy.split(","))
+        group, num = maps[mname]
+    else:
+        assert a.load_state, "--spawn is required unless --load-state is given"
+        mname, sx, sy = "(state)", 0, 0
     assert len(a.flag) <= 5, "at most 5 --flag"
     mgba.log.silence()
     core = mgba.core.load_path(a.rom)
@@ -88,25 +105,64 @@ def main():
             if a.trace and tracing[0] and frame % a.trace == 0:
                 img.to_pil().convert("RGB").save(str(Path(a.out).with_name(Path(a.out).stem + f"_{frame}.png")))
         held[:] = [(k, u) for k, u in held if u > frame]
-    step(4400)
-    core.memory.u16[probe] = (group << 8) | num; core.memory.u16[probe + 2] = sx; core.memory.u16[probe + 4] = sy
     trainers = constants("include/constants/opponents.h", "TRAINER_")
     tfs = constants("include/constants/flags.h", "TRAINER_FLAGS_START")["TRAINER_FLAGS_START"]
-    for i, f in enumerate(a.flag):   # FLAG_X, or TRAINER_X to mark that trainer as already defeated
-        core.memory.u16[probe + 6 + 2 * i] = flags[f] if f in flags else tfs + trainers[f]
-    if a.item:
-        core.memory.u16[probe + 20] = constants("include/constants/items.h", "ITEM_")[a.item]
-    if a.party:
-        core.memory.u16[probe + 22] = constants("include/constants/species.h", "SPECIES_")[a.party]
-    assert len(a.var) <= 2, "at most 2 --var"
-    for i, v in enumerate(a.var):
-        name, val = v.split("=")
-        core.memory.u16[probe + 24 + 4 * i] = vars_[name]; core.memory.u16[probe + 26 + 4 * i] = int(val, 0)
-    step(a.settle - 4400)
-    def dismiss(frames):           # mash B: closes any scene text, harmless otherwise
-        for f in range(0, frames, 45): presses[frame + f] = ("B", 8)
-        step(frames + 10)
-    dismiss(900)                    # the arrival scene, if any
+    gmain = syms.get("gMain")
+    def in_battle():
+        return bool(gmain) and (core.memory.u8[gmain + 0x439] >> 1) & 1
+    def fight(limit=15000):        # through a battle: A (FIGHT, first move, text) with a B every fifth tap to back out
+        spent, taps = 0, 0          # of a "switch POKéMON?" prompt or the party menu; stop when inBattle clears
+        while in_battle() and spent < limit:
+            step(8, "B" if taps % 5 == 4 else "A"); step(32); spent += 40; taps += 1
+        if spent: step(120); dismiss(240)   # the exp/level-up text and the fade back
+        return spent
+    def set_battle_style_set():
+        # SaveBlock2: u16 at 0x14 holds optionsTextSpeed:3, optionsWindowFrameType:5, optionsSound:1, optionsBattleStyle:1.
+        # SET style means no "switch POKéMON?" prompt, which the A-mash would otherwise answer YES to and then live
+        # in the party menu. Only when the field reads as expected (text speed MID = 1 in the low bits).
+        sb2 = core.memory.u32[syms["gSaveBlock2Ptr"]]
+        v = core.memory.u16[sb2 + 0x14]
+        if (v & 7) in (0, 1, 2):
+            core.memory.u16[sb2 + 0x14] = (v & ~7) | 2 | (1 << 9)   # text speed FAST, battle style SET
+    def live_pos():
+        sb1 = core.memory.u32[sb1p]
+        g, n = core.memory.u8[sb1 + 4], core.memory.u8[sb1 + 5]
+        return next((k for k, v in maps.items() if v == (g, n)), None), core.memory.s16[sb1], core.memory.s16[sb1 + 2]
+    def dismiss(frames):           # mash B: closes any scene text, harmless otherwise; fights any battle a scene starts
+        done = 0
+        while done < frames:
+            chunk = min(180, frames - done)
+            for f in range(0, chunk, 45): presses[frame + f] = ("B", 8)
+            step(chunk); done += chunk
+            if a.fight and in_battle():
+                print(f"  (battle at frame {frame}: fought for {fight()} frames)")
+        step(10)
+    if a.load_state:
+        # resume: the boot key schedule must not fire, so start the frame clock past it
+        from mgba._pylib import ffi
+        presses.clear()
+        data = Path(a.load_state).read_bytes()
+        state = ffi.new("unsigned char[]", data)
+        assert core.load_raw_state(state), "load_raw_state failed (state from another ROM build?)"
+        frame = 100000
+        step(30)
+    else:
+        step(4400)
+        core.memory.u16[probe] = (group << 8) | num; core.memory.u16[probe + 2] = sx; core.memory.u16[probe + 4] = sy
+        for i, f in enumerate(a.flag):   # FLAG_X, or TRAINER_X to mark that trainer as already defeated
+            core.memory.u16[probe + 6 + 2 * i] = flags[f] if f in flags else tfs + trainers[f]
+        if a.item:
+            core.memory.u16[probe + 20] = constants("include/constants/items.h", "ITEM_")[a.item]
+        if a.party:
+            core.memory.u16[probe + 22] = constants("include/constants/species.h", "SPECIES_")[a.party]
+        assert len(a.var) <= 2, "at most 2 --var"
+        for i, v in enumerate(a.var):
+            name, val = v.split("=")
+            core.memory.u16[probe + 24 + 4 * i] = vars_[name]; core.memory.u16[probe + 26 + 4 * i] = int(val, 0)
+        step(a.settle - 4400)
+        dismiss(900)                    # the arrival scene, if any
+    if a.fight:
+        set_battle_style_set()
     tracing[0] = True
     for wspec in a.walk:
         d, n = (wspec.split(":") + ["1"])[:2]
@@ -119,6 +175,53 @@ def main():
             step(8, n.upper()); step(40); continue
         elif d.upper() == "IDLE":   # IDLE:n -- wait n frames with no input (menu fades, text printing)
             step(int(n)); continue
+        elif d.upper() == "TALK":   # TALK:n -- A, wait for the text, then n more A presses spaced for printing
+            step(8, "A"); step(420)   # (a YES/NO prompt takes the default YES)
+            for _ in range(int(n)):
+                step(8, "A"); step(300)
+        elif d.upper() in ("GOTO", "GOTOEDGE", "GOTOWARP"):
+            # GOTO:x,y / GOTOEDGE:up / GOTOWARP:n -- plan on the live map with tools/skald/route.py, walk run by
+            # run, and re-plan from the real position after anything (a trainer, a scene, a wanderer) cuts a run short
+            import route
+            target = n
+            still = 0
+            blocked = set()             # tiles that refused a step (an NPC who moved): re-plan around them
+            DXY = {"RIGHT": (1, 0), "LEFT": (-1, 0), "DOWN": (0, 1), "UP": (0, -1)}
+            for attempt in range(60):
+                mapname, px, py = live_pos()
+                mdir = map_folders().get(mapname)
+                if mdir is None:
+                    print(f"  GOTO: unknown live map {mapname}"); break
+                kw = {}
+                if d.upper() == "GOTO":
+                    gx, gy = map(int, target.split(",")); kw["goal"] = (gx, gy)
+                    if (px, py) == (gx, gy): break
+                elif d.upper() == "GOTOEDGE":
+                    kw["edge"] = target.lower()
+                else:
+                    kw["warp"] = int(target)
+                path, runs = route.plan(mdir, (px, py), blocked=blocked, **kw)
+                if not runs:
+                    print(f"  GOTO: no path from ({px},{py}) on {mdir} to {target}"); break
+                if d.upper() != "GOTO" and len(path) == 1:
+                    break
+                rd, rk = runs[0]
+                step(16 * (rk - 1) + 12, rd); step(30)
+                dismiss(120)
+                nm, nx, ny = live_pos()
+                if nm != mapname:
+                    break               # crossed a connection or took a door: the goal was the edge/warp
+                if (nx, ny) == (px, py):
+                    still += 1
+                    dismiss(300)        # a scene or a trainer's closing lines may still be running
+                    if still >= 2:      # twice without moving: something stands there now
+                        dx, dy = DXY[rd]
+                        blocked.add((px + dx, py + dy))
+                    if still >= 8:
+                        print(f"  GOTO: stuck at ({px},{py}) heading {rd}"); break
+                else:
+                    still = 0
+            dismiss(a.dismiss); continue
         else:
             step(16 * int(n) + 12, d.upper()); step(30)
         dismiss(a.dismiss)          # a trigger's text, a leave prompt, an arrival on the other side
@@ -142,6 +245,11 @@ def main():
         else:
             print(f"  {c}: unknown")
     if a.out: img.to_pil().convert("RGB").save(a.out)
+    if a.save_state:
+        from mgba._pylib import ffi
+        st = core.save_raw_state()
+        assert st is not None, "save_raw_state failed"
+        Path(a.save_state).write_bytes(bytes(ffi.buffer(st)))
     sys.exit(0 if ok else 1)
 
 if __name__ == "__main__":
