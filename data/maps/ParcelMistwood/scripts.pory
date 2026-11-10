@@ -511,3 +511,17 @@ script ParcelMistwood_Board2 {
     msgbox(format("A SURVEY BOARD with a snare nailed to the back of it as a specimen. The ride is checked for snares each week by the Corps crew the Foundation funds. The board records the finds: 9, 11, 6, 14.\pIt does not record the ones not found. The HOOTHOOT count is the honest version of the same number, and it goes one way."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelMistwood_Board3 {
+    msgbox(format("A SURVEY BOARD by the seep. SLAKOTH in the oldest trees, asleep. A sleeping SLAKOTH is a count of nothing happening, which the Survey says is the hardest count to keep honest.\pNothing is written in the log each spring under this board, with a date. Nothing is the right word."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round four (2026-11-10) ---
+
+script ParcelMistwood_Board5 {
+    msgbox(format("A SURVEY BOARD on the forest's north edge, where the fog thins. HOOTHOOT call here at dusk and the Survey counts calls, not birds, because the fog counts the birds for you.\pThe calls per dusk are given as a column. The column is the shape of a hill, and the board is on the far side of it."), MSGBOX_SIGN)
+    end
+}

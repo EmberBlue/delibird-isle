@@ -812,6 +812,61 @@ ParcelStation_Board2::
 	end
 
 
+ParcelStation_PairFence::
+# 527 "data/maps/ParcelStation/scripts.pory"
+	lock
+# 528 "data/maps/ParcelStation/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelStation_PairFence_2
+# 532 "data/maps/ParcelStation/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelStation_PairFence_3
+# 538 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_7, MSGBOX_DEFAULT
+# 539 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_8, MSGBOX_DEFAULT
+# 540 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_9, MSGBOX_DEFAULT
+# 541 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_10, MSGBOX_DEFAULT
+# 542 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_11, MSGBOX_DEFAULT
+ParcelStation_PairFence_1:
+# 544 "data/maps/ParcelStation/scripts.pory"
+	release
+	end
+
+ParcelStation_PairFence_2:
+# 529 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_0, MSGBOX_DEFAULT
+# 530 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_1, MSGBOX_DEFAULT
+# 531 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_2, MSGBOX_DEFAULT
+	goto ParcelStation_PairFence_1
+
+ParcelStation_PairFence_3:
+# 533 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_3, MSGBOX_DEFAULT
+# 534 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_4, MSGBOX_DEFAULT
+# 535 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_5, MSGBOX_DEFAULT
+# 536 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_PairFence_Text_6, MSGBOX_DEFAULT
+	goto ParcelStation_PairFence_1
+
+
+ParcelStation_Board3::
+# 551 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelStation_Board4::
+# 558 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelStation_Hale_Text_0:
 # 67 "data/maps/ParcelStation/scripts.pory"
 	.string "Hale: It's filed. It's true. Now we find\n"
@@ -1499,3 +1554,86 @@ ParcelStation_Board2_Text_0:
 	.string "place in it, the Survey says under that.\p"
 	.string "Both are true. The board asks you to\n"
 	.string "carry both.$"
+
+ParcelStation_PairFence_Text_0:
+# 529 "data/maps/ParcelStation/scripts.pory"
+	.string "TECHNICIAN: The Director handed both\n"
+	.string "logbooks to the review. The roof one\l"
+	.string "and the fence one.$"
+
+ParcelStation_PairFence_Text_1:
+# 530 "data/maps/ParcelStation/scripts.pory"
+	.string "CADET: I didn't know there were two.$"
+
+ParcelStation_PairFence_Text_2:
+# 531 "data/maps/ParcelStation/scripts.pory"
+	.string "TECHNICIAN: Nobody did. That was the\n"
+	.string "second one's whole point. Now there's\l"
+	.string "one, and the fence is in it.$"
+
+ParcelStation_PairFence_Text_3:
+# 533 "data/maps/ParcelStation/scripts.pory"
+	.string "CADET: The new provisional passed\n"
+	.string "FOREST. First out of Saltwick in nine\l"
+	.string "years, the Hall says.$"
+
+ParcelStation_PairFence_Text_4:
+# 534 "data/maps/ParcelStation/scripts.pory"
+	.string "TECHNICIAN: Nine years. I've logged\n"
+	.string "every one of them. I never thought of\l"
+	.string "them as a wait.$"
+
+ParcelStation_PairFence_Text_5:
+# 535 "data/maps/ParcelStation/scripts.pory"
+	.string "CADET: What did you think of them as?$"
+
+ParcelStation_PairFence_Text_6:
+# 536 "data/maps/ParcelStation/scripts.pory"
+	.string "TECHNICIAN: Weather.$"
+
+ParcelStation_PairFence_Text_7:
+# 538 "data/maps/ParcelStation/scripts.pory"
+	.string "TECHNICIAN: Roof dish reads one point\n"
+	.string "two above the century mean.$"
+
+ParcelStation_PairFence_Text_8:
+# 539 "data/maps/ParcelStation/scripts.pory"
+	.string "CADET: Is that a lot?$"
+
+ParcelStation_PairFence_Text_9:
+# 540 "data/maps/ParcelStation/scripts.pory"
+	.string "TECHNICIAN: It's a number. The Station\n"
+	.string "doesn't do a lot. The Station does\l"
+	.string "numbers.$"
+
+ParcelStation_PairFence_Text_10:
+# 541 "data/maps/ParcelStation/scripts.pory"
+	.string "CADET: Who does a lot?$"
+
+ParcelStation_PairFence_Text_11:
+# 542 "data/maps/ParcelStation/scripts.pory"
+	.string "TECHNICIAN: The people who read the\n"
+	.string "numbers and then go outside. Not many.$"
+
+ParcelStation_Board3_Text_0:
+# 551 "data/maps/ParcelStation/scripts.pory"
+	.string "A SURVEY BOARD at the moor edge. NUMEL\n"
+	.string "come down to the Station's warm vents\l"
+	.string "in the cold months and ELECTRIKE to\l"
+	.string "the fence line. The board notes which\l"
+	.string "arrived first each year.\p"
+	.string "For twenty years it was the NUMEL. For\n"
+	.string "the last six it has been both on the\l"
+	.string "same day, earlier.$"
+
+ParcelStation_Board4_Text_0:
+# 558 "data/maps/ParcelStation/scripts.pory"
+	.string "A SURVEY BOARD at the Station's back\n"
+	.string "fence, where the staff smoke.\l"
+	.string "Over-the-fence readings were taken\l"
+	.string "here before they had a name, by someone\l"
+	.string "who stood exactly where you stand to\l"
+	.string "be out of the wind.\p"
+	.string "The board marks the spot with a brass\n"
+	.string "dot. Stand on it. The Survey's rule: read\l"
+	.string "from the same place.$"

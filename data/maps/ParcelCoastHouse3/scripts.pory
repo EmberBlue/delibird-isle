@@ -3,6 +3,22 @@ mapscripts ParcelCoastHouse3_MapScripts {
 script ParcelCoastHouse3_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_SCALE) && !flag(FLAG_SKALD_Q_SCALE_DONE)) {
+        if (flag(FLAG_SKALD_Q_SCALE_FOUND)) {
+            msgbox(format("CLERK: The same year. The same year. They certified the scale and the numbers turned, and I filed both without seeing it.\pIt's in the review now, with my name on the finding. Here. I was given these for twenty years' service. The service wasn't to them."), MSGBOX_DEFAULT)
+            giveitem(ITEM_DIVE_BALL, 2)
+            setflag(FLAG_SKALD_Q_SCALE_DONE)
+        } else {
+            msgbox(format("CLERK: The quay scale, by the cold store. The brass plate. The year."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_SCALE_DONE)) {
+        msgbox(format("CLERK: The catch logs turn on one date; I know the page. The quay scale has a brass plate with the year it was last certified. I've always wondered if the two dates are the same year.\pGo and read the plate. If they match, I'll know the scale was reset the year the numbers started lying."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_SCALE)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("CLERK: The catch logs are public. Anyone can read the day the numbers turned. Three people have.\pOne was a child doing homework. That's the best reader a ledger ever had."), MSGBOX_DEFAULT)
         release

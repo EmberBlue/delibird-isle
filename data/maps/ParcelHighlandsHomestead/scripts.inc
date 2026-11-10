@@ -88,6 +88,12 @@ ParcelHighlandsHomestead_ReadShelf::
 	end
 
 
+ParcelHighlandsHomestead_SeedTin::
+# 52 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	msgbox ParcelHighlandsHomestead_SeedTin_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelHighlandsHomestead_Grandson_Text_0:
 # 8 "data/maps/ParcelHighlandsHomestead/scripts.pory"
 	.string "GRANDSON: Gran read the letter twice\n"
@@ -149,3 +155,16 @@ ParcelHighlandsHomestead_ReadShelf_Text_0:
 	.string "thickest.\p"
 	.string "The last entry says: ground soft at the\n"
 	.string "gate. March. Underlined.$"
+
+ParcelHighlandsHomestead_SeedTin_Text_0:
+# 52 "data/maps/ParcelHighlandsHomestead/scripts.pory"
+	.string "A seed tin on the dresser, the\n"
+	.string "homestead's: packets by year, the\l"
+	.string "dates when sowing was possible written\l"
+	.string "on the lids.\p"
+	.string "The dates walk earlier across the lids,\n"
+	.string "and then stop walking and start\l"
+	.string "jumping. The last three lids say: sown\l"
+	.string "twice. Sown twice means the first\l"
+	.string "sowing died in a thaw and a frost.\p"
+	.string "There is no packet for next year yet.$"

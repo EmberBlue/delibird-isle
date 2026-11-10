@@ -768,3 +768,32 @@ script ParcelCoastBreakwater_Board2 {
     msgbox(format("A SURVEY BOARD facing the sea. CORSOLA on the old wall's foot, the only hard ground the dredge cannot reach. Pink in the clean years, white in the warm ones.\pThe board is a colour chart: a square painted each summer. Read it from the left."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelCoastBreakwater_PairWall {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DREDGE HAND: Dredge is parked. I'm on the review's crew, counting what comes back on the bottom."), MSGBOX_DEFAULT)
+        msgbox(format("NETMENDER: What comes back?"), MSGBOX_DEFAULT)
+        msgbox(format("DREDGE HAND: Mussels. Weed. A CORSOLA, pink, which the inspector made me photograph. I used to move that bottom a thousand tonnes a day. Now I photograph it."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("NETMENDER: The ranger walked the wall to the end and counted the calves. Two."), MSGBOX_DEFAULT)
+        msgbox(format("DREDGE HAND: Two's not many."), MSGBOX_DEFAULT)
+        msgbox(format("NETMENDER: Two's two more than the licence knows about. It's in a book now, with the licence number beside it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("DREDGE HAND: Spoil run at six. Same as every morning."), MSGBOX_DEFAULT)
+        msgbox(format("NETMENDER: Same as every morning for the WAILMER, too. They calve where you dump."), MSGBOX_DEFAULT)
+        msgbox(format("DREDGE HAND: I dump where the licence says."), MSGBOX_DEFAULT)
+        msgbox(format("NETMENDER: The licence has a number. The calves don't. That's the whole argument, and you've just had it."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelCoastBreakwater_Board3 {
+    msgbox(format("A SURVEY BOARD at the breakwater's root. TENTACOOL in the shallows below, more every warm year, the board says, and KRABBY fewer. The board gives both lines and lets them cross.\pWhere they cross is a date. The date has a tide written beside it, as if the Survey wanted the hour too."), MSGBOX_SIGN)
+    end
+}

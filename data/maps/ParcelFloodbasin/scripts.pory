@@ -131,6 +131,22 @@ script ParcelFloodbasin_Dorsey {
 script ParcelFloodbasin_Aide1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_VOUCHER) && !flag(FLAG_SKALD_Q_VOUCHER_DONE)) {
+        if (flag(FLAG_SKALD_Q_VOUCHER_FOUND)) {
+            msgbox(format("AIDE: Two hundred and twelve. Forty-one households. That's five vouchers a household, a winter. Five.\pThat's the number I'll give the hearing if they ask what relief looked like. Here. The last of the box that wasn't paper."), MSGBOX_DEFAULT)
+            giveitem(ITEM_SUPER_POTION, 3)
+            setflag(FLAG_SKALD_Q_VOUCHER_DONE)
+        } else {
+            msgbox(format("AIDE: Behind the tents. The voucher box. Count the counterfoils."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_VOUCHER_DONE)) {
+        msgbox(format("AIDE: The empty voucher box from last winter is still behind the tents. We were told to burn it. I didn't. The counterfoils are in it, every voucher we ever gave, with a name on each.\pGo and count the counterfoils for me. I want the number before someone else wants the box."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_VOUCHER)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("AIDE: Vouchers are back, from a different fund, with a different crest. Same sheet. I kept the sheet.\pForty-one names, and I know every one of them now."), MSGBOX_DEFAULT)
         release
@@ -2186,5 +2202,52 @@ script ParcelFloodbasin_Board1 {
 
 script ParcelFloodbasin_Board2 {
     msgbox(format("A SURVEY BOARD by the relief tents. Deformity count, POLIWAG, spring sample of one hundred, in a column down the board: 0, 0, 1, 0, 3, 4, 7, 9.\pA sign beside the board says the site is being remediated. The board does not argue with the sign. It is a column of numbers."), MSGBOX_SIGN)
+    end
+}
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelFloodbasin_FindVoucher {
+    if (flag(FLAG_SKALD_Q_VOUCHER) && !flag(FLAG_SKALD_Q_VOUCHER_FOUND)) {
+        msgbox(format("A wooden box behind the tents, the Foundation's crest stencilled on the side, the lid off. Inside, counterfoils in bundles tied with string, a name on each. You count the bundles and then the counterfoils in one bundle and multiply, and then you count them all anyway. Two hundred and twelve.\pThe names repeat. The same names, winter after winter."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_VOUCHER_FOUND)
+    } else {
+        msgbox(format("The voucher box behind the tents. Two hundred and twelve counterfoils, tied in bundles. Nobody has burned it."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelFloodbasin_Board3 {
+    msgbox(format("A SURVEY BOARD at the basin's north edge. ODDISH in the wet meadow, counted by the smell at dusk, the Survey's oldest joke and most reliable method.\pThe board gives the count. It also gives the date the smell changed, and the word the Survey used for the new smell, which was not a joke."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelFloodbasin_Board4 {
+    msgbox(format("A SURVEY BOARD at the old mill race. Before the works there was a mill, and before the mill a ford, and the board gives the dates of each and the frog count for each, as far back as anyone wrote frogs down.\pThe ford had the most. The board does not say that progress is the wrong word. It gives the count."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round five ---
+
+script ParcelFloodbasin_PairLevee {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD WOMAN: Fourth flood. Slower. The sluice held it a day."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: A day's not a cure."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: A day's a day. I packed sandbags for three floods without one. I'll take the day and I'll keep the bags."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: The ranger stood on the levee with the Board's man and made him read his own gauge."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Did he read it?"), MSGBOX_DEFAULT)
+        msgbox(format("MAN: He read it. Then he read it again, quieter. That's the sound a number makes when it's true."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD WOMAN: Three floods since the works. Before the works, one in ten years."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: The Board says weather."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: The weather was here before the works too. It knew how to get to the sea then."), MSGBOX_DEFAULT)
+    }
+    release
     end
 }

@@ -1566,6 +1566,57 @@ ParcelFloodbasinSluice_Board2::
 	end
 
 
+ParcelFloodbasinSluice_PairGate::
+# 732 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	lock
+# 733 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinSluice_PairGate_2
+# 737 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasinSluice_PairGate_3
+# 742 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_6, MSGBOX_DEFAULT
+# 743 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_7, MSGBOX_DEFAULT
+# 744 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_8, MSGBOX_DEFAULT
+# 745 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_9, MSGBOX_DEFAULT
+ParcelFloodbasinSluice_PairGate_1:
+# 747 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	release
+	end
+
+ParcelFloodbasinSluice_PairGate_2:
+# 734 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_0, MSGBOX_DEFAULT
+# 735 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_1, MSGBOX_DEFAULT
+# 736 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_2, MSGBOX_DEFAULT
+	goto ParcelFloodbasinSluice_PairGate_1
+
+ParcelFloodbasinSluice_PairGate_3:
+# 738 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_3, MSGBOX_DEFAULT
+# 739 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_4, MSGBOX_DEFAULT
+# 740 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairGate_Text_5, MSGBOX_DEFAULT
+	goto ParcelFloodbasinSluice_PairGate_1
+
+
+ParcelFloodbasinSluice_Board3::
+# 754 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFloodbasinSluice_Board4::
+# 761 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasinSluice_Nils_Text_0:
 # 10 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "NILS: The crossing's the old ford. The\n"
@@ -2265,3 +2316,77 @@ ParcelFloodbasinSluice_Board2_Text_0:
 	.string "a fortnight after the gate closes,\l"
 	.string "every year. The gate's timing is the\l"
 	.string "marsh's timing now. It did not use to be.$"
+
+ParcelFloodbasinSluice_PairGate_Text_0:
+# 734 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "GATEMAN: Gate's on the marsh's calendar\n"
+	.string "now. Board order. First time the order's\l"
+	.string "had a reason on it.$"
+
+ParcelFloodbasinSluice_PairGate_Text_1:
+# 735 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "WOMAN: What's the reason say?$"
+
+ParcelFloodbasinSluice_PairGate_Text_2:
+# 736 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "GATEMAN: GOLDEEN. One word. I've worked\n"
+	.string "this gate twenty years and never seen\l"
+	.string "a fish on an order.$"
+
+ParcelFloodbasinSluice_PairGate_Text_3:
+# 738 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "WOMAN: The ranger stood on the wall and\n"
+	.string "timed the drop. With a watch.$"
+
+ParcelFloodbasinSluice_PairGate_Text_4:
+# 739 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "GATEMAN: Everyone times it with the\n"
+	.string "sun.$"
+
+ParcelFloodbasinSluice_PairGate_Text_5:
+# 740 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "WOMAN: The sun doesn't go in a report. A\n"
+	.string "watch does. That's the difference\l"
+	.string "between knowing and being believed.$"
+
+ParcelFloodbasinSluice_PairGate_Text_6:
+# 742 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "GATEMAN: Gate's late this year. Orders.$"
+
+ParcelFloodbasinSluice_PairGate_Text_7:
+# 743 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "WOMAN: Late for the fields or late for\n"
+	.string "the marsh?$"
+
+ParcelFloodbasinSluice_PairGate_Text_8:
+# 744 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "GATEMAN: Late. I don't get told who for.$"
+
+ParcelFloodbasinSluice_PairGate_Text_9:
+# 745 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "WOMAN: The marsh doesn't get told\n"
+	.string "either. That's two of you.$"
+
+ParcelFloodbasinSluice_Board3_Text_0:
+# 754 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "A SURVEY BOARD on the upper wall.\n"
+	.string "MANECTRIC on the sluice gantries in a\l"
+	.string "storm, drawn by the iron. The board\l"
+	.string "notes the storms by the count of\l"
+	.string "MANECTRIC on the gantry: three, five,\l"
+	.string "eight.\p"
+	.string "The storms are the same size. The\n"
+	.string "gantry is the same iron. There are more\l"
+	.string "storms.$"
+
+ParcelFloodbasinSluice_Board4_Text_0:
+# 761 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "A SURVEY BOARD on the keeper's steps.\n"
+	.string "The sluice has been kept by one family\l"
+	.string "for four generations, and the board\l"
+	.string "carries the keepers' initials and the\l"
+	.string "years, and beside each the number of\l"
+	.string "springs the gate opened on time.\p"
+	.string "The last keeper's row is the longest and\n"
+	.string "the number is the lowest. The board\l"
+	.string "gives no reason. The ledger inside does.$"

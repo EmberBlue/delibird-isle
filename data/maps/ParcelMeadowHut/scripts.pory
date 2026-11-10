@@ -16,3 +16,10 @@ script ParcelMeadowHut_Register {
     }
     end
 }
+
+// --- documents, round five (2026-11-10) ---
+
+script ParcelMeadowHut_KitList {
+    msgbox(format("RIN's kit list, pinned by the door: what a ranger leaves with. Notebook. Pencil, two. A length of red cloth and a stake, for the first habitat you find that nobody has staked. Repels, for the walking. A partner, if one chooses you.\pAt the bottom, added later: the Corps does not issue courage either. Bring your own."), MSGBOX_SIGN)
+    end
+}

@@ -668,3 +668,41 @@ script ParcelRoute1_Board2 {
     msgbox(format("A SURVEY BOARD by the road. WINGULL pairs on the shore pilings, counted at dawn: 14. The Survey's rule for shore birds is written under the number in a smaller hand.\pA pair that nests found enough fish. A pair that stays and does not nest found enough to stay. Watch which."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelRoute1_PairSalt {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD WOMAN: The gate's open. No crest. Someone unscrewed it in the night."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: Was it the ranger?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: The ranger doesn't unscrew things. The ranger writes them down and other people unscrew them. Pick the samphire. It's a good year."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
+        msgbox(format("GIRL: A POLIWAG came through the culvert the wrong way. The ranger saw it."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Wrong way for whom?"), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: For the POLIWAG."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Then it's the right way for something else. Find out what. That's what the ranger's doing."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD WOMAN: Pick below the tide line, not above. Above is the gate's. Below is everyone's."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: The gate has a crest on it."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: The gate has a crest. The marsh has samphire. Pick the samphire."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: What's the crest for?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Managing. Keep picking."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelRoute1_Board3 {
+    msgbox(format("A SURVEY BOARD at the grass edge. TAILLOW nest in the old pilings and feed over the marsh; where they feed is where the insects are, and where the insects are is where the marsh still works.\pThe board draws their flight lines as arrows. The arrows have shortened since the first drawing. They have not turned."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round four (2026-11-10) ---
+
+script ParcelRoute1_Board5 {
+    msgbox(format("A SURVEY BOARD at the north end of the route, where the saltmarsh gives up and the trees begin. The Survey calls this a line and draws it on the board as one, year by year.\pThe trees have not moved. The marsh has. The line is where it always was; the marsh is shorter on its side of it."), MSGBOX_SIGN)
+    end
+}

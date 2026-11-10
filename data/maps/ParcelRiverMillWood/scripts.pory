@@ -746,3 +746,34 @@ script ParcelRiverMillWood_Board2 {
     msgbox(format("A SURVEY BOARD on a stump wide enough to sit on. The stump is the count: the rings were marked with a nail every fifty years by someone with time. The last nail is in the bark.\pThe Survey added the SEEDOT count underneath, because a wood that drops seed is a wood that is still trying."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelRiverMillWood_PairStump {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOODCUTTER: Two stands, not five. The Board's paper came back with three crossed out."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Which two?"), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: The two without husks. Someone read the count. Someone always does, eventually. It's the eventually that costs."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: The ranger counted the husks with me. Forty. She wrote the week."), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: The week matters more than the forty."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Why?"), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: Because forty's a lot and the week's early, and only one of those is good news."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("WOODCUTTER: Five stands marked for the Board. Five."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Which five?"), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: The five with the NINCADA on them. Of course. The paper doesn't know what a husk is."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Can I keep the husks?"), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: Count them first. Then keep them."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelRiverMillWood_Board3 {
+    msgbox(format("A SURVEY BOARD in the second growth. SHROOMISH under the planted spruce and none under the old oak stump.\pThe board explains in one line: planted wood holds the damp, cut ground does not, and a SHROOMISH knows the difference before the soil scientist does."), MSGBOX_SIGN)
+    end
+}

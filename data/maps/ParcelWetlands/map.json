@@ -835,6 +835,38 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_Board2"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 41,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWetlands_FindRack"
+    },
+    {
+      "type": "sign",
+      "x": 21,
+      "y": 53,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWetlands_Board3"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 52,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWetlands_Board4"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 47,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWetlands_Board5"
     }
   ]
 }

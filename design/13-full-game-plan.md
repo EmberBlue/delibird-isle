@@ -744,4 +744,27 @@ quest is built, how the peer works) before they are asked six more times.
   is done, so no side path is blocked. Three scratchpad scripts
   (epilogue1-3.py), all 103 scripts compile, two lines checked in the
   emulator with the flag forced. 93,285 hand-written words. ~6,000 words.
+- **2026-11-10 — one hundred thousand.** The last six thousand: thirteen
+  overheard pairs in the side maps (the marsh edge where the alder stopped
+  at one pace, the cut's mechanic who has stood in the water, the saltmarsh
+  samphire pickers, the sluice gate on the marsh's calendar, the summit
+  cairn, the breakwater's dredge hand photographing a pink CORSOLA, the
+  bridge rail as a hide) and seven more in the towns (the quay coopers
+  moving what's there, the Fernwick post with the thin letter, the turf
+  stackers, the levee's day, the cheesemaker's cows, the net menders' tie
+  it loose, the dry well's line); side quests round five, eight more
+  (PELL's sealed crate 417, the fountain's small plate ON LOAN, the
+  monitor's twelve jars, the Survey's red flow mark the pour stopped a
+  finger short of, the voucher box's two hundred and twelve counterfoils,
+  DELL's shoebox filed ANECDOTAL, the old house's step a hand down on the
+  uphill side, the quay scale certified the year the numbers turned); a
+  third Survey board in every outdoor map and a fourth in eleven, then
+  six more; seven documents in the thin interiors (TARN's bench book, the
+  homestead's seed tin, RIN's kit list with courage added later, SKELD's
+  snare book and its third column, the depot's grading card with HILL
+  priced below two, VANE's weather glass, the gate hut's sheet); and a
+  page two for all seven of INGER's front pages. Verified in the
+  emulator: a find, a pair, a board, the Courier. **100,080 hand-written
+  words** (`tools/skald/wordcount.py`; ~131,000 with the rematch tiers).
+  Audit: 102 maps, the 2 known warnings. The §13 target is met.
 

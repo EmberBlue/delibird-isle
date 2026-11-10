@@ -4457,6 +4457,59 @@ ParcelRiver_Board2::
 	end
 
 
+ParcelRiver_Board3::
+# 2177 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiver_Board4::
+# 2184 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiver_PairStall::
+# 2191 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 2192 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairStall_2
+# 2196 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairStall_3
+# 2202 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_7, MSGBOX_DEFAULT
+# 2203 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_8, MSGBOX_DEFAULT
+# 2204 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_9, MSGBOX_DEFAULT
+# 2205 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_10, MSGBOX_DEFAULT
+ParcelRiver_PairStall_1:
+# 2207 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_PairStall_2:
+# 2193 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_0, MSGBOX_DEFAULT
+# 2194 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_1, MSGBOX_DEFAULT
+# 2195 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_2, MSGBOX_DEFAULT
+	goto ParcelRiver_PairStall_1
+
+ParcelRiver_PairStall_3:
+# 2197 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_3, MSGBOX_DEFAULT
+# 2198 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_4, MSGBOX_DEFAULT
+# 2199 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_5, MSGBOX_DEFAULT
+# 2200 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairStall_Text_6, MSGBOX_DEFAULT
+	goto ParcelRiver_PairStall_1
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 52 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -6880,3 +6933,82 @@ ParcelRiver_Board2_Text_0:
 	.string "The board shows the old bends as a\n"
 	.string "dotted line over the new channel. The\l"
 	.string "dotted line is where the fish were.$"
+
+ParcelRiver_Board3_Text_0:
+# 2177 "data/maps/ParcelRiver/scripts.pory"
+	.string "A SURVEY BOARD at the market bridge's\n"
+	.string "foot. VOLBEAT and ILLUMISE over the\l"
+	.string "river on midsummer night: the town's\l"
+	.string "count, older than the Survey, kept by\l"
+	.string "whoever stands longest on the bridge.\p"
+	.string "The board copies it in. The town's\n"
+	.string "numbers are rounder than the Survey's\l"
+	.string "and fall at the same rate.$"
+
+ParcelRiver_Board4_Text_0:
+# 2184 "data/maps/ParcelRiver/scripts.pory"
+	.string "A SURVEY BOARD on the mill's downstream\n"
+	.string "wall. Here the river is measured twice:\l"
+	.string "by the Board's gauge, which is official,\l"
+	.string "and by the Survey's stake, which is\l"
+	.string "older. The board gives both readings\l"
+	.string "for every spring.\p"
+	.string "They agree to the hand in good years.\n"
+	.string "In the bad years the gauge reads\l"
+	.string "higher, and the Survey has never been\l"
+	.string "told why.$"
+
+ParcelRiver_PairStall_Text_0:
+# 2193 "data/maps/ParcelRiver/scripts.pory"
+	.string "CHEESEMAKER: Milk's up. The buffer\n"
+	.string "strip and the spring allocation. Two\l"
+	.string "rows of alder and a sheet of numbers,\l"
+	.string "and my cows taste it.$"
+
+ParcelRiver_PairStall_Text_1:
+# 2194 "data/maps/ParcelRiver/scripts.pory"
+	.string "WEAVER: You sound like the ranger.$"
+
+ParcelRiver_PairStall_Text_2:
+# 2195 "data/maps/ParcelRiver/scripts.pory"
+	.string "CHEESEMAKER: I sound like my cows. The\n"
+	.string "ranger just wrote them down.$"
+
+ParcelRiver_PairStall_Text_3:
+# 2197 "data/maps/ParcelRiver/scripts.pory"
+	.string "WEAVER: The ranger bought a cheese and\n"
+	.string "asked where the cows graze.$"
+
+ParcelRiver_PairStall_Text_4:
+# 2198 "data/maps/ParcelRiver/scripts.pory"
+	.string "CHEESEMAKER: Did you tell them?$"
+
+ParcelRiver_PairStall_Text_5:
+# 2199 "data/maps/ParcelRiver/scripts.pory"
+	.string "WEAVER: You told them. Above the\n"
+	.string "straightened reach, you said, where the\l"
+	.string "bends were. Then you went quiet.$"
+
+ParcelRiver_PairStall_Text_6:
+# 2200 "data/maps/ParcelRiver/scripts.pory"
+	.string "CHEESEMAKER: I'd never said it out loud.\n"
+	.string "Where the bends were.$"
+
+ParcelRiver_PairStall_Text_7:
+# 2202 "data/maps/ParcelRiver/scripts.pory"
+	.string "CHEESEMAKER: The milk's thinner since\n"
+	.string "the pump went in above the farms.$"
+
+ParcelRiver_PairStall_Text_8:
+# 2203 "data/maps/ParcelRiver/scripts.pory"
+	.string "WEAVER: Thinner milk, thinner cheese,\n"
+	.string "thinner me.$"
+
+ParcelRiver_PairStall_Text_9:
+# 2204 "data/maps/ParcelRiver/scripts.pory"
+	.string "CHEESEMAKER: It's the grass. The grass\n"
+	.string "is the water. The water's the Board's.$"
+
+ParcelRiver_PairStall_Text_10:
+# 2205 "data/maps/ParcelRiver/scripts.pory"
+	.string "WEAVER: Then I'll weave a complaint.$"

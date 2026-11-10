@@ -85,8 +85,10 @@ side quests (Grettir's pond, the Corridor satchel, Hedda's mask, the beaver
 stump, the Highland egg, the Coast shell, Gaute's board), seven field HMs
 wired as real traversal, 8 Skald map sections on the region map with heal
 spots at Saltwick, Fernwick, Elvsund, Delibird, the Coast and the Station.
-The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the
-*shape* of the game is now right; the remaining gap is volume.
+The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: all
+three are met as of 2026-11-10 (100,080 hand-written words by
+`tools/skald/wordcount.py`, 1,071 battles, 102 maps). What remains is
+polish and depth, not volume.
 
 **Added 2026-11-10 (see §13's log for each):** the remix pass (no zone is a
 vanilla slice any more; measured in `build.py`), the survey stakes, every
@@ -111,10 +113,13 @@ nine rules, the Station's forty-year register, the lodging's visitors'
 book, the Courier bound, the Board's water-rights ledger), and a fourth
 story state for every named resident: 203 post-epilogue lines (the
 post-game as a settled "what now"; quest givers speak theirs only once
-their quest is done). ~93,300 hand-written words (~124,000 with the
-rematch-tier lines; `tools/skald/wordcount.py` is the counter), 704
-objects, 429 readable events, 56 overheard conversations, 102 maps, 1,071
-battles. The certification spine was fought
+their quest is done), twenty more overheard pairs (rounds four and five,
+the side maps and the towns), side quests round five (eight; fifty-three
+in all), eighty-three Survey boards in all, seven more documents and a
+page two for every Courier front page. **100,080 hand-written words**
+(~130,700 with the rematch-tier lines; `tools/skald/wordcount.py` is the
+counter), 740 objects, 483 readable events, 76 overheard conversations,
+102 maps, 1,071 battles. The certification spine was fought
 through headlessly with the harness's new `--party`/`--var` (every leader,
 every signing, the confession, the boardroom: `tools/skald/spine.sh`).
 

@@ -2086,3 +2086,80 @@ script ParcelHighlands_Board2 {
     msgbox(format("A SURVEY BOARD on the bore road, the Foundation crest on the post it is nailed to. EXPLORATORY ONLY, says the Company sign a pace away.\pThe Survey board gives the slope readings beside the bore: 2, 4, 9, 15. The unit is hands downslope. The sign has moved with the ground. The board has moved the same distance."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelHighlands_PairRoad {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAN: The leases are enjoined. The form's withdrawn. We stay or we go; nobody's paying either way."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Then we stay the winter and decide in spring, like people have always done up here."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: And if the ground goes?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Then it goes with us standing on it, knowing. That's more than it was offering before."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("OLD WOMAN: The ranger stood in the lambing field and wrote SHIFTED. One word."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: Is that bad?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: It's the word the ground's been saying. Somebody finally spelt it. I'll sign nothing till I've read it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MAN: Sign the form and the house in the valley's ours by autumn."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Whose is this one, then?"), MSGBOX_DEFAULT)
+        msgbox(format("MAN: Subject to review."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: I've lived in it sixty years and it's never been subject to anything but weather. Weather I can read."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelHighlands_FindStep {
+    if (flag(FLAG_SKALD_Q_STEP) && !flag(FLAG_SKALD_Q_STEP_FOUND)) {
+        msgbox(format("A front step, stone, worn in the middle by sixty years of boots. It leans: a hand lower on the uphill side than the down. Under the lip of it, the corner of a key, rusted to the colour of the stone.\pYou leave the key. The step was the question. The step has answered it."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_STEP_FOUND)
+    } else {
+        msgbox(format("The front step of the empty house, leaning uphill. The key is still under it."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelHighlands_Board3 {
+    msgbox(format("A SURVEY BOARD at the thaw ponds. The ponds have names on the board, given in the order they appeared. Eleven names.\pThe oldest pond has a SPHEAL in it that should be on the coast. The board records that too, under the heading: arrived. Not: escaped."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelHighlands_Board4 {
+    msgbox(format("A SURVEY BOARD at the high pass. Above this line the Survey counts only what it can see from the path, because the ground will not take a stake.\pThe board lists what has been seen from here: SNEASEL, SWINUB, once a SALAMENCE with a photograph. The list is not a count. The Survey says so first."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round five ---
+
+script ParcelHighlands_PairWell {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: The bore's capped and the well's still down. Nobody's pretending it'll come back."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: Then why do you check it?"), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Because somebody wrote down the day it was full, and somebody should write down the day it isn't. Pass me the line."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("MAN: The ranger lowered a line in our well. Wrote the depth beside the Company's reading."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Did they match?"), MSGBOX_DEFAULT)
+        msgbox(format("MAN: No. Ours was deeper. Theirs was the one on the sign."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("WOMAN: The well's down a hand again."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: The Company says the bore's exploratory. Doesn't touch the water."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: The water doesn't know what exploratory means. Neither do I. I know the hand."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round four (2026-11-10) ---
+
+script ParcelHighlands_Board5 {
+    msgbox(format("A SURVEY BOARD at the centre's woodpile. The pile is measured in autumn: how much wood the valley sends up, how many winters it would last at the old rate.\pThe second number used to be one. It is two now. Fewer people winter up here. The board does not say that this is why the pile lasts. It gives the two numbers."), MSGBOX_SIGN)
+    end
+}

@@ -1641,6 +1641,51 @@ ParcelCoastBreakwater_Board2::
 	end
 
 
+ParcelCoastBreakwater_PairWall::
+# 775 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	lock
+# 776 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastBreakwater_PairWall_2
+# 780 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastBreakwater_PairWall_3
+# 785 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_6, MSGBOX_DEFAULT
+# 786 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_7, MSGBOX_DEFAULT
+# 787 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_8, MSGBOX_DEFAULT
+# 788 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_9, MSGBOX_DEFAULT
+ParcelCoastBreakwater_PairWall_1:
+# 790 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	release
+	end
+
+ParcelCoastBreakwater_PairWall_2:
+# 777 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_0, MSGBOX_DEFAULT
+# 778 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_1, MSGBOX_DEFAULT
+# 779 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_2, MSGBOX_DEFAULT
+	goto ParcelCoastBreakwater_PairWall_1
+
+ParcelCoastBreakwater_PairWall_3:
+# 781 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_3, MSGBOX_DEFAULT
+# 782 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_4, MSGBOX_DEFAULT
+# 783 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_PairWall_Text_5, MSGBOX_DEFAULT
+	goto ParcelCoastBreakwater_PairWall_1
+
+
+ParcelCoastBreakwater_Board3::
+# 797 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastBreakwater_Ansgar_Text_0:
 # 10 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "ANSGAR: Off the boats a week. The\n"
@@ -2394,3 +2439,69 @@ ParcelCoastBreakwater_Board2_Text_0:
 	.string "The board is a colour chart: a square\n"
 	.string "painted each summer. Read it from the\l"
 	.string "left.$"
+
+ParcelCoastBreakwater_PairWall_Text_0:
+# 777 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "DREDGE HAND: Dredge is parked. I'm on\n"
+	.string "the review's crew, counting what comes\l"
+	.string "back on the bottom.$"
+
+ParcelCoastBreakwater_PairWall_Text_1:
+# 778 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "NETMENDER: What comes back?$"
+
+ParcelCoastBreakwater_PairWall_Text_2:
+# 779 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "DREDGE HAND: Mussels. Weed. A CORSOLA,\n"
+	.string "pink, which the inspector made me\l"
+	.string "photograph. I used to move that bottom\l"
+	.string "a thousand tonnes a day. Now I\l"
+	.string "photograph it.$"
+
+ParcelCoastBreakwater_PairWall_Text_3:
+# 781 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "NETMENDER: The ranger walked the wall\n"
+	.string "to the end and counted the calves. Two.$"
+
+ParcelCoastBreakwater_PairWall_Text_4:
+# 782 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "DREDGE HAND: Two's not many.$"
+
+ParcelCoastBreakwater_PairWall_Text_5:
+# 783 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "NETMENDER: Two's two more than the\n"
+	.string "licence knows about. It's in a book now,\l"
+	.string "with the licence number beside it.$"
+
+ParcelCoastBreakwater_PairWall_Text_6:
+# 785 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "DREDGE HAND: Spoil run at six. Same as\n"
+	.string "every morning.$"
+
+ParcelCoastBreakwater_PairWall_Text_7:
+# 786 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "NETMENDER: Same as every morning for\n"
+	.string "the WAILMER, too. They calve where you\l"
+	.string "dump.$"
+
+ParcelCoastBreakwater_PairWall_Text_8:
+# 787 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "DREDGE HAND: I dump where the licence\n"
+	.string "says.$"
+
+ParcelCoastBreakwater_PairWall_Text_9:
+# 788 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "NETMENDER: The licence has a number.\n"
+	.string "The calves don't. That's the whole\l"
+	.string "argument, and you've just had it.$"
+
+ParcelCoastBreakwater_Board3_Text_0:
+# 797 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "A SURVEY BOARD at the breakwater's\n"
+	.string "root. TENTACOOL in the shallows below,\l"
+	.string "more every warm year, the board says,\l"
+	.string "and KRABBY fewer. The board gives both\l"
+	.string "lines and lets them cross.\p"
+	.string "Where they cross is a date. The date\n"
+	.string "has a tide written beside it, as if the\l"
+	.string "Survey wanted the hour too.$"

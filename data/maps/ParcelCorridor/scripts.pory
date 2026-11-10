@@ -1641,3 +1641,52 @@ script ParcelCorridor_Board2 {
     msgbox(format("A SURVEY BOARD beside the checkpoint. The culvert was described as an upgrade, and the board quotes the description in full, without comment.\pUnder it the Survey has written the pipe width in paces and the old channel width in paces. Reading both is the comment."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelCorridor_PairCut {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DRIVER: Second pipe's going in. Same width as the first."), MSGBOX_DEFAULT)
+        msgbox(format("MECHANIC: Two pipes isn't a stream."), MSGBOX_DEFAULT)
+        msgbox(format("DRIVER: It's twice as much pipe. That's what the drawing says."), MSGBOX_DEFAULT)
+        msgbox(format("MECHANIC: The drawing's never stood in the water. I have. It's a start, and it's not the thing."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("MECHANIC: The ranger measured the pipe. In paces. Then the old channel. In paces."), MSGBOX_DEFAULT)
+        msgbox(format("DRIVER: And?"), MSGBOX_DEFAULT)
+        msgbox(format("MECHANIC: And nothing. They wrote both numbers on the same line and walked off. I've been thinking about that line all week."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("DRIVER: Culvert's flooding the road again."), MSGBOX_DEFAULT)
+        msgbox(format("MECHANIC: It's not flooding. It's returning. The stream remembers the width it had."), MSGBOX_DEFAULT)
+        msgbox(format("DRIVER: Tell that to the axle."), MSGBOX_DEFAULT)
+        msgbox(format("MECHANIC: I'm telling it to you. The axle already knows."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelCorridor_FindHeadwall {
+    if (flag(FLAG_SKALD_Q_HEADWALL) && !flag(FLAG_SKALD_Q_HEADWALL_FOUND)) {
+        msgbox(format("The old headwall above the culvert, concrete poured over stone. At the edge of the pour, where the stone shows, a line of red lead, old, and a figure: the Survey's flow mark, three hands above the top of the pipe.\pThe pour stops a finger short of the mark. Somebody on the crew stopped it there."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_HEADWALL_FOUND)
+    } else {
+        msgbox(format("The old flow mark on the headwall, red lead, three hands above the pipe. Someone has chalked an arrow to it."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelCorridor_Board3 {
+    msgbox(format("A SURVEY BOARD above the cut. The slope slides each spring and the road crew clears it, and the board records both: the slide in paces, the clearing in days.\pThe paces grow. The days do not. The crew is very good. The slope is better."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelCorridor_Board4 {
+    msgbox(format("A SURVEY BOARD at the checkpoint's blind side. The Company's bare stakes along the cut mark where their drainage will run. The Survey's red ones mark where the water does run.\pThe board gives the distance between the two sets, year by year. It closes. The Company is not moving its stakes."), MSGBOX_SIGN)
+    end
+}

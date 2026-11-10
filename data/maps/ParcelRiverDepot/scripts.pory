@@ -57,3 +57,10 @@ script ParcelRiverDepot_WeighBook {
     msgbox(format("The buyer's weigh book, open on the counter. Trout, by the basket, by the week.\pThe weights go down the page the way the river's gauge goes down the ford: a little, then a little, then a line where the buyer started weighing in halves because wholes looked too bare.\pThe FOUNDATION RATE column never moves. It is the only straight line in the book, and the farmers are paid off it, and they know."), MSGBOX_SIGN)
     end
 }
+
+// --- documents, round five (2026-11-10) ---
+
+script ParcelRiverDepot_GradingCard {
+    msgbox(format("The depot's grading card, nailed to the post: produce by class, price by class, the FOUNDATION crest at the top. Class one, class two, and a third class added in pen: hill.\pHill is what the Haukfell families bring down. It is priced below two. Someone has written beside it: they grew it in the snow. Pay two."), MSGBOX_SIGN)
+    end
+}

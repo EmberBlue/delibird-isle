@@ -1630,6 +1630,55 @@ ParcelWetlandsHide_Board2::
 	end
 
 
+ParcelWetlandsHide_PairPath::
+# 767 "data/maps/ParcelWetlandsHide/scripts.pory"
+	lock
+# 768 "data/maps/ParcelWetlandsHide/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHide_PairPath_2
+# 772 "data/maps/ParcelWetlandsHide/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlandsHide_PairPath_3
+# 778 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_7, MSGBOX_DEFAULT
+# 779 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_8, MSGBOX_DEFAULT
+# 780 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_9, MSGBOX_DEFAULT
+# 781 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_10, MSGBOX_DEFAULT
+# 782 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_11, MSGBOX_DEFAULT
+ParcelWetlandsHide_PairPath_1:
+# 784 "data/maps/ParcelWetlandsHide/scripts.pory"
+	release
+	end
+
+ParcelWetlandsHide_PairPath_2:
+# 769 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_0, MSGBOX_DEFAULT
+# 770 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_1, MSGBOX_DEFAULT
+# 771 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_2, MSGBOX_DEFAULT
+	goto ParcelWetlandsHide_PairPath_1
+
+ParcelWetlandsHide_PairPath_3:
+# 773 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_3, MSGBOX_DEFAULT
+# 774 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_4, MSGBOX_DEFAULT
+# 775 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_5, MSGBOX_DEFAULT
+# 776 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_PairPath_Text_6, MSGBOX_DEFAULT
+	goto ParcelWetlandsHide_PairPath_1
+
+
+ParcelWetlandsHide_Board3::
+# 791 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlandsHide_Aslak_Text_0:
 # 10 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "ASLAK: Hide's full. Sit on the bank with\n"
@@ -2370,3 +2419,72 @@ ParcelWetlandsHide_Board2_Text_0:
 	.string "The board shows the count by year as a\n"
 	.string "row of ticks. You can see the shape of\l"
 	.string "it from the path.$"
+
+ParcelWetlandsHide_PairPath_Text_0:
+# 769 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "OLD MAN: Twelve this year.$"
+
+ParcelWetlandsHide_PairPath_Text_1:
+# 770 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "WOMAN: One up.$"
+
+ParcelWetlandsHide_PairPath_Text_2:
+# 771 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "OLD MAN: One up is a lantern's worth of\n"
+	.string "error. Sit next year and we'll see if it's\l"
+	.string "a trend or a lamp.$"
+
+ParcelWetlandsHide_PairPath_Text_3:
+# 773 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "WOMAN: The ranger sat the whole dusk\n"
+	.string "and didn't move. Wrote one number at\l"
+	.string "the end.$"
+
+ParcelWetlandsHide_PairPath_Text_4:
+# 774 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "OLD MAN: Eleven?$"
+
+ParcelWetlandsHide_PairPath_Text_5:
+# 775 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "WOMAN: Eleven.$"
+
+ParcelWetlandsHide_PairPath_Text_6:
+# 776 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "OLD MAN: RAGNA said eleven. The warden\n"
+	.string "said tired. The ranger said eleven. Two\l"
+	.string "to one. That's how a count gets its\l"
+	.string "number.$"
+
+ParcelWetlandsHide_PairPath_Text_7:
+# 778 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "OLD MAN: Lantern off before the gate.\n"
+	.string "The lights count, not us.$"
+
+ParcelWetlandsHide_PairPath_Text_8:
+# 779 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "WOMAN: I know the rule.$"
+
+ParcelWetlandsHide_PairPath_Text_9:
+# 780 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "OLD MAN: The rule's the whole count. One\n"
+	.string "lantern on and the VOLBEAT lie to you\l"
+	.string "for an hour.$"
+
+ParcelWetlandsHide_PairPath_Text_10:
+# 781 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "WOMAN: Do they lie or do they leave?$"
+
+ParcelWetlandsHide_PairPath_Text_11:
+# 782 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "OLD MAN: Same thing, to a count.$"
+
+ParcelWetlandsHide_Board3_Text_0:
+# 791 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "A SURVEY BOARD at the hide's gate. The\n"
+	.string "rule of the dusk count, in full: arrive\l"
+	.string "before the light goes, speak to no one,\l"
+	.string "count what lights, and write the number\l"
+	.string "before you stand up.\p"
+	.string "The last rule is the one the Survey\n"
+	.string "fought for. A number carried to the\l"
+	.string "path is a number changed.$"

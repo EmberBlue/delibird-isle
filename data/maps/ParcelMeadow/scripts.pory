@@ -364,3 +364,10 @@ script ParcelMeadow_Board2 {
     msgbox(format("A SURVEY BOARD, set low, for children. What lives in a meadow lives in the margins: the hedge, the ditch, the stones. Mow the margins and the meadow is grass. Grass is not a meadow.\pThe Survey counts the margin, which is why the mower stops a stride short of the hedge."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelMeadow_Board3 {
+    msgbox(format("A SURVEY BOARD on the paddock fence. The partners here were not bred. They came in from the edges, one at a time, and stayed.\pThe board lists the years and what came: a LOTAD the wet year, a POOCHYENA the hard winter, a WOOPER after the culvert. The meadow is a record of what the country sent us."), MSGBOX_SIGN)
+    end
+}

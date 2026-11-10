@@ -2115,3 +2115,60 @@ script ParcelCoast_Board2 {
     msgbox(format("A SURVEY BOARD at the gull colony. WINGULL nests on the warehouse roofs, counted from the crane: 400, 360, 310, 190.\pThe fishers say the gulls follow the boats. The board says the gulls follow the fish, and the boats follow the fish, and both are now following the same small fish."), MSGBOX_SIGN)
     end
 }
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelCoast_FindScale {
+    if (flag(FLAG_SKALD_Q_SCALE) && !flag(FLAG_SKALD_Q_SCALE_FOUND)) {
+        msgbox(format("The quay scale, iron, big enough to take a boat's whole catch, a brass plate on its post: CERTIFIED, and a year, and a Company stamp. The plate has been polished so often the year is nearly gone. Nearly.\pBeside the scale, chalked on the post by someone with a different idea of certification, the same year, and a question mark."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_SCALE_FOUND)
+    } else {
+        msgbox(format("The quay scale's brass plate. A year, nearly polished away. The chalk question mark has been renewed."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelCoast_Board3 {
+    msgbox(format("A SURVEY BOARD by the cold store. The board is the landings by species, the Survey's copy of the cannery's own. The species list is shorter each year and the top of it is the same fish.\pThe Survey calls that simplification. The cannery calls it efficiency. The board gives both words."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelCoast_Board4 {
+    msgbox(format("A SURVEY BOARD at the fish market's back door. The market's own tally, copied: so many boxes a day, the Company's buyer's price beside each.\pThe Survey adds one column, the one the market does not keep: the smallest fish in the box, in hands. It has been one hand for three years."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round five ---
+
+script ParcelCoast_PairNets {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: Bigger mesh, by the review's rule. Let the small ones through."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: Then what do we catch?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Next year. Tie it loose. I never thought I'd say tie it loose."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("GIRL: The ranger measured a mesh with a notebook. Held the book up to the net."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: What did they write?"), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: The mesh. And then the year the mesh was that size last, which was never."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Never's a date too."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD MAN: Smaller mesh this year. Company's orders."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: Smaller mesh catches smaller fish."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Smaller mesh catches what's left. Tie it tight."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: What's left after what's left?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Tie it tight."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round four (2026-11-10) ---
+
+script ParcelCoast_Board5 {
+    msgbox(format("A SURVEY BOARD on the warehouse corner. The quay's own weather: the Company's hooter at six, the boats out by seven, the gulls up at eight when the first catch lands.\pThe board gives the hour the gulls rise each year. It is later. The catch lands later because there is further to go for it."), MSGBOX_SIGN)
+    end
+}

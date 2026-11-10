@@ -570,3 +570,34 @@ script ParcelDelibirdSummit_Board2 {
     msgbox(format("A SURVEY BOARD on the cairn. The cairn is older than the Survey and taller every year; the islanders add a stone when they reach it.\pThe board asks that you add one, count the SWINUB tracks on the way up, and write the count in the tin. The tin is full of slips. The numbers get smaller as the stack gets taller."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelDelibirdSummit_PairCairn {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("YOUNG MAN: Twelve patches. Down one."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: The board says thirteen."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNG MAN: The board's a year old. The cairn's a stone taller. Both of those are true. Add yours."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("GIRL: The ranger wrote the SNORUNT. All of them. In the patches."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNG MAN: How many?"), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: She wouldn't say. She said the number belongs to the island first."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNG MAN: Then it'll be in the hall by the festival. That's fair."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("YOUNG MAN: Thirteen patches. The board at the path says thirteen."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: There were more when Gran came up. She said the snow never left the top."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNG MAN: It leaves. It just comes back less."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: Then we should add a stone."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNG MAN: We always add a stone."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelDelibirdSummit_Board3 {
+    msgbox(format("A SURVEY BOARD at the last snow patch. PILOSWINE come up to the patches in the warm months to lie on the cold. The board counts the PILOSWINE on the patches, not the patches.\pWhen the patches go, the count will go with them, and the board says so, plainly, as the last line."), MSGBOX_SIGN)
+    end
+}

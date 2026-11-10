@@ -111,3 +111,10 @@ script ParcelFernwickHall_Register {
 script ParcelFernwickHall_Syllabus {
     msgbox(format("The syllabus, framed because somebody was proud of it once. Four competencies, four lines.\pSURVEY. Read the place before you touch it. Guilds, abundance, condition, signs. Against a baseline, or it is a guess.\pRESTRAINT. Knowing what not to do, and when. A deadfall over the only path we clear. A living corridor we leave.\pRESPONSE. The call comes at the wrong time or it would not be a call. Go anyway. Bring what the place needs, not what you wanted to bring.\pREMEDIATION. Put back what can be put back. Write down what cannot. The second half is the part people skip.\pIn pencil below the frame, not in the hand that framed it: and send the writing somewhere it will be read."), MSGBOX_SIGN)
 }
+
+// --- documents, round five (2026-11-10) ---
+
+script ParcelFernwickHall_BenchBook {
+    msgbox(format("A bench book on the cadets' shelf, where provisionals write one line on passing or failing. TARN's rule: one line, true.\pEleven years of lines. Passed, at last. Failed, fair. Failed, not fair, and under it in TARN's hand: fair. Passed; I cried. Passed; the current was mine.\pThe last line is blank and the pen is tied to the book."), MSGBOX_SIGN)
+    end
+}

@@ -1193,6 +1193,61 @@ ParcelRoute1_Board2::
 	end
 
 
+ParcelRoute1_PairSalt::
+# 675 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 676 "data/maps/ParcelRoute1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRoute1_PairSalt_2
+# 680 "data/maps/ParcelRoute1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_BRIDGE_SCENE, ParcelRoute1_PairSalt_3
+# 686 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_7, MSGBOX_DEFAULT
+# 687 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_8, MSGBOX_DEFAULT
+# 688 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_9, MSGBOX_DEFAULT
+# 689 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_10, MSGBOX_DEFAULT
+# 690 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_11, MSGBOX_DEFAULT
+ParcelRoute1_PairSalt_1:
+# 692 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_PairSalt_2:
+# 677 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_0, MSGBOX_DEFAULT
+# 678 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_1, MSGBOX_DEFAULT
+# 679 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_2, MSGBOX_DEFAULT
+	goto ParcelRoute1_PairSalt_1
+
+ParcelRoute1_PairSalt_3:
+# 681 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_3, MSGBOX_DEFAULT
+# 682 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_4, MSGBOX_DEFAULT
+# 683 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_5, MSGBOX_DEFAULT
+# 684 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_6, MSGBOX_DEFAULT
+	goto ParcelRoute1_PairSalt_1
+
+
+ParcelRoute1_Board3::
+# 699 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRoute1_Board5::
+# 706 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Board5_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRoute1_BridgeScene_Text_0:
 # 46 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A whole crowd of POLIWAG, jammed up\n"
@@ -1723,3 +1778,86 @@ ParcelRoute1_Board2_Text_0:
 	.string "A pair that nests found enough fish. A\n"
 	.string "pair that stays and does not nest\l"
 	.string "found enough to stay. Watch which.$"
+
+ParcelRoute1_PairSalt_Text_0:
+# 677 "data/maps/ParcelRoute1/scripts.pory"
+	.string "OLD WOMAN: The gate's open. No crest.\n"
+	.string "Someone unscrewed it in the night.$"
+
+ParcelRoute1_PairSalt_Text_1:
+# 678 "data/maps/ParcelRoute1/scripts.pory"
+	.string "GIRL: Was it the ranger?$"
+
+ParcelRoute1_PairSalt_Text_2:
+# 679 "data/maps/ParcelRoute1/scripts.pory"
+	.string "OLD WOMAN: The ranger doesn't unscrew\n"
+	.string "things. The ranger writes them down and\l"
+	.string "other people unscrew them. Pick the\l"
+	.string "samphire. It's a good year.$"
+
+ParcelRoute1_PairSalt_Text_3:
+# 681 "data/maps/ParcelRoute1/scripts.pory"
+	.string "GIRL: A POLIWAG came through the\n"
+	.string "culvert the wrong way. The ranger saw\l"
+	.string "it.$"
+
+ParcelRoute1_PairSalt_Text_4:
+# 682 "data/maps/ParcelRoute1/scripts.pory"
+	.string "OLD WOMAN: Wrong way for whom?$"
+
+ParcelRoute1_PairSalt_Text_5:
+# 683 "data/maps/ParcelRoute1/scripts.pory"
+	.string "GIRL: For the POLIWAG.$"
+
+ParcelRoute1_PairSalt_Text_6:
+# 684 "data/maps/ParcelRoute1/scripts.pory"
+	.string "OLD WOMAN: Then it's the right way for\n"
+	.string "something else. Find out what. That's\l"
+	.string "what the ranger's doing.$"
+
+ParcelRoute1_PairSalt_Text_7:
+# 686 "data/maps/ParcelRoute1/scripts.pory"
+	.string "OLD WOMAN: Pick below the tide line, not\n"
+	.string "above. Above is the gate's. Below is\l"
+	.string "everyone's.$"
+
+ParcelRoute1_PairSalt_Text_8:
+# 687 "data/maps/ParcelRoute1/scripts.pory"
+	.string "GIRL: The gate has a crest on it.$"
+
+ParcelRoute1_PairSalt_Text_9:
+# 688 "data/maps/ParcelRoute1/scripts.pory"
+	.string "OLD WOMAN: The gate has a crest. The\n"
+	.string "marsh has samphire. Pick the samphire.$"
+
+ParcelRoute1_PairSalt_Text_10:
+# 689 "data/maps/ParcelRoute1/scripts.pory"
+	.string "GIRL: What's the crest for?$"
+
+ParcelRoute1_PairSalt_Text_11:
+# 690 "data/maps/ParcelRoute1/scripts.pory"
+	.string "OLD WOMAN: Managing. Keep picking.$"
+
+ParcelRoute1_Board3_Text_0:
+# 699 "data/maps/ParcelRoute1/scripts.pory"
+	.string "A SURVEY BOARD at the grass edge.\n"
+	.string "TAILLOW nest in the old pilings and\l"
+	.string "feed over the marsh; where they feed is\l"
+	.string "where the insects are, and where the\l"
+	.string "insects are is where the marsh still\l"
+	.string "works.\p"
+	.string "The board draws their flight lines as\n"
+	.string "arrows. The arrows have shortened\l"
+	.string "since the first drawing. They have not\l"
+	.string "turned.$"
+
+ParcelRoute1_Board5_Text_0:
+# 706 "data/maps/ParcelRoute1/scripts.pory"
+	.string "A SURVEY BOARD at the north end of the\n"
+	.string "route, where the saltmarsh gives up and\l"
+	.string "the trees begin. The Survey calls this a\l"
+	.string "line and draws it on the board as one,\l"
+	.string "year by year.\p"
+	.string "The trees have not moved. The marsh\n"
+	.string "has. The line is where it always was; the\l"
+	.string "marsh is shorter on its side of it.$"

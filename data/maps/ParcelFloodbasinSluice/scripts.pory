@@ -725,3 +725,39 @@ script ParcelFloodbasinSluice_Board2 {
     msgbox(format("A SURVEY BOARD, the paint burnt off the gate side by the sun. MARILL on the quiet water above the sluice, young in the reeds.\pThe board notes that the young appear a fortnight after the gate closes, every year. The gate's timing is the marsh's timing now. It did not use to be."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelFloodbasinSluice_PairGate {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GATEMAN: Gate's on the marsh's calendar now. Board order. First time the order's had a reason on it."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: What's the reason say?"), MSGBOX_DEFAULT)
+        msgbox(format("GATEMAN: GOLDEEN. One word. I've worked this gate twenty years and never seen a fish on an order."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WOMAN: The ranger stood on the wall and timed the drop. With a watch."), MSGBOX_DEFAULT)
+        msgbox(format("GATEMAN: Everyone times it with the sun."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: The sun doesn't go in a report. A watch does. That's the difference between knowing and being believed."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GATEMAN: Gate's late this year. Orders."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Late for the fields or late for the marsh?"), MSGBOX_DEFAULT)
+        msgbox(format("GATEMAN: Late. I don't get told who for."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: The marsh doesn't get told either. That's two of you."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelFloodbasinSluice_Board3 {
+    msgbox(format("A SURVEY BOARD on the upper wall. MANECTRIC on the sluice gantries in a storm, drawn by the iron. The board notes the storms by the count of MANECTRIC on the gantry: three, five, eight.\pThe storms are the same size. The gantry is the same iron. There are more storms."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelFloodbasinSluice_Board4 {
+    msgbox(format("A SURVEY BOARD on the keeper's steps. The sluice has been kept by one family for four generations, and the board carries the keepers' initials and the years, and beside each the number of springs the gate opened on time.\pThe last keeper's row is the longest and the number is the lowest. The board gives no reason. The ledger inside does."), MSGBOX_SIGN)
+    end
+}

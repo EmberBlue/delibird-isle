@@ -4355,6 +4355,89 @@ ParcelCoast_Board2::
 	end
 
 
+ParcelCoast_FindScale::
+# 2122 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SCALE, ParcelCoast_FindScale_4
+ParcelCoast_FindScale_3:
+# 2126 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_FindScale_Text_1, MSGBOX_SIGN
+ParcelCoast_FindScale_1:
+	end
+
+ParcelCoast_FindScale_2:
+# 2123 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_FindScale_Text_0, MSGBOX_SIGN
+# 2124 "data/maps/ParcelCoast/scripts.pory"
+	setflag FLAG_SKALD_Q_SCALE_FOUND
+	goto ParcelCoast_FindScale_1
+
+ParcelCoast_FindScale_4:
+# 2122 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_SCALE_FOUND, ParcelCoast_FindScale_2
+	goto ParcelCoast_FindScale_3
+
+
+ParcelCoast_Board3::
+# 2134 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoast_Board4::
+# 2141 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoast_PairNets::
+# 2148 "data/maps/ParcelCoast/scripts.pory"
+	lock
+# 2149 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_PairNets_2
+# 2153 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_PairNets_3
+# 2159 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_7, MSGBOX_DEFAULT
+# 2160 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_8, MSGBOX_DEFAULT
+# 2161 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_9, MSGBOX_DEFAULT
+# 2162 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_10, MSGBOX_DEFAULT
+# 2163 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_11, MSGBOX_DEFAULT
+ParcelCoast_PairNets_1:
+# 2165 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_PairNets_2:
+# 2150 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_0, MSGBOX_DEFAULT
+# 2151 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_1, MSGBOX_DEFAULT
+# 2152 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_2, MSGBOX_DEFAULT
+	goto ParcelCoast_PairNets_1
+
+ParcelCoast_PairNets_3:
+# 2154 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_3, MSGBOX_DEFAULT
+# 2155 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_4, MSGBOX_DEFAULT
+# 2156 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_5, MSGBOX_DEFAULT
+# 2157 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairNets_Text_6, MSGBOX_DEFAULT
+	goto ParcelCoast_PairNets_1
+
+
+ParcelCoast_Board5::
+# 2172 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Board5_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoast_FirstEntry_Text_0:
 # 49 "data/maps/ParcelCoast/scripts.pory"
 	.string "The ferry rounds the headland and the\n"
@@ -6736,3 +6819,112 @@ ParcelCoast_Board2_Text_0:
 	.string "the fish, and the boats follow the fish,\l"
 	.string "and both are now following the same\l"
 	.string "small fish.$"
+
+ParcelCoast_FindScale_Text_0:
+# 2123 "data/maps/ParcelCoast/scripts.pory"
+	.string "The quay scale, iron, big enough to take\n"
+	.string "a boat's whole catch, a brass plate on\l"
+	.string "its post: CERTIFIED, and a year, and a\l"
+	.string "Company stamp. The plate has been\l"
+	.string "polished so often the year is nearly\l"
+	.string "gone. Nearly.\p"
+	.string "Beside the scale, chalked on the post\n"
+	.string "by someone with a different idea of\l"
+	.string "certification, the same year, and a\l"
+	.string "question mark.$"
+
+ParcelCoast_FindScale_Text_1:
+# 2126 "data/maps/ParcelCoast/scripts.pory"
+	.string "The quay scale's brass plate. A year,\n"
+	.string "nearly polished away. The chalk\l"
+	.string "question mark has been renewed.$"
+
+ParcelCoast_Board3_Text_0:
+# 2134 "data/maps/ParcelCoast/scripts.pory"
+	.string "A SURVEY BOARD by the cold store. The\n"
+	.string "board is the landings by species, the\l"
+	.string "Survey's copy of the cannery's own. The\l"
+	.string "species list is shorter each year and\l"
+	.string "the top of it is the same fish.\p"
+	.string "The Survey calls that simplification.\n"
+	.string "The cannery calls it efficiency. The\l"
+	.string "board gives both words.$"
+
+ParcelCoast_Board4_Text_0:
+# 2141 "data/maps/ParcelCoast/scripts.pory"
+	.string "A SURVEY BOARD at the fish market's\n"
+	.string "back door. The market's own tally,\l"
+	.string "copied: so many boxes a day, the\l"
+	.string "Company's buyer's price beside each.\p"
+	.string "The Survey adds one column, the one the\n"
+	.string "market does not keep: the smallest fish\l"
+	.string "in the box, in hands. It has been one\l"
+	.string "hand for three years.$"
+
+ParcelCoast_PairNets_Text_0:
+# 2150 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Bigger mesh, by the review's\n"
+	.string "rule. Let the small ones through.$"
+
+ParcelCoast_PairNets_Text_1:
+# 2151 "data/maps/ParcelCoast/scripts.pory"
+	.string "GIRL: Then what do we catch?$"
+
+ParcelCoast_PairNets_Text_2:
+# 2152 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Next year. Tie it loose. I never\n"
+	.string "thought I'd say tie it loose.$"
+
+ParcelCoast_PairNets_Text_3:
+# 2154 "data/maps/ParcelCoast/scripts.pory"
+	.string "GIRL: The ranger measured a mesh with a\n"
+	.string "notebook. Held the book up to the net.$"
+
+ParcelCoast_PairNets_Text_4:
+# 2155 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: What did they write?$"
+
+ParcelCoast_PairNets_Text_5:
+# 2156 "data/maps/ParcelCoast/scripts.pory"
+	.string "GIRL: The mesh. And then the year the\n"
+	.string "mesh was that size last, which was\l"
+	.string "never.$"
+
+ParcelCoast_PairNets_Text_6:
+# 2157 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Never's a date too.$"
+
+ParcelCoast_PairNets_Text_7:
+# 2159 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Smaller mesh this year.\n"
+	.string "Company's orders.$"
+
+ParcelCoast_PairNets_Text_8:
+# 2160 "data/maps/ParcelCoast/scripts.pory"
+	.string "GIRL: Smaller mesh catches smaller\n"
+	.string "fish.$"
+
+ParcelCoast_PairNets_Text_9:
+# 2161 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Smaller mesh catches what's\n"
+	.string "left. Tie it tight.$"
+
+ParcelCoast_PairNets_Text_10:
+# 2162 "data/maps/ParcelCoast/scripts.pory"
+	.string "GIRL: What's left after what's left?$"
+
+ParcelCoast_PairNets_Text_11:
+# 2163 "data/maps/ParcelCoast/scripts.pory"
+	.string "OLD MAN: Tie it tight.$"
+
+ParcelCoast_Board5_Text_0:
+# 2172 "data/maps/ParcelCoast/scripts.pory"
+	.string "A SURVEY BOARD on the warehouse\n"
+	.string "corner. The quay's own weather: the\l"
+	.string "Company's hooter at six, the boats out\l"
+	.string "by seven, the gulls up at eight when the\l"
+	.string "first catch lands.\p"
+	.string "The board gives the hour the gulls rise\n"
+	.string "each year. It is later. The catch lands\l"
+	.string "later because there is further to go\l"
+	.string "for it.$"

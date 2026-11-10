@@ -442,3 +442,34 @@ script ParcelMarsh_Board2 {
     msgbox(format("A SURVEY BOARD with its red cloth gone. The POLIWAG of this marsh are the same line as the ones in the lower country and the ones on the old charts. The chart said the line recovered.\pThe marsh says: count them yourself. The space for the count is blank. It is blank on purpose."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelMarsh_PairEdge {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("RANGER: Forty-one. One pace. The alder stopped."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: One pace isn't zero."), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: No. But I've never written one before. Write one. Write the year. Underline nothing."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HERON_MET)) {
+        msgbox(format("CADET: There's someone living in the hut. There's smoke."), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: I know who. Leave the smoke alone and read the stake."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Shouldn't we report it?"), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: We report the marsh. She IS the marsh's report. You'll understand that in about a week."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("RANGER: Edge stake forty. The alder's two paces closer than the last reading."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Two paces. That's nothing."), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: Two paces a year for thirty years is the whole marsh. Write two. Write the year."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Who reads it?"), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: Whoever's standing here when it's sixty."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelMarsh_Board3 {
+    msgbox(format("A SURVEY BOARD at the alder edge, nailed low. SMEARGLE have been seen here, the board says, twice, by people the Survey trusts. Not counted. Seen.\pThe board keeps a separate column for seen, and the column is the honest one."), MSGBOX_SIGN)
+    end
+}

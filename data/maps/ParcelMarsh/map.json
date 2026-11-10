@@ -153,6 +153,34 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelMarsh_ItemFullRestore",
       "flag": "FLAG_SKALD_ITEM_MARSH_FULL_RESTORE"
+    },
+    {
+      "local_id": "LOCALID_PAIREDGE_A",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 13,
+      "y": 11,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMarsh_PairEdge",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PAIREDGE_B",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 14,
+      "y": 11,
+      "elevation": 4,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMarsh_PairEdge",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -275,6 +303,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelMarsh_Board2"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelMarsh_Board3"
     }
   ]
 }

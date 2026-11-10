@@ -257,6 +257,14 @@ static const u8 sNbQ_Corner[] = _("Tomas's sill: ");
 static const u8 sNbQ_Roost[] = _("The gulls on the wall: ");
 static const u8 sNbQ_FirstOne[] = _("The first TENTACOOL: ");
 static const u8 sNbQ_Nest[] = _("The heron's nest: ");
+static const u8 sNbQ_Seal[] = _("The sealed crate: ");
+static const u8 sNbQ_Brass[] = _("The fountain's small plate: ");
+static const u8 sNbQ_Rack[] = _("The monitor's jars: ");
+static const u8 sNbQ_Headwall[] = _("The old flow mark: ");
+static const u8 sNbQ_Voucher[] = _("The voucher box: ");
+static const u8 sNbQ_BoardDrawer[] = _("The bottom drawer: ");
+static const u8 sNbQ_Step[] = _("The old house's step: ");
+static const u8 sNbQ_Scale[] = _("The quay scale's plate: ");
 static const struct NbQuest sNbQuests[] =
 {
     {sNbQ_Anni,    FLAG_SKALD_Q_ANNI_NET,    FLAG_SKALD_Q_ANNI_DONE},
@@ -306,6 +314,14 @@ static const struct NbQuest sNbQuests[] =
     {sNbQ_Roost, FLAG_SKALD_Q_ROOST, FLAG_SKALD_Q_ROOST_DONE},
     {sNbQ_FirstOne, FLAG_SKALD_Q_FIRSTONE, FLAG_SKALD_Q_FIRSTONE_DONE},
     {sNbQ_Nest, FLAG_SKALD_Q_NEST, FLAG_SKALD_Q_NEST_DONE},
+    {sNbQ_Seal, FLAG_SKALD_Q_SEAL, FLAG_SKALD_Q_SEAL_DONE},
+    {sNbQ_Brass, FLAG_SKALD_Q_BRASS, FLAG_SKALD_Q_BRASS_DONE},
+    {sNbQ_Rack, FLAG_SKALD_Q_RACK, FLAG_SKALD_Q_RACK_DONE},
+    {sNbQ_Headwall, FLAG_SKALD_Q_HEADWALL, FLAG_SKALD_Q_HEADWALL_DONE},
+    {sNbQ_Voucher, FLAG_SKALD_Q_VOUCHER, FLAG_SKALD_Q_VOUCHER_DONE},
+    {sNbQ_BoardDrawer, FLAG_SKALD_Q_LABEL, FLAG_SKALD_Q_LABEL_DONE},
+    {sNbQ_Step, FLAG_SKALD_Q_STEP, FLAG_SKALD_Q_STEP_DONE},
+    {sNbQ_Scale, FLAG_SKALD_Q_SCALE, FLAG_SKALD_Q_SCALE_DONE},
 };
 
 static const u8 sNb_Margins_None[]  = _("The margins are in her hand, in a\nshorthand you can't read yet.\pIt gets easier the more of the\nregion you've read yourself.");

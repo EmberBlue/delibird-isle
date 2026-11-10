@@ -4355,6 +4355,124 @@ ParcelHighlands_Board2::
 	end
 
 
+ParcelHighlands_PairRoad::
+# 2093 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 2094 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairRoad_2
+# 2099 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairRoad_3
+# 2104 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_7, MSGBOX_DEFAULT
+# 2105 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_8, MSGBOX_DEFAULT
+# 2106 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_9, MSGBOX_DEFAULT
+# 2107 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_10, MSGBOX_DEFAULT
+ParcelHighlands_PairRoad_1:
+# 2109 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+ParcelHighlands_PairRoad_2:
+# 2095 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_0, MSGBOX_DEFAULT
+# 2096 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_1, MSGBOX_DEFAULT
+# 2097 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_2, MSGBOX_DEFAULT
+# 2098 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_3, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairRoad_1
+
+ParcelHighlands_PairRoad_3:
+# 2100 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_4, MSGBOX_DEFAULT
+# 2101 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_5, MSGBOX_DEFAULT
+# 2102 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairRoad_Text_6, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairRoad_1
+
+
+ParcelHighlands_FindStep::
+# 2116 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_STEP, ParcelHighlands_FindStep_4
+ParcelHighlands_FindStep_3:
+# 2120 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_FindStep_Text_1, MSGBOX_SIGN
+ParcelHighlands_FindStep_1:
+	end
+
+ParcelHighlands_FindStep_2:
+# 2117 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_FindStep_Text_0, MSGBOX_SIGN
+# 2118 "data/maps/ParcelHighlands/scripts.pory"
+	setflag FLAG_SKALD_Q_STEP_FOUND
+	goto ParcelHighlands_FindStep_1
+
+ParcelHighlands_FindStep_4:
+# 2116 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_STEP_FOUND, ParcelHighlands_FindStep_2
+	goto ParcelHighlands_FindStep_3
+
+
+ParcelHighlands_Board3::
+# 2128 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelHighlands_Board4::
+# 2135 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelHighlands_PairWell::
+# 2142 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 2143 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairWell_2
+# 2147 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairWell_3
+# 2152 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_6, MSGBOX_DEFAULT
+# 2153 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_7, MSGBOX_DEFAULT
+# 2154 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_8, MSGBOX_DEFAULT
+ParcelHighlands_PairWell_1:
+# 2156 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+ParcelHighlands_PairWell_2:
+# 2144 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_0, MSGBOX_DEFAULT
+# 2145 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_1, MSGBOX_DEFAULT
+# 2146 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_2, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairWell_1
+
+ParcelHighlands_PairWell_3:
+# 2148 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_3, MSGBOX_DEFAULT
+# 2149 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_4, MSGBOX_DEFAULT
+# 2150 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairWell_Text_5, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairWell_1
+
+
+ParcelHighlands_Board5::
+# 2163 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Board5_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 39 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -6575,3 +6693,158 @@ ParcelHighlands_Board2_Text_0:
 	.string "The unit is hands downslope. The sign\l"
 	.string "has moved with the ground. The board\l"
 	.string "has moved the same distance.$"
+
+ParcelHighlands_PairRoad_Text_0:
+# 2095 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: The leases are enjoined. The form's\n"
+	.string "withdrawn. We stay or we go; nobody's\l"
+	.string "paying either way.$"
+
+ParcelHighlands_PairRoad_Text_1:
+# 2096 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD WOMAN: Then we stay the winter and\n"
+	.string "decide in spring, like people have\l"
+	.string "always done up here.$"
+
+ParcelHighlands_PairRoad_Text_2:
+# 2097 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: And if the ground goes?$"
+
+ParcelHighlands_PairRoad_Text_3:
+# 2098 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD WOMAN: Then it goes with us\n"
+	.string "standing on it, knowing. That's more\l"
+	.string "than it was offering before.$"
+
+ParcelHighlands_PairRoad_Text_4:
+# 2100 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD WOMAN: The ranger stood in the\n"
+	.string "lambing field and wrote SHIFTED. One\l"
+	.string "word.$"
+
+ParcelHighlands_PairRoad_Text_5:
+# 2101 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: Is that bad?$"
+
+ParcelHighlands_PairRoad_Text_6:
+# 2102 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD WOMAN: It's the word the ground's\n"
+	.string "been saying. Somebody finally spelt it.\l"
+	.string "I'll sign nothing till I've read it.$"
+
+ParcelHighlands_PairRoad_Text_7:
+# 2104 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: Sign the form and the house in the\n"
+	.string "valley's ours by autumn.$"
+
+ParcelHighlands_PairRoad_Text_8:
+# 2105 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD WOMAN: Whose is this one, then?$"
+
+ParcelHighlands_PairRoad_Text_9:
+# 2106 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: Subject to review.$"
+
+ParcelHighlands_PairRoad_Text_10:
+# 2107 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD WOMAN: I've lived in it sixty years\n"
+	.string "and it's never been subject to anything\l"
+	.string "but weather. Weather I can read.$"
+
+ParcelHighlands_FindStep_Text_0:
+# 2117 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A front step, stone, worn in the middle\n"
+	.string "by sixty years of boots. It leans: a\l"
+	.string "hand lower on the uphill side than the\l"
+	.string "down. Under the lip of it, the corner of\l"
+	.string "a key, rusted to the colour of the\l"
+	.string "stone.\p"
+	.string "You leave the key. The step was the\n"
+	.string "question. The step has answered it.$"
+
+ParcelHighlands_FindStep_Text_1:
+# 2120 "data/maps/ParcelHighlands/scripts.pory"
+	.string "The front step of the empty house,\n"
+	.string "leaning uphill. The key is still under it.$"
+
+ParcelHighlands_Board3_Text_0:
+# 2128 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A SURVEY BOARD at the thaw ponds. The\n"
+	.string "ponds have names on the board, given in\l"
+	.string "the order they appeared. Eleven names.\p"
+	.string "The oldest pond has a SPHEAL in it that\n"
+	.string "should be on the coast. The board\l"
+	.string "records that too, under the heading:\l"
+	.string "arrived. Not: escaped.$"
+
+ParcelHighlands_Board4_Text_0:
+# 2135 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A SURVEY BOARD at the high pass. Above\n"
+	.string "this line the Survey counts only what it\l"
+	.string "can see from the path, because the\l"
+	.string "ground will not take a stake.\p"
+	.string "The board lists what has been seen from\n"
+	.string "here: SNEASEL, SWINUB, once a\l"
+	.string "SALAMENCE with a photograph. The list\l"
+	.string "is not a count. The Survey says so\l"
+	.string "first.$"
+
+ParcelHighlands_PairWell_Text_0:
+# 2144 "data/maps/ParcelHighlands/scripts.pory"
+	.string "WOMAN: The bore's capped and the well's\n"
+	.string "still down. Nobody's pretending it'll\l"
+	.string "come back.$"
+
+ParcelHighlands_PairWell_Text_1:
+# 2145 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: Then why do you check it?$"
+
+ParcelHighlands_PairWell_Text_2:
+# 2146 "data/maps/ParcelHighlands/scripts.pory"
+	.string "WOMAN: Because somebody wrote down\n"
+	.string "the day it was full, and somebody should\l"
+	.string "write down the day it isn't. Pass me the\l"
+	.string "line.$"
+
+ParcelHighlands_PairWell_Text_3:
+# 2148 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: The ranger lowered a line in our\n"
+	.string "well. Wrote the depth beside the\l"
+	.string "Company's reading.$"
+
+ParcelHighlands_PairWell_Text_4:
+# 2149 "data/maps/ParcelHighlands/scripts.pory"
+	.string "WOMAN: Did they match?$"
+
+ParcelHighlands_PairWell_Text_5:
+# 2150 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: No. Ours was deeper. Theirs was the\n"
+	.string "one on the sign.$"
+
+ParcelHighlands_PairWell_Text_6:
+# 2152 "data/maps/ParcelHighlands/scripts.pory"
+	.string "WOMAN: The well's down a hand again.$"
+
+ParcelHighlands_PairWell_Text_7:
+# 2153 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAN: The Company says the bore's\n"
+	.string "exploratory. Doesn't touch the water.$"
+
+ParcelHighlands_PairWell_Text_8:
+# 2154 "data/maps/ParcelHighlands/scripts.pory"
+	.string "WOMAN: The water doesn't know what\n"
+	.string "exploratory means. Neither do I. I know\l"
+	.string "the hand.$"
+
+ParcelHighlands_Board5_Text_0:
+# 2163 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A SURVEY BOARD at the centre's\n"
+	.string "woodpile. The pile is measured in\l"
+	.string "autumn: how much wood the valley sends\l"
+	.string "up, how many winters it would last at\l"
+	.string "the old rate.\p"
+	.string "The second number used to be one. It is\n"
+	.string "two now. Fewer people winter up here.\l"
+	.string "The board does not say that this is why\l"
+	.string "the pile lasts. It gives the two\l"
+	.string "numbers.$"

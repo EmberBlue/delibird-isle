@@ -125,6 +125,22 @@ script ParcelRiverHall_Farmer {
 script ParcelRiverHall_Dell {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_LABEL) && !flag(FLAG_SKALD_Q_LABEL_DONE)) {
+        if (flag(FLAG_SKALD_Q_LABEL_FOUND)) {
+            msgbox(format("DELL: ANECDOTAL. There it is. Forty years of dates and depths and the word they chose was the one that means it doesn't count.\pThe hearing read it anyway. Every page. Here. I don't need these; I need the word changed, and that's not for sale."), MSGBOX_DEFAULT)
+            giveitem(ITEM_LEAF_STONE, 1)
+            setflag(FLAG_SKALD_Q_LABEL_DONE)
+        } else {
+            msgbox(format("DELL: The Board office. Bottom drawer behind the counter. The label."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_LABEL_DONE)) {
+        msgbox(format("DELL: Forty years of discharge notes, in my hand, went to the Board office in a shoebox. They filed them. I'd like to know under what word.\pThe bottom drawer, behind the counter, has a label. Read it to me. I've a feeling about the word."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_LABEL)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("DELL: Forty years, written down, read aloud, and this spring a man came and measured the discharge with me standing there.\pI didn't say anything. I'd said it."), MSGBOX_DEFAULT)
         release

@@ -92,6 +92,12 @@ ParcelRiverDepot_WeighBook::
 	end
 
 
+ParcelRiverDepot_GradingCard::
+# 64 "data/maps/ParcelRiverDepot/scripts.pory"
+	msgbox ParcelRiverDepot_GradingCard_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverDepot_Buyer_Text_0:
 # 9 "data/maps/ParcelRiverDepot/scripts.pory"
 	.string "BUYER: Floor price, same day, and the\n"
@@ -187,3 +193,15 @@ ParcelRiverDepot_WeighBook_Text_0:
 	.string "moves. It is the only straight line in\l"
 	.string "the book, and the farmers are paid off\l"
 	.string "it, and they know.$"
+
+ParcelRiverDepot_GradingCard_Text_0:
+# 64 "data/maps/ParcelRiverDepot/scripts.pory"
+	.string "The depot's grading card, nailed to the\n"
+	.string "post: produce by class, price by class,\l"
+	.string "the FOUNDATION crest at the top. Class\l"
+	.string "one, class two, and a third class added\l"
+	.string "in pen: hill.\p"
+	.string "Hill is what the Haukfell families bring\n"
+	.string "down. It is priced below two. Someone\l"
+	.string "has written beside it: they grew it in\l"
+	.string "the snow. Pay two.$"

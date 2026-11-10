@@ -144,3 +144,15 @@ script ParcelRiverBoard_Allocations {
     msgbox(format("On the inside cover, newest, the Board's stamp and SLUICE's initial: When the sum is larger than the river, the river decides. It has started deciding."), MSGBOX_SIGN)
     end
 }
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelRiverBoard_FindDrawer {
+    if (flag(FLAG_SKALD_Q_LABEL) && !flag(FLAG_SKALD_Q_LABEL_FOUND)) {
+        msgbox(format("The bottom drawer behind the Board's counter, a card in a brass holder: CORRESPONDENCE, PUBLIC, ANECDOTAL. Inside, a shoebox, and in the shoebox forty years of a fisherman's notes, dated, depths in a hand that got shakier and never got less exact.\pSomeone has crossed out ANECDOTAL on the card in pencil and written nothing in its place yet."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_LABEL_FOUND)
+    } else {
+        msgbox(format("The bottom drawer. CORRESPONDENCE, PUBLIC, and a word crossed out. The shoebox is still inside."), MSGBOX_SIGN)
+    }
+    end
+}

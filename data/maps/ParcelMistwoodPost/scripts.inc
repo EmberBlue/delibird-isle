@@ -95,6 +95,12 @@ ParcelMistwoodPost_ReadShelf::
 	end
 
 
+ParcelMistwoodPost_SnareBook::
+# 59 "data/maps/ParcelMistwoodPost/scripts.pory"
+	msgbox ParcelMistwoodPost_SnareBook_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMistwoodPost_Skeld_Text_0:
 # 13 "data/maps/ParcelMistwoodPost/scripts.pory"
 	.string "SKELD: Certified, read, and filed. I sent\n"
@@ -181,3 +187,17 @@ ParcelMistwoodPost_ReadShelf_Text_0:
 	.string "bookmark in the second, at 'snare\l"
 	.string "clearance requires two officers'.\p"
 	.string "The bookmark is a length of snare wire.$"
+
+ParcelMistwoodPost_SnareBook_Text_0:
+# 59 "data/maps/ParcelMistwoodPost/scripts.pory"
+	.string "The snare book at the forest post:\n"
+	.string "every snare pulled, by ride and date, in\l"
+	.string "SKELD's hand. The numbers rise and fall\l"
+	.string "with the seasons and with the price of\l"
+	.string "fur in Saltwick, and SKELD has written\l"
+	.string "the fur price beside the snare count\l"
+	.string "for ten years without comment. The two\l"
+	.string "columns are the same shape.\p"
+	.string "He has started a third column: snares\n"
+	.string "found by rangers. It is short, and he\l"
+	.string "has underlined it.$"

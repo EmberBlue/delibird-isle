@@ -595,3 +595,34 @@ script ParcelDelibirdCliffs_Board2 {
     msgbox(format("A SURVEY BOARD at the bench. STARYU below, in the cold current, lit when the water is clean. The board's instruction is one line: sit until dark and count the lights.\pThe second line is newer. If there are none, write none. None is a reading."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelDelibirdCliffs_PairLedge {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BIRDER: Two hundred and nine. Up three."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Three."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: I know. I wrote it in pencil. Three is a pencil number. Ten is ink."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("WOMAN: The ranger sat on the bench till dark and counted the lights in the water."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: STARYU. I've never counted them. I count up, not down."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Maybe that's why the island's two counts short."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: Maybe. Hand me the glass."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("BIRDER: Two hundred nests on the ledges. Two hundred and six."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: You count every year and every year it's less."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: It's less by less this year."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Is that good?"), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: It's the shape of the number. I'll take the shape."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelDelibirdCliffs_Board3 {
+    msgbox(format("A SURVEY BOARD on the path above the pools. CORSOLA in the warm pools, new; KRABBY in the cold ones, fewer. The children chalk the pools' names on the rock and the Survey copies the chalk onto the board before the rain takes it.\pThe children are the Survey's best field team on this island, and know it."), MSGBOX_SIGN)
+    end
+}

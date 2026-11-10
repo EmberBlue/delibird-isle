@@ -278,6 +278,22 @@ script ParcelFernwick_Scientist {
 script ParcelFernwick_Gentleman {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_BRASS) && !flag(FLAG_SKALD_Q_BRASS_DONE)) {
+        if (flag(FLAG_SKALD_Q_BRASS_FOUND)) {
+            msgbox(format("GENTLEMAN: On loan. ON LOAN. Twenty years I've walked past a gift and it was a loan, and the small plate said so the whole time.\pThank you. Truly. Here; I bought these for the pond and the pond has no use for them."), MSGBOX_DEFAULT)
+            giveitem(ITEM_PP_UP, 1)
+            setflag(FLAG_SKALD_Q_BRASS_DONE)
+        } else {
+            msgbox(format("GENTLEMAN: The back of the fountain. The small plate, low down. Kneel."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_BRASS_DONE)) {
+        msgbox(format("GENTLEMAN: The fountain has two plates. The big one on the front says MEREHOLT paid for it. There's a small one on the back, low down, that I've never been able to read without kneeling, and I don't kneel any more.\pRead it for me. I'd like to know what the small print says about a gift."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_BRASS)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("GENTLEMAN: The plaques are still up. The fountain still runs. Someone has put a small Survey stake in the flowerbed beside it, with a very small red cloth.\pI did not do it. I approve."), MSGBOX_DEFAULT)
         release
@@ -1075,5 +1091,55 @@ script ParcelFernwick_Board1 {
 
 script ParcelFernwick_Board2 {
     msgbox(format("A SURVEY BOARD by the pond. WINGULL pairs on the Fernwick pond: 28 in the first spring of the record, 28 in the tenth. The board gives the number with a warning under it.\pA count that holds is not always a habitat that holds. Sometimes it is a habitat that has stopped being able to lose anything else."), MSGBOX_SIGN)
+    end
+}
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelFernwick_FindBrass {
+    if (flag(FLAG_SKALD_Q_BRASS) && !flag(FLAG_SKALD_Q_BRASS_FOUND)) {
+        msgbox(format("The back of the fountain. Low, where the moss starts, a brass plate the size of a hand: PROVIDED ON LOAN BY THE MEREHOLT FOUNDATION, TERMS HELD AT THE COAST OFFICE.\pThe moss has been wiped off it recently, in one stripe, as if somebody read it and did not want to be seen reading it."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_BRASS_FOUND)
+    } else {
+        msgbox(format("The small plate on the back of the fountain. ON LOAN. The moss has grown back over the first word."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelFernwick_Board3 {
+    msgbox(format("A SURVEY BOARD by the Corps gate. Provisional rangers who signed out of Fernwick for the forest season, by year, and how many came back certified.\pThe second column is small and the Survey does not apologise for it. A small number honestly reached is the whole of the job."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelFernwick_Board4 {
+    msgbox(format("A SURVEY BOARD under the Corps noticeboard, half its size. The Corps' board gives the season's postings. The Survey's gives what the postings found: twelve ponds read, four seeps, two canopies, one floor.\pThe floor was read by one person, in a week, in the rain, and the Survey has written her initial beside it. It is the only initial on the board."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round five ---
+
+script ParcelFernwick_PairLane {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("POSTWOMAN: Letter for the Station. From the review. Thin."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: One page?"), MSGBOX_DEFAULT)
+        msgbox(format("POSTWOMAN: One page, one word, HALE's name on the front. I didn't read it. I didn't have to. He opened it on the step and sat down."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("CADET: The river minutes came by your bag."), MSGBOX_DEFAULT)
+        msgbox(format("POSTWOMAN: Six copies. Forty-one names in each. I read one on the way, I'm not proud."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: What did you think?"), MSGBOX_DEFAULT)
+        msgbox(format("POSTWOMAN: That I've carried a lot of thick letters that said less."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("POSTWOMAN: Letter for the Station. From the Foundation. It's thick."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: They're always thick."), MSGBOX_DEFAULT)
+        msgbox(format("POSTWOMAN: The thin ones are the Survey's. One page, one number. I know which I'd rather carry."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Which?"), MSGBOX_DEFAULT)
+        msgbox(format("POSTWOMAN: The one that doesn't need the envelope."), MSGBOX_DEFAULT)
+    }
+    release
     end
 }

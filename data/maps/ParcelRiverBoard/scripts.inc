@@ -239,6 +239,28 @@ ParcelRiverBoard_Allocations::
 	end
 
 
+ParcelRiverBoard_FindDrawer::
+# 151 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_LABEL, ParcelRiverBoard_FindDrawer_4
+ParcelRiverBoard_FindDrawer_3:
+# 155 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_FindDrawer_Text_1, MSGBOX_SIGN
+ParcelRiverBoard_FindDrawer_1:
+	end
+
+ParcelRiverBoard_FindDrawer_2:
+# 152 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_FindDrawer_Text_0, MSGBOX_SIGN
+# 153 "data/maps/ParcelRiverBoard/scripts.pory"
+	setflag FLAG_SKALD_Q_LABEL_FOUND
+	goto ParcelRiverBoard_FindDrawer_1
+
+ParcelRiverBoard_FindDrawer_4:
+# 151 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_LABEL_FOUND, ParcelRiverBoard_FindDrawer_2
+	goto ParcelRiverBoard_FindDrawer_3
+
+
 ParcelRiverBoard_Sluice_Text_0:
 # 17 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: STRESSED. I read your filing.\n"
@@ -495,3 +517,22 @@ ParcelRiverBoard_Allocations_Text_2:
 	.string "stamp and SLUICE's initial: When the\l"
 	.string "sum is larger than the river, the river\l"
 	.string "decides. It has started deciding.$"
+
+ParcelRiverBoard_FindDrawer_Text_0:
+# 152 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "The bottom drawer behind the Board's\n"
+	.string "counter, a card in a brass holder:\l"
+	.string "CORRESPONDENCE, PUBLIC, ANECDOTAL.\l"
+	.string "Inside, a shoebox, and in the shoebox\l"
+	.string "forty years of a fisherman's notes,\l"
+	.string "dated, depths in a hand that got\l"
+	.string "shakier and never got less exact.\p"
+	.string "Someone has crossed out ANECDOTAL on\n"
+	.string "the card in pencil and written nothing\l"
+	.string "in its place yet.$"
+
+ParcelRiverBoard_FindDrawer_Text_1:
+# 155 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "The bottom drawer. CORRESPONDENCE,\n"
+	.string "PUBLIC, and a word crossed out. The\l"
+	.string "shoebox is still inside.$"

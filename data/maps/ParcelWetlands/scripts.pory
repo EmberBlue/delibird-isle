@@ -244,6 +244,22 @@ script ParcelWetlands_DeadFish {
 script ParcelWetlands_Crowd1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_RACK) && !flag(FLAG_SKALD_Q_RACK_DONE)) {
+        if (flag(FLAG_SKALD_Q_RACK_FOUND)) {
+            msgbox(format("WOMAN: Clear. Clear, you said, and you looked. Then he can drink from the tap and I can stop standing behind him when he does.\pHere. I bought these the week the channel went bad, in case. In case is over."), MSGBOX_DEFAULT)
+            giveitem(ITEM_FULL_HEAL, 2)
+            setflag(FLAG_SKALD_Q_RACK_DONE)
+        } else {
+            msgbox(format("WOMAN: The jar rack on the bank, by the landing. This week's jar. Clear or not."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_RACK_DONE)) {
+        msgbox(format("WOMAN: The monitor on the bank keeps his jars in a rack, dated, one a week. He's away Thursdays. I don't go near it; it feels like reading someone's letters.\pBut I'd like to know what this week's jar looks like, and I'd rather a ranger looked than me. Go and tell me. Clear or not."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_RACK)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("WOMAN: He drinks from the tap now. I've stopped watching. Mostly.\pThe monitor on the bank posts a number every morning, and I read it before I read anything else."), MSGBOX_DEFAULT)
         release
@@ -2127,5 +2143,38 @@ script ParcelWetlands_Board1 {
 
 script ParcelWetlands_Board2 {
     msgbox(format("A SURVEY BOARD by the reed cut. Three frogs are three gauges. POLIWAG for the breeding pools, POLIWHIRL for the summer the pools lasted, QUAGSIRE for silt.\pMore QUAGSIRE is not more marsh. It is more mud. The Survey writes all three and underlines the third when it is the largest. It has been underlined for six years."), MSGBOX_SIGN)
+    end
+}
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelWetlands_FindRack {
+    if (flag(FLAG_SKALD_Q_RACK) && !flag(FLAG_SKALD_Q_RACK_FOUND)) {
+        msgbox(format("A wooden rack on the bank with twelve jars in it, each labelled with a date, the oldest the colour of weak tea and the newest nearly clear. The sheen that was on the first four is not on the last four.\pSomeone has turned this week's jar so the label faces the path, where a passer-by could read it without asking."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_RACK_FOUND)
+    } else {
+        msgbox(format("The monitor's jar rack. Twelve jars, a year of water, reading left to right from tea to clear."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelWetlands_Board3 {
+    msgbox(format("A SURVEY BOARD at the landing. BARBOACH in the mud of the turf channels, counted by hand, by feel, with the sleeves rolled. The count is the Survey's least dignified and most exact.\pThe board gives it in tens. There used to be a second digit."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelWetlands_Board4 {
+    msgbox(format("A SURVEY BOARD at the reed cutters' path. Reed is cut by right here, so much a household, and the Survey counts the stubble: where the cut is honest the stubble is even.\pThe board gives the honest years. It is most of them. The dishonest ones have no names beside them, only a smaller count the year after."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round four (2026-11-10) ---
+
+script ParcelWetlands_Board5 {
+    msgbox(format("A SURVEY BOARD at the west landing, the quiet one. CORPHISH in the stones of the landing, counted by turning stones, ten stones a year, the same ten.\pThe board shows the ten stones as a row of circles with the count inside each. Some circles have a zero in them now. The stones have not moved."), MSGBOX_SIGN)
     end
 }

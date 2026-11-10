@@ -52,3 +52,10 @@ script ParcelMistwoodPost_ReadShelf {
     msgbox(format("Ranger regulations, three volumes. A bookmark in the second, at 'snare clearance requires two officers'.\pThe bookmark is a length of snare wire."), MSGBOX_SIGN)
     end
 }
+
+// --- documents, round five (2026-11-10) ---
+
+script ParcelMistwoodPost_SnareBook {
+    msgbox(format("The snare book at the forest post: every snare pulled, by ride and date, in SKELD's hand. The numbers rise and fall with the seasons and with the price of fur in Saltwick, and SKELD has written the fur price beside the snare count for ten years without comment. The two columns are the same shape.\pHe has started a third column: snares found by rangers. It is short, and he has underlined it."), MSGBOX_SIGN)
+    end
+}

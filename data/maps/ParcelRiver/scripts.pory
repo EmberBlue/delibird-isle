@@ -2170,3 +2170,40 @@ script ParcelRiver_Board2 {
     msgbox(format("A SURVEY BOARD by the market bridge. The river was straightened below the town for the fields. A straight river is faster, deeper, and empties its gravel, and the SEAKING need the gravel.\pThe board shows the old bends as a dotted line over the new channel. The dotted line is where the fish were."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelRiver_Board3 {
+    msgbox(format("A SURVEY BOARD at the market bridge's foot. VOLBEAT and ILLUMISE over the river on midsummer night: the town's count, older than the Survey, kept by whoever stands longest on the bridge.\pThe board copies it in. The town's numbers are rounder than the Survey's and fall at the same rate."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelRiver_Board4 {
+    msgbox(format("A SURVEY BOARD on the mill's downstream wall. Here the river is measured twice: by the Board's gauge, which is official, and by the Survey's stake, which is older. The board gives both readings for every spring.\pThey agree to the hand in good years. In the bad years the gauge reads higher, and the Survey has never been told why."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round five ---
+
+script ParcelRiver_PairStall {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CHEESEMAKER: Milk's up. The buffer strip and the spring allocation. Two rows of alder and a sheet of numbers, and my cows taste it."), MSGBOX_DEFAULT)
+        msgbox(format("WEAVER: You sound like the ranger."), MSGBOX_DEFAULT)
+        msgbox(format("CHEESEMAKER: I sound like my cows. The ranger just wrote them down."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("WEAVER: The ranger bought a cheese and asked where the cows graze."), MSGBOX_DEFAULT)
+        msgbox(format("CHEESEMAKER: Did you tell them?"), MSGBOX_DEFAULT)
+        msgbox(format("WEAVER: You told them. Above the straightened reach, you said, where the bends were. Then you went quiet."), MSGBOX_DEFAULT)
+        msgbox(format("CHEESEMAKER: I'd never said it out loud. Where the bends were."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("CHEESEMAKER: The milk's thinner since the pump went in above the farms."), MSGBOX_DEFAULT)
+        msgbox(format("WEAVER: Thinner milk, thinner cheese, thinner me."), MSGBOX_DEFAULT)
+        msgbox(format("CHEESEMAKER: It's the grass. The grass is the water. The water's the Board's."), MSGBOX_DEFAULT)
+        msgbox(format("WEAVER: Then I'll weave a complaint."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

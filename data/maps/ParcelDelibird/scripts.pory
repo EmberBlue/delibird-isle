@@ -995,3 +995,24 @@ script ParcelDelibird_Board2 {
     msgbox(format("A SURVEY BOARD by the shore path. DELIBIRD bring food to the snowed-in. The board records the storms they came after, by year, and the storms they did not need to.\pThe second list has become the longer one. The islanders put a thank-you under it anyway, every year, in the same place."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelDelibird_Board3 {
+    msgbox(format("A SURVEY BOARD on the hall's seaward wall. The festival dates by year, and beside each the date the strait froze, or did not. Thirty years ago every line had two dates. The last nine have one.\pThe festival is held on the same day regardless. The board does not comment. The second column does."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelDelibird_Board4 {
+    msgbox(format("A SURVEY BOARD by the festival stage. The stage is rebuilt every year and the Survey measures where it stands: a hand further from the sea than the last, every year, for nine years, because the ground it stood on has gone soft.\pThe islanders call it moving the stage. The board calls it a reading."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round four (2026-11-10) ---
+
+script ParcelDelibird_Board5 {
+    msgbox(format("A SURVEY BOARD on the shore road. The island's one road is measured each spring from the hall's door to the water's edge. The board gives the paces.\pThe road has not shortened. The water's edge has come to meet it, three paces in nine years, and the board shows the three as three short lines, like a tally nobody wants to finish."), MSGBOX_SIGN)
+    end
+}

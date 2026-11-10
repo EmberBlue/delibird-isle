@@ -621,6 +621,62 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ParcelHighlands_PairThaw",
       "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PAIRROAD_A",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 15,
+      "y": 51,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelHighlands_PairRoad",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PAIRROAD_B",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 16,
+      "y": 51,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelHighlands_PairRoad",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PAIRWELL_A",
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "x": 19,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelHighlands_PairWell",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PAIRWELL_B",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_2",
+      "x": 20,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelHighlands_PairWell",
+      "flag": "0"
     }
   ],
   "warp_events": [
@@ -997,6 +1053,38 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelHighlands_Board2"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 72,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlands_FindStep"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 72,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlands_Board3"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 17,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlands_Board4"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 75,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlands_Board5"
     }
   ]
 }

@@ -3523,6 +3523,81 @@ ParcelCorridor_Board2::
 	end
 
 
+ParcelCorridor_PairCut::
+# 1648 "data/maps/ParcelCorridor/scripts.pory"
+	lock
+# 1649 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridor_PairCut_2
+# 1654 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelCorridor_PairCut_3
+# 1659 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_7, MSGBOX_DEFAULT
+# 1660 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_8, MSGBOX_DEFAULT
+# 1661 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_9, MSGBOX_DEFAULT
+# 1662 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_10, MSGBOX_DEFAULT
+ParcelCorridor_PairCut_1:
+# 1664 "data/maps/ParcelCorridor/scripts.pory"
+	release
+	end
+
+ParcelCorridor_PairCut_2:
+# 1650 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_0, MSGBOX_DEFAULT
+# 1651 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_1, MSGBOX_DEFAULT
+# 1652 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_2, MSGBOX_DEFAULT
+# 1653 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_3, MSGBOX_DEFAULT
+	goto ParcelCorridor_PairCut_1
+
+ParcelCorridor_PairCut_3:
+# 1655 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_4, MSGBOX_DEFAULT
+# 1656 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_5, MSGBOX_DEFAULT
+# 1657 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCut_Text_6, MSGBOX_DEFAULT
+	goto ParcelCorridor_PairCut_1
+
+
+ParcelCorridor_FindHeadwall::
+# 1671 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_HEADWALL, ParcelCorridor_FindHeadwall_4
+ParcelCorridor_FindHeadwall_3:
+# 1675 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_FindHeadwall_Text_1, MSGBOX_SIGN
+ParcelCorridor_FindHeadwall_1:
+	end
+
+ParcelCorridor_FindHeadwall_2:
+# 1672 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_FindHeadwall_Text_0, MSGBOX_SIGN
+# 1673 "data/maps/ParcelCorridor/scripts.pory"
+	setflag FLAG_SKALD_Q_HEADWALL_FOUND
+	goto ParcelCorridor_FindHeadwall_1
+
+ParcelCorridor_FindHeadwall_4:
+# 1671 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_HEADWALL_FOUND, ParcelCorridor_FindHeadwall_2
+	goto ParcelCorridor_FindHeadwall_3
+
+
+ParcelCorridor_Board3::
+# 1683 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCorridor_Board4::
+# 1690 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCorridor_Checkpoint_Text_0:
 # 45 "data/maps/ParcelCorridor/scripts.pory"
 	.string "MIRREN: Hold it.$"
@@ -5103,3 +5178,98 @@ ParcelCorridor_Board2_Text_0:
 	.string "pipe width in paces and the old channel\l"
 	.string "width in paces. Reading both is the\l"
 	.string "comment.$"
+
+ParcelCorridor_PairCut_Text_0:
+# 1650 "data/maps/ParcelCorridor/scripts.pory"
+	.string "DRIVER: Second pipe's going in. Same\n"
+	.string "width as the first.$"
+
+ParcelCorridor_PairCut_Text_1:
+# 1651 "data/maps/ParcelCorridor/scripts.pory"
+	.string "MECHANIC: Two pipes isn't a stream.$"
+
+ParcelCorridor_PairCut_Text_2:
+# 1652 "data/maps/ParcelCorridor/scripts.pory"
+	.string "DRIVER: It's twice as much pipe. That's\n"
+	.string "what the drawing says.$"
+
+ParcelCorridor_PairCut_Text_3:
+# 1653 "data/maps/ParcelCorridor/scripts.pory"
+	.string "MECHANIC: The drawing's never stood in\n"
+	.string "the water. I have. It's a start, and it's\l"
+	.string "not the thing.$"
+
+ParcelCorridor_PairCut_Text_4:
+# 1655 "data/maps/ParcelCorridor/scripts.pory"
+	.string "MECHANIC: The ranger measured the\n"
+	.string "pipe. In paces. Then the old channel. In\l"
+	.string "paces.$"
+
+ParcelCorridor_PairCut_Text_5:
+# 1656 "data/maps/ParcelCorridor/scripts.pory"
+	.string "DRIVER: And?$"
+
+ParcelCorridor_PairCut_Text_6:
+# 1657 "data/maps/ParcelCorridor/scripts.pory"
+	.string "MECHANIC: And nothing. They wrote both\n"
+	.string "numbers on the same line and walked\l"
+	.string "off. I've been thinking about that line\l"
+	.string "all week.$"
+
+ParcelCorridor_PairCut_Text_7:
+# 1659 "data/maps/ParcelCorridor/scripts.pory"
+	.string "DRIVER: Culvert's flooding the road\n"
+	.string "again.$"
+
+ParcelCorridor_PairCut_Text_8:
+# 1660 "data/maps/ParcelCorridor/scripts.pory"
+	.string "MECHANIC: It's not flooding. It's\n"
+	.string "returning. The stream remembers the\l"
+	.string "width it had.$"
+
+ParcelCorridor_PairCut_Text_9:
+# 1661 "data/maps/ParcelCorridor/scripts.pory"
+	.string "DRIVER: Tell that to the axle.$"
+
+ParcelCorridor_PairCut_Text_10:
+# 1662 "data/maps/ParcelCorridor/scripts.pory"
+	.string "MECHANIC: I'm telling it to you. The axle\n"
+	.string "already knows.$"
+
+ParcelCorridor_FindHeadwall_Text_0:
+# 1672 "data/maps/ParcelCorridor/scripts.pory"
+	.string "The old headwall above the culvert,\n"
+	.string "concrete poured over stone. At the\l"
+	.string "edge of the pour, where the stone\l"
+	.string "shows, a line of red lead, old, and a\l"
+	.string "figure: the Survey's flow mark, three\l"
+	.string "hands above the top of the pipe.\p"
+	.string "The pour stops a finger short of the\n"
+	.string "mark. Somebody on the crew stopped it\l"
+	.string "there.$"
+
+ParcelCorridor_FindHeadwall_Text_1:
+# 1675 "data/maps/ParcelCorridor/scripts.pory"
+	.string "The old flow mark on the headwall, red\n"
+	.string "lead, three hands above the pipe.\l"
+	.string "Someone has chalked an arrow to it.$"
+
+ParcelCorridor_Board3_Text_0:
+# 1683 "data/maps/ParcelCorridor/scripts.pory"
+	.string "A SURVEY BOARD above the cut. The slope\n"
+	.string "slides each spring and the road crew\l"
+	.string "clears it, and the board records both:\l"
+	.string "the slide in paces, the clearing in days.\p"
+	.string "The paces grow. The days do not. The\n"
+	.string "crew is very good. The slope is better.$"
+
+ParcelCorridor_Board4_Text_0:
+# 1690 "data/maps/ParcelCorridor/scripts.pory"
+	.string "A SURVEY BOARD at the checkpoint's\n"
+	.string "blind side. The Company's bare stakes\l"
+	.string "along the cut mark where their drainage\l"
+	.string "will run. The Survey's red ones mark\l"
+	.string "where the water does run.\p"
+	.string "The board gives the distance between\n"
+	.string "the two sets, year by year. It closes.\l"
+	.string "The Company is not moving its stakes.$"

@@ -376,6 +376,22 @@ script ParcelIsle_ItemNetBall {
 script ParcelIsle_LogisticsClerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_SEAL) && !flag(FLAG_SKALD_Q_SEAL_DONE)) {
+        if (flag(FLAG_SKALD_Q_SEAL_FOUND)) {
+            msgbox(format("PELL: Four one seven. That's my manifest. Three crates of soil cores, FERNWICK to the river, and one of them stopped here on the way and nobody told me.\pIt matches. I'll log it as present. Here. From the box of things nobody signs for."), MSGBOX_DEFAULT)
+            giveitem(ITEM_REPEAT_BALL, 2)
+            setflag(FLAG_SKALD_Q_SEAL_DONE)
+        } else {
+            msgbox(format("PELL: The crate on the quay. Council seal on the lid. The number."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_SEAL_DONE)) {
+        msgbox(format("PELL: A crate came off the ferry marked EVIDENCE and nobody's signed for it, so it's sitting on the quay with a Council seal on the lid. I'm not allowed to touch a sealed crate. I'm allowed to know its number.\pGo and read me the seal. If the number matches my manifest, I can stop pretending it isn't there."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_SEAL)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("PELL: Manifests are moving again. Different crests on half of them. I log what moves.\pIt's moving slower, and I know where it's going now, which is new."), MSGBOX_DEFAULT)
         release
@@ -1236,5 +1252,54 @@ script ParcelIsle_Board1 {
 
 script ParcelIsle_Board2 {
     msgbox(format("A SURVEY BOARD by the jetty steps. STARYU on the harbour floor at night, counted by their light from the end of the jetty since before the Survey had a name for the method.\pIt is the easiest count on the island and so it is the longest. 40, 38, 41, 36, 29, 31, 24."), MSGBOX_SIGN)
+    end
+}
+
+// --- side quests, round five (2026-11-10) ---
+
+script ParcelIsle_FindSeal {
+    if (flag(FLAG_SKALD_Q_SEAL) && !flag(FLAG_SKALD_Q_SEAL_FOUND)) {
+        msgbox(format("A crate on the quay, a Council seal across the lid, red wax gone pale in the salt. EVIDENCE, stencilled, and under it a number in a clerk's hand: 417.\pSomeone has stacked a coil of rope against it so it looks like it belongs to the harbour. It does not."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_SEAL_FOUND)
+    } else {
+        msgbox(format("A crate on the quay, sealed, numbered 417. The rope has been moved off it and set neatly to one side."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelIsle_Board3 {
+    msgbox(format("A SURVEY BOARD at the harbour steps. The herring come in on the spring tides, and the board marks the first shoal each year with a nail.\pThe nails run up the post a week a decade. The sizes beside them run down. The board does not say what happens when the nails reach the top."), MSGBOX_SIGN)
+    end
+}
+
+// --- survey boards, round three (2026-11-10) ---
+
+script ParcelIsle_Board4 {
+    msgbox(format("A SURVEY BOARD on the north wall of the harbour. The first stake in Skaldmere was driven here, thirty-one years ago, by a surveyor who is not named on the board, because the Survey does not name surveyors.\pThe stake is gone. The hole is kept open with a brass tube, and the tube is read every spring: present."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round five ---
+
+script ParcelIsle_PairQuay {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("COOPER: Thirty barrels a week, by order. The review's."), MSGBOX_DEFAULT)
+        msgbox(format("DRAYMAN: Thirty barrels of fish that are in the sea. I'll move thirty."), MSGBOX_DEFAULT)
+        msgbox(format("COOPER: You've got cheerful about moving less."), MSGBOX_DEFAULT)
+        msgbox(format("DRAYMAN: I've got cheerful about moving what's there."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("DRAYMAN: The provisional's got FOREST. Hall put it on the board."), MSGBOX_DEFAULT)
+        msgbox(format("COOPER: What's a forest got to do with barrels?"), MSGBOX_DEFAULT)
+        msgbox(format("DRAYMAN: Nothing. Somebody from here did a thing properly. I'm taking it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("COOPER: Forty barrels a week for the cannery, and they want sixty."), MSGBOX_DEFAULT)
+        msgbox(format("DRAYMAN: Sixty barrels of what? The boats bring in forty barrels of fish."), MSGBOX_DEFAULT)
+        msgbox(format("COOPER: The Company says the fish will come."), MSGBOX_DEFAULT)
+        msgbox(format("DRAYMAN: The Company's never been in a boat. I'll move forty."), MSGBOX_DEFAULT)
+    }
+    release
     end
 }

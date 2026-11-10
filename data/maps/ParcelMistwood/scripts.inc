@@ -974,6 +974,18 @@ ParcelMistwood_Board2::
 	end
 
 
+ParcelMistwood_Board3::
+# 518 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelMistwood_Board5::
+# 525 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_Board5_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMistwood_Sanna_Text_0:
 # 16 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SANNA: I've got two WURMPLE. Two! You\n"
@@ -1529,3 +1541,26 @@ ParcelMistwood_Board2_Text_0:
 	.string "The HOOTHOOT count is the honest\l"
 	.string "version of the same number, and it goes\l"
 	.string "one way.$"
+
+ParcelMistwood_Board3_Text_0:
+# 518 "data/maps/ParcelMistwood/scripts.pory"
+	.string "A SURVEY BOARD by the seep. SLAKOTH in\n"
+	.string "the oldest trees, asleep. A sleeping\l"
+	.string "SLAKOTH is a count of nothing\l"
+	.string "happening, which the Survey says is the\l"
+	.string "hardest count to keep honest.\p"
+	.string "Nothing is written in the log each\n"
+	.string "spring under this board, with a date.\l"
+	.string "Nothing is the right word.$"
+
+ParcelMistwood_Board5_Text_0:
+# 525 "data/maps/ParcelMistwood/scripts.pory"
+	.string "A SURVEY BOARD on the forest's north\n"
+	.string "edge, where the fog thins. HOOTHOOT\l"
+	.string "call here at dusk and the Survey counts\l"
+	.string "calls, not birds, because the fog\l"
+	.string "counts the birds for you.\p"
+	.string "The calls per dusk are given as a\n"
+	.string "column. The column is the shape of a\l"
+	.string "hill, and the board is on the far side of\l"
+	.string "it.$"

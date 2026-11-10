@@ -617,6 +617,12 @@ ParcelMeadow_Board2::
 	end
 
 
+ParcelMeadow_Board3::
+# 371 "data/maps/ParcelMeadow/scripts.pory"
+	msgbox ParcelMeadow_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMeadow_FirstEntry_Text_0:
 # 32 "data/maps/ParcelMeadow/scripts.pory"
 	.string "RIN: Oh! You're WREN, right? HALE said\n"
@@ -1005,3 +1011,15 @@ ParcelMeadow_Board2_Text_0:
 	.string "The Survey counts the margin, which is\n"
 	.string "why the mower stops a stride short of\l"
 	.string "the hedge.$"
+
+ParcelMeadow_Board3_Text_0:
+# 371 "data/maps/ParcelMeadow/scripts.pory"
+	.string "A SURVEY BOARD on the paddock fence.\n"
+	.string "The partners here were not bred. They\l"
+	.string "came in from the edges, one at a time,\l"
+	.string "and stayed.\p"
+	.string "The board lists the years and what\n"
+	.string "came: a LOTAD the wet year, a POOCHYENA\l"
+	.string "the hard winter, a WOOPER after the\l"
+	.string "culvert. The meadow is a record of what\l"
+	.string "the country sent us.$"

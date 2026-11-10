@@ -387,4003 +387,4081 @@ ParcelWetlands_Crowd1::
 # 246 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
 # 247 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_Crowd1_2
-# 252 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Crowd1_5
+	goto_if_set FLAG_SKALD_Q_RACK, ParcelWetlands_Crowd1_5
+ParcelWetlands_Crowd1_4:
 # 257 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlands_Crowd1_8
-# 262 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Crowd1_Text_3, MSGBOX_DEFAULT
+	goto_if_unset FLAG_SKALD_Q_RACK_DONE, ParcelWetlands_Crowd1_3
 # 263 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_Crowd1_9
+# 268 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Crowd1_16
+# 273 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlands_Crowd1_19
+# 278 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd1_Text_6, MSGBOX_DEFAULT
+# 279 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd1_2:
 # 248 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Crowd1_Text_0, MSGBOX_DEFAULT
-# 249 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_RACK_FOUND, ParcelWetlands_Crowd1_12
+# 253 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd1_Text_1, MSGBOX_DEFAULT
+ParcelWetlands_Crowd1_11:
+# 255 "data/maps/ParcelWetlands/scripts.pory"
+	release
+	end
+
+ParcelWetlands_Crowd1_3:
+# 258 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd1_Text_2, MSGBOX_DEFAULT
+# 259 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_RACK
+# 260 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd1_5:
-# 253 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Crowd1_Text_1, MSGBOX_DEFAULT
-# 254 "data/maps/ParcelWetlands/scripts.pory"
+# 247 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_RACK_DONE, ParcelWetlands_Crowd1_2
+	goto ParcelWetlands_Crowd1_4
+
+ParcelWetlands_Crowd1_9:
+# 264 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd1_Text_3, MSGBOX_DEFAULT
+# 265 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
-ParcelWetlands_Crowd1_8:
-# 258 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Crowd1_Text_2, MSGBOX_DEFAULT
-# 259 "data/maps/ParcelWetlands/scripts.pory"
+ParcelWetlands_Crowd1_12:
+# 249 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd1_Text_0, MSGBOX_DEFAULT
+# 250 "data/maps/ParcelWetlands/scripts.pory"
+	giveitem ITEM_FULL_HEAL, 2
+# 251 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_RACK_DONE
+	goto ParcelWetlands_Crowd1_11
+
+ParcelWetlands_Crowd1_16:
+# 269 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd1_Text_4, MSGBOX_DEFAULT
+# 270 "data/maps/ParcelWetlands/scripts.pory"
+	release
+	end
+
+ParcelWetlands_Crowd1_19:
+# 274 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd1_Text_5, MSGBOX_DEFAULT
+# 275 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Crowd2::
-# 267 "data/maps/ParcelWetlands/scripts.pory"
+# 283 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 268 "data/maps/ParcelWetlands/scripts.pory"
-	faceplayer
-# 269 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_Crowd2_2
-# 274 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Crowd2_5
-# 279 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlands_Crowd2_8
 # 284 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Crowd2_Text_3, MSGBOX_DEFAULT
+	faceplayer
 # 285 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_Crowd2_2
+# 290 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Crowd2_5
+# 295 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlands_Crowd2_8
+# 300 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd2_Text_3, MSGBOX_DEFAULT
+# 301 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd2_2:
-# 270 "data/maps/ParcelWetlands/scripts.pory"
+# 286 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Crowd2_Text_0, MSGBOX_DEFAULT
-# 271 "data/maps/ParcelWetlands/scripts.pory"
+# 287 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd2_5:
-# 275 "data/maps/ParcelWetlands/scripts.pory"
+# 291 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Crowd2_Text_1, MSGBOX_DEFAULT
-# 276 "data/maps/ParcelWetlands/scripts.pory"
+# 292 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd2_8:
-# 280 "data/maps/ParcelWetlands/scripts.pory"
+# 296 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Crowd2_Text_2, MSGBOX_DEFAULT
-# 281 "data/maps/ParcelWetlands/scripts.pory"
+# 297 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Crowd3::
-# 289 "data/maps/ParcelWetlands/scripts.pory"
+# 305 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 290 "data/maps/ParcelWetlands/scripts.pory"
-	faceplayer
-# 291 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_Crowd3_2
-# 296 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Crowd3_5
-# 301 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlands_Crowd3_8
 # 306 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Crowd3_Text_3, MSGBOX_DEFAULT
+	faceplayer
 # 307 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_Crowd3_2
+# 312 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Crowd3_5
+# 317 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlands_Crowd3_8
+# 322 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Crowd3_Text_3, MSGBOX_DEFAULT
+# 323 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd3_2:
-# 292 "data/maps/ParcelWetlands/scripts.pory"
+# 308 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Crowd3_Text_0, MSGBOX_DEFAULT
-# 293 "data/maps/ParcelWetlands/scripts.pory"
+# 309 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd3_5:
-# 297 "data/maps/ParcelWetlands/scripts.pory"
+# 313 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Crowd3_Text_1, MSGBOX_DEFAULT
-# 298 "data/maps/ParcelWetlands/scripts.pory"
+# 314 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Crowd3_8:
-# 302 "data/maps/ParcelWetlands/scripts.pory"
+# 318 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Crowd3_Text_2, MSGBOX_DEFAULT
-# 303 "data/maps/ParcelWetlands/scripts.pory"
+# 319 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_EvResidue::
-# 313 "data/maps/ParcelWetlands/scripts.pory"
+# 329 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 314 "data/maps/ParcelWetlands/scripts.pory"
+# 330 "data/maps/ParcelWetlands/scripts.pory"
 	call ParcelWetlands_RequirePoison
-# 315 "data/maps/ParcelWetlands/scripts.pory"
+# 331 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_EvResidue_2
-# 319 "data/maps/ParcelWetlands/scripts.pory"
+# 335 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_0x8004, 6
-# 320 "data/maps/ParcelWetlands/scripts.pory"
+# 336 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 321 "data/maps/ParcelWetlands/scripts.pory"
+# 337 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelWetlands_EvResidue_5
-# 326 "data/maps/ParcelWetlands/scripts.pory"
+# 342 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_EvResidue_Text_1, MSGBOX_SIGN
-# 327 "data/maps/ParcelWetlands/scripts.pory"
+# 343 "data/maps/ParcelWetlands/scripts.pory"
 	special SkaldmereCertTaskMark
-# 328 "data/maps/ParcelWetlands/scripts.pory"
+# 344 "data/maps/ParcelWetlands/scripts.pory"
 	call ParcelWetlands_CheckEvidenceDone
-# 329 "data/maps/ParcelWetlands/scripts.pory"
+# 345 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_EvResidue_2:
-# 316 "data/maps/ParcelWetlands/scripts.pory"
+# 332 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_EvResidue_5:
-# 322 "data/maps/ParcelWetlands/scripts.pory"
+# 338 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_EvResidue_Text_0, MSGBOX_SIGN
-# 323 "data/maps/ParcelWetlands/scripts.pory"
+# 339 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_EvPipe::
-# 333 "data/maps/ParcelWetlands/scripts.pory"
+# 349 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 334 "data/maps/ParcelWetlands/scripts.pory"
+# 350 "data/maps/ParcelWetlands/scripts.pory"
 	call ParcelWetlands_RequirePoison
-# 335 "data/maps/ParcelWetlands/scripts.pory"
+# 351 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_EvPipe_2
-# 339 "data/maps/ParcelWetlands/scripts.pory"
+# 355 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_0x8004, 7
-# 340 "data/maps/ParcelWetlands/scripts.pory"
+# 356 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 341 "data/maps/ParcelWetlands/scripts.pory"
+# 357 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelWetlands_EvPipe_5
-# 346 "data/maps/ParcelWetlands/scripts.pory"
+# 362 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_EvPipe_Text_1, MSGBOX_SIGN
-# 347 "data/maps/ParcelWetlands/scripts.pory"
+# 363 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_EvPipe_Text_2, MSGBOX_DEFAULT
-# 348 "data/maps/ParcelWetlands/scripts.pory"
+# 364 "data/maps/ParcelWetlands/scripts.pory"
 	special SkaldmereCertTaskMark
-# 349 "data/maps/ParcelWetlands/scripts.pory"
+# 365 "data/maps/ParcelWetlands/scripts.pory"
 	call ParcelWetlands_CheckEvidenceDone
-# 350 "data/maps/ParcelWetlands/scripts.pory"
+# 366 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_EvPipe_2:
-# 336 "data/maps/ParcelWetlands/scripts.pory"
+# 352 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_EvPipe_5:
-# 342 "data/maps/ParcelWetlands/scripts.pory"
+# 358 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_EvPipe_Text_0, MSGBOX_SIGN
-# 343 "data/maps/ParcelWetlands/scripts.pory"
+# 359 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_EvManifest::
-# 354 "data/maps/ParcelWetlands/scripts.pory"
+# 370 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 355 "data/maps/ParcelWetlands/scripts.pory"
+# 371 "data/maps/ParcelWetlands/scripts.pory"
 	call ParcelWetlands_RequirePoison
-# 356 "data/maps/ParcelWetlands/scripts.pory"
+# 372 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_EvManifest_2
-# 360 "data/maps/ParcelWetlands/scripts.pory"
+# 376 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_0x8004, 8
-# 361 "data/maps/ParcelWetlands/scripts.pory"
+# 377 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 362 "data/maps/ParcelWetlands/scripts.pory"
+# 378 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelWetlands_EvManifest_5
-# 367 "data/maps/ParcelWetlands/scripts.pory"
+# 383 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_EvManifest_Text_1, MSGBOX_SIGN
-# 368 "data/maps/ParcelWetlands/scripts.pory"
+# 384 "data/maps/ParcelWetlands/scripts.pory"
 	special SkaldmereCertTaskMark
-# 369 "data/maps/ParcelWetlands/scripts.pory"
+# 385 "data/maps/ParcelWetlands/scripts.pory"
 	call ParcelWetlands_CheckEvidenceDone
-# 370 "data/maps/ParcelWetlands/scripts.pory"
+# 386 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_EvManifest_2:
-# 357 "data/maps/ParcelWetlands/scripts.pory"
+# 373 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_EvManifest_5:
-# 363 "data/maps/ParcelWetlands/scripts.pory"
+# 379 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_EvManifest_Text_0, MSGBOX_SIGN
-# 364 "data/maps/ParcelWetlands/scripts.pory"
+# 380 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_RequirePoison::
-# 375 "data/maps/ParcelWetlands/scripts.pory"
+# 391 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH1_EVIDENCE
-# 376 "data/maps/ParcelWetlands/scripts.pory"
+# 392 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_0x8004, 5
-# 377 "data/maps/ParcelWetlands/scripts.pory"
+# 393 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 378 "data/maps/ParcelWetlands/scripts.pory"
+# 394 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_RequirePoison_2
 ParcelWetlands_RequirePoison_1:
 	return
 
 ParcelWetlands_RequirePoison_2:
-# 379 "data/maps/ParcelWetlands/scripts.pory"
+# 395 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_RequirePoison_Text_0, MSGBOX_SIGN
 	goto ParcelWetlands_RequirePoison_1
 
 
 ParcelWetlands_CheckEvidenceDone::
-# 385 "data/maps/ParcelWetlands/scripts.pory"
+# 401 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_0x8004, 448
-# 386 "data/maps/ParcelWetlands/scripts.pory"
+# 402 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskCount
-# 387 "data/maps/ParcelWetlands/scripts.pory"
+# 403 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_eq ParcelWetlands_CheckEvidenceDone_2
 ParcelWetlands_CheckEvidenceDone_1:
 	return
 
 ParcelWetlands_CheckEvidenceDone_2:
-# 388 "data/maps/ParcelWetlands/scripts.pory"
+# 404 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_CheckEvidenceDone_Text_0, MSGBOX_DEFAULT
-# 389 "data/maps/ParcelWetlands/scripts.pory"
+# 405 "data/maps/ParcelWetlands/scripts.pory"
 	clearflag FLAG_TEMP_3
-# 390 "data/maps/ParcelWetlands/scripts.pory"
+# 406 "data/maps/ParcelWetlands/scripts.pory"
 	addobject 5
-# 391 "data/maps/ParcelWetlands/scripts.pory"
+# 407 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_CheckEvidenceDone_Text_1, MSGBOX_DEFAULT
 	goto ParcelWetlands_CheckEvidenceDone_1
 
 
 ParcelWetlands_Enforcer::
-# 398 "data/maps/ParcelWetlands/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_ENFORCER, ParcelWetlands_Enforcer_Text_0, ParcelWetlands_Enforcer_Text_1
-# 401 "data/maps/ParcelWetlands/scripts.pory"
-	lock
-# 402 "data/maps/ParcelWetlands/scripts.pory"
-	faceplayer
-# 403 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Enforcer_Text_2, MSGBOX_DEFAULT
-# 404 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Enforcer_Text_3, MSGBOX_DEFAULT
-# 405 "data/maps/ParcelWetlands/scripts.pory"
-	closemessage
-# 406 "data/maps/ParcelWetlands/scripts.pory"
-	removeobject 5
-# 407 "data/maps/ParcelWetlands/scripts.pory"
-	setflag FLAG_TEMP_3
-# 408 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Enforcer_Text_4, MSGBOX_DEFAULT
-# 409 "data/maps/ParcelWetlands/scripts.pory"
-	removeobject 2
-# 410 "data/maps/ParcelWetlands/scripts.pory"
-	setflag FLAG_TEMP_2
-# 411 "data/maps/ParcelWetlands/scripts.pory"
-	removeobject 11
-# 412 "data/maps/ParcelWetlands/scripts.pory"
-	removeobject 12
-# 413 "data/maps/ParcelWetlands/scripts.pory"
-	removeobject 13
 # 414 "data/maps/ParcelWetlands/scripts.pory"
-	removeobject 6
-# 415 "data/maps/ParcelWetlands/scripts.pory"
-	removeobject 7
-# 416 "data/maps/ParcelWetlands/scripts.pory"
-	setflag FLAG_TEMP_4
+	trainerbattle_single TRAINER_SKALD_ENFORCER, ParcelWetlands_Enforcer_Text_0, ParcelWetlands_Enforcer_Text_1
 # 417 "data/maps/ParcelWetlands/scripts.pory"
+	lock
+# 418 "data/maps/ParcelWetlands/scripts.pory"
+	faceplayer
+# 419 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Enforcer_Text_2, MSGBOX_DEFAULT
+# 420 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Enforcer_Text_3, MSGBOX_DEFAULT
+# 421 "data/maps/ParcelWetlands/scripts.pory"
+	closemessage
+# 422 "data/maps/ParcelWetlands/scripts.pory"
+	removeobject 5
+# 423 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_TEMP_3
+# 424 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Enforcer_Text_4, MSGBOX_DEFAULT
+# 425 "data/maps/ParcelWetlands/scripts.pory"
+	removeobject 2
+# 426 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_TEMP_2
+# 427 "data/maps/ParcelWetlands/scripts.pory"
+	removeobject 11
+# 428 "data/maps/ParcelWetlands/scripts.pory"
+	removeobject 12
+# 429 "data/maps/ParcelWetlands/scripts.pory"
+	removeobject 13
+# 430 "data/maps/ParcelWetlands/scripts.pory"
+	removeobject 6
+# 431 "data/maps/ParcelWetlands/scripts.pory"
+	removeobject 7
+# 432 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_TEMP_4
+# 433 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Gunnar::
-# 423 "data/maps/ParcelWetlands/scripts.pory"
+# 439 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 424 "data/maps/ParcelWetlands/scripts.pory"
+# 440 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 425 "data/maps/ParcelWetlands/scripts.pory"
+# 441 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_Gunnar_3
 ParcelWetlands_Gunnar_1:
-# 430 "data/maps/ParcelWetlands/scripts.pory"
+# 446 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Gunnar_7
-# 435 "data/maps/ParcelWetlands/scripts.pory"
+# 451 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_GUNNAR_DONE, ParcelWetlands_Gunnar_10
-# 440 "data/maps/ParcelWetlands/scripts.pory"
+# 456 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_GUNNAR_SEEN, ParcelWetlands_Gunnar_13
-# 454 "data/maps/ParcelWetlands/scripts.pory"
+# 470 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_GUNNAR, ParcelWetlands_Gunnar_16
-# 459 "data/maps/ParcelWetlands/scripts.pory"
+# 475 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_7, MSGBOX_DEFAULT
-# 460 "data/maps/ParcelWetlands/scripts.pory"
+# 476 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_8, MSGBOX_DEFAULT
-# 461 "data/maps/ParcelWetlands/scripts.pory"
+# 477 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_GUNNAR
-# 462 "data/maps/ParcelWetlands/scripts.pory"
+# 478 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Gunnar_2:
-# 426 "data/maps/ParcelWetlands/scripts.pory"
+# 442 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_0, MSGBOX_DEFAULT
-# 427 "data/maps/ParcelWetlands/scripts.pory"
+# 443 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Gunnar_3:
-# 425 "data/maps/ParcelWetlands/scripts.pory"
+# 441 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_GUNNAR_DONE, ParcelWetlands_Gunnar_2
 	goto ParcelWetlands_Gunnar_1
 
 ParcelWetlands_Gunnar_7:
-# 431 "data/maps/ParcelWetlands/scripts.pory"
+# 447 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_1, MSGBOX_DEFAULT
-# 432 "data/maps/ParcelWetlands/scripts.pory"
+# 448 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Gunnar_10:
-# 436 "data/maps/ParcelWetlands/scripts.pory"
+# 452 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_2, MSGBOX_DEFAULT
-# 437 "data/maps/ParcelWetlands/scripts.pory"
+# 453 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Gunnar_13:
-# 441 "data/maps/ParcelWetlands/scripts.pory"
+# 457 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_3, MSGBOX_DEFAULT
-# 442 "data/maps/ParcelWetlands/scripts.pory"
+# 458 "data/maps/ParcelWetlands/scripts.pory"
 	checkitem ITEM_GOOD_ROD
-# 443 "data/maps/ParcelWetlands/scripts.pory"
+# 459 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelWetlands_Gunnar_19
-# 447 "data/maps/ParcelWetlands/scripts.pory"
+# 463 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_5, MSGBOX_DEFAULT
-# 448 "data/maps/ParcelWetlands/scripts.pory"
+# 464 "data/maps/ParcelWetlands/scripts.pory"
 	giveitem ITEM_GOOD_ROD
 ParcelWetlands_Gunnar_18:
-# 450 "data/maps/ParcelWetlands/scripts.pory"
+# 466 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_GUNNAR_DONE
-# 451 "data/maps/ParcelWetlands/scripts.pory"
+# 467 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Gunnar_16:
-# 455 "data/maps/ParcelWetlands/scripts.pory"
+# 471 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_6, MSGBOX_DEFAULT
-# 456 "data/maps/ParcelWetlands/scripts.pory"
+# 472 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Gunnar_19:
-# 444 "data/maps/ParcelWetlands/scripts.pory"
+# 460 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Gunnar_Text_4, MSGBOX_DEFAULT
-# 445 "data/maps/ParcelWetlands/scripts.pory"
+# 461 "data/maps/ParcelWetlands/scripts.pory"
 	giveitem ITEM_NET_BALL, 3
 	goto ParcelWetlands_Gunnar_18
 
 
 ParcelWetlands_Surskit::
-# 467 "data/maps/ParcelWetlands/scripts.pory"
+# 483 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 468 "data/maps/ParcelWetlands/scripts.pory"
+# 484 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 469 "data/maps/ParcelWetlands/scripts.pory"
+# 485 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_GUNNAR, ParcelWetlands_Surskit_3
 ParcelWetlands_Surskit_1:
-# 475 "data/maps/ParcelWetlands/scripts.pory"
+# 491 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Surskit_Text_1, MSGBOX_DEFAULT
-# 476 "data/maps/ParcelWetlands/scripts.pory"
+# 492 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Surskit_2:
-# 470 "data/maps/ParcelWetlands/scripts.pory"
+# 486 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Surskit_Text_0, MSGBOX_DEFAULT
-# 471 "data/maps/ParcelWetlands/scripts.pory"
+# 487 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_GUNNAR_SEEN
-# 472 "data/maps/ParcelWetlands/scripts.pory"
+# 488 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Surskit_3:
-# 469 "data/maps/ParcelWetlands/scripts.pory"
+# 485 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_GUNNAR_DONE, ParcelWetlands_Surskit_2
 	goto ParcelWetlands_Surskit_1
 
 
 ParcelWetlands_Selt::
-# 482 "data/maps/ParcelWetlands/scripts.pory"
+# 498 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_SELT, ParcelWetlands_Selt_Text_0, ParcelWetlands_Selt_Text_1, ParcelWetlands_Selt_FirstWin
-# 486 "data/maps/ParcelWetlands/scripts.pory"
+# 502 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 487 "data/maps/ParcelWetlands/scripts.pory"
+# 503 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Selt_3
 ParcelWetlands_Selt_1:
-# 490 "data/maps/ParcelWetlands/scripts.pory"
+# 506 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Selt_8
 ParcelWetlands_Selt_6:
-# 493 "data/maps/ParcelWetlands/scripts.pory"
+# 509 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Selt_13
 ParcelWetlands_Selt_11:
-# 496 "data/maps/ParcelWetlands/scripts.pory"
+# 512 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Selt_18
 ParcelWetlands_Selt_16:
-# 499 "data/maps/ParcelWetlands/scripts.pory"
+# 515 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Selt_2:
-# 488 "data/maps/ParcelWetlands/scripts.pory"
+# 504 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Selt_R2
 	goto ParcelWetlands_Selt_1
 
 ParcelWetlands_Selt_3:
-# 487 "data/maps/ParcelWetlands/scripts.pory"
+# 503 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SELT_R2
 	goto_if 0, ParcelWetlands_Selt_2
 	goto ParcelWetlands_Selt_1
 
 ParcelWetlands_Selt_7:
-# 491 "data/maps/ParcelWetlands/scripts.pory"
+# 507 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Selt_R3
 	goto ParcelWetlands_Selt_6
 
 ParcelWetlands_Selt_8:
-# 490 "data/maps/ParcelWetlands/scripts.pory"
+# 506 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SELT_R3
 	goto_if 0, ParcelWetlands_Selt_7
 	goto ParcelWetlands_Selt_6
 
 ParcelWetlands_Selt_12:
-# 494 "data/maps/ParcelWetlands/scripts.pory"
+# 510 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Selt_R4
 	goto ParcelWetlands_Selt_11
 
 ParcelWetlands_Selt_13:
-# 493 "data/maps/ParcelWetlands/scripts.pory"
+# 509 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SELT_R4
 	goto_if 0, ParcelWetlands_Selt_12
 	goto ParcelWetlands_Selt_11
 
 ParcelWetlands_Selt_17:
-# 497 "data/maps/ParcelWetlands/scripts.pory"
+# 513 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Selt_R5
 	goto ParcelWetlands_Selt_16
 
 ParcelWetlands_Selt_18:
-# 496 "data/maps/ParcelWetlands/scripts.pory"
+# 512 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SELT_R5
 	goto_if 0, ParcelWetlands_Selt_17
 	goto ParcelWetlands_Selt_16
 
 
 ParcelWetlands_Selt_FirstWin::
-# 503 "data/maps/ParcelWetlands/scripts.pory"
+# 519 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_Text_2, MSGBOX_DEFAULT
-# 504 "data/maps/ParcelWetlands/scripts.pory"
+# 520 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Selt_R2::
-# 508 "data/maps/ParcelWetlands/scripts.pory"
+# 524 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 509 "data/maps/ParcelWetlands/scripts.pory"
+# 525 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 510 "data/maps/ParcelWetlands/scripts.pory"
+# 526 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R2_Text_0, MSGBOX_YESNO
-# 511 "data/maps/ParcelWetlands/scripts.pory"
+# 527 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Selt_R2_2
-# 516 "data/maps/ParcelWetlands/scripts.pory"
+# 532 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SELT_R2, ParcelWetlands_Selt_R2_Text_2
-# 517 "data/maps/ParcelWetlands/scripts.pory"
+# 533 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R2_Text_3, MSGBOX_DEFAULT
-# 518 "data/maps/ParcelWetlands/scripts.pory"
+# 534 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Selt_R2_2:
-# 512 "data/maps/ParcelWetlands/scripts.pory"
+# 528 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R2_Text_1, MSGBOX_DEFAULT
-# 513 "data/maps/ParcelWetlands/scripts.pory"
+# 529 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Selt_R3::
-# 522 "data/maps/ParcelWetlands/scripts.pory"
+# 538 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 523 "data/maps/ParcelWetlands/scripts.pory"
+# 539 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 524 "data/maps/ParcelWetlands/scripts.pory"
+# 540 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R3_Text_0, MSGBOX_YESNO
-# 525 "data/maps/ParcelWetlands/scripts.pory"
+# 541 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Selt_R3_2
-# 530 "data/maps/ParcelWetlands/scripts.pory"
+# 546 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SELT_R3, ParcelWetlands_Selt_R3_Text_1
-# 531 "data/maps/ParcelWetlands/scripts.pory"
+# 547 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R3_Text_2, MSGBOX_DEFAULT
-# 532 "data/maps/ParcelWetlands/scripts.pory"
+# 548 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Selt_R3_2:
-# 526 "data/maps/ParcelWetlands/scripts.pory"
+# 542 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R2_Text_1, MSGBOX_DEFAULT
-# 527 "data/maps/ParcelWetlands/scripts.pory"
+# 543 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Selt_R4::
-# 536 "data/maps/ParcelWetlands/scripts.pory"
+# 552 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 537 "data/maps/ParcelWetlands/scripts.pory"
+# 553 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 538 "data/maps/ParcelWetlands/scripts.pory"
+# 554 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R4_Text_0, MSGBOX_YESNO
-# 539 "data/maps/ParcelWetlands/scripts.pory"
+# 555 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Selt_R4_2
-# 544 "data/maps/ParcelWetlands/scripts.pory"
+# 560 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SELT_R4, ParcelWetlands_Selt_R3_Text_1
-# 545 "data/maps/ParcelWetlands/scripts.pory"
+# 561 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R4_Text_1, MSGBOX_DEFAULT
-# 546 "data/maps/ParcelWetlands/scripts.pory"
+# 562 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Selt_R4_2:
-# 540 "data/maps/ParcelWetlands/scripts.pory"
+# 556 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R2_Text_1, MSGBOX_DEFAULT
-# 541 "data/maps/ParcelWetlands/scripts.pory"
+# 557 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Selt_R5::
-# 550 "data/maps/ParcelWetlands/scripts.pory"
+# 566 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 551 "data/maps/ParcelWetlands/scripts.pory"
+# 567 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 552 "data/maps/ParcelWetlands/scripts.pory"
+# 568 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R5_Text_0, MSGBOX_YESNO
-# 553 "data/maps/ParcelWetlands/scripts.pory"
+# 569 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Selt_R5_2
-# 558 "data/maps/ParcelWetlands/scripts.pory"
+# 574 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SELT_R5, ParcelWetlands_Selt_R5_Text_1
-# 559 "data/maps/ParcelWetlands/scripts.pory"
+# 575 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R5_Text_2, MSGBOX_DEFAULT
-# 560 "data/maps/ParcelWetlands/scripts.pory"
+# 576 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Selt_R5_2:
-# 554 "data/maps/ParcelWetlands/scripts.pory"
+# 570 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Selt_R2_Text_1, MSGBOX_DEFAULT
-# 555 "data/maps/ParcelWetlands/scripts.pory"
+# 571 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Mora::
-# 564 "data/maps/ParcelWetlands/scripts.pory"
+# 580 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_POACHER_B, ParcelWetlands_Mora_Text_0, ParcelWetlands_Mora_Text_1, ParcelWetlands_Mora_FirstWin
-# 568 "data/maps/ParcelWetlands/scripts.pory"
+# 584 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 569 "data/maps/ParcelWetlands/scripts.pory"
+# 585 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Mora_3
 ParcelWetlands_Mora_1:
-# 572 "data/maps/ParcelWetlands/scripts.pory"
+# 588 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Mora_8
 ParcelWetlands_Mora_6:
-# 575 "data/maps/ParcelWetlands/scripts.pory"
+# 591 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Mora_13
 ParcelWetlands_Mora_11:
-# 578 "data/maps/ParcelWetlands/scripts.pory"
+# 594 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Mora_18
 ParcelWetlands_Mora_16:
-# 581 "data/maps/ParcelWetlands/scripts.pory"
+# 597 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Mora_2:
-# 570 "data/maps/ParcelWetlands/scripts.pory"
+# 586 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Mora_R2
 	goto ParcelWetlands_Mora_1
 
 ParcelWetlands_Mora_3:
-# 569 "data/maps/ParcelWetlands/scripts.pory"
+# 585 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_POACHER_B_R2
 	goto_if 0, ParcelWetlands_Mora_2
 	goto ParcelWetlands_Mora_1
 
 ParcelWetlands_Mora_7:
-# 573 "data/maps/ParcelWetlands/scripts.pory"
+# 589 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Mora_R3
 	goto ParcelWetlands_Mora_6
 
 ParcelWetlands_Mora_8:
-# 572 "data/maps/ParcelWetlands/scripts.pory"
+# 588 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_POACHER_B_R3
 	goto_if 0, ParcelWetlands_Mora_7
 	goto ParcelWetlands_Mora_6
 
 ParcelWetlands_Mora_12:
-# 576 "data/maps/ParcelWetlands/scripts.pory"
+# 592 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Mora_R4
 	goto ParcelWetlands_Mora_11
 
 ParcelWetlands_Mora_13:
-# 575 "data/maps/ParcelWetlands/scripts.pory"
+# 591 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_POACHER_B_R4
 	goto_if 0, ParcelWetlands_Mora_12
 	goto ParcelWetlands_Mora_11
 
 ParcelWetlands_Mora_17:
-# 579 "data/maps/ParcelWetlands/scripts.pory"
+# 595 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Mora_R5
 	goto ParcelWetlands_Mora_16
 
 ParcelWetlands_Mora_18:
-# 578 "data/maps/ParcelWetlands/scripts.pory"
+# 594 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_POACHER_B_R5
 	goto_if 0, ParcelWetlands_Mora_17
 	goto ParcelWetlands_Mora_16
 
 
 ParcelWetlands_Mora_FirstWin::
-# 585 "data/maps/ParcelWetlands/scripts.pory"
+# 601 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_Text_2, MSGBOX_DEFAULT
-# 586 "data/maps/ParcelWetlands/scripts.pory"
+# 602 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Mora_R2::
-# 590 "data/maps/ParcelWetlands/scripts.pory"
+# 606 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 591 "data/maps/ParcelWetlands/scripts.pory"
+# 607 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 592 "data/maps/ParcelWetlands/scripts.pory"
+# 608 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R2_Text_0, MSGBOX_YESNO
-# 593 "data/maps/ParcelWetlands/scripts.pory"
+# 609 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Mora_R2_2
-# 598 "data/maps/ParcelWetlands/scripts.pory"
+# 614 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_POACHER_B_R2, ParcelWetlands_Mora_R2_Text_2
-# 599 "data/maps/ParcelWetlands/scripts.pory"
+# 615 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R2_Text_3, MSGBOX_DEFAULT
-# 600 "data/maps/ParcelWetlands/scripts.pory"
+# 616 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Mora_R2_2:
-# 594 "data/maps/ParcelWetlands/scripts.pory"
+# 610 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R2_Text_1, MSGBOX_DEFAULT
-# 595 "data/maps/ParcelWetlands/scripts.pory"
+# 611 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Mora_R3::
-# 604 "data/maps/ParcelWetlands/scripts.pory"
+# 620 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 605 "data/maps/ParcelWetlands/scripts.pory"
+# 621 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 606 "data/maps/ParcelWetlands/scripts.pory"
+# 622 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R3_Text_0, MSGBOX_YESNO
-# 607 "data/maps/ParcelWetlands/scripts.pory"
+# 623 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Mora_R3_2
-# 612 "data/maps/ParcelWetlands/scripts.pory"
+# 628 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_POACHER_B_R3, ParcelWetlands_Mora_R3_Text_1
-# 613 "data/maps/ParcelWetlands/scripts.pory"
+# 629 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R3_Text_2, MSGBOX_DEFAULT
-# 614 "data/maps/ParcelWetlands/scripts.pory"
+# 630 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Mora_R3_2:
-# 608 "data/maps/ParcelWetlands/scripts.pory"
+# 624 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R2_Text_1, MSGBOX_DEFAULT
-# 609 "data/maps/ParcelWetlands/scripts.pory"
+# 625 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Mora_R4::
-# 618 "data/maps/ParcelWetlands/scripts.pory"
+# 634 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 619 "data/maps/ParcelWetlands/scripts.pory"
+# 635 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 620 "data/maps/ParcelWetlands/scripts.pory"
+# 636 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R4_Text_0, MSGBOX_YESNO
-# 621 "data/maps/ParcelWetlands/scripts.pory"
+# 637 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Mora_R4_2
-# 626 "data/maps/ParcelWetlands/scripts.pory"
+# 642 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_POACHER_B_R4, ParcelWetlands_Mora_R3_Text_1
-# 627 "data/maps/ParcelWetlands/scripts.pory"
+# 643 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R4_Text_1, MSGBOX_DEFAULT
-# 628 "data/maps/ParcelWetlands/scripts.pory"
+# 644 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Mora_R4_2:
-# 622 "data/maps/ParcelWetlands/scripts.pory"
+# 638 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R2_Text_1, MSGBOX_DEFAULT
-# 623 "data/maps/ParcelWetlands/scripts.pory"
+# 639 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Mora_R5::
-# 632 "data/maps/ParcelWetlands/scripts.pory"
+# 648 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 633 "data/maps/ParcelWetlands/scripts.pory"
+# 649 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 634 "data/maps/ParcelWetlands/scripts.pory"
+# 650 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R5_Text_0, MSGBOX_YESNO
-# 635 "data/maps/ParcelWetlands/scripts.pory"
+# 651 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Mora_R5_2
-# 640 "data/maps/ParcelWetlands/scripts.pory"
+# 656 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_POACHER_B_R5, ParcelWetlands_Mora_R5_Text_1
-# 641 "data/maps/ParcelWetlands/scripts.pory"
+# 657 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R5_Text_2, MSGBOX_DEFAULT
-# 642 "data/maps/ParcelWetlands/scripts.pory"
+# 658 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Mora_R5_2:
-# 636 "data/maps/ParcelWetlands/scripts.pory"
+# 652 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Mora_R2_Text_1, MSGBOX_DEFAULT
-# 637 "data/maps/ParcelWetlands/scripts.pory"
+# 653 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bran::
-# 646 "data/maps/ParcelWetlands/scripts.pory"
+# 662 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_FORAGER, ParcelWetlands_Bran_Text_0, ParcelWetlands_Bran_Text_1, ParcelWetlands_Bran_FirstWin
-# 650 "data/maps/ParcelWetlands/scripts.pory"
+# 666 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 651 "data/maps/ParcelWetlands/scripts.pory"
+# 667 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Bran_3
 ParcelWetlands_Bran_1:
-# 654 "data/maps/ParcelWetlands/scripts.pory"
+# 670 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Bran_8
 ParcelWetlands_Bran_6:
-# 657 "data/maps/ParcelWetlands/scripts.pory"
+# 673 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Bran_13
 ParcelWetlands_Bran_11:
-# 660 "data/maps/ParcelWetlands/scripts.pory"
+# 676 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Bran_18
 ParcelWetlands_Bran_16:
-# 663 "data/maps/ParcelWetlands/scripts.pory"
+# 679 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Bran_2:
-# 652 "data/maps/ParcelWetlands/scripts.pory"
+# 668 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bran_R2
 	goto ParcelWetlands_Bran_1
 
 ParcelWetlands_Bran_3:
-# 651 "data/maps/ParcelWetlands/scripts.pory"
+# 667 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FORAGER_R2
 	goto_if 0, ParcelWetlands_Bran_2
 	goto ParcelWetlands_Bran_1
 
 ParcelWetlands_Bran_7:
-# 655 "data/maps/ParcelWetlands/scripts.pory"
+# 671 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bran_R3
 	goto ParcelWetlands_Bran_6
 
 ParcelWetlands_Bran_8:
-# 654 "data/maps/ParcelWetlands/scripts.pory"
+# 670 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FORAGER_R3
 	goto_if 0, ParcelWetlands_Bran_7
 	goto ParcelWetlands_Bran_6
 
 ParcelWetlands_Bran_12:
-# 658 "data/maps/ParcelWetlands/scripts.pory"
+# 674 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bran_R4
 	goto ParcelWetlands_Bran_11
 
 ParcelWetlands_Bran_13:
-# 657 "data/maps/ParcelWetlands/scripts.pory"
+# 673 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FORAGER_R4
 	goto_if 0, ParcelWetlands_Bran_12
 	goto ParcelWetlands_Bran_11
 
 ParcelWetlands_Bran_17:
-# 661 "data/maps/ParcelWetlands/scripts.pory"
+# 677 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bran_R5
 	goto ParcelWetlands_Bran_16
 
 ParcelWetlands_Bran_18:
-# 660 "data/maps/ParcelWetlands/scripts.pory"
+# 676 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FORAGER_R5
 	goto_if 0, ParcelWetlands_Bran_17
 	goto ParcelWetlands_Bran_16
 
 
 ParcelWetlands_Bran_FirstWin::
-# 667 "data/maps/ParcelWetlands/scripts.pory"
+# 683 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_Text_2, MSGBOX_DEFAULT
-# 668 "data/maps/ParcelWetlands/scripts.pory"
+# 684 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bran_R2::
-# 672 "data/maps/ParcelWetlands/scripts.pory"
+# 688 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 673 "data/maps/ParcelWetlands/scripts.pory"
+# 689 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 674 "data/maps/ParcelWetlands/scripts.pory"
+# 690 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R2_Text_0, MSGBOX_YESNO
-# 675 "data/maps/ParcelWetlands/scripts.pory"
+# 691 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bran_R2_2
-# 680 "data/maps/ParcelWetlands/scripts.pory"
+# 696 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FORAGER_R2, ParcelWetlands_Bran_R2_Text_2
-# 681 "data/maps/ParcelWetlands/scripts.pory"
+# 697 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R2_Text_3, MSGBOX_DEFAULT
-# 682 "data/maps/ParcelWetlands/scripts.pory"
+# 698 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bran_R2_2:
-# 676 "data/maps/ParcelWetlands/scripts.pory"
+# 692 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R2_Text_1, MSGBOX_DEFAULT
-# 677 "data/maps/ParcelWetlands/scripts.pory"
+# 693 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bran_R3::
-# 686 "data/maps/ParcelWetlands/scripts.pory"
+# 702 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 687 "data/maps/ParcelWetlands/scripts.pory"
+# 703 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 688 "data/maps/ParcelWetlands/scripts.pory"
+# 704 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R3_Text_0, MSGBOX_YESNO
-# 689 "data/maps/ParcelWetlands/scripts.pory"
+# 705 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bran_R3_2
-# 694 "data/maps/ParcelWetlands/scripts.pory"
+# 710 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FORAGER_R3, ParcelWetlands_Bran_R3_Text_1
-# 695 "data/maps/ParcelWetlands/scripts.pory"
+# 711 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R3_Text_2, MSGBOX_DEFAULT
-# 696 "data/maps/ParcelWetlands/scripts.pory"
+# 712 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bran_R3_2:
-# 690 "data/maps/ParcelWetlands/scripts.pory"
+# 706 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R2_Text_1, MSGBOX_DEFAULT
-# 691 "data/maps/ParcelWetlands/scripts.pory"
+# 707 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bran_R4::
-# 700 "data/maps/ParcelWetlands/scripts.pory"
+# 716 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 701 "data/maps/ParcelWetlands/scripts.pory"
+# 717 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 702 "data/maps/ParcelWetlands/scripts.pory"
+# 718 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R4_Text_0, MSGBOX_YESNO
-# 703 "data/maps/ParcelWetlands/scripts.pory"
+# 719 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bran_R4_2
-# 708 "data/maps/ParcelWetlands/scripts.pory"
+# 724 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FORAGER_R4, ParcelWetlands_Bran_R4_Text_1
-# 709 "data/maps/ParcelWetlands/scripts.pory"
+# 725 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R4_Text_2, MSGBOX_DEFAULT
-# 710 "data/maps/ParcelWetlands/scripts.pory"
+# 726 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bran_R4_2:
-# 704 "data/maps/ParcelWetlands/scripts.pory"
+# 720 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R2_Text_1, MSGBOX_DEFAULT
-# 705 "data/maps/ParcelWetlands/scripts.pory"
+# 721 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bran_R5::
-# 714 "data/maps/ParcelWetlands/scripts.pory"
+# 730 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 715 "data/maps/ParcelWetlands/scripts.pory"
+# 731 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 716 "data/maps/ParcelWetlands/scripts.pory"
+# 732 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R5_Text_0, MSGBOX_YESNO
-# 717 "data/maps/ParcelWetlands/scripts.pory"
+# 733 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bran_R5_2
-# 722 "data/maps/ParcelWetlands/scripts.pory"
+# 738 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FORAGER_R5, ParcelWetlands_Bran_R5_Text_1
-# 723 "data/maps/ParcelWetlands/scripts.pory"
+# 739 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R5_Text_2, MSGBOX_DEFAULT
-# 724 "data/maps/ParcelWetlands/scripts.pory"
+# 740 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bran_R5_2:
-# 718 "data/maps/ParcelWetlands/scripts.pory"
+# 734 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bran_R2_Text_1, MSGBOX_DEFAULT
-# 719 "data/maps/ParcelWetlands/scripts.pory"
+# 735 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Kalle::
-# 730 "data/maps/ParcelWetlands/scripts.pory"
+# 746 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_KALLE, ParcelWetlands_Kalle_Text_0, ParcelWetlands_Kalle_Text_1, ParcelWetlands_Kalle_FirstWin
-# 734 "data/maps/ParcelWetlands/scripts.pory"
+# 750 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 735 "data/maps/ParcelWetlands/scripts.pory"
+# 751 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Kalle_3
 ParcelWetlands_Kalle_1:
-# 738 "data/maps/ParcelWetlands/scripts.pory"
+# 754 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Kalle_8
 ParcelWetlands_Kalle_6:
-# 741 "data/maps/ParcelWetlands/scripts.pory"
+# 757 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Kalle_13
 ParcelWetlands_Kalle_11:
-# 744 "data/maps/ParcelWetlands/scripts.pory"
+# 760 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Kalle_18
 ParcelWetlands_Kalle_16:
-# 747 "data/maps/ParcelWetlands/scripts.pory"
+# 763 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Kalle_2:
-# 736 "data/maps/ParcelWetlands/scripts.pory"
+# 752 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Kalle_R2
 	goto ParcelWetlands_Kalle_1
 
 ParcelWetlands_Kalle_3:
-# 735 "data/maps/ParcelWetlands/scripts.pory"
+# 751 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_KALLE_R2
 	goto_if 0, ParcelWetlands_Kalle_2
 	goto ParcelWetlands_Kalle_1
 
 ParcelWetlands_Kalle_7:
-# 739 "data/maps/ParcelWetlands/scripts.pory"
+# 755 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Kalle_R3
 	goto ParcelWetlands_Kalle_6
 
 ParcelWetlands_Kalle_8:
-# 738 "data/maps/ParcelWetlands/scripts.pory"
+# 754 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_KALLE_R3
 	goto_if 0, ParcelWetlands_Kalle_7
 	goto ParcelWetlands_Kalle_6
 
 ParcelWetlands_Kalle_12:
-# 742 "data/maps/ParcelWetlands/scripts.pory"
+# 758 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Kalle_R4
 	goto ParcelWetlands_Kalle_11
 
 ParcelWetlands_Kalle_13:
-# 741 "data/maps/ParcelWetlands/scripts.pory"
+# 757 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_KALLE_R4
 	goto_if 0, ParcelWetlands_Kalle_12
 	goto ParcelWetlands_Kalle_11
 
 ParcelWetlands_Kalle_17:
-# 745 "data/maps/ParcelWetlands/scripts.pory"
+# 761 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Kalle_R5
 	goto ParcelWetlands_Kalle_16
 
 ParcelWetlands_Kalle_18:
-# 744 "data/maps/ParcelWetlands/scripts.pory"
+# 760 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_KALLE_R5
 	goto_if 0, ParcelWetlands_Kalle_17
 	goto ParcelWetlands_Kalle_16
 
 
 ParcelWetlands_Kalle_FirstWin::
-# 751 "data/maps/ParcelWetlands/scripts.pory"
+# 767 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_Text_2, MSGBOX_DEFAULT
-# 752 "data/maps/ParcelWetlands/scripts.pory"
+# 768 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Kalle_R2::
-# 756 "data/maps/ParcelWetlands/scripts.pory"
+# 772 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 757 "data/maps/ParcelWetlands/scripts.pory"
+# 773 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 758 "data/maps/ParcelWetlands/scripts.pory"
+# 774 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R2_Text_0, MSGBOX_YESNO
-# 759 "data/maps/ParcelWetlands/scripts.pory"
+# 775 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Kalle_R2_2
-# 764 "data/maps/ParcelWetlands/scripts.pory"
+# 780 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_KALLE_R2, ParcelWetlands_Kalle_R2_Text_2
-# 765 "data/maps/ParcelWetlands/scripts.pory"
+# 781 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R2_Text_3, MSGBOX_DEFAULT
-# 766 "data/maps/ParcelWetlands/scripts.pory"
+# 782 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Kalle_R2_2:
-# 760 "data/maps/ParcelWetlands/scripts.pory"
+# 776 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R2_Text_1, MSGBOX_DEFAULT
-# 761 "data/maps/ParcelWetlands/scripts.pory"
+# 777 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Kalle_R3::
-# 770 "data/maps/ParcelWetlands/scripts.pory"
+# 786 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 771 "data/maps/ParcelWetlands/scripts.pory"
+# 787 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 772 "data/maps/ParcelWetlands/scripts.pory"
+# 788 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R3_Text_0, MSGBOX_YESNO
-# 773 "data/maps/ParcelWetlands/scripts.pory"
+# 789 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Kalle_R3_2
-# 778 "data/maps/ParcelWetlands/scripts.pory"
+# 794 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_KALLE_R3, ParcelWetlands_Kalle_R3_Text_1
-# 779 "data/maps/ParcelWetlands/scripts.pory"
+# 795 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R3_Text_2, MSGBOX_DEFAULT
-# 780 "data/maps/ParcelWetlands/scripts.pory"
+# 796 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Kalle_R3_2:
-# 774 "data/maps/ParcelWetlands/scripts.pory"
+# 790 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R2_Text_1, MSGBOX_DEFAULT
-# 775 "data/maps/ParcelWetlands/scripts.pory"
+# 791 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Kalle_R4::
-# 784 "data/maps/ParcelWetlands/scripts.pory"
+# 800 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 785 "data/maps/ParcelWetlands/scripts.pory"
+# 801 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 786 "data/maps/ParcelWetlands/scripts.pory"
+# 802 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R4_Text_0, MSGBOX_YESNO
-# 787 "data/maps/ParcelWetlands/scripts.pory"
+# 803 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Kalle_R4_2
-# 792 "data/maps/ParcelWetlands/scripts.pory"
+# 808 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_KALLE_R4, ParcelWetlands_Kalle_R4_Text_1
-# 793 "data/maps/ParcelWetlands/scripts.pory"
+# 809 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R4_Text_2, MSGBOX_DEFAULT
-# 794 "data/maps/ParcelWetlands/scripts.pory"
+# 810 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Kalle_R4_2:
-# 788 "data/maps/ParcelWetlands/scripts.pory"
+# 804 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R2_Text_1, MSGBOX_DEFAULT
-# 789 "data/maps/ParcelWetlands/scripts.pory"
+# 805 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Kalle_R5::
-# 798 "data/maps/ParcelWetlands/scripts.pory"
+# 814 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 799 "data/maps/ParcelWetlands/scripts.pory"
+# 815 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 800 "data/maps/ParcelWetlands/scripts.pory"
+# 816 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R5_Text_0, MSGBOX_YESNO
-# 801 "data/maps/ParcelWetlands/scripts.pory"
+# 817 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Kalle_R5_2
-# 806 "data/maps/ParcelWetlands/scripts.pory"
+# 822 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_KALLE_R5, ParcelWetlands_Kalle_R5_Text_1
-# 807 "data/maps/ParcelWetlands/scripts.pory"
+# 823 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R5_Text_2, MSGBOX_DEFAULT
-# 808 "data/maps/ParcelWetlands/scripts.pory"
+# 824 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Kalle_R5_2:
-# 802 "data/maps/ParcelWetlands/scripts.pory"
+# 818 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Kalle_R2_Text_1, MSGBOX_DEFAULT
-# 803 "data/maps/ParcelWetlands/scripts.pory"
+# 819 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Liv::
-# 812 "data/maps/ParcelWetlands/scripts.pory"
+# 828 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_LIV, ParcelWetlands_Liv_Text_0, ParcelWetlands_Liv_Text_1, ParcelWetlands_Liv_FirstWin
-# 816 "data/maps/ParcelWetlands/scripts.pory"
+# 832 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 817 "data/maps/ParcelWetlands/scripts.pory"
+# 833 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Liv_3
 ParcelWetlands_Liv_1:
-# 820 "data/maps/ParcelWetlands/scripts.pory"
+# 836 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Liv_8
 ParcelWetlands_Liv_6:
-# 823 "data/maps/ParcelWetlands/scripts.pory"
+# 839 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Liv_13
 ParcelWetlands_Liv_11:
-# 826 "data/maps/ParcelWetlands/scripts.pory"
+# 842 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Liv_18
 ParcelWetlands_Liv_16:
-# 829 "data/maps/ParcelWetlands/scripts.pory"
+# 845 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Liv_2:
-# 818 "data/maps/ParcelWetlands/scripts.pory"
+# 834 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Liv_R2
 	goto ParcelWetlands_Liv_1
 
 ParcelWetlands_Liv_3:
-# 817 "data/maps/ParcelWetlands/scripts.pory"
+# 833 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_LIV_R2
 	goto_if 0, ParcelWetlands_Liv_2
 	goto ParcelWetlands_Liv_1
 
 ParcelWetlands_Liv_7:
-# 821 "data/maps/ParcelWetlands/scripts.pory"
+# 837 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Liv_R3
 	goto ParcelWetlands_Liv_6
 
 ParcelWetlands_Liv_8:
-# 820 "data/maps/ParcelWetlands/scripts.pory"
+# 836 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_LIV_R3
 	goto_if 0, ParcelWetlands_Liv_7
 	goto ParcelWetlands_Liv_6
 
 ParcelWetlands_Liv_12:
-# 824 "data/maps/ParcelWetlands/scripts.pory"
+# 840 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Liv_R4
 	goto ParcelWetlands_Liv_11
 
 ParcelWetlands_Liv_13:
-# 823 "data/maps/ParcelWetlands/scripts.pory"
+# 839 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_LIV_R4
 	goto_if 0, ParcelWetlands_Liv_12
 	goto ParcelWetlands_Liv_11
 
 ParcelWetlands_Liv_17:
-# 827 "data/maps/ParcelWetlands/scripts.pory"
+# 843 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Liv_R5
 	goto ParcelWetlands_Liv_16
 
 ParcelWetlands_Liv_18:
-# 826 "data/maps/ParcelWetlands/scripts.pory"
+# 842 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_LIV_R5
 	goto_if 0, ParcelWetlands_Liv_17
 	goto ParcelWetlands_Liv_16
 
 
 ParcelWetlands_Liv_FirstWin::
-# 833 "data/maps/ParcelWetlands/scripts.pory"
+# 849 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_Text_2, MSGBOX_DEFAULT
-# 834 "data/maps/ParcelWetlands/scripts.pory"
+# 850 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Liv_R2::
-# 838 "data/maps/ParcelWetlands/scripts.pory"
+# 854 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 839 "data/maps/ParcelWetlands/scripts.pory"
+# 855 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 840 "data/maps/ParcelWetlands/scripts.pory"
+# 856 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R2_Text_0, MSGBOX_YESNO
-# 841 "data/maps/ParcelWetlands/scripts.pory"
+# 857 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Liv_R2_2
-# 846 "data/maps/ParcelWetlands/scripts.pory"
+# 862 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_LIV_R2, ParcelWetlands_Liv_R2_Text_2
-# 847 "data/maps/ParcelWetlands/scripts.pory"
+# 863 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R2_Text_3, MSGBOX_DEFAULT
-# 848 "data/maps/ParcelWetlands/scripts.pory"
+# 864 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Liv_R2_2:
-# 842 "data/maps/ParcelWetlands/scripts.pory"
+# 858 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R2_Text_1, MSGBOX_DEFAULT
-# 843 "data/maps/ParcelWetlands/scripts.pory"
+# 859 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Liv_R3::
-# 852 "data/maps/ParcelWetlands/scripts.pory"
+# 868 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 853 "data/maps/ParcelWetlands/scripts.pory"
+# 869 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 854 "data/maps/ParcelWetlands/scripts.pory"
+# 870 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R3_Text_0, MSGBOX_YESNO
-# 855 "data/maps/ParcelWetlands/scripts.pory"
+# 871 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Liv_R3_2
-# 860 "data/maps/ParcelWetlands/scripts.pory"
+# 876 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_LIV_R3, ParcelWetlands_Liv_R3_Text_1
-# 861 "data/maps/ParcelWetlands/scripts.pory"
+# 877 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R3_Text_2, MSGBOX_DEFAULT
-# 862 "data/maps/ParcelWetlands/scripts.pory"
+# 878 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Liv_R3_2:
-# 856 "data/maps/ParcelWetlands/scripts.pory"
+# 872 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R2_Text_1, MSGBOX_DEFAULT
-# 857 "data/maps/ParcelWetlands/scripts.pory"
+# 873 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Liv_R4::
-# 866 "data/maps/ParcelWetlands/scripts.pory"
+# 882 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 867 "data/maps/ParcelWetlands/scripts.pory"
+# 883 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 868 "data/maps/ParcelWetlands/scripts.pory"
+# 884 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R4_Text_0, MSGBOX_YESNO
-# 869 "data/maps/ParcelWetlands/scripts.pory"
+# 885 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Liv_R4_2
-# 874 "data/maps/ParcelWetlands/scripts.pory"
+# 890 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_LIV_R4, ParcelWetlands_Liv_R4_Text_1
-# 875 "data/maps/ParcelWetlands/scripts.pory"
+# 891 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R4_Text_2, MSGBOX_DEFAULT
-# 876 "data/maps/ParcelWetlands/scripts.pory"
+# 892 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Liv_R4_2:
-# 870 "data/maps/ParcelWetlands/scripts.pory"
+# 886 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R2_Text_1, MSGBOX_DEFAULT
-# 871 "data/maps/ParcelWetlands/scripts.pory"
+# 887 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Liv_R5::
-# 880 "data/maps/ParcelWetlands/scripts.pory"
+# 896 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 881 "data/maps/ParcelWetlands/scripts.pory"
+# 897 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 882 "data/maps/ParcelWetlands/scripts.pory"
+# 898 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R5_Text_0, MSGBOX_YESNO
-# 883 "data/maps/ParcelWetlands/scripts.pory"
+# 899 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Liv_R5_2
-# 888 "data/maps/ParcelWetlands/scripts.pory"
+# 904 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_LIV_R5, ParcelWetlands_Liv_R2_Text_2
-# 889 "data/maps/ParcelWetlands/scripts.pory"
+# 905 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R5_Text_1, MSGBOX_DEFAULT
-# 890 "data/maps/ParcelWetlands/scripts.pory"
+# 906 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Liv_R5_2:
-# 884 "data/maps/ParcelWetlands/scripts.pory"
+# 900 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Liv_R2_Text_1, MSGBOX_DEFAULT
-# 885 "data/maps/ParcelWetlands/scripts.pory"
+# 901 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Toke::
-# 894 "data/maps/ParcelWetlands/scripts.pory"
+# 910 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_TOKE, ParcelWetlands_Toke_Text_0, ParcelWetlands_Toke_Text_1, ParcelWetlands_Toke_FirstWin
-# 898 "data/maps/ParcelWetlands/scripts.pory"
+# 914 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 899 "data/maps/ParcelWetlands/scripts.pory"
+# 915 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Toke_3
 ParcelWetlands_Toke_1:
-# 902 "data/maps/ParcelWetlands/scripts.pory"
+# 918 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Toke_8
 ParcelWetlands_Toke_6:
-# 905 "data/maps/ParcelWetlands/scripts.pory"
+# 921 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Toke_13
 ParcelWetlands_Toke_11:
-# 908 "data/maps/ParcelWetlands/scripts.pory"
+# 924 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Toke_18
 ParcelWetlands_Toke_16:
-# 911 "data/maps/ParcelWetlands/scripts.pory"
+# 927 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Toke_2:
-# 900 "data/maps/ParcelWetlands/scripts.pory"
+# 916 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Toke_R2
 	goto ParcelWetlands_Toke_1
 
 ParcelWetlands_Toke_3:
-# 899 "data/maps/ParcelWetlands/scripts.pory"
+# 915 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_TOKE_R2
 	goto_if 0, ParcelWetlands_Toke_2
 	goto ParcelWetlands_Toke_1
 
 ParcelWetlands_Toke_7:
-# 903 "data/maps/ParcelWetlands/scripts.pory"
+# 919 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Toke_R3
 	goto ParcelWetlands_Toke_6
 
 ParcelWetlands_Toke_8:
-# 902 "data/maps/ParcelWetlands/scripts.pory"
+# 918 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_TOKE_R3
 	goto_if 0, ParcelWetlands_Toke_7
 	goto ParcelWetlands_Toke_6
 
 ParcelWetlands_Toke_12:
-# 906 "data/maps/ParcelWetlands/scripts.pory"
+# 922 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Toke_R4
 	goto ParcelWetlands_Toke_11
 
 ParcelWetlands_Toke_13:
-# 905 "data/maps/ParcelWetlands/scripts.pory"
+# 921 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_TOKE_R4
 	goto_if 0, ParcelWetlands_Toke_12
 	goto ParcelWetlands_Toke_11
 
 ParcelWetlands_Toke_17:
-# 909 "data/maps/ParcelWetlands/scripts.pory"
+# 925 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Toke_R5
 	goto ParcelWetlands_Toke_16
 
 ParcelWetlands_Toke_18:
-# 908 "data/maps/ParcelWetlands/scripts.pory"
+# 924 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_TOKE_R5
 	goto_if 0, ParcelWetlands_Toke_17
 	goto ParcelWetlands_Toke_16
 
 
 ParcelWetlands_Toke_FirstWin::
-# 915 "data/maps/ParcelWetlands/scripts.pory"
+# 931 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_Text_2, MSGBOX_DEFAULT
-# 916 "data/maps/ParcelWetlands/scripts.pory"
+# 932 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Toke_R2::
-# 920 "data/maps/ParcelWetlands/scripts.pory"
+# 936 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 921 "data/maps/ParcelWetlands/scripts.pory"
+# 937 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 922 "data/maps/ParcelWetlands/scripts.pory"
+# 938 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R2_Text_0, MSGBOX_YESNO
-# 923 "data/maps/ParcelWetlands/scripts.pory"
+# 939 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Toke_R2_2
-# 928 "data/maps/ParcelWetlands/scripts.pory"
+# 944 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_TOKE_R2, ParcelWetlands_Toke_R2_Text_2
-# 929 "data/maps/ParcelWetlands/scripts.pory"
+# 945 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R2_Text_3, MSGBOX_DEFAULT
-# 930 "data/maps/ParcelWetlands/scripts.pory"
+# 946 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Toke_R2_2:
-# 924 "data/maps/ParcelWetlands/scripts.pory"
+# 940 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R2_Text_1, MSGBOX_DEFAULT
-# 925 "data/maps/ParcelWetlands/scripts.pory"
+# 941 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Toke_R3::
-# 934 "data/maps/ParcelWetlands/scripts.pory"
+# 950 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 935 "data/maps/ParcelWetlands/scripts.pory"
+# 951 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 936 "data/maps/ParcelWetlands/scripts.pory"
+# 952 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R3_Text_0, MSGBOX_YESNO
-# 937 "data/maps/ParcelWetlands/scripts.pory"
+# 953 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Toke_R3_2
-# 942 "data/maps/ParcelWetlands/scripts.pory"
+# 958 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_TOKE_R3, ParcelWetlands_Toke_R3_Text_1
-# 943 "data/maps/ParcelWetlands/scripts.pory"
+# 959 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R3_Text_2, MSGBOX_DEFAULT
-# 944 "data/maps/ParcelWetlands/scripts.pory"
+# 960 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Toke_R3_2:
-# 938 "data/maps/ParcelWetlands/scripts.pory"
+# 954 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R2_Text_1, MSGBOX_DEFAULT
-# 939 "data/maps/ParcelWetlands/scripts.pory"
+# 955 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Toke_R4::
-# 948 "data/maps/ParcelWetlands/scripts.pory"
+# 964 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 949 "data/maps/ParcelWetlands/scripts.pory"
+# 965 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 950 "data/maps/ParcelWetlands/scripts.pory"
+# 966 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R4_Text_0, MSGBOX_YESNO
-# 951 "data/maps/ParcelWetlands/scripts.pory"
+# 967 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Toke_R4_2
-# 956 "data/maps/ParcelWetlands/scripts.pory"
+# 972 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_TOKE_R4, ParcelWetlands_Toke_R4_Text_1
-# 957 "data/maps/ParcelWetlands/scripts.pory"
+# 973 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R4_Text_2, MSGBOX_DEFAULT
-# 958 "data/maps/ParcelWetlands/scripts.pory"
+# 974 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Toke_R4_2:
-# 952 "data/maps/ParcelWetlands/scripts.pory"
+# 968 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R2_Text_1, MSGBOX_DEFAULT
-# 953 "data/maps/ParcelWetlands/scripts.pory"
+# 969 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Toke_R5::
-# 962 "data/maps/ParcelWetlands/scripts.pory"
+# 978 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 963 "data/maps/ParcelWetlands/scripts.pory"
+# 979 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 964 "data/maps/ParcelWetlands/scripts.pory"
+# 980 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R5_Text_0, MSGBOX_YESNO
-# 965 "data/maps/ParcelWetlands/scripts.pory"
+# 981 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Toke_R5_2
-# 970 "data/maps/ParcelWetlands/scripts.pory"
+# 986 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_TOKE_R5, ParcelWetlands_Toke_R3_Text_1
-# 971 "data/maps/ParcelWetlands/scripts.pory"
+# 987 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R5_Text_1, MSGBOX_DEFAULT
-# 972 "data/maps/ParcelWetlands/scripts.pory"
+# 988 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Toke_R5_2:
-# 966 "data/maps/ParcelWetlands/scripts.pory"
+# 982 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Toke_R2_Text_1, MSGBOX_DEFAULT
-# 967 "data/maps/ParcelWetlands/scripts.pory"
+# 983 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Jorun::
-# 976 "data/maps/ParcelWetlands/scripts.pory"
+# 992 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_JORUN, ParcelWetlands_Jorun_Text_0, ParcelWetlands_Jorun_Text_1, ParcelWetlands_Jorun_FirstWin
-# 980 "data/maps/ParcelWetlands/scripts.pory"
+# 996 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 981 "data/maps/ParcelWetlands/scripts.pory"
+# 997 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Jorun_3
 ParcelWetlands_Jorun_1:
-# 984 "data/maps/ParcelWetlands/scripts.pory"
+# 1000 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Jorun_8
 ParcelWetlands_Jorun_6:
-# 987 "data/maps/ParcelWetlands/scripts.pory"
+# 1003 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Jorun_13
 ParcelWetlands_Jorun_11:
-# 990 "data/maps/ParcelWetlands/scripts.pory"
+# 1006 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Jorun_18
 ParcelWetlands_Jorun_16:
-# 993 "data/maps/ParcelWetlands/scripts.pory"
+# 1009 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Jorun_2:
-# 982 "data/maps/ParcelWetlands/scripts.pory"
+# 998 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Jorun_R2
 	goto ParcelWetlands_Jorun_1
 
 ParcelWetlands_Jorun_3:
-# 981 "data/maps/ParcelWetlands/scripts.pory"
+# 997 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_JORUN_R2
 	goto_if 0, ParcelWetlands_Jorun_2
 	goto ParcelWetlands_Jorun_1
 
 ParcelWetlands_Jorun_7:
-# 985 "data/maps/ParcelWetlands/scripts.pory"
+# 1001 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Jorun_R3
 	goto ParcelWetlands_Jorun_6
 
 ParcelWetlands_Jorun_8:
-# 984 "data/maps/ParcelWetlands/scripts.pory"
+# 1000 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_JORUN_R3
 	goto_if 0, ParcelWetlands_Jorun_7
 	goto ParcelWetlands_Jorun_6
 
 ParcelWetlands_Jorun_12:
-# 988 "data/maps/ParcelWetlands/scripts.pory"
+# 1004 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Jorun_R4
 	goto ParcelWetlands_Jorun_11
 
 ParcelWetlands_Jorun_13:
-# 987 "data/maps/ParcelWetlands/scripts.pory"
+# 1003 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_JORUN_R4
 	goto_if 0, ParcelWetlands_Jorun_12
 	goto ParcelWetlands_Jorun_11
 
 ParcelWetlands_Jorun_17:
-# 991 "data/maps/ParcelWetlands/scripts.pory"
+# 1007 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Jorun_R5
 	goto ParcelWetlands_Jorun_16
 
 ParcelWetlands_Jorun_18:
-# 990 "data/maps/ParcelWetlands/scripts.pory"
+# 1006 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_JORUN_R5
 	goto_if 0, ParcelWetlands_Jorun_17
 	goto ParcelWetlands_Jorun_16
 
 
 ParcelWetlands_Jorun_FirstWin::
-# 997 "data/maps/ParcelWetlands/scripts.pory"
+# 1013 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_Text_2, MSGBOX_DEFAULT
-# 998 "data/maps/ParcelWetlands/scripts.pory"
+# 1014 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Jorun_R2::
-# 1002 "data/maps/ParcelWetlands/scripts.pory"
+# 1018 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1003 "data/maps/ParcelWetlands/scripts.pory"
+# 1019 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1004 "data/maps/ParcelWetlands/scripts.pory"
+# 1020 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R2_Text_0, MSGBOX_YESNO
-# 1005 "data/maps/ParcelWetlands/scripts.pory"
+# 1021 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Jorun_R2_2
-# 1010 "data/maps/ParcelWetlands/scripts.pory"
+# 1026 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_JORUN_R2, ParcelWetlands_Jorun_R2_Text_2
-# 1011 "data/maps/ParcelWetlands/scripts.pory"
+# 1027 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R2_Text_3, MSGBOX_DEFAULT
-# 1012 "data/maps/ParcelWetlands/scripts.pory"
+# 1028 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Jorun_R2_2:
-# 1006 "data/maps/ParcelWetlands/scripts.pory"
+# 1022 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R2_Text_1, MSGBOX_DEFAULT
-# 1007 "data/maps/ParcelWetlands/scripts.pory"
+# 1023 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Jorun_R3::
-# 1016 "data/maps/ParcelWetlands/scripts.pory"
+# 1032 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1017 "data/maps/ParcelWetlands/scripts.pory"
+# 1033 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1018 "data/maps/ParcelWetlands/scripts.pory"
+# 1034 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R3_Text_0, MSGBOX_YESNO
-# 1019 "data/maps/ParcelWetlands/scripts.pory"
+# 1035 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Jorun_R3_2
-# 1024 "data/maps/ParcelWetlands/scripts.pory"
+# 1040 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_JORUN_R3, ParcelWetlands_Jorun_R2_Text_2
-# 1025 "data/maps/ParcelWetlands/scripts.pory"
+# 1041 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R3_Text_1, MSGBOX_DEFAULT
-# 1026 "data/maps/ParcelWetlands/scripts.pory"
+# 1042 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Jorun_R3_2:
-# 1020 "data/maps/ParcelWetlands/scripts.pory"
+# 1036 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R2_Text_1, MSGBOX_DEFAULT
-# 1021 "data/maps/ParcelWetlands/scripts.pory"
+# 1037 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Jorun_R4::
-# 1030 "data/maps/ParcelWetlands/scripts.pory"
+# 1046 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1031 "data/maps/ParcelWetlands/scripts.pory"
+# 1047 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1032 "data/maps/ParcelWetlands/scripts.pory"
+# 1048 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R4_Text_0, MSGBOX_YESNO
-# 1033 "data/maps/ParcelWetlands/scripts.pory"
+# 1049 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Jorun_R4_2
-# 1038 "data/maps/ParcelWetlands/scripts.pory"
+# 1054 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_JORUN_R4, ParcelWetlands_Jorun_R4_Text_1
-# 1039 "data/maps/ParcelWetlands/scripts.pory"
+# 1055 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R4_Text_2, MSGBOX_DEFAULT
-# 1040 "data/maps/ParcelWetlands/scripts.pory"
+# 1056 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Jorun_R4_2:
-# 1034 "data/maps/ParcelWetlands/scripts.pory"
+# 1050 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R2_Text_1, MSGBOX_DEFAULT
-# 1035 "data/maps/ParcelWetlands/scripts.pory"
+# 1051 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Jorun_R5::
-# 1044 "data/maps/ParcelWetlands/scripts.pory"
+# 1060 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1045 "data/maps/ParcelWetlands/scripts.pory"
+# 1061 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1046 "data/maps/ParcelWetlands/scripts.pory"
+# 1062 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R5_Text_0, MSGBOX_YESNO
-# 1047 "data/maps/ParcelWetlands/scripts.pory"
+# 1063 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Jorun_R5_2
-# 1052 "data/maps/ParcelWetlands/scripts.pory"
+# 1068 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_JORUN_R5, ParcelWetlands_Jorun_R4_Text_1
-# 1053 "data/maps/ParcelWetlands/scripts.pory"
+# 1069 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R5_Text_1, MSGBOX_DEFAULT
-# 1054 "data/maps/ParcelWetlands/scripts.pory"
+# 1070 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Jorun_R5_2:
-# 1048 "data/maps/ParcelWetlands/scripts.pory"
+# 1064 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Jorun_R2_Text_1, MSGBOX_DEFAULT
-# 1049 "data/maps/ParcelWetlands/scripts.pory"
+# 1065 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Stian::
-# 1058 "data/maps/ParcelWetlands/scripts.pory"
+# 1074 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_STIAN, ParcelWetlands_Stian_Text_0, ParcelWetlands_Stian_Text_1, ParcelWetlands_Stian_FirstWin
-# 1062 "data/maps/ParcelWetlands/scripts.pory"
+# 1078 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1063 "data/maps/ParcelWetlands/scripts.pory"
+# 1079 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Stian_3
 ParcelWetlands_Stian_1:
-# 1066 "data/maps/ParcelWetlands/scripts.pory"
+# 1082 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Stian_8
 ParcelWetlands_Stian_6:
-# 1069 "data/maps/ParcelWetlands/scripts.pory"
+# 1085 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Stian_13
 ParcelWetlands_Stian_11:
-# 1072 "data/maps/ParcelWetlands/scripts.pory"
+# 1088 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Stian_18
 ParcelWetlands_Stian_16:
-# 1075 "data/maps/ParcelWetlands/scripts.pory"
+# 1091 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Stian_2:
-# 1064 "data/maps/ParcelWetlands/scripts.pory"
+# 1080 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Stian_R2
 	goto ParcelWetlands_Stian_1
 
 ParcelWetlands_Stian_3:
-# 1063 "data/maps/ParcelWetlands/scripts.pory"
+# 1079 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_STIAN_R2
 	goto_if 0, ParcelWetlands_Stian_2
 	goto ParcelWetlands_Stian_1
 
 ParcelWetlands_Stian_7:
-# 1067 "data/maps/ParcelWetlands/scripts.pory"
+# 1083 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Stian_R3
 	goto ParcelWetlands_Stian_6
 
 ParcelWetlands_Stian_8:
-# 1066 "data/maps/ParcelWetlands/scripts.pory"
+# 1082 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_STIAN_R3
 	goto_if 0, ParcelWetlands_Stian_7
 	goto ParcelWetlands_Stian_6
 
 ParcelWetlands_Stian_12:
-# 1070 "data/maps/ParcelWetlands/scripts.pory"
+# 1086 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Stian_R4
 	goto ParcelWetlands_Stian_11
 
 ParcelWetlands_Stian_13:
-# 1069 "data/maps/ParcelWetlands/scripts.pory"
+# 1085 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_STIAN_R4
 	goto_if 0, ParcelWetlands_Stian_12
 	goto ParcelWetlands_Stian_11
 
 ParcelWetlands_Stian_17:
-# 1073 "data/maps/ParcelWetlands/scripts.pory"
+# 1089 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Stian_R5
 	goto ParcelWetlands_Stian_16
 
 ParcelWetlands_Stian_18:
-# 1072 "data/maps/ParcelWetlands/scripts.pory"
+# 1088 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_STIAN_R5
 	goto_if 0, ParcelWetlands_Stian_17
 	goto ParcelWetlands_Stian_16
 
 
 ParcelWetlands_Stian_FirstWin::
-# 1079 "data/maps/ParcelWetlands/scripts.pory"
+# 1095 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_Text_2, MSGBOX_DEFAULT
-# 1080 "data/maps/ParcelWetlands/scripts.pory"
+# 1096 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Stian_R2::
-# 1084 "data/maps/ParcelWetlands/scripts.pory"
+# 1100 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1085 "data/maps/ParcelWetlands/scripts.pory"
+# 1101 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1086 "data/maps/ParcelWetlands/scripts.pory"
+# 1102 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R2_Text_0, MSGBOX_YESNO
-# 1087 "data/maps/ParcelWetlands/scripts.pory"
+# 1103 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Stian_R2_2
-# 1092 "data/maps/ParcelWetlands/scripts.pory"
+# 1108 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_STIAN_R2, ParcelWetlands_Stian_R2_Text_2
-# 1093 "data/maps/ParcelWetlands/scripts.pory"
+# 1109 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R2_Text_3, MSGBOX_DEFAULT
-# 1094 "data/maps/ParcelWetlands/scripts.pory"
+# 1110 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Stian_R2_2:
-# 1088 "data/maps/ParcelWetlands/scripts.pory"
+# 1104 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R2_Text_1, MSGBOX_DEFAULT
-# 1089 "data/maps/ParcelWetlands/scripts.pory"
+# 1105 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Stian_R3::
-# 1098 "data/maps/ParcelWetlands/scripts.pory"
+# 1114 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1099 "data/maps/ParcelWetlands/scripts.pory"
+# 1115 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1100 "data/maps/ParcelWetlands/scripts.pory"
+# 1116 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R3_Text_0, MSGBOX_YESNO
-# 1101 "data/maps/ParcelWetlands/scripts.pory"
+# 1117 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Stian_R3_2
-# 1106 "data/maps/ParcelWetlands/scripts.pory"
+# 1122 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_STIAN_R3, ParcelWetlands_Stian_R3_Text_1
-# 1107 "data/maps/ParcelWetlands/scripts.pory"
+# 1123 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R3_Text_2, MSGBOX_DEFAULT
-# 1108 "data/maps/ParcelWetlands/scripts.pory"
+# 1124 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Stian_R3_2:
-# 1102 "data/maps/ParcelWetlands/scripts.pory"
+# 1118 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R2_Text_1, MSGBOX_DEFAULT
-# 1103 "data/maps/ParcelWetlands/scripts.pory"
+# 1119 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Stian_R4::
-# 1112 "data/maps/ParcelWetlands/scripts.pory"
+# 1128 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1113 "data/maps/ParcelWetlands/scripts.pory"
+# 1129 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1114 "data/maps/ParcelWetlands/scripts.pory"
+# 1130 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R4_Text_0, MSGBOX_YESNO
-# 1115 "data/maps/ParcelWetlands/scripts.pory"
+# 1131 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Stian_R4_2
-# 1120 "data/maps/ParcelWetlands/scripts.pory"
+# 1136 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_STIAN_R4, ParcelWetlands_Stian_R4_Text_1
-# 1121 "data/maps/ParcelWetlands/scripts.pory"
+# 1137 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R4_Text_2, MSGBOX_DEFAULT
-# 1122 "data/maps/ParcelWetlands/scripts.pory"
+# 1138 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Stian_R4_2:
-# 1116 "data/maps/ParcelWetlands/scripts.pory"
+# 1132 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R2_Text_1, MSGBOX_DEFAULT
-# 1117 "data/maps/ParcelWetlands/scripts.pory"
+# 1133 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Stian_R5::
-# 1126 "data/maps/ParcelWetlands/scripts.pory"
+# 1142 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1127 "data/maps/ParcelWetlands/scripts.pory"
+# 1143 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1128 "data/maps/ParcelWetlands/scripts.pory"
+# 1144 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R5_Text_0, MSGBOX_YESNO
-# 1129 "data/maps/ParcelWetlands/scripts.pory"
+# 1145 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Stian_R5_2
-# 1134 "data/maps/ParcelWetlands/scripts.pory"
+# 1150 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_STIAN_R5, ParcelWetlands_Stian_R5_Text_1
-# 1135 "data/maps/ParcelWetlands/scripts.pory"
+# 1151 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R5_Text_2, MSGBOX_DEFAULT
-# 1136 "data/maps/ParcelWetlands/scripts.pory"
+# 1152 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Stian_R5_2:
-# 1130 "data/maps/ParcelWetlands/scripts.pory"
+# 1146 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stian_R2_Text_1, MSGBOX_DEFAULT
-# 1131 "data/maps/ParcelWetlands/scripts.pory"
+# 1147 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Asta::
-# 1140 "data/maps/ParcelWetlands/scripts.pory"
+# 1156 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_ASTA, ParcelWetlands_Asta_Text_0, ParcelWetlands_Asta_Text_1, ParcelWetlands_Asta_FirstWin
-# 1144 "data/maps/ParcelWetlands/scripts.pory"
+# 1160 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1145 "data/maps/ParcelWetlands/scripts.pory"
+# 1161 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Asta_3
 ParcelWetlands_Asta_1:
-# 1148 "data/maps/ParcelWetlands/scripts.pory"
+# 1164 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Asta_8
 ParcelWetlands_Asta_6:
-# 1151 "data/maps/ParcelWetlands/scripts.pory"
+# 1167 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Asta_13
 ParcelWetlands_Asta_11:
-# 1154 "data/maps/ParcelWetlands/scripts.pory"
+# 1170 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Asta_18
 ParcelWetlands_Asta_16:
-# 1157 "data/maps/ParcelWetlands/scripts.pory"
+# 1173 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Asta_2:
-# 1146 "data/maps/ParcelWetlands/scripts.pory"
+# 1162 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Asta_R2
 	goto ParcelWetlands_Asta_1
 
 ParcelWetlands_Asta_3:
-# 1145 "data/maps/ParcelWetlands/scripts.pory"
+# 1161 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ASTA_R2
 	goto_if 0, ParcelWetlands_Asta_2
 	goto ParcelWetlands_Asta_1
 
 ParcelWetlands_Asta_7:
-# 1149 "data/maps/ParcelWetlands/scripts.pory"
+# 1165 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Asta_R3
 	goto ParcelWetlands_Asta_6
 
 ParcelWetlands_Asta_8:
-# 1148 "data/maps/ParcelWetlands/scripts.pory"
+# 1164 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ASTA_R3
 	goto_if 0, ParcelWetlands_Asta_7
 	goto ParcelWetlands_Asta_6
 
 ParcelWetlands_Asta_12:
-# 1152 "data/maps/ParcelWetlands/scripts.pory"
+# 1168 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Asta_R4
 	goto ParcelWetlands_Asta_11
 
 ParcelWetlands_Asta_13:
-# 1151 "data/maps/ParcelWetlands/scripts.pory"
+# 1167 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ASTA_R4
 	goto_if 0, ParcelWetlands_Asta_12
 	goto ParcelWetlands_Asta_11
 
 ParcelWetlands_Asta_17:
-# 1155 "data/maps/ParcelWetlands/scripts.pory"
+# 1171 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Asta_R5
 	goto ParcelWetlands_Asta_16
 
 ParcelWetlands_Asta_18:
-# 1154 "data/maps/ParcelWetlands/scripts.pory"
+# 1170 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ASTA_R5
 	goto_if 0, ParcelWetlands_Asta_17
 	goto ParcelWetlands_Asta_16
 
 
 ParcelWetlands_Asta_FirstWin::
-# 1161 "data/maps/ParcelWetlands/scripts.pory"
+# 1177 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_Text_2, MSGBOX_DEFAULT
-# 1162 "data/maps/ParcelWetlands/scripts.pory"
+# 1178 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Asta_R2::
-# 1166 "data/maps/ParcelWetlands/scripts.pory"
+# 1182 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1167 "data/maps/ParcelWetlands/scripts.pory"
+# 1183 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1168 "data/maps/ParcelWetlands/scripts.pory"
+# 1184 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R2_Text_0, MSGBOX_YESNO
-# 1169 "data/maps/ParcelWetlands/scripts.pory"
+# 1185 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Asta_R2_2
-# 1174 "data/maps/ParcelWetlands/scripts.pory"
+# 1190 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ASTA_R2, ParcelWetlands_Asta_R2_Text_2
-# 1175 "data/maps/ParcelWetlands/scripts.pory"
+# 1191 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R2_Text_3, MSGBOX_DEFAULT
-# 1176 "data/maps/ParcelWetlands/scripts.pory"
+# 1192 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Asta_R2_2:
-# 1170 "data/maps/ParcelWetlands/scripts.pory"
+# 1186 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R2_Text_1, MSGBOX_DEFAULT
-# 1171 "data/maps/ParcelWetlands/scripts.pory"
+# 1187 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Asta_R3::
-# 1180 "data/maps/ParcelWetlands/scripts.pory"
+# 1196 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1181 "data/maps/ParcelWetlands/scripts.pory"
+# 1197 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1182 "data/maps/ParcelWetlands/scripts.pory"
+# 1198 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R3_Text_0, MSGBOX_YESNO
-# 1183 "data/maps/ParcelWetlands/scripts.pory"
+# 1199 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Asta_R3_2
-# 1188 "data/maps/ParcelWetlands/scripts.pory"
+# 1204 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ASTA_R3, ParcelWetlands_Asta_R2_Text_2
-# 1189 "data/maps/ParcelWetlands/scripts.pory"
+# 1205 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R3_Text_1, MSGBOX_DEFAULT
-# 1190 "data/maps/ParcelWetlands/scripts.pory"
+# 1206 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Asta_R3_2:
-# 1184 "data/maps/ParcelWetlands/scripts.pory"
+# 1200 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R2_Text_1, MSGBOX_DEFAULT
-# 1185 "data/maps/ParcelWetlands/scripts.pory"
+# 1201 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Asta_R4::
-# 1194 "data/maps/ParcelWetlands/scripts.pory"
+# 1210 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1195 "data/maps/ParcelWetlands/scripts.pory"
+# 1211 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1196 "data/maps/ParcelWetlands/scripts.pory"
+# 1212 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R4_Text_0, MSGBOX_YESNO
-# 1197 "data/maps/ParcelWetlands/scripts.pory"
+# 1213 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Asta_R4_2
-# 1202 "data/maps/ParcelWetlands/scripts.pory"
+# 1218 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ASTA_R4, ParcelWetlands_Asta_R4_Text_1
-# 1203 "data/maps/ParcelWetlands/scripts.pory"
+# 1219 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R4_Text_2, MSGBOX_DEFAULT
-# 1204 "data/maps/ParcelWetlands/scripts.pory"
+# 1220 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Asta_R4_2:
-# 1198 "data/maps/ParcelWetlands/scripts.pory"
+# 1214 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R2_Text_1, MSGBOX_DEFAULT
-# 1199 "data/maps/ParcelWetlands/scripts.pory"
+# 1215 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Asta_R5::
-# 1208 "data/maps/ParcelWetlands/scripts.pory"
+# 1224 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1209 "data/maps/ParcelWetlands/scripts.pory"
+# 1225 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1210 "data/maps/ParcelWetlands/scripts.pory"
+# 1226 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R5_Text_0, MSGBOX_YESNO
-# 1211 "data/maps/ParcelWetlands/scripts.pory"
+# 1227 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Asta_R5_2
-# 1216 "data/maps/ParcelWetlands/scripts.pory"
+# 1232 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ASTA_R5, ParcelWetlands_Asta_R5_Text_1
-# 1217 "data/maps/ParcelWetlands/scripts.pory"
+# 1233 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R5_Text_2, MSGBOX_DEFAULT
-# 1218 "data/maps/ParcelWetlands/scripts.pory"
+# 1234 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Asta_R5_2:
-# 1212 "data/maps/ParcelWetlands/scripts.pory"
+# 1228 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Asta_R2_Text_1, MSGBOX_DEFAULT
-# 1213 "data/maps/ParcelWetlands/scripts.pory"
+# 1229 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bjarte::
-# 1222 "data/maps/ParcelWetlands/scripts.pory"
+# 1238 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_BJARTE, ParcelWetlands_Bjarte_Text_0, ParcelWetlands_Bjarte_Text_1, ParcelWetlands_Bjarte_FirstWin
-# 1226 "data/maps/ParcelWetlands/scripts.pory"
+# 1242 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1227 "data/maps/ParcelWetlands/scripts.pory"
+# 1243 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Bjarte_3
 ParcelWetlands_Bjarte_1:
-# 1230 "data/maps/ParcelWetlands/scripts.pory"
+# 1246 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Bjarte_8
 ParcelWetlands_Bjarte_6:
-# 1233 "data/maps/ParcelWetlands/scripts.pory"
+# 1249 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Bjarte_13
 ParcelWetlands_Bjarte_11:
-# 1236 "data/maps/ParcelWetlands/scripts.pory"
+# 1252 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Bjarte_18
 ParcelWetlands_Bjarte_16:
-# 1239 "data/maps/ParcelWetlands/scripts.pory"
+# 1255 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Bjarte_2:
-# 1228 "data/maps/ParcelWetlands/scripts.pory"
+# 1244 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bjarte_R2
 	goto ParcelWetlands_Bjarte_1
 
 ParcelWetlands_Bjarte_3:
-# 1227 "data/maps/ParcelWetlands/scripts.pory"
+# 1243 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_BJARTE_R2
 	goto_if 0, ParcelWetlands_Bjarte_2
 	goto ParcelWetlands_Bjarte_1
 
 ParcelWetlands_Bjarte_7:
-# 1231 "data/maps/ParcelWetlands/scripts.pory"
+# 1247 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bjarte_R3
 	goto ParcelWetlands_Bjarte_6
 
 ParcelWetlands_Bjarte_8:
-# 1230 "data/maps/ParcelWetlands/scripts.pory"
+# 1246 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_BJARTE_R3
 	goto_if 0, ParcelWetlands_Bjarte_7
 	goto ParcelWetlands_Bjarte_6
 
 ParcelWetlands_Bjarte_12:
-# 1234 "data/maps/ParcelWetlands/scripts.pory"
+# 1250 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bjarte_R4
 	goto ParcelWetlands_Bjarte_11
 
 ParcelWetlands_Bjarte_13:
-# 1233 "data/maps/ParcelWetlands/scripts.pory"
+# 1249 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_BJARTE_R4
 	goto_if 0, ParcelWetlands_Bjarte_12
 	goto ParcelWetlands_Bjarte_11
 
 ParcelWetlands_Bjarte_17:
-# 1237 "data/maps/ParcelWetlands/scripts.pory"
+# 1253 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Bjarte_R5
 	goto ParcelWetlands_Bjarte_16
 
 ParcelWetlands_Bjarte_18:
-# 1236 "data/maps/ParcelWetlands/scripts.pory"
+# 1252 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_BJARTE_R5
 	goto_if 0, ParcelWetlands_Bjarte_17
 	goto ParcelWetlands_Bjarte_16
 
 
 ParcelWetlands_Bjarte_FirstWin::
-# 1243 "data/maps/ParcelWetlands/scripts.pory"
+# 1259 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_Text_2, MSGBOX_DEFAULT
-# 1244 "data/maps/ParcelWetlands/scripts.pory"
+# 1260 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bjarte_R2::
-# 1248 "data/maps/ParcelWetlands/scripts.pory"
+# 1264 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1249 "data/maps/ParcelWetlands/scripts.pory"
+# 1265 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1250 "data/maps/ParcelWetlands/scripts.pory"
+# 1266 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R2_Text_0, MSGBOX_YESNO
-# 1251 "data/maps/ParcelWetlands/scripts.pory"
+# 1267 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bjarte_R2_2
-# 1256 "data/maps/ParcelWetlands/scripts.pory"
+# 1272 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_BJARTE_R2, ParcelWetlands_Bjarte_R2_Text_2
-# 1257 "data/maps/ParcelWetlands/scripts.pory"
+# 1273 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R2_Text_3, MSGBOX_DEFAULT
-# 1258 "data/maps/ParcelWetlands/scripts.pory"
+# 1274 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bjarte_R2_2:
-# 1252 "data/maps/ParcelWetlands/scripts.pory"
+# 1268 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R2_Text_1, MSGBOX_DEFAULT
-# 1253 "data/maps/ParcelWetlands/scripts.pory"
+# 1269 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bjarte_R3::
-# 1262 "data/maps/ParcelWetlands/scripts.pory"
+# 1278 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1263 "data/maps/ParcelWetlands/scripts.pory"
+# 1279 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1264 "data/maps/ParcelWetlands/scripts.pory"
+# 1280 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R3_Text_0, MSGBOX_YESNO
-# 1265 "data/maps/ParcelWetlands/scripts.pory"
+# 1281 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bjarte_R3_2
-# 1270 "data/maps/ParcelWetlands/scripts.pory"
+# 1286 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_BJARTE_R3, ParcelWetlands_Bjarte_R3_Text_1
-# 1271 "data/maps/ParcelWetlands/scripts.pory"
+# 1287 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R3_Text_2, MSGBOX_DEFAULT
-# 1272 "data/maps/ParcelWetlands/scripts.pory"
+# 1288 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bjarte_R3_2:
-# 1266 "data/maps/ParcelWetlands/scripts.pory"
+# 1282 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R2_Text_1, MSGBOX_DEFAULT
-# 1267 "data/maps/ParcelWetlands/scripts.pory"
+# 1283 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bjarte_R4::
-# 1276 "data/maps/ParcelWetlands/scripts.pory"
+# 1292 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1277 "data/maps/ParcelWetlands/scripts.pory"
+# 1293 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1278 "data/maps/ParcelWetlands/scripts.pory"
+# 1294 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R4_Text_0, MSGBOX_YESNO
-# 1279 "data/maps/ParcelWetlands/scripts.pory"
+# 1295 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bjarte_R4_2
-# 1284 "data/maps/ParcelWetlands/scripts.pory"
+# 1300 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_BJARTE_R4, ParcelWetlands_Bjarte_R4_Text_1
-# 1285 "data/maps/ParcelWetlands/scripts.pory"
+# 1301 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R4_Text_2, MSGBOX_DEFAULT
-# 1286 "data/maps/ParcelWetlands/scripts.pory"
+# 1302 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bjarte_R4_2:
-# 1280 "data/maps/ParcelWetlands/scripts.pory"
+# 1296 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R2_Text_1, MSGBOX_DEFAULT
-# 1281 "data/maps/ParcelWetlands/scripts.pory"
+# 1297 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Bjarte_R5::
-# 1290 "data/maps/ParcelWetlands/scripts.pory"
+# 1306 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1291 "data/maps/ParcelWetlands/scripts.pory"
+# 1307 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1292 "data/maps/ParcelWetlands/scripts.pory"
+# 1308 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R5_Text_0, MSGBOX_YESNO
-# 1293 "data/maps/ParcelWetlands/scripts.pory"
+# 1309 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Bjarte_R5_2
-# 1298 "data/maps/ParcelWetlands/scripts.pory"
+# 1314 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_BJARTE_R5, ParcelWetlands_Bjarte_R5_Text_1
-# 1299 "data/maps/ParcelWetlands/scripts.pory"
+# 1315 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R5_Text_2, MSGBOX_DEFAULT
-# 1300 "data/maps/ParcelWetlands/scripts.pory"
+# 1316 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Bjarte_R5_2:
-# 1294 "data/maps/ParcelWetlands/scripts.pory"
+# 1310 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Bjarte_R2_Text_1, MSGBOX_DEFAULT
-# 1295 "data/maps/ParcelWetlands/scripts.pory"
+# 1311 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Odd::
-# 1304 "data/maps/ParcelWetlands/scripts.pory"
+# 1320 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_ODD, ParcelWetlands_Odd_Text_0, ParcelWetlands_Odd_Text_1, ParcelWetlands_Odd_FirstWin
-# 1308 "data/maps/ParcelWetlands/scripts.pory"
+# 1324 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1309 "data/maps/ParcelWetlands/scripts.pory"
+# 1325 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Odd_3
 ParcelWetlands_Odd_1:
-# 1312 "data/maps/ParcelWetlands/scripts.pory"
+# 1328 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Odd_8
 ParcelWetlands_Odd_6:
-# 1315 "data/maps/ParcelWetlands/scripts.pory"
+# 1331 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Odd_13
 ParcelWetlands_Odd_11:
-# 1318 "data/maps/ParcelWetlands/scripts.pory"
+# 1334 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Odd_18
 ParcelWetlands_Odd_16:
-# 1321 "data/maps/ParcelWetlands/scripts.pory"
+# 1337 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Odd_2:
-# 1310 "data/maps/ParcelWetlands/scripts.pory"
+# 1326 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Odd_R2
 	goto ParcelWetlands_Odd_1
 
 ParcelWetlands_Odd_3:
-# 1309 "data/maps/ParcelWetlands/scripts.pory"
+# 1325 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ODD_R2
 	goto_if 0, ParcelWetlands_Odd_2
 	goto ParcelWetlands_Odd_1
 
 ParcelWetlands_Odd_7:
-# 1313 "data/maps/ParcelWetlands/scripts.pory"
+# 1329 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Odd_R3
 	goto ParcelWetlands_Odd_6
 
 ParcelWetlands_Odd_8:
-# 1312 "data/maps/ParcelWetlands/scripts.pory"
+# 1328 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ODD_R3
 	goto_if 0, ParcelWetlands_Odd_7
 	goto ParcelWetlands_Odd_6
 
 ParcelWetlands_Odd_12:
-# 1316 "data/maps/ParcelWetlands/scripts.pory"
+# 1332 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Odd_R4
 	goto ParcelWetlands_Odd_11
 
 ParcelWetlands_Odd_13:
-# 1315 "data/maps/ParcelWetlands/scripts.pory"
+# 1331 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ODD_R4
 	goto_if 0, ParcelWetlands_Odd_12
 	goto ParcelWetlands_Odd_11
 
 ParcelWetlands_Odd_17:
-# 1319 "data/maps/ParcelWetlands/scripts.pory"
+# 1335 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Odd_R5
 	goto ParcelWetlands_Odd_16
 
 ParcelWetlands_Odd_18:
-# 1318 "data/maps/ParcelWetlands/scripts.pory"
+# 1334 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ODD_R5
 	goto_if 0, ParcelWetlands_Odd_17
 	goto ParcelWetlands_Odd_16
 
 
 ParcelWetlands_Odd_FirstWin::
-# 1325 "data/maps/ParcelWetlands/scripts.pory"
+# 1341 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_Text_2, MSGBOX_DEFAULT
-# 1326 "data/maps/ParcelWetlands/scripts.pory"
+# 1342 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Odd_R2::
-# 1330 "data/maps/ParcelWetlands/scripts.pory"
+# 1346 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1331 "data/maps/ParcelWetlands/scripts.pory"
+# 1347 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1332 "data/maps/ParcelWetlands/scripts.pory"
+# 1348 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R2_Text_0, MSGBOX_YESNO
-# 1333 "data/maps/ParcelWetlands/scripts.pory"
+# 1349 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Odd_R2_2
-# 1338 "data/maps/ParcelWetlands/scripts.pory"
+# 1354 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ODD_R2, ParcelWetlands_Odd_R2_Text_2
-# 1339 "data/maps/ParcelWetlands/scripts.pory"
+# 1355 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R2_Text_3, MSGBOX_DEFAULT
-# 1340 "data/maps/ParcelWetlands/scripts.pory"
+# 1356 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Odd_R2_2:
-# 1334 "data/maps/ParcelWetlands/scripts.pory"
+# 1350 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R2_Text_1, MSGBOX_DEFAULT
-# 1335 "data/maps/ParcelWetlands/scripts.pory"
+# 1351 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Odd_R3::
-# 1344 "data/maps/ParcelWetlands/scripts.pory"
+# 1360 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1345 "data/maps/ParcelWetlands/scripts.pory"
+# 1361 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1346 "data/maps/ParcelWetlands/scripts.pory"
+# 1362 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R3_Text_0, MSGBOX_YESNO
-# 1347 "data/maps/ParcelWetlands/scripts.pory"
+# 1363 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Odd_R3_2
-# 1352 "data/maps/ParcelWetlands/scripts.pory"
+# 1368 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ODD_R3, ParcelWetlands_Odd_R3_Text_1
-# 1353 "data/maps/ParcelWetlands/scripts.pory"
+# 1369 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R3_Text_2, MSGBOX_DEFAULT
-# 1354 "data/maps/ParcelWetlands/scripts.pory"
+# 1370 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Odd_R3_2:
-# 1348 "data/maps/ParcelWetlands/scripts.pory"
+# 1364 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R2_Text_1, MSGBOX_DEFAULT
-# 1349 "data/maps/ParcelWetlands/scripts.pory"
+# 1365 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Odd_R4::
-# 1358 "data/maps/ParcelWetlands/scripts.pory"
+# 1374 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1359 "data/maps/ParcelWetlands/scripts.pory"
+# 1375 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1360 "data/maps/ParcelWetlands/scripts.pory"
+# 1376 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R4_Text_0, MSGBOX_YESNO
-# 1361 "data/maps/ParcelWetlands/scripts.pory"
+# 1377 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Odd_R4_2
-# 1366 "data/maps/ParcelWetlands/scripts.pory"
+# 1382 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ODD_R4, ParcelWetlands_Odd_R4_Text_1
-# 1367 "data/maps/ParcelWetlands/scripts.pory"
+# 1383 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R4_Text_2, MSGBOX_DEFAULT
-# 1368 "data/maps/ParcelWetlands/scripts.pory"
+# 1384 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Odd_R4_2:
-# 1362 "data/maps/ParcelWetlands/scripts.pory"
+# 1378 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R2_Text_1, MSGBOX_DEFAULT
-# 1363 "data/maps/ParcelWetlands/scripts.pory"
+# 1379 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Odd_R5::
-# 1372 "data/maps/ParcelWetlands/scripts.pory"
+# 1388 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1373 "data/maps/ParcelWetlands/scripts.pory"
+# 1389 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1374 "data/maps/ParcelWetlands/scripts.pory"
+# 1390 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R5_Text_0, MSGBOX_YESNO
-# 1375 "data/maps/ParcelWetlands/scripts.pory"
+# 1391 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Odd_R5_2
-# 1380 "data/maps/ParcelWetlands/scripts.pory"
+# 1396 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ODD_R5, ParcelWetlands_Odd_R4_Text_1
-# 1381 "data/maps/ParcelWetlands/scripts.pory"
+# 1397 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R5_Text_1, MSGBOX_DEFAULT
-# 1382 "data/maps/ParcelWetlands/scripts.pory"
+# 1398 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Odd_R5_2:
-# 1376 "data/maps/ParcelWetlands/scripts.pory"
+# 1392 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Odd_R2_Text_1, MSGBOX_DEFAULT
-# 1377 "data/maps/ParcelWetlands/scripts.pory"
+# 1393 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Haakon::
-# 1386 "data/maps/ParcelWetlands/scripts.pory"
+# 1402 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_HAAKON, ParcelWetlands_Haakon_Text_0, ParcelWetlands_Haakon_Text_1, ParcelWetlands_Haakon_FirstWin
-# 1390 "data/maps/ParcelWetlands/scripts.pory"
+# 1406 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1391 "data/maps/ParcelWetlands/scripts.pory"
+# 1407 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Haakon_3
 ParcelWetlands_Haakon_1:
-# 1394 "data/maps/ParcelWetlands/scripts.pory"
+# 1410 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Haakon_8
 ParcelWetlands_Haakon_6:
-# 1397 "data/maps/ParcelWetlands/scripts.pory"
+# 1413 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Haakon_13
 ParcelWetlands_Haakon_11:
-# 1400 "data/maps/ParcelWetlands/scripts.pory"
+# 1416 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Haakon_18
 ParcelWetlands_Haakon_16:
-# 1403 "data/maps/ParcelWetlands/scripts.pory"
+# 1419 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Haakon_2:
-# 1392 "data/maps/ParcelWetlands/scripts.pory"
+# 1408 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Haakon_R2
 	goto ParcelWetlands_Haakon_1
 
 ParcelWetlands_Haakon_3:
-# 1391 "data/maps/ParcelWetlands/scripts.pory"
+# 1407 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_HAAKON_R2
 	goto_if 0, ParcelWetlands_Haakon_2
 	goto ParcelWetlands_Haakon_1
 
 ParcelWetlands_Haakon_7:
-# 1395 "data/maps/ParcelWetlands/scripts.pory"
+# 1411 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Haakon_R3
 	goto ParcelWetlands_Haakon_6
 
 ParcelWetlands_Haakon_8:
-# 1394 "data/maps/ParcelWetlands/scripts.pory"
+# 1410 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_HAAKON_R3
 	goto_if 0, ParcelWetlands_Haakon_7
 	goto ParcelWetlands_Haakon_6
 
 ParcelWetlands_Haakon_12:
-# 1398 "data/maps/ParcelWetlands/scripts.pory"
+# 1414 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Haakon_R4
 	goto ParcelWetlands_Haakon_11
 
 ParcelWetlands_Haakon_13:
-# 1397 "data/maps/ParcelWetlands/scripts.pory"
+# 1413 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_HAAKON_R4
 	goto_if 0, ParcelWetlands_Haakon_12
 	goto ParcelWetlands_Haakon_11
 
 ParcelWetlands_Haakon_17:
-# 1401 "data/maps/ParcelWetlands/scripts.pory"
+# 1417 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Haakon_R5
 	goto ParcelWetlands_Haakon_16
 
 ParcelWetlands_Haakon_18:
-# 1400 "data/maps/ParcelWetlands/scripts.pory"
+# 1416 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_HAAKON_R5
 	goto_if 0, ParcelWetlands_Haakon_17
 	goto ParcelWetlands_Haakon_16
 
 
 ParcelWetlands_Haakon_FirstWin::
-# 1407 "data/maps/ParcelWetlands/scripts.pory"
+# 1423 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_Text_2, MSGBOX_DEFAULT
-# 1408 "data/maps/ParcelWetlands/scripts.pory"
+# 1424 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Haakon_R2::
-# 1412 "data/maps/ParcelWetlands/scripts.pory"
+# 1428 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1413 "data/maps/ParcelWetlands/scripts.pory"
+# 1429 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1414 "data/maps/ParcelWetlands/scripts.pory"
+# 1430 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R2_Text_0, MSGBOX_YESNO
-# 1415 "data/maps/ParcelWetlands/scripts.pory"
+# 1431 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Haakon_R2_2
-# 1420 "data/maps/ParcelWetlands/scripts.pory"
+# 1436 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_HAAKON_R2, ParcelWetlands_Haakon_R2_Text_2
-# 1421 "data/maps/ParcelWetlands/scripts.pory"
+# 1437 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R2_Text_3, MSGBOX_DEFAULT
-# 1422 "data/maps/ParcelWetlands/scripts.pory"
+# 1438 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Haakon_R2_2:
-# 1416 "data/maps/ParcelWetlands/scripts.pory"
+# 1432 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R2_Text_1, MSGBOX_DEFAULT
-# 1417 "data/maps/ParcelWetlands/scripts.pory"
+# 1433 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Haakon_R3::
-# 1426 "data/maps/ParcelWetlands/scripts.pory"
+# 1442 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1427 "data/maps/ParcelWetlands/scripts.pory"
+# 1443 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1428 "data/maps/ParcelWetlands/scripts.pory"
+# 1444 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R3_Text_0, MSGBOX_YESNO
-# 1429 "data/maps/ParcelWetlands/scripts.pory"
+# 1445 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Haakon_R3_2
-# 1434 "data/maps/ParcelWetlands/scripts.pory"
+# 1450 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_HAAKON_R3, ParcelWetlands_Haakon_R3_Text_1
-# 1435 "data/maps/ParcelWetlands/scripts.pory"
+# 1451 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R3_Text_2, MSGBOX_DEFAULT
-# 1436 "data/maps/ParcelWetlands/scripts.pory"
+# 1452 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Haakon_R3_2:
-# 1430 "data/maps/ParcelWetlands/scripts.pory"
+# 1446 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R2_Text_1, MSGBOX_DEFAULT
-# 1431 "data/maps/ParcelWetlands/scripts.pory"
+# 1447 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Haakon_R4::
-# 1440 "data/maps/ParcelWetlands/scripts.pory"
+# 1456 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1441 "data/maps/ParcelWetlands/scripts.pory"
+# 1457 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1442 "data/maps/ParcelWetlands/scripts.pory"
+# 1458 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R4_Text_0, MSGBOX_YESNO
-# 1443 "data/maps/ParcelWetlands/scripts.pory"
+# 1459 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Haakon_R4_2
-# 1448 "data/maps/ParcelWetlands/scripts.pory"
+# 1464 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_HAAKON_R4, ParcelWetlands_Haakon_R4_Text_1
-# 1449 "data/maps/ParcelWetlands/scripts.pory"
+# 1465 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R4_Text_2, MSGBOX_DEFAULT
-# 1450 "data/maps/ParcelWetlands/scripts.pory"
+# 1466 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Haakon_R4_2:
-# 1444 "data/maps/ParcelWetlands/scripts.pory"
+# 1460 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R2_Text_1, MSGBOX_DEFAULT
-# 1445 "data/maps/ParcelWetlands/scripts.pory"
+# 1461 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Haakon_R5::
-# 1454 "data/maps/ParcelWetlands/scripts.pory"
+# 1470 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1455 "data/maps/ParcelWetlands/scripts.pory"
+# 1471 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1456 "data/maps/ParcelWetlands/scripts.pory"
+# 1472 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R5_Text_0, MSGBOX_YESNO
-# 1457 "data/maps/ParcelWetlands/scripts.pory"
+# 1473 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Haakon_R5_2
-# 1462 "data/maps/ParcelWetlands/scripts.pory"
+# 1478 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_HAAKON_R5, ParcelWetlands_Haakon_R5_Text_1
-# 1463 "data/maps/ParcelWetlands/scripts.pory"
+# 1479 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R5_Text_2, MSGBOX_DEFAULT
-# 1464 "data/maps/ParcelWetlands/scripts.pory"
+# 1480 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Haakon_R5_2:
-# 1458 "data/maps/ParcelWetlands/scripts.pory"
+# 1474 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Haakon_R2_Text_1, MSGBOX_DEFAULT
-# 1459 "data/maps/ParcelWetlands/scripts.pory"
+# 1475 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Eirik::
-# 1468 "data/maps/ParcelWetlands/scripts.pory"
+# 1484 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_EIRIK, ParcelWetlands_Eirik_Text_0, ParcelWetlands_Eirik_Text_1, ParcelWetlands_Eirik_FirstWin
-# 1472 "data/maps/ParcelWetlands/scripts.pory"
+# 1488 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1473 "data/maps/ParcelWetlands/scripts.pory"
+# 1489 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Eirik_3
 ParcelWetlands_Eirik_1:
-# 1476 "data/maps/ParcelWetlands/scripts.pory"
+# 1492 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Eirik_8
 ParcelWetlands_Eirik_6:
-# 1479 "data/maps/ParcelWetlands/scripts.pory"
+# 1495 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Eirik_13
 ParcelWetlands_Eirik_11:
-# 1482 "data/maps/ParcelWetlands/scripts.pory"
+# 1498 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Eirik_18
 ParcelWetlands_Eirik_16:
-# 1485 "data/maps/ParcelWetlands/scripts.pory"
+# 1501 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Eirik_2:
-# 1474 "data/maps/ParcelWetlands/scripts.pory"
+# 1490 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Eirik_R2
 	goto ParcelWetlands_Eirik_1
 
 ParcelWetlands_Eirik_3:
-# 1473 "data/maps/ParcelWetlands/scripts.pory"
+# 1489 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_EIRIK_R2
 	goto_if 0, ParcelWetlands_Eirik_2
 	goto ParcelWetlands_Eirik_1
 
 ParcelWetlands_Eirik_7:
-# 1477 "data/maps/ParcelWetlands/scripts.pory"
+# 1493 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Eirik_R3
 	goto ParcelWetlands_Eirik_6
 
 ParcelWetlands_Eirik_8:
-# 1476 "data/maps/ParcelWetlands/scripts.pory"
+# 1492 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_EIRIK_R3
 	goto_if 0, ParcelWetlands_Eirik_7
 	goto ParcelWetlands_Eirik_6
 
 ParcelWetlands_Eirik_12:
-# 1480 "data/maps/ParcelWetlands/scripts.pory"
+# 1496 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Eirik_R4
 	goto ParcelWetlands_Eirik_11
 
 ParcelWetlands_Eirik_13:
-# 1479 "data/maps/ParcelWetlands/scripts.pory"
+# 1495 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_EIRIK_R4
 	goto_if 0, ParcelWetlands_Eirik_12
 	goto ParcelWetlands_Eirik_11
 
 ParcelWetlands_Eirik_17:
-# 1483 "data/maps/ParcelWetlands/scripts.pory"
+# 1499 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Eirik_R5
 	goto ParcelWetlands_Eirik_16
 
 ParcelWetlands_Eirik_18:
-# 1482 "data/maps/ParcelWetlands/scripts.pory"
+# 1498 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_EIRIK_R5
 	goto_if 0, ParcelWetlands_Eirik_17
 	goto ParcelWetlands_Eirik_16
 
 
 ParcelWetlands_Eirik_FirstWin::
-# 1489 "data/maps/ParcelWetlands/scripts.pory"
+# 1505 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_Text_2, MSGBOX_DEFAULT
-# 1490 "data/maps/ParcelWetlands/scripts.pory"
+# 1506 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Eirik_R2::
-# 1494 "data/maps/ParcelWetlands/scripts.pory"
+# 1510 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1495 "data/maps/ParcelWetlands/scripts.pory"
+# 1511 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1496 "data/maps/ParcelWetlands/scripts.pory"
+# 1512 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R2_Text_0, MSGBOX_YESNO
-# 1497 "data/maps/ParcelWetlands/scripts.pory"
+# 1513 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Eirik_R2_2
-# 1502 "data/maps/ParcelWetlands/scripts.pory"
+# 1518 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_EIRIK_R2, ParcelWetlands_Eirik_R2_Text_2
-# 1503 "data/maps/ParcelWetlands/scripts.pory"
+# 1519 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R2_Text_3, MSGBOX_DEFAULT
-# 1504 "data/maps/ParcelWetlands/scripts.pory"
+# 1520 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Eirik_R2_2:
-# 1498 "data/maps/ParcelWetlands/scripts.pory"
+# 1514 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R2_Text_1, MSGBOX_DEFAULT
-# 1499 "data/maps/ParcelWetlands/scripts.pory"
+# 1515 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Eirik_R3::
-# 1508 "data/maps/ParcelWetlands/scripts.pory"
+# 1524 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1509 "data/maps/ParcelWetlands/scripts.pory"
+# 1525 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1510 "data/maps/ParcelWetlands/scripts.pory"
+# 1526 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R3_Text_0, MSGBOX_YESNO
-# 1511 "data/maps/ParcelWetlands/scripts.pory"
+# 1527 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Eirik_R3_2
-# 1516 "data/maps/ParcelWetlands/scripts.pory"
+# 1532 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_EIRIK_R3, ParcelWetlands_Eirik_R3_Text_1
-# 1517 "data/maps/ParcelWetlands/scripts.pory"
+# 1533 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R3_Text_2, MSGBOX_DEFAULT
-# 1518 "data/maps/ParcelWetlands/scripts.pory"
+# 1534 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Eirik_R3_2:
-# 1512 "data/maps/ParcelWetlands/scripts.pory"
+# 1528 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R2_Text_1, MSGBOX_DEFAULT
-# 1513 "data/maps/ParcelWetlands/scripts.pory"
+# 1529 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Eirik_R4::
-# 1522 "data/maps/ParcelWetlands/scripts.pory"
+# 1538 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1523 "data/maps/ParcelWetlands/scripts.pory"
+# 1539 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1524 "data/maps/ParcelWetlands/scripts.pory"
+# 1540 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R4_Text_0, MSGBOX_YESNO
-# 1525 "data/maps/ParcelWetlands/scripts.pory"
+# 1541 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Eirik_R4_2
-# 1530 "data/maps/ParcelWetlands/scripts.pory"
+# 1546 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_EIRIK_R4, ParcelWetlands_Eirik_R3_Text_1
-# 1531 "data/maps/ParcelWetlands/scripts.pory"
+# 1547 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R4_Text_1, MSGBOX_DEFAULT
-# 1532 "data/maps/ParcelWetlands/scripts.pory"
+# 1548 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Eirik_R4_2:
-# 1526 "data/maps/ParcelWetlands/scripts.pory"
+# 1542 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R2_Text_1, MSGBOX_DEFAULT
-# 1527 "data/maps/ParcelWetlands/scripts.pory"
+# 1543 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Eirik_R5::
-# 1536 "data/maps/ParcelWetlands/scripts.pory"
+# 1552 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1537 "data/maps/ParcelWetlands/scripts.pory"
+# 1553 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1538 "data/maps/ParcelWetlands/scripts.pory"
+# 1554 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R5_Text_0, MSGBOX_YESNO
-# 1539 "data/maps/ParcelWetlands/scripts.pory"
+# 1555 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Eirik_R5_2
-# 1544 "data/maps/ParcelWetlands/scripts.pory"
+# 1560 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_EIRIK_R5, ParcelWetlands_Eirik_R2_Text_2
-# 1545 "data/maps/ParcelWetlands/scripts.pory"
+# 1561 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R5_Text_1, MSGBOX_DEFAULT
-# 1546 "data/maps/ParcelWetlands/scripts.pory"
+# 1562 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Eirik_R5_2:
-# 1540 "data/maps/ParcelWetlands/scripts.pory"
+# 1556 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Eirik_R2_Text_1, MSGBOX_DEFAULT
-# 1541 "data/maps/ParcelWetlands/scripts.pory"
+# 1557 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Siv::
-# 1550 "data/maps/ParcelWetlands/scripts.pory"
+# 1566 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_SIV, ParcelWetlands_Siv_Text_0, ParcelWetlands_Siv_Text_1, ParcelWetlands_Siv_FirstWin
-# 1554 "data/maps/ParcelWetlands/scripts.pory"
+# 1570 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1555 "data/maps/ParcelWetlands/scripts.pory"
+# 1571 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_Siv_3
 ParcelWetlands_Siv_1:
-# 1558 "data/maps/ParcelWetlands/scripts.pory"
+# 1574 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_Siv_8
 ParcelWetlands_Siv_6:
-# 1561 "data/maps/ParcelWetlands/scripts.pory"
+# 1577 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_Siv_13
 ParcelWetlands_Siv_11:
-# 1564 "data/maps/ParcelWetlands/scripts.pory"
+# 1580 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_Siv_18
 ParcelWetlands_Siv_16:
-# 1567 "data/maps/ParcelWetlands/scripts.pory"
+# 1583 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_Siv_2:
-# 1556 "data/maps/ParcelWetlands/scripts.pory"
+# 1572 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Siv_R2
 	goto ParcelWetlands_Siv_1
 
 ParcelWetlands_Siv_3:
-# 1555 "data/maps/ParcelWetlands/scripts.pory"
+# 1571 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SIV_R2
 	goto_if 0, ParcelWetlands_Siv_2
 	goto ParcelWetlands_Siv_1
 
 ParcelWetlands_Siv_7:
-# 1559 "data/maps/ParcelWetlands/scripts.pory"
+# 1575 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Siv_R3
 	goto ParcelWetlands_Siv_6
 
 ParcelWetlands_Siv_8:
-# 1558 "data/maps/ParcelWetlands/scripts.pory"
+# 1574 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SIV_R3
 	goto_if 0, ParcelWetlands_Siv_7
 	goto ParcelWetlands_Siv_6
 
 ParcelWetlands_Siv_12:
-# 1562 "data/maps/ParcelWetlands/scripts.pory"
+# 1578 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Siv_R4
 	goto ParcelWetlands_Siv_11
 
 ParcelWetlands_Siv_13:
-# 1561 "data/maps/ParcelWetlands/scripts.pory"
+# 1577 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SIV_R4
 	goto_if 0, ParcelWetlands_Siv_12
 	goto ParcelWetlands_Siv_11
 
 ParcelWetlands_Siv_17:
-# 1565 "data/maps/ParcelWetlands/scripts.pory"
+# 1581 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_Siv_R5
 	goto ParcelWetlands_Siv_16
 
 ParcelWetlands_Siv_18:
-# 1564 "data/maps/ParcelWetlands/scripts.pory"
+# 1580 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SIV_R5
 	goto_if 0, ParcelWetlands_Siv_17
 	goto ParcelWetlands_Siv_16
 
 
 ParcelWetlands_Siv_FirstWin::
-# 1571 "data/maps/ParcelWetlands/scripts.pory"
+# 1587 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_Text_2, MSGBOX_DEFAULT
-# 1572 "data/maps/ParcelWetlands/scripts.pory"
+# 1588 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Siv_R2::
-# 1576 "data/maps/ParcelWetlands/scripts.pory"
+# 1592 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1577 "data/maps/ParcelWetlands/scripts.pory"
+# 1593 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1578 "data/maps/ParcelWetlands/scripts.pory"
+# 1594 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R2_Text_0, MSGBOX_YESNO
-# 1579 "data/maps/ParcelWetlands/scripts.pory"
+# 1595 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Siv_R2_2
-# 1584 "data/maps/ParcelWetlands/scripts.pory"
+# 1600 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SIV_R2, ParcelWetlands_Siv_R2_Text_2
-# 1585 "data/maps/ParcelWetlands/scripts.pory"
+# 1601 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R2_Text_3, MSGBOX_DEFAULT
-# 1586 "data/maps/ParcelWetlands/scripts.pory"
+# 1602 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Siv_R2_2:
-# 1580 "data/maps/ParcelWetlands/scripts.pory"
+# 1596 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R2_Text_1, MSGBOX_DEFAULT
-# 1581 "data/maps/ParcelWetlands/scripts.pory"
+# 1597 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Siv_R3::
-# 1590 "data/maps/ParcelWetlands/scripts.pory"
+# 1606 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1591 "data/maps/ParcelWetlands/scripts.pory"
+# 1607 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1592 "data/maps/ParcelWetlands/scripts.pory"
+# 1608 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R3_Text_0, MSGBOX_YESNO
-# 1593 "data/maps/ParcelWetlands/scripts.pory"
+# 1609 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Siv_R3_2
-# 1598 "data/maps/ParcelWetlands/scripts.pory"
+# 1614 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SIV_R3, ParcelWetlands_Siv_R3_Text_1
-# 1599 "data/maps/ParcelWetlands/scripts.pory"
+# 1615 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R3_Text_2, MSGBOX_DEFAULT
-# 1600 "data/maps/ParcelWetlands/scripts.pory"
+# 1616 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Siv_R3_2:
-# 1594 "data/maps/ParcelWetlands/scripts.pory"
+# 1610 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R2_Text_1, MSGBOX_DEFAULT
-# 1595 "data/maps/ParcelWetlands/scripts.pory"
+# 1611 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Siv_R4::
-# 1604 "data/maps/ParcelWetlands/scripts.pory"
+# 1620 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1605 "data/maps/ParcelWetlands/scripts.pory"
+# 1621 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1606 "data/maps/ParcelWetlands/scripts.pory"
+# 1622 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R4_Text_0, MSGBOX_YESNO
-# 1607 "data/maps/ParcelWetlands/scripts.pory"
+# 1623 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Siv_R4_2
-# 1612 "data/maps/ParcelWetlands/scripts.pory"
+# 1628 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SIV_R4, ParcelWetlands_Siv_R2_Text_2
-# 1613 "data/maps/ParcelWetlands/scripts.pory"
+# 1629 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R4_Text_1, MSGBOX_DEFAULT
-# 1614 "data/maps/ParcelWetlands/scripts.pory"
+# 1630 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Siv_R4_2:
-# 1608 "data/maps/ParcelWetlands/scripts.pory"
+# 1624 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R2_Text_1, MSGBOX_DEFAULT
-# 1609 "data/maps/ParcelWetlands/scripts.pory"
+# 1625 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_Siv_R5::
-# 1618 "data/maps/ParcelWetlands/scripts.pory"
+# 1634 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1619 "data/maps/ParcelWetlands/scripts.pory"
+# 1635 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1620 "data/maps/ParcelWetlands/scripts.pory"
+# 1636 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R5_Text_0, MSGBOX_YESNO
-# 1621 "data/maps/ParcelWetlands/scripts.pory"
+# 1637 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_Siv_R5_2
-# 1626 "data/maps/ParcelWetlands/scripts.pory"
+# 1642 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SIV_R5, ParcelWetlands_Siv_R5_Text_1
-# 1627 "data/maps/ParcelWetlands/scripts.pory"
+# 1643 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R5_Text_2, MSGBOX_DEFAULT
-# 1628 "data/maps/ParcelWetlands/scripts.pory"
+# 1644 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Siv_R5_2:
-# 1622 "data/maps/ParcelWetlands/scripts.pory"
+# 1638 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Siv_R2_Text_1, MSGBOX_DEFAULT
-# 1623 "data/maps/ParcelWetlands/scripts.pory"
+# 1639 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_ItemAntidote::
-# 1633 "data/maps/ParcelWetlands/scripts.pory"
+# 1649 "data/maps/ParcelWetlands/scripts.pory"
 	finditem ITEM_ANTIDOTE
 	end
 
 
 ParcelWetlands_ItemGreatBall::
-# 1634 "data/maps/ParcelWetlands/scripts.pory"
+# 1650 "data/maps/ParcelWetlands/scripts.pory"
 	finditem ITEM_GREAT_BALL
 	end
 
 
 ParcelWetlands_ItemSuperPotion::
-# 1635 "data/maps/ParcelWetlands/scripts.pory"
+# 1651 "data/maps/ParcelWetlands/scripts.pory"
 	finditem ITEM_SUPER_POTION
 	end
 
 
 ParcelWetlands_ItemNetBall::
-# 1636 "data/maps/ParcelWetlands/scripts.pory"
+# 1652 "data/maps/ParcelWetlands/scripts.pory"
 	finditem ITEM_NET_BALL
 	end
 
 
 ParcelWetlands_SignLanding::
-# 1639 "data/maps/ParcelWetlands/scripts.pory"
+# 1655 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_SignLanding_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlands_SignOffice::
-# 1643 "data/maps/ParcelWetlands/scripts.pory"
+# 1659 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_SignOffice_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlands_SignRoute::
-# 1647 "data/maps/ParcelWetlands/scripts.pory"
+# 1663 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_SignRoute_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlands_T_Paul::
-# 1653 "data/maps/ParcelWetlands/scripts.pory"
+# 1669 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_PAUL, ParcelWetlands_T_Paul_Text_0, ParcelWetlands_T_Paul_Text_1, ParcelWetlands_T_Paul_FirstWin
-# 1657 "data/maps/ParcelWetlands/scripts.pory"
+# 1673 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1658 "data/maps/ParcelWetlands/scripts.pory"
+# 1674 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_T_Paul_3
 ParcelWetlands_T_Paul_1:
-# 1661 "data/maps/ParcelWetlands/scripts.pory"
+# 1677 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_T_Paul_8
 ParcelWetlands_T_Paul_6:
-# 1664 "data/maps/ParcelWetlands/scripts.pory"
+# 1680 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_T_Paul_13
 ParcelWetlands_T_Paul_11:
-# 1667 "data/maps/ParcelWetlands/scripts.pory"
+# 1683 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_T_Paul_18
 ParcelWetlands_T_Paul_16:
-# 1670 "data/maps/ParcelWetlands/scripts.pory"
+# 1686 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_T_Paul_2:
-# 1659 "data/maps/ParcelWetlands/scripts.pory"
+# 1675 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Paul_R2
 	goto ParcelWetlands_T_Paul_1
 
 ParcelWetlands_T_Paul_3:
-# 1658 "data/maps/ParcelWetlands/scripts.pory"
+# 1674 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_PAUL_R2
 	goto_if 0, ParcelWetlands_T_Paul_2
 	goto ParcelWetlands_T_Paul_1
 
 ParcelWetlands_T_Paul_7:
-# 1662 "data/maps/ParcelWetlands/scripts.pory"
+# 1678 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Paul_R3
 	goto ParcelWetlands_T_Paul_6
 
 ParcelWetlands_T_Paul_8:
-# 1661 "data/maps/ParcelWetlands/scripts.pory"
+# 1677 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_PAUL_R3
 	goto_if 0, ParcelWetlands_T_Paul_7
 	goto ParcelWetlands_T_Paul_6
 
 ParcelWetlands_T_Paul_12:
-# 1665 "data/maps/ParcelWetlands/scripts.pory"
+# 1681 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Paul_R4
 	goto ParcelWetlands_T_Paul_11
 
 ParcelWetlands_T_Paul_13:
-# 1664 "data/maps/ParcelWetlands/scripts.pory"
+# 1680 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_PAUL_R4
 	goto_if 0, ParcelWetlands_T_Paul_12
 	goto ParcelWetlands_T_Paul_11
 
 ParcelWetlands_T_Paul_17:
-# 1668 "data/maps/ParcelWetlands/scripts.pory"
+# 1684 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Paul_R5
 	goto ParcelWetlands_T_Paul_16
 
 ParcelWetlands_T_Paul_18:
-# 1667 "data/maps/ParcelWetlands/scripts.pory"
+# 1683 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_PAUL_R5
 	goto_if 0, ParcelWetlands_T_Paul_17
 	goto ParcelWetlands_T_Paul_16
 
 
 ParcelWetlands_T_Paul_FirstWin::
-# 1674 "data/maps/ParcelWetlands/scripts.pory"
+# 1690 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_Text_2, MSGBOX_DEFAULT
-# 1675 "data/maps/ParcelWetlands/scripts.pory"
+# 1691 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Paul_R2::
-# 1679 "data/maps/ParcelWetlands/scripts.pory"
+# 1695 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1680 "data/maps/ParcelWetlands/scripts.pory"
+# 1696 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1681 "data/maps/ParcelWetlands/scripts.pory"
+# 1697 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R2_Text_0, MSGBOX_YESNO
-# 1682 "data/maps/ParcelWetlands/scripts.pory"
+# 1698 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Paul_R2_2
-# 1687 "data/maps/ParcelWetlands/scripts.pory"
+# 1703 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_PAUL_R2, ParcelWetlands_T_Paul_R2_Text_2
-# 1688 "data/maps/ParcelWetlands/scripts.pory"
+# 1704 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R2_Text_3, MSGBOX_DEFAULT
-# 1689 "data/maps/ParcelWetlands/scripts.pory"
+# 1705 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Paul_R2_2:
-# 1683 "data/maps/ParcelWetlands/scripts.pory"
+# 1699 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R2_Text_1, MSGBOX_DEFAULT
-# 1684 "data/maps/ParcelWetlands/scripts.pory"
+# 1700 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Paul_R3::
-# 1693 "data/maps/ParcelWetlands/scripts.pory"
+# 1709 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1694 "data/maps/ParcelWetlands/scripts.pory"
+# 1710 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1695 "data/maps/ParcelWetlands/scripts.pory"
+# 1711 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R3_Text_0, MSGBOX_YESNO
-# 1696 "data/maps/ParcelWetlands/scripts.pory"
+# 1712 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Paul_R3_2
-# 1701 "data/maps/ParcelWetlands/scripts.pory"
+# 1717 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_PAUL_R3, ParcelWetlands_T_Paul_R3_Text_1
-# 1702 "data/maps/ParcelWetlands/scripts.pory"
+# 1718 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R3_Text_2, MSGBOX_DEFAULT
-# 1703 "data/maps/ParcelWetlands/scripts.pory"
+# 1719 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Paul_R3_2:
-# 1697 "data/maps/ParcelWetlands/scripts.pory"
+# 1713 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R2_Text_1, MSGBOX_DEFAULT
-# 1698 "data/maps/ParcelWetlands/scripts.pory"
+# 1714 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Paul_R4::
-# 1707 "data/maps/ParcelWetlands/scripts.pory"
+# 1723 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1708 "data/maps/ParcelWetlands/scripts.pory"
+# 1724 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1709 "data/maps/ParcelWetlands/scripts.pory"
+# 1725 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R4_Text_0, MSGBOX_YESNO
-# 1710 "data/maps/ParcelWetlands/scripts.pory"
+# 1726 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Paul_R4_2
-# 1715 "data/maps/ParcelWetlands/scripts.pory"
+# 1731 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_PAUL_R4, ParcelWetlands_T_Paul_R4_Text_1
-# 1716 "data/maps/ParcelWetlands/scripts.pory"
+# 1732 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R4_Text_2, MSGBOX_DEFAULT
-# 1717 "data/maps/ParcelWetlands/scripts.pory"
+# 1733 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Paul_R4_2:
-# 1711 "data/maps/ParcelWetlands/scripts.pory"
+# 1727 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R2_Text_1, MSGBOX_DEFAULT
-# 1712 "data/maps/ParcelWetlands/scripts.pory"
+# 1728 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Paul_R5::
-# 1721 "data/maps/ParcelWetlands/scripts.pory"
+# 1737 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1722 "data/maps/ParcelWetlands/scripts.pory"
+# 1738 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1723 "data/maps/ParcelWetlands/scripts.pory"
+# 1739 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R5_Text_0, MSGBOX_YESNO
-# 1724 "data/maps/ParcelWetlands/scripts.pory"
+# 1740 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Paul_R5_2
-# 1729 "data/maps/ParcelWetlands/scripts.pory"
+# 1745 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_PAUL_R5, ParcelWetlands_T_Paul_R5_Text_1
-# 1730 "data/maps/ParcelWetlands/scripts.pory"
+# 1746 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R5_Text_2, MSGBOX_DEFAULT
-# 1731 "data/maps/ParcelWetlands/scripts.pory"
+# 1747 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Paul_R5_2:
-# 1725 "data/maps/ParcelWetlands/scripts.pory"
+# 1741 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Paul_R2_Text_1, MSGBOX_DEFAULT
-# 1726 "data/maps/ParcelWetlands/scripts.pory"
+# 1742 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Sunniva::
-# 1735 "data/maps/ParcelWetlands/scripts.pory"
+# 1751 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_SUNNIVA, ParcelWetlands_T_Sunniva_Text_0, ParcelWetlands_T_Sunniva_Text_1, ParcelWetlands_T_Sunniva_FirstWin
-# 1739 "data/maps/ParcelWetlands/scripts.pory"
+# 1755 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1740 "data/maps/ParcelWetlands/scripts.pory"
+# 1756 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_T_Sunniva_3
 ParcelWetlands_T_Sunniva_1:
-# 1743 "data/maps/ParcelWetlands/scripts.pory"
+# 1759 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_T_Sunniva_8
 ParcelWetlands_T_Sunniva_6:
-# 1746 "data/maps/ParcelWetlands/scripts.pory"
+# 1762 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_T_Sunniva_13
 ParcelWetlands_T_Sunniva_11:
-# 1749 "data/maps/ParcelWetlands/scripts.pory"
+# 1765 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_T_Sunniva_18
 ParcelWetlands_T_Sunniva_16:
-# 1752 "data/maps/ParcelWetlands/scripts.pory"
+# 1768 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_T_Sunniva_2:
-# 1741 "data/maps/ParcelWetlands/scripts.pory"
+# 1757 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Sunniva_R2
 	goto ParcelWetlands_T_Sunniva_1
 
 ParcelWetlands_T_Sunniva_3:
-# 1740 "data/maps/ParcelWetlands/scripts.pory"
+# 1756 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SUNNIVA_R2
 	goto_if 0, ParcelWetlands_T_Sunniva_2
 	goto ParcelWetlands_T_Sunniva_1
 
 ParcelWetlands_T_Sunniva_7:
-# 1744 "data/maps/ParcelWetlands/scripts.pory"
+# 1760 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Sunniva_R3
 	goto ParcelWetlands_T_Sunniva_6
 
 ParcelWetlands_T_Sunniva_8:
-# 1743 "data/maps/ParcelWetlands/scripts.pory"
+# 1759 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SUNNIVA_R3
 	goto_if 0, ParcelWetlands_T_Sunniva_7
 	goto ParcelWetlands_T_Sunniva_6
 
 ParcelWetlands_T_Sunniva_12:
-# 1747 "data/maps/ParcelWetlands/scripts.pory"
+# 1763 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Sunniva_R4
 	goto ParcelWetlands_T_Sunniva_11
 
 ParcelWetlands_T_Sunniva_13:
-# 1746 "data/maps/ParcelWetlands/scripts.pory"
+# 1762 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SUNNIVA_R4
 	goto_if 0, ParcelWetlands_T_Sunniva_12
 	goto ParcelWetlands_T_Sunniva_11
 
 ParcelWetlands_T_Sunniva_17:
-# 1750 "data/maps/ParcelWetlands/scripts.pory"
+# 1766 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Sunniva_R5
 	goto ParcelWetlands_T_Sunniva_16
 
 ParcelWetlands_T_Sunniva_18:
-# 1749 "data/maps/ParcelWetlands/scripts.pory"
+# 1765 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_SUNNIVA_R5
 	goto_if 0, ParcelWetlands_T_Sunniva_17
 	goto ParcelWetlands_T_Sunniva_16
 
 
 ParcelWetlands_T_Sunniva_FirstWin::
-# 1756 "data/maps/ParcelWetlands/scripts.pory"
+# 1772 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_Text_2, MSGBOX_DEFAULT
-# 1757 "data/maps/ParcelWetlands/scripts.pory"
+# 1773 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Sunniva_R2::
-# 1761 "data/maps/ParcelWetlands/scripts.pory"
+# 1777 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1762 "data/maps/ParcelWetlands/scripts.pory"
+# 1778 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1763 "data/maps/ParcelWetlands/scripts.pory"
+# 1779 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R2_Text_0, MSGBOX_YESNO
-# 1764 "data/maps/ParcelWetlands/scripts.pory"
+# 1780 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Sunniva_R2_2
-# 1769 "data/maps/ParcelWetlands/scripts.pory"
+# 1785 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SUNNIVA_R2, ParcelWetlands_T_Sunniva_R2_Text_2
-# 1770 "data/maps/ParcelWetlands/scripts.pory"
+# 1786 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R2_Text_3, MSGBOX_DEFAULT
-# 1771 "data/maps/ParcelWetlands/scripts.pory"
+# 1787 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Sunniva_R2_2:
-# 1765 "data/maps/ParcelWetlands/scripts.pory"
+# 1781 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R2_Text_1, MSGBOX_DEFAULT
-# 1766 "data/maps/ParcelWetlands/scripts.pory"
+# 1782 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Sunniva_R3::
-# 1775 "data/maps/ParcelWetlands/scripts.pory"
+# 1791 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1776 "data/maps/ParcelWetlands/scripts.pory"
+# 1792 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1777 "data/maps/ParcelWetlands/scripts.pory"
+# 1793 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R3_Text_0, MSGBOX_YESNO
-# 1778 "data/maps/ParcelWetlands/scripts.pory"
+# 1794 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Sunniva_R3_2
-# 1783 "data/maps/ParcelWetlands/scripts.pory"
+# 1799 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SUNNIVA_R3, ParcelWetlands_T_Sunniva_R3_Text_1
-# 1784 "data/maps/ParcelWetlands/scripts.pory"
+# 1800 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R3_Text_2, MSGBOX_DEFAULT
-# 1785 "data/maps/ParcelWetlands/scripts.pory"
+# 1801 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Sunniva_R3_2:
-# 1779 "data/maps/ParcelWetlands/scripts.pory"
+# 1795 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R2_Text_1, MSGBOX_DEFAULT
-# 1780 "data/maps/ParcelWetlands/scripts.pory"
+# 1796 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Sunniva_R4::
-# 1789 "data/maps/ParcelWetlands/scripts.pory"
+# 1805 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1790 "data/maps/ParcelWetlands/scripts.pory"
+# 1806 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1791 "data/maps/ParcelWetlands/scripts.pory"
+# 1807 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R4_Text_0, MSGBOX_YESNO
-# 1792 "data/maps/ParcelWetlands/scripts.pory"
+# 1808 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Sunniva_R4_2
-# 1797 "data/maps/ParcelWetlands/scripts.pory"
+# 1813 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SUNNIVA_R4, ParcelWetlands_T_Sunniva_R4_Text_1
-# 1798 "data/maps/ParcelWetlands/scripts.pory"
+# 1814 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R4_Text_2, MSGBOX_DEFAULT
-# 1799 "data/maps/ParcelWetlands/scripts.pory"
+# 1815 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Sunniva_R4_2:
-# 1793 "data/maps/ParcelWetlands/scripts.pory"
+# 1809 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R2_Text_1, MSGBOX_DEFAULT
-# 1794 "data/maps/ParcelWetlands/scripts.pory"
+# 1810 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Sunniva_R5::
-# 1803 "data/maps/ParcelWetlands/scripts.pory"
+# 1819 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1804 "data/maps/ParcelWetlands/scripts.pory"
+# 1820 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1805 "data/maps/ParcelWetlands/scripts.pory"
+# 1821 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R5_Text_0, MSGBOX_YESNO
-# 1806 "data/maps/ParcelWetlands/scripts.pory"
+# 1822 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Sunniva_R5_2
-# 1811 "data/maps/ParcelWetlands/scripts.pory"
+# 1827 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_SUNNIVA_R5, ParcelWetlands_T_Sunniva_R5_Text_1
-# 1812 "data/maps/ParcelWetlands/scripts.pory"
+# 1828 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R5_Text_2, MSGBOX_DEFAULT
-# 1813 "data/maps/ParcelWetlands/scripts.pory"
+# 1829 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Sunniva_R5_2:
-# 1807 "data/maps/ParcelWetlands/scripts.pory"
+# 1823 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Sunniva_R2_Text_1, MSGBOX_DEFAULT
-# 1808 "data/maps/ParcelWetlands/scripts.pory"
+# 1824 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Roar::
-# 1817 "data/maps/ParcelWetlands/scripts.pory"
+# 1833 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WET_ROAR, ParcelWetlands_T_Roar_Text_0, ParcelWetlands_T_Roar_Text_1, ParcelWetlands_T_Roar_FirstWin
-# 1821 "data/maps/ParcelWetlands/scripts.pory"
+# 1837 "data/maps/ParcelWetlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1822 "data/maps/ParcelWetlands/scripts.pory"
+# 1838 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWetlands_T_Roar_3
 ParcelWetlands_T_Roar_1:
-# 1825 "data/maps/ParcelWetlands/scripts.pory"
+# 1841 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWetlands_T_Roar_8
 ParcelWetlands_T_Roar_6:
-# 1828 "data/maps/ParcelWetlands/scripts.pory"
+# 1844 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWetlands_T_Roar_13
 ParcelWetlands_T_Roar_11:
-# 1831 "data/maps/ParcelWetlands/scripts.pory"
+# 1847 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWetlands_T_Roar_18
 ParcelWetlands_T_Roar_16:
-# 1834 "data/maps/ParcelWetlands/scripts.pory"
+# 1850 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWetlands_T_Roar_2:
-# 1823 "data/maps/ParcelWetlands/scripts.pory"
+# 1839 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Roar_R2
 	goto ParcelWetlands_T_Roar_1
 
 ParcelWetlands_T_Roar_3:
-# 1822 "data/maps/ParcelWetlands/scripts.pory"
+# 1838 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ROAR_R2
 	goto_if 0, ParcelWetlands_T_Roar_2
 	goto ParcelWetlands_T_Roar_1
 
 ParcelWetlands_T_Roar_7:
-# 1826 "data/maps/ParcelWetlands/scripts.pory"
+# 1842 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Roar_R3
 	goto ParcelWetlands_T_Roar_6
 
 ParcelWetlands_T_Roar_8:
-# 1825 "data/maps/ParcelWetlands/scripts.pory"
+# 1841 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ROAR_R3
 	goto_if 0, ParcelWetlands_T_Roar_7
 	goto ParcelWetlands_T_Roar_6
 
 ParcelWetlands_T_Roar_12:
-# 1829 "data/maps/ParcelWetlands/scripts.pory"
+# 1845 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Roar_R4
 	goto ParcelWetlands_T_Roar_11
 
 ParcelWetlands_T_Roar_13:
-# 1828 "data/maps/ParcelWetlands/scripts.pory"
+# 1844 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ROAR_R4
 	goto_if 0, ParcelWetlands_T_Roar_12
 	goto ParcelWetlands_T_Roar_11
 
 ParcelWetlands_T_Roar_17:
-# 1832 "data/maps/ParcelWetlands/scripts.pory"
+# 1848 "data/maps/ParcelWetlands/scripts.pory"
 	goto ParcelWetlands_T_Roar_R5
 	goto ParcelWetlands_T_Roar_16
 
 ParcelWetlands_T_Roar_18:
-# 1831 "data/maps/ParcelWetlands/scripts.pory"
+# 1847 "data/maps/ParcelWetlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WET_ROAR_R5
 	goto_if 0, ParcelWetlands_T_Roar_17
 	goto ParcelWetlands_T_Roar_16
 
 
 ParcelWetlands_T_Roar_FirstWin::
-# 1838 "data/maps/ParcelWetlands/scripts.pory"
+# 1854 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_Text_2, MSGBOX_DEFAULT
-# 1839 "data/maps/ParcelWetlands/scripts.pory"
+# 1855 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Roar_R2::
-# 1843 "data/maps/ParcelWetlands/scripts.pory"
+# 1859 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1844 "data/maps/ParcelWetlands/scripts.pory"
+# 1860 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1845 "data/maps/ParcelWetlands/scripts.pory"
+# 1861 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R2_Text_0, MSGBOX_YESNO
-# 1846 "data/maps/ParcelWetlands/scripts.pory"
+# 1862 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Roar_R2_2
-# 1851 "data/maps/ParcelWetlands/scripts.pory"
+# 1867 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ROAR_R2, ParcelWetlands_T_Roar_R2_Text_2
-# 1852 "data/maps/ParcelWetlands/scripts.pory"
+# 1868 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R2_Text_3, MSGBOX_DEFAULT
-# 1853 "data/maps/ParcelWetlands/scripts.pory"
+# 1869 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Roar_R2_2:
-# 1847 "data/maps/ParcelWetlands/scripts.pory"
+# 1863 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R2_Text_1, MSGBOX_DEFAULT
-# 1848 "data/maps/ParcelWetlands/scripts.pory"
+# 1864 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Roar_R3::
-# 1857 "data/maps/ParcelWetlands/scripts.pory"
+# 1873 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1858 "data/maps/ParcelWetlands/scripts.pory"
+# 1874 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1859 "data/maps/ParcelWetlands/scripts.pory"
+# 1875 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R3_Text_0, MSGBOX_YESNO
-# 1860 "data/maps/ParcelWetlands/scripts.pory"
+# 1876 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Roar_R3_2
-# 1865 "data/maps/ParcelWetlands/scripts.pory"
+# 1881 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ROAR_R3, ParcelWetlands_T_Roar_R3_Text_1
-# 1866 "data/maps/ParcelWetlands/scripts.pory"
+# 1882 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R3_Text_2, MSGBOX_DEFAULT
-# 1867 "data/maps/ParcelWetlands/scripts.pory"
+# 1883 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Roar_R3_2:
-# 1861 "data/maps/ParcelWetlands/scripts.pory"
+# 1877 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R2_Text_1, MSGBOX_DEFAULT
-# 1862 "data/maps/ParcelWetlands/scripts.pory"
+# 1878 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Roar_R4::
-# 1871 "data/maps/ParcelWetlands/scripts.pory"
+# 1887 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1872 "data/maps/ParcelWetlands/scripts.pory"
+# 1888 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1873 "data/maps/ParcelWetlands/scripts.pory"
+# 1889 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R4_Text_0, MSGBOX_YESNO
-# 1874 "data/maps/ParcelWetlands/scripts.pory"
+# 1890 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Roar_R4_2
-# 1879 "data/maps/ParcelWetlands/scripts.pory"
+# 1895 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ROAR_R4, ParcelWetlands_T_Roar_R4_Text_1
-# 1880 "data/maps/ParcelWetlands/scripts.pory"
+# 1896 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R4_Text_2, MSGBOX_DEFAULT
-# 1881 "data/maps/ParcelWetlands/scripts.pory"
+# 1897 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Roar_R4_2:
-# 1875 "data/maps/ParcelWetlands/scripts.pory"
+# 1891 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R2_Text_1, MSGBOX_DEFAULT
-# 1876 "data/maps/ParcelWetlands/scripts.pory"
+# 1892 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_T_Roar_R5::
-# 1885 "data/maps/ParcelWetlands/scripts.pory"
+# 1901 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1886 "data/maps/ParcelWetlands/scripts.pory"
+# 1902 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1887 "data/maps/ParcelWetlands/scripts.pory"
+# 1903 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R5_Text_0, MSGBOX_YESNO
-# 1888 "data/maps/ParcelWetlands/scripts.pory"
+# 1904 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWetlands_T_Roar_R5_2
-# 1893 "data/maps/ParcelWetlands/scripts.pory"
+# 1909 "data/maps/ParcelWetlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WET_ROAR_R5, ParcelWetlands_T_Roar_R5_Text_1
-# 1894 "data/maps/ParcelWetlands/scripts.pory"
+# 1910 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R5_Text_2, MSGBOX_DEFAULT
-# 1895 "data/maps/ParcelWetlands/scripts.pory"
+# 1911 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_T_Roar_R5_2:
-# 1889 "data/maps/ParcelWetlands/scripts.pory"
+# 1905 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_T_Roar_R2_Text_1, MSGBOX_DEFAULT
-# 1890 "data/maps/ParcelWetlands/scripts.pory"
+# 1906 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
 ParcelWetlands_PerrinScene::
-# 1901 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALD_PERRIN_2, ParcelWetlands_PerrinScene_2
-# 1905 "data/maps/ParcelWetlands/scripts.pory"
-	lockall
-# 1906 "data/maps/ParcelWetlands/scripts.pory"
-	playse SE_PIN
-# 1907 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PerrinScene_Text_0, MSGBOX_DEFAULT
-# 1908 "data/maps/ParcelWetlands/scripts.pory"
-	closemessage
-# 1909 "data/maps/ParcelWetlands/scripts.pory"
-	applymovement 32, Movement_ParcelWetlands_PerrinIn
-# 1910 "data/maps/ParcelWetlands/scripts.pory"
-	waitmovement 0
-# 1911 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PerrinScene_Text_1, MSGBOX_DEFAULT
-# 1912 "data/maps/ParcelWetlands/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_PERRIN_2, ParcelWetlands_PerrinScene_Text_2
-# 1913 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PerrinScene_Text_3, MSGBOX_DEFAULT
-# 1914 "data/maps/ParcelWetlands/scripts.pory"
-	closemessage
-# 1915 "data/maps/ParcelWetlands/scripts.pory"
-	applymovement 32, Movement_ParcelWetlands_PerrinOut
-# 1916 "data/maps/ParcelWetlands/scripts.pory"
-	waitmovement 0
 # 1917 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_PERRIN_2, ParcelWetlands_PerrinScene_2
+# 1921 "data/maps/ParcelWetlands/scripts.pory"
+	lockall
+# 1922 "data/maps/ParcelWetlands/scripts.pory"
+	playse SE_PIN
+# 1923 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PerrinScene_Text_0, MSGBOX_DEFAULT
+# 1924 "data/maps/ParcelWetlands/scripts.pory"
+	closemessage
+# 1925 "data/maps/ParcelWetlands/scripts.pory"
+	applymovement 32, Movement_ParcelWetlands_PerrinIn
+# 1926 "data/maps/ParcelWetlands/scripts.pory"
+	waitmovement 0
+# 1927 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PerrinScene_Text_1, MSGBOX_DEFAULT
+# 1928 "data/maps/ParcelWetlands/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_PERRIN_2, ParcelWetlands_PerrinScene_Text_2
+# 1929 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PerrinScene_Text_3, MSGBOX_DEFAULT
+# 1930 "data/maps/ParcelWetlands/scripts.pory"
+	closemessage
+# 1931 "data/maps/ParcelWetlands/scripts.pory"
+	applymovement 32, Movement_ParcelWetlands_PerrinOut
+# 1932 "data/maps/ParcelWetlands/scripts.pory"
+	waitmovement 0
+# 1933 "data/maps/ParcelWetlands/scripts.pory"
 	removeobject 32
-# 1918 "data/maps/ParcelWetlands/scripts.pory"
+# 1934 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_PERRIN_2
-# 1919 "data/maps/ParcelWetlands/scripts.pory"
+# 1935 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_TEMP_5, 1
-# 1920 "data/maps/ParcelWetlands/scripts.pory"
+# 1936 "data/maps/ParcelWetlands/scripts.pory"
 	releaseall
 	end
 
 ParcelWetlands_PerrinScene_2:
-# 1902 "data/maps/ParcelWetlands/scripts.pory"
+# 1918 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_TEMP_5, 1
 	end
 
 
 ParcelWetlands_PerrinTalk::
-# 1924 "data/maps/ParcelWetlands/scripts.pory"
+# 1940 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1925 "data/maps/ParcelWetlands/scripts.pory"
+# 1941 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 1926 "data/maps/ParcelWetlands/scripts.pory"
+# 1942 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PerrinTalk_Text_0, MSGBOX_DEFAULT
-# 1927 "data/maps/ParcelWetlands/scripts.pory"
+# 1943 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 
-# 1930 "data/maps/ParcelWetlands/scripts.pory"
+# 1946 "data/maps/ParcelWetlands/scripts.pory"
 Movement_ParcelWetlands_PerrinIn:
-# 1930 "data/maps/ParcelWetlands/scripts.pory"
+# 1946 "data/maps/ParcelWetlands/scripts.pory"
 	walk_left
-# 1930 "data/maps/ParcelWetlands/scripts.pory"
+# 1946 "data/maps/ParcelWetlands/scripts.pory"
 	walk_left
-# 1930 "data/maps/ParcelWetlands/scripts.pory"
+# 1946 "data/maps/ParcelWetlands/scripts.pory"
 	walk_left
 	step_end
 
-# 1931 "data/maps/ParcelWetlands/scripts.pory"
+# 1947 "data/maps/ParcelWetlands/scripts.pory"
 Movement_ParcelWetlands_PerrinOut:
-# 1931 "data/maps/ParcelWetlands/scripts.pory"
+# 1947 "data/maps/ParcelWetlands/scripts.pory"
 	walk_right
-# 1931 "data/maps/ParcelWetlands/scripts.pory"
+# 1947 "data/maps/ParcelWetlands/scripts.pory"
 	walk_right
-# 1931 "data/maps/ParcelWetlands/scripts.pory"
+# 1947 "data/maps/ParcelWetlands/scripts.pory"
 	walk_right
 	step_end
 
 ParcelWetlands_Epilogue::
-# 1935 "data/maps/ParcelWetlands/scripts.pory"
+# 1951 "data/maps/ParcelWetlands/scripts.pory"
 	lockall
-# 1936 "data/maps/ParcelWetlands/scripts.pory"
+# 1952 "data/maps/ParcelWetlands/scripts.pory"
 	delay 20
-# 1937 "data/maps/ParcelWetlands/scripts.pory"
+# 1953 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Epilogue_Text_0, MSGBOX_DEFAULT
-# 1938 "data/maps/ParcelWetlands/scripts.pory"
+# 1954 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Epilogue_Text_1, MSGBOX_DEFAULT
-# 1939 "data/maps/ParcelWetlands/scripts.pory"
+# 1955 "data/maps/ParcelWetlands/scripts.pory"
 	closemessage
-# 1940 "data/maps/ParcelWetlands/scripts.pory"
+# 1956 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_SKALD_EPILOGUE, 2
-# 1941 "data/maps/ParcelWetlands/scripts.pory"
+# 1957 "data/maps/ParcelWetlands/scripts.pory"
 	warp MAP_PARCEL_FLOODBASIN, 20, 90
-# 1942 "data/maps/ParcelWetlands/scripts.pory"
+# 1958 "data/maps/ParcelWetlands/scripts.pory"
 	waitstate
 	end
 
 
 ParcelWetlands_ToHide::
-# 1948 "data/maps/ParcelWetlands/scripts.pory"
+# 1964 "data/maps/ParcelWetlands/scripts.pory"
 	warp MAP_PARCEL_WETLANDS_HIDE, 47, 10
-# 1949 "data/maps/ParcelWetlands/scripts.pory"
+# 1965 "data/maps/ParcelWetlands/scripts.pory"
 	waitstate
 	end
 
 
 ParcelWetlands_ReedCount::
-# 1954 "data/maps/ParcelWetlands/scripts.pory"
+# 1970 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_REED, ParcelWetlands_ReedCount_3
 ParcelWetlands_ReedCount_1:
-# 1959 "data/maps/ParcelWetlands/scripts.pory"
+# 1975 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_ReedCount_Text_1, MSGBOX_SIGN
 	end
 
 ParcelWetlands_ReedCount_2:
-# 1955 "data/maps/ParcelWetlands/scripts.pory"
+# 1971 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_ReedCount_Text_0, MSGBOX_SIGN
-# 1956 "data/maps/ParcelWetlands/scripts.pory"
+# 1972 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_REED_FOUND
 	end
 
 ParcelWetlands_ReedCount_3:
-# 1954 "data/maps/ParcelWetlands/scripts.pory"
+# 1970 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_REED_FOUND, ParcelWetlands_ReedCount_2
 	goto ParcelWetlands_ReedCount_1
 
 
 ParcelWetlands_SurveyStake::
-# 1965 "data/maps/ParcelWetlands/scripts.pory"
+# 1981 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_SurveyStake_Text_0, MSGBOX_SIGN
-# 1966 "data/maps/ParcelWetlands/scripts.pory"
+# 1982 "data/maps/ParcelWetlands/scripts.pory"
 	setvar VAR_0x8004, 0
-# 1967 "data/maps/ParcelWetlands/scripts.pory"
+# 1983 "data/maps/ParcelWetlands/scripts.pory"
 	special SkaldSurveyStake
-# 1968 "data/maps/ParcelWetlands/scripts.pory"
+# 1984 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
-# 1969 "data/maps/ParcelWetlands/scripts.pory"
+# 1985 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_SECOND, ParcelWetlands_SurveyStake_3
 ParcelWetlands_SurveyStake_1:
 	end
 
 ParcelWetlands_SurveyStake_2:
-# 1970 "data/maps/ParcelWetlands/scripts.pory"
+# 1986 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_SurveyStake_Text_1, MSGBOX_SIGN
-# 1971 "data/maps/ParcelWetlands/scripts.pory"
+# 1987 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_SECOND_0
 	goto ParcelWetlands_SurveyStake_1
 
 ParcelWetlands_SurveyStake_3:
-# 1969 "data/maps/ParcelWetlands/scripts.pory"
+# 1985 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_unset FLAG_SKALD_SECOND_0, ParcelWetlands_SurveyStake_2
 	goto ParcelWetlands_SurveyStake_1
 
 
 ParcelWetlands_PairLanding::
-# 1979 "data/maps/ParcelWetlands/scripts.pory"
+# 1995 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 1980 "data/maps/ParcelWetlands/scripts.pory"
+# 1996 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairLanding_2
-# 1985 "data/maps/ParcelWetlands/scripts.pory"
+# 2001 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairLanding_3
-# 1991 "data/maps/ParcelWetlands/scripts.pory"
+# 2007 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_8, MSGBOX_DEFAULT
-# 1992 "data/maps/ParcelWetlands/scripts.pory"
+# 2008 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_9, MSGBOX_DEFAULT
-# 1993 "data/maps/ParcelWetlands/scripts.pory"
+# 2009 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_10, MSGBOX_DEFAULT
-# 1994 "data/maps/ParcelWetlands/scripts.pory"
+# 2010 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_11, MSGBOX_DEFAULT
 ParcelWetlands_PairLanding_1:
-# 1996 "data/maps/ParcelWetlands/scripts.pory"
+# 2012 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_PairLanding_2:
-# 1981 "data/maps/ParcelWetlands/scripts.pory"
+# 1997 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_0, MSGBOX_DEFAULT
-# 1982 "data/maps/ParcelWetlands/scripts.pory"
+# 1998 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_1, MSGBOX_DEFAULT
-# 1983 "data/maps/ParcelWetlands/scripts.pory"
+# 1999 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_2, MSGBOX_DEFAULT
-# 1984 "data/maps/ParcelWetlands/scripts.pory"
+# 2000 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_3, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairLanding_1
 
 ParcelWetlands_PairLanding_3:
-# 1986 "data/maps/ParcelWetlands/scripts.pory"
+# 2002 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_4, MSGBOX_DEFAULT
-# 1987 "data/maps/ParcelWetlands/scripts.pory"
+# 2003 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_5, MSGBOX_DEFAULT
-# 1988 "data/maps/ParcelWetlands/scripts.pory"
+# 2004 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_6, MSGBOX_DEFAULT
-# 1989 "data/maps/ParcelWetlands/scripts.pory"
+# 2005 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_7, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairLanding_1
 
 
 ParcelWetlands_PairTurf::
-# 2001 "data/maps/ParcelWetlands/scripts.pory"
+# 2017 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 2002 "data/maps/ParcelWetlands/scripts.pory"
+# 2018 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairTurf_2
-# 2007 "data/maps/ParcelWetlands/scripts.pory"
+# 2023 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairTurf_3
-# 2013 "data/maps/ParcelWetlands/scripts.pory"
+# 2029 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_8, MSGBOX_DEFAULT
-# 2014 "data/maps/ParcelWetlands/scripts.pory"
+# 2030 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_9, MSGBOX_DEFAULT
-# 2015 "data/maps/ParcelWetlands/scripts.pory"
+# 2031 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_10, MSGBOX_DEFAULT
-# 2016 "data/maps/ParcelWetlands/scripts.pory"
+# 2032 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_11, MSGBOX_DEFAULT
 ParcelWetlands_PairTurf_1:
-# 2018 "data/maps/ParcelWetlands/scripts.pory"
+# 2034 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_PairTurf_2:
-# 2003 "data/maps/ParcelWetlands/scripts.pory"
+# 2019 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_0, MSGBOX_DEFAULT
-# 2004 "data/maps/ParcelWetlands/scripts.pory"
+# 2020 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_1, MSGBOX_DEFAULT
-# 2005 "data/maps/ParcelWetlands/scripts.pory"
+# 2021 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_2, MSGBOX_DEFAULT
-# 2006 "data/maps/ParcelWetlands/scripts.pory"
+# 2022 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_3, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairTurf_1
 
 ParcelWetlands_PairTurf_3:
-# 2008 "data/maps/ParcelWetlands/scripts.pory"
+# 2024 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_4, MSGBOX_DEFAULT
-# 2009 "data/maps/ParcelWetlands/scripts.pory"
+# 2025 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_5, MSGBOX_DEFAULT
-# 2010 "data/maps/ParcelWetlands/scripts.pory"
+# 2026 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_6, MSGBOX_DEFAULT
-# 2011 "data/maps/ParcelWetlands/scripts.pory"
+# 2027 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_7, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairTurf_1
 
 
 ParcelWetlands_Stringer::
-# 2025 "data/maps/ParcelWetlands/scripts.pory"
-	lock
-# 2026 "data/maps/ParcelWetlands/scripts.pory"
-	faceplayer
-# 2027 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Stringer_2
-# 2029 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_Stringer_3
 # 2041 "data/maps/ParcelWetlands/scripts.pory"
+	lock
+# 2042 "data/maps/ParcelWetlands/scripts.pory"
+	faceplayer
+# 2043 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Stringer_2
+# 2045 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_Stringer_3
+# 2057 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_7, MSGBOX_DEFAULT
 ParcelWetlands_Stringer_1:
-# 2043 "data/maps/ParcelWetlands/scripts.pory"
+# 2059 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Stringer_2:
-# 2028 "data/maps/ParcelWetlands/scripts.pory"
+# 2044 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_0, MSGBOX_DEFAULT
 	goto ParcelWetlands_Stringer_1
 
 ParcelWetlands_Stringer_3:
-# 2030 "data/maps/ParcelWetlands/scripts.pory"
+# 2046 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_1, MSGBOX_DEFAULT
-# 2031 "data/maps/ParcelWetlands/scripts.pory"
+# 2047 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_2, MSGBOX_YESNO
-# 2032 "data/maps/ParcelWetlands/scripts.pory"
+# 2048 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelWetlands_Stringer_7
-# 2037 "data/maps/ParcelWetlands/scripts.pory"
+# 2053 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_5, MSGBOX_DEFAULT
-# 2038 "data/maps/ParcelWetlands/scripts.pory"
+# 2054 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_6, MSGBOX_DEFAULT
 	goto ParcelWetlands_Stringer_1
 
 ParcelWetlands_Stringer_7:
-# 2033 "data/maps/ParcelWetlands/scripts.pory"
+# 2049 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_3, MSGBOX_DEFAULT
-# 2034 "data/maps/ParcelWetlands/scripts.pory"
+# 2050 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_4, MSGBOX_DEFAULT
-# 2035 "data/maps/ParcelWetlands/scripts.pory"
+# 2051 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_CH_QUOTE
 	goto ParcelWetlands_Stringer_1
 
 
 ParcelWetlands_TurfCutter::
-# 2050 "data/maps/ParcelWetlands/scripts.pory"
+# 2066 "data/maps/ParcelWetlands/scripts.pory"
 	lock
-# 2051 "data/maps/ParcelWetlands/scripts.pory"
+# 2067 "data/maps/ParcelWetlands/scripts.pory"
 	faceplayer
-# 2052 "data/maps/ParcelWetlands/scripts.pory"
+# 2068 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlands_TurfCutter_3
 ParcelWetlands_TurfCutter_1:
-# 2057 "data/maps/ParcelWetlands/scripts.pory"
+# 2073 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_TURF_DONE, ParcelWetlands_TurfCutter_7
-# 2059 "data/maps/ParcelWetlands/scripts.pory"
+# 2075 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_TURF, ParcelWetlands_TurfCutter_8
-# 2068 "data/maps/ParcelWetlands/scripts.pory"
+# 2084 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_TurfCutter_Text_4, MSGBOX_DEFAULT
-# 2069 "data/maps/ParcelWetlands/scripts.pory"
+# 2085 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_TURF
 ParcelWetlands_TurfCutter_6:
-# 2071 "data/maps/ParcelWetlands/scripts.pory"
+# 2087 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_TurfCutter_2:
-# 2053 "data/maps/ParcelWetlands/scripts.pory"
+# 2069 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_TurfCutter_Text_0, MSGBOX_DEFAULT
-# 2054 "data/maps/ParcelWetlands/scripts.pory"
+# 2070 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_TurfCutter_3:
-# 2052 "data/maps/ParcelWetlands/scripts.pory"
+# 2068 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_TURF_DONE, ParcelWetlands_TurfCutter_2
 	goto ParcelWetlands_TurfCutter_1
 
 ParcelWetlands_TurfCutter_7:
-# 2058 "data/maps/ParcelWetlands/scripts.pory"
+# 2074 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_TurfCutter_Text_1, MSGBOX_DEFAULT
 	goto ParcelWetlands_TurfCutter_6
 
 ParcelWetlands_TurfCutter_8:
-# 2060 "data/maps/ParcelWetlands/scripts.pory"
+# 2076 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_TURF_FOUND, ParcelWetlands_TurfCutter_12
-# 2065 "data/maps/ParcelWetlands/scripts.pory"
+# 2081 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_TurfCutter_Text_3, MSGBOX_DEFAULT
 	goto ParcelWetlands_TurfCutter_6
 
 ParcelWetlands_TurfCutter_12:
-# 2061 "data/maps/ParcelWetlands/scripts.pory"
+# 2077 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_TurfCutter_Text_2, MSGBOX_DEFAULT
-# 2062 "data/maps/ParcelWetlands/scripts.pory"
+# 2078 "data/maps/ParcelWetlands/scripts.pory"
 	giveitem ITEM_ETHER, 2
-# 2063 "data/maps/ParcelWetlands/scripts.pory"
+# 2079 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_TURF_DONE
 	goto ParcelWetlands_TurfCutter_6
 
 
 ParcelWetlands_TurfCrack::
-# 2076 "data/maps/ParcelWetlands/scripts.pory"
+# 2092 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_TURF, ParcelWetlands_TurfCrack_4
 ParcelWetlands_TurfCrack_3:
-# 2080 "data/maps/ParcelWetlands/scripts.pory"
+# 2096 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_TurfCrack_Text_1, MSGBOX_SIGN
 ParcelWetlands_TurfCrack_1:
 	end
 
 ParcelWetlands_TurfCrack_2:
-# 2077 "data/maps/ParcelWetlands/scripts.pory"
+# 2093 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_TurfCrack_Text_0, MSGBOX_SIGN
-# 2078 "data/maps/ParcelWetlands/scripts.pory"
+# 2094 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_TURF_FOUND
 	goto ParcelWetlands_TurfCrack_1
 
 ParcelWetlands_TurfCrack_4:
-# 2076 "data/maps/ParcelWetlands/scripts.pory"
+# 2092 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_TURF_FOUND, ParcelWetlands_TurfCrack_2
 	goto ParcelWetlands_TurfCrack_3
 
 
 ParcelWetlands_FindNest::
-# 2088 "data/maps/ParcelWetlands/scripts.pory"
+# 2104 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_NEST, ParcelWetlands_FindNest_4
 ParcelWetlands_FindNest_3:
-# 2092 "data/maps/ParcelWetlands/scripts.pory"
+# 2108 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_FindNest_Text_1, MSGBOX_SIGN
 ParcelWetlands_FindNest_1:
 	end
 
 ParcelWetlands_FindNest_2:
-# 2089 "data/maps/ParcelWetlands/scripts.pory"
+# 2105 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_FindNest_Text_0, MSGBOX_SIGN
-# 2090 "data/maps/ParcelWetlands/scripts.pory"
+# 2106 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_NEST_FOUND
 	goto ParcelWetlands_FindNest_1
 
 ParcelWetlands_FindNest_4:
-# 2088 "data/maps/ParcelWetlands/scripts.pory"
+# 2104 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_NEST_FOUND, ParcelWetlands_FindNest_2
 	goto ParcelWetlands_FindNest_3
 
 
 ParcelWetlands_PairSouth::
-# 2098 "data/maps/ParcelWetlands/scripts.pory"
-	lock
-# 2099 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairSouth_2
-# 2105 "data/maps/ParcelWetlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairSouth_3
-# 2111 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairSouth_Text_9, MSGBOX_DEFAULT
-# 2112 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairSouth_Text_10, MSGBOX_DEFAULT
-# 2113 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairSouth_Text_11, MSGBOX_DEFAULT
 # 2114 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairSouth_Text_12, MSGBOX_DEFAULT
+	lock
 # 2115 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairSouth_2
+# 2121 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairSouth_3
+# 2127 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_9, MSGBOX_DEFAULT
+# 2128 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_10, MSGBOX_DEFAULT
+# 2129 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_11, MSGBOX_DEFAULT
+# 2130 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_12, MSGBOX_DEFAULT
+# 2131 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_13, MSGBOX_DEFAULT
 ParcelWetlands_PairSouth_1:
-# 2117 "data/maps/ParcelWetlands/scripts.pory"
+# 2133 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_PairSouth_2:
-# 2100 "data/maps/ParcelWetlands/scripts.pory"
+# 2116 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_0, MSGBOX_DEFAULT
-# 2101 "data/maps/ParcelWetlands/scripts.pory"
+# 2117 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_1, MSGBOX_DEFAULT
-# 2102 "data/maps/ParcelWetlands/scripts.pory"
+# 2118 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_2, MSGBOX_DEFAULT
-# 2103 "data/maps/ParcelWetlands/scripts.pory"
+# 2119 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_3, MSGBOX_DEFAULT
-# 2104 "data/maps/ParcelWetlands/scripts.pory"
+# 2120 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_4, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairSouth_1
 
 ParcelWetlands_PairSouth_3:
-# 2106 "data/maps/ParcelWetlands/scripts.pory"
+# 2122 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_5, MSGBOX_DEFAULT
-# 2107 "data/maps/ParcelWetlands/scripts.pory"
+# 2123 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_6, MSGBOX_DEFAULT
-# 2108 "data/maps/ParcelWetlands/scripts.pory"
+# 2124 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_7, MSGBOX_DEFAULT
-# 2109 "data/maps/ParcelWetlands/scripts.pory"
+# 2125 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairSouth_Text_8, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairSouth_1
 
 
 ParcelWetlands_Board1::
-# 2124 "data/maps/ParcelWetlands/scripts.pory"
+# 2140 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Board1_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlands_Board2::
-# 2129 "data/maps/ParcelWetlands/scripts.pory"
+# 2145 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlands_FindRack::
+# 2152 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_RACK, ParcelWetlands_FindRack_4
+ParcelWetlands_FindRack_3:
+# 2156 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_FindRack_Text_1, MSGBOX_SIGN
+ParcelWetlands_FindRack_1:
+	end
+
+ParcelWetlands_FindRack_2:
+# 2153 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_FindRack_Text_0, MSGBOX_SIGN
+# 2154 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_RACK_FOUND
+	goto ParcelWetlands_FindRack_1
+
+ParcelWetlands_FindRack_4:
+# 2152 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_RACK_FOUND, ParcelWetlands_FindRack_2
+	goto ParcelWetlands_FindRack_3
+
+
+ParcelWetlands_Board3::
+# 2164 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlands_Board4::
+# 2171 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlands_Board5::
+# 2178 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Board5_Text_0, MSGBOX_SIGN
 	end
 
 
@@ -4572,23 +4650,49 @@ ParcelWetlands_DeadFish_Text_0:
 	.string "not right itself.$"
 
 ParcelWetlands_Crowd1_Text_0:
-# 248 "data/maps/ParcelWetlands/scripts.pory"
+# 249 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: Clear. Clear, you said, and you\n"
+	.string "looked. Then he can drink from the tap\l"
+	.string "and I can stop standing behind him when\l"
+	.string "he does.\p"
+	.string "Here. I bought these the week the\n"
+	.string "channel went bad, in case. In case is\l"
+	.string "over.$"
+
+ParcelWetlands_Crowd1_Text_1:
+# 253 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: The jar rack on the bank, by the\n"
+	.string "landing. This week's jar. Clear or not.$"
+
+ParcelWetlands_Crowd1_Text_2:
+# 258 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: The monitor on the bank keeps\n"
+	.string "his jars in a rack, dated, one a week.\l"
+	.string "He's away Thursdays. I don't go near it;\l"
+	.string "it feels like reading someone's letters.\p"
+	.string "But I'd like to know what this week's jar\n"
+	.string "looks like, and I'd rather a ranger\l"
+	.string "looked than me. Go and tell me. Clear or\l"
+	.string "not.$"
+
+ParcelWetlands_Crowd1_Text_3:
+# 264 "data/maps/ParcelWetlands/scripts.pory"
 	.string "WOMAN: He drinks from the tap now. I've\n"
 	.string "stopped watching. Mostly.\p"
 	.string "The monitor on the bank posts a number\n"
 	.string "every morning, and I read it before I\l"
 	.string "read anything else.$"
 
-ParcelWetlands_Crowd1_Text_1:
-# 253 "data/maps/ParcelWetlands/scripts.pory"
+ParcelWetlands_Crowd1_Text_4:
+# 269 "data/maps/ParcelWetlands/scripts.pory"
 	.string "WOMAN: My husband drank from that\n"
 	.string "channel the morning it went bad. He's\l"
 	.string "fine. The monitor on the bank says the\l"
 	.string "channel's fine too, now. I'll drink from\l"
 	.string "it before he does. Then we'll know.$"
 
-ParcelWetlands_Crowd1_Text_2:
-# 258 "data/maps/ParcelWetlands/scripts.pory"
+ParcelWetlands_Crowd1_Text_5:
+# 274 "data/maps/ParcelWetlands/scripts.pory"
 	.string "WOMAN: He's fine. He's been fine for\n"
 	.string "weeks. I still watch him drink.\p"
 	.string "They say the river people made the\n"
@@ -4596,21 +4700,21 @@ ParcelWetlands_Crowd1_Text_2:
 	.string "somebody to say ours out loud. To my\l"
 	.string "face, in this town.$"
 
-ParcelWetlands_Crowd1_Text_3:
-# 262 "data/maps/ParcelWetlands/scripts.pory"
+ParcelWetlands_Crowd1_Text_6:
+# 278 "data/maps/ParcelWetlands/scripts.pory"
 	.string "WOMAN: My husband drank from that\n"
 	.string "channel this morning. He's fine. He's\l"
 	.string "fine, isn't he?$"
 
 ParcelWetlands_Crowd2_Text_0:
-# 270 "data/maps/ParcelWetlands/scripts.pory"
+# 286 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAN: Our name's on the sheet now, under\n"
 	.string "'allocation'. Small number. Ours.\p"
 	.string "I go in and look at it the way you'd look\n"
 	.string "at a boat you'd paid off.$"
 
 ParcelWetlands_Crowd2_Text_1:
-# 275 "data/maps/ParcelWetlands/scripts.pory"
+# 291 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAN: Somebody did this, I said. The\n"
 	.string "hearing said who. A permit page says how\l"
 	.string "much they're allowed to do now. It's a\l"
@@ -4618,7 +4722,7 @@ ParcelWetlands_Crowd2_Text_1:
 	.string "couldn't argue with a night.$"
 
 ParcelWetlands_Crowd2_Text_2:
-# 280 "data/maps/ParcelWetlands/scripts.pory"
+# 296 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAN: Somebody did it, and somebody's\n"
 	.string "name is on a sheet in the river hall now,\l"
 	.string "under 'allocation.'\p"
@@ -4627,44 +4731,44 @@ ParcelWetlands_Crowd2_Text_2:
 	.string "won't sit down.$"
 
 ParcelWetlands_Crowd2_Text_3:
-# 284 "data/maps/ParcelWetlands/scripts.pory"
+# 300 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAN: Somebody did this. Water doesn't\n"
 	.string "go bad on its own in a night.\p"
 	.string "And I don't see anybody from the CORPS\n"
 	.string "writing THAT down.$"
 
 ParcelWetlands_Crowd3_Text_0:
-# 292 "data/maps/ParcelWetlands/scripts.pory"
+# 308 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Dad says it's the allocation. He\n"
 	.string "says it like a word he's learned to use.\p"
 	.string "He says you wrote it down like it cost\n"
 	.string "him less now. I think he means thanks.$"
 
 ParcelWetlands_Crowd3_Text_1:
-# 297 "data/maps/ParcelWetlands/scripts.pory"
+# 313 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Dad says it wasn't your fault. He\n"
 	.string "says it like it cost him. He also says\l"
 	.string "you wrote it down. He says that like it\l"
 	.string "cost him more.$"
 
 ParcelWetlands_Crowd3_Text_2:
-# 302 "data/maps/ParcelWetlands/scripts.pory"
+# 318 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Dad doesn't say it's your fault any\n"
 	.string "more. He says it's 'the allocation.'\p"
 	.string "I don't know what that is. Is it worse\n"
 	.string "than you?$"
 
 ParcelWetlands_Crowd3_Text_3:
-# 306 "data/maps/ParcelWetlands/scripts.pory"
+# 322 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Dad says it's your fault. Is it your\n"
 	.string "fault?$"
 
 ParcelWetlands_EvResidue_Text_0:
-# 322 "data/maps/ParcelWetlands/scripts.pory"
+# 338 "data/maps/ParcelWetlands/scripts.pory"
 	.string "The residue sample. Sealed.$"
 
 ParcelWetlands_EvResidue_Text_1:
-# 326 "data/maps/ParcelWetlands/scripts.pory"
+# 342 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Upstream of the landing the residue\n"
 	.string "collects in the reed roots. Greasy.\l"
 	.string "Faintly sweet.\p"
@@ -4672,19 +4776,19 @@ ParcelWetlands_EvResidue_Text_1:
 	.string "and labelled.$"
 
 ParcelWetlands_EvPipe_Text_0:
-# 342 "data/maps/ParcelWetlands/scripts.pory"
+# 358 "data/maps/ParcelWetlands/scripts.pory"
 	.string "The pipe segment. Photographed and\n"
 	.string "noted.$"
 
 ParcelWetlands_EvPipe_Text_1:
-# 346 "data/maps/ParcelWetlands/scripts.pory"
+# 362 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A broken discharge pipe, half-buried\n"
 	.string "under the falls. The break is old. The\l"
 	.string "staining inside it is not.\p"
 	.string "Photographed where it lies.$"
 
 ParcelWetlands_EvPipe_Text_2:
-# 347 "data/maps/ParcelWetlands/scripts.pory"
+# 363 "data/maps/ParcelWetlands/scripts.pory"
 	.string "You have stood over a pipe like this\n"
 	.string "before, at the edge of a marsh nobody\l"
 	.string "called a habitat, beside a friend who\l"
@@ -4694,12 +4798,12 @@ ParcelWetlands_EvPipe_Text_2:
 	.string "it anyway.$"
 
 ParcelWetlands_EvManifest_Text_0:
-# 363 "data/maps/ParcelWetlands/scripts.pory"
+# 379 "data/maps/ParcelWetlands/scripts.pory"
 	.string "The manifest. Drying between notebook\n"
 	.string "pages.$"
 
 ParcelWetlands_EvManifest_Text_1:
-# 367 "data/maps/ParcelWetlands/scripts.pory"
+# 383 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A transport manifest, soaked but\n"
 	.string "readable. Tonnage. Dates. A carrier code\l"
 	.string "that isn't in any register.\p"
@@ -4707,50 +4811,50 @@ ParcelWetlands_EvManifest_Text_1:
 	.string "by hand.$"
 
 ParcelWetlands_RequirePoison_Text_0:
-# 379 "data/maps/ParcelWetlands/scripts.pory"
+# 395 "data/maps/ParcelWetlands/scripts.pory"
 	.string "The water is quiet. HARLAND's boats sit\n"
 	.string "low on their lines.$"
 
 ParcelWetlands_CheckEvidenceDone_Text_0:
-# 388 "data/maps/ParcelWetlands/scripts.pory"
+# 404 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Residue. Pipe. Manifest.\p"
 	.string "Enough to point. Not enough to convict.\n"
 	.string "All of it written down.$"
 
 ParcelWetlands_CheckEvidenceDone_Text_1:
-# 391 "data/maps/ParcelWetlands/scripts.pory"
+# 407 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Someone is standing at the landing.\n"
 	.string "Watching.$"
 
 ParcelWetlands_Enforcer_Text_0:
-# 399 "data/maps/ParcelWetlands/scripts.pory"
+# 415 "data/maps/ParcelWetlands/scripts.pory"
 	.string "VOSS: You think you're saving\n"
 	.string "something?\p"
 	.string "The land's already dead.\n"
 	.string "We're just the first to admit it.$"
 
 ParcelWetlands_Enforcer_Text_1:
-# 400 "data/maps/ParcelWetlands/scripts.pory"
+# 416 "data/maps/ParcelWetlands/scripts.pory"
 	.string "VOSS: Hm.$"
 
 ParcelWetlands_Enforcer_Text_2:
-# 403 "data/maps/ParcelWetlands/scripts.pory"
+# 419 "data/maps/ParcelWetlands/scripts.pory"
 	.string "VOSS: Your mentor tried.\n"
 	.string "Look how that went.$"
 
 ParcelWetlands_Enforcer_Text_3:
-# 404 "data/maps/ParcelWetlands/scripts.pory"
+# 420 "data/maps/ParcelWetlands/scripts.pory"
 	.string "VOSS: Keep the manifest. Frame it.\n"
 	.string "Nobody who matters can read.$"
 
 ParcelWetlands_Enforcer_Text_4:
-# 408 "data/maps/ParcelWetlands/scripts.pory"
+# 424 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAN: Where'd the councilman go? He was\n"
 	.string "right there by the office.\p"
 	.string "His car's gone.$"
 
 ParcelWetlands_Gunnar_Text_0:
-# 426 "data/maps/ParcelWetlands/scripts.pory"
+# 442 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: Twice as far out, then less. The\n"
 	.string "count's in. Not where it was. In.\p"
 	.string "I write it on the boat with a nail now,\n"
@@ -4758,7 +4862,7 @@ ParcelWetlands_Gunnar_Text_0:
 	.string "RANGER.$"
 
 ParcelWetlands_Gunnar_Text_1:
-# 431 "data/maps/ParcelWetlands/scripts.pory"
+# 447 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: Twice as far out, I said. The\n"
 	.string "count's coming back in. Not to where it\l"
 	.string "was. In. You wrote it down and now I\l"
@@ -4766,42 +4870,42 @@ ParcelWetlands_Gunnar_Text_1:
 	.string "down. Three of us. That's a survey.$"
 
 ParcelWetlands_Gunnar_Text_2:
-# 436 "data/maps/ParcelWetlands/scripts.pory"
+# 452 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: Twice as far out. You remember\n"
 	.string "that for me, when you write your\l"
 	.string "reports.$"
 
 ParcelWetlands_Gunnar_Text_3:
-# 441 "data/maps/ParcelWetlands/scripts.pory"
+# 457 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: Still there? Skating about?\p"
 	.string "Good. Good. Then it's not all gone bad.\n"
 	.string "Not yet.$"
 
 ParcelWetlands_Gunnar_Text_4:
-# 444 "data/maps/ParcelWetlands/scripts.pory"
+# 460 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: Take these. My son's. He's not\n"
 	.string "coming back for them.$"
 
 ParcelWetlands_Gunnar_Text_5:
-# 447 "data/maps/ParcelWetlands/scripts.pory"
+# 463 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: Take this. My son's rod. He's\n"
 	.string "not coming back for it.$"
 
 ParcelWetlands_Gunnar_Text_6:
-# 455 "data/maps/ParcelWetlands/scripts.pory"
+# 471 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: The puddles past the bridge,\n"
 	.string "west end. Little blue thing on long legs.\l"
 	.string "Go and look.$"
 
 ParcelWetlands_Gunnar_Text_7:
-# 459 "data/maps/ParcelWetlands/scripts.pory"
+# 475 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: The reed beds used to go twice\n"
 	.string "as far out. Ask anyone old enough to\l"
 	.string "remember.\p"
 	.string "Nobody asks.$"
 
 ParcelWetlands_Gunnar_Text_8:
-# 460 "data/maps/ParcelWetlands/scripts.pory"
+# 476 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GUNNAR: You're a RANGER, aren't you?\n"
 	.string "Then count something for me.\p"
 	.string "There used to be SURSKIT on the\n"
@@ -4811,600 +4915,600 @@ ParcelWetlands_Gunnar_Text_8:
 	.string "Go and look. Then come and tell me.$"
 
 ParcelWetlands_Surskit_Text_0:
-# 470 "data/maps/ParcelWetlands/scripts.pory"
+# 486 "data/maps/ParcelWetlands/scripts.pory"
 	.string "The SURSKIT skates a circle on the\n"
 	.string "puddle, then another.\p"
 	.string "One. Still here. Written down.$"
 
 ParcelWetlands_Surskit_Text_1:
-# 475 "data/maps/ParcelWetlands/scripts.pory"
+# 491 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A SURSKIT skates a circle on the\n"
 	.string "puddle, then another.$"
 
 ParcelWetlands_Selt_Text_0:
-# 483 "data/maps/ParcelWetlands/scripts.pory"
+# 499 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Nothing illegal about standing by\n"
 	.string "the water, kid.$"
 
 ParcelWetlands_Selt_Text_1:
-# 484 "data/maps/ParcelWetlands/scripts.pory"
+# 500 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Fine, fine. Moving along.$"
 
 ParcelWetlands_Selt_Text_2:
-# 499 "data/maps/ParcelWetlands/scripts.pory"
+# 515 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: A man's got to eat. You want\n"
 	.string "villains, look further up the money.$"
 
 ParcelWetlands_Selt_R2_Text_0:
-# 510 "data/maps/ParcelWetlands/scripts.pory"
+# 526 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Back this way? I've not been idle.\n"
 	.string "Rematch?$"
 
 ParcelWetlands_Selt_R2_Text_1:
-# 512 "data/maps/ParcelWetlands/scripts.pory"
+# 528 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Another time, then.$"
 
 ParcelWetlands_Selt_R2_Text_2:
-# 516 "data/maps/ParcelWetlands/scripts.pory"
+# 532 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Right. That's the whole of it.$"
 
 ParcelWetlands_Selt_R2_Text_3:
-# 517 "data/maps/ParcelWetlands/scripts.pory"
+# 533 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Selt_R3_Text_0:
-# 524 "data/maps/ParcelWetlands/scripts.pory"
+# 540 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelWetlands_Selt_R3_Text_1:
-# 530 "data/maps/ParcelWetlands/scripts.pory"
+# 546 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Still yours.$"
 
 ParcelWetlands_Selt_R3_Text_2:
-# 531 "data/maps/ParcelWetlands/scripts.pory"
+# 547 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWetlands_Selt_R4_Text_0:
-# 538 "data/maps/ParcelWetlands/scripts.pory"
+# 554 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Full strength, no excuses, mine or\n"
 	.string "yours. Rematch?$"
 
 ParcelWetlands_Selt_R4_Text_1:
-# 545 "data/maps/ParcelWetlands/scripts.pory"
+# 561 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelWetlands_Selt_R5_Text_0:
-# 552 "data/maps/ParcelWetlands/scripts.pory"
+# 568 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelWetlands_Selt_R5_Text_1:
-# 558 "data/maps/ParcelWetlands/scripts.pory"
+# 574 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: …Fair.$"
 
 ParcelWetlands_Selt_R5_Text_2:
-# 559 "data/maps/ParcelWetlands/scripts.pory"
+# 575 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SELT: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelWetlands_Mora_Text_0:
-# 565 "data/maps/ParcelWetlands/scripts.pory"
+# 581 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: This patch is spoken for. Walk on.$"
 
 ParcelWetlands_Mora_Text_1:
-# 566 "data/maps/ParcelWetlands/scripts.pory"
+# 582 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Ugh. Whatever.$"
 
 ParcelWetlands_Mora_Text_2:
-# 581 "data/maps/ParcelWetlands/scripts.pory"
+# 597 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Spoken for by WHO? Mind your own\n"
 	.string "business.$"
 
 ParcelWetlands_Mora_R2_Text_0:
-# 592 "data/maps/ParcelWetlands/scripts.pory"
+# 608 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelWetlands_Mora_R2_Text_1:
-# 594 "data/maps/ParcelWetlands/scripts.pory"
+# 610 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Fine. Same spot.$"
 
 ParcelWetlands_Mora_R2_Text_2:
-# 598 "data/maps/ParcelWetlands/scripts.pory"
+# 614 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Still yours.$"
 
 ParcelWetlands_Mora_R2_Text_3:
-# 599 "data/maps/ParcelWetlands/scripts.pory"
+# 615 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelWetlands_Mora_R3_Text_0:
-# 606 "data/maps/ParcelWetlands/scripts.pory"
+# 622 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_Mora_R3_Text_1:
-# 612 "data/maps/ParcelWetlands/scripts.pory"
+# 628 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: That's the one I wanted to see.$"
 
 ParcelWetlands_Mora_R3_Text_2:
-# 613 "data/maps/ParcelWetlands/scripts.pory"
+# 629 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Mora_R4_Text_0:
-# 620 "data/maps/ParcelWetlands/scripts.pory"
+# 636 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelWetlands_Mora_R4_Text_1:
-# 627 "data/maps/ParcelWetlands/scripts.pory"
+# 643 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Mora_R5_Text_0:
-# 634 "data/maps/ParcelWetlands/scripts.pory"
+# 650 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelWetlands_Mora_R5_Text_1:
-# 640 "data/maps/ParcelWetlands/scripts.pory"
+# 656 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Noted. Properly, this time.$"
 
 ParcelWetlands_Mora_R5_Text_2:
-# 641 "data/maps/ParcelWetlands/scripts.pory"
+# 657 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MORA: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelWetlands_Bran_Text_0:
-# 647 "data/maps/ParcelWetlands/scripts.pory"
+# 663 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Mind your boots. Mudcaps grow\n"
 	.string "where you least want them.\p"
 	.string "And trainers, apparently. C'mon then.$"
 
 ParcelWetlands_Bran_Text_1:
-# 648 "data/maps/ParcelWetlands/scripts.pory"
+# 664 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Heh. Soft hands, hard hits.$"
 
 ParcelWetlands_Bran_Text_2:
-# 663 "data/maps/ParcelWetlands/scripts.pory"
+# 679 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: There's a path up to the office\n"
 	.string "from here. Mind the ledge, it's higher\l"
 	.string "than it looks.$"
 
 ParcelWetlands_Bran_R2_Text_0:
-# 674 "data/maps/ParcelWetlands/scripts.pory"
+# 690 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelWetlands_Bran_R2_Text_1:
-# 676 "data/maps/ParcelWetlands/scripts.pory"
+# 692 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: No hurry. The water keeps.$"
 
 ParcelWetlands_Bran_R2_Text_2:
-# 680 "data/maps/ParcelWetlands/scripts.pory"
+# 696 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Right. That's the whole of it.$"
 
 ParcelWetlands_Bran_R2_Text_3:
-# 681 "data/maps/ParcelWetlands/scripts.pory"
+# 697 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Bran_R3_Text_0:
-# 688 "data/maps/ParcelWetlands/scripts.pory"
+# 704 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: They say you don't lose any more.\n"
 	.string "Let's check?$"
 
 ParcelWetlands_Bran_R3_Text_1:
-# 694 "data/maps/ParcelWetlands/scripts.pory"
+# 710 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: That's the one I wanted to see.$"
 
 ParcelWetlands_Bran_R3_Text_2:
-# 695 "data/maps/ParcelWetlands/scripts.pory"
+# 711 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWetlands_Bran_R4_Text_0:
-# 702 "data/maps/ParcelWetlands/scripts.pory"
+# 718 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelWetlands_Bran_R4_Text_1:
-# 708 "data/maps/ParcelWetlands/scripts.pory"
+# 724 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Noted. Properly, this time.$"
 
 ParcelWetlands_Bran_R4_Text_2:
-# 709 "data/maps/ParcelWetlands/scripts.pory"
+# 725 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Bran_R5_Text_0:
-# 716 "data/maps/ParcelWetlands/scripts.pory"
+# 732 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelWetlands_Bran_R5_Text_1:
-# 722 "data/maps/ParcelWetlands/scripts.pory"
+# 738 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: …Again, then. Later.$"
 
 ParcelWetlands_Bran_R5_Text_2:
-# 723 "data/maps/ParcelWetlands/scripts.pory"
+# 739 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BRAN: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelWetlands_Kalle_Text_0:
-# 731 "data/maps/ParcelWetlands/scripts.pory"
+# 747 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: The reeds are full of cocoons.\n"
 	.string "Hundreds! Don't step on them!$"
 
 ParcelWetlands_Kalle_Text_1:
-# 732 "data/maps/ParcelWetlands/scripts.pory"
+# 748 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Aw. They'll hatch anyway.$"
 
 ParcelWetlands_Kalle_Text_2:
-# 747 "data/maps/ParcelWetlands/scripts.pory"
+# 763 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: WURMPLE pick the reed stems.\n"
 	.string "When the reeds go, where do they pick?$"
 
 ParcelWetlands_Kalle_R2_Text_0:
-# 758 "data/maps/ParcelWetlands/scripts.pory"
+# 774 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Back this way? I've not been\n"
 	.string "idle. Rematch?$"
 
 ParcelWetlands_Kalle_R2_Text_1:
-# 760 "data/maps/ParcelWetlands/scripts.pory"
+# 776 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Suit yourself. I'm here.$"
 
 ParcelWetlands_Kalle_R2_Text_2:
-# 764 "data/maps/ParcelWetlands/scripts.pory"
+# 780 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Right. That's the whole of it.$"
 
 ParcelWetlands_Kalle_R2_Text_3:
-# 765 "data/maps/ParcelWetlands/scripts.pory"
+# 781 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Kalle_R3_Text_0:
-# 772 "data/maps/ParcelWetlands/scripts.pory"
+# 788 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_Kalle_R3_Text_1:
-# 778 "data/maps/ParcelWetlands/scripts.pory"
+# 794 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: …Fair.$"
 
 ParcelWetlands_Kalle_R3_Text_2:
-# 779 "data/maps/ParcelWetlands/scripts.pory"
+# 795 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Kalle_R4_Text_0:
-# 786 "data/maps/ParcelWetlands/scripts.pory"
+# 802 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Full strength, no excuses, mine\n"
 	.string "or yours. Rematch?$"
 
 ParcelWetlands_Kalle_R4_Text_1:
-# 792 "data/maps/ParcelWetlands/scripts.pory"
+# 808 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Noted. Properly, this time.$"
 
 ParcelWetlands_Kalle_R4_Text_2:
-# 793 "data/maps/ParcelWetlands/scripts.pory"
+# 809 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Kalle_R5_Text_0:
-# 800 "data/maps/ParcelWetlands/scripts.pory"
+# 816 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelWetlands_Kalle_R5_Text_1:
-# 806 "data/maps/ParcelWetlands/scripts.pory"
+# 822 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: …Again, then. Later.$"
 
 ParcelWetlands_Kalle_R5_Text_2:
-# 807 "data/maps/ParcelWetlands/scripts.pory"
+# 823 "data/maps/ParcelWetlands/scripts.pory"
 	.string "KALLE: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelWetlands_Liv_Text_0:
-# 813 "data/maps/ParcelWetlands/scripts.pory"
+# 829 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: Nobody comes out this far. So\n"
 	.string "you're either lost or you're a RANGER.$"
 
 ParcelWetlands_Liv_Text_1:
-# 814 "data/maps/ParcelWetlands/scripts.pory"
+# 830 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: RANGER, then.$"
 
 ParcelWetlands_Liv_Text_2:
-# 829 "data/maps/ParcelWetlands/scripts.pory"
+# 845 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: I come out here for the quiet. It's\n"
 	.string "less quiet than it was. Engines on the\l"
 	.string "water, at night.$"
 
 ParcelWetlands_Liv_R2_Text_0:
-# 840 "data/maps/ParcelWetlands/scripts.pory"
+# 856 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelWetlands_Liv_R2_Text_1:
-# 842 "data/maps/ParcelWetlands/scripts.pory"
+# 858 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: Fine. Same spot.$"
 
 ParcelWetlands_Liv_R2_Text_2:
-# 846 "data/maps/ParcelWetlands/scripts.pory"
+# 862 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: …Fair.$"
 
 ParcelWetlands_Liv_R2_Text_3:
-# 847 "data/maps/ParcelWetlands/scripts.pory"
+# 863 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelWetlands_Liv_R3_Text_0:
-# 854 "data/maps/ParcelWetlands/scripts.pory"
+# 870 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelWetlands_Liv_R3_Text_1:
-# 860 "data/maps/ParcelWetlands/scripts.pory"
+# 876 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: …Again, then. Later.$"
 
 ParcelWetlands_Liv_R3_Text_2:
-# 861 "data/maps/ParcelWetlands/scripts.pory"
+# 877 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Liv_R4_Text_0:
-# 868 "data/maps/ParcelWetlands/scripts.pory"
+# 884 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelWetlands_Liv_R4_Text_1:
-# 874 "data/maps/ParcelWetlands/scripts.pory"
+# 890 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: Right. That's the whole of it.$"
 
 ParcelWetlands_Liv_R4_Text_2:
-# 875 "data/maps/ParcelWetlands/scripts.pory"
+# 891 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelWetlands_Liv_R5_Text_0:
-# 882 "data/maps/ParcelWetlands/scripts.pory"
+# 898 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: Last one. I've put everything I've\n"
 	.string "got into this team. Go?$"
 
 ParcelWetlands_Liv_R5_Text_1:
-# 889 "data/maps/ParcelWetlands/scripts.pory"
+# 905 "data/maps/ParcelWetlands/scripts.pory"
 	.string "LIV: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelWetlands_Toke_Text_0:
-# 895 "data/maps/ParcelWetlands/scripts.pory"
+# 911 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: You didn't see me. Nobody sees me.$"
 
 ParcelWetlands_Toke_Text_1:
-# 896 "data/maps/ParcelWetlands/scripts.pory"
+# 912 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: You saw me.$"
 
 ParcelWetlands_Toke_Text_2:
-# 911 "data/maps/ParcelWetlands/scripts.pory"
+# 927 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: The grass is tallest by the water.\n"
 	.string "That's where I hide. That's where the\l"
 	.string "SURSKIT hide, too.$"
 
 ParcelWetlands_Toke_R2_Text_0:
-# 922 "data/maps/ParcelWetlands/scripts.pory"
+# 938 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelWetlands_Toke_R2_Text_1:
-# 924 "data/maps/ParcelWetlands/scripts.pory"
+# 940 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: No hurry. The water keeps.$"
 
 ParcelWetlands_Toke_R2_Text_2:
-# 928 "data/maps/ParcelWetlands/scripts.pory"
+# 944 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: That's the one I wanted to see.$"
 
 ParcelWetlands_Toke_R2_Text_3:
-# 929 "data/maps/ParcelWetlands/scripts.pory"
+# 945 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelWetlands_Toke_R3_Text_0:
-# 936 "data/maps/ParcelWetlands/scripts.pory"
+# 952 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelWetlands_Toke_R3_Text_1:
-# 942 "data/maps/ParcelWetlands/scripts.pory"
+# 958 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: …Fair.$"
 
 ParcelWetlands_Toke_R3_Text_2:
-# 943 "data/maps/ParcelWetlands/scripts.pory"
+# 959 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Toke_R4_Text_0:
-# 950 "data/maps/ParcelWetlands/scripts.pory"
+# 966 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelWetlands_Toke_R4_Text_1:
-# 956 "data/maps/ParcelWetlands/scripts.pory"
+# 972 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: Right. That's the whole of it.$"
 
 ParcelWetlands_Toke_R4_Text_2:
-# 957 "data/maps/ParcelWetlands/scripts.pory"
+# 973 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Toke_R5_Text_0:
-# 964 "data/maps/ParcelWetlands/scripts.pory"
+# 980 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: The region's different now. Let's\n"
 	.string "see if you are?$"
 
 ParcelWetlands_Toke_R5_Text_1:
-# 971 "data/maps/ParcelWetlands/scripts.pory"
+# 987 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TOKE: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelWetlands_Jorun_Text_0:
-# 977 "data/maps/ParcelWetlands/scripts.pory"
+# 993 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Camped here three nights. My\n"
 	.string "WOOPER found something in the mud\l"
 	.string "yesterday. Let's see what you've found.$"
 
 ParcelWetlands_Jorun_Text_1:
-# 978 "data/maps/ParcelWetlands/scripts.pory"
+# 994 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Found out, is what.$"
 
 ParcelWetlands_Jorun_Text_2:
-# 993 "data/maps/ParcelWetlands/scripts.pory"
+# 1009 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: It was a crate slat. Green paint.\n"
 	.string "Nobody paints crates green round here.$"
 
 ParcelWetlands_Jorun_R2_Text_0:
-# 1004 "data/maps/ParcelWetlands/scripts.pory"
+# 1020 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelWetlands_Jorun_R2_Text_1:
-# 1006 "data/maps/ParcelWetlands/scripts.pory"
+# 1022 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Another time, then.$"
 
 ParcelWetlands_Jorun_R2_Text_2:
-# 1010 "data/maps/ParcelWetlands/scripts.pory"
+# 1026 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: That's the one I wanted to see.$"
 
 ParcelWetlands_Jorun_R2_Text_3:
-# 1011 "data/maps/ParcelWetlands/scripts.pory"
+# 1027 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Jorun_R3_Text_0:
-# 1018 "data/maps/ParcelWetlands/scripts.pory"
+# 1034 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_Jorun_R3_Text_1:
-# 1025 "data/maps/ParcelWetlands/scripts.pory"
+# 1041 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWetlands_Jorun_R4_Text_0:
-# 1032 "data/maps/ParcelWetlands/scripts.pory"
+# 1048 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelWetlands_Jorun_R4_Text_1:
-# 1038 "data/maps/ParcelWetlands/scripts.pory"
+# 1054 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: …Fair.$"
 
 ParcelWetlands_Jorun_R4_Text_2:
-# 1039 "data/maps/ParcelWetlands/scripts.pory"
+# 1055 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelWetlands_Jorun_R5_Text_0:
-# 1046 "data/maps/ParcelWetlands/scripts.pory"
+# 1062 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelWetlands_Jorun_R5_Text_1:
-# 1053 "data/maps/ParcelWetlands/scripts.pory"
+# 1069 "data/maps/ParcelWetlands/scripts.pory"
 	.string "JORUN: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelWetlands_Stian_Text_0:
-# 1059 "data/maps/ParcelWetlands/scripts.pory"
+# 1075 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: WINGULL used to roost on the\n"
 	.string "reed islands. There's fewer islands\l"
 	.string "every year. Battle?$"
 
 ParcelWetlands_Stian_Text_1:
-# 1060 "data/maps/ParcelWetlands/scripts.pory"
+# 1076 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Fewer WINGULL, too.$"
 
 ParcelWetlands_Stian_Text_2:
-# 1075 "data/maps/ParcelWetlands/scripts.pory"
+# 1091 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: They moved to the landing roofs.\n"
 	.string "HARLAND hates it.$"
 
 ParcelWetlands_Stian_R2_Text_0:
-# 1086 "data/maps/ParcelWetlands/scripts.pory"
+# 1102 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelWetlands_Stian_R2_Text_1:
-# 1088 "data/maps/ParcelWetlands/scripts.pory"
+# 1104 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Suit yourself. I'm here.$"
 
 ParcelWetlands_Stian_R2_Text_2:
-# 1092 "data/maps/ParcelWetlands/scripts.pory"
+# 1108 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Still yours.$"
 
 ParcelWetlands_Stian_R2_Text_3:
-# 1093 "data/maps/ParcelWetlands/scripts.pory"
+# 1109 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelWetlands_Stian_R3_Text_0:
-# 1100 "data/maps/ParcelWetlands/scripts.pory"
+# 1116 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_Stian_R3_Text_1:
-# 1106 "data/maps/ParcelWetlands/scripts.pory"
+# 1122 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Noted. Properly, this time.$"
 
 ParcelWetlands_Stian_R3_Text_2:
-# 1107 "data/maps/ParcelWetlands/scripts.pory"
+# 1123 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWetlands_Stian_R4_Text_0:
-# 1114 "data/maps/ParcelWetlands/scripts.pory"
+# 1130 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelWetlands_Stian_R4_Text_1:
-# 1120 "data/maps/ParcelWetlands/scripts.pory"
+# 1136 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: …Fair.$"
 
 ParcelWetlands_Stian_R4_Text_2:
-# 1121 "data/maps/ParcelWetlands/scripts.pory"
+# 1137 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Stian_R5_Text_0:
-# 1128 "data/maps/ParcelWetlands/scripts.pory"
+# 1144 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelWetlands_Stian_R5_Text_1:
-# 1134 "data/maps/ParcelWetlands/scripts.pory"
+# 1150 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: Right. That's the whole of it.$"
 
 ParcelWetlands_Stian_R5_Text_2:
-# 1135 "data/maps/ParcelWetlands/scripts.pory"
+# 1151 "data/maps/ParcelWetlands/scripts.pory"
 	.string "STIAN: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelWetlands_Asta_Text_0:
-# 1141 "data/maps/ParcelWetlands/scripts.pory"
+# 1157 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Cadet ASTA, Corps patrol.\n"
 	.string "Provisional? Then you'll spar. HALE's\l"
 	.string "orders.$"
 
 ParcelWetlands_Asta_Text_1:
-# 1142 "data/maps/ParcelWetlands/scripts.pory"
+# 1158 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Good. HALE will want to hear that.$"
 
 ParcelWetlands_Asta_Text_2:
-# 1157 "data/maps/ParcelWetlands/scripts.pory"
+# 1173 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: The office people won't let us\n"
 	.string "gauge the channels ourselves.\l"
 	.string "'Duplication of effort.'\p"
@@ -5412,678 +5516,678 @@ ParcelWetlands_Asta_Text_2:
 	.string "write down ours.$"
 
 ParcelWetlands_Asta_R2_Text_0:
-# 1168 "data/maps/ParcelWetlands/scripts.pory"
+# 1184 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelWetlands_Asta_R2_Text_1:
-# 1170 "data/maps/ParcelWetlands/scripts.pory"
+# 1186 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Fine. Same spot.$"
 
 ParcelWetlands_Asta_R2_Text_2:
-# 1174 "data/maps/ParcelWetlands/scripts.pory"
+# 1190 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: …Fair.$"
 
 ParcelWetlands_Asta_R2_Text_3:
-# 1175 "data/maps/ParcelWetlands/scripts.pory"
+# 1191 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Asta_R3_Text_0:
-# 1182 "data/maps/ParcelWetlands/scripts.pory"
+# 1198 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_Asta_R3_Text_1:
-# 1189 "data/maps/ParcelWetlands/scripts.pory"
+# 1205 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Asta_R4_Text_0:
-# 1196 "data/maps/ParcelWetlands/scripts.pory"
+# 1212 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelWetlands_Asta_R4_Text_1:
-# 1202 "data/maps/ParcelWetlands/scripts.pory"
+# 1218 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: That's the one I wanted to see.$"
 
 ParcelWetlands_Asta_R4_Text_2:
-# 1203 "data/maps/ParcelWetlands/scripts.pory"
+# 1219 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelWetlands_Asta_R5_Text_0:
-# 1210 "data/maps/ParcelWetlands/scripts.pory"
+# 1226 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: The region's different now. Let's\n"
 	.string "see if you are?$"
 
 ParcelWetlands_Asta_R5_Text_1:
-# 1216 "data/maps/ParcelWetlands/scripts.pory"
+# 1232 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Still yours.$"
 
 ParcelWetlands_Asta_R5_Text_2:
-# 1217 "data/maps/ParcelWetlands/scripts.pory"
+# 1233 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ASTA: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelWetlands_Bjarte_Text_0:
-# 1223 "data/maps/ParcelWetlands/scripts.pory"
+# 1239 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Cadet BJARTE. The bridge is my\n"
 	.string "post. Nobody crosses without a battle,\l"
 	.string "HALE says.$"
 
 ParcelWetlands_Bjarte_Text_1:
-# 1224 "data/maps/ParcelWetlands/scripts.pory"
+# 1240 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: HALE doesn't actually say that.$"
 
 ParcelWetlands_Bjarte_Text_2:
-# 1239 "data/maps/ParcelWetlands/scripts.pory"
+# 1255 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: There's an old road east, over\n"
 	.string "the bridge and through the trees. The\l"
 	.string "culvert road. HALE said you'd be going\l"
 	.string "that way.$"
 
 ParcelWetlands_Bjarte_R2_Text_0:
-# 1250 "data/maps/ParcelWetlands/scripts.pory"
+# 1266 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelWetlands_Bjarte_R2_Text_1:
-# 1252 "data/maps/ParcelWetlands/scripts.pory"
+# 1268 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelWetlands_Bjarte_R2_Text_2:
-# 1256 "data/maps/ParcelWetlands/scripts.pory"
+# 1272 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Noted. Properly, this time.$"
 
 ParcelWetlands_Bjarte_R2_Text_3:
-# 1257 "data/maps/ParcelWetlands/scripts.pory"
+# 1273 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelWetlands_Bjarte_R3_Text_0:
-# 1264 "data/maps/ParcelWetlands/scripts.pory"
+# 1280 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_Bjarte_R3_Text_1:
-# 1270 "data/maps/ParcelWetlands/scripts.pory"
+# 1286 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Still yours.$"
 
 ParcelWetlands_Bjarte_R3_Text_2:
-# 1271 "data/maps/ParcelWetlands/scripts.pory"
+# 1287 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Bjarte_R4_Text_0:
-# 1278 "data/maps/ParcelWetlands/scripts.pory"
+# 1294 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Full strength, no excuses, mine\n"
 	.string "or yours. Rematch?$"
 
 ParcelWetlands_Bjarte_R4_Text_1:
-# 1284 "data/maps/ParcelWetlands/scripts.pory"
+# 1300 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: …Fair.$"
 
 ParcelWetlands_Bjarte_R4_Text_2:
-# 1285 "data/maps/ParcelWetlands/scripts.pory"
+# 1301 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Bjarte_R5_Text_0:
-# 1292 "data/maps/ParcelWetlands/scripts.pory"
+# 1308 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelWetlands_Bjarte_R5_Text_1:
-# 1298 "data/maps/ParcelWetlands/scripts.pory"
+# 1314 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: …Again, then. Later.$"
 
 ParcelWetlands_Bjarte_R5_Text_2:
-# 1299 "data/maps/ParcelWetlands/scripts.pory"
+# 1315 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BJARTE: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelWetlands_Odd_Text_0:
-# 1305 "data/maps/ParcelWetlands/scripts.pory"
+# 1321 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: These cliffs are the only dry\n"
 	.string "ground for a mile. I'm not sharing them.$"
 
 ParcelWetlands_Odd_Text_1:
-# 1306 "data/maps/ParcelWetlands/scripts.pory"
+# 1322 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Fine. Share.$"
 
 ParcelWetlands_Odd_Text_2:
-# 1321 "data/maps/ParcelWetlands/scripts.pory"
+# 1337 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: The rock's wet all year now. Used\n"
 	.string "to dry out by midsummer.$"
 
 ParcelWetlands_Odd_R2_Text_0:
-# 1332 "data/maps/ParcelWetlands/scripts.pory"
+# 1348 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Clearances or not, I want that one\n"
 	.string "back. Go?$"
 
 ParcelWetlands_Odd_R2_Text_1:
-# 1334 "data/maps/ParcelWetlands/scripts.pory"
+# 1350 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: No hurry. The water keeps.$"
 
 ParcelWetlands_Odd_R2_Text_2:
-# 1338 "data/maps/ParcelWetlands/scripts.pory"
+# 1354 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Right. That's the whole of it.$"
 
 ParcelWetlands_Odd_R2_Text_3:
-# 1339 "data/maps/ParcelWetlands/scripts.pory"
+# 1355 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Odd_R3_Text_0:
-# 1346 "data/maps/ParcelWetlands/scripts.pory"
+# 1362 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_Odd_R3_Text_1:
-# 1352 "data/maps/ParcelWetlands/scripts.pory"
+# 1368 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: …Fair.$"
 
 ParcelWetlands_Odd_R3_Text_2:
-# 1353 "data/maps/ParcelWetlands/scripts.pory"
+# 1369 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Odd_R4_Text_0:
-# 1360 "data/maps/ParcelWetlands/scripts.pory"
+# 1376 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Nearly the top, they say. Not past\n"
 	.string "me. Again?$"
 
 ParcelWetlands_Odd_R4_Text_1:
-# 1366 "data/maps/ParcelWetlands/scripts.pory"
+# 1382 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Still yours.$"
 
 ParcelWetlands_Odd_R4_Text_2:
-# 1367 "data/maps/ParcelWetlands/scripts.pory"
+# 1383 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Odd_R5_Text_0:
-# 1374 "data/maps/ParcelWetlands/scripts.pory"
+# 1390 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: Last one. I've put everything I've\n"
 	.string "got into this team. Go?$"
 
 ParcelWetlands_Odd_R5_Text_1:
-# 1381 "data/maps/ParcelWetlands/scripts.pory"
+# 1397 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ODD: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelWetlands_Haakon_Text_0:
-# 1387 "data/maps/ParcelWetlands/scripts.pory"
+# 1403 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: Shh. You'll scare them. Too late.\n"
 	.string "Battle.$"
 
 ParcelWetlands_Haakon_Text_1:
-# 1388 "data/maps/ParcelWetlands/scripts.pory"
+# 1404 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: Scared them anyway.$"
 
 ParcelWetlands_Haakon_Text_2:
-# 1403 "data/maps/ParcelWetlands/scripts.pory"
+# 1419 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: The channel above the landing\n"
 	.string "still runs clean. Mostly. I fish here, not\l"
 	.string "down there.$"
 
 ParcelWetlands_Haakon_R2_Text_0:
-# 1414 "data/maps/ParcelWetlands/scripts.pory"
+# 1430 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelWetlands_Haakon_R2_Text_1:
-# 1416 "data/maps/ParcelWetlands/scripts.pory"
+# 1432 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: No hurry. The water keeps.$"
 
 ParcelWetlands_Haakon_R2_Text_2:
-# 1420 "data/maps/ParcelWetlands/scripts.pory"
+# 1436 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: Still yours.$"
 
 ParcelWetlands_Haakon_R2_Text_3:
-# 1421 "data/maps/ParcelWetlands/scripts.pory"
+# 1437 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelWetlands_Haakon_R3_Text_0:
-# 1428 "data/maps/ParcelWetlands/scripts.pory"
+# 1444 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelWetlands_Haakon_R3_Text_1:
-# 1434 "data/maps/ParcelWetlands/scripts.pory"
+# 1450 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: That's the one I wanted to see.$"
 
 ParcelWetlands_Haakon_R3_Text_2:
-# 1435 "data/maps/ParcelWetlands/scripts.pory"
+# 1451 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_Haakon_R4_Text_0:
-# 1442 "data/maps/ParcelWetlands/scripts.pory"
+# 1458 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelWetlands_Haakon_R4_Text_1:
-# 1448 "data/maps/ParcelWetlands/scripts.pory"
+# 1464 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: Noted. Properly, this time.$"
 
 ParcelWetlands_Haakon_R4_Text_2:
-# 1449 "data/maps/ParcelWetlands/scripts.pory"
+# 1465 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelWetlands_Haakon_R5_Text_0:
-# 1456 "data/maps/ParcelWetlands/scripts.pory"
+# 1472 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelWetlands_Haakon_R5_Text_1:
-# 1462 "data/maps/ParcelWetlands/scripts.pory"
+# 1478 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: Right. That's the whole of it.$"
 
 ParcelWetlands_Haakon_R5_Text_2:
-# 1463 "data/maps/ParcelWetlands/scripts.pory"
+# 1479 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HAAKON: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelWetlands_Eirik_Text_0:
-# 1469 "data/maps/ParcelWetlands/scripts.pory"
+# 1485 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: Three MAGIKARP today. Three!\n"
 	.string "Last year it'd be thirty. Take it out on\l"
 	.string "me, go on.$"
 
 ParcelWetlands_Eirik_Text_1:
-# 1470 "data/maps/ParcelWetlands/scripts.pory"
+# 1486 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: Thirty-one, then.$"
 
 ParcelWetlands_Eirik_Text_2:
-# 1485 "data/maps/ParcelWetlands/scripts.pory"
+# 1501 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: HARLAND says the CORPS counts\n"
 	.string "the fish wrong. I say there's nothing\l"
 	.string "left to count.$"
 
 ParcelWetlands_Eirik_R2_Text_0:
-# 1496 "data/maps/ParcelWetlands/scripts.pory"
+# 1512 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelWetlands_Eirik_R2_Text_1:
-# 1498 "data/maps/ParcelWetlands/scripts.pory"
+# 1514 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: Fine. Same spot.$"
 
 ParcelWetlands_Eirik_R2_Text_2:
-# 1502 "data/maps/ParcelWetlands/scripts.pory"
+# 1518 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: That's the one I wanted to see.$"
 
 ParcelWetlands_Eirik_R2_Text_3:
-# 1503 "data/maps/ParcelWetlands/scripts.pory"
+# 1519 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Eirik_R3_Text_0:
-# 1510 "data/maps/ParcelWetlands/scripts.pory"
+# 1526 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelWetlands_Eirik_R3_Text_1:
-# 1516 "data/maps/ParcelWetlands/scripts.pory"
+# 1532 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: …Again, then. Later.$"
 
 ParcelWetlands_Eirik_R3_Text_2:
-# 1517 "data/maps/ParcelWetlands/scripts.pory"
+# 1533 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWetlands_Eirik_R4_Text_0:
-# 1524 "data/maps/ParcelWetlands/scripts.pory"
+# 1540 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelWetlands_Eirik_R4_Text_1:
-# 1531 "data/maps/ParcelWetlands/scripts.pory"
+# 1547 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Eirik_R5_Text_0:
-# 1538 "data/maps/ParcelWetlands/scripts.pory"
+# 1554 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelWetlands_Eirik_R5_Text_1:
-# 1545 "data/maps/ParcelWetlands/scripts.pory"
+# 1561 "data/maps/ParcelWetlands/scripts.pory"
 	.string "EIRIK: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelWetlands_Siv_Text_0:
-# 1551 "data/maps/ParcelWetlands/scripts.pory"
+# 1567 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: I like it up here. You can see the\n"
 	.string "whole marsh. Including you, coming.$"
 
 ParcelWetlands_Siv_Text_1:
-# 1552 "data/maps/ParcelWetlands/scripts.pory"
+# 1568 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Should've looked harder.$"
 
 ParcelWetlands_Siv_Text_2:
-# 1567 "data/maps/ParcelWetlands/scripts.pory"
+# 1583 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: From up here you can see the shine\n"
 	.string "on the water some mornings. Rainbow\l"
 	.string "colours. Pretty, if you don't think\l"
 	.string "about it.$"
 
 ParcelWetlands_Siv_R2_Text_0:
-# 1578 "data/maps/ParcelWetlands/scripts.pory"
+# 1594 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Back this way? I've not been idle.\n"
 	.string "Rematch?$"
 
 ParcelWetlands_Siv_R2_Text_1:
-# 1580 "data/maps/ParcelWetlands/scripts.pory"
+# 1596 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Fine. Same spot.$"
 
 ParcelWetlands_Siv_R2_Text_2:
-# 1584 "data/maps/ParcelWetlands/scripts.pory"
+# 1600 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Right. That's the whole of it.$"
 
 ParcelWetlands_Siv_R2_Text_3:
-# 1585 "data/maps/ParcelWetlands/scripts.pory"
+# 1601 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_Siv_R3_Text_0:
-# 1592 "data/maps/ParcelWetlands/scripts.pory"
+# 1608 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: They say you don't lose any more.\n"
 	.string "Let's check?$"
 
 ParcelWetlands_Siv_R3_Text_1:
-# 1598 "data/maps/ParcelWetlands/scripts.pory"
+# 1614 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: That's the one I wanted to see.$"
 
 ParcelWetlands_Siv_R3_Text_2:
-# 1599 "data/maps/ParcelWetlands/scripts.pory"
+# 1615 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWetlands_Siv_R4_Text_0:
-# 1606 "data/maps/ParcelWetlands/scripts.pory"
+# 1622 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: I've watched you walk past twice.\n"
 	.string "Not a third time. Battle?$"
 
 ParcelWetlands_Siv_R4_Text_1:
-# 1613 "data/maps/ParcelWetlands/scripts.pory"
+# 1629 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWetlands_Siv_R5_Text_0:
-# 1620 "data/maps/ParcelWetlands/scripts.pory"
+# 1636 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelWetlands_Siv_R5_Text_1:
-# 1626 "data/maps/ParcelWetlands/scripts.pory"
+# 1642 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: …Fair.$"
 
 ParcelWetlands_Siv_R5_Text_2:
-# 1627 "data/maps/ParcelWetlands/scripts.pory"
+# 1643 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SIV: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelWetlands_SignLanding_Text_0:
-# 1639 "data/maps/ParcelWetlands/scripts.pory"
+# 1655 "data/maps/ParcelWetlands/scripts.pory"
 	.string "REEDMERE LANDING\p"
 	.string "Boats moored past sundown pay the\n"
 	.string "landing fee. Fish counts to the office.\l"
 	.string "No nets in the channel.$"
 
 ParcelWetlands_SignOffice_Text_0:
-# 1643 "data/maps/ParcelWetlands/scripts.pory"
+# 1659 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MEREHOLT TIDEWATER DIVISION\n"
 	.string "Reedmere Gauging Office\p"
 	.string "Opening ceremony by COUNCILMAN\n"
 	.string "DORSEY. All welcome.$"
 
 ParcelWetlands_SignRoute_Text_0:
-# 1647 "data/maps/ParcelWetlands/scripts.pory"
+# 1663 "data/maps/ParcelWetlands/scripts.pory"
 	.string "REEDMERE\p"
 	.string "North: the landing and the backwater.\n"
 	.string "South: FERNWICK.$"
 
 ParcelWetlands_T_Paul_Text_0:
-# 1654 "data/maps/ParcelWetlands/scripts.pory"
+# 1670 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: The reed beds are the best bug\n"
 	.string "country in the district. Were. Battle.$"
 
 ParcelWetlands_T_Paul_Text_1:
-# 1655 "data/maps/ParcelWetlands/scripts.pory"
+# 1671 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: Were.$"
 
 ParcelWetlands_T_Paul_Text_2:
-# 1670 "data/maps/ParcelWetlands/scripts.pory"
+# 1686 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: Half the reed beds went under the\n"
 	.string "FOUNDATION's gauges. Gauges don't eat\l"
 	.string "reeds. The boat traffic does.$"
 
 ParcelWetlands_T_Paul_R2_Text_0:
-# 1681 "data/maps/ParcelWetlands/scripts.pory"
+# 1697 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelWetlands_T_Paul_R2_Text_1:
-# 1683 "data/maps/ParcelWetlands/scripts.pory"
+# 1699 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: No hurry. The water keeps.$"
 
 ParcelWetlands_T_Paul_R2_Text_2:
-# 1687 "data/maps/ParcelWetlands/scripts.pory"
+# 1703 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: Right. That's the whole of it.$"
 
 ParcelWetlands_T_Paul_R2_Text_3:
-# 1688 "data/maps/ParcelWetlands/scripts.pory"
+# 1704 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_T_Paul_R3_Text_0:
-# 1695 "data/maps/ParcelWetlands/scripts.pory"
+# 1711 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: They say you don't lose any more.\n"
 	.string "Let's check?$"
 
 ParcelWetlands_T_Paul_R3_Text_1:
-# 1701 "data/maps/ParcelWetlands/scripts.pory"
+# 1717 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: …Fair.$"
 
 ParcelWetlands_T_Paul_R3_Text_2:
-# 1702 "data/maps/ParcelWetlands/scripts.pory"
+# 1718 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWetlands_T_Paul_R4_Text_0:
-# 1709 "data/maps/ParcelWetlands/scripts.pory"
+# 1725 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: I've watched you walk past twice.\n"
 	.string "Not a third time. Battle?$"
 
 ParcelWetlands_T_Paul_R4_Text_1:
-# 1715 "data/maps/ParcelWetlands/scripts.pory"
+# 1731 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: That's the one I wanted to see.$"
 
 ParcelWetlands_T_Paul_R4_Text_2:
-# 1716 "data/maps/ParcelWetlands/scripts.pory"
+# 1732 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelWetlands_T_Paul_R5_Text_0:
-# 1723 "data/maps/ParcelWetlands/scripts.pory"
+# 1739 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelWetlands_T_Paul_R5_Text_1:
-# 1729 "data/maps/ParcelWetlands/scripts.pory"
+# 1745 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: Still yours.$"
 
 ParcelWetlands_T_Paul_R5_Text_2:
-# 1730 "data/maps/ParcelWetlands/scripts.pory"
+# 1746 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PAUL: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelWetlands_T_Sunniva_Text_0:
-# 1736 "data/maps/ParcelWetlands/scripts.pory"
+# 1752 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Cadet SUNNIVA, plateau watch.\n"
 	.string "HALE's orders: every provisional spars.\l"
 	.string "Yes, even now.$"
 
 ParcelWetlands_T_Sunniva_Text_1:
-# 1737 "data/maps/ParcelWetlands/scripts.pory"
+# 1753 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Logged. HALE will nod.$"
 
 ParcelWetlands_T_Sunniva_Text_2:
-# 1752 "data/maps/ParcelWetlands/scripts.pory"
+# 1768 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: The office below has four\n"
 	.string "gauges and we have one notebook. Guess\l"
 	.string "which numbers get believed.$"
 
 ParcelWetlands_T_Sunniva_R2_Text_0:
-# 1763 "data/maps/ParcelWetlands/scripts.pory"
+# 1779 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelWetlands_T_Sunniva_R2_Text_1:
-# 1765 "data/maps/ParcelWetlands/scripts.pory"
+# 1781 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Another time, then.$"
 
 ParcelWetlands_T_Sunniva_R2_Text_2:
-# 1769 "data/maps/ParcelWetlands/scripts.pory"
+# 1785 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: That's the one I wanted to\n"
 	.string "see.$"
 
 ParcelWetlands_T_Sunniva_R2_Text_3:
-# 1770 "data/maps/ParcelWetlands/scripts.pory"
+# 1786 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelWetlands_T_Sunniva_R3_Text_0:
-# 1777 "data/maps/ParcelWetlands/scripts.pory"
+# 1793 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelWetlands_T_Sunniva_R3_Text_1:
-# 1783 "data/maps/ParcelWetlands/scripts.pory"
+# 1799 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Right. That's the whole of it.$"
 
 ParcelWetlands_T_Sunniva_R3_Text_2:
-# 1784 "data/maps/ParcelWetlands/scripts.pory"
+# 1800 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Three. I'll be stronger when\n"
 	.string "the coast's done with you.$"
 
 ParcelWetlands_T_Sunniva_R4_Text_0:
-# 1791 "data/maps/ParcelWetlands/scripts.pory"
+# 1807 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Full strength, no excuses,\n"
 	.string "mine or yours. Rematch?$"
 
 ParcelWetlands_T_Sunniva_R4_Text_1:
-# 1797 "data/maps/ParcelWetlands/scripts.pory"
+# 1813 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: …Fair.$"
 
 ParcelWetlands_T_Sunniva_R4_Text_2:
-# 1798 "data/maps/ParcelWetlands/scripts.pory"
+# 1814 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelWetlands_T_Sunniva_R5_Text_0:
-# 1805 "data/maps/ParcelWetlands/scripts.pory"
+# 1821 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelWetlands_T_Sunniva_R5_Text_1:
-# 1811 "data/maps/ParcelWetlands/scripts.pory"
+# 1827 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Still yours.$"
 
 ParcelWetlands_T_Sunniva_R5_Text_2:
-# 1812 "data/maps/ParcelWetlands/scripts.pory"
+# 1828 "data/maps/ParcelWetlands/scripts.pory"
 	.string "SUNNIVA: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelWetlands_T_Roar_Text_0:
-# 1818 "data/maps/ParcelWetlands/scripts.pory"
+# 1834 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: Fishing the upper pool off the\n"
 	.string "bridge. Clean up here. Cleaner. Battle.$"
 
 ParcelWetlands_T_Roar_Text_1:
-# 1819 "data/maps/ParcelWetlands/scripts.pory"
+# 1835 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: Scared the fish. Again.$"
 
 ParcelWetlands_T_Roar_Text_2:
-# 1834 "data/maps/ParcelWetlands/scripts.pory"
+# 1850 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: There's a channel from the pool\n"
 	.string "down past the landing. Whatever's in\l"
 	.string "the pool ends up in the backwater.\l"
 	.string "Think about that.$"
 
 ParcelWetlands_T_Roar_R2_Text_0:
-# 1845 "data/maps/ParcelWetlands/scripts.pory"
+# 1861 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelWetlands_T_Roar_R2_Text_1:
-# 1847 "data/maps/ParcelWetlands/scripts.pory"
+# 1863 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: No hurry. The water keeps.$"
 
 ParcelWetlands_T_Roar_R2_Text_2:
-# 1851 "data/maps/ParcelWetlands/scripts.pory"
+# 1867 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: …Fair.$"
 
 ParcelWetlands_T_Roar_R2_Text_3:
-# 1852 "data/maps/ParcelWetlands/scripts.pory"
+# 1868 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWetlands_T_Roar_R3_Text_0:
-# 1859 "data/maps/ParcelWetlands/scripts.pory"
+# 1875 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: They say you don't lose any more.\n"
 	.string "Let's check?$"
 
 ParcelWetlands_T_Roar_R3_Text_1:
-# 1865 "data/maps/ParcelWetlands/scripts.pory"
+# 1881 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: Noted. Properly, this time.$"
 
 ParcelWetlands_T_Roar_R3_Text_2:
-# 1866 "data/maps/ParcelWetlands/scripts.pory"
+# 1882 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWetlands_T_Roar_R4_Text_0:
-# 1873 "data/maps/ParcelWetlands/scripts.pory"
+# 1889 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelWetlands_T_Roar_R4_Text_1:
-# 1879 "data/maps/ParcelWetlands/scripts.pory"
+# 1895 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: …Again, then. Later.$"
 
 ParcelWetlands_T_Roar_R4_Text_2:
-# 1880 "data/maps/ParcelWetlands/scripts.pory"
+# 1896 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelWetlands_T_Roar_R5_Text_0:
-# 1887 "data/maps/ParcelWetlands/scripts.pory"
+# 1903 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelWetlands_T_Roar_R5_Text_1:
-# 1893 "data/maps/ParcelWetlands/scripts.pory"
+# 1909 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: Still yours.$"
 
 ParcelWetlands_T_Roar_R5_Text_2:
-# 1894 "data/maps/ParcelWetlands/scripts.pory"
+# 1910 "data/maps/ParcelWetlands/scripts.pory"
 	.string "ROAR: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelWetlands_PerrinScene_Text_0:
-# 1907 "data/maps/ParcelWetlands/scripts.pory"
+# 1923 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PERRIN: WREN!$"
 
 ParcelWetlands_PerrinScene_Text_1:
-# 1911 "data/maps/ParcelWetlands/scripts.pory"
+# 1927 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PERRIN: WREN! The FOUNDATION office\n"
 	.string "gave me a tour. Gauges on every\l"
 	.string "channel! THAT's what reading water\l"
@@ -6091,11 +6195,11 @@ ParcelWetlands_PerrinScene_Text_1:
 	.string "Battle. I've been training. Properly.$"
 
 ParcelWetlands_PerrinScene_Text_2:
-# 1912 "data/maps/ParcelWetlands/scripts.pory"
+# 1928 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PERRIN: Fine. FINE.$"
 
 ParcelWetlands_PerrinScene_Text_3:
-# 1913 "data/maps/ParcelWetlands/scripts.pory"
+# 1929 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PERRIN: Your notebook, my gauges. We'll\n"
 	.string "see which one the hearing reads.\p"
 	.string "They offered me a desk, by the way. Part\n"
@@ -6103,11 +6207,11 @@ ParcelWetlands_PerrinScene_Text_3:
 	.string "thinking about it.$"
 
 ParcelWetlands_PerrinTalk_Text_0:
-# 1926 "data/maps/ParcelWetlands/scripts.pory"
+# 1942 "data/maps/ParcelWetlands/scripts.pory"
 	.string "PERRIN: Hang on, I'm coming to you.$"
 
 ParcelWetlands_Epilogue_Text_0:
-# 1937 "data/maps/ParcelWetlands/scripts.pory"
+# 1953 "data/maps/ParcelWetlands/scripts.pory"
 	.string "REEDMERE. The channel runs under the\n"
 	.string "landing the way it did the first week,\l"
 	.string "and it doesn't smell of anything.\p"
@@ -6117,7 +6221,7 @@ ParcelWetlands_Epilogue_Text_0:
 	.string "cut a ribbon for it.$"
 
 ParcelWetlands_Epilogue_Text_1:
-# 1938 "data/maps/ParcelWetlands/scripts.pory"
+# 1954 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND's boat is on the hard with the\n"
 	.string "hull open. He is scraping it himself,\l"
 	.string "slowly, the way a man does who has\l"
@@ -6127,7 +6231,7 @@ ParcelWetlands_Epilogue_Text_1:
 	.string "it, not red. A child's ribbon.$"
 
 ParcelWetlands_ReedCount_Text_0:
-# 1955 "data/maps/ParcelWetlands/scripts.pory"
+# 1971 "data/maps/ParcelWetlands/scripts.pory"
 	.string "You walk the bed the way he said,\n"
 	.string "counting the stands that top your\l"
 	.string "head. Most don't.\p"
@@ -6135,20 +6239,20 @@ ParcelWetlands_ReedCount_Text_0:
 	.string "Nineteen.$"
 
 ParcelWetlands_ReedCount_Text_1:
-# 1959 "data/maps/ParcelWetlands/scripts.pory"
+# 1975 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A reed bed. The stands lean the way the\n"
 	.string "wind went last. Fewer top your head\l"
 	.string "than you'd expect.$"
 
 ParcelWetlands_SurveyStake_Text_0:
-# 1965 "data/maps/ParcelWetlands/scripts.pory"
+# 1981 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A survey stake driven into the\n"
 	.string "landing's turf, a strip of red cloth tied\l"
 	.string "at the top. It is the Corps' mark: this\l"
 	.string "place is being read.$"
 
 ParcelWetlands_SurveyStake_Text_1:
-# 1970 "data/maps/ParcelWetlands/scripts.pory"
+# 1986 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Second reading. The channel runs clear\n"
 	.string "under the landing and doesn't smell of\l"
 	.string "anything. Where the pipe was there is a\l"
@@ -6158,133 +6262,133 @@ ParcelWetlands_SurveyStake_Text_1:
 	.string "not a trend. You write four.$"
 
 ParcelWetlands_PairLanding_Text_0:
-# 1981 "data/maps/ParcelWetlands/scripts.pory"
+# 1997 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: They're pulling the pipe.\n"
 	.string "Contractors, from the Coast. The same\l"
 	.string "ones who laid it.$"
 
 ParcelWetlands_PairLanding_Text_1:
-# 1982 "data/maps/ParcelWetlands/scripts.pory"
+# 1998 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: Paid twice for one pipe.\n"
 	.string "There's a trade.$"
 
 ParcelWetlands_PairLanding_Text_2:
-# 1983 "data/maps/ParcelWetlands/scripts.pory"
+# 1999 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: HARLAND's standing over them\n"
 	.string "with his arms folded. Hasn't said a word\l"
 	.string "all morning.$"
 
 ParcelWetlands_PairLanding_Text_3:
-# 1984 "data/maps/ParcelWetlands/scripts.pory"
+# 2000 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: First time in his life\n"
 	.string "silence has done his work for him. He\l"
 	.string "looks lost.$"
 
 ParcelWetlands_PairLanding_Text_4:
-# 1986 "data/maps/ParcelWetlands/scripts.pory"
+# 2002 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: The manifest the ranger read.\n"
 	.string "Washed up on the south bank, they said.\l"
 	.string "In the open.$"
 
 ParcelWetlands_PairLanding_Text_5:
-# 1987 "data/maps/ParcelWetlands/scripts.pory"
+# 2003 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: Nothing washes up in the\n"
 	.string "open on this bank. It's a mud bank. It\l"
 	.string "keeps what it gets.$"
 
 ParcelWetlands_PairLanding_Text_6:
-# 1988 "data/maps/ParcelWetlands/scripts.pory"
+# 2004 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: So somebody put it there.$"
 
 ParcelWetlands_PairLanding_Text_7:
-# 1989 "data/maps/ParcelWetlands/scripts.pory"
+# 2005 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: Somebody wanted it read\n"
 	.string "and couldn't be the one reading it. I\l"
 	.string "can think of two. So can you.$"
 
 ParcelWetlands_PairLanding_Text_8:
-# 1991 "data/maps/ParcelWetlands/scripts.pory"
+# 2007 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: HARLAND's shouting at the new\n"
 	.string "office again.$"
 
 ParcelWetlands_PairLanding_Text_9:
-# 1992 "data/maps/ParcelWetlands/scripts.pory"
+# 2008 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: HARLAND shouts at\n"
 	.string "everything that has a door. It's the\l"
 	.string "ones without a door that worry me.$"
 
 ParcelWetlands_PairLanding_Text_10:
-# 1993 "data/maps/ParcelWetlands/scripts.pory"
+# 2009 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: Such as?$"
 
 ParcelWetlands_PairLanding_Text_11:
-# 1994 "data/maps/ParcelWetlands/scripts.pory"
+# 2010 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: The pipe under the falls.\n"
 	.string "Try shouting at that.$"
 
 ParcelWetlands_PairTurf_Text_0:
-# 2003 "data/maps/ParcelWetlands/scripts.pory"
+# 2019 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: The cloth's still there. It's gone\n"
 	.string "pink.$"
 
 ParcelWetlands_PairTurf_Text_1:
-# 2004 "data/maps/ParcelWetlands/scripts.pory"
+# 2020 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: They don't take them down.\n"
 	.string "That's the point of them. In thirty\l"
 	.string "years someone will read the pink one\l"
 	.string "and know the day it went up.$"
 
 ParcelWetlands_PairTurf_Text_2:
-# 2005 "data/maps/ParcelWetlands/scripts.pory"
+# 2021 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: Will the turf be back?$"
 
 ParcelWetlands_PairTurf_Text_3:
-# 2006 "data/maps/ParcelWetlands/scripts.pory"
+# 2022 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: Some of it. The ranger said\n"
 	.string "some of it, and the ranger's never once\l"
 	.string "said more than that.$"
 
 ParcelWetlands_PairTurf_Text_4:
-# 2008 "data/maps/ParcelWetlands/scripts.pory"
+# 2024 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: The ranger put a red cloth on a\n"
 	.string "stick on our turf. Is that ours now?$"
 
 ParcelWetlands_PairTurf_Text_5:
-# 2009 "data/maps/ParcelWetlands/scripts.pory"
+# 2025 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: It was always ours. The cloth\n"
 	.string "says somebody else has noticed.$"
 
 ParcelWetlands_PairTurf_Text_6:
-# 2010 "data/maps/ParcelWetlands/scripts.pory"
+# 2026 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: Noticed what?$"
 
 ParcelWetlands_PairTurf_Text_7:
-# 2011 "data/maps/ParcelWetlands/scripts.pory"
+# 2027 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: That it cracks when you jump on\n"
 	.string "it. Somebody wrote that down. Somebody\l"
 	.string "important, now.$"
 
 ParcelWetlands_PairTurf_Text_8:
-# 2013 "data/maps/ParcelWetlands/scripts.pory"
+# 2029 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: The turf cracks when you jump on\n"
 	.string "it.$"
 
 ParcelWetlands_PairTurf_Text_9:
-# 2014 "data/maps/ParcelWetlands/scripts.pory"
+# 2030 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: Then don't jump on it.$"
 
 ParcelWetlands_PairTurf_Text_10:
-# 2015 "data/maps/ParcelWetlands/scripts.pory"
+# 2031 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: It didn't crack last year. I\n"
 	.string "jumped on it all last year.$"
 
 ParcelWetlands_PairTurf_Text_11:
-# 2016 "data/maps/ParcelWetlands/scripts.pory"
+# 2032 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: …No. It didn't. Come away from\n"
 	.string "there.$"
 
 ParcelWetlands_Stringer_Text_0:
-# 2028 "data/maps/ParcelWetlands/scripts.pory"
+# 2044 "data/maps/ParcelWetlands/scripts.pory"
 	.string "INGER: They pulled the pipe this\n"
 	.string "morning. I was here at six. So was\l"
 	.string "HARLAND.\p"
@@ -6294,7 +6398,7 @@ ParcelWetlands_Stringer_Text_0:
 	.string "mine stand that wasn't a number.$"
 
 ParcelWetlands_Stringer_Text_1:
-# 2030 "data/maps/ParcelWetlands/scripts.pory"
+# 2046 "data/maps/ParcelWetlands/scripts.pory"
 	.string "INGER: You read the pipe. The manifest.\n"
 	.string "The residue. HARLAND's gone quiet and\l"
 	.string "the new office has gone loud, which is\l"
@@ -6303,28 +6407,28 @@ ParcelWetlands_Stringer_Text_1:
 	.string "name. Yes?$"
 
 ParcelWetlands_Stringer_Text_2:
-# 2031 "data/maps/ParcelWetlands/scripts.pory"
+# 2047 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Give INGER a sentence?$"
 
 ParcelWetlands_Stringer_Text_3:
-# 2033 "data/maps/ParcelWetlands/scripts.pory"
+# 2049 "data/maps/ParcelWetlands/scripts.pory"
 	.string "{PLAYER}: The water is a living\n"
 	.string "corridor. Someone put a pipe in it on\l"
 	.string "schedule.$"
 
 ParcelWetlands_Stringer_Text_4:
-# 2034 "data/maps/ParcelWetlands/scripts.pory"
+# 2050 "data/maps/ParcelWetlands/scripts.pory"
 	.string "INGER: …That's two sentences. I'll run\n"
 	.string "both. I'll run them exactly.\p"
 	.string "Nobody gives me exact. Thank you.$"
 
 ParcelWetlands_Stringer_Text_5:
-# 2037 "data/maps/ParcelWetlands/scripts.pory"
+# 2053 "data/maps/ParcelWetlands/scripts.pory"
 	.string "{PLAYER}: Not on the record. Read the\n"
 	.string "survey.$"
 
 ParcelWetlands_Stringer_Text_6:
-# 2038 "data/maps/ParcelWetlands/scripts.pory"
+# 2054 "data/maps/ParcelWetlands/scripts.pory"
 	.string "INGER: Everyone says read the survey.\n"
 	.string "Nobody reads the survey. That's what\l"
 	.string "I'm for.\p"
@@ -6333,7 +6437,7 @@ ParcelWetlands_Stringer_Text_6:
 	.string "its own line.$"
 
 ParcelWetlands_Stringer_Text_7:
-# 2041 "data/maps/ParcelWetlands/scripts.pory"
+# 2057 "data/maps/ParcelWetlands/scripts.pory"
 	.string "INGER: Ribbon-cutting. Five gauges,\n"
 	.string "one speech, refreshments courtesy of\l"
 	.string "Mereholt Coastal. I ate the\l"
@@ -6345,7 +6449,7 @@ ParcelWetlands_Stringer_Text_7:
 	.string "be the one eating.$"
 
 ParcelWetlands_TurfCutter_Text_0:
-# 2053 "data/maps/ParcelWetlands/scripts.pory"
+# 2069 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TURF CUTTER: Cutting less. By choice,\n"
 	.string "still. The north edge has WOOPER on it\l"
 	.string "this spring.\p"
@@ -6354,24 +6458,24 @@ ParcelWetlands_TurfCutter_Text_0:
 	.string "That's the whole of my part.$"
 
 ParcelWetlands_TurfCutter_Text_1:
-# 2058 "data/maps/ParcelWetlands/scripts.pory"
+# 2074 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TURF CUTTER: I'm cutting less this year.\n"
 	.string "First time it's been by choice.$"
 
 ParcelWetlands_TurfCutter_Text_2:
-# 2061 "data/maps/ParcelWetlands/scripts.pory"
+# 2077 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TURF CUTTER: By the north edge. That's\n"
 	.string "new ground to crack. The spade stays\l"
 	.string "out of the north edge, then.\p"
 	.string "Here. For the walking.$"
 
 ParcelWetlands_TurfCutter_Text_3:
-# 2065 "data/maps/ParcelWetlands/scripts.pory"
+# 2081 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TURF CUTTER: The worst crack. Wide as a\n"
 	.string "hand, dry to the bottom. You'll know it.$"
 
 ParcelWetlands_TurfCutter_Text_4:
-# 2068 "data/maps/ParcelWetlands/scripts.pory"
+# 2084 "data/maps/ParcelWetlands/scripts.pory"
 	.string "TURF CUTTER: I've cut turf on this\n"
 	.string "landing thirty years. Never where it\l"
 	.string "cracks; cracked turf is dead turf, you\l"
@@ -6381,7 +6485,7 @@ ParcelWetlands_TurfCutter_Text_4:
 	.string "where not to put the spade.$"
 
 ParcelWetlands_TurfCrack_Text_0:
-# 2077 "data/maps/ParcelWetlands/scripts.pory"
+# 2093 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A crack in the turf a hand wide, the\n"
 	.string "peat dry and crumbling to the bottom. A\l"
 	.string "beetle is using it as a road.\p"
@@ -6390,12 +6494,12 @@ ParcelWetlands_TurfCrack_Text_0:
 	.string "with a boot.$"
 
 ParcelWetlands_TurfCrack_Text_1:
-# 2080 "data/maps/ParcelWetlands/scripts.pory"
+# 2096 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A crack in the turf a hand wide. The\n"
 	.string "beetle has gone on.$"
 
 ParcelWetlands_FindNest_Text_0:
-# 2089 "data/maps/ParcelWetlands/scripts.pory"
+# 2105 "data/maps/ParcelWetlands/scripts.pory"
 	.string "The north reed bed, half of it pale and\n"
 	.string "dead, half of it standing. In the\l"
 	.string "standing half, a heron's nest, a\l"
@@ -6406,83 +6510,83 @@ ParcelWetlands_FindNest_Text_0:
 	.string "the water.$"
 
 ParcelWetlands_FindNest_Text_1:
-# 2092 "data/maps/ParcelWetlands/scripts.pory"
+# 2108 "data/maps/ParcelWetlands/scripts.pory"
 	.string "The north reed bed. The nest is there,\n"
 	.string "and the heron is standing in the\l"
 	.string "shallows below it, reading the water.$"
 
 ParcelWetlands_PairSouth_Text_0:
-# 2100 "data/maps/ParcelWetlands/scripts.pory"
+# 2116 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: The monitor takes a jar every\n"
 	.string "week now. The jars go to the lab at\l"
 	.string "Saltwick.$"
 
 ParcelWetlands_PairSouth_Text_1:
-# 2101 "data/maps/ParcelWetlands/scripts.pory"
+# 2117 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Can I drink from the channel?$"
 
 ParcelWetlands_PairSouth_Text_2:
-# 2102 "data/maps/ParcelWetlands/scripts.pory"
+# 2118 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: When the jar says so. Not when\n"
 	.string "the colour does. You asked who does the\l"
 	.string "test. That's who. A ranger, a jar and a\l"
 	.string "clock.$"
 
 ParcelWetlands_PairSouth_Text_3:
-# 2103 "data/maps/ParcelWetlands/scripts.pory"
+# 2119 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: That's not a who.$"
 
 ParcelWetlands_PairSouth_Text_4:
-# 2104 "data/maps/ParcelWetlands/scripts.pory"
+# 2120 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: It's the best who we've had.$"
 
 ParcelWetlands_PairSouth_Text_5:
-# 2106 "data/maps/ParcelWetlands/scripts.pory"
+# 2122 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: The ranger read the pipe under the\n"
 	.string "falls. There was a sheen. Like petrol on\l"
 	.string "a puddle.$"
 
 ParcelWetlands_PairSouth_Text_6:
-# 2107 "data/maps/ParcelWetlands/scripts.pory"
+# 2123 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: There's been a sheen for two\n"
 	.string "years.$"
 
 ParcelWetlands_PairSouth_Text_7:
-# 2108 "data/maps/ParcelWetlands/scripts.pory"
+# 2124 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Then why didn't anyone say?$"
 
 ParcelWetlands_PairSouth_Text_8:
-# 2109 "data/maps/ParcelWetlands/scripts.pory"
+# 2125 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: Everyone said. Nobody wrote.\n"
 	.string "There's a difference, and the\l"
 	.string "difference is why you're not allowed to\l"
 	.string "drink from the channel.$"
 
 ParcelWetlands_PairSouth_Text_9:
-# 2111 "data/maps/ParcelWetlands/scripts.pory"
+# 2127 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: Don't drink from the channel\n"
 	.string "below the falls.$"
 
 ParcelWetlands_PairSouth_Text_10:
-# 2112 "data/maps/ParcelWetlands/scripts.pory"
+# 2128 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Why not? It looks clean.$"
 
 ParcelWetlands_PairSouth_Text_11:
-# 2113 "data/maps/ParcelWetlands/scripts.pory"
+# 2129 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: Clean is a colour. Safe is a\n"
 	.string "test. We've got the colour.$"
 
 ParcelWetlands_PairSouth_Text_12:
-# 2114 "data/maps/ParcelWetlands/scripts.pory"
+# 2130 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOY: Who does the test?$"
 
 ParcelWetlands_PairSouth_Text_13:
-# 2115 "data/maps/ParcelWetlands/scripts.pory"
+# 2131 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: Nobody, yet. Somebody with a\n"
 	.string "notebook, I'm told, is on the way.$"
 
 ParcelWetlands_Board1_Text_0:
-# 2124 "data/maps/ParcelWetlands/scripts.pory"
+# 2140 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A SURVEY BOARD on the turf. REEDMERE.\n"
 	.string "Freshwater marsh, flood-pulse: the\l"
 	.string "water rises in spring, spreads, drops,\l"
@@ -6494,7 +6598,7 @@ ParcelWetlands_Board1_Text_0:
 	.string "water fell first.$"
 
 ParcelWetlands_Board2_Text_0:
-# 2129 "data/maps/ParcelWetlands/scripts.pory"
+# 2145 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A SURVEY BOARD by the reed cut. Three\n"
 	.string "frogs are three gauges. POLIWAG for\l"
 	.string "the breeding pools, POLIWHIRL for the\l"
@@ -6505,3 +6609,55 @@ ParcelWetlands_Board2_Text_0:
 	.string "and underlines the third when it is the\l"
 	.string "largest. It has been underlined for six\l"
 	.string "years.$"
+
+ParcelWetlands_FindRack_Text_0:
+# 2153 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A wooden rack on the bank with twelve\n"
+	.string "jars in it, each labelled with a date, the\l"
+	.string "oldest the colour of weak tea and the\l"
+	.string "newest nearly clear. The sheen that was\l"
+	.string "on the first four is not on the last\l"
+	.string "four.\p"
+	.string "Someone has turned this week's jar so\n"
+	.string "the label faces the path, where a\l"
+	.string "passer-by could read it without asking.$"
+
+ParcelWetlands_FindRack_Text_1:
+# 2156 "data/maps/ParcelWetlands/scripts.pory"
+	.string "The monitor's jar rack. Twelve jars, a\n"
+	.string "year of water, reading left to right\l"
+	.string "from tea to clear.$"
+
+ParcelWetlands_Board3_Text_0:
+# 2164 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A SURVEY BOARD at the landing.\n"
+	.string "BARBOACH in the mud of the turf\l"
+	.string "channels, counted by hand, by feel, with\l"
+	.string "the sleeves rolled. The count is the\l"
+	.string "Survey's least dignified and most\l"
+	.string "exact.\p"
+	.string "The board gives it in tens. There used\n"
+	.string "to be a second digit.$"
+
+ParcelWetlands_Board4_Text_0:
+# 2171 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A SURVEY BOARD at the reed cutters'\n"
+	.string "path. Reed is cut by right here, so much\l"
+	.string "a household, and the Survey counts the\l"
+	.string "stubble: where the cut is honest the\l"
+	.string "stubble is even.\p"
+	.string "The board gives the honest years. It is\n"
+	.string "most of them. The dishonest ones have\l"
+	.string "no names beside them, only a smaller\l"
+	.string "count the year after.$"
+
+ParcelWetlands_Board5_Text_0:
+# 2178 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A SURVEY BOARD at the west landing, the\n"
+	.string "quiet one. CORPHISH in the stones of\l"
+	.string "the landing, counted by turning stones,\l"
+	.string "ten stones a year, the same ten.\p"
+	.string "The board shows the ten stones as a row\n"
+	.string "of circles with the count inside each.\l"
+	.string "Some circles have a zero in them now.\l"
+	.string "The stones have not moved.$"

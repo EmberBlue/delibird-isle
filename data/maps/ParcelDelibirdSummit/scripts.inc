@@ -1144,6 +1144,55 @@ ParcelDelibirdSummit_Board2::
 	end
 
 
+ParcelDelibirdSummit_PairCairn::
+# 577 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	lock
+# 578 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibirdSummit_PairCairn_2
+# 582 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibirdSummit_PairCairn_3
+# 588 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_7, MSGBOX_DEFAULT
+# 589 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_8, MSGBOX_DEFAULT
+# 590 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_9, MSGBOX_DEFAULT
+# 591 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_10, MSGBOX_DEFAULT
+# 592 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_11, MSGBOX_DEFAULT
+ParcelDelibirdSummit_PairCairn_1:
+# 594 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	release
+	end
+
+ParcelDelibirdSummit_PairCairn_2:
+# 579 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_0, MSGBOX_DEFAULT
+# 580 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_1, MSGBOX_DEFAULT
+# 581 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_2, MSGBOX_DEFAULT
+	goto ParcelDelibirdSummit_PairCairn_1
+
+ParcelDelibirdSummit_PairCairn_3:
+# 583 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_3, MSGBOX_DEFAULT
+# 584 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_4, MSGBOX_DEFAULT
+# 585 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_5, MSGBOX_DEFAULT
+# 586 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairCairn_Text_6, MSGBOX_DEFAULT
+	goto ParcelDelibirdSummit_PairCairn_1
+
+
+ParcelDelibirdSummit_Board3::
+# 601 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibirdSummit_Ingrid_Text_0:
 # 20 "data/maps/ParcelDelibirdSummit/scripts.pory"
 	.string "Ingrid: You said it to their faces. ILEX\n"
@@ -1777,3 +1826,71 @@ ParcelDelibirdSummit_Board2_Text_0:
 	.string "write the count in the tin. The tin is\l"
 	.string "full of slips. The numbers get smaller as\l"
 	.string "the stack gets taller.$"
+
+ParcelDelibirdSummit_PairCairn_Text_0:
+# 579 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "YOUNG MAN: Twelve patches. Down one.$"
+
+ParcelDelibirdSummit_PairCairn_Text_1:
+# 580 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "GIRL: The board says thirteen.$"
+
+ParcelDelibirdSummit_PairCairn_Text_2:
+# 581 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "YOUNG MAN: The board's a year old. The\n"
+	.string "cairn's a stone taller. Both of those\l"
+	.string "are true. Add yours.$"
+
+ParcelDelibirdSummit_PairCairn_Text_3:
+# 583 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "GIRL: The ranger wrote the SNORUNT. All\n"
+	.string "of them. In the patches.$"
+
+ParcelDelibirdSummit_PairCairn_Text_4:
+# 584 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "YOUNG MAN: How many?$"
+
+ParcelDelibirdSummit_PairCairn_Text_5:
+# 585 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "GIRL: She wouldn't say. She said the\n"
+	.string "number belongs to the island first.$"
+
+ParcelDelibirdSummit_PairCairn_Text_6:
+# 586 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "YOUNG MAN: Then it'll be in the hall by\n"
+	.string "the festival. That's fair.$"
+
+ParcelDelibirdSummit_PairCairn_Text_7:
+# 588 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "YOUNG MAN: Thirteen patches. The board\n"
+	.string "at the path says thirteen.$"
+
+ParcelDelibirdSummit_PairCairn_Text_8:
+# 589 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "GIRL: There were more when Gran came\n"
+	.string "up. She said the snow never left the\l"
+	.string "top.$"
+
+ParcelDelibirdSummit_PairCairn_Text_9:
+# 590 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "YOUNG MAN: It leaves. It just comes\n"
+	.string "back less.$"
+
+ParcelDelibirdSummit_PairCairn_Text_10:
+# 591 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "GIRL: Then we should add a stone.$"
+
+ParcelDelibirdSummit_PairCairn_Text_11:
+# 592 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "YOUNG MAN: We always add a stone.$"
+
+ParcelDelibirdSummit_Board3_Text_0:
+# 601 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "A SURVEY BOARD at the last snow patch.\n"
+	.string "PILOSWINE come up to the patches in\l"
+	.string "the warm months to lie on the cold. The\l"
+	.string "board counts the PILOSWINE on the\l"
+	.string "patches, not the patches.\p"
+	.string "When the patches go, the count will go\n"
+	.string "with them, and the board says so,\l"
+	.string "plainly, as the last line.$"

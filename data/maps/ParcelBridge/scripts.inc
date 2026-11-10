@@ -520,6 +520,53 @@ ParcelBridge_Board2::
 	end
 
 
+ParcelBridge_PairRail::
+# 235 "data/maps/ParcelBridge/scripts.pory"
+	lock
+# 236 "data/maps/ParcelBridge/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelBridge_PairRail_2
+# 241 "data/maps/ParcelBridge/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_STATION_BRIEF, ParcelBridge_PairRail_3
+# 246 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_7, MSGBOX_DEFAULT
+# 247 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_8, MSGBOX_DEFAULT
+# 248 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_9, MSGBOX_DEFAULT
+# 249 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_10, MSGBOX_DEFAULT
+ParcelBridge_PairRail_1:
+# 251 "data/maps/ParcelBridge/scripts.pory"
+	release
+	end
+
+ParcelBridge_PairRail_2:
+# 237 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_0, MSGBOX_DEFAULT
+# 238 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_1, MSGBOX_DEFAULT
+# 239 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_2, MSGBOX_DEFAULT
+# 240 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_3, MSGBOX_DEFAULT
+	goto ParcelBridge_PairRail_1
+
+ParcelBridge_PairRail_3:
+# 242 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_4, MSGBOX_DEFAULT
+# 243 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_5, MSGBOX_DEFAULT
+# 244 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_PairRail_Text_6, MSGBOX_DEFAULT
+	goto ParcelBridge_PairRail_1
+
+
+ParcelBridge_Board3::
+# 258 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelBridge_SceneTrigger_Text_0:
 # 47 "data/maps/ParcelBridge/scripts.pory"
 	.string "Wind over the rail. Water surging\n"
@@ -643,3 +690,70 @@ ParcelBridge_Board2_Text_0:
 	.string "the carving the Survey wrote: left\l"
 	.string "here.\p"
 	.string "It is not an official entry. It stayed.$"
+
+ParcelBridge_PairRail_Text_0:
+# 237 "data/maps/ParcelBridge/scripts.pory"
+	.string "CADET: The inlet count's in the review.\n"
+	.string "Mine. From this rail.$"
+
+ParcelBridge_PairRail_Text_1:
+# 238 "data/maps/ParcelBridge/scripts.pory"
+	.string "FISHER: Who'd have thought a bridge\n"
+	.string "could be a hide.$"
+
+ParcelBridge_PairRail_Text_2:
+# 239 "data/maps/ParcelBridge/scripts.pory"
+	.string "CADET: You did. You said so.$"
+
+ParcelBridge_PairRail_Text_3:
+# 240 "data/maps/ParcelBridge/scripts.pory"
+	.string "FISHER: I say a lot of things at dusk.\n"
+	.string "Most of them aren't in a review.$"
+
+ParcelBridge_PairRail_Text_4:
+# 242 "data/maps/ParcelBridge/scripts.pory"
+	.string "FISHER: The provisional came through\n"
+	.string "this morning. Stood here half an hour.\l"
+	.string "Didn't write anything.$"
+
+ParcelBridge_PairRail_Text_5:
+# 243 "data/maps/ParcelBridge/scripts.pory"
+	.string "CADET: Then what was the point?$"
+
+ParcelBridge_PairRail_Text_6:
+# 244 "data/maps/ParcelBridge/scripts.pory"
+	.string "FISHER: Looking. You write after you've\n"
+	.string "looked. Most people do it the other way\l"
+	.string "round and call it a survey.$"
+
+ParcelBridge_PairRail_Text_7:
+# 246 "data/maps/ParcelBridge/scripts.pory"
+	.string "CADET: The briefing says count at dusk\n"
+	.string "from the rail.$"
+
+ParcelBridge_PairRail_Text_8:
+# 247 "data/maps/ParcelBridge/scripts.pory"
+	.string "FISHER: The briefing's right. First time\n"
+	.string "for everything.$"
+
+ParcelBridge_PairRail_Text_9:
+# 248 "data/maps/ParcelBridge/scripts.pory"
+	.string "CADET: What am I counting?$"
+
+ParcelBridge_PairRail_Text_10:
+# 249 "data/maps/ParcelBridge/scripts.pory"
+	.string "FISHER: Whatever moves under the deck.\n"
+	.string "Salt side to fresh side. If you only\l"
+	.string "count what you know the name of, you'll\l"
+	.string "miss the half that matters.$"
+
+ParcelBridge_Board3_Text_0:
+# 258 "data/maps/ParcelBridge/scripts.pory"
+	.string "A SURVEY BOARD on the far bridge head.\n"
+	.string "The inlet here is where the salt stops.\l"
+	.string "The board gives the line as a date: the\l"
+	.string "furthest upstream the Survey has\l"
+	.string "tasted salt each spring.\p"
+	.string "The dates are the same. The distances\n"
+	.string "are not. Salt is a hundred paces further\l"
+	.string "in than when the board was made.$"

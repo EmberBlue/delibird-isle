@@ -2862,6 +2862,18 @@ ParcelWeather_Board2::
 	end
 
 
+ParcelWeather_Board3::
+# 1346 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWeather_GateHut::
+# 1353 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_GateHut_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWeather_FirstEntry_Text_0:
 # 28 "data/maps/ParcelWeather/scripts.pory"
 	.string "A sign over the landing: MEREHOLT\n"
@@ -4256,3 +4268,28 @@ ParcelWeather_Board2_Text_0:
 	.string "The line walks right across the board.\n"
 	.string "The last point is off the edge, on the\l"
 	.string "post.$"
+
+ParcelWeather_Board3_Text_0:
+# 1346 "data/maps/ParcelWeather/scripts.pory"
+	.string "A SURVEY BOARD at the Institute's wall.\n"
+	.string "Rain gauge readings, the Institute's,\l"
+	.string "copied by the Survey beside the WOOPER\l"
+	.string "count from the pond below the gate.\p"
+	.string "The two columns move together for\n"
+	.string "twenty years and then stop moving\l"
+	.string "together. The board draws a line at the\l"
+	.string "year they parted.$"
+
+ParcelWeather_GateHut_Text_0:
+# 1353 "data/maps/ParcelWeather/scripts.pory"
+	.string "The gate hut, the door swollen shut and\n"
+	.string "then not. Inside, pinned to the back\l"
+	.string "wall, a sheet gone brown, a column of\l"
+	.string "dates and a column of readings in a\l"
+	.string "careful hand, the first date\l"
+	.string "twenty-three years ago: the\l"
+	.string "over-the-fence readings, one a day,\l"
+	.string "begun before anyone called them a log.\p"
+	.string "At the bottom of the sheet: CONTINUED\n"
+	.string "IN THE DRAWER. And newer still, in a\l"
+	.string "third hand: CONTINUED IN THE RECORD.$"

@@ -1866,6 +1866,24 @@ ParcelDelibird_Board2::
 	end
 
 
+ParcelDelibird_Board3::
+# 1002 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelDelibird_Board4::
+# 1009 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_Board4_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelDelibird_Board5::
+# 1016 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_Board5_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibird_FirstEntry_Text_0:
 # 55 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The boat noses in and the island takes\n"
@@ -3214,3 +3232,39 @@ ParcelDelibird_Board2_Text_0:
 	.string "one. The islanders put a thank-you\l"
 	.string "under it anyway, every year, in the same\l"
 	.string "place.$"
+
+ParcelDelibird_Board3_Text_0:
+# 1002 "data/maps/ParcelDelibird/scripts.pory"
+	.string "A SURVEY BOARD on the hall's seaward\n"
+	.string "wall. The festival dates by year, and\l"
+	.string "beside each the date the strait froze,\l"
+	.string "or did not. Thirty years ago every line\l"
+	.string "had two dates. The last nine have one.\p"
+	.string "The festival is held on the same day\n"
+	.string "regardless. The board does not comment.\l"
+	.string "The second column does.$"
+
+ParcelDelibird_Board4_Text_0:
+# 1009 "data/maps/ParcelDelibird/scripts.pory"
+	.string "A SURVEY BOARD by the festival stage.\n"
+	.string "The stage is rebuilt every year and the\l"
+	.string "Survey measures where it stands: a\l"
+	.string "hand further from the sea than the\l"
+	.string "last, every year, for nine years,\l"
+	.string "because the ground it stood on has\l"
+	.string "gone soft.\p"
+	.string "The islanders call it moving the stage.\n"
+	.string "The board calls it a reading.$"
+
+ParcelDelibird_Board5_Text_0:
+# 1016 "data/maps/ParcelDelibird/scripts.pory"
+	.string "A SURVEY BOARD on the shore road. The\n"
+	.string "island's one road is measured each\l"
+	.string "spring from the hall's door to the\l"
+	.string "water's edge. The board gives the\l"
+	.string "paces.\p"
+	.string "The road has not shortened. The water's\n"
+	.string "edge has come to meet it, three paces in\l"
+	.string "nine years, and the board shows the\l"
+	.string "three as three short lines, like a tally\l"
+	.string "nobody wants to finish.$"

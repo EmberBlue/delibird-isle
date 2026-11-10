@@ -826,6 +826,55 @@ ParcelMarsh_Board2::
 	end
 
 
+ParcelMarsh_PairEdge::
+# 449 "data/maps/ParcelMarsh/scripts.pory"
+	lock
+# 450 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelMarsh_PairEdge_2
+# 454 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HERON_MET, ParcelMarsh_PairEdge_3
+# 460 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_7, MSGBOX_DEFAULT
+# 461 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_8, MSGBOX_DEFAULT
+# 462 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_9, MSGBOX_DEFAULT
+# 463 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_10, MSGBOX_DEFAULT
+# 464 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_11, MSGBOX_DEFAULT
+ParcelMarsh_PairEdge_1:
+# 466 "data/maps/ParcelMarsh/scripts.pory"
+	release
+	end
+
+ParcelMarsh_PairEdge_2:
+# 451 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_0, MSGBOX_DEFAULT
+# 452 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_1, MSGBOX_DEFAULT
+# 453 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_2, MSGBOX_DEFAULT
+	goto ParcelMarsh_PairEdge_1
+
+ParcelMarsh_PairEdge_3:
+# 455 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_3, MSGBOX_DEFAULT
+# 456 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_4, MSGBOX_DEFAULT
+# 457 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_5, MSGBOX_DEFAULT
+# 458 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairEdge_Text_6, MSGBOX_DEFAULT
+	goto ParcelMarsh_PairEdge_1
+
+
+ParcelMarsh_Board3::
+# 473 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMarsh_FirstEntry_Text_0:
 # 30 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: This is as far as I go. The road\n"
@@ -1499,3 +1548,71 @@ ParcelMarsh_Board2_Text_0:
 	.string "The marsh says: count them yourself.\n"
 	.string "The space for the count is blank. It is\l"
 	.string "blank on purpose.$"
+
+ParcelMarsh_PairEdge_Text_0:
+# 451 "data/maps/ParcelMarsh/scripts.pory"
+	.string "RANGER: Forty-one. One pace. The alder\n"
+	.string "stopped.$"
+
+ParcelMarsh_PairEdge_Text_1:
+# 452 "data/maps/ParcelMarsh/scripts.pory"
+	.string "CADET: One pace isn't zero.$"
+
+ParcelMarsh_PairEdge_Text_2:
+# 453 "data/maps/ParcelMarsh/scripts.pory"
+	.string "RANGER: No. But I've never written one\n"
+	.string "before. Write one. Write the year.\l"
+	.string "Underline nothing.$"
+
+ParcelMarsh_PairEdge_Text_3:
+# 455 "data/maps/ParcelMarsh/scripts.pory"
+	.string "CADET: There's someone living in the\n"
+	.string "hut. There's smoke.$"
+
+ParcelMarsh_PairEdge_Text_4:
+# 456 "data/maps/ParcelMarsh/scripts.pory"
+	.string "RANGER: I know who. Leave the smoke\n"
+	.string "alone and read the stake.$"
+
+ParcelMarsh_PairEdge_Text_5:
+# 457 "data/maps/ParcelMarsh/scripts.pory"
+	.string "CADET: Shouldn't we report it?$"
+
+ParcelMarsh_PairEdge_Text_6:
+# 458 "data/maps/ParcelMarsh/scripts.pory"
+	.string "RANGER: We report the marsh. She IS the\n"
+	.string "marsh's report. You'll understand that\l"
+	.string "in about a week.$"
+
+ParcelMarsh_PairEdge_Text_7:
+# 460 "data/maps/ParcelMarsh/scripts.pory"
+	.string "RANGER: Edge stake forty. The alder's\n"
+	.string "two paces closer than the last reading.$"
+
+ParcelMarsh_PairEdge_Text_8:
+# 461 "data/maps/ParcelMarsh/scripts.pory"
+	.string "CADET: Two paces. That's nothing.$"
+
+ParcelMarsh_PairEdge_Text_9:
+# 462 "data/maps/ParcelMarsh/scripts.pory"
+	.string "RANGER: Two paces a year for thirty\n"
+	.string "years is the whole marsh. Write two.\l"
+	.string "Write the year.$"
+
+ParcelMarsh_PairEdge_Text_10:
+# 463 "data/maps/ParcelMarsh/scripts.pory"
+	.string "CADET: Who reads it?$"
+
+ParcelMarsh_PairEdge_Text_11:
+# 464 "data/maps/ParcelMarsh/scripts.pory"
+	.string "RANGER: Whoever's standing here when\n"
+	.string "it's sixty.$"
+
+ParcelMarsh_Board3_Text_0:
+# 473 "data/maps/ParcelMarsh/scripts.pory"
+	.string "A SURVEY BOARD at the alder edge,\n"
+	.string "nailed low. SMEARGLE have been seen\l"
+	.string "here, the board says, twice, by people\l"
+	.string "the Survey trusts. Not counted. Seen.\p"
+	.string "The board keeps a separate column for\n"
+	.string "seen, and the column is the honest one.$"

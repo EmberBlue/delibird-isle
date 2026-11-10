@@ -168,6 +168,12 @@ ParcelWeatherInstitute2F_Castform_2:
 	end
 
 
+ParcelWeatherInstitute2F_Glass::
+# 96 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	msgbox ParcelWeatherInstitute2F_Glass_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWeatherInstitute2F_Director_Text_0:
 # 12 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: The four are yours, and the\n"
@@ -316,3 +322,14 @@ ParcelWeatherInstitute2F_Castform_Text_0:
 	.string "CASTFORM, asleep in its rain form.\p"
 	.string "It has been raining very gently on a box\n"
 	.string "of files for some time.$"
+
+ParcelWeatherInstitute2F_Glass_Text_0:
+# 96 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	.string "VANE's weather glass on the sill, the old\n"
+	.string "kind, a bulb and a spout. The water in\l"
+	.string "the spout stands high before a storm.\p"
+	.string "A card beside it, in the Director's hand:\n"
+	.string "the dish reads the sky. The glass reads\l"
+	.string "the room. I have never once seen them\l"
+	.string "disagree about a storm, only about when\l"
+	.string "to say so.$"

@@ -1339,3 +1339,17 @@ script ParcelWeather_Board2 {
     msgbox(format("A SURVEY BOARD, the only one with a graph. First frost by year, from the Station's own records, plotted by the Survey because the Station would not.\pThe line walks right across the board. The last point is off the edge, on the post."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelWeather_Board3 {
+    msgbox(format("A SURVEY BOARD at the Institute's wall. Rain gauge readings, the Institute's, copied by the Survey beside the WOOPER count from the pond below the gate.\pThe two columns move together for twenty years and then stop moving together. The board draws a line at the year they parted."), MSGBOX_SIGN)
+    end
+}
+
+// --- documents, round five (2026-11-10) ---
+
+script ParcelWeather_GateHut {
+    msgbox(format("The gate hut, the door swollen shut and then not. Inside, pinned to the back wall, a sheet gone brown, a column of dates and a column of readings in a careful hand, the first date twenty-three years ago: the over-the-fence readings, one a day, begun before anyone called them a log.\pAt the bottom of the sheet: CONTINUED IN THE DRAWER. And newer still, in a third hand: CONTINUED IN THE RECORD."), MSGBOX_SIGN)
+    end
+}

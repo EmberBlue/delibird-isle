@@ -45,3 +45,10 @@ script ParcelHighlandsHomestead_ReadShelf {
     msgbox(format("A shelf of ledgers: lambing, shearing, the weather. The weather ledger is the thickest.\pThe last entry says: ground soft at the gate. March. Underlined."), MSGBOX_SIGN)
     end
 }
+
+// --- documents, round five (2026-11-10) ---
+
+script ParcelHighlandsHomestead_SeedTin {
+    msgbox(format("A seed tin on the dresser, the homestead's: packets by year, the dates when sowing was possible written on the lids.\pThe dates walk earlier across the lids, and then stop walking and start jumping. The last three lids say: sown twice. Sown twice means the first sowing died in a thaw and a frost.\pThere is no packet for next year yet."), MSGBOX_SIGN)
+    end
+}

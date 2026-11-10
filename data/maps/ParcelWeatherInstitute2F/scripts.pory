@@ -89,3 +89,10 @@ script ParcelWeatherInstitute2F_Castform {
     setflag(FLAG_SKALD_Q_CASTFORM_FOUND)
     end
 }
+
+// --- documents, round five (2026-11-10) ---
+
+script ParcelWeatherInstitute2F_Glass {
+    msgbox(format("VANE's weather glass on the sill, the old kind, a bulb and a spout. The water in the spout stands high before a storm.\pA card beside it, in the Director's hand: the dish reads the sky. The glass reads the room. I have never once seen them disagree about a storm, only about when to say so."), MSGBOX_SIGN)
+    end
+}

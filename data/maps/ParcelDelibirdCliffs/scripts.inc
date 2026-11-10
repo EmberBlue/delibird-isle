@@ -1194,6 +1194,55 @@ ParcelDelibirdCliffs_Board2::
 	end
 
 
+ParcelDelibirdCliffs_PairLedge::
+# 602 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	lock
+# 603 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibirdCliffs_PairLedge_2
+# 607 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibirdCliffs_PairLedge_3
+# 613 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_7, MSGBOX_DEFAULT
+# 614 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_8, MSGBOX_DEFAULT
+# 615 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_9, MSGBOX_DEFAULT
+# 616 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_10, MSGBOX_DEFAULT
+# 617 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_11, MSGBOX_DEFAULT
+ParcelDelibirdCliffs_PairLedge_1:
+# 619 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	release
+	end
+
+ParcelDelibirdCliffs_PairLedge_2:
+# 604 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_0, MSGBOX_DEFAULT
+# 605 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_1, MSGBOX_DEFAULT
+# 606 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_2, MSGBOX_DEFAULT
+	goto ParcelDelibirdCliffs_PairLedge_1
+
+ParcelDelibirdCliffs_PairLedge_3:
+# 608 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_3, MSGBOX_DEFAULT
+# 609 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_4, MSGBOX_DEFAULT
+# 610 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_5, MSGBOX_DEFAULT
+# 611 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairLedge_Text_6, MSGBOX_DEFAULT
+	goto ParcelDelibirdCliffs_PairLedge_1
+
+
+ParcelDelibirdCliffs_Board3::
+# 626 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibirdCliffs_Tomas_Text_0:
 # 20 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "Tomas: The floor slopes a little more\n"
@@ -1854,3 +1903,71 @@ ParcelDelibirdCliffs_Board2_Text_0:
 	.string "lights.\p"
 	.string "The second line is newer. If there are\n"
 	.string "none, write none. None is a reading.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_0:
+# 604 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "BIRDER: Two hundred and nine. Up three.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_1:
+# 605 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "WOMAN: Three.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_2:
+# 606 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "BIRDER: I know. I wrote it in pencil.\n"
+	.string "Three is a pencil number. Ten is ink.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_3:
+# 608 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "WOMAN: The ranger sat on the bench till\n"
+	.string "dark and counted the lights in the\l"
+	.string "water.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_4:
+# 609 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "BIRDER: STARYU. I've never counted\n"
+	.string "them. I count up, not down.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_5:
+# 610 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "WOMAN: Maybe that's why the island's\n"
+	.string "two counts short.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_6:
+# 611 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "BIRDER: Maybe. Hand me the glass.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_7:
+# 613 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "BIRDER: Two hundred nests on the\n"
+	.string "ledges. Two hundred and six.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_8:
+# 614 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "WOMAN: You count every year and every\n"
+	.string "year it's less.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_9:
+# 615 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "BIRDER: It's less by less this year.$"
+
+ParcelDelibirdCliffs_PairLedge_Text_10:
+# 616 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "WOMAN: Is that good?$"
+
+ParcelDelibirdCliffs_PairLedge_Text_11:
+# 617 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "BIRDER: It's the shape of the number.\n"
+	.string "I'll take the shape.$"
+
+ParcelDelibirdCliffs_Board3_Text_0:
+# 626 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "A SURVEY BOARD on the path above the\n"
+	.string "pools. CORSOLA in the warm pools, new;\l"
+	.string "KRABBY in the cold ones, fewer. The\l"
+	.string "children chalk the pools' names on the\l"
+	.string "rock and the Survey copies the chalk\l"
+	.string "onto the board before the rain takes\l"
+	.string "it.\p"
+	.string "The children are the Survey's best field\n"
+	.string "team on this island, and know it.$"

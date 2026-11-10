@@ -7,6 +7,22 @@ mapscripts ParcelCorridorHut_MapScripts {
 script ParcelCorridorHut_Foreman {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_HEADWALL) && !flag(FLAG_SKALD_Q_HEADWALL_DONE)) {
+        if (flag(FLAG_SKALD_Q_HEADWALL_FOUND)) {
+            msgbox(format("FOREMAN: Three hands above the pipe. The stream used to run three hands higher than the top of the pipe we gave it.\pI've put that on the drawing for the second pipe. In red. Here; the crew hut's spare. You'll need light in that pipe one day."), MSGBOX_DEFAULT)
+            giveitem(ITEM_ESCAPE_ROPE, 2)
+            setflag(FLAG_SKALD_Q_HEADWALL_DONE)
+        } else {
+            msgbox(format("FOREMAN: The headwall above the culvert mouth. Red lead. The height."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_HEADWALL_DONE)) {
+        msgbox(format("FOREMAN: Before the culvert went in, the Survey painted a flow mark on the old headwall. Red lead. The crew were told to pour over it. One of my lads says they didn't, quite.\pGo and look at the headwall above the pipe. If the mark's there, read me the height. I'd like to know what we buried."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_HEADWALL)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("FOREMAN: Flow data every month to FERNWICK and now to the window too. The lads read it. The culvert's getting a second pipe.\pNot an upgrade. A correction. I said the word myself."), MSGBOX_DEFAULT)
         release

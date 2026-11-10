@@ -760,3 +760,34 @@ script ParcelWetlandsHide_Board2 {
     msgbox(format("A SURVEY BOARD on the hide's outer wall, for people who will not go in. SURSKIT on the open water mean the surface is clean enough to stand on.\pThe board shows the count by year as a row of ticks. You can see the shape of it from the path."), MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs, round four ---
+
+script ParcelWetlandsHide_PairPath {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: Twelve this year."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: One up."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: One up is a lantern's worth of error. Sit next year and we'll see if it's a trend or a lamp."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("WOMAN: The ranger sat the whole dusk and didn't move. Wrote one number at the end."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Eleven?"), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Eleven."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: RAGNA said eleven. The warden said tired. The ranger said eleven. Two to one. That's how a count gets its number."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD MAN: Lantern off before the gate. The lights count, not us."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: I know the rule."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: The rule's the whole count. One lantern on and the VOLBEAT lie to you for an hour."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Do they lie or do they leave?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Same thing, to a count."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round two (2026-11-10) ---
+
+script ParcelWetlandsHide_Board3 {
+    msgbox(format("A SURVEY BOARD at the hide's gate. The rule of the dusk count, in full: arrive before the light goes, speak to no one, count what lights, and write the number before you stand up.\pThe last rule is the one the Survey fought for. A number carried to the path is a number changed."), MSGBOX_SIGN)
+    end
+}

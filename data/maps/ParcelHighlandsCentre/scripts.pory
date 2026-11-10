@@ -49,6 +49,22 @@ script ParcelHighlandsCentre_OldMan {
 script ParcelHighlandsCentre_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_STEP) && !flag(FLAG_SKALD_Q_STEP_DONE)) {
+        if (flag(FLAG_SKALD_Q_STEP_FOUND)) {
+            msgbox(format("WOMAN: A hand down on the uphill side. The uphill side. The ground's not sliding away from the house, it's sinking under it.\pThen it's not a house to go back to. It's a step to remember. Thank you for being the one who looked. Here. The valley house came with these and we've nothing to use them on."), MSGBOX_DEFAULT)
+            giveitem(ITEM_NEST_BALL, 2)
+            setflag(FLAG_SKALD_Q_STEP_DONE)
+        } else {
+            msgbox(format("WOMAN: Our old house, up the track. The front step. Level or not."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_STEP_DONE)) {
+        msgbox(format("WOMAN: The key to our old house is under the step. It's been under the step since my husband's mother put it there. We're in the valley house now and I can't go up and look. I'd cry, and the children would see.\pGo up and look at the step for me. Not the key. The step. Tell me if it's still level."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_STEP)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         msgbox(format("WOMAN: The house we left is 'under review'. The house we're in is warm. I've stopped asking which is ours. Both. Neither.\pThe children call this one home. That decides it."), MSGBOX_DEFAULT)
         release

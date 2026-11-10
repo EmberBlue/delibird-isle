@@ -1621,6 +1621,55 @@ ParcelRiverMillWood_Board2::
 	end
 
 
+ParcelRiverMillWood_PairStump::
+# 753 "data/maps/ParcelRiverMillWood/scripts.pory"
+	lock
+# 754 "data/maps/ParcelRiverMillWood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverMillWood_PairStump_2
+# 758 "data/maps/ParcelRiverMillWood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiverMillWood_PairStump_3
+# 764 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_7, MSGBOX_DEFAULT
+# 765 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_8, MSGBOX_DEFAULT
+# 766 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_9, MSGBOX_DEFAULT
+# 767 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_10, MSGBOX_DEFAULT
+# 768 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_11, MSGBOX_DEFAULT
+ParcelRiverMillWood_PairStump_1:
+# 770 "data/maps/ParcelRiverMillWood/scripts.pory"
+	release
+	end
+
+ParcelRiverMillWood_PairStump_2:
+# 755 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_0, MSGBOX_DEFAULT
+# 756 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_1, MSGBOX_DEFAULT
+# 757 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_2, MSGBOX_DEFAULT
+	goto ParcelRiverMillWood_PairStump_1
+
+ParcelRiverMillWood_PairStump_3:
+# 759 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_3, MSGBOX_DEFAULT
+# 760 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_4, MSGBOX_DEFAULT
+# 761 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_5, MSGBOX_DEFAULT
+# 762 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairStump_Text_6, MSGBOX_DEFAULT
+	goto ParcelRiverMillWood_PairStump_1
+
+
+ParcelRiverMillWood_Board3::
+# 777 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Board3_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverMillWood_Halle_Text_0:
 # 10 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "HALLE: This stand is twelve years old.\n"
@@ -2388,3 +2437,75 @@ ParcelRiverMillWood_Board2_Text_0:
 	.string "The Survey added the SEEDOT count\n"
 	.string "underneath, because a wood that drops\l"
 	.string "seed is a wood that is still trying.$"
+
+ParcelRiverMillWood_PairStump_Text_0:
+# 755 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: Two stands, not five. The\n"
+	.string "Board's paper came back with three\l"
+	.string "crossed out.$"
+
+ParcelRiverMillWood_PairStump_Text_1:
+# 756 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "BOY: Which two?$"
+
+ParcelRiverMillWood_PairStump_Text_2:
+# 757 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: The two without husks.\n"
+	.string "Someone read the count. Someone always\l"
+	.string "does, eventually. It's the eventually\l"
+	.string "that costs.$"
+
+ParcelRiverMillWood_PairStump_Text_3:
+# 759 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "BOY: The ranger counted the husks with\n"
+	.string "me. Forty. She wrote the week.$"
+
+ParcelRiverMillWood_PairStump_Text_4:
+# 760 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: The week matters more\n"
+	.string "than the forty.$"
+
+ParcelRiverMillWood_PairStump_Text_5:
+# 761 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "BOY: Why?$"
+
+ParcelRiverMillWood_PairStump_Text_6:
+# 762 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: Because forty's a lot and\n"
+	.string "the week's early, and only one of those\l"
+	.string "is good news.$"
+
+ParcelRiverMillWood_PairStump_Text_7:
+# 764 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: Five stands marked for the\n"
+	.string "Board. Five.$"
+
+ParcelRiverMillWood_PairStump_Text_8:
+# 765 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "BOY: Which five?$"
+
+ParcelRiverMillWood_PairStump_Text_9:
+# 766 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: The five with the NINCADA\n"
+	.string "on them. Of course. The paper doesn't\l"
+	.string "know what a husk is.$"
+
+ParcelRiverMillWood_PairStump_Text_10:
+# 767 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "BOY: Can I keep the husks?$"
+
+ParcelRiverMillWood_PairStump_Text_11:
+# 768 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: Count them first. Then\n"
+	.string "keep them.$"
+
+ParcelRiverMillWood_Board3_Text_0:
+# 777 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "A SURVEY BOARD in the second growth.\n"
+	.string "SHROOMISH under the planted spruce\l"
+	.string "and none under the old oak stump.\p"
+	.string "The board explains in one line: planted\n"
+	.string "wood holds the damp, cut ground does\l"
+	.string "not, and a SHROOMISH knows the\l"
+	.string "difference before the soil scientist\l"
+	.string "does.$"

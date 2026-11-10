@@ -174,6 +174,12 @@ ParcelFernwickHall_Syllabus::
 	return
 
 
+ParcelFernwickHall_BenchBook::
+# 118 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_BenchBook_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHall_Greeter_Text_0:
 # 12 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "GREETER: Three passed first time this\n"
@@ -371,3 +377,16 @@ ParcelFernwickHall_Syllabus_Text_0:
 	.string "In pencil below the frame, not in the\n"
 	.string "hand that framed it: and send the\l"
 	.string "writing somewhere it will be read.$"
+
+ParcelFernwickHall_BenchBook_Text_0:
+# 118 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "A bench book on the cadets' shelf,\n"
+	.string "where provisionals write one line on\l"
+	.string "passing or failing. TARN's rule: one line,\l"
+	.string "true.\p"
+	.string "Eleven years of lines. Passed, at last.\n"
+	.string "Failed, fair. Failed, not fair, and under\l"
+	.string "it in TARN's hand: fair. Passed; I cried.\l"
+	.string "Passed; the current was mine.\p"
+	.string "The last line is blank and the pen is\n"
+	.string "tied to the book.$"
