@@ -76,6 +76,22 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 - **Edit tiles and objects in place**: `layout_edit.py` (elev / copy / set)
   and `map_obj.py` (--to / --face) keep the ROM's addresses stable, so
   harness savestates survive a rebuild. Script edits do not.
+- **A generated layout keeps its hand fixes in `fixes.json`.** `map.bin` of
+  a remixed map is the output of its `build.py` (or `draw.py` over
+  `canvas.txt`); `layout_edit.py` records each edit in the layout's
+  `fixes.json` and the generator re-applies it last, so a regeneration does
+  not undo a stair or an elevation. `python3 tools/skald/layout_fixes.py
+  --check` must print `0 layout(s) differ`. A fix wins over the generator
+  for its tile: delete the entry if a generator change replaces it.
+- **A door onto water is a trap.** Vanilla surf-in caves (Scorched Slab,
+  Shoal Cave) arrive on a `MB_WATER_*_ARROW_WARP` tile. Behind a land door
+  the player arrives walking on water and can never SURF (the engine wants
+  elevation 3). Give such an interior a dry doorstep: metatile 572
+  (`MB_SOUTH_ARROW_WARP`, General+Cave) at elevation 3.
+- **You cannot surf off a bridge.** SURF starts only from elevation-3
+  ground beside water. A bank reached "by SURF" needs such a tile on the
+  near side, or a dry path. `reach.py` models this; `--why MAP x,y` prints
+  the route it found to any tile.
 
 ## Delibird Isle (Johto tilesets)
 - Legend `tools/skald/legends/johtogeneral__azaleatown.json` (sea 473, not

@@ -39,6 +39,9 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
 - **Warp targets**: decode destination tile of every warp()/warp_event — col must be 0 (doors exempt).
 - **Connections**: for each edge connection, offset-aligned walkable tiles must exist both sides.
 - **Fly**: custom MAPSECs need rows in sMapHealLocations (src/region_map.c) or fly = Littleroot bedroom.
+- **Generated layouts**: `python3 tools/skald/layout_fixes.py --check` must
+  print `0 layout(s) differ from their generator` (hand tile fixes live in
+  each layout's `fixes.json`; see skald-add-content).
 - **Script gates**: `python3 tools/skald/gates.py` must print `0 suspicious
   gate(s)` (a side quest or a post-story line ending the talk ahead of a
   ferry, heal, shop, exam, HM, certification or evidence mark). `--all`

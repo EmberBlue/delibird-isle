@@ -941,5 +941,18 @@ quest is built, how the peer works) before they are asked six more times.
   reach them (water tiles have collision 0 and the placement pass asked
   only that); and the Coast's dredge-line reading sat on a sandbar only a
   surfer reaches while HALE's hint says "walk the quay" (a second reading
-  spot on the Breakwater beach looks out at the same water).
+  spot on the Breakwater beach looks out at the same water). With those,
+  chapters 1-6 play end to end: six badges' worth of exams and all five
+  certifications. Chapter 7 (the climate station) then showed the audit's
+  own blind spot: three of VANE's four divisions stand across a lake no
+  walker could reach, and `reach.py` had passed it by surfing off the
+  bridge from a gravel tile a remix line had painted onto the deck. The
+  engine only starts SURF from elevation-3 ground; the audit knows that
+  now, and with it found the Floodbasin works too, whose land door opened
+  onto a water tile (the player walked on water and could never reach the
+  pump-house plate of a side quest). The station got a staff path behind
+  the windbreak with a board at its mouth; the works a dry doorstep. And
+  because every one of these tile fixes had been made on generated
+  `map.bin` files, they now live in per-layout `fixes.json` files that
+  the generators re-apply (`layout_fixes.py --check`: 0 differ).
 

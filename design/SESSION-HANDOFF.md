@@ -476,9 +476,13 @@ replaces is gone from the tree).
   required reading locked behind side quests and the return ferries dead
   after the finale (all fixed; `gates.py` now scans for the pattern), and
   three battles whose rewards needed a second talk (continuation scripts
-  now). Standing audits before any map or script work is called done:
+  now). Chapters 5-6 followed (Delibird Isle, the Coast and its signing);
+  chapter 7 found the climate station's west plots and the Floodbasin
+  works unreachable (fixed; the audit no longer surfs off bridges).
+  Standing audits before any map or script work is called done:
   `audit.py` (2 known warnings), `reach.py` (0), `reach.py --trainers`
-  (0), `event_elev.py` (0), `gates.py` (0).
+  (0), `event_elev.py` (0), `gates.py` (0), `layout_fixes.py --check`
+  (0 differ: hand tile fixes live in each layout's `fixes.json`).
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to
