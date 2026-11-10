@@ -270,36 +270,36 @@ script ParcelIsle_FerrySign {
 script ParcelIsle_FerryCaptain {
     lock
     faceplayer
-    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_TALLY_DONE)) {
-        msgbox(format("CAPTAIN: New post went in. First notch's already on it. Not mine. A LAPRAS off the north point, the mate swears.\pI let him cut it. Someone has to start the next count."), MSGBOX_DEFAULT)
-        release
-        end
-    }
-    if (flag(FLAG_SKALD_Q_TALLY) && !flag(FLAG_SKALD_Q_TALLY_DONE)) {
-        if (flag(FLAG_SKALD_Q_TALLY_FOUND)) {
-            msgbox(format("CAPTAIN: Eleven in the first decade, four in the second, one in the third. That's the count. I knew it. I wanted it said back to me by a notebook.\pHere. For the boat you'll need one day."), MSGBOX_DEFAULT)
-            giveitem(ITEM_NET_BALL, 3)
-            setflag(FLAG_SKALD_Q_TALLY_DONE)
-        } else {
-            msgbox(format("CAPTAIN: The pier post. Far end. Count the notches, not the splinters."), MSGBOX_DEFAULT)
-        }
-        release
-        end
-    } elif (!flag(FLAG_SKALD_Q_TALLY_DONE)) {
-        msgbox(format("CAPTAIN: Every LAPRAS I've seen on the crossing in thirty years, I've cut a notch in the pier post. The post's rotting. Before it goes, I'd like the count read by somebody whose word carries.\pIt's at the far end, by the water. Read it and tell me."), MSGBOX_DEFAULT)
-        setflag(FLAG_SKALD_Q_TALLY)
-        release
-        end
-    }
-    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("CAPTAIN: Passage out, RANGER? Any time. Any weather. You've paid for the ferry for life, the harbour office says. I'd have taken you anyway."), MSGBOX_DEFAULT)
-        release
-        end
+    // The ferry is the main road from chapter 5 on, so nothing here may end the talk once
+    // passage is open: the pier-post tally (a side quest) is a preamble, never a gate.
+    if (flag(FLAG_SKALD_Q_TALLY) && !flag(FLAG_SKALD_Q_TALLY_DONE) && flag(FLAG_SKALD_Q_TALLY_FOUND)) {
+        msgbox(format("CAPTAIN: Eleven in the first decade, four in the second, one in the third. That's the count. I knew it. I wanted it said back to me by a notebook.\pHere. For the boat you'll need one day."), MSGBOX_DEFAULT)
+        giveitem(ITEM_NET_BALL, 3)
+        setflag(FLAG_SKALD_Q_TALLY_DONE)
     }
     if (!flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
         msgbox(format("CAPTAIN: Passage out? Not in this cold, not without a reason.\pCome back when the RANGERS have sent you up the mountains. You'll know when."), MSGBOX_DEFAULT)
+        if (flag(FLAG_SKALD_Q_TALLY_DONE)) {
+            release
+            end
+        }
+        if (flag(FLAG_SKALD_Q_TALLY)) {
+            msgbox(format("CAPTAIN: The pier post. Far end. Count the notches, not the splinters."), MSGBOX_DEFAULT)
+        } else {
+            msgbox(format("CAPTAIN: Every LAPRAS I've seen on the crossing in thirty years, I've cut a notch in the pier post. The post's rotting. Before it goes, I'd like the count read by somebody whose word carries.\pIt's at the far end, by the water. Read it and tell me."), MSGBOX_DEFAULT)
+            setflag(FLAG_SKALD_Q_TALLY)
+        }
         release
         end
+    }
+    if (!flag(FLAG_SKALD_Q_TALLY) && !flag(FLAG_SKALD_Q_TALLY_DONE)) {
+        msgbox(format("CAPTAIN: Every LAPRAS I've seen on the crossing in thirty years, I've cut a notch in the pier post. The post's rotting. Before it goes, I'd like the count read by somebody whose word carries.\pIt's at the far end, by the water. Read it and tell me."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_TALLY)
+    }
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_TALLY_DONE)) {
+        msgbox(format("CAPTAIN: New post went in. First notch's already on it. Not mine. A LAPRAS off the north point, the mate swears.\pI let him cut it. Someone has to start the next count."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CAPTAIN: Passage out, RANGER? Any time. Any weather. You've paid for the ferry for life, the harbour office says. I'd have taken you anyway."), MSGBOX_DEFAULT)
     }
     msgbox(format("CAPTAIN: Harbour's open. Where to?"), MSGBOX_DEFAULT)
     multichoice(1, 1, MULTI_SKALD_FERRY, FALSE)

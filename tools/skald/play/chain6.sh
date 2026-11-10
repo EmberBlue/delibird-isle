@@ -20,11 +20,11 @@ seg() {
   if [ "$need" != "-" ] && ! grep -q "$need = 1" $P/$name.log; then echo "!!! $name: $need not set"; exit 1; fi
 }
 PICK2="--walk TAP:DOWN --walk IDLE:20 --walk TAP:DOWN --walk IDLE:20 --walk A:1 --walk IDLE:300"
-# PERRIN on the quay (trigger row 54), then HARLAND (36,53) from above: one shift out on the water
-seg s54 s53 FLAG_SKALD_COAST_SHIFT_DONE --walk GOTO:30,53 --walk WAIT:2500 --walk GOTO:36,52 --walk DOWN:0 --walk TALK:16 --walk WAIT:3000 \
-  --check FLAG_SKALD_COAST_SHIFT_DONE --expect MAP_PARCEL_COAST
-# HARLAND again: the forty-jobs question, the battle, badge 6, HM02
-seg s55 s54 FLAG_BADGE06_GET --walk GOTO:36,52 --walk DOWN:0 --walk TALK:30 --walk WAIT:2500 --check FLAG_BADGE06_GET --expect MAP_PARCEL_COAST
+# PERRIN on the quay (trigger row 54), then HARLAND (36,53) from above: the forty-jobs question, the battle, badge 6, HM02
+seg s54 s53 FLAG_BADGE06_GET --walk GOTO:30,53 --walk WAIT:2500 --walk GOTO:36,52 --walk DOWN:0 --walk TALK:30 --walk WAIT:2500 \
+  --check FLAG_BADGE06_GET --expect MAP_PARCEL_COAST
+# HARLAND again: one shift out on the water
+seg s55 s54 FLAG_SKALD_COAST_SHIFT_DONE --walk GOTO:36,52 --walk DOWN:0 --walk TALK:16 --walk WAIT:3000 --check FLAG_SKALD_COAST_SHIFT_DONE --expect MAP_PARCEL_COAST
 # the four readings on the ground: the urchin barren (36,57), the dredge scar (7,58), the one-size catch (7,36),
 # the empty pilings (32,44) behind the item ball at (31,44)
 seg s56 s55 - --walk GOTO:35,57 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 \

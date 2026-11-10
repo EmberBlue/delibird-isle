@@ -231,7 +231,8 @@ def main():
                 c = cb2()
                 return c != CB["CB2_BagMenuRun"] and c not in field_cbs
             item_s, slot_s = n.split(",")
-            slot = int(slot_s)
+            # 'last' = the newest party member (gPlayerPartyCount), e.g. a lent swimmer
+            slot = core.memory.u8[syms["gPlayerPartyCount"]] if slot_s == "last" else int(slot_s)
             item_name = f"ITEM_{item_s.upper()}" if not item_s.isdigit() else None
             item = int(item_s) if item_s.isdigit() else -1
             sb1 = core.memory.u32[sb1p]

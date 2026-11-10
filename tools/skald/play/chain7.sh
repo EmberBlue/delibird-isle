@@ -22,11 +22,11 @@ seg() {
 # the four divisions: over the bridge to ICE (30,16), RAIN (16,21), then the west yard: SUN (6,16), SAND (6,5)
 seg s61 s60 - --walk GOTO:30,17 --walk UP:0 --walk TALK:1 --walk WAIT:900 --walk GOTO:16,22 --walk UP:0 --walk TALK:1 --walk WAIT:900 \
   --expect MAP_PARCEL_WEATHER
-seg s62 s61 FLAG_SKALDMERE_WEATHER_CLEARED --walk GOTO:7,16 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 --walk GOTO:7,5 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 \
-  --check FLAG_SKALDMERE_WEATHER_CLEARED --expect MAP_PARCEL_WEATHER
+seg s62 s61 - --walk GOTO:7,16 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 --walk GOTO:7,5 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 \
+  --check TRAINER_SKALD_RAIN --check TRAINER_SKALD_SUN --check TRAINER_SKALD_SAND --check TRAINER_SKALD_ICE --expect MAP_PARCEL_WEATHER
 # the Institute (door (6,32) = warp 0 of the map? the door tile itself), the stairs (1F warp 2 at (17,1)), VANE (10,8)
 seg s63 s62 FLAG_BADGE07_GET --walk GOTO:6,33 --walk UP:0 --walk WAIT:400 --walk GOTOWARP:2 --walk WAIT:400 \
-  --walk GOTO:10,9 --walk UP:0 --walk TALK:30 --walk WAIT:2500 --check FLAG_BADGE07_GET --expect MAP_PARCEL_WEATHER_INSTITUTE2_F
+  --walk GOTO:10,9 --walk UP:0 --walk TALK:30 --walk WAIT:2500 --check FLAG_BADGE07_GET --check FLAG_SKALDMERE_WEATHER_CLEARED --expect MAP_PARCEL_WEATHER_INSTITUTE2_F
 # back down and out, the sailor (10,34) home to Saltwick
 seg s64 s63 - --walk GOTOWARP:0 --walk WAIT:400 --walk GOTOWARP:0 --walk WAIT:400 --walk GOTO:10,33 --walk DOWN:0 --walk TALK:3 --walk WAIT:2500 --expect MAP_PARCEL_ISLE
 echo "=== chapter 7 complete, back in Saltwick $(date +%H:%M:%S)"

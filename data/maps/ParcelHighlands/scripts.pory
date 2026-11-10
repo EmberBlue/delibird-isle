@@ -209,6 +209,19 @@ script ParcelHighlands_Homesteader {
         release
         end
     }
+    // The reading comes first: HALE's certification needs it, so the lambing-field errand
+    // (a side quest) is offered on the next talk, not in front of it.
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH4_EVIDENCE)
+    setvar(VAR_0x8004, 5)
+    specialvar(VAR_RESULT, SkaldmereCertTaskGet)
+    if (var(VAR_RESULT) == 0 && !flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("HOMESTEADER: You're not from the company. Good. I'm tired of being adapted at.\pEight generations of us wintered this slope. You knew where you stood. The ground held, the cold came, the cold went, the ground held again."), MSGBOX_DEFAULT)
+        msgbox(format("HOMESTEADER: Now the ground breathes. The doors won't shut true. The near corner's a hand's depth into the mud since spring. The well runs brown in a month it never ran brown."), MSGBOX_DEFAULT)
+        msgbox(format("HOMESTEADER: The FOUNDATION's grant will move me somewhere warm and write 'resilience' on the cheque. The young ones already signed. I don't blame them.\pThe ground is dying. They call it opportunity. I call it leaving."), MSGBOX_DEFAULT)
+        special(SkaldmereCertTaskMark)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_FROST) && !flag(FLAG_SKALD_Q_FROST_DONE)) {
         if (flag(FLAG_SKALD_Q_FROST_FOUND)) {
             msgbox(format("HOMESTEADER: Water. …Then it's not freezing back this year either. I'll move the ewes down before I'm told to. Nobody tells you in time up here; you have to read it yourself.\pHere. From the box the Foundation sent. I'd rather you had it than they thought I'd used it."), MSGBOX_DEFAULT)
@@ -257,10 +270,6 @@ script ParcelHighlands_Homesteader {
         release
         end
     }
-    msgbox(format("HOMESTEADER: You're not from the company. Good. I'm tired of being adapted at.\pEight generations of us wintered this slope. You knew where you stood. The ground held, the cold came, the cold went, the ground held again."), MSGBOX_DEFAULT)
-    msgbox(format("HOMESTEADER: Now the ground breathes. The doors won't shut true. The near corner's a hand's depth into the mud since spring. The well runs brown in a month it never ran brown."), MSGBOX_DEFAULT)
-    msgbox(format("HOMESTEADER: The FOUNDATION's grant will move me somewhere warm and write 'resilience' on the cheque. The young ones already signed. I don't blame them.\pThe ground is dying. They call it opportunity. I call it leaving."), MSGBOX_DEFAULT)
-    special(SkaldmereCertTaskMark)
     release
     end
 }

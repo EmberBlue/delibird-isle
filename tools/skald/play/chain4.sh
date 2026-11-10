@@ -25,13 +25,13 @@ seg s34 s33 - --walk GOTO:20,74 --walk UP:0 --walk WAIT:2500 --walk GOTO:18,67 -
   --walk GOTO:8,66 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 --expect MAP_PARCEL_HIGHLANDS
 seg s35 s34 - --walk GOTO:28,52 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 --check VAR_SKALDMERE_CH4_EVIDENCE --expect MAP_PARCEL_HIGHLANDS
 # the slide: ILEX's voice from above (trigger row 49), STRENGTH on the east boulder (26,48) and through the gap
-seg s36 s35 - --walk GOTO:26,50 --walk UP:0 --walk WAIT:2500 --walk UP:0 --walk TALK:1 --walk WAIT:400 \
+seg s36 s35 - --walk GOTO:26,50 --walk UP:0 --walk WAIT:2500 --walk UP:0 --walk TALK:6 --walk WAIT:400 \
   --walk UP:0 --walk WAIT:60 --walk UP:0 --walk WAIT:60 --walk UP:0 --walk WAIT:60 --walk UP:0 --walk WAIT:200 --expect MAP_PARCEL_HIGHLANDS
 # the drill sign (28,38) from (27,38), then VALE's gate (trigger (24,42)/(25,42)): the exam, badge 5, HM03
 seg s37 s36 FLAG_BADGE05_GET --walk GOTO:27,38 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 \
   --walk GOTO:24,44 --walk UP:0 --walk UP:0 --walk WAIT:5000 --check FLAG_BADGE05_GET --expect MAP_PARCEL_HIGHLANDS
-# SURF onto the lead (bag: HM01 Cut, HM03 Surf, HM04 Strength, HM05 Flash, HM06 Rock Smash -> index 1; slot 1 has a free move)
-seg s38 s37 - --walk TEACHHM:HM03,1 --walk WAIT:200 --expect MAP_PARCEL_HIGHLANDS
+# SURF onto the lead (bag: HM01 Cut, HM03 Surf, HM04 Strength, HM05 Flash, HM06 Rock Smash -> taught to the last party member: VALE's lent MARILL when nobody else can swim)
+seg s38 s37 - --walk TEACHHM:HM03,last --walk WAIT:200 --expect MAP_PARCEL_HIGHLANDS
 # the sea for SURF: from the village beach (12,60) north up the coast and the lake to the summit trail's shore (13,36),
 # then the lowlander (33,20), the band stakes (25,14) and ILEX (25,13) on the plateau
 seg s39 s38 - --walk GOTO:12,60 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:13,36 --walk WAIT:300 \

@@ -427,12 +427,13 @@ script ParcelCoast_GullMan {
 script ParcelCoast_ReturnFerry {
     lock
     faceplayer
+    // After the hearing the sailor has a new line, but the boat still sails: the line is the
+    // same YES/NO question (it used to end the talk, stranding a post-game player here).
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("SAILOR: Back to SALTWICK, RANGER? Go on. They'll want to see the one who did it. Don't let them buy you a drink. They'll try."), MSGBOX_DEFAULT)
-        release
-        end
+        msgbox(format("SAILOR: Back to SALTWICK, RANGER? Go on. They'll want to see the one who did it. Don't let them buy you a drink. They'll try."), MSGBOX_YESNO)
+    } else {
+        msgbox(format("SAILOR: Back to SALTWICK, RANGER? Can't say I blame you. Nothing to do here but watch them take it."), MSGBOX_YESNO)
     }
-    msgbox(format("SAILOR: Back to SALTWICK, RANGER? Can't say I blame you. Nothing to do here but watch them take it."), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 0) {
         msgbox(format("SAILOR: I'll wait. The catch isn't going anywhere. Less of it every run, but it isn't going anywhere."), MSGBOX_DEFAULT)
         release

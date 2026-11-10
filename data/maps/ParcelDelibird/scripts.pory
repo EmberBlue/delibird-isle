@@ -250,12 +250,13 @@ script ParcelDelibird_BannerSign {
 script ParcelDelibird_ReturnFerry {
     lock
     faceplayer
+    // After the hearing the sailor has a new line, but the boat still sails: the line is the
+    // same YES/NO question (it used to end the talk, stranding a post-game player here).
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Sailor: Back to the mainland, Ranger? The island will be here, for a while yet. Your paper didn't change the ice. It changed what the ice is called in a room far away. That's something."), MSGBOX_DEFAULT)
-        release
-        end
+        msgbox(format("Sailor: Back to the mainland, Ranger? The island will be here, for a while yet. Your paper didn't change the ice. It changed what the ice is called in a room far away. That's something."), MSGBOX_YESNO)
+    } else {
+        msgbox(format("Sailor: Back to the mainland, Ranger? Whenever you're ready.\pThe island will be here. For a while yet, it'll be here."), MSGBOX_YESNO)
     }
-    msgbox(format("Sailor: Back to the mainland, Ranger? Whenever you're ready.\pThe island will be here. For a while yet, it'll be here."), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 0) {
         msgbox(format("Sailor: Stay for the lights, then. They're worth it."), MSGBOX_DEFAULT)
         release
