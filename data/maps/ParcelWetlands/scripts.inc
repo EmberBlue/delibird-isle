@@ -4231,6 +4231,28 @@ ParcelWetlands_TurfCrack_4:
 	goto ParcelWetlands_TurfCrack_3
 
 
+ParcelWetlands_FindNest::
+# 2053 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_NEST, ParcelWetlands_FindNest_4
+ParcelWetlands_FindNest_3:
+# 2057 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_FindNest_Text_1, MSGBOX_SIGN
+ParcelWetlands_FindNest_1:
+	end
+
+ParcelWetlands_FindNest_2:
+# 2054 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_FindNest_Text_0, MSGBOX_SIGN
+# 2055 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_NEST_FOUND
+	goto ParcelWetlands_FindNest_1
+
+ParcelWetlands_FindNest_4:
+# 2053 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_NEST_FOUND, ParcelWetlands_FindNest_2
+	goto ParcelWetlands_FindNest_3
+
+
 ParcelWetlands_Harland_Text_0:
 # 77 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: They read your report out on\n"
@@ -6181,3 +6203,20 @@ ParcelWetlands_TurfCrack_Text_1:
 # 2045 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A crack in the turf a hand wide. The\n"
 	.string "beetle has gone on.$"
+
+ParcelWetlands_FindNest_Text_0:
+# 2054 "data/maps/ParcelWetlands/scripts.pory"
+	.string "The north reed bed, half of it pale and\n"
+	.string "dead, half of it standing. In the\l"
+	.string "standing half, a heron's nest, a\l"
+	.string "platform of old stems, and on it a heron,\l"
+	.string "very still, in the way that means an egg.\p"
+	.string "It looks at you for exactly as long as\n"
+	.string "it takes you to look at it, and then at\l"
+	.string "the water.$"
+
+ParcelWetlands_FindNest_Text_1:
+# 2057 "data/maps/ParcelWetlands/scripts.pory"
+	.string "The north reed bed. The nest is there,\n"
+	.string "and the heron is standing in the\l"
+	.string "shallows below it, reading the water.$"

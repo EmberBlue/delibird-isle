@@ -745,6 +745,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFernwick_HighWaterStone"
+    },
+    {
+      "type": "sign",
+      "x": 24,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_FindJar"
     }
   ]
 }

@@ -315,1351 +315,1389 @@ ParcelFernwick_Scientist::
 # 211 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
 # 212 "data/maps/ParcelFernwick/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_Scientist_2
-ParcelFernwick_Scientist_1:
-# 215 "data/maps/ParcelFernwick/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_Scientist_5
-# 220 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_Scientist_Text_2, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALD_Q_JAR, ParcelFernwick_Scientist_5
+ParcelFernwick_Scientist_4:
 # 222 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_JAR_DONE, ParcelFernwick_Scientist_3
+# 228 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_Scientist_9
+ParcelFernwick_Scientist_8:
+# 231 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_Scientist_16
+# 236 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Scientist_Text_5, MSGBOX_DEFAULT
+# 238 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Scientist_2:
 # 213 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_Scientist_Text_0, MSGBOX_DEFAULT
-	goto ParcelFernwick_Scientist_1
+	goto_if_set FLAG_SKALD_Q_JAR_FOUND, ParcelFernwick_Scientist_12
+# 218 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Scientist_Text_1, MSGBOX_DEFAULT
+ParcelFernwick_Scientist_11:
+# 220 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
+
+ParcelFernwick_Scientist_3:
+# 223 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Scientist_Text_2, MSGBOX_DEFAULT
+# 224 "data/maps/ParcelFernwick/scripts.pory"
+	setflag FLAG_SKALD_Q_JAR
+# 225 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
 
 ParcelFernwick_Scientist_5:
+# 212 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_JAR_DONE, ParcelFernwick_Scientist_2
+	goto ParcelFernwick_Scientist_4
+
+ParcelFernwick_Scientist_9:
+# 229 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Scientist_Text_3, MSGBOX_DEFAULT
+	goto ParcelFernwick_Scientist_8
+
+ParcelFernwick_Scientist_12:
+# 214 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Scientist_Text_0, MSGBOX_DEFAULT
+# 215 "data/maps/ParcelFernwick/scripts.pory"
+	giveitem ITEM_HYPER_POTION, 2
 # 216 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_Scientist_Text_1, MSGBOX_DEFAULT
-# 217 "data/maps/ParcelFernwick/scripts.pory"
+	setflag FLAG_SKALD_Q_JAR_DONE
+	goto ParcelFernwick_Scientist_11
+
+ParcelFernwick_Scientist_16:
+# 232 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Scientist_Text_4, MSGBOX_DEFAULT
+# 233 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_Gentleman::
-# 227 "data/maps/ParcelFernwick/scripts.pory"
+# 243 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 228 "data/maps/ParcelFernwick/scripts.pory"
+# 244 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 229 "data/maps/ParcelFernwick/scripts.pory"
+# 245 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_Gentleman_2
-# 234 "data/maps/ParcelFernwick/scripts.pory"
+# 250 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_Gentleman_5
-# 239 "data/maps/ParcelFernwick/scripts.pory"
+# 255 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Gentleman_Text_2, MSGBOX_DEFAULT
-# 240 "data/maps/ParcelFernwick/scripts.pory"
+# 256 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Gentleman_2:
-# 230 "data/maps/ParcelFernwick/scripts.pory"
+# 246 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Gentleman_Text_0, MSGBOX_DEFAULT
-# 231 "data/maps/ParcelFernwick/scripts.pory"
+# 247 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Gentleman_5:
-# 235 "data/maps/ParcelFernwick/scripts.pory"
+# 251 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Gentleman_Text_1, MSGBOX_DEFAULT
-# 236 "data/maps/ParcelFernwick/scripts.pory"
+# 252 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_Clerk::
-# 245 "data/maps/ParcelFernwick/scripts.pory"
+# 261 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 246 "data/maps/ParcelFernwick/scripts.pory"
+# 262 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 247 "data/maps/ParcelFernwick/scripts.pory"
+# 263 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_Clerk_2
-# 252 "data/maps/ParcelFernwick/scripts.pory"
+# 268 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_Clerk_5
-# 257 "data/maps/ParcelFernwick/scripts.pory"
+# 273 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Clerk_Text_2, MSGBOX_DEFAULT
-# 258 "data/maps/ParcelFernwick/scripts.pory"
+# 274 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Clerk_2:
-# 248 "data/maps/ParcelFernwick/scripts.pory"
+# 264 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Clerk_Text_0, MSGBOX_DEFAULT
-# 249 "data/maps/ParcelFernwick/scripts.pory"
+# 265 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Clerk_5:
-# 253 "data/maps/ParcelFernwick/scripts.pory"
+# 269 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Clerk_Text_1, MSGBOX_DEFAULT
-# 254 "data/maps/ParcelFernwick/scripts.pory"
+# 270 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_Mother::
-# 263 "data/maps/ParcelFernwick/scripts.pory"
+# 279 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 264 "data/maps/ParcelFernwick/scripts.pory"
+# 280 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 265 "data/maps/ParcelFernwick/scripts.pory"
+# 281 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_Mother_2
-# 270 "data/maps/ParcelFernwick/scripts.pory"
+# 286 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_Mother_5
-# 275 "data/maps/ParcelFernwick/scripts.pory"
+# 291 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Mother_Text_2, MSGBOX_DEFAULT
-# 276 "data/maps/ParcelFernwick/scripts.pory"
+# 292 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Mother_2:
-# 266 "data/maps/ParcelFernwick/scripts.pory"
+# 282 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Mother_Text_0, MSGBOX_DEFAULT
-# 267 "data/maps/ParcelFernwick/scripts.pory"
+# 283 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Mother_5:
-# 271 "data/maps/ParcelFernwick/scripts.pory"
+# 287 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Mother_Text_1, MSGBOX_DEFAULT
-# 272 "data/maps/ParcelFernwick/scripts.pory"
+# 288 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_ItemSuperPotion::
-# 281 "data/maps/ParcelFernwick/scripts.pory"
+# 297 "data/maps/ParcelFernwick/scripts.pory"
 	finditem ITEM_SUPER_POTION
 	end
 
 
 ParcelFernwick_HallSign::
-# 287 "data/maps/ParcelFernwick/scripts.pory"
+# 303 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_HallSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwick_HQSign::
-# 292 "data/maps/ParcelFernwick/scripts.pory"
+# 308 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_HQSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwick_SurveySign::
-# 297 "data/maps/ParcelFernwick/scripts.pory"
+# 313 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_SurveySign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwick_FisherSign::
-# 302 "data/maps/ParcelFernwick/scripts.pory"
+# 318 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_FisherSign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwick_CitySign::
-# 307 "data/maps/ParcelFernwick/scripts.pory"
+# 323 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_CitySign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwick_T_Ella::
-# 313 "data/maps/ParcelFernwick/scripts.pory"
+# 329 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_FW_ELLA, ParcelFernwick_T_Ella_Text_0, ParcelFernwick_T_Ella_Text_1, ParcelFernwick_T_Ella_FirstWin
-# 317 "data/maps/ParcelFernwick/scripts.pory"
+# 333 "data/maps/ParcelFernwick/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 318 "data/maps/ParcelFernwick/scripts.pory"
+# 334 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelFernwick_T_Ella_3
 ParcelFernwick_T_Ella_1:
-# 321 "data/maps/ParcelFernwick/scripts.pory"
+# 337 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelFernwick_T_Ella_8
 ParcelFernwick_T_Ella_6:
-# 324 "data/maps/ParcelFernwick/scripts.pory"
+# 340 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelFernwick_T_Ella_13
 ParcelFernwick_T_Ella_11:
-# 327 "data/maps/ParcelFernwick/scripts.pory"
+# 343 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelFernwick_T_Ella_18
 ParcelFernwick_T_Ella_16:
-# 330 "data/maps/ParcelFernwick/scripts.pory"
+# 346 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelFernwick_T_Ella_2:
-# 319 "data/maps/ParcelFernwick/scripts.pory"
+# 335 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Ella_R2
 	goto ParcelFernwick_T_Ella_1
 
 ParcelFernwick_T_Ella_3:
-# 318 "data/maps/ParcelFernwick/scripts.pory"
+# 334 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_ELLA_R2
 	goto_if 0, ParcelFernwick_T_Ella_2
 	goto ParcelFernwick_T_Ella_1
 
 ParcelFernwick_T_Ella_7:
-# 322 "data/maps/ParcelFernwick/scripts.pory"
+# 338 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Ella_R3
 	goto ParcelFernwick_T_Ella_6
 
 ParcelFernwick_T_Ella_8:
-# 321 "data/maps/ParcelFernwick/scripts.pory"
+# 337 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_ELLA_R3
 	goto_if 0, ParcelFernwick_T_Ella_7
 	goto ParcelFernwick_T_Ella_6
 
 ParcelFernwick_T_Ella_12:
-# 325 "data/maps/ParcelFernwick/scripts.pory"
+# 341 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Ella_R4
 	goto ParcelFernwick_T_Ella_11
 
 ParcelFernwick_T_Ella_13:
-# 324 "data/maps/ParcelFernwick/scripts.pory"
+# 340 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_ELLA_R4
 	goto_if 0, ParcelFernwick_T_Ella_12
 	goto ParcelFernwick_T_Ella_11
 
 ParcelFernwick_T_Ella_17:
-# 328 "data/maps/ParcelFernwick/scripts.pory"
+# 344 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Ella_R5
 	goto ParcelFernwick_T_Ella_16
 
 ParcelFernwick_T_Ella_18:
-# 327 "data/maps/ParcelFernwick/scripts.pory"
+# 343 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_ELLA_R5
 	goto_if 0, ParcelFernwick_T_Ella_17
 	goto ParcelFernwick_T_Ella_16
 
 
 ParcelFernwick_T_Ella_FirstWin::
-# 334 "data/maps/ParcelFernwick/scripts.pory"
+# 350 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_Text_2, MSGBOX_DEFAULT
-# 335 "data/maps/ParcelFernwick/scripts.pory"
+# 351 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Ella_R2::
-# 339 "data/maps/ParcelFernwick/scripts.pory"
+# 355 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 340 "data/maps/ParcelFernwick/scripts.pory"
+# 356 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 341 "data/maps/ParcelFernwick/scripts.pory"
+# 357 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R2_Text_0, MSGBOX_YESNO
-# 342 "data/maps/ParcelFernwick/scripts.pory"
+# 358 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Ella_R2_2
-# 347 "data/maps/ParcelFernwick/scripts.pory"
+# 363 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_ELLA_R2, ParcelFernwick_T_Ella_R2_Text_2
-# 348 "data/maps/ParcelFernwick/scripts.pory"
+# 364 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R2_Text_3, MSGBOX_DEFAULT
-# 349 "data/maps/ParcelFernwick/scripts.pory"
+# 365 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Ella_R2_2:
-# 343 "data/maps/ParcelFernwick/scripts.pory"
+# 359 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R2_Text_1, MSGBOX_DEFAULT
-# 344 "data/maps/ParcelFernwick/scripts.pory"
+# 360 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Ella_R3::
-# 353 "data/maps/ParcelFernwick/scripts.pory"
+# 369 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 354 "data/maps/ParcelFernwick/scripts.pory"
+# 370 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 355 "data/maps/ParcelFernwick/scripts.pory"
+# 371 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R3_Text_0, MSGBOX_YESNO
-# 356 "data/maps/ParcelFernwick/scripts.pory"
+# 372 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Ella_R3_2
-# 361 "data/maps/ParcelFernwick/scripts.pory"
+# 377 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_ELLA_R3, ParcelFernwick_T_Ella_R3_Text_1
-# 362 "data/maps/ParcelFernwick/scripts.pory"
+# 378 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R3_Text_2, MSGBOX_DEFAULT
-# 363 "data/maps/ParcelFernwick/scripts.pory"
+# 379 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Ella_R3_2:
-# 357 "data/maps/ParcelFernwick/scripts.pory"
+# 373 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R2_Text_1, MSGBOX_DEFAULT
-# 358 "data/maps/ParcelFernwick/scripts.pory"
+# 374 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Ella_R4::
-# 367 "data/maps/ParcelFernwick/scripts.pory"
+# 383 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 368 "data/maps/ParcelFernwick/scripts.pory"
+# 384 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 369 "data/maps/ParcelFernwick/scripts.pory"
+# 385 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R4_Text_0, MSGBOX_YESNO
-# 370 "data/maps/ParcelFernwick/scripts.pory"
+# 386 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Ella_R4_2
-# 375 "data/maps/ParcelFernwick/scripts.pory"
+# 391 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_ELLA_R4, ParcelFernwick_T_Ella_R4_Text_1
-# 376 "data/maps/ParcelFernwick/scripts.pory"
+# 392 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R4_Text_2, MSGBOX_DEFAULT
-# 377 "data/maps/ParcelFernwick/scripts.pory"
+# 393 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Ella_R4_2:
-# 371 "data/maps/ParcelFernwick/scripts.pory"
+# 387 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R2_Text_1, MSGBOX_DEFAULT
-# 372 "data/maps/ParcelFernwick/scripts.pory"
+# 388 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Ella_R5::
-# 381 "data/maps/ParcelFernwick/scripts.pory"
+# 397 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 382 "data/maps/ParcelFernwick/scripts.pory"
+# 398 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 383 "data/maps/ParcelFernwick/scripts.pory"
+# 399 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R5_Text_0, MSGBOX_YESNO
-# 384 "data/maps/ParcelFernwick/scripts.pory"
+# 400 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Ella_R5_2
-# 389 "data/maps/ParcelFernwick/scripts.pory"
+# 405 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_ELLA_R5, ParcelFernwick_T_Ella_R5_Text_1
-# 390 "data/maps/ParcelFernwick/scripts.pory"
+# 406 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R5_Text_2, MSGBOX_DEFAULT
-# 391 "data/maps/ParcelFernwick/scripts.pory"
+# 407 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Ella_R5_2:
-# 385 "data/maps/ParcelFernwick/scripts.pory"
+# 401 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Ella_R2_Text_1, MSGBOX_DEFAULT
-# 386 "data/maps/ParcelFernwick/scripts.pory"
+# 402 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Henrik::
-# 395 "data/maps/ParcelFernwick/scripts.pory"
+# 411 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_FW_HENRIK, ParcelFernwick_T_Henrik_Text_0, ParcelFernwick_T_Henrik_Text_1, ParcelFernwick_T_Henrik_FirstWin
-# 399 "data/maps/ParcelFernwick/scripts.pory"
+# 415 "data/maps/ParcelFernwick/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 400 "data/maps/ParcelFernwick/scripts.pory"
+# 416 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelFernwick_T_Henrik_3
 ParcelFernwick_T_Henrik_1:
-# 403 "data/maps/ParcelFernwick/scripts.pory"
+# 419 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelFernwick_T_Henrik_8
 ParcelFernwick_T_Henrik_6:
-# 406 "data/maps/ParcelFernwick/scripts.pory"
+# 422 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelFernwick_T_Henrik_13
 ParcelFernwick_T_Henrik_11:
-# 409 "data/maps/ParcelFernwick/scripts.pory"
+# 425 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelFernwick_T_Henrik_18
 ParcelFernwick_T_Henrik_16:
-# 412 "data/maps/ParcelFernwick/scripts.pory"
+# 428 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelFernwick_T_Henrik_2:
-# 401 "data/maps/ParcelFernwick/scripts.pory"
+# 417 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Henrik_R2
 	goto ParcelFernwick_T_Henrik_1
 
 ParcelFernwick_T_Henrik_3:
-# 400 "data/maps/ParcelFernwick/scripts.pory"
+# 416 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_HENRIK_R2
 	goto_if 0, ParcelFernwick_T_Henrik_2
 	goto ParcelFernwick_T_Henrik_1
 
 ParcelFernwick_T_Henrik_7:
-# 404 "data/maps/ParcelFernwick/scripts.pory"
+# 420 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Henrik_R3
 	goto ParcelFernwick_T_Henrik_6
 
 ParcelFernwick_T_Henrik_8:
-# 403 "data/maps/ParcelFernwick/scripts.pory"
+# 419 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_HENRIK_R3
 	goto_if 0, ParcelFernwick_T_Henrik_7
 	goto ParcelFernwick_T_Henrik_6
 
 ParcelFernwick_T_Henrik_12:
-# 407 "data/maps/ParcelFernwick/scripts.pory"
+# 423 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Henrik_R4
 	goto ParcelFernwick_T_Henrik_11
 
 ParcelFernwick_T_Henrik_13:
-# 406 "data/maps/ParcelFernwick/scripts.pory"
+# 422 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_HENRIK_R4
 	goto_if 0, ParcelFernwick_T_Henrik_12
 	goto ParcelFernwick_T_Henrik_11
 
 ParcelFernwick_T_Henrik_17:
-# 410 "data/maps/ParcelFernwick/scripts.pory"
+# 426 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Henrik_R5
 	goto ParcelFernwick_T_Henrik_16
 
 ParcelFernwick_T_Henrik_18:
-# 409 "data/maps/ParcelFernwick/scripts.pory"
+# 425 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_HENRIK_R5
 	goto_if 0, ParcelFernwick_T_Henrik_17
 	goto ParcelFernwick_T_Henrik_16
 
 
 ParcelFernwick_T_Henrik_FirstWin::
-# 416 "data/maps/ParcelFernwick/scripts.pory"
+# 432 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_Text_2, MSGBOX_DEFAULT
-# 417 "data/maps/ParcelFernwick/scripts.pory"
+# 433 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Henrik_R2::
-# 421 "data/maps/ParcelFernwick/scripts.pory"
+# 437 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 422 "data/maps/ParcelFernwick/scripts.pory"
+# 438 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 423 "data/maps/ParcelFernwick/scripts.pory"
+# 439 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R2_Text_0, MSGBOX_YESNO
-# 424 "data/maps/ParcelFernwick/scripts.pory"
+# 440 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Henrik_R2_2
-# 429 "data/maps/ParcelFernwick/scripts.pory"
+# 445 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_HENRIK_R2, ParcelFernwick_T_Henrik_R2_Text_2
-# 430 "data/maps/ParcelFernwick/scripts.pory"
+# 446 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R2_Text_3, MSGBOX_DEFAULT
-# 431 "data/maps/ParcelFernwick/scripts.pory"
+# 447 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Henrik_R2_2:
-# 425 "data/maps/ParcelFernwick/scripts.pory"
+# 441 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R2_Text_1, MSGBOX_DEFAULT
-# 426 "data/maps/ParcelFernwick/scripts.pory"
+# 442 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Henrik_R3::
-# 435 "data/maps/ParcelFernwick/scripts.pory"
+# 451 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 436 "data/maps/ParcelFernwick/scripts.pory"
+# 452 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 437 "data/maps/ParcelFernwick/scripts.pory"
+# 453 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R3_Text_0, MSGBOX_YESNO
-# 438 "data/maps/ParcelFernwick/scripts.pory"
+# 454 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Henrik_R3_2
-# 443 "data/maps/ParcelFernwick/scripts.pory"
+# 459 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_HENRIK_R3, ParcelFernwick_T_Henrik_R3_Text_1
-# 444 "data/maps/ParcelFernwick/scripts.pory"
+# 460 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R3_Text_2, MSGBOX_DEFAULT
-# 445 "data/maps/ParcelFernwick/scripts.pory"
+# 461 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Henrik_R3_2:
-# 439 "data/maps/ParcelFernwick/scripts.pory"
+# 455 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R2_Text_1, MSGBOX_DEFAULT
-# 440 "data/maps/ParcelFernwick/scripts.pory"
+# 456 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Henrik_R4::
-# 449 "data/maps/ParcelFernwick/scripts.pory"
+# 465 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 450 "data/maps/ParcelFernwick/scripts.pory"
+# 466 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 451 "data/maps/ParcelFernwick/scripts.pory"
+# 467 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R4_Text_0, MSGBOX_YESNO
-# 452 "data/maps/ParcelFernwick/scripts.pory"
+# 468 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Henrik_R4_2
-# 457 "data/maps/ParcelFernwick/scripts.pory"
+# 473 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_HENRIK_R4, ParcelFernwick_T_Henrik_R3_Text_1
-# 458 "data/maps/ParcelFernwick/scripts.pory"
+# 474 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R4_Text_1, MSGBOX_DEFAULT
-# 459 "data/maps/ParcelFernwick/scripts.pory"
+# 475 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Henrik_R4_2:
-# 453 "data/maps/ParcelFernwick/scripts.pory"
+# 469 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R2_Text_1, MSGBOX_DEFAULT
-# 454 "data/maps/ParcelFernwick/scripts.pory"
+# 470 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Henrik_R5::
-# 463 "data/maps/ParcelFernwick/scripts.pory"
+# 479 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 464 "data/maps/ParcelFernwick/scripts.pory"
+# 480 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 465 "data/maps/ParcelFernwick/scripts.pory"
+# 481 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R5_Text_0, MSGBOX_YESNO
-# 466 "data/maps/ParcelFernwick/scripts.pory"
+# 482 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Henrik_R5_2
-# 471 "data/maps/ParcelFernwick/scripts.pory"
+# 487 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_HENRIK_R5, ParcelFernwick_T_Henrik_R2_Text_2
-# 472 "data/maps/ParcelFernwick/scripts.pory"
+# 488 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R5_Text_1, MSGBOX_DEFAULT
-# 473 "data/maps/ParcelFernwick/scripts.pory"
+# 489 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Henrik_R5_2:
-# 467 "data/maps/ParcelFernwick/scripts.pory"
+# 483 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Henrik_R2_Text_1, MSGBOX_DEFAULT
-# 468 "data/maps/ParcelFernwick/scripts.pory"
+# 484 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Steinar::
-# 477 "data/maps/ParcelFernwick/scripts.pory"
+# 493 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_FW_STEINAR, ParcelFernwick_T_Steinar_Text_0, ParcelFernwick_T_Steinar_Text_1, ParcelFernwick_T_Steinar_FirstWin
-# 481 "data/maps/ParcelFernwick/scripts.pory"
+# 497 "data/maps/ParcelFernwick/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 482 "data/maps/ParcelFernwick/scripts.pory"
+# 498 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelFernwick_T_Steinar_3
 ParcelFernwick_T_Steinar_1:
-# 485 "data/maps/ParcelFernwick/scripts.pory"
+# 501 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelFernwick_T_Steinar_8
 ParcelFernwick_T_Steinar_6:
-# 488 "data/maps/ParcelFernwick/scripts.pory"
+# 504 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelFernwick_T_Steinar_13
 ParcelFernwick_T_Steinar_11:
-# 491 "data/maps/ParcelFernwick/scripts.pory"
+# 507 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelFernwick_T_Steinar_18
 ParcelFernwick_T_Steinar_16:
-# 494 "data/maps/ParcelFernwick/scripts.pory"
+# 510 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelFernwick_T_Steinar_2:
-# 483 "data/maps/ParcelFernwick/scripts.pory"
+# 499 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Steinar_R2
 	goto ParcelFernwick_T_Steinar_1
 
 ParcelFernwick_T_Steinar_3:
-# 482 "data/maps/ParcelFernwick/scripts.pory"
+# 498 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_STEINAR_R2
 	goto_if 0, ParcelFernwick_T_Steinar_2
 	goto ParcelFernwick_T_Steinar_1
 
 ParcelFernwick_T_Steinar_7:
-# 486 "data/maps/ParcelFernwick/scripts.pory"
+# 502 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Steinar_R3
 	goto ParcelFernwick_T_Steinar_6
 
 ParcelFernwick_T_Steinar_8:
-# 485 "data/maps/ParcelFernwick/scripts.pory"
+# 501 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_STEINAR_R3
 	goto_if 0, ParcelFernwick_T_Steinar_7
 	goto ParcelFernwick_T_Steinar_6
 
 ParcelFernwick_T_Steinar_12:
-# 489 "data/maps/ParcelFernwick/scripts.pory"
+# 505 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Steinar_R4
 	goto ParcelFernwick_T_Steinar_11
 
 ParcelFernwick_T_Steinar_13:
-# 488 "data/maps/ParcelFernwick/scripts.pory"
+# 504 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_STEINAR_R4
 	goto_if 0, ParcelFernwick_T_Steinar_12
 	goto ParcelFernwick_T_Steinar_11
 
 ParcelFernwick_T_Steinar_17:
-# 492 "data/maps/ParcelFernwick/scripts.pory"
+# 508 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Steinar_R5
 	goto ParcelFernwick_T_Steinar_16
 
 ParcelFernwick_T_Steinar_18:
-# 491 "data/maps/ParcelFernwick/scripts.pory"
+# 507 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_STEINAR_R5
 	goto_if 0, ParcelFernwick_T_Steinar_17
 	goto ParcelFernwick_T_Steinar_16
 
 
 ParcelFernwick_T_Steinar_FirstWin::
-# 498 "data/maps/ParcelFernwick/scripts.pory"
+# 514 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_Text_2, MSGBOX_DEFAULT
-# 499 "data/maps/ParcelFernwick/scripts.pory"
+# 515 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Steinar_R2::
-# 503 "data/maps/ParcelFernwick/scripts.pory"
+# 519 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 504 "data/maps/ParcelFernwick/scripts.pory"
+# 520 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 505 "data/maps/ParcelFernwick/scripts.pory"
+# 521 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R2_Text_0, MSGBOX_YESNO
-# 506 "data/maps/ParcelFernwick/scripts.pory"
+# 522 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Steinar_R2_2
-# 511 "data/maps/ParcelFernwick/scripts.pory"
+# 527 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_STEINAR_R2, ParcelFernwick_T_Steinar_R2_Text_2
-# 512 "data/maps/ParcelFernwick/scripts.pory"
+# 528 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R2_Text_3, MSGBOX_DEFAULT
-# 513 "data/maps/ParcelFernwick/scripts.pory"
+# 529 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Steinar_R2_2:
-# 507 "data/maps/ParcelFernwick/scripts.pory"
+# 523 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R2_Text_1, MSGBOX_DEFAULT
-# 508 "data/maps/ParcelFernwick/scripts.pory"
+# 524 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Steinar_R3::
-# 517 "data/maps/ParcelFernwick/scripts.pory"
+# 533 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 518 "data/maps/ParcelFernwick/scripts.pory"
+# 534 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 519 "data/maps/ParcelFernwick/scripts.pory"
+# 535 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R3_Text_0, MSGBOX_YESNO
-# 520 "data/maps/ParcelFernwick/scripts.pory"
+# 536 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Steinar_R3_2
-# 525 "data/maps/ParcelFernwick/scripts.pory"
+# 541 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_STEINAR_R3, ParcelFernwick_T_Steinar_R3_Text_1
-# 526 "data/maps/ParcelFernwick/scripts.pory"
+# 542 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R3_Text_2, MSGBOX_DEFAULT
-# 527 "data/maps/ParcelFernwick/scripts.pory"
+# 543 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Steinar_R3_2:
-# 521 "data/maps/ParcelFernwick/scripts.pory"
+# 537 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R2_Text_1, MSGBOX_DEFAULT
-# 522 "data/maps/ParcelFernwick/scripts.pory"
+# 538 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Steinar_R4::
-# 531 "data/maps/ParcelFernwick/scripts.pory"
+# 547 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 532 "data/maps/ParcelFernwick/scripts.pory"
+# 548 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 533 "data/maps/ParcelFernwick/scripts.pory"
+# 549 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R4_Text_0, MSGBOX_YESNO
-# 534 "data/maps/ParcelFernwick/scripts.pory"
+# 550 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Steinar_R4_2
-# 539 "data/maps/ParcelFernwick/scripts.pory"
+# 555 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_STEINAR_R4, ParcelFernwick_T_Steinar_R2_Text_2
-# 540 "data/maps/ParcelFernwick/scripts.pory"
+# 556 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R4_Text_1, MSGBOX_DEFAULT
-# 541 "data/maps/ParcelFernwick/scripts.pory"
+# 557 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Steinar_R4_2:
-# 535 "data/maps/ParcelFernwick/scripts.pory"
+# 551 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R2_Text_1, MSGBOX_DEFAULT
-# 536 "data/maps/ParcelFernwick/scripts.pory"
+# 552 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Steinar_R5::
-# 545 "data/maps/ParcelFernwick/scripts.pory"
+# 561 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 546 "data/maps/ParcelFernwick/scripts.pory"
+# 562 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 547 "data/maps/ParcelFernwick/scripts.pory"
+# 563 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R5_Text_0, MSGBOX_YESNO
-# 548 "data/maps/ParcelFernwick/scripts.pory"
+# 564 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Steinar_R5_2
-# 553 "data/maps/ParcelFernwick/scripts.pory"
+# 569 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_STEINAR_R5, ParcelFernwick_T_Steinar_R5_Text_1
-# 554 "data/maps/ParcelFernwick/scripts.pory"
+# 570 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R5_Text_2, MSGBOX_DEFAULT
-# 555 "data/maps/ParcelFernwick/scripts.pory"
+# 571 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Steinar_R5_2:
-# 549 "data/maps/ParcelFernwick/scripts.pory"
+# 565 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Steinar_R2_Text_1, MSGBOX_DEFAULT
-# 550 "data/maps/ParcelFernwick/scripts.pory"
+# 566 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Marte::
-# 559 "data/maps/ParcelFernwick/scripts.pory"
+# 575 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_FW_MARTE, ParcelFernwick_T_Marte_Text_0, ParcelFernwick_T_Marte_Text_1, ParcelFernwick_T_Marte_FirstWin
-# 563 "data/maps/ParcelFernwick/scripts.pory"
+# 579 "data/maps/ParcelFernwick/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 564 "data/maps/ParcelFernwick/scripts.pory"
+# 580 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelFernwick_T_Marte_3
 ParcelFernwick_T_Marte_1:
-# 567 "data/maps/ParcelFernwick/scripts.pory"
+# 583 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelFernwick_T_Marte_8
 ParcelFernwick_T_Marte_6:
-# 570 "data/maps/ParcelFernwick/scripts.pory"
+# 586 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelFernwick_T_Marte_13
 ParcelFernwick_T_Marte_11:
-# 573 "data/maps/ParcelFernwick/scripts.pory"
+# 589 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelFernwick_T_Marte_18
 ParcelFernwick_T_Marte_16:
-# 576 "data/maps/ParcelFernwick/scripts.pory"
+# 592 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelFernwick_T_Marte_2:
-# 565 "data/maps/ParcelFernwick/scripts.pory"
+# 581 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Marte_R2
 	goto ParcelFernwick_T_Marte_1
 
 ParcelFernwick_T_Marte_3:
-# 564 "data/maps/ParcelFernwick/scripts.pory"
+# 580 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_MARTE_R2
 	goto_if 0, ParcelFernwick_T_Marte_2
 	goto ParcelFernwick_T_Marte_1
 
 ParcelFernwick_T_Marte_7:
-# 568 "data/maps/ParcelFernwick/scripts.pory"
+# 584 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Marte_R3
 	goto ParcelFernwick_T_Marte_6
 
 ParcelFernwick_T_Marte_8:
-# 567 "data/maps/ParcelFernwick/scripts.pory"
+# 583 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_MARTE_R3
 	goto_if 0, ParcelFernwick_T_Marte_7
 	goto ParcelFernwick_T_Marte_6
 
 ParcelFernwick_T_Marte_12:
-# 571 "data/maps/ParcelFernwick/scripts.pory"
+# 587 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Marte_R4
 	goto ParcelFernwick_T_Marte_11
 
 ParcelFernwick_T_Marte_13:
-# 570 "data/maps/ParcelFernwick/scripts.pory"
+# 586 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_MARTE_R4
 	goto_if 0, ParcelFernwick_T_Marte_12
 	goto ParcelFernwick_T_Marte_11
 
 ParcelFernwick_T_Marte_17:
-# 574 "data/maps/ParcelFernwick/scripts.pory"
+# 590 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Marte_R5
 	goto ParcelFernwick_T_Marte_16
 
 ParcelFernwick_T_Marte_18:
-# 573 "data/maps/ParcelFernwick/scripts.pory"
+# 589 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_MARTE_R5
 	goto_if 0, ParcelFernwick_T_Marte_17
 	goto ParcelFernwick_T_Marte_16
 
 
 ParcelFernwick_T_Marte_FirstWin::
-# 580 "data/maps/ParcelFernwick/scripts.pory"
+# 596 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_Text_2, MSGBOX_DEFAULT
-# 581 "data/maps/ParcelFernwick/scripts.pory"
+# 597 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Marte_R2::
-# 585 "data/maps/ParcelFernwick/scripts.pory"
+# 601 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 586 "data/maps/ParcelFernwick/scripts.pory"
+# 602 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 587 "data/maps/ParcelFernwick/scripts.pory"
+# 603 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R2_Text_0, MSGBOX_YESNO
-# 588 "data/maps/ParcelFernwick/scripts.pory"
+# 604 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Marte_R2_2
-# 593 "data/maps/ParcelFernwick/scripts.pory"
+# 609 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_MARTE_R2, ParcelFernwick_T_Marte_R2_Text_2
-# 594 "data/maps/ParcelFernwick/scripts.pory"
+# 610 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R2_Text_3, MSGBOX_DEFAULT
-# 595 "data/maps/ParcelFernwick/scripts.pory"
+# 611 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Marte_R2_2:
-# 589 "data/maps/ParcelFernwick/scripts.pory"
+# 605 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R2_Text_1, MSGBOX_DEFAULT
-# 590 "data/maps/ParcelFernwick/scripts.pory"
+# 606 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Marte_R3::
-# 599 "data/maps/ParcelFernwick/scripts.pory"
+# 615 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 600 "data/maps/ParcelFernwick/scripts.pory"
+# 616 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 601 "data/maps/ParcelFernwick/scripts.pory"
+# 617 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R3_Text_0, MSGBOX_YESNO
-# 602 "data/maps/ParcelFernwick/scripts.pory"
+# 618 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Marte_R3_2
-# 607 "data/maps/ParcelFernwick/scripts.pory"
+# 623 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_MARTE_R3, ParcelFernwick_T_Marte_R2_Text_2
-# 608 "data/maps/ParcelFernwick/scripts.pory"
+# 624 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R3_Text_1, MSGBOX_DEFAULT
-# 609 "data/maps/ParcelFernwick/scripts.pory"
+# 625 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Marte_R3_2:
-# 603 "data/maps/ParcelFernwick/scripts.pory"
+# 619 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R2_Text_1, MSGBOX_DEFAULT
-# 604 "data/maps/ParcelFernwick/scripts.pory"
+# 620 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Marte_R4::
-# 613 "data/maps/ParcelFernwick/scripts.pory"
+# 629 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 614 "data/maps/ParcelFernwick/scripts.pory"
+# 630 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 615 "data/maps/ParcelFernwick/scripts.pory"
+# 631 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R4_Text_0, MSGBOX_YESNO
-# 616 "data/maps/ParcelFernwick/scripts.pory"
+# 632 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Marte_R4_2
-# 621 "data/maps/ParcelFernwick/scripts.pory"
+# 637 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_MARTE_R4, ParcelFernwick_T_Marte_R4_Text_1
-# 622 "data/maps/ParcelFernwick/scripts.pory"
+# 638 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R4_Text_2, MSGBOX_DEFAULT
-# 623 "data/maps/ParcelFernwick/scripts.pory"
+# 639 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Marte_R4_2:
-# 617 "data/maps/ParcelFernwick/scripts.pory"
+# 633 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R2_Text_1, MSGBOX_DEFAULT
-# 618 "data/maps/ParcelFernwick/scripts.pory"
+# 634 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Marte_R5::
-# 627 "data/maps/ParcelFernwick/scripts.pory"
+# 643 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 628 "data/maps/ParcelFernwick/scripts.pory"
+# 644 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 629 "data/maps/ParcelFernwick/scripts.pory"
+# 645 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R5_Text_0, MSGBOX_YESNO
-# 630 "data/maps/ParcelFernwick/scripts.pory"
+# 646 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Marte_R5_2
-# 635 "data/maps/ParcelFernwick/scripts.pory"
+# 651 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_MARTE_R5, ParcelFernwick_T_Marte_R5_Text_1
-# 636 "data/maps/ParcelFernwick/scripts.pory"
+# 652 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R5_Text_2, MSGBOX_DEFAULT
-# 637 "data/maps/ParcelFernwick/scripts.pory"
+# 653 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Marte_R5_2:
-# 631 "data/maps/ParcelFernwick/scripts.pory"
+# 647 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Marte_R2_Text_1, MSGBOX_DEFAULT
-# 632 "data/maps/ParcelFernwick/scripts.pory"
+# 648 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Leon::
-# 641 "data/maps/ParcelFernwick/scripts.pory"
+# 657 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_FW_LEON, ParcelFernwick_T_Leon_Text_0, ParcelFernwick_T_Leon_Text_1, ParcelFernwick_T_Leon_FirstWin
-# 645 "data/maps/ParcelFernwick/scripts.pory"
+# 661 "data/maps/ParcelFernwick/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 646 "data/maps/ParcelFernwick/scripts.pory"
+# 662 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelFernwick_T_Leon_3
 ParcelFernwick_T_Leon_1:
-# 649 "data/maps/ParcelFernwick/scripts.pory"
+# 665 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelFernwick_T_Leon_8
 ParcelFernwick_T_Leon_6:
-# 652 "data/maps/ParcelFernwick/scripts.pory"
+# 668 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelFernwick_T_Leon_13
 ParcelFernwick_T_Leon_11:
-# 655 "data/maps/ParcelFernwick/scripts.pory"
+# 671 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelFernwick_T_Leon_18
 ParcelFernwick_T_Leon_16:
-# 658 "data/maps/ParcelFernwick/scripts.pory"
+# 674 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelFernwick_T_Leon_2:
-# 647 "data/maps/ParcelFernwick/scripts.pory"
+# 663 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Leon_R2
 	goto ParcelFernwick_T_Leon_1
 
 ParcelFernwick_T_Leon_3:
-# 646 "data/maps/ParcelFernwick/scripts.pory"
+# 662 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_LEON_R2
 	goto_if 0, ParcelFernwick_T_Leon_2
 	goto ParcelFernwick_T_Leon_1
 
 ParcelFernwick_T_Leon_7:
-# 650 "data/maps/ParcelFernwick/scripts.pory"
+# 666 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Leon_R3
 	goto ParcelFernwick_T_Leon_6
 
 ParcelFernwick_T_Leon_8:
-# 649 "data/maps/ParcelFernwick/scripts.pory"
+# 665 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_LEON_R3
 	goto_if 0, ParcelFernwick_T_Leon_7
 	goto ParcelFernwick_T_Leon_6
 
 ParcelFernwick_T_Leon_12:
-# 653 "data/maps/ParcelFernwick/scripts.pory"
+# 669 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Leon_R4
 	goto ParcelFernwick_T_Leon_11
 
 ParcelFernwick_T_Leon_13:
-# 652 "data/maps/ParcelFernwick/scripts.pory"
+# 668 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_LEON_R4
 	goto_if 0, ParcelFernwick_T_Leon_12
 	goto ParcelFernwick_T_Leon_11
 
 ParcelFernwick_T_Leon_17:
-# 656 "data/maps/ParcelFernwick/scripts.pory"
+# 672 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Leon_R5
 	goto ParcelFernwick_T_Leon_16
 
 ParcelFernwick_T_Leon_18:
-# 655 "data/maps/ParcelFernwick/scripts.pory"
+# 671 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_LEON_R5
 	goto_if 0, ParcelFernwick_T_Leon_17
 	goto ParcelFernwick_T_Leon_16
 
 
 ParcelFernwick_T_Leon_FirstWin::
-# 662 "data/maps/ParcelFernwick/scripts.pory"
+# 678 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_Text_2, MSGBOX_DEFAULT
-# 663 "data/maps/ParcelFernwick/scripts.pory"
+# 679 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Leon_R2::
-# 667 "data/maps/ParcelFernwick/scripts.pory"
+# 683 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 668 "data/maps/ParcelFernwick/scripts.pory"
+# 684 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 669 "data/maps/ParcelFernwick/scripts.pory"
+# 685 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R2_Text_0, MSGBOX_YESNO
-# 670 "data/maps/ParcelFernwick/scripts.pory"
+# 686 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Leon_R2_2
-# 675 "data/maps/ParcelFernwick/scripts.pory"
+# 691 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_LEON_R2, ParcelFernwick_T_Leon_R2_Text_2
-# 676 "data/maps/ParcelFernwick/scripts.pory"
+# 692 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R2_Text_3, MSGBOX_DEFAULT
-# 677 "data/maps/ParcelFernwick/scripts.pory"
+# 693 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Leon_R2_2:
-# 671 "data/maps/ParcelFernwick/scripts.pory"
+# 687 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R2_Text_1, MSGBOX_DEFAULT
-# 672 "data/maps/ParcelFernwick/scripts.pory"
+# 688 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Leon_R3::
-# 681 "data/maps/ParcelFernwick/scripts.pory"
+# 697 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 682 "data/maps/ParcelFernwick/scripts.pory"
+# 698 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 683 "data/maps/ParcelFernwick/scripts.pory"
+# 699 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R3_Text_0, MSGBOX_YESNO
-# 684 "data/maps/ParcelFernwick/scripts.pory"
+# 700 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Leon_R3_2
-# 689 "data/maps/ParcelFernwick/scripts.pory"
+# 705 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_LEON_R3, ParcelFernwick_T_Leon_R3_Text_1
-# 690 "data/maps/ParcelFernwick/scripts.pory"
+# 706 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R3_Text_2, MSGBOX_DEFAULT
-# 691 "data/maps/ParcelFernwick/scripts.pory"
+# 707 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Leon_R3_2:
-# 685 "data/maps/ParcelFernwick/scripts.pory"
+# 701 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R2_Text_1, MSGBOX_DEFAULT
-# 686 "data/maps/ParcelFernwick/scripts.pory"
+# 702 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Leon_R4::
-# 695 "data/maps/ParcelFernwick/scripts.pory"
+# 711 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 696 "data/maps/ParcelFernwick/scripts.pory"
+# 712 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 697 "data/maps/ParcelFernwick/scripts.pory"
+# 713 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R4_Text_0, MSGBOX_YESNO
-# 698 "data/maps/ParcelFernwick/scripts.pory"
+# 714 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Leon_R4_2
-# 703 "data/maps/ParcelFernwick/scripts.pory"
+# 719 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_LEON_R4, ParcelFernwick_T_Leon_R4_Text_1
-# 704 "data/maps/ParcelFernwick/scripts.pory"
+# 720 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R4_Text_2, MSGBOX_DEFAULT
-# 705 "data/maps/ParcelFernwick/scripts.pory"
+# 721 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Leon_R4_2:
-# 699 "data/maps/ParcelFernwick/scripts.pory"
+# 715 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R2_Text_1, MSGBOX_DEFAULT
-# 700 "data/maps/ParcelFernwick/scripts.pory"
+# 716 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Leon_R5::
-# 709 "data/maps/ParcelFernwick/scripts.pory"
+# 725 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 710 "data/maps/ParcelFernwick/scripts.pory"
+# 726 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 711 "data/maps/ParcelFernwick/scripts.pory"
+# 727 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R5_Text_0, MSGBOX_YESNO
-# 712 "data/maps/ParcelFernwick/scripts.pory"
+# 728 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Leon_R5_2
-# 717 "data/maps/ParcelFernwick/scripts.pory"
+# 733 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_LEON_R5, ParcelFernwick_T_Leon_R2_Text_2
-# 718 "data/maps/ParcelFernwick/scripts.pory"
+# 734 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R5_Text_1, MSGBOX_DEFAULT
-# 719 "data/maps/ParcelFernwick/scripts.pory"
+# 735 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Leon_R5_2:
-# 713 "data/maps/ParcelFernwick/scripts.pory"
+# 729 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Leon_R2_Text_1, MSGBOX_DEFAULT
-# 714 "data/maps/ParcelFernwick/scripts.pory"
+# 730 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Thea::
-# 723 "data/maps/ParcelFernwick/scripts.pory"
+# 739 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_FW_THEA, ParcelFernwick_T_Thea_Text_0, ParcelFernwick_T_Thea_Text_1, ParcelFernwick_T_Thea_FirstWin
-# 727 "data/maps/ParcelFernwick/scripts.pory"
+# 743 "data/maps/ParcelFernwick/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 728 "data/maps/ParcelFernwick/scripts.pory"
+# 744 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelFernwick_T_Thea_3
 ParcelFernwick_T_Thea_1:
-# 731 "data/maps/ParcelFernwick/scripts.pory"
+# 747 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelFernwick_T_Thea_8
 ParcelFernwick_T_Thea_6:
-# 734 "data/maps/ParcelFernwick/scripts.pory"
+# 750 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelFernwick_T_Thea_13
 ParcelFernwick_T_Thea_11:
-# 737 "data/maps/ParcelFernwick/scripts.pory"
+# 753 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelFernwick_T_Thea_18
 ParcelFernwick_T_Thea_16:
-# 740 "data/maps/ParcelFernwick/scripts.pory"
+# 756 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelFernwick_T_Thea_2:
-# 729 "data/maps/ParcelFernwick/scripts.pory"
+# 745 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Thea_R2
 	goto ParcelFernwick_T_Thea_1
 
 ParcelFernwick_T_Thea_3:
-# 728 "data/maps/ParcelFernwick/scripts.pory"
+# 744 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_THEA_R2
 	goto_if 0, ParcelFernwick_T_Thea_2
 	goto ParcelFernwick_T_Thea_1
 
 ParcelFernwick_T_Thea_7:
-# 732 "data/maps/ParcelFernwick/scripts.pory"
+# 748 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Thea_R3
 	goto ParcelFernwick_T_Thea_6
 
 ParcelFernwick_T_Thea_8:
-# 731 "data/maps/ParcelFernwick/scripts.pory"
+# 747 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_THEA_R3
 	goto_if 0, ParcelFernwick_T_Thea_7
 	goto ParcelFernwick_T_Thea_6
 
 ParcelFernwick_T_Thea_12:
-# 735 "data/maps/ParcelFernwick/scripts.pory"
+# 751 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Thea_R4
 	goto ParcelFernwick_T_Thea_11
 
 ParcelFernwick_T_Thea_13:
-# 734 "data/maps/ParcelFernwick/scripts.pory"
+# 750 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_THEA_R4
 	goto_if 0, ParcelFernwick_T_Thea_12
 	goto ParcelFernwick_T_Thea_11
 
 ParcelFernwick_T_Thea_17:
-# 738 "data/maps/ParcelFernwick/scripts.pory"
+# 754 "data/maps/ParcelFernwick/scripts.pory"
 	goto ParcelFernwick_T_Thea_R5
 	goto ParcelFernwick_T_Thea_16
 
 ParcelFernwick_T_Thea_18:
-# 737 "data/maps/ParcelFernwick/scripts.pory"
+# 753 "data/maps/ParcelFernwick/scripts.pory"
 	checktrainerflag TRAINER_SKALD_FW_THEA_R5
 	goto_if 0, ParcelFernwick_T_Thea_17
 	goto ParcelFernwick_T_Thea_16
 
 
 ParcelFernwick_T_Thea_FirstWin::
-# 744 "data/maps/ParcelFernwick/scripts.pory"
+# 760 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_Text_2, MSGBOX_DEFAULT
-# 745 "data/maps/ParcelFernwick/scripts.pory"
+# 761 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Thea_R2::
-# 749 "data/maps/ParcelFernwick/scripts.pory"
+# 765 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 750 "data/maps/ParcelFernwick/scripts.pory"
+# 766 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 751 "data/maps/ParcelFernwick/scripts.pory"
+# 767 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R2_Text_0, MSGBOX_YESNO
-# 752 "data/maps/ParcelFernwick/scripts.pory"
+# 768 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Thea_R2_2
-# 757 "data/maps/ParcelFernwick/scripts.pory"
+# 773 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_THEA_R2, ParcelFernwick_T_Thea_R2_Text_2
-# 758 "data/maps/ParcelFernwick/scripts.pory"
+# 774 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R2_Text_3, MSGBOX_DEFAULT
-# 759 "data/maps/ParcelFernwick/scripts.pory"
+# 775 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Thea_R2_2:
-# 753 "data/maps/ParcelFernwick/scripts.pory"
+# 769 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R2_Text_1, MSGBOX_DEFAULT
-# 754 "data/maps/ParcelFernwick/scripts.pory"
+# 770 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Thea_R3::
-# 763 "data/maps/ParcelFernwick/scripts.pory"
+# 779 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 764 "data/maps/ParcelFernwick/scripts.pory"
+# 780 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 765 "data/maps/ParcelFernwick/scripts.pory"
+# 781 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R3_Text_0, MSGBOX_YESNO
-# 766 "data/maps/ParcelFernwick/scripts.pory"
+# 782 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Thea_R3_2
-# 771 "data/maps/ParcelFernwick/scripts.pory"
+# 787 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_THEA_R3, ParcelFernwick_T_Thea_R3_Text_1
-# 772 "data/maps/ParcelFernwick/scripts.pory"
+# 788 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R3_Text_2, MSGBOX_DEFAULT
-# 773 "data/maps/ParcelFernwick/scripts.pory"
+# 789 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Thea_R3_2:
-# 767 "data/maps/ParcelFernwick/scripts.pory"
+# 783 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R2_Text_1, MSGBOX_DEFAULT
-# 768 "data/maps/ParcelFernwick/scripts.pory"
+# 784 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Thea_R4::
-# 777 "data/maps/ParcelFernwick/scripts.pory"
+# 793 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 778 "data/maps/ParcelFernwick/scripts.pory"
+# 794 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 779 "data/maps/ParcelFernwick/scripts.pory"
+# 795 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R4_Text_0, MSGBOX_YESNO
-# 780 "data/maps/ParcelFernwick/scripts.pory"
+# 796 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Thea_R4_2
-# 785 "data/maps/ParcelFernwick/scripts.pory"
+# 801 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_THEA_R4, ParcelFernwick_T_Thea_R3_Text_1
-# 786 "data/maps/ParcelFernwick/scripts.pory"
+# 802 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R4_Text_1, MSGBOX_DEFAULT
-# 787 "data/maps/ParcelFernwick/scripts.pory"
+# 803 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Thea_R4_2:
-# 781 "data/maps/ParcelFernwick/scripts.pory"
+# 797 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R2_Text_1, MSGBOX_DEFAULT
-# 782 "data/maps/ParcelFernwick/scripts.pory"
+# 798 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_T_Thea_R5::
-# 791 "data/maps/ParcelFernwick/scripts.pory"
+# 807 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 792 "data/maps/ParcelFernwick/scripts.pory"
+# 808 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 793 "data/maps/ParcelFernwick/scripts.pory"
+# 809 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R5_Text_0, MSGBOX_YESNO
-# 794 "data/maps/ParcelFernwick/scripts.pory"
+# 810 "data/maps/ParcelFernwick/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwick_T_Thea_R5_2
-# 799 "data/maps/ParcelFernwick/scripts.pory"
+# 815 "data/maps/ParcelFernwick/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_FW_THEA_R5, ParcelFernwick_T_Thea_R5_Text_1
-# 800 "data/maps/ParcelFernwick/scripts.pory"
+# 816 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R5_Text_2, MSGBOX_DEFAULT
-# 801 "data/maps/ParcelFernwick/scripts.pory"
+# 817 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_T_Thea_R5_2:
-# 795 "data/maps/ParcelFernwick/scripts.pory"
+# 811 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_T_Thea_R2_Text_1, MSGBOX_DEFAULT
-# 796 "data/maps/ParcelFernwick/scripts.pory"
+# 812 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
 ParcelFernwick_PondLook::
-# 807 "data/maps/ParcelFernwick/scripts.pory"
+# 823 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 808 "data/maps/ParcelFernwick/scripts.pory"
+# 824 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_GRETTIR, ParcelFernwick_PondLook_3
 ParcelFernwick_PondLook_1:
-# 814 "data/maps/ParcelFernwick/scripts.pory"
+# 830 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PondLook_Text_1, MSGBOX_SIGN
-# 815 "data/maps/ParcelFernwick/scripts.pory"
+# 831 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_PondLook_2:
-# 809 "data/maps/ParcelFernwick/scripts.pory"
+# 825 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PondLook_Text_0, MSGBOX_SIGN
-# 810 "data/maps/ParcelFernwick/scripts.pory"
+# 826 "data/maps/ParcelFernwick/scripts.pory"
 	setflag FLAG_SKALD_Q_GRETTIR_SEEN
-# 811 "data/maps/ParcelFernwick/scripts.pory"
+# 827 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_PondLook_3:
-# 808 "data/maps/ParcelFernwick/scripts.pory"
+# 824 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_GRETTIR_SEEN, ParcelFernwick_PondLook_2
 	goto ParcelFernwick_PondLook_1
 
 
 ParcelFernwick_PerrinScene::
-# 821 "data/maps/ParcelFernwick/scripts.pory"
-	goto_if_set FLAG_SKALD_PERRIN_1, ParcelFernwick_PerrinScene_2
-# 825 "data/maps/ParcelFernwick/scripts.pory"
-	lockall
-# 826 "data/maps/ParcelFernwick/scripts.pory"
-	playse SE_PIN
-# 827 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_PerrinScene_Text_0, MSGBOX_DEFAULT
-# 828 "data/maps/ParcelFernwick/scripts.pory"
-	closemessage
-# 829 "data/maps/ParcelFernwick/scripts.pory"
-	applymovement 21, Movement_ParcelFernwick_PerrinIn
-# 830 "data/maps/ParcelFernwick/scripts.pory"
-	waitmovement 0
-# 831 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_PerrinScene_Text_1, MSGBOX_DEFAULT
-# 832 "data/maps/ParcelFernwick/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_PERRIN_1, ParcelFernwick_PerrinScene_Text_2
-# 833 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_PerrinScene_Text_3, MSGBOX_DEFAULT
-# 834 "data/maps/ParcelFernwick/scripts.pory"
-	closemessage
-# 835 "data/maps/ParcelFernwick/scripts.pory"
-	applymovement 21, Movement_ParcelFernwick_PerrinOut
-# 836 "data/maps/ParcelFernwick/scripts.pory"
-	waitmovement 0
 # 837 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALD_PERRIN_1, ParcelFernwick_PerrinScene_2
+# 841 "data/maps/ParcelFernwick/scripts.pory"
+	lockall
+# 842 "data/maps/ParcelFernwick/scripts.pory"
+	playse SE_PIN
+# 843 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PerrinScene_Text_0, MSGBOX_DEFAULT
+# 844 "data/maps/ParcelFernwick/scripts.pory"
+	closemessage
+# 845 "data/maps/ParcelFernwick/scripts.pory"
+	applymovement 21, Movement_ParcelFernwick_PerrinIn
+# 846 "data/maps/ParcelFernwick/scripts.pory"
+	waitmovement 0
+# 847 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PerrinScene_Text_1, MSGBOX_DEFAULT
+# 848 "data/maps/ParcelFernwick/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_PERRIN_1, ParcelFernwick_PerrinScene_Text_2
+# 849 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PerrinScene_Text_3, MSGBOX_DEFAULT
+# 850 "data/maps/ParcelFernwick/scripts.pory"
+	closemessage
+# 851 "data/maps/ParcelFernwick/scripts.pory"
+	applymovement 21, Movement_ParcelFernwick_PerrinOut
+# 852 "data/maps/ParcelFernwick/scripts.pory"
+	waitmovement 0
+# 853 "data/maps/ParcelFernwick/scripts.pory"
 	removeobject 21
-# 838 "data/maps/ParcelFernwick/scripts.pory"
+# 854 "data/maps/ParcelFernwick/scripts.pory"
 	setflag FLAG_SKALD_PERRIN_1
-# 839 "data/maps/ParcelFernwick/scripts.pory"
+# 855 "data/maps/ParcelFernwick/scripts.pory"
 	setvar VAR_TEMP_5, 1
-# 840 "data/maps/ParcelFernwick/scripts.pory"
+# 856 "data/maps/ParcelFernwick/scripts.pory"
 	releaseall
 	end
 
 ParcelFernwick_PerrinScene_2:
-# 822 "data/maps/ParcelFernwick/scripts.pory"
+# 838 "data/maps/ParcelFernwick/scripts.pory"
 	setvar VAR_TEMP_5, 1
 	end
 
 
 ParcelFernwick_PerrinTalk::
-# 844 "data/maps/ParcelFernwick/scripts.pory"
+# 860 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 845 "data/maps/ParcelFernwick/scripts.pory"
+# 861 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 846 "data/maps/ParcelFernwick/scripts.pory"
+# 862 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PerrinTalk_Text_0, MSGBOX_DEFAULT
-# 847 "data/maps/ParcelFernwick/scripts.pory"
+# 863 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 
-# 850 "data/maps/ParcelFernwick/scripts.pory"
+# 866 "data/maps/ParcelFernwick/scripts.pory"
 Movement_ParcelFernwick_PerrinIn:
-# 850 "data/maps/ParcelFernwick/scripts.pory"
+# 866 "data/maps/ParcelFernwick/scripts.pory"
 	walk_down
-# 850 "data/maps/ParcelFernwick/scripts.pory"
+# 866 "data/maps/ParcelFernwick/scripts.pory"
 	walk_down
 	step_end
 
-# 851 "data/maps/ParcelFernwick/scripts.pory"
+# 867 "data/maps/ParcelFernwick/scripts.pory"
 Movement_ParcelFernwick_PerrinOut:
-# 851 "data/maps/ParcelFernwick/scripts.pory"
+# 867 "data/maps/ParcelFernwick/scripts.pory"
 	walk_up
-# 851 "data/maps/ParcelFernwick/scripts.pory"
+# 867 "data/maps/ParcelFernwick/scripts.pory"
 	walk_up
 	step_end
 
 ParcelFernwick_PondPage::
-# 854 "data/maps/ParcelFernwick/scripts.pory"
+# 870 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_PAGE, ParcelFernwick_PondPage_2
-# 857 "data/maps/ParcelFernwick/scripts.pory"
+# 873 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PondPage_Text_0, MSGBOX_SIGN
-# 858 "data/maps/ParcelFernwick/scripts.pory"
+# 874 "data/maps/ParcelFernwick/scripts.pory"
 	setflag FLAG_SKALD_Q_PAGE_FOUND
 	end
 
@@ -1668,189 +1706,211 @@ ParcelFernwick_PondPage_2:
 
 
 ParcelFernwick_PairCorps::
-# 865 "data/maps/ParcelFernwick/scripts.pory"
+# 881 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 866 "data/maps/ParcelFernwick/scripts.pory"
+# 882 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_PairCorps_2
-# 871 "data/maps/ParcelFernwick/scripts.pory"
+# 887 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_PairCorps_3
-# 877 "data/maps/ParcelFernwick/scripts.pory"
+# 893 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_8, MSGBOX_DEFAULT
-# 878 "data/maps/ParcelFernwick/scripts.pory"
+# 894 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_9, MSGBOX_DEFAULT
-# 879 "data/maps/ParcelFernwick/scripts.pory"
+# 895 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_10, MSGBOX_DEFAULT
-# 880 "data/maps/ParcelFernwick/scripts.pory"
+# 896 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_11, MSGBOX_DEFAULT
 ParcelFernwick_PairCorps_1:
-# 882 "data/maps/ParcelFernwick/scripts.pory"
+# 898 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_PairCorps_2:
-# 867 "data/maps/ParcelFernwick/scripts.pory"
+# 883 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_0, MSGBOX_DEFAULT
-# 868 "data/maps/ParcelFernwick/scripts.pory"
+# 884 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_1, MSGBOX_DEFAULT
-# 869 "data/maps/ParcelFernwick/scripts.pory"
+# 885 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_2, MSGBOX_DEFAULT
-# 870 "data/maps/ParcelFernwick/scripts.pory"
+# 886 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_3, MSGBOX_DEFAULT
 	goto ParcelFernwick_PairCorps_1
 
 ParcelFernwick_PairCorps_3:
-# 872 "data/maps/ParcelFernwick/scripts.pory"
+# 888 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_4, MSGBOX_DEFAULT
-# 873 "data/maps/ParcelFernwick/scripts.pory"
+# 889 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_5, MSGBOX_DEFAULT
-# 874 "data/maps/ParcelFernwick/scripts.pory"
+# 890 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_6, MSGBOX_DEFAULT
-# 875 "data/maps/ParcelFernwick/scripts.pory"
+# 891 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairCorps_Text_7, MSGBOX_DEFAULT
 	goto ParcelFernwick_PairCorps_1
 
 
 ParcelFernwick_PairPond::
-# 887 "data/maps/ParcelFernwick/scripts.pory"
-	lock
-# 888 "data/maps/ParcelFernwick/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_PairPond_2
-# 893 "data/maps/ParcelFernwick/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_PairPond_3
-# 899 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_PairPond_Text_8, MSGBOX_DEFAULT
-# 900 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_PairPond_Text_9, MSGBOX_DEFAULT
-# 901 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_PairPond_Text_10, MSGBOX_DEFAULT
-# 902 "data/maps/ParcelFernwick/scripts.pory"
-	msgbox ParcelFernwick_PairPond_Text_11, MSGBOX_DEFAULT
 # 903 "data/maps/ParcelFernwick/scripts.pory"
+	lock
+# 904 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_PairPond_2
+# 909 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_PairPond_3
+# 915 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_8, MSGBOX_DEFAULT
+# 916 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_9, MSGBOX_DEFAULT
+# 917 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_10, MSGBOX_DEFAULT
+# 918 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_11, MSGBOX_DEFAULT
+# 919 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_12, MSGBOX_DEFAULT
 ParcelFernwick_PairPond_1:
-# 905 "data/maps/ParcelFernwick/scripts.pory"
+# 921 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_PairPond_2:
-# 889 "data/maps/ParcelFernwick/scripts.pory"
+# 905 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_0, MSGBOX_DEFAULT
-# 890 "data/maps/ParcelFernwick/scripts.pory"
+# 906 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_1, MSGBOX_DEFAULT
-# 891 "data/maps/ParcelFernwick/scripts.pory"
+# 907 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_2, MSGBOX_DEFAULT
-# 892 "data/maps/ParcelFernwick/scripts.pory"
+# 908 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_3, MSGBOX_DEFAULT
 	goto ParcelFernwick_PairPond_1
 
 ParcelFernwick_PairPond_3:
-# 894 "data/maps/ParcelFernwick/scripts.pory"
+# 910 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_4, MSGBOX_DEFAULT
-# 895 "data/maps/ParcelFernwick/scripts.pory"
+# 911 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_5, MSGBOX_DEFAULT
-# 896 "data/maps/ParcelFernwick/scripts.pory"
+# 912 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_6, MSGBOX_DEFAULT
-# 897 "data/maps/ParcelFernwick/scripts.pory"
+# 913 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_PairPond_Text_7, MSGBOX_DEFAULT
 	goto ParcelFernwick_PairPond_1
 
 
 ParcelFernwick_Stringer::
-# 912 "data/maps/ParcelFernwick/scripts.pory"
+# 928 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 913 "data/maps/ParcelFernwick/scripts.pory"
+# 929 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 914 "data/maps/ParcelFernwick/scripts.pory"
+# 930 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_Stringer_2
-# 916 "data/maps/ParcelFernwick/scripts.pory"
+# 932 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelFernwick_Stringer_3
-# 924 "data/maps/ParcelFernwick/scripts.pory"
+# 940 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Stringer_Text_4, MSGBOX_DEFAULT
 ParcelFernwick_Stringer_1:
-# 926 "data/maps/ParcelFernwick/scripts.pory"
+# 942 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Stringer_2:
-# 915 "data/maps/ParcelFernwick/scripts.pory"
+# 931 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Stringer_Text_0, MSGBOX_DEFAULT
 	goto ParcelFernwick_Stringer_1
 
 ParcelFernwick_Stringer_3:
-# 917 "data/maps/ParcelFernwick/scripts.pory"
+# 933 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Stringer_Text_1, MSGBOX_DEFAULT
-# 918 "data/maps/ParcelFernwick/scripts.pory"
+# 934 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALD_CH_QUOTE, ParcelFernwick_Stringer_7
-# 921 "data/maps/ParcelFernwick/scripts.pory"
+# 937 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Stringer_Text_3, MSGBOX_DEFAULT
 	goto ParcelFernwick_Stringer_1
 
 ParcelFernwick_Stringer_7:
-# 919 "data/maps/ParcelFernwick/scripts.pory"
+# 935 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Stringer_Text_2, MSGBOX_DEFAULT
 	goto ParcelFernwick_Stringer_1
 
 
 ParcelFernwick_Gardener::
-# 933 "data/maps/ParcelFernwick/scripts.pory"
+# 949 "data/maps/ParcelFernwick/scripts.pory"
 	lock
-# 934 "data/maps/ParcelFernwick/scripts.pory"
+# 950 "data/maps/ParcelFernwick/scripts.pory"
 	faceplayer
-# 935 "data/maps/ParcelFernwick/scripts.pory"
+# 951 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_STONE_DONE, ParcelFernwick_Gardener_2
-# 937 "data/maps/ParcelFernwick/scripts.pory"
+# 953 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_STONE, ParcelFernwick_Gardener_3
-# 946 "data/maps/ParcelFernwick/scripts.pory"
+# 962 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Gardener_Text_3, MSGBOX_DEFAULT
-# 947 "data/maps/ParcelFernwick/scripts.pory"
+# 963 "data/maps/ParcelFernwick/scripts.pory"
 	setflag FLAG_SKALD_Q_STONE
 ParcelFernwick_Gardener_1:
-# 949 "data/maps/ParcelFernwick/scripts.pory"
+# 965 "data/maps/ParcelFernwick/scripts.pory"
 	release
 	end
 
 ParcelFernwick_Gardener_2:
-# 936 "data/maps/ParcelFernwick/scripts.pory"
+# 952 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Gardener_Text_0, MSGBOX_DEFAULT
 	goto ParcelFernwick_Gardener_1
 
 ParcelFernwick_Gardener_3:
-# 938 "data/maps/ParcelFernwick/scripts.pory"
+# 954 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_STONE_FOUND, ParcelFernwick_Gardener_7
-# 943 "data/maps/ParcelFernwick/scripts.pory"
+# 959 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Gardener_Text_2, MSGBOX_DEFAULT
 	goto ParcelFernwick_Gardener_1
 
 ParcelFernwick_Gardener_7:
-# 939 "data/maps/ParcelFernwick/scripts.pory"
+# 955 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_Gardener_Text_1, MSGBOX_DEFAULT
-# 940 "data/maps/ParcelFernwick/scripts.pory"
+# 956 "data/maps/ParcelFernwick/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
-# 941 "data/maps/ParcelFernwick/scripts.pory"
+# 957 "data/maps/ParcelFernwick/scripts.pory"
 	setflag FLAG_SKALD_Q_STONE_DONE
 	goto ParcelFernwick_Gardener_1
 
 
 ParcelFernwick_HighWaterStone::
-# 954 "data/maps/ParcelFernwick/scripts.pory"
+# 970 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_STONE, ParcelFernwick_HighWaterStone_4
 ParcelFernwick_HighWaterStone_3:
-# 958 "data/maps/ParcelFernwick/scripts.pory"
+# 974 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_HighWaterStone_Text_1, MSGBOX_SIGN
 ParcelFernwick_HighWaterStone_1:
 	end
 
 ParcelFernwick_HighWaterStone_2:
-# 955 "data/maps/ParcelFernwick/scripts.pory"
+# 971 "data/maps/ParcelFernwick/scripts.pory"
 	msgbox ParcelFernwick_HighWaterStone_Text_0, MSGBOX_SIGN
-# 956 "data/maps/ParcelFernwick/scripts.pory"
+# 972 "data/maps/ParcelFernwick/scripts.pory"
 	setflag FLAG_SKALD_Q_STONE_FOUND
 	goto ParcelFernwick_HighWaterStone_1
 
 ParcelFernwick_HighWaterStone_4:
-# 954 "data/maps/ParcelFernwick/scripts.pory"
+# 970 "data/maps/ParcelFernwick/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_STONE_FOUND, ParcelFernwick_HighWaterStone_2
 	goto ParcelFernwick_HighWaterStone_3
+
+
+ParcelFernwick_FindJar::
+# 982 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_JAR, ParcelFernwick_FindJar_4
+ParcelFernwick_FindJar_3:
+# 986 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_FindJar_Text_1, MSGBOX_SIGN
+ParcelFernwick_FindJar_1:
+	end
+
+ParcelFernwick_FindJar_2:
+# 983 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_FindJar_Text_0, MSGBOX_SIGN
+# 984 "data/maps/ParcelFernwick/scripts.pory"
+	setflag FLAG_SKALD_Q_JAR_FOUND
+	goto ParcelFernwick_FindJar_1
+
+ParcelFernwick_FindJar_4:
+# 982 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_JAR_FOUND, ParcelFernwick_FindJar_2
+	goto ParcelFernwick_FindJar_3
 
 
 ParcelFernwick_Smeargle_Text_0:
@@ -2106,14 +2166,40 @@ ParcelFernwick_Fisher_Text_2:
 	.string "says.$"
 
 ParcelFernwick_Scientist_Text_0:
-# 213 "data/maps/ParcelFernwick/scripts.pory"
+# 214 "data/maps/ParcelFernwick/scripts.pory"
+	.string "SCIENTIST: Nine days. Nine days a jar\n"
+	.string "of the pond sat in the sun with my name\l"
+	.string "on it and nobody kicked it over. This\l"
+	.string "town respects a label more than it\l"
+	.string "respects the pond.\p"
+	.string "Take these. I'm going to go and fill a\n"
+	.string "new one.$"
+
+ParcelFernwick_Scientist_Text_1:
+# 218 "data/maps/ParcelFernwick/scripts.pory"
+	.string "SCIENTIST: A jar on the kerb, south\n"
+	.string "path. Labelled POND, with a date.$"
+
+ParcelFernwick_Scientist_Text_2:
+# 223 "data/maps/ParcelFernwick/scripts.pory"
+	.string "SCIENTIST: I left a sample jar on the\n"
+	.string "kerb by the south path last week. Pond\l"
+	.string "water. Labelled. I meant to come back\l"
+	.string "with the kit and I came back with\l"
+	.string "excuses.\p"
+	.string "If it's still there, read me the label. I\n"
+	.string "want to know if the date on it shames\l"
+	.string "me.$"
+
+ParcelFernwick_Scientist_Text_3:
+# 229 "data/maps/ParcelFernwick/scripts.pory"
 	.string "SURVEYOR: Forty years of measuring and\n"
 	.string "nobody cared. Now the lawyers want the\l"
 	.string "numbers by Thursday.\p"
 	.string "We don't have a Thursday setting.$"
 
-ParcelFernwick_Scientist_Text_1:
-# 216 "data/maps/ParcelFernwick/scripts.pory"
+ParcelFernwick_Scientist_Text_4:
+# 232 "data/maps/ParcelFernwick/scripts.pory"
 	.string "SURVEYOR: Forty years of measuring,\n"
 	.string "and this is the first autumn anyone's\l"
 	.string "asked for the numbers before the\l"
@@ -2122,15 +2208,15 @@ ParcelFernwick_Scientist_Text_1:
 	.string "numbers. We're both right, which she\l"
 	.string "hates.$"
 
-ParcelFernwick_Scientist_Text_2:
-# 220 "data/maps/ParcelFernwick/scripts.pory"
+ParcelFernwick_Scientist_Text_5:
+# 236 "data/maps/ParcelFernwick/scripts.pory"
 	.string "SURVEYOR: We measure. That's all we do.\n"
 	.string "Forty years of measuring.\p"
 	.string "ILEX is inside. She'll tell you it's\n"
 	.string "boring. She's lying.$"
 
 ParcelFernwick_Gentleman_Text_0:
-# 230 "data/maps/ParcelFernwick/scripts.pory"
+# 246 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GENTLEMAN: MEREHOLT paid for the\n"
 	.string "fountain. It still says so. The hearing\l"
 	.string "didn't take the plaques down. I'd have\l"
@@ -2138,7 +2224,7 @@ ParcelFernwick_Gentleman_Text_0:
 	.string "stay. They say exactly what they say.$"
 
 ParcelFernwick_Gentleman_Text_1:
-# 235 "data/maps/ParcelFernwick/scripts.pory"
+# 251 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GENTLEMAN: The plate on the fountain\n"
 	.string "has been polished. Twice this month.\l"
 	.string "Somebody up the coast is nervous about\l"
@@ -2147,14 +2233,14 @@ ParcelFernwick_Gentleman_Text_1:
 	.string "carefully than I used to.$"
 
 ParcelFernwick_Gentleman_Text_2:
-# 239 "data/maps/ParcelFernwick/scripts.pory"
+# 255 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GENTLEMAN: MEREHOLT paid for the\n"
 	.string "fountain. It says so on the fountain.\p"
 	.string "It says so on most things around here,\n"
 	.string "if you read the small plates.$"
 
 ParcelFernwick_Clerk_Text_0:
-# 248 "data/maps/ParcelFernwick/scripts.pory"
+# 264 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: Day rate at the marsh works is\n"
 	.string "down. Nobody asks what the work is now\l"
 	.string "either. The deal's the same. The pay's\l"
@@ -2162,7 +2248,7 @@ ParcelFernwick_Clerk_Text_0:
 	.string "nobody renegotiates.$"
 
 ParcelFernwick_Clerk_Text_1:
-# 253 "data/maps/ParcelFernwick/scripts.pory"
+# 269 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: Day rate's down. First time in\n"
 	.string "three years. Half the marsh crew's been\l"
 	.string "stood down 'pending review.'\p"
@@ -2171,13 +2257,13 @@ ParcelFernwick_Clerk_Text_1:
 	.string "to the fountain.$"
 
 ParcelFernwick_Clerk_Text_2:
-# 257 "data/maps/ParcelFernwick/scripts.pory"
+# 273 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: Day rate at the marsh works is\n"
 	.string "up again. Don't ask what the work is.\p"
 	.string "Nobody asks. That's the deal.$"
 
 ParcelFernwick_Mother_Text_0:
-# 266 "data/maps/ParcelFernwick/scripts.pory"
+# 282 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MOTHER: My boy still wants to be a\n"
 	.string "RANGER. I've stopped saying RANGERS\l"
 	.string "don't get paid. They don't. But somebody\l"
@@ -2185,7 +2271,7 @@ ParcelFernwick_Mother_Text_0:
 	.string "town went quiet.$"
 
 ParcelFernwick_Mother_Text_1:
-# 271 "data/maps/ParcelFernwick/scripts.pory"
+# 287 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MOTHER: My boy's stopped saying the\n"
 	.string "MEREHOLT part. He heard the men at the\l"
 	.string "fountain talking about the river\l"
@@ -2194,14 +2280,14 @@ ParcelFernwick_Mother_Text_1:
 	.string "had to ask the clerk.$"
 
 ParcelFernwick_Mother_Text_2:
-# 275 "data/maps/ParcelFernwick/scripts.pory"
+# 291 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MOTHER: My boy wants to be a RANGER. I\n"
 	.string "told him RANGERS don't get paid.\p"
 	.string "He said that's fine, he'll be a MEREHOLT\n"
 	.string "guy on weekends.$"
 
 ParcelFernwick_HallSign_Text_0:
-# 287 "data/maps/ParcelFernwick/scripts.pory"
+# 303 "data/maps/ParcelFernwick/scripts.pory"
 	.string "SKALDMERE CLIMATE CORPS\n"
 	.string "CERTIFICATION HALL\p"
 	.string "Forest Certification: practical\n"
@@ -2209,14 +2295,14 @@ ParcelFernwick_HallSign_Text_0:
 	.string "Examiner: TARN, Tidewater Division.$"
 
 ParcelFernwick_HQSign_Text_0:
-# 292 "data/maps/ParcelFernwick/scripts.pory"
+# 308 "data/maps/ParcelFernwick/scripts.pory"
 	.string "SKALDMERE CLIMATE CORPS\n"
 	.string "DISTRICT STATION\p"
 	.string "Rangers, provisionals and the public:\n"
 	.string "front desk.$"
 
 ParcelFernwick_SurveySign_Text_0:
-# 297 "data/maps/ParcelFernwick/scripts.pory"
+# 313 "data/maps/ParcelFernwick/scripts.pory"
 	.string "SKALDMERE SURVEY\n"
 	.string "District office\p"
 	.string "Long-baseline monitoring. Soil cores,\n"
@@ -2224,460 +2310,460 @@ ParcelFernwick_SurveySign_Text_0:
 	.string "We do not issue press releases.$"
 
 ParcelFernwick_FisherSign_Text_0:
-# 302 "data/maps/ParcelFernwick/scripts.pory"
+# 318 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GRETTIR'S\n"
 	.string "Rods. Bait. Marsh advice.\p"
 	.string "The advice is free and you won't take\n"
 	.string "it.$"
 
 ParcelFernwick_CitySign_Text_0:
-# 307 "data/maps/ParcelFernwick/scripts.pory"
+# 323 "data/maps/ParcelFernwick/scripts.pory"
 	.string "FERNWICK\n"
 	.string "District seat, Saltmarsh Coast\p"
 	.string "A smaller plate: PROMENADE AND\n"
 	.string "FOUNTAIN BY THE MEREHOLT FOUNDATION.$"
 
 ParcelFernwick_T_Ella_Text_0:
-# 314 "data/maps/ParcelFernwick/scripts.pory"
+# 330 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: The park pond's new. Nothing lives\n"
 	.string "in it yet. The CORPS says give it a year.\l"
 	.string "Battle?$"
 
 ParcelFernwick_T_Ella_Text_1:
-# 315 "data/maps/ParcelFernwick/scripts.pory"
+# 331 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: A year, they said.$"
 
 ParcelFernwick_T_Ella_Text_2:
-# 330 "data/maps/ParcelFernwick/scripts.pory"
+# 346 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: TARN failed my brother twice. He's\n"
 	.string "at the HALL every day anyway. That's\l"
 	.string "FERNWICK.$"
 
 ParcelFernwick_T_Ella_R2_Text_0:
-# 341 "data/maps/ParcelFernwick/scripts.pory"
+# 357 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelFernwick_T_Ella_R2_Text_1:
-# 343 "data/maps/ParcelFernwick/scripts.pory"
+# 359 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: Another time, then.$"
 
 ParcelFernwick_T_Ella_R2_Text_2:
-# 347 "data/maps/ParcelFernwick/scripts.pory"
+# 363 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: Still yours.$"
 
 ParcelFernwick_T_Ella_R2_Text_3:
-# 348 "data/maps/ParcelFernwick/scripts.pory"
+# 364 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelFernwick_T_Ella_R3_Text_0:
-# 355 "data/maps/ParcelFernwick/scripts.pory"
+# 371 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelFernwick_T_Ella_R3_Text_1:
-# 361 "data/maps/ParcelFernwick/scripts.pory"
+# 377 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: …Fair.$"
 
 ParcelFernwick_T_Ella_R3_Text_2:
-# 362 "data/maps/ParcelFernwick/scripts.pory"
+# 378 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelFernwick_T_Ella_R4_Text_0:
-# 369 "data/maps/ParcelFernwick/scripts.pory"
+# 385 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: I've watched you walk past twice.\n"
 	.string "Not a third time. Battle?$"
 
 ParcelFernwick_T_Ella_R4_Text_1:
-# 375 "data/maps/ParcelFernwick/scripts.pory"
+# 391 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: …Again, then. Later.$"
 
 ParcelFernwick_T_Ella_R4_Text_2:
-# 376 "data/maps/ParcelFernwick/scripts.pory"
+# 392 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelFernwick_T_Ella_R5_Text_0:
-# 383 "data/maps/ParcelFernwick/scripts.pory"
+# 399 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: The region's different now. Let's\n"
 	.string "see if you are?$"
 
 ParcelFernwick_T_Ella_R5_Text_1:
-# 389 "data/maps/ParcelFernwick/scripts.pory"
+# 405 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: Noted. Properly, this time.$"
 
 ParcelFernwick_T_Ella_R5_Text_2:
-# 390 "data/maps/ParcelFernwick/scripts.pory"
+# 406 "data/maps/ParcelFernwick/scripts.pory"
 	.string "ELLA: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelFernwick_T_Henrik_Text_0:
-# 396 "data/maps/ParcelFernwick/scripts.pory"
+# 412 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: The district station sends\n"
 	.string "provisionals north and gets reports\l"
 	.string "back. Never the provisionals. Battle!$"
 
 ParcelFernwick_T_Henrik_Text_1:
-# 397 "data/maps/ParcelFernwick/scripts.pory"
+# 413 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: Some come back, then.$"
 
 ParcelFernwick_T_Henrik_Text_2:
-# 412 "data/maps/ParcelFernwick/scripts.pory"
+# 428 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: ILEX files everything at the\n"
 	.string "survey office. Everything. I asked her\l"
 	.string "what for. She said 'later'.$"
 
 ParcelFernwick_T_Henrik_R2_Text_0:
-# 423 "data/maps/ParcelFernwick/scripts.pory"
+# 439 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelFernwick_T_Henrik_R2_Text_1:
-# 425 "data/maps/ParcelFernwick/scripts.pory"
+# 441 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: No hurry. The water keeps.$"
 
 ParcelFernwick_T_Henrik_R2_Text_2:
-# 429 "data/maps/ParcelFernwick/scripts.pory"
+# 445 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: That's the one I wanted to see.$"
 
 ParcelFernwick_T_Henrik_R2_Text_3:
-# 430 "data/maps/ParcelFernwick/scripts.pory"
+# 446 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelFernwick_T_Henrik_R3_Text_0:
-# 437 "data/maps/ParcelFernwick/scripts.pory"
+# 453 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: Three stamps, then five. Fine.\n"
 	.string "Me next?$"
 
 ParcelFernwick_T_Henrik_R3_Text_1:
-# 443 "data/maps/ParcelFernwick/scripts.pory"
+# 459 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: Still yours.$"
 
 ParcelFernwick_T_Henrik_R3_Text_2:
-# 444 "data/maps/ParcelFernwick/scripts.pory"
+# 460 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelFernwick_T_Henrik_R4_Text_0:
-# 451 "data/maps/ParcelFernwick/scripts.pory"
+# 467 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelFernwick_T_Henrik_R4_Text_1:
-# 458 "data/maps/ParcelFernwick/scripts.pory"
+# 474 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelFernwick_T_Henrik_R5_Text_0:
-# 465 "data/maps/ParcelFernwick/scripts.pory"
+# 481 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelFernwick_T_Henrik_R5_Text_1:
-# 472 "data/maps/ParcelFernwick/scripts.pory"
+# 488 "data/maps/ParcelFernwick/scripts.pory"
 	.string "HENRIK: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelFernwick_T_Steinar_Text_0:
-# 478 "data/maps/ParcelFernwick/scripts.pory"
+# 494 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: Down from the marsh road. The\n"
 	.string "plaza's the only flat ground in forty\l"
 	.string "miles. Battle for it.$"
 
 ParcelFernwick_T_Steinar_Text_1:
-# 479 "data/maps/ParcelFernwick/scripts.pory"
+# 495 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: Share the flat ground, then.$"
 
 ParcelFernwick_T_Steinar_Text_2:
-# 494 "data/maps/ParcelFernwick/scripts.pory"
+# 510 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: The north checkpoint's\n"
 	.string "WARD's. He doesn't bend. The marsh is\l"
 	.string "past him and the marsh is worse than he\l"
 	.string "is.$"
 
 ParcelFernwick_T_Steinar_R2_Text_0:
-# 505 "data/maps/ParcelFernwick/scripts.pory"
+# 521 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelFernwick_T_Steinar_R2_Text_1:
-# 507 "data/maps/ParcelFernwick/scripts.pory"
+# 523 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelFernwick_T_Steinar_R2_Text_2:
-# 511 "data/maps/ParcelFernwick/scripts.pory"
+# 527 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: Noted. Properly, this time.$"
 
 ParcelFernwick_T_Steinar_R2_Text_3:
-# 512 "data/maps/ParcelFernwick/scripts.pory"
+# 528 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelFernwick_T_Steinar_R3_Text_0:
-# 519 "data/maps/ParcelFernwick/scripts.pory"
+# 535 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: Three stamps, then five. Fine.\n"
 	.string "Me next?$"
 
 ParcelFernwick_T_Steinar_R3_Text_1:
-# 525 "data/maps/ParcelFernwick/scripts.pory"
+# 541 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: …Fair.$"
 
 ParcelFernwick_T_Steinar_R3_Text_2:
-# 526 "data/maps/ParcelFernwick/scripts.pory"
+# 542 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelFernwick_T_Steinar_R4_Text_0:
-# 533 "data/maps/ParcelFernwick/scripts.pory"
+# 549 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelFernwick_T_Steinar_R4_Text_1:
-# 540 "data/maps/ParcelFernwick/scripts.pory"
+# 556 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelFernwick_T_Steinar_R5_Text_0:
-# 547 "data/maps/ParcelFernwick/scripts.pory"
+# 563 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelFernwick_T_Steinar_R5_Text_1:
-# 553 "data/maps/ParcelFernwick/scripts.pory"
+# 569 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: …Again, then. Later.$"
 
 ParcelFernwick_T_Steinar_R5_Text_2:
-# 554 "data/maps/ParcelFernwick/scripts.pory"
+# 570 "data/maps/ParcelFernwick/scripts.pory"
 	.string "STEINAR: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelFernwick_T_Marte_Text_0:
-# 560 "data/maps/ParcelFernwick/scripts.pory"
+# 576 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: South square's where the\n"
 	.string "MISTWOOD road comes in. Everyone comes\l"
 	.string "in tired. Easy battles.$"
 
 ParcelFernwick_T_Marte_Text_1:
-# 561 "data/maps/ParcelFernwick/scripts.pory"
+# 577 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: Not that tired, then.$"
 
 ParcelFernwick_T_Marte_Text_2:
-# 576 "data/maps/ParcelFernwick/scripts.pory"
+# 592 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: The CENTER's free for\n"
 	.string "provisionals. The MART isn't. The CORPS\l"
 	.string "pays for healing, not REPELS. Funny\l"
 	.string "priorities.$"
 
 ParcelFernwick_T_Marte_R2_Text_0:
-# 587 "data/maps/ParcelFernwick/scripts.pory"
+# 603 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelFernwick_T_Marte_R2_Text_1:
-# 589 "data/maps/ParcelFernwick/scripts.pory"
+# 605 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: Fine. Same spot.$"
 
 ParcelFernwick_T_Marte_R2_Text_2:
-# 593 "data/maps/ParcelFernwick/scripts.pory"
+# 609 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: …Fair.$"
 
 ParcelFernwick_T_Marte_R2_Text_3:
-# 594 "data/maps/ParcelFernwick/scripts.pory"
+# 610 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelFernwick_T_Marte_R3_Text_0:
-# 601 "data/maps/ParcelFernwick/scripts.pory"
+# 617 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelFernwick_T_Marte_R3_Text_1:
-# 608 "data/maps/ParcelFernwick/scripts.pory"
+# 624 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelFernwick_T_Marte_R4_Text_0:
-# 615 "data/maps/ParcelFernwick/scripts.pory"
+# 631 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: Full strength, no excuses, mine\n"
 	.string "or yours. Rematch?$"
 
 ParcelFernwick_T_Marte_R4_Text_1:
-# 621 "data/maps/ParcelFernwick/scripts.pory"
+# 637 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: Right. That's the whole of it.$"
 
 ParcelFernwick_T_Marte_R4_Text_2:
-# 622 "data/maps/ParcelFernwick/scripts.pory"
+# 638 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelFernwick_T_Marte_R5_Text_0:
-# 629 "data/maps/ParcelFernwick/scripts.pory"
+# 645 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelFernwick_T_Marte_R5_Text_1:
-# 635 "data/maps/ParcelFernwick/scripts.pory"
+# 651 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: That's the one I wanted to see.$"
 
 ParcelFernwick_T_Marte_R5_Text_2:
-# 636 "data/maps/ParcelFernwick/scripts.pory"
+# 652 "data/maps/ParcelFernwick/scripts.pory"
 	.string "MARTE: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelFernwick_T_Leon_Text_0:
-# 642 "data/maps/ParcelFernwick/scripts.pory"
+# 658 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: The square's the only place in\n"
 	.string "FERNWICK with grass worth a bug.\l"
 	.string "Battle!$"
 
 ParcelFernwick_T_Leon_Text_1:
-# 643 "data/maps/ParcelFernwick/scripts.pory"
+# 659 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Worth a bug. Not a battle.$"
 
 ParcelFernwick_T_Leon_Text_2:
-# 658 "data/maps/ParcelFernwick/scripts.pory"
+# 674 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: WURMPLE in the park, none by the\n"
 	.string "station. The station's all pavement.\l"
 	.string "Pavement's the point, my dad says.$"
 
 ParcelFernwick_T_Leon_R2_Text_0:
-# 669 "data/maps/ParcelFernwick/scripts.pory"
+# 685 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelFernwick_T_Leon_R2_Text_1:
-# 671 "data/maps/ParcelFernwick/scripts.pory"
+# 687 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelFernwick_T_Leon_R2_Text_2:
-# 675 "data/maps/ParcelFernwick/scripts.pory"
+# 691 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: …Again, then. Later.$"
 
 ParcelFernwick_T_Leon_R2_Text_3:
-# 676 "data/maps/ParcelFernwick/scripts.pory"
+# 692 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelFernwick_T_Leon_R3_Text_0:
-# 683 "data/maps/ParcelFernwick/scripts.pory"
+# 699 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelFernwick_T_Leon_R3_Text_1:
-# 689 "data/maps/ParcelFernwick/scripts.pory"
+# 705 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Right. That's the whole of it.$"
 
 ParcelFernwick_T_Leon_R3_Text_2:
-# 690 "data/maps/ParcelFernwick/scripts.pory"
+# 706 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelFernwick_T_Leon_R4_Text_0:
-# 697 "data/maps/ParcelFernwick/scripts.pory"
+# 713 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelFernwick_T_Leon_R4_Text_1:
-# 703 "data/maps/ParcelFernwick/scripts.pory"
+# 719 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Noted. Properly, this time.$"
 
 ParcelFernwick_T_Leon_R4_Text_2:
-# 704 "data/maps/ParcelFernwick/scripts.pory"
+# 720 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelFernwick_T_Leon_R5_Text_0:
-# 711 "data/maps/ParcelFernwick/scripts.pory"
+# 727 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: The region's different now. Let's\n"
 	.string "see if you are?$"
 
 ParcelFernwick_T_Leon_R5_Text_1:
-# 718 "data/maps/ParcelFernwick/scripts.pory"
+# 734 "data/maps/ParcelFernwick/scripts.pory"
 	.string "LEON: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelFernwick_T_Thea_Text_0:
-# 724 "data/maps/ParcelFernwick/scripts.pory"
+# 740 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Cadet THEA, station duty. HALE\n"
 	.string "says spar every provisional who\l"
 	.string "crosses the plaza. You crossed it.$"
 
 ParcelFernwick_T_Thea_Text_1:
-# 725 "data/maps/ParcelFernwick/scripts.pory"
+# 741 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: HALE will want the score.$"
 
 ParcelFernwick_T_Thea_Text_2:
-# 740 "data/maps/ParcelFernwick/scripts.pory"
+# 756 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Every cadet wants the Reedmere\n"
 	.string "posting. The marsh is where things\l"
 	.string "happen. Things aren't good, but they\l"
 	.string "happen.$"
 
 ParcelFernwick_T_Thea_R2_Text_0:
-# 751 "data/maps/ParcelFernwick/scripts.pory"
+# 767 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelFernwick_T_Thea_R2_Text_1:
-# 753 "data/maps/ParcelFernwick/scripts.pory"
+# 769 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Another time, then.$"
 
 ParcelFernwick_T_Thea_R2_Text_2:
-# 757 "data/maps/ParcelFernwick/scripts.pory"
+# 773 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Right. That's the whole of it.$"
 
 ParcelFernwick_T_Thea_R2_Text_3:
-# 758 "data/maps/ParcelFernwick/scripts.pory"
+# 774 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelFernwick_T_Thea_R3_Text_0:
-# 765 "data/maps/ParcelFernwick/scripts.pory"
+# 781 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelFernwick_T_Thea_R3_Text_1:
-# 771 "data/maps/ParcelFernwick/scripts.pory"
+# 787 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Still yours.$"
 
 ParcelFernwick_T_Thea_R3_Text_2:
-# 772 "data/maps/ParcelFernwick/scripts.pory"
+# 788 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelFernwick_T_Thea_R4_Text_0:
-# 779 "data/maps/ParcelFernwick/scripts.pory"
+# 795 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelFernwick_T_Thea_R4_Text_1:
-# 786 "data/maps/ParcelFernwick/scripts.pory"
+# 802 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelFernwick_T_Thea_R5_Text_0:
-# 793 "data/maps/ParcelFernwick/scripts.pory"
+# 809 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelFernwick_T_Thea_R5_Text_1:
-# 799 "data/maps/ParcelFernwick/scripts.pory"
+# 815 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: That's the one I wanted to see.$"
 
 ParcelFernwick_T_Thea_R5_Text_2:
-# 800 "data/maps/ParcelFernwick/scripts.pory"
+# 816 "data/maps/ParcelFernwick/scripts.pory"
 	.string "THEA: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelFernwick_PondLook_Text_0:
-# 809 "data/maps/ParcelFernwick/scripts.pory"
+# 825 "data/maps/ParcelFernwick/scripts.pory"
 	.string "Still water over bare clay. Nothing.\n"
 	.string "Nothing.\p"
 	.string "Then a SURSKIT, skating out from the\n"
@@ -2685,16 +2771,16 @@ ParcelFernwick_PondLook_Text_0:
 	.string "It found the pond on its own.$"
 
 ParcelFernwick_PondLook_Text_1:
-# 814 "data/maps/ParcelFernwick/scripts.pory"
+# 830 "data/maps/ParcelFernwick/scripts.pory"
 	.string "The park pond. Still water. A SURSKIT\n"
 	.string "skates across it and back.$"
 
 ParcelFernwick_PerrinScene_Text_0:
-# 827 "data/maps/ParcelFernwick/scripts.pory"
+# 843 "data/maps/ParcelFernwick/scripts.pory"
 	.string "PERRIN: WREN!$"
 
 ParcelFernwick_PerrinScene_Text_1:
-# 831 "data/maps/ParcelFernwick/scripts.pory"
+# 847 "data/maps/ParcelFernwick/scripts.pory"
 	.string "PERRIN: There you are! WREN, right? I'm\n"
 	.string "PERRIN. Same cohort, different\l"
 	.string "dispatch. TARN passed me yesterday.\l"
@@ -2703,11 +2789,11 @@ ParcelFernwick_PerrinScene_Text_1:
 	.string "doesn't do rankings. Let's find out.$"
 
 ParcelFernwick_PerrinScene_Text_2:
-# 832 "data/maps/ParcelFernwick/scripts.pory"
+# 848 "data/maps/ParcelFernwick/scripts.pory"
 	.string "PERRIN: Huh. Okay. OKAY.$"
 
 ParcelFernwick_PerrinScene_Text_3:
-# 833 "data/maps/ParcelFernwick/scripts.pory"
+# 849 "data/maps/ParcelFernwick/scripts.pory"
 	.string "PERRIN: See you up the road. HALE's\n"
 	.string "sending me to the landing too. The\l"
 	.string "FOUNDATION's got an outreach grant for\l"
@@ -2715,11 +2801,11 @@ ParcelFernwick_PerrinScene_Text_3:
 	.string "apply. It pays.$"
 
 ParcelFernwick_PerrinTalk_Text_0:
-# 846 "data/maps/ParcelFernwick/scripts.pory"
+# 862 "data/maps/ParcelFernwick/scripts.pory"
 	.string "PERRIN: Hang on, I'm coming to you.$"
 
 ParcelFernwick_PondPage_Text_0:
-# 857 "data/maps/ParcelFernwick/scripts.pory"
+# 873 "data/maps/ParcelFernwick/scripts.pory"
 	.string "Under the pond's edge, a page gone to\n"
 	.string "pulp. One line still legible, in a square\l"
 	.string "hand:\p"
@@ -2727,138 +2813,138 @@ ParcelFernwick_PondPage_Text_0:
 	.string "start here.'$"
 
 ParcelFernwick_PairCorps_Text_0:
-# 867 "data/maps/ParcelFernwick/scripts.pory"
+# 883 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: The Director's office sent a\n"
 	.string "letter. The certification programme is\l"
 	.string "'under review for independence'.$"
 
 ParcelFernwick_PairCorps_Text_1:
-# 868 "data/maps/ParcelFernwick/scripts.pory"
+# 884 "data/maps/ParcelFernwick/scripts.pory"
 	.string "NEIGHBOUR: Meaning the FOUNDATION's\n"
 	.string "third of it.$"
 
 ParcelFernwick_PairCorps_Text_2:
-# 869 "data/maps/ParcelFernwick/scripts.pory"
+# 885 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: Meaning eight stations instead\n"
 	.string "of twelve, if they walk. HALE says he'd\l"
 	.string "rather have eight honest ones.$"
 
 ParcelFernwick_PairCorps_Text_3:
-# 870 "data/maps/ParcelFernwick/scripts.pory"
+# 886 "data/maps/ParcelFernwick/scripts.pory"
 	.string "NEIGHBOUR: HALE's said that for twenty\n"
 	.string "years. Now someone's written it down\l"
 	.string "where it counts.$"
 
 ParcelFernwick_PairCorps_Text_4:
-# 872 "data/maps/ParcelFernwick/scripts.pory"
+# 888 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: The river meeting's in the\n"
 	.string "papers. Forty-one ratepayers and a\l"
 	.string "Board that won't name a year.$"
 
 ParcelFernwick_PairCorps_Text_5:
-# 873 "data/maps/ParcelFernwick/scripts.pory"
+# 889 "data/maps/ParcelFernwick/scripts.pory"
 	.string "NEIGHBOUR: And a ranger who stood in\n"
 	.string "the back and wrote it all down.$"
 
 ParcelFernwick_PairCorps_Text_6:
-# 874 "data/maps/ParcelFernwick/scripts.pory"
+# 890 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: Writing it down isn't standing\n"
 	.string "up.$"
 
 ParcelFernwick_PairCorps_Text_7:
-# 875 "data/maps/ParcelFernwick/scripts.pory"
+# 891 "data/maps/ParcelFernwick/scripts.pory"
 	.string "NEIGHBOUR: Ask the Board which one\n"
 	.string "they're more afraid of.$"
 
 ParcelFernwick_PairCorps_Text_8:
-# 877 "data/maps/ParcelFernwick/scripts.pory"
+# 893 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: HALE took another provisional.\n"
 	.string "From JOHTO, this one. No partner. No\l"
 	.string "badges. Nothing.$"
 
 ParcelFernwick_PairCorps_Text_9:
-# 878 "data/maps/ParcelFernwick/scripts.pory"
+# 894 "data/maps/ParcelFernwick/scripts.pory"
 	.string "NEIGHBOUR: He takes them with nothing\n"
 	.string "on purpose. Says you can see what they\l"
 	.string "do with it.$"
 
 ParcelFernwick_PairCorps_Text_10:
-# 879 "data/maps/ParcelFernwick/scripts.pory"
+# 895 "data/maps/ParcelFernwick/scripts.pory"
 	.string "CLERK: What do they do with it?$"
 
 ParcelFernwick_PairCorps_Text_11:
-# 880 "data/maps/ParcelFernwick/scripts.pory"
+# 896 "data/maps/ParcelFernwick/scripts.pory"
 	.string "NEIGHBOUR: Mostly leave. The ones that\n"
 	.string "stay, you remember.$"
 
 ParcelFernwick_PairPond_Text_0:
-# 889 "data/maps/ParcelFernwick/scripts.pory"
+# 905 "data/maps/ParcelFernwick/scripts.pory"
 	.string "BOY: There's a SMEARGLE on the far\n"
 	.string "bank. It paints the line where the water\l"
 	.string "was.$"
 
 ParcelFernwick_PairPond_Text_1:
-# 890 "data/maps/ParcelFernwick/scripts.pory"
+# 906 "data/maps/ParcelFernwick/scripts.pory"
 	.string "OLD MAN: I've seen it. It's not painting\n"
 	.string "where the water was. It's painting\l"
 	.string "where the water is.$"
 
 ParcelFernwick_PairPond_Text_2:
-# 891 "data/maps/ParcelFernwick/scripts.pory"
+# 907 "data/maps/ParcelFernwick/scripts.pory"
 	.string "BOY: That's the same line.$"
 
 ParcelFernwick_PairPond_Text_3:
-# 892 "data/maps/ParcelFernwick/scripts.pory"
+# 908 "data/maps/ParcelFernwick/scripts.pory"
 	.string "OLD MAN: This year it is. Watch it next\n"
 	.string "year. That's the whole job, you know.\l"
 	.string "Watching next year.$"
 
 ParcelFernwick_PairPond_Text_4:
-# 894 "data/maps/ParcelFernwick/scripts.pory"
+# 910 "data/maps/ParcelFernwick/scripts.pory"
 	.string "BOY: The ranger counted the pond.\n"
 	.string "Twenty-eight pairs of WINGULL, they\l"
 	.string "said, same as the old notebook.$"
 
 ParcelFernwick_PairPond_Text_5:
-# 895 "data/maps/ParcelFernwick/scripts.pory"
+# 911 "data/maps/ParcelFernwick/scripts.pory"
 	.string "OLD MAN: Same number. Half the water.\n"
 	.string "Work that out for your homework.$"
 
 ParcelFernwick_PairPond_Text_6:
-# 896 "data/maps/ParcelFernwick/scripts.pory"
+# 912 "data/maps/ParcelFernwick/scripts.pory"
 	.string "BOY: Fewer places to land, so they land\n"
 	.string "closer together?$"
 
 ParcelFernwick_PairPond_Text_7:
-# 897 "data/maps/ParcelFernwick/scripts.pory"
+# 913 "data/maps/ParcelFernwick/scripts.pory"
 	.string "OLD MAN: So the count looks fine. Good.\n"
 	.string "You'll be a surveyor or a liar, and the\l"
 	.string "difference is who you tell.$"
 
 ParcelFernwick_PairPond_Text_8:
-# 899 "data/maps/ParcelFernwick/scripts.pory"
+# 915 "data/maps/ParcelFernwick/scripts.pory"
 	.string "OLD MAN: The pond came up to that\n"
 	.string "stone when I was your age. Every spring.$"
 
 ParcelFernwick_PairPond_Text_9:
-# 900 "data/maps/ParcelFernwick/scripts.pory"
+# 916 "data/maps/ParcelFernwick/scripts.pory"
 	.string "BOY: Which stone?$"
 
 ParcelFernwick_PairPond_Text_10:
-# 901 "data/maps/ParcelFernwick/scripts.pory"
+# 917 "data/maps/ParcelFernwick/scripts.pory"
 	.string "OLD MAN: That one. The dry one. You're\n"
 	.string "standing on it.$"
 
 ParcelFernwick_PairPond_Text_11:
-# 902 "data/maps/ParcelFernwick/scripts.pory"
+# 918 "data/maps/ParcelFernwick/scripts.pory"
 	.string "BOY: It's a long way from the water.$"
 
 ParcelFernwick_PairPond_Text_12:
-# 903 "data/maps/ParcelFernwick/scripts.pory"
+# 919 "data/maps/ParcelFernwick/scripts.pory"
 	.string "OLD MAN: It didn't move.$"
 
 ParcelFernwick_Stringer_Text_0:
-# 915 "data/maps/ParcelFernwick/scripts.pory"
+# 931 "data/maps/ParcelFernwick/scripts.pory"
 	.string "INGER: The hearing is on the front\n"
 	.string "page. My piece above the fold, the\l"
 	.string "Commissioner's reply below it. Nine\l"
@@ -2869,14 +2955,14 @@ ParcelFernwick_Stringer_Text_0:
 	.string "it. It's the only review I've had.$"
 
 ParcelFernwick_Stringer_Text_1:
-# 917 "data/maps/ParcelFernwick/scripts.pory"
+# 933 "data/maps/ParcelFernwick/scripts.pory"
 	.string "INGER: The Poisoned Waters piece ran.\n"
 	.string "Page four. The Commissioner's reply ran\l"
 	.string "page two. That's the ratio in this\l"
 	.string "region: his two to my four.$"
 
 ParcelFernwick_Stringer_Text_2:
-# 919 "data/maps/ParcelFernwick/scripts.pory"
+# 935 "data/maps/ParcelFernwick/scripts.pory"
 	.string "INGER: Your sentence is in it, under\n"
 	.string "your name. The editor wanted it cut. I\l"
 	.string "said the ranger said it on the record,\l"
@@ -2884,14 +2970,14 @@ ParcelFernwick_Stringer_Text_2:
 	.string "cut. He didn't know what I meant. He will.$"
 
 ParcelFernwick_Stringer_Text_3:
-# 921 "data/maps/ParcelFernwick/scripts.pory"
+# 937 "data/maps/ParcelFernwick/scripts.pory"
 	.string "INGER: You're in it without your name,\n"
 	.string "because you didn't give me one. 'A\l"
 	.string "ranger read the manifest.' Passive\l"
 	.string "voice. I hate it. It's what you left me.$"
 
 ParcelFernwick_Stringer_Text_4:
-# 924 "data/maps/ParcelFernwick/scripts.pory"
+# 940 "data/maps/ParcelFernwick/scripts.pory"
 	.string "INGER: The HQ. I'm not allowed in. HALE\n"
 	.string "says the Corps doesn't talk to the\l"
 	.string "press; it talks to the record.\p"
@@ -2901,14 +2987,14 @@ ParcelFernwick_Stringer_Text_4:
 	.string "an answer for six years.$"
 
 ParcelFernwick_Gardener_Text_0:
-# 936 "data/maps/ParcelFernwick/scripts.pory"
+# 952 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GARDENER: Twelve paces. I've started\n"
 	.string "watering the far bank. It won't bring it\l"
 	.string "back. It's something to do with my\l"
 	.string "hands.$"
 
 ParcelFernwick_Gardener_Text_1:
-# 939 "data/maps/ParcelFernwick/scripts.pory"
+# 955 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GARDENER: Dry. Twelve paces from the\n"
 	.string "water. I knew. I wanted somebody with a\l"
 	.string "notebook to know too.\p"
@@ -2916,12 +3002,12 @@ ParcelFernwick_Gardener_Text_1:
 	.string "pond.$"
 
 ParcelFernwick_Gardener_Text_2:
-# 943 "data/maps/ParcelFernwick/scripts.pory"
+# 959 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GARDENER: South, set in the pavement. A\n"
 	.string "dark stone. Dry, I expect.$"
 
 ParcelFernwick_Gardener_Text_3:
-# 946 "data/maps/ParcelFernwick/scripts.pory"
+# 962 "data/maps/ParcelFernwick/scripts.pory"
 	.string "GARDENER: The pond garden's mine to\n"
 	.string "keep. The pond isn't anyone's to keep,\l"
 	.string "it seems.\p"
@@ -2931,7 +3017,7 @@ ParcelFernwick_Gardener_Text_3:
 	.string "me if it's wet.$"
 
 ParcelFernwick_HighWaterStone_Text_0:
-# 955 "data/maps/ParcelFernwick/scripts.pory"
+# 971 "data/maps/ParcelFernwick/scripts.pory"
 	.string "A dark stone set in the pavement, worn\n"
 	.string "smooth on top. The high-water stone.\l"
 	.string "The pond is twelve paces north of it\l"
@@ -2940,6 +3026,21 @@ ParcelFernwick_HighWaterStone_Text_0:
 	.string "for the moss to give up on it.$"
 
 ParcelFernwick_HighWaterStone_Text_1:
-# 958 "data/maps/ParcelFernwick/scripts.pory"
+# 974 "data/maps/ParcelFernwick/scripts.pory"
 	.string "A dark stone set in the pavement, dry,\n"
 	.string "twelve paces from the water.$"
+
+ParcelFernwick_FindJar_Text_0:
+# 983 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A sample jar on the kerb, a third full,\n"
+	.string "the water gone green against the glass.\l"
+	.string "The label says POND, SOUTH BANK, and a\l"
+	.string "date nine days old, and a name.\p"
+	.string "Somebody has moved it an inch so the\n"
+	.string "path stays clear, and no further.$"
+
+ParcelFernwick_FindJar_Text_1:
+# 986 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A sample jar on the kerb, nine days old\n"
+	.string "now and counting. The label has started\l"
+	.string "to curl.$"

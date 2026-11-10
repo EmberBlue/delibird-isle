@@ -346,6 +346,22 @@ script ParcelCoast_Docker {
 script ParcelCoast_GullMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_ROOST) && !flag(FLAG_SKALD_Q_ROOST_DONE)) {
+        if (flag(FLAG_SKALD_Q_ROOST_FOUND)) {
+            msgbox(format("GULL MAN: Sixty-one. That's more than the stacks ever held. They've found a way to live on what we built to kill the beach.\pI don't know if that's hope or just gulls. Here. From the sea, before the dredge."), MSGBOX_DEFAULT)
+            giveitem(ITEM_BIG_PEARL, 1)
+            setflag(FLAG_SKALD_Q_ROOST_DONE)
+        } else {
+            msgbox(format("GULL MAN: The east end of the quay wall. Count the WINGULL. Dusk's best but any time will do."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_ROOST_DONE)) {
+        msgbox(format("GULL MAN: The WINGULL used to roost on the sea stacks. The dredge took the stacks for spoil; they roost on the breakwater now. I count them every dusk. I can't see the east end from here any more; my eyes.\pGo to the east end of the quay wall and count what's roosting. Tell me."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_ROOST)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: I count the boats out and the boats in. Half the number now, by order. The crates per boat went up. Nobody asked me. I'm telling you anyway."), MSGBOX_DEFAULT)
         release
@@ -1999,5 +2015,17 @@ script ParcelCoast_Stringer {
         msgbox(format("INGER: Forty jobs, the Commissioner says. I've counted thirty-one. The other nine are 'in the pipeline'.\pI asked which pipeline. He laughed. People laugh at me a lot in this town. It means I asked the right thing."), MSGBOX_DEFAULT)
     }
     release
+    end
+}
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelCoast_FindRoost {
+    if (flag(FLAG_SKALD_Q_ROOST) && !flag(FLAG_SKALD_Q_ROOST_FOUND)) {
+        msgbox(format("The east end of the quay wall. WINGULL along the top of it, shoulder to shoulder, facing the wind. You count them twice, the way the Survey does. Sixty-one. Sixty-one.\pThe wall was built to stop the sea reaching the beach. It stopped the beach instead. The gulls do not know that."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_ROOST_FOUND)
+    } else {
+        msgbox(format("The east end of the quay wall. The WINGULL are still there, sixty-odd, facing the wind."), MSGBOX_SIGN)
+    }
     end
 }

@@ -72,6 +72,22 @@ script ParcelDelibirdCliffs_Rune {
 script ParcelDelibirdCliffs_Einar {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_FIRSTONE) && !flag(FLAG_SKALD_Q_FIRSTONE_DONE)) {
+        if (flag(FLAG_SKALD_Q_FIRSTONE_FOUND)) {
+            msgbox(format("EINAR: Midwinter, this year, in chalk, in a hand with a backwards letter. It's on the list, then. Dated.\pForty-one years and the list has started writing itself faster than I can. Here. From the point, from when the water was cold."), MSGBOX_DEFAULT)
+            giveitem(ITEM_DIVE_BALL, 2)
+            setflag(FLAG_SKALD_Q_FIRSTONE_DONE)
+        } else {
+            msgbox(format("EINAR: The beach pools below. The children's chalk. The date."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_FIRSTONE_DONE)) {
+        msgbox(format("EINAR: Forty years of the list and CORSOLA's on it. The next thing on it, by my reckoning, will be a TENTACOOL in the beach pools. The children say there's one already.\pGo down and look. If there is, read me the date off whatever they've written beside it. Children date things."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_FIRSTONE)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("Einar: Your paper has my list in it. Forty years of a shore, in a footnote.\pI'll take a footnote. Footnotes are where the truth gets kept while the main text is still arguing."), MSGBOX_DEFAULT)
         release
@@ -548,5 +564,17 @@ script ParcelDelibirdCliffs_PairBeach {
         msgbox(format("MOTHER: I'm happy for you. Go and swim. I'll be the one on the beach not being happy, and you can ask me about it when you're older."), MSGBOX_DEFAULT)
     }
     release
+    end
+}
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelDelibirdCliffs_FindFirstone {
+    if (flag(FLAG_SKALD_Q_FIRSTONE) && !flag(FLAG_SKALD_Q_FIRSTONE_FOUND)) {
+        msgbox(format("A tide pool on the warm beach. In it, a TENTACOOL, small, slow, a long way from anywhere it belongs. On the rock beside the pool, in chalk, in a child's hand: FIRST ONE, and this Midwinter's date, with one letter the wrong way round.\pSomebody has drawn a circle round the whole thing, pool and all, to keep it."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_FIRSTONE_FOUND)
+    } else {
+        msgbox(format("A tide pool with a chalk circle round it. FIRST ONE, and a date. The TENTACOOL has gone back out, or down. The chalk is staying."), MSGBOX_SIGN)
+    }
     end
 }

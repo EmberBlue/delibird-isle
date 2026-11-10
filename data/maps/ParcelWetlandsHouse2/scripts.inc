@@ -8,164 +8,227 @@ ParcelWetlandsHouse2_OldMan::
 # 8 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	faceplayer
 # 9 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_REED, ParcelWetlandsHouse2_OldMan_3
-ParcelWetlandsHouse2_OldMan_1:
-# 23 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHouse2_OldMan_7
-# 28 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	goto_if_unset FLAG_SKALD_Q_REED_DONE, ParcelWetlandsHouse2_OldMan_13
-# 34 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlandsHouse2_OldMan_16
+	goto_if_set FLAG_SKALD_Q_NEST, ParcelWetlandsHouse2_OldMan_5
+ParcelWetlandsHouse2_OldMan_4:
+# 19 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_NEST_DONE, ParcelWetlandsHouse2_OldMan_3
+# 25 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_REED, ParcelWetlandsHouse2_OldMan_10
+ParcelWetlandsHouse2_OldMan_8:
 # 39 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	msgbox ParcelWetlandsHouse2_OldMan_Text_7, MSGBOX_DEFAULT
-# 40 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHouse2_OldMan_18
+# 44 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_REED_DONE, ParcelWetlandsHouse2_OldMan_24
+# 50 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlandsHouse2_OldMan_27
+# 55 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_10, MSGBOX_DEFAULT
+# 56 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	release
 	end
 
 ParcelWetlandsHouse2_OldMan_2:
 # 10 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_REED_FOUND, ParcelWetlandsHouse2_OldMan_10
-# 19 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	msgbox ParcelWetlandsHouse2_OldMan_Text_3, MSGBOX_DEFAULT
-# 20 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_NEST_FOUND, ParcelWetlandsHouse2_OldMan_14
+# 15 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_1, MSGBOX_DEFAULT
+ParcelWetlandsHouse2_OldMan_13:
+# 17 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	release
 	end
 
 ParcelWetlandsHouse2_OldMan_3:
-# 9 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	goto_if_unset FLAG_SKALD_Q_REED_DONE, ParcelWetlandsHouse2_OldMan_2
-	goto ParcelWetlandsHouse2_OldMan_1
-
-ParcelWetlandsHouse2_OldMan_7:
-# 24 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	msgbox ParcelWetlandsHouse2_OldMan_Text_4, MSGBOX_DEFAULT
-# 25 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	release
-	end
-
-ParcelWetlandsHouse2_OldMan_10:
-# 11 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	msgbox ParcelWetlandsHouse2_OldMan_Text_0, MSGBOX_DEFAULT
-# 12 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	msgbox ParcelWetlandsHouse2_OldMan_Text_1, MSGBOX_DEFAULT
-# 13 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	giveitem ITEM_QUICK_CLAW
-# 14 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	setflag FLAG_SKALD_Q_REED_DONE
-# 15 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 20 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_OldMan_Text_2, MSGBOX_DEFAULT
-# 16 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 21 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	setflag FLAG_SKALD_Q_NEST
+# 22 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	release
 	end
 
-ParcelWetlandsHouse2_OldMan_13:
-# 29 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	msgbox ParcelWetlandsHouse2_OldMan_Text_5, MSGBOX_DEFAULT
-# 30 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	setflag FLAG_SKALD_Q_REED
-# 31 "data/maps/ParcelWetlandsHouse2/scripts.pory"
-	release
-	end
+ParcelWetlandsHouse2_OldMan_5:
+# 9 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_NEST_DONE, ParcelWetlandsHouse2_OldMan_2
+	goto ParcelWetlandsHouse2_OldMan_4
 
-ParcelWetlandsHouse2_OldMan_16:
+ParcelWetlandsHouse2_OldMan_9:
+# 26 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_REED_FOUND, ParcelWetlandsHouse2_OldMan_21
 # 35 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_OldMan_Text_6, MSGBOX_DEFAULT
 # 36 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	release
 	end
 
+ParcelWetlandsHouse2_OldMan_10:
+# 25 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_REED_DONE, ParcelWetlandsHouse2_OldMan_9
+	goto ParcelWetlandsHouse2_OldMan_8
+
+ParcelWetlandsHouse2_OldMan_14:
+# 11 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_0, MSGBOX_DEFAULT
+# 12 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	giveitem ITEM_ELIXIR, 1
+# 13 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	setflag FLAG_SKALD_Q_NEST_DONE
+	goto ParcelWetlandsHouse2_OldMan_13
+
+ParcelWetlandsHouse2_OldMan_18:
+# 40 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_7, MSGBOX_DEFAULT
+# 41 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	release
+	end
+
+ParcelWetlandsHouse2_OldMan_21:
+# 27 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_3, MSGBOX_DEFAULT
+# 28 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_4, MSGBOX_DEFAULT
+# 29 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	giveitem ITEM_QUICK_CLAW
+# 30 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	setflag FLAG_SKALD_Q_REED_DONE
+# 31 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_5, MSGBOX_DEFAULT
+# 32 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	release
+	end
+
+ParcelWetlandsHouse2_OldMan_24:
+# 45 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_8, MSGBOX_DEFAULT
+# 46 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	setflag FLAG_SKALD_Q_REED
+# 47 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	release
+	end
+
+ParcelWetlandsHouse2_OldMan_27:
+# 51 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_OldMan_Text_9, MSGBOX_DEFAULT
+# 52 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	release
+	end
+
 
 ParcelWetlandsHouse2_Boy::
-# 45 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 61 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	lock
-# 46 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 62 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	faceplayer
-# 47 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 63 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHouse2_Boy_2
-# 52 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 68 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelWetlandsHouse2_Boy_5
-# 57 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 73 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_Boy_Text_2, MSGBOX_DEFAULT
-# 58 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 74 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	release
 	end
 
 ParcelWetlandsHouse2_Boy_2:
-# 48 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 64 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_Boy_Text_0, MSGBOX_DEFAULT
-# 49 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 65 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	release
 	end
 
 ParcelWetlandsHouse2_Boy_5:
-# 53 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 69 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_Boy_Text_1, MSGBOX_DEFAULT
-# 54 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 70 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	release
 	end
 
 
 ParcelWetlandsHouse2_ReadDresser::
-# 63 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 79 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_ReadDresser_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlandsHouse2_ReadDrawer::
-# 68 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 84 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_ReadDrawer_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlandsHouse2_PaperReedTally::
-# 75 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 91 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHouse2_PaperReedTally_2
-# 78 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 94 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_PaperReedTally_Text_1, MSGBOX_SIGN
 ParcelWetlandsHouse2_PaperReedTally_1:
 	end
 
 ParcelWetlandsHouse2_PaperReedTally_2:
-# 76 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 92 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	msgbox ParcelWetlandsHouse2_PaperReedTally_Text_0, MSGBOX_SIGN
 	goto ParcelWetlandsHouse2_PaperReedTally_1
 
 
 ParcelWetlandsHouse2_OldMan_Text_0:
 # 11 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	.string "OLD MAN: Sat. …Sat. Then there's\n"
+	.string "something left in that water worth\l"
+	.string "standing in all day for. A heron knows. A\l"
+	.string "heron doesn't stand anywhere for the\l"
+	.string "view.\p"
+	.string "Here. For the walking out. I'd give you\n"
+	.string "more for the walking back with that.$"
+
+ParcelWetlandsHouse2_OldMan_Text_1:
+# 15 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	.string "OLD MAN: The north bed, out past the\n"
+	.string "landing. The nest. Sat or empty.$"
+
+ParcelWetlandsHouse2_OldMan_Text_2:
+# 20 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	.string "OLD MAN: There's a heron's nest in the\n"
+	.string "north bed. There's been a heron's nest\l"
+	.string "in the north bed since my father cut\l"
+	.string "reeds, and I've not been able to walk\l"
+	.string "out to it in three years.\p"
+	.string "Go and look. Tell me if it's sat this\n"
+	.string "year. I'd rather know than wonder.$"
+
+ParcelWetlandsHouse2_OldMan_Text_3:
+# 27 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: Nineteen. There were forty in\n"
 	.string "that bed when I was your age. Fifty-one\l"
 	.string "when my father cut it.\p"
 	.string "Nineteen goes to the river hall in your\n"
 	.string "writing, not mine. Yours gets read.$"
 
-ParcelWetlandsHouse2_OldMan_Text_1:
-# 12 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+ParcelWetlandsHouse2_OldMan_Text_4:
+# 28 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: Take this. Found it in the beds\n"
 	.string "years back; the heron that owned it was\l"
 	.string "quicker than me. It'll be quicker than\l"
 	.string "whatever you're facing, too.$"
 
-ParcelWetlandsHouse2_OldMan_Text_2:
-# 15 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+ParcelWetlandsHouse2_OldMan_Text_5:
+# 31 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: Eight years to come back, and\n"
 	.string "nineteen stands. Write both. One\l"
 	.string "without the other is a lie by halves.$"
 
-ParcelWetlandsHouse2_OldMan_Text_3:
-# 19 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+ParcelWetlandsHouse2_OldMan_Text_6:
+# 35 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: West of the landing, the reed\n"
 	.string "bed past the pond. Taller than you.\l"
 	.string "Count them.$"
 
-ParcelWetlandsHouse2_OldMan_Text_4:
-# 24 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+ParcelWetlandsHouse2_OldMan_Text_7:
+# 40 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: GUNNAR's SURSKIT count went\n"
 	.string "up this month. First time. He told\l"
 	.string "everyone. He told me twice.$"
 
-ParcelWetlandsHouse2_OldMan_Text_5:
-# 29 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+ParcelWetlandsHouse2_OldMan_Text_8:
+# 45 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: Twelve-year rounds, I told\n"
 	.string "you. Eight, now. I've said eight to the\l"
 	.string "river hall and the river hall wants it\l"
@@ -177,8 +240,8 @@ ParcelWetlandsHouse2_OldMan_Text_5:
 	.string "That's the rule. Taller than a person is\l"
 	.string "a stand.$"
 
-ParcelWetlandsHouse2_OldMan_Text_6:
-# 35 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+ParcelWetlandsHouse2_OldMan_Text_9:
+# 51 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: The reeds came back at eight\n"
 	.string "years this time. Not twelve. I wrote\l"
 	.string "eight down and sent it to the river hall,\l"
@@ -188,20 +251,20 @@ ParcelWetlandsHouse2_OldMan_Text_6:
 	.string "sent a number anywhere. It felt like\l"
 	.string "posting a letter to the weather.$"
 
-ParcelWetlandsHouse2_OldMan_Text_7:
-# 39 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+ParcelWetlandsHouse2_OldMan_Text_10:
+# 55 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: I cut reed for thatch.\n"
 	.string "Twelve-year rounds, like the mill wood.\l"
 	.string "The reeds don't come back on the twelve\l"
 	.string "now. Eight, maybe.$"
 
 ParcelWetlandsHouse2_Boy_Text_0:
-# 48 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 64 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "BOY: Forty-nine! I'm the clicker now.\n"
 	.string "GUNNAR says I'm 'very accurate'.$"
 
 ParcelWetlandsHouse2_Boy_Text_1:
-# 53 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 69 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "BOY: GUNNAR says the river people\n"
 	.string "counted their frogs in front of\l"
 	.string "everybody. With a clicker, like ours!\p"
@@ -210,25 +273,25 @@ ParcelWetlandsHouse2_Boy_Text_1:
 	.string "colder is when it matters.$"
 
 ParcelWetlandsHouse2_Boy_Text_2:
-# 57 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 73 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "BOY: I helped GUNNAR count. He let me\n"
 	.string "hold the clicker. Forty-four!$"
 
 ParcelWetlandsHouse2_ReadDresser_Text_0:
-# 63 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 79 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "A reed knife on the dresser, and a\n"
 	.string "notebook: TWELVE. Then EIGHT, with a\l"
 	.string "line under it, and a river hall address\l"
 	.string "on the facing page.$"
 
 ParcelWetlandsHouse2_ReadDrawer_Text_0:
-# 68 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 84 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "GUNNAR's spare clicker, in the drawer,\n"
 	.string "on a ribbon. Forty-four, it still says.\l"
 	.string "Nobody has pressed it since.$"
 
 ParcelWetlandsHouse2_PaperReedTally_Text_0:
-# 76 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 92 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "The reed-cutting tally, chalked inside\n"
 	.string "the door. Under this year's nineteen\l"
 	.string "the boy has chalked his first count,\l"
@@ -240,7 +303,7 @@ ParcelWetlandsHouse2_PaperReedTally_Text_0:
 	.string "an upward number.$"
 
 ParcelWetlandsHouse2_PaperReedTally_Text_1:
-# 78 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+# 94 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "The reed-cutting tally, chalked inside\n"
 	.string "the door for three generations:\l"
 	.string "bundles per bed per year. Fifty-one in\l"

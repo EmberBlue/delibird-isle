@@ -399,6 +399,22 @@ script ParcelRiver_Boy {
 script ParcelRiver_PondFisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_DEPTH) && !flag(FLAG_SKALD_Q_DEPTH_DONE)) {
+        if (flag(FLAG_SKALD_Q_DEPTH_FOUND)) {
+            msgbox(format("FISHER: Still there. Two hands over theirs, red under white, and the river at neither. His was right in his year and theirs is right in theirs and the water's walked away from both.\pTake these. Catch something in the pool while there's a pool."), MSGBOX_DEFAULT)
+            giveitem(ITEM_GREAT_BALL, 3)
+            setflag(FLAG_SKALD_Q_DEPTH_DONE)
+        } else {
+            msgbox(format("FISHER: The pier at the pool. Red lead under the Board's white. Two hands up."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_DEPTH_DONE)) {
+        msgbox(format("FISHER: The pool below the ford had a depth mark painted on the pier, my grandfather's, in red lead. The Board painted their own over it when the gauge went in.\pGo and see if his is still under theirs. It'd be two hands higher, if it's there."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_DEPTH)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: I fish the town pond. Stocked. The river's getting better below the plots, they say. I'll fish it when I believe them. Not yet. Soon, maybe."), MSGBOX_DEFAULT)
         release
@@ -2051,5 +2067,17 @@ script ParcelRiver_FordBoy {
         setflag(FLAG_SKALD_Q_BOOK)
     }
     release
+    end
+}
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelRiver_FindDepth {
+    if (flag(FLAG_SKALD_Q_DEPTH) && !flag(FLAG_SKALD_Q_DEPTH_FOUND)) {
+        msgbox(format("The pier at the pool. The Board's depth mark in white, a date beside it. Under the white, where it has flaked, a line of old red lead two hands higher, and no date, because a man who paints his own mark does not think to date it.\pThe water is below both marks. By a hand. By two."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_DEPTH_FOUND)
+    } else {
+        msgbox(format("The pier at the pool. White over red, the river below both. Someone has scraped the white back a little so the red shows."), MSGBOX_SIGN)
+    }
     end
 }

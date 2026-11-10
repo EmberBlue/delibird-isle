@@ -839,6 +839,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasin_SurveyStake"
+    },
+    {
+      "type": "sign",
+      "x": 31,
+      "y": 95,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFloodbasin_FindDeadline"
     }
   ]
 }

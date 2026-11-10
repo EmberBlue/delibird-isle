@@ -261,6 +261,22 @@ script ParcelFloodbasin_VilGirl {
 script ParcelFloodbasin_VilFisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_DEADLINE) && !flag(FLAG_SKALD_Q_DEADLINE_DONE)) {
+        if (flag(FLAG_SKALD_Q_DEADLINE_FOUND)) {
+            msgbox(format("FISHER: Past the big stone. It's never reached past the big stone. The works are further up than they say the water goes, then.\pHere. For the smell. There's no cure for the smell, but these are for the rest."), MSGBOX_DEFAULT)
+            giveitem(ITEM_ANTIDOTE, 3)
+            setflag(FLAG_SKALD_Q_DEADLINE_DONE)
+        } else {
+            msgbox(format("FISHER: The bank. The line of them. Find where it stops."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_DEADLINE_DONE)) {
+        msgbox(format("FISHER: After every pulse there's a line on the bank where the fish lie. The Board man says it's weather. I say it's a line, and lines have a top end.\pGo along the bank and find the top of it. Tell me how far up it reaches this year."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_DEADLINE)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: Does writing fix anything, I asked you. The vouchers are still stopped. The boat's still stopped. But a Board man came and measured the water instead of telling me about it. Writing did that."), MSGBOX_DEFAULT)
         release
@@ -2085,5 +2101,17 @@ script ParcelFloodbasin_WellWoman {
         setflag(FLAG_SKALD_Q_PLATE)
     }
     release
+    end
+}
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelFloodbasin_FindDeadline {
+    if (flag(FLAG_SKALD_Q_DEADLINE) && !flag(FLAG_SKALD_Q_DEADLINE_FOUND)) {
+        msgbox(format("The top of the line. MAGIKARP, mostly, pale, lying where the pulse left them, and the last one is past the big stone that nobody has ever had to use as a marker before.\pYou put a stake of reed in the mud beside it, because there is no cloth, and because somebody should."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_DEADLINE_FOUND)
+    } else {
+        msgbox(format("A reed stake in the mud beside a big stone. The line reached here this year. The reed is bending already."), MSGBOX_SIGN)
+    }
     end
 }

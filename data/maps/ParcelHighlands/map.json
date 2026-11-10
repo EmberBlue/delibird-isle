@@ -945,6 +945,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelHighlands_SurveyStake"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 60,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlands_FindFrost"
     }
   ]
 }

@@ -248,6 +248,15 @@ static const u8 sNbQ_Letter[] = _("The carrier's letter: ");
 static const u8 sNbQ_Scratch[] = _("The hut wall scratch: ");
 static const u8 sNbQ_Copy[] = _("The inspector's copy: ");
 static const u8 sNbQ_FortyOne[] = _("Page forty-one: ");
+static const u8 sNbQ_Tally[] = _("The pier post's notches: ");
+static const u8 sNbQ_Jar[] = _("The jar on the kerb: ");
+static const u8 sNbQ_Deadline[] = _("The top of the line: ");
+static const u8 sNbQ_Depth[] = _("The red lead mark: ");
+static const u8 sNbQ_Frost[] = _("The lambing field crack: ");
+static const u8 sNbQ_Corner[] = _("Tomas's sill: ");
+static const u8 sNbQ_Roost[] = _("The gulls on the wall: ");
+static const u8 sNbQ_FirstOne[] = _("The first TENTACOOL: ");
+static const u8 sNbQ_Nest[] = _("The heron's nest: ");
 static const struct NbQuest sNbQuests[] =
 {
     {sNbQ_Anni,    FLAG_SKALD_Q_ANNI_NET,    FLAG_SKALD_Q_ANNI_DONE},
@@ -288,6 +297,15 @@ static const struct NbQuest sNbQuests[] =
     {sNbQ_Scratch, FLAG_SKALD_Q_SCRATCH, FLAG_SKALD_Q_SCRATCH_DONE},
     {sNbQ_Copy, FLAG_SKALD_Q_COPY, FLAG_SKALD_Q_COPY_DONE},
     {sNbQ_FortyOne, FLAG_SKALD_Q_FORTYONE, FLAG_SKALD_Q_FORTYONE_DONE},
+    {sNbQ_Tally, FLAG_SKALD_Q_TALLY, FLAG_SKALD_Q_TALLY_DONE},
+    {sNbQ_Jar, FLAG_SKALD_Q_JAR, FLAG_SKALD_Q_JAR_DONE},
+    {sNbQ_Deadline, FLAG_SKALD_Q_DEADLINE, FLAG_SKALD_Q_DEADLINE_DONE},
+    {sNbQ_Depth, FLAG_SKALD_Q_DEPTH, FLAG_SKALD_Q_DEPTH_DONE},
+    {sNbQ_Frost, FLAG_SKALD_Q_FROST, FLAG_SKALD_Q_FROST_DONE},
+    {sNbQ_Corner, FLAG_SKALD_Q_CORNER, FLAG_SKALD_Q_CORNER_DONE},
+    {sNbQ_Roost, FLAG_SKALD_Q_ROOST, FLAG_SKALD_Q_ROOST_DONE},
+    {sNbQ_FirstOne, FLAG_SKALD_Q_FIRSTONE, FLAG_SKALD_Q_FIRSTONE_DONE},
+    {sNbQ_Nest, FLAG_SKALD_Q_NEST, FLAG_SKALD_Q_NEST_DONE},
 };
 
 static const u8 sNb_Margins_None[]  = _("The margins are in her hand, in a\nshorthand you can't read yet.\pIt gets easier the more of the\nregion you've read yourself.");

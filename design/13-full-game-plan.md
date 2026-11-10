@@ -628,4 +628,19 @@ quest is built, how the peer works) before they are asked six more times.
   circled sailing; Timo's lines and the other answer; the neighbour's
   window book with the 02:10 entry; Piet's list with the fog counted in
   days without; the Flats' rent card. ~2,200 words.
+- **2026-11-10 — side quests, round four (forty-two in all), and the last
+  mid-game lines.** Nine more, hooked into residents who had none: the
+  ferry captain's LAPRAS notches on the rotting pier post (eleven, four,
+  one), the Fernwick scientist's sample jar nine days on the kerb, the
+  Leirvik fisher's line of dead fish past the big stone (a reed stake,
+  because there was no cloth), the Elvsund pond fisher's red-lead depth
+  mark under the Board's white (the water below both), the Haukfell
+  homesteader's lambing-field crack (water in the bottom, not ice; not
+  even cold), Ketil's sill two planks under the shore (set a hand above
+  his father's frost line), the gull man's sixty-one WINGULL on the wall
+  built to kill the beach, Einar's first TENTACOOL dated in a child's
+  chalk with one letter backwards, and the reed cutter's heron, sat. The
+  River Hall's five and the Station's reception and technician got their
+  mid-game lines, so every named resident now speaks in three states.
+  ~1,600 words; the notebook's side-work page lists forty-two.
 

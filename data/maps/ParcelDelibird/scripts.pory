@@ -126,6 +126,22 @@ script ParcelDelibird_Elder_RoundDone {
 script ParcelDelibird_Ketil {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_CORNER) && !flag(FLAG_SKALD_Q_CORNER_DONE)) {
+        if (flag(FLAG_SKALD_Q_CORNER_FOUND)) {
+            msgbox(format("KETIL: To the second plank. …I set that sill a hand above the frost line, because that's where my father said to set it. His frost line.\pHere. I don't need these; I need the ground to hold still, and nobody sells that."), MSGBOX_DEFAULT)
+            giveitem(ITEM_RARE_CANDY, 1)
+            setflag(FLAG_SKALD_Q_CORNER_DONE)
+        } else {
+            msgbox(format("KETIL: The shore, where the cabin was. The sill, if it's showing."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_CORNER_DONE)) {
+        msgbox(format("KETIL: TOMAS's old cabin stood on the shore here till the corner went into the ground. We moved him. The sill's still down there, I think, if you want to see what a cabin looks like when the island takes it back.\pRead me how far the sill's sunk. I can't go down there. I built it."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_CORNER)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("Ketil: I mend nets. The nets are the same. What comes up in them isn't.\pThat's in your paper, I'm told, in better words than mine."), MSGBOX_DEFAULT)
         release
@@ -920,6 +936,18 @@ script ParcelDelibird_HutScratch {
         setflag(FLAG_SKALD_Q_SCRATCH_FOUND)
     } else {
         msgbox(format("Two scratches on the hut wall, level with each other, nine years apart. The ground between them has gone."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelDelibird_FindCorner {
+    if (flag(FLAG_SKALD_Q_CORNER) && !flag(FLAG_SKALD_Q_CORNER_FOUND)) {
+        msgbox(format("On the shore, in the wet ground, the line of a sill: the bottom beam of a cabin, sunk to its second plank, the wood still sound. A nail, a hinge, the place a step was.\pThe ground has taken it a plank at a time and is not finished."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_CORNER_FOUND)
+    } else {
+        msgbox(format("The line of a sill in the wet shore, two planks under. The hinge is the only part still above the ground."), MSGBOX_SIGN)
     }
     end
 }

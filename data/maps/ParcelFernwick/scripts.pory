@@ -209,6 +209,22 @@ script ParcelFernwick_Fisher {
 script ParcelFernwick_Scientist {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_JAR) && !flag(FLAG_SKALD_Q_JAR_DONE)) {
+        if (flag(FLAG_SKALD_Q_JAR_FOUND)) {
+            msgbox(format("SCIENTIST: Nine days. Nine days a jar of the pond sat in the sun with my name on it and nobody kicked it over. This town respects a label more than it respects the pond.\pTake these. I'm going to go and fill a new one."), MSGBOX_DEFAULT)
+            giveitem(ITEM_HYPER_POTION, 2)
+            setflag(FLAG_SKALD_Q_JAR_DONE)
+        } else {
+            msgbox(format("SCIENTIST: A jar on the kerb, south path. Labelled POND, with a date."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_JAR_DONE)) {
+        msgbox(format("SCIENTIST: I left a sample jar on the kerb by the south path last week. Pond water. Labelled. I meant to come back with the kit and I came back with excuses.\pIf it's still there, read me the label. I want to know if the date on it shames me."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_JAR)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SURVEYOR: Forty years of measuring and nobody cared. Now the lawyers want the numbers by Thursday.\pWe don't have a Thursday setting."), MSGBOX_DEFAULT)
     }
@@ -956,6 +972,18 @@ script ParcelFernwick_HighWaterStone {
         setflag(FLAG_SKALD_Q_STONE_FOUND)
     } else {
         msgbox(format("A dark stone set in the pavement, dry, twelve paces from the water."), MSGBOX_SIGN)
+    }
+    end
+}
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelFernwick_FindJar {
+    if (flag(FLAG_SKALD_Q_JAR) && !flag(FLAG_SKALD_Q_JAR_FOUND)) {
+        msgbox(format("A sample jar on the kerb, a third full, the water gone green against the glass. The label says POND, SOUTH BANK, and a date nine days old, and a name.\pSomebody has moved it an inch so the path stays clear, and no further."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_JAR_FOUND)
+    } else {
+        msgbox(format("A sample jar on the kerb, nine days old now and counting. The label has started to curl."), MSGBOX_SIGN)
     }
     end
 }

@@ -189,6 +189,22 @@ script ParcelHighlands_HollisTech {
 script ParcelHighlands_Homesteader {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_FROST) && !flag(FLAG_SKALD_Q_FROST_DONE)) {
+        if (flag(FLAG_SKALD_Q_FROST_FOUND)) {
+            msgbox(format("HOMESTEADER: Water. …Then it's not freezing back this year either. I'll move the ewes down before I'm told to. Nobody tells you in time up here; you have to read it yourself.\pHere. From the box the Foundation sent. I'd rather you had it than they thought I'd used it."), MSGBOX_DEFAULT)
+            giveitem(ITEM_REVIVE, 2)
+            setflag(FLAG_SKALD_Q_FROST_DONE)
+        } else {
+            msgbox(format("HOMESTEADER: The lambing field, above the thaw ponds. The crack. Ice or water in the bottom."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_FROST_DONE)) {
+        msgbox(format("HOMESTEADER: The lambing field above the thaw ponds has cracked across. Not a slide; a crack, straight, like somebody ruled it. I'd like to know if it's the one the geologist warned about.\pGo and look at it. Tell me if there's ice in the bottom. If there's ice, it's the ground. If there's water, it's worse."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_FROST)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HOMESTEADER: SHIFTED, you wrote, and the hearing wrote it after you. The ground didn't hear. The leases did. Pending survey, they say. I'll be here for the survey."), MSGBOX_DEFAULT)
         release
@@ -1994,5 +2010,17 @@ script ParcelHighlands_Carrier {
         setflag(FLAG_SKALD_Q_LETTER)
     }
     release
+    end
+}
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelHighlands_FindFrost {
+    if (flag(FLAG_SKALD_Q_FROST) && !flag(FLAG_SKALD_Q_FROST_FOUND)) {
+        msgbox(format("A crack across the lambing field, straight as a rule, a hand wide. The sides are turf. The bottom is water, standing, brown, with the sky in it.\pNo ice. You put your hand in to be sure. It is not even cold."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_FROST_FOUND)
+    } else {
+        msgbox(format("A crack across the field, a hand wide, water in the bottom. A ewe has already learned to step over it."), MSGBOX_SIGN)
+    }
     end
 }

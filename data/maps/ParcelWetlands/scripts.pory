@@ -2046,3 +2046,15 @@ script ParcelWetlands_TurfCrack {
     }
     end
 }
+
+// --- side quests, round four (2026-11-10) ---
+
+script ParcelWetlands_FindNest {
+    if (flag(FLAG_SKALD_Q_NEST) && !flag(FLAG_SKALD_Q_NEST_FOUND)) {
+        msgbox(format("The north reed bed, half of it pale and dead, half of it standing. In the standing half, a heron's nest, a platform of old stems, and on it a heron, very still, in the way that means an egg.\pIt looks at you for exactly as long as it takes you to look at it, and then at the water."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_NEST_FOUND)
+    } else {
+        msgbox(format("The north reed bed. The nest is there, and the heron is standing in the shallows below it, reading the water."), MSGBOX_SIGN)
+    }
+    end
+}

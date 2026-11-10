@@ -762,6 +762,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoast_SurveyStake"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 48,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoast_FindRoost"
     }
   ]
 }

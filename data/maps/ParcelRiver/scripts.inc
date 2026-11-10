@@ -661,3374 +661,3412 @@ ParcelRiver_PondFisher::
 # 401 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
 # 402 "data/maps/ParcelRiver/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PondFisher_2
-# 407 "data/maps/ParcelRiver/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiver_PondFisher_5
+	goto_if_set FLAG_SKALD_Q_DEPTH, ParcelRiver_PondFisher_5
+ParcelRiver_PondFisher_4:
 # 412 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PondFisher_Text_2, MSGBOX_DEFAULT
-# 413 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_DEPTH_DONE, ParcelRiver_PondFisher_3
+# 418 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PondFisher_9
+# 423 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiver_PondFisher_16
+# 428 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PondFisher_Text_5, MSGBOX_DEFAULT
+# 429 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_PondFisher_2:
 # 403 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PondFisher_Text_0, MSGBOX_DEFAULT
-# 404 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_DEPTH_FOUND, ParcelRiver_PondFisher_12
+# 408 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PondFisher_Text_1, MSGBOX_DEFAULT
+ParcelRiver_PondFisher_11:
+# 410 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_PondFisher_3:
+# 413 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PondFisher_Text_2, MSGBOX_DEFAULT
+# 414 "data/maps/ParcelRiver/scripts.pory"
+	setflag FLAG_SKALD_Q_DEPTH
+# 415 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_PondFisher_5:
-# 408 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PondFisher_Text_1, MSGBOX_DEFAULT
-# 409 "data/maps/ParcelRiver/scripts.pory"
+# 402 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_DEPTH_DONE, ParcelRiver_PondFisher_2
+	goto ParcelRiver_PondFisher_4
+
+ParcelRiver_PondFisher_9:
+# 419 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PondFisher_Text_3, MSGBOX_DEFAULT
+# 420 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_PondFisher_12:
+# 404 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PondFisher_Text_0, MSGBOX_DEFAULT
+# 405 "data/maps/ParcelRiver/scripts.pory"
+	giveitem ITEM_GREAT_BALL, 3
+# 406 "data/maps/ParcelRiver/scripts.pory"
+	setflag FLAG_SKALD_Q_DEPTH_DONE
+	goto ParcelRiver_PondFisher_11
+
+ParcelRiver_PondFisher_16:
+# 424 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PondFisher_Text_4, MSGBOX_DEFAULT
+# 425 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_AnglerTrainer::
-# 419 "data/maps/ParcelRiver/scripts.pory"
+# 435 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 420 "data/maps/ParcelRiver/scripts.pory"
+# 436 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 421 "data/maps/ParcelRiver/scripts.pory"
+# 437 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_DELL_DONE, ParcelRiver_AnglerTrainer_2
-# 426 "data/maps/ParcelRiver/scripts.pory"
+# 442 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_DELL_LURE, ParcelRiver_AnglerTrainer_5
-# 434 "data/maps/ParcelRiver/scripts.pory"
+# 450 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_DELL, ParcelRiver_AnglerTrainer_8
-# 439 "data/maps/ParcelRiver/scripts.pory"
+# 455 "data/maps/ParcelRiver/scripts.pory"
 	release
-# 440 "data/maps/ParcelRiver/scripts.pory"
+# 456 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_ANGLER, ParcelRiver_AnglerTrainer_Text_4, ParcelRiver_AnglerTrainer_Text_5
-# 443 "data/maps/ParcelRiver/scripts.pory"
+# 459 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_AnglerTrainer_Text_6, MSGBOX_DEFAULT
-# 444 "data/maps/ParcelRiver/scripts.pory"
+# 460 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_Q_DELL
 	end
 
 ParcelRiver_AnglerTrainer_2:
-# 422 "data/maps/ParcelRiver/scripts.pory"
+# 438 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_AnglerTrainer_Text_0, MSGBOX_DEFAULT
-# 423 "data/maps/ParcelRiver/scripts.pory"
+# 439 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_AnglerTrainer_5:
-# 427 "data/maps/ParcelRiver/scripts.pory"
+# 443 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_AnglerTrainer_Text_1, MSGBOX_DEFAULT
-# 428 "data/maps/ParcelRiver/scripts.pory"
+# 444 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_AnglerTrainer_Text_2, MSGBOX_DEFAULT
-# 429 "data/maps/ParcelRiver/scripts.pory"
+# 445 "data/maps/ParcelRiver/scripts.pory"
 	giveitem ITEM_SUPER_ROD
-# 430 "data/maps/ParcelRiver/scripts.pory"
+# 446 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_Q_DELL_DONE
-# 431 "data/maps/ParcelRiver/scripts.pory"
+# 447 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_AnglerTrainer_8:
-# 435 "data/maps/ParcelRiver/scripts.pory"
+# 451 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_AnglerTrainer_Text_3, MSGBOX_DEFAULT
-# 436 "data/maps/ParcelRiver/scripts.pory"
+# 452 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Lure::
-# 448 "data/maps/ParcelRiver/scripts.pory"
+# 464 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 449 "data/maps/ParcelRiver/scripts.pory"
+# 465 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_DELL, ParcelRiver_Lure_3
 ParcelRiver_Lure_1:
-# 455 "data/maps/ParcelRiver/scripts.pory"
+# 471 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lure_Text_1, MSGBOX_SIGN
-# 456 "data/maps/ParcelRiver/scripts.pory"
+# 472 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Lure_2:
-# 450 "data/maps/ParcelRiver/scripts.pory"
+# 466 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lure_Text_0, MSGBOX_SIGN
-# 451 "data/maps/ParcelRiver/scripts.pory"
+# 467 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_Q_DELL_LURE
-# 452 "data/maps/ParcelRiver/scripts.pory"
+# 468 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Lure_3:
-# 449 "data/maps/ParcelRiver/scripts.pory"
+# 465 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_DELL_LURE, ParcelRiver_Lure_2
 	goto ParcelRiver_Lure_1
 
 
 ParcelRiver_Arna::
-# 462 "data/maps/ParcelRiver/scripts.pory"
+# 478 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_ARNA, ParcelRiver_Arna_Text_0, ParcelRiver_Arna_Text_1, ParcelRiver_Arna_FirstWin
-# 466 "data/maps/ParcelRiver/scripts.pory"
+# 482 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 467 "data/maps/ParcelRiver/scripts.pory"
+# 483 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Arna_3
 ParcelRiver_Arna_1:
-# 470 "data/maps/ParcelRiver/scripts.pory"
+# 486 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Arna_8
 ParcelRiver_Arna_6:
-# 473 "data/maps/ParcelRiver/scripts.pory"
+# 489 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Arna_13
 ParcelRiver_Arna_11:
-# 476 "data/maps/ParcelRiver/scripts.pory"
+# 492 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Arna_18
 ParcelRiver_Arna_16:
-# 479 "data/maps/ParcelRiver/scripts.pory"
+# 495 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Arna_2:
-# 468 "data/maps/ParcelRiver/scripts.pory"
+# 484 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Arna_R2
 	goto ParcelRiver_Arna_1
 
 ParcelRiver_Arna_3:
-# 467 "data/maps/ParcelRiver/scripts.pory"
+# 483 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ARNA_R2
 	goto_if 0, ParcelRiver_Arna_2
 	goto ParcelRiver_Arna_1
 
 ParcelRiver_Arna_7:
-# 471 "data/maps/ParcelRiver/scripts.pory"
+# 487 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Arna_R3
 	goto ParcelRiver_Arna_6
 
 ParcelRiver_Arna_8:
-# 470 "data/maps/ParcelRiver/scripts.pory"
+# 486 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ARNA_R3
 	goto_if 0, ParcelRiver_Arna_7
 	goto ParcelRiver_Arna_6
 
 ParcelRiver_Arna_12:
-# 474 "data/maps/ParcelRiver/scripts.pory"
+# 490 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Arna_R4
 	goto ParcelRiver_Arna_11
 
 ParcelRiver_Arna_13:
-# 473 "data/maps/ParcelRiver/scripts.pory"
+# 489 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ARNA_R4
 	goto_if 0, ParcelRiver_Arna_12
 	goto ParcelRiver_Arna_11
 
 ParcelRiver_Arna_17:
-# 477 "data/maps/ParcelRiver/scripts.pory"
+# 493 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Arna_R5
 	goto ParcelRiver_Arna_16
 
 ParcelRiver_Arna_18:
-# 476 "data/maps/ParcelRiver/scripts.pory"
+# 492 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ARNA_R5
 	goto_if 0, ParcelRiver_Arna_17
 	goto ParcelRiver_Arna_16
 
 
 ParcelRiver_Arna_FirstWin::
-# 483 "data/maps/ParcelRiver/scripts.pory"
+# 499 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_Text_2, MSGBOX_DEFAULT
-# 484 "data/maps/ParcelRiver/scripts.pory"
+# 500 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Arna_R2::
-# 488 "data/maps/ParcelRiver/scripts.pory"
+# 504 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 489 "data/maps/ParcelRiver/scripts.pory"
+# 505 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 490 "data/maps/ParcelRiver/scripts.pory"
+# 506 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R2_Text_0, MSGBOX_YESNO
-# 491 "data/maps/ParcelRiver/scripts.pory"
+# 507 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Arna_R2_2
-# 496 "data/maps/ParcelRiver/scripts.pory"
+# 512 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ARNA_R2, ParcelRiver_Arna_R2_Text_2
-# 497 "data/maps/ParcelRiver/scripts.pory"
+# 513 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R2_Text_3, MSGBOX_DEFAULT
-# 498 "data/maps/ParcelRiver/scripts.pory"
+# 514 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Arna_R2_2:
-# 492 "data/maps/ParcelRiver/scripts.pory"
+# 508 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R2_Text_1, MSGBOX_DEFAULT
-# 493 "data/maps/ParcelRiver/scripts.pory"
+# 509 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Arna_R3::
-# 502 "data/maps/ParcelRiver/scripts.pory"
+# 518 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 503 "data/maps/ParcelRiver/scripts.pory"
+# 519 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 504 "data/maps/ParcelRiver/scripts.pory"
+# 520 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R3_Text_0, MSGBOX_YESNO
-# 505 "data/maps/ParcelRiver/scripts.pory"
+# 521 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Arna_R3_2
-# 510 "data/maps/ParcelRiver/scripts.pory"
+# 526 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ARNA_R3, ParcelRiver_Arna_R3_Text_1
-# 511 "data/maps/ParcelRiver/scripts.pory"
+# 527 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R3_Text_2, MSGBOX_DEFAULT
-# 512 "data/maps/ParcelRiver/scripts.pory"
+# 528 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Arna_R3_2:
-# 506 "data/maps/ParcelRiver/scripts.pory"
+# 522 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R2_Text_1, MSGBOX_DEFAULT
-# 507 "data/maps/ParcelRiver/scripts.pory"
+# 523 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Arna_R4::
-# 516 "data/maps/ParcelRiver/scripts.pory"
+# 532 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 517 "data/maps/ParcelRiver/scripts.pory"
+# 533 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 518 "data/maps/ParcelRiver/scripts.pory"
+# 534 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R4_Text_0, MSGBOX_YESNO
-# 519 "data/maps/ParcelRiver/scripts.pory"
+# 535 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Arna_R4_2
-# 524 "data/maps/ParcelRiver/scripts.pory"
+# 540 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ARNA_R4, ParcelRiver_Arna_R4_Text_1
-# 525 "data/maps/ParcelRiver/scripts.pory"
+# 541 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R4_Text_2, MSGBOX_DEFAULT
-# 526 "data/maps/ParcelRiver/scripts.pory"
+# 542 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Arna_R4_2:
-# 520 "data/maps/ParcelRiver/scripts.pory"
+# 536 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R2_Text_1, MSGBOX_DEFAULT
-# 521 "data/maps/ParcelRiver/scripts.pory"
+# 537 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Arna_R5::
-# 530 "data/maps/ParcelRiver/scripts.pory"
+# 546 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 531 "data/maps/ParcelRiver/scripts.pory"
+# 547 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 532 "data/maps/ParcelRiver/scripts.pory"
+# 548 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R5_Text_0, MSGBOX_YESNO
-# 533 "data/maps/ParcelRiver/scripts.pory"
+# 549 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Arna_R5_2
-# 538 "data/maps/ParcelRiver/scripts.pory"
+# 554 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ARNA_R5, ParcelRiver_Arna_R5_Text_1
-# 539 "data/maps/ParcelRiver/scripts.pory"
+# 555 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R5_Text_2, MSGBOX_DEFAULT
-# 540 "data/maps/ParcelRiver/scripts.pory"
+# 556 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Arna_R5_2:
-# 534 "data/maps/ParcelRiver/scripts.pory"
+# 550 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Arna_R2_Text_1, MSGBOX_DEFAULT
-# 535 "data/maps/ParcelRiver/scripts.pory"
+# 551 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Botolv::
-# 544 "data/maps/ParcelRiver/scripts.pory"
+# 560 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_BOTOLV, ParcelRiver_Botolv_Text_0, ParcelRiver_Botolv_Text_1, ParcelRiver_Botolv_FirstWin
-# 548 "data/maps/ParcelRiver/scripts.pory"
+# 564 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 549 "data/maps/ParcelRiver/scripts.pory"
+# 565 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Botolv_3
 ParcelRiver_Botolv_1:
-# 552 "data/maps/ParcelRiver/scripts.pory"
+# 568 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Botolv_8
 ParcelRiver_Botolv_6:
-# 555 "data/maps/ParcelRiver/scripts.pory"
+# 571 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Botolv_13
 ParcelRiver_Botolv_11:
-# 558 "data/maps/ParcelRiver/scripts.pory"
+# 574 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Botolv_18
 ParcelRiver_Botolv_16:
-# 561 "data/maps/ParcelRiver/scripts.pory"
+# 577 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Botolv_2:
-# 550 "data/maps/ParcelRiver/scripts.pory"
+# 566 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Botolv_R2
 	goto ParcelRiver_Botolv_1
 
 ParcelRiver_Botolv_3:
-# 549 "data/maps/ParcelRiver/scripts.pory"
+# 565 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_BOTOLV_R2
 	goto_if 0, ParcelRiver_Botolv_2
 	goto ParcelRiver_Botolv_1
 
 ParcelRiver_Botolv_7:
-# 553 "data/maps/ParcelRiver/scripts.pory"
+# 569 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Botolv_R3
 	goto ParcelRiver_Botolv_6
 
 ParcelRiver_Botolv_8:
-# 552 "data/maps/ParcelRiver/scripts.pory"
+# 568 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_BOTOLV_R3
 	goto_if 0, ParcelRiver_Botolv_7
 	goto ParcelRiver_Botolv_6
 
 ParcelRiver_Botolv_12:
-# 556 "data/maps/ParcelRiver/scripts.pory"
+# 572 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Botolv_R4
 	goto ParcelRiver_Botolv_11
 
 ParcelRiver_Botolv_13:
-# 555 "data/maps/ParcelRiver/scripts.pory"
+# 571 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_BOTOLV_R4
 	goto_if 0, ParcelRiver_Botolv_12
 	goto ParcelRiver_Botolv_11
 
 ParcelRiver_Botolv_17:
-# 559 "data/maps/ParcelRiver/scripts.pory"
+# 575 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Botolv_R5
 	goto ParcelRiver_Botolv_16
 
 ParcelRiver_Botolv_18:
-# 558 "data/maps/ParcelRiver/scripts.pory"
+# 574 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_BOTOLV_R5
 	goto_if 0, ParcelRiver_Botolv_17
 	goto ParcelRiver_Botolv_16
 
 
 ParcelRiver_Botolv_FirstWin::
-# 565 "data/maps/ParcelRiver/scripts.pory"
+# 581 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_Text_2, MSGBOX_DEFAULT
-# 566 "data/maps/ParcelRiver/scripts.pory"
+# 582 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Botolv_R2::
-# 570 "data/maps/ParcelRiver/scripts.pory"
+# 586 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 571 "data/maps/ParcelRiver/scripts.pory"
+# 587 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 572 "data/maps/ParcelRiver/scripts.pory"
+# 588 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R2_Text_0, MSGBOX_YESNO
-# 573 "data/maps/ParcelRiver/scripts.pory"
+# 589 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Botolv_R2_2
-# 578 "data/maps/ParcelRiver/scripts.pory"
+# 594 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_BOTOLV_R2, ParcelRiver_Botolv_R2_Text_2
-# 579 "data/maps/ParcelRiver/scripts.pory"
+# 595 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R2_Text_3, MSGBOX_DEFAULT
-# 580 "data/maps/ParcelRiver/scripts.pory"
+# 596 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Botolv_R2_2:
-# 574 "data/maps/ParcelRiver/scripts.pory"
+# 590 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R2_Text_1, MSGBOX_DEFAULT
-# 575 "data/maps/ParcelRiver/scripts.pory"
+# 591 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Botolv_R3::
-# 584 "data/maps/ParcelRiver/scripts.pory"
+# 600 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 585 "data/maps/ParcelRiver/scripts.pory"
+# 601 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 586 "data/maps/ParcelRiver/scripts.pory"
+# 602 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R3_Text_0, MSGBOX_YESNO
-# 587 "data/maps/ParcelRiver/scripts.pory"
+# 603 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Botolv_R3_2
-# 592 "data/maps/ParcelRiver/scripts.pory"
+# 608 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_BOTOLV_R3, ParcelRiver_Botolv_R3_Text_1
-# 593 "data/maps/ParcelRiver/scripts.pory"
+# 609 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R3_Text_2, MSGBOX_DEFAULT
-# 594 "data/maps/ParcelRiver/scripts.pory"
+# 610 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Botolv_R3_2:
-# 588 "data/maps/ParcelRiver/scripts.pory"
+# 604 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R2_Text_1, MSGBOX_DEFAULT
-# 589 "data/maps/ParcelRiver/scripts.pory"
+# 605 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Botolv_R4::
-# 598 "data/maps/ParcelRiver/scripts.pory"
+# 614 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 599 "data/maps/ParcelRiver/scripts.pory"
+# 615 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 600 "data/maps/ParcelRiver/scripts.pory"
+# 616 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R4_Text_0, MSGBOX_YESNO
-# 601 "data/maps/ParcelRiver/scripts.pory"
+# 617 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Botolv_R4_2
-# 606 "data/maps/ParcelRiver/scripts.pory"
+# 622 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_BOTOLV_R4, ParcelRiver_Botolv_R4_Text_1
-# 607 "data/maps/ParcelRiver/scripts.pory"
+# 623 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R4_Text_2, MSGBOX_DEFAULT
-# 608 "data/maps/ParcelRiver/scripts.pory"
+# 624 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Botolv_R4_2:
-# 602 "data/maps/ParcelRiver/scripts.pory"
+# 618 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R2_Text_1, MSGBOX_DEFAULT
-# 603 "data/maps/ParcelRiver/scripts.pory"
+# 619 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Botolv_R5::
-# 612 "data/maps/ParcelRiver/scripts.pory"
+# 628 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 613 "data/maps/ParcelRiver/scripts.pory"
+# 629 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 614 "data/maps/ParcelRiver/scripts.pory"
+# 630 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R5_Text_0, MSGBOX_YESNO
-# 615 "data/maps/ParcelRiver/scripts.pory"
+# 631 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Botolv_R5_2
-# 620 "data/maps/ParcelRiver/scripts.pory"
+# 636 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_BOTOLV_R5, ParcelRiver_Botolv_R4_Text_1
-# 621 "data/maps/ParcelRiver/scripts.pory"
+# 637 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R5_Text_1, MSGBOX_DEFAULT
-# 622 "data/maps/ParcelRiver/scripts.pory"
+# 638 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Botolv_R5_2:
-# 616 "data/maps/ParcelRiver/scripts.pory"
+# 632 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Botolv_R2_Text_1, MSGBOX_DEFAULT
-# 617 "data/maps/ParcelRiver/scripts.pory"
+# 633 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Gudrun::
-# 626 "data/maps/ParcelRiver/scripts.pory"
+# 642 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_GUDRUN, ParcelRiver_Gudrun_Text_0, ParcelRiver_Gudrun_Text_1, ParcelRiver_Gudrun_FirstWin
-# 630 "data/maps/ParcelRiver/scripts.pory"
+# 646 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 631 "data/maps/ParcelRiver/scripts.pory"
+# 647 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Gudrun_3
 ParcelRiver_Gudrun_1:
-# 634 "data/maps/ParcelRiver/scripts.pory"
+# 650 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Gudrun_8
 ParcelRiver_Gudrun_6:
-# 637 "data/maps/ParcelRiver/scripts.pory"
+# 653 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Gudrun_13
 ParcelRiver_Gudrun_11:
-# 640 "data/maps/ParcelRiver/scripts.pory"
+# 656 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Gudrun_18
 ParcelRiver_Gudrun_16:
-# 643 "data/maps/ParcelRiver/scripts.pory"
+# 659 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Gudrun_2:
-# 632 "data/maps/ParcelRiver/scripts.pory"
+# 648 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Gudrun_R2
 	goto ParcelRiver_Gudrun_1
 
 ParcelRiver_Gudrun_3:
-# 631 "data/maps/ParcelRiver/scripts.pory"
+# 647 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_GUDRUN_R2
 	goto_if 0, ParcelRiver_Gudrun_2
 	goto ParcelRiver_Gudrun_1
 
 ParcelRiver_Gudrun_7:
-# 635 "data/maps/ParcelRiver/scripts.pory"
+# 651 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Gudrun_R3
 	goto ParcelRiver_Gudrun_6
 
 ParcelRiver_Gudrun_8:
-# 634 "data/maps/ParcelRiver/scripts.pory"
+# 650 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_GUDRUN_R3
 	goto_if 0, ParcelRiver_Gudrun_7
 	goto ParcelRiver_Gudrun_6
 
 ParcelRiver_Gudrun_12:
-# 638 "data/maps/ParcelRiver/scripts.pory"
+# 654 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Gudrun_R4
 	goto ParcelRiver_Gudrun_11
 
 ParcelRiver_Gudrun_13:
-# 637 "data/maps/ParcelRiver/scripts.pory"
+# 653 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_GUDRUN_R4
 	goto_if 0, ParcelRiver_Gudrun_12
 	goto ParcelRiver_Gudrun_11
 
 ParcelRiver_Gudrun_17:
-# 641 "data/maps/ParcelRiver/scripts.pory"
+# 657 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Gudrun_R5
 	goto ParcelRiver_Gudrun_16
 
 ParcelRiver_Gudrun_18:
-# 640 "data/maps/ParcelRiver/scripts.pory"
+# 656 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_GUDRUN_R5
 	goto_if 0, ParcelRiver_Gudrun_17
 	goto ParcelRiver_Gudrun_16
 
 
 ParcelRiver_Gudrun_FirstWin::
-# 647 "data/maps/ParcelRiver/scripts.pory"
+# 663 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_Text_2, MSGBOX_DEFAULT
-# 648 "data/maps/ParcelRiver/scripts.pory"
+# 664 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Gudrun_R2::
-# 652 "data/maps/ParcelRiver/scripts.pory"
+# 668 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 653 "data/maps/ParcelRiver/scripts.pory"
+# 669 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 654 "data/maps/ParcelRiver/scripts.pory"
+# 670 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R2_Text_0, MSGBOX_YESNO
-# 655 "data/maps/ParcelRiver/scripts.pory"
+# 671 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Gudrun_R2_2
-# 660 "data/maps/ParcelRiver/scripts.pory"
+# 676 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_GUDRUN_R2, ParcelRiver_Gudrun_R2_Text_2
-# 661 "data/maps/ParcelRiver/scripts.pory"
+# 677 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R2_Text_3, MSGBOX_DEFAULT
-# 662 "data/maps/ParcelRiver/scripts.pory"
+# 678 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Gudrun_R2_2:
-# 656 "data/maps/ParcelRiver/scripts.pory"
+# 672 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R2_Text_1, MSGBOX_DEFAULT
-# 657 "data/maps/ParcelRiver/scripts.pory"
+# 673 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Gudrun_R3::
-# 666 "data/maps/ParcelRiver/scripts.pory"
+# 682 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 667 "data/maps/ParcelRiver/scripts.pory"
+# 683 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 668 "data/maps/ParcelRiver/scripts.pory"
+# 684 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R3_Text_0, MSGBOX_YESNO
-# 669 "data/maps/ParcelRiver/scripts.pory"
+# 685 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Gudrun_R3_2
-# 674 "data/maps/ParcelRiver/scripts.pory"
+# 690 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_GUDRUN_R3, ParcelRiver_Gudrun_R3_Text_1
-# 675 "data/maps/ParcelRiver/scripts.pory"
+# 691 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R3_Text_2, MSGBOX_DEFAULT
-# 676 "data/maps/ParcelRiver/scripts.pory"
+# 692 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Gudrun_R3_2:
-# 670 "data/maps/ParcelRiver/scripts.pory"
+# 686 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R2_Text_1, MSGBOX_DEFAULT
-# 671 "data/maps/ParcelRiver/scripts.pory"
+# 687 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Gudrun_R4::
-# 680 "data/maps/ParcelRiver/scripts.pory"
+# 696 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 681 "data/maps/ParcelRiver/scripts.pory"
+# 697 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 682 "data/maps/ParcelRiver/scripts.pory"
+# 698 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R4_Text_0, MSGBOX_YESNO
-# 683 "data/maps/ParcelRiver/scripts.pory"
+# 699 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Gudrun_R4_2
-# 688 "data/maps/ParcelRiver/scripts.pory"
+# 704 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_GUDRUN_R4, ParcelRiver_Gudrun_R4_Text_1
-# 689 "data/maps/ParcelRiver/scripts.pory"
+# 705 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R4_Text_2, MSGBOX_DEFAULT
-# 690 "data/maps/ParcelRiver/scripts.pory"
+# 706 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Gudrun_R4_2:
-# 684 "data/maps/ParcelRiver/scripts.pory"
+# 700 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R2_Text_1, MSGBOX_DEFAULT
-# 685 "data/maps/ParcelRiver/scripts.pory"
+# 701 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Gudrun_R5::
-# 694 "data/maps/ParcelRiver/scripts.pory"
+# 710 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 695 "data/maps/ParcelRiver/scripts.pory"
+# 711 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 696 "data/maps/ParcelRiver/scripts.pory"
+# 712 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R5_Text_0, MSGBOX_YESNO
-# 697 "data/maps/ParcelRiver/scripts.pory"
+# 713 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Gudrun_R5_2
-# 702 "data/maps/ParcelRiver/scripts.pory"
+# 718 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_GUDRUN_R5, ParcelRiver_Gudrun_R3_Text_1
-# 703 "data/maps/ParcelRiver/scripts.pory"
+# 719 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R5_Text_1, MSGBOX_DEFAULT
-# 704 "data/maps/ParcelRiver/scripts.pory"
+# 720 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Gudrun_R5_2:
-# 698 "data/maps/ParcelRiver/scripts.pory"
+# 714 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Gudrun_R2_Text_1, MSGBOX_DEFAULT
-# 699 "data/maps/ParcelRiver/scripts.pory"
+# 715 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Havard::
-# 708 "data/maps/ParcelRiver/scripts.pory"
+# 724 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_HAVARD, ParcelRiver_Havard_Text_0, ParcelRiver_Havard_Text_1, ParcelRiver_Havard_FirstWin
-# 712 "data/maps/ParcelRiver/scripts.pory"
+# 728 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 713 "data/maps/ParcelRiver/scripts.pory"
+# 729 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Havard_3
 ParcelRiver_Havard_1:
-# 716 "data/maps/ParcelRiver/scripts.pory"
+# 732 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Havard_8
 ParcelRiver_Havard_6:
-# 719 "data/maps/ParcelRiver/scripts.pory"
+# 735 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Havard_13
 ParcelRiver_Havard_11:
-# 722 "data/maps/ParcelRiver/scripts.pory"
+# 738 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Havard_18
 ParcelRiver_Havard_16:
-# 725 "data/maps/ParcelRiver/scripts.pory"
+# 741 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Havard_2:
-# 714 "data/maps/ParcelRiver/scripts.pory"
+# 730 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Havard_R2
 	goto ParcelRiver_Havard_1
 
 ParcelRiver_Havard_3:
-# 713 "data/maps/ParcelRiver/scripts.pory"
+# 729 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_HAVARD_R2
 	goto_if 0, ParcelRiver_Havard_2
 	goto ParcelRiver_Havard_1
 
 ParcelRiver_Havard_7:
-# 717 "data/maps/ParcelRiver/scripts.pory"
+# 733 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Havard_R3
 	goto ParcelRiver_Havard_6
 
 ParcelRiver_Havard_8:
-# 716 "data/maps/ParcelRiver/scripts.pory"
+# 732 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_HAVARD_R3
 	goto_if 0, ParcelRiver_Havard_7
 	goto ParcelRiver_Havard_6
 
 ParcelRiver_Havard_12:
-# 720 "data/maps/ParcelRiver/scripts.pory"
+# 736 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Havard_R4
 	goto ParcelRiver_Havard_11
 
 ParcelRiver_Havard_13:
-# 719 "data/maps/ParcelRiver/scripts.pory"
+# 735 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_HAVARD_R4
 	goto_if 0, ParcelRiver_Havard_12
 	goto ParcelRiver_Havard_11
 
 ParcelRiver_Havard_17:
-# 723 "data/maps/ParcelRiver/scripts.pory"
+# 739 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Havard_R5
 	goto ParcelRiver_Havard_16
 
 ParcelRiver_Havard_18:
-# 722 "data/maps/ParcelRiver/scripts.pory"
+# 738 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_HAVARD_R5
 	goto_if 0, ParcelRiver_Havard_17
 	goto ParcelRiver_Havard_16
 
 
 ParcelRiver_Havard_FirstWin::
-# 729 "data/maps/ParcelRiver/scripts.pory"
+# 745 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_Text_2, MSGBOX_DEFAULT
-# 730 "data/maps/ParcelRiver/scripts.pory"
+# 746 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Havard_R2::
-# 734 "data/maps/ParcelRiver/scripts.pory"
+# 750 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 735 "data/maps/ParcelRiver/scripts.pory"
+# 751 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 736 "data/maps/ParcelRiver/scripts.pory"
+# 752 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R2_Text_0, MSGBOX_YESNO
-# 737 "data/maps/ParcelRiver/scripts.pory"
+# 753 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Havard_R2_2
-# 742 "data/maps/ParcelRiver/scripts.pory"
+# 758 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_HAVARD_R2, ParcelRiver_Havard_R2_Text_2
-# 743 "data/maps/ParcelRiver/scripts.pory"
+# 759 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R2_Text_3, MSGBOX_DEFAULT
-# 744 "data/maps/ParcelRiver/scripts.pory"
+# 760 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Havard_R2_2:
-# 738 "data/maps/ParcelRiver/scripts.pory"
+# 754 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R2_Text_1, MSGBOX_DEFAULT
-# 739 "data/maps/ParcelRiver/scripts.pory"
+# 755 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Havard_R3::
-# 748 "data/maps/ParcelRiver/scripts.pory"
+# 764 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 749 "data/maps/ParcelRiver/scripts.pory"
+# 765 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 750 "data/maps/ParcelRiver/scripts.pory"
+# 766 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R3_Text_0, MSGBOX_YESNO
-# 751 "data/maps/ParcelRiver/scripts.pory"
+# 767 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Havard_R3_2
-# 756 "data/maps/ParcelRiver/scripts.pory"
+# 772 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_HAVARD_R3, ParcelRiver_Havard_R3_Text_1
-# 757 "data/maps/ParcelRiver/scripts.pory"
+# 773 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R3_Text_2, MSGBOX_DEFAULT
-# 758 "data/maps/ParcelRiver/scripts.pory"
+# 774 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Havard_R3_2:
-# 752 "data/maps/ParcelRiver/scripts.pory"
+# 768 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R2_Text_1, MSGBOX_DEFAULT
-# 753 "data/maps/ParcelRiver/scripts.pory"
+# 769 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Havard_R4::
-# 762 "data/maps/ParcelRiver/scripts.pory"
+# 778 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 763 "data/maps/ParcelRiver/scripts.pory"
+# 779 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 764 "data/maps/ParcelRiver/scripts.pory"
+# 780 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R4_Text_0, MSGBOX_YESNO
-# 765 "data/maps/ParcelRiver/scripts.pory"
+# 781 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Havard_R4_2
-# 770 "data/maps/ParcelRiver/scripts.pory"
+# 786 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_HAVARD_R4, ParcelRiver_Havard_R4_Text_1
-# 771 "data/maps/ParcelRiver/scripts.pory"
+# 787 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R4_Text_2, MSGBOX_DEFAULT
-# 772 "data/maps/ParcelRiver/scripts.pory"
+# 788 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Havard_R4_2:
-# 766 "data/maps/ParcelRiver/scripts.pory"
+# 782 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R2_Text_1, MSGBOX_DEFAULT
-# 767 "data/maps/ParcelRiver/scripts.pory"
+# 783 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Havard_R5::
-# 776 "data/maps/ParcelRiver/scripts.pory"
+# 792 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 777 "data/maps/ParcelRiver/scripts.pory"
+# 793 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 778 "data/maps/ParcelRiver/scripts.pory"
+# 794 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R5_Text_0, MSGBOX_YESNO
-# 779 "data/maps/ParcelRiver/scripts.pory"
+# 795 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Havard_R5_2
-# 784 "data/maps/ParcelRiver/scripts.pory"
+# 800 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_HAVARD_R5, ParcelRiver_Havard_R2_Text_2
-# 785 "data/maps/ParcelRiver/scripts.pory"
+# 801 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R5_Text_1, MSGBOX_DEFAULT
-# 786 "data/maps/ParcelRiver/scripts.pory"
+# 802 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Havard_R5_2:
-# 780 "data/maps/ParcelRiver/scripts.pory"
+# 796 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Havard_R2_Text_1, MSGBOX_DEFAULT
-# 781 "data/maps/ParcelRiver/scripts.pory"
+# 797 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Idun::
-# 790 "data/maps/ParcelRiver/scripts.pory"
+# 806 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_IDUN, ParcelRiver_Idun_Text_0, ParcelRiver_Idun_Text_1, ParcelRiver_Idun_FirstWin
-# 794 "data/maps/ParcelRiver/scripts.pory"
+# 810 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 795 "data/maps/ParcelRiver/scripts.pory"
+# 811 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Idun_3
 ParcelRiver_Idun_1:
-# 798 "data/maps/ParcelRiver/scripts.pory"
+# 814 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Idun_8
 ParcelRiver_Idun_6:
-# 801 "data/maps/ParcelRiver/scripts.pory"
+# 817 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Idun_13
 ParcelRiver_Idun_11:
-# 804 "data/maps/ParcelRiver/scripts.pory"
+# 820 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Idun_18
 ParcelRiver_Idun_16:
-# 807 "data/maps/ParcelRiver/scripts.pory"
+# 823 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Idun_2:
-# 796 "data/maps/ParcelRiver/scripts.pory"
+# 812 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Idun_R2
 	goto ParcelRiver_Idun_1
 
 ParcelRiver_Idun_3:
-# 795 "data/maps/ParcelRiver/scripts.pory"
+# 811 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_IDUN_R2
 	goto_if 0, ParcelRiver_Idun_2
 	goto ParcelRiver_Idun_1
 
 ParcelRiver_Idun_7:
-# 799 "data/maps/ParcelRiver/scripts.pory"
+# 815 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Idun_R3
 	goto ParcelRiver_Idun_6
 
 ParcelRiver_Idun_8:
-# 798 "data/maps/ParcelRiver/scripts.pory"
+# 814 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_IDUN_R3
 	goto_if 0, ParcelRiver_Idun_7
 	goto ParcelRiver_Idun_6
 
 ParcelRiver_Idun_12:
-# 802 "data/maps/ParcelRiver/scripts.pory"
+# 818 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Idun_R4
 	goto ParcelRiver_Idun_11
 
 ParcelRiver_Idun_13:
-# 801 "data/maps/ParcelRiver/scripts.pory"
+# 817 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_IDUN_R4
 	goto_if 0, ParcelRiver_Idun_12
 	goto ParcelRiver_Idun_11
 
 ParcelRiver_Idun_17:
-# 805 "data/maps/ParcelRiver/scripts.pory"
+# 821 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Idun_R5
 	goto ParcelRiver_Idun_16
 
 ParcelRiver_Idun_18:
-# 804 "data/maps/ParcelRiver/scripts.pory"
+# 820 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_IDUN_R5
 	goto_if 0, ParcelRiver_Idun_17
 	goto ParcelRiver_Idun_16
 
 
 ParcelRiver_Idun_FirstWin::
-# 811 "data/maps/ParcelRiver/scripts.pory"
+# 827 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_Text_2, MSGBOX_DEFAULT
-# 812 "data/maps/ParcelRiver/scripts.pory"
+# 828 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Idun_R2::
-# 816 "data/maps/ParcelRiver/scripts.pory"
+# 832 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 817 "data/maps/ParcelRiver/scripts.pory"
+# 833 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 818 "data/maps/ParcelRiver/scripts.pory"
+# 834 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R2_Text_0, MSGBOX_YESNO
-# 819 "data/maps/ParcelRiver/scripts.pory"
+# 835 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Idun_R2_2
-# 824 "data/maps/ParcelRiver/scripts.pory"
+# 840 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_IDUN_R2, ParcelRiver_Idun_R2_Text_2
-# 825 "data/maps/ParcelRiver/scripts.pory"
+# 841 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R2_Text_3, MSGBOX_DEFAULT
-# 826 "data/maps/ParcelRiver/scripts.pory"
+# 842 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Idun_R2_2:
-# 820 "data/maps/ParcelRiver/scripts.pory"
+# 836 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R2_Text_1, MSGBOX_DEFAULT
-# 821 "data/maps/ParcelRiver/scripts.pory"
+# 837 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Idun_R3::
-# 830 "data/maps/ParcelRiver/scripts.pory"
+# 846 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 831 "data/maps/ParcelRiver/scripts.pory"
+# 847 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 832 "data/maps/ParcelRiver/scripts.pory"
+# 848 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R3_Text_0, MSGBOX_YESNO
-# 833 "data/maps/ParcelRiver/scripts.pory"
+# 849 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Idun_R3_2
-# 838 "data/maps/ParcelRiver/scripts.pory"
+# 854 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_IDUN_R3, ParcelRiver_Idun_R3_Text_1
-# 839 "data/maps/ParcelRiver/scripts.pory"
+# 855 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R3_Text_2, MSGBOX_DEFAULT
-# 840 "data/maps/ParcelRiver/scripts.pory"
+# 856 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Idun_R3_2:
-# 834 "data/maps/ParcelRiver/scripts.pory"
+# 850 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R2_Text_1, MSGBOX_DEFAULT
-# 835 "data/maps/ParcelRiver/scripts.pory"
+# 851 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Idun_R4::
-# 844 "data/maps/ParcelRiver/scripts.pory"
+# 860 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 845 "data/maps/ParcelRiver/scripts.pory"
+# 861 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 846 "data/maps/ParcelRiver/scripts.pory"
+# 862 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R4_Text_0, MSGBOX_YESNO
-# 847 "data/maps/ParcelRiver/scripts.pory"
+# 863 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Idun_R4_2
-# 852 "data/maps/ParcelRiver/scripts.pory"
+# 868 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_IDUN_R4, ParcelRiver_Idun_R4_Text_1
-# 853 "data/maps/ParcelRiver/scripts.pory"
+# 869 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R4_Text_2, MSGBOX_DEFAULT
-# 854 "data/maps/ParcelRiver/scripts.pory"
+# 870 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Idun_R4_2:
-# 848 "data/maps/ParcelRiver/scripts.pory"
+# 864 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R2_Text_1, MSGBOX_DEFAULT
-# 849 "data/maps/ParcelRiver/scripts.pory"
+# 865 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Idun_R5::
-# 858 "data/maps/ParcelRiver/scripts.pory"
+# 874 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 859 "data/maps/ParcelRiver/scripts.pory"
+# 875 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 860 "data/maps/ParcelRiver/scripts.pory"
+# 876 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R5_Text_0, MSGBOX_YESNO
-# 861 "data/maps/ParcelRiver/scripts.pory"
+# 877 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Idun_R5_2
-# 866 "data/maps/ParcelRiver/scripts.pory"
+# 882 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_IDUN_R5, ParcelRiver_Idun_R4_Text_1
-# 867 "data/maps/ParcelRiver/scripts.pory"
+# 883 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R5_Text_1, MSGBOX_DEFAULT
-# 868 "data/maps/ParcelRiver/scripts.pory"
+# 884 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Idun_R5_2:
-# 862 "data/maps/ParcelRiver/scripts.pory"
+# 878 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Idun_R2_Text_1, MSGBOX_DEFAULT
-# 863 "data/maps/ParcelRiver/scripts.pory"
+# 879 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Joar::
-# 872 "data/maps/ParcelRiver/scripts.pory"
+# 888 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_JOAR, ParcelRiver_Joar_Text_0, ParcelRiver_Joar_Text_1, ParcelRiver_Joar_FirstWin
-# 876 "data/maps/ParcelRiver/scripts.pory"
+# 892 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 877 "data/maps/ParcelRiver/scripts.pory"
+# 893 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Joar_3
 ParcelRiver_Joar_1:
-# 880 "data/maps/ParcelRiver/scripts.pory"
+# 896 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Joar_8
 ParcelRiver_Joar_6:
-# 883 "data/maps/ParcelRiver/scripts.pory"
+# 899 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Joar_13
 ParcelRiver_Joar_11:
-# 886 "data/maps/ParcelRiver/scripts.pory"
+# 902 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Joar_18
 ParcelRiver_Joar_16:
-# 889 "data/maps/ParcelRiver/scripts.pory"
+# 905 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Joar_2:
-# 878 "data/maps/ParcelRiver/scripts.pory"
+# 894 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Joar_R2
 	goto ParcelRiver_Joar_1
 
 ParcelRiver_Joar_3:
-# 877 "data/maps/ParcelRiver/scripts.pory"
+# 893 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_JOAR_R2
 	goto_if 0, ParcelRiver_Joar_2
 	goto ParcelRiver_Joar_1
 
 ParcelRiver_Joar_7:
-# 881 "data/maps/ParcelRiver/scripts.pory"
+# 897 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Joar_R3
 	goto ParcelRiver_Joar_6
 
 ParcelRiver_Joar_8:
-# 880 "data/maps/ParcelRiver/scripts.pory"
+# 896 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_JOAR_R3
 	goto_if 0, ParcelRiver_Joar_7
 	goto ParcelRiver_Joar_6
 
 ParcelRiver_Joar_12:
-# 884 "data/maps/ParcelRiver/scripts.pory"
+# 900 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Joar_R4
 	goto ParcelRiver_Joar_11
 
 ParcelRiver_Joar_13:
-# 883 "data/maps/ParcelRiver/scripts.pory"
+# 899 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_JOAR_R4
 	goto_if 0, ParcelRiver_Joar_12
 	goto ParcelRiver_Joar_11
 
 ParcelRiver_Joar_17:
-# 887 "data/maps/ParcelRiver/scripts.pory"
+# 903 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Joar_R5
 	goto ParcelRiver_Joar_16
 
 ParcelRiver_Joar_18:
-# 886 "data/maps/ParcelRiver/scripts.pory"
+# 902 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_JOAR_R5
 	goto_if 0, ParcelRiver_Joar_17
 	goto ParcelRiver_Joar_16
 
 
 ParcelRiver_Joar_FirstWin::
-# 893 "data/maps/ParcelRiver/scripts.pory"
+# 909 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_Text_2, MSGBOX_DEFAULT
-# 894 "data/maps/ParcelRiver/scripts.pory"
+# 910 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Joar_R2::
-# 898 "data/maps/ParcelRiver/scripts.pory"
+# 914 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 899 "data/maps/ParcelRiver/scripts.pory"
+# 915 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 900 "data/maps/ParcelRiver/scripts.pory"
+# 916 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R2_Text_0, MSGBOX_YESNO
-# 901 "data/maps/ParcelRiver/scripts.pory"
+# 917 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Joar_R2_2
-# 906 "data/maps/ParcelRiver/scripts.pory"
+# 922 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_JOAR_R2, ParcelRiver_Joar_R2_Text_2
-# 907 "data/maps/ParcelRiver/scripts.pory"
+# 923 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R2_Text_3, MSGBOX_DEFAULT
-# 908 "data/maps/ParcelRiver/scripts.pory"
+# 924 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Joar_R2_2:
-# 902 "data/maps/ParcelRiver/scripts.pory"
+# 918 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R2_Text_1, MSGBOX_DEFAULT
-# 903 "data/maps/ParcelRiver/scripts.pory"
+# 919 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Joar_R3::
-# 912 "data/maps/ParcelRiver/scripts.pory"
+# 928 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 913 "data/maps/ParcelRiver/scripts.pory"
+# 929 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 914 "data/maps/ParcelRiver/scripts.pory"
+# 930 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R3_Text_0, MSGBOX_YESNO
-# 915 "data/maps/ParcelRiver/scripts.pory"
+# 931 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Joar_R3_2
-# 920 "data/maps/ParcelRiver/scripts.pory"
+# 936 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_JOAR_R3, ParcelRiver_Joar_R3_Text_1
-# 921 "data/maps/ParcelRiver/scripts.pory"
+# 937 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R3_Text_2, MSGBOX_DEFAULT
-# 922 "data/maps/ParcelRiver/scripts.pory"
+# 938 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Joar_R3_2:
-# 916 "data/maps/ParcelRiver/scripts.pory"
+# 932 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R2_Text_1, MSGBOX_DEFAULT
-# 917 "data/maps/ParcelRiver/scripts.pory"
+# 933 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Joar_R4::
-# 926 "data/maps/ParcelRiver/scripts.pory"
+# 942 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 927 "data/maps/ParcelRiver/scripts.pory"
+# 943 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 928 "data/maps/ParcelRiver/scripts.pory"
+# 944 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R4_Text_0, MSGBOX_YESNO
-# 929 "data/maps/ParcelRiver/scripts.pory"
+# 945 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Joar_R4_2
-# 934 "data/maps/ParcelRiver/scripts.pory"
+# 950 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_JOAR_R4, ParcelRiver_Joar_R4_Text_1
-# 935 "data/maps/ParcelRiver/scripts.pory"
+# 951 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R4_Text_2, MSGBOX_DEFAULT
-# 936 "data/maps/ParcelRiver/scripts.pory"
+# 952 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Joar_R4_2:
-# 930 "data/maps/ParcelRiver/scripts.pory"
+# 946 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R2_Text_1, MSGBOX_DEFAULT
-# 931 "data/maps/ParcelRiver/scripts.pory"
+# 947 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Joar_R5::
-# 940 "data/maps/ParcelRiver/scripts.pory"
+# 956 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 941 "data/maps/ParcelRiver/scripts.pory"
+# 957 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 942 "data/maps/ParcelRiver/scripts.pory"
+# 958 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R5_Text_0, MSGBOX_YESNO
-# 943 "data/maps/ParcelRiver/scripts.pory"
+# 959 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Joar_R5_2
-# 948 "data/maps/ParcelRiver/scripts.pory"
+# 964 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_JOAR_R5, ParcelRiver_Joar_R4_Text_1
-# 949 "data/maps/ParcelRiver/scripts.pory"
+# 965 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R5_Text_1, MSGBOX_DEFAULT
-# 950 "data/maps/ParcelRiver/scripts.pory"
+# 966 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Joar_R5_2:
-# 944 "data/maps/ParcelRiver/scripts.pory"
+# 960 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Joar_R2_Text_1, MSGBOX_DEFAULT
-# 945 "data/maps/ParcelRiver/scripts.pory"
+# 961 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Kari::
-# 954 "data/maps/ParcelRiver/scripts.pory"
+# 970 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_KARI, ParcelRiver_Kari_Text_0, ParcelRiver_Kari_Text_1, ParcelRiver_Kari_FirstWin
-# 958 "data/maps/ParcelRiver/scripts.pory"
+# 974 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 959 "data/maps/ParcelRiver/scripts.pory"
+# 975 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Kari_3
 ParcelRiver_Kari_1:
-# 962 "data/maps/ParcelRiver/scripts.pory"
+# 978 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Kari_8
 ParcelRiver_Kari_6:
-# 965 "data/maps/ParcelRiver/scripts.pory"
+# 981 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Kari_13
 ParcelRiver_Kari_11:
-# 968 "data/maps/ParcelRiver/scripts.pory"
+# 984 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Kari_18
 ParcelRiver_Kari_16:
-# 971 "data/maps/ParcelRiver/scripts.pory"
+# 987 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Kari_2:
-# 960 "data/maps/ParcelRiver/scripts.pory"
+# 976 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Kari_R2
 	goto ParcelRiver_Kari_1
 
 ParcelRiver_Kari_3:
-# 959 "data/maps/ParcelRiver/scripts.pory"
+# 975 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_KARI_R2
 	goto_if 0, ParcelRiver_Kari_2
 	goto ParcelRiver_Kari_1
 
 ParcelRiver_Kari_7:
-# 963 "data/maps/ParcelRiver/scripts.pory"
+# 979 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Kari_R3
 	goto ParcelRiver_Kari_6
 
 ParcelRiver_Kari_8:
-# 962 "data/maps/ParcelRiver/scripts.pory"
+# 978 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_KARI_R3
 	goto_if 0, ParcelRiver_Kari_7
 	goto ParcelRiver_Kari_6
 
 ParcelRiver_Kari_12:
-# 966 "data/maps/ParcelRiver/scripts.pory"
+# 982 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Kari_R4
 	goto ParcelRiver_Kari_11
 
 ParcelRiver_Kari_13:
-# 965 "data/maps/ParcelRiver/scripts.pory"
+# 981 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_KARI_R4
 	goto_if 0, ParcelRiver_Kari_12
 	goto ParcelRiver_Kari_11
 
 ParcelRiver_Kari_17:
-# 969 "data/maps/ParcelRiver/scripts.pory"
+# 985 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Kari_R5
 	goto ParcelRiver_Kari_16
 
 ParcelRiver_Kari_18:
-# 968 "data/maps/ParcelRiver/scripts.pory"
+# 984 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_KARI_R5
 	goto_if 0, ParcelRiver_Kari_17
 	goto ParcelRiver_Kari_16
 
 
 ParcelRiver_Kari_FirstWin::
-# 975 "data/maps/ParcelRiver/scripts.pory"
+# 991 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_Text_2, MSGBOX_DEFAULT
-# 976 "data/maps/ParcelRiver/scripts.pory"
+# 992 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Kari_R2::
-# 980 "data/maps/ParcelRiver/scripts.pory"
+# 996 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 981 "data/maps/ParcelRiver/scripts.pory"
+# 997 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 982 "data/maps/ParcelRiver/scripts.pory"
+# 998 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R2_Text_0, MSGBOX_YESNO
-# 983 "data/maps/ParcelRiver/scripts.pory"
+# 999 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Kari_R2_2
-# 988 "data/maps/ParcelRiver/scripts.pory"
+# 1004 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_KARI_R2, ParcelRiver_Kari_R2_Text_2
-# 989 "data/maps/ParcelRiver/scripts.pory"
+# 1005 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R2_Text_3, MSGBOX_DEFAULT
-# 990 "data/maps/ParcelRiver/scripts.pory"
+# 1006 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Kari_R2_2:
-# 984 "data/maps/ParcelRiver/scripts.pory"
+# 1000 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R2_Text_1, MSGBOX_DEFAULT
-# 985 "data/maps/ParcelRiver/scripts.pory"
+# 1001 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Kari_R3::
-# 994 "data/maps/ParcelRiver/scripts.pory"
+# 1010 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 995 "data/maps/ParcelRiver/scripts.pory"
+# 1011 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 996 "data/maps/ParcelRiver/scripts.pory"
+# 1012 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R3_Text_0, MSGBOX_YESNO
-# 997 "data/maps/ParcelRiver/scripts.pory"
+# 1013 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Kari_R3_2
-# 1002 "data/maps/ParcelRiver/scripts.pory"
+# 1018 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_KARI_R3, ParcelRiver_Kari_R3_Text_1
-# 1003 "data/maps/ParcelRiver/scripts.pory"
+# 1019 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R3_Text_2, MSGBOX_DEFAULT
-# 1004 "data/maps/ParcelRiver/scripts.pory"
+# 1020 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Kari_R3_2:
-# 998 "data/maps/ParcelRiver/scripts.pory"
+# 1014 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R2_Text_1, MSGBOX_DEFAULT
-# 999 "data/maps/ParcelRiver/scripts.pory"
+# 1015 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Kari_R4::
-# 1008 "data/maps/ParcelRiver/scripts.pory"
+# 1024 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1009 "data/maps/ParcelRiver/scripts.pory"
+# 1025 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1010 "data/maps/ParcelRiver/scripts.pory"
+# 1026 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R4_Text_0, MSGBOX_YESNO
-# 1011 "data/maps/ParcelRiver/scripts.pory"
+# 1027 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Kari_R4_2
-# 1016 "data/maps/ParcelRiver/scripts.pory"
+# 1032 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_KARI_R4, ParcelRiver_Kari_R3_Text_1
-# 1017 "data/maps/ParcelRiver/scripts.pory"
+# 1033 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R4_Text_1, MSGBOX_DEFAULT
-# 1018 "data/maps/ParcelRiver/scripts.pory"
+# 1034 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Kari_R4_2:
-# 1012 "data/maps/ParcelRiver/scripts.pory"
+# 1028 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R2_Text_1, MSGBOX_DEFAULT
-# 1013 "data/maps/ParcelRiver/scripts.pory"
+# 1029 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Kari_R5::
-# 1022 "data/maps/ParcelRiver/scripts.pory"
+# 1038 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1023 "data/maps/ParcelRiver/scripts.pory"
+# 1039 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1024 "data/maps/ParcelRiver/scripts.pory"
+# 1040 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R5_Text_0, MSGBOX_YESNO
-# 1025 "data/maps/ParcelRiver/scripts.pory"
+# 1041 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Kari_R5_2
-# 1030 "data/maps/ParcelRiver/scripts.pory"
+# 1046 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_KARI_R5, ParcelRiver_Kari_R5_Text_1
-# 1031 "data/maps/ParcelRiver/scripts.pory"
+# 1047 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R5_Text_2, MSGBOX_DEFAULT
-# 1032 "data/maps/ParcelRiver/scripts.pory"
+# 1048 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Kari_R5_2:
-# 1026 "data/maps/ParcelRiver/scripts.pory"
+# 1042 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Kari_R2_Text_1, MSGBOX_DEFAULT
-# 1027 "data/maps/ParcelRiver/scripts.pory"
+# 1043 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Lars::
-# 1036 "data/maps/ParcelRiver/scripts.pory"
+# 1052 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_LARS, ParcelRiver_Lars_Text_0, ParcelRiver_Lars_Text_1, ParcelRiver_Lars_FirstWin
-# 1040 "data/maps/ParcelRiver/scripts.pory"
+# 1056 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1041 "data/maps/ParcelRiver/scripts.pory"
+# 1057 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Lars_3
 ParcelRiver_Lars_1:
-# 1044 "data/maps/ParcelRiver/scripts.pory"
+# 1060 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Lars_8
 ParcelRiver_Lars_6:
-# 1047 "data/maps/ParcelRiver/scripts.pory"
+# 1063 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Lars_13
 ParcelRiver_Lars_11:
-# 1050 "data/maps/ParcelRiver/scripts.pory"
+# 1066 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Lars_18
 ParcelRiver_Lars_16:
-# 1053 "data/maps/ParcelRiver/scripts.pory"
+# 1069 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Lars_2:
-# 1042 "data/maps/ParcelRiver/scripts.pory"
+# 1058 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Lars_R2
 	goto ParcelRiver_Lars_1
 
 ParcelRiver_Lars_3:
-# 1041 "data/maps/ParcelRiver/scripts.pory"
+# 1057 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_LARS_R2
 	goto_if 0, ParcelRiver_Lars_2
 	goto ParcelRiver_Lars_1
 
 ParcelRiver_Lars_7:
-# 1045 "data/maps/ParcelRiver/scripts.pory"
+# 1061 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Lars_R3
 	goto ParcelRiver_Lars_6
 
 ParcelRiver_Lars_8:
-# 1044 "data/maps/ParcelRiver/scripts.pory"
+# 1060 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_LARS_R3
 	goto_if 0, ParcelRiver_Lars_7
 	goto ParcelRiver_Lars_6
 
 ParcelRiver_Lars_12:
-# 1048 "data/maps/ParcelRiver/scripts.pory"
+# 1064 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Lars_R4
 	goto ParcelRiver_Lars_11
 
 ParcelRiver_Lars_13:
-# 1047 "data/maps/ParcelRiver/scripts.pory"
+# 1063 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_LARS_R4
 	goto_if 0, ParcelRiver_Lars_12
 	goto ParcelRiver_Lars_11
 
 ParcelRiver_Lars_17:
-# 1051 "data/maps/ParcelRiver/scripts.pory"
+# 1067 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Lars_R5
 	goto ParcelRiver_Lars_16
 
 ParcelRiver_Lars_18:
-# 1050 "data/maps/ParcelRiver/scripts.pory"
+# 1066 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_LARS_R5
 	goto_if 0, ParcelRiver_Lars_17
 	goto ParcelRiver_Lars_16
 
 
 ParcelRiver_Lars_FirstWin::
-# 1057 "data/maps/ParcelRiver/scripts.pory"
+# 1073 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_Text_2, MSGBOX_DEFAULT
-# 1058 "data/maps/ParcelRiver/scripts.pory"
+# 1074 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Lars_R2::
-# 1062 "data/maps/ParcelRiver/scripts.pory"
+# 1078 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1063 "data/maps/ParcelRiver/scripts.pory"
+# 1079 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1064 "data/maps/ParcelRiver/scripts.pory"
+# 1080 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R2_Text_0, MSGBOX_YESNO
-# 1065 "data/maps/ParcelRiver/scripts.pory"
+# 1081 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Lars_R2_2
-# 1070 "data/maps/ParcelRiver/scripts.pory"
+# 1086 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_LARS_R2, ParcelRiver_Lars_R2_Text_2
-# 1071 "data/maps/ParcelRiver/scripts.pory"
+# 1087 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R2_Text_3, MSGBOX_DEFAULT
-# 1072 "data/maps/ParcelRiver/scripts.pory"
+# 1088 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Lars_R2_2:
-# 1066 "data/maps/ParcelRiver/scripts.pory"
+# 1082 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R2_Text_1, MSGBOX_DEFAULT
-# 1067 "data/maps/ParcelRiver/scripts.pory"
+# 1083 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Lars_R3::
-# 1076 "data/maps/ParcelRiver/scripts.pory"
+# 1092 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1077 "data/maps/ParcelRiver/scripts.pory"
+# 1093 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1078 "data/maps/ParcelRiver/scripts.pory"
+# 1094 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R3_Text_0, MSGBOX_YESNO
-# 1079 "data/maps/ParcelRiver/scripts.pory"
+# 1095 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Lars_R3_2
-# 1084 "data/maps/ParcelRiver/scripts.pory"
+# 1100 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_LARS_R3, ParcelRiver_Lars_R3_Text_1
-# 1085 "data/maps/ParcelRiver/scripts.pory"
+# 1101 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R3_Text_2, MSGBOX_DEFAULT
-# 1086 "data/maps/ParcelRiver/scripts.pory"
+# 1102 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Lars_R3_2:
-# 1080 "data/maps/ParcelRiver/scripts.pory"
+# 1096 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R2_Text_1, MSGBOX_DEFAULT
-# 1081 "data/maps/ParcelRiver/scripts.pory"
+# 1097 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Lars_R4::
-# 1090 "data/maps/ParcelRiver/scripts.pory"
+# 1106 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1091 "data/maps/ParcelRiver/scripts.pory"
+# 1107 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1092 "data/maps/ParcelRiver/scripts.pory"
+# 1108 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R4_Text_0, MSGBOX_YESNO
-# 1093 "data/maps/ParcelRiver/scripts.pory"
+# 1109 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Lars_R4_2
-# 1098 "data/maps/ParcelRiver/scripts.pory"
+# 1114 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_LARS_R4, ParcelRiver_Lars_R2_Text_2
-# 1099 "data/maps/ParcelRiver/scripts.pory"
+# 1115 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R4_Text_1, MSGBOX_DEFAULT
-# 1100 "data/maps/ParcelRiver/scripts.pory"
+# 1116 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Lars_R4_2:
-# 1094 "data/maps/ParcelRiver/scripts.pory"
+# 1110 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R2_Text_1, MSGBOX_DEFAULT
-# 1095 "data/maps/ParcelRiver/scripts.pory"
+# 1111 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Lars_R5::
-# 1104 "data/maps/ParcelRiver/scripts.pory"
+# 1120 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1105 "data/maps/ParcelRiver/scripts.pory"
+# 1121 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1106 "data/maps/ParcelRiver/scripts.pory"
+# 1122 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R5_Text_0, MSGBOX_YESNO
-# 1107 "data/maps/ParcelRiver/scripts.pory"
+# 1123 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Lars_R5_2
-# 1112 "data/maps/ParcelRiver/scripts.pory"
+# 1128 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_LARS_R5, ParcelRiver_Lars_R5_Text_1
-# 1113 "data/maps/ParcelRiver/scripts.pory"
+# 1129 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R5_Text_2, MSGBOX_DEFAULT
-# 1114 "data/maps/ParcelRiver/scripts.pory"
+# 1130 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Lars_R5_2:
-# 1108 "data/maps/ParcelRiver/scripts.pory"
+# 1124 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Lars_R2_Text_1, MSGBOX_DEFAULT
-# 1109 "data/maps/ParcelRiver/scripts.pory"
+# 1125 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Marit::
-# 1118 "data/maps/ParcelRiver/scripts.pory"
+# 1134 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_MARIT, ParcelRiver_Marit_Text_0, ParcelRiver_Marit_Text_1, ParcelRiver_Marit_FirstWin
-# 1122 "data/maps/ParcelRiver/scripts.pory"
+# 1138 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1123 "data/maps/ParcelRiver/scripts.pory"
+# 1139 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Marit_3
 ParcelRiver_Marit_1:
-# 1126 "data/maps/ParcelRiver/scripts.pory"
+# 1142 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Marit_8
 ParcelRiver_Marit_6:
-# 1129 "data/maps/ParcelRiver/scripts.pory"
+# 1145 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Marit_13
 ParcelRiver_Marit_11:
-# 1132 "data/maps/ParcelRiver/scripts.pory"
+# 1148 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Marit_18
 ParcelRiver_Marit_16:
-# 1135 "data/maps/ParcelRiver/scripts.pory"
+# 1151 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Marit_2:
-# 1124 "data/maps/ParcelRiver/scripts.pory"
+# 1140 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Marit_R2
 	goto ParcelRiver_Marit_1
 
 ParcelRiver_Marit_3:
-# 1123 "data/maps/ParcelRiver/scripts.pory"
+# 1139 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_MARIT_R2
 	goto_if 0, ParcelRiver_Marit_2
 	goto ParcelRiver_Marit_1
 
 ParcelRiver_Marit_7:
-# 1127 "data/maps/ParcelRiver/scripts.pory"
+# 1143 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Marit_R3
 	goto ParcelRiver_Marit_6
 
 ParcelRiver_Marit_8:
-# 1126 "data/maps/ParcelRiver/scripts.pory"
+# 1142 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_MARIT_R3
 	goto_if 0, ParcelRiver_Marit_7
 	goto ParcelRiver_Marit_6
 
 ParcelRiver_Marit_12:
-# 1130 "data/maps/ParcelRiver/scripts.pory"
+# 1146 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Marit_R4
 	goto ParcelRiver_Marit_11
 
 ParcelRiver_Marit_13:
-# 1129 "data/maps/ParcelRiver/scripts.pory"
+# 1145 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_MARIT_R4
 	goto_if 0, ParcelRiver_Marit_12
 	goto ParcelRiver_Marit_11
 
 ParcelRiver_Marit_17:
-# 1133 "data/maps/ParcelRiver/scripts.pory"
+# 1149 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Marit_R5
 	goto ParcelRiver_Marit_16
 
 ParcelRiver_Marit_18:
-# 1132 "data/maps/ParcelRiver/scripts.pory"
+# 1148 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_MARIT_R5
 	goto_if 0, ParcelRiver_Marit_17
 	goto ParcelRiver_Marit_16
 
 
 ParcelRiver_Marit_FirstWin::
-# 1139 "data/maps/ParcelRiver/scripts.pory"
+# 1155 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_Text_2, MSGBOX_DEFAULT
-# 1140 "data/maps/ParcelRiver/scripts.pory"
+# 1156 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Marit_R2::
-# 1144 "data/maps/ParcelRiver/scripts.pory"
+# 1160 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1145 "data/maps/ParcelRiver/scripts.pory"
+# 1161 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1146 "data/maps/ParcelRiver/scripts.pory"
+# 1162 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R2_Text_0, MSGBOX_YESNO
-# 1147 "data/maps/ParcelRiver/scripts.pory"
+# 1163 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Marit_R2_2
-# 1152 "data/maps/ParcelRiver/scripts.pory"
+# 1168 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_MARIT_R2, ParcelRiver_Marit_R2_Text_2
-# 1153 "data/maps/ParcelRiver/scripts.pory"
+# 1169 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R2_Text_3, MSGBOX_DEFAULT
-# 1154 "data/maps/ParcelRiver/scripts.pory"
+# 1170 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Marit_R2_2:
-# 1148 "data/maps/ParcelRiver/scripts.pory"
+# 1164 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R2_Text_1, MSGBOX_DEFAULT
-# 1149 "data/maps/ParcelRiver/scripts.pory"
+# 1165 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Marit_R3::
-# 1158 "data/maps/ParcelRiver/scripts.pory"
+# 1174 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1159 "data/maps/ParcelRiver/scripts.pory"
+# 1175 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1160 "data/maps/ParcelRiver/scripts.pory"
+# 1176 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R3_Text_0, MSGBOX_YESNO
-# 1161 "data/maps/ParcelRiver/scripts.pory"
+# 1177 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Marit_R3_2
-# 1166 "data/maps/ParcelRiver/scripts.pory"
+# 1182 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_MARIT_R3, ParcelRiver_Marit_R3_Text_1
-# 1167 "data/maps/ParcelRiver/scripts.pory"
+# 1183 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R3_Text_2, MSGBOX_DEFAULT
-# 1168 "data/maps/ParcelRiver/scripts.pory"
+# 1184 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Marit_R3_2:
-# 1162 "data/maps/ParcelRiver/scripts.pory"
+# 1178 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R2_Text_1, MSGBOX_DEFAULT
-# 1163 "data/maps/ParcelRiver/scripts.pory"
+# 1179 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Marit_R4::
-# 1172 "data/maps/ParcelRiver/scripts.pory"
+# 1188 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1173 "data/maps/ParcelRiver/scripts.pory"
+# 1189 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1174 "data/maps/ParcelRiver/scripts.pory"
+# 1190 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R4_Text_0, MSGBOX_YESNO
-# 1175 "data/maps/ParcelRiver/scripts.pory"
+# 1191 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Marit_R4_2
-# 1180 "data/maps/ParcelRiver/scripts.pory"
+# 1196 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_MARIT_R4, ParcelRiver_Marit_R4_Text_1
-# 1181 "data/maps/ParcelRiver/scripts.pory"
+# 1197 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R4_Text_2, MSGBOX_DEFAULT
-# 1182 "data/maps/ParcelRiver/scripts.pory"
+# 1198 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Marit_R4_2:
-# 1176 "data/maps/ParcelRiver/scripts.pory"
+# 1192 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R2_Text_1, MSGBOX_DEFAULT
-# 1177 "data/maps/ParcelRiver/scripts.pory"
+# 1193 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Marit_R5::
-# 1186 "data/maps/ParcelRiver/scripts.pory"
+# 1202 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1187 "data/maps/ParcelRiver/scripts.pory"
+# 1203 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1188 "data/maps/ParcelRiver/scripts.pory"
+# 1204 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R5_Text_0, MSGBOX_YESNO
-# 1189 "data/maps/ParcelRiver/scripts.pory"
+# 1205 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Marit_R5_2
-# 1194 "data/maps/ParcelRiver/scripts.pory"
+# 1210 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_MARIT_R5, ParcelRiver_Marit_R5_Text_1
-# 1195 "data/maps/ParcelRiver/scripts.pory"
+# 1211 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R5_Text_2, MSGBOX_DEFAULT
-# 1196 "data/maps/ParcelRiver/scripts.pory"
+# 1212 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Marit_R5_2:
-# 1190 "data/maps/ParcelRiver/scripts.pory"
+# 1206 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Marit_R2_Text_1, MSGBOX_DEFAULT
-# 1191 "data/maps/ParcelRiver/scripts.pory"
+# 1207 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Njal::
-# 1200 "data/maps/ParcelRiver/scripts.pory"
+# 1216 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_NJAL, ParcelRiver_Njal_Text_0, ParcelRiver_Njal_Text_1, ParcelRiver_Njal_FirstWin
-# 1204 "data/maps/ParcelRiver/scripts.pory"
+# 1220 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1205 "data/maps/ParcelRiver/scripts.pory"
+# 1221 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Njal_3
 ParcelRiver_Njal_1:
-# 1208 "data/maps/ParcelRiver/scripts.pory"
+# 1224 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Njal_8
 ParcelRiver_Njal_6:
-# 1211 "data/maps/ParcelRiver/scripts.pory"
+# 1227 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Njal_13
 ParcelRiver_Njal_11:
-# 1214 "data/maps/ParcelRiver/scripts.pory"
+# 1230 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Njal_18
 ParcelRiver_Njal_16:
-# 1217 "data/maps/ParcelRiver/scripts.pory"
+# 1233 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Njal_2:
-# 1206 "data/maps/ParcelRiver/scripts.pory"
+# 1222 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Njal_R2
 	goto ParcelRiver_Njal_1
 
 ParcelRiver_Njal_3:
-# 1205 "data/maps/ParcelRiver/scripts.pory"
+# 1221 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_NJAL_R2
 	goto_if 0, ParcelRiver_Njal_2
 	goto ParcelRiver_Njal_1
 
 ParcelRiver_Njal_7:
-# 1209 "data/maps/ParcelRiver/scripts.pory"
+# 1225 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Njal_R3
 	goto ParcelRiver_Njal_6
 
 ParcelRiver_Njal_8:
-# 1208 "data/maps/ParcelRiver/scripts.pory"
+# 1224 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_NJAL_R3
 	goto_if 0, ParcelRiver_Njal_7
 	goto ParcelRiver_Njal_6
 
 ParcelRiver_Njal_12:
-# 1212 "data/maps/ParcelRiver/scripts.pory"
+# 1228 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Njal_R4
 	goto ParcelRiver_Njal_11
 
 ParcelRiver_Njal_13:
-# 1211 "data/maps/ParcelRiver/scripts.pory"
+# 1227 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_NJAL_R4
 	goto_if 0, ParcelRiver_Njal_12
 	goto ParcelRiver_Njal_11
 
 ParcelRiver_Njal_17:
-# 1215 "data/maps/ParcelRiver/scripts.pory"
+# 1231 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Njal_R5
 	goto ParcelRiver_Njal_16
 
 ParcelRiver_Njal_18:
-# 1214 "data/maps/ParcelRiver/scripts.pory"
+# 1230 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_NJAL_R5
 	goto_if 0, ParcelRiver_Njal_17
 	goto ParcelRiver_Njal_16
 
 
 ParcelRiver_Njal_FirstWin::
-# 1221 "data/maps/ParcelRiver/scripts.pory"
+# 1237 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_Text_2, MSGBOX_DEFAULT
-# 1222 "data/maps/ParcelRiver/scripts.pory"
+# 1238 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Njal_R2::
-# 1226 "data/maps/ParcelRiver/scripts.pory"
+# 1242 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1227 "data/maps/ParcelRiver/scripts.pory"
+# 1243 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1228 "data/maps/ParcelRiver/scripts.pory"
+# 1244 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R2_Text_0, MSGBOX_YESNO
-# 1229 "data/maps/ParcelRiver/scripts.pory"
+# 1245 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Njal_R2_2
-# 1234 "data/maps/ParcelRiver/scripts.pory"
+# 1250 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_NJAL_R2, ParcelRiver_Njal_R2_Text_2
-# 1235 "data/maps/ParcelRiver/scripts.pory"
+# 1251 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R2_Text_3, MSGBOX_DEFAULT
-# 1236 "data/maps/ParcelRiver/scripts.pory"
+# 1252 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Njal_R2_2:
-# 1230 "data/maps/ParcelRiver/scripts.pory"
+# 1246 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R2_Text_1, MSGBOX_DEFAULT
-# 1231 "data/maps/ParcelRiver/scripts.pory"
+# 1247 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Njal_R3::
-# 1240 "data/maps/ParcelRiver/scripts.pory"
+# 1256 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1241 "data/maps/ParcelRiver/scripts.pory"
+# 1257 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1242 "data/maps/ParcelRiver/scripts.pory"
+# 1258 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R3_Text_0, MSGBOX_YESNO
-# 1243 "data/maps/ParcelRiver/scripts.pory"
+# 1259 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Njal_R3_2
-# 1248 "data/maps/ParcelRiver/scripts.pory"
+# 1264 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_NJAL_R3, ParcelRiver_Njal_R3_Text_1
-# 1249 "data/maps/ParcelRiver/scripts.pory"
+# 1265 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R3_Text_2, MSGBOX_DEFAULT
-# 1250 "data/maps/ParcelRiver/scripts.pory"
+# 1266 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Njal_R3_2:
-# 1244 "data/maps/ParcelRiver/scripts.pory"
+# 1260 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R2_Text_1, MSGBOX_DEFAULT
-# 1245 "data/maps/ParcelRiver/scripts.pory"
+# 1261 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Njal_R4::
-# 1254 "data/maps/ParcelRiver/scripts.pory"
+# 1270 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1255 "data/maps/ParcelRiver/scripts.pory"
+# 1271 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1256 "data/maps/ParcelRiver/scripts.pory"
+# 1272 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R4_Text_0, MSGBOX_YESNO
-# 1257 "data/maps/ParcelRiver/scripts.pory"
+# 1273 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Njal_R4_2
-# 1262 "data/maps/ParcelRiver/scripts.pory"
+# 1278 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_NJAL_R4, ParcelRiver_Njal_R4_Text_1
-# 1263 "data/maps/ParcelRiver/scripts.pory"
+# 1279 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R4_Text_2, MSGBOX_DEFAULT
-# 1264 "data/maps/ParcelRiver/scripts.pory"
+# 1280 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Njal_R4_2:
-# 1258 "data/maps/ParcelRiver/scripts.pory"
+# 1274 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R2_Text_1, MSGBOX_DEFAULT
-# 1259 "data/maps/ParcelRiver/scripts.pory"
+# 1275 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Njal_R5::
-# 1268 "data/maps/ParcelRiver/scripts.pory"
+# 1284 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1269 "data/maps/ParcelRiver/scripts.pory"
+# 1285 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1270 "data/maps/ParcelRiver/scripts.pory"
+# 1286 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R5_Text_0, MSGBOX_YESNO
-# 1271 "data/maps/ParcelRiver/scripts.pory"
+# 1287 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Njal_R5_2
-# 1276 "data/maps/ParcelRiver/scripts.pory"
+# 1292 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_NJAL_R5, ParcelRiver_Njal_R5_Text_1
-# 1277 "data/maps/ParcelRiver/scripts.pory"
+# 1293 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R5_Text_2, MSGBOX_DEFAULT
-# 1278 "data/maps/ParcelRiver/scripts.pory"
+# 1294 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Njal_R5_2:
-# 1272 "data/maps/ParcelRiver/scripts.pory"
+# 1288 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Njal_R2_Text_1, MSGBOX_DEFAULT
-# 1273 "data/maps/ParcelRiver/scripts.pory"
+# 1289 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ottar::
-# 1282 "data/maps/ParcelRiver/scripts.pory"
+# 1298 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_OTTAR, ParcelRiver_Ottar_Text_0, ParcelRiver_Ottar_Text_1, ParcelRiver_Ottar_FirstWin
-# 1286 "data/maps/ParcelRiver/scripts.pory"
+# 1302 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1287 "data/maps/ParcelRiver/scripts.pory"
+# 1303 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Ottar_3
 ParcelRiver_Ottar_1:
-# 1290 "data/maps/ParcelRiver/scripts.pory"
+# 1306 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Ottar_8
 ParcelRiver_Ottar_6:
-# 1293 "data/maps/ParcelRiver/scripts.pory"
+# 1309 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Ottar_13
 ParcelRiver_Ottar_11:
-# 1296 "data/maps/ParcelRiver/scripts.pory"
+# 1312 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Ottar_18
 ParcelRiver_Ottar_16:
-# 1299 "data/maps/ParcelRiver/scripts.pory"
+# 1315 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Ottar_2:
-# 1288 "data/maps/ParcelRiver/scripts.pory"
+# 1304 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ottar_R2
 	goto ParcelRiver_Ottar_1
 
 ParcelRiver_Ottar_3:
-# 1287 "data/maps/ParcelRiver/scripts.pory"
+# 1303 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_OTTAR_R2
 	goto_if 0, ParcelRiver_Ottar_2
 	goto ParcelRiver_Ottar_1
 
 ParcelRiver_Ottar_7:
-# 1291 "data/maps/ParcelRiver/scripts.pory"
+# 1307 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ottar_R3
 	goto ParcelRiver_Ottar_6
 
 ParcelRiver_Ottar_8:
-# 1290 "data/maps/ParcelRiver/scripts.pory"
+# 1306 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_OTTAR_R3
 	goto_if 0, ParcelRiver_Ottar_7
 	goto ParcelRiver_Ottar_6
 
 ParcelRiver_Ottar_12:
-# 1294 "data/maps/ParcelRiver/scripts.pory"
+# 1310 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ottar_R4
 	goto ParcelRiver_Ottar_11
 
 ParcelRiver_Ottar_13:
-# 1293 "data/maps/ParcelRiver/scripts.pory"
+# 1309 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_OTTAR_R4
 	goto_if 0, ParcelRiver_Ottar_12
 	goto ParcelRiver_Ottar_11
 
 ParcelRiver_Ottar_17:
-# 1297 "data/maps/ParcelRiver/scripts.pory"
+# 1313 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ottar_R5
 	goto ParcelRiver_Ottar_16
 
 ParcelRiver_Ottar_18:
-# 1296 "data/maps/ParcelRiver/scripts.pory"
+# 1312 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_OTTAR_R5
 	goto_if 0, ParcelRiver_Ottar_17
 	goto ParcelRiver_Ottar_16
 
 
 ParcelRiver_Ottar_FirstWin::
-# 1303 "data/maps/ParcelRiver/scripts.pory"
+# 1319 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_Text_2, MSGBOX_DEFAULT
-# 1304 "data/maps/ParcelRiver/scripts.pory"
+# 1320 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ottar_R2::
-# 1308 "data/maps/ParcelRiver/scripts.pory"
+# 1324 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1309 "data/maps/ParcelRiver/scripts.pory"
+# 1325 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1310 "data/maps/ParcelRiver/scripts.pory"
+# 1326 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R2_Text_0, MSGBOX_YESNO
-# 1311 "data/maps/ParcelRiver/scripts.pory"
+# 1327 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ottar_R2_2
-# 1316 "data/maps/ParcelRiver/scripts.pory"
+# 1332 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_OTTAR_R2, ParcelRiver_Ottar_R2_Text_2
-# 1317 "data/maps/ParcelRiver/scripts.pory"
+# 1333 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R2_Text_3, MSGBOX_DEFAULT
-# 1318 "data/maps/ParcelRiver/scripts.pory"
+# 1334 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ottar_R2_2:
-# 1312 "data/maps/ParcelRiver/scripts.pory"
+# 1328 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R2_Text_1, MSGBOX_DEFAULT
-# 1313 "data/maps/ParcelRiver/scripts.pory"
+# 1329 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ottar_R3::
-# 1322 "data/maps/ParcelRiver/scripts.pory"
+# 1338 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1323 "data/maps/ParcelRiver/scripts.pory"
+# 1339 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1324 "data/maps/ParcelRiver/scripts.pory"
+# 1340 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R3_Text_0, MSGBOX_YESNO
-# 1325 "data/maps/ParcelRiver/scripts.pory"
+# 1341 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ottar_R3_2
-# 1330 "data/maps/ParcelRiver/scripts.pory"
+# 1346 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_OTTAR_R3, ParcelRiver_Ottar_R3_Text_1
-# 1331 "data/maps/ParcelRiver/scripts.pory"
+# 1347 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R3_Text_2, MSGBOX_DEFAULT
-# 1332 "data/maps/ParcelRiver/scripts.pory"
+# 1348 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ottar_R3_2:
-# 1326 "data/maps/ParcelRiver/scripts.pory"
+# 1342 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R2_Text_1, MSGBOX_DEFAULT
-# 1327 "data/maps/ParcelRiver/scripts.pory"
+# 1343 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ottar_R4::
-# 1336 "data/maps/ParcelRiver/scripts.pory"
+# 1352 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1337 "data/maps/ParcelRiver/scripts.pory"
+# 1353 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1338 "data/maps/ParcelRiver/scripts.pory"
+# 1354 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R4_Text_0, MSGBOX_YESNO
-# 1339 "data/maps/ParcelRiver/scripts.pory"
+# 1355 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ottar_R4_2
-# 1344 "data/maps/ParcelRiver/scripts.pory"
+# 1360 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_OTTAR_R4, ParcelRiver_Ottar_R4_Text_1
-# 1345 "data/maps/ParcelRiver/scripts.pory"
+# 1361 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R4_Text_2, MSGBOX_DEFAULT
-# 1346 "data/maps/ParcelRiver/scripts.pory"
+# 1362 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ottar_R4_2:
-# 1340 "data/maps/ParcelRiver/scripts.pory"
+# 1356 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R2_Text_1, MSGBOX_DEFAULT
-# 1341 "data/maps/ParcelRiver/scripts.pory"
+# 1357 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ottar_R5::
-# 1350 "data/maps/ParcelRiver/scripts.pory"
+# 1366 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1351 "data/maps/ParcelRiver/scripts.pory"
+# 1367 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1352 "data/maps/ParcelRiver/scripts.pory"
+# 1368 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R5_Text_0, MSGBOX_YESNO
-# 1353 "data/maps/ParcelRiver/scripts.pory"
+# 1369 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ottar_R5_2
-# 1358 "data/maps/ParcelRiver/scripts.pory"
+# 1374 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_OTTAR_R5, ParcelRiver_Ottar_R5_Text_1
-# 1359 "data/maps/ParcelRiver/scripts.pory"
+# 1375 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R5_Text_2, MSGBOX_DEFAULT
-# 1360 "data/maps/ParcelRiver/scripts.pory"
+# 1376 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ottar_R5_2:
-# 1354 "data/maps/ParcelRiver/scripts.pory"
+# 1370 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ottar_R2_Text_1, MSGBOX_DEFAULT
-# 1355 "data/maps/ParcelRiver/scripts.pory"
+# 1371 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Paal::
-# 1364 "data/maps/ParcelRiver/scripts.pory"
+# 1380 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_PAAL, ParcelRiver_Paal_Text_0, ParcelRiver_Paal_Text_1, ParcelRiver_Paal_FirstWin
-# 1368 "data/maps/ParcelRiver/scripts.pory"
+# 1384 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1369 "data/maps/ParcelRiver/scripts.pory"
+# 1385 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Paal_3
 ParcelRiver_Paal_1:
-# 1372 "data/maps/ParcelRiver/scripts.pory"
+# 1388 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Paal_8
 ParcelRiver_Paal_6:
-# 1375 "data/maps/ParcelRiver/scripts.pory"
+# 1391 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Paal_13
 ParcelRiver_Paal_11:
-# 1378 "data/maps/ParcelRiver/scripts.pory"
+# 1394 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Paal_18
 ParcelRiver_Paal_16:
-# 1381 "data/maps/ParcelRiver/scripts.pory"
+# 1397 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Paal_2:
-# 1370 "data/maps/ParcelRiver/scripts.pory"
+# 1386 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Paal_R2
 	goto ParcelRiver_Paal_1
 
 ParcelRiver_Paal_3:
-# 1369 "data/maps/ParcelRiver/scripts.pory"
+# 1385 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_PAAL_R2
 	goto_if 0, ParcelRiver_Paal_2
 	goto ParcelRiver_Paal_1
 
 ParcelRiver_Paal_7:
-# 1373 "data/maps/ParcelRiver/scripts.pory"
+# 1389 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Paal_R3
 	goto ParcelRiver_Paal_6
 
 ParcelRiver_Paal_8:
-# 1372 "data/maps/ParcelRiver/scripts.pory"
+# 1388 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_PAAL_R3
 	goto_if 0, ParcelRiver_Paal_7
 	goto ParcelRiver_Paal_6
 
 ParcelRiver_Paal_12:
-# 1376 "data/maps/ParcelRiver/scripts.pory"
+# 1392 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Paal_R4
 	goto ParcelRiver_Paal_11
 
 ParcelRiver_Paal_13:
-# 1375 "data/maps/ParcelRiver/scripts.pory"
+# 1391 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_PAAL_R4
 	goto_if 0, ParcelRiver_Paal_12
 	goto ParcelRiver_Paal_11
 
 ParcelRiver_Paal_17:
-# 1379 "data/maps/ParcelRiver/scripts.pory"
+# 1395 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Paal_R5
 	goto ParcelRiver_Paal_16
 
 ParcelRiver_Paal_18:
-# 1378 "data/maps/ParcelRiver/scripts.pory"
+# 1394 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_PAAL_R5
 	goto_if 0, ParcelRiver_Paal_17
 	goto ParcelRiver_Paal_16
 
 
 ParcelRiver_Paal_FirstWin::
-# 1385 "data/maps/ParcelRiver/scripts.pory"
+# 1401 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_Text_2, MSGBOX_DEFAULT
-# 1386 "data/maps/ParcelRiver/scripts.pory"
+# 1402 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Paal_R2::
-# 1390 "data/maps/ParcelRiver/scripts.pory"
+# 1406 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1391 "data/maps/ParcelRiver/scripts.pory"
+# 1407 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1392 "data/maps/ParcelRiver/scripts.pory"
+# 1408 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R2_Text_0, MSGBOX_YESNO
-# 1393 "data/maps/ParcelRiver/scripts.pory"
+# 1409 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Paal_R2_2
-# 1398 "data/maps/ParcelRiver/scripts.pory"
+# 1414 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_PAAL_R2, ParcelRiver_Paal_R2_Text_2
-# 1399 "data/maps/ParcelRiver/scripts.pory"
+# 1415 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R2_Text_3, MSGBOX_DEFAULT
-# 1400 "data/maps/ParcelRiver/scripts.pory"
+# 1416 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Paal_R2_2:
-# 1394 "data/maps/ParcelRiver/scripts.pory"
+# 1410 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R2_Text_1, MSGBOX_DEFAULT
-# 1395 "data/maps/ParcelRiver/scripts.pory"
+# 1411 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Paal_R3::
-# 1404 "data/maps/ParcelRiver/scripts.pory"
+# 1420 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1405 "data/maps/ParcelRiver/scripts.pory"
+# 1421 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1406 "data/maps/ParcelRiver/scripts.pory"
+# 1422 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R3_Text_0, MSGBOX_YESNO
-# 1407 "data/maps/ParcelRiver/scripts.pory"
+# 1423 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Paal_R3_2
-# 1412 "data/maps/ParcelRiver/scripts.pory"
+# 1428 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_PAAL_R3, ParcelRiver_Paal_R3_Text_1
-# 1413 "data/maps/ParcelRiver/scripts.pory"
+# 1429 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R3_Text_2, MSGBOX_DEFAULT
-# 1414 "data/maps/ParcelRiver/scripts.pory"
+# 1430 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Paal_R3_2:
-# 1408 "data/maps/ParcelRiver/scripts.pory"
+# 1424 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R2_Text_1, MSGBOX_DEFAULT
-# 1409 "data/maps/ParcelRiver/scripts.pory"
+# 1425 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Paal_R4::
-# 1418 "data/maps/ParcelRiver/scripts.pory"
+# 1434 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1419 "data/maps/ParcelRiver/scripts.pory"
+# 1435 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1420 "data/maps/ParcelRiver/scripts.pory"
+# 1436 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R4_Text_0, MSGBOX_YESNO
-# 1421 "data/maps/ParcelRiver/scripts.pory"
+# 1437 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Paal_R4_2
-# 1426 "data/maps/ParcelRiver/scripts.pory"
+# 1442 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_PAAL_R4, ParcelRiver_Paal_R2_Text_2
-# 1427 "data/maps/ParcelRiver/scripts.pory"
+# 1443 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R4_Text_1, MSGBOX_DEFAULT
-# 1428 "data/maps/ParcelRiver/scripts.pory"
+# 1444 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Paal_R4_2:
-# 1422 "data/maps/ParcelRiver/scripts.pory"
+# 1438 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R2_Text_1, MSGBOX_DEFAULT
-# 1423 "data/maps/ParcelRiver/scripts.pory"
+# 1439 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Paal_R5::
-# 1432 "data/maps/ParcelRiver/scripts.pory"
+# 1448 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1433 "data/maps/ParcelRiver/scripts.pory"
+# 1449 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1434 "data/maps/ParcelRiver/scripts.pory"
+# 1450 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R5_Text_0, MSGBOX_YESNO
-# 1435 "data/maps/ParcelRiver/scripts.pory"
+# 1451 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Paal_R5_2
-# 1440 "data/maps/ParcelRiver/scripts.pory"
+# 1456 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_PAAL_R5, ParcelRiver_Paal_R2_Text_2
-# 1441 "data/maps/ParcelRiver/scripts.pory"
+# 1457 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R5_Text_1, MSGBOX_DEFAULT
-# 1442 "data/maps/ParcelRiver/scripts.pory"
+# 1458 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Paal_R5_2:
-# 1436 "data/maps/ParcelRiver/scripts.pory"
+# 1452 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Paal_R2_Text_1, MSGBOX_DEFAULT
-# 1437 "data/maps/ParcelRiver/scripts.pory"
+# 1453 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ragna::
-# 1446 "data/maps/ParcelRiver/scripts.pory"
+# 1462 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_RAGNA, ParcelRiver_Ragna_Text_0, ParcelRiver_Ragna_Text_1, ParcelRiver_Ragna_FirstWin
-# 1450 "data/maps/ParcelRiver/scripts.pory"
+# 1466 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1451 "data/maps/ParcelRiver/scripts.pory"
+# 1467 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Ragna_3
 ParcelRiver_Ragna_1:
-# 1454 "data/maps/ParcelRiver/scripts.pory"
+# 1470 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Ragna_8
 ParcelRiver_Ragna_6:
-# 1457 "data/maps/ParcelRiver/scripts.pory"
+# 1473 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Ragna_13
 ParcelRiver_Ragna_11:
-# 1460 "data/maps/ParcelRiver/scripts.pory"
+# 1476 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Ragna_18
 ParcelRiver_Ragna_16:
-# 1463 "data/maps/ParcelRiver/scripts.pory"
+# 1479 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Ragna_2:
-# 1452 "data/maps/ParcelRiver/scripts.pory"
+# 1468 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ragna_R2
 	goto ParcelRiver_Ragna_1
 
 ParcelRiver_Ragna_3:
-# 1451 "data/maps/ParcelRiver/scripts.pory"
+# 1467 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_RAGNA_R2
 	goto_if 0, ParcelRiver_Ragna_2
 	goto ParcelRiver_Ragna_1
 
 ParcelRiver_Ragna_7:
-# 1455 "data/maps/ParcelRiver/scripts.pory"
+# 1471 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ragna_R3
 	goto ParcelRiver_Ragna_6
 
 ParcelRiver_Ragna_8:
-# 1454 "data/maps/ParcelRiver/scripts.pory"
+# 1470 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_RAGNA_R3
 	goto_if 0, ParcelRiver_Ragna_7
 	goto ParcelRiver_Ragna_6
 
 ParcelRiver_Ragna_12:
-# 1458 "data/maps/ParcelRiver/scripts.pory"
+# 1474 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ragna_R4
 	goto ParcelRiver_Ragna_11
 
 ParcelRiver_Ragna_13:
-# 1457 "data/maps/ParcelRiver/scripts.pory"
+# 1473 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_RAGNA_R4
 	goto_if 0, ParcelRiver_Ragna_12
 	goto ParcelRiver_Ragna_11
 
 ParcelRiver_Ragna_17:
-# 1461 "data/maps/ParcelRiver/scripts.pory"
+# 1477 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Ragna_R5
 	goto ParcelRiver_Ragna_16
 
 ParcelRiver_Ragna_18:
-# 1460 "data/maps/ParcelRiver/scripts.pory"
+# 1476 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_RAGNA_R5
 	goto_if 0, ParcelRiver_Ragna_17
 	goto ParcelRiver_Ragna_16
 
 
 ParcelRiver_Ragna_FirstWin::
-# 1467 "data/maps/ParcelRiver/scripts.pory"
+# 1483 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_Text_2, MSGBOX_DEFAULT
-# 1468 "data/maps/ParcelRiver/scripts.pory"
+# 1484 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ragna_R2::
-# 1472 "data/maps/ParcelRiver/scripts.pory"
+# 1488 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1473 "data/maps/ParcelRiver/scripts.pory"
+# 1489 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1474 "data/maps/ParcelRiver/scripts.pory"
+# 1490 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R2_Text_0, MSGBOX_YESNO
-# 1475 "data/maps/ParcelRiver/scripts.pory"
+# 1491 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ragna_R2_2
-# 1480 "data/maps/ParcelRiver/scripts.pory"
+# 1496 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_RAGNA_R2, ParcelRiver_Ragna_R2_Text_2
-# 1481 "data/maps/ParcelRiver/scripts.pory"
+# 1497 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R2_Text_3, MSGBOX_DEFAULT
-# 1482 "data/maps/ParcelRiver/scripts.pory"
+# 1498 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ragna_R2_2:
-# 1476 "data/maps/ParcelRiver/scripts.pory"
+# 1492 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R2_Text_1, MSGBOX_DEFAULT
-# 1477 "data/maps/ParcelRiver/scripts.pory"
+# 1493 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ragna_R3::
-# 1486 "data/maps/ParcelRiver/scripts.pory"
+# 1502 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1487 "data/maps/ParcelRiver/scripts.pory"
+# 1503 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1488 "data/maps/ParcelRiver/scripts.pory"
+# 1504 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R3_Text_0, MSGBOX_YESNO
-# 1489 "data/maps/ParcelRiver/scripts.pory"
+# 1505 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ragna_R3_2
-# 1494 "data/maps/ParcelRiver/scripts.pory"
+# 1510 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_RAGNA_R3, ParcelRiver_Ragna_R3_Text_1
-# 1495 "data/maps/ParcelRiver/scripts.pory"
+# 1511 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R3_Text_2, MSGBOX_DEFAULT
-# 1496 "data/maps/ParcelRiver/scripts.pory"
+# 1512 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ragna_R3_2:
-# 1490 "data/maps/ParcelRiver/scripts.pory"
+# 1506 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R2_Text_1, MSGBOX_DEFAULT
-# 1491 "data/maps/ParcelRiver/scripts.pory"
+# 1507 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ragna_R4::
-# 1500 "data/maps/ParcelRiver/scripts.pory"
+# 1516 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1501 "data/maps/ParcelRiver/scripts.pory"
+# 1517 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1502 "data/maps/ParcelRiver/scripts.pory"
+# 1518 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R4_Text_0, MSGBOX_YESNO
-# 1503 "data/maps/ParcelRiver/scripts.pory"
+# 1519 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ragna_R4_2
-# 1508 "data/maps/ParcelRiver/scripts.pory"
+# 1524 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_RAGNA_R4, ParcelRiver_Ragna_R4_Text_1
-# 1509 "data/maps/ParcelRiver/scripts.pory"
+# 1525 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R4_Text_2, MSGBOX_DEFAULT
-# 1510 "data/maps/ParcelRiver/scripts.pory"
+# 1526 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ragna_R4_2:
-# 1504 "data/maps/ParcelRiver/scripts.pory"
+# 1520 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R2_Text_1, MSGBOX_DEFAULT
-# 1505 "data/maps/ParcelRiver/scripts.pory"
+# 1521 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Ragna_R5::
-# 1514 "data/maps/ParcelRiver/scripts.pory"
+# 1530 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1515 "data/maps/ParcelRiver/scripts.pory"
+# 1531 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1516 "data/maps/ParcelRiver/scripts.pory"
+# 1532 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R5_Text_0, MSGBOX_YESNO
-# 1517 "data/maps/ParcelRiver/scripts.pory"
+# 1533 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Ragna_R5_2
-# 1522 "data/maps/ParcelRiver/scripts.pory"
+# 1538 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_RAGNA_R5, ParcelRiver_Ragna_R3_Text_1
-# 1523 "data/maps/ParcelRiver/scripts.pory"
+# 1539 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R5_Text_1, MSGBOX_DEFAULT
-# 1524 "data/maps/ParcelRiver/scripts.pory"
+# 1540 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Ragna_R5_2:
-# 1518 "data/maps/ParcelRiver/scripts.pory"
+# 1534 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Ragna_R2_Text_1, MSGBOX_DEFAULT
-# 1519 "data/maps/ParcelRiver/scripts.pory"
+# 1535 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Sigurd::
-# 1528 "data/maps/ParcelRiver/scripts.pory"
+# 1544 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_SIGURD, ParcelRiver_Sigurd_Text_0, ParcelRiver_Sigurd_Text_1, ParcelRiver_Sigurd_FirstWin
-# 1532 "data/maps/ParcelRiver/scripts.pory"
+# 1548 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1533 "data/maps/ParcelRiver/scripts.pory"
+# 1549 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_Sigurd_3
 ParcelRiver_Sigurd_1:
-# 1536 "data/maps/ParcelRiver/scripts.pory"
+# 1552 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_Sigurd_8
 ParcelRiver_Sigurd_6:
-# 1539 "data/maps/ParcelRiver/scripts.pory"
+# 1555 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_Sigurd_13
 ParcelRiver_Sigurd_11:
-# 1542 "data/maps/ParcelRiver/scripts.pory"
+# 1558 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_Sigurd_18
 ParcelRiver_Sigurd_16:
-# 1545 "data/maps/ParcelRiver/scripts.pory"
+# 1561 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_Sigurd_2:
-# 1534 "data/maps/ParcelRiver/scripts.pory"
+# 1550 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Sigurd_R2
 	goto ParcelRiver_Sigurd_1
 
 ParcelRiver_Sigurd_3:
-# 1533 "data/maps/ParcelRiver/scripts.pory"
+# 1549 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_SIGURD_R2
 	goto_if 0, ParcelRiver_Sigurd_2
 	goto ParcelRiver_Sigurd_1
 
 ParcelRiver_Sigurd_7:
-# 1537 "data/maps/ParcelRiver/scripts.pory"
+# 1553 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Sigurd_R3
 	goto ParcelRiver_Sigurd_6
 
 ParcelRiver_Sigurd_8:
-# 1536 "data/maps/ParcelRiver/scripts.pory"
+# 1552 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_SIGURD_R3
 	goto_if 0, ParcelRiver_Sigurd_7
 	goto ParcelRiver_Sigurd_6
 
 ParcelRiver_Sigurd_12:
-# 1540 "data/maps/ParcelRiver/scripts.pory"
+# 1556 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Sigurd_R4
 	goto ParcelRiver_Sigurd_11
 
 ParcelRiver_Sigurd_13:
-# 1539 "data/maps/ParcelRiver/scripts.pory"
+# 1555 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_SIGURD_R4
 	goto_if 0, ParcelRiver_Sigurd_12
 	goto ParcelRiver_Sigurd_11
 
 ParcelRiver_Sigurd_17:
-# 1543 "data/maps/ParcelRiver/scripts.pory"
+# 1559 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_Sigurd_R5
 	goto ParcelRiver_Sigurd_16
 
 ParcelRiver_Sigurd_18:
-# 1542 "data/maps/ParcelRiver/scripts.pory"
+# 1558 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_SIGURD_R5
 	goto_if 0, ParcelRiver_Sigurd_17
 	goto ParcelRiver_Sigurd_16
 
 
 ParcelRiver_Sigurd_FirstWin::
-# 1549 "data/maps/ParcelRiver/scripts.pory"
+# 1565 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_Text_2, MSGBOX_DEFAULT
-# 1550 "data/maps/ParcelRiver/scripts.pory"
+# 1566 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Sigurd_R2::
-# 1554 "data/maps/ParcelRiver/scripts.pory"
+# 1570 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1555 "data/maps/ParcelRiver/scripts.pory"
+# 1571 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1556 "data/maps/ParcelRiver/scripts.pory"
+# 1572 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R2_Text_0, MSGBOX_YESNO
-# 1557 "data/maps/ParcelRiver/scripts.pory"
+# 1573 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Sigurd_R2_2
-# 1562 "data/maps/ParcelRiver/scripts.pory"
+# 1578 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_SIGURD_R2, ParcelRiver_Sigurd_R2_Text_2
-# 1563 "data/maps/ParcelRiver/scripts.pory"
+# 1579 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R2_Text_3, MSGBOX_DEFAULT
-# 1564 "data/maps/ParcelRiver/scripts.pory"
+# 1580 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Sigurd_R2_2:
-# 1558 "data/maps/ParcelRiver/scripts.pory"
+# 1574 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R2_Text_1, MSGBOX_DEFAULT
-# 1559 "data/maps/ParcelRiver/scripts.pory"
+# 1575 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Sigurd_R3::
-# 1568 "data/maps/ParcelRiver/scripts.pory"
+# 1584 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1569 "data/maps/ParcelRiver/scripts.pory"
+# 1585 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1570 "data/maps/ParcelRiver/scripts.pory"
+# 1586 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R3_Text_0, MSGBOX_YESNO
-# 1571 "data/maps/ParcelRiver/scripts.pory"
+# 1587 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Sigurd_R3_2
-# 1576 "data/maps/ParcelRiver/scripts.pory"
+# 1592 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_SIGURD_R3, ParcelRiver_Sigurd_R3_Text_1
-# 1577 "data/maps/ParcelRiver/scripts.pory"
+# 1593 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R3_Text_2, MSGBOX_DEFAULT
-# 1578 "data/maps/ParcelRiver/scripts.pory"
+# 1594 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Sigurd_R3_2:
-# 1572 "data/maps/ParcelRiver/scripts.pory"
+# 1588 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R2_Text_1, MSGBOX_DEFAULT
-# 1573 "data/maps/ParcelRiver/scripts.pory"
+# 1589 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Sigurd_R4::
-# 1582 "data/maps/ParcelRiver/scripts.pory"
+# 1598 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1583 "data/maps/ParcelRiver/scripts.pory"
+# 1599 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1584 "data/maps/ParcelRiver/scripts.pory"
+# 1600 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R4_Text_0, MSGBOX_YESNO
-# 1585 "data/maps/ParcelRiver/scripts.pory"
+# 1601 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Sigurd_R4_2
-# 1590 "data/maps/ParcelRiver/scripts.pory"
+# 1606 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_SIGURD_R4, ParcelRiver_Sigurd_R4_Text_1
-# 1591 "data/maps/ParcelRiver/scripts.pory"
+# 1607 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R4_Text_2, MSGBOX_DEFAULT
-# 1592 "data/maps/ParcelRiver/scripts.pory"
+# 1608 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Sigurd_R4_2:
-# 1586 "data/maps/ParcelRiver/scripts.pory"
+# 1602 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R2_Text_1, MSGBOX_DEFAULT
-# 1587 "data/maps/ParcelRiver/scripts.pory"
+# 1603 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_Sigurd_R5::
-# 1596 "data/maps/ParcelRiver/scripts.pory"
+# 1612 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1597 "data/maps/ParcelRiver/scripts.pory"
+# 1613 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1598 "data/maps/ParcelRiver/scripts.pory"
+# 1614 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R5_Text_0, MSGBOX_YESNO
-# 1599 "data/maps/ParcelRiver/scripts.pory"
+# 1615 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_Sigurd_R5_2
-# 1604 "data/maps/ParcelRiver/scripts.pory"
+# 1620 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_SIGURD_R5, ParcelRiver_Sigurd_R5_Text_1
-# 1605 "data/maps/ParcelRiver/scripts.pory"
+# 1621 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R5_Text_2, MSGBOX_DEFAULT
-# 1606 "data/maps/ParcelRiver/scripts.pory"
+# 1622 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Sigurd_R5_2:
-# 1600 "data/maps/ParcelRiver/scripts.pory"
+# 1616 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Sigurd_R2_Text_1, MSGBOX_DEFAULT
-# 1601 "data/maps/ParcelRiver/scripts.pory"
+# 1617 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_ItemPotion::
-# 1611 "data/maps/ParcelRiver/scripts.pory"
+# 1627 "data/maps/ParcelRiver/scripts.pory"
 	finditem ITEM_HYPER_POTION
 	end
 
 
 ParcelRiver_ItemSuperRepel::
-# 1612 "data/maps/ParcelRiver/scripts.pory"
+# 1628 "data/maps/ParcelRiver/scripts.pory"
 	finditem ITEM_SUPER_REPEL
 	end
 
 
 ParcelRiver_ItemGreatBall::
-# 1613 "data/maps/ParcelRiver/scripts.pory"
+# 1629 "data/maps/ParcelRiver/scripts.pory"
 	finditem ITEM_GREAT_BALL
 	end
 
 
 ParcelRiver_ItemTM19::
-# 1614 "data/maps/ParcelRiver/scripts.pory"
+# 1630 "data/maps/ParcelRiver/scripts.pory"
 	finditem ITEM_TM19
 	end
 
 
 ParcelRiver_SignTown::
-# 1617 "data/maps/ParcelRiver/scripts.pory"
+# 1633 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_SignTown_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiver_SignBoard::
-# 1621 "data/maps/ParcelRiver/scripts.pory"
+# 1637 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_SignBoard_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiver_SignMarket::
-# 1625 "data/maps/ParcelRiver/scripts.pory"
+# 1641 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_SignMarket_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiver_T_Aud::
-# 1631 "data/maps/ParcelRiver/scripts.pory"
+# 1647 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_AUD, ParcelRiver_T_Aud_Text_0, ParcelRiver_T_Aud_Text_1, ParcelRiver_T_Aud_FirstWin
-# 1635 "data/maps/ParcelRiver/scripts.pory"
+# 1651 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1636 "data/maps/ParcelRiver/scripts.pory"
+# 1652 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_T_Aud_3
 ParcelRiver_T_Aud_1:
-# 1639 "data/maps/ParcelRiver/scripts.pory"
+# 1655 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_T_Aud_8
 ParcelRiver_T_Aud_6:
-# 1642 "data/maps/ParcelRiver/scripts.pory"
+# 1658 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_T_Aud_13
 ParcelRiver_T_Aud_11:
-# 1645 "data/maps/ParcelRiver/scripts.pory"
+# 1661 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_T_Aud_18
 ParcelRiver_T_Aud_16:
-# 1648 "data/maps/ParcelRiver/scripts.pory"
+# 1664 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_T_Aud_2:
-# 1637 "data/maps/ParcelRiver/scripts.pory"
+# 1653 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Aud_R2
 	goto ParcelRiver_T_Aud_1
 
 ParcelRiver_T_Aud_3:
-# 1636 "data/maps/ParcelRiver/scripts.pory"
+# 1652 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_AUD_R2
 	goto_if 0, ParcelRiver_T_Aud_2
 	goto ParcelRiver_T_Aud_1
 
 ParcelRiver_T_Aud_7:
-# 1640 "data/maps/ParcelRiver/scripts.pory"
+# 1656 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Aud_R3
 	goto ParcelRiver_T_Aud_6
 
 ParcelRiver_T_Aud_8:
-# 1639 "data/maps/ParcelRiver/scripts.pory"
+# 1655 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_AUD_R3
 	goto_if 0, ParcelRiver_T_Aud_7
 	goto ParcelRiver_T_Aud_6
 
 ParcelRiver_T_Aud_12:
-# 1643 "data/maps/ParcelRiver/scripts.pory"
+# 1659 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Aud_R4
 	goto ParcelRiver_T_Aud_11
 
 ParcelRiver_T_Aud_13:
-# 1642 "data/maps/ParcelRiver/scripts.pory"
+# 1658 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_AUD_R4
 	goto_if 0, ParcelRiver_T_Aud_12
 	goto ParcelRiver_T_Aud_11
 
 ParcelRiver_T_Aud_17:
-# 1646 "data/maps/ParcelRiver/scripts.pory"
+# 1662 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Aud_R5
 	goto ParcelRiver_T_Aud_16
 
 ParcelRiver_T_Aud_18:
-# 1645 "data/maps/ParcelRiver/scripts.pory"
+# 1661 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_AUD_R5
 	goto_if 0, ParcelRiver_T_Aud_17
 	goto ParcelRiver_T_Aud_16
 
 
 ParcelRiver_T_Aud_FirstWin::
-# 1652 "data/maps/ParcelRiver/scripts.pory"
+# 1668 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_Text_2, MSGBOX_DEFAULT
-# 1653 "data/maps/ParcelRiver/scripts.pory"
+# 1669 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Aud_R2::
-# 1657 "data/maps/ParcelRiver/scripts.pory"
+# 1673 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1658 "data/maps/ParcelRiver/scripts.pory"
+# 1674 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1659 "data/maps/ParcelRiver/scripts.pory"
+# 1675 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R2_Text_0, MSGBOX_YESNO
-# 1660 "data/maps/ParcelRiver/scripts.pory"
+# 1676 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Aud_R2_2
-# 1665 "data/maps/ParcelRiver/scripts.pory"
+# 1681 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_AUD_R2, ParcelRiver_T_Aud_R2_Text_2
-# 1666 "data/maps/ParcelRiver/scripts.pory"
+# 1682 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R2_Text_3, MSGBOX_DEFAULT
-# 1667 "data/maps/ParcelRiver/scripts.pory"
+# 1683 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Aud_R2_2:
-# 1661 "data/maps/ParcelRiver/scripts.pory"
+# 1677 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R2_Text_1, MSGBOX_DEFAULT
-# 1662 "data/maps/ParcelRiver/scripts.pory"
+# 1678 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Aud_R3::
-# 1671 "data/maps/ParcelRiver/scripts.pory"
+# 1687 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1672 "data/maps/ParcelRiver/scripts.pory"
+# 1688 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1673 "data/maps/ParcelRiver/scripts.pory"
+# 1689 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R3_Text_0, MSGBOX_YESNO
-# 1674 "data/maps/ParcelRiver/scripts.pory"
+# 1690 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Aud_R3_2
-# 1679 "data/maps/ParcelRiver/scripts.pory"
+# 1695 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_AUD_R3, ParcelRiver_T_Aud_R3_Text_1
-# 1680 "data/maps/ParcelRiver/scripts.pory"
+# 1696 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R3_Text_2, MSGBOX_DEFAULT
-# 1681 "data/maps/ParcelRiver/scripts.pory"
+# 1697 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Aud_R3_2:
-# 1675 "data/maps/ParcelRiver/scripts.pory"
+# 1691 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R2_Text_1, MSGBOX_DEFAULT
-# 1676 "data/maps/ParcelRiver/scripts.pory"
+# 1692 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Aud_R4::
-# 1685 "data/maps/ParcelRiver/scripts.pory"
+# 1701 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1686 "data/maps/ParcelRiver/scripts.pory"
+# 1702 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1687 "data/maps/ParcelRiver/scripts.pory"
+# 1703 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R4_Text_0, MSGBOX_YESNO
-# 1688 "data/maps/ParcelRiver/scripts.pory"
+# 1704 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Aud_R4_2
-# 1693 "data/maps/ParcelRiver/scripts.pory"
+# 1709 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_AUD_R4, ParcelRiver_T_Aud_R4_Text_1
-# 1694 "data/maps/ParcelRiver/scripts.pory"
+# 1710 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R4_Text_2, MSGBOX_DEFAULT
-# 1695 "data/maps/ParcelRiver/scripts.pory"
+# 1711 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Aud_R4_2:
-# 1689 "data/maps/ParcelRiver/scripts.pory"
+# 1705 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R2_Text_1, MSGBOX_DEFAULT
-# 1690 "data/maps/ParcelRiver/scripts.pory"
+# 1706 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Aud_R5::
-# 1699 "data/maps/ParcelRiver/scripts.pory"
+# 1715 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1700 "data/maps/ParcelRiver/scripts.pory"
+# 1716 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1701 "data/maps/ParcelRiver/scripts.pory"
+# 1717 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R5_Text_0, MSGBOX_YESNO
-# 1702 "data/maps/ParcelRiver/scripts.pory"
+# 1718 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Aud_R5_2
-# 1707 "data/maps/ParcelRiver/scripts.pory"
+# 1723 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_AUD_R5, ParcelRiver_T_Aud_R5_Text_1
-# 1708 "data/maps/ParcelRiver/scripts.pory"
+# 1724 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R5_Text_2, MSGBOX_DEFAULT
-# 1709 "data/maps/ParcelRiver/scripts.pory"
+# 1725 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Aud_R5_2:
-# 1703 "data/maps/ParcelRiver/scripts.pory"
+# 1719 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Aud_R2_Text_1, MSGBOX_DEFAULT
-# 1704 "data/maps/ParcelRiver/scripts.pory"
+# 1720 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Espen::
-# 1713 "data/maps/ParcelRiver/scripts.pory"
+# 1729 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_ESPEN, ParcelRiver_T_Espen_Text_0, ParcelRiver_T_Espen_Text_1, ParcelRiver_T_Espen_FirstWin
-# 1717 "data/maps/ParcelRiver/scripts.pory"
+# 1733 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1718 "data/maps/ParcelRiver/scripts.pory"
+# 1734 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_T_Espen_3
 ParcelRiver_T_Espen_1:
-# 1721 "data/maps/ParcelRiver/scripts.pory"
+# 1737 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_T_Espen_8
 ParcelRiver_T_Espen_6:
-# 1724 "data/maps/ParcelRiver/scripts.pory"
+# 1740 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_T_Espen_13
 ParcelRiver_T_Espen_11:
-# 1727 "data/maps/ParcelRiver/scripts.pory"
+# 1743 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_T_Espen_18
 ParcelRiver_T_Espen_16:
-# 1730 "data/maps/ParcelRiver/scripts.pory"
+# 1746 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_T_Espen_2:
-# 1719 "data/maps/ParcelRiver/scripts.pory"
+# 1735 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Espen_R2
 	goto ParcelRiver_T_Espen_1
 
 ParcelRiver_T_Espen_3:
-# 1718 "data/maps/ParcelRiver/scripts.pory"
+# 1734 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ESPEN_R2
 	goto_if 0, ParcelRiver_T_Espen_2
 	goto ParcelRiver_T_Espen_1
 
 ParcelRiver_T_Espen_7:
-# 1722 "data/maps/ParcelRiver/scripts.pory"
+# 1738 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Espen_R3
 	goto ParcelRiver_T_Espen_6
 
 ParcelRiver_T_Espen_8:
-# 1721 "data/maps/ParcelRiver/scripts.pory"
+# 1737 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ESPEN_R3
 	goto_if 0, ParcelRiver_T_Espen_7
 	goto ParcelRiver_T_Espen_6
 
 ParcelRiver_T_Espen_12:
-# 1725 "data/maps/ParcelRiver/scripts.pory"
+# 1741 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Espen_R4
 	goto ParcelRiver_T_Espen_11
 
 ParcelRiver_T_Espen_13:
-# 1724 "data/maps/ParcelRiver/scripts.pory"
+# 1740 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ESPEN_R4
 	goto_if 0, ParcelRiver_T_Espen_12
 	goto ParcelRiver_T_Espen_11
 
 ParcelRiver_T_Espen_17:
-# 1728 "data/maps/ParcelRiver/scripts.pory"
+# 1744 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Espen_R5
 	goto ParcelRiver_T_Espen_16
 
 ParcelRiver_T_Espen_18:
-# 1727 "data/maps/ParcelRiver/scripts.pory"
+# 1743 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_ESPEN_R5
 	goto_if 0, ParcelRiver_T_Espen_17
 	goto ParcelRiver_T_Espen_16
 
 
 ParcelRiver_T_Espen_FirstWin::
-# 1734 "data/maps/ParcelRiver/scripts.pory"
+# 1750 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_Text_2, MSGBOX_DEFAULT
-# 1735 "data/maps/ParcelRiver/scripts.pory"
+# 1751 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Espen_R2::
-# 1739 "data/maps/ParcelRiver/scripts.pory"
+# 1755 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1740 "data/maps/ParcelRiver/scripts.pory"
+# 1756 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1741 "data/maps/ParcelRiver/scripts.pory"
+# 1757 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R2_Text_0, MSGBOX_YESNO
-# 1742 "data/maps/ParcelRiver/scripts.pory"
+# 1758 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Espen_R2_2
-# 1747 "data/maps/ParcelRiver/scripts.pory"
+# 1763 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ESPEN_R2, ParcelRiver_T_Espen_R2_Text_2
-# 1748 "data/maps/ParcelRiver/scripts.pory"
+# 1764 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R2_Text_3, MSGBOX_DEFAULT
-# 1749 "data/maps/ParcelRiver/scripts.pory"
+# 1765 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Espen_R2_2:
-# 1743 "data/maps/ParcelRiver/scripts.pory"
+# 1759 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R2_Text_1, MSGBOX_DEFAULT
-# 1744 "data/maps/ParcelRiver/scripts.pory"
+# 1760 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Espen_R3::
-# 1753 "data/maps/ParcelRiver/scripts.pory"
+# 1769 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1754 "data/maps/ParcelRiver/scripts.pory"
+# 1770 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1755 "data/maps/ParcelRiver/scripts.pory"
+# 1771 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R3_Text_0, MSGBOX_YESNO
-# 1756 "data/maps/ParcelRiver/scripts.pory"
+# 1772 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Espen_R3_2
-# 1761 "data/maps/ParcelRiver/scripts.pory"
+# 1777 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ESPEN_R3, ParcelRiver_T_Espen_R3_Text_1
-# 1762 "data/maps/ParcelRiver/scripts.pory"
+# 1778 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R3_Text_2, MSGBOX_DEFAULT
-# 1763 "data/maps/ParcelRiver/scripts.pory"
+# 1779 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Espen_R3_2:
-# 1757 "data/maps/ParcelRiver/scripts.pory"
+# 1773 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R2_Text_1, MSGBOX_DEFAULT
-# 1758 "data/maps/ParcelRiver/scripts.pory"
+# 1774 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Espen_R4::
-# 1767 "data/maps/ParcelRiver/scripts.pory"
+# 1783 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1768 "data/maps/ParcelRiver/scripts.pory"
+# 1784 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1769 "data/maps/ParcelRiver/scripts.pory"
+# 1785 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R4_Text_0, MSGBOX_YESNO
-# 1770 "data/maps/ParcelRiver/scripts.pory"
+# 1786 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Espen_R4_2
-# 1775 "data/maps/ParcelRiver/scripts.pory"
+# 1791 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ESPEN_R4, ParcelRiver_T_Espen_R4_Text_1
-# 1776 "data/maps/ParcelRiver/scripts.pory"
+# 1792 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R4_Text_2, MSGBOX_DEFAULT
-# 1777 "data/maps/ParcelRiver/scripts.pory"
+# 1793 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Espen_R4_2:
-# 1771 "data/maps/ParcelRiver/scripts.pory"
+# 1787 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R2_Text_1, MSGBOX_DEFAULT
-# 1772 "data/maps/ParcelRiver/scripts.pory"
+# 1788 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Espen_R5::
-# 1781 "data/maps/ParcelRiver/scripts.pory"
+# 1797 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1782 "data/maps/ParcelRiver/scripts.pory"
+# 1798 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1783 "data/maps/ParcelRiver/scripts.pory"
+# 1799 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R5_Text_0, MSGBOX_YESNO
-# 1784 "data/maps/ParcelRiver/scripts.pory"
+# 1800 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Espen_R5_2
-# 1789 "data/maps/ParcelRiver/scripts.pory"
+# 1805 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_ESPEN_R5, ParcelRiver_T_Espen_R2_Text_2
-# 1790 "data/maps/ParcelRiver/scripts.pory"
+# 1806 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R5_Text_1, MSGBOX_DEFAULT
-# 1791 "data/maps/ParcelRiver/scripts.pory"
+# 1807 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Espen_R5_2:
-# 1785 "data/maps/ParcelRiver/scripts.pory"
+# 1801 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Espen_R2_Text_1, MSGBOX_DEFAULT
-# 1786 "data/maps/ParcelRiver/scripts.pory"
+# 1802 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Trygve::
-# 1795 "data/maps/ParcelRiver/scripts.pory"
+# 1811 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_RIV_TRYGVE, ParcelRiver_T_Trygve_Text_0, ParcelRiver_T_Trygve_Text_1, ParcelRiver_T_Trygve_FirstWin
-# 1799 "data/maps/ParcelRiver/scripts.pory"
+# 1815 "data/maps/ParcelRiver/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1800 "data/maps/ParcelRiver/scripts.pory"
+# 1816 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelRiver_T_Trygve_3
 ParcelRiver_T_Trygve_1:
-# 1803 "data/maps/ParcelRiver/scripts.pory"
+# 1819 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelRiver_T_Trygve_8
 ParcelRiver_T_Trygve_6:
-# 1806 "data/maps/ParcelRiver/scripts.pory"
+# 1822 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelRiver_T_Trygve_13
 ParcelRiver_T_Trygve_11:
-# 1809 "data/maps/ParcelRiver/scripts.pory"
+# 1825 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelRiver_T_Trygve_18
 ParcelRiver_T_Trygve_16:
-# 1812 "data/maps/ParcelRiver/scripts.pory"
+# 1828 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelRiver_T_Trygve_2:
-# 1801 "data/maps/ParcelRiver/scripts.pory"
+# 1817 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Trygve_R2
 	goto ParcelRiver_T_Trygve_1
 
 ParcelRiver_T_Trygve_3:
-# 1800 "data/maps/ParcelRiver/scripts.pory"
+# 1816 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_TRYGVE_R2
 	goto_if 0, ParcelRiver_T_Trygve_2
 	goto ParcelRiver_T_Trygve_1
 
 ParcelRiver_T_Trygve_7:
-# 1804 "data/maps/ParcelRiver/scripts.pory"
+# 1820 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Trygve_R3
 	goto ParcelRiver_T_Trygve_6
 
 ParcelRiver_T_Trygve_8:
-# 1803 "data/maps/ParcelRiver/scripts.pory"
+# 1819 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_TRYGVE_R3
 	goto_if 0, ParcelRiver_T_Trygve_7
 	goto ParcelRiver_T_Trygve_6
 
 ParcelRiver_T_Trygve_12:
-# 1807 "data/maps/ParcelRiver/scripts.pory"
+# 1823 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Trygve_R4
 	goto ParcelRiver_T_Trygve_11
 
 ParcelRiver_T_Trygve_13:
-# 1806 "data/maps/ParcelRiver/scripts.pory"
+# 1822 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_TRYGVE_R4
 	goto_if 0, ParcelRiver_T_Trygve_12
 	goto ParcelRiver_T_Trygve_11
 
 ParcelRiver_T_Trygve_17:
-# 1810 "data/maps/ParcelRiver/scripts.pory"
+# 1826 "data/maps/ParcelRiver/scripts.pory"
 	goto ParcelRiver_T_Trygve_R5
 	goto ParcelRiver_T_Trygve_16
 
 ParcelRiver_T_Trygve_18:
-# 1809 "data/maps/ParcelRiver/scripts.pory"
+# 1825 "data/maps/ParcelRiver/scripts.pory"
 	checktrainerflag TRAINER_SKALD_RIV_TRYGVE_R5
 	goto_if 0, ParcelRiver_T_Trygve_17
 	goto ParcelRiver_T_Trygve_16
 
 
 ParcelRiver_T_Trygve_FirstWin::
-# 1816 "data/maps/ParcelRiver/scripts.pory"
+# 1832 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_Text_2, MSGBOX_DEFAULT
-# 1817 "data/maps/ParcelRiver/scripts.pory"
+# 1833 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Trygve_R2::
-# 1821 "data/maps/ParcelRiver/scripts.pory"
+# 1837 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1822 "data/maps/ParcelRiver/scripts.pory"
+# 1838 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1823 "data/maps/ParcelRiver/scripts.pory"
+# 1839 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R2_Text_0, MSGBOX_YESNO
-# 1824 "data/maps/ParcelRiver/scripts.pory"
+# 1840 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Trygve_R2_2
-# 1829 "data/maps/ParcelRiver/scripts.pory"
+# 1845 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_TRYGVE_R2, ParcelRiver_T_Trygve_R2_Text_2
-# 1830 "data/maps/ParcelRiver/scripts.pory"
+# 1846 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R2_Text_3, MSGBOX_DEFAULT
-# 1831 "data/maps/ParcelRiver/scripts.pory"
+# 1847 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Trygve_R2_2:
-# 1825 "data/maps/ParcelRiver/scripts.pory"
+# 1841 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R2_Text_1, MSGBOX_DEFAULT
-# 1826 "data/maps/ParcelRiver/scripts.pory"
+# 1842 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Trygve_R3::
-# 1835 "data/maps/ParcelRiver/scripts.pory"
+# 1851 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1836 "data/maps/ParcelRiver/scripts.pory"
+# 1852 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1837 "data/maps/ParcelRiver/scripts.pory"
+# 1853 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R3_Text_0, MSGBOX_YESNO
-# 1838 "data/maps/ParcelRiver/scripts.pory"
+# 1854 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Trygve_R3_2
-# 1843 "data/maps/ParcelRiver/scripts.pory"
+# 1859 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_TRYGVE_R3, ParcelRiver_T_Trygve_R3_Text_1
-# 1844 "data/maps/ParcelRiver/scripts.pory"
+# 1860 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R3_Text_2, MSGBOX_DEFAULT
-# 1845 "data/maps/ParcelRiver/scripts.pory"
+# 1861 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Trygve_R3_2:
-# 1839 "data/maps/ParcelRiver/scripts.pory"
+# 1855 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R2_Text_1, MSGBOX_DEFAULT
-# 1840 "data/maps/ParcelRiver/scripts.pory"
+# 1856 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Trygve_R4::
-# 1849 "data/maps/ParcelRiver/scripts.pory"
+# 1865 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1850 "data/maps/ParcelRiver/scripts.pory"
+# 1866 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1851 "data/maps/ParcelRiver/scripts.pory"
+# 1867 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R4_Text_0, MSGBOX_YESNO
-# 1852 "data/maps/ParcelRiver/scripts.pory"
+# 1868 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Trygve_R4_2
-# 1857 "data/maps/ParcelRiver/scripts.pory"
+# 1873 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_TRYGVE_R4, ParcelRiver_T_Trygve_R3_Text_1
-# 1858 "data/maps/ParcelRiver/scripts.pory"
+# 1874 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R4_Text_1, MSGBOX_DEFAULT
-# 1859 "data/maps/ParcelRiver/scripts.pory"
+# 1875 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Trygve_R4_2:
-# 1853 "data/maps/ParcelRiver/scripts.pory"
+# 1869 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R2_Text_1, MSGBOX_DEFAULT
-# 1854 "data/maps/ParcelRiver/scripts.pory"
+# 1870 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_T_Trygve_R5::
-# 1863 "data/maps/ParcelRiver/scripts.pory"
+# 1879 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1864 "data/maps/ParcelRiver/scripts.pory"
+# 1880 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1865 "data/maps/ParcelRiver/scripts.pory"
+# 1881 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R5_Text_0, MSGBOX_YESNO
-# 1866 "data/maps/ParcelRiver/scripts.pory"
+# 1882 "data/maps/ParcelRiver/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiver_T_Trygve_R5_2
-# 1871 "data/maps/ParcelRiver/scripts.pory"
+# 1887 "data/maps/ParcelRiver/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_RIV_TRYGVE_R5, ParcelRiver_T_Trygve_R5_Text_1
-# 1872 "data/maps/ParcelRiver/scripts.pory"
+# 1888 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R5_Text_2, MSGBOX_DEFAULT
-# 1873 "data/maps/ParcelRiver/scripts.pory"
+# 1889 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_T_Trygve_R5_2:
-# 1867 "data/maps/ParcelRiver/scripts.pory"
+# 1883 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_T_Trygve_R2_Text_1, MSGBOX_DEFAULT
-# 1868 "data/maps/ParcelRiver/scripts.pory"
+# 1884 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
 ParcelRiver_BeaverStump::
-# 1879 "data/maps/ParcelRiver/scripts.pory"
+# 1895 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1880 "data/maps/ParcelRiver/scripts.pory"
+# 1896 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_BEAVER, ParcelRiver_BeaverStump_3
 ParcelRiver_BeaverStump_1:
-# 1886 "data/maps/ParcelRiver/scripts.pory"
+# 1902 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_BeaverStump_Text_1, MSGBOX_SIGN
-# 1887 "data/maps/ParcelRiver/scripts.pory"
+# 1903 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_BeaverStump_2:
-# 1881 "data/maps/ParcelRiver/scripts.pory"
+# 1897 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_BeaverStump_Text_0, MSGBOX_SIGN
-# 1882 "data/maps/ParcelRiver/scripts.pory"
+# 1898 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_Q_BEAVER_SEEN
-# 1883 "data/maps/ParcelRiver/scripts.pory"
+# 1899 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_BeaverStump_3:
-# 1880 "data/maps/ParcelRiver/scripts.pory"
+# 1896 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_BEAVER_SEEN, ParcelRiver_BeaverStump_2
 	goto ParcelRiver_BeaverStump_1
 
 
 ParcelRiver_PerrinScene::
-# 1893 "data/maps/ParcelRiver/scripts.pory"
-	goto_if_set FLAG_SKALD_PERRIN_4, ParcelRiver_PerrinScene_2
-# 1897 "data/maps/ParcelRiver/scripts.pory"
-	lockall
-# 1898 "data/maps/ParcelRiver/scripts.pory"
-	playse SE_PIN
-# 1899 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PerrinScene_Text_0, MSGBOX_DEFAULT
-# 1900 "data/maps/ParcelRiver/scripts.pory"
-	closemessage
-# 1901 "data/maps/ParcelRiver/scripts.pory"
-	applymovement 34, Movement_ParcelRiver_PerrinIn
-# 1902 "data/maps/ParcelRiver/scripts.pory"
-	waitmovement 0
-# 1903 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PerrinScene_Text_1, MSGBOX_DEFAULT
-# 1904 "data/maps/ParcelRiver/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_PERRIN_4, ParcelRiver_PerrinScene_Text_2
-# 1905 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PerrinScene_Text_3, MSGBOX_DEFAULT
-# 1906 "data/maps/ParcelRiver/scripts.pory"
-	closemessage
-# 1907 "data/maps/ParcelRiver/scripts.pory"
-	applymovement 34, Movement_ParcelRiver_PerrinOut
-# 1908 "data/maps/ParcelRiver/scripts.pory"
-	waitmovement 0
 # 1909 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALD_PERRIN_4, ParcelRiver_PerrinScene_2
+# 1913 "data/maps/ParcelRiver/scripts.pory"
+	lockall
+# 1914 "data/maps/ParcelRiver/scripts.pory"
+	playse SE_PIN
+# 1915 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PerrinScene_Text_0, MSGBOX_DEFAULT
+# 1916 "data/maps/ParcelRiver/scripts.pory"
+	closemessage
+# 1917 "data/maps/ParcelRiver/scripts.pory"
+	applymovement 34, Movement_ParcelRiver_PerrinIn
+# 1918 "data/maps/ParcelRiver/scripts.pory"
+	waitmovement 0
+# 1919 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PerrinScene_Text_1, MSGBOX_DEFAULT
+# 1920 "data/maps/ParcelRiver/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_PERRIN_4, ParcelRiver_PerrinScene_Text_2
+# 1921 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PerrinScene_Text_3, MSGBOX_DEFAULT
+# 1922 "data/maps/ParcelRiver/scripts.pory"
+	closemessage
+# 1923 "data/maps/ParcelRiver/scripts.pory"
+	applymovement 34, Movement_ParcelRiver_PerrinOut
+# 1924 "data/maps/ParcelRiver/scripts.pory"
+	waitmovement 0
+# 1925 "data/maps/ParcelRiver/scripts.pory"
 	removeobject 34
-# 1910 "data/maps/ParcelRiver/scripts.pory"
+# 1926 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_PERRIN_4
-# 1911 "data/maps/ParcelRiver/scripts.pory"
+# 1927 "data/maps/ParcelRiver/scripts.pory"
 	setvar VAR_TEMP_5, 1
-# 1912 "data/maps/ParcelRiver/scripts.pory"
+# 1928 "data/maps/ParcelRiver/scripts.pory"
 	releaseall
 	end
 
 ParcelRiver_PerrinScene_2:
-# 1894 "data/maps/ParcelRiver/scripts.pory"
+# 1910 "data/maps/ParcelRiver/scripts.pory"
 	setvar VAR_TEMP_5, 1
 	end
 
 
 ParcelRiver_PerrinTalk::
-# 1916 "data/maps/ParcelRiver/scripts.pory"
+# 1932 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1917 "data/maps/ParcelRiver/scripts.pory"
+# 1933 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 1918 "data/maps/ParcelRiver/scripts.pory"
+# 1934 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PerrinTalk_Text_0, MSGBOX_DEFAULT
-# 1919 "data/maps/ParcelRiver/scripts.pory"
+# 1935 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 
-# 1922 "data/maps/ParcelRiver/scripts.pory"
+# 1938 "data/maps/ParcelRiver/scripts.pory"
 Movement_ParcelRiver_PerrinIn:
-# 1922 "data/maps/ParcelRiver/scripts.pory"
+# 1938 "data/maps/ParcelRiver/scripts.pory"
 	walk_down
-# 1922 "data/maps/ParcelRiver/scripts.pory"
+# 1938 "data/maps/ParcelRiver/scripts.pory"
 	walk_down
 	step_end
 
-# 1923 "data/maps/ParcelRiver/scripts.pory"
+# 1939 "data/maps/ParcelRiver/scripts.pory"
 Movement_ParcelRiver_PerrinOut:
-# 1923 "data/maps/ParcelRiver/scripts.pory"
+# 1939 "data/maps/ParcelRiver/scripts.pory"
 	walk_up
-# 1923 "data/maps/ParcelRiver/scripts.pory"
+# 1939 "data/maps/ParcelRiver/scripts.pory"
 	walk_up
 	step_end
 
 ParcelRiver_Epilogue::
-# 1927 "data/maps/ParcelRiver/scripts.pory"
+# 1943 "data/maps/ParcelRiver/scripts.pory"
 	lockall
-# 1928 "data/maps/ParcelRiver/scripts.pory"
+# 1944 "data/maps/ParcelRiver/scripts.pory"
 	delay 20
-# 1929 "data/maps/ParcelRiver/scripts.pory"
+# 1945 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Epilogue_Text_0, MSGBOX_DEFAULT
-# 1930 "data/maps/ParcelRiver/scripts.pory"
+# 1946 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Epilogue_Text_1, MSGBOX_DEFAULT
-# 1931 "data/maps/ParcelRiver/scripts.pory"
+# 1947 "data/maps/ParcelRiver/scripts.pory"
 	closemessage
-# 1932 "data/maps/ParcelRiver/scripts.pory"
+# 1948 "data/maps/ParcelRiver/scripts.pory"
 	setvar VAR_SKALD_EPILOGUE, 4
-# 1933 "data/maps/ParcelRiver/scripts.pory"
+# 1949 "data/maps/ParcelRiver/scripts.pory"
 	warp MAP_PARCEL_HIGHLANDS, 20, 68
-# 1934 "data/maps/ParcelRiver/scripts.pory"
+# 1950 "data/maps/ParcelRiver/scripts.pory"
 	waitstate
 	end
 
 
 ParcelRiver_ToMillWood::
-# 1940 "data/maps/ParcelRiver/scripts.pory"
+# 1956 "data/maps/ParcelRiver/scripts.pory"
 	warp MAP_PARCEL_RIVER_MILL_WOOD, 36, 37
-# 1941 "data/maps/ParcelRiver/scripts.pory"
+# 1957 "data/maps/ParcelRiver/scripts.pory"
 	waitstate
 	end
 
 
 ParcelRiver_Hives::
-# 1946 "data/maps/ParcelRiver/scripts.pory"
+# 1962 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_HIVES, ParcelRiver_Hives_2
-# 1949 "data/maps/ParcelRiver/scripts.pory"
+# 1965 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Hives_Text_0, MSGBOX_SIGN
-# 1950 "data/maps/ParcelRiver/scripts.pory"
+# 1966 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_Q_HIVES_FOUND
 	end
 
@@ -4037,192 +4075,214 @@ ParcelRiver_Hives_2:
 
 
 ParcelRiver_SurveyStake::
-# 1956 "data/maps/ParcelRiver/scripts.pory"
+# 1972 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_SurveyStake_Text_0, MSGBOX_SIGN
-# 1957 "data/maps/ParcelRiver/scripts.pory"
+# 1973 "data/maps/ParcelRiver/scripts.pory"
 	setvar VAR_0x8004, 3
-# 1958 "data/maps/ParcelRiver/scripts.pory"
+# 1974 "data/maps/ParcelRiver/scripts.pory"
 	special SkaldSurveyStake
-# 1959 "data/maps/ParcelRiver/scripts.pory"
+# 1975 "data/maps/ParcelRiver/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
-# 1960 "data/maps/ParcelRiver/scripts.pory"
+# 1976 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_SECOND, ParcelRiver_SurveyStake_3
 ParcelRiver_SurveyStake_1:
 	end
 
 ParcelRiver_SurveyStake_2:
-# 1961 "data/maps/ParcelRiver/scripts.pory"
+# 1977 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_SurveyStake_Text_1, MSGBOX_SIGN
-# 1962 "data/maps/ParcelRiver/scripts.pory"
+# 1978 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_SECOND_3
 	goto ParcelRiver_SurveyStake_1
 
 ParcelRiver_SurveyStake_3:
-# 1960 "data/maps/ParcelRiver/scripts.pory"
+# 1976 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_unset FLAG_SKALD_SECOND_3, ParcelRiver_SurveyStake_2
 	goto ParcelRiver_SurveyStake_1
 
 
 ParcelRiver_PairMeter::
-# 1970 "data/maps/ParcelRiver/scripts.pory"
+# 1986 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 1971 "data/maps/ParcelRiver/scripts.pory"
+# 1987 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairMeter_2
-# 1976 "data/maps/ParcelRiver/scripts.pory"
+# 1992 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairMeter_3
-# 1982 "data/maps/ParcelRiver/scripts.pory"
+# 1998 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_8, MSGBOX_DEFAULT
-# 1983 "data/maps/ParcelRiver/scripts.pory"
+# 1999 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_9, MSGBOX_DEFAULT
-# 1984 "data/maps/ParcelRiver/scripts.pory"
+# 2000 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_10, MSGBOX_DEFAULT
-# 1985 "data/maps/ParcelRiver/scripts.pory"
+# 2001 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_11, MSGBOX_DEFAULT
 ParcelRiver_PairMeter_1:
-# 1987 "data/maps/ParcelRiver/scripts.pory"
+# 2003 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_PairMeter_2:
-# 1972 "data/maps/ParcelRiver/scripts.pory"
+# 1988 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_0, MSGBOX_DEFAULT
-# 1973 "data/maps/ParcelRiver/scripts.pory"
+# 1989 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_1, MSGBOX_DEFAULT
-# 1974 "data/maps/ParcelRiver/scripts.pory"
+# 1990 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_2, MSGBOX_DEFAULT
-# 1975 "data/maps/ParcelRiver/scripts.pory"
+# 1991 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_3, MSGBOX_DEFAULT
 	goto ParcelRiver_PairMeter_1
 
 ParcelRiver_PairMeter_3:
-# 1977 "data/maps/ParcelRiver/scripts.pory"
+# 1993 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_4, MSGBOX_DEFAULT
-# 1978 "data/maps/ParcelRiver/scripts.pory"
+# 1994 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_5, MSGBOX_DEFAULT
-# 1979 "data/maps/ParcelRiver/scripts.pory"
+# 1995 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_6, MSGBOX_DEFAULT
-# 1980 "data/maps/ParcelRiver/scripts.pory"
+# 1996 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairMeter_Text_7, MSGBOX_DEFAULT
 	goto ParcelRiver_PairMeter_1
 
 
 ParcelRiver_PairFord::
-# 1992 "data/maps/ParcelRiver/scripts.pory"
-	lock
-# 1993 "data/maps/ParcelRiver/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairFord_2
-# 1999 "data/maps/ParcelRiver/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairFord_3
-# 2005 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PairFord_Text_9, MSGBOX_DEFAULT
-# 2006 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PairFord_Text_10, MSGBOX_DEFAULT
-# 2007 "data/maps/ParcelRiver/scripts.pory"
-	msgbox ParcelRiver_PairFord_Text_11, MSGBOX_DEFAULT
 # 2008 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 2009 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairFord_2
+# 2015 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairFord_3
+# 2021 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_9, MSGBOX_DEFAULT
+# 2022 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_10, MSGBOX_DEFAULT
+# 2023 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_11, MSGBOX_DEFAULT
+# 2024 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_12, MSGBOX_DEFAULT
 ParcelRiver_PairFord_1:
-# 2010 "data/maps/ParcelRiver/scripts.pory"
+# 2026 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_PairFord_2:
-# 1994 "data/maps/ParcelRiver/scripts.pory"
+# 2010 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_0, MSGBOX_DEFAULT
-# 1995 "data/maps/ParcelRiver/scripts.pory"
+# 2011 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_1, MSGBOX_DEFAULT
-# 1996 "data/maps/ParcelRiver/scripts.pory"
+# 2012 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_2, MSGBOX_DEFAULT
-# 1997 "data/maps/ParcelRiver/scripts.pory"
+# 2013 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_3, MSGBOX_DEFAULT
-# 1998 "data/maps/ParcelRiver/scripts.pory"
+# 2014 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_4, MSGBOX_DEFAULT
 	goto ParcelRiver_PairFord_1
 
 ParcelRiver_PairFord_3:
-# 2000 "data/maps/ParcelRiver/scripts.pory"
+# 2016 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_5, MSGBOX_DEFAULT
-# 2001 "data/maps/ParcelRiver/scripts.pory"
+# 2017 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_6, MSGBOX_DEFAULT
-# 2002 "data/maps/ParcelRiver/scripts.pory"
+# 2018 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_7, MSGBOX_DEFAULT
-# 2003 "data/maps/ParcelRiver/scripts.pory"
+# 2019 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_PairFord_Text_8, MSGBOX_DEFAULT
 	goto ParcelRiver_PairFord_1
 
 
 ParcelRiver_Stringer::
-# 2017 "data/maps/ParcelRiver/scripts.pory"
+# 2033 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 2018 "data/maps/ParcelRiver/scripts.pory"
+# 2034 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 2019 "data/maps/ParcelRiver/scripts.pory"
+# 2035 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_Stringer_2
-# 2021 "data/maps/ParcelRiver/scripts.pory"
+# 2037 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_Stringer_3
-# 2028 "data/maps/ParcelRiver/scripts.pory"
+# 2044 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Stringer_Text_3, MSGBOX_DEFAULT
 ParcelRiver_Stringer_1:
-# 2030 "data/maps/ParcelRiver/scripts.pory"
+# 2046 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_Stringer_2:
-# 2020 "data/maps/ParcelRiver/scripts.pory"
+# 2036 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Stringer_Text_0, MSGBOX_DEFAULT
 	goto ParcelRiver_Stringer_1
 
 ParcelRiver_Stringer_3:
-# 2022 "data/maps/ParcelRiver/scripts.pory"
+# 2038 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_CH_SPOKE, ParcelRiver_Stringer_7
-# 2025 "data/maps/ParcelRiver/scripts.pory"
+# 2041 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Stringer_Text_2, MSGBOX_DEFAULT
 	goto ParcelRiver_Stringer_1
 
 ParcelRiver_Stringer_7:
-# 2023 "data/maps/ParcelRiver/scripts.pory"
+# 2039 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_Stringer_Text_1, MSGBOX_DEFAULT
 	goto ParcelRiver_Stringer_1
 
 
 ParcelRiver_FordBoy::
-# 2037 "data/maps/ParcelRiver/scripts.pory"
+# 2053 "data/maps/ParcelRiver/scripts.pory"
 	lock
-# 2038 "data/maps/ParcelRiver/scripts.pory"
+# 2054 "data/maps/ParcelRiver/scripts.pory"
 	faceplayer
-# 2039 "data/maps/ParcelRiver/scripts.pory"
+# 2055 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_BOOK_DONE, ParcelRiver_FordBoy_2
-# 2041 "data/maps/ParcelRiver/scripts.pory"
+# 2057 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_BOOK, ParcelRiver_FordBoy_3
-# 2050 "data/maps/ParcelRiver/scripts.pory"
+# 2066 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_FordBoy_Text_3, MSGBOX_DEFAULT
-# 2051 "data/maps/ParcelRiver/scripts.pory"
+# 2067 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_Q_BOOK
 ParcelRiver_FordBoy_1:
-# 2053 "data/maps/ParcelRiver/scripts.pory"
+# 2069 "data/maps/ParcelRiver/scripts.pory"
 	release
 	end
 
 ParcelRiver_FordBoy_2:
-# 2040 "data/maps/ParcelRiver/scripts.pory"
+# 2056 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_FordBoy_Text_0, MSGBOX_DEFAULT
 	goto ParcelRiver_FordBoy_1
 
 ParcelRiver_FordBoy_3:
-# 2042 "data/maps/ParcelRiver/scripts.pory"
+# 2058 "data/maps/ParcelRiver/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_BOOK_FOUND, ParcelRiver_FordBoy_7
-# 2047 "data/maps/ParcelRiver/scripts.pory"
+# 2063 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_FordBoy_Text_2, MSGBOX_DEFAULT
 	goto ParcelRiver_FordBoy_1
 
 ParcelRiver_FordBoy_7:
-# 2043 "data/maps/ParcelRiver/scripts.pory"
+# 2059 "data/maps/ParcelRiver/scripts.pory"
 	msgbox ParcelRiver_FordBoy_Text_1, MSGBOX_DEFAULT
-# 2044 "data/maps/ParcelRiver/scripts.pory"
+# 2060 "data/maps/ParcelRiver/scripts.pory"
 	giveitem ITEM_NET_BALL, 3
-# 2045 "data/maps/ParcelRiver/scripts.pory"
+# 2061 "data/maps/ParcelRiver/scripts.pory"
 	setflag FLAG_SKALD_Q_BOOK_DONE
 	goto ParcelRiver_FordBoy_1
+
+
+ParcelRiver_FindDepth::
+# 2076 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_DEPTH, ParcelRiver_FindDepth_4
+ParcelRiver_FindDepth_3:
+# 2080 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_FindDepth_Text_1, MSGBOX_SIGN
+ParcelRiver_FindDepth_1:
+	end
+
+ParcelRiver_FindDepth_2:
+# 2077 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_FindDepth_Text_0, MSGBOX_SIGN
+# 2078 "data/maps/ParcelRiver/scripts.pory"
+	setflag FLAG_SKALD_Q_DEPTH_FOUND
+	goto ParcelRiver_FindDepth_1
+
+ParcelRiver_FindDepth_4:
+# 2076 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_DEPTH_FOUND, ParcelRiver_FindDepth_2
+	goto ParcelRiver_FindDepth_3
 
 
 ParcelRiver_FirstEntry_Text_0:
@@ -4769,14 +4829,39 @@ ParcelRiver_Boy_Text_2:
 	.string "freezing.$"
 
 ParcelRiver_PondFisher_Text_0:
-# 403 "data/maps/ParcelRiver/scripts.pory"
+# 404 "data/maps/ParcelRiver/scripts.pory"
+	.string "FISHER: Still there. Two hands over\n"
+	.string "theirs, red under white, and the river at\l"
+	.string "neither. His was right in his year and\l"
+	.string "theirs is right in theirs and the water's\l"
+	.string "walked away from both.\p"
+	.string "Take these. Catch something in the pool\n"
+	.string "while there's a pool.$"
+
+ParcelRiver_PondFisher_Text_1:
+# 408 "data/maps/ParcelRiver/scripts.pory"
+	.string "FISHER: The pier at the pool. Red lead\n"
+	.string "under the Board's white. Two hands up.$"
+
+ParcelRiver_PondFisher_Text_2:
+# 413 "data/maps/ParcelRiver/scripts.pory"
+	.string "FISHER: The pool below the ford had a\n"
+	.string "depth mark painted on the pier, my\l"
+	.string "grandfather's, in red lead. The Board\l"
+	.string "painted their own over it when the\l"
+	.string "gauge went in.\p"
+	.string "Go and see if his is still under theirs.\n"
+	.string "It'd be two hands higher, if it's there.$"
+
+ParcelRiver_PondFisher_Text_3:
+# 419 "data/maps/ParcelRiver/scripts.pory"
 	.string "FISHER: I fish the town pond. Stocked.\n"
 	.string "The river's getting better below the\l"
 	.string "plots, they say. I'll fish it when I\l"
 	.string "believe them. Not yet. Soon, maybe.$"
 
-ParcelRiver_PondFisher_Text_1:
-# 408 "data/maps/ParcelRiver/scripts.pory"
+ParcelRiver_PondFisher_Text_4:
+# 424 "data/maps/ParcelRiver/scripts.pory"
 	.string "FISHER: Stocked pond, stocked fish. Up\n"
 	.string "at HAUKFELL they've got a stocked\l"
 	.string "house now, they tell me. A grant and a\l"
@@ -4784,20 +4869,20 @@ ParcelRiver_PondFisher_Text_1:
 	.string "Same thing. Not the same. The fish know.\n"
 	.string "The people know.$"
 
-ParcelRiver_PondFisher_Text_2:
-# 412 "data/maps/ParcelRiver/scripts.pory"
+ParcelRiver_PondFisher_Text_5:
+# 428 "data/maps/ParcelRiver/scripts.pory"
 	.string "FISHER: I fish the town pond now.\n"
 	.string "Stocked. It's not the same, but it's not\l"
 	.string "green either.$"
 
 ParcelRiver_AnglerTrainer_Text_0:
-# 422 "data/maps/ParcelRiver/scripts.pory"
+# 438 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Forty years on this reach. You're\n"
 	.string "the first one came up here to LOOK\l"
 	.string "instead of promise. Means something.$"
 
 ParcelRiver_AnglerTrainer_Text_1:
-# 427 "data/maps/ParcelRiver/scripts.pory"
+# 443 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: That's it! That's the one. My\n"
 	.string "father's. Snagged it on the gravel\l"
 	.string "above town thirty years back and never\l"
@@ -4805,7 +4890,7 @@ ParcelRiver_AnglerTrainer_Text_1:
 	.string "You went and looked. Nobody looks.$"
 
 ParcelRiver_AnglerTrainer_Text_2:
-# 428 "data/maps/ParcelRiver/scripts.pory"
+# 444 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Take the rod. The good one. I'm\n"
 	.string "done with the big water; my knees say\l"
 	.string "so.\p"
@@ -4814,25 +4899,25 @@ ParcelRiver_AnglerTrainer_Text_2:
 	.string "many.$"
 
 ParcelRiver_AnglerTrainer_Text_3:
-# 435 "data/maps/ParcelRiver/scripts.pory"
+# 451 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Above the town, on the gravel,\n"
 	.string "where the water's still clear. A brass\l"
 	.string "lure. You'd see it if anyone would.$"
 
 ParcelRiver_AnglerTrainer_Text_4:
-# 441 "data/maps/ParcelRiver/scripts.pory"
+# 457 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Forty years I worked this reach.\n"
 	.string "Pulled SEAKING out by the armful, once.\p"
 	.string "Now look at it. Battle me. I could use\n"
 	.string "the distraction.$"
 
 ParcelRiver_AnglerTrainer_Text_5:
-# 442 "data/maps/ParcelRiver/scripts.pory"
+# 458 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Hah. You've still got the eye for\n"
 	.string "it. Wish the river did.$"
 
 ParcelRiver_AnglerTrainer_Text_6:
-# 443 "data/maps/ParcelRiver/scripts.pory"
+# 459 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: The Board swears the cut'll bring\n"
 	.string "the fish back. The Board swears a lot of\l"
 	.string "things.\p"
@@ -4843,1066 +4928,1066 @@ ParcelRiver_AnglerTrainer_Text_6:
 	.string "that clear water, it's you.$"
 
 ParcelRiver_Lure_Text_0:
-# 450 "data/maps/ParcelRiver/scripts.pory"
+# 466 "data/maps/ParcelRiver/scripts.pory"
 	.string "Something glints on the gravel under\n"
 	.string "the clear water. A brass lure, green with\l"
 	.string "age, the hook long gone.\p"
 	.string "Fished out.$"
 
 ParcelRiver_Lure_Text_1:
-# 455 "data/maps/ParcelRiver/scripts.pory"
+# 471 "data/maps/ParcelRiver/scripts.pory"
 	.string "Clear water over clean gravel. You can\n"
 	.string "count the stones.$"
 
 ParcelRiver_Arna_Text_0:
-# 463 "data/maps/ParcelRiver/scripts.pory"
+# 479 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: The flower plots are the best\n"
 	.string "picnic in the district. Shame about the\l"
 	.string "smell off the river. Battle?$"
 
 ParcelRiver_Arna_Text_1:
-# 464 "data/maps/ParcelRiver/scripts.pory"
+# 480 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: Lovely. Now go away, I'm eating.$"
 
 ParcelRiver_Arna_Text_2:
-# 479 "data/maps/ParcelRiver/scripts.pory"
+# 495 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: ROSELIA only grow above the town\n"
 	.string "now. Below it, nothing with a scent.$"
 
 ParcelRiver_Arna_R2_Text_0:
-# 490 "data/maps/ParcelRiver/scripts.pory"
+# 506 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelRiver_Arna_R2_Text_1:
-# 492 "data/maps/ParcelRiver/scripts.pory"
+# 508 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelRiver_Arna_R2_Text_2:
-# 496 "data/maps/ParcelRiver/scripts.pory"
+# 512 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: …Again, then. Later.$"
 
 ParcelRiver_Arna_R2_Text_3:
-# 497 "data/maps/ParcelRiver/scripts.pory"
+# 513 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_Arna_R3_Text_0:
-# 504 "data/maps/ParcelRiver/scripts.pory"
+# 520 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelRiver_Arna_R3_Text_1:
-# 510 "data/maps/ParcelRiver/scripts.pory"
+# 526 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: Right. That's the whole of it.$"
 
 ParcelRiver_Arna_R3_Text_2:
-# 511 "data/maps/ParcelRiver/scripts.pory"
+# 527 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Arna_R4_Text_0:
-# 518 "data/maps/ParcelRiver/scripts.pory"
+# 534 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: Full strength, no excuses, mine or\n"
 	.string "yours. Rematch?$"
 
 ParcelRiver_Arna_R4_Text_1:
-# 524 "data/maps/ParcelRiver/scripts.pory"
+# 540 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: Still yours.$"
 
 ParcelRiver_Arna_R4_Text_2:
-# 525 "data/maps/ParcelRiver/scripts.pory"
+# 541 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelRiver_Arna_R5_Text_0:
-# 532 "data/maps/ParcelRiver/scripts.pory"
+# 548 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelRiver_Arna_R5_Text_1:
-# 538 "data/maps/ParcelRiver/scripts.pory"
+# 554 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: That's the one I wanted to see.$"
 
 ParcelRiver_Arna_R5_Text_2:
-# 539 "data/maps/ParcelRiver/scripts.pory"
+# 555 "data/maps/ParcelRiver/scripts.pory"
 	.string "ARNA: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelRiver_Botolv_Text_0:
-# 545 "data/maps/ParcelRiver/scripts.pory"
+# 561 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Camped on the high meadow a\n"
 	.string "week. Seen the Board's boat go up and\l"
 	.string "down six times. Seen you once. Battle.$"
 
 ParcelRiver_Botolv_Text_1:
-# 546 "data/maps/ParcelRiver/scripts.pory"
+# 562 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Once was enough.$"
 
 ParcelRiver_Botolv_Text_2:
-# 561 "data/maps/ParcelRiver/scripts.pory"
+# 577 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: They're surveying the upstream\n"
 	.string "reach. Stakes, every fifty paces.\l"
 	.string "That's the clean bit. Why stake the\l"
 	.string "clean bit?$"
 
 ParcelRiver_Botolv_R2_Text_0:
-# 572 "data/maps/ParcelRiver/scripts.pory"
+# 588 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelRiver_Botolv_R2_Text_1:
-# 574 "data/maps/ParcelRiver/scripts.pory"
+# 590 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: No hurry. The water keeps.$"
 
 ParcelRiver_Botolv_R2_Text_2:
-# 578 "data/maps/ParcelRiver/scripts.pory"
+# 594 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: That's the one I wanted to see.$"
 
 ParcelRiver_Botolv_R2_Text_3:
-# 579 "data/maps/ParcelRiver/scripts.pory"
+# 595 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelRiver_Botolv_R3_Text_0:
-# 586 "data/maps/ParcelRiver/scripts.pory"
+# 602 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelRiver_Botolv_R3_Text_1:
-# 592 "data/maps/ParcelRiver/scripts.pory"
+# 608 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: …Fair.$"
 
 ParcelRiver_Botolv_R3_Text_2:
-# 593 "data/maps/ParcelRiver/scripts.pory"
+# 609 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelRiver_Botolv_R4_Text_0:
-# 600 "data/maps/ParcelRiver/scripts.pory"
+# 616 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelRiver_Botolv_R4_Text_1:
-# 606 "data/maps/ParcelRiver/scripts.pory"
+# 622 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Right. That's the whole of it.$"
 
 ParcelRiver_Botolv_R4_Text_2:
-# 607 "data/maps/ParcelRiver/scripts.pory"
+# 623 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Botolv_R5_Text_0:
-# 614 "data/maps/ParcelRiver/scripts.pory"
+# 630 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelRiver_Botolv_R5_Text_1:
-# 621 "data/maps/ParcelRiver/scripts.pory"
+# 637 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOTOLV: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelRiver_Gudrun_Text_0:
-# 627 "data/maps/ParcelRiver/scripts.pory"
+# 643 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: ILLUMISE light up over the\n"
 	.string "ponds at dusk. Fewer every summer. My\l"
 	.string "mum says I imagine it. Battle me and tell\l"
 	.string "me I don't.$"
 
 ParcelRiver_Gudrun_Text_1:
-# 628 "data/maps/ParcelRiver/scripts.pory"
+# 644 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: You don't think I imagine it.\n"
 	.string "Good.$"
 
 ParcelRiver_Gudrun_Text_2:
-# 643 "data/maps/ParcelRiver/scripts.pory"
+# 659 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: Twelve last summer. Seven this\n"
 	.string "one. I count. Somebody has to.$"
 
 ParcelRiver_Gudrun_R2_Text_0:
-# 654 "data/maps/ParcelRiver/scripts.pory"
+# 670 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelRiver_Gudrun_R2_Text_1:
-# 656 "data/maps/ParcelRiver/scripts.pory"
+# 672 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelRiver_Gudrun_R2_Text_2:
-# 660 "data/maps/ParcelRiver/scripts.pory"
+# 676 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: …Again, then. Later.$"
 
 ParcelRiver_Gudrun_R2_Text_3:
-# 661 "data/maps/ParcelRiver/scripts.pory"
+# 677 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelRiver_Gudrun_R3_Text_0:
-# 668 "data/maps/ParcelRiver/scripts.pory"
+# 684 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelRiver_Gudrun_R3_Text_1:
-# 674 "data/maps/ParcelRiver/scripts.pory"
+# 690 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: …Fair.$"
 
 ParcelRiver_Gudrun_R3_Text_2:
-# 675 "data/maps/ParcelRiver/scripts.pory"
+# 691 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Gudrun_R4_Text_0:
-# 682 "data/maps/ParcelRiver/scripts.pory"
+# 698 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelRiver_Gudrun_R4_Text_1:
-# 688 "data/maps/ParcelRiver/scripts.pory"
+# 704 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: Right. That's the whole of it.$"
 
 ParcelRiver_Gudrun_R4_Text_2:
-# 689 "data/maps/ParcelRiver/scripts.pory"
+# 705 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Gudrun_R5_Text_0:
-# 696 "data/maps/ParcelRiver/scripts.pory"
+# 712 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelRiver_Gudrun_R5_Text_1:
-# 703 "data/maps/ParcelRiver/scripts.pory"
+# 719 "data/maps/ParcelRiver/scripts.pory"
 	.string "GUDRUN: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelRiver_Havard_Text_0:
-# 709 "data/maps/ParcelRiver/scripts.pory"
+# 725 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Pond's stocked by the Board.\n"
 	.string "Twice a year. You catch one, you thank\l"
 	.string "the Board. Battle?$"
 
 ParcelRiver_Havard_Text_1:
-# 710 "data/maps/ParcelRiver/scripts.pory"
+# 726 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Don't thank me. Thank the\n"
 	.string "Board.$"
 
 ParcelRiver_Havard_Text_2:
-# 725 "data/maps/ParcelRiver/scripts.pory"
+# 741 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Stocked fish don't breed. You\n"
 	.string "know that, right? They put them in, we\l"
 	.string "take them out. That's not a river.\l"
 	.string "That's a shop.$"
 
 ParcelRiver_Havard_R2_Text_0:
-# 736 "data/maps/ParcelRiver/scripts.pory"
+# 752 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelRiver_Havard_R2_Text_1:
-# 738 "data/maps/ParcelRiver/scripts.pory"
+# 754 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Another time, then.$"
 
 ParcelRiver_Havard_R2_Text_2:
-# 742 "data/maps/ParcelRiver/scripts.pory"
+# 758 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Still yours.$"
 
 ParcelRiver_Havard_R2_Text_3:
-# 743 "data/maps/ParcelRiver/scripts.pory"
+# 759 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelRiver_Havard_R3_Text_0:
-# 750 "data/maps/ParcelRiver/scripts.pory"
+# 766 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelRiver_Havard_R3_Text_1:
-# 756 "data/maps/ParcelRiver/scripts.pory"
+# 772 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: That's the one I wanted to see.$"
 
 ParcelRiver_Havard_R3_Text_2:
-# 757 "data/maps/ParcelRiver/scripts.pory"
+# 773 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelRiver_Havard_R4_Text_0:
-# 764 "data/maps/ParcelRiver/scripts.pory"
+# 780 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelRiver_Havard_R4_Text_1:
-# 770 "data/maps/ParcelRiver/scripts.pory"
+# 786 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: …Fair.$"
 
 ParcelRiver_Havard_R4_Text_2:
-# 771 "data/maps/ParcelRiver/scripts.pory"
+# 787 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Havard_R5_Text_0:
-# 778 "data/maps/ParcelRiver/scripts.pory"
+# 794 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelRiver_Havard_R5_Text_1:
-# 785 "data/maps/ParcelRiver/scripts.pory"
+# 801 "data/maps/ParcelRiver/scripts.pory"
 	.string "HAVARD: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelRiver_Idun_Text_0:
-# 791 "data/maps/ParcelRiver/scripts.pory"
+# 807 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Cadet IDUN. ILEX has me counting\n"
 	.string "larvae under stones. Spar first. Then\l"
 	.string "I'll show you my count.$"
 
 ParcelRiver_Idun_Text_1:
-# 792 "data/maps/ParcelRiver/scripts.pory"
+# 808 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Eighteen species above the town.\n"
 	.string "Four below. That's my count.$"
 
 ParcelRiver_Idun_Text_2:
-# 807 "data/maps/ParcelRiver/scripts.pory"
+# 823 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: ILEX says don't call it dead until\n"
 	.string "you've turned every stone. I turned\l"
 	.string "every stone. It's not dead. Yet.$"
 
 ParcelRiver_Idun_R2_Text_0:
-# 818 "data/maps/ParcelRiver/scripts.pory"
+# 834 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Back this way? I've not been idle.\n"
 	.string "Rematch?$"
 
 ParcelRiver_Idun_R2_Text_1:
-# 820 "data/maps/ParcelRiver/scripts.pory"
+# 836 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Another time, then.$"
 
 ParcelRiver_Idun_R2_Text_2:
-# 824 "data/maps/ParcelRiver/scripts.pory"
+# 840 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: …Fair.$"
 
 ParcelRiver_Idun_R2_Text_3:
-# 825 "data/maps/ParcelRiver/scripts.pory"
+# 841 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_Idun_R3_Text_0:
-# 832 "data/maps/ParcelRiver/scripts.pory"
+# 848 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelRiver_Idun_R3_Text_1:
-# 838 "data/maps/ParcelRiver/scripts.pory"
+# 854 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: …Again, then. Later.$"
 
 ParcelRiver_Idun_R3_Text_2:
-# 839 "data/maps/ParcelRiver/scripts.pory"
+# 855 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelRiver_Idun_R4_Text_0:
-# 846 "data/maps/ParcelRiver/scripts.pory"
+# 862 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Full strength, no excuses, mine or\n"
 	.string "yours. Rematch?$"
 
 ParcelRiver_Idun_R4_Text_1:
-# 852 "data/maps/ParcelRiver/scripts.pory"
+# 868 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Right. That's the whole of it.$"
 
 ParcelRiver_Idun_R4_Text_2:
-# 853 "data/maps/ParcelRiver/scripts.pory"
+# 869 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Idun_R5_Text_0:
-# 860 "data/maps/ParcelRiver/scripts.pory"
+# 876 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelRiver_Idun_R5_Text_1:
-# 867 "data/maps/ParcelRiver/scripts.pory"
+# 883 "data/maps/ParcelRiver/scripts.pory"
 	.string "IDUN: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelRiver_Joar_Text_0:
-# 873 "data/maps/ParcelRiver/scripts.pory"
+# 889 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: The plots have the best bugs. The\n"
 	.string "farmer lets me in if I don't tread the\l"
 	.string "rows. You're treading the rows.$"
 
 ParcelRiver_Joar_Text_1:
-# 874 "data/maps/ParcelRiver/scripts.pory"
+# 890 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Fine, tread them.$"
 
 ParcelRiver_Joar_Text_2:
-# 889 "data/maps/ParcelRiver/scripts.pory"
+# 905 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: VOLBEAT in the plots, none in the\n"
 	.string "fields below. The fields below get the\l"
 	.string "sacks with the crest on.$"
 
 ParcelRiver_Joar_R2_Text_0:
-# 900 "data/maps/ParcelRiver/scripts.pory"
+# 916 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelRiver_Joar_R2_Text_1:
-# 902 "data/maps/ParcelRiver/scripts.pory"
+# 918 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Another time, then.$"
 
 ParcelRiver_Joar_R2_Text_2:
-# 906 "data/maps/ParcelRiver/scripts.pory"
+# 922 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Noted. Properly, this time.$"
 
 ParcelRiver_Joar_R2_Text_3:
-# 907 "data/maps/ParcelRiver/scripts.pory"
+# 923 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelRiver_Joar_R3_Text_0:
-# 914 "data/maps/ParcelRiver/scripts.pory"
+# 930 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelRiver_Joar_R3_Text_1:
-# 920 "data/maps/ParcelRiver/scripts.pory"
+# 936 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: That's the one I wanted to see.$"
 
 ParcelRiver_Joar_R3_Text_2:
-# 921 "data/maps/ParcelRiver/scripts.pory"
+# 937 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Joar_R4_Text_0:
-# 928 "data/maps/ParcelRiver/scripts.pory"
+# 944 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelRiver_Joar_R4_Text_1:
-# 934 "data/maps/ParcelRiver/scripts.pory"
+# 950 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Still yours.$"
 
 ParcelRiver_Joar_R4_Text_2:
-# 935 "data/maps/ParcelRiver/scripts.pory"
+# 951 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Joar_R5_Text_0:
-# 942 "data/maps/ParcelRiver/scripts.pory"
+# 958 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelRiver_Joar_R5_Text_1:
-# 949 "data/maps/ParcelRiver/scripts.pory"
+# 965 "data/maps/ParcelRiver/scripts.pory"
 	.string "JOAR: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelRiver_Kari_Text_0:
-# 955 "data/maps/ParcelRiver/scripts.pory"
+# 971 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: The puddles by the depot are the\n"
 	.string "only wet ground the Board hasn't\l"
 	.string "metered. Yet. Battle!$"
 
 ParcelRiver_Kari_Text_1:
-# 956 "data/maps/ParcelRiver/scripts.pory"
+# 972 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: Metered that, didn't you.$"
 
 ParcelRiver_Kari_Text_2:
-# 971 "data/maps/ParcelRiver/scripts.pory"
+# 987 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: The depot pays by weight. Nobody\n"
 	.string "asks what's in the sacks they sell you\l"
 	.string "for the weight.$"
 
 ParcelRiver_Kari_R2_Text_0:
-# 982 "data/maps/ParcelRiver/scripts.pory"
+# 998 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: Back this way? I've not been idle.\n"
 	.string "Rematch?$"
 
 ParcelRiver_Kari_R2_Text_1:
-# 984 "data/maps/ParcelRiver/scripts.pory"
+# 1000 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: Fine. Same spot.$"
 
 ParcelRiver_Kari_R2_Text_2:
-# 988 "data/maps/ParcelRiver/scripts.pory"
+# 1004 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: That's the one I wanted to see.$"
 
 ParcelRiver_Kari_R2_Text_3:
-# 989 "data/maps/ParcelRiver/scripts.pory"
+# 1005 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelRiver_Kari_R3_Text_0:
-# 996 "data/maps/ParcelRiver/scripts.pory"
+# 1012 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelRiver_Kari_R3_Text_1:
-# 1002 "data/maps/ParcelRiver/scripts.pory"
+# 1018 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: Right. That's the whole of it.$"
 
 ParcelRiver_Kari_R3_Text_2:
-# 1003 "data/maps/ParcelRiver/scripts.pory"
+# 1019 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Kari_R4_Text_0:
-# 1010 "data/maps/ParcelRiver/scripts.pory"
+# 1026 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelRiver_Kari_R4_Text_1:
-# 1017 "data/maps/ParcelRiver/scripts.pory"
+# 1033 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelRiver_Kari_R5_Text_0:
-# 1024 "data/maps/ParcelRiver/scripts.pory"
+# 1040 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: I heard what you filed. Then show\n"
 	.string "me what filed it?$"
 
 ParcelRiver_Kari_R5_Text_1:
-# 1030 "data/maps/ParcelRiver/scripts.pory"
+# 1046 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: …Fair.$"
 
 ParcelRiver_Kari_R5_Text_2:
-# 1031 "data/maps/ParcelRiver/scripts.pory"
+# 1047 "data/maps/ParcelRiver/scripts.pory"
 	.string "KARI: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelRiver_Lars_Text_0:
-# 1037 "data/maps/ParcelRiver/scripts.pory"
+# 1053 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: The rocks by the pond are the\n"
 	.string "only rocks for a mile. I'm a HIKER. I take\l"
 	.string "what I can get. Battle.$"
 
 ParcelRiver_Lars_Text_1:
-# 1038 "data/maps/ParcelRiver/scripts.pory"
+# 1054 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: Take that, then.$"
 
 ParcelRiver_Lars_Text_2:
-# 1053 "data/maps/ParcelRiver/scripts.pory"
+# 1069 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: The mountain's north, past the\n"
 	.string "clean water. It's got proper rock. And a\l"
 	.string "MEREHOLT office at the top of the pass,\l"
 	.string "I hear.$"
 
 ParcelRiver_Lars_R2_Text_0:
-# 1064 "data/maps/ParcelRiver/scripts.pory"
+# 1080 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelRiver_Lars_R2_Text_1:
-# 1066 "data/maps/ParcelRiver/scripts.pory"
+# 1082 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: Suit yourself. I'm here.$"
 
 ParcelRiver_Lars_R2_Text_2:
-# 1070 "data/maps/ParcelRiver/scripts.pory"
+# 1086 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: Still yours.$"
 
 ParcelRiver_Lars_R2_Text_3:
-# 1071 "data/maps/ParcelRiver/scripts.pory"
+# 1087 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_Lars_R3_Text_0:
-# 1078 "data/maps/ParcelRiver/scripts.pory"
+# 1094 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelRiver_Lars_R3_Text_1:
-# 1084 "data/maps/ParcelRiver/scripts.pory"
+# 1100 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: …Fair.$"
 
 ParcelRiver_Lars_R3_Text_2:
-# 1085 "data/maps/ParcelRiver/scripts.pory"
+# 1101 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Lars_R4_Text_0:
-# 1092 "data/maps/ParcelRiver/scripts.pory"
+# 1108 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelRiver_Lars_R4_Text_1:
-# 1099 "data/maps/ParcelRiver/scripts.pory"
+# 1115 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelRiver_Lars_R5_Text_0:
-# 1106 "data/maps/ParcelRiver/scripts.pory"
+# 1122 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: I heard what you filed. Then show\n"
 	.string "me what filed it?$"
 
 ParcelRiver_Lars_R5_Text_1:
-# 1112 "data/maps/ParcelRiver/scripts.pory"
+# 1128 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: That's the one I wanted to see.$"
 
 ParcelRiver_Lars_R5_Text_2:
-# 1113 "data/maps/ParcelRiver/scripts.pory"
+# 1129 "data/maps/ParcelRiver/scripts.pory"
 	.string "LARS: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelRiver_Marit_Text_0:
-# 1119 "data/maps/ParcelRiver/scripts.pory"
+# 1135 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: I live on the farm. The field\n"
 	.string "drain runs under my window. I know what\l"
 	.string "the river smells like at night. Battle?$"
 
 ParcelRiver_Marit_Text_1:
-# 1120 "data/maps/ParcelRiver/scripts.pory"
+# 1136 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Smells better than losing.$"
 
 ParcelRiver_Marit_Text_2:
-# 1135 "data/maps/ParcelRiver/scripts.pory"
+# 1151 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Dad would dig the buffer strip\n"
 	.string "tomorrow. Two rows. Nobody's paying for\l"
 	.string "two rows.$"
 
 ParcelRiver_Marit_R2_Text_0:
-# 1146 "data/maps/ParcelRiver/scripts.pory"
+# 1162 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Back this way? I've not been\n"
 	.string "idle. Rematch?$"
 
 ParcelRiver_Marit_R2_Text_1:
-# 1148 "data/maps/ParcelRiver/scripts.pory"
+# 1164 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelRiver_Marit_R2_Text_2:
-# 1152 "data/maps/ParcelRiver/scripts.pory"
+# 1168 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: That's the one I wanted to see.$"
 
 ParcelRiver_Marit_R2_Text_3:
-# 1153 "data/maps/ParcelRiver/scripts.pory"
+# 1169 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_Marit_R3_Text_0:
-# 1160 "data/maps/ParcelRiver/scripts.pory"
+# 1176 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelRiver_Marit_R3_Text_1:
-# 1166 "data/maps/ParcelRiver/scripts.pory"
+# 1182 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Noted. Properly, this time.$"
 
 ParcelRiver_Marit_R3_Text_2:
-# 1167 "data/maps/ParcelRiver/scripts.pory"
+# 1183 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Marit_R4_Text_0:
-# 1174 "data/maps/ParcelRiver/scripts.pory"
+# 1190 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelRiver_Marit_R4_Text_1:
-# 1180 "data/maps/ParcelRiver/scripts.pory"
+# 1196 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: Still yours.$"
 
 ParcelRiver_Marit_R4_Text_2:
-# 1181 "data/maps/ParcelRiver/scripts.pory"
+# 1197 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelRiver_Marit_R5_Text_0:
-# 1188 "data/maps/ParcelRiver/scripts.pory"
+# 1204 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelRiver_Marit_R5_Text_1:
-# 1194 "data/maps/ParcelRiver/scripts.pory"
+# 1210 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: …Again, then. Later.$"
 
 ParcelRiver_Marit_R5_Text_2:
-# 1195 "data/maps/ParcelRiver/scripts.pory"
+# 1211 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARIT: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelRiver_Njal_Text_0:
-# 1201 "data/maps/ParcelRiver/scripts.pory"
+# 1217 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: ELECTRIKE from the power line\n"
 	.string "cut, north of here. Fastest thing in the\l"
 	.string "valley. Battle!$"
 
 ParcelRiver_Njal_Text_1:
-# 1202 "data/maps/ParcelRiver/scripts.pory"
+# 1218 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Fast, not strong. Noted.$"
 
 ParcelRiver_Njal_Text_2:
-# 1217 "data/maps/ParcelRiver/scripts.pory"
+# 1233 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: They strung the line to the Board\n"
 	.string "office last year. For the meters. The\l"
 	.string "meters need power. The farms didn't.$"
 
 ParcelRiver_Njal_R2_Text_0:
-# 1228 "data/maps/ParcelRiver/scripts.pory"
+# 1244 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelRiver_Njal_R2_Text_1:
-# 1230 "data/maps/ParcelRiver/scripts.pory"
+# 1246 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Another time, then.$"
 
 ParcelRiver_Njal_R2_Text_2:
-# 1234 "data/maps/ParcelRiver/scripts.pory"
+# 1250 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Noted. Properly, this time.$"
 
 ParcelRiver_Njal_R2_Text_3:
-# 1235 "data/maps/ParcelRiver/scripts.pory"
+# 1251 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelRiver_Njal_R3_Text_0:
-# 1242 "data/maps/ParcelRiver/scripts.pory"
+# 1258 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelRiver_Njal_R3_Text_1:
-# 1248 "data/maps/ParcelRiver/scripts.pory"
+# 1264 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Still yours.$"
 
 ParcelRiver_Njal_R3_Text_2:
-# 1249 "data/maps/ParcelRiver/scripts.pory"
+# 1265 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Njal_R4_Text_0:
-# 1256 "data/maps/ParcelRiver/scripts.pory"
+# 1272 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelRiver_Njal_R4_Text_1:
-# 1262 "data/maps/ParcelRiver/scripts.pory"
+# 1278 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: …Again, then. Later.$"
 
 ParcelRiver_Njal_R4_Text_2:
-# 1263 "data/maps/ParcelRiver/scripts.pory"
+# 1279 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Njal_R5_Text_0:
-# 1270 "data/maps/ParcelRiver/scripts.pory"
+# 1286 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelRiver_Njal_R5_Text_1:
-# 1276 "data/maps/ParcelRiver/scripts.pory"
+# 1292 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: …Fair.$"
 
 ParcelRiver_Njal_R5_Text_2:
-# 1277 "data/maps/ParcelRiver/scripts.pory"
+# 1293 "data/maps/ParcelRiver/scripts.pory"
 	.string "NJAL: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelRiver_Ottar_Text_0:
-# 1283 "data/maps/ParcelRiver/scripts.pory"
+# 1299 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: One SEAKING. Took me all spring.\n"
 	.string "I'm not sharing the bank. Battle.$"
 
 ParcelRiver_Ottar_Text_1:
-# 1284 "data/maps/ParcelRiver/scripts.pory"
+# 1300 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: Share, then.$"
 
 ParcelRiver_Ottar_Text_2:
-# 1299 "data/maps/ParcelRiver/scripts.pory"
+# 1315 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: DELL says the river used to give\n"
 	.string "SEAKING by the armful. I believe him.\l"
 	.string "I've seen the photographs.$"
 
 ParcelRiver_Ottar_R2_Text_0:
-# 1310 "data/maps/ParcelRiver/scripts.pory"
+# 1326 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelRiver_Ottar_R2_Text_1:
-# 1312 "data/maps/ParcelRiver/scripts.pory"
+# 1328 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelRiver_Ottar_R2_Text_2:
-# 1316 "data/maps/ParcelRiver/scripts.pory"
+# 1332 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: …Fair.$"
 
 ParcelRiver_Ottar_R2_Text_3:
-# 1317 "data/maps/ParcelRiver/scripts.pory"
+# 1333 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelRiver_Ottar_R3_Text_0:
-# 1324 "data/maps/ParcelRiver/scripts.pory"
+# 1340 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelRiver_Ottar_R3_Text_1:
-# 1330 "data/maps/ParcelRiver/scripts.pory"
+# 1346 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: That's the one I wanted to see.$"
 
 ParcelRiver_Ottar_R3_Text_2:
-# 1331 "data/maps/ParcelRiver/scripts.pory"
+# 1347 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Ottar_R4_Text_0:
-# 1338 "data/maps/ParcelRiver/scripts.pory"
+# 1354 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelRiver_Ottar_R4_Text_1:
-# 1344 "data/maps/ParcelRiver/scripts.pory"
+# 1360 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: Still yours.$"
 
 ParcelRiver_Ottar_R4_Text_2:
-# 1345 "data/maps/ParcelRiver/scripts.pory"
+# 1361 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelRiver_Ottar_R5_Text_0:
-# 1352 "data/maps/ParcelRiver/scripts.pory"
+# 1368 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelRiver_Ottar_R5_Text_1:
-# 1358 "data/maps/ParcelRiver/scripts.pory"
+# 1374 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: …Again, then. Later.$"
 
 ParcelRiver_Ottar_R5_Text_2:
-# 1359 "data/maps/ParcelRiver/scripts.pory"
+# 1375 "data/maps/ParcelRiver/scripts.pory"
 	.string "OTTAR: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelRiver_Paal_Text_0:
-# 1365 "data/maps/ParcelRiver/scripts.pory"
+# 1381 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: The bank's a highway. Board\n"
 	.string "boats, Corps cadets, now you. Battle,\l"
 	.string "and then walk somewhere else.$"
 
 ParcelRiver_Paal_Text_1:
-# 1366 "data/maps/ParcelRiver/scripts.pory"
+# 1382 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: Walk wherever you like.$"
 
 ParcelRiver_Paal_Text_2:
-# 1381 "data/maps/ParcelRiver/scripts.pory"
+# 1397 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: There's a man on a boat down by\n"
 	.string "the plots who talks to nobody. HARLAND.\l"
 	.string "He talked to a RANGER once. It didn't go\l"
 	.string "well, I hear.$"
 
 ParcelRiver_Paal_R2_Text_0:
-# 1392 "data/maps/ParcelRiver/scripts.pory"
+# 1408 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelRiver_Paal_R2_Text_1:
-# 1394 "data/maps/ParcelRiver/scripts.pory"
+# 1410 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: Another time, then.$"
 
 ParcelRiver_Paal_R2_Text_2:
-# 1398 "data/maps/ParcelRiver/scripts.pory"
+# 1414 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: That's the one I wanted to see.$"
 
 ParcelRiver_Paal_R2_Text_3:
-# 1399 "data/maps/ParcelRiver/scripts.pory"
+# 1415 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_Paal_R3_Text_0:
-# 1406 "data/maps/ParcelRiver/scripts.pory"
+# 1422 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelRiver_Paal_R3_Text_1:
-# 1412 "data/maps/ParcelRiver/scripts.pory"
+# 1428 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: …Again, then. Later.$"
 
 ParcelRiver_Paal_R3_Text_2:
-# 1413 "data/maps/ParcelRiver/scripts.pory"
+# 1429 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelRiver_Paal_R4_Text_0:
-# 1420 "data/maps/ParcelRiver/scripts.pory"
+# 1436 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelRiver_Paal_R4_Text_1:
-# 1427 "data/maps/ParcelRiver/scripts.pory"
+# 1443 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Paal_R5_Text_0:
-# 1434 "data/maps/ParcelRiver/scripts.pory"
+# 1450 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelRiver_Paal_R5_Text_1:
-# 1441 "data/maps/ParcelRiver/scripts.pory"
+# 1457 "data/maps/ParcelRiver/scripts.pory"
 	.string "PAAL: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelRiver_Ragna_Text_0:
-# 1447 "data/maps/ParcelRiver/scripts.pory"
+# 1463 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: The river's thoughts are loud\n"
 	.string "here. Fast. Angry. Below the cut it\l"
 	.string "stops thinking at all. Battle me.$"
 
 ParcelRiver_Ragna_Text_1:
-# 1448 "data/maps/ParcelRiver/scripts.pory"
+# 1464 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: Your thoughts are loud too.$"
 
 ParcelRiver_Ragna_Text_2:
-# 1463 "data/maps/ParcelRiver/scripts.pory"
+# 1479 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: The councilman's thoughts are\n"
 	.string "the loudest in the valley. He believes\l"
 	.string "every word. That's the strange part.$"
 
 ParcelRiver_Ragna_R2_Text_0:
-# 1474 "data/maps/ParcelRiver/scripts.pory"
+# 1490 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: Back this way? I've not been\n"
 	.string "idle. Rematch?$"
 
 ParcelRiver_Ragna_R2_Text_1:
-# 1476 "data/maps/ParcelRiver/scripts.pory"
+# 1492 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: Suit yourself. I'm here.$"
 
 ParcelRiver_Ragna_R2_Text_2:
-# 1480 "data/maps/ParcelRiver/scripts.pory"
+# 1496 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: …Again, then. Later.$"
 
 ParcelRiver_Ragna_R2_Text_3:
-# 1481 "data/maps/ParcelRiver/scripts.pory"
+# 1497 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_Ragna_R3_Text_0:
-# 1488 "data/maps/ParcelRiver/scripts.pory"
+# 1504 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelRiver_Ragna_R3_Text_1:
-# 1494 "data/maps/ParcelRiver/scripts.pory"
+# 1510 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: …Fair.$"
 
 ParcelRiver_Ragna_R3_Text_2:
-# 1495 "data/maps/ParcelRiver/scripts.pory"
+# 1511 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelRiver_Ragna_R4_Text_0:
-# 1502 "data/maps/ParcelRiver/scripts.pory"
+# 1518 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelRiver_Ragna_R4_Text_1:
-# 1508 "data/maps/ParcelRiver/scripts.pory"
+# 1524 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: Noted. Properly, this time.$"
 
 ParcelRiver_Ragna_R4_Text_2:
-# 1509 "data/maps/ParcelRiver/scripts.pory"
+# 1525 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_Ragna_R5_Text_0:
-# 1516 "data/maps/ParcelRiver/scripts.pory"
+# 1532 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelRiver_Ragna_R5_Text_1:
-# 1523 "data/maps/ParcelRiver/scripts.pory"
+# 1539 "data/maps/ParcelRiver/scripts.pory"
 	.string "RAGNA: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelRiver_Sigurd_Text_0:
-# 1529 "data/maps/ParcelRiver/scripts.pory"
+# 1545 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Cadet SIGURD, on the depot\n"
 	.string "watch. HALE wants to know what goes in\l"
 	.string "and what comes out. Spar.$"
 
 ParcelRiver_Sigurd_Text_1:
-# 1530 "data/maps/ParcelRiver/scripts.pory"
+# 1546 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Good. The sacks go in. The\n"
 	.string "money comes out. That's my report.$"
 
 ParcelRiver_Sigurd_Text_2:
-# 1545 "data/maps/ParcelRiver/scripts.pory"
+# 1561 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: The depot buys at the\n"
 	.string "FOUNDATION's number and sells the\l"
 	.string "sacks at the FOUNDATION's number. Both\l"
 	.string "numbers are the same man's.$"
 
 ParcelRiver_Sigurd_R2_Text_0:
-# 1556 "data/maps/ParcelRiver/scripts.pory"
+# 1572 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelRiver_Sigurd_R2_Text_1:
-# 1558 "data/maps/ParcelRiver/scripts.pory"
+# 1574 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelRiver_Sigurd_R2_Text_2:
-# 1562 "data/maps/ParcelRiver/scripts.pory"
+# 1578 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Noted. Properly, this time.$"
 
 ParcelRiver_Sigurd_R2_Text_3:
-# 1563 "data/maps/ParcelRiver/scripts.pory"
+# 1579 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_Sigurd_R3_Text_0:
-# 1570 "data/maps/ParcelRiver/scripts.pory"
+# 1586 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Three stamps, then five. Fine.\n"
 	.string "Me next?$"
 
 ParcelRiver_Sigurd_R3_Text_1:
-# 1576 "data/maps/ParcelRiver/scripts.pory"
+# 1592 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Still yours.$"
 
 ParcelRiver_Sigurd_R3_Text_2:
-# 1577 "data/maps/ParcelRiver/scripts.pory"
+# 1593 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_Sigurd_R4_Text_0:
-# 1584 "data/maps/ParcelRiver/scripts.pory"
+# 1600 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelRiver_Sigurd_R4_Text_1:
-# 1590 "data/maps/ParcelRiver/scripts.pory"
+# 1606 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: …Again, then. Later.$"
 
 ParcelRiver_Sigurd_R4_Text_2:
-# 1591 "data/maps/ParcelRiver/scripts.pory"
+# 1607 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelRiver_Sigurd_R5_Text_0:
-# 1598 "data/maps/ParcelRiver/scripts.pory"
+# 1614 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelRiver_Sigurd_R5_Text_1:
-# 1604 "data/maps/ParcelRiver/scripts.pory"
+# 1620 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: …Fair.$"
 
 ParcelRiver_Sigurd_R5_Text_2:
-# 1605 "data/maps/ParcelRiver/scripts.pory"
+# 1621 "data/maps/ParcelRiver/scripts.pory"
 	.string "SIGURD: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelRiver_SignTown_Text_0:
-# 1617 "data/maps/ParcelRiver/scripts.pory"
+# 1633 "data/maps/ParcelRiver/scripts.pory"
 	.string "ELVSUND\p"
 	.string "Market Thursdays. Boats moor at the\n"
 	.string "east bank. The Water Board office is\l"
 	.string "open to ratepayers.$"
 
 ParcelRiver_SignBoard_Text_0:
-# 1621 "data/maps/ParcelRiver/scripts.pory"
+# 1637 "data/maps/ParcelRiver/scripts.pory"
 	.string "ELVSUND WATER BOARD -- NOTICE\p"
 	.string "Channel Improvement, Phase 2: works\n"
 	.string "commence upstream of the town after\l"
@@ -5911,235 +5996,235 @@ ParcelRiver_SignBoard_Text_0:
 	.string "office is closed for objections.$"
 
 ParcelRiver_SignMarket_Text_0:
-# 1625 "data/maps/ParcelRiver/scripts.pory"
+# 1641 "data/maps/ParcelRiver/scripts.pory"
 	.string "MARKET DAY\p"
 	.string "Eggs. Greens. Honey. Trout (limited).\n"
 	.string "Councilman DORSEY will take questions\l"
 	.string "at noon.$"
 
 ParcelRiver_T_Aud_Text_0:
-# 1632 "data/maps/ParcelRiver/scripts.pory"
+# 1648 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: The high meadow's the last place\n"
 	.string "the flowers come up on their own. Battle\l"
 	.string "me among them.$"
 
 ParcelRiver_T_Aud_Text_1:
-# 1633 "data/maps/ParcelRiver/scripts.pory"
+# 1649 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Among them, beaten.$"
 
 ParcelRiver_T_Aud_Text_2:
-# 1648 "data/maps/ParcelRiver/scripts.pory"
+# 1664 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Below the town they spray. Above\n"
 	.string "the town they don't. You can draw the\l"
 	.string "line with your nose.$"
 
 ParcelRiver_T_Aud_R2_Text_0:
-# 1659 "data/maps/ParcelRiver/scripts.pory"
+# 1675 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelRiver_T_Aud_R2_Text_1:
-# 1661 "data/maps/ParcelRiver/scripts.pory"
+# 1677 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Another time, then.$"
 
 ParcelRiver_T_Aud_R2_Text_2:
-# 1665 "data/maps/ParcelRiver/scripts.pory"
+# 1681 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: …Fair.$"
 
 ParcelRiver_T_Aud_R2_Text_3:
-# 1666 "data/maps/ParcelRiver/scripts.pory"
+# 1682 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelRiver_T_Aud_R3_Text_0:
-# 1673 "data/maps/ParcelRiver/scripts.pory"
+# 1689 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelRiver_T_Aud_R3_Text_1:
-# 1679 "data/maps/ParcelRiver/scripts.pory"
+# 1695 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Right. That's the whole of it.$"
 
 ParcelRiver_T_Aud_R3_Text_2:
-# 1680 "data/maps/ParcelRiver/scripts.pory"
+# 1696 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_T_Aud_R4_Text_0:
-# 1687 "data/maps/ParcelRiver/scripts.pory"
+# 1703 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelRiver_T_Aud_R4_Text_1:
-# 1693 "data/maps/ParcelRiver/scripts.pory"
+# 1709 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: That's the one I wanted to see.$"
 
 ParcelRiver_T_Aud_R4_Text_2:
-# 1694 "data/maps/ParcelRiver/scripts.pory"
+# 1710 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_T_Aud_R5_Text_0:
-# 1701 "data/maps/ParcelRiver/scripts.pory"
+# 1717 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: I heard what you filed. Then show\n"
 	.string "me what filed it?$"
 
 ParcelRiver_T_Aud_R5_Text_1:
-# 1707 "data/maps/ParcelRiver/scripts.pory"
+# 1723 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: …Again, then. Later.$"
 
 ParcelRiver_T_Aud_R5_Text_2:
-# 1708 "data/maps/ParcelRiver/scripts.pory"
+# 1724 "data/maps/ParcelRiver/scripts.pory"
 	.string "AUD: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelRiver_T_Espen_Text_0:
-# 1714 "data/maps/ParcelRiver/scripts.pory"
+# 1730 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: ELECTRIKE from the power line\n"
 	.string "cut. Fastest thing on the farm. Battle!$"
 
 ParcelRiver_T_Espen_Text_1:
-# 1715 "data/maps/ParcelRiver/scripts.pory"
+# 1731 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Fast. Not fast enough.$"
 
 ParcelRiver_T_Espen_Text_2:
-# 1730 "data/maps/ParcelRiver/scripts.pory"
+# 1746 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: The line goes to the Board\n"
 	.string "office for the meters. The farm got\l"
 	.string "nothing off it. Dad says we got the\l"
 	.string "view.$"
 
 ParcelRiver_T_Espen_R2_Text_0:
-# 1741 "data/maps/ParcelRiver/scripts.pory"
+# 1757 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelRiver_T_Espen_R2_Text_1:
-# 1743 "data/maps/ParcelRiver/scripts.pory"
+# 1759 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Another time, then.$"
 
 ParcelRiver_T_Espen_R2_Text_2:
-# 1747 "data/maps/ParcelRiver/scripts.pory"
+# 1763 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Noted. Properly, this time.$"
 
 ParcelRiver_T_Espen_R2_Text_3:
-# 1748 "data/maps/ParcelRiver/scripts.pory"
+# 1764 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelRiver_T_Espen_R3_Text_0:
-# 1755 "data/maps/ParcelRiver/scripts.pory"
+# 1771 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelRiver_T_Espen_R3_Text_1:
-# 1761 "data/maps/ParcelRiver/scripts.pory"
+# 1777 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Right. That's the whole of it.$"
 
 ParcelRiver_T_Espen_R3_Text_2:
-# 1762 "data/maps/ParcelRiver/scripts.pory"
+# 1778 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelRiver_T_Espen_R4_Text_0:
-# 1769 "data/maps/ParcelRiver/scripts.pory"
+# 1785 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelRiver_T_Espen_R4_Text_1:
-# 1775 "data/maps/ParcelRiver/scripts.pory"
+# 1791 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Still yours.$"
 
 ParcelRiver_T_Espen_R4_Text_2:
-# 1776 "data/maps/ParcelRiver/scripts.pory"
+# 1792 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelRiver_T_Espen_R5_Text_0:
-# 1783 "data/maps/ParcelRiver/scripts.pory"
+# 1799 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelRiver_T_Espen_R5_Text_1:
-# 1790 "data/maps/ParcelRiver/scripts.pory"
+# 1806 "data/maps/ParcelRiver/scripts.pory"
 	.string "ESPEN: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelRiver_T_Trygve_Text_0:
-# 1796 "data/maps/ParcelRiver/scripts.pory"
+# 1812 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: One WHISCASH, out of the clean\n"
 	.string "reach. Took three seasons. Battle it.$"
 
 ParcelRiver_T_Trygve_Text_1:
-# 1797 "data/maps/ParcelRiver/scripts.pory"
+# 1813 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Three seasons, and that.$"
 
 ParcelRiver_T_Trygve_Text_2:
-# 1812 "data/maps/ParcelRiver/scripts.pory"
+# 1828 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: They want to put the straight\n"
 	.string "channel through the clean reach. Phase\l"
 	.string "2. Where do they think the WHISCASH will\l"
 	.string "go?$"
 
 ParcelRiver_T_Trygve_R2_Text_0:
-# 1823 "data/maps/ParcelRiver/scripts.pory"
+# 1839 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelRiver_T_Trygve_R2_Text_1:
-# 1825 "data/maps/ParcelRiver/scripts.pory"
+# 1841 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Suit yourself. I'm here.$"
 
 ParcelRiver_T_Trygve_R2_Text_2:
-# 1829 "data/maps/ParcelRiver/scripts.pory"
+# 1845 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Noted. Properly, this time.$"
 
 ParcelRiver_T_Trygve_R2_Text_3:
-# 1830 "data/maps/ParcelRiver/scripts.pory"
+# 1846 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelRiver_T_Trygve_R3_Text_0:
-# 1837 "data/maps/ParcelRiver/scripts.pory"
+# 1853 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: I moved the whole team on.\n"
 	.string "Let's see if you have?$"
 
 ParcelRiver_T_Trygve_R3_Text_1:
-# 1843 "data/maps/ParcelRiver/scripts.pory"
+# 1859 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: …Fair.$"
 
 ParcelRiver_T_Trygve_R3_Text_2:
-# 1844 "data/maps/ParcelRiver/scripts.pory"
+# 1860 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelRiver_T_Trygve_R4_Text_0:
-# 1851 "data/maps/ParcelRiver/scripts.pory"
+# 1867 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelRiver_T_Trygve_R4_Text_1:
-# 1858 "data/maps/ParcelRiver/scripts.pory"
+# 1874 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelRiver_T_Trygve_R5_Text_0:
-# 1865 "data/maps/ParcelRiver/scripts.pory"
+# 1881 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelRiver_T_Trygve_R5_Text_1:
-# 1871 "data/maps/ParcelRiver/scripts.pory"
+# 1887 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Right. That's the whole of it.$"
 
 ParcelRiver_T_Trygve_R5_Text_2:
-# 1872 "data/maps/ParcelRiver/scripts.pory"
+# 1888 "data/maps/ParcelRiver/scripts.pory"
 	.string "TRYGVE: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelRiver_BeaverStump_Text_0:
-# 1881 "data/maps/ParcelRiver/scripts.pory"
+# 1897 "data/maps/ParcelRiver/scripts.pory"
 	.string "A sapling stump on the bank, gnawed to\n"
 	.string "a point. The chips at its foot are pale.\l"
 	.string "Fresh.\p"
@@ -6148,16 +6233,16 @@ ParcelRiver_BeaverStump_Text_0:
 	.string "name beside it.$"
 
 ParcelRiver_BeaverStump_Text_1:
-# 1886 "data/maps/ParcelRiver/scripts.pory"
+# 1902 "data/maps/ParcelRiver/scripts.pory"
 	.string "A sapling stump on the bank, gnawed to\n"
 	.string "a point.$"
 
 ParcelRiver_PerrinScene_Text_0:
-# 1899 "data/maps/ParcelRiver/scripts.pory"
+# 1915 "data/maps/ParcelRiver/scripts.pory"
 	.string "PERRIN: WREN!$"
 
 ParcelRiver_PerrinScene_Text_1:
-# 1903 "data/maps/ParcelRiver/scripts.pory"
+# 1919 "data/maps/ParcelRiver/scripts.pory"
 	.string "PERRIN: DORSEY introduced me at the\n"
 	.string "market! 'Our newest liaison.' LIAISON,\l"
 	.string "WREN.\p"
@@ -6166,22 +6251,22 @@ ParcelRiver_PerrinScene_Text_1:
 	.string "Battle!$"
 
 ParcelRiver_PerrinScene_Text_2:
-# 1904 "data/maps/ParcelRiver/scripts.pory"
+# 1920 "data/maps/ParcelRiver/scripts.pory"
 	.string "PERRIN: Okay. You CAN argue with it.$"
 
 ParcelRiver_PerrinScene_Text_3:
-# 1905 "data/maps/ParcelRiver/scripts.pory"
+# 1921 "data/maps/ParcelRiver/scripts.pory"
 	.string "PERRIN: I took the desk. Part time's\n"
 	.string "full time now. It's good work. It IS.\p"
 	.string "HOLLIS asked about you. She asks about\n"
 	.string "everyone. It's her best trick.$"
 
 ParcelRiver_PerrinTalk_Text_0:
-# 1918 "data/maps/ParcelRiver/scripts.pory"
+# 1934 "data/maps/ParcelRiver/scripts.pory"
 	.string "PERRIN: Hang on, I'm coming to you.$"
 
 ParcelRiver_Epilogue_Text_0:
-# 1929 "data/maps/ParcelRiver/scripts.pory"
+# 1945 "data/maps/ParcelRiver/scripts.pory"
 	.string "ELVSUND. Market day. The WATER BOARD\n"
 	.string "notice on the pole has six names under\l"
 	.string "it, and the sentence they argued about\l"
@@ -6191,7 +6276,7 @@ ParcelRiver_Epilogue_Text_0:
 	.string "The crossing is still the crossing.$"
 
 ParcelRiver_Epilogue_Text_1:
-# 1930 "data/maps/ParcelRiver/scripts.pory"
+# 1946 "data/maps/ParcelRiver/scripts.pory"
 	.string "The gauge at the ford carries two\n"
 	.string "boards now, one above the other. The\l"
 	.string "old mark and the new. Children read them\l"
@@ -6203,7 +6288,7 @@ ParcelRiver_Epilogue_Text_1:
 	.string "morning, and one morning it will be true.$"
 
 ParcelRiver_Hives_Text_0:
-# 1949 "data/maps/ParcelRiver/scripts.pory"
+# 1965 "data/maps/ParcelRiver/scripts.pory"
 	.string "Six hives on the bank, humming. The\n"
 	.string "beekeeper is asleep against the end\l"
 	.string "one with a smoker in his lap, perfectly\l"
@@ -6211,7 +6296,7 @@ ParcelRiver_Hives_Text_0:
 	.string "The flowers are out all along the bank.$"
 
 ParcelRiver_SurveyStake_Text_0:
-# 1956 "data/maps/ParcelRiver/scripts.pory"
+# 1972 "data/maps/ParcelRiver/scripts.pory"
 	.string "A survey stake at the edge of the\n"
 	.string "market ground, red cloth at the top, a\l"
 	.string "child's blue ribbon tied under it by\l"
@@ -6219,7 +6304,7 @@ ParcelRiver_SurveyStake_Text_0:
 	.string "company.$"
 
 ParcelRiver_SurveyStake_Text_1:
-# 1961 "data/maps/ParcelRiver/scripts.pory"
+# 1977 "data/maps/ParcelRiver/scripts.pory"
 	.string "Second reading. Two boards on the\n"
 	.string "gauge, old mark and new. The reach\l"
 	.string "above the town still runs slack; the\l"
@@ -6230,142 +6315,142 @@ ParcelRiver_SurveyStake_Text_1:
 	.string "what the Survey does with hope.$"
 
 ParcelRiver_PairMeter_Text_0:
-# 1972 "data/maps/ParcelRiver/scripts.pory"
+# 1988 "data/maps/ParcelRiver/scripts.pory"
 	.string "FARMER: The Board's publishing both\n"
 	.string "readings now. Old datum and new. Two\l"
 	.string "columns.$"
 
 ParcelRiver_PairMeter_Text_1:
-# 1973 "data/maps/ParcelRiver/scripts.pory"
+# 1989 "data/maps/ParcelRiver/scripts.pory"
 	.string "MILLER: Two columns and one river. The\n"
 	.string "wet column and the honest one.$"
 
 ParcelRiver_PairMeter_Text_2:
-# 1974 "data/maps/ParcelRiver/scripts.pory"
+# 1990 "data/maps/ParcelRiver/scripts.pory"
 	.string "FARMER: The honest one says my\n"
 	.string "allocation is a quarter of what it was.\l"
 	.string "On paper. It was always a quarter in the\l"
 	.string "field.$"
 
 ParcelRiver_PairMeter_Text_3:
-# 1975 "data/maps/ParcelRiver/scripts.pory"
+# 1991 "data/maps/ParcelRiver/scripts.pory"
 	.string "MILLER: Paper's catching up with the\n"
 	.string "field. Give it another forty years.$"
 
 ParcelRiver_PairMeter_Text_4:
-# 1977 "data/maps/ParcelRiver/scripts.pory"
+# 1993 "data/maps/ParcelRiver/scripts.pory"
 	.string "MILLER: Forty-one of us signed. The\n"
 	.string "reply was one paragraph. I've framed\l"
 	.string "the paragraph.$"
 
 ParcelRiver_PairMeter_Text_5:
-# 1978 "data/maps/ParcelRiver/scripts.pory"
+# 1994 "data/maps/ParcelRiver/scripts.pory"
 	.string "FARMER: The ranger read it. Twice. Then\n"
 	.string "asked SLUICE which year the datum was\l"
 	.string "set.$"
 
 ParcelRiver_PairMeter_Text_6:
-# 1979 "data/maps/ParcelRiver/scripts.pory"
+# 1995 "data/maps/ParcelRiver/scripts.pory"
 	.string "MILLER: And?$"
 
 ParcelRiver_PairMeter_Text_7:
-# 1980 "data/maps/ParcelRiver/scripts.pory"
+# 1996 "data/maps/ParcelRiver/scripts.pory"
 	.string "FARMER: And SLUICE answered. In public.\n"
 	.string "First Board officer to answer anything\l"
 	.string "in public since the gauge went in.$"
 
 ParcelRiver_PairMeter_Text_8:
-# 1982 "data/maps/ParcelRiver/scripts.pory"
+# 1998 "data/maps/ParcelRiver/scripts.pory"
 	.string "FARMER: Fourteen plots metered. The\n"
 	.string "meter runs when the water runs. The\l"
 	.string "water runs when the Board says.$"
 
 ParcelRiver_PairMeter_Text_9:
-# 1983 "data/maps/ParcelRiver/scripts.pory"
+# 1999 "data/maps/ParcelRiver/scripts.pory"
 	.string "MILLER: My wheel turned for free for\n"
 	.string "sixty years and now it's a 'draw'. A draw.\l"
 	.string "Like a lottery.$"
 
 ParcelRiver_PairMeter_Text_10:
-# 1984 "data/maps/ParcelRiver/scripts.pory"
+# 2000 "data/maps/ParcelRiver/scripts.pory"
 	.string "FARMER: You're ahead of me. They've\n"
 	.string "called mine an 'allocation'.$"
 
 ParcelRiver_PairMeter_Text_11:
-# 1985 "data/maps/ParcelRiver/scripts.pory"
+# 2001 "data/maps/ParcelRiver/scripts.pory"
 	.string "MILLER: Longer word. More expensive.$"
 
 ParcelRiver_PairFord_Text_0:
-# 1994 "data/maps/ParcelRiver/scripts.pory"
+# 2010 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: OTTAR let the SEAKING go. The\n"
 	.string "last one. Off the ford, at first light,\l"
 	.string "nobody watching but me.$"
 
 ParcelRiver_PairFord_Text_1:
-# 1995 "data/maps/ParcelRiver/scripts.pory"
+# 2011 "data/maps/ParcelRiver/scripts.pory"
 	.string "GRANDDAUGHTER: Why would he do that?$"
 
 ParcelRiver_PairFord_Text_2:
-# 1996 "data/maps/ParcelRiver/scripts.pory"
+# 2012 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: The ranger's count is in the\n"
 	.string "record. One fish. He said one fish in a\l"
 	.string "record is a prisoner. One fish in a river\l"
 	.string "is a chance.$"
 
 ParcelRiver_PairFord_Text_3:
-# 1997 "data/maps/ParcelRiver/scripts.pory"
+# 2013 "data/maps/ParcelRiver/scripts.pory"
 	.string "GRANDDAUGHTER: Is it?$"
 
 ParcelRiver_PairFord_Text_4:
-# 1998 "data/maps/ParcelRiver/scripts.pory"
+# 2014 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Ask me in forty years. Write down\n"
 	.string "that I said that.$"
 
 ParcelRiver_PairFord_Text_5:
-# 2000 "data/maps/ParcelRiver/scripts.pory"
+# 2016 "data/maps/ParcelRiver/scripts.pory"
 	.string "GRANDDAUGHTER: The ranger stood in the\n"
 	.string "shallows for an hour. Just counting.$"
 
 ParcelRiver_PairFord_Text_6:
-# 2001 "data/maps/ParcelRiver/scripts.pory"
+# 2017 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Counting what? There's nothing\n"
 	.string "to count.$"
 
 ParcelRiver_PairFord_Text_7:
-# 2002 "data/maps/ParcelRiver/scripts.pory"
+# 2018 "data/maps/ParcelRiver/scripts.pory"
 	.string "GRANDDAUGHTER: That's what they were\n"
 	.string "counting. They wrote down nothing, with\l"
 	.string "the date. Said nothing with a date is a\l"
 	.string "number.$"
 
 ParcelRiver_PairFord_Text_8:
-# 2003 "data/maps/ParcelRiver/scripts.pory"
+# 2019 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: …Your great-grandfather would\n"
 	.string "have liked that. He never wrote\l"
 	.string "anything down and it's all gone with him.$"
 
 ParcelRiver_PairFord_Text_9:
-# 2005 "data/maps/ParcelRiver/scripts.pory"
+# 2021 "data/maps/ParcelRiver/scripts.pory"
 	.string "GRANDDAUGHTER: You said the SEAKING\n"
 	.string "came up to the ford. In red.$"
 
 ParcelRiver_PairFord_Text_10:
-# 2006 "data/maps/ParcelRiver/scripts.pory"
+# 2022 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: Every spring. You could walk\n"
 	.string "across on them, my father said. He said\l"
 	.string "a lot of things.$"
 
 ParcelRiver_PairFord_Text_11:
-# 2007 "data/maps/ParcelRiver/scripts.pory"
+# 2023 "data/maps/ParcelRiver/scripts.pory"
 	.string "GRANDDAUGHTER: Was that one true?$"
 
 ParcelRiver_PairFord_Text_12:
-# 2008 "data/maps/ParcelRiver/scripts.pory"
+# 2024 "data/maps/ParcelRiver/scripts.pory"
 	.string "DELL: The ford part. The walking part\n"
 	.string "was my father.$"
 
 ParcelRiver_Stringer_Text_0:
-# 2020 "data/maps/ParcelRiver/scripts.pory"
+# 2036 "data/maps/ParcelRiver/scripts.pory"
 	.string "INGER: The Board publishes two columns\n"
 	.string "now. Old datum, new datum. I ran them\l"
 	.string "side by side without a word of comment.\p"
@@ -6375,7 +6460,7 @@ ParcelRiver_Stringer_Text_0:
 	.string "going.$"
 
 ParcelRiver_Stringer_Text_1:
-# 2023 "data/maps/ParcelRiver/scripts.pory"
+# 2039 "data/maps/ParcelRiver/scripts.pory"
 	.string "INGER: The meeting ran as half a page.\n"
 	.string "Including the ranger who stood up at\l"
 	.string "the back and said refuse the\l"
@@ -6385,7 +6470,7 @@ ParcelRiver_Stringer_Text_1:
 	.string "the sentence at Reedmere.$"
 
 ParcelRiver_Stringer_Text_2:
-# 2025 "data/maps/ParcelRiver/scripts.pory"
+# 2041 "data/maps/ParcelRiver/scripts.pory"
 	.string "INGER: The meeting ran as half a page.\n"
 	.string "The ranger stood at the back and wrote.\l"
 	.string "I put that in.\p"
@@ -6395,7 +6480,7 @@ ParcelRiver_Stringer_Text_2:
 	.string "Board.$"
 
 ParcelRiver_Stringer_Text_3:
-# 2028 "data/maps/ParcelRiver/scripts.pory"
+# 2044 "data/maps/ParcelRiver/scripts.pory"
 	.string "INGER: The water meeting's tonight.\n"
 	.string "Forty-one ratepayers and a Board that\l"
 	.string "won't name a year.\p"
@@ -6406,13 +6491,13 @@ ParcelRiver_Stringer_Text_3:
 	.string "often I could set it in type myself.$"
 
 ParcelRiver_FordBoy_Text_0:
-# 2040 "data/maps/ParcelRiver/scripts.pory"
+# 2056 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOY: I'm keeping my own book now. One\n"
 	.string "line a week. DAD says that's how it\l"
 	.string "starts.$"
 
 ParcelRiver_FordBoy_Text_1:
-# 2043 "data/maps/ParcelRiver/scripts.pory"
+# 2059 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOY: Eleven years NORMAL and then they\n"
 	.string "moved the mark. So the floods didn't\l"
 	.string "stop. The book stopped.\p"
@@ -6421,12 +6506,12 @@ ParcelRiver_FordBoy_Text_1:
 	.string "straight.$"
 
 ParcelRiver_FordBoy_Text_2:
-# 2047 "data/maps/ParcelRiver/scripts.pory"
+# 2063 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOY: The gauge book. In the Board\n"
 	.string "office, on the counter. The kept one.$"
 
 ParcelRiver_FordBoy_Text_3:
-# 2050 "data/maps/ParcelRiver/scripts.pory"
+# 2066 "data/maps/ParcelRiver/scripts.pory"
 	.string "BOY: The Board's book has the real river\n"
 	.string "in it. DAD says. He says there's two\l"
 	.string "books, the one they show and the one\l"
@@ -6434,3 +6519,21 @@ ParcelRiver_FordBoy_Text_3:
 	.string "You can go in the office. Read the kept\n"
 	.string "one and tell me which year the floods\l"
 	.string "stopped.$"
+
+ParcelRiver_FindDepth_Text_0:
+# 2077 "data/maps/ParcelRiver/scripts.pory"
+	.string "The pier at the pool. The Board's depth\n"
+	.string "mark in white, a date beside it. Under\l"
+	.string "the white, where it has flaked, a line of\l"
+	.string "old red lead two hands higher, and no\l"
+	.string "date, because a man who paints his own\l"
+	.string "mark does not think to date it.\p"
+	.string "The water is below both marks. By a\n"
+	.string "hand. By two.$"
+
+ParcelRiver_FindDepth_Text_1:
+# 2080 "data/maps/ParcelRiver/scripts.pory"
+	.string "The pier at the pool. White over red, the\n"
+	.string "river below both. Someone has scraped\l"
+	.string "the white back a little so the red\l"
+	.string "shows.$"
