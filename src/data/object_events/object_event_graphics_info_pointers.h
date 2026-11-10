@@ -261,6 +261,15 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_UnusedMauvi
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Agatha;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Cacnea;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Delibird;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldIlex;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldHeron;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldInger;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldMirren;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldBreen;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldSluice;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldVale;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldHollis;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SkaldCordelia;
 
 
 
@@ -510,6 +519,15 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_CACNEA]     =               &gObjectEventGraphicsInfo_Cacnea,
     [OBJ_EVENT_GFX_AGATHA] =                   &gObjectEventGraphicsInfo_Agatha,
     [OBJ_EVENT_GFX_DELIBIRD] =                 &gObjectEventGraphicsInfo_Delibird,
+    [OBJ_EVENT_GFX_SKALD_ILEX] =               &gObjectEventGraphicsInfo_SkaldIlex,
+    [OBJ_EVENT_GFX_SKALD_HERON] =              &gObjectEventGraphicsInfo_SkaldHeron,
+    [OBJ_EVENT_GFX_SKALD_INGER] =              &gObjectEventGraphicsInfo_SkaldInger,
+    [OBJ_EVENT_GFX_SKALD_MIRREN] =             &gObjectEventGraphicsInfo_SkaldMirren,
+    [OBJ_EVENT_GFX_SKALD_BREEN] =              &gObjectEventGraphicsInfo_SkaldBreen,
+    [OBJ_EVENT_GFX_SKALD_SLUICE] =             &gObjectEventGraphicsInfo_SkaldSluice,
+    [OBJ_EVENT_GFX_SKALD_VALE] =               &gObjectEventGraphicsInfo_SkaldVale,
+    [OBJ_EVENT_GFX_SKALD_HOLLIS] =             &gObjectEventGraphicsInfo_SkaldHollis,
+    [OBJ_EVENT_GFX_SKALD_CORDELIA] =           &gObjectEventGraphicsInfo_SkaldCordelia,
 };
 
 const struct ObjectEventGraphicsInfo *const gMauvilleOldManGraphicsInfoPointers[] = {

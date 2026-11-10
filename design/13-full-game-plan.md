@@ -658,4 +658,24 @@ quest is built, how the peer works) before they are asked six more times.
   year of fish left; I pack fish, I'm learning to read them), the
   Station modeller and cadet (after isn't in the scenario, that's a
   scope; what happened is a technical term now). ~1,400 words.
+- **2026-11-10 — the art pass (the user asked whether the "cool art" of
+  other hacks was within reach; this is the answer).** The Rayquaza title
+  screen is gone: the Pokémon wordmark now sits over an "ANTHROPOCENE"
+  banner and a night coast — Delibird Isle on the horizon with its snowy
+  summit and a harbour light that breathes, a Delibird and a Surveyor's
+  red-cloth stake on the near headland, stars, ripples, and an aurora with
+  its reflection on the sea, drifting and shimmering on the layer that used
+  to carry Emerald's clouds (`tools/skald/title_art.py`; all layers
+  generated, tile-quantized into five scene palettes, verified by
+  screenshot at three moments). Nine cast members got their own overworld
+  sprites on two faction palettes — Survey olive with the red marker cloth,
+  Mereholt teal and charcoal — so ILEX is one person across six maps instead
+  of three stock sprites, HERON reads as a field scientist in an oilskin,
+  CORDELIA as a silver-haired chair with a teal scarf, HOLLIS in Mereholt
+  teal, INGER in red, and the leaders who shared a sprite (MIRREN/BREEN,
+  SLUICE/VALE) no longer do (`tools/skald/cast_sprites.py`; all nine
+  walked to and screenshotted in their maps). The dialogue box border went
+  from Emerald teal to ice and slate and the default menu frame was redrawn
+  to match (`tools/skald/ui_frames.py`). Deferred: trainer battle sprites,
+  a northern retint of the outdoor tileset palettes, building exteriors.
 

@@ -1409,6 +1409,45 @@ const struct SpriteFrameImage gObjectEventPicTable_Agatha[] = {
     overworld_frame(gObjectEventPic_Agatha, 2, 4,15),
 };
 
+// ---------- The Skaldmere cast (tools/skald/cast_sprites.py) ----------
+extern const u32 gObjectEventPic_SkaldIlex[];
+extern const u32 gObjectEventPic_SkaldHeron[];
+extern const u32 gObjectEventPic_SkaldInger[];
+extern const u32 gObjectEventPic_SkaldMirren[];
+extern const u32 gObjectEventPic_SkaldBreen[];
+extern const u32 gObjectEventPic_SkaldSluice[];
+extern const u32 gObjectEventPic_SkaldVale[];
+extern const u32 gObjectEventPic_SkaldHollis[];
+extern const u32 gObjectEventPic_SkaldCordelia[];
+
+static const struct SpriteFrameImage sPicTable_SkaldIlex[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldIlex, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldHeron[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldHeron, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldInger[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldInger, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldMirren[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldMirren, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldBreen[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldBreen, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldSluice[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldSluice, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldVale[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldVale, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldHollis[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldHollis, 2, 4),
+};
+static const struct SpriteFrameImage sPicTable_SkaldCordelia[] = {
+    overworld_ascending_frames(gObjectEventPic_SkaldCordelia, 2, 4),
+};
+
 
 
 

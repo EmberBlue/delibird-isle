@@ -490,6 +490,8 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #include "data/object_events/object_event_graphics_info_followers.h"
 
 extern const u16 gObjectEventPal_Delibird[];
+extern const u16 gObjectEventPal_SkaldSurvey[];
+extern const u16 gObjectEventPal_SkaldMereholt[];
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Npc1,                  OBJ_EVENT_PAL_TAG_NPC_1},
@@ -528,6 +530,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_RubySapphireBrendan,   OBJ_EVENT_PAL_TAG_RS_BRENDAN},
     {gObjectEventPal_RubySapphireMay,       OBJ_EVENT_PAL_TAG_RS_MAY},
     {gObjectEventPal_Delibird,              OBJ_EVENT_PAL_TAG_DELIBIRD},
+    {gObjectEventPal_SkaldSurvey,           OBJ_EVENT_PAL_TAG_SKALD_SURVEY},
+    {gObjectEventPal_SkaldMereholt,         OBJ_EVENT_PAL_TAG_SKALD_MERELHOLT},
 
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},

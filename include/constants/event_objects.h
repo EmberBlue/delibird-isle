@@ -256,8 +256,18 @@
 #define OBJ_EVENT_GFX_CACNEA                     242
 #define OBJ_EVENT_GFX_AGATHA                     243
 #define OBJ_EVENT_GFX_DELIBIRD                   244
+// The Skaldmere cast (tools/skald/cast_sprites.py)
+#define OBJ_EVENT_GFX_SKALD_ILEX                 245
+#define OBJ_EVENT_GFX_SKALD_HERON                246
+#define OBJ_EVENT_GFX_SKALD_INGER                247
+#define OBJ_EVENT_GFX_SKALD_MIRREN               248
+#define OBJ_EVENT_GFX_SKALD_BREEN                249
+#define OBJ_EVENT_GFX_SKALD_SLUICE               250
+#define OBJ_EVENT_GFX_SKALD_VALE                 251
+#define OBJ_EVENT_GFX_SKALD_HOLLIS               252
+#define OBJ_EVENT_GFX_SKALD_CORDELIA             253
 
-#define NUM_OBJ_EVENT_GFX                        245
+#define NUM_OBJ_EVENT_GFX                        254
 
 
 
@@ -392,6 +402,8 @@
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
 #define OBJ_EVENT_PAL_TAG_DELIBIRD                0x1125  // (Or just use the next available number)
+#define OBJ_EVENT_PAL_TAG_SKALD_SURVEY            0x1126  // olive field gear, red marker cloth, greys
+#define OBJ_EVENT_PAL_TAG_SKALD_MERELHOLT         0x1127  // Mereholt teal, charcoal, silver
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

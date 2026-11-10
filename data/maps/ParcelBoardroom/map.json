@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_BOARD_CORDELIA",
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_SKALD_CORDELIA",
       "x": 17,
       "y": 5,
       "elevation": 3,

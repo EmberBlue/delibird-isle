@@ -2077,12 +2077,17 @@ const u16 gMonIconPalettes[][16] =
     INCBIN_U16("graphics/pokemon/icon_palettes/pal5.gbapal"),
 };
 
+// BG palettes 0-9 are the wordmark, 10-14 the night coast, 15 the aurora (tools/skald/title_art.py).
 const u16 gTitleScreenBgPalettes[]         = INCBIN_U16("graphics/title_screen/pokemon_logo.gbapal",
-                                                        "graphics/title_screen/rayquaza_and_clouds.gbapal");
-const u16 gTitleScreenEmeraldVersionPal[]  = INCBIN_U16("graphics/title_screen/emerald_version.gbapal");
-const u32 gTitleScreenCloudsTilemap[]      = INCBIN_U32("graphics/title_screen/clouds.bin.lz");
+                                                        "graphics/title_screen/skald_scene_0.gbapal",
+                                                        "graphics/title_screen/skald_scene_1.gbapal",
+                                                        "graphics/title_screen/skald_scene_2.gbapal",
+                                                        "graphics/title_screen/skald_scene_3.gbapal",
+                                                        "graphics/title_screen/skald_scene_4.gbapal",
+                                                        "graphics/title_screen/skald_aurora.gbapal");
+const u16 gTitleScreenBannerPal[]          = INCBIN_U16("graphics/title_screen/skald_title.gbapal");
 const u32 gTitleScreenPokemonLogoGfx[]     = INCBIN_U32("graphics/title_screen/pokemon_logo.8bpp.lz");
-const u32 gTitleScreenEmeraldVersionGfx[]  = INCBIN_U32("graphics/title_screen/emerald_version.8bpp.lz");
+const u32 gTitleScreenBannerGfx[]          = INCBIN_U32("graphics/title_screen/skald_title.8bpp.lz");
 const u16 gTitleScreenPressStartPal[]      = INCBIN_U16("graphics/title_screen/press_start.gbapal");
 const u32 gTitleScreenPressStartGfx[]      = INCBIN_U32("graphics/title_screen/press_start.4bpp.lz");
 const u32 gTitleScreenPokemonLogoTilemap[] = INCBIN_U32("graphics/title_screen/pokemon_logo.bin.lz");

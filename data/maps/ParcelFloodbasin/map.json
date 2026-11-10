@@ -102,7 +102,7 @@
     },
     {
       "local_id": "LOCALID_FLOODBASIN_GYM",
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "graphics_id": "OBJ_EVENT_GFX_SKALD_BREEN",
       "x": 16,
       "y": 1,
       "elevation": 3,
@@ -578,7 +578,7 @@
     },
     {
       "local_id": "LOCALID_STRINGER",
-      "graphics_id": "OBJ_EVENT_GFX_REPORTER_F",
+      "graphics_id": "OBJ_EVENT_GFX_SKALD_INGER",
       "x": 36,
       "y": 92,
       "elevation": 3,

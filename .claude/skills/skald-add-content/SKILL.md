@@ -66,6 +66,31 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 - No em-dash (use --), no escaped double quotes, \p new box, \n line, \l scroll.
 - §00 register: implies more than it states; no exposition dumps.
 
+## Art (title screen, cast sprites, UI frames)
+- Every custom graphic is generated: `tools/skald/title_art.py` (title layers),
+  `tools/skald/cast_sprites.py` (nine cast sheets + two faction palettes),
+  `tools/skald/ui_frames.py` (dialogue border colours, menu frame 1). Edit the
+  generator, re-run it, rebuild; the PNG/.pal/.bin outputs are what's committed.
+- New overworld sprite: 144x32 nine-frame indexed PNG (16 colours, index 0
+  transparent, skin at 1-4, white 14, black 15) under
+  `graphics/object_events/pics/people/skald/` (the pattern rule in
+  `spritesheet_rules.mk` converts anything there). Then: `OBJ_EVENT_GFX_SKALD_X`
+  in `include/constants/event_objects.h` (bump `NUM_OBJ_EVENT_GFX`), an INCBIN in
+  `object_event_graphics.h`, a `sPicTable_SkaldX` in `object_event_pic_tables.h`,
+  `SKALD_CAST_GRAPHICS_INFO(SkaldX, palTag)` in `object_event_graphics_info.h`,
+  the extern + `[OBJ_EVENT_GFX_SKALD_X]` entry in
+  `object_event_graphics_info_pointers.h`, and the map.json `graphics_id`.
+- New sprite palette: JASC `.pal` in `graphics/object_events/palettes/`, INCBIN in
+  `object_event_graphics.h`, `OBJ_EVENT_PAL_TAG_*` (next after 0x1127) in
+  `event_objects.h`, extern + row in `sObjectEventSpritePalettes`
+  (`src/event_object_movement.c`). Palettes load dynamically by tag; keep the
+  distinct palettes on one map under ~8.
+- Title screen BG palettes: 0-9 wordmark, 10-14 scene, 15 aurora. The harbour
+  lamp is palette 10 colour 15 (pulsed in code) -- keep `LAMP` out of every
+  other scene palette so its tile can only be assigned to palette 10.
+- Check art in the emulator, not just the PNG: `capture.py` for the title,
+  `walktest.py --out` next to the NPC for sprites, a talk for the dialogue box.
+
 ## Ship ritual
 - `python3 tools/skald/audit.py` must be clean (walkability, warps, trigger guards,
   top-layer cover, connections, fly rows, trainer registration).

@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "LOCALID_MARSH_HERON",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "graphics_id": "OBJ_EVENT_GFX_SKALD_HERON",
       "x": 19,
       "y": 9,
       "elevation": 3,

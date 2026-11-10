@@ -4760,6 +4760,38 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Agatha = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
+// ---------- The Skaldmere cast (tools/skald/cast_sprites.py) ----------
+// Standard 16x32 nine-frame people sheets on the two faction palettes.
+#define SKALD_CAST_GRAPHICS_INFO(Name, palTag)                       \
+    const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_##Name = { \
+        .tileTag = TAG_NONE,                                           \
+        .paletteTag = palTag,                                          \
+        .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,                \
+        .size = 256,                                                   \
+        .width = 16,                                                   \
+        .height = 32,                                                  \
+        .paletteSlot = PALSLOT_NPC_1,                                  \
+        .shadowSize = SHADOW_SIZE_M,                                   \
+        .inanimate = FALSE,                                            \
+        .compressed = FALSE,                                           \
+        .tracks = TRACKS_FOOT,                                         \
+        .oam = &gObjectEventBaseOam_16x32,                             \
+        .subspriteTables = sOamTables_16x32,                           \
+        .anims = sAnimTable_Standard,                                  \
+        .images = sPicTable_##Name,                                    \
+        .affineAnims = gDummySpriteAffineAnimTable,                    \
+    }
+
+SKALD_CAST_GRAPHICS_INFO(SkaldIlex, OBJ_EVENT_PAL_TAG_SKALD_SURVEY);
+SKALD_CAST_GRAPHICS_INFO(SkaldHeron, OBJ_EVENT_PAL_TAG_SKALD_SURVEY);
+SKALD_CAST_GRAPHICS_INFO(SkaldInger, OBJ_EVENT_PAL_TAG_SKALD_SURVEY);
+SKALD_CAST_GRAPHICS_INFO(SkaldMirren, OBJ_EVENT_PAL_TAG_SKALD_SURVEY);
+SKALD_CAST_GRAPHICS_INFO(SkaldBreen, OBJ_EVENT_PAL_TAG_SKALD_SURVEY);
+SKALD_CAST_GRAPHICS_INFO(SkaldSluice, OBJ_EVENT_PAL_TAG_SKALD_SURVEY);
+SKALD_CAST_GRAPHICS_INFO(SkaldVale, OBJ_EVENT_PAL_TAG_SKALD_SURVEY);
+SKALD_CAST_GRAPHICS_INFO(SkaldHollis, OBJ_EVENT_PAL_TAG_SKALD_MERELHOLT);
+SKALD_CAST_GRAPHICS_INFO(SkaldCordelia, OBJ_EVENT_PAL_TAG_SKALD_MERELHOLT);
+
 
 
 

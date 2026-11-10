@@ -260,6 +260,49 @@ Heron's confession with the Hollis choice, her battle and the final survey
 Leader scenes need `A:300`-`A:350`, Vane `A:650`. The probe commands are in
 `tools/skald/sweep.py`'s neighbour, the scratch `gates.sh`, and the skill.
 
+## Art (2026-11-10) — what is custom now, and how to redo it
+
+Three generators under `tools/skald/` produce every custom graphic; the
+PNGs they write are committed, so the build never runs them. Re-run one,
+rebuild, look at the result in the emulator (the vanilla asset the generator
+replaces is gone from the tree).
+
+- **Title screen** — `title_art.py`. Night coast: seven-band sky with stars,
+  Delibird Isle on the horizon (snowy summit, a harbour light whose colour
+  pulses from `UpdateHarbourLampColor`, BG palette 10 colour 15), sea with
+  ripples, a dark headland with a Delibird and a Surveyor's red-cloth stake,
+  and an aurora with its reflection on the old clouds layer (BG1, alpha
+  7/16, scanline wave 2/3, drifting east). The wordmark keeps its stock
+  pixels with the palette compacted to 160 colours (palettes 0-9); the
+  scene owns palettes 10-14 (one per region: sky, sea, land, delibird,
+  horizon; tiles are assigned the first palette that holds all their
+  colours, strays remapped to the nearest), the aurora palette 15. The
+  "ANTHROPOCENE" banner is three 64x32 8bpp sprites (Inter ExtraBold,
+  outlined, ice gradient). VRAM: wordmark charblock 0 / screen 31, scene
+  charblock 1 / screen 22, aurora charblock 3 / screen 23. Verify with
+  `python3 tools/screenshot/capture.py --frames 2600 --press START@500:8`.
+- **Cast sprites** — `cast_sprites.py`. Nine 16x32 nine-frame sheets in
+  `graphics/object_events/pics/people/skald/` on two new palettes
+  (`skald_survey`: olive, red marker cloth, greys; `skald_mereholt`: teal,
+  charcoal, silver). Each is a stock sheet with a triad remap and a collar
+  patch: ILEX (woman_2, red cloth at the throat), HERON (old_woman in a dark
+  oilskin), INGER (reporter_f in red), MIRREN/BREEN (expert_m in olive/red;
+  TARN keeps the stock steel blue), SLUICE/VALE (expert_f in olive/red),
+  HOLLIS (woman_5 in teal), CORDELIA (expert_f, silver hair, charcoal, teal
+  scarf). Registered as `OBJ_EVENT_GFX_SKALD_*` (245-253) through the
+  `SKALD_CAST_GRAPHICS_INFO` macro in `object_event_graphics_info.h`, the
+  pattern rule in `spritesheet_rules.mk`, and the palette table in
+  `event_object_movement.c`; the 22 map objects point at them (Ilex used to
+  be three different stock sprites across six maps).
+- **UI** — `ui_frames.py`. The dialogue box keeps its shape with ice/slate/
+  dark-slate border colours (palette 13-15 of `message_box.png`; text
+  colours untouched), and window frame 1 (the default menu border) is a
+  slate band with an ice rule.
+- Verified in-emulator: the title at three moments, all nine sprites in
+  their maps via `walktest.py --out`, a dialogue box. `TAP:START` did not
+  open the start menu under the harness, so frame 1 was checked from its
+  PNG only.
+
 ## Known-open (honest list)
 
 - **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816
@@ -320,9 +363,14 @@ Leader scenes need `A:300`-`A:350`, Vane `A:650`. The probe commands are in
   instead. A `giveitem` scene needs `WAIT:3000` before its flag reads back.
 - Vanilla trainers 0–861 still exist in the data (unreachable); ids are
   pinned, `MAX_TRAINERS_COUNT` 2048 must not move.
-- Title screen, "they" pronouns, `Parcel*` folder names (placeholders; the
-  in-game names are the real ones: Saltwick, Fernwick, Reedmere, Hollowbend
-  Spur, Leirvik, Elvsund, Haukfell, Mereholt Coast, the Climate Station).
+- "They" pronouns, `Parcel*` folder names (placeholders; the in-game names
+  are the real ones: Saltwick, Fernwick, Reedmere, Hollowbend Spur, Leirvik,
+  Elvsund, Haukfell, Mereholt Coast, the Climate Station). The title screen
+  stopped being a placeholder on 2026-11-10 (see "Art" below).
+- Art still vanilla: trainer battle sprites (the eight leaders fight as stock
+  classes), building exteriors, the overworld tileset palettes (a cooler
+  northern retint was considered and deferred: three primary tilesets and a
+  dozen secondaries would all need the same hand).
 
 ## Top gotchas from this session (full list in §12)
 

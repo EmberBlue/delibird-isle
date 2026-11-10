@@ -49,6 +49,13 @@ A. Deterministic per input schedule. Interiors smaller than viewport don't
 scroll the camera. Cutscenes pan the camera off the player — mid-cutscene
 frames prove nothing about sprite visibility.
 
+Title screen: `--frames 2600 --press START@500:8` lands on the settled title
+(the START skips the intro); take a second frame ~350 later to see the aurora
+drift and the harbour lamp pulse. Overworld sprites: `walktest.py --spawn` two
+tiles below the NPC, `--walk UP:0 --out shot.png`. A dialogue box: add
+`--walk A:90` before `--out`. `TAP:START` does not open the start menu under
+the harness (checked 2026-11-10), so menu frames are judged from their PNG.
+
 ## FireRed tileset (frp_*) specifics
 
 - Attributes are **u16** (behaviour low byte, layer bits 12-13) — decode with `<H`.

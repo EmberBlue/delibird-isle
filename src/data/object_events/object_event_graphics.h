@@ -498,3 +498,16 @@ const u32 gObjectEventPic_Cacnea_OW[] =
 // ---------- Agatha OW sheet ----------
 const u32 gObjectEventPic_Agatha[] =
     INCBIN_U32("graphics/object_events/pics/people/kanto/agatha.4bpp");
+
+// ---------- The Skaldmere cast (tools/skald/cast_sprites.py) ----------
+const u16 gObjectEventPal_SkaldSurvey[] = INCBIN_U16("graphics/object_events/palettes/skald_survey.gbapal");
+const u16 gObjectEventPal_SkaldMereholt[] = INCBIN_U16("graphics/object_events/palettes/skald_mereholt.gbapal");
+const u32 gObjectEventPic_SkaldIlex[] = INCBIN_U32("graphics/object_events/pics/people/skald/ilex.4bpp");
+const u32 gObjectEventPic_SkaldHeron[] = INCBIN_U32("graphics/object_events/pics/people/skald/heron.4bpp");
+const u32 gObjectEventPic_SkaldInger[] = INCBIN_U32("graphics/object_events/pics/people/skald/inger.4bpp");
+const u32 gObjectEventPic_SkaldMirren[] = INCBIN_U32("graphics/object_events/pics/people/skald/mirren.4bpp");
+const u32 gObjectEventPic_SkaldBreen[] = INCBIN_U32("graphics/object_events/pics/people/skald/breen.4bpp");
+const u32 gObjectEventPic_SkaldSluice[] = INCBIN_U32("graphics/object_events/pics/people/skald/sluice.4bpp");
+const u32 gObjectEventPic_SkaldVale[] = INCBIN_U32("graphics/object_events/pics/people/skald/vale.4bpp");
+const u32 gObjectEventPic_SkaldHollis[] = INCBIN_U32("graphics/object_events/pics/people/skald/hollis.4bpp");
+const u32 gObjectEventPic_SkaldCordelia[] = INCBIN_U32("graphics/object_events/pics/people/skald/cordelia.4bpp");

@@ -72,7 +72,7 @@
     },
     {
       "local_id": "LOCALID_RH_SLUICE",
-      "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
+      "graphics_id": "OBJ_EVENT_GFX_SKALD_SLUICE",
       "x": 14,
       "y": 7,
       "elevation": 3,
@@ -100,7 +100,7 @@
     },
     {
       "local_id": "LOCALID_RH_ILEX",
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "graphics_id": "OBJ_EVENT_GFX_SKALD_ILEX",
       "x": 7,
       "y": 2,
       "elevation": 3,

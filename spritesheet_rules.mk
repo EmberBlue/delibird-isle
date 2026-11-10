@@ -4929,6 +4929,10 @@ $(MISCGFXDIR)/emotes.4bpp: %.4bpp: %.png
 $(OBJEVENTGFXDIR)/people/kanto/agatha.4bpp: graphics/object_events/pics/people/kanto/agatha.png
 	$(GFX) $< $@ -mwidth 2 -mheight 4
 
+# The Skaldmere cast (standard 16x32 nine-frame sheets; tools/skald/cast_sprites.py)
+$(OBJEVENTGFXDIR)/people/skald/%.4bpp: $(OBJEVENTGFXDIR)/people/skald/%.png
+	$(GFX) $< $@ -mwidth 2 -mheight 4
+
 
 
 
