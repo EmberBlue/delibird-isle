@@ -138,7 +138,9 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
                 if not passable(nx, ny, n in goals):
                     continue
                 if not mode and not elev_ok(ce, nelev):
-                    continue                      # landing from a surf ride ignores elevation
+                    continue
+                if mode and nelev != 3:
+                    continue                      # CanStopSurfing: a surfer lands only on elevation-3 ground
                 # MB_IMPASSABLE_<D>: a cave ledge lip -- not entered heading D, not left heading the other way
                 dn, opp = DIRS[(dx, dy)], DIRS[(-dx, -dy)]
                 if ("IMPASSABLE" in nbeh and dn in nbeh) or ("IMPASSABLE" in cbeh and opp in cbeh):

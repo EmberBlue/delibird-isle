@@ -76,7 +76,9 @@ def warp_behaviours():
 WARP_BEHAVIOURS = warp_behaviours()
 # Walkable tiles whose top layer is meant to cover the player: General's 15 is the ground directly above a
 # tree (its canopy drawn over you), which the climate station's staff path behind the windbreak extends.
-TOPLAYER_OK = {("ParcelWeather", 15)}
+# Fortree's 620 is the grass shore whose froth line sits on the top layer: on the Marsh landing strip (elevation 3,
+# so a surfer can come ashore below HERON) the line crosses the player's feet, which reads as the water's edge.
+TOPLAYER_OK = {("ParcelWeather", 15), ("ParcelMarsh", 620)}
 RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
 
 

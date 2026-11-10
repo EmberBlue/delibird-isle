@@ -267,7 +267,8 @@ def reach(maps, byid, start, hm):
                 if here[1] != 3 or "BRIDGE" in m.beh(x, y)[2]:
                     continue
             if kind == "land" and here and here[0] in ("water", "fall"):
-                pass                               # landing from surf: no elevation check
+                if nelev != 3:                     # CanStopSurfing: a surfer lands only on elevation-3 ground
+                    continue
             elif kind == "land" and not elev_ok(helev, nelev):
                 continue
             visit((nm, nx, ny))
