@@ -1299,6 +1299,7 @@
 #define FLAG_SKALD_CH_BLANKET              FLAG_ITEM_TRICK_HOUSE_PUZZLE_3_WOOD_MAIL      // took the Foundation blanket at Leirvik
 #define FLAG_SKALD_CH_HOLLIS_NAMED         FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL      // put Hollis's name in the record
 #define FLAG_SKALD_CH_MAHOGANY             FLAG_ITEM_TRICK_HOUSE_PUZZLE_6_GLITTER_MAIL   // filed the Mahogany correction in their own hand
+#define FLAG_SKALD_CH_QUOTE                FLAG_ITEM_TRICK_HOUSE_PUZZLE_7_TROPIC_MAIL    // gave MAREN of the Courier a sentence on the record
 
 #define FLAG_SKALD_Q_DRAWER 0x493 // Skaldmere: side quests
 #define FLAG_SKALD_Q_DRAWER_SEEN 0x494 // Skaldmere: side quests

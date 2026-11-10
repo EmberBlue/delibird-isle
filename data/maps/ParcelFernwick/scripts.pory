@@ -858,3 +858,71 @@ script ParcelFernwick_PondPage {
     setflag(FLAG_SKALD_Q_PAGE_FOUND)
     end
 }
+
+// --- town life (2026-11-10): the pairs ---
+
+script ParcelFernwick_PairCorps {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CLERK: The Director's office sent a letter. The certification programme is 'under review for independence'."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: Meaning the FOUNDATION's third of it."), MSGBOX_DEFAULT)
+        msgbox(format("CLERK: Meaning eight stations instead of twelve, if they walk. HALE says he'd rather have eight honest ones."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: HALE's said that for twenty years. Now someone's written it down where it counts."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("CLERK: The river meeting's in the papers. Forty-one ratepayers and a Board that won't name a year."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: And a ranger who stood in the back and wrote it all down."), MSGBOX_DEFAULT)
+        msgbox(format("CLERK: Writing it down isn't standing up."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: Ask the Board which one they're more afraid of."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("CLERK: HALE took another provisional. From JOHTO, this one. No partner. No badges. Nothing."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: He takes them with nothing on purpose. Says you can see what they do with it."), MSGBOX_DEFAULT)
+        msgbox(format("CLERK: What do they do with it?"), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: Mostly leave. The ones that stay, you remember."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelFernwick_PairPond {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BOY: There's a SMEARGLE on the far bank. It paints the line where the water was."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: I've seen it. It's not painting where the water was. It's painting where the water is."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: That's the same line."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: This year it is. Watch it next year. That's the whole job, you know. Watching next year."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BOY: The ranger counted the pond. Twenty-eight pairs of WINGULL, they said, same as the old notebook."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Same number. Half the water. Work that out for your homework."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Fewer places to land, so they land closer together?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: So the count looks fine. Good. You'll be a surveyor or a liar, and the difference is who you tell."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD MAN: The pond came up to that stone when I was your age. Every spring."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Which stone?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: That one. The dry one. You're standing on it."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: It's a long way from the water."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: It didn't move."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+
+script ParcelFernwick_Stringer {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAREN: The hearing is on the front page. My piece above the fold, the Commissioner's reply below it. Nine years I've had that upside down.\pHALE still won't talk to me. He sent a note. It said: the record has a circulation now. Thank you. I've framed it. It's the only review I've had."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("MAREN: The Poisoned Waters piece ran. Page four. The Commissioner's reply ran page two. That's the ratio in this region: his two to my four."), MSGBOX_DEFAULT)
+        if (flag(FLAG_SKALD_CH_QUOTE)) {
+            msgbox(format("MAREN: Your sentence is in it, under your name. The editor wanted it cut. I said the ranger said it on the record, and the record is the one thing he can't cut. He didn't know what I meant. He will."), MSGBOX_DEFAULT)
+        } else {
+            msgbox(format("MAREN: You're in it without your name, because you didn't give me one. 'A ranger read the manifest.' Passive voice. I hate it. It's what you left me."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("MAREN: The HQ. I'm not allowed in. HALE says the Corps doesn't talk to the press; it talks to the record.\pI told him the record doesn't have a circulation. He said that's its one advantage. I've been trying to think of an answer for six years."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

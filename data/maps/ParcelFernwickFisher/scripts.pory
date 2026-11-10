@@ -36,3 +36,9 @@ script ParcelFernwickFisher_OldMan {
     release
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelFernwickFisher_TideTable {
+    msgbox(format("A tide table nailed to the wall, this year's, with the old man's marks on it.\pThe springs and the neaps in print. In pencil beside them: HIGH, in a shaky capital, on nine days that the table calls ordinary.\pThe nine days are all in the same month. The month the basin flooded. The water that came down the river that month went out to sea past this door, and the table did not know."), MSGBOX_SIGN)
+}

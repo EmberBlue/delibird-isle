@@ -466,4 +466,31 @@ quest is built, how the peer works) before they are asked six more times.
   filled or ruled empty, Cordelia notices who keeps their own accounts.
   Plus "Sit?" in the boardroom, because the chair was made lower on
   purpose. Flags `FLAG_SKALD_CH_*` (aliases of unreachable item flags).
+- **2026-11-10 — town life (problems 3 and 4: "nobody lives here", "the
+  cast doesn't recur").** Two people talking in every settlement, backs
+  to a wall, overheard in three story states -- the Saltwick net-mender
+  and the old woman (the lab's new light), the docker and the chandler
+  (the east berth cleared by six), Fernwick's clerk and neighbour (eight
+  honest stations), the old man and the boy at the pond (the stone that
+  didn't move), Reedmere's fisher and boatwright (nothing washes up in
+  the open on a mud bank), the mother and the girl on the turf (it cracks
+  when you jump on it), Mrs Aske and her neighbour (a drawer of blankets),
+  the ferryman and the lad (who pays the Foundation), Elvsund's farmer and
+  miller (the wet column and the honest one), Dell and the
+  granddaughter (one fish in a river is a chance), Haukfell's roadman and
+  postmistress (funny old weather), the old man and his son (warm's warm;
+  I'll go and I'll know, both), the island's grandmother and boy (you
+  don't cheer a lamp in a storm), the wife and husband (a ruler, not
+  comfort), the Coast's docker and fisher (how they get you both ends),
+  the secretary and the accountant (line forty, hospitality), the
+  Station's technician and keeper (the brackets are the series), the cook
+  and the cadet (the ones who read the yard walk slower). ~3,000 words,
+  36 objects (`pairs.py`). And **MAREN of the Skaldmere Courier**, a
+  stringer whose desk is a bench: outside the lodging, the HQ, the
+  Tidewater office, the relief office, the hall, the centre, the hearing
+  room, with two or three states each; at Reedmere she asks for one
+  sentence on the record (`FLAG_SKALD_CH_QUOTE`), and at the Coast after
+  the sitting she tells you what she ran at the top. ~1,200 words. The
+  two interiors that had no readable (the Fernwick fisher's tide table,
+  the ferry's manifest board) have one.
 

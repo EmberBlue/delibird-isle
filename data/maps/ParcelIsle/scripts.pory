@@ -1000,3 +1000,67 @@ script ParcelIsle_T_Line_R5 {
     release
     end
 }
+
+// --- town life (2026-11-10): the pairs ---
+
+script ParcelIsle_PairNets {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("NETMENDER: The lab on the front. They've taken the boards down. There's a light in it."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: The Survey's leased it. For the baselines, they say. Thirty-one years of cloth in cardboard boxes."), MSGBOX_DEFAULT)
+        msgbox(format("NETMENDER: In the lab they emptied. In the same room."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: In the same room. Somebody has a sense of humour. Not the company."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("NETMENDER: They say the ranger made FOREST. First one out of this harbour in nine years."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Out of this harbour. Listen to you. You sold the ranger a bad rope."), MSGBOX_DEFAULT)
+        msgbox(format("NETMENDER: It was a fair rope. The ranger's just hard on rope."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Hard on everything, I hear. Good. Something should be."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("NETMENDER: Third ferry this week with nobody getting off but freight."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Somebody got off. The one with the notebook."), MSGBOX_DEFAULT)
+        msgbox(format("NETMENDER: That's not a somebody. That's a letter with legs."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: A letter's more than this town's had in a while. Mend your net."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelIsle_PairFreight {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DOCKER: East berth's open all night now. Logistics pulled the night crew."), MSGBOX_DEFAULT)
+        msgbox(format("CHANDLER: Pulled them where?"), MSGBOX_DEFAULT)
+        msgbox(format("DOCKER: Nowhere. That's the thing. Nowhere to pull them to, with the dredge stopped."), MSGBOX_DEFAULT)
+        msgbox(format("CHANDLER: Then they'll be in my shop by the weekend, wanting rope on credit. Tell them yes."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("DOCKER: Saw the ranger go through to the meadow with nothing. Came back with a DODUO at heel, or whatever it was. Didn't look like a trainer."), MSGBOX_DEFAULT)
+        msgbox(format("CHANDLER: Looked like someone who'd been chosen and hadn't decided how they felt."), MSGBOX_DEFAULT)
+        msgbox(format("DOCKER: You can see all that from the quay?"), MSGBOX_DEFAULT)
+        msgbox(format("CHANDLER: I sell rope to everyone who leaves. You learn faces."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("DOCKER: Logistics wants the east berth cleared by six. Every night this month, by six."), MSGBOX_DEFAULT)
+        msgbox(format("CHANDLER: Cleared for what? Nothing comes in at six."), MSGBOX_DEFAULT)
+        msgbox(format("DOCKER: Something goes out. I don't ask. It's a good job for not asking."), MSGBOX_DEFAULT)
+        msgbox(format("CHANDLER: It's the only kind they have."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+
+script ParcelIsle_Stringer {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAREN: The Survey's in the lab now. I covered the move. Thirty-one years of red cloth going in through the door the company's van came out of at two in the morning.\pBest picture I've taken. Front page. Logistics did not comment, and I printed that they did not."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("MAREN: FOREST, I heard. From a bench you hear things. The lab on the front is still boarded. The police call it burglary. I call it burglary in print, and we both know the word's wrong.\pWhen you've got the right word, I'm here. I'm always here. It's a very good bench."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MAREN: Skaldmere Courier. Dock desk, which is this bench. You came off the morning ferry with a bag and no partner. That's a story or it's nothing. Which?"), MSGBOX_DEFAULT)
+        msgbox(format("{PLAYER}: Nothing yet."), MSGBOX_DEFAULT)
+        msgbox(format("MAREN: Good answer. Most people give me the other one and regret it by the second ferry. Come back when it's something."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

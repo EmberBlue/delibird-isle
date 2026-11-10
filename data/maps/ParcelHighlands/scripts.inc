@@ -3989,6 +3989,123 @@ ParcelHighlands_SurveyStake::
 	end
 
 
+ParcelHighlands_PairSlide::
+# 1904 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 1905 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairSlide_2
+# 1910 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairSlide_3
+# 1916 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_8, MSGBOX_DEFAULT
+# 1917 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_9, MSGBOX_DEFAULT
+# 1918 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_10, MSGBOX_DEFAULT
+# 1919 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_11, MSGBOX_DEFAULT
+ParcelHighlands_PairSlide_1:
+# 1921 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+ParcelHighlands_PairSlide_2:
+# 1906 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_0, MSGBOX_DEFAULT
+# 1907 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_1, MSGBOX_DEFAULT
+# 1908 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_2, MSGBOX_DEFAULT
+# 1909 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_3, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairSlide_1
+
+ParcelHighlands_PairSlide_3:
+# 1911 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_4, MSGBOX_DEFAULT
+# 1912 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_5, MSGBOX_DEFAULT
+# 1913 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_6, MSGBOX_DEFAULT
+# 1914 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_7, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairSlide_1
+
+
+ParcelHighlands_PairCentre::
+# 1926 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 1927 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairCentre_2
+# 1933 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairCentre_3
+# 1939 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_9, MSGBOX_DEFAULT
+# 1940 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_10, MSGBOX_DEFAULT
+# 1941 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_11, MSGBOX_DEFAULT
+# 1942 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_12, MSGBOX_DEFAULT
+# 1943 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_13, MSGBOX_DEFAULT
+ParcelHighlands_PairCentre_1:
+# 1945 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+ParcelHighlands_PairCentre_2:
+# 1928 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_0, MSGBOX_DEFAULT
+# 1929 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_1, MSGBOX_DEFAULT
+# 1930 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_2, MSGBOX_DEFAULT
+# 1931 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_3, MSGBOX_DEFAULT
+# 1932 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_4, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairCentre_1
+
+ParcelHighlands_PairCentre_3:
+# 1934 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_5, MSGBOX_DEFAULT
+# 1935 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_6, MSGBOX_DEFAULT
+# 1936 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_7, MSGBOX_DEFAULT
+# 1937 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_8, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairCentre_1
+
+
+ParcelHighlands_Stringer::
+# 1952 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 1953 "data/maps/ParcelHighlands/scripts.pory"
+	faceplayer
+# 1954 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_Stringer_2
+# 1956 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_Stringer_3
+# 1959 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Stringer_Text_2, MSGBOX_DEFAULT
+ParcelHighlands_Stringer_1:
+# 1961 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+ParcelHighlands_Stringer_2:
+# 1955 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Stringer_Text_0, MSGBOX_DEFAULT
+	goto ParcelHighlands_Stringer_1
+
+ParcelHighlands_Stringer_3:
+# 1957 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Stringer_Text_1, MSGBOX_DEFAULT
+	goto ParcelHighlands_Stringer_1
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 39 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -5800,3 +5917,169 @@ ParcelHighlands_SurveyStake_Text_0:
 	.string "centre, red cloth at the top. The ground\l"
 	.string "has moved since it was driven; it leans a\l"
 	.string "hand's width downslope.$"
+
+ParcelHighlands_PairSlide_Text_0:
+# 1906 "data/maps/ParcelHighlands/scripts.pory"
+	.string "ROADMAN: Permafrost licence deferred.\n"
+	.string "Deferred isn't refused.$"
+
+ParcelHighlands_PairSlide_Text_1:
+# 1907 "data/maps/ParcelHighlands/scripts.pory"
+	.string "POSTMISTRESS: No. But the drill crew's\n"
+	.string "gone and the casing's capped and the\l"
+	.string "field's not sliding this spring.$"
+
+ParcelHighlands_PairSlide_Text_2:
+# 1908 "data/maps/ParcelHighlands/scripts.pory"
+	.string "ROADMAN: It'll slide. The ground's soft\n"
+	.string "now. It doesn't harden back.$"
+
+ParcelHighlands_PairSlide_Text_3:
+# 1909 "data/maps/ParcelHighlands/scripts.pory"
+	.string "POSTMISTRESS: I know. The ranger said\n"
+	.string "so, to our faces. First one who did. I'd\l"
+	.string "rather know.$"
+
+ParcelHighlands_PairSlide_Text_4:
+# 1911 "data/maps/ParcelHighlands/scripts.pory"
+	.string "POSTMISTRESS: The ranger read the\n"
+	.string "stake at the warming centre out loud.\l"
+	.string "Everything on it. Twenty people stood\l"
+	.string "and listened.$"
+
+ParcelHighlands_PairSlide_Text_5:
+# 1912 "data/maps/ParcelHighlands/scripts.pory"
+	.string "ROADMAN: What's on it?$"
+
+ParcelHighlands_PairSlide_Text_6:
+# 1913 "data/maps/ParcelHighlands/scripts.pory"
+	.string "POSTMISTRESS: The slide. The bore. The\n"
+	.string "gas column. The dates. Nothing we didn't\l"
+	.string "know, all in one place, in a voice.$"
+
+ParcelHighlands_PairSlide_Text_7:
+# 1914 "data/maps/ParcelHighlands/scripts.pory"
+	.string "ROADMAN: That's what's been missing.\n"
+	.string "The voice. We all knew it quietly.$"
+
+ParcelHighlands_PairSlide_Text_8:
+# 1916 "data/maps/ParcelHighlands/scripts.pory"
+	.string "ROADMAN: Top field's gone. Slid\n"
+	.string "overnight. Took the fence and half the\l"
+	.string "track.$"
+
+ParcelHighlands_PairSlide_Text_9:
+# 1917 "data/maps/ParcelHighlands/scripts.pory"
+	.string "POSTMISTRESS: That's three fields in\n"
+	.string "two years.$"
+
+ParcelHighlands_PairSlide_Text_10:
+# 1918 "data/maps/ParcelHighlands/scripts.pory"
+	.string "ROADMAN: 'Weather event', the Board\n"
+	.string "says. It's been a weather event for two\l"
+	.string "years.$"
+
+ParcelHighlands_PairSlide_Text_11:
+# 1919 "data/maps/ParcelHighlands/scripts.pory"
+	.string "POSTMISTRESS: The drill went in two\n"
+	.string "years ago. Funny old weather.$"
+
+ParcelHighlands_PairCentre_Text_0:
+# 1928 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: They've pinned the slips up. All\n"
+	.string "of them. Mine's on the board for anyone\l"
+	.string "to read.$"
+
+ParcelHighlands_PairCentre_Text_1:
+# 1929 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SON: Yours and the child's. 'The ranger\n"
+	.string "read the stakes out loud and mum cried.'$"
+
+ParcelHighlands_PairCentre_Text_2:
+# 1930 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: That's the whole hearing in one\n"
+	.string "line. They should have saved the paper.$"
+
+ParcelHighlands_PairCentre_Text_3:
+# 1931 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SON: Warm room still open?$"
+
+ParcelHighlands_PairCentre_Text_4:
+# 1932 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: Warm room's still open.\n"
+	.string "Different crest on the door. Same door.$"
+
+ParcelHighlands_PairCentre_Text_5:
+# 1934 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SON: The ranger put a slip in the\n"
+	.string "suggestion box. We saw it through the\l"
+	.string "slot. It said: ask the drill people what\l"
+	.string "the gas column means.$"
+
+ParcelHighlands_PairCentre_Text_6:
+# 1935 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: That was my slip.$"
+
+ParcelHighlands_PairCentre_Text_7:
+# 1936 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SON: It was in the ranger's hand.$"
+
+ParcelHighlands_PairCentre_Text_8:
+# 1937 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: Then there's two of us. That's\n"
+	.string "a committee, in Haukfell.$"
+
+ParcelHighlands_PairCentre_Text_9:
+# 1939 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: The centre's warm. I'll give\n"
+	.string "them that. First winter I've had a warm\l"
+	.string "room since my wife.$"
+
+ParcelHighlands_PairCentre_Text_10:
+# 1940 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SON: The FOUNDATION built it. Two weeks\n"
+	.string "before the licence went to the Council.$"
+
+ParcelHighlands_PairCentre_Text_11:
+# 1941 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: I know when it was built. I was\n"
+	.string "cold at the time. I noticed the date.$"
+
+ParcelHighlands_PairCentre_Text_12:
+# 1942 "data/maps/ParcelHighlands/scripts.pory"
+	.string "SON: And you'll still go.$"
+
+ParcelHighlands_PairCentre_Text_13:
+# 1943 "data/maps/ParcelHighlands/scripts.pory"
+	.string "OLD MAN: I'll still go. Warm's warm. I'll go\n"
+	.string "and I'll know, both.$"
+
+ParcelHighlands_Stringer_Text_0:
+# 1955 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAREN: They've pinned the slips up in\n"
+	.string "the centre. I photographed the child's.\l"
+	.string "The ranger read the stakes out loud and\l"
+	.string "mum cried.\p"
+	.string "My editor cut it. I put it back. He cut it\n"
+	.string "again. It's in. We're not speaking, and\l"
+	.string "the paper's never sold better.$"
+
+ParcelHighlands_Stringer_Text_1:
+# 1957 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAREN: The suggestion box. I asked the\n"
+	.string "host to open it for me. He said the\l"
+	.string "FOUNDATION empties it.\p"
+	.string "I said: then that's my story. He went\n"
+	.string "white. Good man. Wrong employer. It's a\l"
+	.string "common condition up here.$"
+
+ParcelHighlands_Stringer_Text_2:
+# 1959 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MAREN: The slide. I came up for the\n"
+	.string "slide. 'Weather event,' the Board says.\p"
+	.string "I've written weather event three times\n"
+	.string "in two years. I'm starting to feel like a\l"
+	.string "forecaster. The drill went in two years\l"
+	.string "ago; I'm not allowed to put those two\l"
+	.string "sentences next to each other. So I put\l"
+	.string "them one paragraph apart.$"

@@ -1897,3 +1897,67 @@ script ParcelHighlands_SurveyStake {
     msgbox(gStringVar4, MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs ---
+
+script ParcelHighlands_PairSlide {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("ROADMAN: Permafrost licence deferred. Deferred isn't refused."), MSGBOX_DEFAULT)
+        msgbox(format("POSTMISTRESS: No. But the drill crew's gone and the casing's capped and the field's not sliding this spring."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: It'll slide. The ground's soft now. It doesn't harden back."), MSGBOX_DEFAULT)
+        msgbox(format("POSTMISTRESS: I know. The ranger said so, to our faces. First one who did. I'd rather know."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("POSTMISTRESS: The ranger read the stake at the warming centre out loud. Everything on it. Twenty people stood and listened."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: What's on it?"), MSGBOX_DEFAULT)
+        msgbox(format("POSTMISTRESS: The slide. The bore. The gas column. The dates. Nothing we didn't know, all in one place, in a voice."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: That's what's been missing. The voice. We all knew it quietly."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("ROADMAN: Top field's gone. Slid overnight. Took the fence and half the track."), MSGBOX_DEFAULT)
+        msgbox(format("POSTMISTRESS: That's three fields in two years."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: 'Weather event', the Board says. It's been a weather event for two years."), MSGBOX_DEFAULT)
+        msgbox(format("POSTMISTRESS: The drill went in two years ago. Funny old weather."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelHighlands_PairCentre {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: They've pinned the slips up. All of them. Mine's on the board for anyone to read."), MSGBOX_DEFAULT)
+        msgbox(format("SON: Yours and the child's. 'The ranger read the stakes out loud and mum cried.'"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: That's the whole hearing in one line. They should have saved the paper."), MSGBOX_DEFAULT)
+        msgbox(format("SON: Warm room still open?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Warm room's still open. Different crest on the door. Same door."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("SON: The ranger put a slip in the suggestion box. We saw it through the slot. It said: ask the drill people what the gas column means."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: That was my slip."), MSGBOX_DEFAULT)
+        msgbox(format("SON: It was in the ranger's hand."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Then there's two of us. That's a committee, in Haukfell."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD MAN: The centre's warm. I'll give them that. First winter I've had a warm room since my wife."), MSGBOX_DEFAULT)
+        msgbox(format("SON: The FOUNDATION built it. Two weeks before the licence went to the Council."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: I know when it was built. I was cold at the time. I noticed the date."), MSGBOX_DEFAULT)
+        msgbox(format("SON: And you'll still go."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: I'll still go. Warm's warm. I'll go and I'll know, both."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+
+script ParcelHighlands_Stringer {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAREN: They've pinned the slips up in the centre. I photographed the child's. The ranger read the stakes out loud and mum cried.\pMy editor cut it. I put it back. He cut it again. It's in. We're not speaking, and the paper's never sold better."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("MAREN: The suggestion box. I asked the host to open it for me. He said the FOUNDATION empties it.\pI said: then that's my story. He went white. Good man. Wrong employer. It's a common condition up here."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MAREN: The slide. I came up for the slide. 'Weather event,' the Board says.\pI've written weather event three times in two years. I'm starting to feel like a forecaster. The drill went in two years ago; I'm not allowed to put those two sentences next to each other. So I put them one paragraph apart."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

@@ -230,9 +230,12 @@ passes except the retired Station's.
 ## Known-open (honest list)
 
 - **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816
-  rematch tiers) against the 1,000 target -- met; **~62,500 hand-written
-  words** (every `_R2`–`_R5`/`_FirstWin` rematch script excluded; ~90k
-  with them) against 100k -- the remaining gap. The rematch tiers
+  rematch tiers) against the 1,000 target -- met; **~66,800 hand-written
+  words** (every `_R2`–`_R5`/`_FirstWin` rematch script excluded; ~94k
+  with them; 655 objects, 323 readable/hidden events) against 100k -- the
+  remaining gap. Recount with the snippet in §13's 2026-11-10 entries
+  (script bodies minus the rematch scripts, plus the notebook's C strings
+  and the 81 dex entries). The rematch tiers
   are the custom "ledger" system, not Match Call (the save block has 28
   bytes of headroom and the registered-flag range 0x15C–0x1A9 is boxed in
   by our flags; `FREE_*` options in `include/config/save.h` would buy room

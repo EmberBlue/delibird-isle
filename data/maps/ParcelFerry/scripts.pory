@@ -48,3 +48,9 @@ script ParcelFerry_Attendant {
     release
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelFerry_Manifest {
+    msgbox(format("The crossing's manifest board. Chalk, wiped and rewritten every sailing.\pPASSENGERS: a number. FREIGHT: Mereholt Logistics, always, and the tonnage. LIVESTOCK: none. MAIL: one bag.\pUnder MAIL, smaller, in a different chalk that nobody has wiped: and one letter that came by hand, a long time ago, and is still being answered."), MSGBOX_SIGN)
+}

@@ -4046,6 +4046,128 @@ ParcelRiver_SurveyStake::
 	end
 
 
+ParcelRiver_PairMeter::
+# 1965 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 1966 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairMeter_2
+# 1971 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairMeter_3
+# 1977 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_8, MSGBOX_DEFAULT
+# 1978 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_9, MSGBOX_DEFAULT
+# 1979 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_10, MSGBOX_DEFAULT
+# 1980 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_11, MSGBOX_DEFAULT
+ParcelRiver_PairMeter_1:
+# 1982 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_PairMeter_2:
+# 1967 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_0, MSGBOX_DEFAULT
+# 1968 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_1, MSGBOX_DEFAULT
+# 1969 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_2, MSGBOX_DEFAULT
+# 1970 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_3, MSGBOX_DEFAULT
+	goto ParcelRiver_PairMeter_1
+
+ParcelRiver_PairMeter_3:
+# 1972 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_4, MSGBOX_DEFAULT
+# 1973 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_5, MSGBOX_DEFAULT
+# 1974 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_6, MSGBOX_DEFAULT
+# 1975 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMeter_Text_7, MSGBOX_DEFAULT
+	goto ParcelRiver_PairMeter_1
+
+
+ParcelRiver_PairFord::
+# 1987 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 1988 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairFord_2
+# 1994 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairFord_3
+# 2000 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_9, MSGBOX_DEFAULT
+# 2001 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_10, MSGBOX_DEFAULT
+# 2002 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_11, MSGBOX_DEFAULT
+# 2003 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_12, MSGBOX_DEFAULT
+ParcelRiver_PairFord_1:
+# 2005 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_PairFord_2:
+# 1989 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_0, MSGBOX_DEFAULT
+# 1990 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_1, MSGBOX_DEFAULT
+# 1991 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_2, MSGBOX_DEFAULT
+# 1992 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_3, MSGBOX_DEFAULT
+# 1993 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_4, MSGBOX_DEFAULT
+	goto ParcelRiver_PairFord_1
+
+ParcelRiver_PairFord_3:
+# 1995 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_5, MSGBOX_DEFAULT
+# 1996 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_6, MSGBOX_DEFAULT
+# 1997 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_7, MSGBOX_DEFAULT
+# 1998 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairFord_Text_8, MSGBOX_DEFAULT
+	goto ParcelRiver_PairFord_1
+
+
+ParcelRiver_Stringer::
+# 2012 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 2013 "data/maps/ParcelRiver/scripts.pory"
+	faceplayer
+# 2014 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_Stringer_2
+# 2016 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_Stringer_3
+# 2023 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Stringer_Text_3, MSGBOX_DEFAULT
+ParcelRiver_Stringer_1:
+# 2025 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_Stringer_2:
+# 2015 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Stringer_Text_0, MSGBOX_DEFAULT
+	goto ParcelRiver_Stringer_1
+
+ParcelRiver_Stringer_3:
+# 2017 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALD_CH_SPOKE, ParcelRiver_Stringer_7
+# 2020 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Stringer_Text_2, MSGBOX_DEFAULT
+	goto ParcelRiver_Stringer_1
+
+ParcelRiver_Stringer_7:
+# 2018 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Stringer_Text_1, MSGBOX_DEFAULT
+	goto ParcelRiver_Stringer_1
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 51 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -6026,3 +6148,179 @@ ParcelRiver_SurveyStake_Text_0:
 	.string "child's blue ribbon tied under it by\l"
 	.string "somebody who thought it needed\l"
 	.string "company.$"
+
+ParcelRiver_PairMeter_Text_0:
+# 1967 "data/maps/ParcelRiver/scripts.pory"
+	.string "FARMER: The Board's publishing both\n"
+	.string "readings now. Old datum and new. Two\l"
+	.string "columns.$"
+
+ParcelRiver_PairMeter_Text_1:
+# 1968 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: Two columns and one river. The\n"
+	.string "wet column and the honest one.$"
+
+ParcelRiver_PairMeter_Text_2:
+# 1969 "data/maps/ParcelRiver/scripts.pory"
+	.string "FARMER: The honest one says my\n"
+	.string "allocation is a quarter of what it was.\l"
+	.string "On paper. It was always a quarter in the\l"
+	.string "field.$"
+
+ParcelRiver_PairMeter_Text_3:
+# 1970 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: Paper's catching up with the\n"
+	.string "field. Give it another forty years.$"
+
+ParcelRiver_PairMeter_Text_4:
+# 1972 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: Forty-one of us signed. The\n"
+	.string "reply was one paragraph. I've framed\l"
+	.string "the paragraph.$"
+
+ParcelRiver_PairMeter_Text_5:
+# 1973 "data/maps/ParcelRiver/scripts.pory"
+	.string "FARMER: The ranger read it. Twice. Then\n"
+	.string "asked SLUICE which year the datum was\l"
+	.string "set.$"
+
+ParcelRiver_PairMeter_Text_6:
+# 1974 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: And?$"
+
+ParcelRiver_PairMeter_Text_7:
+# 1975 "data/maps/ParcelRiver/scripts.pory"
+	.string "FARMER: And SLUICE answered. In public.\n"
+	.string "First Board officer to answer anything\l"
+	.string "in public since the gauge went in.$"
+
+ParcelRiver_PairMeter_Text_8:
+# 1977 "data/maps/ParcelRiver/scripts.pory"
+	.string "FARMER: Fourteen plots metered. The\n"
+	.string "meter runs when the water runs. The\l"
+	.string "water runs when the Board says.$"
+
+ParcelRiver_PairMeter_Text_9:
+# 1978 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: My wheel turned for free for\n"
+	.string "sixty years and now it's a 'draw'. A draw.\l"
+	.string "Like a lottery.$"
+
+ParcelRiver_PairMeter_Text_10:
+# 1979 "data/maps/ParcelRiver/scripts.pory"
+	.string "FARMER: You're ahead of me. They've\n"
+	.string "called mine an 'allocation'.$"
+
+ParcelRiver_PairMeter_Text_11:
+# 1980 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: Longer word. More expensive.$"
+
+ParcelRiver_PairFord_Text_0:
+# 1989 "data/maps/ParcelRiver/scripts.pory"
+	.string "DELL: OTTAR let the SEAKING go. The\n"
+	.string "last one. Off the ford, at first light,\l"
+	.string "nobody watching but me.$"
+
+ParcelRiver_PairFord_Text_1:
+# 1990 "data/maps/ParcelRiver/scripts.pory"
+	.string "GRANDDAUGHTER: Why would he do that?$"
+
+ParcelRiver_PairFord_Text_2:
+# 1991 "data/maps/ParcelRiver/scripts.pory"
+	.string "DELL: The ranger's count is in the\n"
+	.string "record. One fish. He said one fish in a\l"
+	.string "record is a prisoner. One fish in a river\l"
+	.string "is a chance.$"
+
+ParcelRiver_PairFord_Text_3:
+# 1992 "data/maps/ParcelRiver/scripts.pory"
+	.string "GRANDDAUGHTER: Is it?$"
+
+ParcelRiver_PairFord_Text_4:
+# 1993 "data/maps/ParcelRiver/scripts.pory"
+	.string "DELL: Ask me in forty years. Write down\n"
+	.string "that I said that.$"
+
+ParcelRiver_PairFord_Text_5:
+# 1995 "data/maps/ParcelRiver/scripts.pory"
+	.string "GRANDDAUGHTER: The ranger stood in the\n"
+	.string "shallows for an hour. Just counting.$"
+
+ParcelRiver_PairFord_Text_6:
+# 1996 "data/maps/ParcelRiver/scripts.pory"
+	.string "DELL: Counting what? There's nothing\n"
+	.string "to count.$"
+
+ParcelRiver_PairFord_Text_7:
+# 1997 "data/maps/ParcelRiver/scripts.pory"
+	.string "GRANDDAUGHTER: That's what they were\n"
+	.string "counting. They wrote down nothing, with\l"
+	.string "the date. Said nothing with a date is a\l"
+	.string "number.$"
+
+ParcelRiver_PairFord_Text_8:
+# 1998 "data/maps/ParcelRiver/scripts.pory"
+	.string "DELL: …Your great-grandfather would\n"
+	.string "have liked that. He never wrote\l"
+	.string "anything down and it's all gone with him.$"
+
+ParcelRiver_PairFord_Text_9:
+# 2000 "data/maps/ParcelRiver/scripts.pory"
+	.string "GRANDDAUGHTER: You said the SEAKING\n"
+	.string "came up to the ford. In red.$"
+
+ParcelRiver_PairFord_Text_10:
+# 2001 "data/maps/ParcelRiver/scripts.pory"
+	.string "DELL: Every spring. You could walk\n"
+	.string "across on them, my father said. He said\l"
+	.string "a lot of things.$"
+
+ParcelRiver_PairFord_Text_11:
+# 2002 "data/maps/ParcelRiver/scripts.pory"
+	.string "GRANDDAUGHTER: Was that one true?$"
+
+ParcelRiver_PairFord_Text_12:
+# 2003 "data/maps/ParcelRiver/scripts.pory"
+	.string "DELL: The ford part. The walking part\n"
+	.string "was my father.$"
+
+ParcelRiver_Stringer_Text_0:
+# 2015 "data/maps/ParcelRiver/scripts.pory"
+	.string "MAREN: The Board publishes two columns\n"
+	.string "now. Old datum, new datum. I ran them\l"
+	.string "side by side without a word of comment.\p"
+	.string "Best thing I never wrote. The miller\n"
+	.string "framed it next to the Board's\l"
+	.string "one-paragraph reply. He's got a wall\l"
+	.string "going.$"
+
+ParcelRiver_Stringer_Text_1:
+# 2018 "data/maps/ParcelRiver/scripts.pory"
+	.string "MAREN: The meeting ran as half a page.\n"
+	.string "Including the ranger who stood up at\l"
+	.string "the back and said refuse the\l"
+	.string "straightened mile.\p"
+	.string "I quoted you from memory. It was close.\n"
+	.string "If it wasn't, you should have given me\l"
+	.string "the sentence at Reedmere.$"
+
+ParcelRiver_Stringer_Text_2:
+# 2020 "data/maps/ParcelRiver/scripts.pory"
+	.string "MAREN: The meeting ran as half a page.\n"
+	.string "The ranger stood at the back and wrote.\l"
+	.string "I put that in.\p"
+	.string "Standing at the back writing is a\n"
+	.string "position too. ILEX has held it for\l"
+	.string "thirty years. Look where it's got the\l"
+	.string "Board.$"
+
+ParcelRiver_Stringer_Text_3:
+# 2023 "data/maps/ParcelRiver/scripts.pory"
+	.string "MAREN: The water meeting's tonight.\n"
+	.string "Forty-one ratepayers and a Board that\l"
+	.string "won't name a year.\p"
+	.string "I asked SLUICE which year. SLUICE said\n"
+	.string "ask the Board. I asked the Board. The\l"
+	.string "Board doesn't comment on individual\l"
+	.string "readings. I've written that sentence so\l"
+	.string "often I could set it in type myself.$"

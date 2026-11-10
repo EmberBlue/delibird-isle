@@ -1545,6 +1545,100 @@ ParcelDelibird_GymIlex_Rematch_2:
 	end
 
 
+ParcelDelibird_PairLights::
+# 837 "data/maps/ParcelDelibird/scripts.pory"
+	lock
+# 838 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_PairLights_2
+# 844 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairLights_3
+# 850 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_9, MSGBOX_DEFAULT
+# 851 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_10, MSGBOX_DEFAULT
+# 852 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_11, MSGBOX_DEFAULT
+# 853 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_12, MSGBOX_DEFAULT
+# 854 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_13, MSGBOX_DEFAULT
+ParcelDelibird_PairLights_1:
+# 856 "data/maps/ParcelDelibird/scripts.pory"
+	release
+	end
+
+ParcelDelibird_PairLights_2:
+# 839 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_0, MSGBOX_DEFAULT
+# 840 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_1, MSGBOX_DEFAULT
+# 841 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_2, MSGBOX_DEFAULT
+# 842 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_3, MSGBOX_DEFAULT
+# 843 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_4, MSGBOX_DEFAULT
+	goto ParcelDelibird_PairLights_1
+
+ParcelDelibird_PairLights_3:
+# 845 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_5, MSGBOX_DEFAULT
+# 846 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_6, MSGBOX_DEFAULT
+# 847 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_7, MSGBOX_DEFAULT
+# 848 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_8, MSGBOX_DEFAULT
+	goto ParcelDelibird_PairLights_1
+
+
+ParcelDelibird_PairGround::
+# 861 "data/maps/ParcelDelibird/scripts.pory"
+	lock
+# 862 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_PairGround_2
+# 868 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairGround_3
+# 875 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_10, MSGBOX_DEFAULT
+# 876 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_11, MSGBOX_DEFAULT
+# 877 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_12, MSGBOX_DEFAULT
+# 878 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_13, MSGBOX_DEFAULT
+ParcelDelibird_PairGround_1:
+# 880 "data/maps/ParcelDelibird/scripts.pory"
+	release
+	end
+
+ParcelDelibird_PairGround_2:
+# 863 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_0, MSGBOX_DEFAULT
+# 864 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_1, MSGBOX_DEFAULT
+# 865 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_2, MSGBOX_DEFAULT
+# 866 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_3, MSGBOX_DEFAULT
+# 867 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_4, MSGBOX_DEFAULT
+	goto ParcelDelibird_PairGround_1
+
+ParcelDelibird_PairGround_3:
+# 869 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_5, MSGBOX_DEFAULT
+# 870 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_6, MSGBOX_DEFAULT
+# 871 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_7, MSGBOX_DEFAULT
+# 872 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_8, MSGBOX_DEFAULT
+# 873 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_9, MSGBOX_DEFAULT
+	goto ParcelDelibird_PairGround_1
+
+
 ParcelDelibird_FirstEntry_Text_0:
 # 49 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The boat noses in and the island takes\n"
@@ -2523,3 +2617,149 @@ ParcelDelibird_GymIlex_Rematch_Text_3:
 # 829 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Ilex: The cloth is in my pocket.\n"
 	.string "Whenever you like.$"
+
+ParcelDelibird_PairLights_Text_0:
+# 839 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: The square's lit. Nobody\n"
+	.string "cheered. Did you notice? Nobody\l"
+	.string "cheered.$"
+
+ParcelDelibird_PairLights_Text_1:
+# 840 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BOY: Was that wrong?$"
+
+ParcelDelibird_PairLights_Text_2:
+# 841 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: It was right. You don't\n"
+	.string "cheer a lamp in a storm. You stand near\l"
+	.string "it.$"
+
+ParcelDelibird_PairLights_Text_3:
+# 842 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BOY: The ranger stood near it.$"
+
+ParcelDelibird_PairLights_Text_4:
+# 843 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: The ranger looked up the\n"
+	.string "slope at the wet ground, same as me.\l"
+	.string "Then stood near it anyway. That's the\l"
+	.string "whole of being grown.$"
+
+ParcelDelibird_PairLights_Text_5:
+# 845 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BOY: The ranger did the whole round.\n"
+	.string "Three doors, on foot. MARTA gave them\l"
+	.string "the bird.$"
+
+ParcelDelibird_PairLights_Text_6:
+# 846 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: MARTA gave them the bird\n"
+	.string "because the bird chose. You don't give a\l"
+	.string "DELIBIRD. It goes.$"
+
+ParcelDelibird_PairLights_Text_7:
+# 847 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BOY: Where would it go?$"
+
+ParcelDelibird_PairLights_Text_8:
+# 848 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: Wherever something's\n"
+	.string "needed. It has a worse sense of\l"
+	.string "self-preservation than you do.$"
+
+ParcelDelibird_PairLights_Text_9:
+# 850 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: The stringer's up the\n"
+	.string "ladder again. Every bulb on the eaves\l"
+	.string "tested, and it's a month off.$"
+
+ParcelDelibird_PairLights_Text_10:
+# 851 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BOY: Why so early?$"
+
+ParcelDelibird_PairLights_Text_11:
+# 852 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: Because the ground under\n"
+	.string "the ladder was dry last year and it isn't\l"
+	.string "this year. She wants it done before it\l"
+	.string "isn't a ladder you'd want to stand on.$"
+
+ParcelDelibird_PairLights_Text_12:
+# 853 "data/maps/ParcelDelibird/scripts.pory"
+	.string "BOY: Can I hold the ladder?$"
+
+ParcelDelibird_PairLights_Text_13:
+# 854 "data/maps/ParcelDelibird/scripts.pory"
+	.string "GRANDMOTHER: Hold the ladder. That's\n"
+	.string "what boys are for.$"
+
+ParcelDelibird_PairGround_Text_0:
+# 863 "data/maps/ParcelDelibird/scripts.pory"
+	.string "WIFE: The FOUNDATION's paper about\n"
+	.string "moving the festival. MARTA wrote back\l"
+	.string "'thank you, and no'. In those words.$"
+
+ParcelDelibird_PairGround_Text_1:
+# 864 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HUSBAND: And the Council?$"
+
+ParcelDelibird_PairGround_Text_2:
+# 865 "data/maps/ParcelDelibird/scripts.pory"
+	.string "WIFE: Sent a surveyor. A real one, with\n"
+	.string "the red cloth. To ask us where we'd want\l"
+	.string "to be, if.$"
+
+ParcelDelibird_PairGround_Text_3:
+# 866 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HUSBAND: If.$"
+
+ParcelDelibird_PairGround_Text_4:
+# 867 "data/maps/ParcelDelibird/scripts.pory"
+	.string "WIFE: If. First time anyone's said it to\n"
+	.string "us as a question.$"
+
+ParcelDelibird_PairGround_Text_5:
+# 869 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HUSBAND: The ranger measured the slump\n"
+	.string "with a tape. Wrote the number on the\l"
+	.string "stake and the date under it.$"
+
+ParcelDelibird_PairGround_Text_6:
+# 870 "data/maps/ParcelDelibird/scripts.pory"
+	.string "WIFE: What was the number?$"
+
+ParcelDelibird_PairGround_Text_7:
+# 871 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HUSBAND: Doesn't matter. What matters\n"
+	.string "is there'll be another number next year\l"
+	.string "under it, and anyone can see which way\l"
+	.string "they go.$"
+
+ParcelDelibird_PairGround_Text_8:
+# 872 "data/maps/ParcelDelibird/scripts.pory"
+	.string "WIFE: That's not comfort.$"
+
+ParcelDelibird_PairGround_Text_9:
+# 873 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HUSBAND: No. It's a ruler. We've had\n"
+	.string "comfort. It came with a crest on it.$"
+
+ParcelDelibird_PairGround_Text_10:
+# 875 "data/maps/ParcelDelibird/scripts.pory"
+	.string "WIFE: TOMAS's cabin corner is in the\n"
+	.string "ground to the sill. Ketil's talking about\l"
+	.string "moving him.$"
+
+ParcelDelibird_PairGround_Text_11:
+# 876 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HUSBAND: Moving him where? Every cabin\n"
+	.string "on the north side has a corner going.$"
+
+ParcelDelibird_PairGround_Text_12:
+# 877 "data/maps/ParcelDelibird/scripts.pory"
+	.string "WIFE: Then we move the north side.$"
+
+ParcelDelibird_PairGround_Text_13:
+# 878 "data/maps/ParcelDelibird/scripts.pory"
+	.string "HUSBAND: We've moved it twice in my life.\n"
+	.string "Each time it caught us up.$"

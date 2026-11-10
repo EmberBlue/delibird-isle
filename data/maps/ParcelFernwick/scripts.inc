@@ -1667,6 +1667,130 @@ ParcelFernwick_PondPage_2:
 	end
 
 
+ParcelFernwick_PairCorps::
+# 865 "data/maps/ParcelFernwick/scripts.pory"
+	lock
+# 866 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_PairCorps_2
+# 871 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_PairCorps_3
+# 877 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_8, MSGBOX_DEFAULT
+# 878 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_9, MSGBOX_DEFAULT
+# 879 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_10, MSGBOX_DEFAULT
+# 880 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_11, MSGBOX_DEFAULT
+ParcelFernwick_PairCorps_1:
+# 882 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
+
+ParcelFernwick_PairCorps_2:
+# 867 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_0, MSGBOX_DEFAULT
+# 868 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_1, MSGBOX_DEFAULT
+# 869 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_2, MSGBOX_DEFAULT
+# 870 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_3, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairCorps_1
+
+ParcelFernwick_PairCorps_3:
+# 872 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_4, MSGBOX_DEFAULT
+# 873 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_5, MSGBOX_DEFAULT
+# 874 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_6, MSGBOX_DEFAULT
+# 875 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairCorps_Text_7, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairCorps_1
+
+
+ParcelFernwick_PairPond::
+# 887 "data/maps/ParcelFernwick/scripts.pory"
+	lock
+# 888 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_PairPond_2
+# 893 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_PairPond_3
+# 899 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_8, MSGBOX_DEFAULT
+# 900 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_9, MSGBOX_DEFAULT
+# 901 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_10, MSGBOX_DEFAULT
+# 902 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_11, MSGBOX_DEFAULT
+# 903 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_12, MSGBOX_DEFAULT
+ParcelFernwick_PairPond_1:
+# 905 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
+
+ParcelFernwick_PairPond_2:
+# 889 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_0, MSGBOX_DEFAULT
+# 890 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_1, MSGBOX_DEFAULT
+# 891 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_2, MSGBOX_DEFAULT
+# 892 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_3, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairPond_1
+
+ParcelFernwick_PairPond_3:
+# 894 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_4, MSGBOX_DEFAULT
+# 895 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_5, MSGBOX_DEFAULT
+# 896 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_6, MSGBOX_DEFAULT
+# 897 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairPond_Text_7, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairPond_1
+
+
+ParcelFernwick_Stringer::
+# 912 "data/maps/ParcelFernwick/scripts.pory"
+	lock
+# 913 "data/maps/ParcelFernwick/scripts.pory"
+	faceplayer
+# 914 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_Stringer_2
+# 916 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelFernwick_Stringer_3
+# 924 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Stringer_Text_4, MSGBOX_DEFAULT
+ParcelFernwick_Stringer_1:
+# 926 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
+
+ParcelFernwick_Stringer_2:
+# 915 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Stringer_Text_0, MSGBOX_DEFAULT
+	goto ParcelFernwick_Stringer_1
+
+ParcelFernwick_Stringer_3:
+# 917 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Stringer_Text_1, MSGBOX_DEFAULT
+# 918 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALD_CH_QUOTE, ParcelFernwick_Stringer_7
+# 921 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Stringer_Text_3, MSGBOX_DEFAULT
+	goto ParcelFernwick_Stringer_1
+
+ParcelFernwick_Stringer_7:
+# 919 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Stringer_Text_2, MSGBOX_DEFAULT
+	goto ParcelFernwick_Stringer_1
+
+
 ParcelFernwick_Smeargle_Text_0:
 # 29 "data/maps/ParcelFernwick/scripts.pory"
 	.string "A SMEARGLE sits on the bank with its\n"
@@ -2535,3 +2659,177 @@ ParcelFernwick_PondPage_Text_0:
 	.string "hand:\p"
 	.string "'Marsh page. 28 pairs. The low years\n"
 	.string "start here.'$"
+
+ParcelFernwick_PairCorps_Text_0:
+# 867 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: The Director's office sent a\n"
+	.string "letter. The certification programme is\l"
+	.string "'under review for independence'.$"
+
+ParcelFernwick_PairCorps_Text_1:
+# 868 "data/maps/ParcelFernwick/scripts.pory"
+	.string "NEIGHBOUR: Meaning the FOUNDATION's\n"
+	.string "third of it.$"
+
+ParcelFernwick_PairCorps_Text_2:
+# 869 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: Meaning eight stations instead\n"
+	.string "of twelve, if they walk. HALE says he'd\l"
+	.string "rather have eight honest ones.$"
+
+ParcelFernwick_PairCorps_Text_3:
+# 870 "data/maps/ParcelFernwick/scripts.pory"
+	.string "NEIGHBOUR: HALE's said that for twenty\n"
+	.string "years. Now someone's written it down\l"
+	.string "where it counts.$"
+
+ParcelFernwick_PairCorps_Text_4:
+# 872 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: The river meeting's in the\n"
+	.string "papers. Forty-one ratepayers and a\l"
+	.string "Board that won't name a year.$"
+
+ParcelFernwick_PairCorps_Text_5:
+# 873 "data/maps/ParcelFernwick/scripts.pory"
+	.string "NEIGHBOUR: And a ranger who stood in\n"
+	.string "the back and wrote it all down.$"
+
+ParcelFernwick_PairCorps_Text_6:
+# 874 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: Writing it down isn't standing\n"
+	.string "up.$"
+
+ParcelFernwick_PairCorps_Text_7:
+# 875 "data/maps/ParcelFernwick/scripts.pory"
+	.string "NEIGHBOUR: Ask the Board which one\n"
+	.string "they're more afraid of.$"
+
+ParcelFernwick_PairCorps_Text_8:
+# 877 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: HALE took another provisional.\n"
+	.string "From JOHTO, this one. No partner. No\l"
+	.string "badges. Nothing.$"
+
+ParcelFernwick_PairCorps_Text_9:
+# 878 "data/maps/ParcelFernwick/scripts.pory"
+	.string "NEIGHBOUR: He takes them with nothing\n"
+	.string "on purpose. Says you can see what they\l"
+	.string "do with it.$"
+
+ParcelFernwick_PairCorps_Text_10:
+# 879 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: What do they do with it?$"
+
+ParcelFernwick_PairCorps_Text_11:
+# 880 "data/maps/ParcelFernwick/scripts.pory"
+	.string "NEIGHBOUR: Mostly leave. The ones that\n"
+	.string "stay, you remember.$"
+
+ParcelFernwick_PairPond_Text_0:
+# 889 "data/maps/ParcelFernwick/scripts.pory"
+	.string "BOY: There's a SMEARGLE on the far\n"
+	.string "bank. It paints the line where the water\l"
+	.string "was.$"
+
+ParcelFernwick_PairPond_Text_1:
+# 890 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD MAN: I've seen it. It's not painting\n"
+	.string "where the water was. It's painting\l"
+	.string "where the water is.$"
+
+ParcelFernwick_PairPond_Text_2:
+# 891 "data/maps/ParcelFernwick/scripts.pory"
+	.string "BOY: That's the same line.$"
+
+ParcelFernwick_PairPond_Text_3:
+# 892 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD MAN: This year it is. Watch it next\n"
+	.string "year. That's the whole job, you know.\l"
+	.string "Watching next year.$"
+
+ParcelFernwick_PairPond_Text_4:
+# 894 "data/maps/ParcelFernwick/scripts.pory"
+	.string "BOY: The ranger counted the pond.\n"
+	.string "Twenty-eight pairs of WINGULL, they\l"
+	.string "said, same as the old notebook.$"
+
+ParcelFernwick_PairPond_Text_5:
+# 895 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD MAN: Same number. Half the water.\n"
+	.string "Work that out for your homework.$"
+
+ParcelFernwick_PairPond_Text_6:
+# 896 "data/maps/ParcelFernwick/scripts.pory"
+	.string "BOY: Fewer places to land, so they land\n"
+	.string "closer together?$"
+
+ParcelFernwick_PairPond_Text_7:
+# 897 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD MAN: So the count looks fine. Good.\n"
+	.string "You'll be a surveyor or a liar, and the\l"
+	.string "difference is who you tell.$"
+
+ParcelFernwick_PairPond_Text_8:
+# 899 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD MAN: The pond came up to that\n"
+	.string "stone when I was your age. Every spring.$"
+
+ParcelFernwick_PairPond_Text_9:
+# 900 "data/maps/ParcelFernwick/scripts.pory"
+	.string "BOY: Which stone?$"
+
+ParcelFernwick_PairPond_Text_10:
+# 901 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD MAN: That one. The dry one. You're\n"
+	.string "standing on it.$"
+
+ParcelFernwick_PairPond_Text_11:
+# 902 "data/maps/ParcelFernwick/scripts.pory"
+	.string "BOY: It's a long way from the water.$"
+
+ParcelFernwick_PairPond_Text_12:
+# 903 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD MAN: It didn't move.$"
+
+ParcelFernwick_Stringer_Text_0:
+# 915 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MAREN: The hearing is on the front\n"
+	.string "page. My piece above the fold, the\l"
+	.string "Commissioner's reply below it. Nine\l"
+	.string "years I've had that upside down.\p"
+	.string "HALE still won't talk to me. He sent a\n"
+	.string "note. It said: the record has a\l"
+	.string "circulation now. Thank you. I've framed\l"
+	.string "it. It's the only review I've had.$"
+
+ParcelFernwick_Stringer_Text_1:
+# 917 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MAREN: The Poisoned Waters piece ran.\n"
+	.string "Page four. The Commissioner's reply ran\l"
+	.string "page two. That's the ratio in this\l"
+	.string "region: his two to my four.$"
+
+ParcelFernwick_Stringer_Text_2:
+# 919 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MAREN: Your sentence is in it, under\n"
+	.string "your name. The editor wanted it cut. I\l"
+	.string "said the ranger said it on the record,\l"
+	.string "and the record is the one thing he can't\l"
+	.string "cut. He didn't know what I meant. He will.$"
+
+ParcelFernwick_Stringer_Text_3:
+# 921 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MAREN: You're in it without your name,\n"
+	.string "because you didn't give me one. 'A\l"
+	.string "ranger read the manifest.' Passive\l"
+	.string "voice. I hate it. It's what you left me.$"
+
+ParcelFernwick_Stringer_Text_4:
+# 924 "data/maps/ParcelFernwick/scripts.pory"
+	.string "MAREN: The HQ. I'm not allowed in. HALE\n"
+	.string "says the Corps doesn't talk to the\l"
+	.string "press; it talks to the record.\p"
+	.string "I told him the record doesn't have a\n"
+	.string "circulation. He said that's its one\l"
+	.string "advantage. I've been trying to think of\l"
+	.string "an answer for six years.$"

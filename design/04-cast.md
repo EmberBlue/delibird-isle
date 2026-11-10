@@ -306,3 +306,20 @@ liaison → relocation team → Coastal Holdings), and found at the window desk
 in Hollis's office after the finale, having typed the response. Not a rival
 trope: the rhyme's fourth leg. Sprite: the white-coated rich boy; parties
 built on Electrike/Numel (the two meadow partners nobody picks).
+
+## Maren — the stringer (added 2026-11-10, built)
+
+The Skaldmere Courier's correspondent for everywhere, whose desk is
+whichever bench is outside the building she is not allowed into: the
+Saltwick lodging, the Fernwick HQ ("the Corps talks to the record"),
+the Tidewater office's ribbon, the Leirvik relief line (a drawer of
+photographs, different child, same blanket), the Elvsund hall, the
+Haukfell centre, the Coast's hearing room. She is the game's outside
+eye: she asks the one thing nobody in the room will, gets laughed at,
+and prints the laugh. She counts (thirty-one jobs, not forty) and keeps
+the ratio (his page two to her page four) until the sitting turns it
+over. She never joins the Corps, never takes a side on paper, and never
+stops asking Wren for one sentence on the record; whether Wren gives it
+at Reedmere (`FLAG_SKALD_CH_QUOTE`) decides what she runs at the top
+after the hearing. Sprite: the reporter. No battle. Problem 4 of §13
+("the cast doesn't recur") answered from the other side of the notebook.

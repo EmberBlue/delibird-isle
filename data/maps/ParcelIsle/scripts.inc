@@ -1897,6 +1897,123 @@ ParcelIsle_T_Line_R5_2:
 	end
 
 
+ParcelIsle_PairNets::
+# 1007 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 1008 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_PairNets_2
+# 1013 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_PairNets_3
+# 1019 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_8, MSGBOX_DEFAULT
+# 1020 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_9, MSGBOX_DEFAULT
+# 1021 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_10, MSGBOX_DEFAULT
+# 1022 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_11, MSGBOX_DEFAULT
+ParcelIsle_PairNets_1:
+# 1024 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_PairNets_2:
+# 1009 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_0, MSGBOX_DEFAULT
+# 1010 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_1, MSGBOX_DEFAULT
+# 1011 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_2, MSGBOX_DEFAULT
+# 1012 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_3, MSGBOX_DEFAULT
+	goto ParcelIsle_PairNets_1
+
+ParcelIsle_PairNets_3:
+# 1014 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_4, MSGBOX_DEFAULT
+# 1015 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_5, MSGBOX_DEFAULT
+# 1016 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_6, MSGBOX_DEFAULT
+# 1017 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairNets_Text_7, MSGBOX_DEFAULT
+	goto ParcelIsle_PairNets_1
+
+
+ParcelIsle_PairFreight::
+# 1029 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 1030 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_PairFreight_2
+# 1035 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_PairFreight_3
+# 1041 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_8, MSGBOX_DEFAULT
+# 1042 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_9, MSGBOX_DEFAULT
+# 1043 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_10, MSGBOX_DEFAULT
+# 1044 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_11, MSGBOX_DEFAULT
+ParcelIsle_PairFreight_1:
+# 1046 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_PairFreight_2:
+# 1031 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_0, MSGBOX_DEFAULT
+# 1032 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_1, MSGBOX_DEFAULT
+# 1033 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_2, MSGBOX_DEFAULT
+# 1034 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_3, MSGBOX_DEFAULT
+	goto ParcelIsle_PairFreight_1
+
+ParcelIsle_PairFreight_3:
+# 1036 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_4, MSGBOX_DEFAULT
+# 1037 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_5, MSGBOX_DEFAULT
+# 1038 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_6, MSGBOX_DEFAULT
+# 1039 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairFreight_Text_7, MSGBOX_DEFAULT
+	goto ParcelIsle_PairFreight_1
+
+
+ParcelIsle_Stringer::
+# 1053 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 1054 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 1055 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_Stringer_2
+# 1057 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_Stringer_3
+# 1060 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Stringer_Text_2, MSGBOX_DEFAULT
+# 1061 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Stringer_Text_3, MSGBOX_DEFAULT
+# 1062 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Stringer_Text_4, MSGBOX_DEFAULT
+ParcelIsle_Stringer_1:
+# 1064 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_Stringer_2:
+# 1056 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Stringer_Text_0, MSGBOX_DEFAULT
+	goto ParcelIsle_Stringer_1
+
+ParcelIsle_Stringer_3:
+# 1058 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Stringer_Text_1, MSGBOX_DEFAULT
+	goto ParcelIsle_Stringer_1
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAM: Hey! You're the mainlander, right?\n"
@@ -3044,3 +3161,169 @@ ParcelIsle_T_Line_R5_Text_2:
 # 999 "data/maps/ParcelIsle/scripts.pory"
 	.string "LINE: That's all I've got. It was enough\n"
 	.string "to see it done.$"
+
+ParcelIsle_PairNets_Text_0:
+# 1009 "data/maps/ParcelIsle/scripts.pory"
+	.string "NETMENDER: The lab on the front.\n"
+	.string "They've taken the boards down. There's\l"
+	.string "a light in it.$"
+
+ParcelIsle_PairNets_Text_1:
+# 1010 "data/maps/ParcelIsle/scripts.pory"
+	.string "OLD WOMAN: The Survey's leased it. For\n"
+	.string "the baselines, they say. Thirty-one\l"
+	.string "years of cloth in cardboard boxes.$"
+
+ParcelIsle_PairNets_Text_2:
+# 1011 "data/maps/ParcelIsle/scripts.pory"
+	.string "NETMENDER: In the lab they emptied. In\n"
+	.string "the same room.$"
+
+ParcelIsle_PairNets_Text_3:
+# 1012 "data/maps/ParcelIsle/scripts.pory"
+	.string "OLD WOMAN: In the same room. Somebody\n"
+	.string "has a sense of humour. Not the company.$"
+
+ParcelIsle_PairNets_Text_4:
+# 1014 "data/maps/ParcelIsle/scripts.pory"
+	.string "NETMENDER: They say the ranger made\n"
+	.string "FOREST. First one out of this harbour in\l"
+	.string "nine years.$"
+
+ParcelIsle_PairNets_Text_5:
+# 1015 "data/maps/ParcelIsle/scripts.pory"
+	.string "OLD WOMAN: Out of this harbour. Listen\n"
+	.string "to you. You sold the ranger a bad rope.$"
+
+ParcelIsle_PairNets_Text_6:
+# 1016 "data/maps/ParcelIsle/scripts.pory"
+	.string "NETMENDER: It was a fair rope. The\n"
+	.string "ranger's just hard on rope.$"
+
+ParcelIsle_PairNets_Text_7:
+# 1017 "data/maps/ParcelIsle/scripts.pory"
+	.string "OLD WOMAN: Hard on everything, I hear.\n"
+	.string "Good. Something should be.$"
+
+ParcelIsle_PairNets_Text_8:
+# 1019 "data/maps/ParcelIsle/scripts.pory"
+	.string "NETMENDER: Third ferry this week with\n"
+	.string "nobody getting off but freight.$"
+
+ParcelIsle_PairNets_Text_9:
+# 1020 "data/maps/ParcelIsle/scripts.pory"
+	.string "OLD WOMAN: Somebody got off. The one\n"
+	.string "with the notebook.$"
+
+ParcelIsle_PairNets_Text_10:
+# 1021 "data/maps/ParcelIsle/scripts.pory"
+	.string "NETMENDER: That's not a somebody.\n"
+	.string "That's a letter with legs.$"
+
+ParcelIsle_PairNets_Text_11:
+# 1022 "data/maps/ParcelIsle/scripts.pory"
+	.string "OLD WOMAN: A letter's more than this\n"
+	.string "town's had in a while. Mend your net.$"
+
+ParcelIsle_PairFreight_Text_0:
+# 1031 "data/maps/ParcelIsle/scripts.pory"
+	.string "DOCKER: East berth's open all night now.\n"
+	.string "Logistics pulled the night crew.$"
+
+ParcelIsle_PairFreight_Text_1:
+# 1032 "data/maps/ParcelIsle/scripts.pory"
+	.string "CHANDLER: Pulled them where?$"
+
+ParcelIsle_PairFreight_Text_2:
+# 1033 "data/maps/ParcelIsle/scripts.pory"
+	.string "DOCKER: Nowhere. That's the thing.\n"
+	.string "Nowhere to pull them to, with the dredge\l"
+	.string "stopped.$"
+
+ParcelIsle_PairFreight_Text_3:
+# 1034 "data/maps/ParcelIsle/scripts.pory"
+	.string "CHANDLER: Then they'll be in my shop by\n"
+	.string "the weekend, wanting rope on credit.\l"
+	.string "Tell them yes.$"
+
+ParcelIsle_PairFreight_Text_4:
+# 1036 "data/maps/ParcelIsle/scripts.pory"
+	.string "DOCKER: Saw the ranger go through to\n"
+	.string "the meadow with nothing. Came back with\l"
+	.string "a DODUO at heel, or whatever it was.\l"
+	.string "Didn't look like a trainer.$"
+
+ParcelIsle_PairFreight_Text_5:
+# 1037 "data/maps/ParcelIsle/scripts.pory"
+	.string "CHANDLER: Looked like someone who'd\n"
+	.string "been chosen and hadn't decided how\l"
+	.string "they felt.$"
+
+ParcelIsle_PairFreight_Text_6:
+# 1038 "data/maps/ParcelIsle/scripts.pory"
+	.string "DOCKER: You can see all that from the\n"
+	.string "quay?$"
+
+ParcelIsle_PairFreight_Text_7:
+# 1039 "data/maps/ParcelIsle/scripts.pory"
+	.string "CHANDLER: I sell rope to everyone who\n"
+	.string "leaves. You learn faces.$"
+
+ParcelIsle_PairFreight_Text_8:
+# 1041 "data/maps/ParcelIsle/scripts.pory"
+	.string "DOCKER: Logistics wants the east berth\n"
+	.string "cleared by six. Every night this month,\l"
+	.string "by six.$"
+
+ParcelIsle_PairFreight_Text_9:
+# 1042 "data/maps/ParcelIsle/scripts.pory"
+	.string "CHANDLER: Cleared for what? Nothing\n"
+	.string "comes in at six.$"
+
+ParcelIsle_PairFreight_Text_10:
+# 1043 "data/maps/ParcelIsle/scripts.pory"
+	.string "DOCKER: Something goes out. I don't\n"
+	.string "ask. It's a good job for not asking.$"
+
+ParcelIsle_PairFreight_Text_11:
+# 1044 "data/maps/ParcelIsle/scripts.pory"
+	.string "CHANDLER: It's the only kind they have.$"
+
+ParcelIsle_Stringer_Text_0:
+# 1056 "data/maps/ParcelIsle/scripts.pory"
+	.string "MAREN: The Survey's in the lab now. I\n"
+	.string "covered the move. Thirty-one years of\l"
+	.string "red cloth going in through the door the\l"
+	.string "company's van came out of at two in the\l"
+	.string "morning.\p"
+	.string "Best picture I've taken. Front page.\n"
+	.string "Logistics did not comment, and I\l"
+	.string "printed that they did not.$"
+
+ParcelIsle_Stringer_Text_1:
+# 1058 "data/maps/ParcelIsle/scripts.pory"
+	.string "MAREN: FOREST, I heard. From a bench\n"
+	.string "you hear things. The lab on the front is\l"
+	.string "still boarded. The police call it\l"
+	.string "burglary. I call it burglary in print, and\l"
+	.string "we both know the word's wrong.\p"
+	.string "When you've got the right word, I'm here.\n"
+	.string "I'm always here. It's a very good bench.$"
+
+ParcelIsle_Stringer_Text_2:
+# 1060 "data/maps/ParcelIsle/scripts.pory"
+	.string "MAREN: Skaldmere Courier. Dock desk,\n"
+	.string "which is this bench. You came off the\l"
+	.string "morning ferry with a bag and no partner.\l"
+	.string "That's a story or it's nothing. Which?$"
+
+ParcelIsle_Stringer_Text_3:
+# 1061 "data/maps/ParcelIsle/scripts.pory"
+	.string "{PLAYER}: Nothing yet.$"
+
+ParcelIsle_Stringer_Text_4:
+# 1062 "data/maps/ParcelIsle/scripts.pory"
+	.string "MAREN: Good answer. Most people give me\n"
+	.string "the other one and regret it by the\l"
+	.string "second ferry. Come back when it's\l"
+	.string "something.$"

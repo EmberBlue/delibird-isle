@@ -66,6 +66,12 @@ ParcelFernwickFisher_OldMan_14:
 	goto ParcelFernwickFisher_OldMan_13
 
 
+ParcelFernwickFisher_TideTable::
+# 43 "data/maps/ParcelFernwickFisher/scripts.pory"
+	msgbox ParcelFernwickFisher_TideTable_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelFernwickFisher_OldMan_Text_0:
 # 8 "data/maps/ParcelFernwickFisher/scripts.pory"
 	.string "GRETTIR: A POLIWAG. In the CORPS pond.\n"
@@ -116,3 +122,17 @@ ParcelFernwickFisher_OldMan_Text_6:
 	.string "Go and look at it for me. Properly. Tell\n"
 	.string "me if anything's found it on its own.\l"
 	.string "Nothing has, I'll bet you.$"
+
+ParcelFernwickFisher_TideTable_Text_0:
+# 43 "data/maps/ParcelFernwickFisher/scripts.pory"
+	.string "A tide table nailed to the wall, this\n"
+	.string "year's, with the old man's marks on it.\p"
+	.string "The springs and the neaps in print. In\n"
+	.string "pencil beside them: HIGH, in a shaky\l"
+	.string "capital, on nine days that the table\l"
+	.string "calls ordinary.\p"
+	.string "The nine days are all in the same month.\n"
+	.string "The month the basin flooded. The water\l"
+	.string "that came down the river that month\l"
+	.string "went out to sea past this door, and the\l"
+	.string "table did not know.$"

@@ -78,6 +78,12 @@ ParcelFerry_Attendant::
 	end
 
 
+ParcelFerry_Manifest::
+# 55 "data/maps/ParcelFerry/scripts.pory"
+	msgbox ParcelFerry_Manifest_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelFerry_Opening_Text_0:
 # 18 "data/maps/ParcelFerry/scripts.pory"
 	.string "In an age of unstable climates and\n"
@@ -118,3 +124,16 @@ ParcelFerry_Attendant_Text_0:
 # 47 "data/maps/ParcelFerry/scripts.pory"
 	.string "Attendant: Island stop's next.\n"
 	.string "Gather your things.$"
+
+ParcelFerry_Manifest_Text_0:
+# 55 "data/maps/ParcelFerry/scripts.pory"
+	.string "The crossing's manifest board. Chalk,\n"
+	.string "wiped and rewritten every sailing.\p"
+	.string "PASSENGERS: a number. FREIGHT:\n"
+	.string "Mereholt Logistics, always, and the\l"
+	.string "tonnage. LIVESTOCK: none. MAIL: one\l"
+	.string "bag.\p"
+	.string "Under MAIL, smaller, in a different\n"
+	.string "chalk that nobody has wiped: and one\l"
+	.string "letter that came by hand, a long time\l"
+	.string "ago, and is still being answered.$"

@@ -2679,6 +2679,98 @@ ParcelWeather_T_Oyvind_R5_2:
 	end
 
 
+ParcelWeather_PairGauge::
+# 1242 "data/maps/ParcelWeather/scripts.pory"
+	lock
+# 1243 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairGauge_2
+# 1248 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairGauge_3
+# 1255 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_9, MSGBOX_DEFAULT
+# 1256 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_10, MSGBOX_DEFAULT
+# 1257 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_11, MSGBOX_DEFAULT
+# 1258 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_12, MSGBOX_DEFAULT
+ParcelWeather_PairGauge_1:
+# 1260 "data/maps/ParcelWeather/scripts.pory"
+	release
+	end
+
+ParcelWeather_PairGauge_2:
+# 1244 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_0, MSGBOX_DEFAULT
+# 1245 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_1, MSGBOX_DEFAULT
+# 1246 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_2, MSGBOX_DEFAULT
+# 1247 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_3, MSGBOX_DEFAULT
+	goto ParcelWeather_PairGauge_1
+
+ParcelWeather_PairGauge_3:
+# 1249 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_4, MSGBOX_DEFAULT
+# 1250 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_5, MSGBOX_DEFAULT
+# 1251 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_6, MSGBOX_DEFAULT
+# 1252 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_7, MSGBOX_DEFAULT
+# 1253 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGauge_Text_8, MSGBOX_DEFAULT
+	goto ParcelWeather_PairGauge_1
+
+
+ParcelWeather_PairYard::
+# 1265 "data/maps/ParcelWeather/scripts.pory"
+	lock
+# 1266 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairYard_2
+# 1272 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairYard_3
+# 1278 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_9, MSGBOX_DEFAULT
+# 1279 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_10, MSGBOX_DEFAULT
+# 1280 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_11, MSGBOX_DEFAULT
+# 1281 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_12, MSGBOX_DEFAULT
+# 1282 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_13, MSGBOX_DEFAULT
+ParcelWeather_PairYard_1:
+# 1284 "data/maps/ParcelWeather/scripts.pory"
+	release
+	end
+
+ParcelWeather_PairYard_2:
+# 1267 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_0, MSGBOX_DEFAULT
+# 1268 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_1, MSGBOX_DEFAULT
+# 1269 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_2, MSGBOX_DEFAULT
+# 1270 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_3, MSGBOX_DEFAULT
+# 1271 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_4, MSGBOX_DEFAULT
+	goto ParcelWeather_PairYard_1
+
+ParcelWeather_PairYard_3:
+# 1273 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_5, MSGBOX_DEFAULT
+# 1274 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_6, MSGBOX_DEFAULT
+# 1275 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_7, MSGBOX_DEFAULT
+# 1276 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_8, MSGBOX_DEFAULT
+	goto ParcelWeather_PairYard_1
+
+
 ParcelWeather_FirstEntry_Text_0:
 # 22 "data/maps/ParcelWeather/scripts.pory"
 	.string "A sign over the landing: MEREHOLT\n"
@@ -3817,3 +3909,144 @@ ParcelWeather_T_Oyvind_R5_Text_2:
 # 1234 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
+
+ParcelWeather_PairGauge_Text_0:
+# 1244 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: The Council wants the\n"
+	.string "Station's series. All forty years,\l"
+	.string "certified. For the review.$"
+
+ParcelWeather_PairGauge_Text_1:
+# 1245 "data/maps/ParcelWeather/scripts.pory"
+	.string "KEEPER: Then they'll get the brackets\n"
+	.string "too. The brackets are the series.$"
+
+ParcelWeather_PairGauge_Text_2:
+# 1246 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: They won't like the\n"
+	.string "brackets.$"
+
+ParcelWeather_PairGauge_Text_3:
+# 1247 "data/maps/ParcelWeather/scripts.pory"
+	.string "KEEPER: Nobody likes the brackets.\n"
+	.string "VANE says that's how you know they're\l"
+	.string "true. Pack the book. Carefully. It's the\l"
+	.string "only one.$"
+
+ParcelWeather_PairGauge_Text_4:
+# 1249 "data/maps/ParcelWeather/scripts.pory"
+	.string "KEEPER: VANE cleared the ranger. First\n"
+	.string "one through the gauntlet in two years\l"
+	.string "who read the instruments before\l"
+	.string "fighting the instrument-keepers.$"
+
+ParcelWeather_PairGauge_Text_5:
+# 1250 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: Is that the order it's\n"
+	.string "meant to go?$"
+
+ParcelWeather_PairGauge_Text_6:
+# 1251 "data/maps/ParcelWeather/scripts.pory"
+	.string "KEEPER: It's the order VANE's always\n"
+	.string "said. Nobody listened. Now one did.$"
+
+ParcelWeather_PairGauge_Text_7:
+# 1252 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: What did the ranger read?$"
+
+ParcelWeather_PairGauge_Text_8:
+# 1253 "data/maps/ParcelWeather/scripts.pory"
+	.string "KEEPER: Everything with a date on it.\n"
+	.string "Then asked why the fifth gauge was\l"
+	.string "drawn where the falls aren't.$"
+
+ParcelWeather_PairGauge_Text_9:
+# 1255 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: The ice-out book's missing\n"
+	.string "a year. Someone tore the page.$"
+
+ParcelWeather_PairGauge_Text_10:
+# 1256 "data/maps/ParcelWeather/scripts.pory"
+	.string "KEEPER: Nobody tore it. It was the year\n"
+	.string "with no ice. The clerk couldn't bring\l"
+	.string "himself to write it and left the page.$"
+
+ParcelWeather_PairGauge_Text_11:
+# 1257 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: So the gap's the reading.$"
+
+ParcelWeather_PairGauge_Text_12:
+# 1258 "data/maps/ParcelWeather/scripts.pory"
+	.string "KEEPER: The gap's the reading. I've\n"
+	.string "started putting the gaps in brackets.\l"
+	.string "It's the only way the column stays a\l"
+	.string "column.$"
+
+ParcelWeather_PairYard_Text_0:
+# 1267 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: VANE's been asked to testify. In\n"
+	.string "the review. With the book.$"
+
+ParcelWeather_PairYard_Text_1:
+# 1268 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: VANE hates rooms.$"
+
+ParcelWeather_PairYard_Text_2:
+# 1269 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: VANE hates rooms that don't have\n"
+	.string "weather in them. This one will. The\l"
+	.string "ranger made sure the windows are the\l"
+	.string "evidence.$"
+
+ParcelWeather_PairYard_Text_3:
+# 1270 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: I don't understand that.$"
+
+ParcelWeather_PairYard_Text_4:
+# 1271 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: Eat your breakfast. You will.$"
+
+ParcelWeather_PairYard_Text_5:
+# 1273 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: The ranger walked down slow.$"
+
+ParcelWeather_PairYard_Text_6:
+# 1274 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: Told you.$"
+
+ParcelWeather_PairYard_Text_7:
+# 1275 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: Stopped at the gate stake and\n"
+	.string "read the whole thing. Then looked back\l"
+	.string "at the yard like it had said something.$"
+
+ParcelWeather_PairYard_Text_8:
+# 1276 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: It had. The yard's been saying it\n"
+	.string "for forty years. Takes a certain kind of\l"
+	.string "ear.$"
+
+ParcelWeather_PairYard_Text_9:
+# 1278 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: The gauntlet four eat like a\n"
+	.string "landslide. Four breakfasts before the\l"
+	.string "fog's off the yard.$"
+
+ParcelWeather_PairYard_Text_10:
+# 1279 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: They say the ranger's coming up\n"
+	.string "the road. On foot. Alone.$"
+
+ParcelWeather_PairYard_Text_11:
+# 1280 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: They all come up alone. It's the\n"
+	.string "going down that tells you anything.$"
+
+ParcelWeather_PairYard_Text_12:
+# 1281 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: How?$"
+
+ParcelWeather_PairYard_Text_13:
+# 1282 "data/maps/ParcelWeather/scripts.pory"
+	.string "COOK: The ones who read the yard on the\n"
+	.string "way down walk slower. Watch for it.$"

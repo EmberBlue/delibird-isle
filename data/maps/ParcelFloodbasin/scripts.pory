@@ -1988,3 +1988,67 @@ script ParcelFloodbasin_SurveyStake {
     msgbox(gStringVar4, MSGBOX_SIGN)
     end
 }
+
+// --- town life (2026-11-10): the pairs ---
+
+script ParcelFloodbasin_PairBlankets {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MRS ASKE: Thursday. The roof. Nine years of Thursdays and this one a man came."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: Because the works are 'under active remediation' now. Capitals. There's a sign."), MSGBOX_DEFAULT)
+        msgbox(format("MRS ASKE: There was always a sign."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: There's a fence round the sign now, and a man inside the fence with a pump. Small things. I'll take small things."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("NEIGHBOUR: The ranger's stake by the hamlet sign. People stop at it now. Read what it says and go on."), MSGBOX_DEFAULT)
+        msgbox(format("MRS ASKE: What does it say?"), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: It says what we've all said, in order, with the dates. That's all. Somehow that's the thing nobody had done."), MSGBOX_DEFAULT)
+        msgbox(format("MRS ASKE: DORSEY read it. He read it twice and then he smiled at me. I didn't like the second smile."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MRS ASKE: Third blanket in two years. I've a drawer of FOUNDATION blankets. I could open a shop."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: Don't say that where the aide can hear. He'll write down that you're grateful."), MSGBOX_DEFAULT)
+        msgbox(format("MRS ASKE: I am grateful. For the blanket. It's a good blanket."), MSGBOX_DEFAULT)
+        msgbox(format("NEIGHBOUR: It's the water I'd like a word about. Nobody's handing out any of that."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelFloodbasin_PairBoat {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FERRYMAN: Last run tonight. The FOUNDATION's pulled the boat. 'Needs have been reassessed.'"), MSGBOX_DEFAULT)
+        msgbox(format("LAD: The road's clear. We don't need the boat."), MSGBOX_DEFAULT)
+        msgbox(format("FERRYMAN: We never needed the boat. We needed the road clear. Took nine years and a hearing to say it in that order."), MSGBOX_DEFAULT)
+        msgbox(format("LAD: What'll you do?"), MSGBOX_DEFAULT)
+        msgbox(format("FERRYMAN: Row. I did before. The river's still there, whoever's paying."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("LAD: The ranger wouldn't take the free boat. Walked the road both ways with the water up to the knee."), MSGBOX_DEFAULT)
+        msgbox(format("FERRYMAN: Rangers are paid to be difficult."), MSGBOX_DEFAULT)
+        msgbox(format("LAD: A third of them by the FOUNDATION, the poster says."), MSGBOX_DEFAULT)
+        msgbox(format("FERRYMAN: You've been reading posters. That's how it starts. Get in the boat."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("FERRYMAN: FOUNDATION's boat. Twice a day to FERNWICK. Nobody pays."), MSGBOX_DEFAULT)
+        msgbox(format("LAD: Then who pays you?"), MSGBOX_DEFAULT)
+        msgbox(format("FERRYMAN: The FOUNDATION. I just said."), MSGBOX_DEFAULT)
+        msgbox(format("LAD: And who pays the FOUNDATION?"), MSGBOX_DEFAULT)
+        msgbox(format("FERRYMAN: …Get in the boat."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+
+script ParcelFloodbasin_Stringer {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MAREN: The works are fenced and there's a man inside the fence with a pump. I ran a photograph of the pump.\pA pump is not a story. In Leirvik, after twenty-two years, a pump is the story. The editor didn't argue. He's from here."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAREN: Your stake by the hamlet sign made the paper. Not the words -- the photograph. People standing in a row reading a stick.\pIt did better than the Commissioner with the blanket. He noticed. He asked me which photographer. I said the same one as always. He didn't like that either."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MAREN: Third flood, third relief line, third photograph of the Commissioner handing a child a blanket. I've got a drawer of them.\pDifferent child each time. Same blanket. I've never been allowed to print that sentence. I'm saying it to you so it exists somewhere."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

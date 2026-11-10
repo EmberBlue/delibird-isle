@@ -1235,3 +1235,52 @@ script ParcelWeather_T_Oyvind_R5 {
     release
     end
 }
+
+// --- town life (2026-11-10): the pairs ---
+
+script ParcelWeather_PairGauge {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("TECHNICIAN: The Council wants the Station's series. All forty years, certified. For the review."), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: Then they'll get the brackets too. The brackets are the series."), MSGBOX_DEFAULT)
+        msgbox(format("TECHNICIAN: They won't like the brackets."), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: Nobody likes the brackets. VANE says that's how you know they're true. Pack the book. Carefully. It's the only one."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
+        msgbox(format("KEEPER: VANE cleared the ranger. First one through the gauntlet in two years who read the instruments before fighting the instrument-keepers."), MSGBOX_DEFAULT)
+        msgbox(format("TECHNICIAN: Is that the order it's meant to go?"), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: It's the order VANE's always said. Nobody listened. Now one did."), MSGBOX_DEFAULT)
+        msgbox(format("TECHNICIAN: What did the ranger read?"), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: Everything with a date on it. Then asked why the fifth gauge was drawn where the falls aren't."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("TECHNICIAN: The ice-out book's missing a year. Someone tore the page."), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: Nobody tore it. It was the year with no ice. The clerk couldn't bring himself to write it and left the page."), MSGBOX_DEFAULT)
+        msgbox(format("TECHNICIAN: So the gap's the reading."), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: The gap's the reading. I've started putting the gaps in brackets. It's the only way the column stays a column."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelWeather_PairYard {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("COOK: VANE's been asked to testify. In the review. With the book."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: VANE hates rooms."), MSGBOX_DEFAULT)
+        msgbox(format("COOK: VANE hates rooms that don't have weather in them. This one will. The ranger made sure the windows are the evidence."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: I don't understand that."), MSGBOX_DEFAULT)
+        msgbox(format("COOK: Eat your breakfast. You will."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
+        msgbox(format("CADET: The ranger walked down slow."), MSGBOX_DEFAULT)
+        msgbox(format("COOK: Told you."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Stopped at the gate stake and read the whole thing. Then looked back at the yard like it had said something."), MSGBOX_DEFAULT)
+        msgbox(format("COOK: It had. The yard's been saying it for forty years. Takes a certain kind of ear."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("COOK: The gauntlet four eat like a landslide. Four breakfasts before the fog's off the yard."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: They say the ranger's coming up the road. On foot. Alone."), MSGBOX_DEFAULT)
+        msgbox(format("COOK: They all come up alone. It's the going down that tells you anything."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: How?"), MSGBOX_DEFAULT)
+        msgbox(format("COOK: The ones who read the yard on the way down walk slower. Watch for it."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

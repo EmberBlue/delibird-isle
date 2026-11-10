@@ -4170,6 +4170,123 @@ ParcelFloodbasin_SurveyStake::
 	end
 
 
+ParcelFloodbasin_PairBlankets::
+# 1995 "data/maps/ParcelFloodbasin/scripts.pory"
+	lock
+# 1996 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasin_PairBlankets_2
+# 2001 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasin_PairBlankets_3
+# 2007 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_8, MSGBOX_DEFAULT
+# 2008 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_9, MSGBOX_DEFAULT
+# 2009 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_10, MSGBOX_DEFAULT
+# 2010 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_11, MSGBOX_DEFAULT
+ParcelFloodbasin_PairBlankets_1:
+# 2012 "data/maps/ParcelFloodbasin/scripts.pory"
+	release
+	end
+
+ParcelFloodbasin_PairBlankets_2:
+# 1997 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_0, MSGBOX_DEFAULT
+# 1998 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_1, MSGBOX_DEFAULT
+# 1999 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_2, MSGBOX_DEFAULT
+# 2000 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_3, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairBlankets_1
+
+ParcelFloodbasin_PairBlankets_3:
+# 2002 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_4, MSGBOX_DEFAULT
+# 2003 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_5, MSGBOX_DEFAULT
+# 2004 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_6, MSGBOX_DEFAULT
+# 2005 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBlankets_Text_7, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairBlankets_1
+
+
+ParcelFloodbasin_PairBoat::
+# 2017 "data/maps/ParcelFloodbasin/scripts.pory"
+	lock
+# 2018 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasin_PairBoat_2
+# 2024 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasin_PairBoat_3
+# 2030 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_9, MSGBOX_DEFAULT
+# 2031 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_10, MSGBOX_DEFAULT
+# 2032 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_11, MSGBOX_DEFAULT
+# 2033 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_12, MSGBOX_DEFAULT
+# 2034 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_13, MSGBOX_DEFAULT
+ParcelFloodbasin_PairBoat_1:
+# 2036 "data/maps/ParcelFloodbasin/scripts.pory"
+	release
+	end
+
+ParcelFloodbasin_PairBoat_2:
+# 2019 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_0, MSGBOX_DEFAULT
+# 2020 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_1, MSGBOX_DEFAULT
+# 2021 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_2, MSGBOX_DEFAULT
+# 2022 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_3, MSGBOX_DEFAULT
+# 2023 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_4, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairBoat_1
+
+ParcelFloodbasin_PairBoat_3:
+# 2025 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_5, MSGBOX_DEFAULT
+# 2026 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_6, MSGBOX_DEFAULT
+# 2027 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_7, MSGBOX_DEFAULT
+# 2028 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBoat_Text_8, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairBoat_1
+
+
+ParcelFloodbasin_Stringer::
+# 2043 "data/maps/ParcelFloodbasin/scripts.pory"
+	lock
+# 2044 "data/maps/ParcelFloodbasin/scripts.pory"
+	faceplayer
+# 2045 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasin_Stringer_2
+# 2047 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasin_Stringer_3
+# 2050 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_Stringer_Text_2, MSGBOX_DEFAULT
+ParcelFloodbasin_Stringer_1:
+# 2052 "data/maps/ParcelFloodbasin/scripts.pory"
+	release
+	end
+
+ParcelFloodbasin_Stringer_2:
+# 2046 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_Stringer_Text_0, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_Stringer_1
+
+ParcelFloodbasin_Stringer_3:
+# 2048 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_Stringer_Text_1, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_Stringer_1
+
+
 ParcelFloodbasin_FirstEntry_Text_0:
 # 58 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "The trees open onto a low, wide basin.\n"
@@ -6089,3 +6206,172 @@ ParcelFloodbasin_SurveyStake_Text_0:
 	.string "A survey stake by the hamlet sign, red\n"
 	.string "cloth at the top, the cloth gone pale on\l"
 	.string "the side the floods come from.$"
+
+ParcelFloodbasin_PairBlankets_Text_0:
+# 1997 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MRS ASKE: Thursday. The roof. Nine\n"
+	.string "years of Thursdays and this one a man\l"
+	.string "came.$"
+
+ParcelFloodbasin_PairBlankets_Text_1:
+# 1998 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NEIGHBOUR: Because the works are\n"
+	.string "'under active remediation' now.\l"
+	.string "Capitals. There's a sign.$"
+
+ParcelFloodbasin_PairBlankets_Text_2:
+# 1999 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MRS ASKE: There was always a sign.$"
+
+ParcelFloodbasin_PairBlankets_Text_3:
+# 2000 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NEIGHBOUR: There's a fence round the\n"
+	.string "sign now, and a man inside the fence\l"
+	.string "with a pump. Small things. I'll take small\l"
+	.string "things.$"
+
+ParcelFloodbasin_PairBlankets_Text_4:
+# 2002 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NEIGHBOUR: The ranger's stake by the\n"
+	.string "hamlet sign. People stop at it now. Read\l"
+	.string "what it says and go on.$"
+
+ParcelFloodbasin_PairBlankets_Text_5:
+# 2003 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MRS ASKE: What does it say?$"
+
+ParcelFloodbasin_PairBlankets_Text_6:
+# 2004 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NEIGHBOUR: It says what we've all said,\n"
+	.string "in order, with the dates. That's all.\l"
+	.string "Somehow that's the thing nobody had\l"
+	.string "done.$"
+
+ParcelFloodbasin_PairBlankets_Text_7:
+# 2005 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MRS ASKE: DORSEY read it. He read it\n"
+	.string "twice and then he smiled at me. I didn't\l"
+	.string "like the second smile.$"
+
+ParcelFloodbasin_PairBlankets_Text_8:
+# 2007 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MRS ASKE: Third blanket in two years.\n"
+	.string "I've a drawer of FOUNDATION blankets. I\l"
+	.string "could open a shop.$"
+
+ParcelFloodbasin_PairBlankets_Text_9:
+# 2008 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NEIGHBOUR: Don't say that where the\n"
+	.string "aide can hear. He'll write down that\l"
+	.string "you're grateful.$"
+
+ParcelFloodbasin_PairBlankets_Text_10:
+# 2009 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MRS ASKE: I am grateful. For the\n"
+	.string "blanket. It's a good blanket.$"
+
+ParcelFloodbasin_PairBlankets_Text_11:
+# 2010 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NEIGHBOUR: It's the water I'd like a\n"
+	.string "word about. Nobody's handing out any of\l"
+	.string "that.$"
+
+ParcelFloodbasin_PairBoat_Text_0:
+# 2019 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: Last run tonight. The\n"
+	.string "FOUNDATION's pulled the boat. 'Needs\l"
+	.string "have been reassessed.'$"
+
+ParcelFloodbasin_PairBoat_Text_1:
+# 2020 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAD: The road's clear. We don't need the\n"
+	.string "boat.$"
+
+ParcelFloodbasin_PairBoat_Text_2:
+# 2021 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: We never needed the boat. We\n"
+	.string "needed the road clear. Took nine years\l"
+	.string "and a hearing to say it in that order.$"
+
+ParcelFloodbasin_PairBoat_Text_3:
+# 2022 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAD: What'll you do?$"
+
+ParcelFloodbasin_PairBoat_Text_4:
+# 2023 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: Row. I did before. The river's\n"
+	.string "still there, whoever's paying.$"
+
+ParcelFloodbasin_PairBoat_Text_5:
+# 2025 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAD: The ranger wouldn't take the free\n"
+	.string "boat. Walked the road both ways with\l"
+	.string "the water up to the knee.$"
+
+ParcelFloodbasin_PairBoat_Text_6:
+# 2026 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: Rangers are paid to be\n"
+	.string "difficult.$"
+
+ParcelFloodbasin_PairBoat_Text_7:
+# 2027 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAD: A third of them by the FOUNDATION,\n"
+	.string "the poster says.$"
+
+ParcelFloodbasin_PairBoat_Text_8:
+# 2028 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: You've been reading posters.\n"
+	.string "That's how it starts. Get in the boat.$"
+
+ParcelFloodbasin_PairBoat_Text_9:
+# 2030 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: FOUNDATION's boat. Twice a\n"
+	.string "day to FERNWICK. Nobody pays.$"
+
+ParcelFloodbasin_PairBoat_Text_10:
+# 2031 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAD: Then who pays you?$"
+
+ParcelFloodbasin_PairBoat_Text_11:
+# 2032 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: The FOUNDATION. I just said.$"
+
+ParcelFloodbasin_PairBoat_Text_12:
+# 2033 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAD: And who pays the FOUNDATION?$"
+
+ParcelFloodbasin_PairBoat_Text_13:
+# 2034 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "FERRYMAN: …Get in the boat.$"
+
+ParcelFloodbasin_Stringer_Text_0:
+# 2046 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAREN: The works are fenced and\n"
+	.string "there's a man inside the fence with a\l"
+	.string "pump. I ran a photograph of the pump.\p"
+	.string "A pump is not a story. In Leirvik, after\n"
+	.string "twenty-two years, a pump is the story.\l"
+	.string "The editor didn't argue. He's from here.$"
+
+ParcelFloodbasin_Stringer_Text_1:
+# 2048 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAREN: Your stake by the hamlet sign\n"
+	.string "made the paper. Not the words -- the\l"
+	.string "photograph. People standing in a row\l"
+	.string "reading a stick.\p"
+	.string "It did better than the Commissioner\n"
+	.string "with the blanket. He noticed. He asked\l"
+	.string "me which photographer. I said the same\l"
+	.string "one as always. He didn't like that\l"
+	.string "either.$"
+
+ParcelFloodbasin_Stringer_Text_2:
+# 2050 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAREN: Third flood, third relief line,\n"
+	.string "third photograph of the Commissioner\l"
+	.string "handing a child a blanket. I've got a\l"
+	.string "drawer of them.\p"
+	.string "Different child each time. Same blanket.\n"
+	.string "I've never been allowed to print that\l"
+	.string "sentence. I'm saying it to you so it\l"
+	.string "exists somewhere.$"

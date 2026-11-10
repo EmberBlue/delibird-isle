@@ -830,3 +830,53 @@ script ParcelDelibird_GymIlex_Rematch {
     release
     end
 }
+
+// --- town life (2026-11-10): the pairs ---
+
+script ParcelDelibird_PairLights {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GRANDMOTHER: The square's lit. Nobody cheered. Did you notice? Nobody cheered."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Was that wrong?"), MSGBOX_DEFAULT)
+        msgbox(format("GRANDMOTHER: It was right. You don't cheer a lamp in a storm. You stand near it."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: The ranger stood near it."), MSGBOX_DEFAULT)
+        msgbox(format("GRANDMOTHER: The ranger looked up the slope at the wet ground, same as me. Then stood near it anyway. That's the whole of being grown."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("BOY: The ranger did the whole round. Three doors, on foot. MARTA gave them the bird."), MSGBOX_DEFAULT)
+        msgbox(format("GRANDMOTHER: MARTA gave them the bird because the bird chose. You don't give a DELIBIRD. It goes."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Where would it go?"), MSGBOX_DEFAULT)
+        msgbox(format("GRANDMOTHER: Wherever something's needed. It has a worse sense of self-preservation than you do."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GRANDMOTHER: The stringer's up the ladder again. Every bulb on the eaves tested, and it's a month off."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Why so early?"), MSGBOX_DEFAULT)
+        msgbox(format("GRANDMOTHER: Because the ground under the ladder was dry last year and it isn't this year. She wants it done before it isn't a ladder you'd want to stand on."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Can I hold the ladder?"), MSGBOX_DEFAULT)
+        msgbox(format("GRANDMOTHER: Hold the ladder. That's what boys are for."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibird_PairGround {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WIFE: The FOUNDATION's paper about moving the festival. MARTA wrote back 'thank you, and no'. In those words."), MSGBOX_DEFAULT)
+        msgbox(format("HUSBAND: And the Council?"), MSGBOX_DEFAULT)
+        msgbox(format("WIFE: Sent a surveyor. A real one, with the red cloth. To ask us where we'd want to be, if."), MSGBOX_DEFAULT)
+        msgbox(format("HUSBAND: If."), MSGBOX_DEFAULT)
+        msgbox(format("WIFE: If. First time anyone's said it to us as a question."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("HUSBAND: The ranger measured the slump with a tape. Wrote the number on the stake and the date under it."), MSGBOX_DEFAULT)
+        msgbox(format("WIFE: What was the number?"), MSGBOX_DEFAULT)
+        msgbox(format("HUSBAND: Doesn't matter. What matters is there'll be another number next year under it, and anyone can see which way they go."), MSGBOX_DEFAULT)
+        msgbox(format("WIFE: That's not comfort."), MSGBOX_DEFAULT)
+        msgbox(format("HUSBAND: No. It's a ruler. We've had comfort. It came with a crest on it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("WIFE: TOMAS's cabin corner is in the ground to the sill. Ketil's talking about moving him."), MSGBOX_DEFAULT)
+        msgbox(format("HUSBAND: Moving him where? Every cabin on the north side has a corner going."), MSGBOX_DEFAULT)
+        msgbox(format("WIFE: Then we move the north side."), MSGBOX_DEFAULT)
+        msgbox(format("HUSBAND: We've moved it twice in my life. Each time it caught us up."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
