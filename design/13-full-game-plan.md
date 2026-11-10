@@ -929,5 +929,17 @@ quest is built, how the peer works) before they are asked six more times.
   Homesteader's lambing-field errand sat in front of the reading HALE's
   certification counts. All restructured (function first, errand as a
   preamble, reaction line as the prompt); `tools/skald/gates.py` scans
-  every script for the pattern and reads 0.
+  every script for the pattern and reads 0. With those in, chapter 4
+  played to HALE's Highland signing (STRENGTH through the slide, VALE's
+  badge, the lent MARILL carrying SURF up the coast), the walk back to
+  Saltwick, the ferry, ILEX's badge on Delibird Isle, the Coast ferry,
+  HARLAND's badge and the shift at sea. What that stretch found: HM moves
+  could not be forgotten and there is no Move Deleter, so a lone partner
+  ended up locked into four field moves (`P_CAN_FORGET_HIDDEN_MOVE` is
+  TRUE now); nine land villagers were standing in open water, seven of
+  them in the Floodbasin lake where only SURF two chapters later could
+  reach them (water tiles have collision 0 and the placement pass asked
+  only that); and the Coast's dredge-line reading sat on a sandbar only a
+  surfer reaches while HALE's hint says "walk the quay" (a second reading
+  spot on the Breakwater beach looks out at the same water).
 

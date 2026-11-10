@@ -24,6 +24,16 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 7. Run `python3 tools/skald/reach.py` (must read 0) — see skald-verify.
 
 ## Placing NPCs and setting elevation (what the reachability audit keeps catching)
+- **Water tiles have collision 0.** "Is this tile walkable?" is not
+  `collision == 0`: a placement pass that asked only that stood nine
+  villagers in a lake and a harbour basin. People go on land (behaviour not
+  WATER); only swimmers, tubers and Pokémon go in water, and the tile under
+  one of those takes elevation 0 so it can be addressed from the shore.
+  `event_elev.py` reports people standing in open water.
+- **A reading the story requires must be readable the way its hint says.**
+  HALE says "walk the quay"; the dredge line was on a sandbar only SURF
+  reaches. When a sign sits in water, give it a second `bg_event` (same
+  script) on a tile a walker can face, on whichever map owns that shore.
 - **Never put an NPC, trainer or item ball on the only tile through.** A
   one-wide gap in a fence, a doorstep lane, a 1-tile corridor, the tile
   below a stair: a standing NPC there seals the map for good (trainers who
