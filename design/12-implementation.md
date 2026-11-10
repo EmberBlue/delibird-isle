@@ -487,6 +487,18 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   Interiors and caves are not graded (map types other than town, city,
   route, ocean route, underwater), and `.pal` line endings are LF in the
   tree; git normalises them.
+- **The player's colours** live in three palettes per avatar:
+  `graphics/object_events/palettes/{brendan,may}.pal` (every overworld
+  sheet: walking, running, bikes, surfing, fishing, field moves),
+  `*_reflection.pal` (the water reflection, a per-entry offset of the
+  base), and `graphics/trainers/palettes/{brendan,may}.pal`, which the
+  battle back sprite and the trainer-card / intro front picture share
+  (`gTrainerPalette_Brendan` is the only palette symbol either pic
+  references). Entries 10-11 are the green pair, 12-13 the red pair, 1-4
+  skin, 5-8 the dark outfit, 9 white, 14 white, 15 black, in both the
+  overworld and the trainer palettes. `tools/skald/player_kit.py` writes
+  all six; `field_specials.c` also loads the base palette directly for one
+  scene, so there is no second copy to keep in step.
 
 ## RAM budget (the binding constraint)
 

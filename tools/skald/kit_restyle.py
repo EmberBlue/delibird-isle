@@ -165,7 +165,7 @@ def general(check_only=False):
                 dirty = True
                 changes += 1
         if dirty and not check_only:
-            p.write_text("\n".join(lines) + "\n")
+            p.write_text("\n".join(lines) + "\n", newline="\r\n")
             print(f"wrote {p.relative_to(ROOT)}")
     # 2. the Center's red roof tiles -> duplicates in free slots, palette 4
     im = _tiles_png()
@@ -245,7 +245,7 @@ def apply(check_only=False):
                     changed = True
                     drift += 1
             if changed and not check_only:
-                p.write_text("\n".join(lines) + "\n")
+                p.write_text("\n".join(lines) + "\n", newline="\r\n")   # *.pal are eol=crlf in .gitattributes
                 print(f"wrote {p.relative_to(ROOT)}")
     if check_only:
         print("drift:", drift)

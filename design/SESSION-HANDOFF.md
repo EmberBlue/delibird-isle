@@ -384,6 +384,14 @@ replaces is gone from the tree).
   value, so `kit_restyle.py` (which now writes into the base when it
   exists) and hand edits compose and the grade never stacks.
   `--preview MAP OUT.png v1` renders a candidate without writing.
+- **The player** — `player_kit.py`. Both avatars keep their stock pixels
+  and change clothes through six palettes (overworld, reflection, and the
+  trainer palette the back sprite and trainer-card picture share): the
+  Hoenn green pair (headband and pack on one, bandana and pack on the
+  other) is the Survey's red marker cloth, the red pair (shirt panels on
+  one, the shirt on the other) is the Survey's olive. Skin, hair, whites
+  and trousers untouched. Checked in-emulator: walking, the battle intro's
+  back sprite, the trainer card.
 - Verified in-emulator: the title at three moments, all nine sprites in
   their maps via `walktest.py --out`, a dialogue box. `TAP:START` did not
   open the start menu under the harness, so frame 1 was checked from its
@@ -473,9 +481,11 @@ replaces is gone from the tree).
   stopped being a placeholder on 2026-11-10 (see "Art" below).
 - Art still vanilla: route trainers' battle pictures (the leaders have
   their own palettes; everyone else is a stock class) and the player
-  avatars (Brendan/May as shipped; the "they" avatar would be a third
-  sprite set). Building exteriors and the outdoor palettes stopped being
-  vanilla on 2026-11-10 (see Art: the kits and the northern grade).
+  avatars' *pixels* (Brendan/May silhouettes in the Survey's colours; a
+  "they" avatar would be a third sprite set and a third gender in the save
+  block, which nothing in the engine supports). Building exteriors, the
+  outdoor palettes and the player's clothes stopped being vanilla on
+  2026-11-10 (see Art).
 
 ## Top gotchas from this session (full list in §12)
 

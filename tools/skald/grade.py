@@ -109,7 +109,8 @@ def read_pal(p):
 
 
 def write_pal(p, lines, colours):
-    p.write_text("\n".join(lines[:3] + [f"{c[0]} {c[1]} {c[2]}" for c in colours]) + "\n")
+    # .gitattributes: *.pal text eol=crlf -- write what the checkout has, so git stays quiet
+    p.write_text("\n".join(lines[:3] + [f"{c[0]} {c[1]} {c[2]}" for c in colours]) + "\n", newline="\r\n")
 
 
 def outdoor_tilesets():

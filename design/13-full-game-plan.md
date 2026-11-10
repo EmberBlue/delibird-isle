@@ -819,4 +819,12 @@ quest is built, how the peer works) before they are asked six more times.
   applied; checked in the emulator in the same eight towns. The ungraded
   palettes stay in the tree as the base, so the grade can be retuned or
   removed in one run.
+- **2026-11-10 — the player wears the Survey's kit.** Six palettes
+  (`tools/skald/player_kit.py`), no new pixels: the Hoenn green on the
+  headband, bandana and pack is the Survey's red marker cloth, the red
+  shirt is the Survey's olive, so the cadet matches the Surveyors they
+  walk beside. Checked walking, in the battle intro and on the trainer
+  card. A third, "they" avatar stays out of reach: it would need a third
+  gender in the save block, which nothing in the engine supports; the
+  text already says they.
 

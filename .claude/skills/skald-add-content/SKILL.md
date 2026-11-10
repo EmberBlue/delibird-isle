@@ -88,6 +88,9 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   itself), then `python3 tools/skald/grade.py --apply` regenerates the live
   `.pal`. `grade.py --check` must say 0 drift before committing. A new outdoor
   tileset gets a base folder on the first `--apply`.
+- The player's clothes are `tools/skald/player_kit.py` (six palettes: overworld,
+  reflection and the shared back-sprite/trainer-card palette per avatar; entries
+  10-11 green pair, 12-13 red pair). Change colours there, never in the PNGs.
 - A new fly town: `FLAG_VISITED_PARCEL_X` (alias an unreachable Hoenn visited
   flag in `flags.h`), `setflag` it in the map's `MAP_SCRIPT_ON_TRANSITION`, add
   the `MAPSEC_` case to `GetMapsecType()` in `src/region_map.c`, a row in
