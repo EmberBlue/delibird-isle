@@ -22,6 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import audit  # noqa: E402
 
 DIRS = {(1, 0): "RIGHT", (-1, 0): "LEFT", (0, 1): "DOWN", (0, -1): "UP"}
+LEDGE_DIR = {"RIGHT": "EAST", "LEFT": "WEST", "DOWN": "SOUTH", "UP": "NORTH"}   # MB_JUMP_<compass>, keys are <d-pad>
 
 
 def is_water(beh):
@@ -114,7 +115,7 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
             n = (nx, ny)
             if n in prev:
                 continue
-            if 0 <= nx < W and 0 <= ny < H and info(nx, ny)[2] == f"MB_JUMP_{DIRS[(dx, dy)]}":
+            if 0 <= nx < W and 0 <= ny < H and info(nx, ny)[2] == f"MB_JUMP_{LEDGE_DIR[DIRS[(dx, dy)]]}":
                 land = (nx + dx, ny + dy)           # a ledge: one press, the player lands two tiles on
                 if land not in prev and passable(*land, land in goals):
                     prev[land] = cur

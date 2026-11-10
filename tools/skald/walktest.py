@@ -305,6 +305,11 @@ def main():
                 nm, nx, ny = live_pos()
                 if nm != mapname:
                     break               # crossed a connection or took a door: the goal was the edge/warp
+                if (nx, ny) == (px, py) and pav is not None and core.memory.u8[pav + 6]:
+                    # gPlayerAvatar.preventStep: a script has the player (a trigger on this tile started a
+                    # scene). Not a blocked tile -- dismiss until the script lets go, then plan again.
+                    dismiss(600)
+                    continue
                 if (nx, ny) == (px, py):
                     still += 1
                     dismiss(300)        # a scene or a trainer's closing lines may still be running
