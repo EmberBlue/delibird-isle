@@ -817,6 +817,7 @@ script ParcelDelibird_Epilogue {
     lockall
     delay(20)
     msgbox(format("DELIBIRD ISLE. The thaw didn't stop because a hearing sat. The festival ground is a third mud.\pThe delivery list is up on the square again, longer than last year, and every house on it has a name beside it before noon."), MSGBOX_DEFAULT)
+    msgbox(format("MARTA's list has your name beside a door you have never been through. KETIL says the bird put it there. It goes where something's needed; it always has.\pUp the slope the wet ground shines back at the lights. Someone has set a row of stakes along the line of it, red cloth on every one. They did not wait for a surveyor."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 6)
     warp(MAP_PARCEL_MARSH, 19, 9)
@@ -887,5 +888,38 @@ script ParcelDelibird_PairGround {
         msgbox(format("HUSBAND: We've moved it twice in my life. Each time it caught us up."), MSGBOX_DEFAULT)
     }
     release
+    end
+}
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelDelibird_LampStringer {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_SCRATCH_DONE)) {
+        msgbox(format("STRINGER: Two hands. I say it before I go up the ladder now. Then I go up the ladder."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_SCRATCH)) {
+        if (flag(FLAG_SKALD_Q_SCRATCH_FOUND)) {
+            msgbox(format("STRINGER: Two hands. …Two hands in nine years. It isn't the ladder.\pI'll string them anyway. Here. For climbing things that sink."), MSGBOX_DEFAULT)
+            giveitem(ITEM_RARE_CANDY, 1)
+            setflag(FLAG_SKALD_Q_SCRATCH_DONE)
+        } else {
+            msgbox(format("STRINGER: The warming hut wall. A scratch at head height. Mine was, the first year."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("STRINGER: I string the lights. Every year the foot of the ladder sits a little lower against the hut wall, and I tell myself it's the ladder.\pThere's a scratch on the hut wall from the first year, head height. Go and read how far below it the ground is now. I can't make myself."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_SCRATCH)
+    }
+    release
+    end
+}
+
+script ParcelDelibird_HutScratch {
+    if (flag(FLAG_SKALD_Q_SCRATCH) && !flag(FLAG_SKALD_Q_SCRATCH_FOUND)) {
+        msgbox(format("A scratch on the hut wall at head height, with a year beside it, nine winters back. The ground beneath it has gone down two hands since. The sill is in the earth.\pSomeone has added a second scratch, this year, level with the first. The wall hasn't moved. The island has."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_SCRATCH_FOUND)
+    } else {
+        msgbox(format("Two scratches on the hut wall, level with each other, nine years apart. The ground between them has gone."), MSGBOX_SIGN)
+    }
     end
 }

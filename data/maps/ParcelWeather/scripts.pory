@@ -1284,3 +1284,15 @@ script ParcelWeather_PairYard {
     release
     end
 }
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelWeather_PageFortyOne {
+    if (flag(FLAG_SKALD_Q_FORTYONE) && !flag(FLAG_SKALD_Q_FORTYONE_FOUND)) {
+        msgbox(format("A page from a ledger, pinned under a stone by somebody who found it before you and did not know what to do with it. Page forty-one. ICE OUT: and no date. NO ICE, underlined twice, and a question mark rubbed to a ghost.\pYou fold it into the notebook. It is the loudest page you have carried."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_FORTYONE_FOUND)
+    } else {
+        msgbox(format("A stone where a page was. Somebody has written on the stone, small: 41."), MSGBOX_SIGN)
+    }
+    end
+}

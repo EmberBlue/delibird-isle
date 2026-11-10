@@ -1791,6 +1791,68 @@ ParcelFernwick_Stringer_7:
 	goto ParcelFernwick_Stringer_1
 
 
+ParcelFernwick_Gardener::
+# 933 "data/maps/ParcelFernwick/scripts.pory"
+	lock
+# 934 "data/maps/ParcelFernwick/scripts.pory"
+	faceplayer
+# 935 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_STONE_DONE, ParcelFernwick_Gardener_2
+# 937 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_STONE, ParcelFernwick_Gardener_3
+# 946 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Gardener_Text_3, MSGBOX_DEFAULT
+# 947 "data/maps/ParcelFernwick/scripts.pory"
+	setflag FLAG_SKALD_Q_STONE
+ParcelFernwick_Gardener_1:
+# 949 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
+
+ParcelFernwick_Gardener_2:
+# 936 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Gardener_Text_0, MSGBOX_DEFAULT
+	goto ParcelFernwick_Gardener_1
+
+ParcelFernwick_Gardener_3:
+# 938 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_STONE_FOUND, ParcelFernwick_Gardener_7
+# 943 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Gardener_Text_2, MSGBOX_DEFAULT
+	goto ParcelFernwick_Gardener_1
+
+ParcelFernwick_Gardener_7:
+# 939 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Gardener_Text_1, MSGBOX_DEFAULT
+# 940 "data/maps/ParcelFernwick/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 1
+# 941 "data/maps/ParcelFernwick/scripts.pory"
+	setflag FLAG_SKALD_Q_STONE_DONE
+	goto ParcelFernwick_Gardener_1
+
+
+ParcelFernwick_HighWaterStone::
+# 954 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_STONE, ParcelFernwick_HighWaterStone_4
+ParcelFernwick_HighWaterStone_3:
+# 958 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_HighWaterStone_Text_1, MSGBOX_SIGN
+ParcelFernwick_HighWaterStone_1:
+	end
+
+ParcelFernwick_HighWaterStone_2:
+# 955 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_HighWaterStone_Text_0, MSGBOX_SIGN
+# 956 "data/maps/ParcelFernwick/scripts.pory"
+	setflag FLAG_SKALD_Q_STONE_FOUND
+	goto ParcelFernwick_HighWaterStone_1
+
+ParcelFernwick_HighWaterStone_4:
+# 954 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_STONE_FOUND, ParcelFernwick_HighWaterStone_2
+	goto ParcelFernwick_HighWaterStone_3
+
+
 ParcelFernwick_Smeargle_Text_0:
 # 29 "data/maps/ParcelFernwick/scripts.pory"
 	.string "A SMEARGLE sits on the bank with its\n"
@@ -2837,3 +2899,47 @@ ParcelFernwick_Stringer_Text_4:
 	.string "circulation. He said that's its one\l"
 	.string "advantage. I've been trying to think of\l"
 	.string "an answer for six years.$"
+
+ParcelFernwick_Gardener_Text_0:
+# 936 "data/maps/ParcelFernwick/scripts.pory"
+	.string "GARDENER: Twelve paces. I've started\n"
+	.string "watering the far bank. It won't bring it\l"
+	.string "back. It's something to do with my\l"
+	.string "hands.$"
+
+ParcelFernwick_Gardener_Text_1:
+# 939 "data/maps/ParcelFernwick/scripts.pory"
+	.string "GARDENER: Dry. Twelve paces from the\n"
+	.string "water. I knew. I wanted somebody with a\l"
+	.string "notebook to know too.\p"
+	.string "Take this. I was going to give it to the\n"
+	.string "pond.$"
+
+ParcelFernwick_Gardener_Text_2:
+# 943 "data/maps/ParcelFernwick/scripts.pory"
+	.string "GARDENER: South, set in the pavement. A\n"
+	.string "dark stone. Dry, I expect.$"
+
+ParcelFernwick_Gardener_Text_3:
+# 946 "data/maps/ParcelFernwick/scripts.pory"
+	.string "GARDENER: The pond garden's mine to\n"
+	.string "keep. The pond isn't anyone's to keep,\l"
+	.string "it seems.\p"
+	.string "There's a stone in the pavement south\n"
+	.string "of here that the water came up to every\l"
+	.string "spring when I was a girl. Find it and tell\l"
+	.string "me if it's wet.$"
+
+ParcelFernwick_HighWaterStone_Text_0:
+# 955 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A dark stone set in the pavement, worn\n"
+	.string "smooth on top. The high-water stone.\l"
+	.string "The pond is twelve paces north of it\l"
+	.string "and does not reach.\p"
+	.string "It is dry. It has been dry long enough\n"
+	.string "for the moss to give up on it.$"
+
+ParcelFernwick_HighWaterStone_Text_1:
+# 958 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A dark stone set in the pavement, dry,\n"
+	.string "twelve paces from the water.$"

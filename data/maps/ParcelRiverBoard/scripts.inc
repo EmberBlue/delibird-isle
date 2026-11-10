@@ -192,6 +192,13 @@ ParcelRiverBoard_Sluice_Rematch_2:
 ParcelRiverBoard_GaugeBook::
 # 118 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_GaugeBook_Text_0, MSGBOX_SIGN
+# 119 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_BOOK, ParcelRiverBoard_GaugeBook_1
+	return
+
+ParcelRiverBoard_GaugeBook_1:
+# 120 "data/maps/ParcelRiverBoard/scripts.pory"
+	setflag FLAG_SKALD_Q_BOOK_FOUND
 	return
 
 

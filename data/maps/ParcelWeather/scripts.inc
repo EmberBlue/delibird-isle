@@ -2771,6 +2771,28 @@ ParcelWeather_PairYard_3:
 	goto ParcelWeather_PairYard_1
 
 
+ParcelWeather_PageFortyOne::
+# 1291 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_FORTYONE, ParcelWeather_PageFortyOne_4
+ParcelWeather_PageFortyOne_3:
+# 1295 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PageFortyOne_Text_1, MSGBOX_SIGN
+ParcelWeather_PageFortyOne_1:
+	end
+
+ParcelWeather_PageFortyOne_2:
+# 1292 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PageFortyOne_Text_0, MSGBOX_SIGN
+# 1293 "data/maps/ParcelWeather/scripts.pory"
+	setflag FLAG_SKALD_Q_FORTYONE_FOUND
+	goto ParcelWeather_PageFortyOne_1
+
+ParcelWeather_PageFortyOne_4:
+# 1291 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_FORTYONE_FOUND, ParcelWeather_PageFortyOne_2
+	goto ParcelWeather_PageFortyOne_3
+
+
 ParcelWeather_FirstEntry_Text_0:
 # 22 "data/maps/ParcelWeather/scripts.pory"
 	.string "A sign over the landing: MEREHOLT\n"
@@ -4050,3 +4072,19 @@ ParcelWeather_PairYard_Text_13:
 # 1282 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: The ones who read the yard on the\n"
 	.string "way down walk slower. Watch for it.$"
+
+ParcelWeather_PageFortyOne_Text_0:
+# 1292 "data/maps/ParcelWeather/scripts.pory"
+	.string "A page from a ledger, pinned under a\n"
+	.string "stone by somebody who found it before\l"
+	.string "you and did not know what to do with it.\l"
+	.string "Page forty-one. ICE OUT: and no date.\l"
+	.string "NO ICE, underlined twice, and a question\l"
+	.string "mark rubbed to a ghost.\p"
+	.string "You fold it into the notebook. It is the\n"
+	.string "loudest page you have carried.$"
+
+ParcelWeather_PageFortyOne_Text_1:
+# 1295 "data/maps/ParcelWeather/scripts.pory"
+	.string "A stone where a page was. Somebody has\n"
+	.string "written on the stone, small: 41.$"

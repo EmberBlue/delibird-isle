@@ -515,4 +515,29 @@ quest is built, how the peer works) before they are asked six more times.
   with the small box for the reason, the everfrost's depreciation
   schedule). Tarn and Ilex are talked-to leaders now rather than sight
   trainers, so the reading comes before the water.
+- **2026-11-10 — side quests, round three (one per settlement; thirty-three
+  in all), and the epilogue seen closer.** Each is a small act of reading
+  for someone who cannot make themselves do it: the Saltwick oysterman's
+  father's ground (the Survey's stake in the shallows says GONE; Surf to
+  reach it), the Fernwick gardener's high-water stone (dry, twelve paces
+  from the pond), the Reedmere turf cutter's worst crack (the spade stays
+  out of the north edge), the Leirvik woman's pump-house plate (DISCHARGE
+  LICENSED; what her husband wouldn't say), the Elvsund boy's kept book
+  (the floods didn't stop; the book stopped), the Haukfell carrier's
+  letter to the homestead above the slide (hand, not box; the box went
+  down the hill), the island lamp-stringer's scratch on the hut wall (two
+  hands in nine years; it isn't the ladder), the Coast inspector's
+  carbon copy (under the clerk's tray, RECEIVED, not filed), and Moss's
+  page forty-one from the ice-out book (NO ICE, underlined twice, blown
+  into the yard). Flags `FLAG_SKALD_Q_*`, listed on the notebook's
+  side-work page; several hook into existing readables (the plate, the
+  gauge book) and residents (the grandson, the inspector, Moss). The
+  seven epilogue vignettes each gained one more thing seen, not told:
+  Harland scraping his own hull, Mrs Aske's roof with a man on it, the
+  two boards on the ford gauge and Dell watching for a red flank, the
+  slips under glass and the capped casing with a stake beside it, Marta's
+  list with the player's name by a door never entered, the POLITOED in
+  the hut doorway and the stone holding the player's sheet, the dredge
+  padlocked and the office above the docks with or without its
+  nameplate (`FLAG_SKALD_CH_HOLLIS_NAMED`).
 

@@ -1864,6 +1864,7 @@ script ParcelHighlands_Epilogue {
     lockall
     delay(20)
     msgbox(format("HAUKFELL. The bore is capped. Enjoined pending survey, and the survey is yours. The leases wait on it. The ground doesn't.\pThe warming centre stays open past midnight now. HOLLIS cut the ribbon. It's still warm."), MSGBOX_DEFAULT)
+    msgbox(format("The slips are pinned up in the centre under glass now, the child's in the middle.\pOn the slope the drill casing wears a cap, a padlock and a laminated notice. The ground around it is soft. It does not read notices. Somebody has stood a red-cloth stake beside it anyway."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 5)
     warp(MAP_PARCEL_DELIBIRD, 13, 13)
@@ -1964,6 +1965,29 @@ script ParcelHighlands_Stringer {
         msgbox(format("MAREN: The suggestion box. I asked the host to open it for me. He said the FOUNDATION empties it.\pI said: then that's my story. He went white. Good man. Wrong employer. It's a common condition up here."), MSGBOX_DEFAULT)
     } else {
         msgbox(format("MAREN: The slide. I came up for the slide. 'Weather event,' the Board says.\pI've written weather event three times in two years. I'm starting to feel like a forecaster. The drill went in two years ago; I'm not allowed to put those two sentences next to each other. So I put them one paragraph apart."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelHighlands_Carrier {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_LETTER_DONE)) {
+        msgbox(format("CARRIER: Knee's no better. The road's no better. The letters still go. That's three things that haven't changed."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_LETTER)) {
+        if (flag(FLAG_SKALD_Q_LETTER_FOUND)) {
+            msgbox(format("CARRIER: Delivered. In the hand. That's the whole of the job, and most people miss the half of it.\pMilk from the homestead; she sends it down with every letter. Yours."), MSGBOX_DEFAULT)
+            giveitem(ITEM_MOOMOO_MILK, 2)
+            setflag(FLAG_SKALD_Q_LETTER_DONE)
+        } else {
+            msgbox(format("CARRIER: The homestead, above the slide. The grandson. Hand, not box."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("CARRIER: Letters for the homestead above the slide. The road's gone and my knee's gone with it.\pYou're going up. One letter, the old woman's. Put it in her grandson's hand, not the box; the box went down the hill with the field."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_LETTER)
     }
     release
     end

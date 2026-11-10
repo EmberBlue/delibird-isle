@@ -112,28 +112,56 @@ ParcelStationHall_Clerk::
 	faceplayer
 # 50 "data/maps/ParcelStationHall/scripts.pory"
 	goto_if_set FLAG_SKALD_HALL_REQUISITION, ParcelStationHall_Clerk_2
-# 55 "data/maps/ParcelStationHall/scripts.pory"
-	msgbox ParcelStationHall_Clerk_Text_1, MSGBOX_DEFAULT
-# 56 "data/maps/ParcelStationHall/scripts.pory"
+# 68 "data/maps/ParcelStationHall/scripts.pory"
+	msgbox ParcelStationHall_Clerk_Text_4, MSGBOX_DEFAULT
+# 69 "data/maps/ParcelStationHall/scripts.pory"
 	giveitem ITEM_GREAT_BALL, 5
-# 57 "data/maps/ParcelStationHall/scripts.pory"
+# 70 "data/maps/ParcelStationHall/scripts.pory"
 	setflag FLAG_SKALD_HALL_REQUISITION
-# 58 "data/maps/ParcelStationHall/scripts.pory"
-	msgbox ParcelStationHall_Clerk_Text_2, MSGBOX_DEFAULT
-# 59 "data/maps/ParcelStationHall/scripts.pory"
+# 71 "data/maps/ParcelStationHall/scripts.pory"
+	msgbox ParcelStationHall_Clerk_Text_5, MSGBOX_DEFAULT
+# 72 "data/maps/ParcelStationHall/scripts.pory"
 	release
 	end
 
 ParcelStationHall_Clerk_2:
 # 51 "data/maps/ParcelStationHall/scripts.pory"
-	msgbox ParcelStationHall_Clerk_Text_0, MSGBOX_DEFAULT
-# 52 "data/maps/ParcelStationHall/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_FORTYONE_DONE, ParcelStationHall_Clerk_5
+# 53 "data/maps/ParcelStationHall/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_FORTYONE, ParcelStationHall_Clerk_6
+# 62 "data/maps/ParcelStationHall/scripts.pory"
+	msgbox ParcelStationHall_Clerk_Text_3, MSGBOX_DEFAULT
+# 63 "data/maps/ParcelStationHall/scripts.pory"
+	setflag FLAG_SKALD_Q_FORTYONE
+ParcelStationHall_Clerk_4:
+# 65 "data/maps/ParcelStationHall/scripts.pory"
 	release
 	end
 
+ParcelStationHall_Clerk_5:
+# 52 "data/maps/ParcelStationHall/scripts.pory"
+	msgbox ParcelStationHall_Clerk_Text_0, MSGBOX_DEFAULT
+	goto ParcelStationHall_Clerk_4
+
+ParcelStationHall_Clerk_6:
+# 54 "data/maps/ParcelStationHall/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_FORTYONE_FOUND, ParcelStationHall_Clerk_10
+# 59 "data/maps/ParcelStationHall/scripts.pory"
+	msgbox ParcelStationHall_Clerk_Text_2, MSGBOX_DEFAULT
+	goto ParcelStationHall_Clerk_4
+
+ParcelStationHall_Clerk_10:
+# 55 "data/maps/ParcelStationHall/scripts.pory"
+	msgbox ParcelStationHall_Clerk_Text_1, MSGBOX_DEFAULT
+# 56 "data/maps/ParcelStationHall/scripts.pory"
+	giveitem ITEM_MAX_ETHER, 1
+# 57 "data/maps/ParcelStationHall/scripts.pory"
+	setflag FLAG_SKALD_Q_FORTYONE_DONE
+	goto ParcelStationHall_Clerk_4
+
 
 ParcelStationHall_IceOut::
-# 66 "data/maps/ParcelStationHall/scripts.pory"
+# 79 "data/maps/ParcelStationHall/scripts.pory"
 	msgbox ParcelStationHall_IceOut_Text_0, MSGBOX_SIGN
 	return
 
@@ -205,7 +233,7 @@ ParcelStationHall_CertWall_Text_5:
 	.string "which, here, is what a fuss looks like.$"
 
 ParcelStationHall_Clerk_Text_0:
-# 51 "data/maps/ParcelStationHall/scripts.pory"
+# 52 "data/maps/ParcelStationHall/scripts.pory"
 	.string "Moss: Stores are stores. If it's not on\n"
 	.string "the shelf, the coast took it.\p"
 	.string "Sign the ledger on your way out.\n"
@@ -213,6 +241,31 @@ ParcelStationHall_Clerk_Text_0:
 
 ParcelStationHall_Clerk_Text_1:
 # 55 "data/maps/ParcelStationHall/scripts.pory"
+	.string "Moss: NO ICE, underlined twice, and a\n"
+	.string "question mark somebody rubbed out.\l"
+	.string "That's the page.\p"
+	.string "Back in the book, between forty and\n"
+	.string "forty-two, where the argument belongs.\l"
+	.string "Here. Requisitioned, signed, initialled.$"
+
+ParcelStationHall_Clerk_Text_2:
+# 59 "data/maps/ParcelStationHall/scripts.pory"
+	.string "Moss: Page forty-one. The yard. The\n"
+	.string "wind goes east here; everything ends up\l"
+	.string "by the gate.$"
+
+ParcelStationHall_Clerk_Text_3:
+# 62 "data/maps/ParcelStationHall/scripts.pory"
+	.string "Moss: The ice-out book has a torn year.\n"
+	.string "Page forty-one. The keeper took it out\l"
+	.string "to the yard to show the cadets, and the\l"
+	.string "wind had it.\p"
+	.string "Find the page. A book with a gap in it is\n"
+	.string "a book with an argument in it, and I\l"
+	.string "don't file arguments.$"
+
+ParcelStationHall_Clerk_Text_4:
+# 68 "data/maps/ParcelStationHall/scripts.pory"
 	.string "A narrow man behind a narrow desk,\n"
 	.string "filing survey slips by some order only\l"
 	.string "he can see.\p"
@@ -221,8 +274,8 @@ ParcelStationHall_Clerk_Text_1:
 	.string "ready for weeks. Nobody tells me\l"
 	.string "anything, but I stock for it anyway.$"
 
-ParcelStationHall_Clerk_Text_2:
-# 58 "data/maps/ParcelStationHall/scripts.pory"
+ParcelStationHall_Clerk_Text_5:
+# 71 "data/maps/ParcelStationHall/scripts.pory"
 	.string "Moss: Sign here. And initial here. And --\n"
 	.string "yes. There.\p"
 	.string "Moss: The Corps runs on two things,\n"
@@ -231,7 +284,7 @@ ParcelStationHall_Clerk_Text_2:
 	.string "second kind.$"
 
 ParcelStationHall_IceOut_Text_0:
-# 66 "data/maps/ParcelStationHall/scripts.pory"
+# 79 "data/maps/ParcelStationHall/scripts.pory"
 	.string "The instrument log, the Station's\n"
 	.string "oldest book. One line a year for the\l"
 	.string "tarn: ICE OUT, and a date.\p"

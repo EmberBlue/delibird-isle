@@ -4,6 +4,12 @@ mapscripts ParcelHighlandsHomestead_MapScripts {
 script ParcelHighlandsHomestead_Grandson {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_LETTER) && !flag(FLAG_SKALD_Q_LETTER_FOUND)) {
+        msgbox(format("GRANDSON: For Gran? …She'll read it twice and tell me nothing. Thank you.\pThe carrier can't make the slide any more; nobody told us why the letters stopped. We thought it was us."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_LETTER_FOUND)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GRANDSON: I signed. Gran didn't. The leases are enjoined pending survey, so the boxes stay unpacked. She hasn't said 'told you'. She's said it with her face every morning."), MSGBOX_DEFAULT)
         release

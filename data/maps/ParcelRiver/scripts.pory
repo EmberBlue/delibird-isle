@@ -1927,6 +1927,7 @@ script ParcelRiver_Epilogue {
     lockall
     delay(20)
     msgbox(format("ELVSUND. Market day. The WATER BOARD notice on the pole has six names under it, and the sentence they argued about for two hours is in.\pRead the whole river before you judge any part of it. SLUICE keeps the gate. The crossing is still the crossing."), MSGBOX_DEFAULT)
+    msgbox(format("The gauge at the ford carries two boards now, one above the other. The old mark and the new. Children read them aloud to each other and argue about which is real.\pDELL is at the ford with no rod. Watching. He says he saw a red flank go up at first light. He says it every morning, and one morning it will be true."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 4)
     warp(MAP_PARCEL_HIGHLANDS, 20, 68)
@@ -2021,6 +2022,29 @@ script ParcelRiver_Stringer {
         }
     } else {
         msgbox(format("MAREN: The water meeting's tonight. Forty-one ratepayers and a Board that won't name a year.\pI asked SLUICE which year. SLUICE said ask the Board. I asked the Board. The Board doesn't comment on individual readings. I've written that sentence so often I could set it in type myself."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelRiver_FordBoy {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_BOOK_DONE)) {
+        msgbox(format("BOY: I'm keeping my own book now. One line a week. DAD says that's how it starts."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_BOOK)) {
+        if (flag(FLAG_SKALD_Q_BOOK_FOUND)) {
+            msgbox(format("BOY: Eleven years NORMAL and then they moved the mark. So the floods didn't stop. The book stopped.\pDAD'll want to know he was right. He won't like it. Here, for telling me straight."), MSGBOX_DEFAULT)
+            giveitem(ITEM_NET_BALL, 3)
+            setflag(FLAG_SKALD_Q_BOOK_DONE)
+        } else {
+            msgbox(format("BOY: The gauge book. In the Board office, on the counter. The kept one."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("BOY: The Board's book has the real river in it. DAD says. He says there's two books, the one they show and the one they keep.\pYou can go in the office. Read the kept one and tell me which year the floods stopped."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_BOOK)
     }
     release
     end

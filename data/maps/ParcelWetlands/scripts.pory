@@ -1905,6 +1905,7 @@ script ParcelWetlands_Epilogue {
     lockall
     delay(20)
     msgbox(format("REEDMERE. The channel runs under the landing the way it did the first week, and it doesn't smell of anything.\pThe works upstream hold a permit with a new page in it. A CORPS monitor sits on the bank with a jar and a clock. Nobody cut a ribbon for it."), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND's boat is on the hard with the hull open. He is scraping it himself, slowly, the way a man does who has decided to keep something.\pOn the turf the stake has gone pink. Someone has tied a second cloth under it, not red. A child's ribbon."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 2)
     warp(MAP_PARCEL_FLOODBASIN, 20, 90)
@@ -2006,5 +2007,38 @@ script ParcelWetlands_Stringer {
         msgbox(format("MAREN: Ribbon-cutting. Five gauges, one speech, refreshments courtesy of Mereholt Coastal. I ate the refreshments; the paper doesn't pay me enough not to.\pYou're the ranger HARLAND's shouting about. When you've read what's under the falls, I'd like a sentence. One. I'll be the one eating."), MSGBOX_DEFAULT)
     }
     release
+    end
+}
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelWetlands_TurfCutter {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_TURF_DONE)) {
+        msgbox(format("TURF CUTTER: I'm cutting less this year. First time it's been by choice."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_TURF)) {
+        if (flag(FLAG_SKALD_Q_TURF_FOUND)) {
+            msgbox(format("TURF CUTTER: By the north edge. That's new ground to crack. The spade stays out of the north edge, then.\pHere. For the walking."), MSGBOX_DEFAULT)
+            giveitem(ITEM_ETHER, 2)
+            setflag(FLAG_SKALD_Q_TURF_DONE)
+        } else {
+            msgbox(format("TURF CUTTER: The worst crack. Wide as a hand, dry to the bottom. You'll know it."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("TURF CUTTER: I've cut turf on this landing thirty years. Never where it cracks; cracked turf is dead turf, you burn it and it's gone for good.\pThe cracks have moved. Find me the worst of them this year and I'll know where not to put the spade."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_TURF)
+    }
+    release
+    end
+}
+
+script ParcelWetlands_TurfCrack {
+    if (flag(FLAG_SKALD_Q_TURF) && !flag(FLAG_SKALD_Q_TURF_FOUND)) {
+        msgbox(format("A crack in the turf a hand wide, the peat dry and crumbling to the bottom. A beetle is using it as a road.\pThe worst of them this year. The year before, it was a line you could cover with a boot."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_TURF_FOUND)
+    } else {
+        msgbox(format("A crack in the turf a hand wide. The beetle has gone on."), MSGBOX_SIGN)
+    }
     end
 }

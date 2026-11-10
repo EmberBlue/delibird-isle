@@ -68,44 +68,82 @@ ParcelCoastCannery_Inspector::
 # 40 "data/maps/ParcelCoastCannery/scripts.pory"
 	faceplayer
 # 41 "data/maps/ParcelCoastCannery/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastCannery_Inspector_2
-# 46 "data/maps/ParcelCoastCannery/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastCannery_Inspector_5
+	goto_if_set FLAG_SKALD_Q_COPY, ParcelCoastCannery_Inspector_5
+ParcelCoastCannery_Inspector_4:
 # 51 "data/maps/ParcelCoastCannery/scripts.pory"
-	msgbox ParcelCoastCannery_Inspector_Text_2, MSGBOX_DEFAULT
-# 52 "data/maps/ParcelCoastCannery/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_COPY_DONE, ParcelCoastCannery_Inspector_3
+# 57 "data/maps/ParcelCoastCannery/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastCannery_Inspector_9
+# 62 "data/maps/ParcelCoastCannery/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastCannery_Inspector_16
+# 67 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_Inspector_Text_5, MSGBOX_DEFAULT
+# 68 "data/maps/ParcelCoastCannery/scripts.pory"
 	release
 	end
 
 ParcelCoastCannery_Inspector_2:
 # 42 "data/maps/ParcelCoastCannery/scripts.pory"
-	msgbox ParcelCoastCannery_Inspector_Text_0, MSGBOX_DEFAULT
-# 43 "data/maps/ParcelCoastCannery/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_COPY_FOUND, ParcelCoastCannery_Inspector_12
+# 47 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_Inspector_Text_1, MSGBOX_DEFAULT
+ParcelCoastCannery_Inspector_11:
+# 49 "data/maps/ParcelCoastCannery/scripts.pory"
+	release
+	end
+
+ParcelCoastCannery_Inspector_3:
+# 52 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_Inspector_Text_2, MSGBOX_DEFAULT
+# 53 "data/maps/ParcelCoastCannery/scripts.pory"
+	setflag FLAG_SKALD_Q_COPY
+# 54 "data/maps/ParcelCoastCannery/scripts.pory"
 	release
 	end
 
 ParcelCoastCannery_Inspector_5:
-# 47 "data/maps/ParcelCoastCannery/scripts.pory"
-	msgbox ParcelCoastCannery_Inspector_Text_1, MSGBOX_DEFAULT
-# 48 "data/maps/ParcelCoastCannery/scripts.pory"
+# 41 "data/maps/ParcelCoastCannery/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_COPY_DONE, ParcelCoastCannery_Inspector_2
+	goto ParcelCoastCannery_Inspector_4
+
+ParcelCoastCannery_Inspector_9:
+# 58 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_Inspector_Text_3, MSGBOX_DEFAULT
+# 59 "data/maps/ParcelCoastCannery/scripts.pory"
+	release
+	end
+
+ParcelCoastCannery_Inspector_12:
+# 43 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_Inspector_Text_0, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelCoastCannery/scripts.pory"
+	giveitem ITEM_PP_UP, 1
+# 45 "data/maps/ParcelCoastCannery/scripts.pory"
+	setflag FLAG_SKALD_Q_COPY_DONE
+	goto ParcelCoastCannery_Inspector_11
+
+ParcelCoastCannery_Inspector_16:
+# 63 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_Inspector_Text_4, MSGBOX_DEFAULT
+# 64 "data/maps/ParcelCoastCannery/scripts.pory"
 	release
 	end
 
 
 ParcelCoastCannery_Board::
-# 56 "data/maps/ParcelCoastCannery/scripts.pory"
+# 72 "data/maps/ParcelCoastCannery/scripts.pory"
 	msgbox ParcelCoastCannery_Board_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastCannery_CatchBook::
-# 63 "data/maps/ParcelCoastCannery/scripts.pory"
+# 79 "data/maps/ParcelCoastCannery/scripts.pory"
 	msgbox ParcelCoastCannery_CatchBook_Text_0, MSGBOX_SIGN
 	return
 
 
 ParcelCoastCannery_Grading::
-# 67 "data/maps/ParcelCoastCannery/scripts.pory"
+# 83 "data/maps/ParcelCoastCannery/scripts.pory"
 	msgbox ParcelCoastCannery_Grading_Text_0, MSGBOX_SIGN
 	return
 
@@ -160,15 +198,40 @@ ParcelCoastCannery_Line_Text_2:
 	.string "Nobody's stopped in a year.$"
 
 ParcelCoastCannery_Inspector_Text_0:
-# 42 "data/maps/ParcelCoastCannery/scripts.pory"
+# 43 "data/maps/ParcelCoastCannery/scripts.pory"
+	.string "INSPECTOR: Under the tray. RECEIVED,\n"
+	.string "not filed. Of course.\p"
+	.string "You put it back on top? Good. That's all\n"
+	.string "I ever asked of it. Here. I've no fish to\l"
+	.string "give you, and I wouldn't give you those.$"
+
+ParcelCoastCannery_Inspector_Text_1:
+# 47 "data/maps/ParcelCoastCannery/scripts.pory"
+	.string "INSPECTOR: The hearing room. Under\n"
+	.string "something, I expect. That's where my\l"
+	.string "letters go.$"
+
+ParcelCoastCannery_Inspector_Text_2:
+# 52 "data/maps/ParcelCoastCannery/scripts.pory"
+	.string "INSPECTOR: My copy to the Council\n"
+	.string "clerk. The one about the minimum size.\l"
+	.string "It went up the street in my own hand\l"
+	.string "and never reached the tray.\p"
+	.string "Somewhere between here and the hearing\n"
+	.string "room. If you find it, I'd like it back in\l"
+	.string "the tray, on top, where the next sitting\l"
+	.string "has to move it.$"
+
+ParcelCoastCannery_Inspector_Text_3:
+# 58 "data/maps/ParcelCoastCannery/scripts.pory"
 	.string "INSPECTOR: Every landing weighed,\n"
 	.string "every weight logged, every log to the\l"
 	.string "review now, not the coast office. Same\l"
 	.string "numbers. Different reader. That's the\l"
 	.string "whole change. It's enough.$"
 
-ParcelCoastCannery_Inspector_Text_1:
-# 47 "data/maps/ParcelCoastCannery/scripts.pory"
+ParcelCoastCannery_Inspector_Text_4:
+# 63 "data/maps/ParcelCoastCannery/scripts.pory"
 	.string "INSPECTOR: Every landing weighed.\n"
 	.string "Every weight logged. Every log to the\l"
 	.string "coast office. The numbers are still\l"
@@ -178,8 +241,8 @@ ParcelCoastCannery_Inspector_Text_1:
 	.string "to. It's not my department. It's a\l"
 	.string "column.$"
 
-ParcelCoastCannery_Inspector_Text_2:
-# 51 "data/maps/ParcelCoastCannery/scripts.pory"
+ParcelCoastCannery_Inspector_Text_5:
+# 67 "data/maps/ParcelCoastCannery/scripts.pory"
 	.string "INSPECTOR: Quota compliance. Every\n"
 	.string "landing weighed, every weight logged,\l"
 	.string "every log to the coast office. The\l"
@@ -189,14 +252,14 @@ ParcelCoastCannery_Inspector_Text_2:
 	.string "department.$"
 
 ParcelCoastCannery_Board_Text_0:
-# 56 "data/maps/ParcelCoastCannery/scripts.pory"
+# 72 "data/maps/ParcelCoastCannery/scripts.pory"
 	.string "QUOTA BOARD. This month: 41 tonnes\n"
 	.string "landed, 40 tonnes permitted. Over by\l"
 	.string "one. A note in red: ROUNDING. Last\l"
 	.string "year's board, under it: 112 tonnes.$"
 
 ParcelCoastCannery_CatchBook_Text_0:
-# 63 "data/maps/ParcelCoastCannery/scripts.pory"
+# 79 "data/maps/ParcelCoastCannery/scripts.pory"
 	.string "The catch book, chained to the desk.\n"
 	.string "Landings by season, by boat, by kind.\l"
 	.string "Anyone may read it. Nobody does.\p"
@@ -222,7 +285,7 @@ ParcelCoastCannery_CatchBook_Text_0:
 	.string "Foundation's chart shows. The totals.$"
 
 ParcelCoastCannery_Grading_Text_0:
-# 67 "data/maps/ParcelCoastCannery/scripts.pory"
+# 83 "data/maps/ParcelCoastCannery/scripts.pory"
 	.string "The inspector's grading sheets on a\n"
 	.string "clip. This week's landings, by grade.\p"
 	.string "GRADE ONE: a short column. GRADE TWO:\n"

@@ -1925,6 +1925,7 @@ script ParcelFloodbasin_Epilogue {
     lockall
     delay(20)
     msgbox(format("LEIRVIK. The relief tent is gone. The sandbags are stacked where DORSEY's photographer stood.\pPhase 2 goes ahead. Dry sheds, like PERRIN said. The next pulse will come from somewhere, and now there's a page that says where."), MSGBOX_DEFAULT)
+    msgbox(format("MRS ASKE's roof has a man on it. Thursday. He is not the FOUNDATION's and the ladder is his own.\pIn the basin the water runs grey after a pulse now, not brown. It isn't clean. It's honest, which is further than it had got in twenty-two years."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 3)
     warp(MAP_PARCEL_RIVER, 16, 30)
@@ -2055,6 +2056,29 @@ script ParcelFloodbasin_Stringer {
         msgbox(format("MAREN: Your stake by the hamlet sign made the paper. Not the words -- the photograph. People standing in a row reading a stick.\pIt did better than the Commissioner with the blanket. He noticed. He asked me which photographer. I said the same one as always. He didn't like that either."), MSGBOX_DEFAULT)
     } else {
         msgbox(format("MAREN: Third flood, third relief line, third photograph of the Commissioner handing a child a blanket. I've got a drawer of them.\pDifferent child each time. Same blanket. I've never been allowed to print that sentence. I'm saying it to you so it exists somewhere."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelFloodbasin_WellWoman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_PLATE_DONE)) {
+        msgbox(format("WOMAN: Discharge licensed. I say it to myself when the aide comes round with the blankets. It helps, a little."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_PLATE)) {
+        if (flag(FLAG_SKALD_Q_PLATE_FOUND)) {
+            msgbox(format("WOMAN: Discharge licensed. Where did you think it went.\pThat's what he wouldn't say. I'd like to hit something. Here; I've no use for these now."), MSGBOX_DEFAULT)
+            giveitem(ITEM_FULL_HEAL, 2)
+            setflag(FLAG_SKALD_Q_PLATE_DONE)
+        } else {
+            msgbox(format("WOMAN: The pump house plate. Up at the works, on the wall. Brass, I'm told."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("WOMAN: The works up the basin. There's a plate on the pump house. My husband read it once and came home and wouldn't say what it said.\pYou read things for a living. Read me the plate."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_PLATE)
     }
     release
     end

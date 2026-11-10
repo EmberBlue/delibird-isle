@@ -1870,6 +1870,12 @@ script ParcelCoast_Epilogue {
     lockall
     delay(20)
     msgbox(format("MEREHOLT COAST. The cranes swing on schedule. The quota review runs to spring, and the boats go out under it and come back with what there is."), MSGBOX_DEFAULT)
+    msgbox(format("At the east berth the dredge is tied up with its bucket down and a padlock through the chain. The night crew sit on the quay edge with nothing to lift, which the docker says is a kind of work."), MSGBOX_DEFAULT)
+    if (flag(FLAG_SKALD_CH_HOLLIS_NAMED)) {
+        msgbox(format("The office above the docks has a blank where a nameplate was. The kettle is on anyway. The secretary comes in on her own time, pours two cups, and drinks neither."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("The office above the docks keeps its nameplate. HOLLIS is at the window with the fourth letter in the typewriter and the ribbon worn to grey. She has not sent it. She is not going to stop writing it."), MSGBOX_DEFAULT)
+    }
     msgbox(format("HALE: You want to know if it was worth it. Wrong verb. Ask if it was true.\pIt was. Go and rest. Then go and read something else. There's a lot of region left."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 8)

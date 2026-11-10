@@ -38,6 +38,22 @@ script ParcelCoastCannery_Line {
 script ParcelCoastCannery_Inspector {
     lock
     faceplayer
+    if (flag(FLAG_SKALD_Q_COPY) && !flag(FLAG_SKALD_Q_COPY_DONE)) {
+        if (flag(FLAG_SKALD_Q_COPY_FOUND)) {
+            msgbox(format("INSPECTOR: Under the tray. RECEIVED, not filed. Of course.\pYou put it back on top? Good. That's all I ever asked of it. Here. I've no fish to give you, and I wouldn't give you those."), MSGBOX_DEFAULT)
+            giveitem(ITEM_PP_UP, 1)
+            setflag(FLAG_SKALD_Q_COPY_DONE)
+        } else {
+            msgbox(format("INSPECTOR: The hearing room. Under something, I expect. That's where my letters go."), MSGBOX_DEFAULT)
+        }
+        release
+        end
+    } elif (!flag(FLAG_SKALD_Q_COPY_DONE)) {
+        msgbox(format("INSPECTOR: My copy to the Council clerk. The one about the minimum size. It went up the street in my own hand and never reached the tray.\pSomewhere between here and the hearing room. If you find it, I'd like it back in the tray, on top, where the next sitting has to move it."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_COPY)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("INSPECTOR: Every landing weighed, every weight logged, every log to the review now, not the coast office. Same numbers. Different reader. That's the whole change. It's enough."), MSGBOX_DEFAULT)
         release

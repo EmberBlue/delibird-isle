@@ -48,7 +48,20 @@ script ParcelStationHall_Clerk {
     lock
     faceplayer
     if (flag(FLAG_SKALD_HALL_REQUISITION)) {
-        msgbox(format("Moss: Stores are stores. If it's not on the shelf, the coast took it.\pSign the ledger on your way out. Everyone signs the ledger."), MSGBOX_DEFAULT)
+        if (flag(FLAG_SKALD_Q_FORTYONE_DONE)) {
+            msgbox(format("Moss: Stores are stores. If it's not on the shelf, the coast took it.\pSign the ledger on your way out. Everyone signs the ledger."), MSGBOX_DEFAULT)
+        } elif (flag(FLAG_SKALD_Q_FORTYONE)) {
+            if (flag(FLAG_SKALD_Q_FORTYONE_FOUND)) {
+                msgbox(format("Moss: NO ICE, underlined twice, and a question mark somebody rubbed out. That's the page.\pBack in the book, between forty and forty-two, where the argument belongs. Here. Requisitioned, signed, initialled."), MSGBOX_DEFAULT)
+                giveitem(ITEM_MAX_ETHER, 1)
+                setflag(FLAG_SKALD_Q_FORTYONE_DONE)
+            } else {
+                msgbox(format("Moss: Page forty-one. The yard. The wind goes east here; everything ends up by the gate."), MSGBOX_DEFAULT)
+            }
+        } else {
+            msgbox(format("Moss: The ice-out book has a torn year. Page forty-one. The keeper took it out to the yard to show the cadets, and the wind had it.\pFind the page. A book with a gap in it is a book with an argument in it, and I don't file arguments."), MSGBOX_DEFAULT)
+            setflag(FLAG_SKALD_Q_FORTYONE)
+        }
         release
         end
     }

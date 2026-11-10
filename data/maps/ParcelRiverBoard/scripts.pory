@@ -116,4 +116,7 @@ script ParcelRiverBoard_Sluice_Rematch {
 
 script ParcelRiverBoard_GaugeBook {
     msgbox(format("The gauge book, open on the counter. One line a week, in different hands, for a long time.\pThe early pages are wet. Spring readings over the top mark, the word FLOOD in the margin twice a year, a note that the ford was impassable from thaw to midsummer.\pThe middle pages are the book the Board quotes. The gauge reads NORMAL for eleven years running. The hand is the same hand all the way through, neat, unhurried.\pThe last pages are dry. Two hands below the mark. Three. A week with no reading and a note: gauge out of water, reset to new datum.\pNORMAL was never crossed out. They moved the mark."), MSGBOX_SIGN)
+    if (flag(FLAG_SKALD_Q_BOOK)) {
+        setflag(FLAG_SKALD_Q_BOOK_FOUND)
+    }
 }

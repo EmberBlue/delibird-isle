@@ -108,3 +108,15 @@ script ParcelCoastHearing_Tray {
         msgbox(format("The clerk's tray. The order of business for the next sitting, typed.\pITEM 1. Minutes. ITEM 2. Apologies. ITEM 3. The Commissioner's report on public-private partnership.\pITEM 4. Mereholt Coastal, dredging consent, renewal. Recommended for approval, officer's report attached.\pITEM 5. Mereholt Permafrost, exploratory licence, Haukfell. Recommended for approval, officer's report attached.\pITEM 6. Recovery model, Mereholt Foundation, tabled for information. Not for debate.\pITEM 7. Objection, from the floor, as in previous seasons. Noted.\pItem 7 is one line. It has been one line for nine years."), MSGBOX_SIGN)
     }
 }
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelCoastHearing_Copy {
+    if (flag(FLAG_SKALD_Q_COPY) && !flag(FLAG_SKALD_Q_COPY_FOUND)) {
+        msgbox(format("Under the clerk's tray, a carbon copy of a grading sheet, stamped RECEIVED in the corner and never filed. Minimum size not met, see management, copy to the clerk of the Council.\pYou put it back on top of the tray, where the next sitting will have to move it to reach anything else."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_COPY_FOUND)
+    } else {
+        msgbox(format("The clerk's tray, with a grading sheet on top of it that was not there before. It says RECEIVED."), MSGBOX_SIGN)
+    }
+    end
+}

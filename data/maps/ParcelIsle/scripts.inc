@@ -2014,6 +2014,68 @@ ParcelIsle_Stringer_3:
 	goto ParcelIsle_Stringer_1
 
 
+ParcelIsle_Oysterman::
+# 1071 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 1072 "data/maps/ParcelIsle/scripts.pory"
+	faceplayer
+# 1073 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SHOAL_DONE, ParcelIsle_Oysterman_2
+# 1075 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SHOAL, ParcelIsle_Oysterman_3
+# 1084 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Oysterman_Text_3, MSGBOX_DEFAULT
+# 1085 "data/maps/ParcelIsle/scripts.pory"
+	setflag FLAG_SKALD_Q_SHOAL
+ParcelIsle_Oysterman_1:
+# 1087 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_Oysterman_2:
+# 1074 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Oysterman_Text_0, MSGBOX_DEFAULT
+	goto ParcelIsle_Oysterman_1
+
+ParcelIsle_Oysterman_3:
+# 1076 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SHOAL_FOUND, ParcelIsle_Oysterman_7
+# 1081 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Oysterman_Text_2, MSGBOX_DEFAULT
+	goto ParcelIsle_Oysterman_1
+
+ParcelIsle_Oysterman_7:
+# 1077 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Oysterman_Text_1, MSGBOX_DEFAULT
+# 1078 "data/maps/ParcelIsle/scripts.pory"
+	giveitem ITEM_PEARL, 2
+# 1079 "data/maps/ParcelIsle/scripts.pory"
+	setflag FLAG_SKALD_Q_SHOAL_DONE
+	goto ParcelIsle_Oysterman_1
+
+
+ParcelIsle_ShoalStake::
+# 1092 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SHOAL, ParcelIsle_ShoalStake_4
+ParcelIsle_ShoalStake_3:
+# 1096 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_ShoalStake_Text_1, MSGBOX_SIGN
+ParcelIsle_ShoalStake_1:
+	end
+
+ParcelIsle_ShoalStake_2:
+# 1093 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_ShoalStake_Text_0, MSGBOX_SIGN
+# 1094 "data/maps/ParcelIsle/scripts.pory"
+	setflag FLAG_SKALD_Q_SHOAL_FOUND
+	goto ParcelIsle_ShoalStake_1
+
+ParcelIsle_ShoalStake_4:
+# 1092 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_SHOAL_FOUND, ParcelIsle_ShoalStake_2
+	goto ParcelIsle_ShoalStake_3
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAM: Hey! You're the mainlander, right?\n"
@@ -3327,3 +3389,47 @@ ParcelIsle_Stringer_Text_4:
 	.string "the other one and regret it by the\l"
 	.string "second ferry. Come back when it's\l"
 	.string "something.$"
+
+ParcelIsle_Oysterman_Text_0:
+# 1074 "data/maps/ParcelIsle/scripts.pory"
+	.string "OYSTERMAN: GONE, it says. My father\n"
+	.string "would have wanted the word. He'd have\l"
+	.string "wanted it spelled right. It is.$"
+
+ParcelIsle_Oysterman_Text_1:
+# 1077 "data/maps/ParcelIsle/scripts.pory"
+	.string "OYSTERMAN: …GONE. In the Survey's hand.\n"
+	.string "Thirty-one years and nobody put it in\l"
+	.string "writing where he could have read it.\p"
+	.string "Here. He kept these from the last good\n"
+	.string "year. You read it; you have one.$"
+
+ParcelIsle_Oysterman_Text_2:
+# 1081 "data/maps/ParcelIsle/scripts.pory"
+	.string "OYSTERMAN: Past the pier, in the\n"
+	.string "shallows. The cloth will be rags by now.\l"
+	.string "The tag's brass.$"
+
+ParcelIsle_Oysterman_Text_3:
+# 1084 "data/maps/ParcelIsle/scripts.pory"
+	.string "OYSTERMAN: My father's oyster ground\n"
+	.string "was out there. Where the dredge spoil\l"
+	.string "sits now. The Survey staked it the year\l"
+	.string "it went, and I never went out to look.\p"
+	.string "You've a notebook. Go and read me the\n"
+	.string "stake. Out past the pier, in the\l"
+	.string "shallows.$"
+
+ParcelIsle_ShoalStake_Text_0:
+# 1093 "data/maps/ParcelIsle/scripts.pory"
+	.string "A survey stake in the shallows, leaning.\n"
+	.string "The cloth is threads. The brass tag\l"
+	.string "reads: SALTWICK SHOALS, OYSTER GROUND.\l"
+	.string "FIRST STAKE, LAST READING, and under\l"
+	.string "them one word cut deeper than the rest.\p"
+	.string "GONE.$"
+
+ParcelIsle_ShoalStake_Text_1:
+# 1096 "data/maps/ParcelIsle/scripts.pory"
+	.string "A leaning stake in the shallows. Brass\n"
+	.string "tag, red threads, one word.$"

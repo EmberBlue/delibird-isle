@@ -926,3 +926,36 @@ script ParcelFernwick_Stringer {
     release
     end
 }
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelFernwick_Gardener {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_STONE_DONE)) {
+        msgbox(format("GARDENER: Twelve paces. I've started watering the far bank. It won't bring it back. It's something to do with my hands."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_STONE)) {
+        if (flag(FLAG_SKALD_Q_STONE_FOUND)) {
+            msgbox(format("GARDENER: Dry. Twelve paces from the water. I knew. I wanted somebody with a notebook to know too.\pTake this. I was going to give it to the pond."), MSGBOX_DEFAULT)
+            giveitem(ITEM_RARE_CANDY, 1)
+            setflag(FLAG_SKALD_Q_STONE_DONE)
+        } else {
+            msgbox(format("GARDENER: South, set in the pavement. A dark stone. Dry, I expect."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("GARDENER: The pond garden's mine to keep. The pond isn't anyone's to keep, it seems.\pThere's a stone in the pavement south of here that the water came up to every spring when I was a girl. Find it and tell me if it's wet."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_STONE)
+    }
+    release
+    end
+}
+
+script ParcelFernwick_HighWaterStone {
+    if (flag(FLAG_SKALD_Q_STONE) && !flag(FLAG_SKALD_Q_STONE_FOUND)) {
+        msgbox(format("A dark stone set in the pavement, worn smooth on top. The high-water stone. The pond is twelve paces north of it and does not reach.\pIt is dry. It has been dry long enough for the moss to give up on it."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_STONE_FOUND)
+    } else {
+        msgbox(format("A dark stone set in the pavement, dry, twelve paces from the water."), MSGBOX_SIGN)
+    }
+    end
+}

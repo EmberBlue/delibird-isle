@@ -5,6 +5,9 @@ mapscripts ParcelFloodbasinWorks_MapScripts {
 script ParcelFloodbasinWorks_ItemTM18 { finditem(ITEM_TM18) end }
 script ParcelFloodbasinWorks_Plate {
     msgbox(format("A brass plate, green with damp: MEREHOLT BASIN WORKS -- PUMP HOUSE 2. DISCHARGE LICENSED.\pBelow it, scratched in by hand: WHERE DID YOU THINK IT WENT?"), MSGBOX_SIGN)
+    if (flag(FLAG_SKALD_Q_PLATE)) {
+        setflag(FLAG_SKALD_Q_PLATE_FOUND)
+    }
     end
 }
 

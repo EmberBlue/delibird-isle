@@ -237,6 +237,15 @@ static const u8 sNbQ_Plank[]   = _("The keel plank: ");
 static const u8 sNbQ_Core[]    = _("Core tag 48-50: ");
 static const u8 sNbQ_Sledge[]  = _("KARI's sledge: ");
 static const u8 sNbQ_Carbon[]  = _("The fourth carbon: ");
+static const u8 sNbQ_Shoal[] = _("The shoal stake: ");
+static const u8 sNbQ_Stone[] = _("The high-water stone: ");
+static const u8 sNbQ_Turf[] = _("The turf cut: ");
+static const u8 sNbQ_Plate[] = _("The pump house plate: ");
+static const u8 sNbQ_Book[] = _("The kept book: ");
+static const u8 sNbQ_Letter[] = _("The carrier's letter: ");
+static const u8 sNbQ_Scratch[] = _("The hut wall scratch: ");
+static const u8 sNbQ_Copy[] = _("The inspector's copy: ");
+static const u8 sNbQ_FortyOne[] = _("Page forty-one: ");
 static const struct NbQuest sNbQuests[] =
 {
     {sNbQ_Anni,    FLAG_SKALD_Q_ANNI_NET,    FLAG_SKALD_Q_ANNI_DONE},
@@ -268,6 +277,15 @@ static const struct NbQuest sNbQuests[] =
     {sNbQ_Core,    FLAG_SKALD_Q_CORE,        FLAG_SKALD_Q_CORE_DONE},
     {sNbQ_Sledge,  FLAG_SKALD_Q_SLEDGE,      FLAG_SKALD_Q_SLEDGE_DONE},
     {sNbQ_Carbon,  FLAG_SKALD_Q_CARBON,      FLAG_SKALD_Q_CARBON_DONE},
+    {sNbQ_Shoal, FLAG_SKALD_Q_SHOAL, FLAG_SKALD_Q_SHOAL_DONE},
+    {sNbQ_Stone, FLAG_SKALD_Q_STONE, FLAG_SKALD_Q_STONE_DONE},
+    {sNbQ_Turf, FLAG_SKALD_Q_TURF, FLAG_SKALD_Q_TURF_DONE},
+    {sNbQ_Plate, FLAG_SKALD_Q_PLATE, FLAG_SKALD_Q_PLATE_DONE},
+    {sNbQ_Book, FLAG_SKALD_Q_BOOK, FLAG_SKALD_Q_BOOK_DONE},
+    {sNbQ_Letter, FLAG_SKALD_Q_LETTER, FLAG_SKALD_Q_LETTER_DONE},
+    {sNbQ_Scratch, FLAG_SKALD_Q_SCRATCH, FLAG_SKALD_Q_SCRATCH_DONE},
+    {sNbQ_Copy, FLAG_SKALD_Q_COPY, FLAG_SKALD_Q_COPY_DONE},
+    {sNbQ_FortyOne, FLAG_SKALD_Q_FORTYONE, FLAG_SKALD_Q_FORTYONE_DONE},
 };
 
 static const u8 sNb_Margins_None[]  = _("The margins are in her hand, in a\nshorthand you can't read yet.\pIt gets easier the more of the\nregion you've read yourself.");

@@ -11,11 +11,19 @@ ParcelFloodbasinWorks_ItemTM18::
 ParcelFloodbasinWorks_Plate::
 # 7 "data/maps/ParcelFloodbasinWorks/scripts.pory"
 	msgbox ParcelFloodbasinWorks_Plate_Text_0, MSGBOX_SIGN
+# 8 "data/maps/ParcelFloodbasinWorks/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_PLATE, ParcelFloodbasinWorks_Plate_2
+ParcelFloodbasinWorks_Plate_1:
 	end
+
+ParcelFloodbasinWorks_Plate_2:
+# 9 "data/maps/ParcelFloodbasinWorks/scripts.pory"
+	setflag FLAG_SKALD_Q_PLATE_FOUND
+	goto ParcelFloodbasinWorks_Plate_1
 
 
 ParcelFloodbasinWorks_Permit::
-# 14 "data/maps/ParcelFloodbasinWorks/scripts.pory"
+# 17 "data/maps/ParcelFloodbasinWorks/scripts.pory"
 	msgbox ParcelFloodbasinWorks_Permit_Text_0, MSGBOX_SIGN
 	return
 
@@ -29,7 +37,7 @@ ParcelFloodbasinWorks_Plate_Text_0:
 	.string "DID YOU THINK IT WENT?$"
 
 ParcelFloodbasinWorks_Permit_Text_0:
-# 14 "data/maps/ParcelFloodbasinWorks/scripts.pory"
+# 17 "data/maps/ParcelFloodbasinWorks/scripts.pory"
 	.string "Behind glass on the wall of the works,\n"
 	.string "the consent, as the law requires it to\l"
 	.string "be displayed. The glass is cracked and\l"

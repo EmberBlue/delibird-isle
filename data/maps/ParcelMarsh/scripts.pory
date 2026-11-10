@@ -403,6 +403,7 @@ script ParcelMarsh_Epilogue {
     lockall
     delay(20)
     msgbox(format("The marsh. The count in the notebook runs to the last day in her hand, steady to the end. Forty-one. Forty-one. Thirty-nine. Forty.\pNo entry after it. A strip of red cloth on the reeds, and nobody to sign it.\pThe POLIWAG hold where the stream still runs. The corridor listing went through on the day she stopped writing."), MSGBOX_DEFAULT)
+    msgbox(format("Her hut is swept. The POLITOED sits in the doorway and does not go in. It has been fed; someone from the Survey comes out on the ferry days and leaves before it has to be thanked.\pThe stone that held her sheet flat on the table is holding yours."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 7)
     warp(MAP_PARCEL_COAST, 30, 53)

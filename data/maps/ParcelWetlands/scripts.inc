@@ -3970,186 +3970,250 @@ ParcelWetlands_Epilogue::
 # 1907 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Epilogue_Text_0, MSGBOX_DEFAULT
 # 1908 "data/maps/ParcelWetlands/scripts.pory"
-	closemessage
+	msgbox ParcelWetlands_Epilogue_Text_1, MSGBOX_DEFAULT
 # 1909 "data/maps/ParcelWetlands/scripts.pory"
-	setvar VAR_SKALD_EPILOGUE, 2
+	closemessage
 # 1910 "data/maps/ParcelWetlands/scripts.pory"
-	warp MAP_PARCEL_FLOODBASIN, 20, 90
+	setvar VAR_SKALD_EPILOGUE, 2
 # 1911 "data/maps/ParcelWetlands/scripts.pory"
+	warp MAP_PARCEL_FLOODBASIN, 20, 90
+# 1912 "data/maps/ParcelWetlands/scripts.pory"
 	waitstate
 	end
 
 
 ParcelWetlands_ToHide::
-# 1917 "data/maps/ParcelWetlands/scripts.pory"
-	warp MAP_PARCEL_WETLANDS_HIDE, 47, 10
 # 1918 "data/maps/ParcelWetlands/scripts.pory"
+	warp MAP_PARCEL_WETLANDS_HIDE, 47, 10
+# 1919 "data/maps/ParcelWetlands/scripts.pory"
 	waitstate
 	end
 
 
 ParcelWetlands_ReedCount::
-# 1923 "data/maps/ParcelWetlands/scripts.pory"
+# 1924 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_REED, ParcelWetlands_ReedCount_3
 ParcelWetlands_ReedCount_1:
-# 1928 "data/maps/ParcelWetlands/scripts.pory"
+# 1929 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_ReedCount_Text_1, MSGBOX_SIGN
 	end
 
 ParcelWetlands_ReedCount_2:
-# 1924 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_ReedCount_Text_0, MSGBOX_SIGN
 # 1925 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_ReedCount_Text_0, MSGBOX_SIGN
+# 1926 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_Q_REED_FOUND
 	end
 
 ParcelWetlands_ReedCount_3:
-# 1923 "data/maps/ParcelWetlands/scripts.pory"
+# 1924 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_REED_FOUND, ParcelWetlands_ReedCount_2
 	goto ParcelWetlands_ReedCount_1
 
 
 ParcelWetlands_SurveyStake::
-# 1934 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_SurveyStake_Text_0, MSGBOX_SIGN
 # 1935 "data/maps/ParcelWetlands/scripts.pory"
-	setvar VAR_0x8004, 0
+	msgbox ParcelWetlands_SurveyStake_Text_0, MSGBOX_SIGN
 # 1936 "data/maps/ParcelWetlands/scripts.pory"
-	special SkaldSurveyStake
+	setvar VAR_0x8004, 0
 # 1937 "data/maps/ParcelWetlands/scripts.pory"
+	special SkaldSurveyStake
+# 1938 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
 	end
 
 
 ParcelWetlands_PairLanding::
-# 1944 "data/maps/ParcelWetlands/scripts.pory"
-	lock
 # 1945 "data/maps/ParcelWetlands/scripts.pory"
+	lock
+# 1946 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairLanding_2
-# 1950 "data/maps/ParcelWetlands/scripts.pory"
+# 1951 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairLanding_3
-# 1956 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_8, MSGBOX_DEFAULT
 # 1957 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_9, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairLanding_Text_8, MSGBOX_DEFAULT
 # 1958 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_10, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairLanding_Text_9, MSGBOX_DEFAULT
 # 1959 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairLanding_Text_10, MSGBOX_DEFAULT
+# 1960 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_11, MSGBOX_DEFAULT
 ParcelWetlands_PairLanding_1:
-# 1961 "data/maps/ParcelWetlands/scripts.pory"
+# 1962 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_PairLanding_2:
-# 1946 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_0, MSGBOX_DEFAULT
 # 1947 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairLanding_Text_0, MSGBOX_DEFAULT
 # 1948 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_2, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairLanding_Text_1, MSGBOX_DEFAULT
 # 1949 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairLanding_Text_2, MSGBOX_DEFAULT
+# 1950 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_3, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairLanding_1
 
 ParcelWetlands_PairLanding_3:
-# 1951 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_4, MSGBOX_DEFAULT
 # 1952 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_5, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairLanding_Text_4, MSGBOX_DEFAULT
 # 1953 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairLanding_Text_6, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairLanding_Text_5, MSGBOX_DEFAULT
 # 1954 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairLanding_Text_6, MSGBOX_DEFAULT
+# 1955 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairLanding_Text_7, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairLanding_1
 
 
 ParcelWetlands_PairTurf::
-# 1966 "data/maps/ParcelWetlands/scripts.pory"
-	lock
 # 1967 "data/maps/ParcelWetlands/scripts.pory"
+	lock
+# 1968 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairTurf_2
-# 1972 "data/maps/ParcelWetlands/scripts.pory"
+# 1973 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairTurf_3
-# 1978 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_8, MSGBOX_DEFAULT
 # 1979 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_9, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairTurf_Text_8, MSGBOX_DEFAULT
 # 1980 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_10, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairTurf_Text_9, MSGBOX_DEFAULT
 # 1981 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairTurf_Text_10, MSGBOX_DEFAULT
+# 1982 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_11, MSGBOX_DEFAULT
 ParcelWetlands_PairTurf_1:
-# 1983 "data/maps/ParcelWetlands/scripts.pory"
+# 1984 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_PairTurf_2:
-# 1968 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_0, MSGBOX_DEFAULT
 # 1969 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairTurf_Text_0, MSGBOX_DEFAULT
 # 1970 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_2, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairTurf_Text_1, MSGBOX_DEFAULT
 # 1971 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairTurf_Text_2, MSGBOX_DEFAULT
+# 1972 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_3, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairTurf_1
 
 ParcelWetlands_PairTurf_3:
-# 1973 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_4, MSGBOX_DEFAULT
 # 1974 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_5, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairTurf_Text_4, MSGBOX_DEFAULT
 # 1975 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_PairTurf_Text_6, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_PairTurf_Text_5, MSGBOX_DEFAULT
 # 1976 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairTurf_Text_6, MSGBOX_DEFAULT
+# 1977 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_PairTurf_Text_7, MSGBOX_DEFAULT
 	goto ParcelWetlands_PairTurf_1
 
 
 ParcelWetlands_Stringer::
-# 1990 "data/maps/ParcelWetlands/scripts.pory"
-	lock
 # 1991 "data/maps/ParcelWetlands/scripts.pory"
-	faceplayer
+	lock
 # 1992 "data/maps/ParcelWetlands/scripts.pory"
+	faceplayer
+# 1993 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_Stringer_2
-# 1994 "data/maps/ParcelWetlands/scripts.pory"
+# 1995 "data/maps/ParcelWetlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_Stringer_3
-# 2006 "data/maps/ParcelWetlands/scripts.pory"
+# 2007 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_7, MSGBOX_DEFAULT
 ParcelWetlands_Stringer_1:
-# 2008 "data/maps/ParcelWetlands/scripts.pory"
+# 2009 "data/maps/ParcelWetlands/scripts.pory"
 	release
 	end
 
 ParcelWetlands_Stringer_2:
-# 1993 "data/maps/ParcelWetlands/scripts.pory"
+# 1994 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_0, MSGBOX_DEFAULT
 	goto ParcelWetlands_Stringer_1
 
 ParcelWetlands_Stringer_3:
-# 1995 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Stringer_Text_1, MSGBOX_DEFAULT
 # 1996 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Stringer_Text_2, MSGBOX_YESNO
+	msgbox ParcelWetlands_Stringer_Text_1, MSGBOX_DEFAULT
 # 1997 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Stringer_Text_2, MSGBOX_YESNO
+# 1998 "data/maps/ParcelWetlands/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelWetlands_Stringer_7
-# 2002 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Stringer_Text_5, MSGBOX_DEFAULT
 # 2003 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Stringer_Text_5, MSGBOX_DEFAULT
+# 2004 "data/maps/ParcelWetlands/scripts.pory"
 	msgbox ParcelWetlands_Stringer_Text_6, MSGBOX_DEFAULT
 	goto ParcelWetlands_Stringer_1
 
 ParcelWetlands_Stringer_7:
-# 1998 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Stringer_Text_3, MSGBOX_DEFAULT
 # 1999 "data/maps/ParcelWetlands/scripts.pory"
-	msgbox ParcelWetlands_Stringer_Text_4, MSGBOX_DEFAULT
+	msgbox ParcelWetlands_Stringer_Text_3, MSGBOX_DEFAULT
 # 2000 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Stringer_Text_4, MSGBOX_DEFAULT
+# 2001 "data/maps/ParcelWetlands/scripts.pory"
 	setflag FLAG_SKALD_CH_QUOTE
 	goto ParcelWetlands_Stringer_1
+
+
+ParcelWetlands_TurfCutter::
+# 2016 "data/maps/ParcelWetlands/scripts.pory"
+	lock
+# 2017 "data/maps/ParcelWetlands/scripts.pory"
+	faceplayer
+# 2018 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TURF_DONE, ParcelWetlands_TurfCutter_2
+# 2020 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TURF, ParcelWetlands_TurfCutter_3
+# 2029 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_TurfCutter_Text_3, MSGBOX_DEFAULT
+# 2030 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_TURF
+ParcelWetlands_TurfCutter_1:
+# 2032 "data/maps/ParcelWetlands/scripts.pory"
+	release
+	end
+
+ParcelWetlands_TurfCutter_2:
+# 2019 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_TurfCutter_Text_0, MSGBOX_DEFAULT
+	goto ParcelWetlands_TurfCutter_1
+
+ParcelWetlands_TurfCutter_3:
+# 2021 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TURF_FOUND, ParcelWetlands_TurfCutter_7
+# 2026 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_TurfCutter_Text_2, MSGBOX_DEFAULT
+	goto ParcelWetlands_TurfCutter_1
+
+ParcelWetlands_TurfCutter_7:
+# 2022 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_TurfCutter_Text_1, MSGBOX_DEFAULT
+# 2023 "data/maps/ParcelWetlands/scripts.pory"
+	giveitem ITEM_ETHER, 2
+# 2024 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_TURF_DONE
+	goto ParcelWetlands_TurfCutter_1
+
+
+ParcelWetlands_TurfCrack::
+# 2037 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TURF, ParcelWetlands_TurfCrack_4
+ParcelWetlands_TurfCrack_3:
+# 2041 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_TurfCrack_Text_1, MSGBOX_SIGN
+ParcelWetlands_TurfCrack_1:
+	end
+
+ParcelWetlands_TurfCrack_2:
+# 2038 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_TurfCrack_Text_0, MSGBOX_SIGN
+# 2039 "data/maps/ParcelWetlands/scripts.pory"
+	setflag FLAG_SKALD_Q_TURF_FOUND
+	goto ParcelWetlands_TurfCrack_1
+
+ParcelWetlands_TurfCrack_4:
+# 2037 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_TURF_FOUND, ParcelWetlands_TurfCrack_2
+	goto ParcelWetlands_TurfCrack_3
 
 
 ParcelWetlands_Harland_Text_0:
@@ -5834,8 +5898,18 @@ ParcelWetlands_Epilogue_Text_0:
 	.string "the bank with a jar and a clock. Nobody\l"
 	.string "cut a ribbon for it.$"
 
+ParcelWetlands_Epilogue_Text_1:
+# 1908 "data/maps/ParcelWetlands/scripts.pory"
+	.string "HARLAND's boat is on the hard with the\n"
+	.string "hull open. He is scraping it himself,\l"
+	.string "slowly, the way a man does who has\l"
+	.string "decided to keep something.\p"
+	.string "On the turf the stake has gone pink.\n"
+	.string "Someone has tied a second cloth under\l"
+	.string "it, not red. A child's ribbon.$"
+
 ParcelWetlands_ReedCount_Text_0:
-# 1924 "data/maps/ParcelWetlands/scripts.pory"
+# 1925 "data/maps/ParcelWetlands/scripts.pory"
 	.string "You walk the bed the way he said,\n"
 	.string "counting the stands that top your\l"
 	.string "head. Most don't.\p"
@@ -5843,146 +5917,146 @@ ParcelWetlands_ReedCount_Text_0:
 	.string "Nineteen.$"
 
 ParcelWetlands_ReedCount_Text_1:
-# 1928 "data/maps/ParcelWetlands/scripts.pory"
+# 1929 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A reed bed. The stands lean the way the\n"
 	.string "wind went last. Fewer top your head\l"
 	.string "than you'd expect.$"
 
 ParcelWetlands_SurveyStake_Text_0:
-# 1934 "data/maps/ParcelWetlands/scripts.pory"
+# 1935 "data/maps/ParcelWetlands/scripts.pory"
 	.string "A survey stake driven into the\n"
 	.string "landing's turf, a strip of red cloth tied\l"
 	.string "at the top. It is the Corps' mark: this\l"
 	.string "place is being read.$"
 
 ParcelWetlands_PairLanding_Text_0:
-# 1946 "data/maps/ParcelWetlands/scripts.pory"
+# 1947 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: They're pulling the pipe.\n"
 	.string "Contractors, from the Coast. The same\l"
 	.string "ones who laid it.$"
 
 ParcelWetlands_PairLanding_Text_1:
-# 1947 "data/maps/ParcelWetlands/scripts.pory"
+# 1948 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: Paid twice for one pipe.\n"
 	.string "There's a trade.$"
 
 ParcelWetlands_PairLanding_Text_2:
-# 1948 "data/maps/ParcelWetlands/scripts.pory"
+# 1949 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: HARLAND's standing over them\n"
 	.string "with his arms folded. Hasn't said a word\l"
 	.string "all morning.$"
 
 ParcelWetlands_PairLanding_Text_3:
-# 1949 "data/maps/ParcelWetlands/scripts.pory"
+# 1950 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: First time in his life\n"
 	.string "silence has done his work for him. He\l"
 	.string "looks lost.$"
 
 ParcelWetlands_PairLanding_Text_4:
-# 1951 "data/maps/ParcelWetlands/scripts.pory"
+# 1952 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: The manifest the ranger read.\n"
 	.string "Washed up on the south bank, they said.\l"
 	.string "In the open.$"
 
 ParcelWetlands_PairLanding_Text_5:
-# 1952 "data/maps/ParcelWetlands/scripts.pory"
+# 1953 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: Nothing washes up in the\n"
 	.string "open on this bank. It's a mud bank. It\l"
 	.string "keeps what it gets.$"
 
 ParcelWetlands_PairLanding_Text_6:
-# 1953 "data/maps/ParcelWetlands/scripts.pory"
+# 1954 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: So somebody put it there.$"
 
 ParcelWetlands_PairLanding_Text_7:
-# 1954 "data/maps/ParcelWetlands/scripts.pory"
+# 1955 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: Somebody wanted it read\n"
 	.string "and couldn't be the one reading it. I\l"
 	.string "can think of two. So can you.$"
 
 ParcelWetlands_PairLanding_Text_8:
-# 1956 "data/maps/ParcelWetlands/scripts.pory"
+# 1957 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: HARLAND's shouting at the new\n"
 	.string "office again.$"
 
 ParcelWetlands_PairLanding_Text_9:
-# 1957 "data/maps/ParcelWetlands/scripts.pory"
+# 1958 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: HARLAND shouts at\n"
 	.string "everything that has a door. It's the\l"
 	.string "ones without a door that worry me.$"
 
 ParcelWetlands_PairLanding_Text_10:
-# 1958 "data/maps/ParcelWetlands/scripts.pory"
+# 1959 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: Such as?$"
 
 ParcelWetlands_PairLanding_Text_11:
-# 1959 "data/maps/ParcelWetlands/scripts.pory"
+# 1960 "data/maps/ParcelWetlands/scripts.pory"
 	.string "BOATWRIGHT: The pipe under the falls.\n"
 	.string "Try shouting at that.$"
 
 ParcelWetlands_PairTurf_Text_0:
-# 1968 "data/maps/ParcelWetlands/scripts.pory"
+# 1969 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: The cloth's still there. It's gone\n"
 	.string "pink.$"
 
 ParcelWetlands_PairTurf_Text_1:
-# 1969 "data/maps/ParcelWetlands/scripts.pory"
+# 1970 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: They don't take them down.\n"
 	.string "That's the point of them. In thirty\l"
 	.string "years someone will read the pink one\l"
 	.string "and know the day it went up.$"
 
 ParcelWetlands_PairTurf_Text_2:
-# 1970 "data/maps/ParcelWetlands/scripts.pory"
+# 1971 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: Will the turf be back?$"
 
 ParcelWetlands_PairTurf_Text_3:
-# 1971 "data/maps/ParcelWetlands/scripts.pory"
+# 1972 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: Some of it. The ranger said\n"
 	.string "some of it, and the ranger's never once\l"
 	.string "said more than that.$"
 
 ParcelWetlands_PairTurf_Text_4:
-# 1973 "data/maps/ParcelWetlands/scripts.pory"
+# 1974 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: The ranger put a red cloth on a\n"
 	.string "stick on our turf. Is that ours now?$"
 
 ParcelWetlands_PairTurf_Text_5:
-# 1974 "data/maps/ParcelWetlands/scripts.pory"
+# 1975 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: It was always ours. The cloth\n"
 	.string "says somebody else has noticed.$"
 
 ParcelWetlands_PairTurf_Text_6:
-# 1975 "data/maps/ParcelWetlands/scripts.pory"
+# 1976 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: Noticed what?$"
 
 ParcelWetlands_PairTurf_Text_7:
-# 1976 "data/maps/ParcelWetlands/scripts.pory"
+# 1977 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: That it cracks when you jump on\n"
 	.string "it. Somebody wrote that down. Somebody\l"
 	.string "important, now.$"
 
 ParcelWetlands_PairTurf_Text_8:
-# 1978 "data/maps/ParcelWetlands/scripts.pory"
+# 1979 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: The turf cracks when you jump on\n"
 	.string "it.$"
 
 ParcelWetlands_PairTurf_Text_9:
-# 1979 "data/maps/ParcelWetlands/scripts.pory"
+# 1980 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: Then don't jump on it.$"
 
 ParcelWetlands_PairTurf_Text_10:
-# 1980 "data/maps/ParcelWetlands/scripts.pory"
+# 1981 "data/maps/ParcelWetlands/scripts.pory"
 	.string "GIRL: It didn't crack last year. I\n"
 	.string "jumped on it all last year.$"
 
 ParcelWetlands_PairTurf_Text_11:
-# 1981 "data/maps/ParcelWetlands/scripts.pory"
+# 1982 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MOTHER: …No. It didn't. Come away from\n"
 	.string "there.$"
 
 ParcelWetlands_Stringer_Text_0:
-# 1993 "data/maps/ParcelWetlands/scripts.pory"
+# 1994 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAREN: They pulled the pipe this\n"
 	.string "morning. I was here at six. So was\l"
 	.string "HARLAND.\p"
@@ -5992,7 +6066,7 @@ ParcelWetlands_Stringer_Text_0:
 	.string "mine stand that wasn't a number.$"
 
 ParcelWetlands_Stringer_Text_1:
-# 1995 "data/maps/ParcelWetlands/scripts.pory"
+# 1996 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAREN: You read the pipe. The manifest.\n"
 	.string "The residue. HARLAND's gone quiet and\l"
 	.string "the new office has gone loud, which is\l"
@@ -6001,28 +6075,28 @@ ParcelWetlands_Stringer_Text_1:
 	.string "name. Yes?$"
 
 ParcelWetlands_Stringer_Text_2:
-# 1996 "data/maps/ParcelWetlands/scripts.pory"
+# 1997 "data/maps/ParcelWetlands/scripts.pory"
 	.string "Give MAREN a sentence?$"
 
 ParcelWetlands_Stringer_Text_3:
-# 1998 "data/maps/ParcelWetlands/scripts.pory"
+# 1999 "data/maps/ParcelWetlands/scripts.pory"
 	.string "{PLAYER}: The water is a living\n"
 	.string "corridor. Someone put a pipe in it on\l"
 	.string "schedule.$"
 
 ParcelWetlands_Stringer_Text_4:
-# 1999 "data/maps/ParcelWetlands/scripts.pory"
+# 2000 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAREN: …That's two sentences. I'll run\n"
 	.string "both. I'll run them exactly.\p"
 	.string "Nobody gives me exact. Thank you.$"
 
 ParcelWetlands_Stringer_Text_5:
-# 2002 "data/maps/ParcelWetlands/scripts.pory"
+# 2003 "data/maps/ParcelWetlands/scripts.pory"
 	.string "{PLAYER}: Not on the record. Read the\n"
 	.string "survey.$"
 
 ParcelWetlands_Stringer_Text_6:
-# 2003 "data/maps/ParcelWetlands/scripts.pory"
+# 2004 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAREN: Everyone says read the survey.\n"
 	.string "Nobody reads the survey. That's what\l"
 	.string "I'm for.\p"
@@ -6031,7 +6105,7 @@ ParcelWetlands_Stringer_Text_6:
 	.string "its own line.$"
 
 ParcelWetlands_Stringer_Text_7:
-# 2006 "data/maps/ParcelWetlands/scripts.pory"
+# 2007 "data/maps/ParcelWetlands/scripts.pory"
 	.string "MAREN: Ribbon-cutting. Five gauges,\n"
 	.string "one speech, refreshments courtesy of\l"
 	.string "Mereholt Coastal. I ate the\l"
@@ -6041,3 +6115,44 @@ ParcelWetlands_Stringer_Text_7:
 	.string "about. When you've read what's under\l"
 	.string "the falls, I'd like a sentence. One. I'll\l"
 	.string "be the one eating.$"
+
+ParcelWetlands_TurfCutter_Text_0:
+# 2019 "data/maps/ParcelWetlands/scripts.pory"
+	.string "TURF CUTTER: I'm cutting less this year.\n"
+	.string "First time it's been by choice.$"
+
+ParcelWetlands_TurfCutter_Text_1:
+# 2022 "data/maps/ParcelWetlands/scripts.pory"
+	.string "TURF CUTTER: By the north edge. That's\n"
+	.string "new ground to crack. The spade stays\l"
+	.string "out of the north edge, then.\p"
+	.string "Here. For the walking.$"
+
+ParcelWetlands_TurfCutter_Text_2:
+# 2026 "data/maps/ParcelWetlands/scripts.pory"
+	.string "TURF CUTTER: The worst crack. Wide as a\n"
+	.string "hand, dry to the bottom. You'll know it.$"
+
+ParcelWetlands_TurfCutter_Text_3:
+# 2029 "data/maps/ParcelWetlands/scripts.pory"
+	.string "TURF CUTTER: I've cut turf on this\n"
+	.string "landing thirty years. Never where it\l"
+	.string "cracks; cracked turf is dead turf, you\l"
+	.string "burn it and it's gone for good.\p"
+	.string "The cracks have moved. Find me the\n"
+	.string "worst of them this year and I'll know\l"
+	.string "where not to put the spade.$"
+
+ParcelWetlands_TurfCrack_Text_0:
+# 2038 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A crack in the turf a hand wide, the\n"
+	.string "peat dry and crumbling to the bottom. A\l"
+	.string "beetle is using it as a road.\p"
+	.string "The worst of them this year. The year\n"
+	.string "before, it was a line you could cover\l"
+	.string "with a boot.$"
+
+ParcelWetlands_TurfCrack_Text_1:
+# 2041 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A crack in the turf a hand wide. The\n"
+	.string "beetle has gone on.$"

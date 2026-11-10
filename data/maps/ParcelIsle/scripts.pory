@@ -1064,3 +1064,36 @@ script ParcelIsle_Stringer {
     release
     end
 }
+
+// --- side quests, round three (2026-11-10) ---
+
+script ParcelIsle_Oysterman {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALD_Q_SHOAL_DONE)) {
+        msgbox(format("OYSTERMAN: GONE, it says. My father would have wanted the word. He'd have wanted it spelled right. It is."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALD_Q_SHOAL)) {
+        if (flag(FLAG_SKALD_Q_SHOAL_FOUND)) {
+            msgbox(format("OYSTERMAN: …GONE. In the Survey's hand. Thirty-one years and nobody put it in writing where he could have read it.\pHere. He kept these from the last good year. You read it; you have one."), MSGBOX_DEFAULT)
+            giveitem(ITEM_PEARL, 2)
+            setflag(FLAG_SKALD_Q_SHOAL_DONE)
+        } else {
+            msgbox(format("OYSTERMAN: Past the pier, in the shallows. The cloth will be rags by now. The tag's brass."), MSGBOX_DEFAULT)
+        }
+    } else {
+        msgbox(format("OYSTERMAN: My father's oyster ground was out there. Where the dredge spoil sits now. The Survey staked it the year it went, and I never went out to look.\pYou've a notebook. Go and read me the stake. Out past the pier, in the shallows."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_Q_SHOAL)
+    }
+    release
+    end
+}
+
+script ParcelIsle_ShoalStake {
+    if (flag(FLAG_SKALD_Q_SHOAL) && !flag(FLAG_SKALD_Q_SHOAL_FOUND)) {
+        msgbox(format("A survey stake in the shallows, leaning. The cloth is threads. The brass tag reads: SALTWICK SHOALS, OYSTER GROUND. FIRST STAKE, LAST READING, and under them one word cut deeper than the rest.\pGONE."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_Q_SHOAL_FOUND)
+    } else {
+        msgbox(format("A leaning stake in the shallows. Brass tag, red threads, one word."), MSGBOX_SIGN)
+    }
+    end
+}

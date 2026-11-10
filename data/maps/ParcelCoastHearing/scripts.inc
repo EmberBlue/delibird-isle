@@ -197,6 +197,28 @@ ParcelCoastHearing_Tray_9:
 	goto ParcelCoastHearing_Tray_8
 
 
+ParcelCoastHearing_Copy::
+# 115 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_COPY, ParcelCoastHearing_Copy_4
+ParcelCoastHearing_Copy_3:
+# 119 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Copy_Text_1, MSGBOX_SIGN
+ParcelCoastHearing_Copy_1:
+	end
+
+ParcelCoastHearing_Copy_2:
+# 116 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Copy_Text_0, MSGBOX_SIGN
+# 117 "data/maps/ParcelCoastHearing/scripts.pory"
+	setflag FLAG_SKALD_Q_COPY_FOUND
+	goto ParcelCoastHearing_Copy_1
+
+ParcelCoastHearing_Copy_4:
+# 115 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_COPY_FOUND, ParcelCoastHearing_Copy_2
+	goto ParcelCoastHearing_Copy_3
+
+
 ParcelCoastHearing_Clerk_Text_0:
 # 9 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "CLERK: The hearing's in session. They\n"
@@ -430,3 +452,20 @@ ParcelCoastHearing_Tray_Text_6:
 	.string "previous seasons. Noted.\p"
 	.string "Item 7 is one line. It has been one line\n"
 	.string "for nine years.$"
+
+ParcelCoastHearing_Copy_Text_0:
+# 116 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "Under the clerk's tray, a carbon copy of\n"
+	.string "a grading sheet, stamped RECEIVED in\l"
+	.string "the corner and never filed. Minimum size\l"
+	.string "not met, see management, copy to the\l"
+	.string "clerk of the Council.\p"
+	.string "You put it back on top of the tray,\n"
+	.string "where the next sitting will have to move\l"
+	.string "it to reach anything else.$"
+
+ParcelCoastHearing_Copy_Text_1:
+# 119 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "The clerk's tray, with a grading sheet\n"
+	.string "on top of it that was not there before.\l"
+	.string "It says RECEIVED.$"

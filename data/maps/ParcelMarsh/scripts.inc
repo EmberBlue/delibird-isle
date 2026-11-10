@@ -764,20 +764,22 @@ ParcelMarsh_Epilogue::
 # 405 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Epilogue_Text_0, MSGBOX_DEFAULT
 # 406 "data/maps/ParcelMarsh/scripts.pory"
-	closemessage
+	msgbox ParcelMarsh_Epilogue_Text_1, MSGBOX_DEFAULT
 # 407 "data/maps/ParcelMarsh/scripts.pory"
-	setvar VAR_SKALD_EPILOGUE, 7
+	closemessage
 # 408 "data/maps/ParcelMarsh/scripts.pory"
-	warp MAP_PARCEL_COAST, 30, 53
+	setvar VAR_SKALD_EPILOGUE, 7
 # 409 "data/maps/ParcelMarsh/scripts.pory"
+	warp MAP_PARCEL_COAST, 30, 53
+# 410 "data/maps/ParcelMarsh/scripts.pory"
 	waitstate
 	end
 
 
 ParcelMarsh_HeronCount::
-# 413 "data/maps/ParcelMarsh/scripts.pory"
+# 414 "data/maps/ParcelMarsh/scripts.pory"
 	goto_if_unset FLAG_SKALDMERE_EPILOGUE_DONE, ParcelMarsh_HeronCount_2
-# 416 "data/maps/ParcelMarsh/scripts.pory"
+# 417 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_HeronCount_Text_0, MSGBOX_SIGN
 	end
 
@@ -786,13 +788,13 @@ ParcelMarsh_HeronCount_2:
 
 
 ParcelMarsh_SurveyStake::
-# 422 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_SurveyStake_Text_0, MSGBOX_SIGN
 # 423 "data/maps/ParcelMarsh/scripts.pory"
-	setvar VAR_0x8004, 6
+	msgbox ParcelMarsh_SurveyStake_Text_0, MSGBOX_SIGN
 # 424 "data/maps/ParcelMarsh/scripts.pory"
-	special SkaldSurveyStake
+	setvar VAR_0x8004, 6
 # 425 "data/maps/ParcelMarsh/scripts.pory"
+	special SkaldSurveyStake
+# 426 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
 	end
 
@@ -1412,8 +1414,18 @@ ParcelMarsh_Epilogue_Text_0:
 	.string "runs. The corridor listing went through\l"
 	.string "on the day she stopped writing.$"
 
+ParcelMarsh_Epilogue_Text_1:
+# 406 "data/maps/ParcelMarsh/scripts.pory"
+	.string "Her hut is swept. The POLITOED sits in\n"
+	.string "the doorway and does not go in. It has\l"
+	.string "been fed; someone from the Survey\l"
+	.string "comes out on the ferry days and leaves\l"
+	.string "before it has to be thanked.\p"
+	.string "The stone that held her sheet flat on\n"
+	.string "the table is holding yours.$"
+
 ParcelMarsh_HeronCount_Text_0:
-# 416 "data/maps/ParcelMarsh/scripts.pory"
+# 417 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The notebook she kept here, open to\n"
 	.string "the last page. A count, steady to the\l"
 	.string "end: forty-one, forty-one, thirty-nine,\l"
@@ -1421,7 +1433,7 @@ ParcelMarsh_HeronCount_Text_0:
 	.string "No entry after it.$"
 
 ParcelMarsh_SurveyStake_Text_0:
-# 422 "data/maps/ParcelMarsh/scripts.pory"
+# 423 "data/maps/ParcelMarsh/scripts.pory"
 	.string "A survey stake at the marsh's edge.\n"
 	.string "Fresh red cloth. Under it, a much older\l"
 	.string "stake, the cloth gone to rust, driven by\l"
