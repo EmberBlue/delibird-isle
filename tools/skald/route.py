@@ -59,7 +59,31 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
         else:
             y = 0 if edge == "up" else H - 1
             goals = {(x, y) for x in range(W) if passable(x, y, True)}
+        # keep only edge tiles whose counterpart across the connection is walkable land
+        conn = next((c for c in (mj.get("connections") or []) if c["direction"] == edge), None)
+        if conn:
+            other = next((p.name for p in (ROOT / "data/maps").iterdir() if (p / "map.json").exists()
+                          and json.loads((p / "map.json").read_text()).get("id") == conn["map"]), None)
+            if other:
+                omj, olay, oW, oH, owords, otiles = audit.load_map(other)
+                off = conn["offset"]
+
+                def other_ok(gx, gy):
+                    if edge in ("left", "right"):
+                        ox, oy = (oW - 1 if edge == "left" else 0), gy - off
+                    else:
+                        ox, oy = gx - off, (oH - 1 if edge == "up" else 0)
+                    if not (0 <= ox < oW and 0 <= oy < oH):
+                        return False
+                    mid, col, elev = audit.decode(owords[oy * oW + ox])
+                    beh = audit.BEH.get(otiles.get(mid, ((), 0, 0))[1], "")
+                    return col == 0 and "WATER" not in beh
+                linked = {g for g in goals if other_ok(*g)}
+                if linked:
+                    goals = linked
     elif warp is not None:
+        if warp >= len(mj.get("warp_events", [])):
+            return None, None            # no such warp on this map (the caller is probably still indoors)
         e = mj["warp_events"][warp]
         goals = {(e["x"], e["y"])}
     else:

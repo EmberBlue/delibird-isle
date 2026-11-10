@@ -210,8 +210,8 @@
     {
       "local_id": "LOCALID_COR_DAG",
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 55,
-      "y": 10,
+      "x": 54,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,

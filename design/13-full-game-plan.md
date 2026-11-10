@@ -854,7 +854,16 @@ quest is built, how the peer works) before they are asked six more times.
   been freed of badge checks (`OW_FIELD_MOVES_NEED_BADGES` is FALSE, with
   a comment saying exactly this); the three field scripts -- the tree,
   the breakable rock, the boulder -- had not. They are now. Every player
-  would have been stuck in Mistwood. The spine never saw this because it spawns past
+  would have been stuck in Mistwood. Third, planning chapter 2 from the
+  map data: the Corridor's road from MIRREN's gate never reached the east
+  plaza -- the terrace path (the stair at (52,11), the ledge, the column
+  on x 55, rows 14-16) ended against rock four tiles short, and the
+  trainer DAG stood on the one tile between the ledge and the column.
+  So the adit, the old workings and the north exit to the Floodbasin
+  were unreachable on foot: nothing past chapter 1 could be played.
+  `build.py` step 7 continues row 15 through the rock to a stair onto the
+  plaza, DAG moved to (54,9); a flood fill from the gate now reaches the
+  exit. The spine never saw this because it spawns past
   the gate; the sweep never saw it because the tree is a cuttable object,
   not a warp. This is what the honest "not played end to end" bullet in
   the handoff was for.

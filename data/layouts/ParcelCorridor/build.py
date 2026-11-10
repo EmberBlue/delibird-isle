@@ -64,6 +64,20 @@ put(3, 7, SIGN, 1)
 put(78, 5, 0x09F, 1, 0)
 put(78, 6, 0x0A7, 0, 3)
 
+
+# 7. the terrace joins the east plaza (2026-11-10, found by the first real playthrough): the terrace is an
+#    L -- the stair at (52,11), the ledge (52-55, 9-10), the column x 55 down to row 14, then rows 14-16 east
+#    to x 59/60 -- and ended against rock four tiles short of the plaza. Row 15 now continues through the
+#    rock (x 61-63, terrace top at elevation 4), climbs to (63,14) and (63,13) is a stair down onto the
+#    plaza's row 13 (elevation 3), so the road from MIRREN's gate reaches the adit, the old workings and
+#    the north exit. Without it the Floodbasin could not be reached on foot. (DAG moved off (55,10), the
+#    one tile between the ledge and the column, to (54,9) in map.json.)
+terrace_top = words[15 * W + 57] & 0x3FF
+stair = words[11 * W + 52] & 0x3FF
+rect(61, 15, 63, 15, terrace_top, 0, 4)
+put(63, 14, terrace_top, 0, 4)
+put(63, 13, stair, 0, 0)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelCorridor: wrote {W}x{H} map.bin")

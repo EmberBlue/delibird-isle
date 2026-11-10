@@ -528,6 +528,15 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   are now badge-free too. CUT is earned before badge 1, so the vanilla
   tree check alone made chapter 1 unbeatable; the first real playthrough
   found it, nothing else could have.
+- **Walkability is a flood fill, not a sweep.** `sweep.py` proves every
+  warp and connection fires; `spine.sh` proves every exam grants its
+  badge; neither proves a player can walk from one to the next. The
+  Corridor's road stopped four tiles short of its east plaza (a dead-end
+  terrace, and a trainer on the only connecting tile) with both passing.
+  For every outdoor map, flood-fill from its entry with NPCs as solid
+  (`tools/skald/route.py` does this per segment) and demand that every
+  exit, door threshold and story object is reached; when a planner says
+  "no path" in a map that must be crossed, believe it before the harness.
 
 ## RAM budget (the binding constraint)
 
