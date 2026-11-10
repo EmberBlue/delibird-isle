@@ -293,12 +293,24 @@ def main():
                 print(f"  TEACHHM: party menu never opened (cb2 {cb2():#x})")
             else:
                 step(90)
-                for _ in range(slot - 1):
-                    step(8, "DOWN"); step(30)
+                # The party menu remembers its cursor too (gPartyMenu.slotId, offset 9): steer onto the
+                # wanted slot instead of counting DOWNs from wherever the last visit left it.
+                pm = syms.get("gPartyMenu")
+                for _ in range(10):
+                    cur = core.memory.s8[pm + 9] if pm is not None else 0
+                    if cur == slot - 1: break
+                    step(8, "UP" if 0 <= cur < 6 and cur > slot - 1 else "DOWN"); step(30)
+                party_cb = cb2()                     # the party menu's own callback (static, so read here)
                 step(8, "A"); step(300)
-                for _ in range(12):                  # the learn text, a replace prompt if any (A takes it)
+                for _ in range(40):
+                    c = cb2()
                     if not in_party(): break
-                    step(8, "A"); step(300)
+                    if c == party_cb:                # the learn text, "delete a move?" (A = YES), "Poof!", ...
+                        step(8, "A"); step(300)
+                    else:                            # the move-forget screen: A takes the highlighted move,
+                        step(8, "A"); step(150)      # but an HM move "can't be forgotten now" -- then try
+                        if cb2() == c:               # the next one down
+                            step(8, "DOWN"); step(40)
             for _ in range(10):
                 if cb2() == CB["CB2_Overworld"]: break
                 step(8, "B"); step(60)

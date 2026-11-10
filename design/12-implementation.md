@@ -526,7 +526,12 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   right after `giveitem(ITEM_HM03)` and lends a level-25 MARILL when the
   answer is no. FLY, DIVE, FLASH and WATERFALL open side areas only and
   stay species-dependent (ZIGZAGOON, LOTAD, POLIWAG, WINGULL and SLAKOTH
-  are all early wild learners). The party menu's
+  are all early wild learners). **HM moves can be forgotten**
+  (`P_CAN_FORGET_HIDDEN_MOVE TRUE`, include/config/pokemon.h): a lone
+  partner carrying CUT, ROCK SMASH, STRENGTH and SURF would otherwise be
+  locked into four field moves for good, there is no Move Deleter in
+  Skaldmere, and the HMs stay in the bag to be re-taught, so nothing can
+  be lost by overwriting one. The party menu's
   "NOT ABLE!" is the player's only warning, so re-run the audit whenever
   a gate or a partner changes. **Badge checks live in two places**: the
   party menu (`OW_FIELD_MOVES_NEED_BADGES`, FALSE here) and the field
