@@ -570,6 +570,7 @@ gSpecials::
 	def_special SkaldmereCertTaskMark
 	def_special SkaldmereCertTaskGet
 	def_special SkaldmereCertTaskCount
+	def_special SkaldmerePartyCanLearn
 	def_special SkaldmereClassifyMeadow
 	def_special SkaldmereSetGender
 	def_special SkaldmereClassifyFloodbasin

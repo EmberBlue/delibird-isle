@@ -1,8 +1,11 @@
 #include "global.h"
 #include "battle_setup.h"
 #include "event_data.h"
+#include "pokemon.h"
 #include "string_util.h"
 #include "survey.h"
+#include "constants/moves.h"
+#include "constants/species.h"
 
 // Script bridge for the survey/certification systems (§08 Act III, §10).
 // The training tasks track in one var as a bitfield; the habitat-survey
@@ -39,6 +42,27 @@ u16 SkaldmereCertTaskCount(void)
         v >>= 1;
     }
     return n;
+}
+
+// Does anyone in the party know, or could be taught, the move in
+// gSpecialVar_0x8004? Used where a field move the main path needs is handed
+// out (VALE's HM03), so a party of non-swimmers is lent a swimmer instead of
+// being stranded below the summit.
+u16 SkaldmerePartyCanLearn(void)
+{
+    u32 i, j;
+    for (i = 0; i < gPlayerPartyCount; i++)
+    {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG);
+        if (species == SPECIES_NONE || species == SPECIES_EGG)
+            continue;
+        for (j = 0; j < MAX_MON_MOVES; j++)
+            if (GetMonData(&gPlayerParty[i], MON_DATA_MOVE1 + j) == gSpecialVar_0x8004)
+                return 1;
+        if (CanLearnTeachableMove(species, gSpecialVar_0x8004))
+            return 1;
+    }
+    return 0;
 }
 
 // The Holding Meadow habitat read (§08: a Reference-state teaching ground).

@@ -446,6 +446,17 @@ script ParcelHighlands_ValeGate {
     call(Common_EventScript_PlayGymBadgeFanfare)
     msgbox(format("VALE: Vale clearance. Line item 05. The last one Highland Operations issues before the water.\pIt certifies you fit to cross what the thaw has put in the way."), MSGBOX_DEFAULT)
     giveitem(ITEM_HM03)
+    // The summit trail is reached over the water. A party that cannot carry SURF
+    // (five of the eight Meadow partners cannot) is lent a swimmer here.
+    setvar(VAR_0x8004, MOVE_SURF)
+    specialvar(VAR_RESULT, SkaldmerePartyCanLearn)
+    if (var(VAR_RESULT) == 0) {
+        msgbox(format("VALE: And nothing in your party swims. Highland Operations keeps a MARILL on the meltwater lines; it reads the depth stakes for us.\pTake it. A permit's no use to a walker."), MSGBOX_DEFAULT)
+        givemon(SPECIES_MARILL, 25)
+        if (var(VAR_RESULT) == 1) {
+            msgbox(format("VALE: Your party's full. It's gone to the storage system under your name. Fetch it at the centre before you try the water."), MSGBOX_DEFAULT)
+        }
+    }
     msgbox(format("VALE: SURF. A meltwater permit, in plain terms. It moves you over the standing thaw the slope keeps making.\pThere's more of it every season. We don't advertise that."), MSGBOX_DEFAULT)
     closemessage
     applymovement(LOCALID_HL_GYM, Movement_HL_ValeBack)

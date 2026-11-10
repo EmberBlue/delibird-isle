@@ -517,9 +517,16 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   the only way north to the river) and STRENGTH/ROCK SMASH (the row of
   rocks and boulders below VALE's gate) sit on the main path, so the
   seven Meadow partner lines learn all three from
-  `tools/skald/partner_hms.py`; SURF, FLY, DIVE, FLASH and WATERFALL open
-  side areas only and stay species-dependent (ZIGZAGOON, LOTAD, POLIWAG,
-  WINGULL and SLAKOTH are all early wild learners). The party menu's
+  `tools/skald/partner_hms.py`. SURF is also on the main path (HALE's
+  summit trail is reached over the Highlands lake; `reach.py --hm
+  cut,flash,rocksmash,strength` shows the whole summit region unreachable
+  until `surf`), and five of the eight partner lines cannot carry it, so
+  VALE's gate script runs `SkaldmerePartyCanLearn` (src/survey_scripting.c,
+  `gSpecialVar_0x8004` = the move: anyone who knows it or can be taught it)
+  right after `giveitem(ITEM_HM03)` and lends a level-25 MARILL when the
+  answer is no. FLY, DIVE, FLASH and WATERFALL open side areas only and
+  stay species-dependent (ZIGZAGOON, LOTAD, POLIWAG, WINGULL and SLAKOTH
+  are all early wild learners). The party menu's
   "NOT ABLE!" is the player's only warning, so re-run the audit whenever
   a gate or a partner changes. **Badge checks live in two places**: the
   party menu (`OW_FIELD_MOVES_NEED_BADGES`, FALSE here) and the field

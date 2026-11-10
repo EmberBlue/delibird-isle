@@ -892,5 +892,15 @@ quest is built, how the peer works) before they are asked six more times.
   SURF. Chapter 1 replays clean on the new build; the harness now reads
   battle RAM (PP topped up, action cursor steered back to FIGHT) instead
   of mashing blind, after the MIRREN exam showed a level-100 Mewtwo
-  Struggling to death with every move's PP spent.
+  Struggling to death with every move's PP spent. The live run then found
+  the next class of break on its own: a trainer who spots you walks up and
+  stays where the battle began, and the Corridor's INGA, looking down a
+  one-wide terrace corridor, parked herself in it. `reach.py --trainers`
+  now checks every trainer's sight line against the cut vertices of the
+  walkable graph: eleven such trainers (two across Mistwood's main path,
+  one across the Weather bridge, one on the summit trail) face open ground
+  or notice the player only beside them. And a design hole the staged
+  audit exposed: SURF is main-path (the summit) but five of the eight
+  Meadow partners cannot learn it, so VALE now lends a MARILL to a party
+  with no swimmer.
 

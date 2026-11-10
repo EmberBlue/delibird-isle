@@ -24,8 +24,13 @@ import audit  # noqa: E402
 DIRS = {(1, 0): "RIGHT", (-1, 0): "LEFT", (0, 1): "DOWN", (0, -1): "UP"}
 
 
-def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, allow_grass_goal=True, blocked=()):
-    """blocked: extra tiles to treat as solid (an NPC who walked over to battle and stayed)."""
+def is_water(beh):
+    return ("WATER" in beh or "SEAWEED" in beh or "CURRENT" in beh) and "SHALLOW" not in beh and "WATERFALL" not in beh and "BRIDGE" not in beh
+
+
+def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, allow_grass_goal=True, blocked=(), surf=False):
+    """blocked: extra tiles to treat as solid (an NPC who walked over to battle and stayed).
+    surf: the player is already surfing, so water is floor (land is still fine: riding onto a shore dismounts)."""
     mj, lay, W, H, words, tiles = audit.load_map(map_name)
     objs = {(e["x"], e["y"]) for e in mj.get("object_events", [])} | set(blocked)
     warps = {(e["x"], e["y"]) for e in mj.get("warp_events", [])}
@@ -43,7 +48,9 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
             return False
         if (x, y) in warps and not is_goal:
             return False                      # stepping on a door mid-path would warp
-        if any(k in beh for k in ("WATER", "WATERFALL", "JUMP", "SAND_DUNE")):
+        if is_water(beh):
+            return bool(surf)
+        if any(k in beh for k in ("WATERFALL", "JUMP", "SAND_DUNE")):
             return False
         if avoid_grass and "GRASS" in beh and not is_goal:
             return False
@@ -115,8 +122,8 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
                 continue
             if not passable(nx, ny, n in goals):
                 continue
-            if not elev_ok(ce, info(nx, ny)[1]):
-                continue
+            if not elev_ok(ce, info(nx, ny)[1]) and not (is_water(info(cx, cy)[2]) or is_water(info(nx, ny)[2])):
+                continue                          # surf on/off ignores elevation
             # MB_IMPASSABLE_<D>: a cave ledge lip -- not entered heading D, not left heading the other way
             dn, opp = DIRS[(dx, dy)], DIRS[(-dx, -dy)]
             bh, bn = info(cx, cy)[2], info(nx, ny)[2]

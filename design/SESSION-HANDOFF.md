@@ -461,7 +461,13 @@ replaces is gone from the tree).
   the intended gates. Chapter 1 replays clean on the fixed build;
   chapters 2-3 (`play/chain2.sh`, `play/chain3.sh`: the Wetlands, MIRREN,
   the Floodbasin readings and BREEN, the River and SLUICE, ILEX's two
-  signings, into the Highlands) are the live run; 4-8 still to script.
+  signings, into the Highlands) are the live run, `play/chain4.sh` (the
+  Highlands: readings, STRENGTH through the slide, VALE, SURF up the coast
+  to HALE) is scripted and queued; 5-8 still to script. Rules the run
+  taught: `reach.py --trainers` (a spotted-you trainer parks on its stop
+  tile), savestates pin a map's NPCs (replay from the previous map after
+  an NPC change), SURF is main-path so VALE lends a MARILL to parties with
+  no swimmer.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to

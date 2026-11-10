@@ -54,7 +54,9 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   as letters; two letters that look joined are cut off from each other.
   Script warps a story flag gates are staged in `SCRIPT_STAGE`; NPCs a
   script moves for good (BREEN) in `OBJ_AFTER` — add to both when writing
-  such scripts, or the audit lies.
+  such scripts, or the audit lies. `--trainers` must also read 0: a trainer
+  who walks up to the player stays where the battle began, so a sight line
+  across a cut vertex of the walkable graph is a soft-lock (eleven were).
 
 ## Seeing the game
 
@@ -213,3 +215,15 @@ list that was green on 2026-11-07 is the one in the handoff.
   run a `givemon` scene first (Marta's round) and then walk into a line.
 - A flag set after `giveitem` needs ~3000 frames of dismissal before it
   reads back; `--dismiss 1200` is too short.
+- **A savestate pins the current map's objects.** The object templates live
+  in the save block and are copied from ROM only when a map loads, so after
+  changing a map's NPCs (position, facing, sight) a state saved ON that map
+  still has the old ones. Replay from a state saved on the previous map so
+  the crossing reloads them (the Corridor trainer re-faced in ROM kept
+  challenging from the old facing for two runs until s15 was replayed from
+  the Wetlands state). Layout (.bin) changes do not have this problem.
+- Trainer fights are driven from battle RAM, not blind taps: `fight()` tops
+  up the lead's PP in `gBattleMons` and steers `gActionSelectionCursor` back
+  to FIGHT. The probe party's lead has three attacking moves and an empty
+  fourth slot so an HM teaches with no forget prompt. `--fight-cap N` and
+  `--trace 1000000` (one battle line, no periodic dump) for experiments.

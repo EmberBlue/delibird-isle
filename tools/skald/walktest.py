@@ -281,7 +281,10 @@ def main():
                     kw["edge"] = target.lower()
                 else:
                     kw["warp"] = int(target)
-                # prefer a grass-free path (fewer wild battles); fall back to any path
+                # prefer a grass-free path (fewer wild battles); fall back to any path. While surfing
+                # (gPlayerAvatar.flags bit 3) water is floor and riding onto a shore dismounts.
+                pav = syms.get("gPlayerAvatar")
+                kw["surf"] = bool(pav is not None and core.memory.u8[pav] & 0x08)
                 path, runs = route.plan(mdir, (px, py), blocked=blocked, avoid_grass=True, **kw)
                 if not path:
                     path, runs = route.plan(mdir, (px, py), blocked=blocked, **kw)
