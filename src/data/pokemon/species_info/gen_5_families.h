@@ -3297,10 +3297,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .height = 15,
         .weight = 620,
         .description = COMPOUND_STRING(
-            "It increases the power of its punches\n"
-            "by vibrating the bumps on its fists.\n"
-            "They can also shoot paralyzing liquid\n"
-            "from their head bumps."),
+            "SLUICE's. Its calls carry under the gates\n"
+            "and the keeper reads the river's depth by\n"
+            "the pitch. The gauge agrees with it to the\n"
+            "hand. The gauge is checked against it."),
         .pokemonScale = 268,
         .pokemonOffset = 2,
         .trainerScale = 271,

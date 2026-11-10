@@ -872,10 +872,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 12,
         .weight = 249,
         .description = COMPOUND_STRING(
-            "When Staravia evolve into Staraptor,\n"
-            "they leave the flock to live alone. It has\n"
-            "a savage nature. It will courageously\n"
-            "challenge foes that are much larger."),
+            "ILEX's second. It flies the red-cloth\n"
+            "lines faster than she can walk them and\n"
+            "lands on the stakes that have fallen. She\n"
+            "trusts it to find the ones she missed."),
         .pokemonScale = 282,
         .pokemonOffset = 4,
         .trainerScale = 256,
@@ -3066,10 +3066,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 9,
         .weight = 299,
         .description = COMPOUND_STRING(
-            "It appears on shallow-water beaches to\n"
-            "eat sand for nourishment. Should one\n"
-            "Gastrodon encounter another of a\n"
-            "different color, a fierce battle will ensue."),
+            "The sluice keeper's. It lives in the\n"
+            "channel below the gates and eats what the\n"
+            "silt brings down. Its colour has changed\n"
+            "since the record began. Nobody says why."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -3130,10 +3130,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 9,
         .weight = 299,
         .description = COMPOUND_STRING(
-            "Found more often on land than in the sea.\n"
-            "They normally live in rocky seashores, but\n"
-            "when cloudy or rainy, they can sometimes\n"
-            "be found on mountains, far from the sea."),
+            "The sluice keeper's. It lives in the\n"
+            "channel below the gates and eats what the\n"
+            "silt brings down. Its colour has changed\n"
+            "since the record began. Nobody says why."),
         .pokemonScale = 338,
         .pokemonOffset = 8,
         .trainerScale = 256,
@@ -5079,10 +5079,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 13,
         .weight = 444,
         .description = COMPOUND_STRING(
-            "Swaying and dodging the attacks\n"
-            "of its foes, it weaves its flexible body\n"
-            "in close, then lunges out with its\n"
-            "poisonous claws."),
+            "Full grown CROAGUNK, carrying the full\n"
+            "dose. One at the Floodbasin works, kept\n"
+            "behind the fence by a guard who feeds it.\n"
+            "The guard is tested too. He asked to be."),
         .pokemonScale = 272,
         .pokemonOffset = 3,
         .trainerScale = 256,
@@ -5500,10 +5500,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 22,
         .weight = 1355,
         .description = COMPOUND_STRING(
-            "It lives a quiet life on mountains that\n"
-            "are perpetually covered in snow. It hides\n"
-            "itself by whipping up blizzards.\n"
-            "It is also known as “The Ice Monster.”"),
+            "The Institute keeps one for the snow it\n"
+            "makes. On the ridge the wild ones thin\n"
+            "each winter. The treeline they live above\n"
+            "climbs after them, and does not stop."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 348,
