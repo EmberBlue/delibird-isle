@@ -26,3 +26,19 @@ script ParcelMarshHut_Sheet {
         msgbox(format("A survey sheet on the table, held flat with a stone from the shore. The marsh, the keystone pool, the frogs by stage.\pEgg, tadpole, POLIWAG, POLIWHIRL, POLITOED. A count and a date for each, in the hand from the margins of your notebook. The counts fall down the page, season by season, and the hand does not change.\pThe current line is half written. The date is today's."), MSGBOX_SIGN)
     }
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelMarshHut_Notebook {
+    if (!flag(FLAG_SKALDMERE_HERON_MET)) {
+        msgbox(format("A notebook on the table, closed, squared to the edge. You do not open another surveyor's notebook. Not until she has opened it to you."), MSGBOX_SIGN)
+        end
+    }
+    msgbox(format("Her marsh notebook, open where she left it. The hand from your margins, smaller now, as if the paper were rationed.\pSPRING. Keystone pool. Egg masses: 6. Last spring 9. The spring before, 11. I write the real number first and then I sit with it. The sitting is the work I owe.\pI have modelled this curve twice in my life. Once to save a marsh and once to tell the truth. The second curve is lower than the first and it is the only one I will sign again."), MSGBOX_SIGN)
+    msgbox(format("SUMMER. POLIWAG: 40. POLIWHIRL: 7. POLITOED: 1, calling, at dusk, from the far hummock. One is a number. One is also a sentence with nobody at the other end.\pThe pool is a hand lower than the red cloth. I did not drive that cloth. ILEX did, the year I was busy being right. I have been measuring against her ever since. It is the only baseline I trust, including mine."), MSGBOX_SIGN)
+    msgbox(format("AUTUMN. The road crew's flags are at the edge of the alder. They are not here for the marsh. They are here because the marsh is in the way of something. That is the whole history of this region in a sentence and I have spent thirty years writing it longer.\pWINTER. No count. Ice. I walked the edge and found the cloth and read the stake and wrote: present. A stake present is a reading. HOLLIS taught me that, or I taught her. We have stopped being able to tell."), MSGBOX_SIGN)
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The last page is newer, the ink darker.\pIt is in the record now, all of it, in the real numbers. I thought I would feel lighter. I feel accurate. That will do. Mind the frogs."), MSGBOX_SIGN)
+    }
+    end
+}

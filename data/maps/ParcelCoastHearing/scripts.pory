@@ -120,3 +120,15 @@ script ParcelCoastHearing_Copy {
     }
     end
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelCoastHearing_Register {
+    msgbox(format("A ledger on the clerk's shelf, REGISTER OF OBJECTIONS, the spine mended with tape. Mereholt Coastal, dredging consent: nine entries, one a renewal.\pONE. Objector: a fisher of Mereholt Coast. Ground: the spoil ground is the calving ground. Disposal: noted; the licence conditions were explained to the objector.\pTWO. Objector: the same. Ground: the same, with a count. Disposal: noted; counts are not the Council's to assess.\pTHREE. Objector: the Saltwick harbour-master. Ground: silt on the nursery beds. Disposal: referred to the officer; the officer reported no evidence."), MSGBOX_SIGN)
+    msgbox(format("FOUR. Objector: a schoolteacher of Elvsund, on behalf of a class. Ground: a letter in forty hands. Disposal: noted with thanks; the Commissioner replied to the school.\pFIVE. Objector: the Skaldmere Survey. Ground: red-cloth baselines, kelp cover, eleven years. Disposal: the Survey's markers are not an official instrument.\pSIX. Objector: the same fisher, with others. Ground: landings by year. Disposal: noted; the industry's own figures show a sustainable harvest, certified."), MSGBOX_SIGN)
+    msgbox(format("SEVEN. Objector: the Mereholt Coast fishers' union. Ground: the certification itself. Disposal: out of scope.\pEIGHT. Objector: a ranger of the Climate Corps, provisional. Ground: withdrawn before the sitting. Disposal: none. A note in the margin: posted to the Station the following week.\pNINE. Objector: the same fisher, alone again. Ground: as before. Disposal: noted. The entry is shorter than the others. The pen pressed harder."), MSGBOX_SIGN)
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("TEN. Objectors: a ranger of the Climate Corps, the Skaldmere Survey, and a statement read in absence. Ground: entered in full, see the record. Disposal: the consent is suspended.\pUnder it, in the fisher's hand, which the clerk let stand: ten."), MSGBOX_SIGN)
+    }
+    end
+}

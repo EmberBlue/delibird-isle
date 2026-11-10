@@ -202,6 +202,16 @@ ParcelRiverBoard_GaugeBook_1:
 	return
 
 
+ParcelRiverBoard_Allocations::
+# 127 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Allocations_Text_0, MSGBOX_SIGN
+# 128 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Allocations_Text_1, MSGBOX_SIGN
+# 129 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Allocations_Text_2, MSGBOX_SIGN
+	end
+
+
 ParcelRiverBoard_Sluice_Text_0:
 # 17 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: STRESSED. I read your filing.\n"
@@ -397,3 +407,38 @@ ParcelRiverBoard_GaugeBook_Text_0:
 	.string "to new datum.\p"
 	.string "NORMAL was never crossed out. They\n"
 	.string "moved the mark.$"
+
+ParcelRiverBoard_Allocations_Text_0:
+# 127 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "The Board's ledger of allocations,\n"
+	.string "chained to the shelf like the gauge\l"
+	.string "book. Who may take how much from the\l"
+	.string "Elvsund, by year, in the clerk's hand.\p"
+	.string "The early pages are short. Mills: two.\n"
+	.string "Farms: eleven, a rod each. The town:\l"
+	.string "drinking and the wash-house. The river:\l"
+	.string "the rest, unwritten, because nobody\l"
+	.string "thought to write what was not taken.$"
+
+ParcelRiverBoard_Allocations_Text_1:
+# 128 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "The middle pages lengthen. Farms:\n"
+	.string "thirty, and the rods become pipes.\l"
+	.string "Mereholt Logistics, for the depot: a\l"
+	.string "figure. Mereholt Coastal, for the cold\l"
+	.string "store: a figure. Irrigation improvement\l"
+	.string "scheme, Foundation grant: the largest\l"
+	.string "figure on the page, in a different ink.\p"
+	.string "The last pages are the sum. Allocations\n"
+	.string "exceed the mean summer flow in seven of\l"
+	.string "the last ten years. The clerk has\l"
+	.string "written the gauge's figure beside the\l"
+	.string "total and drawn no line between them.\l"
+	.string "Nobody has asked the clerk to.$"
+
+ParcelRiverBoard_Allocations_Text_2:
+# 129 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "On the inside cover, newest, the Board's\n"
+	.string "stamp and SLUICE's initial: When the\l"
+	.string "sum is larger than the river, the river\l"
+	.string "decides. It has started deciding.$"

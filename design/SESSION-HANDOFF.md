@@ -104,10 +104,14 @@ hearing, the epilogue seen closer, and the post-game second readings
 carries; 161 in all), and forty-four Survey boards, two in every outdoor
 map, each a field note in the Survey's voice grounded in §06 (the WOOPER
 counted at the culvert, the SHROOMISH as air gauge, the CROAGUNK tested to
-test the water, the summit's thirteen snow patches). ~85,100 hand-written
-words (~115,700 with the rematch-tier lines; `tools/skald/wordcount.py` is
-the counter), 704 objects, 420 readable events, 56 overheard
-conversations, 102 maps, 1,071 battles. The certification spine was fought
+test the water, the summit's thirteen snow patches), and nine more books
+(the Council's register of objections, Heron's marsh notebook, the Mahogany
+model with Ilex's margins, the Foundation's annual report, the Survey's
+nine rules, the Station's forty-year register, the lodging's visitors'
+book, the Courier bound, the Board's water-rights ledger). ~87,300
+hand-written words (~117,900 with the rematch-tier lines;
+`tools/skald/wordcount.py` is the counter), 704 objects, 429 readable
+events, 56 overheard conversations, 102 maps, 1,071 battles. The certification spine was fought
 through headlessly with the harness's new `--party`/`--var` (every leader,
 every signing, the confession, the boardroom: `tools/skald/spine.sh`).
 

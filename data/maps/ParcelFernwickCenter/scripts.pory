@@ -43,3 +43,12 @@ script ParcelFernwickCenter_ReadMap {
     msgbox(format("A map of the district. Someone has drawn the marsh's old shoreline on it in pencil, a finger-width out from the printed one."), MSGBOX_SIGN)
     end
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelFernwickCenter_Bound {
+    msgbox(format("A bound volume of THE SKALDMERE COURIER on the Centre's shelf, the years before you came. The nurse says people read it while they wait and nobody has ever finished it.\pMEREHOLT TO FUND TWO FIELD STATIONS. The Foundation's Chair, photographed with the Corps' director at Fernwick. A new era of partnership for the region's environment.\pPRESERVE GATE OPENED AT SALTWICK. Managed access to the saltmarsh, a Foundation crest on the gate. A fisher quoted, briefly, asking who manages the sea."), MSGBOX_SIGN)
+    msgbox(format("RECORD HERRING YEAR. A photograph of the quay heaped. Smaller, inside: the Survey notes the record is for landings, not for fish.\pHAUKFELL BORE EXPLORATORY ONLY, COMPANY ASSURES. The first use of the phrase in print. INGER, then on page six, counts its uses by the end of the year: fourteen.\pLAB OPENS ON THE SALTWICK FRONT. A regional ecologist, returned from Johto to lead the Foundation's resilience programme. She is photographed not smiling. The caption calls it modesty."), MSGBOX_SIGN)
+    msgbox(format("CORRECTION. The Courier regrets that last week's figure for the Reedmere WOOPER count was supplied by the Foundation and not, as stated, by the Survey. The Survey's figure is lower.\pThe volume ends there. The next year is the one you arrived in, and it is on the board by the door, one page at a time."), MSGBOX_SIGN)
+    end
+}

@@ -156,6 +156,16 @@ ParcelWeatherInstitute1F_Scenarios::
 	end
 
 
+ParcelWeatherInstitute1F_Register::
+# 94 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Register_Text_0, MSGBOX_SIGN
+# 95 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Register_Text_1, MSGBOX_SIGN
+# 96 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Register_Text_2, MSGBOX_SIGN
+	end
+
+
 ParcelWeatherInstitute1F_Reception_Text_0:
 # 8 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "RECEPTION: The director is upstairs. He\n"
@@ -282,3 +292,47 @@ ParcelWeatherInstitute1F_Scenarios_Text_0:
 	.string "copied out. It does not end in a word. It\l"
 	.string "ends at this month, because that is\l"
 	.string "where the pencil stopped.$"
+
+ParcelWeatherInstitute1F_Register_Text_0:
+# 94 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "The Station's register, open on the\n"
+	.string "stand under the roof dish's cable.\l"
+	.string "Forty years of the same page: first\l"
+	.string "frost, last frost, ice-out on the tarn,\l"
+	.string "the first storm named.\p"
+	.string "FIRST FROST. The dates walk down the\n"
+	.string "column a day or two a year, with the odd\l"
+	.string "year that walks back and gets a tick\l"
+	.string "from somebody relieved. The ticks stop\l"
+	.string "twenty years in.\p"
+	.string "ICE-OUT. The tarn used to go in a week\n"
+	.string "in late spring. The column has it going\l"
+	.string "in a fortnight, then a month, then, in\l"
+	.string "the last three years, not going at all,\l"
+	.string "because it did not fully come.$"
+
+ParcelWeatherInstitute1F_Register_Text_1:
+# 95 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "STORMS NAMED. Four a year, then six,\n"
+	.string "then the year with eleven, when the\l"
+	.string "Director's hand gets smaller to fit them\l"
+	.string "in.\p"
+	.string "In the margin of the last page, the\n"
+	.string "Director's initials beside a note not\l"
+	.string "meant for the page: The dish measures.\l"
+	.string "The register remembers. I was hired for\l"
+	.string "the first and I have ended up keeping\l"
+	.string "the second. I do not know which the\l"
+	.string "Council wants.\p"
+	.string "Under it, the Survey's initial and one\n"
+	.string "line: Both. Keep both.$"
+
+ParcelWeatherInstitute1F_Register_Text_2:
+# 96 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "A loose sheet is tucked in the back:\n"
+	.string "the Survey's dusk counts from the\l"
+	.string "Reedmere hide, copied by hand into the\l"
+	.string "Station's own columns, year by year, so\l"
+	.string "that the frost and the lights can be\l"
+	.string "read together. Nobody at the Station\l"
+	.string "admits to doing it.$"

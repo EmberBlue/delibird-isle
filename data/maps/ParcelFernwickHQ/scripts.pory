@@ -183,3 +183,12 @@ script ParcelFernwickHQ_Handbook {
     msgbox(format("SECTION 9. WHEN THE WORK IS WRONG. If a ranger is asked to round up, round down, omit, soften, delay or lose a record, the ranger will decline, in writing, once, and then file the record anyway. This section is short because it is not complicated. It is only hard.\pThe page the spine is broken at is this one. Someone has written beside it, in the ink the Corps issues: it is also the whole job. H."), MSGBOX_SIGN)
     end
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelFernwickHQ_RedCloth {
+    msgbox(format("A pamphlet on the Corps counter, between the leaflets, older than any of them. RED CLOTH. THE SURVEY'S METHOD, IN NINE RULES.\pONE. Drive the stake where the habitat is, not where the path is. You will walk further. The habitat does not care.\pTWO. Tie red cloth at the top. Red so it can be found in a wet year. Cloth so it rots when nobody comes back, and the stake tells you that too.\pTHREE. Read the same thing the same way at the same time of year. A method changed is a record ended."), MSGBOX_SIGN)
+    msgbox(format("FOUR. Write the number you got. Not the number you expected, not the number that would help. The number.\pFIVE. Write what is absent. None is a reading. A blank is not.\pSIX. Do not model. Modelling is for people who will not be here next year. The Survey will be here next year.\pSEVEN. Keep the old sheets. The sheet is the baseline. The baseline is the argument. There is no other argument."), MSGBOX_SIGN)
+    msgbox(format("EIGHT. Sign with an initial. The Survey is not a career.\pNINE. When the stake has fallen and the cloth is gone and the habitat is gone with it, drive a new stake in the same hole and read it. The last reading is the one that matters.\pAt the bottom, in the Corps' type: Provisionals are reminded that Corps surveys are filed with the regional office and are not bound by the Survey's rules. In pencil beneath: they should be."), MSGBOX_SIGN)
+    end
+}

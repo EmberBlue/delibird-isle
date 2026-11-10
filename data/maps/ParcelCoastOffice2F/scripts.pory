@@ -132,3 +132,15 @@ script ParcelCoastOffice2F_GrantFile {
 script ParcelCoastOffice2F_Programme {
     msgbox(format("The programme ledger. Grants by recipient, this cycle.\pSkaldmere Climate Corps, two field stations: a large figure. Certification training: a large figure. Regional research: a figure with a note, released against delivery of the model.\pWetland Resilience Programme, Dr. Heron: a figure, and beside it, in pencil, CONDITIONS.\pDelibird Isle Festival Committee: banners, blankets, a stage. A small figure. Someone has underlined it twice.\pCommunity Centre, Haukfell: a figure, and a date two weeks before the Permafrost licence was first tabled.\pAt the foot, the total, and the line every ledger has: funds provided by Mereholt Resources Ltd. The Foundation does not have money. It has a parent."), MSGBOX_SIGN)
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelCoastOffice2F_AnnualReport {
+    msgbox(format("THE MEREHOLT FOUNDATION. ANNUAL REPORT. Glossy, square, heavier than it needs to be. The cover is the Fernwick pond at dawn.\pFROM THE CHAIR. Resilience is the word of the year, and we did not choose it lightly. Skaldmere's ecosystems have shown, time and again, their capacity to recover. Our task is to give them room to do so, and to give the communities that depend on them the same room."), MSGBOX_SIGN)
+    msgbox(format("PROGRAMMES. The Climate Corps field stations: two. Certification training: eighty provisional rangers supported. Community relief: the Floodbasin tents, the Haukfell warming centre, the island's storm blankets. Regional research: the recovery model, now in its ninth edition.\pIN THE FIELD. A photograph of the Conservation Program Officer at a stake with red cloth on it, smiling. The caption says: monitoring continues across six zones. The stake is the Survey's. The caption does not say so."), MSGBOX_SIGN)
+    msgbox(format("FINANCIALS. Programme spending as a share of group turnover: a figure to one decimal place. Group turnover itself is on another page in another document.\pA FINAL WORD. We are proud of what the region has recovered, and prouder of what it will.\pThe back page is a list of the board. The Chair's name is first. The Officer's is last, in smaller type, under Staff."), MSGBOX_SIGN)
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Someone has written across the Chair's letter in pencil, small: ninth edition. Withdrawn. The handwriting is HOLLIS's."), MSGBOX_SIGN)
+    }
+    end
+}

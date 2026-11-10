@@ -57,3 +57,15 @@ script ParcelTownLodging_FieldGuide {
     }
     end
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelTownLodging_Visitors {
+    msgbox(format("The lodging's visitors' book, on the shelf by the stair. Every room has had someone in it, and most of them wrote.\pA drover, years back: Good bed, bad weather, fair price. Saw a WAILMER from the ferry rail, the keeper says that is normal. It is not normal where I am from.\pA provisional ranger, the next spring: Came for the forest season. Partner from the meadow, a LOTAD, slow and sure. Back in the autumn with a certificate or not at all.\pThe same hand, autumn: Not at all. Not this year."), MSGBOX_SIGN)
+    msgbox(format("A Foundation officer, in neat capitals: Delightful. The pond at dawn is worth the ferry alone.\pA fisher's wife, on a Council day: Here for the sitting. Item seven again. Bought the children shells.\pA surveyor's initial, no words, three years running, each with a date in spring.\pA child, very large letters: WE SAW THE DELIBIRD BOAT."), MSGBOX_SIGN)
+    msgbox(format("A hand you know from your own notebook's margins, old ink: Last night before the marsh. The keeper gave me the room by the window without my asking. People here know when someone is not coming back, and they are kind about it in the only way that does not make it worse."), MSGBOX_SIGN)
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The newest entry is not yours. It is INGER's: Front page. Thank you for the room and the tea, and for not asking what it would say."), MSGBOX_SIGN)
+    }
+    end
+}

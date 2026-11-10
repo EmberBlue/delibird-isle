@@ -87,3 +87,12 @@ script ParcelWeatherInstitute1F_Scenarios {
     msgbox(format("The model, pinned to the wall in three sheets. SCENARIO A: TARGETED INTERVENTION. SCENARIO B: ENHANCED INTERVENTION. SCENARIO C: FULL MANAGEMENT.\pEvery curve on every sheet ends in the same word: MANAGEABLE. Someone has pencilled a fourth sheet on the back of a requisition form and pinned it under the three. SCENARIO D: WHAT HAPPENED. The curve is the over-the-fence log, copied out. It does not end in a word. It ends at this month, because that is where the pencil stopped."), MSGBOX_SIGN)
     end
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelWeatherInstitute1F_Register {
+    msgbox(format("The Station's register, open on the stand under the roof dish's cable. Forty years of the same page: first frost, last frost, ice-out on the tarn, the first storm named.\pFIRST FROST. The dates walk down the column a day or two a year, with the odd year that walks back and gets a tick from somebody relieved. The ticks stop twenty years in.\pICE-OUT. The tarn used to go in a week in late spring. The column has it going in a fortnight, then a month, then, in the last three years, not going at all, because it did not fully come."), MSGBOX_SIGN)
+    msgbox(format("STORMS NAMED. Four a year, then six, then the year with eleven, when the Director's hand gets smaller to fit them in.\pIn the margin of the last page, the Director's initials beside a note not meant for the page: The dish measures. The register remembers. I was hired for the first and I have ended up keeping the second. I do not know which the Council wants.\pUnder it, the Survey's initial and one line: Both. Keep both."), MSGBOX_SIGN)
+    msgbox(format("A loose sheet is tucked in the back: the Survey's dusk counts from the Reedmere hide, copied by hand into the Station's own columns, year by year, so that the frost and the lights can be read together. Nobody at the Station admits to doing it."), MSGBOX_SIGN)
+    end
+}

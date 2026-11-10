@@ -312,6 +312,16 @@ ParcelFernwickHQ_Handbook::
 	end
 
 
+ParcelFernwickHQ_RedCloth::
+# 190 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_RedCloth_Text_0, MSGBOX_SIGN
+# 191 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_RedCloth_Text_1, MSGBOX_SIGN
+# 192 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_RedCloth_Text_2, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHQ_Reception_Text_0:
 # 12 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "RECEPTION: HALE slept. A whole night. I\n"
@@ -731,3 +741,50 @@ ParcelFernwickHQ_Handbook_Text_2:
 	.string "one. Someone has written beside it, in\l"
 	.string "the ink the Corps issues: it is also the\l"
 	.string "whole job. H.$"
+
+ParcelFernwickHQ_RedCloth_Text_0:
+# 190 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "A pamphlet on the Corps counter,\n"
+	.string "between the leaflets, older than any of\l"
+	.string "them. RED CLOTH. THE SURVEY'S METHOD,\l"
+	.string "IN NINE RULES.\p"
+	.string "ONE. Drive the stake where the habitat\n"
+	.string "is, not where the path is. You will walk\l"
+	.string "further. The habitat does not care.\p"
+	.string "TWO. Tie red cloth at the top. Red so it\n"
+	.string "can be found in a wet year. Cloth so it\l"
+	.string "rots when nobody comes back, and the\l"
+	.string "stake tells you that too.\p"
+	.string "THREE. Read the same thing the same way\n"
+	.string "at the same time of year. A method\l"
+	.string "changed is a record ended.$"
+
+ParcelFernwickHQ_RedCloth_Text_1:
+# 191 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "FOUR. Write the number you got. Not the\n"
+	.string "number you expected, not the number\l"
+	.string "that would help. The number.\p"
+	.string "FIVE. Write what is absent. None is a\n"
+	.string "reading. A blank is not.\p"
+	.string "SIX. Do not model. Modelling is for\n"
+	.string "people who will not be here next year.\l"
+	.string "The Survey will be here next year.\p"
+	.string "SEVEN. Keep the old sheets. The sheet\n"
+	.string "is the baseline. The baseline is the\l"
+	.string "argument. There is no other argument.$"
+
+ParcelFernwickHQ_RedCloth_Text_2:
+# 192 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "EIGHT. Sign with an initial. The Survey\n"
+	.string "is not a career.\p"
+	.string "NINE. When the stake has fallen and the\n"
+	.string "cloth is gone and the habitat is gone\l"
+	.string "with it, drive a new stake in the same\l"
+	.string "hole and read it. The last reading is the\l"
+	.string "one that matters.\p"
+	.string "At the bottom, in the Corps' type:\n"
+	.string "Provisionals are reminded that Corps\l"
+	.string "surveys are filed with the regional\l"
+	.string "office and are not bound by the\l"
+	.string "Survey's rules. In pencil beneath: they\l"
+	.string "should be.$"

@@ -708,4 +708,25 @@ quest is built, how the peer works) before they are asked six more times.
   the number. Six boards read in the emulator from their stand tiles.
   `tools/skald/wordcount.py` is now the counter: 85,093 hand-written
   words (~115,700 with the rematch tiers). ~4,700 words.
+- **2026-11-10 — books, round two.** Nine multi-page readables on
+  scouted shelf tiles, each a document the world would actually hold: the
+  Council's REGISTER OF OBJECTIONS at the hearing (nine entries on the
+  dredging consent, each with its disposal, from "counts are not the
+  Council's to assess" to "out of scope"; a tenth after the finale, and
+  "ten" in the fisher's hand), Heron's marsh notebook in the hut (the real
+  numbers first, then the sitting with them; the two curves she modelled;
+  "I feel accurate. That will do."), the Mahogany recovery model in the
+  Survey's archive with ILEX's margins ("figure 3 is where the Foundation
+  lives"; "we stake, we do not model, this is why"), the Foundation's
+  annual report in Hollis's office (the Officer photographed smiling at a
+  stake that is the Survey's; after the finale, "ninth edition. Withdrawn."
+  in her hand), RED CLOTH, the Survey's method in nine rules on the Corps
+  counter, the Station's forty-year register (first frost walking down the
+  column, the tarn that did not fully come), the lodging's visitors' book
+  (the provisional who wrote "not at all, not this year"; the hand from the
+  notebook's margins the night before the marsh), the Courier bound (the
+  years before Wren came, down to the correction about whose WOOPER figure
+  it was), and the Board's water-rights ledger ("when the sum is larger
+  than the river, the river decides"). Three read in the emulator. 87,257
+  hand-written words. ~2,200 words.
 

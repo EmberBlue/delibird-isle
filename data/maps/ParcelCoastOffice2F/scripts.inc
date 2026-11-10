@@ -223,6 +223,24 @@ ParcelCoastOffice2F_Programme::
 	return
 
 
+ParcelCoastOffice2F_AnnualReport::
+# 139 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_AnnualReport_Text_0, MSGBOX_SIGN
+# 140 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_AnnualReport_Text_1, MSGBOX_SIGN
+# 141 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_AnnualReport_Text_2, MSGBOX_SIGN
+# 142 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice2F_AnnualReport_2
+ParcelCoastOffice2F_AnnualReport_1:
+	end
+
+ParcelCoastOffice2F_AnnualReport_2:
+# 143 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_AnnualReport_Text_3, MSGBOX_SIGN
+	goto ParcelCoastOffice2F_AnnualReport_1
+
+
 ParcelCoastOffice2F_Hollis_Text_0:
 # 19 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "HOLLIS: My name was in it. Every\n"
@@ -519,3 +537,54 @@ ParcelCoastOffice2F_Programme_Text_0:
 	.string "every ledger has: funds provided by\l"
 	.string "Mereholt Resources Ltd. The Foundation\l"
 	.string "does not have money. It has a parent.$"
+
+ParcelCoastOffice2F_AnnualReport_Text_0:
+# 139 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "THE MEREHOLT FOUNDATION. ANNUAL\n"
+	.string "REPORT. Glossy, square, heavier than it\l"
+	.string "needs to be. The cover is the Fernwick\l"
+	.string "pond at dawn.\p"
+	.string "FROM THE CHAIR. Resilience is the word\n"
+	.string "of the year, and we did not choose it\l"
+	.string "lightly. Skaldmere's ecosystems have\l"
+	.string "shown, time and again, their capacity to\l"
+	.string "recover. Our task is to give them room\l"
+	.string "to do so, and to give the communities\l"
+	.string "that depend on them the same room.$"
+
+ParcelCoastOffice2F_AnnualReport_Text_1:
+# 140 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "PROGRAMMES. The Climate Corps field\n"
+	.string "stations: two. Certification training:\l"
+	.string "eighty provisional rangers supported.\l"
+	.string "Community relief: the Floodbasin tents,\l"
+	.string "the Haukfell warming centre, the\l"
+	.string "island's storm blankets. Regional\l"
+	.string "research: the recovery model, now in its\l"
+	.string "ninth edition.\p"
+	.string "IN THE FIELD. A photograph of the\n"
+	.string "Conservation Program Officer at a\l"
+	.string "stake with red cloth on it, smiling. The\l"
+	.string "caption says: monitoring continues\l"
+	.string "across six zones. The stake is the\l"
+	.string "Survey's. The caption does not say so.$"
+
+ParcelCoastOffice2F_AnnualReport_Text_2:
+# 141 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "FINANCIALS. Programme spending as a\n"
+	.string "share of group turnover: a figure to\l"
+	.string "one decimal place. Group turnover\l"
+	.string "itself is on another page in another\l"
+	.string "document.\p"
+	.string "A FINAL WORD. We are proud of what the\n"
+	.string "region has recovered, and prouder of\l"
+	.string "what it will.\p"
+	.string "The back page is a list of the board.\n"
+	.string "The Chair's name is first. The Officer's\l"
+	.string "is last, in smaller type, under Staff.$"
+
+ParcelCoastOffice2F_AnnualReport_Text_3:
+# 143 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "Someone has written across the Chair's\n"
+	.string "letter in pencil, small: ninth edition.\l"
+	.string "Withdrawn. The handwriting is HOLLIS's.$"

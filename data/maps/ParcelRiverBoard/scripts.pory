@@ -120,3 +120,12 @@ script ParcelRiverBoard_GaugeBook {
         setflag(FLAG_SKALD_Q_BOOK_FOUND)
     }
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelRiverBoard_Allocations {
+    msgbox(format("The Board's ledger of allocations, chained to the shelf like the gauge book. Who may take how much from the Elvsund, by year, in the clerk's hand.\pThe early pages are short. Mills: two. Farms: eleven, a rod each. The town: drinking and the wash-house. The river: the rest, unwritten, because nobody thought to write what was not taken."), MSGBOX_SIGN)
+    msgbox(format("The middle pages lengthen. Farms: thirty, and the rods become pipes. Mereholt Logistics, for the depot: a figure. Mereholt Coastal, for the cold store: a figure. Irrigation improvement scheme, Foundation grant: the largest figure on the page, in a different ink.\pThe last pages are the sum. Allocations exceed the mean summer flow in seven of the last ten years. The clerk has written the gauge's figure beside the total and drawn no line between them. Nobody has asked the clerk to."), MSGBOX_SIGN)
+    msgbox(format("On the inside cover, newest, the Board's stamp and SLUICE's initial: When the sum is larger than the river, the river decides. It has started deciding."), MSGBOX_SIGN)
+    end
+}

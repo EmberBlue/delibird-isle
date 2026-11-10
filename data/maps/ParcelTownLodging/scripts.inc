@@ -83,6 +83,24 @@ ParcelTownLodging_FieldGuide_2:
 	goto ParcelTownLodging_FieldGuide_1
 
 
+ParcelTownLodging_Visitors::
+# 64 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Visitors_Text_0, MSGBOX_SIGN
+# 65 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Visitors_Text_1, MSGBOX_SIGN
+# 66 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Visitors_Text_2, MSGBOX_SIGN
+# 67 "data/maps/ParcelTownLodging/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelTownLodging_Visitors_2
+ParcelTownLodging_Visitors_1:
+	end
+
+ParcelTownLodging_Visitors_2:
+# 68 "data/maps/ParcelTownLodging/scripts.pory"
+	msgbox ParcelTownLodging_Visitors_Text_3, MSGBOX_SIGN
+	goto ParcelTownLodging_Visitors_1
+
+
 ParcelTownLodging_Keeper_Text_0:
 # 11 "data/maps/ParcelTownLodging/scripts.pory"
 	.string "Keeper: The scientist's room is paid\n"
@@ -243,3 +261,52 @@ ParcelTownLodging_FieldGuide_Text_6:
 	.string "The appendix page has been read so\n"
 	.string "often the corner is soft. Nobody has\l"
 	.string "written anything on it.$"
+
+ParcelTownLodging_Visitors_Text_0:
+# 64 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "The lodging's visitors' book, on the\n"
+	.string "shelf by the stair. Every room has had\l"
+	.string "someone in it, and most of them wrote.\p"
+	.string "A drover, years back: Good bed, bad\n"
+	.string "weather, fair price. Saw a WAILMER from\l"
+	.string "the ferry rail, the keeper says that is\l"
+	.string "normal. It is not normal where I am from.\p"
+	.string "A provisional ranger, the next spring:\n"
+	.string "Came for the forest season. Partner\l"
+	.string "from the meadow, a LOTAD, slow and sure.\l"
+	.string "Back in the autumn with a certificate\l"
+	.string "or not at all.\p"
+	.string "The same hand, autumn: Not at all. Not\n"
+	.string "this year.$"
+
+ParcelTownLodging_Visitors_Text_1:
+# 65 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "A Foundation officer, in neat capitals:\n"
+	.string "Delightful. The pond at dawn is worth\l"
+	.string "the ferry alone.\p"
+	.string "A fisher's wife, on a Council day: Here\n"
+	.string "for the sitting. Item seven again.\l"
+	.string "Bought the children shells.\p"
+	.string "A surveyor's initial, no words, three\n"
+	.string "years running, each with a date in\l"
+	.string "spring.\p"
+	.string "A child, very large letters: WE SAW THE\n"
+	.string "DELIBIRD BOAT.$"
+
+ParcelTownLodging_Visitors_Text_2:
+# 66 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "A hand you know from your own\n"
+	.string "notebook's margins, old ink: Last night\l"
+	.string "before the marsh. The keeper gave me\l"
+	.string "the room by the window without my\l"
+	.string "asking. People here know when someone\l"
+	.string "is not coming back, and they are kind\l"
+	.string "about it in the only way that does not\l"
+	.string "make it worse.$"
+
+ParcelTownLodging_Visitors_Text_3:
+# 68 "data/maps/ParcelTownLodging/scripts.pory"
+	.string "The newest entry is not yours. It is\n"
+	.string "INGER's: Front page. Thank you for the\l"
+	.string "room and the tea, and for not asking\l"
+	.string "what it would say.$"

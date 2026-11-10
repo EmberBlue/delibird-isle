@@ -219,6 +219,24 @@ ParcelCoastHearing_Copy_4:
 	goto ParcelCoastHearing_Copy_3
 
 
+ParcelCoastHearing_Register::
+# 127 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Register_Text_0, MSGBOX_SIGN
+# 128 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Register_Text_1, MSGBOX_SIGN
+# 129 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Register_Text_2, MSGBOX_SIGN
+# 130 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Register_2
+ParcelCoastHearing_Register_1:
+	end
+
+ParcelCoastHearing_Register_2:
+# 131 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Register_Text_3, MSGBOX_SIGN
+	goto ParcelCoastHearing_Register_1
+
+
 ParcelCoastHearing_Clerk_Text_0:
 # 9 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "CLERK: The hearing's in session. They\n"
@@ -469,3 +487,67 @@ ParcelCoastHearing_Copy_Text_1:
 	.string "The clerk's tray, with a grading sheet\n"
 	.string "on top of it that was not there before.\l"
 	.string "It says RECEIVED.$"
+
+ParcelCoastHearing_Register_Text_0:
+# 127 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "A ledger on the clerk's shelf, REGISTER\n"
+	.string "OF OBJECTIONS, the spine mended with\l"
+	.string "tape. Mereholt Coastal, dredging\l"
+	.string "consent: nine entries, one a renewal.\p"
+	.string "ONE. Objector: a fisher of Mereholt\n"
+	.string "Coast. Ground: the spoil ground is the\l"
+	.string "calving ground. Disposal: noted; the\l"
+	.string "licence conditions were explained to\l"
+	.string "the objector.\p"
+	.string "TWO. Objector: the same. Ground: the\n"
+	.string "same, with a count. Disposal: noted;\l"
+	.string "counts are not the Council's to assess.\p"
+	.string "THREE. Objector: the Saltwick\n"
+	.string "harbour-master. Ground: silt on the\l"
+	.string "nursery beds. Disposal: referred to the\l"
+	.string "officer; the officer reported no\l"
+	.string "evidence.$"
+
+ParcelCoastHearing_Register_Text_1:
+# 128 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "FOUR. Objector: a schoolteacher of\n"
+	.string "Elvsund, on behalf of a class. Ground: a\l"
+	.string "letter in forty hands. Disposal: noted\l"
+	.string "with thanks; the Commissioner replied\l"
+	.string "to the school.\p"
+	.string "FIVE. Objector: the Skaldmere Survey.\n"
+	.string "Ground: red-cloth baselines, kelp\l"
+	.string "cover, eleven years. Disposal: the\l"
+	.string "Survey's markers are not an official\l"
+	.string "instrument.\p"
+	.string "SIX. Objector: the same fisher, with\n"
+	.string "others. Ground: landings by year.\l"
+	.string "Disposal: noted; the industry's own\l"
+	.string "figures show a sustainable harvest,\l"
+	.string "certified.$"
+
+ParcelCoastHearing_Register_Text_2:
+# 129 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "SEVEN. Objector: the Mereholt Coast\n"
+	.string "fishers' union. Ground: the\l"
+	.string "certification itself. Disposal: out of\l"
+	.string "scope.\p"
+	.string "EIGHT. Objector: a ranger of the\n"
+	.string "Climate Corps, provisional. Ground:\l"
+	.string "withdrawn before the sitting. Disposal:\l"
+	.string "none. A note in the margin: posted to\l"
+	.string "the Station the following week.\p"
+	.string "NINE. Objector: the same fisher, alone\n"
+	.string "again. Ground: as before. Disposal:\l"
+	.string "noted. The entry is shorter than the\l"
+	.string "others. The pen pressed harder.$"
+
+ParcelCoastHearing_Register_Text_3:
+# 131 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "TEN. Objectors: a ranger of the Climate\n"
+	.string "Corps, the Skaldmere Survey, and a\l"
+	.string "statement read in absence. Ground:\l"
+	.string "entered in full, see the record.\l"
+	.string "Disposal: the consent is suspended.\p"
+	.string "Under it, in the fisher's hand, which the\n"
+	.string "clerk let stand: ten.$"

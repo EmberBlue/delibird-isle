@@ -116,3 +116,12 @@ script ParcelFernwickSurvey_Letters {
 script ParcelFernwickSurvey_Index {
     msgbox(format("The sheet index. Every place the Survey has ever staked, one line each, with the year of the first stake and the year of the last reading.\pSaltwick Shoals, the old oyster ground. First stake, last reading, then the word GONE and a date.\pReedmere Landing, the turf. Still read. The Hollowbend culvert, the pool below. Still read. Leirvik bridge reach. Still read, with a note: the state changed. Do not reset.\pFive lines carry GONE. A sixth has been written and then rubbed at with a thumb until the paper roughened. Under it, faint: NOT YET.\pNo line has ever been removed from the index. Ilex does not throw things away. That is the whole method."), MSGBOX_SIGN)
 }
+
+// --- books, round two (2026-11-10) ---
+
+script ParcelFernwickSurvey_Model {
+    msgbox(format("A bound memorandum in the Survey's archive: THE MAHOGANY MARSH, RECOVERY OF THE POLITOED POPULATION, A PREDICTIVE MODEL. The author's initial. The margins are ILEX's.\pABSTRACT. Following protection, the keystone population recovered along a logistic curve to ninety per cent of the pre-disturbance baseline within eleven seasons, demonstrating the resilience of the freshwater marsh system to transient pressure.\pIn the margin: transient. Underlined twice. The pressure was not transient. The protection was."), MSGBOX_SIGN)
+    msgbox(format("METHOD. Counts were taken at the breeding pools in spring and extrapolated to the marsh by habitat area. Years with incomplete coverage were filled by interpolation.\pIn the margin: three of eleven years filled. The filled years are the steep part of the curve.\pRESULTS. Figure 2 shows the fitted curve against the observations. The fit is strong. Figure 3 projects the curve to full recovery.\pIn the margin: figure 2 stops in year eight. Figure 3 is where the Foundation lives."), MSGBOX_SIGN)
+    msgbox(format("DISCUSSION. The result suggests that wetland systems of this type possess substantial capacity to absorb disturbance and return, and that protection, where granted, may be reviewed as recovery proceeds.\pIn the margin, the only long note: She wrote this to win the listing and it won it. Then it was read by people who wanted the last sentence and not the first. A true thing said too strongly becomes a false thing said by someone else. We stake. We do not model. This is why.\pOn the back cover, newer: Lent to the ranger. Return it to the shelf, not to me. I have read it enough."), MSGBOX_SIGN)
+    end
+}

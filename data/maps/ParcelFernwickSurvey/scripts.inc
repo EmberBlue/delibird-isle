@@ -234,6 +234,16 @@ ParcelFernwickSurvey_Index::
 	return
 
 
+ParcelFernwickSurvey_Model::
+# 123 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	msgbox ParcelFernwickSurvey_Model_Text_0, MSGBOX_SIGN
+# 124 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	msgbox ParcelFernwickSurvey_Model_Text_1, MSGBOX_SIGN
+# 125 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	msgbox ParcelFernwickSurvey_Model_Text_2, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickSurvey_Clerk_Text_0:
 # 13 "data/maps/ParcelFernwickSurvey/scripts.pory"
 	.string "CLERK: There it is. Forty years of\n"
@@ -466,3 +476,59 @@ ParcelFernwickSurvey_Index_Text_0:
 	.string "No line has ever been removed from the\n"
 	.string "index. Ilex does not throw things away.\l"
 	.string "That is the whole method.$"
+
+ParcelFernwickSurvey_Model_Text_0:
+# 123 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	.string "A bound memorandum in the Survey's\n"
+	.string "archive: THE MAHOGANY MARSH, RECOVERY\l"
+	.string "OF THE POLITOED POPULATION, A\l"
+	.string "PREDICTIVE MODEL. The author's initial.\l"
+	.string "The margins are ILEX's.\p"
+	.string "ABSTRACT. Following protection, the\n"
+	.string "keystone population recovered along a\l"
+	.string "logistic curve to ninety per cent of\l"
+	.string "the pre-disturbance baseline within\l"
+	.string "eleven seasons, demonstrating the\l"
+	.string "resilience of the freshwater marsh\l"
+	.string "system to transient pressure.\p"
+	.string "In the margin: transient. Underlined\n"
+	.string "twice. The pressure was not transient.\l"
+	.string "The protection was.$"
+
+ParcelFernwickSurvey_Model_Text_1:
+# 124 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	.string "METHOD. Counts were taken at the\n"
+	.string "breeding pools in spring and\l"
+	.string "extrapolated to the marsh by habitat\l"
+	.string "area. Years with incomplete coverage\l"
+	.string "were filled by interpolation.\p"
+	.string "In the margin: three of eleven years\n"
+	.string "filled. The filled years are the steep\l"
+	.string "part of the curve.\p"
+	.string "RESULTS. Figure 2 shows the fitted\n"
+	.string "curve against the observations. The fit\l"
+	.string "is strong. Figure 3 projects the curve\l"
+	.string "to full recovery.\p"
+	.string "In the margin: figure 2 stops in year\n"
+	.string "eight. Figure 3 is where the Foundation\l"
+	.string "lives.$"
+
+ParcelFernwickSurvey_Model_Text_2:
+# 125 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	.string "DISCUSSION. The result suggests that\n"
+	.string "wetland systems of this type possess\l"
+	.string "substantial capacity to absorb\l"
+	.string "disturbance and return, and that\l"
+	.string "protection, where granted, may be\l"
+	.string "reviewed as recovery proceeds.\p"
+	.string "In the margin, the only long note: She\n"
+	.string "wrote this to win the listing and it won\l"
+	.string "it. Then it was read by people who\l"
+	.string "wanted the last sentence and not the\l"
+	.string "first. A true thing said too strongly\l"
+	.string "becomes a false thing said by someone\l"
+	.string "else. We stake. We do not model. This is\l"
+	.string "why.\p"
+	.string "On the back cover, newer: Lent to the\n"
+	.string "ranger. Return it to the shelf, not to\l"
+	.string "me. I have read it enough.$"
