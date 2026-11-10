@@ -219,13 +219,15 @@ list that was green on 2026-11-07 is the one in the handoff.
   run a `givemon` scene first (Marta's round) and then walk into a line.
 - A flag set after `giveitem` needs ~3000 frames of dismissal before it
   reads back; `--dismiss 1200` is too short.
-- **A savestate pins the current map's objects.** The object templates live
-  in the save block and are copied from ROM only when a map loads, so after
-  changing a map's NPCs (position, facing, sight) a state saved ON that map
-  still has the old ones. Replay from a state saved on the previous map so
-  the crossing reloads them (the Corridor trainer re-faced in ROM kept
-  challenging from the old facing for two runs until s15 was replayed from
-  the Wetlands state). Layout (.bin) changes do not have this problem.
+- **A savestate pins the current map: its objects AND its layout.** The
+  object templates live in the save block and the map grid in
+  `gBackupMapLayout`, both copied from ROM only when a map loads, so after
+  changing a map's NPCs or tiles a state saved ON that map still has the
+  old ones (the Corridor trainer re-faced in ROM kept challenging from the
+  old facing; the levee's player elevation stayed at the old tile values).
+  Replay from a state saved on the previous map so the crossing reloads
+  everything. Script changes shift every address and need a replay from
+  s01.
 - **Never rebuild the probe ROM under a running chain**: mGBA maps the file
   and the live segment dies with SIGBUS (exit 135). Stop, build, resume.
 - **Menus remember their cursor.** The START menu reopens on the entry picked

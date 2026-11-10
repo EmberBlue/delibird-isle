@@ -36,9 +36,11 @@ tail -f $SKALD_SCRATCH/play/run/run_rest.log
 
 ## Rules the chains taught (also in skald-verify)
 
-- A savestate pins the current map's NPCs. After changing a map's objects, resume from the
-  state saved on the previous map so the crossing reloads them.
-- Script changes shift ROM addresses and invalidate every state; layout and object edits do not.
+- A savestate pins the current map's NPCs and its layout (the RAM copies). After changing a
+  map's objects or tiles, resume from the state saved on the previous map so the crossing
+  reloads them.
+- Script changes shift ROM addresses and invalidate every state; layout and object edits only
+  invalidate states saved on that map.
 - `GOTO` plans on the live map (ledges, surf) and B's through scenes before calling a tile
   blocked; it still cannot read menus, so a choice box is picked with `TAP:DOWN` + `A:1`
   repeated (see `PICK1` in chain5, `PICK2` in chain6).

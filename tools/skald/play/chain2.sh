@@ -46,7 +46,8 @@ seg s20 s19 - --walk TEACHHM:HM06,2 --walk WAIT:200 --walk GOTO:12,1 --walk LEFT
 # the walk back for the Wetland signing: River -> Floodbasin -> Corridor -> Wetlands -> Fernwick, ILEX's report
 # at the Survey office (door = warp 4; ILEX at (6,3)), then HALE at the HQ (warp 1; HALE at (6,6))
 seg s21 s20 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_FLOODBASIN
-seg s22 s21 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_CORRIDOR
+# back in the Floodbasin's neck the rocks have grown back: smash the one below, then south to the Corridor
+seg s22 s21 - --walk DOWN:0 --walk TALK:2 --walk WAIT:500 --walk DOWN:0 --walk WAIT:100 --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_CORRIDOR
 seg s23 s22 - --walk GOTOEDGE:left --walk LEFT:0 --walk WAIT:600 --expect MAP_PARCEL_WETLANDS
 seg s24 s23 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_FERNWICK
 seg s25 s24 FLAG_SKALDMERE_WETLAND_CERT --walk GOTOWARP:4 --walk WAIT:400 --walk GOTO:6,4 --walk UP:0 --walk TALK:5 --walk WAIT:600 \
