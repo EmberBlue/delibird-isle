@@ -105,7 +105,15 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
         for (dx, dy) in DIRS:
             nx, ny = cx + dx, cy + dy
             n = (nx, ny)
-            if n in prev or not passable(nx, ny, n in goals):
+            if n in prev:
+                continue
+            if 0 <= nx < W and 0 <= ny < H and info(nx, ny)[2] == f"MB_JUMP_{DIRS[(dx, dy)]}":
+                land = (nx + dx, ny + dy)           # a ledge: one press, the player lands two tiles on
+                if land not in prev and passable(*land, land in goals):
+                    prev[land] = cur
+                    q.append(land)
+                continue
+            if not passable(nx, ny, n in goals):
                 continue
             if not elev_ok(ce, info(nx, ny)[1]):
                 continue
@@ -119,14 +127,21 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
         path.append(c)
         c = prev[c]
     path.reverse()
-    # compress into runs
+    # compress into runs; a ledge jump (two tiles in one step) is its own one-press run, since the
+    # game finishes the jump by itself and the harness re-plans from wherever it lands
     runs = []
     for a, b in zip(path, path[1:]):
-        d = DIRS[(b[0] - a[0], b[1] - a[1])]
-        if runs and runs[-1][0] == d:
+        dx, dy = b[0] - a[0], b[1] - a[1]
+        if abs(dx) + abs(dy) == 2:
+            runs.append([DIRS[(dx // 2, dy // 2)], 1])
+            runs.append(None)                     # break the run after the jump
+            continue
+        d = DIRS[(dx, dy)]
+        if runs and runs[-1] is not None and runs[-1][0] == d:
             runs[-1][1] += 1
         else:
             runs.append([d, 1])
+    runs = [r for r in runs if r is not None]
     return path, runs
 
 

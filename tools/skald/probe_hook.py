@@ -32,10 +32,14 @@ HOOK = f"""    if (gProbe[0] != 0) {MARK}: tools/skald/walktest.py pokes gProbe 
             AddBagItem(gProbe[10], 1); {MARK}
         if (gProbe[11] != 0) {MARK}: a level-100 partner so the harness can win battles
         {{ {MARK}
-            u16 mv = 58; u8 pp = 16; {MARK}: ICE BEAM in slot 1 -- no type is immune, so mashing A always ends the fight
-            ScriptGiveMon(gProbe[11], 100, 0); {MARK}
-            SetMonData(&gPlayerParty[0], MON_DATA_MOVE1, &mv); {MARK}
-            SetMonData(&gPlayerParty[0], MON_DATA_PP1, &pp); {MARK}
+            u16 mv[4] = {{58, 585, 408, 573}}; u8 pp[4] = {{16, 24, 32, 32}}; u8 bon = 0xFF; {MARK}: ICE BEAM, MOONBLAST, POWER GEM, FREEZE-DRY: no type is immune to all four; 104 PP between heals
+            ScriptGiveMon(gProbe[11], 100, 472); {MARK}: holding LEFTOVERS, so a chapter of fights does not wear it down
+            for (i = 0; i < 4; i++) {MARK}
+            {{ {MARK}
+                SetMonData(&gPlayerParty[0], MON_DATA_MOVE1 + i, &mv[i]); {MARK}
+                SetMonData(&gPlayerParty[0], MON_DATA_PP1 + i, &pp[i]); {MARK}
+            }} {MARK}
+            SetMonData(&gPlayerParty[0], MON_DATA_PP_BONUSES, &bon); {MARK}
         }} {MARK}
         if (gProbe[12] != 0) {MARK}: up to two vars, id/value pairs
             VarSet(gProbe[12], gProbe[13]); {MARK}

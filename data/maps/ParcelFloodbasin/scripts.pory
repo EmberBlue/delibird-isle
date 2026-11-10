@@ -44,6 +44,12 @@ script ParcelFloodbasin_OnTransition {
     } else {
         clearflag(FLAG_TEMP_2)
     }
+    // BREEN steps out of the river neck after the exam (Movement_FLD_BreenAside ends at
+    // (15,2)); keep him there on every later visit, or he blocks the only tile north.
+    if (flag(FLAG_BADGE03_GET)) {
+        setobjectxyperm(LOCALID_FLOODBASIN_GYM, 15, 2)
+        setobjectmovementtype(LOCALID_FLOODBASIN_GYM, MOVEMENT_TYPE_FACE_UP)
+    }
     end
 }
 

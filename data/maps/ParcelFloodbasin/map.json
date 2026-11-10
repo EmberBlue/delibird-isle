@@ -201,8 +201,8 @@
     {
       "local_id": "LOCALID_FLD_VIL_OLDWOMAN",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 28,
-      "y": 92,
+      "x": 31,
+      "y": 90,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -229,8 +229,8 @@
     {
       "local_id": "LOCALID_FLD_VIL_GIRL",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 27,
-      "y": 92,
+      "x": 30,
+      "y": 90,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -579,8 +579,8 @@
     {
       "local_id": "LOCALID_STRINGER",
       "graphics_id": "OBJ_EVENT_GFX_SKALD_INGER",
-      "x": 36,
-      "y": 92,
+      "x": 38,
+      "y": 91,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
