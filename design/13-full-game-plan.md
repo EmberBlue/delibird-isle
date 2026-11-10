@@ -833,4 +833,18 @@ quest is built, how the peer works) before they are asked six more times.
   pressed START. Both handoffs into it now go to the title. Boot to title
   is about ten seconds with no input; the splash stays as the expansion's
   credit.
+- **2026-11-10 — the first real playthrough finds a soft-lock.** The
+  harness can now play the game in savestate segments from a real new
+  game (`walktest.py --save-state/--load-state`, `--fight`, `GOTO`,
+  `TALK`; see the verify skill). Ferry, Saltwick, RIN and the SEEDOT,
+  Route 1 with its trainers and the poacher bridge, Mistwood's three
+  snares and SKELD's HM01 all play as written. Then the deadfall: in the
+  expansion's Gen 9 learnsets none of the seven Meadow partners could
+  learn CUT, while SKELD says "Teach it to your partner" -- a player who
+  had caught nothing (ZIGZAGOON is the only local wild CUT user) was
+  stuck in the forest. `tools/skald/partner_cut.py` adds CUT to the
+  seven partner lines. The spine never saw this because it spawns past
+  the gate; the sweep never saw it because the tree is a cuttable object,
+  not a warp. This is what the honest "not played end to end" bullet in
+  the handoff was for.
 

@@ -433,9 +433,16 @@ replaces is gone from the tree).
   content pass spot-checked from the harness (boards, pairs, books, quest
   finds, post-epilogue lines, the PokéNav map, the title). Re-run on
   2026-11-10 after every content and art pass: sweep 252 OK / 0 BAD,
-  spine all fifteen flags. What has not happened is one person playing
-  from the ferry to the credits in a single save; do that when there is
-  time, with a notebook open.
+  spine all fifteen flags. **Now being played for real** (2026-11-10):
+  `walktest.py` keeps savestates across runs (`--save-state` /
+  `--load-state`), fights or runs from battles (`--fight`), plans walks on
+  the live map (`GOTO`) and talks (`TALK`); the chapter-1 chain lives in
+  the scratchpad as `play/chain_all.sh` (ferry → Saltwick → RIN → the
+  SEEDOT → Route 1 → the bridge → Mistwood → the snares → HM01 → CUT →
+  Fernwick → HALE → TARN → the signing). First real finding: no Meadow
+  partner could learn CUT (fixed, `partner_cut.py`). Chapters 2-8 are
+  still to be played this way; the other HM gates (Rock Smash, Strength,
+  Surf, Fly, Dive, Flash) need the same learnset check first.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to

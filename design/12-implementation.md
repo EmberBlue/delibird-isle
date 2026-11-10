@@ -508,6 +508,15 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   case 3. The film's code stays in the tree unused; `FLAG_SKIP_INTRO`
   still jumps from the copyright screen to the main menu. Boot to the
   settled title is ~600 frames with no input.
+- **HM gates and the expansion's learnsets.** `teachable_learnsets.h` is
+  Gen 9 era: species that could learn an HM in Emerald often cannot here
+  (SEEDOT, LOTAD, SHROOMISH, NUMEL, ELECTRIKE, DODUO, CARVANHA all lacked
+  CUT). Any gate that needs a field move must be checked against what the
+  player can actually hold at that point: the seven Meadow partners get
+  CUT from `tools/skald/partner_cut.py`; do the same audit for Rock Smash
+  (BREEN), Strength (SLUICE), Surf (VALE), Fly (HARLAND), Dive (VANE) and
+  Flash (MIRREN) before trusting a gate -- the party menu's "NOT ABLE!"
+  is the player's only warning.
 
 ## RAM budget (the binding constraint)
 

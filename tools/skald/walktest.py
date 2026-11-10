@@ -110,11 +110,27 @@ def main():
     gmain = syms.get("gMain")
     def in_battle():
         return bool(gmain) and (core.memory.u8[gmain + 0x439] >> 1) & 1
-    def fight(limit=15000):        # through a battle: A (FIGHT, first move, text) with a B every fifth tap to back out
-        spent, taps = 0, 0          # of a "switch POKéMON?" prompt or the party menu; stop when inBattle clears
+    btf = syms.get("gBattleTypeFlags")
+    def fight(limit=20000):        # through a battle until inBattle clears.
+        spent, taps = 0, 0
+        # A wild battle is run from (a level-100 partner always escapes): UP, LEFT to FIGHT, DOWN, RIGHT to RUN, A,
+        # then B through the text. Fighting every encounter drains PP until Recover is the only move left and a
+        # wild battle can never end. A trainer battle is fought: per six taps A (FIGHT), a cursor nudge, A (the
+        # move), A, A, B -- the nudge cycles the move so an exhausted move's "no PP left" cannot loop forever.
+        wild = btf is not None and not (core.memory.u32[btf] & 8)   # BATTLE_TYPE_TRAINER
+        nudges = ["RIGHT", "DOWN", "LEFT", "UP"]
+        run_keys = ["UP", "LEFT", "DOWN", "RIGHT", "A", "B", "B", "B"]
         while in_battle() and spent < limit:
-            step(8, "B" if taps % 5 == 4 else "A"); step(32); spent += 40; taps += 1
-        if spent: step(120); dismiss(240)   # the exp/level-up text and the fade back
+            if wild:
+                key = run_keys[taps % len(run_keys)]
+            else:
+                k = taps % 6
+                key = nudges[(taps // 6) % 4] if k == 1 else ("B" if k == 5 else "A")
+            step(8, key); step(32); spent += 40; taps += 1
+        if spent:                   # the exp / level-up text and the fade back, plain B (no re-entry)
+            step(120)
+            for f in range(0, 240, 45): presses[frame + f] = ("B", 8)
+            step(250)
         return spent
     def set_battle_style_set():
         # SaveBlock2: u16 at 0x14 holds optionsTextSpeed:3, optionsWindowFrameType:5, optionsSound:1, optionsBattleStyle:1.
@@ -172,6 +188,7 @@ def main():
         elif d.upper() == "WAIT":   # WAIT:n -- just mash B for n frames (a long scene, a chained warp sequence)
             dismiss(int(n)); continue
         elif d.upper() == "TAP":    # TAP:KEY -- one tap (menus: TAP:START, TAP:DOWN, TAP:A, TAP:R ...), no dismiss phase
+            if a.trace: print(f"  TAP {n.upper()} @ {frame}", flush=True)
             step(8, n.upper()); step(40); continue
         elif d.upper() == "IDLE":   # IDLE:n -- wait n frames with no input (menu fades, text printing)
             step(int(n)); continue
@@ -209,6 +226,7 @@ def main():
                 if d.upper() != "GOTO" and len(path) == 1:
                     break
                 rd, rk = runs[0]
+                print(f"  GOTO {target}: at ({px},{py}) {rd} x{rk} (frame {frame})", flush=True)
                 step(16 * (rk - 1) + 12, rd); step(30)
                 dismiss(120)
                 nm, nx, ny = live_pos()

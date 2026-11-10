@@ -4364,6 +4364,7 @@ static const u16 sSirfetchdTeachableLearnset[] = {
 
 #if P_FAMILY_DODUO
 static const u16 sDoduoTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
@@ -4390,6 +4391,7 @@ static const u16 sDoduoTeachableLearnset[] = {
 };
 
 static const u16 sDodrioTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
@@ -13072,6 +13074,7 @@ static const u16 sDustoxTeachableLearnset[] = {
 
 #if P_FAMILY_LOTAD
 static const u16 sLotadTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -13103,6 +13106,7 @@ static const u16 sLotadTeachableLearnset[] = {
 };
 
 static const u16 sLombreTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -13147,6 +13151,7 @@ static const u16 sLombreTeachableLearnset[] = {
 };
 
 static const u16 sLudicoloTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -13197,6 +13202,7 @@ static const u16 sLudicoloTeachableLearnset[] = {
 
 #if P_FAMILY_SEEDOT
 static const u16 sSeedotTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLET_SEED,
@@ -13697,6 +13703,7 @@ static const u16 sMasquerainTeachableLearnset[] = {
 
 #if P_FAMILY_SHROOMISH
 static const u16 sShroomishTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_BULLET_SEED,
@@ -14744,6 +14751,7 @@ static const u16 sMedichamTeachableLearnset[] = {
 
 #if P_FAMILY_ELECTRIKE
 static const u16 sElectrikeTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_DOUBLE_EDGE,
@@ -14774,6 +14782,7 @@ static const u16 sElectrikeTeachableLearnset[] = {
 };
 
 static const u16 sManectricTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_DOUBLE_EDGE,
@@ -15155,6 +15164,7 @@ static const u16 sSwalotTeachableLearnset[] = {
 
 #if P_FAMILY_CARVANHA
 static const u16 sCarvanhaTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_DIVE,
@@ -15185,6 +15195,7 @@ static const u16 sCarvanhaTeachableLearnset[] = {
 };
 
 static const u16 sSharpedoTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_DIVE,
@@ -15290,6 +15301,7 @@ static const u16 sWailordTeachableLearnset[] = {
 
 #if P_FAMILY_NUMEL
 static const u16 sNumelTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_DEFENSE_CURL,
@@ -15322,6 +15334,7 @@ static const u16 sNumelTeachableLearnset[] = {
 };
 
 static const u16 sCameruptTeachableLearnset[] = {
+    MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
     MOVE_DEFENSE_CURL,
