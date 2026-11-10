@@ -230,9 +230,9 @@ passes except the retired Station's.
 ## Known-open (honest list)
 
 - **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816
-  rematch tiers) against the 1,000 target -- met; **~71,300 hand-written
+  rematch tiers) against the 1,000 target -- met; **~72,400 hand-written
   words** (every `_R2`–`_R5`/`_FirstWin` rematch script excluded; ~94k
-  with them; 684 objects, 329 readable/hidden events; 33 side quests; 47 overheard conversations) against 100k -- the
+  with them; 686 objects, 333 readable/hidden events; 33 side quests; 47 overheard conversations) against 100k -- the
   remaining gap. Recount with the snippet in §13's 2026-11-10 entries
   (script bodies minus the rematch scripts, plus the notebook's C strings
   and the 81 dex entries). The rematch tiers

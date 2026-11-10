@@ -95,7 +95,15 @@ script ParcelMeadow_Rin {
         release
         end
     }
-    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+    if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("RIN: Six left in the paddock and none of them is going anywhere. I've stopped calling them the ones that wait. They're the ones that stay.\pThe marsh is next for you, HALE says. Whatever you find out there, come back and tell the paddock. They like the sound of it."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("RIN: The NUMEL went up the slope on its own last week. Stood at the gate for a day and then walked north. I let it. Nobody's chosen it in two years; it chose.\pThe meadow's for edge species. Sometimes the edge moves."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("RIN: The river village stood up to the Board. The ferry hands said so. I read the Board's bulletin to the paddock in a silly voice and the CARVANHA bit the fence.\pI don't think it understood. I think it liked the voice."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("RIN: A cadet came for the SEEDOT. Stood still for an hour in the rain and the SEEDOT dropped off its branch onto her head. That counts.\pFive left. They watch the gate when the ferry's in. All of them. I don't tell them the odds."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
         msgbox(format("RIN: Look at you, all certified. The meadow's quieter without your partner in it. Don't tell it I said that."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("RIN: HALE's at the station. Take the track north through MISTWOOD. It's a bit of a walk, and the woods are full of people who want to battle.\pThat's a good thing, by the way. Your partner needs the practice."), MSGBOX_DEFAULT)
@@ -118,6 +126,11 @@ script ParcelMeadow_Sign {
 script ParcelMeadow_Doduo {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The DODUO watches the gate. It has watched the gate since the ferry came in with you on it, and it is the only one of the seven that still thinks somebody else is coming.\pIt is right. Somebody always is."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("The DODUO looks at you with one head. The other one is watching the trees."), MSGBOX_DEFAULT)
         release
@@ -141,6 +154,11 @@ script ParcelMeadow_Doduo {
 script ParcelMeadow_Shroomish {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The SHROOMISH has moved to the damp corner under the hedge and is doing very well there. It has been read about in a hearing, in a way, and has not noticed."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("The SHROOMISH is asleep under the tree. Or pretending. Hard to tell with SHROOMISH."), MSGBOX_DEFAULT)
         release
@@ -164,6 +182,11 @@ script ParcelMeadow_Shroomish {
 script ParcelMeadow_Seedot {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A SEEDOT hangs from the gate rail where a different SEEDOT used to hang. RIN says it came in on its own from the wood and took the spot. The meadow has a vacancy policy. It did not write it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("The SEEDOT is hanging from the branch by its stem, pretending to be an acorn. It's not fooling anyone."), MSGBOX_DEFAULT)
         release
@@ -187,6 +210,11 @@ script ParcelMeadow_Seedot {
 script ParcelMeadow_Lotad {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The LOTAD has the whole pool to itself and sits exactly where it sat the day you came in. It would have been a good partner. It is a good pool."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("The LOTAD is sitting at the edge of the pool with its pad in the water. Living the dream."), MSGBOX_DEFAULT)
         release
@@ -210,6 +238,11 @@ script ParcelMeadow_Lotad {
 script ParcelMeadow_Carvanha {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The CARVANHA has worn a groove in the fence rail with its teeth. RIN has started reading it the Board's bulletins on purpose. It bites harder at the second column."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("The CARVANHA circles the pool. It has been circling the pool since you got here. It will circle the pool after you leave."), MSGBOX_DEFAULT)
         release
@@ -233,6 +266,11 @@ script ParcelMeadow_Carvanha {
 script ParcelMeadow_Numel {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The NUMEL's corner is empty. It walked north on its own before the hearing and RIN let it. There is a dent in the turf the shape of a NUMEL, and the grass is already closing it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("The NUMEL is lying in the warm sand. It hasn't noticed you. It may not have noticed anything this week."), MSGBOX_DEFAULT)
         release
@@ -256,6 +294,11 @@ script ParcelMeadow_Numel {
 script ParcelMeadow_Electrike {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The ELECTRIKE's fur stands up when the weather turns, same as ever. The Station's keeper came down to borrow it for a forecast once and RIN said no. It forecasts for the paddock now. The paddock is grateful."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SYS_POKEMON_GET)) {
         msgbox(format("The ELECTRIKE runs the fence line, back and forth, back and forth. Your hair stands up when it passes."), MSGBOX_DEFAULT)
         release

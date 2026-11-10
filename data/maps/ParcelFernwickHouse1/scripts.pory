@@ -33,3 +33,17 @@ script ParcelFernwickHouse1_ReadShelf {
     msgbox(format("A shelf of Corps field guides and a shelf of dredging manuals, spine to spine. Neither side has been dusted. Both have been read."), MSGBOX_SIGN)
     end
 }
+
+script ParcelFernwickHouse1_Sister {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SISTER: I wrote the Reedmere survey. The pipe. He read it at the dinner table with the gravy going cold and didn't say a word till the end.\pThen he said: that's my shift you've written about. I said yes. He said: you spelled the foreman's name wrong. I had. He fixed it. That's us, now. He fixes my spelling."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("SISTER: Corps, provisional, two years. He's on the dredge. We don't talk about work, so we don't talk.\pThe radio's on the weather because the weather's the one thing that happens to both of us the same. Sit down if you like. There's a third chair; it's been empty a while."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("SISTER: Corps, provisional, two years. He's on the dredge. We don't talk about work, so we don't talk.\pThe radio's on the weather because the weather's the one thing that happens to both of us the same."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

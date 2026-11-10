@@ -32,3 +32,17 @@ script ParcelFernwickHouse3_ReadDresser {
     msgbox(format("A dresser of good plates. One has been moved to the front and turned so its chip faces the wall."), MSGBOX_SIGN)
     end
 }
+
+script ParcelFernwickHouse3_Granddaughter {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: Gran kept the receipt. One loaf, paid in coin. It's in the field guide now, at the marsh plants, where she says the scientist would have wanted it.\pI'm not allowed to bake with the field guide open. I do anyway. The pages smell of flour. She pretends not to notice."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("GIRL: Gran says a loaf is a day. You bake it in the morning and it's gone by night, and the next day you bake again, and that's how you know you're alive.\pShe said it about the scientist's bread. Then she stopped talking and kneaded for a long time."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GIRL: I do the morning batch. Gran does the talking.\pShe says the ovens in this town have been warm for two hundred years without a break and she's not going to be the one who lets them go cold. So I get up at four."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

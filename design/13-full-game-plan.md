@@ -557,4 +557,18 @@ quest is built, how the peer works) before they are asked six more times.
   the same as wanting it), the dredge hand and the old lifeguard on the
   closed beach (you can't close a beach that's already gone). ~1,800
   words, 22 objects. Forty-seven conversations in the world now.
+- **2026-11-10 — Rin, the unchosen, the Courier, two more residents.**
+  Rin has six states across the arc now (a cadet comes for the SEEDOT in
+  the rain; the CARVANHA bites the fence at the Board's bulletin; the
+  NUMEL walks north on its own and is let; "I've stopped calling them the
+  ones that wait. They're the ones that stay"), and each of the seven
+  partners has a line after the hearing (the DODUO still watches the gate
+  for somebody else; the NUMEL's dent in the turf closing over). The
+  Skaldmere Courier's front page is pinned by the door of every Center
+  (`Skald_EventScript_Courier`, one shared script, seven states: the lab
+  cleared overnight, first FOREST in nine years, the ratio of page two to
+  page four, WHICH YEAR?, the slide and the ribbon on one page, FORTY
+  JOBS and THIRTY-ONE, ITEM SEVEN TOOK THE AFTERNOON). The Fernwick dredge
+  house has its sister (Corps, provisional, two years; he fixes her
+  spelling now) and the baker her granddaughter (a loaf is a day).
 
