@@ -18,7 +18,7 @@ MAPFILE = [ROOT / "pokeemerald.map"]
 def symbols():
     out = {}
     for line in MAPFILE[0].read_text().splitlines():
-        m = re.match(r"\s+0x([0-9a-f]{8})\s+(g\w+)$", line)
+        m = re.match(r"\s+0x([0-9a-f]{8})\s+([A-Za-z_]\w*)$", line)   # globals and functions (CB2_* etc.)
         if m: out[m.group(2)] = int(m.group(1), 16)
     return out
 
@@ -192,6 +192,60 @@ def main():
             step(8, n.upper()); step(40); continue
         elif d.upper() == "IDLE":   # IDLE:n -- wait n frames with no input (menu fades, text printing)
             step(int(n)); continue
+        elif d.upper() == "TEACHHM":
+            # TEACHHM:i,slot -- from the field: START, the BAG entry (3rd with the dex, 2nd without), the TMs & HMs
+            # pocket, the i-th item, then A every 300 frames until the party menu's callback is live, DOWN to
+            # the slot, A, A until the party menu closes, B until the field is back. Screen states are read
+            # from gMain.callback2, so nothing depends on how long a text box takes to print.
+            cb2 = lambda: core.memory.u32[gmain + 4] & ~1      # function pointers carry the Thumb bit
+            CB = {k: syms.get(k) for k in ("CB2_BagMenuRun", "CB2_Overworld", "CB2_OverworldBasic", "CB2_ReturnToField",
+                                           "CB2_ReturnToFieldWithOpenMenu", "CB2_ReturnToFieldContinueScript")}
+            assert CB["CB2_BagMenuRun"] and CB["CB2_Overworld"], f"callbacks missing from the map: {CB}"
+            field_cbs = {v for k, v in CB.items() if v and k != "CB2_BagMenuRun"}
+            # the party menu's own callback is static (not in the map): in this flow it is the screen
+            # that is neither the bag nor the field
+            CB["CB2_UpdatePartyMenu"] = None
+            def in_party():
+                c = cb2()
+                return c != CB["CB2_BagMenuRun"] and c not in field_cbs
+            item, slot = (int(v) for v in n.split(","))
+            sb1 = core.memory.u32[sb1p]
+            flags_off = core.memory.u16[probe + 16]
+            has_dex = (core.memory.u8[sb1 + flags_off + (flags["FLAG_SYS_POKEDEX_GET"] >> 3)] >> (flags["FLAG_SYS_POKEDEX_GET"] & 7)) & 1
+            step(8, "START"); step(60)
+            for _ in range(2 if has_dex else 1):
+                step(8, "DOWN"); step(16)
+            step(8, "A")
+            for _ in range(40):                      # the bag opens
+                step(10)
+                if cb2() == CB["CB2_BagMenuRun"]: break
+            step(90)
+            step(8, "RIGHT"); step(40); step(8, "RIGHT"); step(120)  # TMs & HMs pocket (let the switch settle)
+            step(8, "UP"); step(20); step(8, "UP"); step(20)          # cursor to the top of the list
+            for _ in range(item):
+                step(8, "DOWN"); step(20)
+            step(30)
+            presses_done = 0
+            while not in_party() and presses_done < 14:
+                if a.trace: print(f"  TEACHHM A @ {frame} cb2={cb2():#x}", flush=True)
+                step(8, "A"); step(300); presses_done += 1
+            if a.trace: print(f"  TEACHHM after A-loop @ {frame} cb2={cb2():#x} party={in_party()}", flush=True)
+            if not in_party():
+                print(f"  TEACHHM: party menu never opened (cb2 {cb2():#x})")
+            else:
+                step(90)
+                for _ in range(slot - 1):
+                    step(8, "DOWN"); step(30)
+                step(8, "A"); step(300)
+                for _ in range(12):                  # the learn text, a replace prompt if any (A takes it)
+                    if not in_party(): break
+                    step(8, "A"); step(300)
+            for _ in range(10):
+                if cb2() == CB["CB2_Overworld"]: break
+                step(8, "B"); step(60)
+            step(60)
+            print(f"  TEACHHM item {item} slot {slot}: back in the field = {cb2() == CB['CB2_Overworld']}")
+            continue
         elif d.upper() == "TALK":   # TALK:n -- A, wait for the text, then n more A presses spaced for printing
             step(8, "A"); step(420)   # (a YES/NO prompt takes the default YES)
             for _ in range(int(n)):

@@ -84,7 +84,13 @@ spaced A presses (a YES/NO takes the default YES). Start the chain from the
 real new game: `--spawn MAP_PARCEL_FERRY:4,6 --party SPECIES_MEWTWO --walk
 WAIT:4500` lands on Saltwick's pier with the opening played. The harness holds
 a direction for 16n+12 frames, so `DIR:n` moves n+1 tiles (route.py already
-prints n-1).
+prints n-1). `--walk TEACHHM:i,slot` teaches the i-th item of the TMs & HMs
+pocket to party slot `slot` through the real bag menus, reading the screen
+state from `gMain.callback2` (mask the Thumb bit when comparing a function
+pointer with a map symbol: `0x...87d` is `CB2_BagMenuRun` at `0x...87c`); the
+party menu's own callback is static, so "neither the bag nor the field" is
+how it is recognised. Text-timing scripts for menus are not reproducible --
+drive menus by state, never by frame counts.
 
 See a whole map without booting: `python3 tools/skald/pal_tool.py render
 ParcelFernwick out.png` draws it from tile data (seconds, exact colours).
