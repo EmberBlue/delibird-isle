@@ -467,7 +467,9 @@ replaces is gone from the tree).
   taught: `reach.py --trainers` (a spotted-you trainer parks on its stop
   tile), savestates pin a map's NPCs (replay from the previous map after
   an NPC change), SURF is main-path so VALE lends a MARILL to parties with
-  no swimmer.
+  no swimmer, and **events only work at the player's elevation**
+  (`event_elev.py`: 33 NPCs/triggers/items in the elevation-5 and -4
+  zones were silent, 19 water-standing NPCs need the wildcard 0).
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to

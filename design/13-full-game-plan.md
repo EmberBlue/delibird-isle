@@ -902,5 +902,14 @@ quest is built, how the peer works) before they are asked six more times.
   or notice the player only beside them. And a design hole the staged
   audit exposed: SURF is main-path (the summit) but five of the eight
   Meadow partners cannot learn it, so VALE now lends a MARILL to a party
-  with no swimmer.
+  with no swimmer. Then the quiet one: the engine matches a trigger, a
+  sign or a talkable NPC to the player only at the player's elevation,
+  which is the tile's. The Floodbasin hamlet and the Highlands terrace
+  were built at elevation 5 and the boardwalk zones at 4 with their
+  people, item balls and triggers left at the default 3: 33 silent events
+  (the relief-line villagers, the HOMESTEADER, ILEX on the plateau, the
+  Corridor's DAG), plus 19 NPCs standing in water (the sick MAGIKARP, the
+  flooded hamlet's residents) that need the wildcard 0 because the player
+  reads them from a bridge. `event_elev.py` finds and fixes both; the
+  standard audit warns on them now.
 
