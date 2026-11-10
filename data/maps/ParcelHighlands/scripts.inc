@@ -682,26 +682,36 @@ ParcelHighlands_ValeGate::
 # 395 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_ValeGate_Text_1, MSGBOX_DEFAULT
 # 396 "data/maps/ParcelHighlands/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_GYM5, ParcelHighlands_ValeGate_Text_2
+	msgbox ParcelHighlands_ValeGate_Text_2, MSGBOX_YESNO
 # 397 "data/maps/ParcelHighlands/scripts.pory"
-	setflag FLAG_BADGE05_GET
-# 398 "data/maps/ParcelHighlands/scripts.pory"
-	call Common_EventScript_PlayGymBadgeFanfare
-# 399 "data/maps/ParcelHighlands/scripts.pory"
-	msgbox ParcelHighlands_ValeGate_Text_3, MSGBOX_DEFAULT
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelHighlands_ValeGate_5
 # 400 "data/maps/ParcelHighlands/scripts.pory"
-	giveitem ITEM_HM03
-# 401 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_ValeGate_Text_4, MSGBOX_DEFAULT
-# 402 "data/maps/ParcelHighlands/scripts.pory"
-	closemessage
+# 401 "data/maps/ParcelHighlands/scripts.pory"
+	setflag FLAG_SKALD_EXAM_5
+ParcelHighlands_ValeGate_4:
 # 403 "data/maps/ParcelHighlands/scripts.pory"
-	applymovement 8, Movement_HL_ValeBack
+	trainerbattle_no_intro TRAINER_SKALD_GYM5, ParcelHighlands_ValeGate_Text_5
 # 404 "data/maps/ParcelHighlands/scripts.pory"
-	waitmovement 0
+	setflag FLAG_BADGE05_GET
 # 405 "data/maps/ParcelHighlands/scripts.pory"
-	setvar VAR_TEMP_4, 1
+	call Common_EventScript_PlayGymBadgeFanfare
 # 406 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_ValeGate_Text_6, MSGBOX_DEFAULT
+# 407 "data/maps/ParcelHighlands/scripts.pory"
+	giveitem ITEM_HM03
+# 408 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_ValeGate_Text_7, MSGBOX_DEFAULT
+# 409 "data/maps/ParcelHighlands/scripts.pory"
+	closemessage
+# 410 "data/maps/ParcelHighlands/scripts.pory"
+	applymovement 8, Movement_HL_ValeBack
+# 411 "data/maps/ParcelHighlands/scripts.pory"
+	waitmovement 0
+# 412 "data/maps/ParcelHighlands/scripts.pory"
+	setvar VAR_TEMP_4, 1
+# 413 "data/maps/ParcelHighlands/scripts.pory"
 	releaseall
 	end
 
@@ -710,3266 +720,3271 @@ ParcelHighlands_ValeGate_2:
 	setvar VAR_TEMP_4, 1
 	end
 
+ParcelHighlands_ValeGate_5:
+# 398 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_ValeGate_Text_3, MSGBOX_DEFAULT
+	goto ParcelHighlands_ValeGate_4
+
 
 ParcelHighlands_GymVale::
-# 410 "data/maps/ParcelHighlands/scripts.pory"
+# 417 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 411 "data/maps/ParcelHighlands/scripts.pory"
+# 418 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 412 "data/maps/ParcelHighlands/scripts.pory"
+# 419 "data/maps/ParcelHighlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelHighlands_GymVale_2
 ParcelHighlands_GymVale_1:
-# 415 "data/maps/ParcelHighlands/scripts.pory"
+# 422 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_GymVale_Text_0, MSGBOX_DEFAULT
-# 416 "data/maps/ParcelHighlands/scripts.pory"
+# 423 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_GymVale_2:
-# 413 "data/maps/ParcelHighlands/scripts.pory"
+# 420 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_GymVale_Rematch
 	goto ParcelHighlands_GymVale_1
 
 
-# 419 "data/maps/ParcelHighlands/scripts.pory"
+# 426 "data/maps/ParcelHighlands/scripts.pory"
 Movement_HL_ValeApproach:
-# 419 "data/maps/ParcelHighlands/scripts.pory"
+# 426 "data/maps/ParcelHighlands/scripts.pory"
 	walk_left
-# 419 "data/maps/ParcelHighlands/scripts.pory"
+# 426 "data/maps/ParcelHighlands/scripts.pory"
 	walk_left
 	step_end
 
-# 420 "data/maps/ParcelHighlands/scripts.pory"
+# 427 "data/maps/ParcelHighlands/scripts.pory"
 Movement_HL_ValeBack:
-# 420 "data/maps/ParcelHighlands/scripts.pory"
+# 427 "data/maps/ParcelHighlands/scripts.pory"
 	walk_right
-# 420 "data/maps/ParcelHighlands/scripts.pory"
+# 427 "data/maps/ParcelHighlands/scripts.pory"
 	walk_right
-# 420 "data/maps/ParcelHighlands/scripts.pory"
+# 427 "data/maps/ParcelHighlands/scripts.pory"
 	face_left
 	step_end
 
-# 421 "data/maps/ParcelHighlands/scripts.pory"
+# 428 "data/maps/ParcelHighlands/scripts.pory"
 Movement_HL_FaceRight:
-# 421 "data/maps/ParcelHighlands/scripts.pory"
+# 428 "data/maps/ParcelHighlands/scripts.pory"
 	face_right
 	step_end
 
 ParcelHighlands_Asbjorn::
-# 425 "data/maps/ParcelHighlands/scripts.pory"
+# 432 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_ASBJORN, ParcelHighlands_Asbjorn_Text_0, ParcelHighlands_Asbjorn_Text_1, ParcelHighlands_Asbjorn_FirstWin
-# 429 "data/maps/ParcelHighlands/scripts.pory"
+# 436 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 430 "data/maps/ParcelHighlands/scripts.pory"
+# 437 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Asbjorn_3
 ParcelHighlands_Asbjorn_1:
-# 433 "data/maps/ParcelHighlands/scripts.pory"
+# 440 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Asbjorn_8
 ParcelHighlands_Asbjorn_6:
-# 436 "data/maps/ParcelHighlands/scripts.pory"
+# 443 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Asbjorn_13
 ParcelHighlands_Asbjorn_11:
-# 439 "data/maps/ParcelHighlands/scripts.pory"
+# 446 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Asbjorn_18
 ParcelHighlands_Asbjorn_16:
-# 442 "data/maps/ParcelHighlands/scripts.pory"
+# 449 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Asbjorn_2:
-# 431 "data/maps/ParcelHighlands/scripts.pory"
+# 438 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Asbjorn_R2
 	goto ParcelHighlands_Asbjorn_1
 
 ParcelHighlands_Asbjorn_3:
-# 430 "data/maps/ParcelHighlands/scripts.pory"
+# 437 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_ASBJORN_R2
 	goto_if 0, ParcelHighlands_Asbjorn_2
 	goto ParcelHighlands_Asbjorn_1
 
 ParcelHighlands_Asbjorn_7:
-# 434 "data/maps/ParcelHighlands/scripts.pory"
+# 441 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Asbjorn_R3
 	goto ParcelHighlands_Asbjorn_6
 
 ParcelHighlands_Asbjorn_8:
-# 433 "data/maps/ParcelHighlands/scripts.pory"
+# 440 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_ASBJORN_R3
 	goto_if 0, ParcelHighlands_Asbjorn_7
 	goto ParcelHighlands_Asbjorn_6
 
 ParcelHighlands_Asbjorn_12:
-# 437 "data/maps/ParcelHighlands/scripts.pory"
+# 444 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Asbjorn_R4
 	goto ParcelHighlands_Asbjorn_11
 
 ParcelHighlands_Asbjorn_13:
-# 436 "data/maps/ParcelHighlands/scripts.pory"
+# 443 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_ASBJORN_R4
 	goto_if 0, ParcelHighlands_Asbjorn_12
 	goto ParcelHighlands_Asbjorn_11
 
 ParcelHighlands_Asbjorn_17:
-# 440 "data/maps/ParcelHighlands/scripts.pory"
+# 447 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Asbjorn_R5
 	goto ParcelHighlands_Asbjorn_16
 
 ParcelHighlands_Asbjorn_18:
-# 439 "data/maps/ParcelHighlands/scripts.pory"
+# 446 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_ASBJORN_R5
 	goto_if 0, ParcelHighlands_Asbjorn_17
 	goto ParcelHighlands_Asbjorn_16
 
 
 ParcelHighlands_Asbjorn_FirstWin::
-# 446 "data/maps/ParcelHighlands/scripts.pory"
+# 453 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_Text_2, MSGBOX_DEFAULT
-# 447 "data/maps/ParcelHighlands/scripts.pory"
+# 454 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Asbjorn_R2::
-# 451 "data/maps/ParcelHighlands/scripts.pory"
+# 458 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 452 "data/maps/ParcelHighlands/scripts.pory"
+# 459 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 453 "data/maps/ParcelHighlands/scripts.pory"
+# 460 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R2_Text_0, MSGBOX_YESNO
-# 454 "data/maps/ParcelHighlands/scripts.pory"
+# 461 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Asbjorn_R2_2
-# 459 "data/maps/ParcelHighlands/scripts.pory"
+# 466 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_ASBJORN_R2, ParcelHighlands_Asbjorn_R2_Text_2
-# 460 "data/maps/ParcelHighlands/scripts.pory"
+# 467 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R2_Text_3, MSGBOX_DEFAULT
-# 461 "data/maps/ParcelHighlands/scripts.pory"
+# 468 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Asbjorn_R2_2:
-# 455 "data/maps/ParcelHighlands/scripts.pory"
+# 462 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R2_Text_1, MSGBOX_DEFAULT
-# 456 "data/maps/ParcelHighlands/scripts.pory"
+# 463 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Asbjorn_R3::
-# 465 "data/maps/ParcelHighlands/scripts.pory"
+# 472 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 466 "data/maps/ParcelHighlands/scripts.pory"
+# 473 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 467 "data/maps/ParcelHighlands/scripts.pory"
+# 474 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R3_Text_0, MSGBOX_YESNO
-# 468 "data/maps/ParcelHighlands/scripts.pory"
+# 475 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Asbjorn_R3_2
-# 473 "data/maps/ParcelHighlands/scripts.pory"
+# 480 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_ASBJORN_R3, ParcelHighlands_Asbjorn_R3_Text_1
-# 474 "data/maps/ParcelHighlands/scripts.pory"
+# 481 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R3_Text_2, MSGBOX_DEFAULT
-# 475 "data/maps/ParcelHighlands/scripts.pory"
+# 482 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Asbjorn_R3_2:
-# 469 "data/maps/ParcelHighlands/scripts.pory"
+# 476 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R2_Text_1, MSGBOX_DEFAULT
-# 470 "data/maps/ParcelHighlands/scripts.pory"
+# 477 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Asbjorn_R4::
-# 479 "data/maps/ParcelHighlands/scripts.pory"
+# 486 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 480 "data/maps/ParcelHighlands/scripts.pory"
+# 487 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 481 "data/maps/ParcelHighlands/scripts.pory"
+# 488 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R4_Text_0, MSGBOX_YESNO
-# 482 "data/maps/ParcelHighlands/scripts.pory"
+# 489 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Asbjorn_R4_2
-# 487 "data/maps/ParcelHighlands/scripts.pory"
+# 494 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_ASBJORN_R4, ParcelHighlands_Asbjorn_R4_Text_1
-# 488 "data/maps/ParcelHighlands/scripts.pory"
+# 495 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R4_Text_2, MSGBOX_DEFAULT
-# 489 "data/maps/ParcelHighlands/scripts.pory"
+# 496 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Asbjorn_R4_2:
-# 483 "data/maps/ParcelHighlands/scripts.pory"
+# 490 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R2_Text_1, MSGBOX_DEFAULT
-# 484 "data/maps/ParcelHighlands/scripts.pory"
+# 491 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Asbjorn_R5::
-# 493 "data/maps/ParcelHighlands/scripts.pory"
+# 500 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 494 "data/maps/ParcelHighlands/scripts.pory"
+# 501 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 495 "data/maps/ParcelHighlands/scripts.pory"
+# 502 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R5_Text_0, MSGBOX_YESNO
-# 496 "data/maps/ParcelHighlands/scripts.pory"
+# 503 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Asbjorn_R5_2
-# 501 "data/maps/ParcelHighlands/scripts.pory"
+# 508 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_ASBJORN_R5, ParcelHighlands_Asbjorn_R2_Text_2
-# 502 "data/maps/ParcelHighlands/scripts.pory"
+# 509 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R5_Text_1, MSGBOX_DEFAULT
-# 503 "data/maps/ParcelHighlands/scripts.pory"
+# 510 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Asbjorn_R5_2:
-# 497 "data/maps/ParcelHighlands/scripts.pory"
+# 504 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Asbjorn_R2_Text_1, MSGBOX_DEFAULT
-# 498 "data/maps/ParcelHighlands/scripts.pory"
+# 505 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Brynjar::
-# 507 "data/maps/ParcelHighlands/scripts.pory"
+# 514 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_BRYNJAR, ParcelHighlands_Brynjar_Text_0, ParcelHighlands_Brynjar_Text_1, ParcelHighlands_Brynjar_FirstWin
-# 511 "data/maps/ParcelHighlands/scripts.pory"
+# 518 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 512 "data/maps/ParcelHighlands/scripts.pory"
+# 519 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Brynjar_3
 ParcelHighlands_Brynjar_1:
-# 515 "data/maps/ParcelHighlands/scripts.pory"
+# 522 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Brynjar_8
 ParcelHighlands_Brynjar_6:
-# 518 "data/maps/ParcelHighlands/scripts.pory"
+# 525 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Brynjar_13
 ParcelHighlands_Brynjar_11:
-# 521 "data/maps/ParcelHighlands/scripts.pory"
+# 528 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Brynjar_18
 ParcelHighlands_Brynjar_16:
-# 524 "data/maps/ParcelHighlands/scripts.pory"
+# 531 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Brynjar_2:
-# 513 "data/maps/ParcelHighlands/scripts.pory"
+# 520 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Brynjar_R2
 	goto ParcelHighlands_Brynjar_1
 
 ParcelHighlands_Brynjar_3:
-# 512 "data/maps/ParcelHighlands/scripts.pory"
+# 519 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_BRYNJAR_R2
 	goto_if 0, ParcelHighlands_Brynjar_2
 	goto ParcelHighlands_Brynjar_1
 
 ParcelHighlands_Brynjar_7:
-# 516 "data/maps/ParcelHighlands/scripts.pory"
+# 523 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Brynjar_R3
 	goto ParcelHighlands_Brynjar_6
 
 ParcelHighlands_Brynjar_8:
-# 515 "data/maps/ParcelHighlands/scripts.pory"
+# 522 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_BRYNJAR_R3
 	goto_if 0, ParcelHighlands_Brynjar_7
 	goto ParcelHighlands_Brynjar_6
 
 ParcelHighlands_Brynjar_12:
-# 519 "data/maps/ParcelHighlands/scripts.pory"
+# 526 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Brynjar_R4
 	goto ParcelHighlands_Brynjar_11
 
 ParcelHighlands_Brynjar_13:
-# 518 "data/maps/ParcelHighlands/scripts.pory"
+# 525 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_BRYNJAR_R4
 	goto_if 0, ParcelHighlands_Brynjar_12
 	goto ParcelHighlands_Brynjar_11
 
 ParcelHighlands_Brynjar_17:
-# 522 "data/maps/ParcelHighlands/scripts.pory"
+# 529 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Brynjar_R5
 	goto ParcelHighlands_Brynjar_16
 
 ParcelHighlands_Brynjar_18:
-# 521 "data/maps/ParcelHighlands/scripts.pory"
+# 528 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_BRYNJAR_R5
 	goto_if 0, ParcelHighlands_Brynjar_17
 	goto ParcelHighlands_Brynjar_16
 
 
 ParcelHighlands_Brynjar_FirstWin::
-# 528 "data/maps/ParcelHighlands/scripts.pory"
+# 535 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_Text_2, MSGBOX_DEFAULT
-# 529 "data/maps/ParcelHighlands/scripts.pory"
+# 536 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Brynjar_R2::
-# 533 "data/maps/ParcelHighlands/scripts.pory"
+# 540 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 534 "data/maps/ParcelHighlands/scripts.pory"
+# 541 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 535 "data/maps/ParcelHighlands/scripts.pory"
+# 542 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R2_Text_0, MSGBOX_YESNO
-# 536 "data/maps/ParcelHighlands/scripts.pory"
+# 543 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Brynjar_R2_2
-# 541 "data/maps/ParcelHighlands/scripts.pory"
+# 548 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_BRYNJAR_R2, ParcelHighlands_Brynjar_R2_Text_2
-# 542 "data/maps/ParcelHighlands/scripts.pory"
+# 549 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R2_Text_3, MSGBOX_DEFAULT
-# 543 "data/maps/ParcelHighlands/scripts.pory"
+# 550 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Brynjar_R2_2:
-# 537 "data/maps/ParcelHighlands/scripts.pory"
+# 544 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R2_Text_1, MSGBOX_DEFAULT
-# 538 "data/maps/ParcelHighlands/scripts.pory"
+# 545 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Brynjar_R3::
-# 547 "data/maps/ParcelHighlands/scripts.pory"
+# 554 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 548 "data/maps/ParcelHighlands/scripts.pory"
+# 555 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 549 "data/maps/ParcelHighlands/scripts.pory"
+# 556 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R3_Text_0, MSGBOX_YESNO
-# 550 "data/maps/ParcelHighlands/scripts.pory"
+# 557 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Brynjar_R3_2
-# 555 "data/maps/ParcelHighlands/scripts.pory"
+# 562 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_BRYNJAR_R3, ParcelHighlands_Brynjar_R3_Text_1
-# 556 "data/maps/ParcelHighlands/scripts.pory"
+# 563 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R3_Text_2, MSGBOX_DEFAULT
-# 557 "data/maps/ParcelHighlands/scripts.pory"
+# 564 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Brynjar_R3_2:
-# 551 "data/maps/ParcelHighlands/scripts.pory"
+# 558 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R2_Text_1, MSGBOX_DEFAULT
-# 552 "data/maps/ParcelHighlands/scripts.pory"
+# 559 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Brynjar_R4::
-# 561 "data/maps/ParcelHighlands/scripts.pory"
+# 568 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 562 "data/maps/ParcelHighlands/scripts.pory"
+# 569 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 563 "data/maps/ParcelHighlands/scripts.pory"
+# 570 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R4_Text_0, MSGBOX_YESNO
-# 564 "data/maps/ParcelHighlands/scripts.pory"
+# 571 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Brynjar_R4_2
-# 569 "data/maps/ParcelHighlands/scripts.pory"
+# 576 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_BRYNJAR_R4, ParcelHighlands_Brynjar_R3_Text_1
-# 570 "data/maps/ParcelHighlands/scripts.pory"
+# 577 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R4_Text_1, MSGBOX_DEFAULT
-# 571 "data/maps/ParcelHighlands/scripts.pory"
+# 578 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Brynjar_R4_2:
-# 565 "data/maps/ParcelHighlands/scripts.pory"
+# 572 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R2_Text_1, MSGBOX_DEFAULT
-# 566 "data/maps/ParcelHighlands/scripts.pory"
+# 573 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Brynjar_R5::
-# 575 "data/maps/ParcelHighlands/scripts.pory"
+# 582 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 576 "data/maps/ParcelHighlands/scripts.pory"
+# 583 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 577 "data/maps/ParcelHighlands/scripts.pory"
+# 584 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R5_Text_0, MSGBOX_YESNO
-# 578 "data/maps/ParcelHighlands/scripts.pory"
+# 585 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Brynjar_R5_2
-# 583 "data/maps/ParcelHighlands/scripts.pory"
+# 590 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_BRYNJAR_R5, ParcelHighlands_Brynjar_R2_Text_2
-# 584 "data/maps/ParcelHighlands/scripts.pory"
+# 591 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R5_Text_1, MSGBOX_DEFAULT
-# 585 "data/maps/ParcelHighlands/scripts.pory"
+# 592 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Brynjar_R5_2:
-# 579 "data/maps/ParcelHighlands/scripts.pory"
+# 586 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Brynjar_R2_Text_1, MSGBOX_DEFAULT
-# 580 "data/maps/ParcelHighlands/scripts.pory"
+# 587 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Dagny::
-# 589 "data/maps/ParcelHighlands/scripts.pory"
+# 596 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_DAGNY, ParcelHighlands_Dagny_Text_0, ParcelHighlands_Dagny_Text_1, ParcelHighlands_Dagny_FirstWin
-# 593 "data/maps/ParcelHighlands/scripts.pory"
+# 600 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 594 "data/maps/ParcelHighlands/scripts.pory"
+# 601 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Dagny_3
 ParcelHighlands_Dagny_1:
-# 597 "data/maps/ParcelHighlands/scripts.pory"
+# 604 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Dagny_8
 ParcelHighlands_Dagny_6:
-# 600 "data/maps/ParcelHighlands/scripts.pory"
+# 607 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Dagny_13
 ParcelHighlands_Dagny_11:
-# 603 "data/maps/ParcelHighlands/scripts.pory"
+# 610 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Dagny_18
 ParcelHighlands_Dagny_16:
-# 606 "data/maps/ParcelHighlands/scripts.pory"
+# 613 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Dagny_2:
-# 595 "data/maps/ParcelHighlands/scripts.pory"
+# 602 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Dagny_R2
 	goto ParcelHighlands_Dagny_1
 
 ParcelHighlands_Dagny_3:
-# 594 "data/maps/ParcelHighlands/scripts.pory"
+# 601 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_DAGNY_R2
 	goto_if 0, ParcelHighlands_Dagny_2
 	goto ParcelHighlands_Dagny_1
 
 ParcelHighlands_Dagny_7:
-# 598 "data/maps/ParcelHighlands/scripts.pory"
+# 605 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Dagny_R3
 	goto ParcelHighlands_Dagny_6
 
 ParcelHighlands_Dagny_8:
-# 597 "data/maps/ParcelHighlands/scripts.pory"
+# 604 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_DAGNY_R3
 	goto_if 0, ParcelHighlands_Dagny_7
 	goto ParcelHighlands_Dagny_6
 
 ParcelHighlands_Dagny_12:
-# 601 "data/maps/ParcelHighlands/scripts.pory"
+# 608 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Dagny_R4
 	goto ParcelHighlands_Dagny_11
 
 ParcelHighlands_Dagny_13:
-# 600 "data/maps/ParcelHighlands/scripts.pory"
+# 607 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_DAGNY_R4
 	goto_if 0, ParcelHighlands_Dagny_12
 	goto ParcelHighlands_Dagny_11
 
 ParcelHighlands_Dagny_17:
-# 604 "data/maps/ParcelHighlands/scripts.pory"
+# 611 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Dagny_R5
 	goto ParcelHighlands_Dagny_16
 
 ParcelHighlands_Dagny_18:
-# 603 "data/maps/ParcelHighlands/scripts.pory"
+# 610 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_DAGNY_R5
 	goto_if 0, ParcelHighlands_Dagny_17
 	goto ParcelHighlands_Dagny_16
 
 
 ParcelHighlands_Dagny_FirstWin::
-# 610 "data/maps/ParcelHighlands/scripts.pory"
+# 617 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_Text_2, MSGBOX_DEFAULT
-# 611 "data/maps/ParcelHighlands/scripts.pory"
+# 618 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Dagny_R2::
-# 615 "data/maps/ParcelHighlands/scripts.pory"
+# 622 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 616 "data/maps/ParcelHighlands/scripts.pory"
+# 623 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 617 "data/maps/ParcelHighlands/scripts.pory"
+# 624 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R2_Text_0, MSGBOX_YESNO
-# 618 "data/maps/ParcelHighlands/scripts.pory"
+# 625 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Dagny_R2_2
-# 623 "data/maps/ParcelHighlands/scripts.pory"
+# 630 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_DAGNY_R2, ParcelHighlands_Dagny_R2_Text_2
-# 624 "data/maps/ParcelHighlands/scripts.pory"
+# 631 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R2_Text_3, MSGBOX_DEFAULT
-# 625 "data/maps/ParcelHighlands/scripts.pory"
+# 632 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Dagny_R2_2:
-# 619 "data/maps/ParcelHighlands/scripts.pory"
+# 626 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R2_Text_1, MSGBOX_DEFAULT
-# 620 "data/maps/ParcelHighlands/scripts.pory"
+# 627 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Dagny_R3::
-# 629 "data/maps/ParcelHighlands/scripts.pory"
+# 636 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 630 "data/maps/ParcelHighlands/scripts.pory"
+# 637 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 631 "data/maps/ParcelHighlands/scripts.pory"
+# 638 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R3_Text_0, MSGBOX_YESNO
-# 632 "data/maps/ParcelHighlands/scripts.pory"
+# 639 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Dagny_R3_2
-# 637 "data/maps/ParcelHighlands/scripts.pory"
+# 644 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_DAGNY_R3, ParcelHighlands_Dagny_R2_Text_2
-# 638 "data/maps/ParcelHighlands/scripts.pory"
+# 645 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R3_Text_1, MSGBOX_DEFAULT
-# 639 "data/maps/ParcelHighlands/scripts.pory"
+# 646 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Dagny_R3_2:
-# 633 "data/maps/ParcelHighlands/scripts.pory"
+# 640 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R2_Text_1, MSGBOX_DEFAULT
-# 634 "data/maps/ParcelHighlands/scripts.pory"
+# 641 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Dagny_R4::
-# 643 "data/maps/ParcelHighlands/scripts.pory"
+# 650 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 644 "data/maps/ParcelHighlands/scripts.pory"
+# 651 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 645 "data/maps/ParcelHighlands/scripts.pory"
+# 652 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R4_Text_0, MSGBOX_YESNO
-# 646 "data/maps/ParcelHighlands/scripts.pory"
+# 653 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Dagny_R4_2
-# 651 "data/maps/ParcelHighlands/scripts.pory"
+# 658 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_DAGNY_R4, ParcelHighlands_Dagny_R2_Text_2
-# 652 "data/maps/ParcelHighlands/scripts.pory"
+# 659 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R4_Text_1, MSGBOX_DEFAULT
-# 653 "data/maps/ParcelHighlands/scripts.pory"
+# 660 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Dagny_R4_2:
-# 647 "data/maps/ParcelHighlands/scripts.pory"
+# 654 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R2_Text_1, MSGBOX_DEFAULT
-# 648 "data/maps/ParcelHighlands/scripts.pory"
+# 655 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Dagny_R5::
-# 657 "data/maps/ParcelHighlands/scripts.pory"
+# 664 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 658 "data/maps/ParcelHighlands/scripts.pory"
+# 665 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 659 "data/maps/ParcelHighlands/scripts.pory"
+# 666 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R5_Text_0, MSGBOX_YESNO
-# 660 "data/maps/ParcelHighlands/scripts.pory"
+# 667 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Dagny_R5_2
-# 665 "data/maps/ParcelHighlands/scripts.pory"
+# 672 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_DAGNY_R5, ParcelHighlands_Dagny_R5_Text_1
-# 666 "data/maps/ParcelHighlands/scripts.pory"
+# 673 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R5_Text_2, MSGBOX_DEFAULT
-# 667 "data/maps/ParcelHighlands/scripts.pory"
+# 674 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Dagny_R5_2:
-# 661 "data/maps/ParcelHighlands/scripts.pory"
+# 668 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Dagny_R2_Text_1, MSGBOX_DEFAULT
-# 662 "data/maps/ParcelHighlands/scripts.pory"
+# 669 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Eivind::
-# 671 "data/maps/ParcelHighlands/scripts.pory"
+# 678 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_EIVIND, ParcelHighlands_Eivind_Text_0, ParcelHighlands_Eivind_Text_1, ParcelHighlands_Eivind_FirstWin
-# 675 "data/maps/ParcelHighlands/scripts.pory"
+# 682 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 676 "data/maps/ParcelHighlands/scripts.pory"
+# 683 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Eivind_3
 ParcelHighlands_Eivind_1:
-# 679 "data/maps/ParcelHighlands/scripts.pory"
+# 686 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Eivind_8
 ParcelHighlands_Eivind_6:
-# 682 "data/maps/ParcelHighlands/scripts.pory"
+# 689 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Eivind_13
 ParcelHighlands_Eivind_11:
-# 685 "data/maps/ParcelHighlands/scripts.pory"
+# 692 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Eivind_18
 ParcelHighlands_Eivind_16:
-# 688 "data/maps/ParcelHighlands/scripts.pory"
+# 695 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Eivind_2:
-# 677 "data/maps/ParcelHighlands/scripts.pory"
+# 684 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Eivind_R2
 	goto ParcelHighlands_Eivind_1
 
 ParcelHighlands_Eivind_3:
-# 676 "data/maps/ParcelHighlands/scripts.pory"
+# 683 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_EIVIND_R2
 	goto_if 0, ParcelHighlands_Eivind_2
 	goto ParcelHighlands_Eivind_1
 
 ParcelHighlands_Eivind_7:
-# 680 "data/maps/ParcelHighlands/scripts.pory"
+# 687 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Eivind_R3
 	goto ParcelHighlands_Eivind_6
 
 ParcelHighlands_Eivind_8:
-# 679 "data/maps/ParcelHighlands/scripts.pory"
+# 686 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_EIVIND_R3
 	goto_if 0, ParcelHighlands_Eivind_7
 	goto ParcelHighlands_Eivind_6
 
 ParcelHighlands_Eivind_12:
-# 683 "data/maps/ParcelHighlands/scripts.pory"
+# 690 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Eivind_R4
 	goto ParcelHighlands_Eivind_11
 
 ParcelHighlands_Eivind_13:
-# 682 "data/maps/ParcelHighlands/scripts.pory"
+# 689 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_EIVIND_R4
 	goto_if 0, ParcelHighlands_Eivind_12
 	goto ParcelHighlands_Eivind_11
 
 ParcelHighlands_Eivind_17:
-# 686 "data/maps/ParcelHighlands/scripts.pory"
+# 693 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Eivind_R5
 	goto ParcelHighlands_Eivind_16
 
 ParcelHighlands_Eivind_18:
-# 685 "data/maps/ParcelHighlands/scripts.pory"
+# 692 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_EIVIND_R5
 	goto_if 0, ParcelHighlands_Eivind_17
 	goto ParcelHighlands_Eivind_16
 
 
 ParcelHighlands_Eivind_FirstWin::
-# 692 "data/maps/ParcelHighlands/scripts.pory"
+# 699 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_Text_2, MSGBOX_DEFAULT
-# 693 "data/maps/ParcelHighlands/scripts.pory"
+# 700 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Eivind_R2::
-# 697 "data/maps/ParcelHighlands/scripts.pory"
+# 704 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 698 "data/maps/ParcelHighlands/scripts.pory"
+# 705 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 699 "data/maps/ParcelHighlands/scripts.pory"
+# 706 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R2_Text_0, MSGBOX_YESNO
-# 700 "data/maps/ParcelHighlands/scripts.pory"
+# 707 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Eivind_R2_2
-# 705 "data/maps/ParcelHighlands/scripts.pory"
+# 712 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_EIVIND_R2, ParcelHighlands_Eivind_R2_Text_2
-# 706 "data/maps/ParcelHighlands/scripts.pory"
+# 713 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R2_Text_3, MSGBOX_DEFAULT
-# 707 "data/maps/ParcelHighlands/scripts.pory"
+# 714 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Eivind_R2_2:
-# 701 "data/maps/ParcelHighlands/scripts.pory"
+# 708 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R2_Text_1, MSGBOX_DEFAULT
-# 702 "data/maps/ParcelHighlands/scripts.pory"
+# 709 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Eivind_R3::
-# 711 "data/maps/ParcelHighlands/scripts.pory"
+# 718 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 712 "data/maps/ParcelHighlands/scripts.pory"
+# 719 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 713 "data/maps/ParcelHighlands/scripts.pory"
+# 720 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R3_Text_0, MSGBOX_YESNO
-# 714 "data/maps/ParcelHighlands/scripts.pory"
+# 721 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Eivind_R3_2
-# 719 "data/maps/ParcelHighlands/scripts.pory"
+# 726 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_EIVIND_R3, ParcelHighlands_Eivind_R3_Text_1
-# 720 "data/maps/ParcelHighlands/scripts.pory"
+# 727 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R3_Text_2, MSGBOX_DEFAULT
-# 721 "data/maps/ParcelHighlands/scripts.pory"
+# 728 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Eivind_R3_2:
-# 715 "data/maps/ParcelHighlands/scripts.pory"
+# 722 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R2_Text_1, MSGBOX_DEFAULT
-# 716 "data/maps/ParcelHighlands/scripts.pory"
+# 723 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Eivind_R4::
-# 725 "data/maps/ParcelHighlands/scripts.pory"
+# 732 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 726 "data/maps/ParcelHighlands/scripts.pory"
+# 733 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 727 "data/maps/ParcelHighlands/scripts.pory"
+# 734 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R4_Text_0, MSGBOX_YESNO
-# 728 "data/maps/ParcelHighlands/scripts.pory"
+# 735 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Eivind_R4_2
-# 733 "data/maps/ParcelHighlands/scripts.pory"
+# 740 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_EIVIND_R4, ParcelHighlands_Eivind_R3_Text_1
-# 734 "data/maps/ParcelHighlands/scripts.pory"
+# 741 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R4_Text_1, MSGBOX_DEFAULT
-# 735 "data/maps/ParcelHighlands/scripts.pory"
+# 742 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Eivind_R4_2:
-# 729 "data/maps/ParcelHighlands/scripts.pory"
+# 736 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R2_Text_1, MSGBOX_DEFAULT
-# 730 "data/maps/ParcelHighlands/scripts.pory"
+# 737 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Eivind_R5::
-# 739 "data/maps/ParcelHighlands/scripts.pory"
+# 746 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 740 "data/maps/ParcelHighlands/scripts.pory"
+# 747 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 741 "data/maps/ParcelHighlands/scripts.pory"
+# 748 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R5_Text_0, MSGBOX_YESNO
-# 742 "data/maps/ParcelHighlands/scripts.pory"
+# 749 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Eivind_R5_2
-# 747 "data/maps/ParcelHighlands/scripts.pory"
+# 754 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_EIVIND_R5, ParcelHighlands_Eivind_R5_Text_1
-# 748 "data/maps/ParcelHighlands/scripts.pory"
+# 755 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R5_Text_2, MSGBOX_DEFAULT
-# 749 "data/maps/ParcelHighlands/scripts.pory"
+# 756 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Eivind_R5_2:
-# 743 "data/maps/ParcelHighlands/scripts.pory"
+# 750 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Eivind_R2_Text_1, MSGBOX_DEFAULT
-# 744 "data/maps/ParcelHighlands/scripts.pory"
+# 751 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Finn::
-# 753 "data/maps/ParcelHighlands/scripts.pory"
+# 760 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_FINN, ParcelHighlands_Finn_Text_0, ParcelHighlands_Finn_Text_1, ParcelHighlands_Finn_FirstWin
-# 757 "data/maps/ParcelHighlands/scripts.pory"
+# 764 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 758 "data/maps/ParcelHighlands/scripts.pory"
+# 765 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Finn_3
 ParcelHighlands_Finn_1:
-# 761 "data/maps/ParcelHighlands/scripts.pory"
+# 768 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Finn_8
 ParcelHighlands_Finn_6:
-# 764 "data/maps/ParcelHighlands/scripts.pory"
+# 771 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Finn_13
 ParcelHighlands_Finn_11:
-# 767 "data/maps/ParcelHighlands/scripts.pory"
+# 774 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Finn_18
 ParcelHighlands_Finn_16:
-# 770 "data/maps/ParcelHighlands/scripts.pory"
+# 777 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Finn_2:
-# 759 "data/maps/ParcelHighlands/scripts.pory"
+# 766 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Finn_R2
 	goto ParcelHighlands_Finn_1
 
 ParcelHighlands_Finn_3:
-# 758 "data/maps/ParcelHighlands/scripts.pory"
+# 765 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_FINN_R2
 	goto_if 0, ParcelHighlands_Finn_2
 	goto ParcelHighlands_Finn_1
 
 ParcelHighlands_Finn_7:
-# 762 "data/maps/ParcelHighlands/scripts.pory"
+# 769 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Finn_R3
 	goto ParcelHighlands_Finn_6
 
 ParcelHighlands_Finn_8:
-# 761 "data/maps/ParcelHighlands/scripts.pory"
+# 768 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_FINN_R3
 	goto_if 0, ParcelHighlands_Finn_7
 	goto ParcelHighlands_Finn_6
 
 ParcelHighlands_Finn_12:
-# 765 "data/maps/ParcelHighlands/scripts.pory"
+# 772 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Finn_R4
 	goto ParcelHighlands_Finn_11
 
 ParcelHighlands_Finn_13:
-# 764 "data/maps/ParcelHighlands/scripts.pory"
+# 771 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_FINN_R4
 	goto_if 0, ParcelHighlands_Finn_12
 	goto ParcelHighlands_Finn_11
 
 ParcelHighlands_Finn_17:
-# 768 "data/maps/ParcelHighlands/scripts.pory"
+# 775 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Finn_R5
 	goto ParcelHighlands_Finn_16
 
 ParcelHighlands_Finn_18:
-# 767 "data/maps/ParcelHighlands/scripts.pory"
+# 774 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_FINN_R5
 	goto_if 0, ParcelHighlands_Finn_17
 	goto ParcelHighlands_Finn_16
 
 
 ParcelHighlands_Finn_FirstWin::
-# 774 "data/maps/ParcelHighlands/scripts.pory"
+# 781 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_Text_2, MSGBOX_DEFAULT
-# 775 "data/maps/ParcelHighlands/scripts.pory"
+# 782 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Finn_R2::
-# 779 "data/maps/ParcelHighlands/scripts.pory"
+# 786 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 780 "data/maps/ParcelHighlands/scripts.pory"
+# 787 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 781 "data/maps/ParcelHighlands/scripts.pory"
+# 788 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R2_Text_0, MSGBOX_YESNO
-# 782 "data/maps/ParcelHighlands/scripts.pory"
+# 789 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Finn_R2_2
-# 787 "data/maps/ParcelHighlands/scripts.pory"
+# 794 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_FINN_R2, ParcelHighlands_Finn_R2_Text_2
-# 788 "data/maps/ParcelHighlands/scripts.pory"
+# 795 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R2_Text_3, MSGBOX_DEFAULT
-# 789 "data/maps/ParcelHighlands/scripts.pory"
+# 796 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Finn_R2_2:
-# 783 "data/maps/ParcelHighlands/scripts.pory"
+# 790 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R2_Text_1, MSGBOX_DEFAULT
-# 784 "data/maps/ParcelHighlands/scripts.pory"
+# 791 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Finn_R3::
-# 793 "data/maps/ParcelHighlands/scripts.pory"
+# 800 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 794 "data/maps/ParcelHighlands/scripts.pory"
+# 801 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 795 "data/maps/ParcelHighlands/scripts.pory"
+# 802 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R3_Text_0, MSGBOX_YESNO
-# 796 "data/maps/ParcelHighlands/scripts.pory"
+# 803 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Finn_R3_2
-# 801 "data/maps/ParcelHighlands/scripts.pory"
+# 808 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_FINN_R3, ParcelHighlands_Finn_R2_Text_2
-# 802 "data/maps/ParcelHighlands/scripts.pory"
+# 809 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R3_Text_1, MSGBOX_DEFAULT
-# 803 "data/maps/ParcelHighlands/scripts.pory"
+# 810 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Finn_R3_2:
-# 797 "data/maps/ParcelHighlands/scripts.pory"
+# 804 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R2_Text_1, MSGBOX_DEFAULT
-# 798 "data/maps/ParcelHighlands/scripts.pory"
+# 805 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Finn_R4::
-# 807 "data/maps/ParcelHighlands/scripts.pory"
+# 814 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 808 "data/maps/ParcelHighlands/scripts.pory"
+# 815 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 809 "data/maps/ParcelHighlands/scripts.pory"
+# 816 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R4_Text_0, MSGBOX_YESNO
-# 810 "data/maps/ParcelHighlands/scripts.pory"
+# 817 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Finn_R4_2
-# 815 "data/maps/ParcelHighlands/scripts.pory"
+# 822 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_FINN_R4, ParcelHighlands_Finn_R4_Text_1
-# 816 "data/maps/ParcelHighlands/scripts.pory"
+# 823 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R4_Text_2, MSGBOX_DEFAULT
-# 817 "data/maps/ParcelHighlands/scripts.pory"
+# 824 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Finn_R4_2:
-# 811 "data/maps/ParcelHighlands/scripts.pory"
+# 818 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R2_Text_1, MSGBOX_DEFAULT
-# 812 "data/maps/ParcelHighlands/scripts.pory"
+# 819 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Finn_R5::
-# 821 "data/maps/ParcelHighlands/scripts.pory"
+# 828 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 822 "data/maps/ParcelHighlands/scripts.pory"
+# 829 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 823 "data/maps/ParcelHighlands/scripts.pory"
+# 830 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R5_Text_0, MSGBOX_YESNO
-# 824 "data/maps/ParcelHighlands/scripts.pory"
+# 831 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Finn_R5_2
-# 829 "data/maps/ParcelHighlands/scripts.pory"
+# 836 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_FINN_R5, ParcelHighlands_Finn_R5_Text_1
-# 830 "data/maps/ParcelHighlands/scripts.pory"
+# 837 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R5_Text_2, MSGBOX_DEFAULT
-# 831 "data/maps/ParcelHighlands/scripts.pory"
+# 838 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Finn_R5_2:
-# 825 "data/maps/ParcelHighlands/scripts.pory"
+# 832 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Finn_R2_Text_1, MSGBOX_DEFAULT
-# 826 "data/maps/ParcelHighlands/scripts.pory"
+# 833 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Grete::
-# 835 "data/maps/ParcelHighlands/scripts.pory"
+# 842 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_GRETE, ParcelHighlands_Grete_Text_0, ParcelHighlands_Grete_Text_1, ParcelHighlands_Grete_FirstWin
-# 839 "data/maps/ParcelHighlands/scripts.pory"
+# 846 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 840 "data/maps/ParcelHighlands/scripts.pory"
+# 847 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Grete_3
 ParcelHighlands_Grete_1:
-# 843 "data/maps/ParcelHighlands/scripts.pory"
+# 850 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Grete_8
 ParcelHighlands_Grete_6:
-# 846 "data/maps/ParcelHighlands/scripts.pory"
+# 853 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Grete_13
 ParcelHighlands_Grete_11:
-# 849 "data/maps/ParcelHighlands/scripts.pory"
+# 856 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Grete_18
 ParcelHighlands_Grete_16:
-# 852 "data/maps/ParcelHighlands/scripts.pory"
+# 859 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Grete_2:
-# 841 "data/maps/ParcelHighlands/scripts.pory"
+# 848 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Grete_R2
 	goto ParcelHighlands_Grete_1
 
 ParcelHighlands_Grete_3:
-# 840 "data/maps/ParcelHighlands/scripts.pory"
+# 847 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_GRETE_R2
 	goto_if 0, ParcelHighlands_Grete_2
 	goto ParcelHighlands_Grete_1
 
 ParcelHighlands_Grete_7:
-# 844 "data/maps/ParcelHighlands/scripts.pory"
+# 851 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Grete_R3
 	goto ParcelHighlands_Grete_6
 
 ParcelHighlands_Grete_8:
-# 843 "data/maps/ParcelHighlands/scripts.pory"
+# 850 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_GRETE_R3
 	goto_if 0, ParcelHighlands_Grete_7
 	goto ParcelHighlands_Grete_6
 
 ParcelHighlands_Grete_12:
-# 847 "data/maps/ParcelHighlands/scripts.pory"
+# 854 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Grete_R4
 	goto ParcelHighlands_Grete_11
 
 ParcelHighlands_Grete_13:
-# 846 "data/maps/ParcelHighlands/scripts.pory"
+# 853 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_GRETE_R4
 	goto_if 0, ParcelHighlands_Grete_12
 	goto ParcelHighlands_Grete_11
 
 ParcelHighlands_Grete_17:
-# 850 "data/maps/ParcelHighlands/scripts.pory"
+# 857 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Grete_R5
 	goto ParcelHighlands_Grete_16
 
 ParcelHighlands_Grete_18:
-# 849 "data/maps/ParcelHighlands/scripts.pory"
+# 856 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_GRETE_R5
 	goto_if 0, ParcelHighlands_Grete_17
 	goto ParcelHighlands_Grete_16
 
 
 ParcelHighlands_Grete_FirstWin::
-# 856 "data/maps/ParcelHighlands/scripts.pory"
+# 863 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_Text_2, MSGBOX_DEFAULT
-# 857 "data/maps/ParcelHighlands/scripts.pory"
+# 864 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Grete_R2::
-# 861 "data/maps/ParcelHighlands/scripts.pory"
+# 868 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 862 "data/maps/ParcelHighlands/scripts.pory"
+# 869 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 863 "data/maps/ParcelHighlands/scripts.pory"
+# 870 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R2_Text_0, MSGBOX_YESNO
-# 864 "data/maps/ParcelHighlands/scripts.pory"
+# 871 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Grete_R2_2
-# 869 "data/maps/ParcelHighlands/scripts.pory"
+# 876 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_GRETE_R2, ParcelHighlands_Grete_R2_Text_2
-# 870 "data/maps/ParcelHighlands/scripts.pory"
+# 877 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R2_Text_3, MSGBOX_DEFAULT
-# 871 "data/maps/ParcelHighlands/scripts.pory"
+# 878 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Grete_R2_2:
-# 865 "data/maps/ParcelHighlands/scripts.pory"
+# 872 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R2_Text_1, MSGBOX_DEFAULT
-# 866 "data/maps/ParcelHighlands/scripts.pory"
+# 873 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Grete_R3::
-# 875 "data/maps/ParcelHighlands/scripts.pory"
+# 882 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 876 "data/maps/ParcelHighlands/scripts.pory"
+# 883 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 877 "data/maps/ParcelHighlands/scripts.pory"
+# 884 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R3_Text_0, MSGBOX_YESNO
-# 878 "data/maps/ParcelHighlands/scripts.pory"
+# 885 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Grete_R3_2
-# 883 "data/maps/ParcelHighlands/scripts.pory"
+# 890 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_GRETE_R3, ParcelHighlands_Grete_R2_Text_2
-# 884 "data/maps/ParcelHighlands/scripts.pory"
+# 891 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R3_Text_1, MSGBOX_DEFAULT
-# 885 "data/maps/ParcelHighlands/scripts.pory"
+# 892 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Grete_R3_2:
-# 879 "data/maps/ParcelHighlands/scripts.pory"
+# 886 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R2_Text_1, MSGBOX_DEFAULT
-# 880 "data/maps/ParcelHighlands/scripts.pory"
+# 887 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Grete_R4::
-# 889 "data/maps/ParcelHighlands/scripts.pory"
+# 896 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 890 "data/maps/ParcelHighlands/scripts.pory"
+# 897 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 891 "data/maps/ParcelHighlands/scripts.pory"
+# 898 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R4_Text_0, MSGBOX_YESNO
-# 892 "data/maps/ParcelHighlands/scripts.pory"
+# 899 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Grete_R4_2
-# 897 "data/maps/ParcelHighlands/scripts.pory"
+# 904 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_GRETE_R4, ParcelHighlands_Grete_R4_Text_1
-# 898 "data/maps/ParcelHighlands/scripts.pory"
+# 905 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R4_Text_2, MSGBOX_DEFAULT
-# 899 "data/maps/ParcelHighlands/scripts.pory"
+# 906 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Grete_R4_2:
-# 893 "data/maps/ParcelHighlands/scripts.pory"
+# 900 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R2_Text_1, MSGBOX_DEFAULT
-# 894 "data/maps/ParcelHighlands/scripts.pory"
+# 901 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Grete_R5::
-# 903 "data/maps/ParcelHighlands/scripts.pory"
+# 910 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 904 "data/maps/ParcelHighlands/scripts.pory"
+# 911 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 905 "data/maps/ParcelHighlands/scripts.pory"
+# 912 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R5_Text_0, MSGBOX_YESNO
-# 906 "data/maps/ParcelHighlands/scripts.pory"
+# 913 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Grete_R5_2
-# 911 "data/maps/ParcelHighlands/scripts.pory"
+# 918 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_GRETE_R5, ParcelHighlands_Grete_R2_Text_2
-# 912 "data/maps/ParcelHighlands/scripts.pory"
+# 919 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R5_Text_1, MSGBOX_DEFAULT
-# 913 "data/maps/ParcelHighlands/scripts.pory"
+# 920 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Grete_R5_2:
-# 907 "data/maps/ParcelHighlands/scripts.pory"
+# 914 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Grete_R2_Text_1, MSGBOX_DEFAULT
-# 908 "data/maps/ParcelHighlands/scripts.pory"
+# 915 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Hauk::
-# 917 "data/maps/ParcelHighlands/scripts.pory"
+# 924 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_HAUK, ParcelHighlands_Hauk_Text_0, ParcelHighlands_Hauk_Text_1, ParcelHighlands_Hauk_FirstWin
-# 921 "data/maps/ParcelHighlands/scripts.pory"
+# 928 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 922 "data/maps/ParcelHighlands/scripts.pory"
+# 929 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Hauk_3
 ParcelHighlands_Hauk_1:
-# 925 "data/maps/ParcelHighlands/scripts.pory"
+# 932 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Hauk_8
 ParcelHighlands_Hauk_6:
-# 928 "data/maps/ParcelHighlands/scripts.pory"
+# 935 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Hauk_13
 ParcelHighlands_Hauk_11:
-# 931 "data/maps/ParcelHighlands/scripts.pory"
+# 938 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Hauk_18
 ParcelHighlands_Hauk_16:
-# 934 "data/maps/ParcelHighlands/scripts.pory"
+# 941 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Hauk_2:
-# 923 "data/maps/ParcelHighlands/scripts.pory"
+# 930 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Hauk_R2
 	goto ParcelHighlands_Hauk_1
 
 ParcelHighlands_Hauk_3:
-# 922 "data/maps/ParcelHighlands/scripts.pory"
+# 929 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HAUK_R2
 	goto_if 0, ParcelHighlands_Hauk_2
 	goto ParcelHighlands_Hauk_1
 
 ParcelHighlands_Hauk_7:
-# 926 "data/maps/ParcelHighlands/scripts.pory"
+# 933 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Hauk_R3
 	goto ParcelHighlands_Hauk_6
 
 ParcelHighlands_Hauk_8:
-# 925 "data/maps/ParcelHighlands/scripts.pory"
+# 932 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HAUK_R3
 	goto_if 0, ParcelHighlands_Hauk_7
 	goto ParcelHighlands_Hauk_6
 
 ParcelHighlands_Hauk_12:
-# 929 "data/maps/ParcelHighlands/scripts.pory"
+# 936 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Hauk_R4
 	goto ParcelHighlands_Hauk_11
 
 ParcelHighlands_Hauk_13:
-# 928 "data/maps/ParcelHighlands/scripts.pory"
+# 935 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HAUK_R4
 	goto_if 0, ParcelHighlands_Hauk_12
 	goto ParcelHighlands_Hauk_11
 
 ParcelHighlands_Hauk_17:
-# 932 "data/maps/ParcelHighlands/scripts.pory"
+# 939 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Hauk_R5
 	goto ParcelHighlands_Hauk_16
 
 ParcelHighlands_Hauk_18:
-# 931 "data/maps/ParcelHighlands/scripts.pory"
+# 938 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HAUK_R5
 	goto_if 0, ParcelHighlands_Hauk_17
 	goto ParcelHighlands_Hauk_16
 
 
 ParcelHighlands_Hauk_FirstWin::
-# 938 "data/maps/ParcelHighlands/scripts.pory"
+# 945 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_Text_2, MSGBOX_DEFAULT
-# 939 "data/maps/ParcelHighlands/scripts.pory"
+# 946 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Hauk_R2::
-# 943 "data/maps/ParcelHighlands/scripts.pory"
+# 950 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 944 "data/maps/ParcelHighlands/scripts.pory"
+# 951 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 945 "data/maps/ParcelHighlands/scripts.pory"
+# 952 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R2_Text_0, MSGBOX_YESNO
-# 946 "data/maps/ParcelHighlands/scripts.pory"
+# 953 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Hauk_R2_2
-# 951 "data/maps/ParcelHighlands/scripts.pory"
+# 958 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HAUK_R2, ParcelHighlands_Hauk_R2_Text_2
-# 952 "data/maps/ParcelHighlands/scripts.pory"
+# 959 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R2_Text_3, MSGBOX_DEFAULT
-# 953 "data/maps/ParcelHighlands/scripts.pory"
+# 960 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Hauk_R2_2:
-# 947 "data/maps/ParcelHighlands/scripts.pory"
+# 954 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R2_Text_1, MSGBOX_DEFAULT
-# 948 "data/maps/ParcelHighlands/scripts.pory"
+# 955 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Hauk_R3::
-# 957 "data/maps/ParcelHighlands/scripts.pory"
+# 964 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 958 "data/maps/ParcelHighlands/scripts.pory"
+# 965 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 959 "data/maps/ParcelHighlands/scripts.pory"
+# 966 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R3_Text_0, MSGBOX_YESNO
-# 960 "data/maps/ParcelHighlands/scripts.pory"
+# 967 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Hauk_R3_2
-# 965 "data/maps/ParcelHighlands/scripts.pory"
+# 972 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HAUK_R3, ParcelHighlands_Hauk_R3_Text_1
-# 966 "data/maps/ParcelHighlands/scripts.pory"
+# 973 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R3_Text_2, MSGBOX_DEFAULT
-# 967 "data/maps/ParcelHighlands/scripts.pory"
+# 974 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Hauk_R3_2:
-# 961 "data/maps/ParcelHighlands/scripts.pory"
+# 968 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R2_Text_1, MSGBOX_DEFAULT
-# 962 "data/maps/ParcelHighlands/scripts.pory"
+# 969 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Hauk_R4::
-# 971 "data/maps/ParcelHighlands/scripts.pory"
+# 978 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 972 "data/maps/ParcelHighlands/scripts.pory"
+# 979 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 973 "data/maps/ParcelHighlands/scripts.pory"
+# 980 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R4_Text_0, MSGBOX_YESNO
-# 974 "data/maps/ParcelHighlands/scripts.pory"
+# 981 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Hauk_R4_2
-# 979 "data/maps/ParcelHighlands/scripts.pory"
+# 986 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HAUK_R4, ParcelHighlands_Hauk_R4_Text_1
-# 980 "data/maps/ParcelHighlands/scripts.pory"
+# 987 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R4_Text_2, MSGBOX_DEFAULT
-# 981 "data/maps/ParcelHighlands/scripts.pory"
+# 988 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Hauk_R4_2:
-# 975 "data/maps/ParcelHighlands/scripts.pory"
+# 982 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R2_Text_1, MSGBOX_DEFAULT
-# 976 "data/maps/ParcelHighlands/scripts.pory"
+# 983 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Hauk_R5::
-# 985 "data/maps/ParcelHighlands/scripts.pory"
+# 992 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 986 "data/maps/ParcelHighlands/scripts.pory"
+# 993 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 987 "data/maps/ParcelHighlands/scripts.pory"
+# 994 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R5_Text_0, MSGBOX_YESNO
-# 988 "data/maps/ParcelHighlands/scripts.pory"
+# 995 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Hauk_R5_2
-# 993 "data/maps/ParcelHighlands/scripts.pory"
+# 1000 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HAUK_R5, ParcelHighlands_Hauk_R5_Text_1
-# 994 "data/maps/ParcelHighlands/scripts.pory"
+# 1001 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R5_Text_2, MSGBOX_DEFAULT
-# 995 "data/maps/ParcelHighlands/scripts.pory"
+# 1002 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Hauk_R5_2:
-# 989 "data/maps/ParcelHighlands/scripts.pory"
+# 996 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Hauk_R2_Text_1, MSGBOX_DEFAULT
-# 990 "data/maps/ParcelHighlands/scripts.pory"
+# 997 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Jarle::
-# 999 "data/maps/ParcelHighlands/scripts.pory"
+# 1006 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_JARLE, ParcelHighlands_Jarle_Text_0, ParcelHighlands_Jarle_Text_1, ParcelHighlands_Jarle_FirstWin
-# 1003 "data/maps/ParcelHighlands/scripts.pory"
+# 1010 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1004 "data/maps/ParcelHighlands/scripts.pory"
+# 1011 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Jarle_3
 ParcelHighlands_Jarle_1:
-# 1007 "data/maps/ParcelHighlands/scripts.pory"
+# 1014 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Jarle_8
 ParcelHighlands_Jarle_6:
-# 1010 "data/maps/ParcelHighlands/scripts.pory"
+# 1017 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Jarle_13
 ParcelHighlands_Jarle_11:
-# 1013 "data/maps/ParcelHighlands/scripts.pory"
+# 1020 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Jarle_18
 ParcelHighlands_Jarle_16:
-# 1016 "data/maps/ParcelHighlands/scripts.pory"
+# 1023 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Jarle_2:
-# 1005 "data/maps/ParcelHighlands/scripts.pory"
+# 1012 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Jarle_R2
 	goto ParcelHighlands_Jarle_1
 
 ParcelHighlands_Jarle_3:
-# 1004 "data/maps/ParcelHighlands/scripts.pory"
+# 1011 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_JARLE_R2
 	goto_if 0, ParcelHighlands_Jarle_2
 	goto ParcelHighlands_Jarle_1
 
 ParcelHighlands_Jarle_7:
-# 1008 "data/maps/ParcelHighlands/scripts.pory"
+# 1015 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Jarle_R3
 	goto ParcelHighlands_Jarle_6
 
 ParcelHighlands_Jarle_8:
-# 1007 "data/maps/ParcelHighlands/scripts.pory"
+# 1014 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_JARLE_R3
 	goto_if 0, ParcelHighlands_Jarle_7
 	goto ParcelHighlands_Jarle_6
 
 ParcelHighlands_Jarle_12:
-# 1011 "data/maps/ParcelHighlands/scripts.pory"
+# 1018 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Jarle_R4
 	goto ParcelHighlands_Jarle_11
 
 ParcelHighlands_Jarle_13:
-# 1010 "data/maps/ParcelHighlands/scripts.pory"
+# 1017 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_JARLE_R4
 	goto_if 0, ParcelHighlands_Jarle_12
 	goto ParcelHighlands_Jarle_11
 
 ParcelHighlands_Jarle_17:
-# 1014 "data/maps/ParcelHighlands/scripts.pory"
+# 1021 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Jarle_R5
 	goto ParcelHighlands_Jarle_16
 
 ParcelHighlands_Jarle_18:
-# 1013 "data/maps/ParcelHighlands/scripts.pory"
+# 1020 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_JARLE_R5
 	goto_if 0, ParcelHighlands_Jarle_17
 	goto ParcelHighlands_Jarle_16
 
 
 ParcelHighlands_Jarle_FirstWin::
-# 1020 "data/maps/ParcelHighlands/scripts.pory"
+# 1027 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_Text_2, MSGBOX_DEFAULT
-# 1021 "data/maps/ParcelHighlands/scripts.pory"
+# 1028 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Jarle_R2::
-# 1025 "data/maps/ParcelHighlands/scripts.pory"
+# 1032 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1026 "data/maps/ParcelHighlands/scripts.pory"
+# 1033 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1027 "data/maps/ParcelHighlands/scripts.pory"
+# 1034 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R2_Text_0, MSGBOX_YESNO
-# 1028 "data/maps/ParcelHighlands/scripts.pory"
+# 1035 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Jarle_R2_2
-# 1033 "data/maps/ParcelHighlands/scripts.pory"
+# 1040 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_JARLE_R2, ParcelHighlands_Jarle_R2_Text_2
-# 1034 "data/maps/ParcelHighlands/scripts.pory"
+# 1041 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R2_Text_3, MSGBOX_DEFAULT
-# 1035 "data/maps/ParcelHighlands/scripts.pory"
+# 1042 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Jarle_R2_2:
-# 1029 "data/maps/ParcelHighlands/scripts.pory"
+# 1036 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R2_Text_1, MSGBOX_DEFAULT
-# 1030 "data/maps/ParcelHighlands/scripts.pory"
+# 1037 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Jarle_R3::
-# 1039 "data/maps/ParcelHighlands/scripts.pory"
+# 1046 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1040 "data/maps/ParcelHighlands/scripts.pory"
+# 1047 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1041 "data/maps/ParcelHighlands/scripts.pory"
+# 1048 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R3_Text_0, MSGBOX_YESNO
-# 1042 "data/maps/ParcelHighlands/scripts.pory"
+# 1049 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Jarle_R3_2
-# 1047 "data/maps/ParcelHighlands/scripts.pory"
+# 1054 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_JARLE_R3, ParcelHighlands_Jarle_R3_Text_1
-# 1048 "data/maps/ParcelHighlands/scripts.pory"
+# 1055 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R3_Text_2, MSGBOX_DEFAULT
-# 1049 "data/maps/ParcelHighlands/scripts.pory"
+# 1056 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Jarle_R3_2:
-# 1043 "data/maps/ParcelHighlands/scripts.pory"
+# 1050 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R2_Text_1, MSGBOX_DEFAULT
-# 1044 "data/maps/ParcelHighlands/scripts.pory"
+# 1051 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Jarle_R4::
-# 1053 "data/maps/ParcelHighlands/scripts.pory"
+# 1060 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1054 "data/maps/ParcelHighlands/scripts.pory"
+# 1061 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1055 "data/maps/ParcelHighlands/scripts.pory"
+# 1062 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R4_Text_0, MSGBOX_YESNO
-# 1056 "data/maps/ParcelHighlands/scripts.pory"
+# 1063 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Jarle_R4_2
-# 1061 "data/maps/ParcelHighlands/scripts.pory"
+# 1068 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_JARLE_R4, ParcelHighlands_Jarle_R3_Text_1
-# 1062 "data/maps/ParcelHighlands/scripts.pory"
+# 1069 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R4_Text_1, MSGBOX_DEFAULT
-# 1063 "data/maps/ParcelHighlands/scripts.pory"
+# 1070 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Jarle_R4_2:
-# 1057 "data/maps/ParcelHighlands/scripts.pory"
+# 1064 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R2_Text_1, MSGBOX_DEFAULT
-# 1058 "data/maps/ParcelHighlands/scripts.pory"
+# 1065 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Jarle_R5::
-# 1067 "data/maps/ParcelHighlands/scripts.pory"
+# 1074 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1068 "data/maps/ParcelHighlands/scripts.pory"
+# 1075 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1069 "data/maps/ParcelHighlands/scripts.pory"
+# 1076 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R5_Text_0, MSGBOX_YESNO
-# 1070 "data/maps/ParcelHighlands/scripts.pory"
+# 1077 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Jarle_R5_2
-# 1075 "data/maps/ParcelHighlands/scripts.pory"
+# 1082 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_JARLE_R5, ParcelHighlands_Jarle_R3_Text_1
-# 1076 "data/maps/ParcelHighlands/scripts.pory"
+# 1083 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R5_Text_1, MSGBOX_DEFAULT
-# 1077 "data/maps/ParcelHighlands/scripts.pory"
+# 1084 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Jarle_R5_2:
-# 1071 "data/maps/ParcelHighlands/scripts.pory"
+# 1078 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Jarle_R2_Text_1, MSGBOX_DEFAULT
-# 1072 "data/maps/ParcelHighlands/scripts.pory"
+# 1079 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Kjersti::
-# 1081 "data/maps/ParcelHighlands/scripts.pory"
+# 1088 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_KJERSTI, ParcelHighlands_Kjersti_Text_0, ParcelHighlands_Kjersti_Text_1, ParcelHighlands_Kjersti_FirstWin
-# 1085 "data/maps/ParcelHighlands/scripts.pory"
+# 1092 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1086 "data/maps/ParcelHighlands/scripts.pory"
+# 1093 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Kjersti_3
 ParcelHighlands_Kjersti_1:
-# 1089 "data/maps/ParcelHighlands/scripts.pory"
+# 1096 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Kjersti_8
 ParcelHighlands_Kjersti_6:
-# 1092 "data/maps/ParcelHighlands/scripts.pory"
+# 1099 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Kjersti_13
 ParcelHighlands_Kjersti_11:
-# 1095 "data/maps/ParcelHighlands/scripts.pory"
+# 1102 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Kjersti_18
 ParcelHighlands_Kjersti_16:
-# 1098 "data/maps/ParcelHighlands/scripts.pory"
+# 1105 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Kjersti_2:
-# 1087 "data/maps/ParcelHighlands/scripts.pory"
+# 1094 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Kjersti_R2
 	goto ParcelHighlands_Kjersti_1
 
 ParcelHighlands_Kjersti_3:
-# 1086 "data/maps/ParcelHighlands/scripts.pory"
+# 1093 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_KJERSTI_R2
 	goto_if 0, ParcelHighlands_Kjersti_2
 	goto ParcelHighlands_Kjersti_1
 
 ParcelHighlands_Kjersti_7:
-# 1090 "data/maps/ParcelHighlands/scripts.pory"
+# 1097 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Kjersti_R3
 	goto ParcelHighlands_Kjersti_6
 
 ParcelHighlands_Kjersti_8:
-# 1089 "data/maps/ParcelHighlands/scripts.pory"
+# 1096 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_KJERSTI_R3
 	goto_if 0, ParcelHighlands_Kjersti_7
 	goto ParcelHighlands_Kjersti_6
 
 ParcelHighlands_Kjersti_12:
-# 1093 "data/maps/ParcelHighlands/scripts.pory"
+# 1100 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Kjersti_R4
 	goto ParcelHighlands_Kjersti_11
 
 ParcelHighlands_Kjersti_13:
-# 1092 "data/maps/ParcelHighlands/scripts.pory"
+# 1099 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_KJERSTI_R4
 	goto_if 0, ParcelHighlands_Kjersti_12
 	goto ParcelHighlands_Kjersti_11
 
 ParcelHighlands_Kjersti_17:
-# 1096 "data/maps/ParcelHighlands/scripts.pory"
+# 1103 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Kjersti_R5
 	goto ParcelHighlands_Kjersti_16
 
 ParcelHighlands_Kjersti_18:
-# 1095 "data/maps/ParcelHighlands/scripts.pory"
+# 1102 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_KJERSTI_R5
 	goto_if 0, ParcelHighlands_Kjersti_17
 	goto ParcelHighlands_Kjersti_16
 
 
 ParcelHighlands_Kjersti_FirstWin::
-# 1102 "data/maps/ParcelHighlands/scripts.pory"
+# 1109 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_Text_2, MSGBOX_DEFAULT
-# 1103 "data/maps/ParcelHighlands/scripts.pory"
+# 1110 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Kjersti_R2::
-# 1107 "data/maps/ParcelHighlands/scripts.pory"
+# 1114 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1108 "data/maps/ParcelHighlands/scripts.pory"
+# 1115 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1109 "data/maps/ParcelHighlands/scripts.pory"
+# 1116 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R2_Text_0, MSGBOX_YESNO
-# 1110 "data/maps/ParcelHighlands/scripts.pory"
+# 1117 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Kjersti_R2_2
-# 1115 "data/maps/ParcelHighlands/scripts.pory"
+# 1122 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_KJERSTI_R2, ParcelHighlands_Kjersti_R2_Text_2
-# 1116 "data/maps/ParcelHighlands/scripts.pory"
+# 1123 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R2_Text_3, MSGBOX_DEFAULT
-# 1117 "data/maps/ParcelHighlands/scripts.pory"
+# 1124 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Kjersti_R2_2:
-# 1111 "data/maps/ParcelHighlands/scripts.pory"
+# 1118 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R2_Text_1, MSGBOX_DEFAULT
-# 1112 "data/maps/ParcelHighlands/scripts.pory"
+# 1119 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Kjersti_R3::
-# 1121 "data/maps/ParcelHighlands/scripts.pory"
+# 1128 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1122 "data/maps/ParcelHighlands/scripts.pory"
+# 1129 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1123 "data/maps/ParcelHighlands/scripts.pory"
+# 1130 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R3_Text_0, MSGBOX_YESNO
-# 1124 "data/maps/ParcelHighlands/scripts.pory"
+# 1131 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Kjersti_R3_2
-# 1129 "data/maps/ParcelHighlands/scripts.pory"
+# 1136 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_KJERSTI_R3, ParcelHighlands_Kjersti_R2_Text_2
-# 1130 "data/maps/ParcelHighlands/scripts.pory"
+# 1137 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R3_Text_1, MSGBOX_DEFAULT
-# 1131 "data/maps/ParcelHighlands/scripts.pory"
+# 1138 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Kjersti_R3_2:
-# 1125 "data/maps/ParcelHighlands/scripts.pory"
+# 1132 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R2_Text_1, MSGBOX_DEFAULT
-# 1126 "data/maps/ParcelHighlands/scripts.pory"
+# 1133 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Kjersti_R4::
-# 1135 "data/maps/ParcelHighlands/scripts.pory"
+# 1142 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1136 "data/maps/ParcelHighlands/scripts.pory"
+# 1143 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1137 "data/maps/ParcelHighlands/scripts.pory"
+# 1144 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R4_Text_0, MSGBOX_YESNO
-# 1138 "data/maps/ParcelHighlands/scripts.pory"
+# 1145 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Kjersti_R4_2
-# 1143 "data/maps/ParcelHighlands/scripts.pory"
+# 1150 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_KJERSTI_R4, ParcelHighlands_Kjersti_R4_Text_1
-# 1144 "data/maps/ParcelHighlands/scripts.pory"
+# 1151 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R4_Text_2, MSGBOX_DEFAULT
-# 1145 "data/maps/ParcelHighlands/scripts.pory"
+# 1152 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Kjersti_R4_2:
-# 1139 "data/maps/ParcelHighlands/scripts.pory"
+# 1146 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R2_Text_1, MSGBOX_DEFAULT
-# 1140 "data/maps/ParcelHighlands/scripts.pory"
+# 1147 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Kjersti_R5::
-# 1149 "data/maps/ParcelHighlands/scripts.pory"
+# 1156 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1150 "data/maps/ParcelHighlands/scripts.pory"
+# 1157 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1151 "data/maps/ParcelHighlands/scripts.pory"
+# 1158 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R5_Text_0, MSGBOX_YESNO
-# 1152 "data/maps/ParcelHighlands/scripts.pory"
+# 1159 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Kjersti_R5_2
-# 1157 "data/maps/ParcelHighlands/scripts.pory"
+# 1164 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_KJERSTI_R5, ParcelHighlands_Kjersti_R2_Text_2
-# 1158 "data/maps/ParcelHighlands/scripts.pory"
+# 1165 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R5_Text_1, MSGBOX_DEFAULT
-# 1159 "data/maps/ParcelHighlands/scripts.pory"
+# 1166 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Kjersti_R5_2:
-# 1153 "data/maps/ParcelHighlands/scripts.pory"
+# 1160 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Kjersti_R2_Text_1, MSGBOX_DEFAULT
-# 1154 "data/maps/ParcelHighlands/scripts.pory"
+# 1161 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Leidulf::
-# 1163 "data/maps/ParcelHighlands/scripts.pory"
+# 1170 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_LEIDULF, ParcelHighlands_Leidulf_Text_0, ParcelHighlands_Leidulf_Text_1, ParcelHighlands_Leidulf_FirstWin
-# 1167 "data/maps/ParcelHighlands/scripts.pory"
+# 1174 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1168 "data/maps/ParcelHighlands/scripts.pory"
+# 1175 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Leidulf_3
 ParcelHighlands_Leidulf_1:
-# 1171 "data/maps/ParcelHighlands/scripts.pory"
+# 1178 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Leidulf_8
 ParcelHighlands_Leidulf_6:
-# 1174 "data/maps/ParcelHighlands/scripts.pory"
+# 1181 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Leidulf_13
 ParcelHighlands_Leidulf_11:
-# 1177 "data/maps/ParcelHighlands/scripts.pory"
+# 1184 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Leidulf_18
 ParcelHighlands_Leidulf_16:
-# 1180 "data/maps/ParcelHighlands/scripts.pory"
+# 1187 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Leidulf_2:
-# 1169 "data/maps/ParcelHighlands/scripts.pory"
+# 1176 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Leidulf_R2
 	goto ParcelHighlands_Leidulf_1
 
 ParcelHighlands_Leidulf_3:
-# 1168 "data/maps/ParcelHighlands/scripts.pory"
+# 1175 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_LEIDULF_R2
 	goto_if 0, ParcelHighlands_Leidulf_2
 	goto ParcelHighlands_Leidulf_1
 
 ParcelHighlands_Leidulf_7:
-# 1172 "data/maps/ParcelHighlands/scripts.pory"
+# 1179 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Leidulf_R3
 	goto ParcelHighlands_Leidulf_6
 
 ParcelHighlands_Leidulf_8:
-# 1171 "data/maps/ParcelHighlands/scripts.pory"
+# 1178 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_LEIDULF_R3
 	goto_if 0, ParcelHighlands_Leidulf_7
 	goto ParcelHighlands_Leidulf_6
 
 ParcelHighlands_Leidulf_12:
-# 1175 "data/maps/ParcelHighlands/scripts.pory"
+# 1182 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Leidulf_R4
 	goto ParcelHighlands_Leidulf_11
 
 ParcelHighlands_Leidulf_13:
-# 1174 "data/maps/ParcelHighlands/scripts.pory"
+# 1181 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_LEIDULF_R4
 	goto_if 0, ParcelHighlands_Leidulf_12
 	goto ParcelHighlands_Leidulf_11
 
 ParcelHighlands_Leidulf_17:
-# 1178 "data/maps/ParcelHighlands/scripts.pory"
+# 1185 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Leidulf_R5
 	goto ParcelHighlands_Leidulf_16
 
 ParcelHighlands_Leidulf_18:
-# 1177 "data/maps/ParcelHighlands/scripts.pory"
+# 1184 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_LEIDULF_R5
 	goto_if 0, ParcelHighlands_Leidulf_17
 	goto ParcelHighlands_Leidulf_16
 
 
 ParcelHighlands_Leidulf_FirstWin::
-# 1184 "data/maps/ParcelHighlands/scripts.pory"
+# 1191 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_Text_2, MSGBOX_DEFAULT
-# 1185 "data/maps/ParcelHighlands/scripts.pory"
+# 1192 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Leidulf_R2::
-# 1189 "data/maps/ParcelHighlands/scripts.pory"
+# 1196 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1190 "data/maps/ParcelHighlands/scripts.pory"
+# 1197 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1191 "data/maps/ParcelHighlands/scripts.pory"
+# 1198 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R2_Text_0, MSGBOX_YESNO
-# 1192 "data/maps/ParcelHighlands/scripts.pory"
+# 1199 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Leidulf_R2_2
-# 1197 "data/maps/ParcelHighlands/scripts.pory"
+# 1204 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_LEIDULF_R2, ParcelHighlands_Leidulf_R2_Text_2
-# 1198 "data/maps/ParcelHighlands/scripts.pory"
+# 1205 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R2_Text_3, MSGBOX_DEFAULT
-# 1199 "data/maps/ParcelHighlands/scripts.pory"
+# 1206 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Leidulf_R2_2:
-# 1193 "data/maps/ParcelHighlands/scripts.pory"
+# 1200 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R2_Text_1, MSGBOX_DEFAULT
-# 1194 "data/maps/ParcelHighlands/scripts.pory"
+# 1201 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Leidulf_R3::
-# 1203 "data/maps/ParcelHighlands/scripts.pory"
+# 1210 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1204 "data/maps/ParcelHighlands/scripts.pory"
+# 1211 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1205 "data/maps/ParcelHighlands/scripts.pory"
+# 1212 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R3_Text_0, MSGBOX_YESNO
-# 1206 "data/maps/ParcelHighlands/scripts.pory"
+# 1213 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Leidulf_R3_2
-# 1211 "data/maps/ParcelHighlands/scripts.pory"
+# 1218 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_LEIDULF_R3, ParcelHighlands_Leidulf_R3_Text_1
-# 1212 "data/maps/ParcelHighlands/scripts.pory"
+# 1219 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R3_Text_2, MSGBOX_DEFAULT
-# 1213 "data/maps/ParcelHighlands/scripts.pory"
+# 1220 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Leidulf_R3_2:
-# 1207 "data/maps/ParcelHighlands/scripts.pory"
+# 1214 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R2_Text_1, MSGBOX_DEFAULT
-# 1208 "data/maps/ParcelHighlands/scripts.pory"
+# 1215 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Leidulf_R4::
-# 1217 "data/maps/ParcelHighlands/scripts.pory"
+# 1224 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1218 "data/maps/ParcelHighlands/scripts.pory"
+# 1225 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1219 "data/maps/ParcelHighlands/scripts.pory"
+# 1226 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R4_Text_0, MSGBOX_YESNO
-# 1220 "data/maps/ParcelHighlands/scripts.pory"
+# 1227 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Leidulf_R4_2
-# 1225 "data/maps/ParcelHighlands/scripts.pory"
+# 1232 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_LEIDULF_R4, ParcelHighlands_Leidulf_R3_Text_1
-# 1226 "data/maps/ParcelHighlands/scripts.pory"
+# 1233 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R4_Text_1, MSGBOX_DEFAULT
-# 1227 "data/maps/ParcelHighlands/scripts.pory"
+# 1234 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Leidulf_R4_2:
-# 1221 "data/maps/ParcelHighlands/scripts.pory"
+# 1228 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R2_Text_1, MSGBOX_DEFAULT
-# 1222 "data/maps/ParcelHighlands/scripts.pory"
+# 1229 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Leidulf_R5::
-# 1231 "data/maps/ParcelHighlands/scripts.pory"
+# 1238 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1232 "data/maps/ParcelHighlands/scripts.pory"
+# 1239 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1233 "data/maps/ParcelHighlands/scripts.pory"
+# 1240 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R5_Text_0, MSGBOX_YESNO
-# 1234 "data/maps/ParcelHighlands/scripts.pory"
+# 1241 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Leidulf_R5_2
-# 1239 "data/maps/ParcelHighlands/scripts.pory"
+# 1246 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_LEIDULF_R5, ParcelHighlands_Leidulf_R5_Text_1
-# 1240 "data/maps/ParcelHighlands/scripts.pory"
+# 1247 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R5_Text_2, MSGBOX_DEFAULT
-# 1241 "data/maps/ParcelHighlands/scripts.pory"
+# 1248 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Leidulf_R5_2:
-# 1235 "data/maps/ParcelHighlands/scripts.pory"
+# 1242 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Leidulf_R2_Text_1, MSGBOX_DEFAULT
-# 1236 "data/maps/ParcelHighlands/scripts.pory"
+# 1243 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Nora::
-# 1245 "data/maps/ParcelHighlands/scripts.pory"
+# 1252 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_NORA, ParcelHighlands_Nora_Text_0, ParcelHighlands_Nora_Text_1, ParcelHighlands_Nora_FirstWin
-# 1249 "data/maps/ParcelHighlands/scripts.pory"
+# 1256 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1250 "data/maps/ParcelHighlands/scripts.pory"
+# 1257 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Nora_3
 ParcelHighlands_Nora_1:
-# 1253 "data/maps/ParcelHighlands/scripts.pory"
+# 1260 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Nora_8
 ParcelHighlands_Nora_6:
-# 1256 "data/maps/ParcelHighlands/scripts.pory"
+# 1263 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Nora_13
 ParcelHighlands_Nora_11:
-# 1259 "data/maps/ParcelHighlands/scripts.pory"
+# 1266 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Nora_18
 ParcelHighlands_Nora_16:
-# 1262 "data/maps/ParcelHighlands/scripts.pory"
+# 1269 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Nora_2:
-# 1251 "data/maps/ParcelHighlands/scripts.pory"
+# 1258 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Nora_R2
 	goto ParcelHighlands_Nora_1
 
 ParcelHighlands_Nora_3:
-# 1250 "data/maps/ParcelHighlands/scripts.pory"
+# 1257 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_NORA_R2
 	goto_if 0, ParcelHighlands_Nora_2
 	goto ParcelHighlands_Nora_1
 
 ParcelHighlands_Nora_7:
-# 1254 "data/maps/ParcelHighlands/scripts.pory"
+# 1261 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Nora_R3
 	goto ParcelHighlands_Nora_6
 
 ParcelHighlands_Nora_8:
-# 1253 "data/maps/ParcelHighlands/scripts.pory"
+# 1260 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_NORA_R3
 	goto_if 0, ParcelHighlands_Nora_7
 	goto ParcelHighlands_Nora_6
 
 ParcelHighlands_Nora_12:
-# 1257 "data/maps/ParcelHighlands/scripts.pory"
+# 1264 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Nora_R4
 	goto ParcelHighlands_Nora_11
 
 ParcelHighlands_Nora_13:
-# 1256 "data/maps/ParcelHighlands/scripts.pory"
+# 1263 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_NORA_R4
 	goto_if 0, ParcelHighlands_Nora_12
 	goto ParcelHighlands_Nora_11
 
 ParcelHighlands_Nora_17:
-# 1260 "data/maps/ParcelHighlands/scripts.pory"
+# 1267 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Nora_R5
 	goto ParcelHighlands_Nora_16
 
 ParcelHighlands_Nora_18:
-# 1259 "data/maps/ParcelHighlands/scripts.pory"
+# 1266 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_NORA_R5
 	goto_if 0, ParcelHighlands_Nora_17
 	goto ParcelHighlands_Nora_16
 
 
 ParcelHighlands_Nora_FirstWin::
-# 1266 "data/maps/ParcelHighlands/scripts.pory"
+# 1273 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_Text_2, MSGBOX_DEFAULT
-# 1267 "data/maps/ParcelHighlands/scripts.pory"
+# 1274 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Nora_R2::
-# 1271 "data/maps/ParcelHighlands/scripts.pory"
+# 1278 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1272 "data/maps/ParcelHighlands/scripts.pory"
+# 1279 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1273 "data/maps/ParcelHighlands/scripts.pory"
+# 1280 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R2_Text_0, MSGBOX_YESNO
-# 1274 "data/maps/ParcelHighlands/scripts.pory"
+# 1281 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Nora_R2_2
-# 1279 "data/maps/ParcelHighlands/scripts.pory"
+# 1286 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_NORA_R2, ParcelHighlands_Nora_R2_Text_2
-# 1280 "data/maps/ParcelHighlands/scripts.pory"
+# 1287 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R2_Text_3, MSGBOX_DEFAULT
-# 1281 "data/maps/ParcelHighlands/scripts.pory"
+# 1288 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Nora_R2_2:
-# 1275 "data/maps/ParcelHighlands/scripts.pory"
+# 1282 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R2_Text_1, MSGBOX_DEFAULT
-# 1276 "data/maps/ParcelHighlands/scripts.pory"
+# 1283 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Nora_R3::
-# 1285 "data/maps/ParcelHighlands/scripts.pory"
+# 1292 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1286 "data/maps/ParcelHighlands/scripts.pory"
+# 1293 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1287 "data/maps/ParcelHighlands/scripts.pory"
+# 1294 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R3_Text_0, MSGBOX_YESNO
-# 1288 "data/maps/ParcelHighlands/scripts.pory"
+# 1295 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Nora_R3_2
-# 1293 "data/maps/ParcelHighlands/scripts.pory"
+# 1300 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_NORA_R3, ParcelHighlands_Nora_R3_Text_1
-# 1294 "data/maps/ParcelHighlands/scripts.pory"
+# 1301 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R3_Text_2, MSGBOX_DEFAULT
-# 1295 "data/maps/ParcelHighlands/scripts.pory"
+# 1302 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Nora_R3_2:
-# 1289 "data/maps/ParcelHighlands/scripts.pory"
+# 1296 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R2_Text_1, MSGBOX_DEFAULT
-# 1290 "data/maps/ParcelHighlands/scripts.pory"
+# 1297 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Nora_R4::
-# 1299 "data/maps/ParcelHighlands/scripts.pory"
+# 1306 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1300 "data/maps/ParcelHighlands/scripts.pory"
+# 1307 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1301 "data/maps/ParcelHighlands/scripts.pory"
+# 1308 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R4_Text_0, MSGBOX_YESNO
-# 1302 "data/maps/ParcelHighlands/scripts.pory"
+# 1309 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Nora_R4_2
-# 1307 "data/maps/ParcelHighlands/scripts.pory"
+# 1314 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_NORA_R4, ParcelHighlands_Nora_R2_Text_2
-# 1308 "data/maps/ParcelHighlands/scripts.pory"
+# 1315 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R4_Text_1, MSGBOX_DEFAULT
-# 1309 "data/maps/ParcelHighlands/scripts.pory"
+# 1316 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Nora_R4_2:
-# 1303 "data/maps/ParcelHighlands/scripts.pory"
+# 1310 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R2_Text_1, MSGBOX_DEFAULT
-# 1304 "data/maps/ParcelHighlands/scripts.pory"
+# 1311 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Nora_R5::
-# 1313 "data/maps/ParcelHighlands/scripts.pory"
+# 1320 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1314 "data/maps/ParcelHighlands/scripts.pory"
+# 1321 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1315 "data/maps/ParcelHighlands/scripts.pory"
+# 1322 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R5_Text_0, MSGBOX_YESNO
-# 1316 "data/maps/ParcelHighlands/scripts.pory"
+# 1323 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Nora_R5_2
-# 1321 "data/maps/ParcelHighlands/scripts.pory"
+# 1328 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_NORA_R5, ParcelHighlands_Nora_R5_Text_1
-# 1322 "data/maps/ParcelHighlands/scripts.pory"
+# 1329 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R5_Text_2, MSGBOX_DEFAULT
-# 1323 "data/maps/ParcelHighlands/scripts.pory"
+# 1330 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Nora_R5_2:
-# 1317 "data/maps/ParcelHighlands/scripts.pory"
+# 1324 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Nora_R2_Text_1, MSGBOX_DEFAULT
-# 1318 "data/maps/ParcelHighlands/scripts.pory"
+# 1325 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Peder::
-# 1327 "data/maps/ParcelHighlands/scripts.pory"
+# 1334 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_PEDER, ParcelHighlands_Peder_Text_0, ParcelHighlands_Peder_Text_1, ParcelHighlands_Peder_FirstWin
-# 1331 "data/maps/ParcelHighlands/scripts.pory"
+# 1338 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1332 "data/maps/ParcelHighlands/scripts.pory"
+# 1339 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Peder_3
 ParcelHighlands_Peder_1:
-# 1335 "data/maps/ParcelHighlands/scripts.pory"
+# 1342 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Peder_8
 ParcelHighlands_Peder_6:
-# 1338 "data/maps/ParcelHighlands/scripts.pory"
+# 1345 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Peder_13
 ParcelHighlands_Peder_11:
-# 1341 "data/maps/ParcelHighlands/scripts.pory"
+# 1348 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Peder_18
 ParcelHighlands_Peder_16:
-# 1344 "data/maps/ParcelHighlands/scripts.pory"
+# 1351 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Peder_2:
-# 1333 "data/maps/ParcelHighlands/scripts.pory"
+# 1340 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Peder_R2
 	goto ParcelHighlands_Peder_1
 
 ParcelHighlands_Peder_3:
-# 1332 "data/maps/ParcelHighlands/scripts.pory"
+# 1339 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_PEDER_R2
 	goto_if 0, ParcelHighlands_Peder_2
 	goto ParcelHighlands_Peder_1
 
 ParcelHighlands_Peder_7:
-# 1336 "data/maps/ParcelHighlands/scripts.pory"
+# 1343 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Peder_R3
 	goto ParcelHighlands_Peder_6
 
 ParcelHighlands_Peder_8:
-# 1335 "data/maps/ParcelHighlands/scripts.pory"
+# 1342 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_PEDER_R3
 	goto_if 0, ParcelHighlands_Peder_7
 	goto ParcelHighlands_Peder_6
 
 ParcelHighlands_Peder_12:
-# 1339 "data/maps/ParcelHighlands/scripts.pory"
+# 1346 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Peder_R4
 	goto ParcelHighlands_Peder_11
 
 ParcelHighlands_Peder_13:
-# 1338 "data/maps/ParcelHighlands/scripts.pory"
+# 1345 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_PEDER_R4
 	goto_if 0, ParcelHighlands_Peder_12
 	goto ParcelHighlands_Peder_11
 
 ParcelHighlands_Peder_17:
-# 1342 "data/maps/ParcelHighlands/scripts.pory"
+# 1349 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Peder_R5
 	goto ParcelHighlands_Peder_16
 
 ParcelHighlands_Peder_18:
-# 1341 "data/maps/ParcelHighlands/scripts.pory"
+# 1348 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_PEDER_R5
 	goto_if 0, ParcelHighlands_Peder_17
 	goto ParcelHighlands_Peder_16
 
 
 ParcelHighlands_Peder_FirstWin::
-# 1348 "data/maps/ParcelHighlands/scripts.pory"
+# 1355 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_Text_2, MSGBOX_DEFAULT
-# 1349 "data/maps/ParcelHighlands/scripts.pory"
+# 1356 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Peder_R2::
-# 1353 "data/maps/ParcelHighlands/scripts.pory"
+# 1360 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1354 "data/maps/ParcelHighlands/scripts.pory"
+# 1361 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1355 "data/maps/ParcelHighlands/scripts.pory"
+# 1362 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R2_Text_0, MSGBOX_YESNO
-# 1356 "data/maps/ParcelHighlands/scripts.pory"
+# 1363 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Peder_R2_2
-# 1361 "data/maps/ParcelHighlands/scripts.pory"
+# 1368 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_PEDER_R2, ParcelHighlands_Peder_R2_Text_2
-# 1362 "data/maps/ParcelHighlands/scripts.pory"
+# 1369 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R2_Text_3, MSGBOX_DEFAULT
-# 1363 "data/maps/ParcelHighlands/scripts.pory"
+# 1370 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Peder_R2_2:
-# 1357 "data/maps/ParcelHighlands/scripts.pory"
+# 1364 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R2_Text_1, MSGBOX_DEFAULT
-# 1358 "data/maps/ParcelHighlands/scripts.pory"
+# 1365 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Peder_R3::
-# 1367 "data/maps/ParcelHighlands/scripts.pory"
+# 1374 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1368 "data/maps/ParcelHighlands/scripts.pory"
+# 1375 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1369 "data/maps/ParcelHighlands/scripts.pory"
+# 1376 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R3_Text_0, MSGBOX_YESNO
-# 1370 "data/maps/ParcelHighlands/scripts.pory"
+# 1377 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Peder_R3_2
-# 1375 "data/maps/ParcelHighlands/scripts.pory"
+# 1382 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_PEDER_R3, ParcelHighlands_Peder_R3_Text_1
-# 1376 "data/maps/ParcelHighlands/scripts.pory"
+# 1383 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R3_Text_2, MSGBOX_DEFAULT
-# 1377 "data/maps/ParcelHighlands/scripts.pory"
+# 1384 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Peder_R3_2:
-# 1371 "data/maps/ParcelHighlands/scripts.pory"
+# 1378 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R2_Text_1, MSGBOX_DEFAULT
-# 1372 "data/maps/ParcelHighlands/scripts.pory"
+# 1379 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Peder_R4::
-# 1381 "data/maps/ParcelHighlands/scripts.pory"
+# 1388 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1382 "data/maps/ParcelHighlands/scripts.pory"
+# 1389 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1383 "data/maps/ParcelHighlands/scripts.pory"
+# 1390 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R4_Text_0, MSGBOX_YESNO
-# 1384 "data/maps/ParcelHighlands/scripts.pory"
+# 1391 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Peder_R4_2
-# 1389 "data/maps/ParcelHighlands/scripts.pory"
+# 1396 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_PEDER_R4, ParcelHighlands_Peder_R4_Text_1
-# 1390 "data/maps/ParcelHighlands/scripts.pory"
+# 1397 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R4_Text_2, MSGBOX_DEFAULT
-# 1391 "data/maps/ParcelHighlands/scripts.pory"
+# 1398 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Peder_R4_2:
-# 1385 "data/maps/ParcelHighlands/scripts.pory"
+# 1392 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R2_Text_1, MSGBOX_DEFAULT
-# 1386 "data/maps/ParcelHighlands/scripts.pory"
+# 1393 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Peder_R5::
-# 1395 "data/maps/ParcelHighlands/scripts.pory"
+# 1402 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1396 "data/maps/ParcelHighlands/scripts.pory"
+# 1403 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1397 "data/maps/ParcelHighlands/scripts.pory"
+# 1404 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R5_Text_0, MSGBOX_YESNO
-# 1398 "data/maps/ParcelHighlands/scripts.pory"
+# 1405 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Peder_R5_2
-# 1403 "data/maps/ParcelHighlands/scripts.pory"
+# 1410 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_PEDER_R5, ParcelHighlands_Peder_R5_Text_1
-# 1404 "data/maps/ParcelHighlands/scripts.pory"
+# 1411 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R5_Text_2, MSGBOX_DEFAULT
-# 1405 "data/maps/ParcelHighlands/scripts.pory"
+# 1412 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Peder_R5_2:
-# 1399 "data/maps/ParcelHighlands/scripts.pory"
+# 1406 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Peder_R2_Text_1, MSGBOX_DEFAULT
-# 1400 "data/maps/ParcelHighlands/scripts.pory"
+# 1407 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Runa::
-# 1409 "data/maps/ParcelHighlands/scripts.pory"
+# 1416 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_RUNA, ParcelHighlands_Runa_Text_0, ParcelHighlands_Runa_Text_1, ParcelHighlands_Runa_FirstWin
-# 1413 "data/maps/ParcelHighlands/scripts.pory"
+# 1420 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1414 "data/maps/ParcelHighlands/scripts.pory"
+# 1421 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Runa_3
 ParcelHighlands_Runa_1:
-# 1417 "data/maps/ParcelHighlands/scripts.pory"
+# 1424 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Runa_8
 ParcelHighlands_Runa_6:
-# 1420 "data/maps/ParcelHighlands/scripts.pory"
+# 1427 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Runa_13
 ParcelHighlands_Runa_11:
-# 1423 "data/maps/ParcelHighlands/scripts.pory"
+# 1430 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Runa_18
 ParcelHighlands_Runa_16:
-# 1426 "data/maps/ParcelHighlands/scripts.pory"
+# 1433 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Runa_2:
-# 1415 "data/maps/ParcelHighlands/scripts.pory"
+# 1422 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Runa_R2
 	goto ParcelHighlands_Runa_1
 
 ParcelHighlands_Runa_3:
-# 1414 "data/maps/ParcelHighlands/scripts.pory"
+# 1421 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_RUNA_R2
 	goto_if 0, ParcelHighlands_Runa_2
 	goto ParcelHighlands_Runa_1
 
 ParcelHighlands_Runa_7:
-# 1418 "data/maps/ParcelHighlands/scripts.pory"
+# 1425 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Runa_R3
 	goto ParcelHighlands_Runa_6
 
 ParcelHighlands_Runa_8:
-# 1417 "data/maps/ParcelHighlands/scripts.pory"
+# 1424 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_RUNA_R3
 	goto_if 0, ParcelHighlands_Runa_7
 	goto ParcelHighlands_Runa_6
 
 ParcelHighlands_Runa_12:
-# 1421 "data/maps/ParcelHighlands/scripts.pory"
+# 1428 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Runa_R4
 	goto ParcelHighlands_Runa_11
 
 ParcelHighlands_Runa_13:
-# 1420 "data/maps/ParcelHighlands/scripts.pory"
+# 1427 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_RUNA_R4
 	goto_if 0, ParcelHighlands_Runa_12
 	goto ParcelHighlands_Runa_11
 
 ParcelHighlands_Runa_17:
-# 1424 "data/maps/ParcelHighlands/scripts.pory"
+# 1431 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Runa_R5
 	goto ParcelHighlands_Runa_16
 
 ParcelHighlands_Runa_18:
-# 1423 "data/maps/ParcelHighlands/scripts.pory"
+# 1430 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_RUNA_R5
 	goto_if 0, ParcelHighlands_Runa_17
 	goto ParcelHighlands_Runa_16
 
 
 ParcelHighlands_Runa_FirstWin::
-# 1430 "data/maps/ParcelHighlands/scripts.pory"
+# 1437 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_Text_2, MSGBOX_DEFAULT
-# 1431 "data/maps/ParcelHighlands/scripts.pory"
+# 1438 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Runa_R2::
-# 1435 "data/maps/ParcelHighlands/scripts.pory"
+# 1442 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1436 "data/maps/ParcelHighlands/scripts.pory"
+# 1443 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1437 "data/maps/ParcelHighlands/scripts.pory"
+# 1444 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R2_Text_0, MSGBOX_YESNO
-# 1438 "data/maps/ParcelHighlands/scripts.pory"
+# 1445 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Runa_R2_2
-# 1443 "data/maps/ParcelHighlands/scripts.pory"
+# 1450 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_RUNA_R2, ParcelHighlands_Runa_R2_Text_2
-# 1444 "data/maps/ParcelHighlands/scripts.pory"
+# 1451 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R2_Text_3, MSGBOX_DEFAULT
-# 1445 "data/maps/ParcelHighlands/scripts.pory"
+# 1452 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Runa_R2_2:
-# 1439 "data/maps/ParcelHighlands/scripts.pory"
+# 1446 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R2_Text_1, MSGBOX_DEFAULT
-# 1440 "data/maps/ParcelHighlands/scripts.pory"
+# 1447 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Runa_R3::
-# 1449 "data/maps/ParcelHighlands/scripts.pory"
+# 1456 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1450 "data/maps/ParcelHighlands/scripts.pory"
+# 1457 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1451 "data/maps/ParcelHighlands/scripts.pory"
+# 1458 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R3_Text_0, MSGBOX_YESNO
-# 1452 "data/maps/ParcelHighlands/scripts.pory"
+# 1459 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Runa_R3_2
-# 1457 "data/maps/ParcelHighlands/scripts.pory"
+# 1464 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_RUNA_R3, ParcelHighlands_Runa_R3_Text_1
-# 1458 "data/maps/ParcelHighlands/scripts.pory"
+# 1465 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R3_Text_2, MSGBOX_DEFAULT
-# 1459 "data/maps/ParcelHighlands/scripts.pory"
+# 1466 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Runa_R3_2:
-# 1453 "data/maps/ParcelHighlands/scripts.pory"
+# 1460 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R2_Text_1, MSGBOX_DEFAULT
-# 1454 "data/maps/ParcelHighlands/scripts.pory"
+# 1461 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Runa_R4::
-# 1463 "data/maps/ParcelHighlands/scripts.pory"
+# 1470 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1464 "data/maps/ParcelHighlands/scripts.pory"
+# 1471 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1465 "data/maps/ParcelHighlands/scripts.pory"
+# 1472 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R4_Text_0, MSGBOX_YESNO
-# 1466 "data/maps/ParcelHighlands/scripts.pory"
+# 1473 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Runa_R4_2
-# 1471 "data/maps/ParcelHighlands/scripts.pory"
+# 1478 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_RUNA_R4, ParcelHighlands_Runa_R4_Text_1
-# 1472 "data/maps/ParcelHighlands/scripts.pory"
+# 1479 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R4_Text_2, MSGBOX_DEFAULT
-# 1473 "data/maps/ParcelHighlands/scripts.pory"
+# 1480 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Runa_R4_2:
-# 1467 "data/maps/ParcelHighlands/scripts.pory"
+# 1474 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R2_Text_1, MSGBOX_DEFAULT
-# 1468 "data/maps/ParcelHighlands/scripts.pory"
+# 1475 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Runa_R5::
-# 1477 "data/maps/ParcelHighlands/scripts.pory"
+# 1484 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1478 "data/maps/ParcelHighlands/scripts.pory"
+# 1485 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1479 "data/maps/ParcelHighlands/scripts.pory"
+# 1486 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R5_Text_0, MSGBOX_YESNO
-# 1480 "data/maps/ParcelHighlands/scripts.pory"
+# 1487 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Runa_R5_2
-# 1485 "data/maps/ParcelHighlands/scripts.pory"
+# 1492 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_RUNA_R5, ParcelHighlands_Runa_R3_Text_1
-# 1486 "data/maps/ParcelHighlands/scripts.pory"
+# 1493 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R5_Text_1, MSGBOX_DEFAULT
-# 1487 "data/maps/ParcelHighlands/scripts.pory"
+# 1494 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Runa_R5_2:
-# 1481 "data/maps/ParcelHighlands/scripts.pory"
+# 1488 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Runa_R2_Text_1, MSGBOX_DEFAULT
-# 1482 "data/maps/ParcelHighlands/scripts.pory"
+# 1489 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Siri::
-# 1491 "data/maps/ParcelHighlands/scripts.pory"
+# 1498 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_SIRI, ParcelHighlands_Siri_Text_0, ParcelHighlands_Siri_Text_1, ParcelHighlands_Siri_FirstWin
-# 1495 "data/maps/ParcelHighlands/scripts.pory"
+# 1502 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1496 "data/maps/ParcelHighlands/scripts.pory"
+# 1503 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_Siri_3
 ParcelHighlands_Siri_1:
-# 1499 "data/maps/ParcelHighlands/scripts.pory"
+# 1506 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_Siri_8
 ParcelHighlands_Siri_6:
-# 1502 "data/maps/ParcelHighlands/scripts.pory"
+# 1509 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_Siri_13
 ParcelHighlands_Siri_11:
-# 1505 "data/maps/ParcelHighlands/scripts.pory"
+# 1512 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_Siri_18
 ParcelHighlands_Siri_16:
-# 1508 "data/maps/ParcelHighlands/scripts.pory"
+# 1515 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_Siri_2:
-# 1497 "data/maps/ParcelHighlands/scripts.pory"
+# 1504 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Siri_R2
 	goto ParcelHighlands_Siri_1
 
 ParcelHighlands_Siri_3:
-# 1496 "data/maps/ParcelHighlands/scripts.pory"
+# 1503 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SIRI_R2
 	goto_if 0, ParcelHighlands_Siri_2
 	goto ParcelHighlands_Siri_1
 
 ParcelHighlands_Siri_7:
-# 1500 "data/maps/ParcelHighlands/scripts.pory"
+# 1507 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Siri_R3
 	goto ParcelHighlands_Siri_6
 
 ParcelHighlands_Siri_8:
-# 1499 "data/maps/ParcelHighlands/scripts.pory"
+# 1506 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SIRI_R3
 	goto_if 0, ParcelHighlands_Siri_7
 	goto ParcelHighlands_Siri_6
 
 ParcelHighlands_Siri_12:
-# 1503 "data/maps/ParcelHighlands/scripts.pory"
+# 1510 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Siri_R4
 	goto ParcelHighlands_Siri_11
 
 ParcelHighlands_Siri_13:
-# 1502 "data/maps/ParcelHighlands/scripts.pory"
+# 1509 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SIRI_R4
 	goto_if 0, ParcelHighlands_Siri_12
 	goto ParcelHighlands_Siri_11
 
 ParcelHighlands_Siri_17:
-# 1506 "data/maps/ParcelHighlands/scripts.pory"
+# 1513 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_Siri_R5
 	goto ParcelHighlands_Siri_16
 
 ParcelHighlands_Siri_18:
-# 1505 "data/maps/ParcelHighlands/scripts.pory"
+# 1512 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SIRI_R5
 	goto_if 0, ParcelHighlands_Siri_17
 	goto ParcelHighlands_Siri_16
 
 
 ParcelHighlands_Siri_FirstWin::
-# 1512 "data/maps/ParcelHighlands/scripts.pory"
+# 1519 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_Text_2, MSGBOX_DEFAULT
-# 1513 "data/maps/ParcelHighlands/scripts.pory"
+# 1520 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Siri_R2::
-# 1517 "data/maps/ParcelHighlands/scripts.pory"
+# 1524 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1518 "data/maps/ParcelHighlands/scripts.pory"
+# 1525 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1519 "data/maps/ParcelHighlands/scripts.pory"
+# 1526 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R2_Text_0, MSGBOX_YESNO
-# 1520 "data/maps/ParcelHighlands/scripts.pory"
+# 1527 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Siri_R2_2
-# 1525 "data/maps/ParcelHighlands/scripts.pory"
+# 1532 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SIRI_R2, ParcelHighlands_Siri_R2_Text_2
-# 1526 "data/maps/ParcelHighlands/scripts.pory"
+# 1533 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R2_Text_3, MSGBOX_DEFAULT
-# 1527 "data/maps/ParcelHighlands/scripts.pory"
+# 1534 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Siri_R2_2:
-# 1521 "data/maps/ParcelHighlands/scripts.pory"
+# 1528 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R2_Text_1, MSGBOX_DEFAULT
-# 1522 "data/maps/ParcelHighlands/scripts.pory"
+# 1529 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Siri_R3::
-# 1531 "data/maps/ParcelHighlands/scripts.pory"
+# 1538 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1532 "data/maps/ParcelHighlands/scripts.pory"
+# 1539 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1533 "data/maps/ParcelHighlands/scripts.pory"
+# 1540 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R3_Text_0, MSGBOX_YESNO
-# 1534 "data/maps/ParcelHighlands/scripts.pory"
+# 1541 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Siri_R3_2
-# 1539 "data/maps/ParcelHighlands/scripts.pory"
+# 1546 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SIRI_R3, ParcelHighlands_Siri_R3_Text_1
-# 1540 "data/maps/ParcelHighlands/scripts.pory"
+# 1547 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R3_Text_2, MSGBOX_DEFAULT
-# 1541 "data/maps/ParcelHighlands/scripts.pory"
+# 1548 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Siri_R3_2:
-# 1535 "data/maps/ParcelHighlands/scripts.pory"
+# 1542 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R2_Text_1, MSGBOX_DEFAULT
-# 1536 "data/maps/ParcelHighlands/scripts.pory"
+# 1543 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Siri_R4::
-# 1545 "data/maps/ParcelHighlands/scripts.pory"
+# 1552 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1546 "data/maps/ParcelHighlands/scripts.pory"
+# 1553 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1547 "data/maps/ParcelHighlands/scripts.pory"
+# 1554 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R4_Text_0, MSGBOX_YESNO
-# 1548 "data/maps/ParcelHighlands/scripts.pory"
+# 1555 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Siri_R4_2
-# 1553 "data/maps/ParcelHighlands/scripts.pory"
+# 1560 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SIRI_R4, ParcelHighlands_Siri_R3_Text_1
-# 1554 "data/maps/ParcelHighlands/scripts.pory"
+# 1561 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R4_Text_1, MSGBOX_DEFAULT
-# 1555 "data/maps/ParcelHighlands/scripts.pory"
+# 1562 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Siri_R4_2:
-# 1549 "data/maps/ParcelHighlands/scripts.pory"
+# 1556 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R2_Text_1, MSGBOX_DEFAULT
-# 1550 "data/maps/ParcelHighlands/scripts.pory"
+# 1557 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Siri_R5::
-# 1559 "data/maps/ParcelHighlands/scripts.pory"
+# 1566 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1560 "data/maps/ParcelHighlands/scripts.pory"
+# 1567 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1561 "data/maps/ParcelHighlands/scripts.pory"
+# 1568 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R5_Text_0, MSGBOX_YESNO
-# 1562 "data/maps/ParcelHighlands/scripts.pory"
+# 1569 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_Siri_R5_2
-# 1567 "data/maps/ParcelHighlands/scripts.pory"
+# 1574 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SIRI_R5, ParcelHighlands_Siri_R5_Text_1
-# 1568 "data/maps/ParcelHighlands/scripts.pory"
+# 1575 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R5_Text_2, MSGBOX_DEFAULT
-# 1569 "data/maps/ParcelHighlands/scripts.pory"
+# 1576 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Siri_R5_2:
-# 1563 "data/maps/ParcelHighlands/scripts.pory"
+# 1570 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Siri_R2_Text_1, MSGBOX_DEFAULT
-# 1564 "data/maps/ParcelHighlands/scripts.pory"
+# 1571 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Snorre::
-# 1575 "data/maps/ParcelHighlands/scripts.pory"
+# 1582 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_SNORRE, ParcelHighlands_T_Snorre_Text_0, ParcelHighlands_T_Snorre_Text_1, ParcelHighlands_T_Snorre_FirstWin
-# 1579 "data/maps/ParcelHighlands/scripts.pory"
+# 1586 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1580 "data/maps/ParcelHighlands/scripts.pory"
+# 1587 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_T_Snorre_3
 ParcelHighlands_T_Snorre_1:
-# 1583 "data/maps/ParcelHighlands/scripts.pory"
+# 1590 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_T_Snorre_8
 ParcelHighlands_T_Snorre_6:
-# 1586 "data/maps/ParcelHighlands/scripts.pory"
+# 1593 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_T_Snorre_13
 ParcelHighlands_T_Snorre_11:
-# 1589 "data/maps/ParcelHighlands/scripts.pory"
+# 1596 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_T_Snorre_18
 ParcelHighlands_T_Snorre_16:
-# 1592 "data/maps/ParcelHighlands/scripts.pory"
+# 1599 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_T_Snorre_2:
-# 1581 "data/maps/ParcelHighlands/scripts.pory"
+# 1588 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Snorre_R2
 	goto ParcelHighlands_T_Snorre_1
 
 ParcelHighlands_T_Snorre_3:
-# 1580 "data/maps/ParcelHighlands/scripts.pory"
+# 1587 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SNORRE_R2
 	goto_if 0, ParcelHighlands_T_Snorre_2
 	goto ParcelHighlands_T_Snorre_1
 
 ParcelHighlands_T_Snorre_7:
-# 1584 "data/maps/ParcelHighlands/scripts.pory"
+# 1591 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Snorre_R3
 	goto ParcelHighlands_T_Snorre_6
 
 ParcelHighlands_T_Snorre_8:
-# 1583 "data/maps/ParcelHighlands/scripts.pory"
+# 1590 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SNORRE_R3
 	goto_if 0, ParcelHighlands_T_Snorre_7
 	goto ParcelHighlands_T_Snorre_6
 
 ParcelHighlands_T_Snorre_12:
-# 1587 "data/maps/ParcelHighlands/scripts.pory"
+# 1594 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Snorre_R4
 	goto ParcelHighlands_T_Snorre_11
 
 ParcelHighlands_T_Snorre_13:
-# 1586 "data/maps/ParcelHighlands/scripts.pory"
+# 1593 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SNORRE_R4
 	goto_if 0, ParcelHighlands_T_Snorre_12
 	goto ParcelHighlands_T_Snorre_11
 
 ParcelHighlands_T_Snorre_17:
-# 1590 "data/maps/ParcelHighlands/scripts.pory"
+# 1597 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Snorre_R5
 	goto ParcelHighlands_T_Snorre_16
 
 ParcelHighlands_T_Snorre_18:
-# 1589 "data/maps/ParcelHighlands/scripts.pory"
+# 1596 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_SNORRE_R5
 	goto_if 0, ParcelHighlands_T_Snorre_17
 	goto ParcelHighlands_T_Snorre_16
 
 
 ParcelHighlands_T_Snorre_FirstWin::
-# 1596 "data/maps/ParcelHighlands/scripts.pory"
+# 1603 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_Text_2, MSGBOX_DEFAULT
-# 1597 "data/maps/ParcelHighlands/scripts.pory"
+# 1604 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Snorre_R2::
-# 1601 "data/maps/ParcelHighlands/scripts.pory"
+# 1608 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1602 "data/maps/ParcelHighlands/scripts.pory"
+# 1609 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1603 "data/maps/ParcelHighlands/scripts.pory"
+# 1610 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R2_Text_0, MSGBOX_YESNO
-# 1604 "data/maps/ParcelHighlands/scripts.pory"
+# 1611 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Snorre_R2_2
-# 1609 "data/maps/ParcelHighlands/scripts.pory"
+# 1616 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SNORRE_R2, ParcelHighlands_T_Snorre_R2_Text_2
-# 1610 "data/maps/ParcelHighlands/scripts.pory"
+# 1617 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R2_Text_3, MSGBOX_DEFAULT
-# 1611 "data/maps/ParcelHighlands/scripts.pory"
+# 1618 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Snorre_R2_2:
-# 1605 "data/maps/ParcelHighlands/scripts.pory"
+# 1612 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R2_Text_1, MSGBOX_DEFAULT
-# 1606 "data/maps/ParcelHighlands/scripts.pory"
+# 1613 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Snorre_R3::
-# 1615 "data/maps/ParcelHighlands/scripts.pory"
+# 1622 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1616 "data/maps/ParcelHighlands/scripts.pory"
+# 1623 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1617 "data/maps/ParcelHighlands/scripts.pory"
+# 1624 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R3_Text_0, MSGBOX_YESNO
-# 1618 "data/maps/ParcelHighlands/scripts.pory"
+# 1625 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Snorre_R3_2
-# 1623 "data/maps/ParcelHighlands/scripts.pory"
+# 1630 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SNORRE_R3, ParcelHighlands_T_Snorre_R3_Text_1
-# 1624 "data/maps/ParcelHighlands/scripts.pory"
+# 1631 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R3_Text_2, MSGBOX_DEFAULT
-# 1625 "data/maps/ParcelHighlands/scripts.pory"
+# 1632 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Snorre_R3_2:
-# 1619 "data/maps/ParcelHighlands/scripts.pory"
+# 1626 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R2_Text_1, MSGBOX_DEFAULT
-# 1620 "data/maps/ParcelHighlands/scripts.pory"
+# 1627 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Snorre_R4::
-# 1629 "data/maps/ParcelHighlands/scripts.pory"
+# 1636 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1630 "data/maps/ParcelHighlands/scripts.pory"
+# 1637 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1631 "data/maps/ParcelHighlands/scripts.pory"
+# 1638 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R4_Text_0, MSGBOX_YESNO
-# 1632 "data/maps/ParcelHighlands/scripts.pory"
+# 1639 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Snorre_R4_2
-# 1637 "data/maps/ParcelHighlands/scripts.pory"
+# 1644 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SNORRE_R4, ParcelHighlands_T_Snorre_R4_Text_1
-# 1638 "data/maps/ParcelHighlands/scripts.pory"
+# 1645 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R4_Text_2, MSGBOX_DEFAULT
-# 1639 "data/maps/ParcelHighlands/scripts.pory"
+# 1646 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Snorre_R4_2:
-# 1633 "data/maps/ParcelHighlands/scripts.pory"
+# 1640 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R2_Text_1, MSGBOX_DEFAULT
-# 1634 "data/maps/ParcelHighlands/scripts.pory"
+# 1641 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Snorre_R5::
-# 1643 "data/maps/ParcelHighlands/scripts.pory"
+# 1650 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1644 "data/maps/ParcelHighlands/scripts.pory"
+# 1651 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1645 "data/maps/ParcelHighlands/scripts.pory"
+# 1652 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R5_Text_0, MSGBOX_YESNO
-# 1646 "data/maps/ParcelHighlands/scripts.pory"
+# 1653 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Snorre_R5_2
-# 1651 "data/maps/ParcelHighlands/scripts.pory"
+# 1658 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_SNORRE_R5, ParcelHighlands_T_Snorre_R5_Text_1
-# 1652 "data/maps/ParcelHighlands/scripts.pory"
+# 1659 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R5_Text_2, MSGBOX_DEFAULT
-# 1653 "data/maps/ParcelHighlands/scripts.pory"
+# 1660 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Snorre_R5_2:
-# 1647 "data/maps/ParcelHighlands/scripts.pory"
+# 1654 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Snorre_R2_Text_1, MSGBOX_DEFAULT
-# 1648 "data/maps/ParcelHighlands/scripts.pory"
+# 1655 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Torgeir::
-# 1657 "data/maps/ParcelHighlands/scripts.pory"
+# 1664 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_TORGEIR, ParcelHighlands_T_Torgeir_Text_0, ParcelHighlands_T_Torgeir_Text_1, ParcelHighlands_T_Torgeir_FirstWin
-# 1661 "data/maps/ParcelHighlands/scripts.pory"
+# 1668 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1662 "data/maps/ParcelHighlands/scripts.pory"
+# 1669 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_T_Torgeir_3
 ParcelHighlands_T_Torgeir_1:
-# 1665 "data/maps/ParcelHighlands/scripts.pory"
+# 1672 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_T_Torgeir_8
 ParcelHighlands_T_Torgeir_6:
-# 1668 "data/maps/ParcelHighlands/scripts.pory"
+# 1675 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_T_Torgeir_13
 ParcelHighlands_T_Torgeir_11:
-# 1671 "data/maps/ParcelHighlands/scripts.pory"
+# 1678 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_T_Torgeir_18
 ParcelHighlands_T_Torgeir_16:
-# 1674 "data/maps/ParcelHighlands/scripts.pory"
+# 1681 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_T_Torgeir_2:
-# 1663 "data/maps/ParcelHighlands/scripts.pory"
+# 1670 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Torgeir_R2
 	goto ParcelHighlands_T_Torgeir_1
 
 ParcelHighlands_T_Torgeir_3:
-# 1662 "data/maps/ParcelHighlands/scripts.pory"
+# 1669 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_TORGEIR_R2
 	goto_if 0, ParcelHighlands_T_Torgeir_2
 	goto ParcelHighlands_T_Torgeir_1
 
 ParcelHighlands_T_Torgeir_7:
-# 1666 "data/maps/ParcelHighlands/scripts.pory"
+# 1673 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Torgeir_R3
 	goto ParcelHighlands_T_Torgeir_6
 
 ParcelHighlands_T_Torgeir_8:
-# 1665 "data/maps/ParcelHighlands/scripts.pory"
+# 1672 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_TORGEIR_R3
 	goto_if 0, ParcelHighlands_T_Torgeir_7
 	goto ParcelHighlands_T_Torgeir_6
 
 ParcelHighlands_T_Torgeir_12:
-# 1669 "data/maps/ParcelHighlands/scripts.pory"
+# 1676 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Torgeir_R4
 	goto ParcelHighlands_T_Torgeir_11
 
 ParcelHighlands_T_Torgeir_13:
-# 1668 "data/maps/ParcelHighlands/scripts.pory"
+# 1675 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_TORGEIR_R4
 	goto_if 0, ParcelHighlands_T_Torgeir_12
 	goto ParcelHighlands_T_Torgeir_11
 
 ParcelHighlands_T_Torgeir_17:
-# 1672 "data/maps/ParcelHighlands/scripts.pory"
+# 1679 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Torgeir_R5
 	goto ParcelHighlands_T_Torgeir_16
 
 ParcelHighlands_T_Torgeir_18:
-# 1671 "data/maps/ParcelHighlands/scripts.pory"
+# 1678 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_TORGEIR_R5
 	goto_if 0, ParcelHighlands_T_Torgeir_17
 	goto ParcelHighlands_T_Torgeir_16
 
 
 ParcelHighlands_T_Torgeir_FirstWin::
-# 1678 "data/maps/ParcelHighlands/scripts.pory"
+# 1685 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_Text_2, MSGBOX_DEFAULT
-# 1679 "data/maps/ParcelHighlands/scripts.pory"
+# 1686 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Torgeir_R2::
-# 1683 "data/maps/ParcelHighlands/scripts.pory"
+# 1690 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1684 "data/maps/ParcelHighlands/scripts.pory"
+# 1691 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1685 "data/maps/ParcelHighlands/scripts.pory"
+# 1692 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R2_Text_0, MSGBOX_YESNO
-# 1686 "data/maps/ParcelHighlands/scripts.pory"
+# 1693 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Torgeir_R2_2
-# 1691 "data/maps/ParcelHighlands/scripts.pory"
+# 1698 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_TORGEIR_R2, ParcelHighlands_T_Torgeir_R2_Text_2
-# 1692 "data/maps/ParcelHighlands/scripts.pory"
+# 1699 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R2_Text_3, MSGBOX_DEFAULT
-# 1693 "data/maps/ParcelHighlands/scripts.pory"
+# 1700 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Torgeir_R2_2:
-# 1687 "data/maps/ParcelHighlands/scripts.pory"
+# 1694 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R2_Text_1, MSGBOX_DEFAULT
-# 1688 "data/maps/ParcelHighlands/scripts.pory"
+# 1695 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Torgeir_R3::
-# 1697 "data/maps/ParcelHighlands/scripts.pory"
+# 1704 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1698 "data/maps/ParcelHighlands/scripts.pory"
+# 1705 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1699 "data/maps/ParcelHighlands/scripts.pory"
+# 1706 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R3_Text_0, MSGBOX_YESNO
-# 1700 "data/maps/ParcelHighlands/scripts.pory"
+# 1707 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Torgeir_R3_2
-# 1705 "data/maps/ParcelHighlands/scripts.pory"
+# 1712 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_TORGEIR_R3, ParcelHighlands_T_Torgeir_R2_Text_2
-# 1706 "data/maps/ParcelHighlands/scripts.pory"
+# 1713 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R3_Text_1, MSGBOX_DEFAULT
-# 1707 "data/maps/ParcelHighlands/scripts.pory"
+# 1714 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Torgeir_R3_2:
-# 1701 "data/maps/ParcelHighlands/scripts.pory"
+# 1708 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R2_Text_1, MSGBOX_DEFAULT
-# 1702 "data/maps/ParcelHighlands/scripts.pory"
+# 1709 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Torgeir_R4::
-# 1711 "data/maps/ParcelHighlands/scripts.pory"
+# 1718 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1712 "data/maps/ParcelHighlands/scripts.pory"
+# 1719 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1713 "data/maps/ParcelHighlands/scripts.pory"
+# 1720 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R4_Text_0, MSGBOX_YESNO
-# 1714 "data/maps/ParcelHighlands/scripts.pory"
+# 1721 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Torgeir_R4_2
-# 1719 "data/maps/ParcelHighlands/scripts.pory"
+# 1726 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_TORGEIR_R4, ParcelHighlands_T_Torgeir_R4_Text_1
-# 1720 "data/maps/ParcelHighlands/scripts.pory"
+# 1727 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R4_Text_2, MSGBOX_DEFAULT
-# 1721 "data/maps/ParcelHighlands/scripts.pory"
+# 1728 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Torgeir_R4_2:
-# 1715 "data/maps/ParcelHighlands/scripts.pory"
+# 1722 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R2_Text_1, MSGBOX_DEFAULT
-# 1716 "data/maps/ParcelHighlands/scripts.pory"
+# 1723 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Torgeir_R5::
-# 1725 "data/maps/ParcelHighlands/scripts.pory"
+# 1732 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1726 "data/maps/ParcelHighlands/scripts.pory"
+# 1733 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1727 "data/maps/ParcelHighlands/scripts.pory"
+# 1734 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R5_Text_0, MSGBOX_YESNO
-# 1728 "data/maps/ParcelHighlands/scripts.pory"
+# 1735 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Torgeir_R5_2
-# 1733 "data/maps/ParcelHighlands/scripts.pory"
+# 1740 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_TORGEIR_R5, ParcelHighlands_T_Torgeir_R5_Text_1
-# 1734 "data/maps/ParcelHighlands/scripts.pory"
+# 1741 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R5_Text_2, MSGBOX_DEFAULT
-# 1735 "data/maps/ParcelHighlands/scripts.pory"
+# 1742 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Torgeir_R5_2:
-# 1729 "data/maps/ParcelHighlands/scripts.pory"
+# 1736 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Torgeir_R2_Text_1, MSGBOX_DEFAULT
-# 1730 "data/maps/ParcelHighlands/scripts.pory"
+# 1737 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Hedvig::
-# 1739 "data/maps/ParcelHighlands/scripts.pory"
+# 1746 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_HL_HEDVIG, ParcelHighlands_T_Hedvig_Text_0, ParcelHighlands_T_Hedvig_Text_1, ParcelHighlands_T_Hedvig_FirstWin
-# 1743 "data/maps/ParcelHighlands/scripts.pory"
+# 1750 "data/maps/ParcelHighlands/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1744 "data/maps/ParcelHighlands/scripts.pory"
+# 1751 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelHighlands_T_Hedvig_3
 ParcelHighlands_T_Hedvig_1:
-# 1747 "data/maps/ParcelHighlands/scripts.pory"
+# 1754 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelHighlands_T_Hedvig_8
 ParcelHighlands_T_Hedvig_6:
-# 1750 "data/maps/ParcelHighlands/scripts.pory"
+# 1757 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelHighlands_T_Hedvig_13
 ParcelHighlands_T_Hedvig_11:
-# 1753 "data/maps/ParcelHighlands/scripts.pory"
+# 1760 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelHighlands_T_Hedvig_18
 ParcelHighlands_T_Hedvig_16:
-# 1756 "data/maps/ParcelHighlands/scripts.pory"
+# 1763 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelHighlands_T_Hedvig_2:
-# 1745 "data/maps/ParcelHighlands/scripts.pory"
+# 1752 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Hedvig_R2
 	goto ParcelHighlands_T_Hedvig_1
 
 ParcelHighlands_T_Hedvig_3:
-# 1744 "data/maps/ParcelHighlands/scripts.pory"
+# 1751 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HEDVIG_R2
 	goto_if 0, ParcelHighlands_T_Hedvig_2
 	goto ParcelHighlands_T_Hedvig_1
 
 ParcelHighlands_T_Hedvig_7:
-# 1748 "data/maps/ParcelHighlands/scripts.pory"
+# 1755 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Hedvig_R3
 	goto ParcelHighlands_T_Hedvig_6
 
 ParcelHighlands_T_Hedvig_8:
-# 1747 "data/maps/ParcelHighlands/scripts.pory"
+# 1754 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HEDVIG_R3
 	goto_if 0, ParcelHighlands_T_Hedvig_7
 	goto ParcelHighlands_T_Hedvig_6
 
 ParcelHighlands_T_Hedvig_12:
-# 1751 "data/maps/ParcelHighlands/scripts.pory"
+# 1758 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Hedvig_R4
 	goto ParcelHighlands_T_Hedvig_11
 
 ParcelHighlands_T_Hedvig_13:
-# 1750 "data/maps/ParcelHighlands/scripts.pory"
+# 1757 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HEDVIG_R4
 	goto_if 0, ParcelHighlands_T_Hedvig_12
 	goto ParcelHighlands_T_Hedvig_11
 
 ParcelHighlands_T_Hedvig_17:
-# 1754 "data/maps/ParcelHighlands/scripts.pory"
+# 1761 "data/maps/ParcelHighlands/scripts.pory"
 	goto ParcelHighlands_T_Hedvig_R5
 	goto ParcelHighlands_T_Hedvig_16
 
 ParcelHighlands_T_Hedvig_18:
-# 1753 "data/maps/ParcelHighlands/scripts.pory"
+# 1760 "data/maps/ParcelHighlands/scripts.pory"
 	checktrainerflag TRAINER_SKALD_HL_HEDVIG_R5
 	goto_if 0, ParcelHighlands_T_Hedvig_17
 	goto ParcelHighlands_T_Hedvig_16
 
 
 ParcelHighlands_T_Hedvig_FirstWin::
-# 1760 "data/maps/ParcelHighlands/scripts.pory"
+# 1767 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_Text_2, MSGBOX_DEFAULT
-# 1761 "data/maps/ParcelHighlands/scripts.pory"
+# 1768 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Hedvig_R2::
-# 1765 "data/maps/ParcelHighlands/scripts.pory"
+# 1772 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1766 "data/maps/ParcelHighlands/scripts.pory"
+# 1773 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1767 "data/maps/ParcelHighlands/scripts.pory"
+# 1774 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R2_Text_0, MSGBOX_YESNO
-# 1768 "data/maps/ParcelHighlands/scripts.pory"
+# 1775 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Hedvig_R2_2
-# 1773 "data/maps/ParcelHighlands/scripts.pory"
+# 1780 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HEDVIG_R2, ParcelHighlands_T_Hedvig_R2_Text_2
-# 1774 "data/maps/ParcelHighlands/scripts.pory"
+# 1781 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R2_Text_3, MSGBOX_DEFAULT
-# 1775 "data/maps/ParcelHighlands/scripts.pory"
+# 1782 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Hedvig_R2_2:
-# 1769 "data/maps/ParcelHighlands/scripts.pory"
+# 1776 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R2_Text_1, MSGBOX_DEFAULT
-# 1770 "data/maps/ParcelHighlands/scripts.pory"
+# 1777 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Hedvig_R3::
-# 1779 "data/maps/ParcelHighlands/scripts.pory"
+# 1786 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1780 "data/maps/ParcelHighlands/scripts.pory"
+# 1787 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1781 "data/maps/ParcelHighlands/scripts.pory"
+# 1788 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R3_Text_0, MSGBOX_YESNO
-# 1782 "data/maps/ParcelHighlands/scripts.pory"
+# 1789 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Hedvig_R3_2
-# 1787 "data/maps/ParcelHighlands/scripts.pory"
+# 1794 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HEDVIG_R3, ParcelHighlands_T_Hedvig_R3_Text_1
-# 1788 "data/maps/ParcelHighlands/scripts.pory"
+# 1795 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R3_Text_2, MSGBOX_DEFAULT
-# 1789 "data/maps/ParcelHighlands/scripts.pory"
+# 1796 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Hedvig_R3_2:
-# 1783 "data/maps/ParcelHighlands/scripts.pory"
+# 1790 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R2_Text_1, MSGBOX_DEFAULT
-# 1784 "data/maps/ParcelHighlands/scripts.pory"
+# 1791 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Hedvig_R4::
-# 1793 "data/maps/ParcelHighlands/scripts.pory"
+# 1800 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1794 "data/maps/ParcelHighlands/scripts.pory"
+# 1801 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1795 "data/maps/ParcelHighlands/scripts.pory"
+# 1802 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R4_Text_0, MSGBOX_YESNO
-# 1796 "data/maps/ParcelHighlands/scripts.pory"
+# 1803 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Hedvig_R4_2
-# 1801 "data/maps/ParcelHighlands/scripts.pory"
+# 1808 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HEDVIG_R4, ParcelHighlands_T_Hedvig_R4_Text_1
-# 1802 "data/maps/ParcelHighlands/scripts.pory"
+# 1809 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R4_Text_2, MSGBOX_DEFAULT
-# 1803 "data/maps/ParcelHighlands/scripts.pory"
+# 1810 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Hedvig_R4_2:
-# 1797 "data/maps/ParcelHighlands/scripts.pory"
+# 1804 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R2_Text_1, MSGBOX_DEFAULT
-# 1798 "data/maps/ParcelHighlands/scripts.pory"
+# 1805 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_T_Hedvig_R5::
-# 1807 "data/maps/ParcelHighlands/scripts.pory"
+# 1814 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1808 "data/maps/ParcelHighlands/scripts.pory"
+# 1815 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1809 "data/maps/ParcelHighlands/scripts.pory"
+# 1816 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R5_Text_0, MSGBOX_YESNO
-# 1810 "data/maps/ParcelHighlands/scripts.pory"
+# 1817 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_T_Hedvig_R5_2
-# 1815 "data/maps/ParcelHighlands/scripts.pory"
+# 1822 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_HL_HEDVIG_R5, ParcelHighlands_T_Hedvig_R4_Text_1
-# 1816 "data/maps/ParcelHighlands/scripts.pory"
+# 1823 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R5_Text_1, MSGBOX_DEFAULT
-# 1817 "data/maps/ParcelHighlands/scripts.pory"
+# 1824 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_T_Hedvig_R5_2:
-# 1811 "data/maps/ParcelHighlands/scripts.pory"
+# 1818 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_T_Hedvig_R2_Text_1, MSGBOX_DEFAULT
-# 1812 "data/maps/ParcelHighlands/scripts.pory"
+# 1819 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_PerrinScene::
-# 1823 "data/maps/ParcelHighlands/scripts.pory"
-	goto_if_set FLAG_SKALD_PERRIN_5, ParcelHighlands_PerrinScene_2
-# 1827 "data/maps/ParcelHighlands/scripts.pory"
-	lockall
-# 1828 "data/maps/ParcelHighlands/scripts.pory"
-	playse SE_PIN
-# 1829 "data/maps/ParcelHighlands/scripts.pory"
-	msgbox ParcelHighlands_PerrinScene_Text_0, MSGBOX_DEFAULT
 # 1830 "data/maps/ParcelHighlands/scripts.pory"
-	closemessage
-# 1831 "data/maps/ParcelHighlands/scripts.pory"
-	applymovement 35, Movement_ParcelHighlands_PerrinIn
-# 1832 "data/maps/ParcelHighlands/scripts.pory"
-	waitmovement 0
-# 1833 "data/maps/ParcelHighlands/scripts.pory"
-	msgbox ParcelHighlands_PerrinScene_Text_1, MSGBOX_DEFAULT
+	goto_if_set FLAG_SKALD_PERRIN_5, ParcelHighlands_PerrinScene_2
 # 1834 "data/maps/ParcelHighlands/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_PERRIN_5, ParcelHighlands_PerrinScene_Text_2
+	lockall
 # 1835 "data/maps/ParcelHighlands/scripts.pory"
-	msgbox ParcelHighlands_PerrinScene_Text_3, MSGBOX_DEFAULT
+	playse SE_PIN
 # 1836 "data/maps/ParcelHighlands/scripts.pory"
-	closemessage
+	msgbox ParcelHighlands_PerrinScene_Text_0, MSGBOX_DEFAULT
 # 1837 "data/maps/ParcelHighlands/scripts.pory"
-	applymovement 35, Movement_ParcelHighlands_PerrinOut
+	closemessage
 # 1838 "data/maps/ParcelHighlands/scripts.pory"
-	waitmovement 0
+	applymovement 35, Movement_ParcelHighlands_PerrinIn
 # 1839 "data/maps/ParcelHighlands/scripts.pory"
-	removeobject 35
+	waitmovement 0
 # 1840 "data/maps/ParcelHighlands/scripts.pory"
-	setflag FLAG_SKALD_PERRIN_5
+	msgbox ParcelHighlands_PerrinScene_Text_1, MSGBOX_DEFAULT
 # 1841 "data/maps/ParcelHighlands/scripts.pory"
-	setvar VAR_TEMP_5, 1
+	trainerbattle_no_intro TRAINER_SKALD_PERRIN_5, ParcelHighlands_PerrinScene_Text_2
 # 1842 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PerrinScene_Text_3, MSGBOX_DEFAULT
+# 1843 "data/maps/ParcelHighlands/scripts.pory"
+	closemessage
+# 1844 "data/maps/ParcelHighlands/scripts.pory"
+	applymovement 35, Movement_ParcelHighlands_PerrinOut
+# 1845 "data/maps/ParcelHighlands/scripts.pory"
+	waitmovement 0
+# 1846 "data/maps/ParcelHighlands/scripts.pory"
+	removeobject 35
+# 1847 "data/maps/ParcelHighlands/scripts.pory"
+	setflag FLAG_SKALD_PERRIN_5
+# 1848 "data/maps/ParcelHighlands/scripts.pory"
+	setvar VAR_TEMP_5, 1
+# 1849 "data/maps/ParcelHighlands/scripts.pory"
 	releaseall
 	end
 
 ParcelHighlands_PerrinScene_2:
-# 1824 "data/maps/ParcelHighlands/scripts.pory"
+# 1831 "data/maps/ParcelHighlands/scripts.pory"
 	setvar VAR_TEMP_5, 1
 	end
 
 
 ParcelHighlands_PerrinTalk::
-# 1846 "data/maps/ParcelHighlands/scripts.pory"
+# 1853 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1847 "data/maps/ParcelHighlands/scripts.pory"
+# 1854 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1848 "data/maps/ParcelHighlands/scripts.pory"
+# 1855 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PerrinTalk_Text_0, MSGBOX_DEFAULT
-# 1849 "data/maps/ParcelHighlands/scripts.pory"
+# 1856 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
-# 1852 "data/maps/ParcelHighlands/scripts.pory"
+# 1859 "data/maps/ParcelHighlands/scripts.pory"
 Movement_ParcelHighlands_PerrinIn:
-# 1852 "data/maps/ParcelHighlands/scripts.pory"
+# 1859 "data/maps/ParcelHighlands/scripts.pory"
 	walk_down
-# 1852 "data/maps/ParcelHighlands/scripts.pory"
+# 1859 "data/maps/ParcelHighlands/scripts.pory"
 	walk_down
 	step_end
 
-# 1853 "data/maps/ParcelHighlands/scripts.pory"
+# 1860 "data/maps/ParcelHighlands/scripts.pory"
 Movement_ParcelHighlands_PerrinOut:
-# 1853 "data/maps/ParcelHighlands/scripts.pory"
+# 1860 "data/maps/ParcelHighlands/scripts.pory"
 	walk_up
-# 1853 "data/maps/ParcelHighlands/scripts.pory"
+# 1860 "data/maps/ParcelHighlands/scripts.pory"
 	walk_up
 	step_end
 
 ParcelHighlands_Epilogue::
-# 1857 "data/maps/ParcelHighlands/scripts.pory"
+# 1864 "data/maps/ParcelHighlands/scripts.pory"
 	lockall
-# 1858 "data/maps/ParcelHighlands/scripts.pory"
+# 1865 "data/maps/ParcelHighlands/scripts.pory"
 	delay 20
-# 1859 "data/maps/ParcelHighlands/scripts.pory"
+# 1866 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Epilogue_Text_0, MSGBOX_DEFAULT
-# 1860 "data/maps/ParcelHighlands/scripts.pory"
+# 1867 "data/maps/ParcelHighlands/scripts.pory"
 	closemessage
-# 1861 "data/maps/ParcelHighlands/scripts.pory"
+# 1868 "data/maps/ParcelHighlands/scripts.pory"
 	setvar VAR_SKALD_EPILOGUE, 5
-# 1862 "data/maps/ParcelHighlands/scripts.pory"
+# 1869 "data/maps/ParcelHighlands/scripts.pory"
 	warp MAP_PARCEL_DELIBIRD, 13, 13
-# 1863 "data/maps/ParcelHighlands/scripts.pory"
+# 1870 "data/maps/ParcelHighlands/scripts.pory"
 	waitstate
 	end
 
 
 ParcelHighlands_GymVale_Rematch::
-# 1869 "data/maps/ParcelHighlands/scripts.pory"
+# 1876 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1870 "data/maps/ParcelHighlands/scripts.pory"
+# 1877 "data/maps/ParcelHighlands/scripts.pory"
 	faceplayer
-# 1871 "data/maps/ParcelHighlands/scripts.pory"
+# 1878 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_GymVale_Rematch_Text_0, MSGBOX_YESNO
-# 1872 "data/maps/ParcelHighlands/scripts.pory"
+# 1879 "data/maps/ParcelHighlands/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelHighlands_GymVale_Rematch_2
-# 1877 "data/maps/ParcelHighlands/scripts.pory"
+# 1884 "data/maps/ParcelHighlands/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_GYM5_R, ParcelHighlands_GymVale_Rematch_Text_2
-# 1878 "data/maps/ParcelHighlands/scripts.pory"
+# 1885 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_GymVale_Rematch_Text_3, MSGBOX_DEFAULT
-# 1879 "data/maps/ParcelHighlands/scripts.pory"
+# 1886 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_GymVale_Rematch_2:
-# 1873 "data/maps/ParcelHighlands/scripts.pory"
+# 1880 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_GymVale_Rematch_Text_1, MSGBOX_DEFAULT
-# 1874 "data/maps/ParcelHighlands/scripts.pory"
+# 1881 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 
 ParcelHighlands_Mareep::
-# 1884 "data/maps/ParcelHighlands/scripts.pory"
+# 1891 "data/maps/ParcelHighlands/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_MAREEP, ParcelHighlands_Mareep_2
-# 1887 "data/maps/ParcelHighlands/scripts.pory"
+# 1894 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Mareep_Text_0, MSGBOX_SIGN
-# 1888 "data/maps/ParcelHighlands/scripts.pory"
+# 1895 "data/maps/ParcelHighlands/scripts.pory"
 	setflag FLAG_SKALD_Q_MAREEP_FOUND
 	end
 
@@ -3978,130 +3993,130 @@ ParcelHighlands_Mareep_2:
 
 
 ParcelHighlands_SurveyStake::
-# 1894 "data/maps/ParcelHighlands/scripts.pory"
+# 1901 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_SurveyStake_Text_0, MSGBOX_SIGN
-# 1895 "data/maps/ParcelHighlands/scripts.pory"
+# 1902 "data/maps/ParcelHighlands/scripts.pory"
 	setvar VAR_0x8004, 4
-# 1896 "data/maps/ParcelHighlands/scripts.pory"
+# 1903 "data/maps/ParcelHighlands/scripts.pory"
 	special SkaldSurveyStake
-# 1897 "data/maps/ParcelHighlands/scripts.pory"
+# 1904 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
 	end
 
 
 ParcelHighlands_PairSlide::
-# 1904 "data/maps/ParcelHighlands/scripts.pory"
+# 1911 "data/maps/ParcelHighlands/scripts.pory"
 	lock
-# 1905 "data/maps/ParcelHighlands/scripts.pory"
+# 1912 "data/maps/ParcelHighlands/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairSlide_2
-# 1910 "data/maps/ParcelHighlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairSlide_3
-# 1916 "data/maps/ParcelHighlands/scripts.pory"
-	msgbox ParcelHighlands_PairSlide_Text_8, MSGBOX_DEFAULT
 # 1917 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairSlide_3
+# 1923 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairSlide_Text_8, MSGBOX_DEFAULT
+# 1924 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_9, MSGBOX_DEFAULT
-# 1918 "data/maps/ParcelHighlands/scripts.pory"
+# 1925 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_10, MSGBOX_DEFAULT
-# 1919 "data/maps/ParcelHighlands/scripts.pory"
+# 1926 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_11, MSGBOX_DEFAULT
 ParcelHighlands_PairSlide_1:
-# 1921 "data/maps/ParcelHighlands/scripts.pory"
+# 1928 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_PairSlide_2:
-# 1906 "data/maps/ParcelHighlands/scripts.pory"
+# 1913 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_0, MSGBOX_DEFAULT
-# 1907 "data/maps/ParcelHighlands/scripts.pory"
+# 1914 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_1, MSGBOX_DEFAULT
-# 1908 "data/maps/ParcelHighlands/scripts.pory"
+# 1915 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_2, MSGBOX_DEFAULT
-# 1909 "data/maps/ParcelHighlands/scripts.pory"
+# 1916 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_3, MSGBOX_DEFAULT
 	goto ParcelHighlands_PairSlide_1
 
 ParcelHighlands_PairSlide_3:
-# 1911 "data/maps/ParcelHighlands/scripts.pory"
+# 1918 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_4, MSGBOX_DEFAULT
-# 1912 "data/maps/ParcelHighlands/scripts.pory"
+# 1919 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_5, MSGBOX_DEFAULT
-# 1913 "data/maps/ParcelHighlands/scripts.pory"
+# 1920 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_6, MSGBOX_DEFAULT
-# 1914 "data/maps/ParcelHighlands/scripts.pory"
+# 1921 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairSlide_Text_7, MSGBOX_DEFAULT
 	goto ParcelHighlands_PairSlide_1
 
 
 ParcelHighlands_PairCentre::
-# 1926 "data/maps/ParcelHighlands/scripts.pory"
-	lock
-# 1927 "data/maps/ParcelHighlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairCentre_2
 # 1933 "data/maps/ParcelHighlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairCentre_3
-# 1939 "data/maps/ParcelHighlands/scripts.pory"
-	msgbox ParcelHighlands_PairCentre_Text_9, MSGBOX_DEFAULT
+	lock
+# 1934 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairCentre_2
 # 1940 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairCentre_3
+# 1946 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairCentre_Text_9, MSGBOX_DEFAULT
+# 1947 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_10, MSGBOX_DEFAULT
-# 1941 "data/maps/ParcelHighlands/scripts.pory"
+# 1948 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_11, MSGBOX_DEFAULT
-# 1942 "data/maps/ParcelHighlands/scripts.pory"
+# 1949 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_12, MSGBOX_DEFAULT
-# 1943 "data/maps/ParcelHighlands/scripts.pory"
+# 1950 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_13, MSGBOX_DEFAULT
 ParcelHighlands_PairCentre_1:
-# 1945 "data/maps/ParcelHighlands/scripts.pory"
+# 1952 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_PairCentre_2:
-# 1928 "data/maps/ParcelHighlands/scripts.pory"
+# 1935 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_0, MSGBOX_DEFAULT
-# 1929 "data/maps/ParcelHighlands/scripts.pory"
+# 1936 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_1, MSGBOX_DEFAULT
-# 1930 "data/maps/ParcelHighlands/scripts.pory"
+# 1937 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_2, MSGBOX_DEFAULT
-# 1931 "data/maps/ParcelHighlands/scripts.pory"
+# 1938 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_3, MSGBOX_DEFAULT
-# 1932 "data/maps/ParcelHighlands/scripts.pory"
+# 1939 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_4, MSGBOX_DEFAULT
 	goto ParcelHighlands_PairCentre_1
 
 ParcelHighlands_PairCentre_3:
-# 1934 "data/maps/ParcelHighlands/scripts.pory"
+# 1941 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_5, MSGBOX_DEFAULT
-# 1935 "data/maps/ParcelHighlands/scripts.pory"
+# 1942 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_6, MSGBOX_DEFAULT
-# 1936 "data/maps/ParcelHighlands/scripts.pory"
+# 1943 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_7, MSGBOX_DEFAULT
-# 1937 "data/maps/ParcelHighlands/scripts.pory"
+# 1944 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_PairCentre_Text_8, MSGBOX_DEFAULT
 	goto ParcelHighlands_PairCentre_1
 
 
 ParcelHighlands_Stringer::
-# 1952 "data/maps/ParcelHighlands/scripts.pory"
-	lock
-# 1953 "data/maps/ParcelHighlands/scripts.pory"
-	faceplayer
-# 1954 "data/maps/ParcelHighlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_Stringer_2
-# 1956 "data/maps/ParcelHighlands/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_Stringer_3
 # 1959 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 1960 "data/maps/ParcelHighlands/scripts.pory"
+	faceplayer
+# 1961 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_Stringer_2
+# 1963 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_Stringer_3
+# 1966 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Stringer_Text_2, MSGBOX_DEFAULT
 ParcelHighlands_Stringer_1:
-# 1961 "data/maps/ParcelHighlands/scripts.pory"
+# 1968 "data/maps/ParcelHighlands/scripts.pory"
 	release
 	end
 
 ParcelHighlands_Stringer_2:
-# 1955 "data/maps/ParcelHighlands/scripts.pory"
+# 1962 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Stringer_Text_0, MSGBOX_DEFAULT
 	goto ParcelHighlands_Stringer_1
 
 ParcelHighlands_Stringer_3:
-# 1957 "data/maps/ParcelHighlands/scripts.pory"
+# 1964 "data/maps/ParcelHighlands/scripts.pory"
 	msgbox ParcelHighlands_Stringer_Text_1, MSGBOX_DEFAULT
 	goto ParcelHighlands_Stringer_1
 
@@ -4578,19 +4593,44 @@ ParcelHighlands_ValeGate_Text_1:
 
 ParcelHighlands_ValeGate_Text_2:
 # 396 "data/maps/ParcelHighlands/scripts.pory"
+	.string "VALE: Highland Operations examines\n"
+	.string "before it clears. The slide above\l"
+	.string "Haukfell. A weather event, as the Board\l"
+	.string "has it?$"
+
+ParcelHighlands_ValeGate_Text_3:
+# 398 "data/maps/ParcelHighlands/scripts.pory"
+	.string "VALE: The Board thanks you. The ground\n"
+	.string "went soft under a casing two years ago;\l"
+	.string "the spring only finished it.\p"
+	.string "Weather is what you say when the cause\n"
+	.string "has a licence number. Read the slope on\l"
+	.string "your way up.$"
+
+ParcelHighlands_ValeGate_Text_4:
+# 400 "data/maps/ParcelHighlands/scripts.pory"
+	.string "VALE: No. The ground went soft under a\n"
+	.string "drill casing and a wet spring finished\l"
+	.string "what the casing started. Weather is the\l"
+	.string "alibi.\p"
+	.string "You read the slope. Now cross what it's\n"
+	.string "made.$"
+
+ParcelHighlands_ValeGate_Text_5:
+# 403 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: …Cleared. You go up with it\n"
 	.string "signed.$"
 
-ParcelHighlands_ValeGate_Text_3:
-# 399 "data/maps/ParcelHighlands/scripts.pory"
+ParcelHighlands_ValeGate_Text_6:
+# 406 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: Vale clearance. Line item 05. The\n"
 	.string "last one Highland Operations issues\l"
 	.string "before the water.\p"
 	.string "It certifies you fit to cross what the\n"
 	.string "thaw has put in the way.$"
 
-ParcelHighlands_ValeGate_Text_4:
-# 401 "data/maps/ParcelHighlands/scripts.pory"
+ParcelHighlands_ValeGate_Text_7:
+# 408 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: SURF. A meltwater permit, in plain\n"
 	.string "terms. It moves you over the standing\l"
 	.string "thaw the slope keeps making.\p"
@@ -4598,1256 +4638,1256 @@ ParcelHighlands_ValeGate_Text_4:
 	.string "don't advertise that.$"
 
 ParcelHighlands_GymVale_Text_0:
-# 415 "data/maps/ParcelHighlands/scripts.pory"
+# 422 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: The ferry runs from the lowland\n"
 	.string "landing. Take what you witnessed here\l"
 	.string "with you. It's the only thing that\l"
 	.string "leaves this slope unspoiled.$"
 
 ParcelHighlands_Asbjorn_Text_0:
-# 426 "data/maps/ParcelHighlands/scripts.pory"
+# 433 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: The foothills are the easy\n"
 	.string "bit. Enjoy them. Battle?$"
 
 ParcelHighlands_Asbjorn_Text_1:
-# 427 "data/maps/ParcelHighlands/scripts.pory"
+# 434 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: Easy bit's over.$"
 
 ParcelHighlands_Asbjorn_Text_2:
-# 442 "data/maps/ParcelHighlands/scripts.pory"
+# 449 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: The trail above the homestead\n"
 	.string "went last night. Rocks, boulders. The\l"
 	.string "FOUNDATION crew looked at it and went\l"
 	.string "for coffee.$"
 
 ParcelHighlands_Asbjorn_R2_Text_0:
-# 453 "data/maps/ParcelHighlands/scripts.pory"
+# 460 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelHighlands_Asbjorn_R2_Text_1:
-# 455 "data/maps/ParcelHighlands/scripts.pory"
+# 462 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: No hurry. The water keeps.$"
 
 ParcelHighlands_Asbjorn_R2_Text_2:
-# 459 "data/maps/ParcelHighlands/scripts.pory"
+# 466 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: Noted. Properly, this time.$"
 
 ParcelHighlands_Asbjorn_R2_Text_3:
-# 460 "data/maps/ParcelHighlands/scripts.pory"
+# 467 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: That's two to you. Get the\n"
 	.string "next stamp and come back.$"
 
 ParcelHighlands_Asbjorn_R3_Text_0:
-# 467 "data/maps/ParcelHighlands/scripts.pory"
+# 474 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelHighlands_Asbjorn_R3_Text_1:
-# 473 "data/maps/ParcelHighlands/scripts.pory"
+# 480 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: Right. That's the whole of it.$"
 
 ParcelHighlands_Asbjorn_R3_Text_2:
-# 474 "data/maps/ParcelHighlands/scripts.pory"
+# 481 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelHighlands_Asbjorn_R4_Text_0:
-# 481 "data/maps/ParcelHighlands/scripts.pory"
+# 488 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: Full strength, no excuses,\n"
 	.string "mine or yours. Rematch?$"
 
 ParcelHighlands_Asbjorn_R4_Text_1:
-# 487 "data/maps/ParcelHighlands/scripts.pory"
+# 494 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: …Again, then. Later.$"
 
 ParcelHighlands_Asbjorn_R4_Text_2:
-# 488 "data/maps/ParcelHighlands/scripts.pory"
+# 495 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Asbjorn_R5_Text_0:
-# 495 "data/maps/ParcelHighlands/scripts.pory"
+# 502 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelHighlands_Asbjorn_R5_Text_1:
-# 502 "data/maps/ParcelHighlands/scripts.pory"
+# 509 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ASBJORN: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelHighlands_Brynjar_Text_0:
-# 508 "data/maps/ParcelHighlands/scripts.pory"
+# 515 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: My NUMEL likes the ground up\n"
 	.string "here. It's warm. It shouldn't be warm.\l"
 	.string "Battle.$"
 
 ParcelHighlands_Brynjar_Text_1:
-# 509 "data/maps/ParcelHighlands/scripts.pory"
+# 516 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: Still warm.$"
 
 ParcelHighlands_Brynjar_Text_2:
-# 524 "data/maps/ParcelHighlands/scripts.pory"
+# 531 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: Warm ground, cold air. Camp on\n"
 	.string "it and you wake up in a puddle that\l"
 	.string "wasn't there.$"
 
 ParcelHighlands_Brynjar_R2_Text_0:
-# 535 "data/maps/ParcelHighlands/scripts.pory"
+# 542 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: Back this way? I've not been\n"
 	.string "idle. Rematch?$"
 
 ParcelHighlands_Brynjar_R2_Text_1:
-# 537 "data/maps/ParcelHighlands/scripts.pory"
+# 544 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: No hurry. The water keeps.$"
 
 ParcelHighlands_Brynjar_R2_Text_2:
-# 541 "data/maps/ParcelHighlands/scripts.pory"
+# 548 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: …Fair.$"
 
 ParcelHighlands_Brynjar_R2_Text_3:
-# 542 "data/maps/ParcelHighlands/scripts.pory"
+# 549 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: That's two to you. Get the\n"
 	.string "next stamp and come back.$"
 
 ParcelHighlands_Brynjar_R3_Text_0:
-# 549 "data/maps/ParcelHighlands/scripts.pory"
+# 556 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelHighlands_Brynjar_R3_Text_1:
-# 555 "data/maps/ParcelHighlands/scripts.pory"
+# 562 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: …Again, then. Later.$"
 
 ParcelHighlands_Brynjar_R3_Text_2:
-# 556 "data/maps/ParcelHighlands/scripts.pory"
+# 563 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelHighlands_Brynjar_R4_Text_0:
-# 563 "data/maps/ParcelHighlands/scripts.pory"
+# 570 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: Full strength, no excuses,\n"
 	.string "mine or yours. Rematch?$"
 
 ParcelHighlands_Brynjar_R4_Text_1:
-# 570 "data/maps/ParcelHighlands/scripts.pory"
+# 577 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Brynjar_R5_Text_0:
-# 577 "data/maps/ParcelHighlands/scripts.pory"
+# 584 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelHighlands_Brynjar_R5_Text_1:
-# 584 "data/maps/ParcelHighlands/scripts.pory"
+# 591 "data/maps/ParcelHighlands/scripts.pory"
 	.string "BRYNJAR: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelHighlands_Dagny_Text_0:
-# 590 "data/maps/ParcelHighlands/scripts.pory"
+# 597 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: I visit the old woman. Somebody\n"
 	.string "should. She won't take the grant, so\l"
 	.string "they've stopped visiting. Battle first.$"
 
 ParcelHighlands_Dagny_Text_1:
-# 591 "data/maps/ParcelHighlands/scripts.pory"
+# 598 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: She'll like you. She doesn't like\n"
 	.string "anyone.$"
 
 ParcelHighlands_Dagny_Text_2:
-# 606 "data/maps/ParcelHighlands/scripts.pory"
+# 613 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: They built the warming centre at\n"
 	.string "the bottom of the hill so she'd have\l"
 	.string "somewhere to go. She hasn't gone.$"
 
 ParcelHighlands_Dagny_R2_Text_0:
-# 617 "data/maps/ParcelHighlands/scripts.pory"
+# 624 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelHighlands_Dagny_R2_Text_1:
-# 619 "data/maps/ParcelHighlands/scripts.pory"
+# 626 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: Fine. Same spot.$"
 
 ParcelHighlands_Dagny_R2_Text_2:
-# 623 "data/maps/ParcelHighlands/scripts.pory"
+# 630 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: That's the one I wanted to see.$"
 
 ParcelHighlands_Dagny_R2_Text_3:
-# 624 "data/maps/ParcelHighlands/scripts.pory"
+# 631 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelHighlands_Dagny_R3_Text_0:
-# 631 "data/maps/ParcelHighlands/scripts.pory"
+# 638 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelHighlands_Dagny_R3_Text_1:
-# 638 "data/maps/ParcelHighlands/scripts.pory"
+# 645 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Dagny_R4_Text_0:
-# 645 "data/maps/ParcelHighlands/scripts.pory"
+# 652 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelHighlands_Dagny_R4_Text_1:
-# 652 "data/maps/ParcelHighlands/scripts.pory"
+# 659 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelHighlands_Dagny_R5_Text_0:
-# 659 "data/maps/ParcelHighlands/scripts.pory"
+# 666 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelHighlands_Dagny_R5_Text_1:
-# 665 "data/maps/ParcelHighlands/scripts.pory"
+# 672 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: …Again, then. Later.$"
 
 ParcelHighlands_Dagny_R5_Text_2:
-# 666 "data/maps/ParcelHighlands/scripts.pory"
+# 673 "data/maps/ParcelHighlands/scripts.pory"
 	.string "DAGNY: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelHighlands_Eivind_Text_0:
-# 672 "data/maps/ParcelHighlands/scripts.pory"
+# 679 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: Three GEODUDE from the slide.\n"
 	.string "The slide gave them up for free. Battle.$"
 
 ParcelHighlands_Eivind_Text_1:
-# 673 "data/maps/ParcelHighlands/scripts.pory"
+# 680 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: The slide gives. The slide\n"
 	.string "takes.$"
 
 ParcelHighlands_Eivind_Text_2:
-# 688 "data/maps/ParcelHighlands/scripts.pory"
+# 695 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: The rock up here used to be\n"
 	.string "frozen into the hill. Now it's just lying\l"
 	.string "on it.$"
 
 ParcelHighlands_Eivind_R2_Text_0:
-# 699 "data/maps/ParcelHighlands/scripts.pory"
+# 706 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelHighlands_Eivind_R2_Text_1:
-# 701 "data/maps/ParcelHighlands/scripts.pory"
+# 708 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: No hurry. The water keeps.$"
 
 ParcelHighlands_Eivind_R2_Text_2:
-# 705 "data/maps/ParcelHighlands/scripts.pory"
+# 712 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: Right. That's the whole of it.$"
 
 ParcelHighlands_Eivind_R2_Text_3:
-# 706 "data/maps/ParcelHighlands/scripts.pory"
+# 713 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_Eivind_R3_Text_0:
-# 713 "data/maps/ParcelHighlands/scripts.pory"
+# 720 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelHighlands_Eivind_R3_Text_1:
-# 719 "data/maps/ParcelHighlands/scripts.pory"
+# 726 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: …Again, then. Later.$"
 
 ParcelHighlands_Eivind_R3_Text_2:
-# 720 "data/maps/ParcelHighlands/scripts.pory"
+# 727 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelHighlands_Eivind_R4_Text_0:
-# 727 "data/maps/ParcelHighlands/scripts.pory"
+# 734 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelHighlands_Eivind_R4_Text_1:
-# 734 "data/maps/ParcelHighlands/scripts.pory"
+# 741 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelHighlands_Eivind_R5_Text_0:
-# 741 "data/maps/ParcelHighlands/scripts.pory"
+# 748 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelHighlands_Eivind_R5_Text_1:
-# 747 "data/maps/ParcelHighlands/scripts.pory"
+# 754 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: Noted. Properly, this time.$"
 
 ParcelHighlands_Eivind_R5_Text_2:
-# 748 "data/maps/ParcelHighlands/scripts.pory"
+# 755 "data/maps/ParcelHighlands/scripts.pory"
 	.string "EIVIND: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelHighlands_Finn_Text_0:
-# 754 "data/maps/ParcelHighlands/scripts.pory"
+# 761 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: SWELLOW nest on the cliffs now.\n"
 	.string "They never used to come this high.\l"
 	.string "Battle!$"
 
 ParcelHighlands_Finn_Text_1:
-# 755 "data/maps/ParcelHighlands/scripts.pory"
+# 762 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: Never used to lose, either.$"
 
 ParcelHighlands_Finn_Text_2:
-# 770 "data/maps/ParcelHighlands/scripts.pory"
+# 777 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: New birds, new rats, new\n"
 	.string "everything. Old woman says it's the end\l"
 	.string "of the world. I think it's just a\l"
 	.string "different world. Is that worse?$"
 
 ParcelHighlands_Finn_R2_Text_0:
-# 781 "data/maps/ParcelHighlands/scripts.pory"
+# 788 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelHighlands_Finn_R2_Text_1:
-# 783 "data/maps/ParcelHighlands/scripts.pory"
+# 790 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: No hurry. The water keeps.$"
 
 ParcelHighlands_Finn_R2_Text_2:
-# 787 "data/maps/ParcelHighlands/scripts.pory"
+# 794 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: Noted. Properly, this time.$"
 
 ParcelHighlands_Finn_R2_Text_3:
-# 788 "data/maps/ParcelHighlands/scripts.pory"
+# 795 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_Finn_R3_Text_0:
-# 795 "data/maps/ParcelHighlands/scripts.pory"
+# 802 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelHighlands_Finn_R3_Text_1:
-# 802 "data/maps/ParcelHighlands/scripts.pory"
+# 809 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelHighlands_Finn_R4_Text_0:
-# 809 "data/maps/ParcelHighlands/scripts.pory"
+# 816 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelHighlands_Finn_R4_Text_1:
-# 815 "data/maps/ParcelHighlands/scripts.pory"
+# 822 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: …Again, then. Later.$"
 
 ParcelHighlands_Finn_R4_Text_2:
-# 816 "data/maps/ParcelHighlands/scripts.pory"
+# 823 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Finn_R5_Text_0:
-# 823 "data/maps/ParcelHighlands/scripts.pory"
+# 830 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: I heard what you filed. Then show\n"
 	.string "me what filed it?$"
 
 ParcelHighlands_Finn_R5_Text_1:
-# 829 "data/maps/ParcelHighlands/scripts.pory"
+# 836 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: That's the one I wanted to see.$"
 
 ParcelHighlands_Finn_R5_Text_2:
-# 830 "data/maps/ParcelHighlands/scripts.pory"
+# 837 "data/maps/ParcelHighlands/scripts.pory"
 	.string "FINN: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelHighlands_Grete_Text_0:
-# 836 "data/maps/ParcelHighlands/scripts.pory"
+# 843 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Cadet GRETE. ILEX has me on the\n"
 	.string "lower stakes. Spar, then I'll tell you\l"
 	.string "where she is.$"
 
 ParcelHighlands_Grete_Text_1:
-# 837 "data/maps/ParcelHighlands/scripts.pory"
+# 844 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: She's on the plateau. The band.\n"
 	.string "You'll know it when you see the cloth.$"
 
 ParcelHighlands_Grete_Text_2:
-# 852 "data/maps/ParcelHighlands/scripts.pory"
+# 859 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: ILEX doesn't come down for days.\n"
 	.string "She says the band moves at night and\l"
 	.string "somebody should be there.$"
 
 ParcelHighlands_Grete_R2_Text_0:
-# 863 "data/maps/ParcelHighlands/scripts.pory"
+# 870 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelHighlands_Grete_R2_Text_1:
-# 865 "data/maps/ParcelHighlands/scripts.pory"
+# 872 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Another time, then.$"
 
 ParcelHighlands_Grete_R2_Text_2:
-# 869 "data/maps/ParcelHighlands/scripts.pory"
+# 876 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Right. That's the whole of it.$"
 
 ParcelHighlands_Grete_R2_Text_3:
-# 870 "data/maps/ParcelHighlands/scripts.pory"
+# 877 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_Grete_R3_Text_0:
-# 877 "data/maps/ParcelHighlands/scripts.pory"
+# 884 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelHighlands_Grete_R3_Text_1:
-# 884 "data/maps/ParcelHighlands/scripts.pory"
+# 891 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Grete_R4_Text_0:
-# 891 "data/maps/ParcelHighlands/scripts.pory"
+# 898 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelHighlands_Grete_R4_Text_1:
-# 897 "data/maps/ParcelHighlands/scripts.pory"
+# 904 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Still yours.$"
 
 ParcelHighlands_Grete_R4_Text_2:
-# 898 "data/maps/ParcelHighlands/scripts.pory"
+# 905 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Grete_R5_Text_0:
-# 905 "data/maps/ParcelHighlands/scripts.pory"
+# 912 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelHighlands_Grete_R5_Text_1:
-# 912 "data/maps/ParcelHighlands/scripts.pory"
+# 919 "data/maps/ParcelHighlands/scripts.pory"
 	.string "GRETE: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelHighlands_Hauk_Text_0:
-# 918 "data/maps/ParcelHighlands/scripts.pory"
+# 925 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: FOUNDATION bore crew. Off shift.\n"
 	.string "I'll battle, but I won't talk about the\l"
 	.string "core samples.$"
 
 ParcelHighlands_Hauk_Text_1:
-# 919 "data/maps/ParcelHighlands/scripts.pory"
+# 926 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: …Fine. There's gas in the core.\n"
 	.string "That's all. Everyone knows.$"
 
 ParcelHighlands_Hauk_Text_2:
-# 934 "data/maps/ParcelHighlands/scripts.pory"
+# 941 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: 'Exploratory.' You explore what\n"
 	.string "you mean to take. That's what the word\l"
 	.string "means.$"
 
 ParcelHighlands_Hauk_R2_Text_0:
-# 945 "data/maps/ParcelHighlands/scripts.pory"
+# 952 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: Back this way? I've not been idle.\n"
 	.string "Rematch?$"
 
 ParcelHighlands_Hauk_R2_Text_1:
-# 947 "data/maps/ParcelHighlands/scripts.pory"
+# 954 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: Another time, then.$"
 
 ParcelHighlands_Hauk_R2_Text_2:
-# 951 "data/maps/ParcelHighlands/scripts.pory"
+# 958 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: …Fair.$"
 
 ParcelHighlands_Hauk_R2_Text_3:
-# 952 "data/maps/ParcelHighlands/scripts.pory"
+# 959 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_Hauk_R3_Text_0:
-# 959 "data/maps/ParcelHighlands/scripts.pory"
+# 966 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: They say you don't lose any more.\n"
 	.string "Let's check?$"
 
 ParcelHighlands_Hauk_R3_Text_1:
-# 965 "data/maps/ParcelHighlands/scripts.pory"
+# 972 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: …Again, then. Later.$"
 
 ParcelHighlands_Hauk_R3_Text_2:
-# 966 "data/maps/ParcelHighlands/scripts.pory"
+# 973 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Hauk_R4_Text_0:
-# 973 "data/maps/ParcelHighlands/scripts.pory"
+# 980 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelHighlands_Hauk_R4_Text_1:
-# 979 "data/maps/ParcelHighlands/scripts.pory"
+# 986 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: Noted. Properly, this time.$"
 
 ParcelHighlands_Hauk_R4_Text_2:
-# 980 "data/maps/ParcelHighlands/scripts.pory"
+# 987 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelHighlands_Hauk_R5_Text_0:
-# 987 "data/maps/ParcelHighlands/scripts.pory"
+# 994 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelHighlands_Hauk_R5_Text_1:
-# 993 "data/maps/ParcelHighlands/scripts.pory"
+# 1000 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: That's the one I wanted to see.$"
 
 ParcelHighlands_Hauk_R5_Text_2:
-# 994 "data/maps/ParcelHighlands/scripts.pory"
+# 1001 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUK: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelHighlands_Jarle_Text_0:
-# 1000 "data/maps/ParcelHighlands/scripts.pory"
+# 1007 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: The plateau's the top of the\n"
 	.string "world. My world, anyway. Battle for it.$"
 
 ParcelHighlands_Jarle_Text_1:
-# 1001 "data/maps/ParcelHighlands/scripts.pory"
+# 1008 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: Your world, then. Mind the\n"
 	.string "stakes.$"
 
 ParcelHighlands_Jarle_Text_2:
-# 1016 "data/maps/ParcelHighlands/scripts.pory"
+# 1023 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: Don't move the red stakes. ILEX\n"
 	.string "will know. ILEX always knows.$"
 
 ParcelHighlands_Jarle_R2_Text_0:
-# 1027 "data/maps/ParcelHighlands/scripts.pory"
+# 1034 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelHighlands_Jarle_R2_Text_1:
-# 1029 "data/maps/ParcelHighlands/scripts.pory"
+# 1036 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: No hurry. The water keeps.$"
 
 ParcelHighlands_Jarle_R2_Text_2:
-# 1033 "data/maps/ParcelHighlands/scripts.pory"
+# 1040 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: That's the one I wanted to see.$"
 
 ParcelHighlands_Jarle_R2_Text_3:
-# 1034 "data/maps/ParcelHighlands/scripts.pory"
+# 1041 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelHighlands_Jarle_R3_Text_0:
-# 1041 "data/maps/ParcelHighlands/scripts.pory"
+# 1048 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelHighlands_Jarle_R3_Text_1:
-# 1047 "data/maps/ParcelHighlands/scripts.pory"
+# 1054 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: Noted. Properly, this time.$"
 
 ParcelHighlands_Jarle_R3_Text_2:
-# 1048 "data/maps/ParcelHighlands/scripts.pory"
+# 1055 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Jarle_R4_Text_0:
-# 1055 "data/maps/ParcelHighlands/scripts.pory"
+# 1062 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelHighlands_Jarle_R4_Text_1:
-# 1062 "data/maps/ParcelHighlands/scripts.pory"
+# 1069 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelHighlands_Jarle_R5_Text_0:
-# 1069 "data/maps/ParcelHighlands/scripts.pory"
+# 1076 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelHighlands_Jarle_R5_Text_1:
-# 1076 "data/maps/ParcelHighlands/scripts.pory"
+# 1083 "data/maps/ParcelHighlands/scripts.pory"
 	.string "JARLE: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelHighlands_Kjersti_Text_0:
-# 1082 "data/maps/ParcelHighlands/scripts.pory"
+# 1089 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: The ponds up here are new.\n"
 	.string "Black water. My SNORUNT won't go near\l"
 	.string "them. Battle?$"
 
 ParcelHighlands_Kjersti_Text_1:
-# 1083 "data/maps/ParcelHighlands/scripts.pory"
+# 1090 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Wouldn't go near you either,\n"
 	.string "now.$"
 
 ParcelHighlands_Kjersti_Text_2:
-# 1098 "data/maps/ParcelHighlands/scripts.pory"
+# 1105 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: The ponds weren't on last\n"
 	.string "year's map. The map's from the\l"
 	.string "FOUNDATION. They print a new one every\l"
 	.string "spring.$"
 
 ParcelHighlands_Kjersti_R2_Text_0:
-# 1109 "data/maps/ParcelHighlands/scripts.pory"
+# 1116 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelHighlands_Kjersti_R2_Text_1:
-# 1111 "data/maps/ParcelHighlands/scripts.pory"
+# 1118 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Fine. Same spot.$"
 
 ParcelHighlands_Kjersti_R2_Text_2:
-# 1115 "data/maps/ParcelHighlands/scripts.pory"
+# 1122 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Still yours.$"
 
 ParcelHighlands_Kjersti_R2_Text_3:
-# 1116 "data/maps/ParcelHighlands/scripts.pory"
+# 1123 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelHighlands_Kjersti_R3_Text_0:
-# 1123 "data/maps/ParcelHighlands/scripts.pory"
+# 1130 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: I moved the whole team on.\n"
 	.string "Let's see if you have?$"
 
 ParcelHighlands_Kjersti_R3_Text_1:
-# 1130 "data/maps/ParcelHighlands/scripts.pory"
+# 1137 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Three. I'll be stronger when\n"
 	.string "the coast's done with you.$"
 
 ParcelHighlands_Kjersti_R4_Text_0:
-# 1137 "data/maps/ParcelHighlands/scripts.pory"
+# 1144 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Full strength, no excuses,\n"
 	.string "mine or yours. Rematch?$"
 
 ParcelHighlands_Kjersti_R4_Text_1:
-# 1143 "data/maps/ParcelHighlands/scripts.pory"
+# 1150 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: …Again, then. Later.$"
 
 ParcelHighlands_Kjersti_R4_Text_2:
-# 1144 "data/maps/ParcelHighlands/scripts.pory"
+# 1151 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Kjersti_R5_Text_0:
-# 1151 "data/maps/ParcelHighlands/scripts.pory"
+# 1158 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelHighlands_Kjersti_R5_Text_1:
-# 1158 "data/maps/ParcelHighlands/scripts.pory"
+# 1165 "data/maps/ParcelHighlands/scripts.pory"
 	.string "KJERSTI: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelHighlands_Leidulf_Text_0:
-# 1164 "data/maps/ParcelHighlands/scripts.pory"
+# 1171 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: I came up for the cold. There's\n"
 	.string "less of it than the brochure said.\l"
 	.string "Battle.$"
 
 ParcelHighlands_Leidulf_Text_1:
-# 1165 "data/maps/ParcelHighlands/scripts.pory"
+# 1172 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: Less of that than the\n"
 	.string "brochure said, too.$"
 
 ParcelHighlands_Leidulf_Text_2:
-# 1180 "data/maps/ParcelHighlands/scripts.pory"
+# 1187 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: The brochure's the\n"
 	.string "FOUNDATION's. 'Alpine experience.' The\l"
 	.string "alpine's leaving. The experience is\l"
 	.string "watching it go.$"
 
 ParcelHighlands_Leidulf_R2_Text_0:
-# 1191 "data/maps/ParcelHighlands/scripts.pory"
+# 1198 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: Back this way? I've not been\n"
 	.string "idle. Rematch?$"
 
 ParcelHighlands_Leidulf_R2_Text_1:
-# 1193 "data/maps/ParcelHighlands/scripts.pory"
+# 1200 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelHighlands_Leidulf_R2_Text_2:
-# 1197 "data/maps/ParcelHighlands/scripts.pory"
+# 1204 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: Noted. Properly, this time.$"
 
 ParcelHighlands_Leidulf_R2_Text_3:
-# 1198 "data/maps/ParcelHighlands/scripts.pory"
+# 1205 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: That's two to you. Get the\n"
 	.string "next stamp and come back.$"
 
 ParcelHighlands_Leidulf_R3_Text_0:
-# 1205 "data/maps/ParcelHighlands/scripts.pory"
+# 1212 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: I moved the whole team on.\n"
 	.string "Let's see if you have?$"
 
 ParcelHighlands_Leidulf_R3_Text_1:
-# 1211 "data/maps/ParcelHighlands/scripts.pory"
+# 1218 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: …Fair.$"
 
 ParcelHighlands_Leidulf_R3_Text_2:
-# 1212 "data/maps/ParcelHighlands/scripts.pory"
+# 1219 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelHighlands_Leidulf_R4_Text_0:
-# 1219 "data/maps/ParcelHighlands/scripts.pory"
+# 1226 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: Full strength, no excuses,\n"
 	.string "mine or yours. Rematch?$"
 
 ParcelHighlands_Leidulf_R4_Text_1:
-# 1226 "data/maps/ParcelHighlands/scripts.pory"
+# 1233 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Leidulf_R5_Text_0:
-# 1233 "data/maps/ParcelHighlands/scripts.pory"
+# 1240 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelHighlands_Leidulf_R5_Text_1:
-# 1239 "data/maps/ParcelHighlands/scripts.pory"
+# 1246 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: That's the one I wanted to\n"
 	.string "see.$"
 
 ParcelHighlands_Leidulf_R5_Text_2:
-# 1240 "data/maps/ParcelHighlands/scripts.pory"
+# 1247 "data/maps/ParcelHighlands/scripts.pory"
 	.string "LEIDULF: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelHighlands_Nora_Text_0:
-# 1246 "data/maps/ParcelHighlands/scripts.pory"
+# 1253 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: The mountain is thinking about\n"
 	.string "falling. Slowly. Can you hear it? Battle\l"
 	.string "me.$"
 
 ParcelHighlands_Nora_Text_1:
-# 1247 "data/maps/ParcelHighlands/scripts.pory"
+# 1254 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: You heard it.$"
 
 ParcelHighlands_Nora_Text_2:
-# 1262 "data/maps/ParcelHighlands/scripts.pory"
+# 1269 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: The woman at the bore thinks\n"
 	.string "loud, warm thoughts. She means every\l"
 	.string "one of them. That's what frightens me.$"
 
 ParcelHighlands_Nora_R2_Text_0:
-# 1273 "data/maps/ParcelHighlands/scripts.pory"
+# 1280 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: Clearances or not, I want that\n"
 	.string "one back. Go?$"
 
 ParcelHighlands_Nora_R2_Text_1:
-# 1275 "data/maps/ParcelHighlands/scripts.pory"
+# 1282 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: Suit yourself. I'm here.$"
 
 ParcelHighlands_Nora_R2_Text_2:
-# 1279 "data/maps/ParcelHighlands/scripts.pory"
+# 1286 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: Still yours.$"
 
 ParcelHighlands_Nora_R2_Text_3:
-# 1280 "data/maps/ParcelHighlands/scripts.pory"
+# 1287 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_Nora_R3_Text_0:
-# 1287 "data/maps/ParcelHighlands/scripts.pory"
+# 1294 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelHighlands_Nora_R3_Text_1:
-# 1293 "data/maps/ParcelHighlands/scripts.pory"
+# 1300 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: …Again, then. Later.$"
 
 ParcelHighlands_Nora_R3_Text_2:
-# 1294 "data/maps/ParcelHighlands/scripts.pory"
+# 1301 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Nora_R4_Text_0:
-# 1301 "data/maps/ParcelHighlands/scripts.pory"
+# 1308 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: Full strength, no excuses, mine or\n"
 	.string "yours. Rematch?$"
 
 ParcelHighlands_Nora_R4_Text_1:
-# 1308 "data/maps/ParcelHighlands/scripts.pory"
+# 1315 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Nora_R5_Text_0:
-# 1315 "data/maps/ParcelHighlands/scripts.pory"
+# 1322 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelHighlands_Nora_R5_Text_1:
-# 1321 "data/maps/ParcelHighlands/scripts.pory"
+# 1328 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: Right. That's the whole of it.$"
 
 ParcelHighlands_Nora_R5_Text_2:
-# 1322 "data/maps/ParcelHighlands/scripts.pory"
+# 1329 "data/maps/ParcelHighlands/scripts.pory"
 	.string "NORA: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelHighlands_Peder_Text_0:
-# 1328 "data/maps/ParcelHighlands/scripts.pory"
+# 1335 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: Nobody sees me on the rock.\n"
 	.string "SNEASEL taught me. Battle.$"
 
 ParcelHighlands_Peder_Text_1:
-# 1329 "data/maps/ParcelHighlands/scripts.pory"
+# 1336 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: SNEASEL would've won.$"
 
 ParcelHighlands_Peder_Text_2:
-# 1344 "data/maps/ParcelHighlands/scripts.pory"
+# 1351 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: The SNEASEL are all up on the\n"
 	.string "band now. Nowhere else cold enough.\l"
 	.string "They don't like company. They've got no\l"
 	.string "choice.$"
 
 ParcelHighlands_Peder_R2_Text_0:
-# 1355 "data/maps/ParcelHighlands/scripts.pory"
+# 1362 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelHighlands_Peder_R2_Text_1:
-# 1357 "data/maps/ParcelHighlands/scripts.pory"
+# 1364 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelHighlands_Peder_R2_Text_2:
-# 1361 "data/maps/ParcelHighlands/scripts.pory"
+# 1368 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: Still yours.$"
 
 ParcelHighlands_Peder_R2_Text_3:
-# 1362 "data/maps/ParcelHighlands/scripts.pory"
+# 1369 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_Peder_R3_Text_0:
-# 1369 "data/maps/ParcelHighlands/scripts.pory"
+# 1376 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelHighlands_Peder_R3_Text_1:
-# 1375 "data/maps/ParcelHighlands/scripts.pory"
+# 1382 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: That's the one I wanted to see.$"
 
 ParcelHighlands_Peder_R3_Text_2:
-# 1376 "data/maps/ParcelHighlands/scripts.pory"
+# 1383 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Peder_R4_Text_0:
-# 1383 "data/maps/ParcelHighlands/scripts.pory"
+# 1390 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelHighlands_Peder_R4_Text_1:
-# 1389 "data/maps/ParcelHighlands/scripts.pory"
+# 1396 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: …Again, then. Later.$"
 
 ParcelHighlands_Peder_R4_Text_2:
-# 1390 "data/maps/ParcelHighlands/scripts.pory"
+# 1397 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Peder_R5_Text_0:
-# 1397 "data/maps/ParcelHighlands/scripts.pory"
+# 1404 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelHighlands_Peder_R5_Text_1:
-# 1403 "data/maps/ParcelHighlands/scripts.pory"
+# 1410 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: Noted. Properly, this time.$"
 
 ParcelHighlands_Peder_R5_Text_2:
-# 1404 "data/maps/ParcelHighlands/scripts.pory"
+# 1411 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PEDER: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelHighlands_Runa_Text_0:
-# 1410 "data/maps/ParcelHighlands/scripts.pory"
+# 1417 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Cadet RUNA. I count the\n"
 	.string "lowlanders. ZIGZAGOON, TAILLOW, NUMEL.\l"
 	.string "New every month. Spar.$"
 
 ParcelHighlands_Runa_Text_1:
-# 1411 "data/maps/ParcelHighlands/scripts.pory"
+# 1418 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Count's the same. You're not a\n"
 	.string "lowlander.$"
 
 ParcelHighlands_Runa_Text_2:
-# 1426 "data/maps/ParcelHighlands/scripts.pory"
+# 1433 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: ILEX says count what's arriving\n"
 	.string "as carefully as what's leaving. Nobody\l"
 	.string "else counts the arrivals. They look like\l"
 	.string "good news.$"
 
 ParcelHighlands_Runa_R2_Text_0:
-# 1437 "data/maps/ParcelHighlands/scripts.pory"
+# 1444 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelHighlands_Runa_R2_Text_1:
-# 1439 "data/maps/ParcelHighlands/scripts.pory"
+# 1446 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Suit yourself. I'm here.$"
 
 ParcelHighlands_Runa_R2_Text_2:
-# 1443 "data/maps/ParcelHighlands/scripts.pory"
+# 1450 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Noted. Properly, this time.$"
 
 ParcelHighlands_Runa_R2_Text_3:
-# 1444 "data/maps/ParcelHighlands/scripts.pory"
+# 1451 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_Runa_R3_Text_0:
-# 1451 "data/maps/ParcelHighlands/scripts.pory"
+# 1458 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelHighlands_Runa_R3_Text_1:
-# 1457 "data/maps/ParcelHighlands/scripts.pory"
+# 1464 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: That's the one I wanted to see.$"
 
 ParcelHighlands_Runa_R3_Text_2:
-# 1458 "data/maps/ParcelHighlands/scripts.pory"
+# 1465 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Runa_R4_Text_0:
-# 1465 "data/maps/ParcelHighlands/scripts.pory"
+# 1472 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Full strength, no excuses, mine or\n"
 	.string "yours. Rematch?$"
 
 ParcelHighlands_Runa_R4_Text_1:
-# 1471 "data/maps/ParcelHighlands/scripts.pory"
+# 1478 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Still yours.$"
 
 ParcelHighlands_Runa_R4_Text_2:
-# 1472 "data/maps/ParcelHighlands/scripts.pory"
+# 1479 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelHighlands_Runa_R5_Text_0:
-# 1479 "data/maps/ParcelHighlands/scripts.pory"
+# 1486 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: The region's different now. Let's\n"
 	.string "see if you are?$"
 
 ParcelHighlands_Runa_R5_Text_1:
-# 1486 "data/maps/ParcelHighlands/scripts.pory"
+# 1493 "data/maps/ParcelHighlands/scripts.pory"
 	.string "RUNA: Five. Write that one down too. I'll\n"
 	.string "know you did.$"
 
 ParcelHighlands_Siri_Text_0:
-# 1492 "data/maps/ParcelHighlands/scripts.pory"
+# 1499 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: My PILOSWINE was born up here.\n"
 	.string "There won't be another one born up\l"
 	.string "here. Battle.$"
 
 ParcelHighlands_Siri_Text_1:
-# 1493 "data/maps/ParcelHighlands/scripts.pory"
+# 1500 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: It's still the strongest thing on\n"
 	.string "the mountain.$"
 
 ParcelHighlands_Siri_Text_2:
-# 1508 "data/maps/ParcelHighlands/scripts.pory"
+# 1515 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: The fall's loud this year. More\n"
 	.string "melt. Every year the fall's loud and\l"
 	.string "every year there's less snow to make it.$"
 
 ParcelHighlands_Siri_R2_Text_0:
-# 1519 "data/maps/ParcelHighlands/scripts.pory"
+# 1526 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: Back this way? I've not been idle.\n"
 	.string "Rematch?$"
 
 ParcelHighlands_Siri_R2_Text_1:
-# 1521 "data/maps/ParcelHighlands/scripts.pory"
+# 1528 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: Fine. Same spot.$"
 
 ParcelHighlands_Siri_R2_Text_2:
-# 1525 "data/maps/ParcelHighlands/scripts.pory"
+# 1532 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: That's the one I wanted to see.$"
 
 ParcelHighlands_Siri_R2_Text_3:
-# 1526 "data/maps/ParcelHighlands/scripts.pory"
+# 1533 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelHighlands_Siri_R3_Text_0:
-# 1533 "data/maps/ParcelHighlands/scripts.pory"
+# 1540 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelHighlands_Siri_R3_Text_1:
-# 1539 "data/maps/ParcelHighlands/scripts.pory"
+# 1546 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: …Fair.$"
 
 ParcelHighlands_Siri_R3_Text_2:
-# 1540 "data/maps/ParcelHighlands/scripts.pory"
+# 1547 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_Siri_R4_Text_0:
-# 1547 "data/maps/ParcelHighlands/scripts.pory"
+# 1554 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelHighlands_Siri_R4_Text_1:
-# 1554 "data/maps/ParcelHighlands/scripts.pory"
+# 1561 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_Siri_R5_Text_0:
-# 1561 "data/maps/ParcelHighlands/scripts.pory"
+# 1568 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelHighlands_Siri_R5_Text_1:
-# 1567 "data/maps/ParcelHighlands/scripts.pory"
+# 1574 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: …Again, then. Later.$"
 
 ParcelHighlands_Siri_R5_Text_2:
-# 1568 "data/maps/ParcelHighlands/scripts.pory"
+# 1575 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SIRI: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelHighlands_T_Snorre_Text_0:
-# 1576 "data/maps/ParcelHighlands/scripts.pory"
+# 1583 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: The slide took the trail. I've\n"
 	.string "been sitting here deciding whether to\l"
 	.string "climb it. Battle first.$"
 
 ParcelHighlands_T_Snorre_Text_1:
-# 1577 "data/maps/ParcelHighlands/scripts.pory"
+# 1584 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: Still deciding.$"
 
 ParcelHighlands_T_Snorre_Text_2:
-# 1592 "data/maps/ParcelHighlands/scripts.pory"
+# 1599 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: ILEX went up through the\n"
 	.string "scree. Alone. She's older than me and\l"
 	.string "she didn't stop to decide.$"
 
 ParcelHighlands_T_Snorre_R2_Text_0:
-# 1603 "data/maps/ParcelHighlands/scripts.pory"
+# 1610 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelHighlands_T_Snorre_R2_Text_1:
-# 1605 "data/maps/ParcelHighlands/scripts.pory"
+# 1612 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: Fine. Same spot.$"
 
 ParcelHighlands_T_Snorre_R2_Text_2:
-# 1609 "data/maps/ParcelHighlands/scripts.pory"
+# 1616 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: Still yours.$"
 
 ParcelHighlands_T_Snorre_R2_Text_3:
-# 1610 "data/maps/ParcelHighlands/scripts.pory"
+# 1617 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelHighlands_T_Snorre_R3_Text_0:
-# 1617 "data/maps/ParcelHighlands/scripts.pory"
+# 1624 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelHighlands_T_Snorre_R3_Text_1:
-# 1623 "data/maps/ParcelHighlands/scripts.pory"
+# 1630 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: Right. That's the whole of it.$"
 
 ParcelHighlands_T_Snorre_R3_Text_2:
-# 1624 "data/maps/ParcelHighlands/scripts.pory"
+# 1631 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelHighlands_T_Snorre_R4_Text_0:
-# 1631 "data/maps/ParcelHighlands/scripts.pory"
+# 1638 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelHighlands_T_Snorre_R4_Text_1:
-# 1637 "data/maps/ParcelHighlands/scripts.pory"
+# 1644 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: …Fair.$"
 
 ParcelHighlands_T_Snorre_R4_Text_2:
-# 1638 "data/maps/ParcelHighlands/scripts.pory"
+# 1645 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelHighlands_T_Snorre_R5_Text_0:
-# 1645 "data/maps/ParcelHighlands/scripts.pory"
+# 1652 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: I heard what you filed. Then\n"
 	.string "show me what filed it?$"
 
 ParcelHighlands_T_Snorre_R5_Text_1:
-# 1651 "data/maps/ParcelHighlands/scripts.pory"
+# 1658 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: That's the one I wanted to see.$"
 
 ParcelHighlands_T_Snorre_R5_Text_2:
-# 1652 "data/maps/ParcelHighlands/scripts.pory"
+# 1659 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SNORRE: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelHighlands_T_Torgeir_Text_0:
-# 1658 "data/maps/ParcelHighlands/scripts.pory"
+# 1665 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Cadet TORGEIR, the low\n"
 	.string "stakes. I count what's come up the\l"
 	.string "slope. Spar.$"
 
 ParcelHighlands_T_Torgeir_Text_1:
-# 1659 "data/maps/ParcelHighlands/scripts.pory"
+# 1666 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Counted.$"
 
 ParcelHighlands_T_Torgeir_Text_2:
-# 1674 "data/maps/ParcelHighlands/scripts.pory"
+# 1681 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Every month something new\n"
 	.string "arrives from the valley. Every month\l"
 	.string "something old goes up to the band and\l"
 	.string "doesn't come down.$"
 
 ParcelHighlands_T_Torgeir_R2_Text_0:
-# 1685 "data/maps/ParcelHighlands/scripts.pory"
+# 1692 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelHighlands_T_Torgeir_R2_Text_1:
-# 1687 "data/maps/ParcelHighlands/scripts.pory"
+# 1694 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelHighlands_T_Torgeir_R2_Text_2:
-# 1691 "data/maps/ParcelHighlands/scripts.pory"
+# 1698 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Still yours.$"
 
 ParcelHighlands_T_Torgeir_R2_Text_3:
-# 1692 "data/maps/ParcelHighlands/scripts.pory"
+# 1699 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: That's two to you. Get the\n"
 	.string "next stamp and come back.$"
 
 ParcelHighlands_T_Torgeir_R3_Text_0:
-# 1699 "data/maps/ParcelHighlands/scripts.pory"
+# 1706 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelHighlands_T_Torgeir_R3_Text_1:
-# 1706 "data/maps/ParcelHighlands/scripts.pory"
+# 1713 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Three. I'll be stronger when\n"
 	.string "the coast's done with you.$"
 
 ParcelHighlands_T_Torgeir_R4_Text_0:
-# 1713 "data/maps/ParcelHighlands/scripts.pory"
+# 1720 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelHighlands_T_Torgeir_R4_Text_1:
-# 1719 "data/maps/ParcelHighlands/scripts.pory"
+# 1726 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: That's the one I wanted to\n"
 	.string "see.$"
 
 ParcelHighlands_T_Torgeir_R4_Text_2:
-# 1720 "data/maps/ParcelHighlands/scripts.pory"
+# 1727 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelHighlands_T_Torgeir_R5_Text_0:
-# 1727 "data/maps/ParcelHighlands/scripts.pory"
+# 1734 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Last one. I've put everything\n"
 	.string "I've got into this team. Go?$"
 
 ParcelHighlands_T_Torgeir_R5_Text_1:
-# 1733 "data/maps/ParcelHighlands/scripts.pory"
+# 1740 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: Noted. Properly, this time.$"
 
 ParcelHighlands_T_Torgeir_R5_Text_2:
-# 1734 "data/maps/ParcelHighlands/scripts.pory"
+# 1741 "data/maps/ParcelHighlands/scripts.pory"
 	.string "TORGEIR: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelHighlands_T_Hedvig_Text_0:
-# 1740 "data/maps/ParcelHighlands/scripts.pory"
+# 1747 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: ILEX measures the band in\n"
 	.string "cloth. I measure it in what the\l"
 	.string "mountain's thinking. It's thinking\l"
 	.string "about leaving. Battle.$"
 
 ParcelHighlands_T_Hedvig_Text_1:
-# 1741 "data/maps/ParcelHighlands/scripts.pory"
+# 1748 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: It's still thinking.$"
 
 ParcelHighlands_T_Hedvig_Text_2:
-# 1756 "data/maps/ParcelHighlands/scripts.pory"
+# 1763 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: The woman at the bore means\n"
 	.string "every warm word. That's what makes her\l"
 	.string "cold.$"
 
 ParcelHighlands_T_Hedvig_R2_Text_0:
-# 1767 "data/maps/ParcelHighlands/scripts.pory"
+# 1774 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelHighlands_T_Hedvig_R2_Text_1:
-# 1769 "data/maps/ParcelHighlands/scripts.pory"
+# 1776 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: Suit yourself. I'm here.$"
 
 ParcelHighlands_T_Hedvig_R2_Text_2:
-# 1773 "data/maps/ParcelHighlands/scripts.pory"
+# 1780 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: Right. That's the whole of it.$"
 
 ParcelHighlands_T_Hedvig_R2_Text_3:
-# 1774 "data/maps/ParcelHighlands/scripts.pory"
+# 1781 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelHighlands_T_Hedvig_R3_Text_0:
-# 1781 "data/maps/ParcelHighlands/scripts.pory"
+# 1788 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelHighlands_T_Hedvig_R3_Text_1:
-# 1787 "data/maps/ParcelHighlands/scripts.pory"
+# 1794 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: Noted. Properly, this time.$"
 
 ParcelHighlands_T_Hedvig_R3_Text_2:
-# 1788 "data/maps/ParcelHighlands/scripts.pory"
+# 1795 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelHighlands_T_Hedvig_R4_Text_0:
-# 1795 "data/maps/ParcelHighlands/scripts.pory"
+# 1802 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: I've watched you walk past\n"
 	.string "twice. Not a third time. Battle?$"
 
 ParcelHighlands_T_Hedvig_R4_Text_1:
-# 1801 "data/maps/ParcelHighlands/scripts.pory"
+# 1808 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: Still yours.$"
 
 ParcelHighlands_T_Hedvig_R4_Text_2:
-# 1802 "data/maps/ParcelHighlands/scripts.pory"
+# 1809 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: When it's all filed, come and\n"
 	.string "find me. Once more.$"
 
 ParcelHighlands_T_Hedvig_R5_Text_0:
-# 1809 "data/maps/ParcelHighlands/scripts.pory"
+# 1816 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelHighlands_T_Hedvig_R5_Text_1:
-# 1816 "data/maps/ParcelHighlands/scripts.pory"
+# 1823 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HEDVIG: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelHighlands_PerrinScene_Text_0:
-# 1829 "data/maps/ParcelHighlands/scripts.pory"
+# 1836 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PERRIN: WREN!$"
 
 ParcelHighlands_PerrinScene_Text_1:
-# 1833 "data/maps/ParcelHighlands/scripts.pory"
+# 1840 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PERRIN: HOLLIS says hello. HOLLIS says\n"
 	.string "you're 'thorough'. She said it like a\l"
 	.string "diagnosis.\p"
@@ -5857,11 +5897,11 @@ ParcelHighlands_PerrinScene_Text_1:
 	.string "move? Battle.$"
 
 ParcelHighlands_PerrinScene_Text_2:
-# 1834 "data/maps/ParcelHighlands/scripts.pory"
+# 1841 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PERRIN: …Eleven's still eleven.$"
 
 ParcelHighlands_PerrinScene_Text_3:
-# 1835 "data/maps/ParcelHighlands/scripts.pory"
+# 1842 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PERRIN: The old woman won't go. I've\n"
 	.string "been up to her door four times. She asks\l"
 	.string "after you.\p"
@@ -5870,11 +5910,11 @@ ParcelHighlands_PerrinScene_Text_3:
 	.string "once.$"
 
 ParcelHighlands_PerrinTalk_Text_0:
-# 1848 "data/maps/ParcelHighlands/scripts.pory"
+# 1855 "data/maps/ParcelHighlands/scripts.pory"
 	.string "PERRIN: Hang on, I'm coming to you.$"
 
 ParcelHighlands_Epilogue_Text_0:
-# 1859 "data/maps/ParcelHighlands/scripts.pory"
+# 1866 "data/maps/ParcelHighlands/scripts.pory"
 	.string "HAUKFELL. The bore is capped. Enjoined\n"
 	.string "pending survey, and the survey is\l"
 	.string "yours. The leases wait on it. The ground\l"
@@ -5884,27 +5924,27 @@ ParcelHighlands_Epilogue_Text_0:
 	.string "It's still warm.$"
 
 ParcelHighlands_GymVale_Rematch_Text_0:
-# 1871 "data/maps/ParcelHighlands/scripts.pory"
+# 1878 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: You went up with it signed, and\n"
 	.string "the slope held. Mostly.\p"
 	.string "I'd see what the cold made of you since.\n"
 	.string "Full strength. Not a gate. Yes?$"
 
 ParcelHighlands_GymVale_Rematch_Text_1:
-# 1873 "data/maps/ParcelHighlands/scripts.pory"
+# 1880 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: Then mind the slope.$"
 
 ParcelHighlands_GymVale_Rematch_Text_2:
-# 1877 "data/maps/ParcelHighlands/scripts.pory"
+# 1884 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: …Cleared. There's nothing above\n"
 	.string "this to clear, so take that as the word.$"
 
 ParcelHighlands_GymVale_Rematch_Text_3:
-# 1878 "data/maps/ParcelHighlands/scripts.pory"
+# 1885 "data/maps/ParcelHighlands/scripts.pory"
 	.string "VALE: The slope's here when you are.$"
 
 ParcelHighlands_Mareep_Text_0:
-# 1887 "data/maps/ParcelHighlands/scripts.pory"
+# 1894 "data/maps/ParcelHighlands/scripts.pory"
 	.string "A MAREEP on the scree above the slide,\n"
 	.string "legs braced, wool full of grit. It looks\l"
 	.string "at you.\p"
@@ -5912,150 +5952,150 @@ ParcelHighlands_Mareep_Text_0:
 	.string "definitely, standing.$"
 
 ParcelHighlands_SurveyStake_Text_0:
-# 1894 "data/maps/ParcelHighlands/scripts.pory"
+# 1901 "data/maps/ParcelHighlands/scripts.pory"
 	.string "A survey stake outside the warming\n"
 	.string "centre, red cloth at the top. The ground\l"
 	.string "has moved since it was driven; it leans a\l"
 	.string "hand's width downslope.$"
 
 ParcelHighlands_PairSlide_Text_0:
-# 1906 "data/maps/ParcelHighlands/scripts.pory"
+# 1913 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ROADMAN: Permafrost licence deferred.\n"
 	.string "Deferred isn't refused.$"
 
 ParcelHighlands_PairSlide_Text_1:
-# 1907 "data/maps/ParcelHighlands/scripts.pory"
+# 1914 "data/maps/ParcelHighlands/scripts.pory"
 	.string "POSTMISTRESS: No. But the drill crew's\n"
 	.string "gone and the casing's capped and the\l"
 	.string "field's not sliding this spring.$"
 
 ParcelHighlands_PairSlide_Text_2:
-# 1908 "data/maps/ParcelHighlands/scripts.pory"
+# 1915 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ROADMAN: It'll slide. The ground's soft\n"
 	.string "now. It doesn't harden back.$"
 
 ParcelHighlands_PairSlide_Text_3:
-# 1909 "data/maps/ParcelHighlands/scripts.pory"
+# 1916 "data/maps/ParcelHighlands/scripts.pory"
 	.string "POSTMISTRESS: I know. The ranger said\n"
 	.string "so, to our faces. First one who did. I'd\l"
 	.string "rather know.$"
 
 ParcelHighlands_PairSlide_Text_4:
-# 1911 "data/maps/ParcelHighlands/scripts.pory"
+# 1918 "data/maps/ParcelHighlands/scripts.pory"
 	.string "POSTMISTRESS: The ranger read the\n"
 	.string "stake at the warming centre out loud.\l"
 	.string "Everything on it. Twenty people stood\l"
 	.string "and listened.$"
 
 ParcelHighlands_PairSlide_Text_5:
-# 1912 "data/maps/ParcelHighlands/scripts.pory"
+# 1919 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ROADMAN: What's on it?$"
 
 ParcelHighlands_PairSlide_Text_6:
-# 1913 "data/maps/ParcelHighlands/scripts.pory"
+# 1920 "data/maps/ParcelHighlands/scripts.pory"
 	.string "POSTMISTRESS: The slide. The bore. The\n"
 	.string "gas column. The dates. Nothing we didn't\l"
 	.string "know, all in one place, in a voice.$"
 
 ParcelHighlands_PairSlide_Text_7:
-# 1914 "data/maps/ParcelHighlands/scripts.pory"
+# 1921 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ROADMAN: That's what's been missing.\n"
 	.string "The voice. We all knew it quietly.$"
 
 ParcelHighlands_PairSlide_Text_8:
-# 1916 "data/maps/ParcelHighlands/scripts.pory"
+# 1923 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ROADMAN: Top field's gone. Slid\n"
 	.string "overnight. Took the fence and half the\l"
 	.string "track.$"
 
 ParcelHighlands_PairSlide_Text_9:
-# 1917 "data/maps/ParcelHighlands/scripts.pory"
+# 1924 "data/maps/ParcelHighlands/scripts.pory"
 	.string "POSTMISTRESS: That's three fields in\n"
 	.string "two years.$"
 
 ParcelHighlands_PairSlide_Text_10:
-# 1918 "data/maps/ParcelHighlands/scripts.pory"
+# 1925 "data/maps/ParcelHighlands/scripts.pory"
 	.string "ROADMAN: 'Weather event', the Board\n"
 	.string "says. It's been a weather event for two\l"
 	.string "years.$"
 
 ParcelHighlands_PairSlide_Text_11:
-# 1919 "data/maps/ParcelHighlands/scripts.pory"
+# 1926 "data/maps/ParcelHighlands/scripts.pory"
 	.string "POSTMISTRESS: The drill went in two\n"
 	.string "years ago. Funny old weather.$"
 
 ParcelHighlands_PairCentre_Text_0:
-# 1928 "data/maps/ParcelHighlands/scripts.pory"
+# 1935 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: They've pinned the slips up. All\n"
 	.string "of them. Mine's on the board for anyone\l"
 	.string "to read.$"
 
 ParcelHighlands_PairCentre_Text_1:
-# 1929 "data/maps/ParcelHighlands/scripts.pory"
+# 1936 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SON: Yours and the child's. 'The ranger\n"
 	.string "read the stakes out loud and mum cried.'$"
 
 ParcelHighlands_PairCentre_Text_2:
-# 1930 "data/maps/ParcelHighlands/scripts.pory"
+# 1937 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: That's the whole hearing in one\n"
 	.string "line. They should have saved the paper.$"
 
 ParcelHighlands_PairCentre_Text_3:
-# 1931 "data/maps/ParcelHighlands/scripts.pory"
+# 1938 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SON: Warm room still open?$"
 
 ParcelHighlands_PairCentre_Text_4:
-# 1932 "data/maps/ParcelHighlands/scripts.pory"
+# 1939 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: Warm room's still open.\n"
 	.string "Different crest on the door. Same door.$"
 
 ParcelHighlands_PairCentre_Text_5:
-# 1934 "data/maps/ParcelHighlands/scripts.pory"
+# 1941 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SON: The ranger put a slip in the\n"
 	.string "suggestion box. We saw it through the\l"
 	.string "slot. It said: ask the drill people what\l"
 	.string "the gas column means.$"
 
 ParcelHighlands_PairCentre_Text_6:
-# 1935 "data/maps/ParcelHighlands/scripts.pory"
+# 1942 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: That was my slip.$"
 
 ParcelHighlands_PairCentre_Text_7:
-# 1936 "data/maps/ParcelHighlands/scripts.pory"
+# 1943 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SON: It was in the ranger's hand.$"
 
 ParcelHighlands_PairCentre_Text_8:
-# 1937 "data/maps/ParcelHighlands/scripts.pory"
+# 1944 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: Then there's two of us. That's\n"
 	.string "a committee, in Haukfell.$"
 
 ParcelHighlands_PairCentre_Text_9:
-# 1939 "data/maps/ParcelHighlands/scripts.pory"
+# 1946 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: The centre's warm. I'll give\n"
 	.string "them that. First winter I've had a warm\l"
 	.string "room since my wife.$"
 
 ParcelHighlands_PairCentre_Text_10:
-# 1940 "data/maps/ParcelHighlands/scripts.pory"
+# 1947 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SON: The FOUNDATION built it. Two weeks\n"
 	.string "before the licence went to the Council.$"
 
 ParcelHighlands_PairCentre_Text_11:
-# 1941 "data/maps/ParcelHighlands/scripts.pory"
+# 1948 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: I know when it was built. I was\n"
 	.string "cold at the time. I noticed the date.$"
 
 ParcelHighlands_PairCentre_Text_12:
-# 1942 "data/maps/ParcelHighlands/scripts.pory"
+# 1949 "data/maps/ParcelHighlands/scripts.pory"
 	.string "SON: And you'll still go.$"
 
 ParcelHighlands_PairCentre_Text_13:
-# 1943 "data/maps/ParcelHighlands/scripts.pory"
+# 1950 "data/maps/ParcelHighlands/scripts.pory"
 	.string "OLD MAN: I'll still go. Warm's warm. I'll go\n"
 	.string "and I'll know, both.$"
 
 ParcelHighlands_Stringer_Text_0:
-# 1955 "data/maps/ParcelHighlands/scripts.pory"
+# 1962 "data/maps/ParcelHighlands/scripts.pory"
 	.string "MAREN: They've pinned the slips up in\n"
 	.string "the centre. I photographed the child's.\l"
 	.string "The ranger read the stakes out loud and\l"
@@ -6065,7 +6105,7 @@ ParcelHighlands_Stringer_Text_0:
 	.string "the paper's never sold better.$"
 
 ParcelHighlands_Stringer_Text_1:
-# 1957 "data/maps/ParcelHighlands/scripts.pory"
+# 1964 "data/maps/ParcelHighlands/scripts.pory"
 	.string "MAREN: The suggestion box. I asked the\n"
 	.string "host to open it for me. He said the\l"
 	.string "FOUNDATION empties it.\p"
@@ -6074,7 +6114,7 @@ ParcelHighlands_Stringer_Text_1:
 	.string "common condition up here.$"
 
 ParcelHighlands_Stringer_Text_2:
-# 1959 "data/maps/ParcelHighlands/scripts.pory"
+# 1966 "data/maps/ParcelHighlands/scripts.pory"
 	.string "MAREN: The slide. I came up for the\n"
 	.string "slide. 'Weather event,' the Board says.\p"
 	.string "I've written weather event three times\n"

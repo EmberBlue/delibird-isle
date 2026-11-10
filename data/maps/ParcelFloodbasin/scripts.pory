@@ -1638,6 +1638,13 @@ script ParcelFloodbasin_Checkpoint {
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_FLD_FaceLeft)
     waitmovement(0)
     msgbox(format("BREEN: Logistics. This is a haul road, not a hiking trail. Nobody moves up to the river neck on my road without clearing me first.\pMIRREN cleared you? MIRREN clears anyone who can read. I need people who can carry."), MSGBOX_DEFAULT)
+    msgbox(format("BREEN: Though the stakes say you read. Prove it quick. The basin runs brown after a pulse.\pBrown's lake water stirred up, is it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("BREEN: Lake water's grey. Brown is soil, off the banks they cut upstream. The lake gets the blame because the lake can't argue.\pCarry, then. Reading you'll learn on the road, same as the rest of us."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("BREEN: …Soil. Upstream soil, off the cut banks. Lake water's grey. Hm. You did read the stakes.\pNow carry."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_EXAM_3)
+    }
     trainerbattle_no_intro(TRAINER_SKALD_GYM3, format("BREEN: …Fine. You can carry weight. Move up."))
     setflag(FLAG_BADGE03_GET)
     call(Common_EventScript_PlayGymBadgeFanfare)

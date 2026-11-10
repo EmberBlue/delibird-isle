@@ -160,6 +160,19 @@ directly onto the four survey-states (§06):
 - The credential is real, inter-regional, **and partly Mereholt-funded** (§05)
   — the game never resolves that tension; the certification UI can quietly
   carry the Foundation mark the player will later come to distrust.
+- **Built (2026-11-10): the examination.** Each certification leader asks
+  one reading question before the battle — a yes/no about the place the
+  player has just surveyed (Tarn's pond count, Mirren's culvert, Breen's
+  brown water, Sluice's gauge, Vale's slide, Harland's forty jobs, Vane's
+  fifth gauge, Ilex's snow patches). The answer gates nothing: a wrong
+  answer gets the correction and the battle proceeds, because the
+  credential tests competence, not obedience, and nothing in this game
+  soft-locks on a quiz. The notebook's Certifications page counts the
+  readings taken as right ("Read right at the examinations: N of 8";
+  `FLAG_SKALD_EXAM_1..8`). The four clearance gatekeepers ask nothing —
+  they test access — and carry a line of procedure instead. The culvert
+  question is the Restraint competency made literal: *do we stop the
+  work?* — no; we write it where it can't be rounded up, and we don't sign.
 
 ## System 4 — Partner recognition (FIRMED) · *"starters choose you"*
 

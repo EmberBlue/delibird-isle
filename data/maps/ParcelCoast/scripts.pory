@@ -160,6 +160,13 @@ script ParcelCoast_GymHarland {
     }
     msgbox(format("HARLAND: So. You came all the way down to the bottom of it. Where the money is.\pThe note on this boat is MEREHOLT's. The quota's MEREHOLT's. The stall I sell at. Set it all side by side and it's one crest. I did, at the river. You made me."), MSGBOX_DEFAULT)
     msgbox(format("HARLAND: I'm not your villain. I'm the man they send the bill to. Write that true and I'll vouch for you on this water, which I don't do twice.\pBut you'll earn it the fisher's way. Show me."), MSGBOX_DEFAULT)
+    msgbox(format("HARLAND: One thing first, since you're the reading sort. Forty jobs, DORSEY says, on the quay. Is that a true number?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("HARLAND: Aye. It's true. They're all true numbers. That was never the trouble; the trouble's what they leave off the page.\pYou can hold two true things at once. Good. Not many can. Now earn it the fisher's way."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_EXAM_6)
+    } else {
+        msgbox(format("HARLAND: It's true. Forty, and every one of them needs the dredge that's taking my ground. The lie's never in the numbers, RANGER.\pLearn to hold two true things at once or you'll be no use to anyone out here. Now earn it the fisher's way."), MSGBOX_DEFAULT)
+    }
     trainerbattle_no_intro(TRAINER_SKALD_GYM6, format("HARLAND: …Aye. You read the water. I'll not pretend you didn't."))
     setflag(FLAG_BADGE06_GET)
     call(Common_EventScript_PlayGymBadgeFanfare)

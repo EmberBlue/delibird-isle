@@ -217,7 +217,7 @@ script ParcelMarsh_Leave {
 
 script ParcelMarsh_GateAune {
     trainerbattle_single(TRAINER_SKALD_GATE_MARSH,
-        format("AUNE: Director, MEREHOLT. I came out to the end of the road to see what's worth the paperwork.\pNothing past me is cleared until I clear it. Show me why you should reach the water at all."),
+        format("AUNE: Director, MEREHOLT. I came out to the end of the road to see what's worth the paperwork.\pThe regime has a form for this gate. I brought it. It has a box for the reason and the box is small, because there has never been a reason before.\pNothing past me is cleared until I clear it. Show me why you should reach the water at all."),
         format("AUNE: …Sufficient. The last gate logs you. Go and read what's left to read."),
         ParcelMarsh_GateAune_Defeated)
     lock

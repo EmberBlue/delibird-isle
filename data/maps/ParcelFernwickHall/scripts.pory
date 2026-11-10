@@ -47,15 +47,23 @@ script ParcelFernwickHall_Tarn {
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         goto(ParcelFernwickHall_Tarn_Rematch)
     }
-    trainerbattle_single(TRAINER_SKALD_GYM1,
-        format("TARN: Tidewater Division. I examine.\pYou want the Forest Certification, provisional? Show me you can hold a line when the water's against you."),
-        format("TARN: Hm. The current's yours, then."),
-        ParcelFernwickHall_Tarn_Defeated)
     lock
     faceplayer
-    msgbox(format("TARN: Passed is passed. Go and see HALE. He signs; I only say whether you can fight."), MSGBOX_DEFAULT)
-    release
-    end
+    if (flag(FLAG_BADGE01_GET)) {
+        msgbox(format("TARN: Passed is passed. Go and see HALE. He signs; I only say whether you can fight."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    msgbox(format("TARN: Tidewater Division. I examine.\pYou want the Forest Certification, provisional? Two parts. The reading, then the water."), MSGBOX_DEFAULT)
+    msgbox(format("TARN: The pond across the boulevard. Twenty-eight pairs of WINGULL on it this spring, the same count her notebook gives for it years back.\pA healthy count, then?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("TARN: Wrong. Same number, half the water. They're closer together, not better off. Abundance is not health; write it on your hand if you have to.\pNow hold a line when the water's against you."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("TARN: Good. Same number, half the water. The birds are closer together, not better off. Most say yes because the number says yes.\pHold that thought while the current's against you."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_EXAM_1)
+    }
+    trainerbattle_no_intro(TRAINER_SKALD_GYM1, format("TARN: Hm. The current's yours, then."))
+    goto(ParcelFernwickHall_Tarn_Defeated)
 }
 
 script ParcelFernwickHall_Tarn_Defeated {

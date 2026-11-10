@@ -1849,7 +1849,11 @@ ParcelFernwick_GateWard_Text_0:
 # 63 "data/maps/ParcelFernwick/scripts.pory"
 	.string "WARD: Station checkpoint. Nobody goes\n"
 	.string "north to the marsh without clearance.\p"
-	.string "You want it? Earn it.$"
+	.string "Card. …Provisional, Tidewater. Four\n"
+	.string "clearances, no photograph that looks\l"
+	.string "like you; they never do, the camera's\l"
+	.string "the FOUNDATION's.\p"
+	.string "You want the fifth stamp? Earn it.$"
 
 ParcelFernwick_GateWard_Text_1:
 # 64 "data/maps/ParcelFernwick/scripts.pory"

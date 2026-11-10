@@ -368,13 +368,22 @@ script ParcelDelibird_GymIlex {
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
         goto(ParcelDelibird_GymIlex_Rematch)
     }
-    trainerbattle_single(TRAINER_SKALD_GYM8,
-        format("Ilex stands a little apart from the lights, a folded square of red cloth in one hand, eyes on the high snowline above the cabins.\pIlex: Surveyor, Skaldmere Survey. I don't fix anything. I measure how fast it's going.\pIlex: You read places on the ground -- snares, residue, the catch on the pallet. I read them from above. The whole crescent of an island at once, before and after, change against change.\pIlex: A field hand should be able to do both. Show me you can hold a line of sight as steady as a line of evidence. From up here, looking down."),
-        format("Ilex: Steady. You kept the frame. Few do, this high up."),
-        ParcelDelibird_GymIlex_Defeated)
-    // Re-talk, after the clearance is earned.
     lock
     faceplayer
+    if (!flag(FLAG_BADGE08_GET)) {
+        msgbox(format("Ilex stands a little apart from the lights, a folded square of red cloth in one hand, eyes on the high snowline above the cabins.\pIlex: Surveyor, Skaldmere Survey. I don't fix anything. I measure how fast it's going.\pIlex: You read places on the ground -- snares, residue, the catch on the pallet. I read them from above. The whole crescent of an island at once, before and after, change against change."), MSGBOX_DEFAULT)
+        msgbox(format("Ilex: The summit first. Thirteen patches of snow up there this Midwinter, by my cloth. More than last year?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT) == 1) {
+            msgbox(format("Ilex: Fewer. Nineteen last year. People see thirteen patches and think snow. I see six that aren't there.\pFrame first, then count. Let's see you hold the frame."), MSGBOX_DEFAULT)
+        } else {
+            msgbox(format("Ilex: Fewer. Nineteen last year. The count goes one way, and it will go one way after I've stopped counting.\pYou kept the frame. Now keep it with the current against you."), MSGBOX_DEFAULT)
+            setflag(FLAG_SKALD_EXAM_8)
+        }
+        msgbox(format("Ilex: A field hand should be able to do both. Show me you can hold a line of sight as steady as a line of evidence. From up here, looking down."), MSGBOX_DEFAULT)
+        trainerbattle_no_intro(TRAINER_SKALD_GYM8, format("Ilex: Steady. You kept the frame. Few do, this high up."))
+        goto(ParcelDelibird_GymIlex_Defeated)
+    }
+    // Re-talk, after the clearance is earned.
     msgbox(format("Ilex turns the red cloth over once, then pockets it.\pIlex: The snowline I'm watching is lower than last Midwinter. I'll have the number before the festival packs up.\pIlex: Numbers don't save a place. They just make it impossible to say later that nobody knew. Carry that with the badge."), MSGBOX_DEFAULT)
     msgbox(format("Ilex: You hold a pen like somebody who learned to look from a brush. I won't ask.\pRed cloth is red cloth, whoever ties it."), MSGBOX_DEFAULT)
     release

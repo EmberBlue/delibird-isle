@@ -21,6 +21,13 @@ script ParcelWeatherInstitute2F_Director {
     msgbox(format("VANE: All four. Good. They're the best minds I have, and you walked through every one.\pDirector, Climate Futures. We model the whole sky here. MEREHOLT pays us to insist it's a machine with knobs."), MSGBOX_DEFAULT)
     msgbox(format("VANE: The trouble is, it was never a machine. It's a body. You can fever it; you can't tune it.\pBut 'we can manage it' is so much easier to fund than 'we have to stop'. So that's the line we sell."), MSGBOX_DEFAULT)
     msgbox(format("VANE: You've read the real weather out there. The thaw. The bloom. The dredged sea. Now beat the man paid to call it adjustable. Show me you've earned the kit. All four skies. Right now."), MSGBOX_DEFAULT)
+    msgbox(format("VANE: One reading before the four skies. The programme from the Tidewater opening: five gauges drawn, the fifth at the falls. Is there a falls on that river?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("VANE: There was, before the sluice. The drawing is forty years out of date and nobody at the ribbon knew the river.\pInstruments don't flatter and they don't forget. Read them."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("VANE: There was. Before the sluice. The artist worked from the Board's old map and nobody at the ribbon knew the river well enough to laugh.\pYou did. Instruments don't flatter. Now read mine."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_EXAM_7)
+    }
     trainerbattle_no_intro(TRAINER_SKALD_DIRECTOR, format("VANE: …Cleanly done. In any weather I could throw. That's the whole of the skill, in the end."))
     msgbox(format("VANE: The weather rocks. They hold a sky longer in a fight. We used them to lie more convincingly. Maybe you'll use them for something else."), MSGBOX_DEFAULT)
     giveitem(ITEM_DAMP_ROCK)

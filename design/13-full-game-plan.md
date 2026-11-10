@@ -493,4 +493,26 @@ quest is built, how the peer works) before they are asked six more times.
   the sitting she tells you what she ran at the top. ~1,200 words. The
   two interiors that had no readable (the Fernwick fisher's tide table,
   the ferry's manifest board) have one.
+- **2026-11-10 — the examinations (problem 5, "the core verb is not a
+  verb", at the leaders).** The eight certification leaders were the
+  thinnest scenes in the game (Breen's whole gate was twelve words). Each
+  now asks one reading question before the battle, and the answer gates
+  nothing -- competence is tested, never domination -- but the notebook's
+  Certifications page counts the ones read right ("Read right at the
+  examinations: N of 8", flags `FLAG_SKALD_EXAM_1..8`). Tarn: twenty-eight
+  pairs on the pond, the same count as her notebook -- healthy? (no: same
+  number, half the water). Mirren: the culvert crew says grates next
+  month -- do we stop the work? (no: we write it where it can't be rounded
+  up, and we don't sign). Breen: the basin runs brown -- lake water? (no:
+  upstream soil off the cut banks). Sluice: the gauge reads NORMAL -- is
+  the river normal? (no: they moved the mark). Vale: the slide -- a
+  weather event? (no: the ground went soft under a casing). Harland:
+  forty jobs -- a true number? (**yes**: they're all true numbers; the lie
+  is never in the numbers). Vane: the fifth gauge drawn at the falls --
+  is there a falls? (no: not since the sluice). Ilex: thirteen snow
+  patches -- more than last year? (no: nineteen). The three Mereholt
+  gatekeepers get a line of procedure each instead (the card, the form
+  with the small box for the reason, the everfrost's depreciation
+  schedule). Tarn and Ilex are talked-to leaders now rather than sight
+  trainers, so the reading comes before the water.
 

@@ -49,7 +49,14 @@ script ParcelCorridor_Checkpoint {
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_COR_FaceRight)
     waitmovement(0)
     msgbox(format("MIRREN: Subsurface Survey. I sign who goes past this cut and who doesn't.\pYou're the provisional. TARN passed you. TARN passes nobody, so either you're good or he's slipping."), MSGBOX_DEFAULT)
-    msgbox(format("MIRREN: Show me you can read anything at all."), MSGBOX_DEFAULT)
+    msgbox(format("MIRREN: One question first. The culvert back there. The orange vest says grates next month, and the frogs can't make the pipe.\pDo we stop the work?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("MIRREN: With what? You'd be one ranger and a notebook in front of a crew with a schedule, and the schedule wins every time.\pWrite it where it can't be rounded up, and don't sign. That's the whole of the power. Learn to use it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MIRREN: Right. We don't stop anything; we're not built for it. We write it down where it can't be rounded up, and we don't sign.\pThat's the whole of the power. It's more than it sounds."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_EXAM_2)
+    }
+    msgbox(format("MIRREN: Now show me you can read anything at all in the dark."), MSGBOX_DEFAULT)
     trainerbattle_no_intro(TRAINER_SKALD_GYM2, format("MIRREN: …Steady under pressure. Noted."))
     setflag(FLAG_BADGE02_GET)
     call(Common_EventScript_PlayGymBadgeFanfare)

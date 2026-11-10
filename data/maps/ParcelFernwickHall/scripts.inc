@@ -61,82 +61,106 @@ ParcelFernwickHall_Tarn::
 	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelFernwickHall_Tarn_2
 ParcelFernwickHall_Tarn_1:
 # 50 "data/maps/ParcelFernwickHall/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_GYM1, ParcelFernwickHall_Tarn_Text_0, ParcelFernwickHall_Tarn_Text_1, ParcelFernwickHall_Tarn_Defeated
-# 54 "data/maps/ParcelFernwickHall/scripts.pory"
 	lock
-# 55 "data/maps/ParcelFernwickHall/scripts.pory"
+# 51 "data/maps/ParcelFernwickHall/scripts.pory"
 	faceplayer
-# 56 "data/maps/ParcelFernwickHall/scripts.pory"
-	msgbox ParcelFernwickHall_Tarn_Text_2, MSGBOX_DEFAULT
+# 52 "data/maps/ParcelFernwickHall/scripts.pory"
+	goto_if_set FLAG_BADGE01_GET, ParcelFernwickHall_Tarn_5
 # 57 "data/maps/ParcelFernwickHall/scripts.pory"
-	release
-	end
+	msgbox ParcelFernwickHall_Tarn_Text_1, MSGBOX_DEFAULT
+# 58 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Tarn_Text_2, MSGBOX_YESNO
+# 59 "data/maps/ParcelFernwickHall/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelFernwickHall_Tarn_8
+# 62 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Tarn_Text_4, MSGBOX_DEFAULT
+# 63 "data/maps/ParcelFernwickHall/scripts.pory"
+	setflag FLAG_SKALD_EXAM_1
+ParcelFernwickHall_Tarn_7:
+# 65 "data/maps/ParcelFernwickHall/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_GYM1, ParcelFernwickHall_Tarn_Text_5
+# 66 "data/maps/ParcelFernwickHall/scripts.pory"
+	goto ParcelFernwickHall_Tarn_Defeated
+	return
 
 ParcelFernwickHall_Tarn_2:
 # 48 "data/maps/ParcelFernwickHall/scripts.pory"
 	goto ParcelFernwickHall_Tarn_Rematch
 	goto ParcelFernwickHall_Tarn_1
 
+ParcelFernwickHall_Tarn_5:
+# 53 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Tarn_Text_0, MSGBOX_DEFAULT
+# 54 "data/maps/ParcelFernwickHall/scripts.pory"
+	release
+	end
+
+ParcelFernwickHall_Tarn_8:
+# 60 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Tarn_Text_3, MSGBOX_DEFAULT
+	goto ParcelFernwickHall_Tarn_7
+
 
 ParcelFernwickHall_Tarn_Defeated::
-# 62 "data/maps/ParcelFernwickHall/scripts.pory"
+# 70 "data/maps/ParcelFernwickHall/scripts.pory"
 	setflag FLAG_BADGE01_GET
-# 63 "data/maps/ParcelFernwickHall/scripts.pory"
+# 71 "data/maps/ParcelFernwickHall/scripts.pory"
 	playfanfare MUS_OBTAIN_BADGE
-# 64 "data/maps/ParcelFernwickHall/scripts.pory"
+# 72 "data/maps/ParcelFernwickHall/scripts.pory"
 	waitfanfare
-# 65 "data/maps/ParcelFernwickHall/scripts.pory"
+# 73 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Tarn_Defeated_Text_0, MSGBOX_DEFAULT
-# 66 "data/maps/ParcelFernwickHall/scripts.pory"
+# 74 "data/maps/ParcelFernwickHall/scripts.pory"
 	giveitem ITEM_TM03
-# 67 "data/maps/ParcelFernwickHall/scripts.pory"
+# 75 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Tarn_Defeated_Text_1, MSGBOX_DEFAULT
-# 68 "data/maps/ParcelFernwickHall/scripts.pory"
+# 76 "data/maps/ParcelFernwickHall/scripts.pory"
 	release
 	end
 
 
 ParcelFernwickHall_Tarn_Rematch::
-# 74 "data/maps/ParcelFernwickHall/scripts.pory"
+# 82 "data/maps/ParcelFernwickHall/scripts.pory"
 	lock
-# 75 "data/maps/ParcelFernwickHall/scripts.pory"
+# 83 "data/maps/ParcelFernwickHall/scripts.pory"
 	faceplayer
-# 76 "data/maps/ParcelFernwickHall/scripts.pory"
+# 84 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Tarn_Rematch_Text_0, MSGBOX_YESNO
-# 77 "data/maps/ParcelFernwickHall/scripts.pory"
+# 85 "data/maps/ParcelFernwickHall/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelFernwickHall_Tarn_Rematch_2
-# 82 "data/maps/ParcelFernwickHall/scripts.pory"
+# 90 "data/maps/ParcelFernwickHall/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_GYM1_R, ParcelFernwickHall_Tarn_Rematch_Text_2
-# 83 "data/maps/ParcelFernwickHall/scripts.pory"
+# 91 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Tarn_Rematch_Text_3, MSGBOX_DEFAULT
-# 84 "data/maps/ParcelFernwickHall/scripts.pory"
+# 92 "data/maps/ParcelFernwickHall/scripts.pory"
 	release
 	end
 
 ParcelFernwickHall_Tarn_Rematch_2:
-# 78 "data/maps/ParcelFernwickHall/scripts.pory"
+# 86 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Tarn_Rematch_Text_1, MSGBOX_DEFAULT
-# 79 "data/maps/ParcelFernwickHall/scripts.pory"
+# 87 "data/maps/ParcelFernwickHall/scripts.pory"
 	release
 	end
 
 
 ParcelFernwickHall_Register::
-# 91 "data/maps/ParcelFernwickHall/scripts.pory"
+# 99 "data/maps/ParcelFernwickHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelFernwickHall_Register_1
-# 94 "data/maps/ParcelFernwickHall/scripts.pory"
+# 102 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Register_Text_1, MSGBOX_SIGN
 	return
 
 ParcelFernwickHall_Register_1:
-# 92 "data/maps/ParcelFernwickHall/scripts.pory"
+# 100 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Register_Text_0, MSGBOX_SIGN
 	return
 
 
 ParcelFernwickHall_Syllabus::
-# 99 "data/maps/ParcelFernwickHall/scripts.pory"
+# 107 "data/maps/ParcelFernwickHall/scripts.pory"
 	msgbox ParcelFernwickHall_Syllabus_Text_0, MSGBOX_SIGN
 	return
 
@@ -200,37 +224,63 @@ ParcelFernwickHall_CadetB_Text_2:
 	.string "waiting.$"
 
 ParcelFernwickHall_Tarn_Text_0:
-# 51 "data/maps/ParcelFernwickHall/scripts.pory"
-	.string "TARN: Tidewater Division. I examine.\p"
-	.string "You want the Forest Certification,\n"
-	.string "provisional? Show me you can hold a line\l"
-	.string "when the water's against you.$"
-
-ParcelFernwickHall_Tarn_Text_1:
-# 52 "data/maps/ParcelFernwickHall/scripts.pory"
-	.string "TARN: Hm. The current's yours, then.$"
-
-ParcelFernwickHall_Tarn_Text_2:
-# 56 "data/maps/ParcelFernwickHall/scripts.pory"
+# 53 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: Passed is passed. Go and see\n"
 	.string "HALE. He signs; I only say whether you\l"
 	.string "can fight.$"
 
-ParcelFernwickHall_Tarn_Defeated_Text_0:
+ParcelFernwickHall_Tarn_Text_1:
+# 57 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "TARN: Tidewater Division. I examine.\p"
+	.string "You want the Forest Certification,\n"
+	.string "provisional? Two parts. The reading,\l"
+	.string "then the water.$"
+
+ParcelFernwickHall_Tarn_Text_2:
+# 58 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "TARN: The pond across the boulevard.\n"
+	.string "Twenty-eight pairs of WINGULL on it\l"
+	.string "this spring, the same count her\l"
+	.string "notebook gives for it years back.\p"
+	.string "A healthy count, then?$"
+
+ParcelFernwickHall_Tarn_Text_3:
+# 60 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "TARN: Wrong. Same number, half the\n"
+	.string "water. They're closer together, not\l"
+	.string "better off. Abundance is not health;\l"
+	.string "write it on your hand if you have to.\p"
+	.string "Now hold a line when the water's against\n"
+	.string "you.$"
+
+ParcelFernwickHall_Tarn_Text_4:
+# 62 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "TARN: Good. Same number, half the water.\n"
+	.string "The birds are closer together, not\l"
+	.string "better off. Most say yes because the\l"
+	.string "number says yes.\p"
+	.string "Hold that thought while the current's\n"
+	.string "against you.$"
+
+ParcelFernwickHall_Tarn_Text_5:
 # 65 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "TARN: Hm. The current's yours, then.$"
+
+ParcelFernwickHall_Tarn_Defeated_Text_0:
+# 73 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: Forest Certification, practical:\n"
 	.string "passed. HALE signs the paper. I only say\l"
 	.string "whether you can fight.\p"
 	.string "You can.$"
 
 ParcelFernwickHall_Tarn_Defeated_Text_1:
-# 67 "data/maps/ParcelFernwickHall/scripts.pory"
+# 75 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: WATER PULSE. Teach it to\n"
 	.string "something. The marsh is mostly water,\l"
 	.string "and most of it's against you.$"
 
 ParcelFernwickHall_Tarn_Rematch_Text_0:
-# 76 "data/maps/ParcelFernwickHall/scripts.pory"
+# 84 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: The author of the record, in my\n"
 	.string "hall. I read it.\p"
 	.string "I examine; I don't sign. But I'd examine\n"
@@ -238,21 +288,21 @@ ParcelFernwickHall_Tarn_Rematch_Text_0:
 	.string "current's older than both of us. Yes?$"
 
 ParcelFernwickHall_Tarn_Rematch_Text_1:
-# 78 "data/maps/ParcelFernwickHall/scripts.pory"
+# 86 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: Another day, then. The water\n"
 	.string "keeps.$"
 
 ParcelFernwickHall_Tarn_Rematch_Text_2:
-# 82 "data/maps/ParcelFernwickHall/scripts.pory"
+# 90 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: …Still yours. The current, I mean.$"
 
 ParcelFernwickHall_Tarn_Rematch_Text_3:
-# 83 "data/maps/ParcelFernwickHall/scripts.pory"
+# 91 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: Come back when you want the\n"
 	.string "water against you again. It always is.$"
 
 ParcelFernwickHall_Register_Text_0:
-# 92 "data/maps/ParcelFernwickHall/scripts.pory"
+# 100 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "The register of certifications, a tall\n"
 	.string "book with a ribbon in it.\p"
 	.string "Each line: a name, a date, FOREST, and\n"
@@ -268,7 +318,7 @@ ParcelFernwickHall_Register_Text_0:
 	.string "a different black from the rest.$"
 
 ParcelFernwickHall_Register_Text_1:
-# 94 "data/maps/ParcelFernwickHall/scripts.pory"
+# 102 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "The register of certifications, a tall\n"
 	.string "book with a ribbon in it.\p"
 	.string "Each line: a name, a date, FOREST, and\n"
@@ -284,7 +334,7 @@ ParcelFernwickHall_Register_Text_1:
 	.string "it.$"
 
 ParcelFernwickHall_Syllabus_Text_0:
-# 99 "data/maps/ParcelFernwickHall/scripts.pory"
+# 107 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "The syllabus, framed because somebody\n"
 	.string "was proud of it once. Four\l"
 	.string "competencies, four lines.\p"

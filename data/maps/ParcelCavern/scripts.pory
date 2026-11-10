@@ -37,6 +37,7 @@ script ParcelCavern_Audit {
     }
     lockall
     msgbox(format("KELDA: Deepwater Ops. Even the cold is logged down here, provisional.\pYou want clearance to read the heart of this place? Earn the audit first."), MSGBOX_DEFAULT)
+    msgbox(format("KELDA: For the ledger: the everfrost is an asset. It has a line, a value, and a depreciation schedule that assumes it will still be here.\pThe schedule was drawn up on the Coast by someone who has not stood in this room. I stand in it every day. Both of those are in the ledger too."), MSGBOX_DEFAULT)
     trainerbattle_no_intro(TRAINER_SKALD_GATE_CAVERN, format("KELDA: …Recorded. You read the cold; now the cold reads you."))
     setflag(FLAG_SKALDMERE_GATE_CAVERN)
     msgbox(format("KELDA: Cavern clearance, logged and filed. Deepwater keeps a close ledger. No one is granted the cold. You took it."), MSGBOX_DEFAULT)

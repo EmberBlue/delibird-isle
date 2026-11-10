@@ -60,7 +60,7 @@ script ParcelFernwick_ToMistwood {
 // --- the north checkpoint --------------------------------------------------------
 script ParcelFernwick_GateWard {
     trainerbattle_single(TRAINER_SKALD_GATE_STATION,
-        format("WARD: Station checkpoint. Nobody goes north to the marsh without clearance.\pYou want it? Earn it."),
+        format("WARD: Station checkpoint. Nobody goes north to the marsh without clearance.\pCard. …Provisional, Tidewater. Four clearances, no photograph that looks like you; they never do, the camera's the FOUNDATION's.\pYou want the fifth stamp? Earn it."),
         format("WARD: Cleared. Logged."),
         ParcelFernwick_GateWard_Defeated)
     lock

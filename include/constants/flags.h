@@ -1300,6 +1300,15 @@
 #define FLAG_SKALD_CH_HOLLIS_NAMED         FLAG_ITEM_TRICK_HOUSE_PUZZLE_4_MECH_MAIL      // put Hollis's name in the record
 #define FLAG_SKALD_CH_MAHOGANY             FLAG_ITEM_TRICK_HOUSE_PUZZLE_6_GLITTER_MAIL   // filed the Mahogany correction in their own hand
 #define FLAG_SKALD_CH_QUOTE                FLAG_ITEM_TRICK_HOUSE_PUZZLE_7_TROPIC_MAIL    // gave MAREN of the Courier a sentence on the record
+// Skaldmere: the examinations -- each certification leader asks one reading question before the battle (2026-11-10)
+#define FLAG_SKALD_EXAM_1                  FLAG_ITEM_TRICK_HOUSE_PUZZLE_8_BEAD_MAIL      // Tarn: the pond count
+#define FLAG_SKALD_EXAM_2                  FLAG_ITEM_JAGGED_PASS_BURN_HEAL                // Mirren: the culvert
+#define FLAG_SKALD_EXAM_3                  FLAG_ITEM_AQUA_HIDEOUT_B1F_MAX_ELIXIR          // Breen: brown water
+#define FLAG_SKALD_EXAM_4                  FLAG_ITEM_AQUA_HIDEOUT_B2F_NEST_BALL           // Sluice: the gauge
+#define FLAG_SKALD_EXAM_5                  FLAG_ITEM_MT_PYRE_EXTERIOR_MAX_POTION          // Vale: the slide
+#define FLAG_SKALD_EXAM_6                  FLAG_ITEM_MT_PYRE_EXTERIOR_TM_SKILL_SWAP       // Harland: forty jobs
+#define FLAG_SKALD_EXAM_7                  FLAG_ITEM_NEW_MAUVILLE_ULTRA_BALL              // Vane: the fifth gauge
+#define FLAG_SKALD_EXAM_8                  FLAG_ITEM_NEW_MAUVILLE_ESCAPE_ROPE             // Ilex: the snow patches
 
 #define FLAG_SKALD_Q_DRAWER 0x493 // Skaldmere: side quests
 #define FLAG_SKALD_Q_DRAWER_SEEN 0x494 // Skaldmere: side quests

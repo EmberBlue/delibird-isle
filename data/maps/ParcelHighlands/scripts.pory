@@ -393,6 +393,13 @@ script ParcelHighlands_ValeGate {
     applymovement(OBJ_EVENT_ID_PLAYER, Movement_HL_FaceRight)
     waitmovement(0)
     msgbox(format("VALE: Highland Operations. Past this point the ground is no longer ours to fix. Only to clear people off of, in order.\pNobody goes up this slope on my ledger unproven. Show me you've earned the meltwater permit."), MSGBOX_DEFAULT)
+    msgbox(format("VALE: Highland Operations examines before it clears. The slide above Haukfell. A weather event, as the Board has it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("VALE: The Board thanks you. The ground went soft under a casing two years ago; the spring only finished it.\pWeather is what you say when the cause has a licence number. Read the slope on your way up."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("VALE: No. The ground went soft under a drill casing and a wet spring finished what the casing started. Weather is the alibi.\pYou read the slope. Now cross what it's made."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_EXAM_5)
+    }
     trainerbattle_no_intro(TRAINER_SKALD_GYM5, format("VALE: …Cleared. You go up with it signed."))
     setflag(FLAG_BADGE05_GET)
     call(Common_EventScript_PlayGymBadgeFanfare)

@@ -194,6 +194,8 @@ static const u8 sNb_Cert_Coastal[]     = _("Coastal: ");
 static const u8 sNb_Signed[]           = _("signed");
 static const u8 sNb_Open[]             = _("--");
 static const u8 sNb_Clearances[]       = _("Clearances held: ");
+static const u8 sNb_Exams[]            = _("\nRead right at the examinations: ");
+static const u8 sNb_OfEightPlain[]     = _(" of 8.");
 static const u8 sNb_Of8[]              = _(" of 8.\nTARN MIRREN BREEN SLUICE\pVALE HARLAND VANE ILEX,\nin that order up the region.");
 static const u8 sNb_Newline[]          = _("\n");
 static const u8 sNb_Page[]             = _("\p");
@@ -351,6 +353,16 @@ void SkaldNotebookBuffer(void)
         ConvertIntToDecimalStringN(gStringVar1, NbBadgeCount(), STR_CONV_MODE_LEFT_ALIGN, 1);
         StringAppend(gStringVar4, gStringVar1);
         StringAppend(gStringVar4, sNb_Of8);
+        {
+            static const u16 sExamFlags[8] = {FLAG_SKALD_EXAM_1, FLAG_SKALD_EXAM_2, FLAG_SKALD_EXAM_3, FLAG_SKALD_EXAM_4, FLAG_SKALD_EXAM_5, FLAG_SKALD_EXAM_6, FLAG_SKALD_EXAM_7, FLAG_SKALD_EXAM_8};
+            u32 right = 0;
+            for (i = 0; i < 8; i++)
+                if (FlagGet(sExamFlags[i])) right++;
+            StringAppend(gStringVar4, sNb_Exams);
+            ConvertIntToDecimalStringN(gStringVar1, right, STR_CONV_MODE_LEFT_ALIGN, 1);
+            StringAppend(gStringVar4, gStringVar1);
+            StringAppend(gStringVar4, sNb_OfEightPlain);
+        }
         break;
     case 2:
     {
