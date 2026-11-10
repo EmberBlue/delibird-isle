@@ -159,6 +159,18 @@ ParcelFernwickSurvey_ReadDesk::
 	end
 
 
+ParcelFernwickSurvey_Letters::
+# 98 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	msgbox ParcelFernwickSurvey_Letters_Text_0, MSGBOX_SIGN
+	return
+
+
+ParcelFernwickSurvey_Index::
+# 102 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	msgbox ParcelFernwickSurvey_Index_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelFernwickSurvey_Clerk_Text_0:
 # 13 "data/maps/ParcelFernwickSurvey/scripts.pory"
 	.string "CLERK: There it is. Forty years of\n"
@@ -294,3 +306,51 @@ ParcelFernwickSurvey_ReadDesk_Text_0:
 	.string "have been read until they're soft.\p"
 	.string "One plant is ringed, with a date beside\n"
 	.string "it, and a place you know the name of.$"
+
+ParcelFernwickSurvey_Letters_Text_0:
+# 98 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	.string "A box file: CORRESPONDENCE, H. Three\n"
+	.string "letters in the hand from your\l"
+	.string "notebook's margins, years apart, each\l"
+	.string "to the Survey.\p"
+	.string "The first. Dear Ilex. I need your\n"
+	.string "baselines for the lower river. Mine\l"
+	.string "start when I arrived and yours start\l"
+	.string "before anyone was counting. Say what\l"
+	.string "the Survey charges and I will find it.\p"
+	.string "The second. Dear Ilex. The Foundation\n"
+	.string "has asked for my models in a form the\l"
+	.string "company can use. I have asked what the\l"
+	.string "company plans. They sent a brochure.\l"
+	.string "Send me the red-cloth dates for the\l"
+	.string "Floodbasin, please. I want to know how\l"
+	.string "long it was healthy before it was not.\p"
+	.string "The third, short. Ilex. If anyone ever\n"
+	.string "asks you for my baselines, give them\l"
+	.string "yours instead. Yours were never\l"
+	.string "adjusted. H.\p"
+	.string "Underneath, in the Surveyor's hand on\n"
+	.string "the file's lid: ANSWERED. ANSWERED. NOT\l"
+	.string "ANSWERED. WHO WOULD I HAVE SENT IT TO.$"
+
+ParcelFernwickSurvey_Index_Text_0:
+# 102 "data/maps/ParcelFernwickSurvey/scripts.pory"
+	.string "The sheet index. Every place the Survey\n"
+	.string "has ever staked, one line each, with the\l"
+	.string "year of the first stake and the year of\l"
+	.string "the last reading.\p"
+	.string "Saltwick Shoals, the old oyster ground.\n"
+	.string "First stake, last reading, then the word\l"
+	.string "GONE and a date.\p"
+	.string "Reedmere Landing, the turf. Still read.\n"
+	.string "The Hollowbend culvert, the pool below.\l"
+	.string "Still read. Leirvik bridge reach. Still\l"
+	.string "read, with a note: the state changed.\l"
+	.string "Do not reset.\p"
+	.string "Five lines carry GONE. A sixth has been\n"
+	.string "written and then rubbed at with a thumb\l"
+	.string "until the paper roughened. Under it,\l"
+	.string "faint: NOT YET.\p"
+	.string "No line has ever been removed from the\n"
+	.string "index. Ilex does not throw things away.\l"
+	.string "That is the whole method.$"

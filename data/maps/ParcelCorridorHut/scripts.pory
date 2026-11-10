@@ -79,3 +79,9 @@ script ParcelCorridorHut_Shelf {
     msgbox(format("Invoices. Grate order, 12 units, due next month.\pA folder labelled FLOW SURVEY. It is empty."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelCorridorHut_Order {
+    msgbox(format("An order form in triplicate on the foreman's table, the top copy soft from handling.\pGRATES, CULVERT TYPE, FOUR. For the Hollowbend crossing. Requested by the site foreman. Priority: ROUTINE. Expected: next month.\pThe form has been re-dated five times. Each new date is next month from the date before it. Each is initialled by someone at the depot who did not come out to look.\pOn the back, in the foreman's hand, a tally of what has gone down the culvert in the meantime. It is a long tally for a routine form."), MSGBOX_SIGN)
+}

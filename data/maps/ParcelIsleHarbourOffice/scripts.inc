@@ -77,6 +77,12 @@ ParcelIsleHarbourOffice_ReadShelf::
 	end
 
 
+ParcelIsleHarbourOffice_Log::
+# 53 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	msgbox ParcelIsleHarbourOffice_Log_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelIsleHarbourOffice_Dagny_Text_0:
 # 11 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
 	.string "DAGNY: I've been asked, in writing, to\n"
@@ -152,3 +158,27 @@ ParcelIsleHarbourOffice_ReadShelf_Text_0:
 	.string "for thirty years. You could read the\l"
 	.string "town's whole life off them. Osk already\l"
 	.string "has.$"
+
+ParcelIsleHarbourOffice_Log_Text_0:
+# 53 "data/maps/ParcelIsleHarbourOffice/scripts.pory"
+	.string "The harbour log, open at last month.\n"
+	.string "Every hull in and out, with the hour and\l"
+	.string "the master's initials.\p"
+	.string "The ferry, twice a day, in the\n"
+	.string "harbourmaster's hand. Fishing boats\l"
+	.string "before light. A Mereholt Logistics\l"
+	.string "coaster on the first of the month, as\l"
+	.string "every month.\p"
+	.string "One night entry, not in the\n"
+	.string "harbourmaster's hand: LOGISTICS, VAN\l"
+	.string "AND LAUNCH, 02:10, NO CARGO DECLARED.\l"
+	.string "Initials you cannot read. The launch\l"
+	.string "left at 04:40, riding low.\p"
+	.string "The next morning's entry is the\n"
+	.string "harbourmaster's again. It says: lab on\l"
+	.string "the front cleared out overnight. Police\l"
+	.string "informed. Nothing to do with the\l"
+	.string "harbour.\p"
+	.string "The two entries are three lines apart.\n"
+	.string "Nobody has drawn a line between them.\l"
+	.string "Nobody needed to.$"

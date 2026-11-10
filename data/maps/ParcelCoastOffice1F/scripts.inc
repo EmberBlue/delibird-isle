@@ -98,6 +98,18 @@ ParcelCoastOffice1F_Model::
 	end
 
 
+ParcelCoastOffice1F_Report::
+# 64 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	msgbox ParcelCoastOffice1F_Report_Text_0, MSGBOX_SIGN
+	return
+
+
+ParcelCoastOffice1F_Leaflet::
+# 68 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	msgbox ParcelCoastOffice1F_Leaflet_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelCoastOffice1F_Reception_Text_0:
 # 10 "data/maps/ParcelCoastOffice1F/scripts.pory"
 	.string "RECEPTION: Welcome to the MEREHOLT\n"
@@ -177,3 +189,44 @@ ParcelCoastOffice1F_Model_Text_0:
 	.string "glass. Tiny boats. A tiny cannery. The\l"
 	.string "sea painted the blue it used to be. No\l"
 	.string "urchins in the model.$"
+
+ParcelCoastOffice1F_Report_Text_0:
+# 64 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	.string "STEWARDSHIP. The Foundation's annual\n"
+	.string "report, on a stand, open at the chair's\l"
+	.string "foreword. Heavy paper. A ranger on a\l"
+	.string "ridge.\p"
+	.string "It has been my privilege, after a career\n"
+	.string "in the Corps, to see conservation from\l"
+	.string "the other side of the table, where\l"
+	.string "decisions are funded rather than\l"
+	.string "wished for.\p"
+	.string "This year the Foundation supported two\n"
+	.string "field stations, forty-four\l"
+	.string "certifications, the regional recovery\l"
+	.string "model, and storm relief on Delibird Isle.\p"
+	.string "The region's habitats are resilient. Our\n"
+	.string "science shows it. Our partners prove it\l"
+	.string "every day.\p"
+	.string "The facing page is a chart. Forty years\n"
+	.string "of curves, rising. There is no axis on\l"
+	.string "the left. There is a logo where the axis\l"
+	.string "would be.$"
+
+ParcelCoastOffice1F_Leaflet_Text_0:
+# 68 "data/maps/ParcelCoastOffice1F/scripts.pory"
+	.string "A rack of leaflets, fanned. LEIRVIK\n"
+	.string "WORKS: REMEDIATION UPDATE. The same\l"
+	.string "leaflet, four printings, four years.\p"
+	.string "The first: works to commence in the\n"
+	.string "spring. The second: works rescheduled\l"
+	.string "following a review of the hydrology. The\l"
+	.string "third: phase one complete, phase two to\l"
+	.string "follow. Phase one was a fence.\p"
+	.string "The fourth: the Foundation continues\n"
+	.string "to work closely with the community. A\l"
+	.string "photograph of a booth, a banner, a child\l"
+	.string "with a balloon.\p"
+	.string "The plate in the basin says what is in\n"
+	.string "the water. None of the four leaflets\l"
+	.string "does.$"

@@ -97,3 +97,17 @@ script ParcelCoastOffice2F_ReadBoat {
     msgbox(format("A model of a fishing boat, the old kind, high in the bow. The card: 'Traditional fleet, heritage display.'\pThe real one is tied up at the quay, owned by a lender."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelCoastOffice2F_GrantFile {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The grant file, HERON, open on the cabinet. Three letters, one a year, signed H. Aune. And a fourth, unsigned, not sent.\pYear one. Dear Dr. H. Renewed, of course. The board asks only that the models be shared with the parent company's planners. I said you would not mind. Tea when I am next in the field.\pYear two. Dear Dr. H. Renewed. The board was glad of the models. They have asked about the older work, the Johto years, for completeness. I have told them it is of no interest. Please do not worry about it.\pYear three. Dr. Heron. The grant is renewed subject to the conditions enclosed. I would ask you to read them carefully. I am sorry about the tone. I did not write the conditions. I am sending them anyway.\pThe fourth, this season, in a hand that has been pressing too hard. Dr. H. They have the same file on me. I have known for three years. I am going to say so at the sitting. I do not know if that is courage or only the end of the rope. I wanted you to hear it from me first.\pIt was not sent. It did not need to be."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The grant file, HERON, open on the cabinet. Three letters, one a year, signed H. Aune.\pYear one. Dear Dr. H. Renewed, of course. The board asks only that the models be shared with the parent company's planners. I said you would not mind. Tea when I am next in the field.\pYear two. Dear Dr. H. Renewed. The board was glad of the models. They have asked about the older work, the Johto years, for completeness. I have told them it is of no interest. Please do not worry about it.\pYear three. Dr. Heron. The grant is renewed subject to the conditions enclosed. I would ask you to read them carefully. I am sorry about the tone. I did not write the conditions. I am sending them anyway.\pThree letters. The first is warm. The third is a lever with a stamp on it. The hand is the same hand."), MSGBOX_SIGN)
+    }
+}
+
+script ParcelCoastOffice2F_Programme {
+    msgbox(format("The programme ledger. Grants by recipient, this cycle.\pSkaldmere Climate Corps, two field stations: a large figure. Certification training: a large figure. Regional research: a figure with a note, released against delivery of the model.\pWetland Resilience Programme, Dr. Heron: a figure, and beside it, in pencil, CONDITIONS.\pDelibird Isle Festival Committee: banners, blankets, a stage. A small figure. Someone has underlined it twice.\pCommunity Centre, Haukfell: a figure, and a date two weeks before the Permafrost licence was first tabled.\pAt the foot, the total, and the line every ledger has: funds provided by Mereholt Resources Ltd. The Foundation does not have money. It has a parent."), MSGBOX_SIGN)
+}

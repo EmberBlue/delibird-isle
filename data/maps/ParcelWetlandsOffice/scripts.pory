@@ -104,3 +104,9 @@ script ParcelWetlandsOffice_ReadGaugeDesk {
     msgbox(format("The gauge desk. Under the blotter, the corner of a hand-drawn map: where the gauges are, and in red, where the water actually goes."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelWetlandsOffice_Programme {
+    msgbox(format("The programme from the office's opening, framed. TIDEWATER MONITORING OFFICE, A COMMUNITY PARTNERSHIP.\pTen o'clock, the ribbon. Commissioner Dorsey. Ten fifteen, remarks: the Foundation's programme officer. Ten thirty, the gauges explained: a technician. Eleven, refreshments, courtesy of Mereholt Coastal.\pA drawing of the five gauges on the back. Four of them stand where the gauges stand. The fifth is drawn at the falls.\pThere are no falls on this river. There were, once, before the sluice. The artist worked from the Board's old map, and nobody at the ribbon noticed."), MSGBOX_SIGN)
+}

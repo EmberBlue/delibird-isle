@@ -116,6 +116,18 @@ ParcelBoardroom_ReadFrame::
 	end
 
 
+ParcelBoardroom_Minutes::
+# 93 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Minutes_Text_0, MSGBOX_SIGN
+	return
+
+
+ParcelBoardroom_Covenant::
+# 97 "data/maps/ParcelBoardroom/scripts.pory"
+	msgbox ParcelBoardroom_Covenant_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelBoardroom_Arrival_Text_0:
 # 29 "data/maps/ParcelBoardroom/scripts.pory"
 	.string "The boardroom runs the whole length of\n"
@@ -287,3 +299,47 @@ ParcelBoardroom_ReadFrame_Text_0:
 	.string "The signature at the bottom is the one\n"
 	.string "from the margins of your notebook,\l"
 	.string "younger.$"
+
+ParcelBoardroom_Minutes_Text_0:
+# 93 "data/maps/ParcelBoardroom/scripts.pory"
+	.string "A single sheet left squared on the\n"
+	.string "table where the board sits. An extract\l"
+	.string "from the minutes, some years old.\p"
+	.string "RESOLVED, that the Foundation's grant\n"
+	.string "to the wetland resilience programme be\l"
+	.string "renewed for a further three years,\l"
+	.string "subject to the programme making its\l"
+	.string "models available to the parent company\l"
+	.string "for planning purposes.\p"
+	.string "RESOLVED, that the programme officer\n"
+	.string "convey the board's continued\l"
+	.string "confidence to the principal\l"
+	.string "investigator in person.\p"
+	.string "RESOLVED, that the file concerning the\n"
+	.string "principal investigator's earlier work in\l"
+	.string "Johto be retained by the secretary and\l"
+	.string "not circulated.\p"
+	.string "Three resolutions. Nobody voted\n"
+	.string "against. The secretary noted the\l"
+	.string "meeting closed at four and that tea was\l"
+	.string "served.$"
+
+ParcelBoardroom_Covenant_Text_0:
+# 97 "data/maps/ParcelBoardroom/scripts.pory"
+	.string "A bound summary for the chair's eyes,\n"
+	.string "left open at the page she must read\l"
+	.string "most.\p"
+	.string "FACILITY COVENANTS. The borrower shall\n"
+	.string "maintain extraction throughput at not\l"
+	.string "less than the scheduled tonnage in\l"
+	.string "each quarter.\p"
+	.string "A shortfall in two consecutive quarters\n"
+	.string "is an event of review. A shortfall in\l"
+	.string "three is an event of default.\p"
+	.string "Under EVENT OF DEFAULT, in a clear\n"
+	.string "hand: the lenders may require a change\l"
+	.string "of management.\p"
+	.string "The page is soft at the corner from\n"
+	.string "being turned to. She said it once, in\l"
+	.string "here, calmly. It is written down the\l"
+	.string "same way.$"

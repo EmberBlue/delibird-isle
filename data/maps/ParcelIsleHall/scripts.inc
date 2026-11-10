@@ -189,6 +189,12 @@ ParcelIsleHall_Minutes_3:
 	goto ParcelIsleHall_Minutes_1
 
 
+ParcelIsleHall_Lease::
+# 104 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Lease_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelIsleHall_Brenna_Text_0:
 # 12 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "BRENNA: We voted. Twelve to nine, to\n"
@@ -366,3 +372,25 @@ ParcelIsleHall_Minutes_Text_2:
 	.string "motion.\n"
 	.string "Item 4: the schedule board. Discussion.\l"
 	.string "No motion.$"
+
+ParcelIsleHall_Lease_Text_0:
+# 104 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "A lease file in the hall's cabinet, the\n"
+	.string "lid left up. THE FRONT, UNIT 3. The lab.\p"
+	.string "Tenant: the Wetland Resilience\n"
+	.string "Programme, Dr. Heron. Landlord: Saltwick\l"
+	.string "Front Holdings, a company with a quay\l"
+	.string "address and a parent you have seen the\l"
+	.string "kerning of.\p"
+	.string "Notice to quit, for redevelopment,\n"
+	.string "dated nine days before the night the\l"
+	.string "lab was emptied. Signed for the\l"
+	.string "landlord. Not signed for the tenant.\l"
+	.string "Served by hand, the note says.\p"
+	.string "Stapled behind it, a second sheet:\n"
+	.string "redevelopment plan, Unit 3. Proposed\l"
+	.string "use: storage, Mereholt Logistics.\p"
+	.string "The official who came to look at the\n"
+	.string "broken lock had this file. He called it a\l"
+	.string "burglary anyway. It was easier for\l"
+	.string "everyone.$"

@@ -166,6 +166,12 @@ ParcelWetlandsOffice_ReadGaugeDesk::
 	end
 
 
+ParcelWetlandsOffice_Programme::
+# 111 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Programme_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelWetlandsOffice_Clerk_Text_0:
 # 12 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "CLERK: The councilman is here. He's in\n"
@@ -304,3 +310,23 @@ ParcelWetlandsOffice_ReadGaugeDesk_Text_0:
 	.string "corner of a hand-drawn map: where the\l"
 	.string "gauges are, and in red, where the water\l"
 	.string "actually goes.$"
+
+ParcelWetlandsOffice_Programme_Text_0:
+# 111 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "The programme from the office's\n"
+	.string "opening, framed. TIDEWATER MONITORING\l"
+	.string "OFFICE, A COMMUNITY PARTNERSHIP.\p"
+	.string "Ten o'clock, the ribbon. Commissioner\n"
+	.string "Dorsey. Ten fifteen, remarks: the\l"
+	.string "Foundation's programme officer. Ten\l"
+	.string "thirty, the gauges explained: a\l"
+	.string "technician. Eleven, refreshments,\l"
+	.string "courtesy of Mereholt Coastal.\p"
+	.string "A drawing of the five gauges on the\n"
+	.string "back. Four of them stand where the\l"
+	.string "gauges stand. The fifth is drawn at the\l"
+	.string "falls.\p"
+	.string "There are no falls on this river. There\n"
+	.string "were, once, before the sluice. The\l"
+	.string "artist worked from the Board's old map,\l"
+	.string "and nobody at the ribbon noticed.$"

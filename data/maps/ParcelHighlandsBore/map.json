@@ -69,6 +69,14 @@
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
       "flag": "FLAG_SKALD_HIDDEN_BORE_STAR_PIECE"
+    },
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlandsBore_Log"
     }
   ]
 }

@@ -56,3 +56,13 @@ script ParcelCoastCannery_Board {
     msgbox(format("QUOTA BOARD. This month: 41 tonnes landed, 40 tonnes permitted. Over by one. A note in red: ROUNDING. Last year's board, under it: 112 tonnes."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelCoastCannery_CatchBook {
+    msgbox(format("The catch book, chained to the desk. Landings by season, by boat, by kind. Anyone may read it. Nobody does.\pThe early seasons: four columns, full. Flatfish, round fish, shell, the rest. The totals climb for years. A new line appears: dredge landings, counted separately, larger than all the boats together.\pThe middle seasons: the boats' columns thin. UNDERSIZE gets its own column and grows. Shell goes to nothing in two seasons and is not printed again.\pThe late seasons: the dredge column holds. The boats' columns are mostly dashes. Someone has started writing the names of the fish that come up where other fish used to, warm-water names, in the margin, in pencil, with question marks.\pThe totals at the bottom of every page are about the same. That is what the Foundation's chart shows. The totals."), MSGBOX_SIGN)
+}
+
+script ParcelCoastCannery_Grading {
+    msgbox(format("The inspector's grading sheets on a clip. This week's landings, by grade.\pGRADE ONE: a short column. GRADE TWO: longer. UNDERSIZE, RETURNED: the longest column, which is to say not returned, which is to say in the cans with a different label.\pA note in the inspector's hand at the foot of each sheet, the same note every week for a year: minimum size not met, see management. Then, this week, a different note: see management, again, in writing, copy to the clerk of the Council.\pThe copy is not on the clip. It went somewhere."), MSGBOX_SIGN)
+}

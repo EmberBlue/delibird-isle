@@ -86,3 +86,13 @@ script ParcelBoardroom_ReadFrame {
     msgbox(format("The recovery model, framed. Forty years of curves, rising.\pThe signature at the bottom is the one from the margins of your notebook, younger."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelBoardroom_Minutes {
+    msgbox(format("A single sheet left squared on the table where the board sits. An extract from the minutes, some years old.\pRESOLVED, that the Foundation's grant to the wetland resilience programme be renewed for a further three years, subject to the programme making its models available to the parent company for planning purposes.\pRESOLVED, that the programme officer convey the board's continued confidence to the principal investigator in person.\pRESOLVED, that the file concerning the principal investigator's earlier work in Johto be retained by the secretary and not circulated.\pThree resolutions. Nobody voted against. The secretary noted the meeting closed at four and that tea was served."), MSGBOX_SIGN)
+}
+
+script ParcelBoardroom_Covenant {
+    msgbox(format("A bound summary for the chair's eyes, left open at the page she must read most.\pFACILITY COVENANTS. The borrower shall maintain extraction throughput at not less than the scheduled tonnage in each quarter.\pA shortfall in two consecutive quarters is an event of review. A shortfall in three is an event of default.\pUnder EVENT OF DEFAULT, in a clear hand: the lenders may require a change of management.\pThe page is soft at the corner from being turned to. She said it once, in here, calmly. It is written down the same way."), MSGBOX_SIGN)
+}

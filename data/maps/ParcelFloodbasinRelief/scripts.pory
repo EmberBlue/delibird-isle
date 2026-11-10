@@ -52,3 +52,9 @@ script ParcelFloodbasinRelief_ReadDresser {
     msgbox(format("A stack of blankets with the crest. The top one has been unfolded and refolded badly by someone who wanted to see if they were real.\pThey are."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelFloodbasinRelief_Ledger {
+    msgbox(format("The relief ledger. Who came, what they were given, what they signed.\pBlankets, two per household, FOUNDATION stamped in the corner. Lamp oil. Dried fish, from the Coast, in cannery cartons. A voucher for the ferry, one way.\pEach line signed by the household and countersigned by the Commissioner's aide. At the foot of each page: relief provided by the Mereholt Foundation in partnership with the Regional Council.\pA column headed CAUSE OF NEED. It says FLOOD on every line. In one place, in another hand, under FLOOD: the works. It has been crossed out and FLOOD written again above it, firmly.\pThe ledger is honest about what was given. It is careful about why."), MSGBOX_SIGN)
+}

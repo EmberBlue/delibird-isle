@@ -176,3 +176,9 @@ script ParcelRiverHall_CrateLabel {
     msgbox(format("Under the trestle table: dust, a chair leg mended with wire, and the marks where crates were stacked for the meeting."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelRiverHall_Petition {
+    msgbox(format("The ratepayers' petition, on the side table where the hall keeps what it is not sure it is allowed to keep.\pWE, THE UNDERSIGNED, holders of water rights on the lower river, ask the Board to state in writing the year against which the gauge reads NORMAL.\pForty-one signatures. Farmers, the boatyard, two mills, the chandler, a child who signed under a parent and was allowed to.\pThe Board's reply is clipped to it, one paragraph. The gauge is calibrated to the standard datum. The Board does not comment on individual readings. Thank you for your interest in the river.\pSomeone has written under the reply: which year. Three times. Each time larger."), MSGBOX_SIGN)
+}

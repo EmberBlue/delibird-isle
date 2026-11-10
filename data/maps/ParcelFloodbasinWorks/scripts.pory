@@ -7,3 +7,9 @@ script ParcelFloodbasinWorks_Plate {
     msgbox(format("A brass plate, green with damp: MEREHOLT BASIN WORKS -- PUMP HOUSE 2. DISCHARGE LICENSED.\pBelow it, scratched in by hand: WHERE DID YOU THINK IT WENT?"), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelFloodbasinWorks_Permit {
+    msgbox(format("Behind glass on the wall of the works, the consent, as the law requires it to be displayed. The glass is cracked and the paper has yellowed to the colour of the water.\pCONSENT TO OPERATE. Granted to Mereholt Resources Ltd for the recovery of ore from the Leirvik seam, subject to conditions.\pCONDITION 4. Tailings to be contained and lined. CONDITION 7. Discharge to the basin not to exceed the levels in Schedule B. CONDITION 12. On cessation, the site to be restored to its prior state within five years.\pThe operation ceased twenty-two years ago. A stamp over the conditions reads: UNDER REVIEW.\pThe stamp is newer than the paper. Someone comes to renew the stamp."), MSGBOX_SIGN)
+}

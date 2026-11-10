@@ -96,6 +96,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelRiverBoard_Ledger"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiverBoard_GaugeBook"
     }
   ]
 }

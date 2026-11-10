@@ -87,6 +87,12 @@ ParcelHighlandsBore_Cores::
 	end
 
 
+ParcelHighlandsBore_Log::
+# 50 "data/maps/ParcelHighlandsBore/scripts.pory"
+	msgbox ParcelHighlandsBore_Log_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelHighlandsBore_Geologist_Text_0:
 # 9 "data/maps/ParcelHighlandsBore/scripts.pory"
 	.string "GEOLOGIST: 48-50. That's the core\n"
@@ -163,3 +169,25 @@ ParcelHighlandsBore_Cores_Text_0:
 	.string "ICE. Below that, a second set of labels\l"
 	.string "in a different hand: GAS -- EST. YIELD.\l"
 	.string "The second set is newer.$"
+
+ParcelHighlandsBore_Log_Text_0:
+# 50 "data/maps/ParcelHighlandsBore/scripts.pory"
+	.string "The drill log, in a tin box by the casing,\n"
+	.string "in the geologist's neat pencil.\p"
+	.string "Depth, ice, gas, notes. The first pages\n"
+	.string "are all ice: solid, grey, old, the\l"
+	.string "permafrost the Highlands sit on. The\l"
+	.string "notes say GOOD CORE, GOOD CORE, GOOD\l"
+	.string "CORE.\p"
+	.string "Deeper, the ice column thins and the\n"
+	.string "gas column fills. Readings the geologist\l"
+	.string "has underlined. A note: VENTED.\l"
+	.string "Another: VENTED, STOP WORK, RESUMED ON\l"
+	.string "INSTRUCTION.\p"
+	.string "The last page: the casing left in, the\n"
+	.string "site to be marked EXPLORATORY ONLY,\l"
+	.string "the log to be sent to the Coast. A copy\l"
+	.string "stayed in the tin.\p"
+	.string "The core sample under glass in the\n"
+	.string "boardroom is from the third page. The\l"
+	.string "good one.$"

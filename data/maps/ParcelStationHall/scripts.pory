@@ -59,3 +59,9 @@ script ParcelStationHall_Clerk {
     release
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelStationHall_IceOut {
+    msgbox(format("The instrument log, the Station's oldest book. One line a year for the tarn: ICE OUT, and a date.\pThe first page: the ice goes in the third week of spring, give or take a week, for forty years. A hand changes, the dates do not.\pThe second page: the second week. Then the first. Then a year with the entry NO ICE, underlined twice, and a question mark that somebody later rubbed out.\pThe current page: NO ICE, NO ICE, NO ICE. The last entry is this spring. The clerk has started writing the date the ice would have gone, in brackets, so the column stays a column.\pA ruler lies in the book. Somebody laid it along the dates once, and saw the line, and left it there."), MSGBOX_SIGN)
+}

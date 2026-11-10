@@ -300,6 +300,12 @@ ParcelRiverHall_CrateLabel_3:
 	goto ParcelRiverHall_CrateLabel_1
 
 
+ParcelRiverHall_Petition::
+# 183 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Petition_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelRiverHall_Meeting_Text_0:
 # 31 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "MAYOR: --order. Order. The RANGER's\n"
@@ -551,3 +557,25 @@ ParcelRiverHall_CrateLabel_Text_1:
 	.string "leg mended with wire, and the marks\l"
 	.string "where crates were stacked for the\l"
 	.string "meeting.$"
+
+ParcelRiverHall_Petition_Text_0:
+# 183 "data/maps/ParcelRiverHall/scripts.pory"
+	.string "The ratepayers' petition, on the side\n"
+	.string "table where the hall keeps what it is\l"
+	.string "not sure it is allowed to keep.\p"
+	.string "WE, THE UNDERSIGNED, holders of water\n"
+	.string "rights on the lower river, ask the Board\l"
+	.string "to state in writing the year against\l"
+	.string "which the gauge reads NORMAL.\p"
+	.string "Forty-one signatures. Farmers, the\n"
+	.string "boatyard, two mills, the chandler, a\l"
+	.string "child who signed under a parent and was\l"
+	.string "allowed to.\p"
+	.string "The Board's reply is clipped to it, one\n"
+	.string "paragraph. The gauge is calibrated to\l"
+	.string "the standard datum. The Board does not\l"
+	.string "comment on individual readings. Thank\l"
+	.string "you for your interest in the river.\p"
+	.string "Someone has written under the reply:\n"
+	.string "which year. Three times. Each time\l"
+	.string "larger.$"

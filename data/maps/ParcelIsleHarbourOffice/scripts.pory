@@ -46,3 +46,9 @@ script ParcelIsleHarbourOffice_ReadShelf {
     msgbox(format("A shelf of bound manifests, every month for thirty years. You could read the town's whole life off them. Osk already has."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelIsleHarbourOffice_Log {
+    msgbox(format("The harbour log, open at last month. Every hull in and out, with the hour and the master's initials.\pThe ferry, twice a day, in the harbourmaster's hand. Fishing boats before light. A Mereholt Logistics coaster on the first of the month, as every month.\pOne night entry, not in the harbourmaster's hand: LOGISTICS, VAN AND LAUNCH, 02:10, NO CARGO DECLARED. Initials you cannot read. The launch left at 04:40, riding low.\pThe next morning's entry is the harbourmaster's again. It says: lab on the front cleared out overnight. Police informed. Nothing to do with the harbour.\pThe two entries are three lines apart. Nobody has drawn a line between them. Nobody needed to."), MSGBOX_SIGN)
+}

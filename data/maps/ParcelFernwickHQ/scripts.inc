@@ -280,6 +280,19 @@ ParcelFernwickHQ_ReadCounter::
 	end
 
 
+ParcelFernwickHQ_Pinned::
+# 166 "data/maps/ParcelFernwickHQ/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHQ_Pinned_1
+# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Pinned_Text_1, MSGBOX_SIGN
+	return
+
+ParcelFernwickHQ_Pinned_1:
+# 167 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Pinned_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelFernwickHQ_Reception_Text_0:
 # 12 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "RECEPTION: HALE slept. A whole night. I\n"
@@ -594,3 +607,46 @@ ParcelFernwickHQ_ReadCounter_Text_0:
 	.string "line reads WREN -- FIELD, and nothing\l"
 	.string "after it.\p"
 	.string "Hale's hand.$"
+
+ParcelFernwickHQ_Pinned_Text_0:
+# 167 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "Where the poster was: the minutes of\n"
+	.string "the river meeting at Elvsund, pinned\l"
+	.string "with four tacks, typed on the hall's\l"
+	.string "machine.\p"
+	.string "PRESENT: the Board's clerk, the\n"
+	.string "Commissioner's deputy, forty-one\l"
+	.string "ratepayers, two rangers, one surveyor.\p"
+	.string "THE RATEPAYERS ASKED why the gauge\n"
+	.string "read normal when their fields did not.\l"
+	.string "THE CLERK SAID the gauge was\l"
+	.string "calibrated. THE SURVEYOR ASKED to\l"
+	.string "which year.\p"
+	.string "THE DEPUTY SAID the Commissioner\n"
+	.string "regretted he could not attend. THE\l"
+	.string "ROOM NOTED this.\p"
+	.string "RESOLVED, by show of hands, that the\n"
+	.string "Board publish its readings against the\l"
+	.string "old datum as well as the new. Carried.\l"
+	.string "Six abstained.\p"
+	.string "Down the margin, six names in Hale's\n"
+	.string "small capitals. The six who stood up\l"
+	.string "first. Not ours, the ranger said. Theirs.$"
+
+ParcelFernwickHQ_Pinned_Text_1:
+# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "A poster, the Foundation's green and\n"
+	.string "grey. A ranger on a ridge with the light\l"
+	.string "behind.\p"
+	.string "STEWARDSHIP. A Mereholt Foundation\n"
+	.string "partnership with the Skaldmere Climate\l"
+	.string "Corps. Two field stations. The\l"
+	.string "certification programme. Equipment for\l"
+	.string "every ranger in the region.\p"
+	.string "Smaller, at the bottom: the Climate\n"
+	.string "Corps is funded in part by Mereholt\l"
+	.string "Foundation conservation grants\l"
+	.string "administered through the Office of\l"
+	.string "Public-Private Partnerships.\p"
+	.string "Someone has pressed a thumbnail into\n"
+	.string "the word PART and left a crescent.$"

@@ -16,3 +16,13 @@ script ParcelMarshHut_Shelf {
     msgbox(format("A shelf: a lamp, a tin of tea, a folded letter addressed to the Corps station at FERNWICK. 'To be opened when the count reaches zero.' It is sealed."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelMarshHut_Sheet {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Her survey sheet, squared to the edge of the table the way she squared everything. The marsh, the keystone pool, the frogs by stage.\pEgg, tadpole, POLIWAG, POLIWHIRL, POLITOED. Each with a count and a date. The counts fall down the page in her hand, year by year, the same hand as the margins of your notebook, older and steadier.\pThe last line in her hand is the day you came. The count is right. You were there for it.\pUnder it, one more line in a different hand, dated after. The count again, lower by two. The hand is yours.\pThere is room on the sheet for a long time yet."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A survey sheet on the table, held flat with a stone from the shore. The marsh, the keystone pool, the frogs by stage.\pEgg, tadpole, POLIWAG, POLIWHIRL, POLITOED. A count and a date for each, in the hand from the margins of your notebook. The counts fall down the page, season by season, and the hand does not change.\pThe current line is half written. The date is today's."), MSGBOX_SIGN)
+    }
+}

@@ -93,6 +93,12 @@ ParcelFloodbasinRelief_ReadDresser::
 	end
 
 
+ParcelFloodbasinRelief_Ledger::
+# 59 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Ledger_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelFloodbasinRelief_Aide_Text_0:
 # 9 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	.string "AIDE: MRS. ASKE's roof. It's on the\n"
@@ -167,3 +173,25 @@ ParcelFloodbasinRelief_ReadDresser_Text_0:
 	.string "badly by someone who wanted to see if\l"
 	.string "they were real.\p"
 	.string "They are.$"
+
+ParcelFloodbasinRelief_Ledger_Text_0:
+# 59 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	.string "The relief ledger. Who came, what they\n"
+	.string "were given, what they signed.\p"
+	.string "Blankets, two per household,\n"
+	.string "FOUNDATION stamped in the corner. Lamp\l"
+	.string "oil. Dried fish, from the Coast, in\l"
+	.string "cannery cartons. A voucher for the\l"
+	.string "ferry, one way.\p"
+	.string "Each line signed by the household and\n"
+	.string "countersigned by the Commissioner's\l"
+	.string "aide. At the foot of each page: relief\l"
+	.string "provided by the Mereholt Foundation in\l"
+	.string "partnership with the Regional Council.\p"
+	.string "A column headed CAUSE OF NEED. It says\n"
+	.string "FLOOD on every line. In one place, in\l"
+	.string "another hand, under FLOOD: the works.\l"
+	.string "It has been crossed out and FLOOD\l"
+	.string "written again above it, firmly.\p"
+	.string "The ledger is honest about what was\n"
+	.string "given. It is careful about why.$"

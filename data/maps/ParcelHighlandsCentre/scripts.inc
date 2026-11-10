@@ -181,6 +181,25 @@ ParcelHighlandsCentre_Dorsey_2:
 	end
 
 
+ParcelHighlandsCentre_Plaque::
+# 113 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Plaque_Text_0, MSGBOX_SIGN
+	return
+
+
+ParcelHighlandsCentre_Box::
+# 117 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Box_1
+# 120 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Box_Text_1, MSGBOX_SIGN
+	return
+
+ParcelHighlandsCentre_Box_1:
+# 118 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Box_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelHighlandsCentre_Host_Text_0:
 # 9 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "HOST: Your survey said SHIFTED. Ours\n"
@@ -339,3 +358,55 @@ ParcelHighlandsCentre_Dorsey_Text_1:
 	.string "does.\p"
 	.string "Write that word. 'Before.' It's the only\n"
 	.string "one that matters up here.$"
+
+ParcelHighlandsCentre_Plaque_Text_0:
+# 113 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "The opening plaque, brass, polished by\n"
+	.string "somebody who takes it as their job.\p"
+	.string "HAUKFELL COMMUNITY CENTRE. Built with\n"
+	.string "the support of the Mereholt Foundation\l"
+	.string "for the people of the Highlands. Opened\l"
+	.string "by Commissioner Dorsey.\p"
+	.string "The date is two weeks before the\n"
+	.string "Permafrost licence was first put\l"
+	.string "before the Council. The centre has a\l"
+	.string "hall, a kitchen, a room for the elderly in\l"
+	.string "the cold months, and a notice board.\p"
+	.string "It is a good building. People use it.\n"
+	.string "That was the point, and also the other\l"
+	.string "point.$"
+
+ParcelHighlandsCentre_Box_Text_0:
+# 118 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "The suggestion box, with its lid off and\n"
+	.string "the slips pinned up beside it where\l"
+	.string "everyone can read them. Someone\l"
+	.string "decided that after the sitting.\p"
+	.string "More chairs for the cold-months room.\n"
+	.string "Fix the kitchen tap. Thank you for the\l"
+	.string "centre.\p"
+	.string "Ask the drill people what the gas column\n"
+	.string "on their log means. Ask them in here,\l"
+	.string "where we can hear.\p"
+	.string "The slide took the top field. The Board\n"
+	.string "says it is weather. The old man says it\l"
+	.string "is the ground going soft under the\l"
+	.string "drill. Who do we ask.\p"
+	.string "The newest slip, in a child's capitals:\n"
+	.string "THE RANGER READ THE STAKES OUT LOUD\l"
+	.string "AND MUM CRIED.$"
+
+ParcelHighlandsCentre_Box_Text_1:
+# 120 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "A suggestion box, locked, with a slot. A\n"
+	.string "few slips show through the slot where\l"
+	.string "the box is full.\p"
+	.string "More chairs for the cold-months room.\n"
+	.string "Fix the kitchen tap. Thank you for the\l"
+	.string "centre.\p"
+	.string "One slip is folded so the writing shows:\n"
+	.string "ask the drill people what the gas column\l"
+	.string "on their log means.\p"
+	.string "The box is emptied by the host once a\n"
+	.string "month. Nobody knows where the slips go\l"
+	.string "after that.$"

@@ -14,6 +14,12 @@ ParcelFloodbasinWorks_Plate::
 	end
 
 
+ParcelFloodbasinWorks_Permit::
+# 14 "data/maps/ParcelFloodbasinWorks/scripts.pory"
+	msgbox ParcelFloodbasinWorks_Permit_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelFloodbasinWorks_Plate_Text_0:
 # 7 "data/maps/ParcelFloodbasinWorks/scripts.pory"
 	.string "A brass plate, green with damp:\n"
@@ -21,3 +27,26 @@ ParcelFloodbasinWorks_Plate_Text_0:
 	.string "DISCHARGE LICENSED.\p"
 	.string "Below it, scratched in by hand: WHERE\n"
 	.string "DID YOU THINK IT WENT?$"
+
+ParcelFloodbasinWorks_Permit_Text_0:
+# 14 "data/maps/ParcelFloodbasinWorks/scripts.pory"
+	.string "Behind glass on the wall of the works,\n"
+	.string "the consent, as the law requires it to\l"
+	.string "be displayed. The glass is cracked and\l"
+	.string "the paper has yellowed to the colour of\l"
+	.string "the water.\p"
+	.string "CONSENT TO OPERATE. Granted to\n"
+	.string "Mereholt Resources Ltd for the\l"
+	.string "recovery of ore from the Leirvik seam,\l"
+	.string "subject to conditions.\p"
+	.string "CONDITION 4. Tailings to be contained\n"
+	.string "and lined. CONDITION 7. Discharge to\l"
+	.string "the basin not to exceed the levels in\l"
+	.string "Schedule B. CONDITION 12. On cessation,\l"
+	.string "the site to be restored to its prior\l"
+	.string "state within five years.\p"
+	.string "The operation ceased twenty-two years\n"
+	.string "ago. A stamp over the conditions reads:\l"
+	.string "UNDER REVIEW.\p"
+	.string "The stamp is newer than the paper.\n"
+	.string "Someone comes to renew the stamp.$"

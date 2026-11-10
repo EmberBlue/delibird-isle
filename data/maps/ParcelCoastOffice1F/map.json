@@ -83,6 +83,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastOffice1F_Model"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoastOffice1F_Report"
+    },
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoastOffice1F_Leaflet"
     }
   ]
 }

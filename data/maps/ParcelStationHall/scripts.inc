@@ -132,6 +132,12 @@ ParcelStationHall_Clerk_2:
 	end
 
 
+ParcelStationHall_IceOut::
+# 66 "data/maps/ParcelStationHall/scripts.pory"
+	msgbox ParcelStationHall_IceOut_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelStationHall_Plaque_Text_0:
 # 13 "data/maps/ParcelStationHall/scripts.pory"
 	.string "Carved over the inner door, the letters\n"
@@ -223,3 +229,25 @@ ParcelStationHall_Clerk_Text_2:
 	.string "provisional. Weather-proof ink, and\l"
 	.string "people who come back. Try to be the\l"
 	.string "second kind.$"
+
+ParcelStationHall_IceOut_Text_0:
+# 66 "data/maps/ParcelStationHall/scripts.pory"
+	.string "The instrument log, the Station's\n"
+	.string "oldest book. One line a year for the\l"
+	.string "tarn: ICE OUT, and a date.\p"
+	.string "The first page: the ice goes in the\n"
+	.string "third week of spring, give or take a\l"
+	.string "week, for forty years. A hand changes,\l"
+	.string "the dates do not.\p"
+	.string "The second page: the second week. Then\n"
+	.string "the first. Then a year with the entry NO\l"
+	.string "ICE, underlined twice, and a question\l"
+	.string "mark that somebody later rubbed out.\p"
+	.string "The current page: NO ICE, NO ICE, NO\n"
+	.string "ICE. The last entry is this spring. The\l"
+	.string "clerk has started writing the date the\l"
+	.string "ice would have gone, in brackets, so the\l"
+	.string "column stays a column.\p"
+	.string "A ruler lies in the book. Somebody laid\n"
+	.string "it along the dates once, and saw the\l"
+	.string "line, and left it there.$"

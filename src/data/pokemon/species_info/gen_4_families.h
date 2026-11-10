@@ -4995,10 +4995,10 @@ const struct SpeciesInfo gSpeciesInfoGen4[] =
         .height = 7,
         .weight = 230,
         .description = COMPOUND_STRING(
-            "Croagunk rarely fights fairly. Inflating\n"
-            "its poison sacs, it fills the area with\n"
-            "an odd sound and hits flinching\n"
-            "opponents with a poison jab."),
+            "Its poison is its own. In the marsh\n"
+            "below the works it carries a second kind,\n"
+            "taken up from the water. The survey tests\n"
+            "the CROAGUNK to test the water."),
         .pokemonScale = 365,
         .pokemonOffset = 12,
         .trainerScale = 256,

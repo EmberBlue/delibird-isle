@@ -43,3 +43,9 @@ script ParcelHighlandsBore_Cores {
     msgbox(format("Core samples racked by depth. The labels change colour at forty metres: ICE. Below that, a second set of labels in a different hand: GAS -- EST. YIELD. The second set is newer."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelHighlandsBore_Log {
+    msgbox(format("The drill log, in a tin box by the casing, in the geologist's neat pencil.\pDepth, ice, gas, notes. The first pages are all ice: solid, grey, old, the permafrost the Highlands sit on. The notes say GOOD CORE, GOOD CORE, GOOD CORE.\pDeeper, the ice column thins and the gas column fills. Readings the geologist has underlined. A note: VENTED. Another: VENTED, STOP WORK, RESUMED ON INSTRUCTION.\pThe last page: the casing left in, the site to be marked EXPLORATORY ONLY, the log to be sent to the Coast. A copy stayed in the tin.\pThe core sample under glass in the boardroom is from the third page. The good one."), MSGBOX_SIGN)
+}

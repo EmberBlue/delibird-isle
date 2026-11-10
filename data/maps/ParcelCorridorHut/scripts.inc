@@ -137,6 +137,12 @@ ParcelCorridorHut_Shelf::
 	end
 
 
+ParcelCorridorHut_Order::
+# 86 "data/maps/ParcelCorridorHut/scripts.pory"
+	msgbox ParcelCorridorHut_Order_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelCorridorHut_Foreman_Text_0:
 # 11 "data/maps/ParcelCorridorHut/scripts.pory"
 	.string "FOREMAN: Pre-construction flow data.\n"
@@ -252,3 +258,22 @@ ParcelCorridorHut_Shelf_Text_0:
 	.string "next month.\p"
 	.string "A folder labelled FLOW SURVEY. It is\n"
 	.string "empty.$"
+
+ParcelCorridorHut_Order_Text_0:
+# 86 "data/maps/ParcelCorridorHut/scripts.pory"
+	.string "An order form in triplicate on the\n"
+	.string "foreman's table, the top copy soft from\l"
+	.string "handling.\p"
+	.string "GRATES, CULVERT TYPE, FOUR. For the\n"
+	.string "Hollowbend crossing. Requested by the\l"
+	.string "site foreman. Priority: ROUTINE.\l"
+	.string "Expected: next month.\p"
+	.string "The form has been re-dated five times.\n"
+	.string "Each new date is next month from the\l"
+	.string "date before it. Each is initialled by\l"
+	.string "someone at the depot who did not come\l"
+	.string "out to look.\p"
+	.string "On the back, in the foreman's hand, a\n"
+	.string "tally of what has gone down the culvert\l"
+	.string "in the meantime. It is a long tally for a\l"
+	.string "routine form.$"

@@ -174,6 +174,12 @@ ParcelRiverBoard_Sluice_Rematch_2:
 	end
 
 
+ParcelRiverBoard_GaugeBook::
+# 111 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_GaugeBook_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelRiverBoard_Sluice_Text_0:
 # 17 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: STRESSED. I read your filing.\n"
@@ -323,3 +329,25 @@ ParcelRiverBoard_Sluice_Rematch_Text_3:
 # 103 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: Come back when the gauge\n"
 	.string "moves. It will.$"
+
+ParcelRiverBoard_GaugeBook_Text_0:
+# 111 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "The gauge book, open on the counter.\n"
+	.string "One line a week, in different hands, for\l"
+	.string "a long time.\p"
+	.string "The early pages are wet. Spring\n"
+	.string "readings over the top mark, the word\l"
+	.string "FLOOD in the margin twice a year, a note\l"
+	.string "that the ford was impassable from thaw\l"
+	.string "to midsummer.\p"
+	.string "The middle pages are the book the Board\n"
+	.string "quotes. The gauge reads NORMAL for\l"
+	.string "eleven years running. The hand is the\l"
+	.string "same hand all the way through, neat,\l"
+	.string "unhurried.\p"
+	.string "The last pages are dry. Two hands below\n"
+	.string "the mark. Three. A week with no reading\l"
+	.string "and a note: gauge out of water, reset\l"
+	.string "to new datum.\p"
+	.string "NORMAL was never crossed out. They\n"
+	.string "moved the mark.$"

@@ -62,6 +62,20 @@ def tileset_dir(sym):
 _ts_cache = {}
 
 
+def warp_behaviours():
+    """Behaviour values the engine fires a warp event from (doors, ladders, escalators, arrow mats, holes,
+    the special warps) -- parsed from the enum so the numbers stay right."""
+    names = []
+    for line in (ROOT / "include/constants/metatile_behaviors.h").read_text().splitlines():
+        m = re.match(r"\s+(MB_\w+),", line)
+        if m: names.append(m.group(1))
+    return {i for i, n in enumerate(names) if re.search(r"DOOR|WARP|LADDER|ESCALATOR|HOLE|STAIRS_OUTSIDE|SHOAL_CAVE_ENTRANCE|_OPEN$", n)}
+
+
+WARP_BEHAVIOURS = warp_behaviours()
+RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
+
+
 def load_ts(sym, base):
     if sym in _ts_cache:
         return _ts_cache[sym]
@@ -300,6 +314,16 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
         for e in mj.get("warp_events", []):
             if not near(e["x"], e["y"]):
                 warn(name, f"warp at ({e['x']},{e['y']}) to {e['dest_map']} is unreachable from any entrance")
+    triggers = {(c["x"], c["y"]) for c in mj.get("coord_events", [])}
+    for e in (mj.get("warp_events", []) if name not in RETIRED_MAPS else []):
+        x, y = e["x"], e["y"]
+        if not (0 <= x < W and 0 <= y < H):
+            continue
+        mid = at(x, y)[0]
+        beh = tiles[mid][1] if mid in tiles else None
+        trigger_near = any((x + dx, y + dy) in triggers for dx, dy in ((0, 0), (1, 0), (-1, 0), (0, 1), (0, -1)))
+        if beh is not None and beh not in WARP_BEHAVIOURS and not trigger_near:
+            warn(name, f"warp at ({x},{y}) to {e['dest_map']} sits on metatile {mid} (behaviour {beh:#x}): the engine only fires warps from door/arrow/ladder tiles -- it is an arrival point only; add a trigger or an arrow mat")
         for e in mj.get("bg_events", []):
             if not near(e["x"], e["y"]):
                 warn(name, f"sign/hidden item at ({e['x']},{e['y']}) is unreachable from any entrance")

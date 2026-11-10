@@ -122,6 +122,25 @@ ParcelFernwickHall_Tarn_Rematch_2:
 	end
 
 
+ParcelFernwickHall_Register::
+# 91 "data/maps/ParcelFernwickHall/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelFernwickHall_Register_1
+# 94 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Register_Text_1, MSGBOX_SIGN
+	return
+
+ParcelFernwickHall_Register_1:
+# 92 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Register_Text_0, MSGBOX_SIGN
+	return
+
+
+ParcelFernwickHall_Syllabus::
+# 99 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Syllabus_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelFernwickHall_Greeter_Text_0:
 # 12 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "GREETER: Nobody passes first time, and\n"
@@ -231,3 +250,58 @@ ParcelFernwickHall_Tarn_Rematch_Text_3:
 # 83 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "TARN: Come back when you want the\n"
 	.string "water against you again. It always is.$"
+
+ParcelFernwickHall_Register_Text_0:
+# 92 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "The register of certifications, a tall\n"
+	.string "book with a ribbon in it.\p"
+	.string "Each line: a name, a date, FOREST, and\n"
+	.string "the leader who signed. The early pages\l"
+	.string "are Tarn's own teacher signing for Tarn.\l"
+	.string "Then Tarn, for twenty years of names.\p"
+	.string "Some names carry a second and third\n"
+	.string "line in other hands: WETLAND,\l"
+	.string "WATERSHED, HIGHLAND. A few carry all of\l"
+	.string "them. Hale's does. Rin's stops at three\l"
+	.string "and has a note: field preference.\p"
+	.string "The newest line is yours. The ink is still\n"
+	.string "a different black from the rest.$"
+
+ParcelFernwickHall_Register_Text_1:
+# 94 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "The register of certifications, a tall\n"
+	.string "book with a ribbon in it.\p"
+	.string "Each line: a name, a date, FOREST, and\n"
+	.string "the leader who signed. The early pages\l"
+	.string "are Tarn's own teacher signing for Tarn.\l"
+	.string "Then Tarn, for twenty years of names.\p"
+	.string "Some names carry a second and third\n"
+	.string "line in other hands: WETLAND,\l"
+	.string "WATERSHED, HIGHLAND. A few carry all of\l"
+	.string "them. Hale's does. Rin's stops at three\l"
+	.string "and has a note: field preference.\p"
+	.string "The next line is blank. The ribbon is in\n"
+	.string "it.$"
+
+ParcelFernwickHall_Syllabus_Text_0:
+# 99 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "The syllabus, framed because somebody\n"
+	.string "was proud of it once. Four\l"
+	.string "competencies, four lines.\p"
+	.string "SURVEY. Read the place before you\n"
+	.string "touch it. Guilds, abundance, condition,\l"
+	.string "signs. Against a baseline, or it is a\l"
+	.string "guess.\p"
+	.string "RESTRAINT. Knowing what not to do, and\n"
+	.string "when. A deadfall over the only path we\l"
+	.string "clear. A living corridor we leave.\p"
+	.string "RESPONSE. The call comes at the wrong\n"
+	.string "time or it would not be a call. Go anyway.\l"
+	.string "Bring what the place needs, not what\l"
+	.string "you wanted to bring.\p"
+	.string "REMEDIATION. Put back what can be put\n"
+	.string "back. Write down what cannot. The\l"
+	.string "second half is the part people skip.\p"
+	.string "In pencil below the frame, not in the\n"
+	.string "hand that framed it: and send the\l"
+	.string "writing somewhere it will be read.$"

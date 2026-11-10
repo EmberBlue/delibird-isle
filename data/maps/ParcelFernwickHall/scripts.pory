@@ -84,3 +84,17 @@ script ParcelFernwickHall_Tarn_Rematch {
     release
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelFernwickHall_Register {
+    if (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("The register of certifications, a tall book with a ribbon in it.\pEach line: a name, a date, FOREST, and the leader who signed. The early pages are Tarn's own teacher signing for Tarn. Then Tarn, for twenty years of names.\pSome names carry a second and third line in other hands: WETLAND, WATERSHED, HIGHLAND. A few carry all of them. Hale's does. Rin's stops at three and has a note: field preference.\pThe newest line is yours. The ink is still a different black from the rest."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The register of certifications, a tall book with a ribbon in it.\pEach line: a name, a date, FOREST, and the leader who signed. The early pages are Tarn's own teacher signing for Tarn. Then Tarn, for twenty years of names.\pSome names carry a second and third line in other hands: WETLAND, WATERSHED, HIGHLAND. A few carry all of them. Hale's does. Rin's stops at three and has a note: field preference.\pThe next line is blank. The ribbon is in it."), MSGBOX_SIGN)
+    }
+}
+
+script ParcelFernwickHall_Syllabus {
+    msgbox(format("The syllabus, framed because somebody was proud of it once. Four competencies, four lines.\pSURVEY. Read the place before you touch it. Guilds, abundance, condition, signs. Against a baseline, or it is a guess.\pRESTRAINT. Knowing what not to do, and when. A deadfall over the only path we clear. A living corridor we leave.\pRESPONSE. The call comes at the wrong time or it would not be a call. Go anyway. Bring what the place needs, not what you wanted to bring.\pREMEDIATION. Put back what can be put back. Write down what cannot. The second half is the part people skip.\pIn pencil below the frame, not in the hand that framed it: and send the writing somewhere it will be read."), MSGBOX_SIGN)
+}

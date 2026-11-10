@@ -299,6 +299,16 @@ heal the party; 3 route trainers; 4 item pickups.
   the tile, and the destination warp event's tile supplies the arrival spot.
   A step trigger with a `warp` command is only for plain path tiles (the
   River's west edge into the mill wood).
+- **Map number 127 and `MAP_DYNAMIC` (fixed 2026-11-10).** `MAP_DYNAMIC`
+  is `(0x7F | (0x7F << 8))`; `SetupWarp` in `src/field_control_avatar.c`
+  tested only `warpEvent->mapNum == MAP_NUM(MAP_DYNAMIC)`, so a warp event
+  into the 128th map of a group (number 127, `ParcelCoastOffice2F`) was
+  treated as a dynamic warp and landed in Petalburg City (map 0,0). Both
+  checks now compare the group byte too. Found by `tools/skald/sweep.py`,
+  which walks every warp event and connection headlessly; run it after any
+  map-table change. The audit additionally warns when a warp event sits on
+  a tile the engine never fires a warp from (behaviour not door / arrow /
+  ladder / escalator / hole) with no step trigger within one tile.
 
 - **This fork uses the triple-layer metatile system.**
   `NUM_TILES_PER_METATILE == 12` (`include/fieldmap.h`): each metatile is

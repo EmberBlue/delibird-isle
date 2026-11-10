@@ -97,3 +97,9 @@ script ParcelIsleHall_Minutes {
     }
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelIsleHall_Lease {
+    msgbox(format("A lease file in the hall's cabinet, the lid left up. THE FRONT, UNIT 3. The lab.\pTenant: the Wetland Resilience Programme, Dr. Heron. Landlord: Saltwick Front Holdings, a company with a quay address and a parent you have seen the kerning of.\pNotice to quit, for redevelopment, dated nine days before the night the lab was emptied. Signed for the landlord. Not signed for the tenant. Served by hand, the note says.\pStapled behind it, a second sheet: redevelopment plan, Unit 3. Proposed use: storage, Mereholt Logistics.\pThe official who came to look at the broken lock had this file. He called it a burglary anyway. It was easier for everyone."), MSGBOX_SIGN)
+}

@@ -162,6 +162,19 @@ ParcelCoastHearing_Carbon_3:
 	goto ParcelCoastHearing_Carbon_1
 
 
+ParcelCoastHearing_Tray::
+# 94 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Tray_1
+# 97 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_1, MSGBOX_SIGN
+	return
+
+ParcelCoastHearing_Tray_1:
+# 95 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelCoastHearing_Clerk_Text_0:
 # 9 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "CLERK: The hearing's in session. They\n"
@@ -297,3 +310,65 @@ ParcelCoastHearing_Carbon_Text_1:
 	.string "The clerk's bench. Behind it, the floor\n"
 	.string "where nine seasons of chairs have\l"
 	.string "scraped the same two lines.$"
+
+ParcelCoastHearing_Tray_Text_0:
+# 95 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "The clerk's tray. The record of the\n"
+	.string "sitting, typed, still warm from the\l"
+	.string "carbon.\p"
+	.string "ITEM 7. Objection, Mereholt Coastal\n"
+	.string "dredging consent, renewal. Nine prior\l"
+	.string "objections noted. The objector was\l"
+	.string "heard.\p"
+	.string "ITEM 8. Submission, Skaldmere Climate\n"
+	.string "Corps, provisional ranger. A field\l"
+	.string "survey in forty-one stakes, four\l"
+	.string "baselines and one notebook. Entered in\l"
+	.string "full.\p"
+	.string "ITEM 9. Submission, the Skaldmere\n"
+	.string "Survey. Red-cloth baselines, six zones,\l"
+	.string "thirty-one years. Entered in full. The\l"
+	.string "Commissioner asked whether the markers\l"
+	.string "were official. The Surveyor said they\l"
+	.string "were older than the office asking.\p"
+	.string "ITEM 10. Statement read on behalf of\n"
+	.string "Dr. Heron, in her absence, by the ranger.\l"
+	.string "Four sentences. Entered. The room was\l"
+	.string "silent for a time the clerk did not\l"
+	.string "record.\p"
+	.string "ITEM 11. The Mereholt Foundation\n"
+	.string "recovery model, as tabled by the\l"
+	.string "Commissioner in the spring. Withdrawn\l"
+	.string "by the Foundation's officer before the\l"
+	.string "vote, without comment.\p"
+	.string "DISPOSITION. Dredging consent:\n"
+	.string "suspended pending review. Permafrost\l"
+	.string "exploratory licence: deferred. The\l"
+	.string "keystone marsh: referred for listing.\l"
+	.string "The chair thanked the room and\l"
+	.string "adjourned.\p"
+	.string "Someone has written in pencil along the\n"
+	.string "bottom edge: nine years for one\l"
+	.string "afternoon. Worth it.$"
+
+ParcelCoastHearing_Tray_Text_1:
+# 97 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "The clerk's tray. The order of business\n"
+	.string "for the next sitting, typed.\p"
+	.string "ITEM 1. Minutes. ITEM 2. Apologies. ITEM\n"
+	.string "3. The Commissioner's report on\l"
+	.string "public-private partnership.\p"
+	.string "ITEM 4. Mereholt Coastal, dredging\n"
+	.string "consent, renewal. Recommended for\l"
+	.string "approval, officer's report attached.\p"
+	.string "ITEM 5. Mereholt Permafrost,\n"
+	.string "exploratory licence, Haukfell.\l"
+	.string "Recommended for approval, officer's\l"
+	.string "report attached.\p"
+	.string "ITEM 6. Recovery model, Mereholt\n"
+	.string "Foundation, tabled for information. Not\l"
+	.string "for debate.\p"
+	.string "ITEM 7. Objection, from the floor, as in\n"
+	.string "previous seasons. Noted.\p"
+	.string "Item 7 is one line. It has been one line\n"
+	.string "for nine years.$"

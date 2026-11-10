@@ -424,4 +424,31 @@ quest is built, how the peer works) before they are asked six more times.
   vocabulary lives in each `build.py` (`bed`, `puddle2`, `shallow`,
   `spill`, `mound`, `fence_h`, `solid`, the Breakwater's `retile`); the
   build line prints the measured difference.
+- **2026-11-10 — the papers, the dex, and the sweep.** Twenty-eight
+  documents on the desks of the offices, halls and back rooms, each a
+  narrated glance with the text quoted: the clerk's tray (the order of
+  business before the sitting; the record of it after), the board's minute
+  that conditioned the grant and the covenant page the chair turns to, the
+  Water Board's gauge book (NORMAL was never crossed out; they moved the
+  mark), the river minutes pinned where the poster was, Heron's three
+  letters to the Survey and the Survey's sheet index with its GONE lines,
+  the certification register and the syllabus in Tarn's hall, the
+  Foundation's annual report with no axis on its chart, the remediation
+  leaflet in four printings, Hollis's grant file (three letters a year
+  apart, and after the sitting a fourth, unsent), the programme ledger
+  (the Foundation does not have money; it has a parent), the fisher's nine
+  carbons read one a year (ten after the sitting, the tenth typed), the
+  cannery's catch book and grading sheets, the harbour log's two entries
+  three lines apart, the lab's lease file, the Tidewater programme with
+  the fifth gauge drawn at the falls, the relief ledger's CAUSE OF NEED
+  column, the works' consent UNDER REVIEW, the centre's plaque and its
+  suggestion box, the drill log's gas column, the Station's ice-out book,
+  Heron's survey sheet (and the line in a different hand), the
+  ratepayers' petition, the grate order form re-dated five times. ~4,200
+  words. Plus **eighty-one Skaldmere dex entries** (`dex.py` over
+  `species_info`): every species in the region's tables described as the
+  Survey reads it -- what it indicates, not what it eats (~2,200 words).
+  And the **sweep**: every warp and connection walked in the emulator; the
+  one real break (the Coast office stairs, map number 127) fixed in the
+  engine. ~65,000 hand-written words.
 

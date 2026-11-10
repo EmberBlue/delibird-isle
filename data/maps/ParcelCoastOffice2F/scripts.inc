@@ -161,6 +161,25 @@ ParcelCoastOffice2F_ReadBoat::
 	end
 
 
+ParcelCoastOffice2F_GrantFile::
+# 104 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice2F_GrantFile_1
+# 107 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_GrantFile_Text_1, MSGBOX_SIGN
+	return
+
+ParcelCoastOffice2F_GrantFile_1:
+# 105 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_GrantFile_Text_0, MSGBOX_SIGN
+	return
+
+
+ParcelCoastOffice2F_Programme::
+# 112 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_Programme_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelCoastOffice2F_Hollis_Text_0:
 # 18 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "HOLLIS: The conservation programme is\n"
@@ -313,3 +332,84 @@ ParcelCoastOffice2F_ReadBoat_Text_0:
 	.string "fleet, heritage display.'\p"
 	.string "The real one is tied up at the quay,\n"
 	.string "owned by a lender.$"
+
+ParcelCoastOffice2F_GrantFile_Text_0:
+# 105 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "The grant file, HERON, open on the\n"
+	.string "cabinet. Three letters, one a year,\l"
+	.string "signed H. Aune. And a fourth, unsigned,\l"
+	.string "not sent.\p"
+	.string "Year one. Dear Dr. H. Renewed, of course.\n"
+	.string "The board asks only that the models be\l"
+	.string "shared with the parent company's\l"
+	.string "planners. I said you would not mind. Tea\l"
+	.string "when I am next in the field.\p"
+	.string "Year two. Dear Dr. H. Renewed. The board\n"
+	.string "was glad of the models. They have asked\l"
+	.string "about the older work, the Johto years,\l"
+	.string "for completeness. I have told them it is\l"
+	.string "of no interest. Please do not worry\l"
+	.string "about it.\p"
+	.string "Year three. Dr. Heron. The grant is\n"
+	.string "renewed subject to the conditions\l"
+	.string "enclosed. I would ask you to read them\l"
+	.string "carefully. I am sorry about the tone. I\l"
+	.string "did not write the conditions. I am\l"
+	.string "sending them anyway.\p"
+	.string "The fourth, this season, in a hand that\n"
+	.string "has been pressing too hard. Dr. H. They\l"
+	.string "have the same file on me. I have known\l"
+	.string "for three years. I am going to say so at\l"
+	.string "the sitting. I do not know if that is\l"
+	.string "courage or only the end of the rope. I\l"
+	.string "wanted you to hear it from me first.\p"
+	.string "It was not sent. It did not need to be.$"
+
+ParcelCoastOffice2F_GrantFile_Text_1:
+# 107 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "The grant file, HERON, open on the\n"
+	.string "cabinet. Three letters, one a year,\l"
+	.string "signed H. Aune.\p"
+	.string "Year one. Dear Dr. H. Renewed, of course.\n"
+	.string "The board asks only that the models be\l"
+	.string "shared with the parent company's\l"
+	.string "planners. I said you would not mind. Tea\l"
+	.string "when I am next in the field.\p"
+	.string "Year two. Dear Dr. H. Renewed. The board\n"
+	.string "was glad of the models. They have asked\l"
+	.string "about the older work, the Johto years,\l"
+	.string "for completeness. I have told them it is\l"
+	.string "of no interest. Please do not worry\l"
+	.string "about it.\p"
+	.string "Year three. Dr. Heron. The grant is\n"
+	.string "renewed subject to the conditions\l"
+	.string "enclosed. I would ask you to read them\l"
+	.string "carefully. I am sorry about the tone. I\l"
+	.string "did not write the conditions. I am\l"
+	.string "sending them anyway.\p"
+	.string "Three letters. The first is warm. The\n"
+	.string "third is a lever with a stamp on it. The\l"
+	.string "hand is the same hand.$"
+
+ParcelCoastOffice2F_Programme_Text_0:
+# 112 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "The programme ledger. Grants by\n"
+	.string "recipient, this cycle.\p"
+	.string "Skaldmere Climate Corps, two field\n"
+	.string "stations: a large figure. Certification\l"
+	.string "training: a large figure. Regional\l"
+	.string "research: a figure with a note, released\l"
+	.string "against delivery of the model.\p"
+	.string "Wetland Resilience Programme, Dr.\n"
+	.string "Heron: a figure, and beside it, in pencil,\l"
+	.string "CONDITIONS.\p"
+	.string "Delibird Isle Festival Committee:\n"
+	.string "banners, blankets, a stage. A small\l"
+	.string "figure. Someone has underlined it twice.\p"
+	.string "Community Centre, Haukfell: a figure,\n"
+	.string "and a date two weeks before the\l"
+	.string "Permafrost licence was first tabled.\p"
+	.string "At the foot, the total, and the line\n"
+	.string "every ledger has: funds provided by\l"
+	.string "Mereholt Resources Ltd. The Foundation\l"
+	.string "does not have money. It has a parent.$"

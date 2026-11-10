@@ -91,3 +91,13 @@ script ParcelFernwickSurvey_ReadDesk {
     msgbox(format("An open field guide on a pupil's desk, forty years old. The marsh-plant pages have been read until they're soft.\pOne plant is ringed, with a date beside it, and a place you know the name of."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelFernwickSurvey_Letters {
+    msgbox(format("A box file: CORRESPONDENCE, H. Three letters in the hand from your notebook's margins, years apart, each to the Survey.\pThe first. Dear Ilex. I need your baselines for the lower river. Mine start when I arrived and yours start before anyone was counting. Say what the Survey charges and I will find it.\pThe second. Dear Ilex. The Foundation has asked for my models in a form the company can use. I have asked what the company plans. They sent a brochure. Send me the red-cloth dates for the Floodbasin, please. I want to know how long it was healthy before it was not.\pThe third, short. Ilex. If anyone ever asks you for my baselines, give them yours instead. Yours were never adjusted. H.\pUnderneath, in the Surveyor's hand on the file's lid: ANSWERED. ANSWERED. NOT ANSWERED. WHO WOULD I HAVE SENT IT TO."), MSGBOX_SIGN)
+}
+
+script ParcelFernwickSurvey_Index {
+    msgbox(format("The sheet index. Every place the Survey has ever staked, one line each, with the year of the first stake and the year of the last reading.\pSaltwick Shoals, the old oyster ground. First stake, last reading, then the word GONE and a date.\pReedmere Landing, the turf. Still read. The Hollowbend culvert, the pool below. Still read. Leirvik bridge reach. Still read, with a note: the state changed. Do not reset.\pFive lines carry GONE. A sixth has been written and then rubbed at with a thumb until the paper roughened. Under it, faint: NOT YET.\pNo line has ever been removed from the index. Ilex does not throw things away. That is the whole method."), MSGBOX_SIGN)
+}

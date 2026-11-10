@@ -78,6 +78,15 @@ frames prove nothing about sprite visibility.
 
 ## Walk test (the real check for connections and warps)
 `tools/skald/walktest.py --spawn MAP_X:x,y --walk DIR:n [--walk ...] --expect MAP_Y`
+
+After any change to map tables, warps or connections, run the whole-world
+sweep: `tools/skald/sweep.py --rom HOOKON.gba --map HOOKON.map --jobs 3
+--log sweep.log` walks every warp event and every connection (257 probes)
+against a probe-hook ROM copied out of the tree (`--map` points walktest at
+that ROM's symbol file, so the sources can be clean while it runs). Read the
+BAD lines: a retired map or a tile the picker chose at the wrong elevation is
+noise; anything else is a break. Map number 127 of a group used to misroute
+every warp into it (fixed in the engine 2026-11-10).
 boots the ROM headless, pokes the spawn into `gProbe` (a TEMP hook in
 `src/new_game.c`: `python3 tools/skald/probe_hook.py --on` adds it, build,
 test, `--off` removes it, `grep -c "TEMP TEST" src/new_game.c` = 0 before

@@ -124,6 +124,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelHighlandsCentre_Board"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlandsCentre_Plaque"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelHighlandsCentre_Box"
     }
   ]
 }

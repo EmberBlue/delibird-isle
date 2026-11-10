@@ -13,9 +13,11 @@ import mgba.core, mgba.image, mgba.log
 ROOT = Path(__file__).resolve().parents[2]
 KEYS = {"A": 0, "B": 1, "SELECT": 2, "START": 3, "RIGHT": 4, "LEFT": 5, "UP": 6, "DOWN": 7, "R": 8, "L": 9}
 
+MAPFILE = [ROOT / "pokeemerald.map"]
+
 def symbols():
     out = {}
-    for line in (ROOT / "pokeemerald.map").read_text().splitlines():
+    for line in MAPFILE[0].read_text().splitlines():
         m = re.match(r"\s+0x([0-9a-f]{8})\s+(g\w+)$", line)
         if m: out[m.group(2)] = int(m.group(1), 16)
     return out
@@ -42,6 +44,7 @@ def constants(header, prefix, seed=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--rom", default=str(ROOT / "pokeemerald.gba"))
+    ap.add_argument("--map", help="the .map symbol file of that ROM (default: pokeemerald.map beside the sources)")
     ap.add_argument("--spawn", required=True, help="MAP_X:x,y")
     ap.add_argument("--walk", action="append", default=[], help="DIR:tiles (repeatable); 'A' taps A to talk to whatever the player faces")
     ap.add_argument("--expect")
@@ -53,6 +56,7 @@ def main():
     ap.add_argument("--check", action="append", default=[], help="FLAG_X or VAR_X to print at the end")
     ap.add_argument("--item", help="ITEM_X to put in the bag before the new game")
     a = ap.parse_args()
+    if a.map: MAPFILE[0] = Path(a.map)
     syms, maps = symbols(), map_ids()
     flags = constants("include/constants/flags.h", "FLAG_", constants("include/constants/opponents.h", ""))   # system flags count up from MAX_TRAINERS_COUNT
     vars_ = constants("include/constants/vars.h", "VAR_")

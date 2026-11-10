@@ -98,6 +98,18 @@ ParcelCoastCannery_Board::
 	end
 
 
+ParcelCoastCannery_CatchBook::
+# 63 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_CatchBook_Text_0, MSGBOX_SIGN
+	return
+
+
+ParcelCoastCannery_Grading::
+# 67 "data/maps/ParcelCoastCannery/scripts.pory"
+	msgbox ParcelCoastCannery_Grading_Text_0, MSGBOX_SIGN
+	return
+
+
 ParcelCoastCannery_Foreman_Text_0:
 # 8 "data/maps/ParcelCoastCannery/scripts.pory"
 	.string "FOREMAN: Half speed by order instead\n"
@@ -182,3 +194,48 @@ ParcelCoastCannery_Board_Text_0:
 	.string "landed, 40 tonnes permitted. Over by\l"
 	.string "one. A note in red: ROUNDING. Last\l"
 	.string "year's board, under it: 112 tonnes.$"
+
+ParcelCoastCannery_CatchBook_Text_0:
+# 63 "data/maps/ParcelCoastCannery/scripts.pory"
+	.string "The catch book, chained to the desk.\n"
+	.string "Landings by season, by boat, by kind.\l"
+	.string "Anyone may read it. Nobody does.\p"
+	.string "The early seasons: four columns, full.\n"
+	.string "Flatfish, round fish, shell, the rest.\l"
+	.string "The totals climb for years. A new line\l"
+	.string "appears: dredge landings, counted\l"
+	.string "separately, larger than all the boats\l"
+	.string "together.\p"
+	.string "The middle seasons: the boats' columns\n"
+	.string "thin. UNDERSIZE gets its own column and\l"
+	.string "grows. Shell goes to nothing in two\l"
+	.string "seasons and is not printed again.\p"
+	.string "The late seasons: the dredge column\n"
+	.string "holds. The boats' columns are mostly\l"
+	.string "dashes. Someone has started writing\l"
+	.string "the names of the fish that come up\l"
+	.string "where other fish used to, warm-water\l"
+	.string "names, in the margin, in pencil, with\l"
+	.string "question marks.\p"
+	.string "The totals at the bottom of every page\n"
+	.string "are about the same. That is what the\l"
+	.string "Foundation's chart shows. The totals.$"
+
+ParcelCoastCannery_Grading_Text_0:
+# 67 "data/maps/ParcelCoastCannery/scripts.pory"
+	.string "The inspector's grading sheets on a\n"
+	.string "clip. This week's landings, by grade.\p"
+	.string "GRADE ONE: a short column. GRADE TWO:\n"
+	.string "longer. UNDERSIZE, RETURNED: the\l"
+	.string "longest column, which is to say not\l"
+	.string "returned, which is to say in the cans\l"
+	.string "with a different label.\p"
+	.string "A note in the inspector's hand at the\n"
+	.string "foot of each sheet, the same note\l"
+	.string "every week for a year: minimum size not\l"
+	.string "met, see management. Then, this week, a\l"
+	.string "different note: see management, again,\l"
+	.string "in writing, copy to the clerk of the\l"
+	.string "Council.\p"
+	.string "The copy is not on the clip. It went\n"
+	.string "somewhere.$"

@@ -57,3 +57,13 @@ script ParcelCoastOffice1F_Model {
     msgbox(format("A scale model of the harbour under glass. Tiny boats. A tiny cannery. The sea painted the blue it used to be. No urchins in the model."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelCoastOffice1F_Report {
+    msgbox(format("STEWARDSHIP. The Foundation's annual report, on a stand, open at the chair's foreword. Heavy paper. A ranger on a ridge.\pIt has been my privilege, after a career in the Corps, to see conservation from the other side of the table, where decisions are funded rather than wished for.\pThis year the Foundation supported two field stations, forty-four certifications, the regional recovery model, and storm relief on Delibird Isle.\pThe region's habitats are resilient. Our science shows it. Our partners prove it every day.\pThe facing page is a chart. Forty years of curves, rising. There is no axis on the left. There is a logo where the axis would be."), MSGBOX_SIGN)
+}
+
+script ParcelCoastOffice1F_Leaflet {
+    msgbox(format("A rack of leaflets, fanned. LEIRVIK WORKS: REMEDIATION UPDATE. The same leaflet, four printings, four years.\pThe first: works to commence in the spring. The second: works rescheduled following a review of the hydrology. The third: phase one complete, phase two to follow. Phase one was a fence.\pThe fourth: the Foundation continues to work closely with the community. A photograph of a booth, a banner, a child with a balloon.\pThe plate in the basin says what is in the water. None of the four leaflets does."), MSGBOX_SIGN)
+}

@@ -106,3 +106,17 @@ script ParcelHighlandsCentre_Dorsey {
     release
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelHighlandsCentre_Plaque {
+    msgbox(format("The opening plaque, brass, polished by somebody who takes it as their job.\pHAUKFELL COMMUNITY CENTRE. Built with the support of the Mereholt Foundation for the people of the Highlands. Opened by Commissioner Dorsey.\pThe date is two weeks before the Permafrost licence was first put before the Council. The centre has a hall, a kitchen, a room for the elderly in the cold months, and a notice board.\pIt is a good building. People use it. That was the point, and also the other point."), MSGBOX_SIGN)
+}
+
+script ParcelHighlandsCentre_Box {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The suggestion box, with its lid off and the slips pinned up beside it where everyone can read them. Someone decided that after the sitting.\pMore chairs for the cold-months room. Fix the kitchen tap. Thank you for the centre.\pAsk the drill people what the gas column on their log means. Ask them in here, where we can hear.\pThe slide took the top field. The Board says it is weather. The old man says it is the ground going soft under the drill. Who do we ask.\pThe newest slip, in a child's capitals: THE RANGER READ THE STAKES OUT LOUD AND MUM CRIED."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A suggestion box, locked, with a slot. A few slips show through the slot where the box is full.\pMore chairs for the cold-months room. Fix the kitchen tap. Thank you for the centre.\pOne slip is folded so the writing shows: ask the drill people what the gas column on their log means.\pThe box is emptied by the host once a month. Nobody knows where the slips go after that."), MSGBOX_SIGN)
+    }
+}

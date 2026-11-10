@@ -202,6 +202,31 @@ segment, so walk onto the trigger as its own `--walk DIR:1` with
 harness party is empty, so any trainer battle ends in a whiteout — spawn
 out of sight lines and treat "reached the battle screen" as the pass.
 
+**The sweep (2026-11-10).** `tools/skald/sweep.py` walks *every* warp event
+and *every* map connection of the 102 maps in the emulator (257 probes,
+about two seconds each with `--jobs 3`), against a probe-hook ROM stashed
+outside the tree so the sources stay clean:
+
+```
+python3 tools/skald/probe_hook.py --on && make -j modern
+cp pokeemerald.gba $SP/hookon.gba && cp pokeemerald.map $SP/hookon.map
+python3 tools/skald/probe_hook.py --off
+python3 tools/skald/sweep.py --rom $SP/hookon.gba --map $SP/hookon.map --jobs 3 --log $SP/sweep.log
+```
+
+It approaches door tiles from the walkable side, arrow mats from behind,
+arrival-only warps by walking onto the trigger beside them, and crosses
+connections where both edge tiles share an elevation. First run: 252/257.
+The one real break it found was the **Coast office stairs landing in
+Petalburg City**: `MAP_PARCEL_COAST_OFFICE2_F` is map *number 127* in its
+group and the engine's `SetupWarp` tested `mapNum == MAP_NUM(MAP_DYNAMIC)`
+alone (0x7F), so every warp into that map became a dynamic warp to map
+(0,0). Fixed in `src/field_control_avatar.c` (both bytes of `MAP_DYNAMIC`
+must match). The audit now also flags a warp event on a plain tile with no
+trigger within one tile (arrival-only; the engine fires warps only from
+door/arrow/ladder tiles). After the fixes: every warp and connection
+passes except the retired Station's.
+
 ## Known-open (honest list)
 
 - **Volume.** 781 reachable trainer battles (197 distinct opponents + 584
@@ -272,6 +297,14 @@ out of sight lines and treat "reached the battle screen" as the pass.
   match neighbours; connection edges need a 0 tile between levels.
 - **Arrival by warp onto a trigger tile does not fire it** — use the
   ON_FRAME table (the Coast, Marsh, Station, Cavern all do).
+- **Map number 127 of any group is poison for warp events** unless the
+  engine patch of 2026-11-10 is in place (`SetupWarp` read `0x7F` as
+  `MAP_DYNAMIC` by number alone). With the patch it is fine; the sweep
+  proves it.
+- **A warp event only fires from a door / arrow-mat / ladder tile.** On a
+  plain tile it is an arrival point only; the way back is a step trigger
+  beside it (Fernwick's south road, the River's west edge) or an arrow mat
+  (516 in leob_rustboro is the woods' south mat). `audit.py` warns.
 - Trainer classes must be Hoenn's: `Swimmer M/F`, `Tuber M/F`, `Ruin Maniac`
   (no `Scientist`), pics `Pokemon Ranger M/F`, `Pokemon Breeder M/F`.
 - `MUS_ROUTE111` does not exist; `MUS_ROUTE113` / `MUS_ROUTE119` / `MUS_ROUTE120` do.
