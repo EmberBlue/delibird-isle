@@ -1129,8 +1129,10 @@ static u8 SetUpCopyrightScreen(void)
         SetMainCallback2(CB2_ExpansionIntro);
         CreateTask(Task_HandleExpansionIntro, 0);
 #else
-        CreateTask(Task_Scene1_Load, 0);
-        SetMainCallback2(MainCB2_Intro);
+        // Skaldmere: no Hoenn intro film (BIRCH in the grass, the bike, the three
+        // legends). The copyright screen fades straight into the title screen, whose
+        // own scene is the opening. FLAG_SKIP_INTRO above still skips to the menu.
+        SetMainCallback2(CB2_InitTitleScreen);
 #endif
         if (gMultibootProgramStruct.gcmb_field_2 != 0)
         {

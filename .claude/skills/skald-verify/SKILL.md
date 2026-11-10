@@ -43,14 +43,15 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
 ## Seeing the game
 
 `bash tools/screenshot/setup.sh` once; `python3 tools/screenshot/capture.py
---frames N --press KEY@FRAME:HOLD --out x.png`. Boot→title ~4500 frames;
+--frames N --press KEY@FRAME:HOLD --out x.png`. Boot→title ~600 frames (the
+copyright screen fades straight into the title; there is no Hoenn intro film);
 START, A, then B-mash ~130-frame spacing through the intro scroll. Mash B not
 A. Deterministic per input schedule. Interiors smaller than viewport don't
 scroll the camera. Cutscenes pan the camera off the player — mid-cutscene
 frames prove nothing about sprite visibility.
 
-Title screen: `--frames 2600 --press START@500:8` lands on the settled title
-(the START skips the intro); take a second frame ~350 later to see the aurora
+Title screen: `--frames 900` lands on the settled title with no input at all
+(`--press START@500:8` is harmless); take a second frame ~350 later to see the aurora
 drift and the harbour lamp pulse. Overworld sprites: `walktest.py --spawn` two
 tiles below the NPC, `--walk UP:0 --out shot.png`. A dialogue box: add
 `--walk A:90` before `--out`. Menus: `TAP:START` works, but follow it with

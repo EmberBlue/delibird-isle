@@ -827,4 +827,10 @@ quest is built, how the peer works) before they are asked six more times.
   card. A third, "they" avatar stays out of reach: it would need a third
   gender in the save block, which nothing in the engine supports; the
   text already says they.
+- **2026-11-10 — no Hoenn film on boot.** Every launch still ran
+  Emerald's intro (BIRCH in the grass, the bike, the three legends)
+  between the pret x RHH splash and our title screen unless the player
+  pressed START. Both handoffs into it now go to the title. Boot to title
+  is about ten seconds with no input; the splash stays as the expansion's
+  credit.
 

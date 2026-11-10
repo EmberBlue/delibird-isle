@@ -11,6 +11,7 @@
 #include "intro.h"
 #include "m4a.h"
 #include "expansion_intro.h"
+#include "title_screen.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
@@ -278,8 +279,9 @@ void Task_HandleExpansionIntro(u8 taskId)
             ResetSpriteData();
             FreeAllSpritePalettes();
             DestroyTask(taskId);
-            CreateTask(Task_Scene1_Load, 0);
-            SetMainCallback2(MainCB2_Intro);
+            // Skaldmere: the splash hands straight to the title screen; the Hoenn
+            // intro film (BIRCH, the bike, the three legends) no longer plays.
+            SetMainCallback2(CB2_InitTitleScreen);
         }
         break;
     }

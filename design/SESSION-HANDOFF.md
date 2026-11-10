@@ -298,7 +298,9 @@ replaces is gone from the tree).
   "ANTHROPOCENE" banner is three 64x32 8bpp sprites (Inter ExtraBold,
   outlined, ice gradient). VRAM: wordmark charblock 0 / screen 31, scene
   charblock 1 / screen 22, aurora charblock 3 / screen 23. Verify with
-  `python3 tools/screenshot/capture.py --frames 2600 --press START@500:8`.
+  `python3 tools/screenshot/capture.py --frames 900` (no input needed: the
+  boot goes copyright, the expansion's pret x RHH splash, then the title; the
+  Hoenn intro film is gone).
 - **Cast sprites** — `cast_sprites.py`. Nine 16x32 nine-frame sheets in
   `graphics/object_events/pics/people/skald/` on two new palettes
   (`skald_survey`: olive, red marker cloth, greys; `skald_mereholt`: teal,
@@ -384,6 +386,9 @@ replaces is gone from the tree).
   value, so `kit_restyle.py` (which now writes into the base when it
   exists) and hand edits compose and the grade never stacks.
   `--preview MAP OUT.png v1` renders a candidate without writing.
+- **Boot** — copyright, the expansion's pret x RHH splash, then the title.
+  The Hoenn intro film no longer plays (both handoffs into it, in
+  `intro.c` and `expansion_intro.c`, go to `CB2_InitTitleScreen`).
 - **The player** — `player_kit.py`. Both avatars keep their stock pixels
   and change clothes through six palettes (overworld, reflection, and the
   trainer palette the back sprite and trainer-card picture share): the

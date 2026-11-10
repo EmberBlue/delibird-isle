@@ -499,6 +499,15 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   overworld and the trainer palettes. `tools/skald/player_kit.py` writes
   all six; `field_specials.c` also loads the base palette directly for one
   scene, so there is no second copy to keep in step.
+- **Boot sequence**: copyright screen, the expansion's "powered by pret x
+  RHH" splash (`EXPANSION_INTRO` in `include/config/general.h`), the title.
+  The Hoenn intro film (BIRCH in the grass, the bike, the three legends)
+  is reached from two places and both now go to `CB2_InitTitleScreen`
+  instead: `intro.c` `COPYRIGHT_START_INTRO` (the `#else` branch, used when
+  the splash is off) and `expansion_intro.c` `Task_HandleExpansionIntro`
+  case 3. The film's code stays in the tree unused; `FLAG_SKIP_INTRO`
+  still jumps from the copyright screen to the main menu. Boot to the
+  settled title is ~600 frames with no input.
 
 ## RAM budget (the binding constraint)
 
