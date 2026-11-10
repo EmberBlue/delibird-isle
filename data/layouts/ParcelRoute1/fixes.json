@@ -1,0 +1,4 @@
+{"comment":"tile fixes re-applied after generation: [x, y, word] with word = metatile | collision<<10 | elevation<<12 (tools/skald/layout_fixes.py)","tiles":[
+[7,29,267],
+[8,29,267],
+[8,31,267]]}

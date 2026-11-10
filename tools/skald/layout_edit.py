@@ -7,7 +7,9 @@
   python3 tools/skald/layout_edit.py MAP set x,y METATILE [col] [elev]
 
 MAP is the map folder name (ParcelHighlands). The file keeps its size, so the ROM's data
-addresses do not move: savestates taken on the previous build stay valid. Touch
+addresses do not move: savestates taken on the previous build stay valid. When the layout is
+generated (build.py or canvas.txt), every edit is also recorded in its fixes.json, which the
+generator re-applies, so the edit survives regeneration (tools/skald/layout_fixes.py). Touch
 data/maps.s afterwards (or run make, which notices the .bin) so the ROM is rebuilt.
 """
 import struct
@@ -25,7 +27,20 @@ def load(name):
 
 
 def save(lay, words):
-    (ROOT / lay["blockdata_filepath"]).write_bytes(struct.pack(f"<{len(words)}H", *words))
+    path = ROOT / lay["blockdata_filepath"]
+    before = struct.unpack(f"<{len(words)}H", path.read_bytes())
+    path.write_bytes(struct.pack(f"<{len(words)}H", *words))
+    # A generated layout (build.py / canvas.txt) would lose this edit on its next regeneration:
+    # record every changed tile in fixes.json, which the generator re-applies (layout_fixes.py).
+    here = path.parent
+    if (here / "build.py").exists() or (here / "canvas.txt").exists():
+        import layout_fixes
+        fixes = layout_fixes.load(here)
+        W = lay["width"]
+        for i, (a, b) in enumerate(zip(before, words)):
+            if a != b:
+                fixes[(i % W, i // W)] = b
+        layout_fixes.save(here, fixes)
 
 
 def word(mid, col, elev):

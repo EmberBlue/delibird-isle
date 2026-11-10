@@ -139,6 +139,8 @@ def build(canvas_path):
         raise SystemExit(f"anchors declared but not drawn: {missing}")
 
     out_dir = canvas_path.parent
+    import layout_fixes
+    layout_fixes.apply_grid(out_dir, grid)                # fixes.json: tile fixes that survive regeneration
     (out_dir / "map.bin").write_bytes(b"".join(struct.pack(f"<{W}H", *row) for row in grid))
     b = border or legend.get("border") or [tiles[list(tiles)[0]][0]] * 4
     (out_dir / "border.bin").write_bytes(struct.pack("<4H", *[wq(m, 1, 0) for m in b]))

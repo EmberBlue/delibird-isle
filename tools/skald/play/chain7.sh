@@ -19,10 +19,12 @@ seg() {
   if [ $rc -ne 0 ]; then echo "!!! $name failed (exit $rc)"; exit 1; fi
   if [ "$need" != "-" ] && ! grep -q "$need = 1" $P/$name.log; then echo "!!! $name: $need not set"; exit 1; fi
 }
-# the four divisions: over the bridge to ICE (30,16), RAIN (16,21), then the west yard: SUN (6,16), SAND (6,5)
+# the four divisions: over the bridge to ICE (30,16); the staff path behind the windbreak (row 15) and the
+# planks to RAIN (16,21); the MAX ETHER ball at (6,6) is the gate to SUN's plank (6,16); SAND (6,5) by the grove
 seg s61 s60 - --walk GOTO:30,17 --walk UP:0 --walk TALK:1 --walk WAIT:900 --walk GOTO:16,22 --walk UP:0 --walk TALK:1 --walk WAIT:900 \
   --expect MAP_PARCEL_WEATHER
-seg s62 s61 - --walk GOTO:7,16 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 --walk GOTO:7,5 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 \
+seg s62 s61 - --walk GOTO:7,6 --walk LEFT:0 --walk TALK:1 --walk WAIT:400 \
+  --walk GOTO:7,16 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 --walk GOTO:7,5 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 \
   --check TRAINER_SKALD_RAIN --check TRAINER_SKALD_SUN --check TRAINER_SKALD_SAND --check TRAINER_SKALD_ICE --expect MAP_PARCEL_WEATHER
 # the Institute (door (6,32) = warp 0 of the map? the door tile itself), the stairs (1F warp 2 at (17,1)), VANE (10,8)
 seg s63 s62 FLAG_BADGE07_GET --walk GOTO:6,33 --walk UP:0 --walk WAIT:400 --walk GOTOWARP:2 --walk WAIT:400 \

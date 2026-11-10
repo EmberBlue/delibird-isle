@@ -44,6 +44,8 @@ rect(28, 13, 29, 13, TREE, 1, 0)
 put(26, 13, SIGN, 1, 0)                # SHORE TRAIL signpost
 
 # ---- write ------------------------------------------------------------------
+import sys; sys.path.insert(0, str(HERE.parents[2] / "tools/skald")); import layout_fixes
+layout_fixes.apply(HERE, words, W)                   # fixes.json: tile fixes that survive regeneration
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 (HERE / "border.bin").write_bytes(struct.pack("<4H", *([(1 << 10) | SEA] * 4)))
 print(f"ParcelDelibird: wrote {W}x{H} map.bin + border.bin")

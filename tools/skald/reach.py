@@ -22,6 +22,7 @@ game as one graph, the way a player experiences it:
   python3 tools/skald/reach.py --frontier ParcelHighlands   where the reach stops on that map, and why
   python3 tools/skald/reach.py --trainers            trainers whose walk-up would park them on a chokepoint
   python3 tools/skald/reach.py --from MAP_PARCEL_RIVER:20,20
+  python3 tools/skald/reach.py --why ParcelWeather 16,22   the route the flood took to that tile
 
 Optimistic where the engine is path-dependent: a pushed boulder's new position is not tracked,
 ice is treated as floor, and a trainer who walks up to the player still blocks their own tile
@@ -167,10 +168,13 @@ def warp_dest(byid, e):
 def reach(maps, byid, start, hm):
     seen = set()
     q = deque()
+    cur = [None]                 # the node being expanded: recorded as the parent of whatever it reaches
+    reach.parent = {}
 
     def visit(node):
         if node not in seen:
             seen.add(node)
+            reach.parent[node] = cur[0]
             q.append(node)
 
     def script_dest(sw):
@@ -187,6 +191,7 @@ def reach(maps, byid, start, hm):
     visit(start)
     while q:
         m, x, y = q.popleft()
+        cur[0] = (m, x, y)
         if m.name not in maps_seen:
             maps_seen.add(m.name)
             for sw in m.script_warps:
@@ -256,6 +261,11 @@ def reach(maps, byid, start, hm):
                     continue
                 visit((nm, nx, ny))
                 continue
+            if kind in ("water", "fall") and here and here[0] in ("land", "boulder", "slope"):
+                # starting to surf: the engine wants the player at elevation 3 exactly
+                # (IsPlayerFacingSurfableFishableWater), so not from a bridge deck or a raised terrace
+                if here[1] != 3 or "BRIDGE" in m.beh(x, y)[2]:
+                    continue
             if kind == "land" and here and here[0] in ("water", "fall"):
                 pass                               # landing from surf: no elevation check
             elif kind == "land" and not elev_ok(helev, nelev):
@@ -496,7 +506,7 @@ def main():
     args = sys.argv[1:]
     hm = set(ALL_HM)
     start_spec = "MAP_PARCEL_FERRY:4,6"
-    grid_map = only = front = None
+    grid_map = only = front = why = None
     i = 0
     while i < len(args):
         a = args[i]
@@ -511,6 +521,8 @@ def main():
             front = args[i + 1]; i += 1
         elif a == "--map":
             only = args[i + 1]; i += 1
+        elif a == "--why":
+            why = (args[i + 1], tuple(int(v) for v in args[i + 2].split(","))); i += 2
         i += 1
     maps, byid = load_all(hm)
     if "--trainers" in args:
@@ -519,6 +531,23 @@ def main():
     mid, xy = start_spec.split(":")
     sx, sy = (int(v) for v in xy.split(","))
     seen = reach(maps, byid, (byid[mid], sx, sy), hm)
+    if why:
+        node = (maps[why[0]], why[1][0], why[1][1])
+        if node not in seen:
+            print(f"{why[0]} {why[1]} is not reached"); return
+        chain = []
+        while node is not None:
+            chain.append(node); node = reach.parent.get(node)
+        chain.reverse()
+        print(f"how the walk gets to {why[0]} {why[1]} ({len(chain)} steps); map changes and water entries:")
+        prev = None
+        for m, x, y in chain:
+            k = tile_kind(m, x, y, hm)
+            tag = (m.name, k[0] if k else "door")
+            if prev is None or tag != prev:
+                print(f"   {m.name} ({x},{y}) {tag[1]}")
+            prev = tag
+        return
     if grid_map:
         grid(maps, seen, grid_map)
     elif front:

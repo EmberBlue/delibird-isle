@@ -93,6 +93,8 @@ heap(8, 58); heap(28, 58)                   # dredge spoil where the sand was
 rect(31, 58, 33, 58, 823, 1, 0)             # crates landed on the quay
 
 # ---- write ----------------------------------------------------------------------
+import sys; sys.path.insert(0, str(HERE.parents[2] / "tools/skald")); import layout_fixes
+layout_fixes.apply(HERE, words, W)                   # fixes.json: tile fixes that survive regeneration
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 changed = sum(1 for a, b in zip(struct.unpack(f"<{W*H}H", (HERE / "base.bin").read_bytes()), words) if (a & 0x3FF) != (b & 0x3FF))
 print(f"ParcelCoast: wrote {W}x{H} map.bin; {changed} tiles differ from Slateport ({100*changed//(W*H)}%)")

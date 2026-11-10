@@ -75,6 +75,8 @@ blob(8, 9, 11, 12); blob(13, 19, 17, 22); blob(26, 15, 29, 17); blob(33, 30, 36,
 for y in range(29, 36):
     put(34, y, 262, 0, 3)
 # ---- write ------------------------------------------------------------------
+import sys; sys.path.insert(0, str(HERE.parents[2] / "tools/skald")); import layout_fixes
+layout_fixes.apply(HERE, words, W)                   # fixes.json: tile fixes that survive regeneration
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 base = struct.unpack(f"<{len(raw)//2}H", raw)
 changed = sum(1 for a, b in zip(base, words) if (a & 0x3FF) != (b & 0x3FF))

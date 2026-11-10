@@ -37,7 +37,8 @@ for y in range(32, 36):                              # the yard in front of the 
         if get(x, y) == 1: put(x, y, 265, 0, 3)
 for x in range(12, 23):                              # a fence between the yard and the plots' road
     if get(x, 33) == 265: put(x, 33, 313 if x not in (12, 22) else (312 if x == 12 else 314), 1, 0)
-put(17, 33, 265, 0, 3)                               # the gate in it
+# (no gate tile: x 17 on row 33 is the bridge deck, not the yard fence -- a gravel tile there read as
+#  shore, and the reachability audit happily surfed off the bridge from it)
 def blob(x0, y0, x1, y1, clip=1):
     """A bed of bare earth: a rectangle with its corners clipped, edged with the
     grass-lipped pieces by which neighbours are outside the bed."""
@@ -67,6 +68,8 @@ for y in range(11, 19):                              # the fence between the plo
 for x, y in ((36, 10), (38, 6), (35, 15), (33, 19), (37, 23)):   # instrument stakes
     if get(x, y) in (1, 14, 15): put(x, y, 320, 1, 0)
 # ---- write ------------------------------------------------------------------
+import sys; sys.path.insert(0, str(HERE.parents[2] / "tools/skald")); import layout_fixes
+layout_fixes.apply(HERE, words, W)                   # fixes.json: tile fixes that survive regeneration
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 base = struct.unpack(f"<{len(raw)//2}H", raw)
 changed = sum(1 for a, b in zip(base, words) if (a & 0x3FF) != (b & 0x3FF))

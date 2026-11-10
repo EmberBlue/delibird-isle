@@ -991,7 +991,14 @@ script ParcelWeather_SignGate {
     end
 }
 script ParcelWeather_SignPlots {
-    msgbox(format("TEST PLOTS. North-west: Aridity. North-east: Solar Forcing. East slope: Cryosphere. River: Hydrology.\pThe real sky is not a plot."), MSGBOX_SIGN)
+    msgbox(format("TEST PLOTS. North-west: Aridity. West yard: Solar Forcing. East slope: Cryosphere. River: Hydrology.\pStaff path to the west plots: behind the windbreak off the east slope, then the planks.\pThe real sky is not a plot."), MSGBOX_SIGN)
+    end
+}
+
+// The only dry way to the west plots: a staff path behind the trees west of the ice plot (row 15),
+// out onto the lake's east strip and the plank walks. This board marks its mouth.
+script ParcelWeather_SignWindbreak {
+    msgbox(format("STAFF PATH\pAridity, Solar Forcing, Hydrology: west, behind the windbreak, then the planks.\pThe trees are the fence. Walk behind them."), MSGBOX_SIGN)
     end
 }
 

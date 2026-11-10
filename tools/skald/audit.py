@@ -74,6 +74,9 @@ def warp_behaviours():
 
 
 WARP_BEHAVIOURS = warp_behaviours()
+# Walkable tiles whose top layer is meant to cover the player: General's 15 is the ground directly above a
+# tree (its canopy drawn over you), which the climate station's staff path behind the windbreak extends.
+TOPLAYER_OK = {("ParcelWeather", 15)}
 RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
 
 
@@ -176,6 +179,8 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                     continue
                 beh = tiles[mid][1]
                 if beh == 0x02 or 0x10 <= beh <= 0x19 or beh in DOOR_BEHAVIOURS:  # grass/water shimmer/doorway overlays are intended
+                    continue
+                if (name, mid) in TOPLAYER_OK:
                     continue
                 if any(tile_has_art(lay, c) for c in tiles[mid][0][8:12]):
                     covered.add(mid)

@@ -112,6 +112,8 @@ for y in range(H):                                        # the sand track becom
         if get(x, y) in GRAVEL and y >= 48: put(x, y, GRAVEL[get(x, y)], 0, 3)
 
 # ---- write ------------------------------------------------------------------
+import sys; sys.path.insert(0, str(HERE.parents[2] / "tools/skald")); import layout_fixes
+layout_fixes.apply(HERE, words, W)                   # fixes.json: tile fixes that survive regeneration
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 base = struct.unpack(f"<{W*H}H", (HERE / "base.bin").read_bytes())
 changed = sum(1 for a, b in zip(base, words) if (a & 0x3FF) != (b & 0x3FF))

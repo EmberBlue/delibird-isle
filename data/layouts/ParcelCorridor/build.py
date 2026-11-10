@@ -79,5 +79,7 @@ put(63, 14, terrace_top, 0, 4)
 put(63, 13, stair, 0, 0)
 
 # ---- write ------------------------------------------------------------------
+import sys; sys.path.insert(0, str(HERE.parents[2] / "tools/skald")); import layout_fixes
+layout_fixes.apply(HERE, words, W)                   # fixes.json: tile fixes that survive regeneration
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 print(f"ParcelCorridor: wrote {W}x{H} map.bin")

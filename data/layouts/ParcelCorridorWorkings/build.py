@@ -119,6 +119,8 @@ for x, y, mid in ((12, 10, 614), (11, 11, 592), (23, 17, 610), (21, 19, 614), (1
     solid(x, y, mid, FLOOR)
 
 # ---- write ------------------------------------------------------------------
+import sys; sys.path.insert(0, str(HERE.parents[2] / "tools/skald")); import layout_fixes
+layout_fixes.apply(HERE, words, W)                   # fixes.json: tile fixes that survive regeneration
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
 base = struct.unpack(f"<{W*H}H", (HERE / "base.bin").read_bytes())
 changed = sum(1 for a, b in zip(base, words) if (a & 0x3FF) != (b & 0x3FF))
