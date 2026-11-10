@@ -450,5 +450,20 @@ quest is built, how the peer works) before they are asked six more times.
   Survey reads it -- what it indicates, not what it eats (~2,200 words).
   And the **sweep**: every warp and connection walked in the emulator; the
   one real break (the Coast office stairs, map number 127) fixed in the
-  engine. ~65,000 hand-written words.
+  engine. ~62,500 hand-written words (every `_R2`–`_R5` and `_FirstWin`
+  rematch script excluded; the earlier "~58,800" used a looser cut).
+- **2026-11-10 — the choices (problem 6, "no agency").** Five remembered
+  choices, none of which moves the landing. The two the bible locked: at
+  the confession Heron asks whether HOLLIS's name goes into the record
+  ("Neither one is mercy. Which?"), and at the road Hale asks whether the
+  MAHOGANY correction is filed in Wren's own hand or left for the lawyers
+  to find ("It's a question of whose hand"). Three for texture: say your
+  piece at the Elvsund water meeting, take the FOUNDATION blanket at
+  Leirvik, drink HOLLIS's tea. Each is read back later by the world
+  rather than announced: the clerk's record of the sitting changes its
+  items 10 and 11, Hollis's last lines and the secretary's change, the
+  pinned minutes gain a seventh name, the relief ledger's last line is
+  filled or ruled empty, Cordelia notices who keeps their own accounts.
+  Plus "Sit?" in the boardroom, because the chair was made lower on
+  purpose. Flags `FLAG_SKALD_CH_*` (aliases of unreachable item flags).
 

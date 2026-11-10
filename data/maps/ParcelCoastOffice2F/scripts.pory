@@ -15,8 +15,18 @@ script ParcelCoastOffice2F_Hollis {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
-        msgbox(format("HOLLIS: The conservation programme is being restructured. Her word. I typed the memo myself. I still type well.\pYou'll want to know whether I'd do it again. So do I, RANGER. So do I."), MSGBOX_DEFAULT)
-        msgbox(format("HOLLIS: No tea today. There's nowhere left to put the kindness."), MSGBOX_DEFAULT)
+        if (flag(FLAG_SKALD_CH_HOLLIS_NAMED)) {
+            msgbox(format("HOLLIS: My name was in it. Every renewal, every condition, in order. You were thorough. I said you would be.\pThe conservation programme is being restructured. Her word. I typed the memo about myself. I still type well."), MSGBOX_DEFAULT)
+            msgbox(format("HOLLIS: You'll want to know whether I'd have left you out, in your place. I've thought about it. I don't know. That is the most honest sentence I've said in this room."), MSGBOX_DEFAULT)
+        } else {
+            msgbox(format("HOLLIS: My name wasn't in it. I read it twice to be sure. Every letter I signed is in the file and not one of them is in your record.\pI don't know whether to thank you or to ask why. I've started typing the fourth letter myself. Someone should."), MSGBOX_DEFAULT)
+            msgbox(format("HOLLIS: You'll want to know whether I'd do it again. So do I, RANGER. So do I."), MSGBOX_DEFAULT)
+        }
+        if (flag(FLAG_SKALD_CH_TEA)) {
+            msgbox(format("HOLLIS: You drank the tea, that first day. I've thought about that more than I should.\pNo tea today. There's nowhere left to put the kindness."), MSGBOX_DEFAULT)
+        } else {
+            msgbox(format("HOLLIS: You never drank the tea. I've thought about that cup more than I should.\pNo tea today. There's nowhere left to put the kindness."), MSGBOX_DEFAULT)
+        }
         release
         end
     }
@@ -30,6 +40,13 @@ script ParcelCoastOffice2F_Hollis {
     msgbox(format("{PLAYER}: …DR. HERON's."), MSGBOX_DEFAULT)
     msgbox(format("HOLLIS: I would hate for one unmeasured word from you to undo her life's work. For her to be remembered as the scientist whose model failed, instead of the one whose science is the only reason there's a fishery left to argue about."), MSGBOX_DEFAULT)
     msgbox(format("HOLLIS: So think about how you write it. For her sake. That's the whole of what I'm asking.\pIt's very good tea. Drink it while it's hot."), MSGBOX_DEFAULT)
+    msgbox(format("The cup is at your hand. Drink it?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("You drink it. It is very good tea.\pShe watches you drink it the way, you will understand later, she watched DR. HERON drink it for three years."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_CH_TEA)
+    } else {
+        msgbox(format("You leave the cup where it is.\pShe notices. She says nothing. After a while she moves it an inch toward you, as if that were the whole of the argument."), MSGBOX_DEFAULT)
+    }
     release
     end
 }
@@ -37,7 +54,11 @@ script ParcelCoastOffice2F_Secretary {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("SECRETARY: Ms. AUNE still sees everyone. Fewer come. She remembers how each of them took their tea. She has started making it herself."), MSGBOX_DEFAULT)
+        if (flag(FLAG_SKALD_CH_TEA)) {
+            msgbox(format("SECRETARY: Ms. AUNE still sees everyone. Fewer come. She remembers how each of them took their tea. She has started making it herself."), MSGBOX_DEFAULT)
+        } else {
+            msgbox(format("SECRETARY: Ms. AUNE still sees everyone. Fewer come. She remembers how each of them took their tea, and that you didn't take yours.\pShe has started making it herself. She still pours two."), MSGBOX_DEFAULT)
+        }
         release
         end
     }

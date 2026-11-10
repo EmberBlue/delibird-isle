@@ -164,7 +164,12 @@ script ParcelFernwickHQ_ReadCounter {
 
 script ParcelFernwickHQ_Pinned {
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Where the poster was: the minutes of the river meeting at Elvsund, pinned with four tacks, typed on the hall's machine.\pPRESENT: the Board's clerk, the Commissioner's deputy, forty-one ratepayers, two rangers, one surveyor.\pTHE RATEPAYERS ASKED why the gauge read normal when their fields did not. THE CLERK SAID the gauge was calibrated. THE SURVEYOR ASKED to which year.\pTHE DEPUTY SAID the Commissioner regretted he could not attend. THE ROOM NOTED this.\pRESOLVED, by show of hands, that the Board publish its readings against the old datum as well as the new. Carried. Six abstained.\pDown the margin, six names in Hale's small capitals. The six who stood up first. Not ours, the ranger said. Theirs."), MSGBOX_SIGN)
+        msgbox(format("Where the poster was: the minutes of the river meeting at Elvsund, pinned with four tacks, typed on the hall's machine.\pPRESENT: the Board's clerk, the Commissioner's deputy, forty-one ratepayers, two rangers, one surveyor.\pTHE RATEPAYERS ASKED why the gauge read normal when their fields did not. THE CLERK SAID the gauge was calibrated. THE SURVEYOR ASKED to which year.\pTHE DEPUTY SAID the Commissioner regretted he could not attend. THE ROOM NOTED this.\pRESOLVED, by show of hands, that the Board publish its readings against the old datum as well as the new. Carried. Six abstained."), MSGBOX_SIGN)
+        if (flag(FLAG_SKALD_CH_SPOKE)) {
+            msgbox(format("Down the margin, six names in Hale's small capitals. The six who stood up first. Under them, smaller, a seventh: yours.\pHe has not mentioned it. He pinned it where you would see it."), MSGBOX_SIGN)
+        } else {
+            msgbox(format("Down the margin, six names in Hale's small capitals. The six who stood up first. Not ours, the ranger said. Theirs."), MSGBOX_SIGN)
+        }
     } else {
         msgbox(format("A poster, the Foundation's green and grey. A ranger on a ridge with the light behind.\pSTEWARDSHIP. A Mereholt Foundation partnership with the Skaldmere Climate Corps. Two field stations. The certification programme. Equipment for every ranger in the region.\pSmaller, at the bottom: the Climate Corps is funded in part by Mereholt Foundation conservation grants administered through the Office of Public-Private Partnerships.\pSomeone has pressed a thumbnail into the word PART and left a crescent."), MSGBOX_SIGN)
     }

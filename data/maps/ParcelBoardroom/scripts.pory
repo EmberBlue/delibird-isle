@@ -60,8 +60,17 @@ script ParcelBoardroom_Cordelia {
         end
     }
     msgbox(format("Cordelia Brooke does not stand to greet you. She finishes the line she is writing, caps the pen, and squares the page against the edge of the desk.\pCordelia: Ranger. Sit, don't sit. The meeting runs the same length either way."), MSGBOX_DEFAULT)
+    msgbox(format("Sit?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("You sit. The chair is lower than hers. It was made that way, by someone who was paid to think about it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("You stand. She notes it and does not offer again. The room is long enough that standing is its own kind of answer."), MSGBOX_DEFAULT)
+    }
     msgbox(format("Cordelia: You filed the truth. All of it, I'm told. I've had it read to me twice -- once by the lawyers, once by the people I pay to translate lawyers.\pReview of the coastal quotas. The permafrost leases enjoined pending survey. The corridor listing, fast-tracked.\pMy expansion, priced this morning at eighteen months of delay. Thirty, if the hearings run long."), MSGBOX_DEFAULT)
     msgbox(format("Cordelia: That is what you bought. I wanted you to hear the price from me, because nobody who celebrates you this week will say it to your face.\pWhen the Politoed data is corrected, the Mahogany preserve loses its listing. Her lie protected that marsh for twenty years. Your truth un-protects it in a filing season.\pI don't say it to wound. I say it because the accounts should be kept whole. Someone in this room still keeps accounts."), MSGBOX_DEFAULT)
+    if (flag(FLAG_SKALD_CH_MAHOGANY)) {
+        msgbox(format("Cordelia: You filed the correction yourself, I'm told. In your own hand, under hers. I'd have waited for a lawyer to find it; most people do.\pYou didn't give them the pleasure. I noticed. I notice who keeps their own accounts."), MSGBOX_DEFAULT)
+    }
     msgbox(format("Cordelia: And you are owed one correction, since we're keeping them.\pYou did not fight a company. Mereholt is the ferry you arrived on. The wage of the man who fed you on the crossing. Half the fuel in this harbour, and a third of the budget of the Corps that trained you.\pYou fought the way this region eats, Ranger. And you have won a delay."), MSGBOX_DEFAULT)
     msgbox(format("For a moment the only sound is the harbour below -- the cranes, swinging weight through the cold air, on schedule.\pCordelia: The board would have my seat in a week if the figures faltered. There are covenants older than my chair that decide most of what I sign.\pI mention that once, for accuracy. Not absolution. Do not write it down as regret."), MSGBOX_DEFAULT)
     msgbox(format("Cordelia: One item remains, and then the door.\pI have read eleven hundred pages about you, most of them in your own hand. Paper flattens people -- it is the only thing paper does reliably.\pI should like the primary source."), MSGBOX_DEFAULT)

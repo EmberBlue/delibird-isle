@@ -46,16 +46,16 @@ ParcelRiverHall_Meeting::
 # 39 "data/maps/ParcelRiverHall/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelRiverHall_Meeting_10
-# 44 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Meeting_Text_11, MSGBOX_DEFAULT
 # 45 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Meeting_Text_11, MSGBOX_DEFAULT
+# 46 "data/maps/ParcelRiverHall/scripts.pory"
 	msgbox ParcelRiverHall_Meeting_Text_12, MSGBOX_DEFAULT
 ParcelRiverHall_Meeting_9:
-# 47 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Meeting_Text_13, MSGBOX_DEFAULT
 # 48 "data/maps/ParcelRiverHall/scripts.pory"
-	setflag FLAG_SKALD_RIV_MEETING_DONE
+	msgbox ParcelRiverHall_Meeting_Text_13, MSGBOX_DEFAULT
 # 49 "data/maps/ParcelRiverHall/scripts.pory"
+	setflag FLAG_SKALD_RIV_MEETING_DONE
+# 50 "data/maps/ParcelRiverHall/scripts.pory"
 	releaseall
 	end
 
@@ -72,236 +72,238 @@ ParcelRiverHall_Meeting_10:
 	msgbox ParcelRiverHall_Meeting_Text_9, MSGBOX_DEFAULT
 # 42 "data/maps/ParcelRiverHall/scripts.pory"
 	msgbox ParcelRiverHall_Meeting_Text_10, MSGBOX_DEFAULT
+# 43 "data/maps/ParcelRiverHall/scripts.pory"
+	setflag FLAG_SKALD_CH_SPOKE
 	goto ParcelRiverHall_Meeting_9
 
 
 ParcelRiverHall_Mayor::
-# 54 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 55 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 56 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 57 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Mayor_2
-# 61 "data/maps/ParcelRiverHall/scripts.pory"
+# 62 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHall_Mayor_5
-# 66 "data/maps/ParcelRiverHall/scripts.pory"
+# 67 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALD_RIV_MEETING_DONE, ParcelRiverHall_Mayor_8
-# 71 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Mayor_Text_3, MSGBOX_DEFAULT
 # 72 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Mayor_Text_3, MSGBOX_DEFAULT
+# 73 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Mayor_2:
-# 57 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Mayor_Text_0, MSGBOX_DEFAULT
 # 58 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Mayor_Text_0, MSGBOX_DEFAULT
+# 59 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Mayor_5:
-# 62 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Mayor_Text_1, MSGBOX_DEFAULT
 # 63 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Mayor_Text_1, MSGBOX_DEFAULT
+# 64 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Mayor_8:
-# 67 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Mayor_Text_2, MSGBOX_DEFAULT
 # 68 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Mayor_Text_2, MSGBOX_DEFAULT
+# 69 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_Harland::
-# 76 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 77 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 78 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 79 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Harland_2
-# 83 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Harland_Text_1, MSGBOX_DEFAULT
 # 84 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Harland_Text_1, MSGBOX_DEFAULT
+# 85 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Harland_2:
-# 79 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Harland_Text_0, MSGBOX_DEFAULT
 # 80 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Harland_Text_0, MSGBOX_DEFAULT
+# 81 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_Farmer::
-# 88 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 89 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 90 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 91 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Farmer_2
-# 95 "data/maps/ParcelRiverHall/scripts.pory"
+# 96 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHall_Farmer_5
-# 100 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Farmer_Text_2, MSGBOX_DEFAULT
 # 101 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Farmer_Text_2, MSGBOX_DEFAULT
+# 102 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Farmer_2:
-# 91 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Farmer_Text_0, MSGBOX_DEFAULT
 # 92 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Farmer_Text_0, MSGBOX_DEFAULT
+# 93 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Farmer_5:
-# 96 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Farmer_Text_1, MSGBOX_DEFAULT
 # 97 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Farmer_Text_1, MSGBOX_DEFAULT
+# 98 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_Dell::
-# 105 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 106 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 107 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 108 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Dell_2
-# 112 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Dell_Text_1, MSGBOX_DEFAULT
 # 113 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Dell_Text_1, MSGBOX_DEFAULT
+# 114 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Dell_2:
-# 108 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Dell_Text_0, MSGBOX_DEFAULT
 # 109 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Dell_Text_0, MSGBOX_DEFAULT
+# 110 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_Sluice::
-# 117 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 118 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 119 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 120 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Sluice_2
-# 124 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Sluice_Text_1, MSGBOX_DEFAULT
 # 125 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Sluice_Text_1, MSGBOX_DEFAULT
+# 126 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Sluice_2:
-# 120 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Sluice_Text_0, MSGBOX_DEFAULT
 # 121 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Sluice_Text_0, MSGBOX_DEFAULT
+# 122 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_Dorsey::
-# 129 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 130 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 131 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 132 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Dorsey_2
-# 136 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Dorsey_Text_1, MSGBOX_DEFAULT
 # 137 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Dorsey_Text_1, MSGBOX_DEFAULT
+# 138 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Dorsey_2:
-# 132 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Dorsey_Text_0, MSGBOX_DEFAULT
 # 133 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Dorsey_Text_0, MSGBOX_DEFAULT
+# 134 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_Ilex::
-# 141 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 142 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 143 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 144 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Ilex_2
-# 148 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Ilex_Text_1, MSGBOX_DEFAULT
 # 149 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Ilex_Text_1, MSGBOX_DEFAULT
+# 150 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Ilex_2:
-# 144 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Ilex_Text_0, MSGBOX_DEFAULT
 # 145 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Ilex_Text_0, MSGBOX_DEFAULT
+# 146 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_Woman::
-# 153 "data/maps/ParcelRiverHall/scripts.pory"
-	lock
 # 154 "data/maps/ParcelRiverHall/scripts.pory"
-	faceplayer
+	lock
 # 155 "data/maps/ParcelRiverHall/scripts.pory"
+	faceplayer
+# 156 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHall_Woman_2
-# 160 "data/maps/ParcelRiverHall/scripts.pory"
+# 161 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHall_Woman_5
-# 165 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Woman_Text_2, MSGBOX_DEFAULT
 # 166 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Woman_Text_2, MSGBOX_DEFAULT
+# 167 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Woman_2:
-# 156 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Woman_Text_0, MSGBOX_DEFAULT
 # 157 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Woman_Text_0, MSGBOX_DEFAULT
+# 158 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 ParcelRiverHall_Woman_5:
-# 161 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_Woman_Text_1, MSGBOX_DEFAULT
 # 162 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_Woman_Text_1, MSGBOX_DEFAULT
+# 163 "data/maps/ParcelRiverHall/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHall_CrateLabel::
-# 171 "data/maps/ParcelRiverHall/scripts.pory"
+# 172 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_CRATE, ParcelRiverHall_CrateLabel_3
 ParcelRiverHall_CrateLabel_1:
-# 176 "data/maps/ParcelRiverHall/scripts.pory"
+# 177 "data/maps/ParcelRiverHall/scripts.pory"
 	msgbox ParcelRiverHall_CrateLabel_Text_1, MSGBOX_SIGN
 	end
 
 ParcelRiverHall_CrateLabel_2:
-# 172 "data/maps/ParcelRiverHall/scripts.pory"
-	msgbox ParcelRiverHall_CrateLabel_Text_0, MSGBOX_SIGN
 # 173 "data/maps/ParcelRiverHall/scripts.pory"
+	msgbox ParcelRiverHall_CrateLabel_Text_0, MSGBOX_SIGN
+# 174 "data/maps/ParcelRiverHall/scripts.pory"
 	setflag FLAG_SKALD_Q_CRATE_FOUND
 	end
 
 ParcelRiverHall_CrateLabel_3:
-# 171 "data/maps/ParcelRiverHall/scripts.pory"
+# 172 "data/maps/ParcelRiverHall/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_CRATE_FOUND, ParcelRiverHall_CrateLabel_2
 	goto ParcelRiverHall_CrateLabel_1
 
 
 ParcelRiverHall_Petition::
-# 183 "data/maps/ParcelRiverHall/scripts.pory"
+# 184 "data/maps/ParcelRiverHall/scripts.pory"
 	msgbox ParcelRiverHall_Petition_Text_0, MSGBOX_SIGN
 	return
 
@@ -389,7 +391,7 @@ ParcelRiverHall_Meeting_Text_10:
 	.string "pen believes it.$"
 
 ParcelRiverHall_Meeting_Text_11:
-# 44 "data/maps/ParcelRiverHall/scripts.pory"
+# 45 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "ILEX: Then I'll say it for the record.\n"
 	.string "Relieve what's reversible. Refuse the\l"
 	.string "straightened mile. The RANGER's survey\l"
@@ -397,18 +399,18 @@ ParcelRiverHall_Meeting_Text_11:
 	.string "notebook.$"
 
 ParcelRiverHall_Meeting_Text_12:
-# 45 "data/maps/ParcelRiverHall/scripts.pory"
+# 46 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "DORSEY: Noted.$"
 
 ParcelRiverHall_Meeting_Text_13:
-# 47 "data/maps/ParcelRiverHall/scripts.pory"
+# 48 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "MAYOR: Vote. Hands. …Carried, against.\n"
 	.string "The Board will proceed. It always\l"
 	.string "proceeds.\p"
 	.string "Thank you all. Mind the step.$"
 
 ParcelRiverHall_Mayor_Text_0:
-# 57 "data/maps/ParcelRiverHall/scripts.pory"
+# 58 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "MAYOR: Carried, against, nine years, and\n"
 	.string "the hearing counted every one of them.\l"
 	.string "They read our minutes into the record.\l"
@@ -416,7 +418,7 @@ ParcelRiverHall_Mayor_Text_0:
 	.string "was shaking. Mine too.$"
 
 ParcelRiverHall_Mayor_Text_1:
-# 62 "data/maps/ParcelRiverHall/scripts.pory"
+# 63 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "MAYOR: Carried, against, and the Board\n"
 	.string "didn't count it, and then HAUKFELL's\l"
 	.string "ground let go and suddenly everyone's\l"
@@ -426,7 +428,7 @@ ParcelRiverHall_Mayor_Text_1:
 	.string "is the first year the minutes travelled.$"
 
 ParcelRiverHall_Mayor_Text_2:
-# 67 "data/maps/ParcelRiverHall/scripts.pory"
+# 68 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "MAYOR: Carried, against. Nine years I've\n"
 	.string "been chairing votes the Board doesn't\l"
 	.string "count.\p"
@@ -434,42 +436,42 @@ ParcelRiverHall_Mayor_Text_2:
 	.string "name's in the minutes.$"
 
 ParcelRiverHall_Mayor_Text_3:
-# 71 "data/maps/ParcelRiverHall/scripts.pory"
+# 72 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "MAYOR: Water meeting at noon. Walk the\n"
 	.string "bank first, RANGER. Everyone in this\l"
 	.string "room has. Most of them twice.$"
 
 ParcelRiverHall_Harland_Text_0:
-# 79 "data/maps/ParcelRiverHall/scripts.pory"
+# 80 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "HARLAND: The mayor asked me to speak\n"
 	.string "at the hearing. I spoke. I'd still rather\l"
 	.string "be on the water. There's a little more of\l"
 	.string "it this year to be on.$"
 
 ParcelRiverHall_Harland_Text_1:
-# 83 "data/maps/ParcelRiverHall/scripts.pory"
+# 84 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "HARLAND: I'm here because the mayor\n"
 	.string "asked. I'd rather be on the water.\l"
 	.string "There's less of it every year to be on.$"
 
 ParcelRiverHall_Farmer_Text_0:
-# 91 "data/maps/ParcelRiverHall/scripts.pory"
+# 92 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "FARMER: Plot nine. Metered. The sign's\n"
 	.string "still up. The number on it is lower.$"
 
 ParcelRiverHall_Farmer_Text_1:
-# 96 "data/maps/ParcelRiverHall/scripts.pory"
+# 97 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "FARMER: Plot nine. Metered. The hill's\n"
 	.string "melting into my allocation and I'm\l"
 	.string "charged for it by the litre.$"
 
 ParcelRiverHall_Farmer_Text_2:
-# 100 "data/maps/ParcelRiverHall/scripts.pory"
+# 101 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "FARMER: Plot nine. Metered. You've seen\n"
 	.string "the sign.$"
 
 ParcelRiverHall_Dell_Text_0:
-# 108 "data/maps/ParcelRiverHall/scripts.pory"
+# 109 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "DELL: Forty years, and somebody wrote\n"
 	.string "it down, and then somebody read it\l"
 	.string "aloud. I've nothing left to say till\l"
@@ -477,57 +479,57 @@ ParcelRiverHall_Dell_Text_0:
 	.string "more.$"
 
 ParcelRiverHall_Dell_Text_1:
-# 112 "data/maps/ParcelRiverHall/scripts.pory"
+# 113 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "DELL: Forty years. I'll say it till\n"
 	.string "somebody writes it down.$"
 
 ParcelRiverHall_Sluice_Text_0:
-# 120 "data/maps/ParcelRiverHall/scripts.pory"
+# 121 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "SLUICE: The ledger balanced in public\n"
 	.string "for once. The councilman watched it\l"
 	.string "balance. I'm told he didn't enjoy it. The\l"
 	.string "ledger didn't care.$"
 
 ParcelRiverHall_Sluice_Text_1:
-# 124 "data/maps/ParcelRiverHall/scripts.pory"
+# 125 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "SLUICE: The ledger doesn't vote. It\n"
 	.string "just balances. Someone should tell the\l"
 	.string "councilman.$"
 
 ParcelRiverHall_Dorsey_Text_0:
-# 132 "data/maps/ParcelRiverHall/scripts.pory"
+# 133 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "DORSEY: I lost an argument in public. I\n"
 	.string "said I'd rather. I meant it. I still mean\l"
 	.string "it. It's harder than I made it sound.$"
 
 ParcelRiverHall_Dorsey_Text_1:
-# 136 "data/maps/ParcelRiverHall/scripts.pory"
+# 137 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "DORSEY: I'd rather lose an argument in\n"
 	.string "public than win one in a report. I say\l"
 	.string "that a lot. I mean it every time.$"
 
 ParcelRiverHall_Ilex_Text_0:
-# 144 "data/maps/ParcelRiverHall/scripts.pory"
+# 145 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "ILEX: The bank above the town. I still\n"
 	.string "go. The river has a name on it now. Yours\l"
 	.string "and mine, and the hearing's stamp under\l"
 	.string "both.$"
 
 ParcelRiverHall_Ilex_Text_1:
-# 148 "data/maps/ParcelRiverHall/scripts.pory"
+# 149 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "ILEX: I'll be at the bank, above the\n"
 	.string "town. Come put a name on the river when\l"
 	.string "you've read all of it.$"
 
 ParcelRiverHall_Woman_Text_0:
-# 156 "data/maps/ParcelRiverHall/scripts.pory"
+# 157 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "WOMAN: I came to every meeting and\n"
 	.string "nothing changed, and then one meeting\l"
 	.string "was read into a hearing and something\l"
 	.string "did. I'm still coming. Now I know why.$"
 
 ParcelRiverHall_Woman_Text_1:
-# 161 "data/maps/ParcelRiverHall/scripts.pory"
+# 162 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "WOMAN: I came to every meeting and\n"
 	.string "nothing changed, and then one changed,\l"
 	.string "and now there's a family from HAUKFELL\l"
@@ -538,13 +540,13 @@ ParcelRiverHall_Woman_Text_1:
 	.string "more than it was.$"
 
 ParcelRiverHall_Woman_Text_2:
-# 165 "data/maps/ParcelRiverHall/scripts.pory"
+# 166 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "WOMAN: I come to every meeting. Nothing\n"
 	.string "changes. I keep coming. That's the only\l"
 	.string "thing I can think of to do.$"
 
 ParcelRiverHall_CrateLabel_Text_0:
-# 172 "data/maps/ParcelRiverHall/scripts.pory"
+# 173 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "Under the edge of the trestle table, a\n"
 	.string "crate label on a loop of string:\l"
 	.string "SKALDMERE SURVEY -- SOIL CORES 1-40\l"
@@ -552,14 +554,14 @@ ParcelRiverHall_CrateLabel_Text_0:
 	.string "A boot has been on it. The ink held.$"
 
 ParcelRiverHall_CrateLabel_Text_1:
-# 176 "data/maps/ParcelRiverHall/scripts.pory"
+# 177 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "Under the trestle table: dust, a chair\n"
 	.string "leg mended with wire, and the marks\l"
 	.string "where crates were stacked for the\l"
 	.string "meeting.$"
 
 ParcelRiverHall_Petition_Text_0:
-# 183 "data/maps/ParcelRiverHall/scripts.pory"
+# 184 "data/maps/ParcelRiverHall/scripts.pory"
 	.string "The ratepayers' petition, on the side\n"
 	.string "table where the hall keeps what it is\l"
 	.string "not sure it is allowed to keep.\p"

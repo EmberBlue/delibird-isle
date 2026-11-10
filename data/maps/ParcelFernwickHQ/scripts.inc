@@ -283,13 +283,22 @@ ParcelFernwickHQ_ReadCounter::
 ParcelFernwickHQ_Pinned::
 # 166 "data/maps/ParcelFernwickHQ/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHQ_Pinned_1
-# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_Pinned_Text_1, MSGBOX_SIGN
+# 174 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Pinned_Text_3, MSGBOX_SIGN
 	return
 
 ParcelFernwickHQ_Pinned_1:
 # 167 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Pinned_Text_0, MSGBOX_SIGN
+# 168 "data/maps/ParcelFernwickHQ/scripts.pory"
+	goto_if_set FLAG_SKALD_CH_SPOKE, ParcelFernwickHQ_Pinned_4
+# 171 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Pinned_Text_2, MSGBOX_SIGN
+	return
+
+ParcelFernwickHQ_Pinned_4:
+# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Pinned_Text_1, MSGBOX_SIGN
 	return
 
 
@@ -628,13 +637,25 @@ ParcelFernwickHQ_Pinned_Text_0:
 	.string "RESOLVED, by show of hands, that the\n"
 	.string "Board publish its readings against the\l"
 	.string "old datum as well as the new. Carried.\l"
-	.string "Six abstained.\p"
+	.string "Six abstained.$"
+
+ParcelFernwickHQ_Pinned_Text_1:
+# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "Down the margin, six names in Hale's\n"
+	.string "small capitals. The six who stood up\l"
+	.string "first. Under them, smaller, a seventh:\l"
+	.string "yours.\p"
+	.string "He has not mentioned it. He pinned it\n"
+	.string "where you would see it.$"
+
+ParcelFernwickHQ_Pinned_Text_2:
+# 171 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "Down the margin, six names in Hale's\n"
 	.string "small capitals. The six who stood up\l"
 	.string "first. Not ours, the ranger said. Theirs.$"
 
-ParcelFernwickHQ_Pinned_Text_1:
-# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
+ParcelFernwickHQ_Pinned_Text_3:
+# 174 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "A poster, the Foundation's green and\n"
 	.string "grey. A ranger on a ridge with the light\l"
 	.string "behind.\p"

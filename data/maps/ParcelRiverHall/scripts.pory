@@ -40,6 +40,7 @@ script ParcelRiverHall_Meeting {
         msgbox(format("{PLAYER}: The clean reach is the baseline. It's what the whole river was. Phase 2 removes it.\pRelieve what's reversible. The buffer strip. The bloom. Fish passage. Refuse the straightened mile. That's the survey. That's what I'll file."), MSGBOX_DEFAULT)
         msgbox(format("DORSEY: …Noted. Loudly."), MSGBOX_DEFAULT)
         msgbox(format("HARLAND: Write it so somebody with a pen believes it."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_CH_SPOKE)
     } else {
         msgbox(format("ILEX: Then I'll say it for the record. Relieve what's reversible. Refuse the straightened mile. The RANGER's survey will say the same; I've read the notebook."), MSGBOX_DEFAULT)
         msgbox(format("DORSEY: Noted."), MSGBOX_DEFAULT)

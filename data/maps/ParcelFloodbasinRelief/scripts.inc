@@ -96,6 +96,20 @@ ParcelFloodbasinRelief_ReadDresser::
 ParcelFloodbasinRelief_Ledger::
 # 59 "data/maps/ParcelFloodbasinRelief/scripts.pory"
 	msgbox ParcelFloodbasinRelief_Ledger_Text_0, MSGBOX_SIGN
+# 60 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_set FLAG_SKALD_CH_BLANKET, ParcelFloodbasinRelief_Ledger_1
+# 62 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	goto_if_set FLAG_SKALD_FLD_RELIEF_DONE, ParcelFloodbasinRelief_Ledger_2
+	return
+
+ParcelFloodbasinRelief_Ledger_1:
+# 61 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Ledger_Text_1, MSGBOX_SIGN
+	return
+
+ParcelFloodbasinRelief_Ledger_2:
+# 63 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	msgbox ParcelFloodbasinRelief_Ledger_Text_2, MSGBOX_SIGN
 	return
 
 
@@ -195,3 +209,17 @@ ParcelFloodbasinRelief_Ledger_Text_0:
 	.string "written again above it, firmly.\p"
 	.string "The ledger is honest about what was\n"
 	.string "given. It is careful about why.$"
+
+ParcelFloodbasinRelief_Ledger_Text_1:
+# 61 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	.string "The last line is yours, in the aide's\n"
+	.string "hand. RANGER. BLANKET, ONE. CAUSE OF\l"
+	.string "NEED: FLOOD.\p"
+	.string "You signed nothing. It is there anyway.$"
+
+ParcelFloodbasinRelief_Ledger_Text_2:
+# 63 "data/maps/ParcelFloodbasinRelief/scripts.pory"
+	.string "The last line has been ruled for a name\n"
+	.string "and left empty. The aide ruled it the\l"
+	.string "day you came down the bank.\p"
+	.string "It is the only empty line in the book.$"

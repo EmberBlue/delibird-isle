@@ -165,14 +165,36 @@ ParcelCoastHearing_Carbon_3:
 ParcelCoastHearing_Tray::
 # 94 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Tray_1
-# 97 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Tray_Text_1, MSGBOX_SIGN
+# 108 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_6, MSGBOX_SIGN
 	return
 
 ParcelCoastHearing_Tray_1:
 # 95 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_0, MSGBOX_SIGN
+# 96 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALD_CH_MAHOGANY, ParcelCoastHearing_Tray_5
+# 99 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_2, MSGBOX_SIGN
+ParcelCoastHearing_Tray_4:
+# 101 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALD_CH_HOLLIS_NAMED, ParcelCoastHearing_Tray_9
+# 104 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_4, MSGBOX_SIGN
+ParcelCoastHearing_Tray_8:
+# 106 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_5, MSGBOX_SIGN
 	return
+
+ParcelCoastHearing_Tray_5:
+# 97 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_1, MSGBOX_SIGN
+	goto ParcelCoastHearing_Tray_4
+
+ParcelCoastHearing_Tray_9:
+# 102 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Tray_Text_3, MSGBOX_SIGN
+	goto ParcelCoastHearing_Tray_8
 
 
 ParcelCoastHearing_Clerk_Text_0:
@@ -330,17 +352,53 @@ ParcelCoastHearing_Tray_Text_0:
 	.string "thirty-one years. Entered in full. The\l"
 	.string "Commissioner asked whether the markers\l"
 	.string "were official. The Surveyor said they\l"
-	.string "were older than the office asking.\p"
+	.string "were older than the office asking.$"
+
+ParcelCoastHearing_Tray_Text_1:
+# 97 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "ITEM 10. Statement read on behalf of\n"
+	.string "Dr. Heron, in her absence, by the ranger.\l"
+	.string "Four sentences, and a fifth in the\l"
+	.string "ranger's own hand correcting the\l"
+	.string "Mahogany data as hers. Entered. The\l"
+	.string "room was silent for a time the clerk did\l"
+	.string "not record.$"
+
+ParcelCoastHearing_Tray_Text_2:
+# 99 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "ITEM 10. Statement read on behalf of\n"
 	.string "Dr. Heron, in her absence, by the ranger.\l"
 	.string "Four sentences. Entered. The room was\l"
 	.string "silent for a time the clerk did not\l"
 	.string "record.\p"
+	.string "A note by the clerk: the Johto\n"
+	.string "correction to follow from the\l"
+	.string "Foundation's counsel. It did, a week\l"
+	.string "later, in a lawyer's hand.$"
+
+ParcelCoastHearing_Tray_Text_3:
+# 102 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "ITEM 11. The Mereholt Foundation\n"
 	.string "recovery model, as tabled by the\l"
 	.string "Commissioner in the spring. Withdrawn\l"
 	.string "by the Foundation's officer before the\l"
-	.string "vote, without comment.\p"
+	.string "vote. Her name entered with it, at the\l"
+	.string "ranger's submission, as the signatory\l"
+	.string "of every condition. She did not object.$"
+
+ParcelCoastHearing_Tray_Text_4:
+# 104 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "ITEM 11. The Mereholt Foundation\n"
+	.string "recovery model, as tabled by the\l"
+	.string "Commissioner in the spring. Withdrawn\l"
+	.string "by the Foundation's officer before the\l"
+	.string "vote, without comment. The officer's\l"
+	.string "name does not appear in the record. She\l"
+	.string "looked at the ranger once, the clerk did\l"
+	.string "not write.$"
+
+ParcelCoastHearing_Tray_Text_5:
+# 106 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "DISPOSITION. Dredging consent:\n"
 	.string "suspended pending review. Permafrost\l"
 	.string "exploratory licence: deferred. The\l"
@@ -351,8 +409,8 @@ ParcelCoastHearing_Tray_Text_0:
 	.string "bottom edge: nine years for one\l"
 	.string "afternoon. Worth it.$"
 
-ParcelCoastHearing_Tray_Text_1:
-# 97 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Tray_Text_6:
+# 108 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "The clerk's tray. The order of business\n"
 	.string "for the next sitting, typed.\p"
 	.string "ITEM 1. Minutes. ITEM 2. Apologies. ITEM\n"

@@ -343,3 +343,14 @@ skeleton:
 - **Resolved 2026-11-07 — the peer.** Perrin (§04) exists: a cohort-mate who
   takes the Foundation path, battled six times, found at Hollis's desk in the
   coda. He never changes the ending; he shows the other door.
+- ✅ **The Hollis choice and the Mahogany statement (built 2026-11-10).**
+  At the confession Heron asks whether Hollis's name goes into the record
+  (`FLAG_SKALD_CH_HOLLIS_NAMED`); at the road Hale asks whether Wren files
+  the Mahogany correction in their own hand or lets the lawyers find it
+  (`FLAG_SKALD_CH_MAHOGANY`). Neither moves the landing (§02's single
+  ending holds): they change what the clerk's record says, what Hollis and
+  Cordelia say afterwards, and who pours the tea. Three smaller texture
+  choices sit beside them -- speaking at the Elvsund meeting (the pinned
+  minutes carry a seventh name), the Foundation blanket at Leirvik (the
+  relief ledger's last line), Hollis's tea (her last lines, and the
+  secretary's). The game offers no easy answer and says so.

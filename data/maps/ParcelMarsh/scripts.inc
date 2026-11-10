@@ -43,18 +43,18 @@ ParcelMarsh_Hale::
 	faceplayer
 # 42 "data/maps/ParcelMarsh/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelMarsh_Hale_2
-# 56 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Hale_Text_5, MSGBOX_DEFAULT
-# 57 "data/maps/ParcelMarsh/scripts.pory"
+# 65 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_10, MSGBOX_DEFAULT
+# 66 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_Hale_2:
 # 43 "data/maps/ParcelMarsh/scripts.pory"
 	goto_if_unset FLAG_SKALD_MARSH_CHOICE_DONE, ParcelMarsh_Hale_5
-# 52 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Hale_Text_4, MSGBOX_DEFAULT
-# 53 "data/maps/ParcelMarsh/scripts.pory"
+# 61 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_9, MSGBOX_DEFAULT
+# 62 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
@@ -64,680 +64,720 @@ ParcelMarsh_Hale_5:
 # 45 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Hale_Text_1, MSGBOX_DEFAULT
 # 46 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Hale_Text_2, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Hale_Text_2, MSGBOX_YESNO
 # 47 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Hale_Text_3, MSGBOX_DEFAULT
-# 48 "data/maps/ParcelMarsh/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelMarsh_Hale_8
+# 52 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_5, MSGBOX_DEFAULT
+# 53 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_6, MSGBOX_DEFAULT
+ParcelMarsh_Hale_7:
+# 55 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_7, MSGBOX_DEFAULT
+# 56 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_8, MSGBOX_DEFAULT
+# 57 "data/maps/ParcelMarsh/scripts.pory"
 	setflag FLAG_SKALD_MARSH_CHOICE_DONE
-# 49 "data/maps/ParcelMarsh/scripts.pory"
+# 58 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
+ParcelMarsh_Hale_8:
+# 48 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_3, MSGBOX_DEFAULT
+# 49 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Hale_Text_4, MSGBOX_DEFAULT
+# 50 "data/maps/ParcelMarsh/scripts.pory"
+	setflag FLAG_SKALD_CH_MAHOGANY
+	goto ParcelMarsh_Hale_7
+
 
 ParcelMarsh_DryChannel::
-# 63 "data/maps/ParcelMarsh/scripts.pory"
+# 72 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 64 "data/maps/ParcelMarsh/scripts.pory"
+# 73 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE
-# 65 "data/maps/ParcelMarsh/scripts.pory"
+# 74 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8004, 0
-# 66 "data/maps/ParcelMarsh/scripts.pory"
+# 75 "data/maps/ParcelMarsh/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 67 "data/maps/ParcelMarsh/scripts.pory"
+# 76 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelMarsh_DryChannel_2
-# 72 "data/maps/ParcelMarsh/scripts.pory"
+# 81 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_DryChannel_Text_1, MSGBOX_SIGN
-# 73 "data/maps/ParcelMarsh/scripts.pory"
+# 82 "data/maps/ParcelMarsh/scripts.pory"
 	special SkaldmereCertTaskMark
-# 74 "data/maps/ParcelMarsh/scripts.pory"
+# 83 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_DryChannel_2:
-# 68 "data/maps/ParcelMarsh/scripts.pory"
+# 77 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_DryChannel_Text_0, MSGBOX_SIGN
-# 69 "data/maps/ParcelMarsh/scripts.pory"
+# 78 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_DeadReeds::
-# 78 "data/maps/ParcelMarsh/scripts.pory"
+# 87 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 79 "data/maps/ParcelMarsh/scripts.pory"
+# 88 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE
-# 80 "data/maps/ParcelMarsh/scripts.pory"
+# 89 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8004, 1
-# 81 "data/maps/ParcelMarsh/scripts.pory"
+# 90 "data/maps/ParcelMarsh/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 82 "data/maps/ParcelMarsh/scripts.pory"
+# 91 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelMarsh_DeadReeds_2
-# 87 "data/maps/ParcelMarsh/scripts.pory"
+# 96 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_DeadReeds_Text_1, MSGBOX_SIGN
-# 88 "data/maps/ParcelMarsh/scripts.pory"
+# 97 "data/maps/ParcelMarsh/scripts.pory"
 	special SkaldmereCertTaskMark
-# 89 "data/maps/ParcelMarsh/scripts.pory"
+# 98 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_DeadReeds_2:
-# 83 "data/maps/ParcelMarsh/scripts.pory"
+# 92 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_DeadReeds_Text_0, MSGBOX_SIGN
-# 84 "data/maps/ParcelMarsh/scripts.pory"
+# 93 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_Edge::
-# 93 "data/maps/ParcelMarsh/scripts.pory"
+# 102 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 94 "data/maps/ParcelMarsh/scripts.pory"
+# 103 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE
-# 95 "data/maps/ParcelMarsh/scripts.pory"
+# 104 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8004, 2
-# 96 "data/maps/ParcelMarsh/scripts.pory"
+# 105 "data/maps/ParcelMarsh/scripts.pory"
 	specialvar VAR_RESULT, SkaldmereCertTaskGet
-# 97 "data/maps/ParcelMarsh/scripts.pory"
+# 106 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelMarsh_Edge_2
-# 102 "data/maps/ParcelMarsh/scripts.pory"
+# 111 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Edge_Text_1, MSGBOX_SIGN
-# 103 "data/maps/ParcelMarsh/scripts.pory"
+# 112 "data/maps/ParcelMarsh/scripts.pory"
 	special SkaldmereCertTaskMark
-# 104 "data/maps/ParcelMarsh/scripts.pory"
+# 113 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_Edge_2:
-# 98 "data/maps/ParcelMarsh/scripts.pory"
+# 107 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Edge_Text_0, MSGBOX_SIGN
-# 99 "data/maps/ParcelMarsh/scripts.pory"
+# 108 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_Poliwag::
-# 108 "data/maps/ParcelMarsh/scripts.pory"
+# 117 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 109 "data/maps/ParcelMarsh/scripts.pory"
+# 118 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE
-# 110 "data/maps/ParcelMarsh/scripts.pory"
+# 119 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8004, 3
-# 111 "data/maps/ParcelMarsh/scripts.pory"
+# 120 "data/maps/ParcelMarsh/scripts.pory"
 	special SkaldmereCertTaskMark
-# 112 "data/maps/ParcelMarsh/scripts.pory"
+# 121 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Poliwag_Text_0, MSGBOX_DEFAULT
-# 113 "data/maps/ParcelMarsh/scripts.pory"
+# 122 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Poliwag_Text_1, MSGBOX_DEFAULT
-# 114 "data/maps/ParcelMarsh/scripts.pory"
+# 123 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_PoliwagWatch::
-# 118 "data/maps/ParcelMarsh/scripts.pory"
+# 127 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 119 "data/maps/ParcelMarsh/scripts.pory"
+# 128 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_PoliwagWatch_Text_0, MSGBOX_DEFAULT
-# 120 "data/maps/ParcelMarsh/scripts.pory"
+# 129 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_Heron::
-# 126 "data/maps/ParcelMarsh/scripts.pory"
-	lock
-# 127 "data/maps/ParcelMarsh/scripts.pory"
-	faceplayer
-# 128 "data/maps/ParcelMarsh/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelMarsh_Heron_2
-# 133 "data/maps/ParcelMarsh/scripts.pory"
-	setvar VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE
-# 134 "data/maps/ParcelMarsh/scripts.pory"
-	setvar VAR_0x8004, 15
 # 135 "data/maps/ParcelMarsh/scripts.pory"
-	specialvar VAR_RESULT, SkaldmereCertTaskCount
+	lock
 # 136 "data/maps/ParcelMarsh/scripts.pory"
+	faceplayer
+# 137 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelMarsh_Heron_2
+# 142 "data/maps/ParcelMarsh/scripts.pory"
+	setvar VAR_0x8005, VAR_SKALDMERE_CH7_EVIDENCE
+# 143 "data/maps/ParcelMarsh/scripts.pory"
+	setvar VAR_0x8004, 15
+# 144 "data/maps/ParcelMarsh/scripts.pory"
+	specialvar VAR_RESULT, SkaldmereCertTaskCount
+# 145 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_lt ParcelMarsh_Heron_5
-# 149 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_5, MSGBOX_DEFAULT
-# 150 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_6, MSGBOX_DEFAULT
-# 151 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_7, MSGBOX_DEFAULT
-# 152 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_8, MSGBOX_DEFAULT
-# 153 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_9, MSGBOX_DEFAULT
-# 154 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_10, MSGBOX_DEFAULT
-# 155 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_11, MSGBOX_DEFAULT
-# 156 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_12, MSGBOX_DEFAULT
-# 157 "data/maps/ParcelMarsh/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_HERON, ParcelMarsh_Heron_Text_13
 # 158 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_14, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_5, MSGBOX_DEFAULT
 # 159 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_15, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_6, MSGBOX_DEFAULT
 # 160 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_16, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_7, MSGBOX_DEFAULT
 # 161 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_17, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_8, MSGBOX_DEFAULT
 # 162 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_18, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_9, MSGBOX_DEFAULT
 # 163 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_19, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_10, MSGBOX_DEFAULT
 # 164 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_20, MSGBOX_YESNO
+	msgbox ParcelMarsh_Heron_Text_11, MSGBOX_DEFAULT
 # 165 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_12, MSGBOX_DEFAULT
+# 166 "data/maps/ParcelMarsh/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_HERON, ParcelMarsh_Heron_Text_13
+# 167 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_14, MSGBOX_DEFAULT
+# 168 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_15, MSGBOX_DEFAULT
+# 169 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_16, MSGBOX_DEFAULT
+# 170 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_17, MSGBOX_DEFAULT
+# 171 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_18, MSGBOX_DEFAULT
+# 172 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_19, MSGBOX_DEFAULT
+# 173 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_20, MSGBOX_YESNO
+# 174 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_Heron_8
-# 170 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_22, MSGBOX_DEFAULT
-# 171 "data/maps/ParcelMarsh/scripts.pory"
-	closemessage
-# 172 "data/maps/ParcelMarsh/scripts.pory"
-	delay 30
-# 173 "data/maps/ParcelMarsh/scripts.pory"
-	bufferpartymonnick 0, 0
-# 174 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_23, MSGBOX_DEFAULT
-# 175 "data/maps/ParcelMarsh/scripts.pory"
-	specialvar VAR_RESULT, SkaldmereClassifyCorridor
-# 176 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_24, MSGBOX_DEFAULT
-# 177 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_25, MSGBOX_DEFAULT
-# 178 "data/maps/ParcelMarsh/scripts.pory"
-	closemessage
 # 179 "data/maps/ParcelMarsh/scripts.pory"
-	playse SE_PIN
+	msgbox ParcelMarsh_Heron_Text_22, MSGBOX_DEFAULT
 # 180 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_26, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_23, MSGBOX_DEFAULT
 # 181 "data/maps/ParcelMarsh/scripts.pory"
-	setflag FLAG_SKALDMERE_FINALE_DONE
+	msgbox ParcelMarsh_Heron_Text_24, MSGBOX_YESNO
 # 182 "data/maps/ParcelMarsh/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelMarsh_Heron_14
+# 187 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_27, MSGBOX_DEFAULT
+# 188 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_28, MSGBOX_DEFAULT
+ParcelMarsh_Heron_13:
+# 190 "data/maps/ParcelMarsh/scripts.pory"
+	closemessage
+# 191 "data/maps/ParcelMarsh/scripts.pory"
+	delay 30
+# 192 "data/maps/ParcelMarsh/scripts.pory"
+	bufferpartymonnick 0, 0
+# 193 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_29, MSGBOX_DEFAULT
+# 194 "data/maps/ParcelMarsh/scripts.pory"
+	specialvar VAR_RESULT, SkaldmereClassifyCorridor
+# 195 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_30, MSGBOX_DEFAULT
+# 196 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_31, MSGBOX_DEFAULT
+# 197 "data/maps/ParcelMarsh/scripts.pory"
+	closemessage
+# 198 "data/maps/ParcelMarsh/scripts.pory"
+	playse SE_PIN
+# 199 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_32, MSGBOX_DEFAULT
+# 200 "data/maps/ParcelMarsh/scripts.pory"
+	setflag FLAG_SKALDMERE_FINALE_DONE
+# 201 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_Heron_2:
-# 129 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_0, MSGBOX_DEFAULT
-# 130 "data/maps/ParcelMarsh/scripts.pory"
-	release
-	end
-
-ParcelMarsh_Heron_5:
-# 137 "data/maps/ParcelMarsh/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HERON_MET, ParcelMarsh_Heron_11
-# 142 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_2, MSGBOX_DEFAULT
-# 143 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_3, MSGBOX_DEFAULT
-# 144 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_4, MSGBOX_DEFAULT
-# 145 "data/maps/ParcelMarsh/scripts.pory"
-	setflag FLAG_SKALDMERE_HERON_MET
-# 146 "data/maps/ParcelMarsh/scripts.pory"
-	release
-	end
-
-ParcelMarsh_Heron_8:
-# 166 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_21, MSGBOX_DEFAULT
-# 167 "data/maps/ParcelMarsh/scripts.pory"
-	release
-	end
-
-ParcelMarsh_Heron_11:
 # 138 "data/maps/ParcelMarsh/scripts.pory"
-	msgbox ParcelMarsh_Heron_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelMarsh_Heron_Text_0, MSGBOX_DEFAULT
 # 139 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
+ParcelMarsh_Heron_5:
+# 146 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HERON_MET, ParcelMarsh_Heron_11
+# 151 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_2, MSGBOX_DEFAULT
+# 152 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_3, MSGBOX_DEFAULT
+# 153 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_4, MSGBOX_DEFAULT
+# 154 "data/maps/ParcelMarsh/scripts.pory"
+	setflag FLAG_SKALDMERE_HERON_MET
+# 155 "data/maps/ParcelMarsh/scripts.pory"
+	release
+	end
+
+ParcelMarsh_Heron_8:
+# 175 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_21, MSGBOX_DEFAULT
+# 176 "data/maps/ParcelMarsh/scripts.pory"
+	release
+	end
+
+ParcelMarsh_Heron_11:
+# 147 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_1, MSGBOX_DEFAULT
+# 148 "data/maps/ParcelMarsh/scripts.pory"
+	release
+	end
+
+ParcelMarsh_Heron_14:
+# 183 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_25, MSGBOX_DEFAULT
+# 184 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Heron_Text_26, MSGBOX_DEFAULT
+# 185 "data/maps/ParcelMarsh/scripts.pory"
+	setflag FLAG_SKALD_CH_HOLLIS_NAMED
+	goto ParcelMarsh_Heron_13
+
 
 ParcelMarsh_Item::
-# 187 "data/maps/ParcelMarsh/scripts.pory"
+# 206 "data/maps/ParcelMarsh/scripts.pory"
 	finditem ITEM_MAX_REVIVE
 	end
 
 
 ParcelMarsh_ItemFullRestore::
-# 188 "data/maps/ParcelMarsh/scripts.pory"
+# 207 "data/maps/ParcelMarsh/scripts.pory"
 	finditem ITEM_FULL_RESTORE
 	end
 
 
 ParcelMarsh_Leave::
-# 191 "data/maps/ParcelMarsh/scripts.pory"
+# 210 "data/maps/ParcelMarsh/scripts.pory"
 	lockall
-# 192 "data/maps/ParcelMarsh/scripts.pory"
+# 211 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Leave_Text_0, MSGBOX_DEFAULT
-# 193 "data/maps/ParcelMarsh/scripts.pory"
+# 212 "data/maps/ParcelMarsh/scripts.pory"
 	closemessage
-# 194 "data/maps/ParcelMarsh/scripts.pory"
+# 213 "data/maps/ParcelMarsh/scripts.pory"
 	warp MAP_PARCEL_FERNWICK, 11, 16
-# 195 "data/maps/ParcelMarsh/scripts.pory"
+# 214 "data/maps/ParcelMarsh/scripts.pory"
 	waitstate
 	end
 
 
 ParcelMarsh_GateAune::
-# 200 "data/maps/ParcelMarsh/scripts.pory"
+# 219 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_GATE_MARSH, ParcelMarsh_GateAune_Text_0, ParcelMarsh_GateAune_Text_1, ParcelMarsh_GateAune_Defeated
-# 204 "data/maps/ParcelMarsh/scripts.pory"
+# 223 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 205 "data/maps/ParcelMarsh/scripts.pory"
+# 224 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 206 "data/maps/ParcelMarsh/scripts.pory"
+# 225 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_GateAune_Text_2, MSGBOX_DEFAULT
-# 207 "data/maps/ParcelMarsh/scripts.pory"
+# 226 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_GateAune_Defeated::
-# 211 "data/maps/ParcelMarsh/scripts.pory"
+# 230 "data/maps/ParcelMarsh/scripts.pory"
 	setflag FLAG_SKALDMERE_GATE_MARSH
-# 212 "data/maps/ParcelMarsh/scripts.pory"
+# 231 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_GateAune_Defeated_Text_0, MSGBOX_DEFAULT
-# 213 "data/maps/ParcelMarsh/scripts.pory"
+# 232 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecA::
-# 217 "data/maps/ParcelMarsh/scripts.pory"
+# 236 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_MARSH_SEC_A, ParcelMarsh_SecA_Text_0, ParcelMarsh_SecA_Text_1, ParcelMarsh_SecA_FirstWin
-# 221 "data/maps/ParcelMarsh/scripts.pory"
+# 240 "data/maps/ParcelMarsh/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 222 "data/maps/ParcelMarsh/scripts.pory"
+# 241 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelMarsh_SecA_3
 ParcelMarsh_SecA_1:
-# 225 "data/maps/ParcelMarsh/scripts.pory"
+# 244 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelMarsh_SecA_8
 ParcelMarsh_SecA_6:
-# 228 "data/maps/ParcelMarsh/scripts.pory"
+# 247 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelMarsh_SecA_13
 ParcelMarsh_SecA_11:
-# 231 "data/maps/ParcelMarsh/scripts.pory"
+# 250 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelMarsh_SecA_18
 ParcelMarsh_SecA_16:
-# 234 "data/maps/ParcelMarsh/scripts.pory"
+# 253 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelMarsh_SecA_2:
-# 223 "data/maps/ParcelMarsh/scripts.pory"
+# 242 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecA_R2
 	goto ParcelMarsh_SecA_1
 
 ParcelMarsh_SecA_3:
-# 222 "data/maps/ParcelMarsh/scripts.pory"
+# 241 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_A_R2
 	goto_if 0, ParcelMarsh_SecA_2
 	goto ParcelMarsh_SecA_1
 
 ParcelMarsh_SecA_7:
-# 226 "data/maps/ParcelMarsh/scripts.pory"
+# 245 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecA_R3
 	goto ParcelMarsh_SecA_6
 
 ParcelMarsh_SecA_8:
-# 225 "data/maps/ParcelMarsh/scripts.pory"
+# 244 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_A_R3
 	goto_if 0, ParcelMarsh_SecA_7
 	goto ParcelMarsh_SecA_6
 
 ParcelMarsh_SecA_12:
-# 229 "data/maps/ParcelMarsh/scripts.pory"
+# 248 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecA_R4
 	goto ParcelMarsh_SecA_11
 
 ParcelMarsh_SecA_13:
-# 228 "data/maps/ParcelMarsh/scripts.pory"
+# 247 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_A_R4
 	goto_if 0, ParcelMarsh_SecA_12
 	goto ParcelMarsh_SecA_11
 
 ParcelMarsh_SecA_17:
-# 232 "data/maps/ParcelMarsh/scripts.pory"
+# 251 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecA_R5
 	goto ParcelMarsh_SecA_16
 
 ParcelMarsh_SecA_18:
-# 231 "data/maps/ParcelMarsh/scripts.pory"
+# 250 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_A_R5
 	goto_if 0, ParcelMarsh_SecA_17
 	goto ParcelMarsh_SecA_16
 
 
 ParcelMarsh_SecA_FirstWin::
-# 238 "data/maps/ParcelMarsh/scripts.pory"
+# 257 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_Text_2, MSGBOX_DEFAULT
-# 239 "data/maps/ParcelMarsh/scripts.pory"
+# 258 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecA_R2::
-# 243 "data/maps/ParcelMarsh/scripts.pory"
+# 262 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 244 "data/maps/ParcelMarsh/scripts.pory"
+# 263 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 245 "data/maps/ParcelMarsh/scripts.pory"
+# 264 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R2_Text_0, MSGBOX_YESNO
-# 246 "data/maps/ParcelMarsh/scripts.pory"
+# 265 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecA_R2_2
-# 251 "data/maps/ParcelMarsh/scripts.pory"
+# 270 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_A_R2, ParcelMarsh_SecA_R2_Text_2
-# 252 "data/maps/ParcelMarsh/scripts.pory"
+# 271 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R2_Text_3, MSGBOX_DEFAULT
-# 253 "data/maps/ParcelMarsh/scripts.pory"
+# 272 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecA_R2_2:
-# 247 "data/maps/ParcelMarsh/scripts.pory"
+# 266 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R2_Text_1, MSGBOX_DEFAULT
-# 248 "data/maps/ParcelMarsh/scripts.pory"
+# 267 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecA_R3::
-# 257 "data/maps/ParcelMarsh/scripts.pory"
+# 276 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 258 "data/maps/ParcelMarsh/scripts.pory"
+# 277 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 259 "data/maps/ParcelMarsh/scripts.pory"
+# 278 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R3_Text_0, MSGBOX_YESNO
-# 260 "data/maps/ParcelMarsh/scripts.pory"
+# 279 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecA_R3_2
-# 265 "data/maps/ParcelMarsh/scripts.pory"
+# 284 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_A_R3, ParcelMarsh_SecA_R3_Text_1
-# 266 "data/maps/ParcelMarsh/scripts.pory"
+# 285 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R3_Text_2, MSGBOX_DEFAULT
-# 267 "data/maps/ParcelMarsh/scripts.pory"
+# 286 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecA_R3_2:
-# 261 "data/maps/ParcelMarsh/scripts.pory"
+# 280 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R2_Text_1, MSGBOX_DEFAULT
-# 262 "data/maps/ParcelMarsh/scripts.pory"
+# 281 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecA_R4::
-# 271 "data/maps/ParcelMarsh/scripts.pory"
+# 290 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 272 "data/maps/ParcelMarsh/scripts.pory"
+# 291 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 273 "data/maps/ParcelMarsh/scripts.pory"
+# 292 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R4_Text_0, MSGBOX_YESNO
-# 274 "data/maps/ParcelMarsh/scripts.pory"
+# 293 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecA_R4_2
-# 279 "data/maps/ParcelMarsh/scripts.pory"
+# 298 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_A_R4, ParcelMarsh_SecA_R4_Text_1
-# 280 "data/maps/ParcelMarsh/scripts.pory"
+# 299 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R4_Text_2, MSGBOX_DEFAULT
-# 281 "data/maps/ParcelMarsh/scripts.pory"
+# 300 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecA_R4_2:
-# 275 "data/maps/ParcelMarsh/scripts.pory"
+# 294 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R2_Text_1, MSGBOX_DEFAULT
-# 276 "data/maps/ParcelMarsh/scripts.pory"
+# 295 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecA_R5::
-# 285 "data/maps/ParcelMarsh/scripts.pory"
+# 304 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 286 "data/maps/ParcelMarsh/scripts.pory"
+# 305 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 287 "data/maps/ParcelMarsh/scripts.pory"
+# 306 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R5_Text_0, MSGBOX_YESNO
-# 288 "data/maps/ParcelMarsh/scripts.pory"
+# 307 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecA_R5_2
-# 293 "data/maps/ParcelMarsh/scripts.pory"
+# 312 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_A_R5, ParcelMarsh_SecA_R5_Text_1
-# 294 "data/maps/ParcelMarsh/scripts.pory"
+# 313 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R5_Text_2, MSGBOX_DEFAULT
-# 295 "data/maps/ParcelMarsh/scripts.pory"
+# 314 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecA_R5_2:
-# 289 "data/maps/ParcelMarsh/scripts.pory"
+# 308 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecA_R2_Text_1, MSGBOX_DEFAULT
-# 290 "data/maps/ParcelMarsh/scripts.pory"
+# 309 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecB::
-# 299 "data/maps/ParcelMarsh/scripts.pory"
+# 318 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_MARSH_SEC_B, ParcelMarsh_SecB_Text_0, ParcelMarsh_SecB_Text_1, ParcelMarsh_SecB_FirstWin
-# 303 "data/maps/ParcelMarsh/scripts.pory"
+# 322 "data/maps/ParcelMarsh/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 304 "data/maps/ParcelMarsh/scripts.pory"
+# 323 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelMarsh_SecB_3
 ParcelMarsh_SecB_1:
-# 307 "data/maps/ParcelMarsh/scripts.pory"
+# 326 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelMarsh_SecB_8
 ParcelMarsh_SecB_6:
-# 310 "data/maps/ParcelMarsh/scripts.pory"
+# 329 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelMarsh_SecB_13
 ParcelMarsh_SecB_11:
-# 313 "data/maps/ParcelMarsh/scripts.pory"
+# 332 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelMarsh_SecB_18
 ParcelMarsh_SecB_16:
-# 316 "data/maps/ParcelMarsh/scripts.pory"
+# 335 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelMarsh_SecB_2:
-# 305 "data/maps/ParcelMarsh/scripts.pory"
+# 324 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecB_R2
 	goto ParcelMarsh_SecB_1
 
 ParcelMarsh_SecB_3:
-# 304 "data/maps/ParcelMarsh/scripts.pory"
+# 323 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_B_R2
 	goto_if 0, ParcelMarsh_SecB_2
 	goto ParcelMarsh_SecB_1
 
 ParcelMarsh_SecB_7:
-# 308 "data/maps/ParcelMarsh/scripts.pory"
+# 327 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecB_R3
 	goto ParcelMarsh_SecB_6
 
 ParcelMarsh_SecB_8:
-# 307 "data/maps/ParcelMarsh/scripts.pory"
+# 326 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_B_R3
 	goto_if 0, ParcelMarsh_SecB_7
 	goto ParcelMarsh_SecB_6
 
 ParcelMarsh_SecB_12:
-# 311 "data/maps/ParcelMarsh/scripts.pory"
+# 330 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecB_R4
 	goto ParcelMarsh_SecB_11
 
 ParcelMarsh_SecB_13:
-# 310 "data/maps/ParcelMarsh/scripts.pory"
+# 329 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_B_R4
 	goto_if 0, ParcelMarsh_SecB_12
 	goto ParcelMarsh_SecB_11
 
 ParcelMarsh_SecB_17:
-# 314 "data/maps/ParcelMarsh/scripts.pory"
+# 333 "data/maps/ParcelMarsh/scripts.pory"
 	goto ParcelMarsh_SecB_R5
 	goto ParcelMarsh_SecB_16
 
 ParcelMarsh_SecB_18:
-# 313 "data/maps/ParcelMarsh/scripts.pory"
+# 332 "data/maps/ParcelMarsh/scripts.pory"
 	checktrainerflag TRAINER_SKALD_MARSH_SEC_B_R5
 	goto_if 0, ParcelMarsh_SecB_17
 	goto ParcelMarsh_SecB_16
 
 
 ParcelMarsh_SecB_FirstWin::
-# 320 "data/maps/ParcelMarsh/scripts.pory"
+# 339 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_Text_2, MSGBOX_DEFAULT
-# 321 "data/maps/ParcelMarsh/scripts.pory"
+# 340 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecB_R2::
-# 325 "data/maps/ParcelMarsh/scripts.pory"
+# 344 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 326 "data/maps/ParcelMarsh/scripts.pory"
+# 345 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 327 "data/maps/ParcelMarsh/scripts.pory"
+# 346 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R2_Text_0, MSGBOX_YESNO
-# 328 "data/maps/ParcelMarsh/scripts.pory"
+# 347 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecB_R2_2
-# 333 "data/maps/ParcelMarsh/scripts.pory"
+# 352 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_B_R2, ParcelMarsh_SecB_R2_Text_2
-# 334 "data/maps/ParcelMarsh/scripts.pory"
+# 353 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R2_Text_3, MSGBOX_DEFAULT
-# 335 "data/maps/ParcelMarsh/scripts.pory"
+# 354 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecB_R2_2:
-# 329 "data/maps/ParcelMarsh/scripts.pory"
+# 348 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R2_Text_1, MSGBOX_DEFAULT
-# 330 "data/maps/ParcelMarsh/scripts.pory"
+# 349 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecB_R3::
-# 339 "data/maps/ParcelMarsh/scripts.pory"
+# 358 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 340 "data/maps/ParcelMarsh/scripts.pory"
+# 359 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 341 "data/maps/ParcelMarsh/scripts.pory"
+# 360 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R3_Text_0, MSGBOX_YESNO
-# 342 "data/maps/ParcelMarsh/scripts.pory"
+# 361 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecB_R3_2
-# 347 "data/maps/ParcelMarsh/scripts.pory"
+# 366 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_B_R3, ParcelMarsh_SecB_R3_Text_1
-# 348 "data/maps/ParcelMarsh/scripts.pory"
+# 367 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R3_Text_2, MSGBOX_DEFAULT
-# 349 "data/maps/ParcelMarsh/scripts.pory"
+# 368 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecB_R3_2:
-# 343 "data/maps/ParcelMarsh/scripts.pory"
+# 362 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R2_Text_1, MSGBOX_DEFAULT
-# 344 "data/maps/ParcelMarsh/scripts.pory"
+# 363 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecB_R4::
-# 353 "data/maps/ParcelMarsh/scripts.pory"
+# 372 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 354 "data/maps/ParcelMarsh/scripts.pory"
+# 373 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 355 "data/maps/ParcelMarsh/scripts.pory"
+# 374 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R4_Text_0, MSGBOX_YESNO
-# 356 "data/maps/ParcelMarsh/scripts.pory"
+# 375 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecB_R4_2
-# 361 "data/maps/ParcelMarsh/scripts.pory"
+# 380 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_B_R4, ParcelMarsh_SecB_R3_Text_1
-# 362 "data/maps/ParcelMarsh/scripts.pory"
+# 381 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R4_Text_1, MSGBOX_DEFAULT
-# 363 "data/maps/ParcelMarsh/scripts.pory"
+# 382 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecB_R4_2:
-# 357 "data/maps/ParcelMarsh/scripts.pory"
+# 376 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R2_Text_1, MSGBOX_DEFAULT
-# 358 "data/maps/ParcelMarsh/scripts.pory"
+# 377 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_SecB_R5::
-# 367 "data/maps/ParcelMarsh/scripts.pory"
+# 386 "data/maps/ParcelMarsh/scripts.pory"
 	lock
-# 368 "data/maps/ParcelMarsh/scripts.pory"
+# 387 "data/maps/ParcelMarsh/scripts.pory"
 	faceplayer
-# 369 "data/maps/ParcelMarsh/scripts.pory"
+# 388 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R5_Text_0, MSGBOX_YESNO
-# 370 "data/maps/ParcelMarsh/scripts.pory"
+# 389 "data/maps/ParcelMarsh/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelMarsh_SecB_R5_2
-# 375 "data/maps/ParcelMarsh/scripts.pory"
+# 394 "data/maps/ParcelMarsh/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_MARSH_SEC_B_R5, ParcelMarsh_SecB_R5_Text_1
-# 376 "data/maps/ParcelMarsh/scripts.pory"
+# 395 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R5_Text_2, MSGBOX_DEFAULT
-# 377 "data/maps/ParcelMarsh/scripts.pory"
+# 396 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 ParcelMarsh_SecB_R5_2:
-# 371 "data/maps/ParcelMarsh/scripts.pory"
+# 390 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SecB_R2_Text_1, MSGBOX_DEFAULT
-# 372 "data/maps/ParcelMarsh/scripts.pory"
+# 391 "data/maps/ParcelMarsh/scripts.pory"
 	release
 	end
 
 
 ParcelMarsh_Epilogue::
-# 384 "data/maps/ParcelMarsh/scripts.pory"
+# 403 "data/maps/ParcelMarsh/scripts.pory"
 	lockall
-# 385 "data/maps/ParcelMarsh/scripts.pory"
+# 404 "data/maps/ParcelMarsh/scripts.pory"
 	delay 20
-# 386 "data/maps/ParcelMarsh/scripts.pory"
+# 405 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_Epilogue_Text_0, MSGBOX_DEFAULT
-# 387 "data/maps/ParcelMarsh/scripts.pory"
+# 406 "data/maps/ParcelMarsh/scripts.pory"
 	closemessage
-# 388 "data/maps/ParcelMarsh/scripts.pory"
+# 407 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_SKALD_EPILOGUE, 7
-# 389 "data/maps/ParcelMarsh/scripts.pory"
+# 408 "data/maps/ParcelMarsh/scripts.pory"
 	warp MAP_PARCEL_COAST, 30, 53
-# 390 "data/maps/ParcelMarsh/scripts.pory"
+# 409 "data/maps/ParcelMarsh/scripts.pory"
 	waitstate
 	end
 
 
 ParcelMarsh_HeronCount::
-# 394 "data/maps/ParcelMarsh/scripts.pory"
+# 413 "data/maps/ParcelMarsh/scripts.pory"
 	goto_if_unset FLAG_SKALDMERE_EPILOGUE_DONE, ParcelMarsh_HeronCount_2
-# 397 "data/maps/ParcelMarsh/scripts.pory"
+# 416 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_HeronCount_Text_0, MSGBOX_SIGN
 	end
 
@@ -746,13 +786,13 @@ ParcelMarsh_HeronCount_2:
 
 
 ParcelMarsh_SurveyStake::
-# 403 "data/maps/ParcelMarsh/scripts.pory"
+# 422 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox ParcelMarsh_SurveyStake_Text_0, MSGBOX_SIGN
-# 404 "data/maps/ParcelMarsh/scripts.pory"
+# 423 "data/maps/ParcelMarsh/scripts.pory"
 	setvar VAR_0x8004, 6
-# 405 "data/maps/ParcelMarsh/scripts.pory"
+# 424 "data/maps/ParcelMarsh/scripts.pory"
 	special SkaldSurveyStake
-# 406 "data/maps/ParcelMarsh/scripts.pory"
+# 425 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
 	end
 
@@ -790,6 +830,39 @@ ParcelMarsh_Hale_Text_1:
 
 ParcelMarsh_Hale_Text_2:
 # 46 "data/maps/ParcelMarsh/scripts.pory"
+	.string "HALE: Her Johto numbers are in there\n"
+	.string "too. The MAHOGANY marsh loses its\l"
+	.string "listing the day they're corrected.\p"
+	.string "You can file the correction yourself, in\n"
+	.string "your own hand, or file the survey and\l"
+	.string "let the lawyers find the rest. They'll\l"
+	.string "find it. It's a question of whose hand.\p"
+	.string "Yours?$"
+
+ParcelMarsh_Hale_Text_3:
+# 48 "data/maps/ParcelMarsh/scripts.pory"
+	.string "{PLAYER}: All of it. In my hand.$"
+
+ParcelMarsh_Hale_Text_4:
+# 49 "data/maps/ParcelMarsh/scripts.pory"
+	.string "HALE: Then that's yours to carry too.\n"
+	.string "Good. It should be someone who knows\l"
+	.string "what it costs.$"
+
+ParcelMarsh_Hale_Text_5:
+# 52 "data/maps/ParcelMarsh/scripts.pory"
+	.string "{PLAYER}: The survey. The rest they'll\n"
+	.string "find.$"
+
+ParcelMarsh_Hale_Text_6:
+# 53 "data/maps/ParcelMarsh/scripts.pory"
+	.string "HALE: They will. The frogs pay either\n"
+	.string "way; you chose who says so. That's not\l"
+	.string "nothing. Don't let anyone tell you it\l"
+	.string "was.$"
+
+ParcelMarsh_Hale_Text_7:
+# 55 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: That's the only done there is.\p"
 	.string "They'll bury it, some of them. And some\n"
 	.string "of them will read it. And a few of those\l"
@@ -799,8 +872,8 @@ ParcelMarsh_Hale_Text_2:
 	.string "That's the work. Not the winning. The\n"
 	.string "witnessing, and the writing it down.$"
 
-ParcelMarsh_Hale_Text_3:
-# 47 "data/maps/ParcelMarsh/scripts.pory"
+ParcelMarsh_Hale_Text_8:
+# 56 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: Come on. Station's a long walk and\n"
 	.string "I'm not as young as the road thinks I\l"
 	.string "am.\p"
@@ -808,23 +881,23 @@ ParcelMarsh_Hale_Text_3:
 	.string "want to see the author. Let them.\l"
 	.string "You've earned watching their faces.$"
 
-ParcelMarsh_Hale_Text_4:
-# 52 "data/maps/ParcelMarsh/scripts.pory"
+ParcelMarsh_Hale_Text_9:
+# 61 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: The record exists. Honest, in your\n"
 	.string "hand. It's the only kind that ever\l"
 	.string "changed anything.$"
 
-ParcelMarsh_Hale_Text_5:
-# 56 "data/maps/ParcelMarsh/scripts.pory"
+ParcelMarsh_Hale_Text_10:
+# 65 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: I'll be here. Past the water it's\n"
 	.string "yours.$"
 
 ParcelMarsh_DryChannel_Text_0:
-# 68 "data/maps/ParcelMarsh/scripts.pory"
+# 77 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The drying channel. In the notebook.$"
 
 ParcelMarsh_DryChannel_Text_1:
-# 72 "data/maps/ParcelMarsh/scripts.pory"
+# 81 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The channel that feeds the marsh from\n"
 	.string "the north runs over cracked grey mud at\l"
 	.string "its edges. It should run cold and full to\l"
@@ -835,11 +908,11 @@ ParcelMarsh_DryChannel_Text_1:
 	.string "journey has written down. Written down.$"
 
 ParcelMarsh_DeadReeds_Text_0:
-# 83 "data/maps/ParcelMarsh/scripts.pory"
+# 92 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The dead reeds. In the notebook.$"
 
 ParcelMarsh_DeadReeds_Text_1:
-# 87 "data/maps/ParcelMarsh/scripts.pory"
+# 96 "data/maps/ParcelMarsh/scripts.pory"
 	.string "A band of fine sedge gone straw-pale\n"
 	.string "and brittle: the reeds that need their\l"
 	.string "feet wet the year round. They're the\l"
@@ -848,11 +921,11 @@ ParcelMarsh_DeadReeds_Text_1:
 	.string "only confirm it. Written down.$"
 
 ParcelMarsh_Edge_Text_0:
-# 98 "data/maps/ParcelMarsh/scripts.pory"
+# 107 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The graded edge. In the notebook.$"
 
 ParcelMarsh_Edge_Text_1:
-# 102 "data/maps/ParcelMarsh/scripts.pory"
+# 111 "data/maps/ParcelMarsh/scripts.pory"
 	.string "On the east side the wild stops in a\n"
 	.string "straight line. Graded ground, a survey\l"
 	.string "flag, the start of a road to nothing\l"
@@ -863,7 +936,7 @@ ParcelMarsh_Edge_Text_1:
 	.string "Written down.$"
 
 ParcelMarsh_Poliwag_Text_0:
-# 112 "data/maps/ParcelMarsh/scripts.pory"
+# 121 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The POLIWAG press together where the\n"
 	.string "stream still runs, fewer than the bank\l"
 	.string "was worn for. They flinch, and hold their\l"
@@ -871,7 +944,7 @@ ParcelMarsh_Poliwag_Text_0:
 	.string "behind them to take.$"
 
 ParcelMarsh_Poliwag_Text_1:
-# 113 "data/maps/ParcelMarsh/scripts.pory"
+# 122 "data/maps/ParcelMarsh/scripts.pory"
 	.string "On the bridge, the first morning, you\n"
 	.string "thought something was chasing them\l"
 	.string "upstream. Nothing was. The water in\l"
@@ -880,18 +953,18 @@ ParcelMarsh_Poliwag_Text_1:
 	.string "yours. Written down.$"
 
 ParcelMarsh_PoliwagWatch_Text_0:
-# 119 "data/maps/ParcelMarsh/scripts.pory"
+# 128 "data/maps/ParcelMarsh/scripts.pory"
 	.string "POLIWAG: …$"
 
 ParcelMarsh_Heron_Text_0:
-# 129 "data/maps/ParcelMarsh/scripts.pory"
+# 138 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Forty-one this morning.\n"
 	.string "Thirty-nine yesterday. Don't read\l"
 	.string "anything into two. I never let you read\l"
 	.string "anything into two.$"
 
 ParcelMarsh_Heron_Text_1:
-# 138 "data/maps/ParcelMarsh/scripts.pory"
+# 147 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Not yet. The drying channel. The\n"
 	.string "dead reeds. The edge they've cut. And\l"
 	.string "them, the frogs, last of all.\p"
@@ -899,17 +972,17 @@ ParcelMarsh_Heron_Text_1:
 	.string "about the part of it that's me.$"
 
 ParcelMarsh_Heron_Text_2:
-# 142 "data/maps/ParcelMarsh/scripts.pory"
+# 151 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: You found me. Of course you did.\n"
 	.string "I taught you how to find the things\l"
 	.string "that don't want finding.$"
 
 ParcelMarsh_Heron_Text_3:
-# 143 "data/maps/ParcelMarsh/scripts.pory"
+# 152 "data/maps/ParcelMarsh/scripts.pory"
 	.string "{PLAYER}: …DR. HERON.$"
 
 ParcelMarsh_Heron_Text_4:
-# 144 "data/maps/ParcelMarsh/scripts.pory"
+# 153 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Don't. Not yet.\p"
 	.string "You came to read a place, not a person.\n"
 	.string "So read the place first, all of it, the\l"
@@ -918,7 +991,7 @@ ParcelMarsh_Heron_Text_4:
 	.string "that.$"
 
 ParcelMarsh_Heron_Text_5:
-# 149 "data/maps/ParcelMarsh/scripts.pory"
+# 158 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: COLLAPSING. You don't have to\n"
 	.string "say it; I can see you've already written\l"
 	.string "it. The keystone's going. The web's\l"
@@ -927,12 +1000,12 @@ ParcelMarsh_Heron_Text_5:
 	.string "on. I built half my name on the number.$"
 
 ParcelMarsh_Heron_Text_6:
-# 150 "data/maps/ParcelMarsh/scripts.pory"
+# 159 "data/maps/ParcelMarsh/scripts.pory"
 	.string "{PLAYER}: The recovery model on the\n"
 	.string "coast. The curves. They're yours.$"
 
 ParcelMarsh_Heron_Text_7:
-# 151 "data/maps/ParcelMarsh/scripts.pory"
+# 160 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: They're mine.\p"
 	.string "Forty years ago. A marsh like this one,\n"
 	.string "north of MAHOGANY. The POLIWAG were\l"
@@ -942,7 +1015,7 @@ ParcelMarsh_Heron_Text_7:
 	.string "recovery that hadn't happened yet.$"
 
 ParcelMarsh_Heron_Text_8:
-# 152 "data/maps/ParcelMarsh/scripts.pory"
+# 161 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: It worked. The preserve was\n"
 	.string "protected. The frogs held on, barely,\l"
 	.string "but they held. And for thirty years I\l"
@@ -951,7 +1024,7 @@ ParcelMarsh_Heron_Text_8:
 	.string "truth.$"
 
 ParcelMarsh_Heron_Text_9:
-# 153 "data/maps/ParcelMarsh/scripts.pory"
+# 162 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Then the concern read my\n"
 	.string "beautiful lie and saw the shape of a\l"
 	.string "key. If one marsh bounces back, they all\l"
@@ -961,13 +1034,13 @@ ParcelMarsh_Heron_Text_9:
 	.string "For everything.$"
 
 ParcelMarsh_Heron_Text_10:
-# 154 "data/maps/ParcelMarsh/scripts.pory"
+# 163 "data/maps/ParcelMarsh/scripts.pory"
 	.string "{PLAYER}: You could have said.\n"
 	.string "Somewhere, sometime, you could have\l"
 	.string "said…$"
 
 ParcelMarsh_Heron_Text_11:
-# 155 "data/maps/ParcelMarsh/scripts.pory"
+# 164 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Said what, to whom, on whose\n"
 	.string "coin? The same hand that funds the lab\l"
 	.string "holds the lie. The day I tell the truth,\l"
@@ -980,20 +1053,20 @@ ParcelMarsh_Heron_Text_11:
 	.string "not moving.$"
 
 ParcelMarsh_Heron_Text_12:
-# 156 "data/maps/ParcelMarsh/scripts.pory"
+# 165 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: You came to read me too. Then\n"
 	.string "read me all the way. Patient, now. Wait\l"
 	.string "for the thing to show itself. The way I\l"
 	.string "taught you.$"
 
 ParcelMarsh_Heron_Text_13:
-# 157 "data/maps/ParcelMarsh/scripts.pory"
+# 166 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: …There. All of me, in the open.\n"
 	.string "The good years and the bought ones\l"
 	.string "both.$"
 
 ParcelMarsh_Heron_Text_14:
-# 158 "data/maps/ParcelMarsh/scripts.pory"
+# 167 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: I can't give you the rest. Some\n"
 	.string "of it I can't say aloud even now. But\l"
 	.string "it's in the notebook. The margins. You\l"
@@ -1002,7 +1075,7 @@ ParcelMarsh_Heron_Text_14:
 	.string "whole point of sending it ahead.$"
 
 ParcelMarsh_Heron_Text_15:
-# 159 "data/maps/ParcelMarsh/scripts.pory"
+# 168 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: You wrote to me the winter he\n"
 	.string "stopped painting. Your SMEARGLE.\l"
 	.string "Eleven pages, and not one of them asked\l"
@@ -1013,17 +1086,17 @@ ParcelMarsh_Heron_Text_15:
 	.string "been grown.$"
 
 ParcelMarsh_Heron_Text_16:
-# 160 "data/maps/ParcelMarsh/scripts.pory"
+# 169 "data/maps/ParcelMarsh/scripts.pory"
 	.string "{PLAYER}: It was the only letter that\n"
 	.string "didn't tell me it would be all right.$"
 
 ParcelMarsh_Heron_Text_17:
-# 161 "data/maps/ParcelMarsh/scripts.pory"
+# 170 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: No. I couldn't manage that one.\n"
 	.string "Not even then.$"
 
 ParcelMarsh_Heron_Text_18:
-# 162 "data/maps/ParcelMarsh/scripts.pory"
+# 171 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: I came here to do the one honest\n"
 	.string "thing I had left. Count them. Truly, this\l"
 	.string "time. Write down how many, and the day\l"
@@ -1032,7 +1105,7 @@ ParcelMarsh_Heron_Text_18:
 	.string "your breath on it.$"
 
 ParcelMarsh_Heron_Text_19:
-# 163 "data/maps/ParcelMarsh/scripts.pory"
+# 172 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: So finish it. Take the record,\n"
 	.string "mine, and ILEX's long cloth, and yours,\l"
 	.string "and put it somewhere it can't be unsaid.\p"
@@ -1044,24 +1117,66 @@ ParcelMarsh_Heron_Text_19:
 	.string "price.$"
 
 ParcelMarsh_Heron_Text_20:
-# 164 "data/maps/ParcelMarsh/scripts.pory"
+# 173 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Honesty isn't free. Pay for it\n"
 	.string "anyway, and keep the receipt.\p"
 	.string "Well? Will you file it true?$"
 
 ParcelMarsh_Heron_Text_21:
-# 166 "data/maps/ParcelMarsh/scripts.pory"
+# 175 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Then sit with it until you can.\n"
 	.string "I'm not going anywhere. Neither, for a\l"
 	.string "while yet, are they.$"
 
 ParcelMarsh_Heron_Text_22:
-# 170 "data/maps/ParcelMarsh/scripts.pory"
+# 179 "data/maps/ParcelMarsh/scripts.pory"
 	.string "{PLAYER}: It's true. That's all it has\n"
 	.string "to be.$"
 
 ParcelMarsh_Heron_Text_23:
-# 174 "data/maps/ParcelMarsh/scripts.pory"
+# 180 "data/maps/ParcelMarsh/scripts.pory"
+	.string "HERON: Then one more thing, and then\n"
+	.string "the frogs.\p"
+	.string "HOLLIS. Her name is on every renewal\n"
+	.string "and every condition. She was my\l"
+	.string "student. She is the one they'll put in\l"
+	.string "the chair after me, and she knows it.\p"
+	.string "Put her name in it and she goes down\n"
+	.string "with me. Leave it out and she stays in\l"
+	.string "the chair they built for her. Neither\l"
+	.string "one is mercy. Which?$"
+
+ParcelMarsh_Heron_Text_24:
+# 181 "data/maps/ParcelMarsh/scripts.pory"
+	.string "Her name in the record?$"
+
+ParcelMarsh_Heron_Text_25:
+# 183 "data/maps/ParcelMarsh/scripts.pory"
+	.string "{PLAYER}: It's hers. It goes in.$"
+
+ParcelMarsh_Heron_Text_26:
+# 184 "data/maps/ParcelMarsh/scripts.pory"
+	.string "HERON: Yes. I'd have done the same,\n"
+	.string "once. Before I learned to leave names\l"
+	.string "out.\p"
+	.string "Don't learn it. It took me thirty years\n"
+	.string "and it was the wrong lesson.$"
+
+ParcelMarsh_Heron_Text_27:
+# 187 "data/maps/ParcelMarsh/scripts.pory"
+	.string "{PLAYER}: She's in the chair they\n"
+	.string "built. The record can say that without\l"
+	.string "her name on it.$"
+
+ParcelMarsh_Heron_Text_28:
+# 188 "data/maps/ParcelMarsh/scripts.pory"
+	.string "HERON: Then she'll have to climb out of\n"
+	.string "it herself. Some do. I didn't.\p"
+	.string "You're kinder than the record. Make\n"
+	.string "sure the record isn't.$"
+
+ParcelMarsh_Heron_Text_29:
+# 193 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The last survey. The woman who taught\n"
 	.string "you the verb watches you do it, and\l"
 	.string "{STR_VAR_1} stays quiet at your\l"
@@ -1071,8 +1186,8 @@ ParcelMarsh_Heron_Text_23:
 	.string "broken places taught you to read, and\l"
 	.string "written down true.$"
 
-ParcelMarsh_Heron_Text_24:
-# 176 "data/maps/ParcelMarsh/scripts.pory"
+ParcelMarsh_Heron_Text_30:
+# 195 "data/maps/ParcelMarsh/scripts.pory"
 	.string "No certification this time. No red cloth\n"
 	.string "from anyone's hand. The last strip ties\l"
 	.string "to your own pack, and nobody signs it.\p"
@@ -1081,13 +1196,13 @@ ParcelMarsh_Heron_Text_24:
 	.string "under hers. They're not the same hand.\l"
 	.string "That's the point.$"
 
-ParcelMarsh_Heron_Text_25:
-# 177 "data/maps/ParcelMarsh/scripts.pory"
+ParcelMarsh_Heron_Text_31:
+# 196 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HERON: Go on. HALE's at the road. He'll\n"
 	.string "pretend he wasn't worried. Let him.$"
 
-ParcelMarsh_Heron_Text_26:
-# 180 "data/maps/ParcelMarsh/scripts.pory"
+ParcelMarsh_Heron_Text_32:
+# 199 "data/maps/ParcelMarsh/scripts.pory"
 	.string "In the last of the running water a\n"
 	.string "single POLIWAG slips upstream in a\l"
 	.string "tight, tired line. The way they did at\l"
@@ -1096,13 +1211,13 @@ ParcelMarsh_Heron_Text_26:
 	.string "You have the word now.$"
 
 ParcelMarsh_Leave_Text_0:
-# 192 "data/maps/ParcelMarsh/scripts.pory"
+# 211 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The road east leads back out of the\n"
 	.string "wilderness to FERNWICK, and whatever\l"
 	.string "the record does next.$"
 
 ParcelMarsh_GateAune_Text_0:
-# 201 "data/maps/ParcelMarsh/scripts.pory"
+# 220 "data/maps/ParcelMarsh/scripts.pory"
 	.string "AUNE: Director, MEREHOLT. I came out to\n"
 	.string "the end of the road to see what's worth\l"
 	.string "the paperwork.\p"
@@ -1111,12 +1226,12 @@ ParcelMarsh_GateAune_Text_0:
 	.string "water at all.$"
 
 ParcelMarsh_GateAune_Text_1:
-# 202 "data/maps/ParcelMarsh/scripts.pory"
+# 221 "data/maps/ParcelMarsh/scripts.pory"
 	.string "AUNE: …Sufficient. The last gate logs\n"
 	.string "you. Go and read what's left to read.$"
 
 ParcelMarsh_GateAune_Text_2:
-# 206 "data/maps/ParcelMarsh/scripts.pory"
+# 225 "data/maps/ParcelMarsh/scripts.pory"
 	.string "AUNE: You're entered. The final\n"
 	.string "clearance, against your card.\p"
 	.string "What you find past here is no longer the\n"
@@ -1124,7 +1239,7 @@ ParcelMarsh_GateAune_Text_2:
 	.string "ever yours to record.$"
 
 ParcelMarsh_GateAune_Defeated_Text_0:
-# 212 "data/maps/ParcelMarsh/scripts.pory"
+# 231 "data/maps/ParcelMarsh/scripts.pory"
 	.string "AUNE: Marsh clearance, granted. The\n"
 	.string "last one MEREHOLT has to give.\p"
 	.string "Everything that matters now is\n"
@@ -1132,157 +1247,157 @@ ParcelMarsh_GateAune_Defeated_Text_0:
 	.string "hands. Funny, that.$"
 
 ParcelMarsh_SecA_Text_0:
-# 218 "data/maps/ParcelMarsh/scripts.pory"
+# 237 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Road's closed. Director's orders.\n"
 	.string "You can argue with me or with her. Me\l"
 	.string "first.$"
 
 ParcelMarsh_SecA_Text_1:
-# 219 "data/maps/ParcelMarsh/scripts.pory"
+# 238 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: …Her, then.$"
 
 ParcelMarsh_SecA_Text_2:
-# 234 "data/maps/ParcelMarsh/scripts.pory"
+# 253 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: We graded fifty metres of road to\n"
 	.string "nowhere and posted two guards on it.\l"
 	.string "Ask me what we're guarding. Go on. I\l"
 	.string "don't know either.$"
 
 ParcelMarsh_SecA_R2_Text_0:
-# 245 "data/maps/ParcelMarsh/scripts.pory"
+# 264 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: I kept the team up for this. Again?$"
 
 ParcelMarsh_SecA_R2_Text_1:
-# 247 "data/maps/ParcelMarsh/scripts.pory"
+# 266 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Suit yourself. I'm here.$"
 
 ParcelMarsh_SecA_R2_Text_2:
-# 251 "data/maps/ParcelMarsh/scripts.pory"
+# 270 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Noted. Properly, this time.$"
 
 ParcelMarsh_SecA_R2_Text_3:
-# 252 "data/maps/ParcelMarsh/scripts.pory"
+# 271 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelMarsh_SecA_R3_Text_0:
-# 259 "data/maps/ParcelMarsh/scripts.pory"
+# 278 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelMarsh_SecA_R3_Text_1:
-# 265 "data/maps/ParcelMarsh/scripts.pory"
+# 284 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: …Fair.$"
 
 ParcelMarsh_SecA_R3_Text_2:
-# 266 "data/maps/ParcelMarsh/scripts.pory"
+# 285 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelMarsh_SecA_R4_Text_0:
-# 273 "data/maps/ParcelMarsh/scripts.pory"
+# 292 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Seven stamps. I've one more fight\n"
 	.string "in me that's worth the name. Yes?$"
 
 ParcelMarsh_SecA_R4_Text_1:
-# 279 "data/maps/ParcelMarsh/scripts.pory"
+# 298 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Still yours.$"
 
 ParcelMarsh_SecA_R4_Text_2:
-# 280 "data/maps/ParcelMarsh/scripts.pory"
+# 299 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelMarsh_SecA_R5_Text_0:
-# 287 "data/maps/ParcelMarsh/scripts.pory"
+# 306 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelMarsh_SecA_R5_Text_1:
-# 293 "data/maps/ParcelMarsh/scripts.pory"
+# 312 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: Right. That's the whole of it.$"
 
 ParcelMarsh_SecA_R5_Text_2:
-# 294 "data/maps/ParcelMarsh/scripts.pory"
+# 313 "data/maps/ParcelMarsh/scripts.pory"
 	.string "VIG: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelMarsh_SecB_Text_0:
-# 300 "data/maps/ParcelMarsh/scripts.pory"
+# 319 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Survey flag's ours. Everything\n"
 	.string "past the flag is 'pending'. You're\l"
 	.string "pending. Battle.$"
 
 ParcelMarsh_SecB_Text_1:
-# 301 "data/maps/ParcelMarsh/scripts.pory"
+# 320 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Pending, still.$"
 
 ParcelMarsh_SecB_Text_2:
-# 316 "data/maps/ParcelMarsh/scripts.pory"
+# 335 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: There's an old woman in there.\n"
 	.string "Past the water. The director knows. The\l"
 	.string "director's not in a hurry. That's the\l"
 	.string "strange part.$"
 
 ParcelMarsh_SecB_R2_Text_0:
-# 327 "data/maps/ParcelMarsh/scripts.pory"
+# 346 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: You again. I've had time to think\n"
 	.string "about last time. Go again?$"
 
 ParcelMarsh_SecB_R2_Text_1:
-# 329 "data/maps/ParcelMarsh/scripts.pory"
+# 348 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Fine. Same spot.$"
 
 ParcelMarsh_SecB_R2_Text_2:
-# 333 "data/maps/ParcelMarsh/scripts.pory"
+# 352 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Noted. Properly, this time.$"
 
 ParcelMarsh_SecB_R2_Text_3:
-# 334 "data/maps/ParcelMarsh/scripts.pory"
+# 353 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelMarsh_SecB_R3_Text_0:
-# 341 "data/maps/ParcelMarsh/scripts.pory"
+# 360 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Three stamps, then five. Fine. Me\n"
 	.string "next?$"
 
 ParcelMarsh_SecB_R3_Text_1:
-# 347 "data/maps/ParcelMarsh/scripts.pory"
+# 366 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Still yours.$"
 
 ParcelMarsh_SecB_R3_Text_2:
-# 348 "data/maps/ParcelMarsh/scripts.pory"
+# 367 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelMarsh_SecB_R4_Text_0:
-# 355 "data/maps/ParcelMarsh/scripts.pory"
+# 374 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelMarsh_SecB_R4_Text_1:
-# 362 "data/maps/ParcelMarsh/scripts.pory"
+# 381 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelMarsh_SecB_R5_Text_0:
-# 369 "data/maps/ParcelMarsh/scripts.pory"
+# 388 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: I heard what you filed. Then show\n"
 	.string "me what filed it?$"
 
 ParcelMarsh_SecB_R5_Text_1:
-# 375 "data/maps/ParcelMarsh/scripts.pory"
+# 394 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: That's the one I wanted to see.$"
 
 ParcelMarsh_SecB_R5_Text_2:
-# 376 "data/maps/ParcelMarsh/scripts.pory"
+# 395 "data/maps/ParcelMarsh/scripts.pory"
 	.string "TOVA: That's all I've got. It was enough\n"
 	.string "to see it done.$"
 
 ParcelMarsh_Epilogue_Text_0:
-# 386 "data/maps/ParcelMarsh/scripts.pory"
+# 405 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The marsh. The count in the notebook\n"
 	.string "runs to the last day in her hand, steady\l"
 	.string "to the end. Forty-one. Forty-one.\l"
@@ -1294,7 +1409,7 @@ ParcelMarsh_Epilogue_Text_0:
 	.string "on the day she stopped writing.$"
 
 ParcelMarsh_HeronCount_Text_0:
-# 397 "data/maps/ParcelMarsh/scripts.pory"
+# 416 "data/maps/ParcelMarsh/scripts.pory"
 	.string "The notebook she kept here, open to\n"
 	.string "the last page. A count, steady to the\l"
 	.string "end: forty-one, forty-one, thirty-nine,\l"
@@ -1302,7 +1417,7 @@ ParcelMarsh_HeronCount_Text_0:
 	.string "No entry after it.$"
 
 ParcelMarsh_SurveyStake_Text_0:
-# 403 "data/maps/ParcelMarsh/scripts.pory"
+# 422 "data/maps/ParcelMarsh/scripts.pory"
 	.string "A survey stake at the marsh's edge.\n"
 	.string "Fresh red cloth. Under it, a much older\l"
 	.string "stake, the cloth gone to rust, driven by\l"

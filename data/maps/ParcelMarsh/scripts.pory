@@ -43,6 +43,15 @@ script ParcelMarsh_Hale {
         if (!flag(FLAG_SKALD_MARSH_CHOICE_DONE)) {
             msgbox(format("HALE: Is it done?"), MSGBOX_DEFAULT)
             msgbox(format("{PLAYER}: …It's true."), MSGBOX_DEFAULT)
+            msgbox(format("HALE: Her Johto numbers are in there too. The MAHOGANY marsh loses its listing the day they're corrected.\pYou can file the correction yourself, in your own hand, or file the survey and let the lawyers find the rest. They'll find it. It's a question of whose hand.\pYours?"), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == 1) {
+                msgbox(format("{PLAYER}: All of it. In my hand."), MSGBOX_DEFAULT)
+                msgbox(format("HALE: Then that's yours to carry too. Good. It should be someone who knows what it costs."), MSGBOX_DEFAULT)
+                setflag(FLAG_SKALD_CH_MAHOGANY)
+            } else {
+                msgbox(format("{PLAYER}: The survey. The rest they'll find."), MSGBOX_DEFAULT)
+                msgbox(format("HALE: They will. The frogs pay either way; you chose who says so. That's not nothing. Don't let anyone tell you it was."), MSGBOX_DEFAULT)
+            }
             msgbox(format("HALE: That's the only done there is.\pThey'll bury it, some of them. And some of them will read it. And a few of those will be standing where you're standing now, one day, with a notebook of their own.\pThat's the work. Not the winning. The witnessing, and the writing it down."), MSGBOX_DEFAULT)
             msgbox(format("HALE: Come on. Station's a long walk and I'm not as young as the road thinks I am.\pWhen you're ready, the coast office will want to see the author. Let them. You've earned watching their faces."), MSGBOX_DEFAULT)
             setflag(FLAG_SKALD_MARSH_CHOICE_DONE)
@@ -168,6 +177,16 @@ script ParcelMarsh_Heron {
         end
     }
     msgbox(format("{PLAYER}: It's true. That's all it has to be."), MSGBOX_DEFAULT)
+    msgbox(format("HERON: Then one more thing, and then the frogs.\pHOLLIS. Her name is on every renewal and every condition. She was my student. She is the one they'll put in the chair after me, and she knows it.\pPut her name in it and she goes down with me. Leave it out and she stays in the chair they built for her. Neither one is mercy. Which?"), MSGBOX_DEFAULT)
+    msgbox(format("Her name in the record?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("{PLAYER}: It's hers. It goes in."), MSGBOX_DEFAULT)
+        msgbox(format("HERON: Yes. I'd have done the same, once. Before I learned to leave names out.\pDon't learn it. It took me thirty years and it was the wrong lesson."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_CH_HOLLIS_NAMED)
+    } else {
+        msgbox(format("{PLAYER}: She's in the chair they built. The record can say that without her name on it."), MSGBOX_DEFAULT)
+        msgbox(format("HERON: Then she'll have to climb out of it herself. Some do. I didn't.\pYou're kinder than the record. Make sure the record isn't."), MSGBOX_DEFAULT)
+    }
     closemessage
     delay(30)
     bufferpartymonnick(0, 0)

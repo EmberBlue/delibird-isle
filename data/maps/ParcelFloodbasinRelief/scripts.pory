@@ -57,4 +57,9 @@ script ParcelFloodbasinRelief_ReadDresser {
 
 script ParcelFloodbasinRelief_Ledger {
     msgbox(format("The relief ledger. Who came, what they were given, what they signed.\pBlankets, two per household, FOUNDATION stamped in the corner. Lamp oil. Dried fish, from the Coast, in cannery cartons. A voucher for the ferry, one way.\pEach line signed by the household and countersigned by the Commissioner's aide. At the foot of each page: relief provided by the Mereholt Foundation in partnership with the Regional Council.\pA column headed CAUSE OF NEED. It says FLOOD on every line. In one place, in another hand, under FLOOD: the works. It has been crossed out and FLOOD written again above it, firmly.\pThe ledger is honest about what was given. It is careful about why."), MSGBOX_SIGN)
+    if (flag(FLAG_SKALD_CH_BLANKET)) {
+        msgbox(format("The last line is yours, in the aide's hand. RANGER. BLANKET, ONE. CAUSE OF NEED: FLOOD.\pYou signed nothing. It is there anyway."), MSGBOX_SIGN)
+    } elif (flag(FLAG_SKALD_FLD_RELIEF_DONE)) {
+        msgbox(format("The last line has been ruled for a name and left empty. The aide ruled it the day you came down the bank.\pIt is the only empty line in the book."), MSGBOX_SIGN)
+    }
 }

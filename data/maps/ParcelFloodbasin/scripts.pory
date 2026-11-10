@@ -87,6 +87,13 @@ script ParcelFloodbasin_ReliefScene {
     applymovement(LOCALID_FLD_DORSEY, Movement_FLD_DorseyFaceDown)
     waitmovement(0)
     msgbox(format("DORSEY: Walk the basin, RANGER. Read your stakes. When you're done, the booth by the bridge will have the remediation file ready for you. All of it. We've nothing to hide."), MSGBOX_DEFAULT)
+    msgbox(format("DORSEY: And take a blanket. FOUNDATION's. Everyone takes one; the nights are the nights whatever you think of the crest.\pTake one?"), MSGBOX_YESNO)
+    if (var(VAR_RESULT) == 1) {
+        msgbox(format("You take it. It is warm, and it says FOUNDATION in the corner, and both of those are true.\pDORSEY: Good. Warm first. Argue later. That's the only order it works in."), MSGBOX_DEFAULT)
+        setflag(FLAG_SKALD_CH_BLANKET)
+    } else {
+        msgbox(format("You leave it on the pile.\pDORSEY: No? …Your business. They write that down too, you know. Who didn't take one. Not me. Them."), MSGBOX_DEFAULT)
+    }
     setflag(FLAG_SKALD_FLD_RELIEF_DONE)
     setvar(VAR_TEMP_3, 1)
     releaseall
