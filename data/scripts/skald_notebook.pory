@@ -4,6 +4,9 @@
 // the assignment, the certifications, the side work, the margins.
 script Skald_EventScript_FieldNotebook {
     lockall
+    // Whoever carries the notebook carries the Survey's species register: the
+    // Pokédex (SKALD DEX). Also covers saves made before the gift set the flag.
+    setflag(FLAG_SYS_POKEDEX_GET)
     do {
         multichoice(0, 0, MULTI_SKALD_NOTEBOOK, FALSE)
         switch (var(VAR_RESULT)) {

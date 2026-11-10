@@ -106,12 +106,14 @@ ParcelFernwickHQ_Hale::
 # 155 "data/maps/ParcelFernwickHQ/scripts.pory"
 	giveitem ITEM_FIELD_NOTEBOOK
 # 156 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_Hale_Text_33, MSGBOX_DEFAULT
+	setflag FLAG_SYS_POKEDEX_GET
 # 157 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_Hale_Text_34, MSGBOX_DEFAULT
+	msgbox ParcelFernwickHQ_Hale_Text_33, MSGBOX_DEFAULT
 # 158 "data/maps/ParcelFernwickHQ/scripts.pory"
-	setflag FLAG_SKALDMERE_STATION_BRIEF
+	msgbox ParcelFernwickHQ_Hale_Text_34, MSGBOX_DEFAULT
 # 159 "data/maps/ParcelFernwickHQ/scripts.pory"
+	setflag FLAG_SKALDMERE_STATION_BRIEF
+# 160 "data/maps/ParcelFernwickHQ/scripts.pory"
 	release
 	end
 
@@ -287,61 +289,61 @@ ParcelFernwickHQ_Hale_38:
 
 
 ParcelFernwickHQ_ReadCase::
-# 164 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 165 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_ReadCase_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickHQ_ReadCounter::
-# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 170 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_ReadCounter_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickHQ_Pinned::
-# 176 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 177 "data/maps/ParcelFernwickHQ/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHQ_Pinned_1
-# 184 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 185 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Pinned_Text_3, MSGBOX_SIGN
 	return
 
 ParcelFernwickHQ_Pinned_1:
-# 177 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_Pinned_Text_0, MSGBOX_SIGN
 # 178 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Pinned_Text_0, MSGBOX_SIGN
+# 179 "data/maps/ParcelFernwickHQ/scripts.pory"
 	goto_if_set FLAG_SKALD_CH_SPOKE, ParcelFernwickHQ_Pinned_4
-# 181 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 182 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Pinned_Text_2, MSGBOX_SIGN
 	return
 
 ParcelFernwickHQ_Pinned_4:
-# 179 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 180 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Pinned_Text_1, MSGBOX_SIGN
 	return
 
 
 ParcelFernwickHQ_Handbook::
-# 191 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_Handbook_Text_0, MSGBOX_SIGN
 # 192 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_Handbook_Text_1, MSGBOX_SIGN
+	msgbox ParcelFernwickHQ_Handbook_Text_0, MSGBOX_SIGN
 # 193 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Handbook_Text_1, MSGBOX_SIGN
+# 194 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Handbook_Text_2, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickHQ_RedCloth::
-# 200 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_RedCloth_Text_0, MSGBOX_SIGN
 # 201 "data/maps/ParcelFernwickHQ/scripts.pory"
-	msgbox ParcelFernwickHQ_RedCloth_Text_1, MSGBOX_SIGN
+	msgbox ParcelFernwickHQ_RedCloth_Text_0, MSGBOX_SIGN
 # 202 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_RedCloth_Text_1, MSGBOX_SIGN
+# 203 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_RedCloth_Text_2, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickHQ_Roster::
-# 209 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 210 "data/maps/ParcelFernwickHQ/scripts.pory"
 	msgbox ParcelFernwickHQ_Roster_Text_0, MSGBOX_SIGN
 	end
 
@@ -645,14 +647,14 @@ ParcelFernwickHQ_Hale_Text_32:
 	.string "are.$"
 
 ParcelFernwickHQ_Hale_Text_33:
-# 156 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 157 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "HALE: You keep one of your own, I see.\n"
 	.string "Older than you are, by the binding.\p"
 	.string "Good. Keep both. Two hands on a page is\n"
 	.string "how a thing gets remembered right.$"
 
 ParcelFernwickHQ_Hale_Text_34:
-# 157 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 158 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "HALE: The Certification Hall is across\n"
 	.string "the boulevard. TARN runs the practical.\l"
 	.string "Pass it and you're a provisional for\l"
@@ -660,14 +662,14 @@ ParcelFernwickHQ_Hale_Text_34:
 	.string "Then we'll talk about the marsh.$"
 
 ParcelFernwickHQ_ReadCase_Text_0:
-# 164 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 165 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "Under the glass, a surveyor's red cloth,\n"
 	.string "forty years old, the dye gone to rust.\l"
 	.string "The card says: FIRST STAKE, KEYSTONE\l"
 	.string "MARSH. No name.$"
 
 ParcelFernwickHQ_ReadCounter_Text_0:
-# 169 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 170 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "The duty counter. A ledger of who is\n"
 	.string "where: eight names, eight zones. One\l"
 	.string "line reads WREN -- FIELD, and nothing\l"
@@ -675,7 +677,7 @@ ParcelFernwickHQ_ReadCounter_Text_0:
 	.string "Hale's hand.$"
 
 ParcelFernwickHQ_Pinned_Text_0:
-# 177 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 178 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "Where the poster was: the minutes of\n"
 	.string "the river meeting at Elvsund, pinned\l"
 	.string "with four tacks, typed on the hall's\l"
@@ -697,7 +699,7 @@ ParcelFernwickHQ_Pinned_Text_0:
 	.string "Six abstained.$"
 
 ParcelFernwickHQ_Pinned_Text_1:
-# 179 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 180 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "Down the margin, six names in Hale's\n"
 	.string "small capitals. The six who stood up\l"
 	.string "first. Under them, smaller, a seventh:\l"
@@ -706,13 +708,13 @@ ParcelFernwickHQ_Pinned_Text_1:
 	.string "where you would see it.$"
 
 ParcelFernwickHQ_Pinned_Text_2:
-# 181 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 182 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "Down the margin, six names in Hale's\n"
 	.string "small capitals. The six who stood up\l"
 	.string "first. Not ours, the ranger said. Theirs.$"
 
 ParcelFernwickHQ_Pinned_Text_3:
-# 184 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 185 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "A poster, the Foundation's green and\n"
 	.string "grey. A ranger on a ridge with the light\l"
 	.string "behind.\p"
@@ -730,7 +732,7 @@ ParcelFernwickHQ_Pinned_Text_3:
 	.string "the word PART and left a crescent.$"
 
 ParcelFernwickHQ_Handbook_Text_0:
-# 191 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 192 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "The Corps handbook, on the counter for\n"
 	.string "provisionals to read while they wait.\l"
 	.string "The spine is broken at the same page in\l"
@@ -750,7 +752,7 @@ ParcelFernwickHQ_Handbook_Text_0:
 	.string "clever.$"
 
 ParcelFernwickHQ_Handbook_Text_1:
-# 192 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 193 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "SECTION 4. THE PARTNER. The Corps does\n"
 	.string "not issue partners. The holding meadow\l"
 	.string "holds edge species that tolerate us;\l"
@@ -766,7 +768,7 @@ ParcelFernwickHQ_Handbook_Text_1:
 	.string "Director. Only the reader does.$"
 
 ParcelFernwickHQ_Handbook_Text_2:
-# 193 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 194 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "SECTION 9. WHEN THE WORK IS WRONG. If a\n"
 	.string "ranger is asked to round up, round down,\l"
 	.string "omit, soften, delay or lose a record, the\l"
@@ -780,7 +782,7 @@ ParcelFernwickHQ_Handbook_Text_2:
 	.string "whole job. H.$"
 
 ParcelFernwickHQ_RedCloth_Text_0:
-# 200 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 201 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "A pamphlet on the Corps counter,\n"
 	.string "between the leaflets, older than any of\l"
 	.string "them. RED CLOTH. THE SURVEY'S METHOD,\l"
@@ -797,7 +799,7 @@ ParcelFernwickHQ_RedCloth_Text_0:
 	.string "changed is a record ended.$"
 
 ParcelFernwickHQ_RedCloth_Text_1:
-# 201 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 202 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "FOUR. Write the number you got. Not the\n"
 	.string "number you expected, not the number\l"
 	.string "that would help. The number.\p"
@@ -811,7 +813,7 @@ ParcelFernwickHQ_RedCloth_Text_1:
 	.string "argument. There is no other argument.$"
 
 ParcelFernwickHQ_RedCloth_Text_2:
-# 202 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 203 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "EIGHT. Sign with an initial. The Survey\n"
 	.string "is not a career.\p"
 	.string "NINE. When the stake has fallen and the\n"
@@ -827,7 +829,7 @@ ParcelFernwickHQ_RedCloth_Text_2:
 	.string "should be.$"
 
 ParcelFernwickHQ_Roster_Text_0:
-# 209 "data/maps/ParcelFernwickHQ/scripts.pory"
+# 210 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "HALE's duty roster, pinned behind the\n"
 	.string "desk. Eight stations, eight names, the\l"
 	.string "shifts in his square hand.\p"

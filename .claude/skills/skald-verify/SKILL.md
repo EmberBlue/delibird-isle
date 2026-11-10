@@ -62,6 +62,13 @@ Add `--trace 60` to see every screen along the way. A fight's intro frames
 (trainer sprite, "would like to battle") are found the same way: `--trace 100`
 over the talk-and-fight sequence, then pick the frames.
 
+After any pass that adds objects or sign events (pairs, boards, quest finds),
+re-run `tools/skald/sweep.py` (every warp and connection) and
+`tools/skald/spine.sh` (the eight exams, the signings, the confession, the
+boardroom) against a fresh probe ROM; a pair of standing NPCs can block a
+one-tile path that the audit does not model. Both runs are background jobs of
+twenty to thirty minutes; the logs are the record.
+
 Region map gotcha: `graphics/pokenav/region_map/map.bin` is an **8-bit affine
 tilemap (64x64 bytes, no flips)**, not a 16-bit text tilemap. A 16-bit file
 of the same 4096 bytes renders as vertical stripes in the PokéNav. Decode it

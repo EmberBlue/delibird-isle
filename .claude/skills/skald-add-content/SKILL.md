@@ -80,6 +80,13 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   the `MAPSEC_` case to `GetMapsecType()` in `src/region_map.c`, a row in
   `sMapHealLocations`, the cell(s) in `region_map_layout.h`, and a town tile
   (162) at the cell in `map.bin` (8-bit affine, see skald-verify).
+- A new species in a wild table or a trainer party needs a Skaldmere dex entry
+  (`e("NAME", ...)` in the scratchpad dex scripts' format: four lines ≤ 44 chars,
+  written into `gen_*_families.h`), its name in `tools/skald/dex_species.txt`,
+  and `python3 tools/skald/regional_dex.py` re-run so the SKALD DEX lists it
+  (the regional dex is generated from that file, south to north, families
+  together). The Pokédex is granted with the Field Notebook
+  (`FLAG_SYS_POKEDEX_GET` in Hale's brief and in the notebook's use script).
 - A trainer class (the title before the name in battle): `TRAINER_CLASS_X` after
   0x4a in `include/constants/trainers.h` (bump `TRAINER_CLASS_COUNT`), a row
   `{ _("NAME"), payout, BALL }` in `gTrainerClasses` (`src/battle_main.c`,

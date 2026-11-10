@@ -385,9 +385,11 @@ replaces is gone from the tree).
   connection has been walked by `tools/skald/sweep.py`, the whole
   certification spine fought through by `tools/skald/spine.sh`, and each
   content pass spot-checked from the harness (boards, pairs, books, quest
-  finds, post-epilogue lines, the PokéNav map, the title). What has not
-  happened is one person playing from the ferry to the credits in a single
-  save; do that when there is time, with a notebook open.
+  finds, post-epilogue lines, the PokéNav map, the title). Re-run on
+  2026-11-10 after every content and art pass: sweep 252 OK / 0 BAD,
+  spine all fifteen flags. What has not happened is one person playing
+  from the ferry to the credits in a single save; do that when there is
+  time, with a notebook open.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to
@@ -404,6 +406,13 @@ replaces is gone from the tree).
   AzaleaTown tileset. The village's own map is now `build.py` over
   `base.bin` (its sea tile had a rock pair on every tile and its border was
   a wall piece; both fixed).
+- **The Pokédex is the SKALD DEX.** `FLAG_SYS_POKEDEX_GET` was never set
+  before 2026-11-10, so the 161 Skaldmere dex entries were unreachable;
+  Hale's brief now sets it with the notebook, and opening the notebook sets
+  it too (older saves). The regional dex (`HOENN_DEX_*` /
+  `sHoennToNationalOrder`) is rewritten by `tools/skald/regional_dex.py` to
+  exactly the Skaldmere species, south to north, families together; the
+  national dex stays off.
 - The **Field Notebook** is a Key Item now (`ITEM_FIELD_NOTEBOOK`, given in
   Hale's first brief): Assignment (where the story wants you next, from
   Hale's own flag logic), Certifications, Side work, Margins (Heron's
