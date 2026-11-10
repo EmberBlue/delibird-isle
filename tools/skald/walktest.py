@@ -129,10 +129,14 @@ def main():
         bmons, acur = syms.get("gBattleMons"), syms.get("gActionSelectionCursor")
         bmain = syms.get("BattleMainCB2")
         while in_battle() and spent < limit:
-            if bmain and (core.memory.u32[gmain + 4] & ~1) != bmain and spent > 400:
-                # Some other screen is up inside the battle: the move-forget summary a level-up opens (an
-                # A there deletes move 1, which is how a partner lost ROCK SMASH to ROLLOUT, 2026-11-10),
-                # the bag, the party menu. B backs out of each; "Stop learning it?" then takes the A.
+            other_screen = bmain and (core.memory.u32[gmain + 4] & ~1) != bmain and spent > 400
+            fainted = bmons is not None and core.memory.u16[bmons + 0x2A] == 0     # struct BattlePokemon: hp
+            if other_screen and not fainted:
+                # Some other screen is up inside the battle and nobody has to be replaced: the move-forget
+                # summary a level-up opens (an A there deletes move 1, which is how a partner dragged out by
+                # ROAR lost ROCK SMASH to ROLLOUT, 2026-11-10), the bag, a party menu opened by mistake. B
+                # backs out of each; "Stop learning it?" then takes the A. A fainted lead is the one case
+                # where that screen is the party menu and wants an A, so it falls through to the taps below.
                 key = "B"
             elif wild:
                 key = run_keys[taps % len(run_keys)]

@@ -61,8 +61,10 @@ tail -f $SKALD_SCRATCH/play/run/run_rest.log
 - The HMs ride on the Meadow partner (party slot 2 in `TEACHHM`), and the chains never check
   that it still knows them. If it is sent out and levels, the move-forget screen opens inside
   the battle, and an A there deletes move 1: on one build the partner traded ROCK SMASH for
-  ROLLOUT in chapter 4 and the run died at a rock in chapter 5. `fight()` now presses B on any
-  screen inside a battle that is not the battle itself. `python3 tools/skald/partydump.py ROM
+  ROLLOUT in chapter 4 and the run died at a rock in chapter 5 (a River trainer's MIGHTYENA
+  uses ROAR, which drags the partner out). `fight()` now presses B on any screen inside a battle
+  that is not the battle itself, unless the active Pokémon has fainted: then that screen is the
+  party menu and needs the A. `python3 tools/skald/partydump.py ROM
   MAP STATE...` prints species, level and moves from savestates when a field move goes missing.
 - An NPC's elevation is re-read from its tile at spawn, so a fish in water is at 1 whatever the
   template says; the tile under it is set to elevation 0 so it reads as a wildcard.
