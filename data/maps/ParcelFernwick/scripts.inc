@@ -1913,6 +1913,49 @@ ParcelFernwick_FindJar_4:
 	goto ParcelFernwick_FindJar_3
 
 
+ParcelFernwick_PairStation::
+# 992 "data/maps/ParcelFernwick/scripts.pory"
+	lock
+# 993 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_PairStation_2
+# 998 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_PairStation_3
+# 1004 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_8, MSGBOX_DEFAULT
+# 1005 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_9, MSGBOX_DEFAULT
+# 1006 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_10, MSGBOX_DEFAULT
+# 1007 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_11, MSGBOX_DEFAULT
+ParcelFernwick_PairStation_1:
+# 1009 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
+
+ParcelFernwick_PairStation_2:
+# 994 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_0, MSGBOX_DEFAULT
+# 995 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_1, MSGBOX_DEFAULT
+# 996 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_2, MSGBOX_DEFAULT
+# 997 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_3, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairStation_1
+
+ParcelFernwick_PairStation_3:
+# 999 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_4, MSGBOX_DEFAULT
+# 1000 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_5, MSGBOX_DEFAULT
+# 1001 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_6, MSGBOX_DEFAULT
+# 1002 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairStation_Text_7, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairStation_1
+
+
 ParcelFernwick_Smeargle_Text_0:
 # 29 "data/maps/ParcelFernwick/scripts.pory"
 	.string "A SMEARGLE sits on the bank with its\n"
@@ -3044,3 +3087,73 @@ ParcelFernwick_FindJar_Text_1:
 	.string "A sample jar on the kerb, nine days old\n"
 	.string "now and counting. The label has started\l"
 	.string "to curl.$"
+
+ParcelFernwick_PairStation_Text_0:
+# 994 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CADET: The Director's letter says\n"
+	.string "'independence review'. HALE says it\l"
+	.string "means eight honest stations or twelve\l"
+	.string "bought ones, and the Director has to\l"
+	.string "choose in writing.$"
+
+ParcelFernwick_PairStation_Text_1:
+# 995 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD WOMAN: HALE's waited twenty years\n"
+	.string "for someone to have to choose in\l"
+	.string "writing.$"
+
+ParcelFernwick_PairStation_Text_2:
+# 996 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CADET: What if the Director chooses\n"
+	.string "twelve?$"
+
+ParcelFernwick_PairStation_Text_3:
+# 997 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD WOMAN: Then HALE will run eight\n"
+	.string "anyway and the paper will say why.\l"
+	.string "That's what the ranger changed. Not the\l"
+	.string "choice. The saying why.$"
+
+ParcelFernwick_PairStation_Text_4:
+# 999 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD WOMAN: The new one spoke at the\n"
+	.string "river meeting, or stood at the back and\l"
+	.string "wrote. Same thing, in this town.$"
+
+ParcelFernwick_PairStation_Text_5:
+# 1000 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CADET: HALE read the minutes out at\n"
+	.string "briefing. All of them. Took the whole\l"
+	.string "hour.$"
+
+ParcelFernwick_PairStation_Text_6:
+# 1001 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD WOMAN: And?$"
+
+ParcelFernwick_PairStation_Text_7:
+# 1002 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CADET: And then he said: that's what\n"
+	.string "the job is. And sent us out. Nobody\l"
+	.string "asked what he meant. We knew.$"
+
+ParcelFernwick_PairStation_Text_8:
+# 1004 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CADET: Twelve stations, the poster\n"
+	.string "says. We run eight.$"
+
+ParcelFernwick_PairStation_Text_9:
+# 1005 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD WOMAN: The poster's the\n"
+	.string "FOUNDATION's. The eight are HALE's.\l"
+	.string "Count the ones with a light on.$"
+
+ParcelFernwick_PairStation_Text_10:
+# 1006 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CADET: Why does nobody fix the poster?$"
+
+ParcelFernwick_PairStation_Text_11:
+# 1007 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD WOMAN: Because the poster paid for\n"
+	.string "two of the eight. You'll understand the\l"
+	.string "arithmetic when you've been cold in a\l"
+	.string "station the poster didn't build.$"

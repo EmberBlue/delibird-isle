@@ -259,9 +259,9 @@ Leader scenes need `A:300`-`A:350`, Vane `A:650`. The probe commands are in
 ## Known-open (honest list)
 
 - **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816
-  rematch tiers) against the 1,000 target -- met; **~79,000 hand-written
+  rematch tiers) against the 1,000 target -- met; **~80,500 hand-written
   words** (every `_R2`–`_R5`/`_FirstWin` rematch script excluded; ~94k
-  with them; 686 objects, 376 readable/hidden events; 42 side quests; 47 overheard conversations) against 100k -- the
+  with them; 704 objects, 376 readable/hidden events; 42 side quests; 56 overheard conversations) against 100k -- the
   remaining gap. Recount with the snippet in §13's 2026-11-10 entries
   (script bodies minus the rematch scripts, plus the notebook's C strings
   and the 81 dex entries). The rematch tiers

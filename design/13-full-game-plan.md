@@ -643,4 +643,19 @@ quest is built, how the peer works) before they are asked six more times.
   River Hall's five and the Station's reception and technician got their
   mid-game lines, so every named resident now speaks in three states.
   ~1,600 words; the notebook's side-work page lists forty-two.
+- **2026-11-10 — a third pair in every settlement (fifty-six
+  conversations).** The Saltwick councillor and schoolteacher (a thing
+  done at two in the morning; "it's already up"), the Fernwick cadet and
+  old woman (count the stations with a light on; the saying why), the
+  Reedmere fisher and boy at the south landing (clean is a colour, safe
+  is a test; a ranger, a jar and a clock), the Leirvik laundress and
+  bargeman (brown sheets hung in the hall behind the blankets; nobody
+  asked the laundress), the Elvsund beekeeper and student (write down the
+  honey, then the trend), the Haukfell mother and boy at the thaw ponds
+  (they're the ground letting go; hold my hand on the soft bit), the
+  island netman and old man on the shore (three steps; I've decided to
+  prefer true), the Coast stallholder and buyer (one length means one
+  year of fish left; I pack fish, I'm learning to read them), the
+  Station modeller and cadet (after isn't in the scenario, that's a
+  scope; what happened is a technical term now). ~1,400 words.
 

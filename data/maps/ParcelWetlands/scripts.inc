@@ -4253,6 +4253,53 @@ ParcelWetlands_FindNest_4:
 	goto ParcelWetlands_FindNest_3
 
 
+ParcelWetlands_PairSouth::
+# 2063 "data/maps/ParcelWetlands/scripts.pory"
+	lock
+# 2064 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairSouth_2
+# 2070 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairSouth_3
+# 2076 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_9, MSGBOX_DEFAULT
+# 2077 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_10, MSGBOX_DEFAULT
+# 2078 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_11, MSGBOX_DEFAULT
+# 2079 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_12, MSGBOX_DEFAULT
+# 2080 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_13, MSGBOX_DEFAULT
+ParcelWetlands_PairSouth_1:
+# 2082 "data/maps/ParcelWetlands/scripts.pory"
+	release
+	end
+
+ParcelWetlands_PairSouth_2:
+# 2065 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_0, MSGBOX_DEFAULT
+# 2066 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_1, MSGBOX_DEFAULT
+# 2067 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_2, MSGBOX_DEFAULT
+# 2068 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_3, MSGBOX_DEFAULT
+# 2069 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_4, MSGBOX_DEFAULT
+	goto ParcelWetlands_PairSouth_1
+
+ParcelWetlands_PairSouth_3:
+# 2071 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_5, MSGBOX_DEFAULT
+# 2072 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_6, MSGBOX_DEFAULT
+# 2073 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_7, MSGBOX_DEFAULT
+# 2074 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairSouth_Text_8, MSGBOX_DEFAULT
+	goto ParcelWetlands_PairSouth_1
+
+
 ParcelWetlands_Harland_Text_0:
 # 77 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: They read your report out on\n"
@@ -6220,3 +6267,73 @@ ParcelWetlands_FindNest_Text_1:
 	.string "The north reed bed. The nest is there,\n"
 	.string "and the heron is standing in the\l"
 	.string "shallows below it, reading the water.$"
+
+ParcelWetlands_PairSouth_Text_0:
+# 2065 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: The monitor takes a jar every\n"
+	.string "week now. The jars go to the lab at\l"
+	.string "Saltwick.$"
+
+ParcelWetlands_PairSouth_Text_1:
+# 2066 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: Can I drink from the channel?$"
+
+ParcelWetlands_PairSouth_Text_2:
+# 2067 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: When the jar says so. Not when\n"
+	.string "the colour does. You asked who does the\l"
+	.string "test. That's who. A ranger, a jar and a\l"
+	.string "clock.$"
+
+ParcelWetlands_PairSouth_Text_3:
+# 2068 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: That's not a who.$"
+
+ParcelWetlands_PairSouth_Text_4:
+# 2069 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: It's the best who we've had.$"
+
+ParcelWetlands_PairSouth_Text_5:
+# 2071 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: The ranger read the pipe under the\n"
+	.string "falls. There was a sheen. Like petrol on\l"
+	.string "a puddle.$"
+
+ParcelWetlands_PairSouth_Text_6:
+# 2072 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: There's been a sheen for two\n"
+	.string "years.$"
+
+ParcelWetlands_PairSouth_Text_7:
+# 2073 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: Then why didn't anyone say?$"
+
+ParcelWetlands_PairSouth_Text_8:
+# 2074 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: Everyone said. Nobody wrote.\n"
+	.string "There's a difference, and the\l"
+	.string "difference is why you're not allowed to\l"
+	.string "drink from the channel.$"
+
+ParcelWetlands_PairSouth_Text_9:
+# 2076 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: Don't drink from the channel\n"
+	.string "below the falls.$"
+
+ParcelWetlands_PairSouth_Text_10:
+# 2077 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: Why not? It looks clean.$"
+
+ParcelWetlands_PairSouth_Text_11:
+# 2078 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: Clean is a colour. Safe is a\n"
+	.string "test. We've got the colour.$"
+
+ParcelWetlands_PairSouth_Text_12:
+# 2079 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: Who does the test?$"
+
+ParcelWetlands_PairSouth_Text_13:
+# 2080 "data/maps/ParcelWetlands/scripts.pory"
+	.string "FISHER: Nobody, yet. Somebody with a\n"
+	.string "notebook, I'm told, is on the way.$"

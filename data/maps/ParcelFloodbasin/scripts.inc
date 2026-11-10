@@ -4419,6 +4419,47 @@ ParcelFloodbasin_FindDeadline_4:
 	goto ParcelFloodbasin_FindDeadline_3
 
 
+ParcelFloodbasin_PairBank::
+# 2120 "data/maps/ParcelFloodbasin/scripts.pory"
+	lock
+# 2121 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasin_PairBank_2
+# 2125 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasin_PairBank_3
+# 2131 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_7, MSGBOX_DEFAULT
+# 2132 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_8, MSGBOX_DEFAULT
+# 2133 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_9, MSGBOX_DEFAULT
+# 2134 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_10, MSGBOX_DEFAULT
+ParcelFloodbasin_PairBank_1:
+# 2136 "data/maps/ParcelFloodbasin/scripts.pory"
+	release
+	end
+
+ParcelFloodbasin_PairBank_2:
+# 2122 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_0, MSGBOX_DEFAULT
+# 2123 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_1, MSGBOX_DEFAULT
+# 2124 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_2, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairBank_1
+
+ParcelFloodbasin_PairBank_3:
+# 2126 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_3, MSGBOX_DEFAULT
+# 2127 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_4, MSGBOX_DEFAULT
+# 2128 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_5, MSGBOX_DEFAULT
+# 2129 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairBank_Text_6, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairBank_1
+
+
 ParcelFloodbasin_FirstEntry_Text_0:
 # 58 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "The trees open onto a low, wide basin.\n"
@@ -6620,3 +6661,61 @@ ParcelFloodbasin_FindDeadline_Text_1:
 	.string "A reed stake in the mud beside a big\n"
 	.string "stone. The line reached here this year.\l"
 	.string "The reed is bending already.$"
+
+ParcelFloodbasin_PairBank_Text_0:
+# 2122 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAUNDRESS: Grey, not brown. The sheets.\n"
+	.string "It's not clean. It's honest.$"
+
+ParcelFloodbasin_PairBank_Text_1:
+# 2123 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "BARGEMAN: You sound like the ranger.$"
+
+ParcelFloodbasin_PairBank_Text_2:
+# 2124 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAUNDRESS: The ranger sounds like my\n"
+	.string "washing book. We've all been saying the\l"
+	.string "same thing for twenty years in\l"
+	.string "different places. Now it's in one place.$"
+
+ParcelFloodbasin_PairBank_Text_3:
+# 2126 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "BARGEMAN: The ranger's stake by the\n"
+	.string "sign has the dates of every pulse on it.\l"
+	.string "Every one. I've been on this water\l"
+	.string "twenty years and I couldn't have told\l"
+	.string "you the dates.$"
+
+ParcelFloodbasin_PairBank_Text_4:
+# 2127 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAUNDRESS: I could. They're in my\n"
+	.string "washing book.$"
+
+ParcelFloodbasin_PairBank_Text_5:
+# 2128 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "BARGEMAN: You never said.$"
+
+ParcelFloodbasin_PairBank_Text_6:
+# 2129 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAUNDRESS: Nobody asked the\n"
+	.string "laundress. The ranger did.$"
+
+ParcelFloodbasin_PairBank_Text_7:
+# 2131 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAUNDRESS: Third wash this month and\n"
+	.string "the sheets come up brown.$"
+
+ParcelFloodbasin_PairBank_Text_8:
+# 2132 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "BARGEMAN: Hang them in the hall. The\n"
+	.string "Commissioner's photographer won't want\l"
+	.string "brown sheets behind the blankets.$"
+
+ParcelFloodbasin_PairBank_Text_9:
+# 2133 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "LAUNDRESS: That's exactly where I'm\n"
+	.string "hanging them.$"
+
+ParcelFloodbasin_PairBank_Text_10:
+# 2134 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "BARGEMAN: …Good.$"

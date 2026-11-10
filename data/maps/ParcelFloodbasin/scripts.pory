@@ -2115,3 +2115,24 @@ script ParcelFloodbasin_FindDeadline {
     }
     end
 }
+
+script ParcelFloodbasin_PairBank {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("LAUNDRESS: Grey, not brown. The sheets. It's not clean. It's honest."), MSGBOX_DEFAULT)
+        msgbox(format("BARGEMAN: You sound like the ranger."), MSGBOX_DEFAULT)
+        msgbox(format("LAUNDRESS: The ranger sounds like my washing book. We've all been saying the same thing for twenty years in different places. Now it's in one place."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("BARGEMAN: The ranger's stake by the sign has the dates of every pulse on it. Every one. I've been on this water twenty years and I couldn't have told you the dates."), MSGBOX_DEFAULT)
+        msgbox(format("LAUNDRESS: I could. They're in my washing book."), MSGBOX_DEFAULT)
+        msgbox(format("BARGEMAN: You never said."), MSGBOX_DEFAULT)
+        msgbox(format("LAUNDRESS: Nobody asked the laundress. The ranger did."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("LAUNDRESS: Third wash this month and the sheets come up brown."), MSGBOX_DEFAULT)
+        msgbox(format("BARGEMAN: Hang them in the hall. The Commissioner's photographer won't want brown sheets behind the blankets."), MSGBOX_DEFAULT)
+        msgbox(format("LAUNDRESS: That's exactly where I'm hanging them."), MSGBOX_DEFAULT)
+        msgbox(format("BARGEMAN: …Good."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

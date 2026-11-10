@@ -4238,6 +4238,45 @@ ParcelHighlands_FindFrost_4:
 	goto ParcelHighlands_FindFrost_3
 
 
+ParcelHighlands_PairThaw::
+# 2029 "data/maps/ParcelHighlands/scripts.pory"
+	lock
+# 2030 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlands_PairThaw_2
+# 2034 "data/maps/ParcelHighlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlands_PairThaw_3
+# 2040 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_7, MSGBOX_DEFAULT
+# 2041 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_8, MSGBOX_DEFAULT
+# 2042 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_9, MSGBOX_DEFAULT
+ParcelHighlands_PairThaw_1:
+# 2044 "data/maps/ParcelHighlands/scripts.pory"
+	release
+	end
+
+ParcelHighlands_PairThaw_2:
+# 2031 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_0, MSGBOX_DEFAULT
+# 2032 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_1, MSGBOX_DEFAULT
+# 2033 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_2, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairThaw_1
+
+ParcelHighlands_PairThaw_3:
+# 2035 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_3, MSGBOX_DEFAULT
+# 2036 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_4, MSGBOX_DEFAULT
+# 2037 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_5, MSGBOX_DEFAULT
+# 2038 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_PairThaw_Text_6, MSGBOX_DEFAULT
+	goto ParcelHighlands_PairThaw_1
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 39 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -6335,3 +6374,54 @@ ParcelHighlands_FindFrost_Text_1:
 	.string "A crack across the field, a hand wide,\n"
 	.string "water in the bottom. A ewe has already\l"
 	.string "learned to step over it.$"
+
+ParcelHighlands_PairThaw_Text_0:
+# 2031 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MOTHER: The drill's capped and the\n"
+	.string "ground is still letting go. HALE said so\l"
+	.string "to our faces. First one who did.$"
+
+ParcelHighlands_PairThaw_Text_1:
+# 2032 "data/maps/ParcelHighlands/scripts.pory"
+	.string "BOY: Is that good?$"
+
+ParcelHighlands_PairThaw_Text_2:
+# 2033 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MOTHER: It's true. Up here that's what\n"
+	.string "we've got instead of good. Hold my hand\l"
+	.string "on the soft bit.$"
+
+ParcelHighlands_PairThaw_Text_3:
+# 2035 "data/maps/ParcelHighlands/scripts.pory"
+	.string "BOY: The ranger stood in the puddle to\n"
+	.string "the knee and wrote something down.$"
+
+ParcelHighlands_PairThaw_Text_4:
+# 2036 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MOTHER: What did they write?$"
+
+ParcelHighlands_PairThaw_Text_5:
+# 2037 "data/maps/ParcelHighlands/scripts.pory"
+	.string "BOY: I asked. They said: thaw pond, new,\n"
+	.string "and the date. Then they said I was\l"
+	.string "right. They're not ponds. They're the\l"
+	.string "ground letting go.$"
+
+ParcelHighlands_PairThaw_Text_6:
+# 2038 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MOTHER: …Come away from there.$"
+
+ParcelHighlands_PairThaw_Text_7:
+# 2040 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MOTHER: Don't play on the ponds.$"
+
+ParcelHighlands_PairThaw_Text_8:
+# 2041 "data/maps/ParcelHighlands/scripts.pory"
+	.string "BOY: They're not ponds. They're puddles.\n"
+	.string "They weren't here last year.$"
+
+ParcelHighlands_PairThaw_Text_9:
+# 2042 "data/maps/ParcelHighlands/scripts.pory"
+	.string "MOTHER: That's why you don't play on\n"
+	.string "them. The ground made them. It can make\l"
+	.string "more.$"

@@ -1125,3 +1125,24 @@ script ParcelIsle_FindTally {
     }
     end
 }
+
+script ParcelIsle_PairGreen {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("COUNCILLOR: The lab's leased to the Survey. Planning consent for a change of use: granted. I signed it myself."), MSGBOX_DEFAULT)
+        msgbox(format("SCHOOLTEACHER: Quickly, for once."), MSGBOX_DEFAULT)
+        msgbox(format("COUNCILLOR: Quickly. I've a reputation to lose and I've decided which way I'd rather lose it. Don't put that on the board."), MSGBOX_DEFAULT)
+        msgbox(format("SCHOOLTEACHER: It's already up."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("SCHOOLTEACHER: The provisional made FOREST. First out of this town in nine years. I've put it on the board at school."), MSGBOX_DEFAULT)
+        msgbox(format("COUNCILLOR: It's not a council matter."), MSGBOX_DEFAULT)
+        msgbox(format("SCHOOLTEACHER: Nothing is, until it's in the paper. Then it's a planning matter. I've watched you long enough to know the order."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("COUNCILLOR: The lab on the front is a planning matter now. Vacant possession. The owner's within his rights."), MSGBOX_DEFAULT)
+        msgbox(format("SCHOOLTEACHER: The owner emptied it at two in the morning."), MSGBOX_DEFAULT)
+        msgbox(format("COUNCILLOR: The owner's hours are the owner's business."), MSGBOX_DEFAULT)
+        msgbox(format("SCHOOLTEACHER: I teach the children that a thing done at two in the morning is a thing someone didn't want seen. Shall I stop?"), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

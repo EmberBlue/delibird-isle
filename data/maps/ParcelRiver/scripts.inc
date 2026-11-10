@@ -4285,6 +4285,47 @@ ParcelRiver_FindDepth_4:
 	goto ParcelRiver_FindDepth_3
 
 
+ParcelRiver_PairRace::
+# 2086 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 2087 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairRace_2
+# 2091 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairRace_3
+# 2097 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_7, MSGBOX_DEFAULT
+# 2098 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_8, MSGBOX_DEFAULT
+# 2099 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_9, MSGBOX_DEFAULT
+# 2100 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_10, MSGBOX_DEFAULT
+ParcelRiver_PairRace_1:
+# 2102 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_PairRace_2:
+# 2088 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_0, MSGBOX_DEFAULT
+# 2089 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_1, MSGBOX_DEFAULT
+# 2090 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_2, MSGBOX_DEFAULT
+	goto ParcelRiver_PairRace_1
+
+ParcelRiver_PairRace_3:
+# 2092 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_3, MSGBOX_DEFAULT
+# 2093 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_4, MSGBOX_DEFAULT
+# 2094 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_5, MSGBOX_DEFAULT
+# 2095 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairRace_Text_6, MSGBOX_DEFAULT
+	goto ParcelRiver_PairRace_1
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 51 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -6537,3 +6578,65 @@ ParcelRiver_FindDepth_Text_1:
 	.string "river below both. Someone has scraped\l"
 	.string "the white back a little so the red\l"
 	.string "shows.$"
+
+ParcelRiver_PairRace_Text_0:
+# 2088 "data/maps/ParcelRiver/scripts.pory"
+	.string "BEEKEEPER: Seven hives. One swarmed\n"
+	.string "and stayed. The bank flowered for three\l"
+	.string "weeks under the new allocation.$"
+
+ParcelRiver_PairRace_Text_1:
+# 2089 "data/maps/ParcelRiver/scripts.pory"
+	.string "STUDENT: Three weeks is not a trend.$"
+
+ParcelRiver_PairRace_Text_2:
+# 2090 "data/maps/ParcelRiver/scripts.pory"
+	.string "BEEKEEPER: Three weeks is honey. Write\n"
+	.string "down the honey, then the trend. In that\l"
+	.string "order, or you'll starve while you're\l"
+	.string "being careful.$"
+
+ParcelRiver_PairRace_Text_3:
+# 2092 "data/maps/ParcelRiver/scripts.pory"
+	.string "STUDENT: The ranger counted the hives\n"
+	.string "with me. Wrote six, and the dates the\l"
+	.string "flowers came.$"
+
+ParcelRiver_PairRace_Text_4:
+# 2093 "data/maps/ParcelRiver/scripts.pory"
+	.string "BEEKEEPER: Six hives in a notebook.\n"
+	.string "Make a difference, will it?$"
+
+ParcelRiver_PairRace_Text_5:
+# 2094 "data/maps/ParcelRiver/scripts.pory"
+	.string "STUDENT: It made a difference to the\n"
+	.string "farmer at the meeting. He read it out.\l"
+	.string "Six hives, he said, and a Board that\l"
+	.string "can't name a year.$"
+
+ParcelRiver_PairRace_Text_6:
+# 2095 "data/maps/ParcelRiver/scripts.pory"
+	.string "BEEKEEPER: …Count them again next\n"
+	.string "spring. In the same notebook, if you can\l"
+	.string "get it.$"
+
+ParcelRiver_PairRace_Text_7:
+# 2097 "data/maps/ParcelRiver/scripts.pory"
+	.string "BEEKEEPER: The hives are down a third.\n"
+	.string "Flowers along the bank came and went in\l"
+	.string "a week.$"
+
+ParcelRiver_PairRace_Text_8:
+# 2098 "data/maps/ParcelRiver/scripts.pory"
+	.string "STUDENT: The Board's allocation\n"
+	.string "starves the bank in spring. Then floods\l"
+	.string "it in summer when nothing needs it.$"
+
+ParcelRiver_PairRace_Text_9:
+# 2099 "data/maps/ParcelRiver/scripts.pory"
+	.string "BEEKEEPER: You've been reading.$"
+
+ParcelRiver_PairRace_Text_10:
+# 2100 "data/maps/ParcelRiver/scripts.pory"
+	.string "STUDENT: I've been counting bees.\n"
+	.string "Reading's what you do after.$"

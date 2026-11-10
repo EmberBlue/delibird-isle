@@ -987,3 +987,25 @@ script ParcelFernwick_FindJar {
     }
     end
 }
+
+script ParcelFernwick_PairStation {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CADET: The Director's letter says 'independence review'. HALE says it means eight honest stations or twelve bought ones, and the Director has to choose in writing."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: HALE's waited twenty years for someone to have to choose in writing."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: What if the Director chooses twelve?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Then HALE will run eight anyway and the paper will say why. That's what the ranger changed. Not the choice. The saying why."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OLD WOMAN: The new one spoke at the river meeting, or stood at the back and wrote. Same thing, in this town."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: HALE read the minutes out at briefing. All of them. Took the whole hour."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: And?"), MSGBOX_DEFAULT)
+        msgbox(format("CADET: And then he said: that's what the job is. And sent us out. Nobody asked what he meant. We knew."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("CADET: Twelve stations, the poster says. We run eight."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: The poster's the FOUNDATION's. The eight are HALE's. Count the ones with a light on."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Why does nobody fix the poster?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Because the poster paid for two of the eight. You'll understand the arithmetic when you've been cold in a station the poster didn't build."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

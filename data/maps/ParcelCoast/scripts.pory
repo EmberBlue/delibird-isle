@@ -2029,3 +2029,26 @@ script ParcelCoast_FindRoost {
     }
     end
 }
+
+script ParcelCoast_PairMarket {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("STALLHOLDER: Small fish on the stall again. Three sizes. The cold store won't take mixed."), MSGBOX_DEFAULT)
+        msgbox(format("BUYER: I'll take mixed. I'll pack them by hand."), MSGBOX_DEFAULT)
+        msgbox(format("STALLHOLDER: That's slower."), MSGBOX_DEFAULT)
+        msgbox(format("BUYER: I pack fish. I'm learning to read them. The ranger made it look like a job."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("BUYER: The ranger stood at the stall for an hour writing down the lengths."), MSGBOX_DEFAULT)
+        msgbox(format("STALLHOLDER: Eleven. All the same. They wrote it the way the inspector writes, and then they asked me how long it had been like that, and I said two years, and they wrote that too."), MSGBOX_DEFAULT)
+        msgbox(format("BUYER: And?"), MSGBOX_DEFAULT)
+        msgbox(format("STALLHOLDER: And nobody had ever asked me how long. Only how much."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("STALLHOLDER: Eleven fish, all one length, and the FOUNDATION's cold store buys the lot."), MSGBOX_DEFAULT)
+        msgbox(format("BUYER: One length is easier to pack."), MSGBOX_DEFAULT)
+        msgbox(format("STALLHOLDER: One length means the sea's only got one year of fish left in it."), MSGBOX_DEFAULT)
+        msgbox(format("BUYER: I pack fish. I don't read seas."), MSGBOX_DEFAULT)
+        msgbox(format("STALLHOLDER: Someone's going to have to."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

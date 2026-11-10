@@ -2058,3 +2058,27 @@ script ParcelWetlands_FindNest {
     }
     end
 }
+
+script ParcelWetlands_PairSouth {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: The monitor takes a jar every week now. The jars go to the lab at Saltwick."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Can I drink from the channel?"), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: When the jar says so. Not when the colour does. You asked who does the test. That's who. A ranger, a jar and a clock."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: That's not a who."), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: It's the best who we've had."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("BOY: The ranger read the pipe under the falls. There was a sheen. Like petrol on a puddle."), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: There's been a sheen for two years."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Then why didn't anyone say?"), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: Everyone said. Nobody wrote. There's a difference, and the difference is why you're not allowed to drink from the channel."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("FISHER: Don't drink from the channel below the falls."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Why not? It looks clean."), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: Clean is a colour. Safe is a test. We've got the colour."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Who does the test?"), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: Nobody, yet. Somebody with a notebook, I'm told, is on the way."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

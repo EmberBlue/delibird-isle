@@ -2024,3 +2024,23 @@ script ParcelHighlands_FindFrost {
     }
     end
 }
+
+script ParcelHighlands_PairThaw {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MOTHER: The drill's capped and the ground is still letting go. HALE said so to our faces. First one who did."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Is that good?"), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: It's true. Up here that's what we've got instead of good. Hold my hand on the soft bit."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("BOY: The ranger stood in the puddle to the knee and wrote something down."), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: What did they write?"), MSGBOX_DEFAULT)
+        msgbox(format("BOY: I asked. They said: thaw pond, new, and the date. Then they said I was right. They're not ponds. They're the ground letting go."), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: …Come away from there."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MOTHER: Don't play on the ponds."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: They're not ponds. They're puddles. They weren't here last year."), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: That's why you don't play on them. The ground made them. It can make more."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

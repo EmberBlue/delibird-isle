@@ -1296,3 +1296,28 @@ script ParcelWeather_PageFortyOne {
     }
     end
 }
+
+script ParcelWeather_PairGate {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MODELLER: The Council wants the series certified. All forty years. With the brackets."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: You said the brackets weren't a flaw."), MSGBOX_DEFAULT)
+        msgbox(format("MODELLER: I said scope. I've stopped saying scope. The director took the word out of the building. He said we'd used it to mean 'the part we don't want to look at' for eleven years."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: What do we say instead?"), MSGBOX_DEFAULT)
+        msgbox(format("MODELLER: What happened. Apparently that's a technical term now."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
+        msgbox(format("CADET: The ranger beat the four and then the director. Then asked the director what Scenario D was."), MSGBOX_DEFAULT)
+        msgbox(format("MODELLER: There isn't a Scenario D."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: There is now. The technician pinned it under the others. It's the over-the-fence log."), MSGBOX_DEFAULT)
+        msgbox(format("MODELLER: That's not a scenario. That's what happened."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Yes."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MODELLER: Scenario C says full management holds the sky to within a degree."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Over what period?"), MSGBOX_DEFAULT)
+        msgbox(format("MODELLER: The funding period."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: …And after?"), MSGBOX_DEFAULT)
+        msgbox(format("MODELLER: After isn't in the scenario. That's not a flaw. That's a scope."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

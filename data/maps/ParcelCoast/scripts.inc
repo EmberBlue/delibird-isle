@@ -4200,6 +4200,51 @@ ParcelCoast_FindRoost_4:
 	goto ParcelCoast_FindRoost_3
 
 
+ParcelCoast_PairMarket::
+# 2034 "data/maps/ParcelCoast/scripts.pory"
+	lock
+# 2035 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_PairMarket_2
+# 2040 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_PairMarket_3
+# 2046 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_8, MSGBOX_DEFAULT
+# 2047 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_9, MSGBOX_DEFAULT
+# 2048 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_10, MSGBOX_DEFAULT
+# 2049 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_11, MSGBOX_DEFAULT
+# 2050 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_12, MSGBOX_DEFAULT
+ParcelCoast_PairMarket_1:
+# 2052 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_PairMarket_2:
+# 2036 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_0, MSGBOX_DEFAULT
+# 2037 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_1, MSGBOX_DEFAULT
+# 2038 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_2, MSGBOX_DEFAULT
+# 2039 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_3, MSGBOX_DEFAULT
+	goto ParcelCoast_PairMarket_1
+
+ParcelCoast_PairMarket_3:
+# 2041 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_4, MSGBOX_DEFAULT
+# 2042 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_5, MSGBOX_DEFAULT
+# 2043 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_6, MSGBOX_DEFAULT
+# 2044 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairMarket_Text_7, MSGBOX_DEFAULT
+	goto ParcelCoast_PairMarket_1
+
+
 ParcelCoast_FirstEntry_Text_0:
 # 48 "data/maps/ParcelCoast/scripts.pory"
 	.string "The ferry rounds the headland and the\n"
@@ -6408,3 +6453,70 @@ ParcelCoast_FindRoost_Text_1:
 	.string "The east end of the quay wall. The\n"
 	.string "WINGULL are still there, sixty-odd,\l"
 	.string "facing the wind.$"
+
+ParcelCoast_PairMarket_Text_0:
+# 2036 "data/maps/ParcelCoast/scripts.pory"
+	.string "STALLHOLDER: Small fish on the stall\n"
+	.string "again. Three sizes. The cold store won't\l"
+	.string "take mixed.$"
+
+ParcelCoast_PairMarket_Text_1:
+# 2037 "data/maps/ParcelCoast/scripts.pory"
+	.string "BUYER: I'll take mixed. I'll pack them by\n"
+	.string "hand.$"
+
+ParcelCoast_PairMarket_Text_2:
+# 2038 "data/maps/ParcelCoast/scripts.pory"
+	.string "STALLHOLDER: That's slower.$"
+
+ParcelCoast_PairMarket_Text_3:
+# 2039 "data/maps/ParcelCoast/scripts.pory"
+	.string "BUYER: I pack fish. I'm learning to read\n"
+	.string "them. The ranger made it look like a job.$"
+
+ParcelCoast_PairMarket_Text_4:
+# 2041 "data/maps/ParcelCoast/scripts.pory"
+	.string "BUYER: The ranger stood at the stall\n"
+	.string "for an hour writing down the lengths.$"
+
+ParcelCoast_PairMarket_Text_5:
+# 2042 "data/maps/ParcelCoast/scripts.pory"
+	.string "STALLHOLDER: Eleven. All the same. They\n"
+	.string "wrote it the way the inspector writes,\l"
+	.string "and then they asked me how long it had\l"
+	.string "been like that, and I said two years,\l"
+	.string "and they wrote that too.$"
+
+ParcelCoast_PairMarket_Text_6:
+# 2043 "data/maps/ParcelCoast/scripts.pory"
+	.string "BUYER: And?$"
+
+ParcelCoast_PairMarket_Text_7:
+# 2044 "data/maps/ParcelCoast/scripts.pory"
+	.string "STALLHOLDER: And nobody had ever\n"
+	.string "asked me how long. Only how much.$"
+
+ParcelCoast_PairMarket_Text_8:
+# 2046 "data/maps/ParcelCoast/scripts.pory"
+	.string "STALLHOLDER: Eleven fish, all one\n"
+	.string "length, and the FOUNDATION's cold store\l"
+	.string "buys the lot.$"
+
+ParcelCoast_PairMarket_Text_9:
+# 2047 "data/maps/ParcelCoast/scripts.pory"
+	.string "BUYER: One length is easier to pack.$"
+
+ParcelCoast_PairMarket_Text_10:
+# 2048 "data/maps/ParcelCoast/scripts.pory"
+	.string "STALLHOLDER: One length means the\n"
+	.string "sea's only got one year of fish left in\l"
+	.string "it.$"
+
+ParcelCoast_PairMarket_Text_11:
+# 2049 "data/maps/ParcelCoast/scripts.pory"
+	.string "BUYER: I pack fish. I don't read seas.$"
+
+ParcelCoast_PairMarket_Text_12:
+# 2050 "data/maps/ParcelCoast/scripts.pory"
+	.string "STALLHOLDER: Someone's going to have\n"
+	.string "to.$"

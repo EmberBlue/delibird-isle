@@ -2136,6 +2136,47 @@ ParcelIsle_FindTally_4:
 	goto ParcelIsle_FindTally_3
 
 
+ParcelIsle_PairGreen::
+# 1130 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 1131 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_PairGreen_2
+# 1136 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_PairGreen_3
+# 1141 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_7, MSGBOX_DEFAULT
+# 1142 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_8, MSGBOX_DEFAULT
+# 1143 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_9, MSGBOX_DEFAULT
+# 1144 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_10, MSGBOX_DEFAULT
+ParcelIsle_PairGreen_1:
+# 1146 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_PairGreen_2:
+# 1132 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_0, MSGBOX_DEFAULT
+# 1133 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_1, MSGBOX_DEFAULT
+# 1134 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_2, MSGBOX_DEFAULT
+# 1135 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_3, MSGBOX_DEFAULT
+	goto ParcelIsle_PairGreen_1
+
+ParcelIsle_PairGreen_3:
+# 1137 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_4, MSGBOX_DEFAULT
+# 1138 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_5, MSGBOX_DEFAULT
+# 1139 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairGreen_Text_6, MSGBOX_DEFAULT
+	goto ParcelIsle_PairGreen_1
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAM: Hey! You're the mainlander, right?\n"
@@ -3533,3 +3574,66 @@ ParcelIsle_FindTally_Text_1:
 	.string "A pier post with three groups of\n"
 	.string "notches. Eleven, four, one. The wood will\l"
 	.string "not take another.$"
+
+ParcelIsle_PairGreen_Text_0:
+# 1132 "data/maps/ParcelIsle/scripts.pory"
+	.string "COUNCILLOR: The lab's leased to the\n"
+	.string "Survey. Planning consent for a change\l"
+	.string "of use: granted. I signed it myself.$"
+
+ParcelIsle_PairGreen_Text_1:
+# 1133 "data/maps/ParcelIsle/scripts.pory"
+	.string "SCHOOLTEACHER: Quickly, for once.$"
+
+ParcelIsle_PairGreen_Text_2:
+# 1134 "data/maps/ParcelIsle/scripts.pory"
+	.string "COUNCILLOR: Quickly. I've a reputation\n"
+	.string "to lose and I've decided which way I'd\l"
+	.string "rather lose it. Don't put that on the\l"
+	.string "board.$"
+
+ParcelIsle_PairGreen_Text_3:
+# 1135 "data/maps/ParcelIsle/scripts.pory"
+	.string "SCHOOLTEACHER: It's already up.$"
+
+ParcelIsle_PairGreen_Text_4:
+# 1137 "data/maps/ParcelIsle/scripts.pory"
+	.string "SCHOOLTEACHER: The provisional made\n"
+	.string "FOREST. First out of this town in nine\l"
+	.string "years. I've put it on the board at\l"
+	.string "school.$"
+
+ParcelIsle_PairGreen_Text_5:
+# 1138 "data/maps/ParcelIsle/scripts.pory"
+	.string "COUNCILLOR: It's not a council matter.$"
+
+ParcelIsle_PairGreen_Text_6:
+# 1139 "data/maps/ParcelIsle/scripts.pory"
+	.string "SCHOOLTEACHER: Nothing is, until it's in\n"
+	.string "the paper. Then it's a planning matter.\l"
+	.string "I've watched you long enough to know\l"
+	.string "the order.$"
+
+ParcelIsle_PairGreen_Text_7:
+# 1141 "data/maps/ParcelIsle/scripts.pory"
+	.string "COUNCILLOR: The lab on the front is a\n"
+	.string "planning matter now. Vacant\l"
+	.string "possession. The owner's within his\l"
+	.string "rights.$"
+
+ParcelIsle_PairGreen_Text_8:
+# 1142 "data/maps/ParcelIsle/scripts.pory"
+	.string "SCHOOLTEACHER: The owner emptied it at\n"
+	.string "two in the morning.$"
+
+ParcelIsle_PairGreen_Text_9:
+# 1143 "data/maps/ParcelIsle/scripts.pory"
+	.string "COUNCILLOR: The owner's hours are the\n"
+	.string "owner's business.$"
+
+ParcelIsle_PairGreen_Text_10:
+# 1144 "data/maps/ParcelIsle/scripts.pory"
+	.string "SCHOOLTEACHER: I teach the children\n"
+	.string "that a thing done at two in the morning\l"
+	.string "is a thing someone didn't want seen.\l"
+	.string "Shall I stop?$"

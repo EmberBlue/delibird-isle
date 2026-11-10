@@ -1790,6 +1790,47 @@ ParcelDelibird_FindCorner_4:
 	goto ParcelDelibird_FindCorner_3
 
 
+ParcelDelibird_PairShore::
+# 956 "data/maps/ParcelDelibird/scripts.pory"
+	lock
+# 957 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_PairShore_2
+# 962 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairShore_3
+# 967 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_7, MSGBOX_DEFAULT
+# 968 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_8, MSGBOX_DEFAULT
+# 969 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_9, MSGBOX_DEFAULT
+# 970 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_10, MSGBOX_DEFAULT
+ParcelDelibird_PairShore_1:
+# 972 "data/maps/ParcelDelibird/scripts.pory"
+	release
+	end
+
+ParcelDelibird_PairShore_2:
+# 958 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_0, MSGBOX_DEFAULT
+# 959 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_1, MSGBOX_DEFAULT
+# 960 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_2, MSGBOX_DEFAULT
+# 961 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_3, MSGBOX_DEFAULT
+	goto ParcelDelibird_PairShore_1
+
+ParcelDelibird_PairShore_3:
+# 963 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_4, MSGBOX_DEFAULT
+# 964 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_5, MSGBOX_DEFAULT
+# 965 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairShore_Text_6, MSGBOX_DEFAULT
+	goto ParcelDelibird_PairShore_1
+
+
 ParcelDelibird_FirstEntry_Text_0:
 # 49 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The boat noses in and the island takes\n"
@@ -3042,3 +3083,66 @@ ParcelDelibird_FindCorner_Text_1:
 	.string "The line of a sill in the wet shore, two\n"
 	.string "planks under. The hinge is the only part\l"
 	.string "still above the ground.$"
+
+ParcelDelibird_PairShore_Text_0:
+# 958 "data/maps/ParcelDelibird/scripts.pory"
+	.string "NETMAN: Red cloth on stakes along the\n"
+	.string "slump line. We put them in ourselves.\l"
+	.string "Didn't wait for the Survey.$"
+
+ParcelDelibird_PairShore_Text_1:
+# 959 "data/maps/ParcelDelibird/scripts.pory"
+	.string "OLD MAN: The Survey came anyway. Wrote\n"
+	.string "down that we'd put them in. That's in a\l"
+	.string "record now too.$"
+
+ParcelDelibird_PairShore_Text_2:
+# 960 "data/maps/ParcelDelibird/scripts.pory"
+	.string "NETMAN: Everything's in a record now.$"
+
+ParcelDelibird_PairShore_Text_3:
+# 961 "data/maps/ParcelDelibird/scripts.pory"
+	.string "OLD MAN: Everything always was. In the\n"
+	.string "ground. Somebody finally learned to\l"
+	.string "read it back.$"
+
+ParcelDelibird_PairShore_Text_4:
+# 963 "data/maps/ParcelDelibird/scripts.pory"
+	.string "OLD MAN: The ranger carried tea to\n"
+	.string "INGRID, oil to TOMAS, and read the\l"
+	.string "stakes between. MARTA gave them the\l"
+	.string "bird.$"
+
+ParcelDelibird_PairShore_Text_5:
+# 964 "data/maps/ParcelDelibird/scripts.pory"
+	.string "NETMAN: The bird gives itself.$"
+
+ParcelDelibird_PairShore_Text_6:
+# 965 "data/maps/ParcelDelibird/scripts.pory"
+	.string "OLD MAN: So MARTA says. I've watched\n"
+	.string "that bird thirty winters. It goes where\l"
+	.string "it's needed. It went off the boat\l"
+	.string "straight to the stranger. Make of that\l"
+	.string "what you like.$"
+
+ParcelDelibird_PairShore_Text_7:
+# 967 "data/maps/ParcelDelibird/scripts.pory"
+	.string "NETMAN: The shore's two steps further\n"
+	.string "in than when I was a boy.$"
+
+ParcelDelibird_PairShore_Text_8:
+# 968 "data/maps/ParcelDelibird/scripts.pory"
+	.string "OLD MAN: Three. I counted. Then I\n"
+	.string "stopped counting because it\l"
+	.string "frightened me, and now I count again\l"
+	.string "because the ranger's up the slope doing\l"
+	.string "it anyway.$"
+
+ParcelDelibird_PairShore_Text_9:
+# 969 "data/maps/ParcelDelibird/scripts.pory"
+	.string "NETMAN: What good's the count?$"
+
+ParcelDelibird_PairShore_Text_10:
+# 970 "data/maps/ParcelDelibird/scripts.pory"
+	.string "OLD MAN: None. It's just true. I've\n"
+	.string "decided to prefer true.$"

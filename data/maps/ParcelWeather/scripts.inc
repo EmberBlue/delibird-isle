@@ -2793,6 +2793,55 @@ ParcelWeather_PageFortyOne_4:
 	goto ParcelWeather_PageFortyOne_3
 
 
+ParcelWeather_PairGate::
+# 1301 "data/maps/ParcelWeather/scripts.pory"
+	lock
+# 1302 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairGate_2
+# 1308 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairGate_3
+# 1315 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_10, MSGBOX_DEFAULT
+# 1316 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_11, MSGBOX_DEFAULT
+# 1317 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_12, MSGBOX_DEFAULT
+# 1318 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_13, MSGBOX_DEFAULT
+# 1319 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_14, MSGBOX_DEFAULT
+ParcelWeather_PairGate_1:
+# 1321 "data/maps/ParcelWeather/scripts.pory"
+	release
+	end
+
+ParcelWeather_PairGate_2:
+# 1303 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_0, MSGBOX_DEFAULT
+# 1304 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_1, MSGBOX_DEFAULT
+# 1305 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_2, MSGBOX_DEFAULT
+# 1306 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_3, MSGBOX_DEFAULT
+# 1307 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_4, MSGBOX_DEFAULT
+	goto ParcelWeather_PairGate_1
+
+ParcelWeather_PairGate_3:
+# 1309 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_5, MSGBOX_DEFAULT
+# 1310 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_6, MSGBOX_DEFAULT
+# 1311 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_7, MSGBOX_DEFAULT
+# 1312 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_8, MSGBOX_DEFAULT
+# 1313 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairGate_Text_9, MSGBOX_DEFAULT
+	goto ParcelWeather_PairGate_1
+
+
 ParcelWeather_FirstEntry_Text_0:
 # 22 "data/maps/ParcelWeather/scripts.pory"
 	.string "A sign over the landing: MEREHOLT\n"
@@ -4088,3 +4137,79 @@ ParcelWeather_PageFortyOne_Text_1:
 # 1295 "data/maps/ParcelWeather/scripts.pory"
 	.string "A stone where a page was. Somebody has\n"
 	.string "written on the stone, small: 41.$"
+
+ParcelWeather_PairGate_Text_0:
+# 1303 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: The Council wants the series\n"
+	.string "certified. All forty years. With the\l"
+	.string "brackets.$"
+
+ParcelWeather_PairGate_Text_1:
+# 1304 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: You said the brackets weren't a\n"
+	.string "flaw.$"
+
+ParcelWeather_PairGate_Text_2:
+# 1305 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: I said scope. I've stopped\n"
+	.string "saying scope. The director took the\l"
+	.string "word out of the building. He said we'd\l"
+	.string "used it to mean 'the part we don't want\l"
+	.string "to look at' for eleven years.$"
+
+ParcelWeather_PairGate_Text_3:
+# 1306 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: What do we say instead?$"
+
+ParcelWeather_PairGate_Text_4:
+# 1307 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: What happened. Apparently\n"
+	.string "that's a technical term now.$"
+
+ParcelWeather_PairGate_Text_5:
+# 1309 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: The ranger beat the four and\n"
+	.string "then the director. Then asked the\l"
+	.string "director what Scenario D was.$"
+
+ParcelWeather_PairGate_Text_6:
+# 1310 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: There isn't a Scenario D.$"
+
+ParcelWeather_PairGate_Text_7:
+# 1311 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: There is now. The technician\n"
+	.string "pinned it under the others. It's the\l"
+	.string "over-the-fence log.$"
+
+ParcelWeather_PairGate_Text_8:
+# 1312 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: That's not a scenario. That's\n"
+	.string "what happened.$"
+
+ParcelWeather_PairGate_Text_9:
+# 1313 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: Yes.$"
+
+ParcelWeather_PairGate_Text_10:
+# 1315 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: Scenario C says full\n"
+	.string "management holds the sky to within a\l"
+	.string "degree.$"
+
+ParcelWeather_PairGate_Text_11:
+# 1316 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: Over what period?$"
+
+ParcelWeather_PairGate_Text_12:
+# 1317 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: The funding period.$"
+
+ParcelWeather_PairGate_Text_13:
+# 1318 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: …And after?$"
+
+ParcelWeather_PairGate_Text_14:
+# 1319 "data/maps/ParcelWeather/scripts.pory"
+	.string "MODELLER: After isn't in the scenario.\n"
+	.string "That's not a flaw. That's a scope.$"

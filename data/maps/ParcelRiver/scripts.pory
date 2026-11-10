@@ -2081,3 +2081,24 @@ script ParcelRiver_FindDepth {
     }
     end
 }
+
+script ParcelRiver_PairRace {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BEEKEEPER: Seven hives. One swarmed and stayed. The bank flowered for three weeks under the new allocation."), MSGBOX_DEFAULT)
+        msgbox(format("STUDENT: Three weeks is not a trend."), MSGBOX_DEFAULT)
+        msgbox(format("BEEKEEPER: Three weeks is honey. Write down the honey, then the trend. In that order, or you'll starve while you're being careful."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("STUDENT: The ranger counted the hives with me. Wrote six, and the dates the flowers came."), MSGBOX_DEFAULT)
+        msgbox(format("BEEKEEPER: Six hives in a notebook. Make a difference, will it?"), MSGBOX_DEFAULT)
+        msgbox(format("STUDENT: It made a difference to the farmer at the meeting. He read it out. Six hives, he said, and a Board that can't name a year."), MSGBOX_DEFAULT)
+        msgbox(format("BEEKEEPER: …Count them again next spring. In the same notebook, if you can get it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("BEEKEEPER: The hives are down a third. Flowers along the bank came and went in a week."), MSGBOX_DEFAULT)
+        msgbox(format("STUDENT: The Board's allocation starves the bank in spring. Then floods it in summer when nothing needs it."), MSGBOX_DEFAULT)
+        msgbox(format("BEEKEEPER: You've been reading."), MSGBOX_DEFAULT)
+        msgbox(format("STUDENT: I've been counting bees. Reading's what you do after."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

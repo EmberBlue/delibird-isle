@@ -951,3 +951,24 @@ script ParcelDelibird_FindCorner {
     }
     end
 }
+
+script ParcelDelibird_PairShore {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("NETMAN: Red cloth on stakes along the slump line. We put them in ourselves. Didn't wait for the Survey."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: The Survey came anyway. Wrote down that we'd put them in. That's in a record now too."), MSGBOX_DEFAULT)
+        msgbox(format("NETMAN: Everything's in a record now."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Everything always was. In the ground. Somebody finally learned to read it back."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("OLD MAN: The ranger carried tea to INGRID, oil to TOMAS, and read the stakes between. MARTA gave them the bird."), MSGBOX_DEFAULT)
+        msgbox(format("NETMAN: The bird gives itself."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: So MARTA says. I've watched that bird thirty winters. It goes where it's needed. It went off the boat straight to the stranger. Make of that what you like."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("NETMAN: The shore's two steps further in than when I was a boy."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Three. I counted. Then I stopped counting because it frightened me, and now I count again because the ranger's up the slope doing it anyway."), MSGBOX_DEFAULT)
+        msgbox(format("NETMAN: What good's the count?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: None. It's just true. I've decided to prefer true."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
