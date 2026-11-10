@@ -112,6 +112,7 @@ def main():
     def in_battle():
         return bool(gmain) and (core.memory.u8[gmain + 0x439] >> 1) & 1
     btf = syms.get("gBattleTypeFlags")
+    battles = [0]                  # how many fights so far (GOTO compares before/after a run)
     def fight(limit=None):         # through a battle until inBattle clears.
         limit = a.fight_cap if limit is None else limit
         spent, taps = 0, 0
@@ -121,6 +122,7 @@ def main():
         # never reads "no PP left", and if the action cursor drifted off FIGHT (an A that landed during an
         # animation, then a stray direction) it is steered back before the next A. B every sixth tap closes
         # anything that still opened.
+        battles[0] += 1
         wild = btf is not None and not (core.memory.u32[btf] & 8)   # BATTLE_TYPE_TRAINER
         if a.trace: print(f"  battle: gBattleTypeFlags={core.memory.u32[btf] if btf else None:#x} wild={wild}", flush=True)
         run_keys = ["UP", "LEFT", "DOWN", "RIGHT", "A", "B", "B", "B"]
@@ -358,6 +360,7 @@ def main():
                     print(f"  GOTO: no path from ({px},{py}) on {mdir} to {target}"); break
                 rd, rk = runs[0]
                 print(f"  GOTO {target}: at ({px},{py}) {rd} x{rk} (frame {frame})", flush=True)
+                fights_before = battles[0]
                 step(16 * (rk - 1) + 12, rd); step(30)
                 dismiss(120)
                 nm, nx, ny = live_pos()
@@ -368,6 +371,8 @@ def main():
                     # scene). Not a blocked tile -- dismiss until the script lets go, then plan again.
                     dismiss(600)
                     continue
+                if (nx, ny) == (px, py) and battles[0] != fights_before:
+                    continue            # a wild battle took the run: not a wall, just plan again
                 if (nx, ny) == (px, py):
                     still += 1
                     dismiss(900)        # a scene on this tile (the Floodbasin relief line runs ten boxes) or a

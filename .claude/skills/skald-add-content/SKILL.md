@@ -53,7 +53,12 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   boards left at the default 3 makes all of them silent (33 such, found
   2026-11-10). `python3 tools/skald/event_elev.py` lists them, `--fix`
   rewrites them (objects and triggers take the tile's elevation, signs
-  take 0); `audit.py` warns on each.
+  take 0); `audit.py` warns on each. **An NPC's elevation is re-read from
+  its tile when it spawns**, so the template's 0 does not survive on a
+  water tile: for a fish or swimmer spoken to from a bridge, set the water
+  tile itself to elevation 0 (`layout_edit.py MAP elev x,y 0`), and put the
+  walkway's ramp/edge tiles at 0 as well so the player on it is a wildcard
+  too (the Floodbasin levee).
 - **Ledges are one-way and the Mach-Bike slope is down-only** (no bike in
   Skaldmere). A ring of ledges around a village needs a stair out
   (metatile 175 in the mountain kit, elevation 0 — see the Highlands at
