@@ -95,12 +95,16 @@ twenty-eight documents on the desks, eighty-one Skaldmere dex entries, five
 remembered choices (Hollis's name, the Mahogany correction, the meeting,
 the blanket, the tea) and the examinations at every leader, forty-seven
 overheard conversations in the towns and on the routes, INGER of the
-Courier at seven doors and her front page in every Center, nine more side
-quests (thirty-three), Rin across the arc and the unchosen after the
+Courier at seven doors and her front page in every Center, eighteen more
+side quests (forty-two), Rin across the arc and the unchosen after the
 hearing, three books (Heron's field guide, the Corps handbook, the harbour
-almanac), the epilogue seen closer, and the post-game second readings
-(Ilex's red cloth). ~74,000 hand-written words, 686 objects, 336 readable
-events, 102 maps, 1,071 battles. The certification spine was fought through headlessly (every leader, every signing, the confession, the boardroom).
+almanac), household papers in twenty-three houses, the lab after the
+hearing, the epilogue seen closer, and the post-game second readings
+(Ilex's red cloth). ~80,500 hand-written words (~111,000 with the
+rematch-tier lines), 704 objects, 376 readable events, 56 overheard
+conversations, 102 maps, 1,071 battles. The certification spine was fought
+through headlessly with the harness's new `--party`/`--var` (every leader,
+every signing, the confession, the boardroom: `tools/skald/spine.sh`).
 
 ## THE recipe (every zone was built this way; keep using it)
 
