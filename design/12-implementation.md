@@ -477,6 +477,16 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
 - **`tiles.png` edits**: keep the PNG 4-bit indexed (`im.save(p, bits=4)`);
   `tiles.4bpp.lz` and `.gbapal` are build outputs (git-ignored) and follow
   the PNG and `.pal` by timestamp.
+- **Outdoor palettes are graded** (`tools/skald/grade.py`): every live
+  outdoor `.pal` equals `grade(base)` with the base in
+  `tools/skald/palette_base/<tileset>/NN.pal`. To change a colour on
+  purpose, write it to the base (or to the live file -- `--apply` notices
+  an entry that is not `grade(base)`, takes it as the new base value and
+  grades it) and run `python3 tools/skald/grade.py --apply`. Never grade a
+  palette twice by hand; `--check` must report 0 drift before a commit.
+  Interiors and caves are not graded (map types other than town, city,
+  route, ocean route, underwater), and `.pal` line endings are LF in the
+  tree; git normalises them.
 
 ## RAM budget (the binding constraint)
 

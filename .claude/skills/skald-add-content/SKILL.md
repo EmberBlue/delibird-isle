@@ -83,6 +83,11 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   `data/tilesets/primary/leob_general`, not `general`. Never put a new cottage
   or hall on General's palette 5 yellows (they are the sand) or expect the
   Pokémon Center's red on palette 1 (it lives on palette 4's free entries).
+- Outdoor palettes are graded: a colour you want in the game goes into
+  `tools/skald/palette_base/<tileset>/NN.pal` (kit_restyle writes there by
+  itself), then `python3 tools/skald/grade.py --apply` regenerates the live
+  `.pal`. `grade.py --check` must say 0 drift before committing. A new outdoor
+  tileset gets a base folder on the first `--apply`.
 - A new fly town: `FLAG_VISITED_PARCEL_X` (alias an unreachable Hoenn visited
   flag in `flags.h`), `setflag` it in the map's `MAP_SCRIPT_ON_TRANSITION`, add
   the `MAPSEC_` case to `GetMapsecType()` in `src/region_map.c`, a row in

@@ -153,7 +153,7 @@ def general(check_only=False):
     changes = 0
     # 1. palette 1: the red roof ramp becomes slate; palette 4: the Center's red lives in the free entries
     for pn, entries in ((1, {11 + i: c for i, c in enumerate(SLATE4)}), (4, PC_PAL4)):
-        p = GENERAL / "palettes" / f"{pn:02}.pal"
+        p = pal_path(GENERAL.name, pn)
         lines = read_pal(p)
         dirty = False
         for idx, rgb in entries.items():
@@ -214,14 +214,26 @@ def general(check_only=False):
     return changes
 
 
+BASE = ROOT / "tools/skald/palette_base"   # grade.py's ungraded palettes; once a kit has them, edits go there
+
+
+def pal_path(kit, pn):
+    """The file an absolute colour belongs in: the grade's base palette when the kit has one
+    (grade.py --apply then regenerates the live palette), else the live palette itself."""
+    b = BASE / kit / f"{pn:02}.pal"
+    if b.exists():
+        return b
+    d = SEC / kit / "palettes"
+    if not d.exists():
+        d = PRI / kit / "palettes"
+    return d / f"{pn:02}.pal"
+
+
 def apply(check_only=False):
     drift = 0
     for kit, pals in SPEC.items():
-        d = SEC / kit / "palettes"
-        if not d.exists():
-            d = PRI / kit / "palettes"
         for pn, entries in pals.items():
-            p = d / f"{pn:02}.pal"
+            p = pal_path(kit, pn)
             lines = read_pal(p)
             changed = False
             for idx, rgb in entries.items():
@@ -245,3 +257,5 @@ if __name__ == "__main__":
     n = apply(check_only=check) + general(check_only=check)
     if check:
         print("total drift:", n)
+    elif n and BASE.exists():
+        print("palettes written to the grade base: run  python3 tools/skald/grade.py --apply")

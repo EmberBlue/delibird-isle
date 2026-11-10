@@ -370,6 +370,20 @@ replaces is gone from the tree).
   one idempotent script; `pal_tool.py` is the renderer that made it safe
   (every visible pixel knows its palette entry; `mask` shows exactly what
   an entry change would touch). Checked in-emulator in eight towns.
+- **Northern grade** — `grade.py`. One colour transform over all 88
+  outdoor palettes (the three primaries and the ten secondaries outdoor
+  Skaldmere layouts use; caves and interiors untouched): greens lean
+  blue-green (+10° at the leafy middle), sand and ash lose a fifth of
+  their saturation and warm 4° toward olive, saturation ×0.92 overall,
+  dark colours take a slate cast, a hair less red and more blue
+  everywhere. Chosen from three candidates on side-by-side renders
+  (v1 too grey in Fernwick's plaza, v2 invisible; v3 is v1 at 0.92).
+  Pipeline: `tools/skald/palette_base/<tileset>/NN.pal` holds the
+  ungraded palettes; the live `.pal` is always `grade(base)`. An
+  absolute colour written to a live palette is detected as a new base
+  value, so `kit_restyle.py` (which now writes into the base when it
+  exists) and hand edits compose and the grade never stacks.
+  `--preview MAP OUT.png v1` renders a candidate without writing.
 - Verified in-emulator: the title at three moments, all nine sprites in
   their maps via `walktest.py --out`, a dialogue box. `TAP:START` did not
   open the start menu under the harness, so frame 1 was checked from its
@@ -458,12 +472,10 @@ replaces is gone from the tree).
   Elvsund, Haukfell, Mereholt Coast, the Climate Station). The title screen
   stopped being a placeholder on 2026-11-10 (see "Art" below).
 - Art still vanilla: route trainers' battle pictures (the leaders have
-  their own palettes; everyone else is a stock class), the overworld
-  tileset palettes (a cooler northern grade; with `pal_tool.py` rendering
-  any map from data in a second, the "same hand across fifteen tilesets"
-  problem is now a script, not a deferral), and the player avatars
-  (Brendan/May as shipped; the "they" avatar would be a third sprite set).
-  Building exteriors stopped being vanilla on 2026-11-10 (see Art).
+  their own palettes; everyone else is a stock class) and the player
+  avatars (Brendan/May as shipped; the "they" avatar would be a third
+  sprite set). Building exteriors and the outdoor palettes stopped being
+  vanilla on 2026-11-10 (see Art: the kits and the northern grade).
 
 ## Top gotchas from this session (full list in §12)
 

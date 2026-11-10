@@ -810,4 +810,13 @@ quest is built, how the peer works) before they are asked six more times.
   Mart its blue, so wayfinding is untouched. Checked in the emulator in
   eight towns. The renderer (`pal_tool.py`) that made this safe is in the
   tree; the outdoor colour grade it now makes possible is the next pass.
+- **2026-11-10 — the northern grade.** The "same hand across fifteen
+  tilesets" problem that had deferred a cooler palette became one
+  function (`tools/skald/grade.py`) over all 88 outdoor palettes:
+  blue-leaning greens, cooler sand and ash, saturation down a notch,
+  slate in the shadows. Three candidates were compared on side-by-side
+  renders of Fernwick, Saltwick, Haukfell and Reedmere before one was
+  applied; checked in the emulator in the same eight towns. The ungraded
+  palettes stay in the tree as the base, so the grade can be retuned or
+  removed in one run.
 
