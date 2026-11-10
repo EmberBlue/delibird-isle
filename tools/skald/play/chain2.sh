@@ -40,7 +40,7 @@ seg s19 s18 FLAG_BADGE03_GET --walk GOTO:20,1 --walk LEFT:0 --walk WAIT:4500 --c
 echo "=== chapter 2 to BREEN complete $(date +%H:%M:%S)"
 # teach ROCK SMASH (HM06 is the second item of the TMs & HMs pocket) to the partner, smash the three rocks at
 # (9..11,1) from the east, then step north off the top row into the River
-seg s20 s19 - --walk TEACHHM:2,2 --walk WAIT:200 --walk GOTO:12,1 --walk LEFT:0 --walk TALK:2 --walk WAIT:500 \
+seg s20 s19 - --walk TEACHHM:HM06,2 --walk WAIT:200 --walk GOTO:12,1 --walk LEFT:0 --walk TALK:2 --walk WAIT:500 \
   --walk LEFT:0 --walk LEFT:0 --walk TALK:2 --walk WAIT:500 --walk LEFT:0 --walk LEFT:0 --walk TALK:2 --walk WAIT:500 \
   --walk UP:0 --walk UP:0 --walk WAIT:1200 --expect MAP_PARCEL_RIVER
 # the walk back for the Wetland signing: River -> Floodbasin -> Corridor -> Wetlands -> Fernwick, ILEX's report

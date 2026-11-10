@@ -31,7 +31,7 @@ seg s36 s35 - --walk GOTO:26,50 --walk UP:0 --walk WAIT:2500 --walk UP:0 --walk 
 seg s37 s36 FLAG_BADGE05_GET --walk GOTO:27,38 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 \
   --walk GOTO:24,44 --walk UP:0 --walk UP:0 --walk WAIT:5000 --check FLAG_BADGE05_GET --expect MAP_PARCEL_HIGHLANDS
 # SURF onto the lead (bag: HM01 Cut, HM03 Surf, HM04 Strength, HM05 Flash, HM06 Rock Smash -> index 1; slot 1 has a free move)
-seg s38 s37 - --walk TEACHHM:1,1 --walk WAIT:200 --expect MAP_PARCEL_HIGHLANDS
+seg s38 s37 - --walk TEACHHM:HM03,1 --walk WAIT:200 --expect MAP_PARCEL_HIGHLANDS
 # the sea for SURF: from the village beach (12,60) north up the coast and the lake to the summit trail's shore (13,36),
 # then the lowlander (33,20), the band stakes (25,14) and ILEX (25,13) on the plateau
 seg s39 s38 - --walk GOTO:12,60 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:13,36 --walk WAIT:300 \

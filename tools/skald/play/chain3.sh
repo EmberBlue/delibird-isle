@@ -31,7 +31,7 @@ seg s30 s29 FLAG_BADGE04_GET --walk GOTOWARP:2 --walk WAIT:400 --walk GOTO:12,12
   --walk GOTOWARP:0 --walk WAIT:400 --check FLAG_BADGE04_GET --expect MAP_PARCEL_RIVER
 # the six Elvsund readings and TRYGVE on the east bank, then ILEX at (54,6) signs the Watershed certification
 # HM04 STRENGTH onto the partner (bag: HM01 Cut, HM04 Strength, HM05 Flash, HM06 Rock Smash -> index 1)
-seg s30b s30 - --walk TEACHHM:1,2 --walk WAIT:200 --expect MAP_PARCEL_RIVER
+seg s30b s30 - --walk TEACHHM:HM04,2 --walk WAIT:200 --expect MAP_PARCEL_RIVER
 seg s31 s30b - --walk GOTO:54,33 --walk RIGHT:0 --walk TALK:2 --walk WAIT:300 \
   --walk GOTO:49,27 --walk UP:0 --walk TALK:2 --walk WAIT:300 \
   --walk GOTO:54,28 --walk UP:0 --walk TALK:5 --walk WAIT:400 \

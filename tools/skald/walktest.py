@@ -192,6 +192,16 @@ def main():
     tracing[0] = True
     for wspec in a.walk:
         d, n = (wspec.split(":") + ["1"])[:2]
+        if d.upper() == "DUMPOBJ":  # DUMPOBJ -- print the live object events (debugging what the player faces)
+            oe = syms.get("gObjectEvents")
+            mapname, px, py = live_pos()
+            print(f"  DUMPOBJ on {mapname} at ({px},{py}), facing {core.memory.u8[oe + 0x18] & 0xF if oe else '?'}")
+            for i in range(16):
+                b = oe + i * 0x24
+                bits = core.memory.u32[b]
+                if bits & 1:
+                    print(f"    obj{i}: local {core.memory.u8[b + 8]} gfx {core.memory.u16[b + 4]} at ({core.memory.s16[b + 0x10] - 7},{core.memory.s16[b + 0x12] - 7}) elev {core.memory.u8[b + 0x0B] & 0xF}{' PLAYER' if (bits >> 16) & 1 else ''}")
+            continue
         if d.upper() == "A":        # A[:n] -- tap A n times (talk, page through text, answer YES to a prompt)
             for _ in range(int(n)):
                 step(8, "A"); step(37)
@@ -218,22 +228,58 @@ def main():
             def in_party():
                 c = cb2()
                 return c != CB["CB2_BagMenuRun"] and c not in field_cbs
-            item, slot = (int(v) for v in n.split(","))
+            item_s, slot_s = n.split(",")
+            slot = int(slot_s)
+            item_name = f"ITEM_{item_s.upper()}" if not item_s.isdigit() else None
+            item = int(item_s) if item_s.isdigit() else -1
             sb1 = core.memory.u32[sb1p]
             flags_off = core.memory.u16[probe + 16]
             has_dex = (core.memory.u8[sb1 + flags_off + (flags["FLAG_SYS_POKEDEX_GET"] >> 3)] >> (flags["FLAG_SYS_POKEDEX_GET"] & 7)) & 1
-            step(8, "START"); step(60)
-            for _ in range(2 if has_dex else 1):
-                step(8, "DOWN"); step(16)
-            step(8, "A")
-            for _ in range(40):                      # the bag opens
-                step(10)
-                if cb2() == CB["CB2_BagMenuRun"]: break
+            # The START menu remembers its cursor between openings, so a fixed number of DOWNs lands on
+            # whatever was picked last (the second TEACHHM of a run opened the PokeNav). Scan instead:
+            # open, move k down, A; if the bag's callback is not live, B back to the field and try k+1.
+            for k in range(9):
+                step(8, "START"); step(60)
+                for _ in range(k):
+                    step(8, "DOWN"); step(16)
+                step(8, "A")
+                for _ in range(40):                  # the bag opens
+                    step(10)
+                    if cb2() == CB["CB2_BagMenuRun"]: break
+                if cb2() == CB["CB2_BagMenuRun"]:
+                    break
+                for _ in range(12):                  # something else opened: close it
+                    if cb2() == CB["CB2_Overworld"]: break
+                    step(8, "B"); step(60)
+                step(8, "B"); step(40); step(8, "B"); step(60)   # and the START menu it returned to
+            else:
+                print("  TEACHHM: the bag never opened"); continue
             step(90)
-            step(8, "RIGHT"); step(40); step(8, "RIGHT"); step(120)  # TMs & HMs pocket (let the switch settle)
-            step(8, "UP"); step(20); step(8, "UP"); step(20)          # cursor to the top of the list
-            for _ in range(item):
-                step(8, "DOWN"); step(20)
+            # The bag remembers its pocket and cursor, and TMs sort before HMs, so neither "RIGHT twice"
+            # nor "the i-th item" is stable. Read gBagPosition / gBagPockets: switch pockets until the
+            # TMs & HMs one is showing, then move the cursor until it sits on the wanted item.
+            tmhm = constants("include/constants/item.h", "TMHM_POCKET")["TMHM_POCKET"]
+            npock = constants("include/constants/item.h", "POCKETS_COUNT")["POCKETS_COUNT"]
+            bpos, bpk = syms["gBagPosition"], syms["gBagPockets"]
+            for _ in range(npock + 1):
+                if core.memory.u8[bpos + 5] == tmhm: break
+                step(8, "RIGHT"); step(60)
+            step(60)
+            slots = core.memory.u32[bpk + 8 * tmhm]; cap = core.memory.u8[bpk + 8 * tmhm + 4]
+            ids = [core.memory.u16[slots + 4 * i] for i in range(cap)]
+            if item_name:
+                wanted = constants("include/constants/items.h", "ITEM_")[item_name]
+                if wanted not in ids:
+                    print(f"  TEACHHM: {item_name} is not in the TMs & HMs pocket {[i for i in ids if i]}"); continue
+                target = ids.index(wanted)
+            else:
+                target = item
+            def cursor():
+                return core.memory.u16[bpos + 8 + 2 * tmhm] + core.memory.u16[bpos + 8 + 2 * npock + 2 * tmhm]
+            for _ in range(24):
+                c = cursor()
+                if c == target: break
+                step(8, "DOWN" if c < target else "UP"); step(24)
             step(30)
             presses_done = 0
             while not in_party() and presses_done < 14:
@@ -254,7 +300,7 @@ def main():
                 if cb2() == CB["CB2_Overworld"]: break
                 step(8, "B"); step(60)
             step(60)
-            print(f"  TEACHHM item {item} slot {slot}: back in the field = {cb2() == CB['CB2_Overworld']}")
+            print(f"  TEACHHM {item_name or item} slot {slot}: back in the field = {cb2() == CB['CB2_Overworld']}")
             continue
         elif d.upper() == "TALK":   # TALK:n -- A, wait for the text, then n more A presses spaced for printing
             step(8, "A"); step(420)   # (a YES/NO prompt takes the default YES)

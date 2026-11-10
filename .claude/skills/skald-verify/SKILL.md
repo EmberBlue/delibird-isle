@@ -226,6 +226,11 @@ list that was green on 2026-11-07 is the one in the handoff.
   the crossing reloads them (the Corridor trainer re-faced in ROM kept
   challenging from the old facing for two runs until s15 was replayed from
   the Wetlands state). Layout (.bin) changes do not have this problem.
+- **Menus remember their cursor.** The START menu reopens on the entry picked
+  last, so "DOWN twice to BAG" worked once per run and then opened the
+  PokéNav; `TEACHHM` now scans positions until `CB2_BagMenuRun` is live.
+  The same goes for the bag's pocket cursor and the party menu: read the
+  state (gMain.callback2, gActionSelectionCursor) rather than counting.
 - Trainer fights are driven from battle RAM, not blind taps: `fight()` tops
   up the lead's PP in `gBattleMons` and steers `gActionSelectionCursor` back
   to FIGHT. The probe party's lead has three attacking moves and an empty

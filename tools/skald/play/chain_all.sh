@@ -34,7 +34,7 @@ seg s07b s07a FLAG_SKALD_SNARE_FREED_3 --walk GOTO:3,7 --walk UP:0 --walk TALK:4
 seg s07c s07b FLAG_SKALD_SNARE_FREED_2 --walk GOTO:25,10 --walk RIGHT:0 --walk TALK:4 --walk WAIT:300 --check FLAG_SKALD_SNARE_FREED_2
 seg s08 s07c FLAG_SKALD_MISTWOOD_CUT_GIVEN --walk GOTOWARP:1 --walk WAIT:300 --walk GOTO:6,5 --walk UP:0 --walk TALK:10 --walk WAIT:900 --check FLAG_SKALD_MISTWOOD_CUT_GIVEN --expect MAP_PARCEL_MISTWOOD_POST
 # teach CUT: Bag (2nd menu item) -> TMs & HMs (two pockets right) -> HM01 -> USE -> text -> YES -> party: DOWN to the partner -> learn
-seg s09 s08 - --walk GOTOWARP:0 --walk WAIT:400 --walk TEACHHM:0,2 --walk WAIT:200 --expect MAP_PARCEL_MISTWOOD
+seg s09 s08 - --walk GOTOWARP:0 --walk WAIT:400 --walk TEACHHM:HM01,2 --walk WAIT:200 --expect MAP_PARCEL_MISTWOOD
 seg s10 s09 - --walk GOTO:14,4 --walk UP:0 --walk TALK:2 --walk WAIT:1500 --walk UP:3 --walk UP:0 --walk WAIT:900 --expect MAP_PARCEL_FERNWICK
 seg s11 s10 FLAG_SKALDMERE_STATION_BRIEF --walk GOTOWARP:1 --walk WAIT:400 --walk GOTO:6,7 --walk UP:0 --walk TALK:16 --walk WAIT:900 --check FLAG_SKALDMERE_STATION_BRIEF --check FLAG_SYS_POKEDEX_GET --expect MAP_PARCEL_FERNWICK_HQ
 # heal at Fernwick's Center before the exam (the Center door is warp 6; the nurse stands at (7,2))
