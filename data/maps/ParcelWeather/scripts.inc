@@ -2140,796 +2140,802 @@ ParcelWeather_SignPlots::
 	end
 
 
+ParcelWeather_SignWindbreak::
+# 1001 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_SignWindbreak_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWeather_T_Amund::
-# 1000 "data/maps/ParcelWeather/scripts.pory"
+# 1007 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_AMUND, ParcelWeather_T_Amund_Text_0, ParcelWeather_T_Amund_Text_1, ParcelWeather_T_Amund_FirstWin
-# 1004 "data/maps/ParcelWeather/scripts.pory"
+# 1011 "data/maps/ParcelWeather/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1005 "data/maps/ParcelWeather/scripts.pory"
+# 1012 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWeather_T_Amund_3
 ParcelWeather_T_Amund_1:
-# 1008 "data/maps/ParcelWeather/scripts.pory"
+# 1015 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWeather_T_Amund_8
 ParcelWeather_T_Amund_6:
-# 1011 "data/maps/ParcelWeather/scripts.pory"
+# 1018 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWeather_T_Amund_13
 ParcelWeather_T_Amund_11:
-# 1014 "data/maps/ParcelWeather/scripts.pory"
+# 1021 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWeather_T_Amund_18
 ParcelWeather_T_Amund_16:
-# 1017 "data/maps/ParcelWeather/scripts.pory"
+# 1024 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWeather_T_Amund_2:
-# 1006 "data/maps/ParcelWeather/scripts.pory"
+# 1013 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Amund_R2
 	goto ParcelWeather_T_Amund_1
 
 ParcelWeather_T_Amund_3:
-# 1005 "data/maps/ParcelWeather/scripts.pory"
+# 1012 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_AMUND_R2
 	goto_if 0, ParcelWeather_T_Amund_2
 	goto ParcelWeather_T_Amund_1
 
 ParcelWeather_T_Amund_7:
-# 1009 "data/maps/ParcelWeather/scripts.pory"
+# 1016 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Amund_R3
 	goto ParcelWeather_T_Amund_6
 
 ParcelWeather_T_Amund_8:
-# 1008 "data/maps/ParcelWeather/scripts.pory"
+# 1015 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_AMUND_R3
 	goto_if 0, ParcelWeather_T_Amund_7
 	goto ParcelWeather_T_Amund_6
 
 ParcelWeather_T_Amund_12:
-# 1012 "data/maps/ParcelWeather/scripts.pory"
+# 1019 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Amund_R4
 	goto ParcelWeather_T_Amund_11
 
 ParcelWeather_T_Amund_13:
-# 1011 "data/maps/ParcelWeather/scripts.pory"
+# 1018 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_AMUND_R4
 	goto_if 0, ParcelWeather_T_Amund_12
 	goto ParcelWeather_T_Amund_11
 
 ParcelWeather_T_Amund_17:
-# 1015 "data/maps/ParcelWeather/scripts.pory"
+# 1022 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Amund_R5
 	goto ParcelWeather_T_Amund_16
 
 ParcelWeather_T_Amund_18:
-# 1014 "data/maps/ParcelWeather/scripts.pory"
+# 1021 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_AMUND_R5
 	goto_if 0, ParcelWeather_T_Amund_17
 	goto ParcelWeather_T_Amund_16
 
 
 ParcelWeather_T_Amund_FirstWin::
-# 1021 "data/maps/ParcelWeather/scripts.pory"
+# 1028 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_Text_2, MSGBOX_DEFAULT
-# 1022 "data/maps/ParcelWeather/scripts.pory"
+# 1029 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Amund_R2::
-# 1026 "data/maps/ParcelWeather/scripts.pory"
+# 1033 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1027 "data/maps/ParcelWeather/scripts.pory"
+# 1034 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1028 "data/maps/ParcelWeather/scripts.pory"
+# 1035 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R2_Text_0, MSGBOX_YESNO
-# 1029 "data/maps/ParcelWeather/scripts.pory"
+# 1036 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Amund_R2_2
-# 1034 "data/maps/ParcelWeather/scripts.pory"
+# 1041 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_AMUND_R2, ParcelWeather_T_Amund_R2_Text_2
-# 1035 "data/maps/ParcelWeather/scripts.pory"
+# 1042 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R2_Text_3, MSGBOX_DEFAULT
-# 1036 "data/maps/ParcelWeather/scripts.pory"
+# 1043 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Amund_R2_2:
-# 1030 "data/maps/ParcelWeather/scripts.pory"
+# 1037 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R2_Text_1, MSGBOX_DEFAULT
-# 1031 "data/maps/ParcelWeather/scripts.pory"
+# 1038 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Amund_R3::
-# 1040 "data/maps/ParcelWeather/scripts.pory"
+# 1047 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1041 "data/maps/ParcelWeather/scripts.pory"
+# 1048 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1042 "data/maps/ParcelWeather/scripts.pory"
+# 1049 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R3_Text_0, MSGBOX_YESNO
-# 1043 "data/maps/ParcelWeather/scripts.pory"
+# 1050 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Amund_R3_2
-# 1048 "data/maps/ParcelWeather/scripts.pory"
+# 1055 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_AMUND_R3, ParcelWeather_T_Amund_R3_Text_1
-# 1049 "data/maps/ParcelWeather/scripts.pory"
+# 1056 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R3_Text_2, MSGBOX_DEFAULT
-# 1050 "data/maps/ParcelWeather/scripts.pory"
+# 1057 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Amund_R3_2:
-# 1044 "data/maps/ParcelWeather/scripts.pory"
+# 1051 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R2_Text_1, MSGBOX_DEFAULT
-# 1045 "data/maps/ParcelWeather/scripts.pory"
+# 1052 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Amund_R4::
-# 1054 "data/maps/ParcelWeather/scripts.pory"
+# 1061 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1055 "data/maps/ParcelWeather/scripts.pory"
+# 1062 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1056 "data/maps/ParcelWeather/scripts.pory"
+# 1063 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R4_Text_0, MSGBOX_YESNO
-# 1057 "data/maps/ParcelWeather/scripts.pory"
+# 1064 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Amund_R4_2
-# 1062 "data/maps/ParcelWeather/scripts.pory"
+# 1069 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_AMUND_R4, ParcelWeather_T_Amund_R2_Text_2
-# 1063 "data/maps/ParcelWeather/scripts.pory"
+# 1070 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R4_Text_1, MSGBOX_DEFAULT
-# 1064 "data/maps/ParcelWeather/scripts.pory"
+# 1071 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Amund_R4_2:
-# 1058 "data/maps/ParcelWeather/scripts.pory"
+# 1065 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R2_Text_1, MSGBOX_DEFAULT
-# 1059 "data/maps/ParcelWeather/scripts.pory"
+# 1066 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Amund_R5::
-# 1068 "data/maps/ParcelWeather/scripts.pory"
+# 1075 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1069 "data/maps/ParcelWeather/scripts.pory"
+# 1076 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1070 "data/maps/ParcelWeather/scripts.pory"
+# 1077 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R5_Text_0, MSGBOX_YESNO
-# 1071 "data/maps/ParcelWeather/scripts.pory"
+# 1078 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Amund_R5_2
-# 1076 "data/maps/ParcelWeather/scripts.pory"
+# 1083 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_AMUND_R5, ParcelWeather_T_Amund_R5_Text_1
-# 1077 "data/maps/ParcelWeather/scripts.pory"
+# 1084 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R5_Text_2, MSGBOX_DEFAULT
-# 1078 "data/maps/ParcelWeather/scripts.pory"
+# 1085 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Amund_R5_2:
-# 1072 "data/maps/ParcelWeather/scripts.pory"
+# 1079 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Amund_R2_Text_1, MSGBOX_DEFAULT
-# 1073 "data/maps/ParcelWeather/scripts.pory"
+# 1080 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Ragnhild::
-# 1082 "data/maps/ParcelWeather/scripts.pory"
+# 1089 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_RAGNHILD, ParcelWeather_T_Ragnhild_Text_0, ParcelWeather_T_Ragnhild_Text_1, ParcelWeather_T_Ragnhild_FirstWin
-# 1086 "data/maps/ParcelWeather/scripts.pory"
+# 1093 "data/maps/ParcelWeather/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1087 "data/maps/ParcelWeather/scripts.pory"
+# 1094 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWeather_T_Ragnhild_3
 ParcelWeather_T_Ragnhild_1:
-# 1090 "data/maps/ParcelWeather/scripts.pory"
+# 1097 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWeather_T_Ragnhild_8
 ParcelWeather_T_Ragnhild_6:
-# 1093 "data/maps/ParcelWeather/scripts.pory"
+# 1100 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWeather_T_Ragnhild_13
 ParcelWeather_T_Ragnhild_11:
-# 1096 "data/maps/ParcelWeather/scripts.pory"
+# 1103 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWeather_T_Ragnhild_18
 ParcelWeather_T_Ragnhild_16:
-# 1099 "data/maps/ParcelWeather/scripts.pory"
+# 1106 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWeather_T_Ragnhild_2:
-# 1088 "data/maps/ParcelWeather/scripts.pory"
+# 1095 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Ragnhild_R2
 	goto ParcelWeather_T_Ragnhild_1
 
 ParcelWeather_T_Ragnhild_3:
-# 1087 "data/maps/ParcelWeather/scripts.pory"
+# 1094 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_RAGNHILD_R2
 	goto_if 0, ParcelWeather_T_Ragnhild_2
 	goto ParcelWeather_T_Ragnhild_1
 
 ParcelWeather_T_Ragnhild_7:
-# 1091 "data/maps/ParcelWeather/scripts.pory"
+# 1098 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Ragnhild_R3
 	goto ParcelWeather_T_Ragnhild_6
 
 ParcelWeather_T_Ragnhild_8:
-# 1090 "data/maps/ParcelWeather/scripts.pory"
+# 1097 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_RAGNHILD_R3
 	goto_if 0, ParcelWeather_T_Ragnhild_7
 	goto ParcelWeather_T_Ragnhild_6
 
 ParcelWeather_T_Ragnhild_12:
-# 1094 "data/maps/ParcelWeather/scripts.pory"
+# 1101 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Ragnhild_R4
 	goto ParcelWeather_T_Ragnhild_11
 
 ParcelWeather_T_Ragnhild_13:
-# 1093 "data/maps/ParcelWeather/scripts.pory"
+# 1100 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_RAGNHILD_R4
 	goto_if 0, ParcelWeather_T_Ragnhild_12
 	goto ParcelWeather_T_Ragnhild_11
 
 ParcelWeather_T_Ragnhild_17:
-# 1097 "data/maps/ParcelWeather/scripts.pory"
+# 1104 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Ragnhild_R5
 	goto ParcelWeather_T_Ragnhild_16
 
 ParcelWeather_T_Ragnhild_18:
-# 1096 "data/maps/ParcelWeather/scripts.pory"
+# 1103 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_RAGNHILD_R5
 	goto_if 0, ParcelWeather_T_Ragnhild_17
 	goto ParcelWeather_T_Ragnhild_16
 
 
 ParcelWeather_T_Ragnhild_FirstWin::
-# 1103 "data/maps/ParcelWeather/scripts.pory"
+# 1110 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_Text_2, MSGBOX_DEFAULT
-# 1104 "data/maps/ParcelWeather/scripts.pory"
+# 1111 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Ragnhild_R2::
-# 1108 "data/maps/ParcelWeather/scripts.pory"
+# 1115 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1109 "data/maps/ParcelWeather/scripts.pory"
+# 1116 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1110 "data/maps/ParcelWeather/scripts.pory"
+# 1117 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R2_Text_0, MSGBOX_YESNO
-# 1111 "data/maps/ParcelWeather/scripts.pory"
+# 1118 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Ragnhild_R2_2
-# 1116 "data/maps/ParcelWeather/scripts.pory"
+# 1123 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_RAGNHILD_R2, ParcelWeather_T_Ragnhild_R2_Text_2
-# 1117 "data/maps/ParcelWeather/scripts.pory"
+# 1124 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R2_Text_3, MSGBOX_DEFAULT
-# 1118 "data/maps/ParcelWeather/scripts.pory"
+# 1125 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Ragnhild_R2_2:
-# 1112 "data/maps/ParcelWeather/scripts.pory"
+# 1119 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R2_Text_1, MSGBOX_DEFAULT
-# 1113 "data/maps/ParcelWeather/scripts.pory"
+# 1120 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Ragnhild_R3::
-# 1122 "data/maps/ParcelWeather/scripts.pory"
+# 1129 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1123 "data/maps/ParcelWeather/scripts.pory"
+# 1130 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1124 "data/maps/ParcelWeather/scripts.pory"
+# 1131 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R3_Text_0, MSGBOX_YESNO
-# 1125 "data/maps/ParcelWeather/scripts.pory"
+# 1132 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Ragnhild_R3_2
-# 1130 "data/maps/ParcelWeather/scripts.pory"
+# 1137 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_RAGNHILD_R3, ParcelWeather_T_Ragnhild_R3_Text_1
-# 1131 "data/maps/ParcelWeather/scripts.pory"
+# 1138 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R3_Text_2, MSGBOX_DEFAULT
-# 1132 "data/maps/ParcelWeather/scripts.pory"
+# 1139 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Ragnhild_R3_2:
-# 1126 "data/maps/ParcelWeather/scripts.pory"
+# 1133 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R2_Text_1, MSGBOX_DEFAULT
-# 1127 "data/maps/ParcelWeather/scripts.pory"
+# 1134 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Ragnhild_R4::
-# 1136 "data/maps/ParcelWeather/scripts.pory"
+# 1143 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1137 "data/maps/ParcelWeather/scripts.pory"
+# 1144 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1138 "data/maps/ParcelWeather/scripts.pory"
+# 1145 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R4_Text_0, MSGBOX_YESNO
-# 1139 "data/maps/ParcelWeather/scripts.pory"
+# 1146 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Ragnhild_R4_2
-# 1144 "data/maps/ParcelWeather/scripts.pory"
+# 1151 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_RAGNHILD_R4, ParcelWeather_T_Ragnhild_R4_Text_1
-# 1145 "data/maps/ParcelWeather/scripts.pory"
+# 1152 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R4_Text_2, MSGBOX_DEFAULT
-# 1146 "data/maps/ParcelWeather/scripts.pory"
+# 1153 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Ragnhild_R4_2:
-# 1140 "data/maps/ParcelWeather/scripts.pory"
+# 1147 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R2_Text_1, MSGBOX_DEFAULT
-# 1141 "data/maps/ParcelWeather/scripts.pory"
+# 1148 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Ragnhild_R5::
-# 1150 "data/maps/ParcelWeather/scripts.pory"
+# 1157 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1151 "data/maps/ParcelWeather/scripts.pory"
+# 1158 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1152 "data/maps/ParcelWeather/scripts.pory"
+# 1159 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R5_Text_0, MSGBOX_YESNO
-# 1153 "data/maps/ParcelWeather/scripts.pory"
+# 1160 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Ragnhild_R5_2
-# 1158 "data/maps/ParcelWeather/scripts.pory"
+# 1165 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_RAGNHILD_R5, ParcelWeather_T_Ragnhild_R3_Text_1
-# 1159 "data/maps/ParcelWeather/scripts.pory"
+# 1166 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R5_Text_1, MSGBOX_DEFAULT
-# 1160 "data/maps/ParcelWeather/scripts.pory"
+# 1167 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Ragnhild_R5_2:
-# 1154 "data/maps/ParcelWeather/scripts.pory"
+# 1161 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Ragnhild_R2_Text_1, MSGBOX_DEFAULT
-# 1155 "data/maps/ParcelWeather/scripts.pory"
+# 1162 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Oyvind::
-# 1164 "data/maps/ParcelWeather/scripts.pory"
+# 1171 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_WEA_OYVIND, ParcelWeather_T_Oyvind_Text_0, ParcelWeather_T_Oyvind_Text_1, ParcelWeather_T_Oyvind_FirstWin
-# 1168 "data/maps/ParcelWeather/scripts.pory"
+# 1175 "data/maps/ParcelWeather/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 1169 "data/maps/ParcelWeather/scripts.pory"
+# 1176 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelWeather_T_Oyvind_3
 ParcelWeather_T_Oyvind_1:
-# 1172 "data/maps/ParcelWeather/scripts.pory"
+# 1179 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelWeather_T_Oyvind_8
 ParcelWeather_T_Oyvind_6:
-# 1175 "data/maps/ParcelWeather/scripts.pory"
+# 1182 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelWeather_T_Oyvind_13
 ParcelWeather_T_Oyvind_11:
-# 1178 "data/maps/ParcelWeather/scripts.pory"
+# 1185 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelWeather_T_Oyvind_18
 ParcelWeather_T_Oyvind_16:
-# 1181 "data/maps/ParcelWeather/scripts.pory"
+# 1188 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelWeather_T_Oyvind_2:
-# 1170 "data/maps/ParcelWeather/scripts.pory"
+# 1177 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Oyvind_R2
 	goto ParcelWeather_T_Oyvind_1
 
 ParcelWeather_T_Oyvind_3:
-# 1169 "data/maps/ParcelWeather/scripts.pory"
+# 1176 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_OYVIND_R2
 	goto_if 0, ParcelWeather_T_Oyvind_2
 	goto ParcelWeather_T_Oyvind_1
 
 ParcelWeather_T_Oyvind_7:
-# 1173 "data/maps/ParcelWeather/scripts.pory"
+# 1180 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Oyvind_R3
 	goto ParcelWeather_T_Oyvind_6
 
 ParcelWeather_T_Oyvind_8:
-# 1172 "data/maps/ParcelWeather/scripts.pory"
+# 1179 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_OYVIND_R3
 	goto_if 0, ParcelWeather_T_Oyvind_7
 	goto ParcelWeather_T_Oyvind_6
 
 ParcelWeather_T_Oyvind_12:
-# 1176 "data/maps/ParcelWeather/scripts.pory"
+# 1183 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Oyvind_R4
 	goto ParcelWeather_T_Oyvind_11
 
 ParcelWeather_T_Oyvind_13:
-# 1175 "data/maps/ParcelWeather/scripts.pory"
+# 1182 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_OYVIND_R4
 	goto_if 0, ParcelWeather_T_Oyvind_12
 	goto ParcelWeather_T_Oyvind_11
 
 ParcelWeather_T_Oyvind_17:
-# 1179 "data/maps/ParcelWeather/scripts.pory"
+# 1186 "data/maps/ParcelWeather/scripts.pory"
 	goto ParcelWeather_T_Oyvind_R5
 	goto ParcelWeather_T_Oyvind_16
 
 ParcelWeather_T_Oyvind_18:
-# 1178 "data/maps/ParcelWeather/scripts.pory"
+# 1185 "data/maps/ParcelWeather/scripts.pory"
 	checktrainerflag TRAINER_SKALD_WEA_OYVIND_R5
 	goto_if 0, ParcelWeather_T_Oyvind_17
 	goto ParcelWeather_T_Oyvind_16
 
 
 ParcelWeather_T_Oyvind_FirstWin::
-# 1185 "data/maps/ParcelWeather/scripts.pory"
+# 1192 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_Text_2, MSGBOX_DEFAULT
-# 1186 "data/maps/ParcelWeather/scripts.pory"
+# 1193 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Oyvind_R2::
-# 1190 "data/maps/ParcelWeather/scripts.pory"
+# 1197 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1191 "data/maps/ParcelWeather/scripts.pory"
+# 1198 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1192 "data/maps/ParcelWeather/scripts.pory"
+# 1199 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R2_Text_0, MSGBOX_YESNO
-# 1193 "data/maps/ParcelWeather/scripts.pory"
+# 1200 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Oyvind_R2_2
-# 1198 "data/maps/ParcelWeather/scripts.pory"
+# 1205 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_OYVIND_R2, ParcelWeather_T_Oyvind_R2_Text_2
-# 1199 "data/maps/ParcelWeather/scripts.pory"
+# 1206 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R2_Text_3, MSGBOX_DEFAULT
-# 1200 "data/maps/ParcelWeather/scripts.pory"
+# 1207 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Oyvind_R2_2:
-# 1194 "data/maps/ParcelWeather/scripts.pory"
+# 1201 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R2_Text_1, MSGBOX_DEFAULT
-# 1195 "data/maps/ParcelWeather/scripts.pory"
+# 1202 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Oyvind_R3::
-# 1204 "data/maps/ParcelWeather/scripts.pory"
+# 1211 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1205 "data/maps/ParcelWeather/scripts.pory"
+# 1212 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1206 "data/maps/ParcelWeather/scripts.pory"
+# 1213 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R3_Text_0, MSGBOX_YESNO
-# 1207 "data/maps/ParcelWeather/scripts.pory"
+# 1214 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Oyvind_R3_2
-# 1212 "data/maps/ParcelWeather/scripts.pory"
+# 1219 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_OYVIND_R3, ParcelWeather_T_Oyvind_R3_Text_1
-# 1213 "data/maps/ParcelWeather/scripts.pory"
+# 1220 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R3_Text_2, MSGBOX_DEFAULT
-# 1214 "data/maps/ParcelWeather/scripts.pory"
+# 1221 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Oyvind_R3_2:
-# 1208 "data/maps/ParcelWeather/scripts.pory"
+# 1215 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R2_Text_1, MSGBOX_DEFAULT
-# 1209 "data/maps/ParcelWeather/scripts.pory"
+# 1216 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Oyvind_R4::
-# 1218 "data/maps/ParcelWeather/scripts.pory"
+# 1225 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1219 "data/maps/ParcelWeather/scripts.pory"
+# 1226 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1220 "data/maps/ParcelWeather/scripts.pory"
+# 1227 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R4_Text_0, MSGBOX_YESNO
-# 1221 "data/maps/ParcelWeather/scripts.pory"
+# 1228 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Oyvind_R4_2
-# 1226 "data/maps/ParcelWeather/scripts.pory"
+# 1233 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_OYVIND_R4, ParcelWeather_T_Oyvind_R4_Text_1
-# 1227 "data/maps/ParcelWeather/scripts.pory"
+# 1234 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R4_Text_2, MSGBOX_DEFAULT
-# 1228 "data/maps/ParcelWeather/scripts.pory"
+# 1235 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Oyvind_R4_2:
-# 1222 "data/maps/ParcelWeather/scripts.pory"
+# 1229 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R2_Text_1, MSGBOX_DEFAULT
-# 1223 "data/maps/ParcelWeather/scripts.pory"
+# 1230 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_T_Oyvind_R5::
-# 1232 "data/maps/ParcelWeather/scripts.pory"
+# 1239 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1233 "data/maps/ParcelWeather/scripts.pory"
+# 1240 "data/maps/ParcelWeather/scripts.pory"
 	faceplayer
-# 1234 "data/maps/ParcelWeather/scripts.pory"
+# 1241 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R5_Text_0, MSGBOX_YESNO
-# 1235 "data/maps/ParcelWeather/scripts.pory"
+# 1242 "data/maps/ParcelWeather/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeather_T_Oyvind_R5_2
-# 1240 "data/maps/ParcelWeather/scripts.pory"
+# 1247 "data/maps/ParcelWeather/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_WEA_OYVIND_R5, ParcelWeather_T_Oyvind_R5_Text_1
-# 1241 "data/maps/ParcelWeather/scripts.pory"
+# 1248 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R5_Text_2, MSGBOX_DEFAULT
-# 1242 "data/maps/ParcelWeather/scripts.pory"
+# 1249 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_T_Oyvind_R5_2:
-# 1236 "data/maps/ParcelWeather/scripts.pory"
+# 1243 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_T_Oyvind_R2_Text_1, MSGBOX_DEFAULT
-# 1237 "data/maps/ParcelWeather/scripts.pory"
+# 1244 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 
 ParcelWeather_PairGauge::
-# 1249 "data/maps/ParcelWeather/scripts.pory"
+# 1256 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1250 "data/maps/ParcelWeather/scripts.pory"
+# 1257 "data/maps/ParcelWeather/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairGauge_2
-# 1255 "data/maps/ParcelWeather/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairGauge_3
 # 1262 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairGauge_3
+# 1269 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_9, MSGBOX_DEFAULT
-# 1263 "data/maps/ParcelWeather/scripts.pory"
+# 1270 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_10, MSGBOX_DEFAULT
-# 1264 "data/maps/ParcelWeather/scripts.pory"
+# 1271 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_11, MSGBOX_DEFAULT
-# 1265 "data/maps/ParcelWeather/scripts.pory"
+# 1272 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_12, MSGBOX_DEFAULT
 ParcelWeather_PairGauge_1:
-# 1267 "data/maps/ParcelWeather/scripts.pory"
+# 1274 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_PairGauge_2:
-# 1251 "data/maps/ParcelWeather/scripts.pory"
+# 1258 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_0, MSGBOX_DEFAULT
-# 1252 "data/maps/ParcelWeather/scripts.pory"
+# 1259 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_1, MSGBOX_DEFAULT
-# 1253 "data/maps/ParcelWeather/scripts.pory"
+# 1260 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_2, MSGBOX_DEFAULT
-# 1254 "data/maps/ParcelWeather/scripts.pory"
+# 1261 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_3, MSGBOX_DEFAULT
 	goto ParcelWeather_PairGauge_1
 
 ParcelWeather_PairGauge_3:
-# 1256 "data/maps/ParcelWeather/scripts.pory"
+# 1263 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_4, MSGBOX_DEFAULT
-# 1257 "data/maps/ParcelWeather/scripts.pory"
+# 1264 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_5, MSGBOX_DEFAULT
-# 1258 "data/maps/ParcelWeather/scripts.pory"
+# 1265 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_6, MSGBOX_DEFAULT
-# 1259 "data/maps/ParcelWeather/scripts.pory"
+# 1266 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_7, MSGBOX_DEFAULT
-# 1260 "data/maps/ParcelWeather/scripts.pory"
+# 1267 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGauge_Text_8, MSGBOX_DEFAULT
 	goto ParcelWeather_PairGauge_1
 
 
 ParcelWeather_PairYard::
-# 1272 "data/maps/ParcelWeather/scripts.pory"
-	lock
-# 1273 "data/maps/ParcelWeather/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairYard_2
 # 1279 "data/maps/ParcelWeather/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairYard_3
-# 1285 "data/maps/ParcelWeather/scripts.pory"
-	msgbox ParcelWeather_PairYard_Text_9, MSGBOX_DEFAULT
+	lock
+# 1280 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairYard_2
 # 1286 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairYard_3
+# 1292 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairYard_Text_9, MSGBOX_DEFAULT
+# 1293 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_10, MSGBOX_DEFAULT
-# 1287 "data/maps/ParcelWeather/scripts.pory"
+# 1294 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_11, MSGBOX_DEFAULT
-# 1288 "data/maps/ParcelWeather/scripts.pory"
+# 1295 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_12, MSGBOX_DEFAULT
-# 1289 "data/maps/ParcelWeather/scripts.pory"
+# 1296 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_13, MSGBOX_DEFAULT
 ParcelWeather_PairYard_1:
-# 1291 "data/maps/ParcelWeather/scripts.pory"
+# 1298 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_PairYard_2:
-# 1274 "data/maps/ParcelWeather/scripts.pory"
+# 1281 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_0, MSGBOX_DEFAULT
-# 1275 "data/maps/ParcelWeather/scripts.pory"
+# 1282 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_1, MSGBOX_DEFAULT
-# 1276 "data/maps/ParcelWeather/scripts.pory"
+# 1283 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_2, MSGBOX_DEFAULT
-# 1277 "data/maps/ParcelWeather/scripts.pory"
+# 1284 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_3, MSGBOX_DEFAULT
-# 1278 "data/maps/ParcelWeather/scripts.pory"
+# 1285 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_4, MSGBOX_DEFAULT
 	goto ParcelWeather_PairYard_1
 
 ParcelWeather_PairYard_3:
-# 1280 "data/maps/ParcelWeather/scripts.pory"
+# 1287 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_5, MSGBOX_DEFAULT
-# 1281 "data/maps/ParcelWeather/scripts.pory"
+# 1288 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_6, MSGBOX_DEFAULT
-# 1282 "data/maps/ParcelWeather/scripts.pory"
+# 1289 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_7, MSGBOX_DEFAULT
-# 1283 "data/maps/ParcelWeather/scripts.pory"
+# 1290 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairYard_Text_8, MSGBOX_DEFAULT
 	goto ParcelWeather_PairYard_1
 
 
 ParcelWeather_PageFortyOne::
-# 1298 "data/maps/ParcelWeather/scripts.pory"
+# 1305 "data/maps/ParcelWeather/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_FORTYONE, ParcelWeather_PageFortyOne_4
 ParcelWeather_PageFortyOne_3:
-# 1302 "data/maps/ParcelWeather/scripts.pory"
+# 1309 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PageFortyOne_Text_1, MSGBOX_SIGN
 ParcelWeather_PageFortyOne_1:
 	end
 
 ParcelWeather_PageFortyOne_2:
-# 1299 "data/maps/ParcelWeather/scripts.pory"
+# 1306 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PageFortyOne_Text_0, MSGBOX_SIGN
-# 1300 "data/maps/ParcelWeather/scripts.pory"
+# 1307 "data/maps/ParcelWeather/scripts.pory"
 	setflag FLAG_SKALD_Q_FORTYONE_FOUND
 	goto ParcelWeather_PageFortyOne_1
 
 ParcelWeather_PageFortyOne_4:
-# 1298 "data/maps/ParcelWeather/scripts.pory"
+# 1305 "data/maps/ParcelWeather/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_FORTYONE_FOUND, ParcelWeather_PageFortyOne_2
 	goto ParcelWeather_PageFortyOne_3
 
 
 ParcelWeather_PairGate::
-# 1308 "data/maps/ParcelWeather/scripts.pory"
-	lock
-# 1309 "data/maps/ParcelWeather/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairGate_2
 # 1315 "data/maps/ParcelWeather/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairGate_3
+	lock
+# 1316 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairGate_2
 # 1322 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeather_PairGate_3
+# 1329 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_10, MSGBOX_DEFAULT
-# 1323 "data/maps/ParcelWeather/scripts.pory"
+# 1330 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_11, MSGBOX_DEFAULT
-# 1324 "data/maps/ParcelWeather/scripts.pory"
+# 1331 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_12, MSGBOX_DEFAULT
-# 1325 "data/maps/ParcelWeather/scripts.pory"
+# 1332 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_13, MSGBOX_DEFAULT
-# 1326 "data/maps/ParcelWeather/scripts.pory"
+# 1333 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_14, MSGBOX_DEFAULT
 ParcelWeather_PairGate_1:
-# 1328 "data/maps/ParcelWeather/scripts.pory"
+# 1335 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_PairGate_2:
-# 1310 "data/maps/ParcelWeather/scripts.pory"
+# 1317 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_0, MSGBOX_DEFAULT
-# 1311 "data/maps/ParcelWeather/scripts.pory"
+# 1318 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_1, MSGBOX_DEFAULT
-# 1312 "data/maps/ParcelWeather/scripts.pory"
+# 1319 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_2, MSGBOX_DEFAULT
-# 1313 "data/maps/ParcelWeather/scripts.pory"
+# 1320 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_3, MSGBOX_DEFAULT
-# 1314 "data/maps/ParcelWeather/scripts.pory"
+# 1321 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_4, MSGBOX_DEFAULT
 	goto ParcelWeather_PairGate_1
 
 ParcelWeather_PairGate_3:
-# 1316 "data/maps/ParcelWeather/scripts.pory"
+# 1323 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_5, MSGBOX_DEFAULT
-# 1317 "data/maps/ParcelWeather/scripts.pory"
+# 1324 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_6, MSGBOX_DEFAULT
-# 1318 "data/maps/ParcelWeather/scripts.pory"
+# 1325 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_7, MSGBOX_DEFAULT
-# 1319 "data/maps/ParcelWeather/scripts.pory"
+# 1326 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_8, MSGBOX_DEFAULT
-# 1320 "data/maps/ParcelWeather/scripts.pory"
+# 1327 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairGate_Text_9, MSGBOX_DEFAULT
 	goto ParcelWeather_PairGate_1
 
 
 ParcelWeather_Board1::
-# 1335 "data/maps/ParcelWeather/scripts.pory"
+# 1342 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Board1_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_Board2::
-# 1340 "data/maps/ParcelWeather/scripts.pory"
+# 1347 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Board2_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_Board3::
-# 1347 "data/maps/ParcelWeather/scripts.pory"
+# 1354 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Board3_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_GateHut::
-# 1354 "data/maps/ParcelWeather/scripts.pory"
+# 1361 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_GateHut_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_Board6::
-# 1359 "data/maps/ParcelWeather/scripts.pory"
+# 1366 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Board6_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_Board8::
-# 1364 "data/maps/ParcelWeather/scripts.pory"
+# 1371 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Board8_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_Board9::
-# 1369 "data/maps/ParcelWeather/scripts.pory"
+# 1376 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_Board9_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeather_PairFence::
-# 1374 "data/maps/ParcelWeather/scripts.pory"
+# 1381 "data/maps/ParcelWeather/scripts.pory"
 	lock
-# 1375 "data/maps/ParcelWeather/scripts.pory"
+# 1382 "data/maps/ParcelWeather/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairFence_2
-# 1379 "data/maps/ParcelWeather/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelWeather_PairFence_3
-# 1385 "data/maps/ParcelWeather/scripts.pory"
-	msgbox ParcelWeather_PairFence_Text_7, MSGBOX_DEFAULT
 # 1386 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelWeather_PairFence_3
+# 1392 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_7, MSGBOX_DEFAULT
+# 1393 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_8, MSGBOX_DEFAULT
-# 1387 "data/maps/ParcelWeather/scripts.pory"
+# 1394 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_9, MSGBOX_DEFAULT
-# 1388 "data/maps/ParcelWeather/scripts.pory"
+# 1395 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_10, MSGBOX_DEFAULT
-# 1389 "data/maps/ParcelWeather/scripts.pory"
+# 1396 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_11, MSGBOX_DEFAULT
 ParcelWeather_PairFence_1:
-# 1391 "data/maps/ParcelWeather/scripts.pory"
+# 1398 "data/maps/ParcelWeather/scripts.pory"
 	release
 	end
 
 ParcelWeather_PairFence_2:
-# 1376 "data/maps/ParcelWeather/scripts.pory"
+# 1383 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_0, MSGBOX_DEFAULT
-# 1377 "data/maps/ParcelWeather/scripts.pory"
+# 1384 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_1, MSGBOX_DEFAULT
-# 1378 "data/maps/ParcelWeather/scripts.pory"
+# 1385 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_2, MSGBOX_DEFAULT
 	goto ParcelWeather_PairFence_1
 
 ParcelWeather_PairFence_3:
-# 1380 "data/maps/ParcelWeather/scripts.pory"
+# 1387 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_3, MSGBOX_DEFAULT
-# 1381 "data/maps/ParcelWeather/scripts.pory"
+# 1388 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_4, MSGBOX_DEFAULT
-# 1382 "data/maps/ParcelWeather/scripts.pory"
+# 1389 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_5, MSGBOX_DEFAULT
-# 1383 "data/maps/ParcelWeather/scripts.pory"
+# 1390 "data/maps/ParcelWeather/scripts.pory"
 	msgbox ParcelWeather_PairFence_Text_6, MSGBOX_DEFAULT
 	goto ParcelWeather_PairFence_1
 
@@ -3845,377 +3851,388 @@ ParcelWeather_SignGate_Text_0:
 
 ParcelWeather_SignPlots_Text_0:
 # 994 "data/maps/ParcelWeather/scripts.pory"
-	.string "TEST PLOTS. North-west: Aridity.\n"
-	.string "North-east: Solar Forcing. East slope:\l"
+	.string "TEST PLOTS. North-west: Aridity. West\n"
+	.string "yard: Solar Forcing. East slope:\l"
 	.string "Cryosphere. River: Hydrology.\p"
+	.string "Staff path to the west plots: behind\n"
+	.string "the windbreak off the east slope, then\l"
+	.string "the planks.\p"
 	.string "The real sky is not a plot.$"
 
-ParcelWeather_T_Amund_Text_0:
+ParcelWeather_SignWindbreak_Text_0:
 # 1001 "data/maps/ParcelWeather/scripts.pory"
+	.string "STAFF PATH\p"
+	.string "Aridity, Solar Forcing, Hydrology: west,\n"
+	.string "behind the windbreak, then the planks.\p"
+	.string "The trees are the fence. Walk behind\n"
+	.string "them.$"
+
+ParcelWeather_T_Amund_Text_0:
+# 1008 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Up the east slope. The frost\n"
 	.string "plot's behind me. It hums. Battle.$"
 
 ParcelWeather_T_Amund_Text_1:
-# 1002 "data/maps/ParcelWeather/scripts.pory"
+# 1009 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Humming's louder than I am,\n"
 	.string "apparently.$"
 
 ParcelWeather_T_Amund_Text_2:
-# 1017 "data/maps/ParcelWeather/scripts.pory"
+# 1024 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: One frozen square on a warming\n"
 	.string "hill. I asked what it's for.\l"
 	.string "'Demonstration.' Of what? Nobody said.$"
 
 ParcelWeather_T_Amund_R2_Text_0:
-# 1028 "data/maps/ParcelWeather/scripts.pory"
+# 1035 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Back this way? I've not been\n"
 	.string "idle. Rematch?$"
 
 ParcelWeather_T_Amund_R2_Text_1:
-# 1030 "data/maps/ParcelWeather/scripts.pory"
+# 1037 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Another time, then.$"
 
 ParcelWeather_T_Amund_R2_Text_2:
-# 1034 "data/maps/ParcelWeather/scripts.pory"
+# 1041 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Still yours.$"
 
 ParcelWeather_T_Amund_R2_Text_3:
-# 1035 "data/maps/ParcelWeather/scripts.pory"
+# 1042 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelWeather_T_Amund_R3_Text_0:
-# 1042 "data/maps/ParcelWeather/scripts.pory"
+# 1049 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: I moved the whole team on. Let's\n"
 	.string "see if you have?$"
 
 ParcelWeather_T_Amund_R3_Text_1:
-# 1048 "data/maps/ParcelWeather/scripts.pory"
+# 1055 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: That's the one I wanted to see.$"
 
 ParcelWeather_T_Amund_R3_Text_2:
-# 1049 "data/maps/ParcelWeather/scripts.pory"
+# 1056 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelWeather_T_Amund_R4_Text_0:
-# 1056 "data/maps/ParcelWeather/scripts.pory"
+# 1063 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelWeather_T_Amund_R4_Text_1:
-# 1063 "data/maps/ParcelWeather/scripts.pory"
+# 1070 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelWeather_T_Amund_R5_Text_0:
-# 1070 "data/maps/ParcelWeather/scripts.pory"
+# 1077 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: They read your name at the\n"
 	.string "hearing. I'd like to read it myself.\l"
 	.string "Battle?$"
 
 ParcelWeather_T_Amund_R5_Text_1:
-# 1076 "data/maps/ParcelWeather/scripts.pory"
+# 1083 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: …Again, then. Later.$"
 
 ParcelWeather_T_Amund_R5_Text_2:
-# 1077 "data/maps/ParcelWeather/scripts.pory"
+# 1084 "data/maps/ParcelWeather/scripts.pory"
 	.string "AMUND: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelWeather_T_Ragnhild_Text_0:
-# 1083 "data/maps/ParcelWeather/scripts.pory"
+# 1090 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Breeder, east plots.\n"
 	.string "CASTFORM for the demos, LUDICOLO for\l"
 	.string "the rain. Battle.$"
 
 ParcelWeather_T_Ragnhild_Text_1:
-# 1084 "data/maps/ParcelWeather/scripts.pory"
+# 1091 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Rained on.$"
 
 ParcelWeather_T_Ragnhild_Text_2:
-# 1099 "data/maps/ParcelWeather/scripts.pory"
+# 1106 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: The station publishes the\n"
 	.string "plot weather. The real weather goes in a\l"
 	.string "drawer. I've seen the drawer.$"
 
 ParcelWeather_T_Ragnhild_R2_Text_0:
-# 1110 "data/maps/ParcelWeather/scripts.pory"
+# 1117 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelWeather_T_Ragnhild_R2_Text_1:
-# 1112 "data/maps/ParcelWeather/scripts.pory"
+# 1119 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Later, then. I'm not going\n"
 	.string "anywhere.$"
 
 ParcelWeather_T_Ragnhild_R2_Text_2:
-# 1116 "data/maps/ParcelWeather/scripts.pory"
+# 1123 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: …Fair.$"
 
 ParcelWeather_T_Ragnhild_R2_Text_3:
-# 1117 "data/maps/ParcelWeather/scripts.pory"
+# 1124 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelWeather_T_Ragnhild_R3_Text_0:
-# 1124 "data/maps/ParcelWeather/scripts.pory"
+# 1131 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelWeather_T_Ragnhild_R3_Text_1:
-# 1130 "data/maps/ParcelWeather/scripts.pory"
+# 1137 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: That's the one I wanted to\n"
 	.string "see.$"
 
 ParcelWeather_T_Ragnhild_R3_Text_2:
-# 1131 "data/maps/ParcelWeather/scripts.pory"
+# 1138 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: One more in me. After the\n"
 	.string "high ground.$"
 
 ParcelWeather_T_Ragnhild_R4_Text_0:
-# 1138 "data/maps/ParcelWeather/scripts.pory"
+# 1145 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Full strength, no excuses,\n"
 	.string "mine or yours. Rematch?$"
 
 ParcelWeather_T_Ragnhild_R4_Text_1:
-# 1144 "data/maps/ParcelWeather/scripts.pory"
+# 1151 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Noted. Properly, this time.$"
 
 ParcelWeather_T_Ragnhild_R4_Text_2:
-# 1145 "data/maps/ParcelWeather/scripts.pory"
+# 1152 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWeather_T_Ragnhild_R5_Text_0:
-# 1152 "data/maps/ParcelWeather/scripts.pory"
+# 1159 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: Last one. I've put\n"
 	.string "everything I've got into this team. Go?$"
 
 ParcelWeather_T_Ragnhild_R5_Text_1:
-# 1159 "data/maps/ParcelWeather/scripts.pory"
+# 1166 "data/maps/ParcelWeather/scripts.pory"
 	.string "RAGNHILD: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelWeather_T_Oyvind_Text_0:
-# 1165 "data/maps/ParcelWeather/scripts.pory"
+# 1172 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Instrument birds. XATU reads\n"
 	.string "the sky better than the plots do.\l"
 	.string "Battle before it tells me how this ends.$"
 
 ParcelWeather_T_Oyvind_Text_1:
-# 1166 "data/maps/ParcelWeather/scripts.pory"
+# 1173 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: It told me.$"
 
 ParcelWeather_T_Oyvind_Text_2:
-# 1181 "data/maps/ParcelWeather/scripts.pory"
+# 1188 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: XATU watches the real sky over\n"
 	.string "the fence. The real sky's not for sale.\l"
 	.string "The plots are.$"
 
 ParcelWeather_T_Oyvind_R2_Text_0:
-# 1192 "data/maps/ParcelWeather/scripts.pory"
+# 1199 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelWeather_T_Oyvind_R2_Text_1:
-# 1194 "data/maps/ParcelWeather/scripts.pory"
+# 1201 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Suit yourself. I'm here.$"
 
 ParcelWeather_T_Oyvind_R2_Text_2:
-# 1198 "data/maps/ParcelWeather/scripts.pory"
+# 1205 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Right. That's the whole of it.$"
 
 ParcelWeather_T_Oyvind_R2_Text_3:
-# 1199 "data/maps/ParcelWeather/scripts.pory"
+# 1206 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: That's two to you. Get the next\n"
 	.string "stamp and come back.$"
 
 ParcelWeather_T_Oyvind_R3_Text_0:
-# 1206 "data/maps/ParcelWeather/scripts.pory"
+# 1213 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: They say you don't lose any\n"
 	.string "more. Let's check?$"
 
 ParcelWeather_T_Oyvind_R3_Text_1:
-# 1212 "data/maps/ParcelWeather/scripts.pory"
+# 1219 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: …Fair.$"
 
 ParcelWeather_T_Oyvind_R3_Text_2:
-# 1213 "data/maps/ParcelWeather/scripts.pory"
+# 1220 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelWeather_T_Oyvind_R4_Text_0:
-# 1220 "data/maps/ParcelWeather/scripts.pory"
+# 1227 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Nearly the top, they say. Not\n"
 	.string "past me. Again?$"
 
 ParcelWeather_T_Oyvind_R4_Text_1:
-# 1226 "data/maps/ParcelWeather/scripts.pory"
+# 1233 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: That's the one I wanted to see.$"
 
 ParcelWeather_T_Oyvind_R4_Text_2:
-# 1227 "data/maps/ParcelWeather/scripts.pory"
+# 1234 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelWeather_T_Oyvind_R5_Text_0:
-# 1234 "data/maps/ParcelWeather/scripts.pory"
+# 1241 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelWeather_T_Oyvind_R5_Text_1:
-# 1240 "data/maps/ParcelWeather/scripts.pory"
+# 1247 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Still yours.$"
 
 ParcelWeather_T_Oyvind_R5_Text_2:
-# 1241 "data/maps/ParcelWeather/scripts.pory"
+# 1248 "data/maps/ParcelWeather/scripts.pory"
 	.string "OYVIND: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelWeather_PairGauge_Text_0:
-# 1251 "data/maps/ParcelWeather/scripts.pory"
+# 1258 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: The Council wants the\n"
 	.string "Station's series. All forty years,\l"
 	.string "certified. For the review.$"
 
 ParcelWeather_PairGauge_Text_1:
-# 1252 "data/maps/ParcelWeather/scripts.pory"
+# 1259 "data/maps/ParcelWeather/scripts.pory"
 	.string "KEEPER: Then they'll get the brackets\n"
 	.string "too. The brackets are the series.$"
 
 ParcelWeather_PairGauge_Text_2:
-# 1253 "data/maps/ParcelWeather/scripts.pory"
+# 1260 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: They won't like the\n"
 	.string "brackets.$"
 
 ParcelWeather_PairGauge_Text_3:
-# 1254 "data/maps/ParcelWeather/scripts.pory"
+# 1261 "data/maps/ParcelWeather/scripts.pory"
 	.string "KEEPER: Nobody likes the brackets.\n"
 	.string "VANE says that's how you know they're\l"
 	.string "true. Pack the book. Carefully. It's the\l"
 	.string "only one.$"
 
 ParcelWeather_PairGauge_Text_4:
-# 1256 "data/maps/ParcelWeather/scripts.pory"
+# 1263 "data/maps/ParcelWeather/scripts.pory"
 	.string "KEEPER: VANE cleared the ranger. First\n"
 	.string "one through the gauntlet in two years\l"
 	.string "who read the instruments before\l"
 	.string "fighting the instrument-keepers.$"
 
 ParcelWeather_PairGauge_Text_5:
-# 1257 "data/maps/ParcelWeather/scripts.pory"
+# 1264 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: Is that the order it's\n"
 	.string "meant to go?$"
 
 ParcelWeather_PairGauge_Text_6:
-# 1258 "data/maps/ParcelWeather/scripts.pory"
+# 1265 "data/maps/ParcelWeather/scripts.pory"
 	.string "KEEPER: It's the order VANE's always\n"
 	.string "said. Nobody listened. Now one did.$"
 
 ParcelWeather_PairGauge_Text_7:
-# 1259 "data/maps/ParcelWeather/scripts.pory"
+# 1266 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: What did the ranger read?$"
 
 ParcelWeather_PairGauge_Text_8:
-# 1260 "data/maps/ParcelWeather/scripts.pory"
+# 1267 "data/maps/ParcelWeather/scripts.pory"
 	.string "KEEPER: Everything with a date on it.\n"
 	.string "Then asked why the fifth gauge was\l"
 	.string "drawn where the falls aren't.$"
 
 ParcelWeather_PairGauge_Text_9:
-# 1262 "data/maps/ParcelWeather/scripts.pory"
+# 1269 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: The ice-out book's missing\n"
 	.string "a year. Someone tore the page.$"
 
 ParcelWeather_PairGauge_Text_10:
-# 1263 "data/maps/ParcelWeather/scripts.pory"
+# 1270 "data/maps/ParcelWeather/scripts.pory"
 	.string "KEEPER: Nobody tore it. It was the year\n"
 	.string "with no ice. The clerk couldn't bring\l"
 	.string "himself to write it and left the page.$"
 
 ParcelWeather_PairGauge_Text_11:
-# 1264 "data/maps/ParcelWeather/scripts.pory"
+# 1271 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: So the gap's the reading.$"
 
 ParcelWeather_PairGauge_Text_12:
-# 1265 "data/maps/ParcelWeather/scripts.pory"
+# 1272 "data/maps/ParcelWeather/scripts.pory"
 	.string "KEEPER: The gap's the reading. I've\n"
 	.string "started putting the gaps in brackets.\l"
 	.string "It's the only way the column stays a\l"
 	.string "column.$"
 
 ParcelWeather_PairYard_Text_0:
-# 1274 "data/maps/ParcelWeather/scripts.pory"
+# 1281 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: VANE's been asked to testify. In\n"
 	.string "the review. With the book.$"
 
 ParcelWeather_PairYard_Text_1:
-# 1275 "data/maps/ParcelWeather/scripts.pory"
+# 1282 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: VANE hates rooms.$"
 
 ParcelWeather_PairYard_Text_2:
-# 1276 "data/maps/ParcelWeather/scripts.pory"
+# 1283 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: VANE hates rooms that don't have\n"
 	.string "weather in them. This one will. The\l"
 	.string "ranger made sure the windows are the\l"
 	.string "evidence.$"
 
 ParcelWeather_PairYard_Text_3:
-# 1277 "data/maps/ParcelWeather/scripts.pory"
+# 1284 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: I don't understand that.$"
 
 ParcelWeather_PairYard_Text_4:
-# 1278 "data/maps/ParcelWeather/scripts.pory"
+# 1285 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: Eat your breakfast. You will.$"
 
 ParcelWeather_PairYard_Text_5:
-# 1280 "data/maps/ParcelWeather/scripts.pory"
+# 1287 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: The ranger walked down slow.$"
 
 ParcelWeather_PairYard_Text_6:
-# 1281 "data/maps/ParcelWeather/scripts.pory"
+# 1288 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: Told you.$"
 
 ParcelWeather_PairYard_Text_7:
-# 1282 "data/maps/ParcelWeather/scripts.pory"
+# 1289 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: Stopped at the gate stake and\n"
 	.string "read the whole thing. Then looked back\l"
 	.string "at the yard like it had said something.$"
 
 ParcelWeather_PairYard_Text_8:
-# 1283 "data/maps/ParcelWeather/scripts.pory"
+# 1290 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: It had. The yard's been saying it\n"
 	.string "for forty years. Takes a certain kind of\l"
 	.string "ear.$"
 
 ParcelWeather_PairYard_Text_9:
-# 1285 "data/maps/ParcelWeather/scripts.pory"
+# 1292 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: The gauntlet four eat like a\n"
 	.string "landslide. Four breakfasts before the\l"
 	.string "fog's off the yard.$"
 
 ParcelWeather_PairYard_Text_10:
-# 1286 "data/maps/ParcelWeather/scripts.pory"
+# 1293 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: They say the ranger's coming up\n"
 	.string "the road. On foot. Alone.$"
 
 ParcelWeather_PairYard_Text_11:
-# 1287 "data/maps/ParcelWeather/scripts.pory"
+# 1294 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: They all come up alone. It's the\n"
 	.string "going down that tells you anything.$"
 
 ParcelWeather_PairYard_Text_12:
-# 1288 "data/maps/ParcelWeather/scripts.pory"
+# 1295 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: How?$"
 
 ParcelWeather_PairYard_Text_13:
-# 1289 "data/maps/ParcelWeather/scripts.pory"
+# 1296 "data/maps/ParcelWeather/scripts.pory"
 	.string "COOK: The ones who read the yard on the\n"
 	.string "way down walk slower. Watch for it.$"
 
 ParcelWeather_PageFortyOne_Text_0:
-# 1299 "data/maps/ParcelWeather/scripts.pory"
+# 1306 "data/maps/ParcelWeather/scripts.pory"
 	.string "A page from a ledger, pinned under a\n"
 	.string "stone by somebody who found it before\l"
 	.string "you and did not know what to do with it.\l"
@@ -4226,23 +4243,23 @@ ParcelWeather_PageFortyOne_Text_0:
 	.string "loudest page you have carried.$"
 
 ParcelWeather_PageFortyOne_Text_1:
-# 1302 "data/maps/ParcelWeather/scripts.pory"
+# 1309 "data/maps/ParcelWeather/scripts.pory"
 	.string "A stone where a page was. Somebody has\n"
 	.string "written on the stone, small: 41.$"
 
 ParcelWeather_PairGate_Text_0:
-# 1310 "data/maps/ParcelWeather/scripts.pory"
+# 1317 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: The Council wants the series\n"
 	.string "certified. All forty years. With the\l"
 	.string "brackets.$"
 
 ParcelWeather_PairGate_Text_1:
-# 1311 "data/maps/ParcelWeather/scripts.pory"
+# 1318 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: You said the brackets weren't a\n"
 	.string "flaw.$"
 
 ParcelWeather_PairGate_Text_2:
-# 1312 "data/maps/ParcelWeather/scripts.pory"
+# 1319 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: I said scope. I've stopped\n"
 	.string "saying scope. The director took the\l"
 	.string "word out of the building. He said we'd\l"
@@ -4250,64 +4267,64 @@ ParcelWeather_PairGate_Text_2:
 	.string "to look at' for eleven years.$"
 
 ParcelWeather_PairGate_Text_3:
-# 1313 "data/maps/ParcelWeather/scripts.pory"
+# 1320 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: What do we say instead?$"
 
 ParcelWeather_PairGate_Text_4:
-# 1314 "data/maps/ParcelWeather/scripts.pory"
+# 1321 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: What happened. Apparently\n"
 	.string "that's a technical term now.$"
 
 ParcelWeather_PairGate_Text_5:
-# 1316 "data/maps/ParcelWeather/scripts.pory"
+# 1323 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: The ranger beat the four and\n"
 	.string "then the director. Then asked the\l"
 	.string "director what Scenario D was.$"
 
 ParcelWeather_PairGate_Text_6:
-# 1317 "data/maps/ParcelWeather/scripts.pory"
+# 1324 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: There isn't a Scenario D.$"
 
 ParcelWeather_PairGate_Text_7:
-# 1318 "data/maps/ParcelWeather/scripts.pory"
+# 1325 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: There is now. The technician\n"
 	.string "pinned it under the others. It's the\l"
 	.string "over-the-fence log.$"
 
 ParcelWeather_PairGate_Text_8:
-# 1319 "data/maps/ParcelWeather/scripts.pory"
+# 1326 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: That's not a scenario. That's\n"
 	.string "what happened.$"
 
 ParcelWeather_PairGate_Text_9:
-# 1320 "data/maps/ParcelWeather/scripts.pory"
+# 1327 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: Yes.$"
 
 ParcelWeather_PairGate_Text_10:
-# 1322 "data/maps/ParcelWeather/scripts.pory"
+# 1329 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: Scenario C says full\n"
 	.string "management holds the sky to within a\l"
 	.string "degree.$"
 
 ParcelWeather_PairGate_Text_11:
-# 1323 "data/maps/ParcelWeather/scripts.pory"
+# 1330 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: Over what period?$"
 
 ParcelWeather_PairGate_Text_12:
-# 1324 "data/maps/ParcelWeather/scripts.pory"
+# 1331 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: The funding period.$"
 
 ParcelWeather_PairGate_Text_13:
-# 1325 "data/maps/ParcelWeather/scripts.pory"
+# 1332 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: …And after?$"
 
 ParcelWeather_PairGate_Text_14:
-# 1326 "data/maps/ParcelWeather/scripts.pory"
+# 1333 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: After isn't in the scenario.\n"
 	.string "That's not a flaw. That's a scope.$"
 
 ParcelWeather_Board1_Text_0:
-# 1335 "data/maps/ParcelWeather/scripts.pory"
+# 1342 "data/maps/ParcelWeather/scripts.pory"
 	.string "A SURVEY BOARD at the Institute gate,\n"
 	.string "with the Institute's permission\l"
 	.string "stamped on it. The Station has measured\l"
@@ -4320,7 +4337,7 @@ ParcelWeather_Board1_Text_0:
 	.string "the finding.$"
 
 ParcelWeather_Board2_Text_0:
-# 1340 "data/maps/ParcelWeather/scripts.pory"
+# 1347 "data/maps/ParcelWeather/scripts.pory"
 	.string "A SURVEY BOARD, the only one with a\n"
 	.string "graph. First frost by year, from the\l"
 	.string "Station's own records, plotted by the\l"
@@ -4330,7 +4347,7 @@ ParcelWeather_Board2_Text_0:
 	.string "post.$"
 
 ParcelWeather_Board3_Text_0:
-# 1347 "data/maps/ParcelWeather/scripts.pory"
+# 1354 "data/maps/ParcelWeather/scripts.pory"
 	.string "A SURVEY BOARD at the Institute's wall.\n"
 	.string "Rain gauge readings, the Institute's,\l"
 	.string "copied by the Survey beside the WOOPER\l"
@@ -4341,7 +4358,7 @@ ParcelWeather_Board3_Text_0:
 	.string "year they parted.$"
 
 ParcelWeather_GateHut_Text_0:
-# 1354 "data/maps/ParcelWeather/scripts.pory"
+# 1361 "data/maps/ParcelWeather/scripts.pory"
 	.string "The gate hut, the door swollen shut and\n"
 	.string "then not. Inside, pinned to the back\l"
 	.string "wall, a sheet gone brown, a column of\l"
@@ -4355,7 +4372,7 @@ ParcelWeather_GateHut_Text_0:
 	.string "third hand: CONTINUED IN THE RECORD.$"
 
 ParcelWeather_Board6_Text_0:
-# 1359 "data/maps/ParcelWeather/scripts.pory"
+# 1366 "data/maps/ParcelWeather/scripts.pory"
 	.string "A SURVEY BOARD at the Station fence.\n"
 	.string "The weather here is measured, not\l"
 	.string "watched: the instruments on the roof\l"
@@ -4367,7 +4384,7 @@ ParcelWeather_Board6_Text_0:
 	.string "off the moor for warmth. Both earlier.$"
 
 ParcelWeather_Board8_Text_0:
-# 1364 "data/maps/ParcelWeather/scripts.pory"
+# 1371 "data/maps/ParcelWeather/scripts.pory"
 	.string "A SURVEY BOARD at the moor edge. NUMEL\n"
 	.string "come down to the Station's warm vents\l"
 	.string "in the cold months and ELECTRIKE to\l"
@@ -4378,7 +4395,7 @@ ParcelWeather_Board8_Text_0:
 	.string "same day, earlier.$"
 
 ParcelWeather_Board9_Text_0:
-# 1369 "data/maps/ParcelWeather/scripts.pory"
+# 1376 "data/maps/ParcelWeather/scripts.pory"
 	.string "A SURVEY BOARD at the Station's back\n"
 	.string "fence, where the staff smoke.\l"
 	.string "Over-the-fence readings were taken\l"
@@ -4390,61 +4407,61 @@ ParcelWeather_Board9_Text_0:
 	.string "from the same place.$"
 
 ParcelWeather_PairFence_Text_0:
-# 1376 "data/maps/ParcelWeather/scripts.pory"
+# 1383 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: The Director handed both\n"
 	.string "logbooks to the review. The roof one\l"
 	.string "and the fence one.$"
 
 ParcelWeather_PairFence_Text_1:
-# 1377 "data/maps/ParcelWeather/scripts.pory"
+# 1384 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: I didn't know there were two.$"
 
 ParcelWeather_PairFence_Text_2:
-# 1378 "data/maps/ParcelWeather/scripts.pory"
+# 1385 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: Nobody did. That was the\n"
 	.string "second one's whole point. Now there's\l"
 	.string "one, and the fence is in it.$"
 
 ParcelWeather_PairFence_Text_3:
-# 1380 "data/maps/ParcelWeather/scripts.pory"
+# 1387 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: The new provisional passed\n"
 	.string "FOREST. First out of Saltwick in nine\l"
 	.string "years, the Hall says.$"
 
 ParcelWeather_PairFence_Text_4:
-# 1381 "data/maps/ParcelWeather/scripts.pory"
+# 1388 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: Nine years. I've logged\n"
 	.string "every one of them. I never thought of\l"
 	.string "them as a wait.$"
 
 ParcelWeather_PairFence_Text_5:
-# 1382 "data/maps/ParcelWeather/scripts.pory"
+# 1389 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: What did you think of them as?$"
 
 ParcelWeather_PairFence_Text_6:
-# 1383 "data/maps/ParcelWeather/scripts.pory"
+# 1390 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: Weather.$"
 
 ParcelWeather_PairFence_Text_7:
-# 1385 "data/maps/ParcelWeather/scripts.pory"
+# 1392 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: Roof dish reads one point\n"
 	.string "two above the century mean.$"
 
 ParcelWeather_PairFence_Text_8:
-# 1386 "data/maps/ParcelWeather/scripts.pory"
+# 1393 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: Is that a lot?$"
 
 ParcelWeather_PairFence_Text_9:
-# 1387 "data/maps/ParcelWeather/scripts.pory"
+# 1394 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: It's a number. The Station\n"
 	.string "doesn't do a lot. The Station does\l"
 	.string "numbers.$"
 
 ParcelWeather_PairFence_Text_10:
-# 1388 "data/maps/ParcelWeather/scripts.pory"
+# 1395 "data/maps/ParcelWeather/scripts.pory"
 	.string "CADET: Who does a lot?$"
 
 ParcelWeather_PairFence_Text_11:
-# 1389 "data/maps/ParcelWeather/scripts.pory"
+# 1396 "data/maps/ParcelWeather/scripts.pory"
 	.string "TECHNICIAN: The people who read the\n"
 	.string "numbers and then go outside. Not many.$"
