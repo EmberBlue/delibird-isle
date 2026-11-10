@@ -64,14 +64,14 @@ ParcelIsleTimoHouse_PaperLines_2:
 
 ParcelIsleTimoHouse_Gran_Text_0:
 # 13 "data/maps/ParcelIsleTimoHouse/scripts.pory"
-	.string "Gran: Past the bridge, was it. All the\n"
+	.string "GRAN: Past the bridge, was it. All the\n"
 	.string "way past, and back again.\p"
 	.string "She looks at you a long moment, and\n"
 	.string "nods once, the way a door closes softly.$"
 
 ParcelIsleTimoHouse_Gran_Text_1:
 # 14 "data/maps/ParcelIsleTimoHouse/scripts.pory"
-	.string "Gran: His mother worked the works, down\n"
+	.string "GRAN: His mother worked the works, down\n"
 	.string "the coast. Years of it. We knew what it\l"
 	.string "was and we needed what it paid, and\l"
 	.string "both things were true at once.\p"
@@ -80,7 +80,7 @@ ParcelIsleTimoHouse_Gran_Text_1:
 
 ParcelIsleTimoHouse_Gran_Text_2:
 # 19 "data/maps/ParcelIsleTimoHouse/scripts.pory"
-	.string "Gran: Timo's asking me what an\n"
+	.string "GRAN: TIMO's asking me what an\n"
 	.string "allocation is. He heard it off the ferry\l"
 	.string "hands.\p"
 	.string "I told him it's when somebody decides\n"
@@ -90,17 +90,17 @@ ParcelIsleTimoHouse_Gran_Text_2:
 
 ParcelIsleTimoHouse_Gran_Text_3:
 # 23 "data/maps/ParcelIsleTimoHouse/scripts.pory"
-	.string "Gran: Timo's out by the water again, I\n"
+	.string "GRAN: TIMO's out by the water again, I\n"
 	.string "expect. Battling strangers off the\l"
 	.string "ferry.\p"
-	.string "Gran: I tell him, don't go past the\n"
+	.string "GRAN: I tell him, don't go past the\n"
 	.string "bridge. He asks why. I tell him, because\l"
 	.string "I said so.\p"
 	.string "He's too young for the other answer.$"
 
 ParcelIsleTimoHouse_Gran_Text_4:
 # 24 "data/maps/ParcelIsleTimoHouse/scripts.pory"
-	.string "Gran: You've been past it, haven't you.\n"
+	.string "GRAN: You've been past it, haven't you.\n"
 	.string "It's on your boots.\p"
 	.string "Come back through when you can. He\n"
 	.string "listens to you lot more than he listens\l"
@@ -128,7 +128,7 @@ ParcelIsleTimoHouse_PaperLines_Text_0:
 	.string "A school exercise book on the dresser.\n"
 	.string "The old lines are still there. A new\l"
 	.string "page: WHAT AN ALLOCATION IS, in Gran's\l"
-	.string "hand, and under it Timo's: when\l"
+	.string "hand, and under it TIMO's: when\l"
 	.string "somebody decides who gets the water.\p"
 	.string "Under that, in Gran's: and now you're\n"
 	.string "ready for the other answer. The other\l"

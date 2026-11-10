@@ -134,7 +134,7 @@ ParcelLab_FirstEntry_Text_2:
 
 ParcelLab_Official_Text_0:
 # 34 "data/maps/ParcelLab/scripts.pory"
-	.string "Official: The file's been reopened. Not\n"
+	.string "OFFICIAL: The file's been reopened. Not\n"
 	.string "by me. By the review, who wanted to know\l"
 	.string "why a burglary had a company van in the\l"
 	.string "harbour log.\p"
@@ -145,7 +145,7 @@ ParcelLab_Official_Text_0:
 
 ParcelLab_Official_Text_1:
 # 38 "data/maps/ParcelLab/scripts.pory"
-	.string "Official: No signs of forced entry\n"
+	.string "OFFICIAL: No signs of forced entry\n"
 	.string "beyond the latch. Could be vandalism.\p"
 	.string "We've filed it.\n"
 	.string "Not much else we can do.$"

@@ -72,6 +72,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 - [larryturbo](https://www.deviantart.com/larryturbo)
 - [kidkatt](https://www.deviantart.com/kidkatt)
 
+## Skaldmere map art (delibird-isle)
+The game's maps draw on three tileset families, all checked into this repository. Nothing was
+taken from another released hack.
+- **Emerald's own tilesets** (95 maps), recoloured and restyled in this project. The ROM reads
+  them from the `leob_*` folders under `data/tilesets/`: the same tiles as vanilla with more
+  metatiles. Who prepared those folders is not recorded in this repository's history.
+- **[FireRed Tileset Port](https://github.com/Liamjd14/Firered-Tileset-Port)** by Liamjd14, the
+  `frp_*` tilesets, vendored as the `extern/Firered-Tileset-Port` submodule (Saltwick, the
+  Holding Meadow, Route 1, Mistwood).
+- **The Johto-style set** (`johtogeneral`, `azaleatown`) used by the three Delibird Isle maps.
+  Its author is not recorded anywhere in this repository's history. Identify and credit the
+  artist before any public release.
+
 ## Resources
 - [Sugimori Palettes and Sprites](https://www.pokecommunity.com/showthread.php?t=336945)
 - [DS Style Gen VI Sprites](https://www.pokecommunity.com/showthread.php?t=314422)

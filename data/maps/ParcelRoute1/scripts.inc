@@ -1079,304 +1079,310 @@ ParcelRoute1_Epilogue::
 # 606 "data/maps/ParcelRoute1/scripts.pory"
 	clearflag FLAG_TEMP_2
 # 607 "data/maps/ParcelRoute1/scripts.pory"
-	addobject 15
+	setobjectxyperm 15, 8, 28
 # 608 "data/maps/ParcelRoute1/scripts.pory"
-	delay 30
+	addobject 15
 # 609 "data/maps/ParcelRoute1/scripts.pory"
-	applymovement 15, Movement_Epilogue_PoliwagDownstream
+	delay 30
 # 610 "data/maps/ParcelRoute1/scripts.pory"
-	waitmovement 0
+	applymovement 15, Movement_Epilogue_PoliwagDownstream
 # 611 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_Epilogue_Text_1, MSGBOX_DEFAULT
+	waitmovement 0
 # 612 "data/maps/ParcelRoute1/scripts.pory"
-	closemessage
+	msgbox ParcelRoute1_Epilogue_Text_1, MSGBOX_DEFAULT
 # 613 "data/maps/ParcelRoute1/scripts.pory"
-	setvar VAR_SKALD_EPILOGUE, 0
+	closemessage
 # 614 "data/maps/ParcelRoute1/scripts.pory"
-	setrespawn HEAL_LOCATION_PARCEL_FERNWICK
+	setvar VAR_SKALD_EPILOGUE, 0
 # 615 "data/maps/ParcelRoute1/scripts.pory"
-	fadescreenspeed FADE_TO_BLACK, 24
+	setrespawn HEAL_LOCATION_PARCEL_FERNWICK
 # 616 "data/maps/ParcelRoute1/scripts.pory"
-	special SkaldGameClear
+	fadescreenspeed FADE_TO_BLACK, 24
 # 617 "data/maps/ParcelRoute1/scripts.pory"
-	waitstate
+	special SkaldGameClear
 # 618 "data/maps/ParcelRoute1/scripts.pory"
+	waitstate
+# 619 "data/maps/ParcelRoute1/scripts.pory"
 	releaseall
 	end
 
 
-# 621 "data/maps/ParcelRoute1/scripts.pory"
-Movement_Epilogue_PoliwagDownstream:
 # 622 "data/maps/ParcelRoute1/scripts.pory"
+Movement_Epilogue_PoliwagDownstream:
+# 623 "data/maps/ParcelRoute1/scripts.pory"
+	face_down
+# 624 "data/maps/ParcelRoute1/scripts.pory"
 	delay_16
-# 623 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
-# 623 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
-# 623 "data/maps/ParcelRoute1/scripts.pory"
-	walk_down
+# 625 "data/maps/ParcelRoute1/scripts.pory"
+	walk_slow_down
+# 625 "data/maps/ParcelRoute1/scripts.pory"
+	walk_slow_down
+# 625 "data/maps/ParcelRoute1/scripts.pory"
+	walk_slow_down
+# 625 "data/maps/ParcelRoute1/scripts.pory"
+	walk_slow_down
 	step_end
 
 ParcelRoute1_Whistle::
-# 627 "data/maps/ParcelRoute1/scripts.pory"
+# 629 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_HALVAR, ParcelRoute1_Whistle_3
 ParcelRoute1_Whistle_1:
-# 632 "data/maps/ParcelRoute1/scripts.pory"
+# 634 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Whistle_Text_1, MSGBOX_SIGN
 	end
 
 ParcelRoute1_Whistle_2:
-# 628 "data/maps/ParcelRoute1/scripts.pory"
+# 630 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Whistle_Text_0, MSGBOX_SIGN
-# 629 "data/maps/ParcelRoute1/scripts.pory"
+# 631 "data/maps/ParcelRoute1/scripts.pory"
 	setflag FLAG_SKALD_Q_HALVAR_FOUND
 	end
 
 ParcelRoute1_Whistle_3:
-# 627 "data/maps/ParcelRoute1/scripts.pory"
+# 629 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_HALVAR_FOUND, ParcelRoute1_Whistle_2
 	goto ParcelRoute1_Whistle_1
 
 
 ParcelRoute1_PairBridge::
-# 639 "data/maps/ParcelRoute1/scripts.pory"
+# 641 "data/maps/ParcelRoute1/scripts.pory"
 	lock
-# 640 "data/maps/ParcelRoute1/scripts.pory"
+# 642 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRoute1_PairBridge_2
-# 644 "data/maps/ParcelRoute1/scripts.pory"
+# 646 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelRoute1_PairBridge_3
-# 650 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_7, MSGBOX_DEFAULT
-# 651 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_8, MSGBOX_DEFAULT
 # 652 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_9, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairBridge_Text_7, MSGBOX_DEFAULT
 # 653 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_10, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairBridge_Text_8, MSGBOX_DEFAULT
 # 654 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_9, MSGBOX_DEFAULT
+# 655 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_10, MSGBOX_DEFAULT
+# 656 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairBridge_Text_11, MSGBOX_DEFAULT
 ParcelRoute1_PairBridge_1:
-# 656 "data/maps/ParcelRoute1/scripts.pory"
+# 658 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 ParcelRoute1_PairBridge_2:
-# 641 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_0, MSGBOX_DEFAULT
-# 642 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_1, MSGBOX_DEFAULT
 # 643 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_0, MSGBOX_DEFAULT
+# 644 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_1, MSGBOX_DEFAULT
+# 645 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairBridge_Text_2, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairBridge_1
 
 ParcelRoute1_PairBridge_3:
-# 645 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_3, MSGBOX_DEFAULT
-# 646 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_4, MSGBOX_DEFAULT
 # 647 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairBridge_Text_5, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairBridge_Text_3, MSGBOX_DEFAULT
 # 648 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_4, MSGBOX_DEFAULT
+# 649 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_5, MSGBOX_DEFAULT
+# 650 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairBridge_Text_6, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairBridge_1
 
 
 ParcelRoute1_Board1::
-# 663 "data/maps/ParcelRoute1/scripts.pory"
+# 665 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Board1_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRoute1_Board2::
-# 668 "data/maps/ParcelRoute1/scripts.pory"
+# 670 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Board2_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRoute1_PairSalt::
-# 675 "data/maps/ParcelRoute1/scripts.pory"
+# 677 "data/maps/ParcelRoute1/scripts.pory"
 	lock
-# 676 "data/maps/ParcelRoute1/scripts.pory"
+# 678 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRoute1_PairSalt_2
-# 680 "data/maps/ParcelRoute1/scripts.pory"
+# 682 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_BRIDGE_SCENE, ParcelRoute1_PairSalt_3
-# 686 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_7, MSGBOX_DEFAULT
-# 687 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_8, MSGBOX_DEFAULT
 # 688 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_9, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairSalt_Text_7, MSGBOX_DEFAULT
 # 689 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_10, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairSalt_Text_8, MSGBOX_DEFAULT
 # 690 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_9, MSGBOX_DEFAULT
+# 691 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_10, MSGBOX_DEFAULT
+# 692 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairSalt_Text_11, MSGBOX_DEFAULT
 ParcelRoute1_PairSalt_1:
-# 692 "data/maps/ParcelRoute1/scripts.pory"
+# 694 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 ParcelRoute1_PairSalt_2:
-# 677 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_0, MSGBOX_DEFAULT
-# 678 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_1, MSGBOX_DEFAULT
 # 679 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_0, MSGBOX_DEFAULT
+# 680 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_1, MSGBOX_DEFAULT
+# 681 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairSalt_Text_2, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairSalt_1
 
 ParcelRoute1_PairSalt_3:
-# 681 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_3, MSGBOX_DEFAULT
-# 682 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_4, MSGBOX_DEFAULT
 # 683 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairSalt_Text_5, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairSalt_Text_3, MSGBOX_DEFAULT
 # 684 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_4, MSGBOX_DEFAULT
+# 685 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairSalt_Text_5, MSGBOX_DEFAULT
+# 686 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairSalt_Text_6, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairSalt_1
 
 
 ParcelRoute1_Board3::
-# 699 "data/maps/ParcelRoute1/scripts.pory"
+# 701 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Board3_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRoute1_Board5::
-# 706 "data/maps/ParcelRoute1/scripts.pory"
+# 708 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Board5_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRoute1_Board6::
-# 711 "data/maps/ParcelRoute1/scripts.pory"
+# 713 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Board6_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRoute1_Board8::
-# 716 "data/maps/ParcelRoute1/scripts.pory"
+# 718 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_Board8_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRoute1_PairRail::
-# 721 "data/maps/ParcelRoute1/scripts.pory"
+# 723 "data/maps/ParcelRoute1/scripts.pory"
 	lock
-# 722 "data/maps/ParcelRoute1/scripts.pory"
+# 724 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRoute1_PairRail_2
-# 727 "data/maps/ParcelRoute1/scripts.pory"
+# 729 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_STATION_BRIEF, ParcelRoute1_PairRail_3
-# 732 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_7, MSGBOX_DEFAULT
-# 733 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_8, MSGBOX_DEFAULT
 # 734 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_9, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairRail_Text_7, MSGBOX_DEFAULT
 # 735 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairRail_Text_8, MSGBOX_DEFAULT
+# 736 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairRail_Text_9, MSGBOX_DEFAULT
+# 737 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairRail_Text_10, MSGBOX_DEFAULT
 ParcelRoute1_PairRail_1:
-# 737 "data/maps/ParcelRoute1/scripts.pory"
+# 739 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 ParcelRoute1_PairRail_2:
-# 723 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_0, MSGBOX_DEFAULT
-# 724 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_1, MSGBOX_DEFAULT
 # 725 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_2, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairRail_Text_0, MSGBOX_DEFAULT
 # 726 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairRail_Text_1, MSGBOX_DEFAULT
+# 727 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairRail_Text_2, MSGBOX_DEFAULT
+# 728 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairRail_Text_3, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairRail_1
 
 ParcelRoute1_PairRail_3:
-# 728 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_4, MSGBOX_DEFAULT
-# 729 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairRail_Text_5, MSGBOX_DEFAULT
 # 730 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairRail_Text_4, MSGBOX_DEFAULT
+# 731 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairRail_Text_5, MSGBOX_DEFAULT
+# 732 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairRail_Text_6, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairRail_1
 
 
 ParcelRoute1_PairStile::
-# 744 "data/maps/ParcelRoute1/scripts.pory"
+# 746 "data/maps/ParcelRoute1/scripts.pory"
 	lock
-# 745 "data/maps/ParcelRoute1/scripts.pory"
+# 747 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRoute1_PairStile_2
-# 750 "data/maps/ParcelRoute1/scripts.pory"
+# 752 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_BRIDGE_SCENE, ParcelRoute1_PairStile_3
-# 755 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_7, MSGBOX_DEFAULT
-# 756 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_8, MSGBOX_DEFAULT
 # 757 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_9, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairStile_Text_7, MSGBOX_DEFAULT
 # 758 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairStile_Text_8, MSGBOX_DEFAULT
+# 759 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairStile_Text_9, MSGBOX_DEFAULT
+# 760 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairStile_Text_10, MSGBOX_DEFAULT
 ParcelRoute1_PairStile_1:
-# 760 "data/maps/ParcelRoute1/scripts.pory"
+# 762 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 ParcelRoute1_PairStile_2:
-# 746 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_0, MSGBOX_DEFAULT
-# 747 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_1, MSGBOX_DEFAULT
 # 748 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_2, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairStile_Text_0, MSGBOX_DEFAULT
 # 749 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairStile_Text_1, MSGBOX_DEFAULT
+# 750 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairStile_Text_2, MSGBOX_DEFAULT
+# 751 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairStile_Text_3, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairStile_1
 
 ParcelRoute1_PairStile_3:
-# 751 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_4, MSGBOX_DEFAULT
-# 752 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairStile_Text_5, MSGBOX_DEFAULT
 # 753 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairStile_Text_4, MSGBOX_DEFAULT
+# 754 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairStile_Text_5, MSGBOX_DEFAULT
+# 755 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairStile_Text_6, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairStile_1
 
 
 ParcelRoute1_PairShore::
-# 765 "data/maps/ParcelRoute1/scripts.pory"
+# 767 "data/maps/ParcelRoute1/scripts.pory"
 	lock
-# 766 "data/maps/ParcelRoute1/scripts.pory"
+# 768 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRoute1_PairShore_2
-# 770 "data/maps/ParcelRoute1/scripts.pory"
+# 772 "data/maps/ParcelRoute1/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelRoute1_PairShore_3
-# 775 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairShore_Text_6, MSGBOX_DEFAULT
-# 776 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairShore_Text_7, MSGBOX_DEFAULT
 # 777 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairShore_Text_8, MSGBOX_DEFAULT
+	msgbox ParcelRoute1_PairShore_Text_6, MSGBOX_DEFAULT
 # 778 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairShore_Text_7, MSGBOX_DEFAULT
+# 779 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairShore_Text_8, MSGBOX_DEFAULT
+# 780 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairShore_Text_9, MSGBOX_DEFAULT
 ParcelRoute1_PairShore_1:
-# 780 "data/maps/ParcelRoute1/scripts.pory"
+# 782 "data/maps/ParcelRoute1/scripts.pory"
 	release
 	end
 
 ParcelRoute1_PairShore_2:
-# 767 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairShore_Text_0, MSGBOX_DEFAULT
-# 768 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairShore_Text_1, MSGBOX_DEFAULT
 # 769 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairShore_Text_0, MSGBOX_DEFAULT
+# 770 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairShore_Text_1, MSGBOX_DEFAULT
+# 771 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairShore_Text_2, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairShore_1
 
 ParcelRoute1_PairShore_3:
-# 771 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairShore_Text_3, MSGBOX_DEFAULT
-# 772 "data/maps/ParcelRoute1/scripts.pory"
-	msgbox ParcelRoute1_PairShore_Text_4, MSGBOX_DEFAULT
 # 773 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairShore_Text_3, MSGBOX_DEFAULT
+# 774 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairShore_Text_4, MSGBOX_DEFAULT
+# 775 "data/maps/ParcelRoute1/scripts.pory"
 	msgbox ParcelRoute1_PairShore_Text_5, MSGBOX_DEFAULT
 	goto ParcelRoute1_PairShore_1
 
@@ -1803,7 +1809,7 @@ ParcelRoute1_Epilogue_Text_0:
 	.string "them.$"
 
 ParcelRoute1_Epilogue_Text_1:
-# 611 "data/maps/ParcelRoute1/scripts.pory"
+# 612 "data/maps/ParcelRoute1/scripts.pory"
 	.string "One POLIWAG, in the middle of the\n"
 	.string "stream, going downstream at its own\l"
 	.string "pace. Nobody helping it. It has the\l"
@@ -1811,7 +1817,7 @@ ParcelRoute1_Epilogue_Text_1:
 	.string "You write it down.$"
 
 ParcelRoute1_Whistle_Text_0:
-# 628 "data/maps/ParcelRoute1/scripts.pory"
+# 630 "data/maps/ParcelRoute1/scripts.pory"
 	.string "Something glints in the shallows where\n"
 	.string "the water has drawn back from the\l"
 	.string "stones. A brass whistle on a rotted\l"
@@ -1819,78 +1825,78 @@ ParcelRoute1_Whistle_Text_0:
 	.string "You fish it out. It still has a pea in it.$"
 
 ParcelRoute1_Whistle_Text_1:
-# 632 "data/maps/ParcelRoute1/scripts.pory"
+# 634 "data/maps/ParcelRoute1/scripts.pory"
 	.string "The inlet by the bridge, drawn back from\n"
 	.string "its stones. Low water. Things show in\l"
 	.string "low water that were never meant to.$"
 
 ParcelRoute1_PairBridge_Text_0:
-# 641 "data/maps/ParcelRoute1/scripts.pory"
+# 643 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: One POLIWAG went downstream\n"
 	.string "on its own this morning. Middle of the\l"
 	.string "stream. Taking its time.$"
 
 ParcelRoute1_PairBridge_Text_1:
-# 642 "data/maps/ParcelRoute1/scripts.pory"
+# 644 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: Just one?$"
 
 ParcelRoute1_PairBridge_Text_2:
-# 643 "data/maps/ParcelRoute1/scripts.pory"
+# 645 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: One's the number you start\n"
 	.string "with. I've fished this bank forty years\l"
 	.string "and I've never once seen the first one\l"
 	.string "before.$"
 
 ParcelRoute1_PairBridge_Text_3:
-# 645 "data/maps/ParcelRoute1/scripts.pory"
+# 647 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: The ranger from the ferry read\n"
 	.string "the bridge the first morning. Before\l"
 	.string "the badge, before anything.$"
 
 ParcelRoute1_PairBridge_Text_4:
-# 646 "data/maps/ParcelRoute1/scripts.pory"
+# 648 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: Read it how?$"
 
 ParcelRoute1_PairBridge_Text_5:
-# 647 "data/maps/ParcelRoute1/scripts.pory"
+# 649 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: Stood where you're standing and\n"
 	.string "wrote down what the frogs were doing.\l"
 	.string "Then went south to the station like it\l"
 	.string "was nothing.$"
 
 ParcelRoute1_PairBridge_Text_6:
-# 648 "data/maps/ParcelRoute1/scripts.pory"
+# 650 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: It was something. People stand\n"
 	.string "here and see a bridge.$"
 
 ParcelRoute1_PairBridge_Text_7:
-# 650 "data/maps/ParcelRoute1/scripts.pory"
+# 652 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: The POLIWAG were under the\n"
 	.string "bridge again this morning. Jammed up.\l"
 	.string "Going nowhere.$"
 
 ParcelRoute1_PairBridge_Text_8:
-# 651 "data/maps/ParcelRoute1/scripts.pory"
+# 653 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: Something chasing them?$"
 
 ParcelRoute1_PairBridge_Text_9:
-# 652 "data/maps/ParcelRoute1/scripts.pory"
+# 654 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: Nothing chases a POLIWAG into\n"
 	.string "a bridge. Something's wrong with the\l"
 	.string "water downstream and they know it\l"
 	.string "before we do.$"
 
 ParcelRoute1_PairBridge_Text_10:
-# 653 "data/maps/ParcelRoute1/scripts.pory"
+# 655 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: I'll write it up.$"
 
 ParcelRoute1_PairBridge_Text_11:
-# 654 "data/maps/ParcelRoute1/scripts.pory"
+# 656 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: Write it up. That's two of us\n"
 	.string "who've noticed in forty years.$"
 
 ParcelRoute1_Board1_Text_0:
-# 663 "data/maps/ParcelRoute1/scripts.pory"
+# 665 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A SURVEY BOARD, fresh paint over older\n"
 	.string "paint. ROUTE 1. Saltmarsh edge: the\l"
 	.string "grass floods on the big tides and\l"
@@ -1902,7 +1908,7 @@ ParcelRoute1_Board1_Text_0:
 	.string "that out. It wore off.$"
 
 ParcelRoute1_Board2_Text_0:
-# 668 "data/maps/ParcelRoute1/scripts.pory"
+# 670 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A SURVEY BOARD by the road. WINGULL\n"
 	.string "pairs on the shore pilings, counted at\l"
 	.string "dawn: 14. The Survey's rule for shore\l"
@@ -1913,66 +1919,66 @@ ParcelRoute1_Board2_Text_0:
 	.string "found enough to stay. Watch which.$"
 
 ParcelRoute1_PairSalt_Text_0:
-# 677 "data/maps/ParcelRoute1/scripts.pory"
+# 679 "data/maps/ParcelRoute1/scripts.pory"
 	.string "OLD WOMAN: The gate's open. No crest.\n"
 	.string "Someone unscrewed it in the night.$"
 
 ParcelRoute1_PairSalt_Text_1:
-# 678 "data/maps/ParcelRoute1/scripts.pory"
+# 680 "data/maps/ParcelRoute1/scripts.pory"
 	.string "GIRL: Was it the ranger?$"
 
 ParcelRoute1_PairSalt_Text_2:
-# 679 "data/maps/ParcelRoute1/scripts.pory"
+# 681 "data/maps/ParcelRoute1/scripts.pory"
 	.string "OLD WOMAN: The ranger doesn't unscrew\n"
 	.string "things. The ranger writes them down and\l"
 	.string "other people unscrew them. Pick the\l"
 	.string "samphire. It's a good year.$"
 
 ParcelRoute1_PairSalt_Text_3:
-# 681 "data/maps/ParcelRoute1/scripts.pory"
+# 683 "data/maps/ParcelRoute1/scripts.pory"
 	.string "GIRL: A POLIWAG came through the\n"
 	.string "culvert the wrong way. The ranger saw\l"
 	.string "it.$"
 
 ParcelRoute1_PairSalt_Text_4:
-# 682 "data/maps/ParcelRoute1/scripts.pory"
+# 684 "data/maps/ParcelRoute1/scripts.pory"
 	.string "OLD WOMAN: Wrong way for whom?$"
 
 ParcelRoute1_PairSalt_Text_5:
-# 683 "data/maps/ParcelRoute1/scripts.pory"
+# 685 "data/maps/ParcelRoute1/scripts.pory"
 	.string "GIRL: For the POLIWAG.$"
 
 ParcelRoute1_PairSalt_Text_6:
-# 684 "data/maps/ParcelRoute1/scripts.pory"
+# 686 "data/maps/ParcelRoute1/scripts.pory"
 	.string "OLD WOMAN: Then it's the right way for\n"
 	.string "something else. Find out what. That's\l"
 	.string "what the ranger's doing.$"
 
 ParcelRoute1_PairSalt_Text_7:
-# 686 "data/maps/ParcelRoute1/scripts.pory"
+# 688 "data/maps/ParcelRoute1/scripts.pory"
 	.string "OLD WOMAN: Pick below the tide line, not\n"
 	.string "above. Above is the gate's. Below is\l"
 	.string "everyone's.$"
 
 ParcelRoute1_PairSalt_Text_8:
-# 687 "data/maps/ParcelRoute1/scripts.pory"
+# 689 "data/maps/ParcelRoute1/scripts.pory"
 	.string "GIRL: The gate has a crest on it.$"
 
 ParcelRoute1_PairSalt_Text_9:
-# 688 "data/maps/ParcelRoute1/scripts.pory"
+# 690 "data/maps/ParcelRoute1/scripts.pory"
 	.string "OLD WOMAN: The gate has a crest. The\n"
 	.string "marsh has samphire. Pick the samphire.$"
 
 ParcelRoute1_PairSalt_Text_10:
-# 689 "data/maps/ParcelRoute1/scripts.pory"
+# 691 "data/maps/ParcelRoute1/scripts.pory"
 	.string "GIRL: What's the crest for?$"
 
 ParcelRoute1_PairSalt_Text_11:
-# 690 "data/maps/ParcelRoute1/scripts.pory"
+# 692 "data/maps/ParcelRoute1/scripts.pory"
 	.string "OLD WOMAN: Managing. Keep picking.$"
 
 ParcelRoute1_Board3_Text_0:
-# 699 "data/maps/ParcelRoute1/scripts.pory"
+# 701 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A SURVEY BOARD at the grass edge.\n"
 	.string "TAILLOW nest in the old pilings and\l"
 	.string "feed over the marsh; where they feed is\l"
@@ -1985,7 +1991,7 @@ ParcelRoute1_Board3_Text_0:
 	.string "turned.$"
 
 ParcelRoute1_Board5_Text_0:
-# 706 "data/maps/ParcelRoute1/scripts.pory"
+# 708 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A SURVEY BOARD at the north end of the\n"
 	.string "route, where the saltmarsh gives up and\l"
 	.string "the trees begin. The Survey calls this a\l"
@@ -1996,7 +2002,7 @@ ParcelRoute1_Board5_Text_0:
 	.string "marsh is shorter on its side of it.$"
 
 ParcelRoute1_Board6_Text_0:
-# 711 "data/maps/ParcelRoute1/scripts.pory"
+# 713 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A SURVEY BOARD at the bridge head. The\n"
 	.string "bridge crosses the inlet where the\l"
 	.string "saltmarsh meets the first fresh water,\l"
@@ -2008,7 +2014,7 @@ ParcelRoute1_Board6_Text_0:
 	.string "whole trouble with bridges.$"
 
 ParcelRoute1_Board8_Text_0:
-# 716 "data/maps/ParcelRoute1/scripts.pory"
+# 718 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A SURVEY BOARD on the far bridge head.\n"
 	.string "The inlet here is where the salt stops.\l"
 	.string "The board gives the line as a date: the\l"
@@ -2019,159 +2025,159 @@ ParcelRoute1_Board8_Text_0:
 	.string "in than when the board was made.$"
 
 ParcelRoute1_PairRail_Text_0:
-# 723 "data/maps/ParcelRoute1/scripts.pory"
+# 725 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: The inlet count's in the review.\n"
 	.string "Mine. From this rail.$"
 
 ParcelRoute1_PairRail_Text_1:
-# 724 "data/maps/ParcelRoute1/scripts.pory"
+# 726 "data/maps/ParcelRoute1/scripts.pory"
 	.string "FISHER: Who'd have thought a bridge\n"
 	.string "could be a hide.$"
 
 ParcelRoute1_PairRail_Text_2:
-# 725 "data/maps/ParcelRoute1/scripts.pory"
+# 727 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: You did. You said so.$"
 
 ParcelRoute1_PairRail_Text_3:
-# 726 "data/maps/ParcelRoute1/scripts.pory"
+# 728 "data/maps/ParcelRoute1/scripts.pory"
 	.string "FISHER: I say a lot of things at dusk.\n"
 	.string "Most of them aren't in a review.$"
 
 ParcelRoute1_PairRail_Text_4:
-# 728 "data/maps/ParcelRoute1/scripts.pory"
+# 730 "data/maps/ParcelRoute1/scripts.pory"
 	.string "FISHER: The provisional came through\n"
 	.string "this morning. Stood here half an hour.\l"
 	.string "Didn't write anything.$"
 
 ParcelRoute1_PairRail_Text_5:
-# 729 "data/maps/ParcelRoute1/scripts.pory"
+# 731 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: Then what was the point?$"
 
 ParcelRoute1_PairRail_Text_6:
-# 730 "data/maps/ParcelRoute1/scripts.pory"
+# 732 "data/maps/ParcelRoute1/scripts.pory"
 	.string "FISHER: Looking. You write after you've\n"
 	.string "looked. Most people do it the other way\l"
 	.string "round and call it a survey.$"
 
 ParcelRoute1_PairRail_Text_7:
-# 732 "data/maps/ParcelRoute1/scripts.pory"
+# 734 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: The briefing says count at dusk\n"
 	.string "from the rail.$"
 
 ParcelRoute1_PairRail_Text_8:
-# 733 "data/maps/ParcelRoute1/scripts.pory"
+# 735 "data/maps/ParcelRoute1/scripts.pory"
 	.string "FISHER: The briefing's right. First time\n"
 	.string "for everything.$"
 
 ParcelRoute1_PairRail_Text_9:
-# 734 "data/maps/ParcelRoute1/scripts.pory"
+# 736 "data/maps/ParcelRoute1/scripts.pory"
 	.string "CADET: What am I counting?$"
 
 ParcelRoute1_PairRail_Text_10:
-# 735 "data/maps/ParcelRoute1/scripts.pory"
+# 737 "data/maps/ParcelRoute1/scripts.pory"
 	.string "FISHER: Whatever moves under the deck.\n"
 	.string "Salt side to fresh side. If you only\l"
 	.string "count what you know the name of, you'll\l"
 	.string "miss the half that matters.$"
 
 ParcelRoute1_PairStile_Text_0:
-# 746 "data/maps/ParcelRoute1/scripts.pory"
+# 748 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HIKER: The crest's off the gate.$"
 
 ParcelRoute1_PairStile_Text_1:
-# 747 "data/maps/ParcelRoute1/scripts.pory"
+# 749 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RANGER: The crest's off the gate. The\n"
 	.string "gate's still here. Gates were always the\l"
 	.string "point. The crest was decoration.$"
 
 ParcelRoute1_PairStile_Text_2:
-# 748 "data/maps/ParcelRoute1/scripts.pory"
+# 750 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HIKER: Who manages it now?$"
 
 ParcelRoute1_PairStile_Text_3:
-# 749 "data/maps/ParcelRoute1/scripts.pory"
+# 751 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RANGER: The tide. Same as before.$"
 
 ParcelRoute1_PairStile_Text_4:
-# 751 "data/maps/ParcelRoute1/scripts.pory"
+# 753 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RANGER: A POLIWAG through the culvert\n"
 	.string "the wrong way, and the provisional\l"
 	.string "wrote it down instead of chasing it.$"
 
 ParcelRoute1_PairStile_Text_5:
-# 752 "data/maps/ParcelRoute1/scripts.pory"
+# 754 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HIKER: Is that the right thing?$"
 
 ParcelRoute1_PairStile_Text_6:
-# 753 "data/maps/ParcelRoute1/scripts.pory"
+# 755 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RANGER: It's the slow thing. Up here the\n"
 	.string "slow thing and the right thing are\l"
 	.string "usually the same thing.$"
 
 ParcelRoute1_PairStile_Text_7:
-# 755 "data/maps/ParcelRoute1/scripts.pory"
+# 757 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HIKER: The gate says managed access.\n"
 	.string "Managed by whom?$"
 
 ParcelRoute1_PairStile_Text_8:
-# 756 "data/maps/ParcelRoute1/scripts.pory"
+# 758 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RANGER: By the crest.$"
 
 ParcelRoute1_PairStile_Text_9:
-# 757 "data/maps/ParcelRoute1/scripts.pory"
+# 759 "data/maps/ParcelRoute1/scripts.pory"
 	.string "HIKER: Crests don't manage. People do.$"
 
 ParcelRoute1_PairStile_Text_10:
-# 758 "data/maps/ParcelRoute1/scripts.pory"
+# 760 "data/maps/ParcelRoute1/scripts.pory"
 	.string "RANGER: Then by the people who own the\n"
 	.string "crest, which is a longer answer and the\l"
 	.string "same one.$"
 
 ParcelRoute1_PairShore_Text_0:
-# 767 "data/maps/ParcelRoute1/scripts.pory"
+# 769 "data/maps/ParcelRoute1/scripts.pory"
 	.string "SAILOR: Ferry's on time. Catch is small\n"
 	.string "and on time.$"
 
 ParcelRoute1_PairShore_Text_1:
-# 768 "data/maps/ParcelRoute1/scripts.pory"
+# 770 "data/maps/ParcelRoute1/scripts.pory"
 	.string "WOMAN: You sound surprised.$"
 
 ParcelRoute1_PairShore_Text_2:
-# 769 "data/maps/ParcelRoute1/scripts.pory"
+# 771 "data/maps/ParcelRoute1/scripts.pory"
 	.string "SAILOR: I've run this crossing twenty\n"
 	.string "years. I've never once been on time\l"
 	.string "because of less. Turns out that's how\l"
 	.string "you do it.$"
 
 ParcelRoute1_PairShore_Text_3:
-# 771 "data/maps/ParcelRoute1/scripts.pory"
+# 773 "data/maps/ParcelRoute1/scripts.pory"
 	.string "WOMAN: A provisional passed FOREST.\n"
 	.string "First out of Saltwick in nine years.$"
 
 ParcelRoute1_PairShore_Text_4:
-# 772 "data/maps/ParcelRoute1/scripts.pory"
+# 774 "data/maps/ParcelRoute1/scripts.pory"
 	.string "SAILOR: I carried them over. Didn't look\n"
 	.string "like much.$"
 
 ParcelRoute1_PairShore_Text_5:
-# 773 "data/maps/ParcelRoute1/scripts.pory"
+# 775 "data/maps/ParcelRoute1/scripts.pory"
 	.string "WOMAN: They never do. The ones that\n"
 	.string "look like much go to the Foundation.$"
 
 ParcelRoute1_PairShore_Text_6:
-# 775 "data/maps/ParcelRoute1/scripts.pory"
+# 777 "data/maps/ParcelRoute1/scripts.pory"
 	.string "SAILOR: Ferry's late because the catch\n"
 	.string "was late because the fish were late.$"
 
 ParcelRoute1_PairShore_Text_7:
-# 776 "data/maps/ParcelRoute1/scripts.pory"
+# 778 "data/maps/ParcelRoute1/scripts.pory"
 	.string "WOMAN: The fish aren't late. There are\n"
 	.string "fewer.$"
 
 ParcelRoute1_PairShore_Text_8:
-# 777 "data/maps/ParcelRoute1/scripts.pory"
+# 779 "data/maps/ParcelRoute1/scripts.pory"
 	.string "SAILOR: Same thing to a timetable.$"
 
 ParcelRoute1_PairShore_Text_9:
-# 778 "data/maps/ParcelRoute1/scripts.pory"
+# 780 "data/maps/ParcelRoute1/scripts.pory"
 	.string "WOMAN: Not to a fish.$"

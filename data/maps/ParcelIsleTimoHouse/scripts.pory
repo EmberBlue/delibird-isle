@@ -10,18 +10,18 @@ script ParcelIsleTimoHouse_Gran {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Gran: Past the bridge, was it. All the way past, and back again.\pShe looks at you a long moment, and nods once, the way a door closes softly."), MSGBOX_DEFAULT)
-        msgbox(format("Gran: His mother worked the works, down the coast. Years of it. We knew what it was and we needed what it paid, and both things were true at once.\pYou wrote it down out loud. Good. It was never going to be us that did."), MSGBOX_DEFAULT)
+        msgbox(format("GRAN: Past the bridge, was it. All the way past, and back again.\pShe looks at you a long moment, and nods once, the way a door closes softly."), MSGBOX_DEFAULT)
+        msgbox(format("GRAN: His mother worked the works, down the coast. Years of it. We knew what it was and we needed what it paid, and both things were true at once.\pYou wrote it down out loud. Good. It was never going to be us that did."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
-        msgbox(format("Gran: Timo's asking me what an allocation is. He heard it off the ferry hands.\pI told him it's when somebody decides who gets the water. He said that's not fair. I said now you're ready for the other answer."), MSGBOX_DEFAULT)
+        msgbox(format("GRAN: TIMO's asking me what an allocation is. He heard it off the ferry hands.\pI told him it's when somebody decides who gets the water. He said that's not fair. I said now you're ready for the other answer."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Gran: Timo's out by the water again, I expect. Battling strangers off the ferry.\pGran: I tell him, don't go past the bridge. He asks why. I tell him, because I said so.\pHe's too young for the other answer."), MSGBOX_DEFAULT)
-    msgbox(format("Gran: You've been past it, haven't you. It's on your boots.\pCome back through when you can. He listens to you lot more than he listens to me."), MSGBOX_DEFAULT)
+    msgbox(format("GRAN: TIMO's out by the water again, I expect. Battling strangers off the ferry.\pGRAN: I tell him, don't go past the bridge. He asks why. I tell him, because I said so.\pHe's too young for the other answer."), MSGBOX_DEFAULT)
+    msgbox(format("GRAN: You've been past it, haven't you. It's on your boots.\pCome back through when you can. He listens to you lot more than he listens to me."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -40,7 +40,7 @@ script ParcelIsleTimoHouse_ReadDrawer {
 
 script ParcelIsleTimoHouse_PaperLines {
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("A school exercise book on the dresser. The old lines are still there. A new page: WHAT AN ALLOCATION IS, in Gran's hand, and under it Timo's: when somebody decides who gets the water.\pUnder that, in Gran's: and now you're ready for the other answer. The other answer is not written down."), MSGBOX_SIGN)
+        msgbox(format("A school exercise book on the dresser. The old lines are still there. A new page: WHAT AN ALLOCATION IS, in Gran's hand, and under it TIMO's: when somebody decides who gets the water.\pUnder that, in Gran's: and now you're ready for the other answer. The other answer is not written down."), MSGBOX_SIGN)
     } else {
         msgbox(format("A school exercise book on the dresser. The same sentence written twenty times in a child's hand: I WILL NOT GO PAST THE BRIDGE.\pThe twenty-first line, smaller, is not the sentence. It says: why. Gran has not corrected it."), MSGBOX_SIGN)
     }

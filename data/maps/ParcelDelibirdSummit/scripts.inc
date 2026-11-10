@@ -1201,7 +1201,7 @@ ParcelDelibirdSummit_Board10::
 
 ParcelDelibirdSummit_Ingrid_Text_0:
 # 20 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Ingrid: You said it to their faces. ILEX\n"
+	.string "INGRID: You said it to their faces. ILEX\n"
 	.string "read me the part about the stakes. My\l"
 	.string "stakes, in a hearing, in the capital.\p"
 	.string "The paint is still three winters bare.\n"
@@ -1210,7 +1210,7 @@ ParcelDelibirdSummit_Ingrid_Text_0:
 
 ParcelDelibirdSummit_Ingrid_Text_1:
 # 25 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Ingrid: The lamp's lit. Tell Marta it's\n"
+	.string "INGRID: The lamp's lit. Tell MARTA it's\n"
 	.string "lit. She'll know what I mean by it.$"
 
 ParcelDelibirdSummit_Ingrid_Text_2:
@@ -1218,13 +1218,13 @@ ParcelDelibirdSummit_Ingrid_Text_2:
 	.string "An old woman in a canvas coat repaints\n"
 	.string "a date on a wooden stake. She does not\l"
 	.string "look up until the brush is clean.\p"
-	.string "Ingrid: From Marta. Lamp oil, and the\n"
+	.string "INGRID: From MARTA. Lamp oil, and the\n"
 	.string "good tea, and a note I'm not to read till\l"
 	.string "dark. Set it down by the hut.$"
 
 ParcelDelibirdSummit_Ingrid_Text_3:
 # 31 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Ingrid: Sixty years the stakes were\n"
+	.string "INGRID: Sixty years the stakes were\n"
 	.string "painted to the snowline on Midwinter\l"
 	.string "morning. I paint the date now, and the\l"
 	.string "line stays where it was.\p"
@@ -1233,29 +1233,29 @@ ParcelDelibirdSummit_Ingrid_Text_3:
 
 ParcelDelibirdSummit_Ingrid_Text_4:
 # 32 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Ingrid: Take this. It fell out of the\n"
+	.string "INGRID: Take this. It fell out of the\n"
 	.string "sky, near enough -- a bird dropped it by\l"
 	.string "the stakes and looked at me as if I'd\l"
 	.string "asked.$"
 
 ParcelDelibirdSummit_Ingrid_Text_5:
 # 35 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Ingrid: Go down careful. The stairs are\n"
+	.string "INGRID: Go down careful. The stairs are\n"
 	.string "new and the ground under them isn't.$"
 
 ParcelDelibirdSummit_Ingrid_Text_6:
 # 39 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Ingrid: Watcher. Not warden, not\n"
+	.string "INGRID: Watcher. Not warden, not\n"
 	.string "keeper. I watch. The stakes are what I\l"
 	.string "watch.\p"
 	.string "The top stake is where the snow should\n"
 	.string "start. It never did, this year. Nor last.\l"
-	.string "Marta sends oil up when she can spare\l"
+	.string "MARTA sends oil up when she can spare\l"
 	.string "it. The lamp is company, nights.$"
 
 ParcelDelibirdSummit_Kari_Text_0:
 # 50 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: You got it! It's got moss on it. It\n"
+	.string "KARI: You got it! It's got moss on it. It\n"
 	.string "didn't have moss.\p"
 	.string "There's nowhere to use it. Gran says\n"
 	.string "there will be, up the top, if the snow\l"
@@ -1264,31 +1264,31 @@ ParcelDelibirdSummit_Kari_Text_0:
 
 ParcelDelibirdSummit_Kari_Text_1:
 # 51 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: Here. Gran gave me this for being\n"
+	.string "KARI: Here. Gran gave me this for being\n"
 	.string "brave about the pond. I wasn't brave. I\l"
 	.string "was just here. You should have it; you\l"
 	.string "climbed.$"
 
 ParcelDelibirdSummit_Kari_Text_2:
 # 54 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: I'm going to keep the sledge\n"
+	.string "KARI: I'm going to keep the sledge\n"
 	.string "inside. Dad says that's silly. I say the\l"
 	.string "tree was silly.$"
 
 ParcelDelibirdSummit_Kari_Text_3:
 # 58 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: The tree by the pond. The fork.\n"
+	.string "KARI: The tree by the pond. The fork.\n"
 	.string "You can see the runner sticking out.$"
 
 ParcelDelibirdSummit_Kari_Text_4:
 # 63 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: They put a rope round my pond. Dad\n"
-	.string "says it's for the little ones.\p"
+	.string "KARI: They put a rope round my pond.\n"
+	.string "Dad says it's for the little ones.\p"
 	.string "I'm little. I think it's for everybody.$"
 
 ParcelDelibirdSummit_Kari_Text_5:
 # 68 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: My sledge is up in the tree. Dad\n"
+	.string "KARI: My sledge is up in the tree. Dad\n"
 	.string "put it there, out of the wet, when the\l"
 	.string "pond came. He says it's safe there. I\l"
 	.string "can see it from here.\p"
@@ -1299,7 +1299,7 @@ ParcelDelibirdSummit_Kari_Text_5:
 
 ParcelDelibirdSummit_Kari_Text_6:
 # 74 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: Gran says the sea by the coast is\n"
+	.string "KARI: Gran says the sea by the coast is\n"
 	.string "sick and the ranger wrote it in a book.\l"
 	.string "Is my pond in the book?\p"
 	.string "I want it in the book. Not because it's\n"
@@ -1308,7 +1308,7 @@ ParcelDelibirdSummit_Kari_Text_6:
 
 ParcelDelibirdSummit_Kari_Text_7:
 # 78 "data/maps/ParcelDelibirdSummit/scripts.pory"
-	.string "Kari: The pond wasn't here last\n"
+	.string "KARI: The pond wasn't here last\n"
 	.string "Midwinter. My sledge run went right\l"
 	.string "where the middle is.\p"
 	.string "Gran says keep off it. There's nothing\n"

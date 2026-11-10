@@ -191,6 +191,9 @@ def main():
         dismiss(900)                    # the arrival scene, if any
     if a.fight:
         set_battle_style_set()
+    # SaveBlock1's flags/vars offsets, written into the probe block by the new-game hook. Remember them now:
+    # a soft reset (the credits) clears EWRAM, and CONTINUE does not run the hook again.
+    offs0 = (core.memory.u16[probe + 16], core.memory.u16[probe + 18])
     tracing[0] = True
     for wspec in a.walk:
         d, n = (wspec.split(":") + ["1"])[:2]
@@ -344,6 +347,15 @@ def main():
             step(8, "A"); step(420)   # (a YES/NO prompt takes the default YES)
             for _ in range(int(n)):
                 step(8, "A"); step(300)
+        elif d.upper() == "TALKFIGHT":   # TALKFIGHT:n -- A through up to n pages until a battle starts, fight it, stop.
+            # For a scene whose text AFTER the battle holds a YES/NO: WAIT would mash B through it and answer NO.
+            for _ in range(int(n)):
+                step(8, "A"); step(300)
+                if in_battle():
+                    print(f"  (battle at frame {frame}: fought for {fight()} frames)")
+                    break
+            else:
+                print("  TALKFIGHT: no battle started")
         elif d.upper() in ("GOTO", "GOTOEDGE", "GOTOWARP"):
             # GOTO:x,y / GOTOEDGE:up / GOTOWARP:n -- plan on the live map with tools/skald/route.py, walk run by
             # run, and re-plan from the real position after anything (a trainer, a scene, a wanderer) cuts a run short
@@ -444,6 +456,8 @@ def main():
     ok = (a.expect is None) or (name == a.expect)
     print(f"{'OK ' if ok else 'BAD'} spawn {mname}({sx},{sy}) walk {a.walk} -> {name} at ({x},{y})" + (f" expected {a.expect}" if not ok else ""))
     flags_off, vars_off = core.memory.u16[probe + 16], core.memory.u16[probe + 18]   # written back by the hook
+    if not flags_off or not vars_off:      # the game was reset and continued from its save since
+        flags_off, vars_off = offs0
     for c in a.check:
         if c in flags:
             print(f"  {c} = {(core.memory.u8[sb1 + flags_off + (flags[c] >> 3)] >> (flags[c] & 7)) & 1}")

@@ -8,8 +8,8 @@ mapscripts ParcelTownLodging_MapScripts {
 script ParcelTownLodging_Keeper {
     lock
     faceplayer
-    msgbox(format("Keeper: The scientist's room is paid through the season.\pShe insisted. Before."), MSGBOX_DEFAULT)
-    msgbox(format("Keeper: You look wrung out.\nRest a while?"), MSGBOX_YESNO)
+    msgbox(format("KEEPER: The scientist's room is paid through the season.\pShe insisted. Before."), MSGBOX_DEFAULT)
+    msgbox(format("KEEPER: You look wrung out.\nRest a while?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 1) {
         closemessage
         fadescreen(FADE_TO_BLACK)
@@ -17,7 +17,7 @@ script ParcelTownLodging_Keeper {
         fadescreen(FADE_FROM_BLACK)
         msgbox(format("Morning comes gray and early.\pYour partner looks rested.\nSo, almost, do you."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("Keeper: The kettle's always on."), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: The kettle's always on."), MSGBOX_DEFAULT)
     }
     release
     end

@@ -17,25 +17,25 @@ script ParcelDelibirdCliffs_Tomas {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Tomas: The floor slopes a little more every year and the hearing didn't change that. It changed who's counting.\pMe, now. I've a book."), MSGBOX_DEFAULT)
+        msgbox(format("TOMAS: The floor slopes a little more every year and the hearing didn't change that. It changed who's counting.\pMe, now. I've a book."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
-        msgbox(format("Tomas: Warm through, thanks to you. Mind the corner of my cabin -- the floor slopes to the sea a little more each winter.\pUsed to be level. I remember it level."), MSGBOX_DEFAULT)
+        msgbox(format("TOMAS: Warm through, thanks to you. Mind the corner of my cabin -- the floor slopes to the sea a little more each winter.\pUsed to be level. I remember it level."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
-        msgbox(format("An old fisher straightens, slow, by a cabin whose seaward corner has settled into the sand.\pTomas: From Marta? You carried this all the way down the cliff for an old man you've never met."), MSGBOX_DEFAULT)
-        msgbox(format("Tomas: That's the island in you already, and you only just landed.\pHere -- take this for the road. No, take it. That's how it works. You'll learn."), MSGBOX_DEFAULT)
+        msgbox(format("An old fisher straightens, slow, by a cabin whose seaward corner has settled into the sand.\pTOMAS: From MARTA? You carried this all the way down the cliff for an old man you've never met."), MSGBOX_DEFAULT)
+        msgbox(format("TOMAS: That's the island in you already, and you only just landed.\pHere -- take this for the road. No, take it. That's how it works. You'll learn."), MSGBOX_DEFAULT)
         giveitem(ITEM_HYPER_POTION)
         setflag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)
-        msgbox(format("Tomas: Now go on with the rest of the round. Marta will have a bird ready for you when it's done. She always does.\pIt's how she says thank you. Don't refuse it -- that's the one rude thing you can do here."), MSGBOX_DEFAULT)
+        msgbox(format("TOMAS: Now go on with the rest of the round. MARTA will have a bird ready for you when it's done. She always does.\pIt's how she says thank you. Don't refuse it -- that's the one rude thing you can do here."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Tomas: Moved the cabin down here when the green went soft under it. The sand's honest, at least. It tells you when it's moving.\pCold off the water today. There's coffee in the square if you've come up short. Up here you never go without."), MSGBOX_DEFAULT)
+    msgbox(format("TOMAS: Moved the cabin down here when the green went soft under it. The sand's honest, at least. It tells you when it's moving.\pCold off the water today. There's coffee in the square if you've come up short. Up here you never go without."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -45,25 +45,25 @@ script ParcelDelibirdCliffs_Rune {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Rune: The beacon's in your record, is it? Good.\pIt's a long time since anyone wrote the point down for anything but wrecks."), MSGBOX_DEFAULT)
+        msgbox(format("RUNE: The beacon's in your record, is it? Good.\pIt's a long time since anyone wrote the point down for anything but wrecks."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALD_DEL_RUNE_DONE)) {
-        msgbox(format("Rune: Tea's on. Marta's tea. You can taste the island in it, she says.\pI say you can taste the peat smoke, and that's the same thing."), MSGBOX_DEFAULT)
+        msgbox(format("RUNE: Tea's on. MARTA's tea. You can taste the island in it, she says.\pI say you can taste the peat smoke, and that's the same thing."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
-        msgbox(format("An old man polishes a brass fitting on the beacon housing. It does not need polishing.\pRune: From Marta. The good tea and a blanket for the night watch. She never forgets the point. Nobody else remembers it."), MSGBOX_DEFAULT)
-        msgbox(format("Rune: Four generations my family lit a fire here for the boats. Now it's a bulb, and MEREHOLT paid for the bulb, and the boats have radar.\pI polish it anyway. A thing kept is a thing kept."), MSGBOX_DEFAULT)
-        msgbox(format("Rune: Take that -- it's what the old lamp used to flash with. Careful of the edge going back.\pThe edge is a different place every spring."), MSGBOX_DEFAULT)
+        msgbox(format("An old man polishes a brass fitting on the beacon housing. It does not need polishing.\pRUNE: From MARTA. The good tea and a blanket for the night watch. She never forgets the point. Nobody else remembers it."), MSGBOX_DEFAULT)
+        msgbox(format("RUNE: Four generations my family lit a fire here for the boats. Now it's a bulb, and MEREHOLT paid for the bulb, and the boats have radar.\pI polish it anyway. A thing kept is a thing kept."), MSGBOX_DEFAULT)
+        msgbox(format("RUNE: Take that -- it's what the old lamp used to flash with. Careful of the edge going back.\pThe edge is a different place every spring."), MSGBOX_DEFAULT)
         giveitem(ITEM_BRIGHT_POWDER)
         setflag(FLAG_SKALD_DEL_RUNE_DONE)
         release
         end
     }
-    msgbox(format("Rune: The point beacon. Lit every night, fire or bulb, for as long as there've been boats stupid enough to need it.\pThe cliff under us has lost a boat's length since my father's day. We'll move the housing back again next year. It's what we do."), MSGBOX_DEFAULT)
+    msgbox(format("RUNE: The point beacon. Lit every night, fire or bulb, for as long as there've been boats stupid enough to need it.\pThe cliff under us has lost a boat's length since my father's day. We'll move the housing back again next year. It's what we do."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -94,23 +94,23 @@ script ParcelDelibirdCliffs_Einar {
         end
     }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Einar: Your paper has my list in it. Forty years of a shore, in a footnote.\pI'll take a footnote. Footnotes are where the truth gets kept while the main text is still arguing."), MSGBOX_DEFAULT)
+        msgbox(format("EINAR: Your paper has my list in it. Forty years of a shore, in a footnote.\pI'll take a footnote. Footnotes are where the truth gets kept while the main text is still arguing."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
-        msgbox(format("Einar: The coast counted its catch out loud, I hear. All one age. I've been saying it about the gulls for ten years.\pNobody counts the gulls. The gulls are fine. The gulls are always fine, until the list says otherwise."), MSGBOX_DEFAULT)
+        msgbox(format("EINAR: The coast counted its catch out loud, I hear. All one age. I've been saying it about the gulls for ten years.\pNobody counts the gulls. The gulls are fine. The gulls are always fine, until the list says otherwise."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("A man with binoculars does not lower them.\pEinar: CORSOLA. In the shallows off the point. Forty years I've kept the list for this shore and I had never once written that name.\pNow it's every tide. The water's warm enough for them. It isn't supposed to be warm enough for them.\pThat is the whole of what I know, and it took forty years."), MSGBOX_DEFAULT)
+    msgbox(format("A man with binoculars does not lower them.\pEINAR: CORSOLA. In the shallows off the point. Forty years I've kept the list for this shore and I had never once written that name.\pNow it's every tide. The water's warm enough for them. It isn't supposed to be warm enough for them.\pThat is the whole of what I know, and it took forty years."), MSGBOX_DEFAULT)
     release
     end
 }
 
 // --- signs -------------------------------------------------------------------------
 script ParcelDelibirdCliffs_TrailSign {
-    msgbox(format("SHORELINE CLIFFS\pThe beach is by the stairs at either end. Tomas's cabin is below the east stairs. The point beacon is past the rocks.\pMind the edge. It is not where the map says."), MSGBOX_SIGN)
+    msgbox(format("SHORELINE CLIFFS\pThe beach is by the stairs at either end. TOMAS's cabin is below the east stairs. The point beacon is past the rocks.\pMind the edge. It is not where the map says."), MSGBOX_SIGN)
     end
 }
 

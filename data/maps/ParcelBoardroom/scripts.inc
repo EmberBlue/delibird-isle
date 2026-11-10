@@ -173,17 +173,17 @@ ParcelBoardroom_Leave_Text_0:
 
 ParcelBoardroom_Cordelia_Text_0:
 # 58 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: The door is where you left it,\n"
-	.string "Ranger.\p"
+	.string "CORDELIA: The door is where you left it,\n"
+	.string "RANGER.\p"
 	.string "One of us still has a region to run.$"
 
 ParcelBoardroom_Cordelia_Text_1:
 # 62 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia Brooke does not stand to\n"
+	.string "CORDELIA BROOKE does not stand to\n"
 	.string "greet you. She finishes the line she is\l"
 	.string "writing, caps the pen, and squares the\l"
 	.string "page against the edge of the desk.\p"
-	.string "Cordelia: Ranger. Sit, don't sit. The\n"
+	.string "CORDELIA: RANGER. Sit, don't sit. The\n"
 	.string "meeting runs the same length either\l"
 	.string "way.$"
 
@@ -205,7 +205,7 @@ ParcelBoardroom_Cordelia_Text_4:
 
 ParcelBoardroom_Cordelia_Text_5:
 # 69 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: You filed the truth. All of it,\n"
+	.string "CORDELIA: You filed the truth. All of it,\n"
 	.string "I'm told. I've had it read to me twice --\l"
 	.string "once by the lawyers, once by the people\l"
 	.string "I pay to translate lawyers.\p"
@@ -219,12 +219,12 @@ ParcelBoardroom_Cordelia_Text_5:
 
 ParcelBoardroom_Cordelia_Text_6:
 # 70 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: That is what you bought. I\n"
+	.string "CORDELIA: That is what you bought. I\n"
 	.string "wanted you to hear the price from me,\l"
 	.string "because nobody who celebrates you this\l"
 	.string "week will say it to your face.\p"
-	.string "When the Politoed data is corrected,\n"
-	.string "the Mahogany preserve loses its\l"
+	.string "When the POLITOED data is corrected,\n"
+	.string "the MAHOGANY preserve loses its\l"
 	.string "listing. Her lie protected that marsh\l"
 	.string "for twenty years. Your truth\l"
 	.string "un-protects it in a filing season.\p"
@@ -235,7 +235,7 @@ ParcelBoardroom_Cordelia_Text_6:
 
 ParcelBoardroom_Cordelia_Text_7:
 # 72 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: You filed the correction\n"
+	.string "CORDELIA: You filed the correction\n"
 	.string "yourself, I'm told. In your own hand,\l"
 	.string "under hers. I'd have waited for a lawyer\l"
 	.string "to find it; most people do.\p"
@@ -245,16 +245,16 @@ ParcelBoardroom_Cordelia_Text_7:
 
 ParcelBoardroom_Cordelia_Text_8:
 # 74 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: And you are owed one\n"
+	.string "CORDELIA: And you are owed one\n"
 	.string "correction, since we're keeping them.\p"
-	.string "You did not fight a company. Mereholt is\n"
-	.string "the ferry you arrived on. The wage of\l"
+	.string "You did not fight a company. MEREHOLT\n"
+	.string "is the ferry you arrived on. The wage of\l"
 	.string "the man who fed you on the crossing.\l"
 	.string "Half the fuel in this harbour, and a\l"
-	.string "third of the budget of the Corps that\l"
+	.string "third of the budget of the CORPS that\l"
 	.string "trained you.\p"
 	.string "You fought the way this region eats,\n"
-	.string "Ranger. And you have won a delay.$"
+	.string "RANGER. And you have won a delay.$"
 
 ParcelBoardroom_Cordelia_Text_9:
 # 75 "data/maps/ParcelBoardroom/scripts.pory"
@@ -262,7 +262,7 @@ ParcelBoardroom_Cordelia_Text_9:
 	.string "harbour below -- the cranes, swinging\l"
 	.string "weight through the cold air, on\l"
 	.string "schedule.\p"
-	.string "Cordelia: The board would have my seat\n"
+	.string "CORDELIA: The board would have my seat\n"
 	.string "in a week if the figures faltered. There\l"
 	.string "are covenants older than my chair that\l"
 	.string "decide most of what I sign.\p"
@@ -272,8 +272,8 @@ ParcelBoardroom_Cordelia_Text_9:
 
 ParcelBoardroom_Cordelia_Text_10:
 # 76 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: One item remains, and then the\n"
-	.string "door.\p"
+	.string "CORDELIA: One item remains, and then\n"
+	.string "the door.\p"
 	.string "I have read eleven hundred pages about\n"
 	.string "you, most of them in your own hand.\l"
 	.string "Paper flattens people -- it is the only\l"
@@ -289,17 +289,17 @@ ParcelBoardroom_Cordelia_Text_11:
 	.string "years of photographs.\p"
 	.string "Groomed. Calm. Asked for nothing, ever,\n"
 	.string "until now.\p"
-	.string "Cordelia: Neither of us is used to\n"
+	.string "CORDELIA: Neither of us is used to\n"
 	.string "losing in a room like this. Shall we?$"
 
 ParcelBoardroom_Cordelia_Text_12:
 # 79 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: Gently, now.\n"
+	.string "CORDELIA: Gently, now.\n"
 	.string "This is still a boardroom.$"
 
 ParcelBoardroom_Cordelia_Text_13:
 # 80 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: …There it is.\n"
+	.string "CORDELIA: …There it is.\n"
 	.string "The thing the paper flattened.$"
 
 ParcelBoardroom_Cordelia_Won_Text_0:
@@ -307,7 +307,7 @@ ParcelBoardroom_Cordelia_Won_Text_0:
 	.string "She recalls her partners the way a\n"
 	.string "person closes a ledger -- precisely,\l"
 	.string "without haste, finished.\p"
-	.string "Cordelia: No settlement. No\n"
+	.string "CORDELIA: No settlement. No\n"
 	.string "counter-offer. There would be no\l"
 	.string "number on it anyway.\p"
 	.string "You have made honesty expensive, which\n"
@@ -318,7 +318,7 @@ ParcelBoardroom_Cordelia_Won_Text_0:
 
 ParcelBoardroom_Cordelia_Won_Text_1:
 # 87 "data/maps/ParcelBoardroom/scripts.pory"
-	.string "Cordelia: For what it is worth -- and\n"
+	.string "CORDELIA: For what it is worth -- and\n"
 	.string "you may price this however you like -- I\l"
 	.string "read her model the year it was\l"
 	.string "published, and I believed it.\p"
@@ -370,7 +370,7 @@ ParcelBoardroom_Minutes_Text_0:
 	.string "investigator in person.\p"
 	.string "RESOLVED, that the file concerning the\n"
 	.string "principal investigator's earlier work in\l"
-	.string "Johto be retained by the secretary and\l"
+	.string "JOHTO be retained by the secretary and\l"
 	.string "not circulated.\p"
 	.string "Three resolutions. Nobody voted\n"
 	.string "against. The secretary noted the\l"

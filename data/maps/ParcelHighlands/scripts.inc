@@ -4081,7 +4081,7 @@ ParcelHighlands_Epilogue::
 # 1930 "data/maps/ParcelHighlands/scripts.pory"
 	setvar VAR_SKALD_EPILOGUE, 5
 # 1931 "data/maps/ParcelHighlands/scripts.pory"
-	warp MAP_PARCEL_DELIBIRD, 13, 13
+	warp MAP_PARCEL_DELIBIRD, 13, 14
 # 1932 "data/maps/ParcelHighlands/scripts.pory"
 	waitstate
 	end

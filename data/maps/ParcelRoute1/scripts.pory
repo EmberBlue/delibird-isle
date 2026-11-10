@@ -604,6 +604,7 @@ script ParcelRoute1_Epilogue {
     msgbox(format("The bridge on ROUTE 1. The first morning, the whole crowd of them was jammed up under it, going nowhere, and you thought something was chasing them."), MSGBOX_DEFAULT)
     closemessage
     clearflag(FLAG_TEMP_2)
+    setobjectxyperm(LOCALID_R1_POLIWAG2, 8, 28)   // just below the planks, where the camera on the bridge can see it
     addobject(LOCALID_R1_POLIWAG2)
     delay(30)
     applymovement(LOCALID_R1_POLIWAG2, Movement_Epilogue_PoliwagDownstream)
@@ -619,8 +620,9 @@ script ParcelRoute1_Epilogue {
     end
 }
 movement Movement_Epilogue_PoliwagDownstream {
+    face_down
     delay_16
-    walk_down * 3
+    walk_slow_down * 4
 }
 
 script ParcelRoute1_Whistle {

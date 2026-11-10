@@ -2299,7 +2299,7 @@ ParcelFernwick_Smeargle_Text_6:
 # 46 "data/maps/ParcelFernwick/scripts.pory"
 	.string "It is not Sketch. It does not try to be.\p"
 	.string "It paints the first page of the\n"
-	.string "notebook you brought from Johto -- the\l"
+	.string "notebook you brought from JOHTO -- the\l"
 	.string "one with the marsh plant nobody else\l"
 	.string "could name -- then sets its tail down\l"
 	.string "beside the page, and waits for the next\l"

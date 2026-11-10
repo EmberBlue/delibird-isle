@@ -13,6 +13,14 @@ cannot be spoken to. (The Floodbasin hamlet, 2026-11-10.)
                                                hidden items take 0, since they are read from a
                                                neighbouring tile of whatever height
 
+  python3 tools/skald/event_elev.py --sides    people who answer from one side and are silent from another:
+                                               an NPC on a raised tile (a dais, a deck, a terrace lip) whose
+                                               neighbouring floor is at another height. The player standing
+                                               there presses A and nothing happens. (Cordelia Brooke behind
+                                               her desk, 2026-11-10.) Fix: give the NPC's own tile elevation 0
+                                               (layout_edit.py MAP elev x,y 0) so the object spawns as a
+                                               wildcard, or level the floor around it.
+
 audit.py calls check() so the standard audit keeps catching this.
 """
 import json
@@ -93,7 +101,52 @@ def check(name, fix=False):
     return out
 
 
+def silent_sides():
+    """Every talkable object with a reachable neighbouring tile whose elevation does not match the
+    object's own (the elevation of the tile it stands on, re-read at spawn). Returns the lines."""
+    import reach
+    hm = set(reach.ALL_HM)
+    maps, byid = reach.load_all(hm)
+    seen = reach.reach(maps, byid, (byid["MAP_PARCEL_FERRY"], 4, 6), hm)
+    out = []
+    for name in sorted(maps):
+        m = maps[name]
+        r = {(x, y) for mm, x, y in seen if mm is m}
+        for (x, y), e in sorted(m.objs.items()):
+            if not m.inside(x, y) or not e.get("script") or e.get("script") == "0x0" or e.get("script") == "NULL":
+                continue
+            g = e["graphics_id"]
+            if "ITEM_BALL" in g or g in reach.HM_GFX or "BERRY_TREE" in g:
+                continue
+            col, oe, beh = m.beh(x, y)
+            if oe in (0, 15):
+                continue
+            good, bad = [], []
+            for dx, dy in NEIGHBOURS:
+                n = (x + dx, y + dy)
+                if n not in r or n in m.objs or n in m.warps:
+                    continue
+                ncol, ne, nbeh = m.beh(*n)
+                if any(w in nbeh for w in reach.WATER_WORDS):
+                    continue                      # a surfer has elevation 1 everywhere; water NPCs are check()'s rule
+                if ne in (0, 15) or ne == oe:
+                    good.append(n)
+                else:
+                    bad.append((n, ne))
+            if bad:
+                out.append(f"{name}: {g[14:]} {e.get('script')} at ({x},{y}) stands at elevation {oe}; silent from "
+                           + ", ".join(f"({n[0]},{n[1]}) [elev {ne}]" for n, ne in bad)
+                           + (f"; answers from {len(good)} side(s)" if good else "; answers from NO side"))
+    return out
+
+
 def main():
+    if "--sides" in sys.argv:
+        lines = silent_sides()
+        for line in lines:
+            print(line)
+        print(f"\n{len(lines)} talkable object(s) silent from a reachable side")
+        return
     fix = "--fix" in sys.argv
     total = 0
     for p in sorted((ROOT / "data/maps").glob("Parcel*/map.json")):

@@ -1928,7 +1928,7 @@ script ParcelHighlands_Epilogue {
     msgbox(format("The slips are pinned up in the centre under glass now, the child's in the middle.\pOn the slope the drill casing wears a cap, a padlock and a laminated notice. The ground around it is soft. It does not read notices. Somebody has stood a red-cloth stake beside it anyway."), MSGBOX_DEFAULT)
     closemessage
     setvar(VAR_SKALD_EPILOGUE, 5)
-    warp(MAP_PARCEL_DELIBIRD, 13, 13)
+    warp(MAP_PARCEL_DELIBIRD, 13, 14)   // the festival ground, below the pair who stand at (12-13,13)
     waitstate
     end
 }

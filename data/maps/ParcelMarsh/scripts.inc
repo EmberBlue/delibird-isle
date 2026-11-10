@@ -953,7 +953,7 @@ ParcelMarsh_Hale_Text_1:
 
 ParcelMarsh_Hale_Text_2:
 # 46 "data/maps/ParcelMarsh/scripts.pory"
-	.string "HALE: Her Johto numbers are in there\n"
+	.string "HALE: Her JOHTO numbers are in there\n"
 	.string "too. The MAHOGANY marsh loses its\l"
 	.string "listing the day they're corrected.\p"
 	.string "You can file the correction yourself, in\n"

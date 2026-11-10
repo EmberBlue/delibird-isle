@@ -31,11 +31,11 @@ script ParcelLab_Official {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Official: The file's been reopened. Not by me. By the review, who wanted to know why a burglary had a company van in the harbour log.\pI wrote vandalism because vandalism is what you write. I've written something else now. It took one word and nine years."), MSGBOX_DEFAULT)
+        msgbox(format("OFFICIAL: The file's been reopened. Not by me. By the review, who wanted to know why a burglary had a company van in the harbour log.\pI wrote vandalism because vandalism is what you write. I've written something else now. It took one word and nine years."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Official: No signs of forced entry beyond the latch. Could be vandalism.\pWe've filed it.\nNot much else we can do."), MSGBOX_DEFAULT)
+    msgbox(format("OFFICIAL: No signs of forced entry beyond the latch. Could be vandalism.\pWe've filed it.\nNot much else we can do."), MSGBOX_DEFAULT)
     msgbox(format("He says it the way a man reads a bus schedule.\pHe has said it before."), MSGBOX_DEFAULT)
     release
     end

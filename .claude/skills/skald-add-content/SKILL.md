@@ -68,7 +68,15 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   water tile: for a fish or swimmer spoken to from a bridge, set the water
   tile itself to elevation 0 (`layout_edit.py MAP elev x,y 0`), and put the
   walkway's ramp/edge tiles at 0 as well so the player on it is a wildcard
-  too (the Floodbasin levee).
+  too (the Floodbasin levee). The same goes for **anyone standing on a
+  raised tile with lower floor beside it** (a chair on a dais, a deck
+  plank next to the bank): give the NPC's own tile elevation 0, or the
+  player beside it at the other height presses A into silence.
+  `event_elev.py --sides` lists every such NPC.
+- **Before placing an NPC, check nothing warps the player onto that tile.**
+  Scripted warps (`warp(MAP_X, x, y)`: ferries, walk-in scenes, the eight
+  epilogue stops) are bare coordinates. `python3 tools/skald/warp_dest.py`
+  checks every one for a solid tile, open water or a person standing there.
 - **Ledges are one-way and the Mach-Bike slope is down-only** (no bike in
   Skaldmere). A ring of ledges around a village needs a stair out
   (metatile 175 in the mountain kit, elevation 0 — see the Highlands at

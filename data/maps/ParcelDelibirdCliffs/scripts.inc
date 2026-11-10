@@ -1245,14 +1245,14 @@ ParcelDelibirdCliffs_Board3::
 
 ParcelDelibirdCliffs_Tomas_Text_0:
 # 20 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Tomas: The floor slopes a little more\n"
+	.string "TOMAS: The floor slopes a little more\n"
 	.string "every year and the hearing didn't\l"
 	.string "change that. It changed who's counting.\p"
 	.string "Me, now. I've a book.$"
 
 ParcelDelibirdCliffs_Tomas_Text_1:
 # 25 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Tomas: Warm through, thanks to you.\n"
+	.string "TOMAS: Warm through, thanks to you.\n"
 	.string "Mind the corner of my cabin -- the floor\l"
 	.string "slopes to the sea a little more each\l"
 	.string "winter.\p"
@@ -1263,21 +1263,21 @@ ParcelDelibirdCliffs_Tomas_Text_2:
 	.string "An old fisher straightens, slow, by a\n"
 	.string "cabin whose seaward corner has settled\l"
 	.string "into the sand.\p"
-	.string "Tomas: From Marta? You carried this all\n"
+	.string "TOMAS: From MARTA? You carried this all\n"
 	.string "the way down the cliff for an old man\l"
 	.string "you've never met.$"
 
 ParcelDelibirdCliffs_Tomas_Text_3:
 # 31 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Tomas: That's the island in you already,\n"
+	.string "TOMAS: That's the island in you already,\n"
 	.string "and you only just landed.\p"
 	.string "Here -- take this for the road. No, take\n"
 	.string "it. That's how it works. You'll learn.$"
 
 ParcelDelibirdCliffs_Tomas_Text_4:
 # 34 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Tomas: Now go on with the rest of the\n"
-	.string "round. Marta will have a bird ready for\l"
+	.string "TOMAS: Now go on with the rest of the\n"
+	.string "round. MARTA will have a bird ready for\l"
 	.string "you when it's done. She always does.\p"
 	.string "It's how she says thank you. Don't\n"
 	.string "refuse it -- that's the one rude thing\l"
@@ -1285,7 +1285,7 @@ ParcelDelibirdCliffs_Tomas_Text_4:
 
 ParcelDelibirdCliffs_Tomas_Text_5:
 # 38 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Tomas: Moved the cabin down here when\n"
+	.string "TOMAS: Moved the cabin down here when\n"
 	.string "the green went soft under it. The\l"
 	.string "sand's honest, at least. It tells you\l"
 	.string "when it's moving.\p"
@@ -1295,14 +1295,14 @@ ParcelDelibirdCliffs_Tomas_Text_5:
 
 ParcelDelibirdCliffs_Rune_Text_0:
 # 48 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Rune: The beacon's in your record, is\n"
+	.string "RUNE: The beacon's in your record, is\n"
 	.string "it? Good.\p"
 	.string "It's a long time since anyone wrote the\n"
 	.string "point down for anything but wrecks.$"
 
 ParcelDelibirdCliffs_Rune_Text_1:
 # 53 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Rune: Tea's on. Marta's tea. You can\n"
+	.string "RUNE: Tea's on. MARTA's tea. You can\n"
 	.string "taste the island in it, she says.\p"
 	.string "I say you can taste the peat smoke, and\n"
 	.string "that's the same thing.$"
@@ -1312,14 +1312,14 @@ ParcelDelibirdCliffs_Rune_Text_2:
 	.string "An old man polishes a brass fitting on\n"
 	.string "the beacon housing. It does not need\l"
 	.string "polishing.\p"
-	.string "Rune: From Marta. The good tea and a\n"
+	.string "RUNE: From MARTA. The good tea and a\n"
 	.string "blanket for the night watch. She never\l"
 	.string "forgets the point. Nobody else\l"
 	.string "remembers it.$"
 
 ParcelDelibirdCliffs_Rune_Text_3:
 # 59 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Rune: Four generations my family lit a\n"
+	.string "RUNE: Four generations my family lit a\n"
 	.string "fire here for the boats. Now it's a bulb,\l"
 	.string "and MEREHOLT paid for the bulb, and the\l"
 	.string "boats have radar.\p"
@@ -1328,7 +1328,7 @@ ParcelDelibirdCliffs_Rune_Text_3:
 
 ParcelDelibirdCliffs_Rune_Text_4:
 # 60 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Rune: Take that -- it's what the old\n"
+	.string "RUNE: Take that -- it's what the old\n"
 	.string "lamp used to flash with. Careful of the\l"
 	.string "edge going back.\p"
 	.string "The edge is a different place every\n"
@@ -1336,7 +1336,7 @@ ParcelDelibirdCliffs_Rune_Text_4:
 
 ParcelDelibirdCliffs_Rune_Text_5:
 # 66 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Rune: The point beacon. Lit every night,\n"
+	.string "RUNE: The point beacon. Lit every night,\n"
 	.string "fire or bulb, for as long as there've\l"
 	.string "been boats stupid enough to need it.\p"
 	.string "The cliff under us has lost a boat's\n"
@@ -1379,7 +1379,7 @@ ParcelDelibirdCliffs_Einar_Text_3:
 
 ParcelDelibirdCliffs_Einar_Text_4:
 # 97 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Einar: Your paper has my list in it.\n"
+	.string "EINAR: Your paper has my list in it.\n"
 	.string "Forty years of a shore, in a footnote.\p"
 	.string "I'll take a footnote. Footnotes are\n"
 	.string "where the truth gets kept while the\l"
@@ -1387,7 +1387,7 @@ ParcelDelibirdCliffs_Einar_Text_4:
 
 ParcelDelibirdCliffs_Einar_Text_5:
 # 102 "data/maps/ParcelDelibirdCliffs/scripts.pory"
-	.string "Einar: The coast counted its catch out\n"
+	.string "EINAR: The coast counted its catch out\n"
 	.string "loud, I hear. All one age. I've been\l"
 	.string "saying it about the gulls for ten years.\p"
 	.string "Nobody counts the gulls. The gulls are\n"
@@ -1398,7 +1398,7 @@ ParcelDelibirdCliffs_Einar_Text_6:
 # 106 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "A man with binoculars does not lower\n"
 	.string "them.\p"
-	.string "Einar: CORSOLA. In the shallows off the\n"
+	.string "EINAR: CORSOLA. In the shallows off the\n"
 	.string "point. Forty years I've kept the list\l"
 	.string "for this shore and I had never once\l"
 	.string "written that name.\p"
@@ -1412,7 +1412,7 @@ ParcelDelibirdCliffs_TrailSign_Text_0:
 # 113 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "SHORELINE CLIFFS\p"
 	.string "The beach is by the stairs at either\n"
-	.string "end. Tomas's cabin is below the east\l"
+	.string "end. TOMAS's cabin is below the east\l"
 	.string "stairs. The point beacon is past the\l"
 	.string "rocks.\p"
 	.string "Mind the edge. It is not where the map\n"

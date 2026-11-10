@@ -17,26 +17,26 @@ script ParcelDelibirdSummit_Ingrid {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Ingrid: You said it to their faces. ILEX read me the part about the stakes. My stakes, in a hearing, in the capital.\pThe paint is still three winters bare. But it is on the record now, and the record outlasts paint."), MSGBOX_DEFAULT)
+        msgbox(format("INGRID: You said it to their faces. ILEX read me the part about the stakes. My stakes, in a hearing, in the capital.\pThe paint is still three winters bare. But it is on the record now, and the record outlasts paint."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALD_DEL_INGRID_DONE)) {
-        msgbox(format("Ingrid: The lamp's lit. Tell Marta it's lit. She'll know what I mean by it."), MSGBOX_DEFAULT)
+        msgbox(format("INGRID: The lamp's lit. Tell MARTA it's lit. She'll know what I mean by it."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_PARCEL)) {
-        msgbox(format("An old woman in a canvas coat repaints a date on a wooden stake. She does not look up until the brush is clean.\pIngrid: From Marta. Lamp oil, and the good tea, and a note I'm not to read till dark. Set it down by the hut."), MSGBOX_DEFAULT)
-        msgbox(format("Ingrid: Sixty years the stakes were painted to the snowline on Midwinter morning. I paint the date now, and the line stays where it was.\pThe line is the only thing on this island that isn't moving."), MSGBOX_DEFAULT)
-        msgbox(format("Ingrid: Take this. It fell out of the sky, near enough -- a bird dropped it by the stakes and looked at me as if I'd asked."), MSGBOX_DEFAULT)
+        msgbox(format("An old woman in a canvas coat repaints a date on a wooden stake. She does not look up until the brush is clean.\pINGRID: From MARTA. Lamp oil, and the good tea, and a note I'm not to read till dark. Set it down by the hut."), MSGBOX_DEFAULT)
+        msgbox(format("INGRID: Sixty years the stakes were painted to the snowline on Midwinter morning. I paint the date now, and the line stays where it was.\pThe line is the only thing on this island that isn't moving."), MSGBOX_DEFAULT)
+        msgbox(format("INGRID: Take this. It fell out of the sky, near enough -- a bird dropped it by the stakes and looked at me as if I'd asked."), MSGBOX_DEFAULT)
         giveitem(ITEM_RARE_CANDY)
         setflag(FLAG_SKALD_DEL_INGRID_DONE)
-        msgbox(format("Ingrid: Go down careful. The stairs are new and the ground under them isn't."), MSGBOX_DEFAULT)
+        msgbox(format("INGRID: Go down careful. The stairs are new and the ground under them isn't."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Ingrid: Watcher. Not warden, not keeper. I watch. The stakes are what I watch.\pThe top stake is where the snow should start. It never did, this year. Nor last. Marta sends oil up when she can spare it. The lamp is company, nights."), MSGBOX_DEFAULT)
+    msgbox(format("INGRID: Watcher. Not warden, not keeper. I watch. The stakes are what I watch.\pThe top stake is where the snow should start. It never did, this year. Nor last. MARTA sends oil up when she can spare it. The lamp is company, nights."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -47,35 +47,35 @@ script ParcelDelibirdSummit_Kari {
     faceplayer
     if (flag(FLAG_SKALD_Q_SLEDGE) && !flag(FLAG_SKALD_Q_SLEDGE_DONE)) {
         if (flag(FLAG_SKALD_Q_SLEDGE_FOUND)) {
-            msgbox(format("Kari: You got it! It's got moss on it. It didn't have moss.\pThere's nowhere to use it. Gran says there will be, up the top, if the snow comes back. Gran says 'if' now. She used to say 'when'."), MSGBOX_DEFAULT)
-            msgbox(format("Kari: Here. Gran gave me this for being brave about the pond. I wasn't brave. I was just here. You should have it; you climbed."), MSGBOX_DEFAULT)
+            msgbox(format("KARI: You got it! It's got moss on it. It didn't have moss.\pThere's nowhere to use it. Gran says there will be, up the top, if the snow comes back. Gran says 'if' now. She used to say 'when'."), MSGBOX_DEFAULT)
+            msgbox(format("KARI: Here. Gran gave me this for being brave about the pond. I wasn't brave. I was just here. You should have it; you climbed."), MSGBOX_DEFAULT)
             giveitem(ITEM_SHELL_BELL)
             setflag(FLAG_SKALD_Q_SLEDGE_DONE)
-            msgbox(format("Kari: I'm going to keep the sledge inside. Dad says that's silly. I say the tree was silly."), MSGBOX_DEFAULT)
+            msgbox(format("KARI: I'm going to keep the sledge inside. Dad says that's silly. I say the tree was silly."), MSGBOX_DEFAULT)
             release
             end
         }
-        msgbox(format("Kari: The tree by the pond. The fork. You can see the runner sticking out."), MSGBOX_DEFAULT)
+        msgbox(format("KARI: The tree by the pond. The fork. You can see the runner sticking out."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Kari: They put a rope round my pond. Dad says it's for the little ones.\pI'm little. I think it's for everybody."), MSGBOX_DEFAULT)
+        msgbox(format("KARI: They put a rope round my pond. Dad says it's for the little ones.\pI'm little. I think it's for everybody."), MSGBOX_DEFAULT)
         release
         end
     }
     if (!flag(FLAG_SKALD_Q_SLEDGE_DONE)) {
-        msgbox(format("Kari: My sledge is up in the tree. Dad put it there, out of the wet, when the pond came. He says it's safe there. I can see it from here.\pIt's not safe. It's just high.\pCan you get it down? You're tall. I'm not allowed to climb since the ground went soft."), MSGBOX_DEFAULT)
+        msgbox(format("KARI: My sledge is up in the tree. Dad put it there, out of the wet, when the pond came. He says it's safe there. I can see it from here.\pIt's not safe. It's just high.\pCan you get it down? You're tall. I'm not allowed to climb since the ground went soft."), MSGBOX_DEFAULT)
         setflag(FLAG_SKALD_Q_SLEDGE)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
-        msgbox(format("Kari: Gran says the sea by the coast is sick and the ranger wrote it in a book. Is my pond in the book?\pI want it in the book. Not because it's sick. Because it was my sledge run first."), MSGBOX_DEFAULT)
+        msgbox(format("KARI: Gran says the sea by the coast is sick and the ranger wrote it in a book. Is my pond in the book?\pI want it in the book. Not because it's sick. Because it was my sledge run first."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Kari: The pond wasn't here last Midwinter. My sledge run went right where the middle is.\pGran says keep off it. There's nothing to keep off.\pThe trees are leaning. Dad says they're sad. I think they're just leaning."), MSGBOX_DEFAULT)
+    msgbox(format("KARI: The pond wasn't here last Midwinter. My sledge run went right where the middle is.\pGran says keep off it. There's nothing to keep off.\pThe trees are leaning. Dad says they're sad. I think they're just leaning."), MSGBOX_DEFAULT)
     release
     end
 }

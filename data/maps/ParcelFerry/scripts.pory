@@ -16,11 +16,11 @@ script ParcelFerry_Opening {
     setvar(VAR_TEMP_0, 1)
     lockall
     msgbox(format("In an age of unstable climates and shrinking wildlands, the bond between people and Pokémon has changed. Some work to restore balance. Others seek control."), MSGBOX_DEFAULT)
-    msgbox(format("You've just arrived from Johto, leaving behind your old home and Pokémon. You carry only a bag, a notebook… and a memory."), MSGBOX_DEFAULT)
+    msgbox(format("You've just arrived from JOHTO, leaving behind your old home and Pokémon. You carry only a bag, a notebook… and a memory."), MSGBOX_DEFAULT)
     closemessage
     delay(30)
     msgbox(format("The cabin sways. Beyond the porthole, gray water and grayer sky.\pThe attendant works down the aisle, checking the manifest against the faces."), MSGBOX_DEFAULT)
-    msgbox(format("Attendant: Wren, off at the island stop, yes?\pThe ink's run. Says here…"), MSGBOX_DEFAULT)
+    msgbox(format("ATTENDANT: WREN, off at the island stop, yes?\pThe ink's run. Says here…"), MSGBOX_DEFAULT)
     multichoice(20, 6, MULTI_SKALD_MANIFEST, FALSE)
     switch (var(VAR_RESULT)) {
         case 0:
@@ -31,7 +31,7 @@ script ParcelFerry_Opening {
             setvar(VAR_0x8004, 0)
     }
     special(SkaldmereSetGender)
-    msgbox(format("The attendant marks the page and moves on.\pAttendant: We're coming in.\nMind the boards--they'll be slick."), MSGBOX_DEFAULT)
+    msgbox(format("The attendant marks the page and moves on.\pATTENDANT: We're coming in.\nMind the boards--they'll be slick."), MSGBOX_DEFAULT)
     closemessage
     delay(40)
     playse(SE_SHIP)
@@ -44,7 +44,7 @@ script ParcelFerry_Opening {
 script ParcelFerry_Attendant {
     lock
     faceplayer
-    msgbox(format("Attendant: Island stop's next.\nGather your things."), MSGBOX_DEFAULT)
+    msgbox(format("ATTENDANT: Island stop's next.\nGather your things."), MSGBOX_DEFAULT)
     release
     end
 }

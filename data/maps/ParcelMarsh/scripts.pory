@@ -43,7 +43,7 @@ script ParcelMarsh_Hale {
         if (!flag(FLAG_SKALD_MARSH_CHOICE_DONE)) {
             msgbox(format("HALE: Is it done?"), MSGBOX_DEFAULT)
             msgbox(format("{PLAYER}: …It's true."), MSGBOX_DEFAULT)
-            msgbox(format("HALE: Her Johto numbers are in there too. The MAHOGANY marsh loses its listing the day they're corrected.\pYou can file the correction yourself, in your own hand, or file the survey and let the lawyers find the rest. They'll find it. It's a question of whose hand.\pYours?"), MSGBOX_YESNO)
+            msgbox(format("HALE: Her JOHTO numbers are in there too. The MAHOGANY marsh loses its listing the day they're corrected.\pYou can file the correction yourself, in your own hand, or file the survey and let the lawyers find the rest. They'll find it. It's a question of whose hand.\pYours?"), MSGBOX_YESNO)
             if (var(VAR_RESULT) == 1) {
                 msgbox(format("{PLAYER}: All of it. In my hand."), MSGBOX_DEFAULT)
                 msgbox(format("HALE: Then that's yours to carry too. Good. It should be someone who knows what it costs."), MSGBOX_DEFAULT)

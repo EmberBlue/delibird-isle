@@ -43,7 +43,7 @@ script ParcelFernwick_Smeargle {
     }
     playse(SE_PIN)
     msgbox(format("WREN received SMEARGLE."), MSGBOX_DEFAULT)
-    msgbox(format("It is not Sketch. It does not try to be.\pIt paints the first page of the notebook you brought from Johto -- the one with the marsh plant nobody else could name -- then sets its tail down beside the page, and waits for the next one."), MSGBOX_DEFAULT)
+    msgbox(format("It is not Sketch. It does not try to be.\pIt paints the first page of the notebook you brought from JOHTO -- the one with the marsh plant nobody else could name -- then sets its tail down beside the page, and waits for the next one."), MSGBOX_DEFAULT)
     closemessage
     setflag(FLAG_SKALD_SMEARGLE_DONE)
     removeobject(LOCALID_FW_SMEARGLE)

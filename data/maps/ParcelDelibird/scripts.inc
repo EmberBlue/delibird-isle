@@ -1908,13 +1908,13 @@ ParcelDelibird_FirstEntry_Text_2:
 	.string "DELIBIRD ISLE MIDWINTER -- ALL\l"
 	.string "WELCOME.\p"
 	.string "Smaller, underneath: in partnership\n"
-	.string "with the Mereholt Foundation.\p"
+	.string "with the MEREHOLT Foundation.\p"
 	.string "{STR_VAR_1} leans into your leg. You\n"
 	.string "go up into the lights.$"
 
 ParcelDelibird_Elder_Text_0:
 # 71 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Word reached us. Word always\n"
+	.string "ELDER: Word reached us. Word always\n"
 	.string "reaches an island last, and stays\l"
 	.string "longest.\p"
 	.string "You wrote it down and you didn't soften\n"
@@ -1924,7 +1924,7 @@ ParcelDelibird_Elder_Text_0:
 
 ParcelDelibird_Elder_Text_1:
 # 72 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: The channel won't refreeze for\n"
+	.string "ELDER: The channel won't refreeze for\n"
 	.string "it, child. The winters don't read filings.\p"
 	.string "But the lights are going up early this\n"
 	.string "year -- you'll have seen. That's not us\l"
@@ -1933,15 +1933,15 @@ ParcelDelibird_Elder_Text_1:
 
 ParcelDelibird_Elder_Text_2:
 # 73 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: The festival was never about the\n"
-	.string "cold, whatever the name says. It was\l"
-	.string "about each other, in the cold.\p"
+	.string "ELDER: The festival was never about\n"
+	.string "the cold, whatever the name says. It\l"
+	.string "was about each other, in the cold.\p"
 	.string "That part keeps. That part we don't\n"
 	.string "need anyone's permission to keep.$"
 
 ParcelDelibird_Elder_Text_3:
 # 78 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: The young ones say give until\n"
+	.string "ELDER: The young ones say give until\n"
 	.string "it's a habit, so the giving's already\l"
 	.string "done when the storm comes and there's\l"
 	.string "no time to decide.\p"
@@ -1950,45 +1950,45 @@ ParcelDelibird_Elder_Text_3:
 
 ParcelDelibird_Elder_Text_4:
 # 86 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Still carrying? Good. Who's\n"
+	.string "ELDER: Still carrying? Good. Who's\n"
 	.string "waiting on you, then.$"
 
 ParcelDelibird_Elder_Text_5:
 # 88 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Tomas. The shore trail east, past\n"
-	.string "the tall grass, then the stairs down to\l"
-	.string "the sand. His cabin's the one with the\l"
-	.string "cold corner.$"
+	.string "ELDER: TOMAS. The shore trail east,\n"
+	.string "past the tall grass, then the stairs\l"
+	.string "down to the sand. His cabin's the one\l"
+	.string "with the cold corner.$"
 
 ParcelDelibird_Elder_Text_6:
 # 91 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Ingrid. The summit trail, up past\n"
+	.string "ELDER: INGRID. The summit trail, up past\n"
 	.string "the cave mouth, two sets of stairs.\l"
 	.string "She's at the stakes. She's always at the\l"
 	.string "stakes.$"
 
 ParcelDelibird_Elder_Text_7:
 # 94 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Rune. Along the cliff top past\n"
+	.string "ELDER: RUNE. Along the cliff top past\n"
 	.string "the rocks, out to the point. You'll see\l"
 	.string "the beacon before you see him.$"
 
 ParcelDelibird_Elder_Text_8:
 # 96 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Go on. Reciprocity doesn't keep.$"
+	.string "ELDER: Go on. Reciprocity doesn't keep.$"
 
 ParcelDelibird_Elder_Text_9:
 # 100 "data/maps/ParcelDelibird/scripts.pory"
 	.string "An old woman sorts folded blankets into\n"
 	.string "oilcloth parcels, quick and sure, a\l"
-	.string "Delibird stacking them at her elbow.\p"
-	.string "Elder: Ranger, is it? Then make yourself\n"
-	.string "useful in the good way, not the\l"
-	.string "clipboard way.$"
+	.string "DELIBIRD stacking them at her elbow.\p"
+	.string "ELDER: RANGER, is it? Then make\n"
+	.string "yourself useful in the good way, not\l"
+	.string "the clipboard way.$"
 
 ParcelDelibird_Elder_Text_10:
 # 101 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: The island runs on this -- you\n"
+	.string "ELDER: The island runs on this -- you\n"
 	.string "give before you're asked, and the island\l"
 	.string "gives back before you need. It's not\l"
 	.string "charity. It's how a cold place keeps\l"
@@ -1998,14 +1998,14 @@ ParcelDelibird_Elder_Text_10:
 
 ParcelDelibird_Elder_Text_11:
 # 102 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: The relief round. Three doors the\n"
-	.string "bird can't reach, the way its wings are\l"
-	.string "this winter.\p"
-	.string "Old Tomas, under the cliffs on the east\n"
+	.string "ELDER: The relief round. Three doors\n"
+	.string "the bird can't reach, the way its wings\l"
+	.string "are this winter.\p"
+	.string "Old TOMAS, under the cliffs on the east\n"
 	.string "shore -- his cabin's the one with the\l"
-	.string "cold corner. Ingrid, up at the snow\l"
+	.string "cold corner. INGRID, up at the snow\l"
 	.string "stakes on the summit -- lamp oil and\l"
-	.string "tea. And Rune, out at the point beacon\l"
+	.string "tea. And RUNE, out at the point beacon\l"
 	.string "past the cliffs.\p"
 	.string "Carry them for me?$"
 
@@ -2017,16 +2017,16 @@ ParcelDelibird_Elder_Text_12:
 
 ParcelDelibird_Elder_RoundDone_Text_0:
 # 111 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Tomas has his blanket, Ingrid her\n"
-	.string "oil, Rune his tea. Three doors, on foot,\l"
-	.string "in a day. Bless you.\p"
+	.string "ELDER: TOMAS has his blanket, INGRID\n"
+	.string "her oil, RUNE his tea. Three doors, on\l"
+	.string "foot, in a day. Bless you.\p"
 	.string "Come here. There's a thing we do for\n"
 	.string "someone who carries for strangers\l"
 	.string "without being asked twice.$"
 
 ParcelDelibird_Elder_RoundDone_Text_1:
 # 112 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: We raise Delibird here. Have for\n"
+	.string "ELDER: We raise DELIBIRD here. Have for\n"
 	.string "longer than the records. In a hard\l"
 	.string "winter they carry food cabin to cabin\l"
 	.string "-- they find the door that needs it.\l"
@@ -2035,7 +2035,7 @@ ParcelDelibird_Elder_RoundDone_Text_1:
 
 ParcelDelibird_Elder_RoundDone_Text_2:
 # 113 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: This one took to you off the\n"
+	.string "ELDER: This one took to you off the\n"
 	.string "boat. Take it. It'll deliver for you the\l"
 	.string "way it delivered for us.\p"
 	.string "The storms are worse now. We'll need\n"
@@ -2049,8 +2049,8 @@ ParcelDelibird_Elder_RoundDone_Text_3:
 
 ParcelDelibird_Elder_RoundDone_Text_4:
 # 118 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder, quieter:\p"
-	.string "Elder: There's a paper from the\n"
+	.string "ELDER, quieter:\p"
+	.string "ELDER: There's a paper from the\n"
 	.string "Foundation says we should think about\l"
 	.string "relocating the festival. Somewhere it\l"
 	.string "won't flood.\p"
@@ -2061,7 +2061,7 @@ ParcelDelibird_Elder_RoundDone_Text_4:
 
 ParcelDelibird_Elder_RoundDone_Text_5:
 # 119 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: Stay a minute. We light the\n"
+	.string "ELDER: Stay a minute. We light the\n"
 	.string "square when the round comes home. We\l"
 	.string "always have.$"
 
@@ -2081,7 +2081,7 @@ ParcelDelibird_Elder_RoundDone_Text_6:
 
 ParcelDelibird_Elder_RoundDone_Text_7:
 # 126 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Elder: There. That's the festival. The\n"
+	.string "ELDER: There. That's the festival. The\n"
 	.string "rest is cocoa.$"
 
 ParcelDelibird_Ketil_Text_0:
@@ -2120,24 +2120,24 @@ ParcelDelibird_Ketil_Text_3:
 
 ParcelDelibird_Ketil_Text_4:
 # 157 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ketil: I mend nets. The nets are the\n"
+	.string "KETIL: I mend nets. The nets are the\n"
 	.string "same. What comes up in them isn't.\p"
 	.string "That's in your paper, I'm told, in better\n"
 	.string "words than mine.$"
 
 ParcelDelibird_Ketil_Text_5:
 # 162 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ketil: The coast paper came over on the\n"
-	.string "ferry. The catch all one size, and a\l"
+	.string "KETIL: The coast paper came over on\n"
+	.string "the ferry. The catch all one size, and a\l"
 	.string "ranger who wrote it down in front of the\l"
 	.string "cannery.\p"
-	.string "Tomas read it twice. He said that's the\n"
+	.string "TOMAS read it twice. He said that's the\n"
 	.string "island in you. Then he said mind the\l"
 	.string "stairs.$"
 
 ParcelDelibird_Ketil_Text_6:
 # 166 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ketil: Tomas took his cabin down under\n"
+	.string "KETIL: TOMAS took his cabin down under\n"
 	.string "the cliffs when the green went soft\l"
 	.string "under it. East trail, past the tall\l"
 	.string "grass, then the stairs.\p"
@@ -2146,18 +2146,19 @@ ParcelDelibird_Ketil_Text_6:
 
 ParcelDelibird_Giver_Text_0:
 # 176 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Villager: Pass it on someday. Whoever's\n"
-	.string "cold next. The hearing didn't put a coat\l"
-	.string "on anyone. We did. We'll keep doing it.$"
+	.string "VILLAGER: Pass it on someday.\n"
+	.string "Whoever's cold next. The hearing didn't\l"
+	.string "put a coat on anyone. We did. We'll keep\l"
+	.string "doing it.$"
 
 ParcelDelibird_Giver_Text_1:
 # 181 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Villager: Pass it on someday, that's all.\n"
-	.string "To whoever's cold next.$"
+	.string "VILLAGER: Pass it on someday, that's\n"
+	.string "all. To whoever's cold next.$"
 
 ParcelDelibird_Giver_Text_2:
 # 185 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Villager: New face! Midwinter rule:\n"
+	.string "VILLAGER: New face! Midwinter rule:\n"
 	.string "nobody meets the giving table\l"
 	.string "empty-handed.\p"
 	.string "Here -- from the square to you. Don't\n"
@@ -2166,32 +2167,33 @@ ParcelDelibird_Giver_Text_2:
 
 ParcelDelibird_Giver_Text_3:
 # 188 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Villager: A feather-charm. The old folk\n"
-	.string "say it keeps the cold honest.\p"
+	.string "VILLAGER: A feather-charm. The old\n"
+	.string "folk say it keeps the cold honest.\p"
 	.string "We could use a little more honest cold.\n"
 	.string "Less every year to keep.$"
 
 ParcelDelibird_Relief_Text_0:
 # 198 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Villager: Bailed dry. It'll be back by the\n"
-	.string "thaw moon, higher. Your filing says so,\l"
-	.string "in better words than mine. It's good to\l"
-	.string "be in a filing. It's like being counted.$"
+	.string "VILLAGER: Bailed dry. It'll be back by\n"
+	.string "the thaw moon, higher. Your filing says\l"
+	.string "so, in better words than mine. It's good\l"
+	.string "to be in a filing. It's like being\l"
+	.string "counted.$"
 
 ParcelDelibird_Relief_Text_1:
 # 203 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Villager: Bailed dry for now. It'll be\n"
+	.string "VILLAGER: Bailed dry for now. It'll be\n"
 	.string "back by the thaw moon. It always comes\l"
 	.string "back a little higher.\p"
-	.string "Thanks for the arms, Ranger.$"
+	.string "Thanks for the arms, RANGER.$"
 
 ParcelDelibird_Relief_Text_2:
 # 207 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A man stacks sandbags against a seep\n"
 	.string "of meltwater rising through what used\l"
-	.string "to be the village green. A Delibird\l"
+	.string "to be the village green. A DELIBIRD\l"
 	.string "ferries icy blocks to shore the wall.\p"
-	.string "Villager: Ranger! Spare arms? The\n"
+	.string "VILLAGER: RANGER! Spare arms? The\n"
 	.string "ground's let go under here -- water\l"
 	.string "comes up where there's no rain to\l"
 	.string "explain it.$"
@@ -2199,22 +2201,22 @@ ParcelDelibird_Relief_Text_2:
 ParcelDelibird_Relief_Text_3:
 # 208 "data/maps/ParcelDelibird/scripts.pory"
 	.string "You work the line until the seep is\n"
-	.string "bagged back. The Delibird drops the\l"
+	.string "bagged back. The DELIBIRD drops the\l"
 	.string "last block and shakes off, pleased.$"
 
 ParcelDelibird_Relief_Text_4:
 # 210 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Villager: There. Dry.\p"
+	.string "VILLAGER: There. Dry.\p"
 	.string "You don't say it and he doesn't ask: the\n"
 	.string "ice under us is thawing, and bags hold\l"
 	.string "water, not winters. We didn't fix it. We\l"
 	.string "bought a season.\p"
-	.string "Villager: A season's a lot, some years.\n"
+	.string "VILLAGER: A season's a lot, some years.\n"
 	.string "Thank you.$"
 
 ParcelDelibird_Delibird_Text_0:
 # 218 "data/maps/ParcelDelibird/scripts.pory"
-	.string "A Delibird works the square, tucking a\n"
+	.string "A DELIBIRD works the square, tucking a\n"
 	.string "wrapped something into a child's hands,\l"
 	.string "then another's, never its own.\p"
 	.string "It notices you watching. It considers\n"
@@ -2238,17 +2240,17 @@ ParcelDelibird_Notice_Text_0:
 # 230 "data/maps/ParcelDelibird/scripts.pory"
 	.string "DELIBIRD ISLE MIDWINTER -- PROGRAMME\p"
 	.string "The giving table, all day. The relief\n"
-	.string "round, when Marta says. The lighting, at\l"
+	.string "round, when MARTA says. The lighting, at\l"
 	.string "dusk, when the round is home.\p"
-	.string "Volunteers see Marta. Everyone is a\n"
+	.string "Volunteers see MARTA. Everyone is a\n"
 	.string "volunteer.$"
 
 ParcelDelibird_SummitTrailSign_Text_0:
 # 235 "data/maps/ParcelDelibird/scripts.pory"
 	.string "SUMMIT TRAIL\p"
 	.string "The snow stakes and the tarn. Two sets\n"
-	.string "of stairs. Ingrid is at the top; she does\l"
-	.string "not come down for Midwinter.\p"
+	.string "of stairs. INGRID is at the top; she\l"
+	.string "does not come down for Midwinter.\p"
 	.string "The snowline marker has been removed\n"
 	.string "for repainting.$"
 
@@ -2256,7 +2258,7 @@ ParcelDelibird_ShoreTrailSign_Text_0:
 # 240 "data/maps/ParcelDelibird/scripts.pory"
 	.string "SHORE TRAIL\p"
 	.string "To the cliffs, the beach and the point\n"
-	.string "beacon. Tomas's cabin is below the east\l"
+	.string "beacon. TOMAS's cabin is below the east\l"
 	.string "stairs.\p"
 	.string "The path along the edge is checked\n"
 	.string "each spring. The edge is not.$"
@@ -2275,7 +2277,7 @@ ParcelDelibird_BannerSign_Text_0:
 
 ParcelDelibird_ReturnFerry_Text_0:
 # 256 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Sailor: Back to the mainland, Ranger?\n"
+	.string "SAILOR: Back to the mainland, RANGER?\n"
 	.string "The island will be here, for a while yet.\l"
 	.string "Your paper didn't change the ice. It\l"
 	.string "changed what the ice is called in a room\l"
@@ -2283,14 +2285,14 @@ ParcelDelibird_ReturnFerry_Text_0:
 
 ParcelDelibird_ReturnFerry_Text_1:
 # 258 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Sailor: Back to the mainland, Ranger?\n"
+	.string "SAILOR: Back to the mainland, RANGER?\n"
 	.string "Whenever you're ready.\p"
 	.string "The island will be here. For a while yet,\n"
 	.string "it'll be here.$"
 
 ParcelDelibird_ReturnFerry_Text_2:
 # 261 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Sailor: Stay for the lights, then.\n"
+	.string "SAILOR: Stay for the lights, then.\n"
 	.string "They're worth it.$"
 
 ParcelDelibird_CaveMouth_Text_0:
@@ -2316,7 +2318,7 @@ ParcelDelibird_CaveMouth_Text_2:
 
 ParcelDelibird_RevelerTrainer_Text_0:
 # 307 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Noel: A Ranger! At Midwinter! You HAVE\n"
+	.string "NOEL: A RANGER! At Midwinter! You HAVE\n"
 	.string "to battle me, it's tradition.\p"
 	.string "Loser owes the winner cocoa. We don't\n"
 	.string "keep score with money up here -- we\l"
@@ -2324,12 +2326,12 @@ ParcelDelibird_RevelerTrainer_Text_0:
 
 ParcelDelibird_RevelerTrainer_Text_1:
 # 308 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Noel: Awww. Fine, fine -- cocoa's on me!\n"
+	.string "NOEL: Awww. Fine, fine -- cocoa's on me!\n"
 	.string "That's the best way to lose anyhow.$"
 
 ParcelDelibird_RevelerTrainer_Text_2:
 # 323 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Noel: Gran says the festival's smaller\n"
+	.string "NOEL: Gran says the festival's smaller\n"
 	.string "every year. Says the ice comes in slower\l"
 	.string "than it did.\p"
 	.string "I don't really get it. But I get the\n"
@@ -2389,14 +2391,14 @@ ParcelDelibird_RevelerTrainer_R5_Text_2:
 
 ParcelDelibird_GymIlex_Text_0:
 # 402 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex stands a little apart from the\n"
+	.string "ILEX stands a little apart from the\n"
 	.string "lights, a folded square of red cloth in\l"
 	.string "one hand, eyes on the high snowline\l"
 	.string "above the cabins.\p"
-	.string "Ilex: Surveyor, Skaldmere Survey. I\n"
+	.string "ILEX: Surveyor, Skaldmere Survey. I\n"
 	.string "don't fix anything. I measure how fast\l"
 	.string "it's going.\p"
-	.string "Ilex: You read places on the ground --\n"
+	.string "ILEX: You read places on the ground --\n"
 	.string "snares, residue, the catch on the\l"
 	.string "pallet. I read them from above. The\l"
 	.string "whole crescent of an island at once,\l"
@@ -2405,14 +2407,14 @@ ParcelDelibird_GymIlex_Text_0:
 
 ParcelDelibird_GymIlex_Text_1:
 # 403 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: The summit first. Thirteen\n"
+	.string "ILEX: The summit first. Thirteen\n"
 	.string "patches of snow up there this\l"
 	.string "Midwinter, by my cloth. More than last\l"
 	.string "year?$"
 
 ParcelDelibird_GymIlex_Text_2:
 # 405 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: Fewer. Nineteen last year. People\n"
+	.string "ILEX: Fewer. Nineteen last year. People\n"
 	.string "see thirteen patches and think snow. I\l"
 	.string "see six that aren't there.\p"
 	.string "Frame first, then count. Let's see you\n"
@@ -2420,7 +2422,7 @@ ParcelDelibird_GymIlex_Text_2:
 
 ParcelDelibird_GymIlex_Text_3:
 # 407 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: Fewer. Nineteen last year. The\n"
+	.string "ILEX: Fewer. Nineteen last year. The\n"
 	.string "count goes one way, and it will go one\l"
 	.string "way after I've stopped counting.\p"
 	.string "You kept the frame. Now keep it with the\n"
@@ -2428,38 +2430,38 @@ ParcelDelibird_GymIlex_Text_3:
 
 ParcelDelibird_GymIlex_Text_4:
 # 410 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: A field hand should be able to do\n"
+	.string "ILEX: A field hand should be able to do\n"
 	.string "both. Show me you can hold a line of\l"
 	.string "sight as steady as a line of evidence.\l"
 	.string "From up here, looking down.$"
 
 ParcelDelibird_GymIlex_Text_5:
 # 411 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: Steady. You kept the frame. Few\n"
+	.string "ILEX: Steady. You kept the frame. Few\n"
 	.string "do, this high up.$"
 
 ParcelDelibird_GymIlex_Text_6:
 # 415 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex turns the red cloth over once,\n"
+	.string "ILEX turns the red cloth over once,\n"
 	.string "then pockets it.\p"
-	.string "Ilex: The snowline I'm watching is lower\n"
+	.string "ILEX: The snowline I'm watching is lower\n"
 	.string "than last Midwinter. I'll have the\l"
 	.string "number before the festival packs up.\p"
-	.string "Ilex: Numbers don't save a place. They\n"
+	.string "ILEX: Numbers don't save a place. They\n"
 	.string "just make it impossible to say later\l"
 	.string "that nobody knew. Carry that with the\l"
 	.string "badge.$"
 
 ParcelDelibird_GymIlex_Text_7:
 # 416 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: You hold a pen like somebody who\n"
+	.string "ILEX: You hold a pen like somebody who\n"
 	.string "learned to look from a brush. I won't\l"
 	.string "ask.\p"
 	.string "Red cloth is red cloth, whoever ties it.$"
 
 ParcelDelibird_GymIlex_Defeated_Text_0:
 # 424 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: The Skyline clearance. It marks\n"
+	.string "ILEX: The Skyline clearance. It marks\n"
 	.string "you fit to read a place from any height\l"
 	.string "-- and to be trusted on the harder\l"
 	.string "water.\p"
@@ -2467,7 +2469,7 @@ ParcelDelibird_GymIlex_Defeated_Text_0:
 
 ParcelDelibird_GymIlex_Defeated_Text_1:
 # 426 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: WATERFALL. It takes you up the\n"
+	.string "ILEX: WATERFALL. It takes you up the\n"
 	.string "climbs that turn most people back.\p"
 	.string "The corridor inland has a few. That's\n"
 	.string "where the last of this gets written.\l"
@@ -2475,14 +2477,14 @@ ParcelDelibird_GymIlex_Defeated_Text_1:
 
 ParcelDelibird_SquareKeeper_Text_0:
 # 439 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Keeper: The shelf thins and fills.\n"
+	.string "KEEPER: The shelf thins and fills.\n"
 	.string "Somebody put a MEREHOLT blanket on it\l"
 	.string "last week. Folded in thirds. Nobody said\l"
 	.string "anything. That's the ledger working.$"
 
 ParcelDelibird_SquareKeeper_Text_1:
 # 444 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Keeper: The shelf thins and fills, thins\n"
+	.string "KEEPER: The shelf thins and fills, thins\n"
 	.string "and fills.\p"
 	.string "Nobody keeps the ledger, so nobody's\n"
 	.string "ever behind.$"
@@ -2495,13 +2497,13 @@ ParcelDelibird_SquareKeeper_Text_2:
 	.string "hand-lettered sign: TAKE ONE. LEAVE\l"
 	.string "ONE, IF YOU CAN.\p"
 	.string "The keeper waves you closer.\p"
-	.string "Keeper: Off the ferry? Then you're\n"
+	.string "KEEPER: Off the ferry? Then you're\n"
 	.string "furthest from home, and that puts you\l"
 	.string "first in line. House rule.$"
 
 ParcelDelibird_SquareKeeper_Text_3:
 # 449 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Keeper: Go on -- the wrapped ones. No\n"
+	.string "KEEPER: Go on -- the wrapped ones. No\n"
 	.string "peeking, no choosing. That's the whole\l"
 	.string "game.\p"
 	.string "You take the parcel your hand lands on.$"
@@ -2516,20 +2518,20 @@ ParcelDelibird_SquareKeeper_Text_5:
 	.string "and the kettle. The keeper doesn't\l"
 	.string "watch you do it, which is its own kind of\l"
 	.string "manners.\p"
-	.string "Keeper: There. Now you're from here.$"
+	.string "KEEPER: There. Now you're from here.$"
 
 ParcelDelibird_SquareKeeper_Text_6:
 # 471 "data/maps/ParcelDelibird/scripts.pory"
 	.string "You go through your bag twice. The\n"
 	.string "keeper waves it off before you can\l"
 	.string "apologize.\p"
-	.string "Keeper: The shelf's patient. So's the\n"
+	.string "KEEPER: The shelf's patient. So's the\n"
 	.string "island.\n"
 	.string "Bring it when you're rich.$"
 
 ParcelDelibird_SquareKeeper_Text_7:
 # 475 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Keeper: Then don't. The square doesn't\n"
+	.string "KEEPER: Then don't. The square doesn't\n"
 	.string "keep accounts.\p"
 	.string "That's not a kindness, mind. It's a\n"
 	.string "discipline.$"
@@ -2539,19 +2541,19 @@ ParcelDelibird_WarmingHut_Text_0:
 	.string "The hut smells of woodsmoke and wet\n"
 	.string "wool. A row of cots, a kettle always on,\l"
 	.string "a crate of donated kit by the door.\p"
-	.string "Hutkeeper: In you come. Storm rule --\n"
+	.string "HUTKEEPER: In you come. Storm rule --\n"
 	.string "nobody asks, nobody pays.\p"
 	.string "Weather counts as a storm. So does a\n"
 	.string "long day.$"
 
 ParcelDelibird_WarmingHut_Text_1:
 # 485 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Hutkeeper: Set your partners down by\n"
+	.string "HUTKEEPER: Set your partners down by\n"
 	.string "the stove. Go on.$"
 
 ParcelDelibird_WarmingHut_Text_2:
 # 488 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Hutkeeper: There. Warmed through.\p"
+	.string "HUTKEEPER: There. Warmed through.\p"
 	.string "This hut's the oldest building standing\n"
 	.string "on the island, you know. The festival is\l"
 	.string "younger than the kindness.\p"
@@ -2562,7 +2564,7 @@ ParcelDelibird_Stringer_Text_0:
 	.string "A woman on a short ladder feeds string\n"
 	.string "lights along the eaves, a spare bulb\l"
 	.string "held in her teeth. She talks around it.\p"
-	.string "Stringer: Every year they go up a week\n"
+	.string "STRINGER: Every year they go up a week\n"
 	.string "earlier. Notice that? Gran strung them\l"
 	.string "the week of first freeze. That was the\l"
 	.string "signal -- that was the whole point of\l"
@@ -2570,12 +2572,12 @@ ParcelDelibird_Stringer_Text_0:
 
 ParcelDelibird_Stringer_Text_1:
 # 498 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Stringer: There's been no first freeze\n"
+	.string "STRINGER: There's been no first freeze\n"
 	.string "worth the name in six years. So now we\l"
 	.string "go by the calendar, like mainlanders.\p"
 	.string "She fits the bulb, and it comes on, warm\n"
 	.string "against the grey.\p"
-	.string "Stringer: Still pretty, though. That's\n"
+	.string "STRINGER: Still pretty, though. That's\n"
 	.string "not nothing. Some years it's most of\l"
 	.string "what we've got.$"
 
@@ -2915,7 +2917,7 @@ ParcelDelibird_Epilogue_Text_1:
 
 ParcelDelibird_GymIlex_Rematch_Text_0:
 # 860 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: The snowline is lower than last\n"
+	.string "ILEX: The snowline is lower than last\n"
 	.string "Midwinter. I have the number now. It's in\l"
 	.string "your record.\p"
 	.string "The Skyline is mine to read. Read it with\n"
@@ -2923,16 +2925,16 @@ ParcelDelibird_GymIlex_Rematch_Text_0:
 
 ParcelDelibird_GymIlex_Rematch_Text_1:
 # 862 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: Then watch the snowline with me a\n"
+	.string "ILEX: Then watch the snowline with me a\n"
 	.string "while.$"
 
 ParcelDelibird_GymIlex_Rematch_Text_2:
 # 866 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: Steady. You still keep the frame.$"
+	.string "ILEX: Steady. You still keep the frame.$"
 
 ParcelDelibird_GymIlex_Rematch_Text_3:
 # 867 "data/maps/ParcelDelibird/scripts.pory"
-	.string "Ilex: The cloth is in my pocket.\n"
+	.string "ILEX: The cloth is in my pocket.\n"
 	.string "Whenever you like.$"
 
 ParcelDelibird_PairLights_Text_0:
@@ -3064,8 +3066,8 @@ ParcelDelibird_PairGround_Text_9:
 ParcelDelibird_PairGround_Text_10:
 # 913 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: TOMAS's cabin corner is in the\n"
-	.string "ground to the sill. Ketil's talking about\l"
-	.string "moving him.$"
+	.string "ground to the sill. KETIL's talking\l"
+	.string "about moving him.$"
 
 ParcelDelibird_PairGround_Text_11:
 # 914 "data/maps/ParcelDelibird/scripts.pory"

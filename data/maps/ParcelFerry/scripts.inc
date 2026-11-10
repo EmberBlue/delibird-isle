@@ -94,7 +94,7 @@ ParcelFerry_Opening_Text_0:
 
 ParcelFerry_Opening_Text_1:
 # 19 "data/maps/ParcelFerry/scripts.pory"
-	.string "You've just arrived from Johto, leaving\n"
+	.string "You've just arrived from JOHTO, leaving\n"
 	.string "behind your old home and Pokémon. You\l"
 	.string "carry only a bag, a notebook… and a\l"
 	.string "memory.$"
@@ -109,7 +109,7 @@ ParcelFerry_Opening_Text_2:
 
 ParcelFerry_Opening_Text_3:
 # 23 "data/maps/ParcelFerry/scripts.pory"
-	.string "Attendant: Wren, off at the island\n"
+	.string "ATTENDANT: WREN, off at the island\n"
 	.string "stop, yes?\p"
 	.string "The ink's run. Says here…$"
 
@@ -117,12 +117,12 @@ ParcelFerry_Opening_Text_4:
 # 34 "data/maps/ParcelFerry/scripts.pory"
 	.string "The attendant marks the page and\n"
 	.string "moves on.\p"
-	.string "Attendant: We're coming in.\n"
+	.string "ATTENDANT: We're coming in.\n"
 	.string "Mind the boards--they'll be slick.$"
 
 ParcelFerry_Attendant_Text_0:
 # 47 "data/maps/ParcelFerry/scripts.pory"
-	.string "Attendant: Island stop's next.\n"
+	.string "ATTENDANT: Island stop's next.\n"
 	.string "Gather your things.$"
 
 ParcelFerry_Manifest_Text_0:

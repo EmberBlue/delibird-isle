@@ -39,7 +39,7 @@ seg s69 s68 FLAG_SKALDMERE_HERON_MET --walk GOTO:34,24 --walk LEFT:0 --walk TALK
   --walk GOTO:18,8 --walk RIGHT:0 --walk TALK:4 --walk WAIT:300 \
   --walk GOTO:19,10 --walk UP:0 --walk TALK:6 --walk WAIT:400 --check FLAG_SKALDMERE_HERON_MET --expect MAP_PARCEL_MARSH
 seg s70 s69 FLAG_SKALDMERE_FINALE_DONE --walk GOTO:10,20 --walk DOWN:0 --walk TALK:3 --walk WAIT:300 --check VAR_SKALDMERE_CH7_EVIDENCE \
-  --walk GOTO:19,10 --walk UP:0 --walk TALK:40 --walk WAIT:3000 --check FLAG_SKALDMERE_FINALE_DONE --expect MAP_PARCEL_MARSH
+  --walk GOTO:19,10 --walk UP:0 --walk TALKFIGHT:120 --walk TALK:130 --walk WAIT:600 --check FLAG_SKALDMERE_FINALE_DONE --check FLAG_SKALD_CH_HOLLIS_NAMED --expect MAP_PARCEL_MARSH
 # the road out (trigger column 39, rows 25-29) warps to Fernwick
 seg s71 s70 - --walk GOTO:18,8 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:38,27 --walk RIGHT:0 --walk WAIT:1500 --expect MAP_PARCEL_FERNWICK
 echo "=== the finale is done $(date +%H:%M:%S)"

@@ -1,9 +1,9 @@
 # The playthrough chains
 
 `walktest.py` plays Skaldmere headlessly, one savestate segment at a time. These scripts string
-the segments into a whole game, chapter by chapter, from the ferry to the finale. Each segment
+the segments into a whole game, chapter by chapter, from the ferry to the credits and the post-game save. Each segment
 loads the previous segment's state, walks (`GOTO`, `GOTOEDGE`, `GOTOWARP`, `TALK`, `TEACHHM`,
-`TAP`, `WAIT`), fights what it meets (`--fight`), saves its own state and a screenshot, and
+`TALKFIGHT`, `TAP`, `WAIT`), fights what it meets (`--fight`), saves its own state and a screenshot, and
 checks a flag or var that proves the beat happened. A failed check stops the chain, and the
 segment's log and `.png` in `$S/play/run/` say where and why.
 
@@ -17,8 +17,10 @@ segment's log and `.png` in `$S/play/run/` say where and why.
 | `chain6.sh` | 6 | the Coast quay | HARLAND's shift and exam, the readings, the plaque, HALE's signing |
 | `chain7.sh` | 7 | the climate station | the four divisions, VANE upstairs |
 | `chain8.sh` | 8 | Saltwick | Fernwick, HALE's walk into the Last Corridor, AUNE, HERON, the finale |
+| `chain9.sh` | 9 | Fernwick, the record filed | the ferry to the Coast, the boardroom, the eight-stop epilogue, the credits, CONTINUE into the post-game |
+| `chain10.sh` | post-game | Fernwick after CONTINUE | the SMEARGLE at the pond, TARN's rematch, the ferry again, PERRIN's last battle |
 
-`run_all.sh` runs them all in order; `run_rest.sh` is the tail after a fix (edit its first line to
+`run_all.sh` runs chapters 1-9 in order (`chain10.sh` is run by hand after it); `run_rest.sh` is the tail after a fix (edit its first line to
 the segment to resume from); `rebuild_and_run.sh` builds the clean ROM and the probe ROM first.
 
 ## Running
@@ -49,5 +51,12 @@ tail -f $SKALD_SCRATCH/play/run/run_rest.log
 - Rocks and trees grow back on map reload; every return trip smashes or cuts again.
 - Never rebuild the probe ROM while a chain is running: mGBA maps the file, and replacing it
   under a live segment kills it with SIGBUS (exit 135). Stop the chain, build, resume.
+- `WAIT` mashes B, and B answers NO. A scene with a YES/NO after its battle (HERON's "Will you
+  file it true?") is driven with `TALKFIGHT:n` (A until the battle starts, fight it, stop) and
+  then `TALK:n` (A only).
+- The last segment runs through a soft reset: A skips the boot logo and the title and takes
+  CONTINUE, and the harness keeps the save-block offsets it read before the reset, because
+  the reset clears the probe block and CONTINUE does not run the hook again. `--trace 1200`
+  on that segment leaves a screenshot of every epilogue stop and the credits.
 - An NPC's elevation is re-read from its tile at spawn, so a fish in water is at 1 whatever the
   template says; the tile under it is set to elevation 0 so it reads as a wildcard.

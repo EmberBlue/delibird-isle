@@ -55,7 +55,7 @@ script ParcelDelibird_FirstEntry {
     msgbox(format("The boat noses in and the island takes you by surprise. String lights, cabins the colours of sweets, woodsmoke and something baking.\pPeople wave. They don't know you, and they wave anyway."), MSGBOX_DEFAULT)
     msgbox(format("It is the warmest place you have set foot in since you started keeping the notebook.\pYou know, now, what the warmth is standing on. You climbed it. You couldn't fix it."), MSGBOX_DEFAULT)
     bufferpartymonnick(0, 0)
-    msgbox(format("A banner over the square snaps in the wind:\nDELIBIRD ISLE MIDWINTER -- ALL WELCOME.\pSmaller, underneath: in partnership with the Mereholt Foundation.\p{STR_VAR_1} leans into your leg. You go up into the lights."), MSGBOX_DEFAULT)
+    msgbox(format("A banner over the square snaps in the wind:\nDELIBIRD ISLE MIDWINTER -- ALL WELCOME.\pSmaller, underneath: in partnership with the MEREHOLT Foundation.\p{STR_VAR_1} leans into your leg. You go up into the lights."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_DELIBIRD_ARRIVAL)
     releaseall
     end
@@ -68,14 +68,14 @@ script ParcelDelibird_Elder {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Elder: Word reached us. Word always reaches an island last, and stays longest.\pYou wrote it down and you didn't soften it. Herself in it too, I hear. That took something out of you, I expect.\pIt ought to. The true ones cost."), MSGBOX_DEFAULT)
-        msgbox(format("Elder: The channel won't refreeze for it, child. The winters don't read filings.\pBut the lights are going up early this year -- you'll have seen. That's not us pretending.\pThat's us carrying it."), MSGBOX_DEFAULT)
-        msgbox(format("Elder: The festival was never about the cold, whatever the name says. It was about each other, in the cold.\pThat part keeps. That part we don't need anyone's permission to keep."), MSGBOX_DEFAULT)
+        msgbox(format("ELDER: Word reached us. Word always reaches an island last, and stays longest.\pYou wrote it down and you didn't soften it. Herself in it too, I hear. That took something out of you, I expect.\pIt ought to. The true ones cost."), MSGBOX_DEFAULT)
+        msgbox(format("ELDER: The channel won't refreeze for it, child. The winters don't read filings.\pBut the lights are going up early this year -- you'll have seen. That's not us pretending.\pThat's us carrying it."), MSGBOX_DEFAULT)
+        msgbox(format("ELDER: The festival was never about the cold, whatever the name says. It was about each other, in the cold.\pThat part keeps. That part we don't need anyone's permission to keep."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
-        msgbox(format("Elder: The young ones say give until it's a habit, so the giving's already done when the storm comes and there's no time to decide.\pYou've got the habit now. I can see it on the bird."), MSGBOX_DEFAULT)
+        msgbox(format("ELDER: The young ones say give until it's a habit, so the giving's already done when the storm comes and there's no time to decide.\pYou've got the habit now. I can see it on the bird."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -83,23 +83,23 @@ script ParcelDelibird_Elder {
         if (flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED) && flag(FLAG_SKALD_DEL_INGRID_DONE) && flag(FLAG_SKALD_DEL_RUNE_DONE)) {
             goto(ParcelDelibird_Elder_RoundDone)
         }
-        msgbox(format("Elder: Still carrying? Good. Who's waiting on you, then."), MSGBOX_DEFAULT)
+        msgbox(format("ELDER: Still carrying? Good. Who's waiting on you, then."), MSGBOX_DEFAULT)
         if (!flag(FLAG_SKALDMERE_DELIBIRD_DELIVERED)) {
-            msgbox(format("Elder: Tomas. The shore trail east, past the tall grass, then the stairs down to the sand. His cabin's the one with the cold corner."), MSGBOX_DEFAULT)
+            msgbox(format("ELDER: TOMAS. The shore trail east, past the tall grass, then the stairs down to the sand. His cabin's the one with the cold corner."), MSGBOX_DEFAULT)
         }
         if (!flag(FLAG_SKALD_DEL_INGRID_DONE)) {
-            msgbox(format("Elder: Ingrid. The summit trail, up past the cave mouth, two sets of stairs. She's at the stakes. She's always at the stakes."), MSGBOX_DEFAULT)
+            msgbox(format("ELDER: INGRID. The summit trail, up past the cave mouth, two sets of stairs. She's at the stakes. She's always at the stakes."), MSGBOX_DEFAULT)
         }
         if (!flag(FLAG_SKALD_DEL_RUNE_DONE)) {
-            msgbox(format("Elder: Rune. Along the cliff top past the rocks, out to the point. You'll see the beacon before you see him."), MSGBOX_DEFAULT)
+            msgbox(format("ELDER: RUNE. Along the cliff top past the rocks, out to the point. You'll see the beacon before you see him."), MSGBOX_DEFAULT)
         }
-        msgbox(format("Elder: Go on. Reciprocity doesn't keep."), MSGBOX_DEFAULT)
+        msgbox(format("ELDER: Go on. Reciprocity doesn't keep."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("An old woman sorts folded blankets into oilcloth parcels, quick and sure, a Delibird stacking them at her elbow.\pElder: Ranger, is it? Then make yourself useful in the good way, not the clipboard way."), MSGBOX_DEFAULT)
-    msgbox(format("Elder: The island runs on this -- you give before you're asked, and the island gives back before you need. It's not charity. It's how a cold place keeps everyone alive through a bad season.\pThe opposite of the people who only ever take from it."), MSGBOX_DEFAULT)
-    msgbox(format("Elder: The relief round. Three doors the bird can't reach, the way its wings are this winter.\pOld Tomas, under the cliffs on the east shore -- his cabin's the one with the cold corner. Ingrid, up at the snow stakes on the summit -- lamp oil and tea. And Rune, out at the point beacon past the cliffs.\pCarry them for me?"), MSGBOX_DEFAULT)
+    msgbox(format("An old woman sorts folded blankets into oilcloth parcels, quick and sure, a DELIBIRD stacking them at her elbow.\pELDER: RANGER, is it? Then make yourself useful in the good way, not the clipboard way."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER: The island runs on this -- you give before you're asked, and the island gives back before you need. It's not charity. It's how a cold place keeps everyone alive through a bad season.\pThe opposite of the people who only ever take from it."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER: The relief round. Three doors the bird can't reach, the way its wings are this winter.\pOld TOMAS, under the cliffs on the east shore -- his cabin's the one with the cold corner. INGRID, up at the snow stakes on the summit -- lamp oil and tea. And RUNE, out at the point beacon past the cliffs.\pCarry them for me?"), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_DELIBIRD_PARCEL)
     msgbox(format("You take the parcels. They are heavier than blankets should be. There is food in all three."), MSGBOX_DEFAULT)
     release
@@ -108,22 +108,22 @@ script ParcelDelibird_Elder {
 
 // all three doors: the Delibird, and the lighting of the square
 script ParcelDelibird_Elder_RoundDone {
-    msgbox(format("Elder: Tomas has his blanket, Ingrid her oil, Rune his tea. Three doors, on foot, in a day. Bless you.\pCome here. There's a thing we do for someone who carries for strangers without being asked twice."), MSGBOX_DEFAULT)
-    msgbox(format("Elder: We raise Delibird here. Have for longer than the records. In a hard winter they carry food cabin to cabin -- they find the door that needs it. Nobody trained that into them. It's just what they are."), MSGBOX_DEFAULT)
-    msgbox(format("Elder: This one took to you off the boat. Take it. It'll deliver for you the way it delivered for us.\pThe storms are worse now. We'll need more of that, not less."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER: TOMAS has his blanket, INGRID her oil, RUNE his tea. Three doors, on foot, in a day. Bless you.\pCome here. There's a thing we do for someone who carries for strangers without being asked twice."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER: We raise DELIBIRD here. Have for longer than the records. In a hard winter they carry food cabin to cabin -- they find the door that needs it. Nobody trained that into them. It's just what they are."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER: This one took to you off the boat. Take it. It'll deliver for you the way it delivered for us.\pThe storms are worse now. We'll need more of that, not less."), MSGBOX_DEFAULT)
     playse(SE_PIN)
     givemon(SPECIES_DELIBIRD, 28)
     setflag(FLAG_SKALDMERE_DELIBIRD_GIFT)
     msgbox(format("WREN received DELIBIRD.\pIt shifts its little sack to one side and looks at you, ready to be useful."), MSGBOX_DEFAULT)
-    msgbox(format("Elder, quieter:\pElder: There's a paper from the Foundation says we should think about relocating the festival. Somewhere it won't flood.\pWe held it here anyway. While there's a here.\pTell your people we said thank you, and no."), MSGBOX_DEFAULT)
-    msgbox(format("Elder: Stay a minute. We light the square when the round comes home. We always have."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER, quieter:\pELDER: There's a paper from the Foundation says we should think about relocating the festival. Somewhere it won't flood.\pWe held it here anyway. While there's a here.\pTell your people we said thank you, and no."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER: Stay a minute. We light the square when the round comes home. We always have."), MSGBOX_DEFAULT)
     closemessage
     fadescreen(FADE_TO_BLACK)
     delay(30)
     msgbox(format("Dusk. The stringer climbs her ladder one last time and the lights come on along the eaves, cabin by cabin, until the whole square is lit and the dark is pushed back to the tree line.\pNobody cheers. They stand in it. A child says the word pretty and is not told to hush.\pBehind the lights, up the slope, the wet ground shines back at them. Nobody looks up there. You do."), MSGBOX_DEFAULT)
     closemessage
     fadescreen(FADE_FROM_BLACK)
-    msgbox(format("Elder: There. That's the festival. The rest is cocoa."), MSGBOX_DEFAULT)
+    msgbox(format("ELDER: There. That's the festival. The rest is cocoa."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -154,16 +154,16 @@ script ParcelDelibird_Ketil {
         end
     }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Ketil: I mend nets. The nets are the same. What comes up in them isn't.\pThat's in your paper, I'm told, in better words than mine."), MSGBOX_DEFAULT)
+        msgbox(format("KETIL: I mend nets. The nets are the same. What comes up in them isn't.\pThat's in your paper, I'm told, in better words than mine."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
-        msgbox(format("Ketil: The coast paper came over on the ferry. The catch all one size, and a ranger who wrote it down in front of the cannery.\pTomas read it twice. He said that's the island in you. Then he said mind the stairs."), MSGBOX_DEFAULT)
+        msgbox(format("KETIL: The coast paper came over on the ferry. The catch all one size, and a ranger who wrote it down in front of the cannery.\pTOMAS read it twice. He said that's the island in you. Then he said mind the stairs."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Ketil: Tomas took his cabin down under the cliffs when the green went soft under it. East trail, past the tall grass, then the stairs.\pMind him. He'll try to give you something. Let him."), MSGBOX_DEFAULT)
+    msgbox(format("KETIL: TOMAS took his cabin down under the cliffs when the green went soft under it. East trail, past the tall grass, then the stairs.\pMind him. He'll try to give you something. Let him."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -173,19 +173,19 @@ script ParcelDelibird_Giver {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Villager: Pass it on someday. Whoever's cold next. The hearing didn't put a coat on anyone. We did. We'll keep doing it."), MSGBOX_DEFAULT)
+        msgbox(format("VILLAGER: Pass it on someday. Whoever's cold next. The hearing didn't put a coat on anyone. We did. We'll keep doing it."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_GIVER)) {
-        msgbox(format("Villager: Pass it on someday, that's all. To whoever's cold next."), MSGBOX_DEFAULT)
+        msgbox(format("VILLAGER: Pass it on someday, that's all. To whoever's cold next."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Villager: New face! Midwinter rule: nobody meets the giving table empty-handed.\pHere -- from the square to you. Don't thank me. Thank me by doing it to the next one."), MSGBOX_DEFAULT)
+    msgbox(format("VILLAGER: New face! Midwinter rule: nobody meets the giving table empty-handed.\pHere -- from the square to you. Don't thank me. Thank me by doing it to the next one."), MSGBOX_DEFAULT)
     giveitem(ITEM_NEVER_MELT_ICE)
     setflag(FLAG_SKALDMERE_DELIBIRD_GIVER)
-    msgbox(format("Villager: A feather-charm. The old folk say it keeps the cold honest.\pWe could use a little more honest cold. Less every year to keep."), MSGBOX_DEFAULT)
+    msgbox(format("VILLAGER: A feather-charm. The old folk say it keeps the cold honest.\pWe could use a little more honest cold. Less every year to keep."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -195,19 +195,19 @@ script ParcelDelibird_Relief {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Villager: Bailed dry. It'll be back by the thaw moon, higher. Your filing says so, in better words than mine. It's good to be in a filing. It's like being counted."), MSGBOX_DEFAULT)
+        msgbox(format("VILLAGER: Bailed dry. It'll be back by the thaw moon, higher. Your filing says so, in better words than mine. It's good to be in a filing. It's like being counted."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALDMERE_DELIBIRD_RELIEF)) {
-        msgbox(format("Villager: Bailed dry for now. It'll be back by the thaw moon. It always comes back a little higher.\pThanks for the arms, Ranger."), MSGBOX_DEFAULT)
+        msgbox(format("VILLAGER: Bailed dry for now. It'll be back by the thaw moon. It always comes back a little higher.\pThanks for the arms, RANGER."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("A man stacks sandbags against a seep of meltwater rising through what used to be the village green. A Delibird ferries icy blocks to shore the wall.\pVillager: Ranger! Spare arms? The ground's let go under here -- water comes up where there's no rain to explain it."), MSGBOX_DEFAULT)
-    msgbox(format("You work the line until the seep is bagged back. The Delibird drops the last block and shakes off, pleased."), MSGBOX_DEFAULT)
+    msgbox(format("A man stacks sandbags against a seep of meltwater rising through what used to be the village green. A DELIBIRD ferries icy blocks to shore the wall.\pVILLAGER: RANGER! Spare arms? The ground's let go under here -- water comes up where there's no rain to explain it."), MSGBOX_DEFAULT)
+    msgbox(format("You work the line until the seep is bagged back. The DELIBIRD drops the last block and shakes off, pleased."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_DELIBIRD_RELIEF)
-    msgbox(format("Villager: There. Dry.\pYou don't say it and he doesn't ask: the ice under us is thawing, and bags hold water, not winters. We didn't fix it. We bought a season.\pVillager: A season's a lot, some years. Thank you."), MSGBOX_DEFAULT)
+    msgbox(format("VILLAGER: There. Dry.\pYou don't say it and he doesn't ask: the ice under us is thawing, and bags hold water, not winters. We didn't fix it. We bought a season.\pVILLAGER: A season's a lot, some years. Thank you."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -215,7 +215,7 @@ script ParcelDelibird_Relief {
 // a Delibird in the square -- the give ethic with feathers on
 script ParcelDelibird_Delibird {
     lock
-    msgbox(format("A Delibird works the square, tucking a wrapped something into a child's hands, then another's, never its own.\pIt notices you watching. It considers its sack, considers you -- and decides you look like you have enough.\pIt moves on. That, too, is the lesson."), MSGBOX_DEFAULT)
+    msgbox(format("A DELIBIRD works the square, tucking a wrapped something into a child's hands, then another's, never its own.\pIt notices you watching. It considers its sack, considers you -- and decides you look like you have enough.\pIt moves on. That, too, is the lesson."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -227,17 +227,17 @@ script ParcelDelibird_SlumpSign {
 }
 
 script ParcelDelibird_Notice {
-    msgbox(format("DELIBIRD ISLE MIDWINTER -- PROGRAMME\pThe giving table, all day. The relief round, when Marta says. The lighting, at dusk, when the round is home.\pVolunteers see Marta. Everyone is a volunteer."), MSGBOX_SIGN)
+    msgbox(format("DELIBIRD ISLE MIDWINTER -- PROGRAMME\pThe giving table, all day. The relief round, when MARTA says. The lighting, at dusk, when the round is home.\pVolunteers see MARTA. Everyone is a volunteer."), MSGBOX_SIGN)
     end
 }
 
 script ParcelDelibird_SummitTrailSign {
-    msgbox(format("SUMMIT TRAIL\pThe snow stakes and the tarn. Two sets of stairs. Ingrid is at the top; she does not come down for Midwinter.\pThe snowline marker has been removed for repainting."), MSGBOX_SIGN)
+    msgbox(format("SUMMIT TRAIL\pThe snow stakes and the tarn. Two sets of stairs. INGRID is at the top; she does not come down for Midwinter.\pThe snowline marker has been removed for repainting."), MSGBOX_SIGN)
     end
 }
 
 script ParcelDelibird_ShoreTrailSign {
-    msgbox(format("SHORE TRAIL\pTo the cliffs, the beach and the point beacon. Tomas's cabin is below the east stairs.\pThe path along the edge is checked each spring. The edge is not."), MSGBOX_SIGN)
+    msgbox(format("SHORE TRAIL\pTo the cliffs, the beach and the point beacon. TOMAS's cabin is below the east stairs.\pThe path along the edge is checked each spring. The edge is not."), MSGBOX_SIGN)
     end
 }
 
@@ -253,12 +253,12 @@ script ParcelDelibird_ReturnFerry {
     // After the hearing the sailor has a new line, but the boat still sails: the line is the
     // same YES/NO question (it used to end the talk, stranding a post-game player here).
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Sailor: Back to the mainland, Ranger? The island will be here, for a while yet. Your paper didn't change the ice. It changed what the ice is called in a room far away. That's something."), MSGBOX_YESNO)
+        msgbox(format("SAILOR: Back to the mainland, RANGER? The island will be here, for a while yet. Your paper didn't change the ice. It changed what the ice is called in a room far away. That's something."), MSGBOX_YESNO)
     } else {
-        msgbox(format("Sailor: Back to the mainland, Ranger? Whenever you're ready.\pThe island will be here. For a while yet, it'll be here."), MSGBOX_YESNO)
+        msgbox(format("SAILOR: Back to the mainland, RANGER? Whenever you're ready.\pThe island will be here. For a while yet, it'll be here."), MSGBOX_YESNO)
     }
     if (var(VAR_RESULT) == 0) {
-        msgbox(format("Sailor: Stay for the lights, then. They're worth it."), MSGBOX_DEFAULT)
+        msgbox(format("SAILOR: Stay for the lights, then. They're worth it."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -304,8 +304,8 @@ script ParcelDelibird_CaveMouth {
 // a festival reveler -- the warmth straight, the dread in a child's offhand line
 script ParcelDelibird_RevelerTrainer {
     trainerbattle_single(TRAINER_SKALD_REVELER,
-        format("Noel: A Ranger! At Midwinter! You HAVE to battle me, it's tradition.\pLoser owes the winner cocoa. We don't keep score with money up here -- we keep it with cocoa."),
-        format("Noel: Awww. Fine, fine -- cocoa's on me!\nThat's the best way to lose anyhow."),
+        format("NOEL: A RANGER! At Midwinter! You HAVE to battle me, it's tradition.\pLoser owes the winner cocoa. We don't keep score with money up here -- we keep it with cocoa."),
+        format("NOEL: Awww. Fine, fine -- cocoa's on me!\nThat's the best way to lose anyhow."),
         ParcelDelibird_RevelerTrainer_FirstWin)
     specialvar(VAR_RESULT, SkaldRematchTier)
     if (var(VAR_RESULT) >= 2 && !defeated(TRAINER_SKALD_REVELER_R2)) {
@@ -320,11 +320,11 @@ script ParcelDelibird_RevelerTrainer {
     if (var(VAR_RESULT) >= 5 && !defeated(TRAINER_SKALD_REVELER_R5)) {
         goto(ParcelDelibird_RevelerTrainer_R5)
     }
-    msgbox(format("Noel: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
+    msgbox(format("NOEL: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
     end
 }
 script ParcelDelibird_RevelerTrainer_FirstWin {
-    msgbox(format("Noel: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
+    msgbox(format("NOEL: Gran says the festival's smaller every year. Says the ice comes in slower than it did.\pI don't really get it. But I get the cocoa. Come on, before it's cold!"), MSGBOX_DEFAULT)
     release
     end
 }
@@ -399,21 +399,21 @@ script ParcelDelibird_GymIlex {
     lock
     faceplayer
     if (!flag(FLAG_BADGE08_GET)) {
-        msgbox(format("Ilex stands a little apart from the lights, a folded square of red cloth in one hand, eyes on the high snowline above the cabins.\pIlex: Surveyor, Skaldmere Survey. I don't fix anything. I measure how fast it's going.\pIlex: You read places on the ground -- snares, residue, the catch on the pallet. I read them from above. The whole crescent of an island at once, before and after, change against change."), MSGBOX_DEFAULT)
-        msgbox(format("Ilex: The summit first. Thirteen patches of snow up there this Midwinter, by my cloth. More than last year?"), MSGBOX_YESNO)
+        msgbox(format("ILEX stands a little apart from the lights, a folded square of red cloth in one hand, eyes on the high snowline above the cabins.\pILEX: Surveyor, Skaldmere Survey. I don't fix anything. I measure how fast it's going.\pILEX: You read places on the ground -- snares, residue, the catch on the pallet. I read them from above. The whole crescent of an island at once, before and after, change against change."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: The summit first. Thirteen patches of snow up there this Midwinter, by my cloth. More than last year?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) {
-            msgbox(format("Ilex: Fewer. Nineteen last year. People see thirteen patches and think snow. I see six that aren't there.\pFrame first, then count. Let's see you hold the frame."), MSGBOX_DEFAULT)
+            msgbox(format("ILEX: Fewer. Nineteen last year. People see thirteen patches and think snow. I see six that aren't there.\pFrame first, then count. Let's see you hold the frame."), MSGBOX_DEFAULT)
         } else {
-            msgbox(format("Ilex: Fewer. Nineteen last year. The count goes one way, and it will go one way after I've stopped counting.\pYou kept the frame. Now keep it with the current against you."), MSGBOX_DEFAULT)
+            msgbox(format("ILEX: Fewer. Nineteen last year. The count goes one way, and it will go one way after I've stopped counting.\pYou kept the frame. Now keep it with the current against you."), MSGBOX_DEFAULT)
             setflag(FLAG_SKALD_EXAM_8)
         }
-        msgbox(format("Ilex: A field hand should be able to do both. Show me you can hold a line of sight as steady as a line of evidence. From up here, looking down."), MSGBOX_DEFAULT)
-        trainerbattle_no_intro(TRAINER_SKALD_GYM8, format("Ilex: Steady. You kept the frame. Few do, this high up."))
+        msgbox(format("ILEX: A field hand should be able to do both. Show me you can hold a line of sight as steady as a line of evidence. From up here, looking down."), MSGBOX_DEFAULT)
+        trainerbattle_no_intro(TRAINER_SKALD_GYM8, format("ILEX: Steady. You kept the frame. Few do, this high up."))
         goto(ParcelDelibird_GymIlex_Defeated)
     }
     // Re-talk, after the clearance is earned.
-    msgbox(format("Ilex turns the red cloth over once, then pockets it.\pIlex: The snowline I'm watching is lower than last Midwinter. I'll have the number before the festival packs up.\pIlex: Numbers don't save a place. They just make it impossible to say later that nobody knew. Carry that with the badge."), MSGBOX_DEFAULT)
-    msgbox(format("Ilex: You hold a pen like somebody who learned to look from a brush. I won't ask.\pRed cloth is red cloth, whoever ties it."), MSGBOX_DEFAULT)
+    msgbox(format("ILEX turns the red cloth over once, then pockets it.\pILEX: The snowline I'm watching is lower than last Midwinter. I'll have the number before the festival packs up.\pILEX: Numbers don't save a place. They just make it impossible to say later that nobody knew. Carry that with the badge."), MSGBOX_DEFAULT)
+    msgbox(format("ILEX: You hold a pen like somebody who learned to look from a brush. I won't ask.\pRed cloth is red cloth, whoever ties it."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -421,9 +421,9 @@ script ParcelDelibird_GymIlex {
 script ParcelDelibird_GymIlex_Defeated {
     setflag(FLAG_BADGE08_GET)
     call(Common_EventScript_PlayGymBadgeFanfare)
-    msgbox(format("Ilex: The Skyline clearance. It marks you fit to read a place from any height -- and to be trusted on the harder water.\pYou'll want the tool that goes with it."), MSGBOX_DEFAULT)
+    msgbox(format("ILEX: The Skyline clearance. It marks you fit to read a place from any height -- and to be trusted on the harder water.\pYou'll want the tool that goes with it."), MSGBOX_DEFAULT)
     giveitem(ITEM_HM07)
-    msgbox(format("Ilex: WATERFALL. It takes you up the climbs that turn most people back.\pThe corridor inland has a few. That's where the last of this gets written. You're nearly ready for it."), MSGBOX_DEFAULT)
+    msgbox(format("ILEX: WATERFALL. It takes you up the climbs that turn most people back.\pThe corridor inland has a few. That's where the last of this gets written. You're nearly ready for it."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -436,17 +436,17 @@ script ParcelDelibird_SquareKeeper {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("Keeper: The shelf thins and fills. Somebody put a MEREHOLT blanket on it last week. Folded in thirds. Nobody said anything. That's the ledger working."), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: The shelf thins and fills. Somebody put a MEREHOLT blanket on it last week. Folded in thirds. Nobody said anything. That's the ledger working."), MSGBOX_DEFAULT)
         release
         end
     }
     if (flag(FLAG_SKALD_DEL_GIFT_SQUARE)) {
-        msgbox(format("Keeper: The shelf thins and fills, thins and fills.\pNobody keeps the ledger, so nobody's ever behind."), MSGBOX_DEFAULT)
+        msgbox(format("KEEPER: The shelf thins and fills, thins and fills.\pNobody keeps the ledger, so nobody's ever behind."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("A trestle table under the string lights, laid out with parcels -- mittens, dried fish, a kettle with a mended spout. A hand-lettered sign: TAKE ONE. LEAVE ONE, IF YOU CAN.\pThe keeper waves you closer.\pKeeper: Off the ferry? Then you're furthest from home, and that puts you first in line. House rule."), MSGBOX_DEFAULT)
-    msgbox(format("Keeper: Go on -- the wrapped ones. No peeking, no choosing. That's the whole game.\pYou take the parcel your hand lands on."), MSGBOX_DEFAULT)
+    msgbox(format("A trestle table under the string lights, laid out with parcels -- mittens, dried fish, a kettle with a mended spout. A hand-lettered sign: TAKE ONE. LEAVE ONE, IF YOU CAN.\pThe keeper waves you closer.\pKEEPER: Off the ferry? Then you're furthest from home, and that puts you first in line. House rule."), MSGBOX_DEFAULT)
+    msgbox(format("KEEPER: Go on -- the wrapped ones. No peeking, no choosing. That's the whole game.\pYou take the parcel your hand lands on."), MSGBOX_DEFAULT)
     random(4)
     switch (var(VAR_RESULT)) {
         case 0:
@@ -464,15 +464,15 @@ script ParcelDelibird_SquareKeeper {
         checkitem(ITEM_POTION)
         if (var(VAR_RESULT) == 1) {
             removeitem(ITEM_POTION)
-            msgbox(format("You set a Potion between the mittens and the kettle. The keeper doesn't watch you do it, which is its own kind of manners.\pKeeper: There. Now you're from here."), MSGBOX_DEFAULT)
+            msgbox(format("You set a Potion between the mittens and the kettle. The keeper doesn't watch you do it, which is its own kind of manners.\pKEEPER: There. Now you're from here."), MSGBOX_DEFAULT)
             release
             end
         }
-        msgbox(format("You go through your bag twice. The keeper waves it off before you can apologize.\pKeeper: The shelf's patient. So's the island.\nBring it when you're rich."), MSGBOX_DEFAULT)
+        msgbox(format("You go through your bag twice. The keeper waves it off before you can apologize.\pKEEPER: The shelf's patient. So's the island.\nBring it when you're rich."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Keeper: Then don't. The square doesn't keep accounts.\pThat's not a kindness, mind. It's a discipline."), MSGBOX_DEFAULT)
+    msgbox(format("KEEPER: Then don't. The square doesn't keep accounts.\pThat's not a kindness, mind. It's a discipline."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -481,11 +481,11 @@ script ParcelDelibird_SquareKeeper {
 script ParcelDelibird_WarmingHut {
     lock
     faceplayer
-    msgbox(format("The hut smells of woodsmoke and wet wool. A row of cots, a kettle always on, a crate of donated kit by the door.\pHutkeeper: In you come. Storm rule -- nobody asks, nobody pays.\pWeather counts as a storm. So does a long day."), MSGBOX_DEFAULT)
-    msgbox(format("Hutkeeper: Set your partners down by the stove. Go on."), MSGBOX_DEFAULT)
+    msgbox(format("The hut smells of woodsmoke and wet wool. A row of cots, a kettle always on, a crate of donated kit by the door.\pHUTKEEPER: In you come. Storm rule -- nobody asks, nobody pays.\pWeather counts as a storm. So does a long day."), MSGBOX_DEFAULT)
+    msgbox(format("HUTKEEPER: Set your partners down by the stove. Go on."), MSGBOX_DEFAULT)
     closemessage
     call(Common_EventScript_OutOfCenterPartyHeal)
-    msgbox(format("Hutkeeper: There. Warmed through.\pThis hut's the oldest building standing on the island, you know. The festival is younger than the kindness.\pMost things are."), MSGBOX_DEFAULT)
+    msgbox(format("HUTKEEPER: There. Warmed through.\pThis hut's the oldest building standing on the island, you know. The festival is younger than the kindness.\pMost things are."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -494,8 +494,8 @@ script ParcelDelibird_WarmingHut {
 script ParcelDelibird_Stringer {
     lock
     faceplayer
-    msgbox(format("A woman on a short ladder feeds string lights along the eaves, a spare bulb held in her teeth. She talks around it.\pStringer: Every year they go up a week earlier. Notice that? Gran strung them the week of first freeze. That was the signal -- that was the whole point of them."), MSGBOX_DEFAULT)
-    msgbox(format("Stringer: There's been no first freeze worth the name in six years. So now we go by the calendar, like mainlanders.\pShe fits the bulb, and it comes on, warm against the grey.\pStringer: Still pretty, though. That's not nothing. Some years it's most of what we've got."), MSGBOX_DEFAULT)
+    msgbox(format("A woman on a short ladder feeds string lights along the eaves, a spare bulb held in her teeth. She talks around it.\pSTRINGER: Every year they go up a week earlier. Notice that? Gran strung them the week of first freeze. That was the signal -- that was the whole point of them."), MSGBOX_DEFAULT)
+    msgbox(format("STRINGER: There's been no first freeze worth the name in six years. So now we go by the calendar, like mainlanders.\pShe fits the bulb, and it comes on, warm against the grey.\pSTRINGER: Still pretty, though. That's not nothing. Some years it's most of what we've got."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -857,14 +857,14 @@ script ParcelDelibird_Epilogue {
 script ParcelDelibird_GymIlex_Rematch {
     lock
     faceplayer
-    msgbox(format("Ilex: The snowline is lower than last Midwinter. I have the number now. It's in your record.\pThe Skyline is mine to read. Read it with me once more, from the top. Will you?"), MSGBOX_YESNO)
+    msgbox(format("ILEX: The snowline is lower than last Midwinter. I have the number now. It's in your record.\pThe Skyline is mine to read. Read it with me once more, from the top. Will you?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 0) {
-        msgbox(format("Ilex: Then watch the snowline with me a while."), MSGBOX_DEFAULT)
+        msgbox(format("ILEX: Then watch the snowline with me a while."), MSGBOX_DEFAULT)
         release
         end
     }
-    trainerbattle_no_intro(TRAINER_SKALD_GYM8_R, format("Ilex: Steady. You still keep the frame."))
-    msgbox(format("Ilex: The cloth is in my pocket. Whenever you like."), MSGBOX_DEFAULT)
+    trainerbattle_no_intro(TRAINER_SKALD_GYM8_R, format("ILEX: Steady. You still keep the frame."))
+    msgbox(format("ILEX: The cloth is in my pocket. Whenever you like."), MSGBOX_DEFAULT)
     release
     end
 }
@@ -910,7 +910,7 @@ script ParcelDelibird_PairGround {
         msgbox(format("WIFE: That's not comfort."), MSGBOX_DEFAULT)
         msgbox(format("HUSBAND: No. It's a ruler. We've had comfort. It came with a crest on it."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("WIFE: TOMAS's cabin corner is in the ground to the sill. Ketil's talking about moving him."), MSGBOX_DEFAULT)
+        msgbox(format("WIFE: TOMAS's cabin corner is in the ground to the sill. KETIL's talking about moving him."), MSGBOX_DEFAULT)
         msgbox(format("HUSBAND: Moving him where? Every cabin on the north side has a corner going."), MSGBOX_DEFAULT)
         msgbox(format("WIFE: Then we move the north side."), MSGBOX_DEFAULT)
         msgbox(format("HUSBAND: We've moved it twice in my life. Each time it caught us up."), MSGBOX_DEFAULT)

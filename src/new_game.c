@@ -101,7 +101,7 @@ static void InitPlayerTrainerId(void)
 // chooses only how the manifest lists them (the ferry's attendant, §07 --
 // SkaldmereSetGender); every new game is named canonically so dialogue can
 // use {PLAYER} and the menu isn't blank. There is no naming screen.
-static const u8 sSkaldmereDefaultName[] = _("Wren");
+static const u8 sSkaldmereDefaultName[] = _("WREN");   // caps, as every NPC line that says the name spells it
 
 static void SetSkaldmereDefaultIdentity(void)
 {

@@ -103,13 +103,13 @@ ParcelTownLodging_Visitors_2:
 
 ParcelTownLodging_Keeper_Text_0:
 # 11 "data/maps/ParcelTownLodging/scripts.pory"
-	.string "Keeper: The scientist's room is paid\n"
+	.string "KEEPER: The scientist's room is paid\n"
 	.string "through the season.\p"
 	.string "She insisted. Before.$"
 
 ParcelTownLodging_Keeper_Text_1:
 # 12 "data/maps/ParcelTownLodging/scripts.pory"
-	.string "Keeper: You look wrung out.\n"
+	.string "KEEPER: You look wrung out.\n"
 	.string "Rest a while?$"
 
 ParcelTownLodging_Keeper_Text_2:
@@ -120,7 +120,7 @@ ParcelTownLodging_Keeper_Text_2:
 
 ParcelTownLodging_Keeper_Text_3:
 # 20 "data/maps/ParcelTownLodging/scripts.pory"
-	.string "Keeper: The kettle's always on.$"
+	.string "KEEPER: The kettle's always on.$"
 
 ParcelTownLodging_Letter_Text_0:
 # 31 "data/maps/ParcelTownLodging/scripts.pory"

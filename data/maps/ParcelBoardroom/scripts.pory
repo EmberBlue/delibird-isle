@@ -55,36 +55,36 @@ script ParcelBoardroom_Cordelia {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
-        msgbox(format("Cordelia: The door is where you left it, Ranger.\pOne of us still has a region to run."), MSGBOX_DEFAULT)
+        msgbox(format("CORDELIA: The door is where you left it, RANGER.\pOne of us still has a region to run."), MSGBOX_DEFAULT)
         release
         end
     }
-    msgbox(format("Cordelia Brooke does not stand to greet you. She finishes the line she is writing, caps the pen, and squares the page against the edge of the desk.\pCordelia: Ranger. Sit, don't sit. The meeting runs the same length either way."), MSGBOX_DEFAULT)
+    msgbox(format("CORDELIA BROOKE does not stand to greet you. She finishes the line she is writing, caps the pen, and squares the page against the edge of the desk.\pCORDELIA: RANGER. Sit, don't sit. The meeting runs the same length either way."), MSGBOX_DEFAULT)
     msgbox(format("Sit?"), MSGBOX_YESNO)
     if (var(VAR_RESULT) == 1) {
         msgbox(format("You sit. The chair is lower than hers. It was made that way, by someone who was paid to think about it."), MSGBOX_DEFAULT)
     } else {
         msgbox(format("You stand. She notes it and does not offer again. The room is long enough that standing is its own kind of answer."), MSGBOX_DEFAULT)
     }
-    msgbox(format("Cordelia: You filed the truth. All of it, I'm told. I've had it read to me twice -- once by the lawyers, once by the people I pay to translate lawyers.\pReview of the coastal quotas. The permafrost leases enjoined pending survey. The corridor listing, fast-tracked.\pMy expansion, priced this morning at eighteen months of delay. Thirty, if the hearings run long."), MSGBOX_DEFAULT)
-    msgbox(format("Cordelia: That is what you bought. I wanted you to hear the price from me, because nobody who celebrates you this week will say it to your face.\pWhen the Politoed data is corrected, the Mahogany preserve loses its listing. Her lie protected that marsh for twenty years. Your truth un-protects it in a filing season.\pI don't say it to wound. I say it because the accounts should be kept whole. Someone in this room still keeps accounts."), MSGBOX_DEFAULT)
+    msgbox(format("CORDELIA: You filed the truth. All of it, I'm told. I've had it read to me twice -- once by the lawyers, once by the people I pay to translate lawyers.\pReview of the coastal quotas. The permafrost leases enjoined pending survey. The corridor listing, fast-tracked.\pMy expansion, priced this morning at eighteen months of delay. Thirty, if the hearings run long."), MSGBOX_DEFAULT)
+    msgbox(format("CORDELIA: That is what you bought. I wanted you to hear the price from me, because nobody who celebrates you this week will say it to your face.\pWhen the POLITOED data is corrected, the MAHOGANY preserve loses its listing. Her lie protected that marsh for twenty years. Your truth un-protects it in a filing season.\pI don't say it to wound. I say it because the accounts should be kept whole. Someone in this room still keeps accounts."), MSGBOX_DEFAULT)
     if (flag(FLAG_SKALD_CH_MAHOGANY)) {
-        msgbox(format("Cordelia: You filed the correction yourself, I'm told. In your own hand, under hers. I'd have waited for a lawyer to find it; most people do.\pYou didn't give them the pleasure. I noticed. I notice who keeps their own accounts."), MSGBOX_DEFAULT)
+        msgbox(format("CORDELIA: You filed the correction yourself, I'm told. In your own hand, under hers. I'd have waited for a lawyer to find it; most people do.\pYou didn't give them the pleasure. I noticed. I notice who keeps their own accounts."), MSGBOX_DEFAULT)
     }
-    msgbox(format("Cordelia: And you are owed one correction, since we're keeping them.\pYou did not fight a company. Mereholt is the ferry you arrived on. The wage of the man who fed you on the crossing. Half the fuel in this harbour, and a third of the budget of the Corps that trained you.\pYou fought the way this region eats, Ranger. And you have won a delay."), MSGBOX_DEFAULT)
-    msgbox(format("For a moment the only sound is the harbour below -- the cranes, swinging weight through the cold air, on schedule.\pCordelia: The board would have my seat in a week if the figures faltered. There are covenants older than my chair that decide most of what I sign.\pI mention that once, for accuracy. Not absolution. Do not write it down as regret."), MSGBOX_DEFAULT)
-    msgbox(format("Cordelia: One item remains, and then the door.\pI have read eleven hundred pages about you, most of them in your own hand. Paper flattens people -- it is the only thing paper does reliably.\pI should like the primary source."), MSGBOX_DEFAULT)
-    msgbox(format("She rises, and the room seems to rise with her. From beside the desk, unhurried, her partners come out to stand where they have stood in ten years of photographs.\pGroomed. Calm. Asked for nothing, ever, until now.\pCordelia: Neither of us is used to losing in a room like this. Shall we?"), MSGBOX_DEFAULT)
+    msgbox(format("CORDELIA: And you are owed one correction, since we're keeping them.\pYou did not fight a company. MEREHOLT is the ferry you arrived on. The wage of the man who fed you on the crossing. Half the fuel in this harbour, and a third of the budget of the CORPS that trained you.\pYou fought the way this region eats, RANGER. And you have won a delay."), MSGBOX_DEFAULT)
+    msgbox(format("For a moment the only sound is the harbour below -- the cranes, swinging weight through the cold air, on schedule.\pCORDELIA: The board would have my seat in a week if the figures faltered. There are covenants older than my chair that decide most of what I sign.\pI mention that once, for accuracy. Not absolution. Do not write it down as regret."), MSGBOX_DEFAULT)
+    msgbox(format("CORDELIA: One item remains, and then the door.\pI have read eleven hundred pages about you, most of them in your own hand. Paper flattens people -- it is the only thing paper does reliably.\pI should like the primary source."), MSGBOX_DEFAULT)
+    msgbox(format("She rises, and the room seems to rise with her. From beside the desk, unhurried, her partners come out to stand where they have stood in ten years of photographs.\pGroomed. Calm. Asked for nothing, ever, until now.\pCORDELIA: Neither of us is used to losing in a room like this. Shall we?"), MSGBOX_DEFAULT)
     trainerbattle_single(TRAINER_SKALD_CORDELIA,
-        format("Cordelia: Gently, now.\nThis is still a boardroom."),
-        format("Cordelia: …There it is.\nThe thing the paper flattened."),
+        format("CORDELIA: Gently, now.\nThis is still a boardroom."),
+        format("CORDELIA: …There it is.\nThe thing the paper flattened."),
         ParcelBoardroom_Cordelia_Won)
     release
     end
 }
 script ParcelBoardroom_Cordelia_Won {
-    msgbox(format("She recalls her partners the way a person closes a ledger -- precisely, without haste, finished.\pCordelia: No settlement. No counter-offer. There would be no number on it anyway.\pYou have made honesty expensive, which is more than most people manage with a whole life. It will not be enough. I think you know that better than the ones who'll drink to you tonight."), MSGBOX_DEFAULT)
-    msgbox(format("Cordelia: For what it is worth -- and you may price this however you like -- I read her model the year it was published, and I believed it.\pI wanted a region that could bear us. I still believe it can.\pWe differ on the arithmetic."), MSGBOX_DEFAULT)
+    msgbox(format("She recalls her partners the way a person closes a ledger -- precisely, without haste, finished.\pCORDELIA: No settlement. No counter-offer. There would be no number on it anyway.\pYou have made honesty expensive, which is more than most people manage with a whole life. It will not be enough. I think you know that better than the ones who'll drink to you tonight."), MSGBOX_DEFAULT)
+    msgbox(format("CORDELIA: For what it is worth -- and you may price this however you like -- I read her model the year it was published, and I believed it.\pI wanted a region that could bear us. I still believe it can.\pWe differ on the arithmetic."), MSGBOX_DEFAULT)
     msgbox(format("She turns her chair to the window, to the harbour, to the cranes still swinging on schedule.\pWhatever her face does next, she has put the whole length of the room between you and it.\pThe meeting is over. Nobody says so. It is over anyway."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALDMERE_CORDELIA_DONE)
     release
@@ -104,7 +104,7 @@ script ParcelBoardroom_ReadFrame {
 // --- papers (2026-11-10): the documents on the desks ---
 
 script ParcelBoardroom_Minutes {
-    msgbox(format("A single sheet left squared on the table where the board sits. An extract from the minutes, some years old.\pRESOLVED, that the Foundation's grant to the wetland resilience programme be renewed for a further three years, subject to the programme making its models available to the parent company for planning purposes.\pRESOLVED, that the programme officer convey the board's continued confidence to the principal investigator in person.\pRESOLVED, that the file concerning the principal investigator's earlier work in Johto be retained by the secretary and not circulated.\pThree resolutions. Nobody voted against. The secretary noted the meeting closed at four and that tea was served."), MSGBOX_SIGN)
+    msgbox(format("A single sheet left squared on the table where the board sits. An extract from the minutes, some years old.\pRESOLVED, that the Foundation's grant to the wetland resilience programme be renewed for a further three years, subject to the programme making its models available to the parent company for planning purposes.\pRESOLVED, that the programme officer convey the board's continued confidence to the principal investigator in person.\pRESOLVED, that the file concerning the principal investigator's earlier work in JOHTO be retained by the secretary and not circulated.\pThree resolutions. Nobody voted against. The secretary noted the meeting closed at four and that tea was served."), MSGBOX_SIGN)
 }
 
 script ParcelBoardroom_Covenant {
