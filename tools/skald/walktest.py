@@ -285,6 +285,18 @@ def main():
                 # (gPlayerAvatar.flags bit 3) water is floor and riding onto a shore dismounts.
                 pav = syms.get("gPlayerAvatar")
                 kw["surf"] = bool(pav is not None and core.memory.u8[pav] & 0x08)
+                # plan around the NPCs where they stand NOW (gObjectEvents, 16 x 0x24 bytes: active bit 0,
+                # isPlayer bit 16, currentCoords at +0x10 with MAP_OFFSET 7), not where map.json spawned them:
+                # a leader who stepped aside, a trainer who walked up, an item ball already taken
+                oe = syms.get("gObjectEvents")
+                if oe is not None:
+                    live = set()
+                    for i in range(16):
+                        b = oe + i * 0x24
+                        bits = core.memory.u32[b]
+                        if (bits & 1) and not ((bits >> 16) & 1) and core.memory.u8[b + 8] != 0xFF:
+                            live.add((core.memory.s16[b + 0x10] - 7, core.memory.s16[b + 0x12] - 7))
+                    kw["objects"] = live
                 path, runs = route.plan(mdir, (px, py), blocked=blocked, avoid_grass=True, **kw)
                 if not path:
                     path, runs = route.plan(mdir, (px, py), blocked=blocked, **kw)

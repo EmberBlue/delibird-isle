@@ -29,11 +29,13 @@ def is_water(beh):
     return ("WATER" in beh or "SEAWEED" in beh or "CURRENT" in beh) and "SHALLOW" not in beh and "WATERFALL" not in beh and "BRIDGE" not in beh
 
 
-def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, allow_grass_goal=True, blocked=(), surf=False):
+def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, allow_grass_goal=True, blocked=(), surf=False, objects=None):
     """blocked: extra tiles to treat as solid (an NPC who walked over to battle and stayed).
-    surf: the player is already surfing, so water is floor (land is still fine: riding onto a shore dismounts)."""
+    surf: the player is already surfing, so water is floor (land is still fine: riding onto a shore dismounts).
+    objects: the live NPC tiles (from gObjectEvents) instead of map.json's -- a leader who stepped aside,
+    a trainer who walked up, an item already picked up."""
     mj, lay, W, H, words, tiles = audit.load_map(map_name)
-    objs = {(e["x"], e["y"]) for e in mj.get("object_events", [])} | set(blocked)
+    objs = (set(objects) if objects is not None else {(e["x"], e["y"]) for e in mj.get("object_events", [])}) | set(blocked)
     warps = {(e["x"], e["y"]) for e in mj.get("warp_events", [])}
 
     def info(x, y):
