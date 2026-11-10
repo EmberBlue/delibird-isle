@@ -581,6 +581,26 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   ROM addresses stable so harness savestates survive the rebuild; script
   edits do not.
 
+- **Rails are plank walks (2026-11-10).** Route 119's white bridges are
+  Acro Bike balance rails (`MB_*_RAIL`), which the engine refuses to a
+  walking player; Skaldmere has no bicycles, and the climate station's
+  lake and the Wetlands' reed walks are made of them. `CheckAcroBikeCollision`
+  (src/field_player_avatar.c) applies the rail collisions only to a rider,
+  so on foot they are floor. The audits treat them as floor too.
+- **SURF starts only from elevation-3 ground that is not a bridge**
+  (`IsPlayerFacingSurfableFishableWater`), and elevation 15 does not merge
+  two levels: a player crossing a 15 tile keeps the elevation they came
+  with. `reach.py` models the first (it had been surfing off a bridge
+  from a stray gravel tile on the deck); `--why MAP x,y` prints its route.
+- **A land door onto a water tile strands the player on water** (a vanilla
+  surf-in cave reused as an interior: the Floodbasin works). Dry doorstep:
+  metatile 572 at elevation 3.
+- **Generated layouts keep hand fixes in `fixes.json`** next to their
+  `build.py` / `canvas.txt`; the generators re-apply them
+  (`tools/skald/layout_fixes.py`, `--check` must read 0 differ).
+  `ParcelIsle`'s canvas no longer draws under the current legend rules; its
+  `map.bin` is the only source until the canvas is repaired.
+
 ## RAM budget (the binding constraint)
 
 ROM is comfortable; the GBA's RAM is the hard limit. The base expansion
