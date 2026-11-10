@@ -312,8 +312,9 @@ def main():
                     continue
                 if (nx, ny) == (px, py):
                     still += 1
-                    dismiss(300)        # a scene or a trainer's closing lines may still be running
-                    if still >= 2:      # twice without moving: something stands there now
+                    dismiss(900)        # a scene on this tile (the Floodbasin relief line runs ten boxes) or a
+                                        # trainer's closing lines may still be playing: B through it first
+                    if still >= 3:      # three times without moving: something stands there now
                         dx, dy = DXY[rd]
                         blocked.add((px + dx, py + dy))
                     if still >= 8:
