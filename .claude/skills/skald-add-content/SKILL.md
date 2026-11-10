@@ -46,6 +46,14 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   elevation 4 draws the player above them — `audit.py` warns otherwise).
   Cave ledge lips are `MB_IMPASSABLE_<dir>`: walkable floor with one walled
   edge, not solid.
+- **Every event carries the elevation of the tile it is used from.** The
+  engine matches a trigger, a sign or a talkable NPC to the player only
+  when the event's elevation is 0 or equals the player's, which is the
+  tile's. Placing a village at elevation 5 with its NPCs, triggers and
+  boards left at the default 3 makes all of them silent (33 such, found
+  2026-11-10). `python3 tools/skald/event_elev.py` lists them, `--fix`
+  rewrites them (objects and triggers take the tile's elevation, signs
+  take 0); `audit.py` warns on each.
 - **Ledges are one-way and the Mach-Bike slope is down-only** (no bike in
   Skaldmere). A ring of ledges around a village needs a stair out
   (metatile 175 in the mountain kit, elevation 0 — see the Highlands at

@@ -236,6 +236,14 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
             te = decode(words[ev["y"] * W + ev["x"]])[2]
             if ev["elevation"] not in (0, te):
                 warn(name, f"event at ({ev['x']},{ev['y']}) has elevation {ev['elevation']} but the tile is {te} (use 0)")
+    # objects too: a villager at elevation 3 on an elevation-5 tile cannot be spoken to
+    # (ObjectEventDoesElevationMatch). tools/skald/event_elev.py --fix rewrites them.
+    for ev in mj.get("object_events") or []:
+        if 0 <= ev["x"] < W and 0 <= ev["y"] < H:
+            mid, col, te = decode(words[ev["y"] * W + ev["x"]])
+            oe = int(ev.get("elevation", 0) or 0)
+            if col == 0 and te not in (0, 15) and oe not in (0, te):
+                warn(name, f"object {ev.get('local_id', '')} at ({ev['x']},{ev['y']}) has elevation {oe} but stands on {te} (event_elev.py --fix)")
     def elev_ok(a, b):
         return a in (0, 15) or b in (0, 15) or a == b
     for c in mj.get("connections", []) or []:

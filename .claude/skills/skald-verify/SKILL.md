@@ -39,6 +39,10 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
 - **Warp targets**: decode destination tile of every warp()/warp_event — col must be 0 (doors exempt).
 - **Connections**: for each edge connection, offset-aligned walkable tiles must exist both sides.
 - **Fly**: custom MAPSECs need rows in sMapHealLocations (src/region_map.c) or fly = Littleroot bedroom.
+- **Event elevations**: `python3 tools/skald/event_elev.py` must list nothing
+  (an NPC, trigger or sign at an elevation the player never has on that
+  tile is unreachable by any input; `--fix` rewrites them). `audit.py`
+  warns on the same.
 - **Reachability (run this before calling any map, NPC or layout change done):**
   `python3 tools/skald/reach.py` floods the whole game from the ferry spawn
   (connections, warps, script warps, one-way ledges, the bike-only muddy
