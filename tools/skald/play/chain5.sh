@@ -46,7 +46,7 @@ seg s50 s49 - --walk GOTO:15,4 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk 
   --walk GOTO:9,13 --walk RIGHT:0 --walk TALK:1 --walk WAIT:600 --walk GOTO:9,11 --walk LEFT:0 --walk TALK:10 --walk WAIT:600 \
   --check FLAG_SKALD_DEL_GIFT_SQUARE --expect MAP_PARCEL_DELIBIRD
 seg s51 s50 - --walk GOTO:6,16 --walk UP:0 --walk TALK:8 --walk WAIT:400 --walk GOTO:20,17 --walk UP:0 --walk TALK:8 --walk WAIT:400 \
-  --walk GOTO:7,11 --walk UP:0 --walk TALK:10 --walk WAIT:600 --walk GOTO:8,19 --walk UP:0 --walk TALK:4 --walk WAIT:900 --expect MAP_PARCEL_DELIBIRD
+  --walk GOTO:8,10 --walk LEFT:0 --walk TALK:10 --walk WAIT:600 --walk GOTO:8,19 --walk UP:0 --walk TALK:4 --walk WAIT:900 --expect MAP_PARCEL_DELIBIRD
 # the sailor (9,23) back to Saltwick, then the captain's second choice = the MEREHOLT COAST
 seg s52 s51 - --walk GOTO:9,22 --walk DOWN:0 --walk MENU:0,8 --walk WAIT:900 --expect MAP_PARCEL_ISLE
 seg s53 s52 FLAG_SKALDMERE_COAST_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk MENU:1,14 \

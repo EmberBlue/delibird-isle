@@ -25,10 +25,15 @@ seg s54 s53 FLAG_BADGE06_GET --walk GOTO:30,53 --walk WAIT:2500 --walk GOTO:36,5
   --check FLAG_BADGE06_GET --expect MAP_PARCEL_COAST
 # HARLAND again: one shift out on the water
 seg s55 s54 FLAG_SKALD_COAST_SHIFT_DONE --walk GOTO:36,52 --walk DOWN:0 --walk TALK:16 --walk WAIT:3000 --check FLAG_SKALD_COAST_SHIFT_DONE --expect MAP_PARCEL_COAST
-# the four readings on the ground: the urchin barren (36,57), the dredge scar (7,58), the one-size catch (7,36),
+# the four readings: down the steps to the Breakwater beach for the dredge line (looking out from its west end,
+# Breakwater (8,0)) and, back north under the lighthouse quay, the urchin barren (36,57); then the one-size catch (7,36),
 # the empty pilings (32,44) behind the item ball at (31,44)
-seg s56 s55 - --walk GOTO:35,57 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 \
-  --walk GOTO:7,57 --walk DOWN:0 --walk TALK:3 --walk WAIT:300 \
+seg s56 s55 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 \
+  --walk GOTO:8,0 --walk LEFT:0 --walk TALK:3 --walk WAIT:300 \
+  --walk GOTO:33,0 --walk UP:0 --walk WAIT:600 \
+  --walk GOTO:35,57 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 \
+  --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 \
+  --walk GOTO:20,0 --walk UP:0 --walk WAIT:600 \
   --walk GOTO:7,37 --walk UP:0 --walk TALK:3 --walk WAIT:300 \
   --walk GOTO:31,43 --walk DOWN:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:31,44 --walk RIGHT:0 --walk TALK:3 --walk WAIT:300 \
   --check VAR_SKALDMERE_CH6_EVIDENCE --expect MAP_PARCEL_COAST

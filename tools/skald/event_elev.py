@@ -45,6 +45,16 @@ def check(name, fix=False):
     for e in mj.get("object_events", []):
         ev = int(e.get("elevation", 0) or 0)
         w = want(e["x"], e["y"])
+        if 0 <= e["x"] < W and 0 <= e["y"] < H:
+            mid_, col_, _ = audit.decode(words[e["y"] * W + e["x"]])
+            beh_ = audit.BEH.get(tiles.get(mid_, ((), 0, 0))[1], "")
+            g = e["graphics_id"][14:]
+            swims = g.startswith(("SWIMMER", "TUBER", "SPECIES(")) or "ITEM_BALL" in g
+            if col_ == 0 and ("WATER" in beh_ or "SEAWEED" in beh_) and "SHALLOW" not in beh_ and not swims:
+                # water tiles have collision 0, so a placement pass that asks "is it walkable?" puts
+                # villagers in lakes (seven in the Floodbasin, two in the Coast basin, 2026-11-10)
+                out.append(f"object {e.get('local_id', '')} {g} at ({e['x']},{e['y']}) stands in open water: move it ashore")
+                continue
         if w == 1 and ev != 0:
             # standing in water (a sick fish, a swimmer): spoken to from a bridge or a boardwalk, where
             # the player's elevation is whatever the ramp gave them -- only the wildcard works
