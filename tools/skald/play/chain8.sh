@@ -29,15 +29,17 @@ seg s67 s66 - --walk GOTOWARP:1 --walk WAIT:400 --walk GOTO:6,7 --walk UP:0 --wa
 # AUNE at the gate (36,23) from below: the last Mereholt clearance; the graded edge (35,27) from the road
 seg s68 s67 FLAG_SKALDMERE_GATE_MARSH --walk GOTO:36,24 --walk UP:0 --walk TALK:6 --walk WAIT:900 --walk GOTO:36,27 --walk LEFT:0 --walk TALK:3 --walk WAIT:300 \
   --check FLAG_SKALDMERE_GATE_MARSH --expect MAP_PARCEL_MARSH
-# the river is the only way in: SURF from the landing (34,24) west, the drying channel (23,1) from (24,1), the
+# the river is the only way in: SURF from the landing (34,24) west, the drying channel (23,1) from (24,1) on its
+# islet, SURF again from the islet's shore (24,6), the
 # Poliwag (20,9) from below, HERON (19,9) once to be met, the dead reeds (10,21), then HERON again: COLLAPSING, the
 # notebook, the finale
 seg s69 s68 FLAG_SKALDMERE_HERON_MET --walk GOTO:34,24 --walk LEFT:0 --walk TALK:1 --walk WAIT:400 \
   --walk GOTO:24,1 --walk LEFT:0 --walk TALK:3 --walk WAIT:300 \
+  --walk GOTO:24,6 --walk LEFT:0 --walk TALK:1 --walk WAIT:400 \
   --walk GOTO:18,8 --walk RIGHT:0 --walk TALK:4 --walk WAIT:300 \
   --walk GOTO:19,10 --walk UP:0 --walk TALK:6 --walk WAIT:400 --check FLAG_SKALDMERE_HERON_MET --expect MAP_PARCEL_MARSH
 seg s70 s69 FLAG_SKALDMERE_FINALE_DONE --walk GOTO:10,20 --walk DOWN:0 --walk TALK:3 --walk WAIT:300 --check VAR_SKALDMERE_CH7_EVIDENCE \
   --walk GOTO:19,10 --walk UP:0 --walk TALK:40 --walk WAIT:3000 --check FLAG_SKALDMERE_FINALE_DONE --expect MAP_PARCEL_MARSH
 # the road out (trigger column 39, rows 25-29) warps to Fernwick
-seg s71 s70 - --walk GOTO:38,27 --walk RIGHT:0 --walk WAIT:1500 --expect MAP_PARCEL_FERNWICK
+seg s71 s70 - --walk GOTO:18,8 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:38,27 --walk RIGHT:0 --walk WAIT:1500 --expect MAP_PARCEL_FERNWICK
 echo "=== the finale is done $(date +%H:%M:%S)"
