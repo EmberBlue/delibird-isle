@@ -6,6 +6,11 @@ mapscripts ParcelRiverHouse4_MapScripts {
 script ParcelRiverHouse4_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Six names on the allocation. I read mine every market day. It hasn't moved.\pThat's what fair looks like, it turns out. It looks like a number that stays."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: The Board posted the allocations with six names under them. I read mine twice. It's fair. First time I've written 'fair' on a form."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelRiverHouse4_Woman {
 script ParcelRiverHouse4_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: Twenty-two stalls! The hill people have potatoes now. I counted them twice. The ranger way.\pHALE's boy from FERNWICK counts his pond the same. We compared."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Nineteen stalls today! I counted twice, like the ranger does."), MSGBOX_DEFAULT)
         release

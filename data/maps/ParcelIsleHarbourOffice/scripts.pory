@@ -7,6 +7,11 @@ mapscripts ParcelIsleHarbourOffice_MapScripts {
 script ParcelIsleHarbourOffice_Dagny {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DAGNY: I'm allowed to talk to you now. In writing, even. The coffee's on.\pThe manifests say what's in the crates. I never thought I'd find that exciting."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
         msgbox(format("DAGNY: I've been asked, in writing, to say nothing to you. So here's what I'll say: the coffee's still on.\pWe're a logistics office. We move whatever the region decides to move. That was never the problem, was it?"), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FINALE_DONE)) {
@@ -23,6 +28,11 @@ script ParcelIsleHarbourOffice_Dagny {
 script ParcelIsleHarbourOffice_Osk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OSK: Four forms, still. The fourth one's got a column for what came back. I've filled it in twice.\p'Relief, returned, empty' and 'evidence, returned, read'."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OSK: I filed the same three forms for six years. This week they sent me a fourth.\pIt's called an 'impact acknowledgement'. Nobody can tell me what it acknowledges."), MSGBOX_DEFAULT)
     }

@@ -6,6 +6,11 @@ mapscripts ParcelCoastHouse4_MapScripts {
 script ParcelCoastHouse4_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Four days at the line and a garden that's actually grown something. Beans.\pI bring them to the quay. HARLAND's union eats them at the meetings."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: The line's on half days under the review. Half days, full pay; HARLAND's union saw to that. I've a garden now."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelCoastHouse4_Woman {
 script ParcelCoastHouse4_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Mixed lengths down the line most mornings. I don't sort them any more. The inspector does.\pShe asked my name on her first day. I told her. It's in her book."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: They read the eleven-fish line at the hearing. My line. I sorted them. Nobody asked my name. That's fine. It was true."), MSGBOX_DEFAULT)
         release

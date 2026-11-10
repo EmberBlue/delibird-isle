@@ -30,12 +30,14 @@ ParcelFernwickCenter_Trainer::
 # 21 "data/maps/ParcelFernwickCenter/scripts.pory"
 	faceplayer
 # 22 "data/maps/ParcelFernwickCenter/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickCenter_Trainer_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelFernwickCenter_Trainer_2
 # 27 "data/maps/ParcelFernwickCenter/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickCenter_Trainer_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickCenter_Trainer_5
 # 32 "data/maps/ParcelFernwickCenter/scripts.pory"
-	msgbox ParcelFernwickCenter_Trainer_Text_2, MSGBOX_DEFAULT
-# 33 "data/maps/ParcelFernwickCenter/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickCenter_Trainer_8
+# 37 "data/maps/ParcelFernwickCenter/scripts.pory"
+	msgbox ParcelFernwickCenter_Trainer_Text_3, MSGBOX_DEFAULT
+# 38 "data/maps/ParcelFernwickCenter/scripts.pory"
 	release
 	end
 
@@ -53,65 +55,80 @@ ParcelFernwickCenter_Trainer_5:
 	release
 	end
 
+ParcelFernwickCenter_Trainer_8:
+# 33 "data/maps/ParcelFernwickCenter/scripts.pory"
+	msgbox ParcelFernwickCenter_Trainer_Text_2, MSGBOX_DEFAULT
+# 34 "data/maps/ParcelFernwickCenter/scripts.pory"
+	release
+	end
+
 
 ParcelFernwickCenter_ReadRack::
-# 38 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 43 "data/maps/ParcelFernwickCenter/scripts.pory"
 	msgbox ParcelFernwickCenter_ReadRack_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickCenter_ReadMap::
-# 43 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 48 "data/maps/ParcelFernwickCenter/scripts.pory"
 	msgbox ParcelFernwickCenter_ReadMap_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickCenter_Bound::
-# 50 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 55 "data/maps/ParcelFernwickCenter/scripts.pory"
 	msgbox ParcelFernwickCenter_Bound_Text_0, MSGBOX_SIGN
-# 51 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 56 "data/maps/ParcelFernwickCenter/scripts.pory"
 	msgbox ParcelFernwickCenter_Bound_Text_1, MSGBOX_SIGN
-# 52 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 57 "data/maps/ParcelFernwickCenter/scripts.pory"
 	msgbox ParcelFernwickCenter_Bound_Text_2, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickCenter_Trainer_Text_0:
 # 23 "data/maps/ParcelFernwickCenter/scripts.pory"
+	.string "BOY: My WOOPER's been fine for a year.\n"
+	.string "The nurse says the landing ones are\l"
+	.string "fine now too, mostly.\p"
+	.string "Mostly is her word. She says it\n"
+	.string "carefully.$"
+
+ParcelFernwickCenter_Trainer_Text_1:
+# 28 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "BOY: The nurse healed my WOOPER. It\n"
 	.string "stayed healed this time. She says the\l"
 	.string "water in the channel is better. The\l"
 	.string "WOOPER says nothing. It's a WOOPER.$"
 
-ParcelFernwickCenter_Trainer_Text_1:
-# 28 "data/maps/ParcelFernwickCenter/scripts.pory"
+ParcelFernwickCenter_Trainer_Text_2:
+# 33 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "BOY: My WOOPER's fine now. The nurse\n"
 	.string "says the ones from upstream are fine\l"
 	.string "and the ones from the landing aren't.\p"
 	.string "She's started writing down which is\n"
 	.string "which. She never did that before.$"
 
-ParcelFernwickCenter_Trainer_Text_2:
-# 32 "data/maps/ParcelFernwickCenter/scripts.pory"
+ParcelFernwickCenter_Trainer_Text_3:
+# 37 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "BOY: The nurse healed my WOOPER. Then\n"
 	.string "it got sick again.\p"
 	.string "It's a WOOPER thing, apparently.$"
 
 ParcelFernwickCenter_ReadRack_Text_0:
-# 38 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 43 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "Leaflets: SURVEY CERTIFICATION --\n"
 	.string "PRACTICAL EXAMS WEEKLY. Under it, in\l"
 	.string "pen: ask for TARN. Don't smile.$"
 
 ParcelFernwickCenter_ReadMap_Text_0:
-# 43 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 48 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "A map of the district. Someone has\n"
 	.string "drawn the marsh's old shoreline on it in\l"
 	.string "pencil, a finger-width out from the\l"
 	.string "printed one.$"
 
 ParcelFernwickCenter_Bound_Text_0:
-# 50 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 55 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "A bound volume of THE SKALDMERE\n"
 	.string "COURIER on the Centre's shelf, the\l"
 	.string "years before you came. The nurse says\l"
@@ -129,7 +146,7 @@ ParcelFernwickCenter_Bound_Text_0:
 	.string "sea.$"
 
 ParcelFernwickCenter_Bound_Text_1:
-# 51 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 56 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "RECORD HERRING YEAR. A photograph of\n"
 	.string "the quay heaped. Smaller, inside: the\l"
 	.string "Survey notes the record is for\l"
@@ -146,7 +163,7 @@ ParcelFernwickCenter_Bound_Text_1:
 	.string "smiling. The caption calls it modesty.$"
 
 ParcelFernwickCenter_Bound_Text_2:
-# 52 "data/maps/ParcelFernwickCenter/scripts.pory"
+# 57 "data/maps/ParcelFernwickCenter/scripts.pory"
 	.string "CORRECTION. The Courier regrets that\n"
 	.string "last week's figure for the Reedmere\l"
 	.string "WOOPER count was supplied by the\l"

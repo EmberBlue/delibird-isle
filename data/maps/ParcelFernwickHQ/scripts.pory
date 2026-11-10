@@ -8,6 +8,11 @@ mapscripts ParcelFernwickHQ_MapScripts {
 script ParcelFernwickHQ_Reception {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("RECEPTION: HALE sleeps most nights now. I can tell by the mornings.\pDon't tell him. He'd stop."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RECEPTION: HALE slept. A whole night. I know because he came in and didn't look like that. Don't tell him I noticed."), MSGBOX_DEFAULT)
         release
@@ -26,6 +31,11 @@ script ParcelFernwickHQ_Reception {
 script ParcelFernwickHQ_Ranger {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("RANGER: The poster's up, and the river minutes are up beside it. HALE says they're the same poster.\pI'm starting to see it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RANGER: 'We don't win. We reduce harm.' HALE put the poster back up. He didn't say anything. He just put it back up."), MSGBOX_DEFAULT)
         release

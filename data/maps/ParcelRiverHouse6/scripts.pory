@@ -6,6 +6,11 @@ mapscripts ParcelRiverHouse6_MapScripts {
 script ParcelRiverHouse6_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: SLUICE has me read the spine twice a quarter now and sign both. 'Meltwater, HAUKFELL' is printed on the form.\pThe Board reads what's printed. I printed it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: SLUICE had me re-read every gauge on the spine after the hearing. Same numbers. She wanted them in my hand, not the Board's."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelRiverHouse6_Man {
 script ParcelRiverHouse6_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: The river's budget balanced. Dad says. I asked if the mountain paid it back. He said no, the mountain's still spending, but we know what it's spending now.\pKnowing is in the budget, he says."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The river's budget got bigger! Dad says it's not money. I said I know, Dad."), MSGBOX_DEFAULT)
         release

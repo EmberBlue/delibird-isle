@@ -4,6 +4,11 @@ mapscripts ParcelWeatherInstitute1F_MapScripts {
 script ParcelWeatherInstitute1F_Reception {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("RECEPTION: The director sees anyone, any day. He's taken down the sign that said otherwise.\pHe kept it. It's in his office, face to the wall."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RECEPTION: The director is upstairs. He sees anyone now. He says the four divisions were the easy part. Go up."), MSGBOX_DEFAULT)
         release
@@ -21,6 +26,11 @@ script ParcelWeatherInstitute1F_Reception {
 script ParcelWeatherInstitute1F_Tech1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("TECHNICIAN: Over-the-fence data, monthly, beside the roof data. The two lines have started to agree.\pThe director says that's the dish catching up. I say it's the fence."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("TECHNICIAN: The drawer's open. The over-the-fence data went to the review in three boxes. We publish it monthly now, next to the plot data. The drawer's for sandwiches."), MSGBOX_DEFAULT)
         release
@@ -38,6 +48,11 @@ script ParcelWeatherInstitute1F_Tech1 {
 script ParcelWeatherInstitute1F_Tech2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_CASTFORM_DONE)) {
+        msgbox(format("TECHNICIAN: Still rain form. It has rained very gently on my desk for a year.\pI've stopped moving the in-tray. The paper dries."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_CASTFORM_DONE)) {
         msgbox(format("TECHNICIAN: Back at its desk. Rain form, still. It rains very gently on my in-tray now. I've moved the in-tray."), MSGBOX_DEFAULT)
         release

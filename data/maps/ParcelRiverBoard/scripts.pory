@@ -43,6 +43,11 @@ script ParcelRiverBoard_Sluice {
 script ParcelRiverBoard_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("CLERK: Allocations posted, names under them, objections open the first of every month. I keep the Phase 2 file on the counter now.\pAnyone can read it. Almost nobody does. The point is the almost."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CLERK: Allocations reposted with six names under them. Objections reopened. The Phase 2 file came off the shelf and into the hearing. You can read it now. Everyone can. Nobody asks."), MSGBOX_DEFAULT)
         release
@@ -60,6 +65,11 @@ script ParcelRiverBoard_Clerk {
 script ParcelRiverBoard_Ratepayer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Plot nine. Metered. Cheaper. The bore crew's wife has moved to the valley.\pI pay for water off a hill nobody's drilling. It's the best bill I've had."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Plot nine. Metered, still. The rate came down a page. I pay for water that used to be free and now it's cheaper. I'm told that's a win. I'm trying to feel it."), MSGBOX_DEFAULT)
         release
@@ -77,6 +87,11 @@ script ParcelRiverBoard_Ratepayer {
 script ParcelRiverBoard_Meterman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("METER READER: Fourteen plots, fourteen meters, and the readings go to SLUICE and then to the window. People read them.\pI used to think I was the only one who read a meter."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("METER READER: Fourteen plots, fourteen meters, hourly, and the readings go to SLUICE first now, not the coast office. She reads them herself. She's a slow reader. Deliberately."), MSGBOX_DEFAULT)
         release

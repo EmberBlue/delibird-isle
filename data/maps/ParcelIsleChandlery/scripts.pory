@@ -38,6 +38,11 @@ ParcelIsleChandlery_Items::
 script ParcelIsleChandlery_Hjalmar {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("HJALMAR: Rope, lamp oil, and the review's notices. KIT pins them up.\pThe third's free, and people stand and read it before they buy the first two."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HJALMAR: Rope, lamp oil, and gossip. KIT sells two of those.\pThe third is free now, and it's all anyone's buying."), MSGBOX_DEFAULT)
     }

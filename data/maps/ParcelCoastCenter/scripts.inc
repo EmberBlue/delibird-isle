@@ -32,12 +32,14 @@ ParcelCoastCenter_Trainer::
 # 20 "data/maps/ParcelCoastCenter/scripts.pory"
 	faceplayer
 # 21 "data/maps/ParcelCoastCenter/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastCenter_Trainer_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastCenter_Trainer_2
 # 26 "data/maps/ParcelCoastCenter/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastCenter_Trainer_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastCenter_Trainer_5
 # 31 "data/maps/ParcelCoastCenter/scripts.pory"
-	msgbox ParcelCoastCenter_Trainer_Text_2, MSGBOX_DEFAULT
-# 32 "data/maps/ParcelCoastCenter/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastCenter_Trainer_8
+# 36 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_Trainer_Text_3, MSGBOX_DEFAULT
+# 37 "data/maps/ParcelCoastCenter/scripts.pory"
 	release
 	end
 
@@ -55,28 +57,44 @@ ParcelCoastCenter_Trainer_5:
 	release
 	end
 
+ParcelCoastCenter_Trainer_8:
+# 32 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_Trainer_Text_2, MSGBOX_DEFAULT
+# 33 "data/maps/ParcelCoastCenter/scripts.pory"
+	release
+	end
+
 
 ParcelCoastCenter_ReadRack::
-# 37 "data/maps/ParcelCoastCenter/scripts.pory"
+# 42 "data/maps/ParcelCoastCenter/scripts.pory"
 	msgbox ParcelCoastCenter_ReadRack_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastCenter_ReadMap::
-# 42 "data/maps/ParcelCoastCenter/scripts.pory"
+# 47 "data/maps/ParcelCoastCenter/scripts.pory"
 	msgbox ParcelCoastCenter_ReadMap_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastCenter_Trainer_Text_0:
 # 22 "data/maps/ParcelCoastCenter/scripts.pory"
+	.string "SAILOR: Five WINGULL in this month,\n"
+	.string "none with hooks. The nurse has started\l"
+	.string "weighing them. Heavier.\p"
+	.string "She writes it on the wall by the door.\n"
+	.string "It's the only chart in here that goes\l"
+	.string "up.$"
+
+ParcelCoastCenter_Trainer_Text_1:
+# 27 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "SAILOR: The WINGULL came in today\n"
 	.string "without hooks in them. Three. The nurse\l"
 	.string "didn't know what to do with a well bird.\l"
 	.string "Neither did I.$"
 
-ParcelCoastCenter_Trainer_Text_1:
-# 27 "data/maps/ParcelCoastCenter/scripts.pory"
+ParcelCoastCenter_Trainer_Text_2:
+# 32 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "SAILOR: The nurse read your survey to\n"
 	.string "the waiting room. The hooks, the\l"
 	.string "starving. She said 'coastal thing', and\l"
@@ -85,22 +103,22 @@ ParcelCoastCenter_Trainer_Text_1:
 	.string "First time I've heard her say what\n"
 	.string "something isn't.$"
 
-ParcelCoastCenter_Trainer_Text_2:
-# 31 "data/maps/ParcelCoastCenter/scripts.pory"
+ParcelCoastCenter_Trainer_Text_3:
+# 36 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "SAILOR: Half the WINGULL in here come\n"
 	.string "in with hooks in them. The other half\l"
 	.string "come in with nothing in them. Starved.\l"
 	.string "The nurse says it's a coastal thing.$"
 
 ParcelCoastCenter_ReadRack_Text_0:
-# 37 "data/maps/ParcelCoastCenter/scripts.pory"
+# 42 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "Leaflets for the cannery's health plan,\n"
 	.string "FOUNDATION crest on every page. Under\l"
 	.string "them, a handwritten card: HOOK REMOVAL,\l"
 	.string "FREE, ASK THE NURSE.$"
 
 ParcelCoastCenter_ReadMap_Text_0:
-# 42 "data/maps/ParcelCoastCenter/scripts.pory"
+# 47 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "A chart of the coast with the dredge\n"
 	.string "line marked in red. Somebody has added\l"
 	.string "the old reef in blue, from memory.\p"

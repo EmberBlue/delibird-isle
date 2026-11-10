@@ -4,6 +4,11 @@ mapscripts ParcelCoastUnion_MapScripts {
 script ParcelCoastUnion_Chair {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("CHAIR: Forty-one boats, thirty-eight notes, three paid off through the review's fund. Three.\pThe hall voted on quotas last month and for the first time I couldn't guess the count. Good."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CHAIR: The review grounds half the fleet two days a week. Half the hall wants your head. The other half knows the fish were gone anyway and somebody finally said so.\pI'm the other half. Barely."), MSGBOX_DEFAULT)
         release
@@ -16,6 +21,11 @@ script ParcelCoastUnion_Chair {
 script ParcelCoastUnion_Fisher1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("FISHER: HARLAND spoke nine minutes once and hasn't since. He's on the water.\pI timed him coming in yesterday. Lighter boat. Easier to time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: HARLAND spoke for the river and the coast both, in one breath. The hearing let him. Nine minutes. I timed it. Best nine minutes this hall's had."), MSGBOX_DEFAULT)
         release
@@ -33,6 +43,11 @@ script ParcelCoastUnion_Fisher1 {
 script ParcelCoastUnion_Fisher2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("FISHER: 'We don't know' is holding. Two years of it. They count what comes in and nobody models.\pI never thought I'd miss being told a date. I do, a bit. I'd rather this."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: The Board's model said six years. The review threw the model out and said 'we don't know'. I'll take 'we don't know'. It's the first true thing they've said about the stock."), MSGBOX_DEFAULT)
         release

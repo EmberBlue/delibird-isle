@@ -3,6 +3,11 @@ mapscripts ParcelRiverHouse1_MapScripts {
 script ParcelRiverHouse1_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_BEAVER_DONE)) {
+        msgbox(format("OLD MAN: A dam. Small. Sticks and mud and a pool behind it you could swim in if you were a boy. I'm not. I sat by it an hour.\pThe allocation did that. I'll never say that sentence again."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: Fresh chips, pale, and the allocation gives the reach above the town a flow again. I went and looked. I'll keep going. One beaver, and I'll die happy. I've told everyone that too."), MSGBOX_DEFAULT)
         release
@@ -34,6 +39,11 @@ script ParcelRiverHouse1_OldMan {
 script ParcelRiverHouse1_OldWoman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OLD WOMAN: He walks up to the dam every morning and comes back wet to the knee. Fifty-two years of the pond. I pack the lunch.\pI've started packing two. He meets people up there."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD WOMAN: Fifty-one years of the pond, and now he walks up every morning to look for a beaver. I pack him a lunch. He comes back with wet boots and no beaver. He's happier than I've seen him."), MSGBOX_DEFAULT)
         release

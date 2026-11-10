@@ -4,6 +4,11 @@ mapscripts ParcelFloodbasinHouse2_MapScripts {
 script ParcelFloodbasinHouse2_Wife {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Fourth flood came slower. A hand lower than the third line. I didn't paint a fourth line.\pA hand lower doesn't get a line. That's the rule I made."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: Third flood, and the Board man says the fourth comes slower with the sluice. The water line's on the wall. I'm leaving it. If the fourth comes, I want to measure him against it."), MSGBOX_DEFAULT)
         release
@@ -21,6 +26,11 @@ script ParcelFloodbasinHouse2_Wife {
 script ParcelFloodbasinHouse2_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: The WOOPER with the wrong feet moved! To the next puddle! The CORPS lady said that's the first thing it's done in two years.\pI did a drawing. She kept it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: The WOOPER with the wrong feet is famous now! A lady drew it! It still doesn't go anywhere."), MSGBOX_DEFAULT)
         release

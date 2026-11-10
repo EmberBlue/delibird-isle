@@ -3,6 +3,11 @@ mapscripts ParcelCoastHouse3_MapScripts {
 script ParcelCoastHouse3_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("CLERK: The catch logs are public. Anyone can read the day the numbers turned. Three people have.\pOne was a child doing homework. That's the best reader a ledger ever had."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CLERK: The exact day the numbers started going down: I gave it to the hearing. The date, the ledger page, the signature under it. It wasn't mine. It wasn't HOLLIS's either. It was above both of us."), MSGBOX_DEFAULT)
         release

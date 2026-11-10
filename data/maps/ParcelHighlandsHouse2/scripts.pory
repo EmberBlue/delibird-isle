@@ -6,6 +6,11 @@ mapscripts ParcelHighlandsHouse2_MapScripts {
 script ParcelHighlandsHouse2_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: He's on the cap crew. Full wage, reading a gauge that says nothing. He sleeps.\pI'd pay for that out of my own wage if they stopped."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: The bore's capped. He's on half wage pending survey. He sleeps at night now. I'll take the half."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelHighlandsHouse2_Woman {
 script ParcelHighlandsHouse2_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: Dad reads the cap now. He says the hill under it says nothing, and nothing is what you want a hill to say.\pI asked what the sea said. He said: later."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: The ranger found the tarn under the hill. Dad says he knew. I asked why he didn't say. He said that's the whole question, son."), MSGBOX_DEFAULT)
         release

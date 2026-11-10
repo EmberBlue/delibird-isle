@@ -55,12 +55,14 @@ ParcelCoastMart_Customer::
 # 30 "data/maps/ParcelCoastMart/scripts.pory"
 	faceplayer
 # 31 "data/maps/ParcelCoastMart/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastMart_Customer_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastMart_Customer_2
 # 36 "data/maps/ParcelCoastMart/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastMart_Customer_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastMart_Customer_5
 # 41 "data/maps/ParcelCoastMart/scripts.pory"
-	msgbox ParcelCoastMart_Customer_Text_2, MSGBOX_DEFAULT
-# 42 "data/maps/ParcelCoastMart/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastMart_Customer_8
+# 46 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_Customer_Text_3, MSGBOX_DEFAULT
+# 47 "data/maps/ParcelCoastMart/scripts.pory"
 	release
 	end
 
@@ -78,28 +80,44 @@ ParcelCoastMart_Customer_5:
 	release
 	end
 
+ParcelCoastMart_Customer_8:
+# 42 "data/maps/ParcelCoastMart/scripts.pory"
+	msgbox ParcelCoastMart_Customer_Text_2, MSGBOX_DEFAULT
+# 43 "data/maps/ParcelCoastMart/scripts.pory"
+	release
+	end
+
 
 ParcelCoastMart_ReadShelf::
-# 47 "data/maps/ParcelCoastMart/scripts.pory"
+# 52 "data/maps/ParcelCoastMart/scripts.pory"
 	msgbox ParcelCoastMart_ReadShelf_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastMart_ReadTins::
-# 52 "data/maps/ParcelCoastMart/scripts.pory"
+# 57 "data/maps/ParcelCoastMart/scripts.pory"
 	msgbox ParcelCoastMart_ReadTins_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastMart_Customer_Text_0:
 # 32 "data/maps/ParcelCoastMart/scripts.pory"
+	.string "SAILOR: DIVE BALLS, still. The nursery's\n"
+	.string "there, down on the bottom, small things\l"
+	.string "in it. I don't catch them. I count them\l"
+	.string "for the review.\p"
+	.string "They pay. Less than fish. More than\n"
+	.string "nothing.$"
+
+ParcelCoastMart_Customer_Text_1:
+# 37 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "SAILOR: DIVE BALLS. Bought one. The\n"
 	.string "clerk asked what for. I said the review\l"
 	.string "says there's a nursery on the bottom. I\l"
 	.string "want to see a nursery.$"
 
-ParcelCoastMart_Customer_Text_1:
-# 37 "data/maps/ParcelCoastMart/scripts.pory"
+ParcelCoastMart_Customer_Text_2:
+# 42 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "SAILOR: DIVE BALLS, still. For the fish,\n"
 	.string "still. The clerk says the ranger's\l"
 	.string "survey has the word 'urchin' in it twelve\l"
@@ -107,21 +125,21 @@ ParcelCoastMart_Customer_Text_1:
 	.string "I said twelve's a lot. She said that's\n"
 	.string "what the survey said about the urchins.$"
 
-ParcelCoastMart_Customer_Text_2:
-# 41 "data/maps/ParcelCoastMart/scripts.pory"
+ParcelCoastMart_Customer_Text_3:
+# 46 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "SAILOR: DIVE BALLS. For what, I asked.\n"
 	.string "The clerk said for the fish. I said\l"
 	.string "there's no fish. She said that's not her\l"
 	.string "department.$"
 
 ParcelCoastMart_ReadShelf_Text_0:
-# 47 "data/maps/ParcelCoastMart/scripts.pory"
+# 52 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "Top shelf: DIVE BALLS, a full case. The\n"
 	.string "price tag has been changed three times,\l"
 	.string "downward.$"
 
 ParcelCoastMart_ReadTins_Text_0:
-# 52 "data/maps/ParcelCoastMart/scripts.pory"
+# 57 "data/maps/ParcelCoastMart/scripts.pory"
 	.string "Tins. The crest on every one. The clerk\n"
 	.string "has turned one so the crest faces the\l"
 	.string "wall, and left it like that.$"

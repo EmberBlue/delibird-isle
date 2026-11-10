@@ -4,6 +4,11 @@ mapscripts ParcelFloodbasinHouse1_MapScripts {
 script ParcelFloodbasinHouse1_Hedda {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_HEDDA_DONE)) {
+        msgbox(format("HEDDA: The Board man comes Tuesdays and I ask him a question each time. He's started bringing answers.\pForty years of not asking, and it's the asking that's hard to stop."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HEDDA: Forty years I didn't ask. You asked, and then a hearing asked, and now a man from the Board asks every Tuesday. I liked it better when nobody asked. That's a confession too."), MSGBOX_DEFAULT)
         release

@@ -185,6 +185,11 @@ script ParcelCoast_GymHarland {
 script ParcelCoast_Hale {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("HALE: The review's still sitting. They sit slow. HOLLIS gave evidence last week, in her own name, and I watched her from the back and she didn't need me to.\pGo rest. That's an order from someone who can't give you any."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HALE: They read it aloud at the hearing. All of it. HOLLIS sat through every page without moving. I watched her. She's the one who taught me to sit still."), MSGBOX_DEFAULT)
         release
@@ -228,6 +233,11 @@ script ParcelCoast_Hale {
 script ParcelCoast_Worker {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WORKER: Fifth generation's on the quay with a clipboard instead of a hook. The review pays him.\pI'd rather he had the hook. I'd rather there were fish for the hook. We'll take the clipboard."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WORKER: Four generations on this quay, and it took a ranger's notebook to put the fifth in a hearing room. My boy spoke. Two minutes. He was good."), MSGBOX_DEFAULT)
         release
@@ -245,6 +255,11 @@ script ParcelCoast_Worker {
 script ParcelCoast_Vendor1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Cod, mixed sizes, and a big one on Tuesday that drew a crowd.\pI asked the inspector if a crowd counts as a reading. She wrote it down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: Cod. Different sizes today. The review's inspector weighs them herself. Customers ask why they're not tidy. I tell them. First time I've told them."), MSGBOX_DEFAULT)
         release
@@ -262,6 +277,11 @@ script ParcelCoast_Vendor1 {
 script ParcelCoast_Vendor2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Urchin roe's off the list for good. The bottom's a nursery, the review says, and nurseries don't sell.\pI'm selling mussels. They're coming back on the wall. Someone should write that down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Urchin roe's off the list. The review says the bottom's a nursery, not a shelf. Nothing else down there to sell. That was the point, wasn't it."), MSGBOX_DEFAULT)
         release
@@ -279,6 +299,11 @@ script ParcelCoast_Vendor2 {
 script ParcelCoast_Vendor3 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: The rent's a page lower and the ice is still FOUNDATION ice. I sell fish.\pI've started reading the pages, though. That's new, and I don't like how much there is."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: Ice is still FOUNDATION ice. Fuel's still FOUNDATION fuel. The rent went down a page in the review. I sell fish. I noticed the page."), MSGBOX_DEFAULT)
         release
@@ -296,6 +321,11 @@ script ParcelCoast_Vendor3 {
 script ParcelCoast_Vendor4 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OLD MAN: Three WAILMER in the mouth this month. Three. I stood with the children and told them you could walk across the harbour once.\pThey believed me. That's new."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: WAILMER in the harbour mouth yesterday. One. My father would have laughed at one. I stood on the quay and watched it like a boy."), MSGBOX_DEFAULT)
         release
@@ -313,6 +343,11 @@ script ParcelCoast_Vendor4 {
 script ParcelCoast_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: The gulls dive most mornings now. Mum doesn't stop to watch any more.\pI do. Somebody should."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The gulls dived today. Mum stopped on the quay to watch. She didn't say anything. She held my hand very tight."), MSGBOX_DEFAULT)
         release
@@ -330,6 +365,11 @@ script ParcelCoast_Girl {
 script ParcelCoast_Docker {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DOCKER: Cannery's on four days. Full pay. The union won it. HARLAND's lot say it's the first thing won in that hall since the war.\pI sleep in daylight and I've stopped minding."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("DOCKER: Cannery's on half days. Half days, full pay. HARLAND's lot argued it in the union hall for a week. I slept in a bed in daylight. Strange thing."), MSGBOX_DEFAULT)
         release
@@ -347,6 +387,11 @@ script ParcelCoast_Docker {
 script ParcelCoast_GullMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_ROOST_DONE)) {
+        msgbox(format("GULL MAN: Sixty-eight at dusk. Seven more. They're nesting on the wall now, not just roosting.\pThe dredge is still parked. I count the dredge too. Still one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_ROOST) && !flag(FLAG_SKALD_Q_ROOST_DONE)) {
         if (flag(FLAG_SKALD_Q_ROOST_FOUND)) {
             msgbox(format("GULL MAN: Sixty-one. That's more than the stacks ever held. They've found a way to live on what we built to kill the beach.\pI don't know if that's hope or just gulls. Here. From the sea, before the dredge."), MSGBOX_DEFAULT)
@@ -1921,6 +1966,11 @@ script ParcelCoast_GymHarland_Rematch {
 script ParcelCoast_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DORSEY: Six berths became two, and a cold store nobody's built. The plaque's in a drawer. I kept it.\pDates matter even when the thing didn't happen."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("DORSEY: Development that listens. I said it at the hearing. They wrote down 'listens' in quotes. I've seen the transcript.\pThe quotes are fair."), MSGBOX_DEFAULT)
         release

@@ -4,6 +4,11 @@ mapscripts ParcelFernwickFisher_MapScripts {
 script ParcelFernwickFisher_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_GRETTIR_DONE)) {
+        msgbox(format("GRETTIR: Two POLIWAG in the CORPS pond. I've told the girl, and the boy who counts for HALE. Three of us know.\pThat's how it starts. I've said that all my life, and now I've seen it start."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GRETTIR: A POLIWAG. In the CORPS pond. One. I've told nobody but you and the girl who watches me. That's how it starts. That's always how it starts."), MSGBOX_DEFAULT)
         release

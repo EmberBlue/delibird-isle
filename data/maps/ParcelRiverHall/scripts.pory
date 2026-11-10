@@ -54,6 +54,11 @@ script ParcelRiverHall_Meeting {
 script ParcelRiverHall_Mayor {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAYOR: Nine years, against, and now a plaque in the hall that says what the vote was and who counted it.\pI had it made small. Small is what we could afford, and it's the right size."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAYOR: Carried, against, nine years, and the hearing counted every one of them. They read our minutes into the record. Nine years of minutes. The clerk's hand was shaking. Mine too."), MSGBOX_DEFAULT)
         release
@@ -76,6 +81,11 @@ script ParcelRiverHall_Mayor {
 script ParcelRiverHall_Harland {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("HARLAND: Spoke once. Won't again unless they make me. The water's a hand up and the SEAKING are back in the riffle above the mill.\pI'd rather tell you that than anything I said in here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HARLAND: The mayor asked me to speak at the hearing. I spoke. I'd still rather be on the water. There's a little more of it this year to be on."), MSGBOX_DEFAULT)
         release
@@ -93,6 +103,11 @@ script ParcelRiverHall_Harland {
 script ParcelRiverHall_Farmer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("FARMER: Plot nine. Metered. The number's lower and the hill's stopped running into my bill.\pThey say the bore's capped. I say the hill's just waiting."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FARMER: Plot nine. Metered. The sign's still up. The number on it is lower."), MSGBOX_DEFAULT)
         release
@@ -110,6 +125,11 @@ script ParcelRiverHall_Farmer {
 script ParcelRiverHall_Dell {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DELL: Forty years, written down, read aloud, and this spring a man came and measured the discharge with me standing there.\pI didn't say anything. I'd said it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("DELL: Forty years, and somebody wrote it down, and then somebody read it aloud. I've nothing left to say till somebody does something. Then I'll say more."), MSGBOX_DEFAULT)
         release
@@ -127,6 +147,11 @@ script ParcelRiverHall_Dell {
 script ParcelRiverHall_Sluice {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("SLUICE: The ledger balances every quarter in public now. Nobody comes. That's the point.\pA thing you can watch doesn't need watching."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SLUICE: The ledger balanced in public for once. The councilman watched it balance. I'm told he didn't enjoy it. The ledger didn't care."), MSGBOX_DEFAULT)
         release
@@ -144,6 +169,11 @@ script ParcelRiverHall_Sluice {
 script ParcelRiverHall_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DORSEY: I come to the meetings and sit at the back. Someone else chairs. I'm told I'm good at the back.\pI'd have argued that, once."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("DORSEY: I lost an argument in public. I said I'd rather. I meant it. I still mean it. It's harder than I made it sound."), MSGBOX_DEFAULT)
         release
@@ -161,6 +191,11 @@ script ParcelRiverHall_Dorsey {
 script ParcelRiverHall_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("ILEX: The bank above the town. I go up every month and the stake's a hand under the cloth and holding.\pYou should see it once a year. Not for the river. For the habit."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("ILEX: The bank above the town. I still go. The river has a name on it now. Yours and mine, and the hearing's stamp under both."), MSGBOX_DEFAULT)
         release
@@ -178,6 +213,11 @@ script ParcelRiverHall_Ilex {
 script ParcelRiverHall_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Still coming. The HAUKFELL family sits in the front row now. The boy takes the minutes.\pNobody asked him to. Nobody's stopped him."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: I came to every meeting and nothing changed, and then one meeting was read into a hearing and something did. I'm still coming. Now I know why."), MSGBOX_DEFAULT)
         release

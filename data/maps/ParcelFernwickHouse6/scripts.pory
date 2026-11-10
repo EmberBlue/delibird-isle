@@ -6,6 +6,11 @@ mapscripts ParcelFernwickHouse6_MapScripts {
 script ParcelFernwickHouse6_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Feed the review's clerks the first Tuesday, the Survey girl Thursdays, HALE whenever he remembers to eat.\pNobody's thin this year. I check."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Fed the hearing's clerks for a week. They eat like people who sit all day. They have."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelFernwickHouse6_Man {
 script ParcelFernwickHouse6_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: Dad says the whole region's still eating what you cooked. He says you don't have to be hungry to be fed.\pI don't understand it. He says I will."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Dad says you fed a whole region a truth. He says that's cooking."), MSGBOX_DEFAULT)
         release

@@ -3,6 +3,11 @@ mapscripts ParcelCoastHouse2_MapScripts {
 script ParcelCoastHouse2_Skipper {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("SKIPPER: The lending company sold the forty boats. The review's fund bought nine of them back for the men who'd lost them.\pNot mine. I sold mine. I knew the difference the day I did it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SKIPPER: Sold the boat the year the dredge came. The lending company's got forty boats tied up now and no quota to run them. I sat in my window and didn't gloat. Much."), MSGBOX_DEFAULT)
         release
@@ -20,6 +25,11 @@ script ParcelCoastHouse2_Skipper {
 script ParcelCoastHouse2_Wife {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WIFE: He goes to the hall every week now. Ink on his hands. He's the one who writes the minutes.\pHe never wrote anything in his life but a bill of sale."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WIFE: He went down to the union hall. First time in six years he's gone anywhere but the window. Came back with ink on his fingers. He'd signed something. He wouldn't say what."), MSGBOX_DEFAULT)
         release

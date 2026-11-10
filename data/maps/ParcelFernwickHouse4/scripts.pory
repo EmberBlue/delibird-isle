@@ -6,6 +6,11 @@ mapscripts ParcelFernwickHouse4_MapScripts {
 script ParcelFernwickHouse4_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: The cabinet came. Three drawers of river and one of coast, and the Survey's asked for nothing, still.\pI've started a drawer for them anyway. Red label."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: The hearing asked for every page. I carried them to the coast myself. Eleven hundred, their clerk said. I'd counted twelve."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelFernwickHouse4_Woman {
 script ParcelFernwickHouse4_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: Dad still says 'wet on purpose'. It's what he calls you. He says it's a compliment.\pHe says it smiling, so."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Dad read your name in the paper and said 'wet on purpose'. He was smiling when he said it."), MSGBOX_DEFAULT)
         release

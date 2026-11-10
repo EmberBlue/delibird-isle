@@ -73,6 +73,11 @@ script ParcelWetlands_OnTransition {
 script ParcelWetlands_Harland {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("HARLAND: My father's name's on the radio and in a record and on a stake. Three places. That's more than most men get.\pI still don't trust your people. I trust you."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HARLAND: They read your report out on the radio. My name was in it. My father's, too.\pFirst time anyone said his name on a radio.\pGo on. I've got nets to mend."), MSGBOX_DEFAULT)
         release
@@ -110,6 +115,11 @@ script ParcelWetlands_Harland {
 script ParcelWetlands_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DORSEY: The findings were welcomed. The findings have been implemented in part. I've learned to hear myself.\pIt's an unpleasant skill and I'd recommend it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("DORSEY: RANGER! The very person.\pYou'll have seen the Council's statement. We welcome the findings. Welcome them.\pSome of us were calling for an independent review years ago. Check the record."), MSGBOX_DEFAULT)
         msgbox(format("DORSEY: Development that listens. Relief that reaches. It's what I've always stood for out here.\pThe review board will want local liaisons, you know. People who understand both sides. I've put my name forward.\pSomebody sensible has to."), MSGBOX_DEFAULT)
@@ -234,6 +244,11 @@ script ParcelWetlands_DeadFish {
 script ParcelWetlands_Crowd1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: He drinks from the tap now. I've stopped watching. Mostly.\pThe monitor on the bank posts a number every morning, and I read it before I read anything else."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: My husband drank from that channel the morning it went bad. He's fine. The monitor on the bank says the channel's fine too, now. I'll drink from it before he does. Then we'll know."), MSGBOX_DEFAULT)
         release
@@ -251,6 +266,11 @@ script ParcelWetlands_Crowd1 {
 script ParcelWetlands_Crowd2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Our name's on the sheet now, under 'allocation'. Small number. Ours.\pI go in and look at it the way you'd look at a boat you'd paid off."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Somebody did this, I said. The hearing said who. A permit page says how much they're allowed to do now. It's a number. I can argue with a number. I couldn't argue with a night."), MSGBOX_DEFAULT)
         release
@@ -268,6 +288,11 @@ script ParcelWetlands_Crowd2 {
 script ParcelWetlands_Crowd3 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: Dad says it's the allocation. He says it like a word he's learned to use.\pHe says you wrote it down like it cost him less now. I think he means thanks."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Dad says it wasn't your fault. He says it like it cost him. He also says you wrote it down. He says that like it cost him more."), MSGBOX_DEFAULT)
         release
@@ -397,6 +422,11 @@ script ParcelWetlands_Enforcer {
 script ParcelWetlands_Gunnar {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_GUNNAR_DONE)) {
+        msgbox(format("GUNNAR: Twice as far out, then less. The count's in. Not where it was. In.\pI write it on the boat with a nail now, like a notch. You started a lot of nails, RANGER."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GUNNAR: Twice as far out, I said. The count's coming back in. Not to where it was. In. You wrote it down and now I write it down and the boy writes it down. Three of us. That's a survey."), MSGBOX_DEFAULT)
         release
@@ -2019,6 +2049,11 @@ script ParcelWetlands_Stringer {
 script ParcelWetlands_TurfCutter {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_TURF_DONE)) {
+        msgbox(format("TURF CUTTER: Cutting less. By choice, still. The north edge has WOOPER on it this spring.\pI didn't put them there. I didn't take the ground out from under them either. That's the whole of my part."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_TURF_DONE)) {
         msgbox(format("TURF CUTTER: I'm cutting less this year. First time it's been by choice."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_TURF)) {

@@ -8,6 +8,11 @@ mapscripts ParcelFernwickSurvey_MapScripts {
 script ParcelFernwickSurvey_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_CRATE_DONE)) {
+        msgbox(format("CLERK: The basement's got a light in it now. First in forty years. I found two more crates. Both words. Both filed.\pThe boot print's framed."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_CRATE) && !flag(FLAG_SKALD_Q_CRATE_DONE)) {
         if (flag(FLAG_SKALD_Q_CRATE_FOUND)) {
             msgbox(format("CLERK: There it is. Forty years of basement, one word, one boot print. I'll keep the boot print."), MSGBOX_DEFAULT)
@@ -46,6 +51,11 @@ script ParcelFernwickSurvey_Clerk {
 script ParcelFernwickSurvey_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_SECOND_DONE)) {
+        msgbox(format("ILEX: Seven seconds in the register, and this spring the first thirds. The column after the second one had no heading.\pI've given it one. It says: after."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         if (flag(FLAG_SKALD_SECOND_DONE)) {
             msgbox(format("ILEX: Seven second readings in the register, under the seven first ones. The column had never been used. It has a date in it now, in your hand.\pTie the cloth to something that needs reading. That's the whole of the job, and you've done it twice."), MSGBOX_DEFAULT)

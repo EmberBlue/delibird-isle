@@ -5,6 +5,11 @@ mapscripts ParcelHighlandsCentre_MapScripts {
 script ParcelHighlandsCentre_Host {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("HOST: The centre's funded by the review now. Same stove, different crest. SHIFTED is on the grant form, in print.\pI had to read it twice to believe someone had typed it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HOST: Your survey said SHIFTED. Ours said 'transitioning'. The grants were paid out of 'transitioning'. The hearing used your word. The grants are 'under review'. I've learnt a new word too."), MSGBOX_DEFAULT)
         release
@@ -22,6 +27,11 @@ script ParcelHighlandsCentre_Host {
 script ParcelHighlandsCentre_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OLD MAN: The well's not back. I'm not going back up. The soup's still good and I've a bunk and a window.\pSome things you stop waiting for, and it turns out that's a kind of rest."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: Came down when the well went. Warm here, soup's good. The leases are enjoined. I'd go back up if the well came back. Wells don't read hearings."), MSGBOX_DEFAULT)
         release
@@ -39,6 +49,11 @@ script ParcelHighlandsCentre_OldMan {
 script ParcelHighlandsCentre_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: The house we left is 'under review'. The house we're in is warm. I've stopped asking which is ours. Both. Neither.\pThe children call this one home. That decides it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: The grant's real, the house in the valley is real, and now the house we left is 'subject to review'. I don't know whose it is. I know it's not ours. That hasn't changed."), MSGBOX_DEFAULT)
         release
@@ -56,6 +71,11 @@ script ParcelHighlandsCentre_Woman {
 script ParcelHighlandsCentre_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: HOLLIS came back. She brought cocoa. The good kind. She sat by the stove and Mum sat next to her and they didn't say anything for a long time.\pThen they both laughed. I don't know at what."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: The stove's still always on! HOLLIS came and sat by it. She didn't say anything. She drank the cocoa. Mum watched her the whole time."), MSGBOX_DEFAULT)
         release
@@ -73,6 +93,11 @@ script ParcelHighlandsCentre_Boy {
 script ParcelHighlandsCentre_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Took the lanyard. Community liaison. I liaise. Mostly I tell the coast office what the soup line's saying, and they write it down.\pIt's a job. It's not nothing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Sign the form, get the grant. Don't sign, get soup. The old woman up the hill got soup for a year, and now she's got a page in a hearing. I signed. I've got a house. Hers is the page I'd rather have."), MSGBOX_DEFAULT)
         release

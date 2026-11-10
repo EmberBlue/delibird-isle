@@ -106,6 +106,11 @@ movement Movement_FLD_DorseyFaceDown { face_down }
 script ParcelFloodbasin_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DORSEY: Phase 2 is a dry shed and a pump that works. I'd have liked more. I've stopped writing what I'd have liked.\pThe FOUNDATION's man was courteous, RANGER. Put that down. It's true, and it's the least of it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("DORSEY: You'll write that the FOUNDATION's man was courteous after the hearing. I was. I am. Phase 2 goes ahead, RANGER. Dry sheds. You'd have built them too. You'd just have built them slower."), MSGBOX_DEFAULT)
         release
@@ -126,6 +131,11 @@ script ParcelFloodbasin_Dorsey {
 script ParcelFloodbasin_Aide1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("AIDE: Vouchers are back, from a different fund, with a different crest. Same sheet. I kept the sheet.\pForty-one names, and I know every one of them now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AIDE: Fuel vouchers are finished. The relief sheet went to the hearing as an exhibit. Forty-one signatures. The councilman's name was the forty-second. I'd not noticed that before."), MSGBOX_DEFAULT)
         release
@@ -143,6 +153,11 @@ script ParcelFloodbasin_Aide1 {
 script ParcelFloodbasin_Aide2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("AIDE: Consulted, this time, means asked. I asked all forty-one. Eleven said no to the shed.\pEleven is in the minutes. I typed it myself."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AIDE: Forty-one households. The hearing asked how many were consulted on Phase 2. I said forty-one signed. They said that wasn't the question. It wasn't."), MSGBOX_DEFAULT)
         release
@@ -160,6 +175,11 @@ script ParcelFloodbasin_Aide2 {
 script ParcelFloodbasin_VilOldWoman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_ROOF_DONE)) {
+        msgbox(format("MRS. ASKE: The roof's held two storms. Tuesdays, they come now, for anyone.\pI make tea on Tuesdays. I never thought I'd have a day."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_ROOF_DONE)) {
         msgbox(format("MRS. ASKE: They came Tuesday. Not Thursday. Tuesday. Eleven years and it took a stranger looking at a tarp."), MSGBOX_DEFAULT)
         release
@@ -198,6 +218,11 @@ script ParcelFloodbasin_VilOldWoman {
 script ParcelFloodbasin_VilMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_BROWN_DONE)) {
+        msgbox(format("MAN: The vials went to the review. They came back with a number on each. Shine's got a name now.\pI'd rather it had stayed mud."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_BROWN) && !flag(FLAG_SKALD_Q_BROWN_DONE)) {
         if (flag(FLAG_SKALD_Q_BROWN_A) && flag(FLAG_SKALD_Q_BROWN_B) && flag(FLAG_SKALD_Q_BROWN_C)) {
             msgbox(format("MAN: Three. You held them up to the light the way I would've if I'd had the vials.\pBrown's just mud. Mud don't shine. That shine's the thing nobody asks about, and now it's in three bottles with my name on the sheet as the one who asked."), MSGBOX_DEFAULT)
@@ -244,6 +269,11 @@ script ParcelFloodbasin_VilMan {
 script ParcelFloodbasin_VilGirl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: The WOOPER with the wrong feet had babies. Their feet are right. The CORPS lady came back and drew those too.\pShe cried a bit. She said it was the cold."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The WOOPER with the wrong feet is still in the puddle. A CORPS lady came and drew it. She said it's in a report now. It doesn't know. It's a WOOPER."), MSGBOX_DEFAULT)
         release
@@ -261,6 +291,11 @@ script ParcelFloodbasin_VilGirl {
 script ParcelFloodbasin_VilFisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_DEADLINE_DONE)) {
+        msgbox(format("FISHER: The water's never reached past the big stone, and this spring it didn't reach the stone before it. First time.\pI put a stick where it stopped. You've made a man of sticks out of me."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_DEADLINE) && !flag(FLAG_SKALD_Q_DEADLINE_DONE)) {
         if (flag(FLAG_SKALD_Q_DEADLINE_FOUND)) {
             msgbox(format("FISHER: Past the big stone. It's never reached past the big stone. The works are further up than they say the water goes, then.\pHere. For the smell. There's no cure for the smell, but these are for the rest."), MSGBOX_DEFAULT)
@@ -2086,6 +2121,11 @@ script ParcelFloodbasin_Stringer {
 script ParcelFloodbasin_WellWoman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_PLATE_DONE)) {
+        msgbox(format("WOMAN: Discharge licensed. The licence is suspended. I say that to myself now, at the pump.\pIt helps more than the first thing did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_PLATE_DONE)) {
         msgbox(format("WOMAN: Discharge licensed. I say it to myself when the aide comes round with the blankets. It helps, a little."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_PLATE)) {

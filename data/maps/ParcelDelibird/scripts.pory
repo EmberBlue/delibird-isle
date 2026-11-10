@@ -132,6 +132,11 @@ script ParcelDelibird_Elder_RoundDone {
 script ParcelDelibird_Ketil {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_CORNER_DONE)) {
+        msgbox(format("KETIL: Set a new sill this spring. Two hands above the old frost line, because the old line's a lie now.\pMy father would have argued. He'd have lost."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_CORNER) && !flag(FLAG_SKALD_Q_CORNER_DONE)) {
         if (flag(FLAG_SKALD_Q_CORNER_FOUND)) {
             msgbox(format("KETIL: To the second plank. …I set that sill a hand above the frost line, because that's where my father said to set it. His frost line.\pHere. I don't need these; I need the ground to hold still, and nobody sells that."), MSGBOX_DEFAULT)

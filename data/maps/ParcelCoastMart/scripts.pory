@@ -28,6 +28,11 @@ ParcelCoastMart_Items::
 script ParcelCoastMart_Customer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("SAILOR: DIVE BALLS, still. The nursery's there, down on the bottom, small things in it. I don't catch them. I count them for the review.\pThey pay. Less than fish. More than nothing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SAILOR: DIVE BALLS. Bought one. The clerk asked what for. I said the review says there's a nursery on the bottom. I want to see a nursery."), MSGBOX_DEFAULT)
         release

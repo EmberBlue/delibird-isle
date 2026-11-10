@@ -119,6 +119,11 @@ script ParcelHighlands_BandStakes {
 script ParcelHighlands_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("ILEX: A hand's width in. Same as last season, and the season before. Three seasons the same is the first thing up here I've been able to call stable.\pI don't call it that. Not yet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("ILEX: The hearings cite the cloth now. Decades of it, read into the record by a clerk who pronounced everything correctly.\pThe band is still shrinking. The number doesn't know it's been believed."), MSGBOX_DEFAULT)
         release
@@ -145,6 +150,11 @@ script ParcelHighlands_Ilex {
 script ParcelHighlands_Hollis {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("HOLLIS: The injunction holds. I check it the way I used to check the renewals. Different signature on the bottom. Mine, as it happens.\pCoffee's still warm."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HOLLIS: Enjoined pending survey. Your survey, as it happens. There's a court seal on the housing; it's new enough to still lie flat.\pThe relocation grants are frozen with the rest of it, you know. The warming centre too. That's the part nobody prices."), MSGBOX_DEFAULT)
         release
@@ -170,6 +180,11 @@ script ParcelHighlands_Hollis {
 script ParcelHighlands_HollisTech {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("TECHNICIAN: Capped. Logged. 'Exploratory' stays 'exploratory' in a sealed box in the coast office.\pI read the gauges on the cap now. Nothing. Nothing is a reading."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("TECHNICIAN: Core samples stopped. The bore's capped pending survey. The bore log said 'exploratory' for two years. The hearing read the word aloud and the room laughed. Not kindly."), MSGBOX_DEFAULT)
         release
@@ -189,6 +204,11 @@ script ParcelHighlands_HollisTech {
 script ParcelHighlands_Homesteader {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_FROST_DONE)) {
+        msgbox(format("HOMESTEADER: Ewes are down the valley. The lambing field's a pond. I named it.\pA field that's a pond needs a name, or you keep calling it the field."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_FROST) && !flag(FLAG_SKALD_Q_FROST_DONE)) {
         if (flag(FLAG_SKALD_Q_FROST_FOUND)) {
             msgbox(format("HOMESTEADER: Water. …Then it's not freezing back this year either. I'll move the ewes down before I'm told to. Nobody tells you in time up here; you have to read it yourself.\pHere. From the box the Foundation sent. I'd rather you had it than they thought I'd used it."), MSGBOX_DEFAULT)
@@ -249,6 +269,11 @@ script ParcelHighlands_Homesteader {
 script ParcelHighlands_Hale {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("HALE: Seasons. We're one more in. The record kept the mountain again, and it didn't keep all of it.\pWrite both. That's the job, and nobody will ever thank you for the second half."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("HALE: You kept the record and the record kept the mountain, for a season. That's the whole of the work up here. Seasons. One at a time."), MSGBOX_DEFAULT)
         release
@@ -1995,6 +2020,11 @@ script ParcelHighlands_Stringer {
 script ParcelHighlands_Carrier {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_LETTER_DONE)) {
+        msgbox(format("CARRIER: Knee's worse. Road's better, a bit; the review graded it. The letters still go.\pTwo things haven't changed and one has, and it's the road. I'd have bet on the knee."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_LETTER_DONE)) {
         msgbox(format("CARRIER: Knee's no better. The road's no better. The letters still go. That's three things that haven't changed."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_LETTER)) {

@@ -7,6 +7,11 @@ mapscripts ParcelCorridorHut_MapScripts {
 script ParcelCorridorHut_Foreman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("FOREMAN: Flow data every month to FERNWICK and now to the window too. The lads read it. The culvert's getting a second pipe.\pNot an upgrade. A correction. I said the word myself."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FOREMAN: Pre-construction flow data. Turns out we do do it, now. Eleven pages of it, every month, to FERNWICK. One of my lads drew the chart. He's proud of it. I let him be."), MSGBOX_DEFAULT)
         release
@@ -34,6 +39,11 @@ script ParcelCorridorHut_Foreman {
 script ParcelCorridorHut_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_FLOW_DONE) && flag(FLAG_SKALD_Q_SIGN_DONE)) {
+        msgbox(format("CLERK: Exhibit one's in a glass case in the hall. The miner comes to look at it.\pI've signed the last three flow reports. My name. Small, but there."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_SIGN) && !flag(FLAG_SKALD_Q_SIGN_DONE)) {
         msgbox(format("CLERK: The closure sign. 1998, CORPS stamp, the miner's name on the back. That goes in the Phase 2 file as exhibit one. Nobody can say the gallery wasn't closed now.\pTake these for the carrying. The foreman keeps them for the lads; the lads don't read either."), MSGBOX_DEFAULT)
         giveitem(ITEM_REVIVE, 2)

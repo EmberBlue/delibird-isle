@@ -7,6 +7,11 @@ mapscripts ParcelIsleOldCoupleHouse_MapScripts {
 script ParcelIsleOldCoupleHouse_Aud {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("AUD: She comes by still, the Survey girl, and reads me the counts. Not the numbers, she'd never. That they're being kept.\pSTEN pretends not to listen."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AUD: She sat right where you're standing and read me your letters. Not the words, she'd never. Just that they'd come.\pI think you were the only person she was ever honest with. And you were a child, far away."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -23,6 +28,11 @@ script ParcelIsleOldCoupleHouse_Aud {
 script ParcelIsleOldCoupleHouse_Sten {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("STEN: Rowed the Survey girl out to her first stake this spring. Thirty-one years since I rowed the Director to his.\pThe currents are still wrong. The boat's still right."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("STEN: Thirty years on the RANGERS' boat. I rowed HALE out to his first survey. Rowed the old Director to his last, the day he took the FOUNDATION job.\pSame boat. Same oars. Never once asked either of them what they were counting."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {

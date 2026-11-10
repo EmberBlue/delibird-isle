@@ -71,43 +71,52 @@ ParcelIsleChandlery_Hjalmar::
 # 40 "data/maps/ParcelIsleChandlery/scripts.pory"
 	faceplayer
 # 41 "data/maps/ParcelIsleChandlery/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleChandlery_Hjalmar_2
-ParcelIsleChandlery_Hjalmar_1:
-# 44 "data/maps/ParcelIsleChandlery/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleChandlery_Hjalmar_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelIsleChandlery_Hjalmar_2
+# 46 "data/maps/ParcelIsleChandlery/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleChandlery_Hjalmar_5
+ParcelIsleChandlery_Hjalmar_4:
 # 49 "data/maps/ParcelIsleChandlery/scripts.pory"
-	msgbox ParcelIsleChandlery_Hjalmar_Text_2, MSGBOX_DEFAULT
-# 51 "data/maps/ParcelIsleChandlery/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelIsleChandlery_Hjalmar_8
+# 54 "data/maps/ParcelIsleChandlery/scripts.pory"
+	msgbox ParcelIsleChandlery_Hjalmar_Text_3, MSGBOX_DEFAULT
+# 56 "data/maps/ParcelIsleChandlery/scripts.pory"
 	release
 	end
 
 ParcelIsleChandlery_Hjalmar_2:
 # 42 "data/maps/ParcelIsleChandlery/scripts.pory"
 	msgbox ParcelIsleChandlery_Hjalmar_Text_0, MSGBOX_DEFAULT
-	goto ParcelIsleChandlery_Hjalmar_1
+# 43 "data/maps/ParcelIsleChandlery/scripts.pory"
+	release
+	end
 
 ParcelIsleChandlery_Hjalmar_5:
-# 45 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 47 "data/maps/ParcelIsleChandlery/scripts.pory"
 	msgbox ParcelIsleChandlery_Hjalmar_Text_1, MSGBOX_DEFAULT
-# 46 "data/maps/ParcelIsleChandlery/scripts.pory"
+	goto ParcelIsleChandlery_Hjalmar_4
+
+ParcelIsleChandlery_Hjalmar_8:
+# 50 "data/maps/ParcelIsleChandlery/scripts.pory"
+	msgbox ParcelIsleChandlery_Hjalmar_Text_2, MSGBOX_DEFAULT
+# 51 "data/maps/ParcelIsleChandlery/scripts.pory"
 	release
 	end
 
 
 ParcelIsleChandlery_ReadShelf::
-# 56 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 61 "data/maps/ParcelIsleChandlery/scripts.pory"
 	msgbox ParcelIsleChandlery_ReadShelf_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsleChandlery_ReadLamps::
-# 61 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 66 "data/maps/ParcelIsleChandlery/scripts.pory"
 	msgbox ParcelIsleChandlery_ReadLamps_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelIsleChandlery_Credit::
-# 68 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 73 "data/maps/ParcelIsleChandlery/scripts.pory"
 	msgbox ParcelIsleChandlery_Credit_Text_0, MSGBOX_SIGN
 	end
 
@@ -140,13 +149,20 @@ ParcelIsleChandlery_Kit_Text_3:
 
 ParcelIsleChandlery_Hjalmar_Text_0:
 # 42 "data/maps/ParcelIsleChandlery/scripts.pory"
+	.string "HJALMAR: Rope, lamp oil, and the\n"
+	.string "review's notices. KIT pins them up.\p"
+	.string "The third's free, and people stand and\n"
+	.string "read it before they buy the first two.$"
+
+ParcelIsleChandlery_Hjalmar_Text_1:
+# 47 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "HJALMAR: Rope, lamp oil, and gossip. KIT\n"
 	.string "sells two of those.\p"
 	.string "The third is free now, and it's all\n"
 	.string "anyone's buying.$"
 
-ParcelIsleChandlery_Hjalmar_Text_1:
-# 45 "data/maps/ParcelIsleChandlery/scripts.pory"
+ParcelIsleChandlery_Hjalmar_Text_2:
+# 50 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "HJALMAR: Rope, lamp oil, and the river\n"
 	.string "minutes. KIT sells two of those. The\l"
 	.string "third she lends, and it comes back with\l"
@@ -154,28 +170,28 @@ ParcelIsleChandlery_Hjalmar_Text_1:
 	.string "I've stood here two hours today. Worth\n"
 	.string "every minute.$"
 
-ParcelIsleChandlery_Hjalmar_Text_2:
-# 49 "data/maps/ParcelIsleChandlery/scripts.pory"
+ParcelIsleChandlery_Hjalmar_Text_3:
+# 54 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "HJALMAR: Rope, lamp oil, and gossip. KIT\n"
 	.string "sells two of those.\p"
 	.string "The third you get by standing here long\n"
 	.string "enough. I've been here an hour.$"
 
 ParcelIsleChandlery_ReadShelf_Text_0:
-# 56 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 61 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "Rope by the fathom, lamp oil by the gill,\n"
 	.string "and a shelf of RANGER stock -- REPELS,\l"
 	.string "POTIONS -- that KIT dusts more often\l"
 	.string "than the rope.$"
 
 ParcelIsleChandlery_ReadLamps_Text_0:
-# 61 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 66 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "A crate of fog lamps. A card on it: THE\n"
 	.string "BOAT REMEMBERS US WHEN IT REMEMBERS\l"
 	.string "US.$"
 
 ParcelIsleChandlery_Credit_Text_0:
-# 68 "data/maps/ParcelIsleChandlery/scripts.pory"
+# 73 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "The credit ledger, kept where the\n"
 	.string "counter hides it. Who owes, for what,\l"
 	.string "since when.\p"

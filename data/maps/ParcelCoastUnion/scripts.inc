@@ -8,10 +8,12 @@ ParcelCoastUnion_Chair::
 # 6 "data/maps/ParcelCoastUnion/scripts.pory"
 	faceplayer
 # 7 "data/maps/ParcelCoastUnion/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Chair_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastUnion_Chair_2
 # 12 "data/maps/ParcelCoastUnion/scripts.pory"
-	msgbox ParcelCoastUnion_Chair_Text_1, MSGBOX_DEFAULT
-# 13 "data/maps/ParcelCoastUnion/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Chair_5
+# 17 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Chair_Text_2, MSGBOX_DEFAULT
+# 18 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
@@ -22,101 +24,135 @@ ParcelCoastUnion_Chair_2:
 	release
 	end
 
+ParcelCoastUnion_Chair_5:
+# 13 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Chair_Text_1, MSGBOX_DEFAULT
+# 14 "data/maps/ParcelCoastUnion/scripts.pory"
+	release
+	end
+
 
 ParcelCoastUnion_Fisher1::
-# 17 "data/maps/ParcelCoastUnion/scripts.pory"
+# 22 "data/maps/ParcelCoastUnion/scripts.pory"
 	lock
-# 18 "data/maps/ParcelCoastUnion/scripts.pory"
+# 23 "data/maps/ParcelCoastUnion/scripts.pory"
 	faceplayer
-# 19 "data/maps/ParcelCoastUnion/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Fisher1_2
 # 24 "data/maps/ParcelCoastUnion/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastUnion_Fisher1_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastUnion_Fisher1_2
 # 29 "data/maps/ParcelCoastUnion/scripts.pory"
-	msgbox ParcelCoastUnion_Fisher1_Text_2, MSGBOX_DEFAULT
-# 30 "data/maps/ParcelCoastUnion/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Fisher1_5
+# 34 "data/maps/ParcelCoastUnion/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastUnion_Fisher1_8
+# 39 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Fisher1_Text_3, MSGBOX_DEFAULT
+# 40 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 ParcelCoastUnion_Fisher1_2:
-# 20 "data/maps/ParcelCoastUnion/scripts.pory"
+# 25 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Fisher1_Text_0, MSGBOX_DEFAULT
-# 21 "data/maps/ParcelCoastUnion/scripts.pory"
+# 26 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 ParcelCoastUnion_Fisher1_5:
-# 25 "data/maps/ParcelCoastUnion/scripts.pory"
+# 30 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Fisher1_Text_1, MSGBOX_DEFAULT
-# 26 "data/maps/ParcelCoastUnion/scripts.pory"
+# 31 "data/maps/ParcelCoastUnion/scripts.pory"
+	release
+	end
+
+ParcelCoastUnion_Fisher1_8:
+# 35 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Fisher1_Text_2, MSGBOX_DEFAULT
+# 36 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 
 ParcelCoastUnion_Fisher2::
-# 34 "data/maps/ParcelCoastUnion/scripts.pory"
+# 44 "data/maps/ParcelCoastUnion/scripts.pory"
 	lock
-# 35 "data/maps/ParcelCoastUnion/scripts.pory"
+# 45 "data/maps/ParcelCoastUnion/scripts.pory"
 	faceplayer
-# 36 "data/maps/ParcelCoastUnion/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Fisher2_2
-# 41 "data/maps/ParcelCoastUnion/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastUnion_Fisher2_5
 # 46 "data/maps/ParcelCoastUnion/scripts.pory"
-	msgbox ParcelCoastUnion_Fisher2_Text_2, MSGBOX_DEFAULT
-# 47 "data/maps/ParcelCoastUnion/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastUnion_Fisher2_2
+# 51 "data/maps/ParcelCoastUnion/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Fisher2_5
+# 56 "data/maps/ParcelCoastUnion/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastUnion_Fisher2_8
+# 61 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Fisher2_Text_3, MSGBOX_DEFAULT
+# 62 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 ParcelCoastUnion_Fisher2_2:
-# 37 "data/maps/ParcelCoastUnion/scripts.pory"
+# 47 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Fisher2_Text_0, MSGBOX_DEFAULT
-# 38 "data/maps/ParcelCoastUnion/scripts.pory"
+# 48 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 ParcelCoastUnion_Fisher2_5:
-# 42 "data/maps/ParcelCoastUnion/scripts.pory"
+# 52 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Fisher2_Text_1, MSGBOX_DEFAULT
-# 43 "data/maps/ParcelCoastUnion/scripts.pory"
+# 53 "data/maps/ParcelCoastUnion/scripts.pory"
+	release
+	end
+
+ParcelCoastUnion_Fisher2_8:
+# 57 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Fisher2_Text_2, MSGBOX_DEFAULT
+# 58 "data/maps/ParcelCoastUnion/scripts.pory"
 	release
 	end
 
 
 ParcelCoastUnion_Board::
-# 51 "data/maps/ParcelCoastUnion/scripts.pory"
+# 66 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Board_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastUnion_Carbons::
-# 58 "data/maps/ParcelCoastUnion/scripts.pory"
+# 73 "data/maps/ParcelCoastUnion/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastUnion_Carbons_1
-# 60 "data/maps/ParcelCoastUnion/scripts.pory"
+# 75 "data/maps/ParcelCoastUnion/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_CARBON_DONE, ParcelCoastUnion_Carbons_2
-# 63 "data/maps/ParcelCoastUnion/scripts.pory"
+# 78 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Carbons_Text_2, MSGBOX_SIGN
 	return
 
 ParcelCoastUnion_Carbons_1:
-# 59 "data/maps/ParcelCoastUnion/scripts.pory"
+# 74 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Carbons_Text_0, MSGBOX_SIGN
 	return
 
 ParcelCoastUnion_Carbons_2:
-# 61 "data/maps/ParcelCoastUnion/scripts.pory"
+# 76 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Carbons_Text_1, MSGBOX_SIGN
 	return
 
 
 ParcelCoastUnion_Roll::
-# 68 "data/maps/ParcelCoastUnion/scripts.pory"
+# 83 "data/maps/ParcelCoastUnion/scripts.pory"
 	msgbox ParcelCoastUnion_Roll_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastUnion_Chair_Text_0:
 # 8 "data/maps/ParcelCoastUnion/scripts.pory"
+	.string "CHAIR: Forty-one boats, thirty-eight\n"
+	.string "notes, three paid off through the\l"
+	.string "review's fund. Three.\p"
+	.string "The hall voted on quotas last month and\n"
+	.string "for the first time I couldn't guess the\l"
+	.string "count. Good.$"
+
+ParcelCoastUnion_Chair_Text_1:
+# 13 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "CHAIR: The review grounds half the\n"
 	.string "fleet two days a week. Half the hall\l"
 	.string "wants your head. The other half knows\l"
@@ -124,8 +160,8 @@ ParcelCoastUnion_Chair_Text_0:
 	.string "finally said so.\p"
 	.string "I'm the other half. Barely.$"
 
-ParcelCoastUnion_Chair_Text_1:
-# 12 "data/maps/ParcelCoastUnion/scripts.pory"
+ParcelCoastUnion_Chair_Text_2:
+# 17 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "CHAIR: Union of Coastal Fishers.\n"
 	.string "Forty-one boats. Forty-one notes held\l"
 	.string "by MEREHOLT COASTAL LENDING. Guess\l"
@@ -134,14 +170,22 @@ ParcelCoastUnion_Chair_Text_1:
 	.string "mortgaged.$"
 
 ParcelCoastUnion_Fisher1_Text_0:
-# 20 "data/maps/ParcelCoastUnion/scripts.pory"
+# 25 "data/maps/ParcelCoastUnion/scripts.pory"
+	.string "FISHER: HARLAND spoke nine minutes\n"
+	.string "once and hasn't since. He's on the\l"
+	.string "water.\p"
+	.string "I timed him coming in yesterday. Lighter\n"
+	.string "boat. Easier to time.$"
+
+ParcelCoastUnion_Fisher1_Text_1:
+# 30 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: HARLAND spoke for the river\n"
 	.string "and the coast both, in one breath. The\l"
 	.string "hearing let him. Nine minutes. I timed it.\l"
 	.string "Best nine minutes this hall's had.$"
 
-ParcelCoastUnion_Fisher1_Text_1:
-# 25 "data/maps/ParcelCoastUnion/scripts.pory"
+ParcelCoastUnion_Fisher1_Text_2:
+# 35 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: HARLAND lost. On the quay, to a\n"
 	.string "ranger, and shook hands, and then he\l"
 	.string "came in here and said: it's written now.\l"
@@ -149,23 +193,31 @@ ParcelCoastUnion_Fisher1_Text_1:
 	.string "Forty-one notes with the lender.\n"
 	.string "Forty-one men who heard him say it.$"
 
-ParcelCoastUnion_Fisher1_Text_2:
-# 29 "data/maps/ParcelCoastUnion/scripts.pory"
+ParcelCoastUnion_Fisher1_Text_3:
+# 39 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: HARLAND came down from the\n"
 	.string "river to fish the coast because the\l"
 	.string "river was done. Now the coast's done.\l"
 	.string "There's nowhere further down.$"
 
 ParcelCoastUnion_Fisher2_Text_0:
-# 37 "data/maps/ParcelCoastUnion/scripts.pory"
+# 47 "data/maps/ParcelCoastUnion/scripts.pory"
+	.string "FISHER: 'We don't know' is holding. Two\n"
+	.string "years of it. They count what comes in\l"
+	.string "and nobody models.\p"
+	.string "I never thought I'd miss being told a\n"
+	.string "date. I do, a bit. I'd rather this.$"
+
+ParcelCoastUnion_Fisher2_Text_1:
+# 52 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: The Board's model said six\n"
 	.string "years. The review threw the model out\l"
 	.string "and said 'we don't know'. I'll take 'we\l"
 	.string "don't know'. It's the first true thing\l"
 	.string "they've said about the stock.$"
 
-ParcelCoastUnion_Fisher2_Text_1:
-# 42 "data/maps/ParcelCoastUnion/scripts.pory"
+ParcelCoastUnion_Fisher2_Text_2:
+# 57 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: The Board's model said six\n"
 	.string "years, six years ago. Your survey says\l"
 	.string "COLLAPSING, this year.\p"
@@ -175,21 +227,21 @@ ParcelCoastUnion_Fisher2_Text_1:
 	.string "the room. He didn't object. He wrote it\l"
 	.string "down.$"
 
-ParcelCoastUnion_Fisher2_Text_2:
-# 46 "data/maps/ParcelCoastUnion/scripts.pory"
+ParcelCoastUnion_Fisher2_Text_3:
+# 61 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "FISHER: The Board's model says the\n"
 	.string "stock recovers in six years if we hold\l"
 	.string "the quota. It said that six years ago.$"
 
 ParcelCoastUnion_Board_Text_0:
-# 51 "data/maps/ParcelCoastUnion/scripts.pory"
+# 66 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "MINUTES. Motion to request an\n"
 	.string "independent stock survey: proposed,\l"
 	.string "seconded, deferred. Deferred. Deferred.\l"
 	.string "Deferred. Four years of the same line.$"
 
 ParcelCoastUnion_Carbons_Text_0:
-# 59 "data/maps/ParcelCoastUnion/scripts.pory"
+# 74 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "The folder of carbons, on the table\n"
 	.string "where anyone can read it now. Ten\l"
 	.string "sheets. The tenth is white, not blue,\l"
@@ -227,7 +279,7 @@ ParcelCoastUnion_Carbons_Text_0:
 	.string "afternoon.$"
 
 ParcelCoastUnion_Carbons_Text_1:
-# 61 "data/maps/ParcelCoastUnion/scripts.pory"
+# 76 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "The folder of carbons, closed with a\n"
 	.string "rubber band. Nine blue sheets, one a\l"
 	.string "year. The fourth is creased from a shoe\l"
@@ -262,7 +314,7 @@ ParcelCoastUnion_Carbons_Text_1:
 	.string "typewriter upstairs.$"
 
 ParcelCoastUnion_Carbons_Text_2:
-# 63 "data/maps/ParcelCoastUnion/scripts.pory"
+# 78 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "A folder with a rubber band round it.\n"
 	.string "CARBONS, in capitals, and under that,\l"
 	.string "smaller: do not lend.\p"
@@ -278,7 +330,7 @@ ParcelCoastUnion_Carbons_Text_2:
 	.string "them.$"
 
 ParcelCoastUnion_Roll_Text_0:
-# 68 "data/maps/ParcelCoastUnion/scripts.pory"
+# 83 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "The membership roll. A name, a boat, a\n"
 	.string "year joined. Three columns, four\l"
 	.string "decades.\p"

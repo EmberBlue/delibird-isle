@@ -8,12 +8,14 @@ ParcelWeatherInstitute1F_Reception::
 # 6 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	faceplayer
 # 7 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute1F_Reception_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWeatherInstitute1F_Reception_2
 # 12 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeatherInstitute1F_Reception_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute1F_Reception_5
 # 17 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	msgbox ParcelWeatherInstitute1F_Reception_Text_2, MSGBOX_DEFAULT
-# 18 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeatherInstitute1F_Reception_8
+# 22 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Reception_Text_3, MSGBOX_DEFAULT
+# 23 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
@@ -31,149 +33,188 @@ ParcelWeatherInstitute1F_Reception_5:
 	release
 	end
 
+ParcelWeatherInstitute1F_Reception_8:
+# 18 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Reception_Text_2, MSGBOX_DEFAULT
+# 19 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	release
+	end
+
 
 ParcelWeatherInstitute1F_Tech1::
-# 22 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 27 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	lock
-# 23 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 28 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	faceplayer
-# 24 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute1F_Tech1_2
 # 29 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeatherInstitute1F_Tech1_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWeatherInstitute1F_Tech1_2
 # 34 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	msgbox ParcelWeatherInstitute1F_Tech1_Text_2, MSGBOX_DEFAULT
-# 35 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute1F_Tech1_5
+# 39 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_CLEARED, ParcelWeatherInstitute1F_Tech1_8
+# 44 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Tech1_Text_3, MSGBOX_DEFAULT
+# 45 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
 ParcelWeatherInstitute1F_Tech1_2:
-# 25 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 30 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Tech1_Text_0, MSGBOX_DEFAULT
-# 26 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 31 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
 ParcelWeatherInstitute1F_Tech1_5:
-# 30 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 35 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Tech1_Text_1, MSGBOX_DEFAULT
-# 31 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 36 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	release
+	end
+
+ParcelWeatherInstitute1F_Tech1_8:
+# 40 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Tech1_Text_2, MSGBOX_DEFAULT
+# 41 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
 
 ParcelWeatherInstitute1F_Tech2::
-# 39 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 49 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	lock
-# 40 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 50 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	faceplayer
-# 41 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_CASTFORM_DONE, ParcelWeatherInstitute1F_Tech2_2
-# 46 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_CASTFORM_FOUND, ParcelWeatherInstitute1F_Tech2_5
-# 53 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_CASTFORM, ParcelWeatherInstitute1F_Tech2_8
-# 58 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WEATHER_ARRIVAL, ParcelWeatherInstitute1F_Tech2_11
-# 64 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute1F_Tech2_14
-# 69 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	msgbox ParcelWeatherInstitute1F_Tech2_Text_5, MSGBOX_DEFAULT
-# 70 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 51 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWeatherInstitute1F_Tech2_3
+ParcelWeatherInstitute1F_Tech2_1:
+# 56 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CASTFORM_DONE, ParcelWeatherInstitute1F_Tech2_7
+# 61 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CASTFORM_FOUND, ParcelWeatherInstitute1F_Tech2_10
+# 68 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CASTFORM, ParcelWeatherInstitute1F_Tech2_13
+# 73 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WEATHER_ARRIVAL, ParcelWeatherInstitute1F_Tech2_16
+# 79 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute1F_Tech2_19
+# 84 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Tech2_Text_6, MSGBOX_DEFAULT
+# 85 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
 ParcelWeatherInstitute1F_Tech2_2:
-# 42 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 52 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Tech2_Text_0, MSGBOX_DEFAULT
-# 43 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 53 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
-ParcelWeatherInstitute1F_Tech2_5:
-# 47 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech2_3:
+# 51 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CASTFORM_DONE, ParcelWeatherInstitute1F_Tech2_2
+	goto ParcelWeatherInstitute1F_Tech2_1
+
+ParcelWeatherInstitute1F_Tech2_7:
+# 57 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Tech2_Text_1, MSGBOX_DEFAULT
-# 48 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	giveitem ITEM_RARE_CANDY
-# 49 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	setflag FLAG_SKALD_Q_CASTFORM_DONE
-# 50 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 58 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
-ParcelWeatherInstitute1F_Tech2_8:
-# 54 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech2_10:
+# 62 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Tech2_Text_2, MSGBOX_DEFAULT
-# 55 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	release
-	end
-
-ParcelWeatherInstitute1F_Tech2_11:
-# 59 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	msgbox ParcelWeatherInstitute1F_Tech2_Text_3, MSGBOX_DEFAULT
-# 60 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	setflag FLAG_SKALD_Q_CASTFORM
-# 61 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
-	release
-	end
-
-ParcelWeatherInstitute1F_Tech2_14:
+# 63 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	giveitem ITEM_RARE_CANDY
+# 64 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	setflag FLAG_SKALD_Q_CASTFORM_DONE
 # 65 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	release
+	end
+
+ParcelWeatherInstitute1F_Tech2_13:
+# 69 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Tech2_Text_3, MSGBOX_DEFAULT
+# 70 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	release
+	end
+
+ParcelWeatherInstitute1F_Tech2_16:
+# 74 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Tech2_Text_4, MSGBOX_DEFAULT
-# 66 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 75 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	setflag FLAG_SKALD_Q_CASTFORM
+# 76 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	release
+	end
+
+ParcelWeatherInstitute1F_Tech2_19:
+# 80 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Tech2_Text_5, MSGBOX_DEFAULT
+# 81 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
 
 ParcelWeatherInstitute1F_Board::
-# 74 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 89 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	lock
-# 75 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 90 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Board_Text_0, MSGBOX_SIGN
-# 76 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 91 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_DRAWER, ParcelWeatherInstitute1F_Board_3
 ParcelWeatherInstitute1F_Board_1:
-# 80 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 95 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	release
 	end
 
 ParcelWeatherInstitute1F_Board_2:
-# 77 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 92 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Board_Text_1, MSGBOX_SIGN
-# 78 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 93 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	setflag FLAG_SKALD_Q_DRAWER_SEEN
 	goto ParcelWeatherInstitute1F_Board_1
 
 ParcelWeatherInstitute1F_Board_3:
-# 76 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 91 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_DRAWER_SEEN, ParcelWeatherInstitute1F_Board_2
 	goto ParcelWeatherInstitute1F_Board_1
 
 
 ParcelWeatherInstitute1F_Scenarios::
-# 87 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 102 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Scenarios_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeatherInstitute1F_Register::
-# 94 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 109 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Register_Text_0, MSGBOX_SIGN
-# 95 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 110 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Register_Text_1, MSGBOX_SIGN
-# 96 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 111 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	msgbox ParcelWeatherInstitute1F_Register_Text_2, MSGBOX_SIGN
 	end
 
 
 ParcelWeatherInstitute1F_Reception_Text_0:
 # 8 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "RECEPTION: The director sees anyone,\n"
+	.string "any day. He's taken down the sign that\l"
+	.string "said otherwise.\p"
+	.string "He kept it. It's in his office, face to\n"
+	.string "the wall.$"
+
+ParcelWeatherInstitute1F_Reception_Text_1:
+# 13 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "RECEPTION: The director is upstairs. He\n"
 	.string "sees anyone now. He says the four\l"
 	.string "divisions were the easy part. Go up.$"
 
-ParcelWeatherInstitute1F_Reception_Text_1:
-# 13 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Reception_Text_2:
+# 18 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "RECEPTION: You've beaten the four and\n"
 	.string "the director. He's asked me to stop\l"
 	.string "saying 'the rules'.\p"
@@ -182,8 +223,8 @@ ParcelWeatherInstitute1F_Reception_Text_1:
 	.string "it any more. I've never heard him say\l"
 	.string "isn't sure. I wrote it down.$"
 
-ParcelWeatherInstitute1F_Reception_Text_2:
-# 17 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Reception_Text_3:
+# 22 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "RECEPTION: The director is upstairs. He\n"
 	.string "sees anyone who's beaten the four\l"
 	.string "divisions, and nobody who hasn't. Those\l"
@@ -191,15 +232,23 @@ ParcelWeatherInstitute1F_Reception_Text_2:
 	.string "here he made himself.$"
 
 ParcelWeatherInstitute1F_Tech1_Text_0:
-# 25 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 30 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "TECHNICIAN: Over-the-fence data,\n"
+	.string "monthly, beside the roof data. The two\l"
+	.string "lines have started to agree.\p"
+	.string "The director says that's the dish\n"
+	.string "catching up. I say it's the fence.$"
+
+ParcelWeatherInstitute1F_Tech1_Text_1:
+# 35 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: The drawer's open. The\n"
 	.string "over-the-fence data went to the\l"
 	.string "review in three boxes. We publish it\l"
 	.string "monthly now, next to the plot data. The\l"
 	.string "drawer's for sandwiches.$"
 
-ParcelWeatherInstitute1F_Tech1_Text_1:
-# 30 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech1_Text_2:
+# 40 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: The director took the\n"
 	.string "drawer upstairs after your battle. All\l"
 	.string "twelve months of the over-the-fence\l"
@@ -209,34 +258,42 @@ ParcelWeatherInstitute1F_Tech1_Text_1:
 	.string "come down. We've started sending the\l"
 	.string "sandwiches up.$"
 
-ParcelWeatherInstitute1F_Tech1_Text_2:
-# 34 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech1_Text_3:
+# 44 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: We publish the plot data\n"
 	.string "monthly. The over-the-fence data goes\l"
 	.string "in a drawer. The drawer is very full.$"
 
 ParcelWeatherInstitute1F_Tech2_Text_0:
-# 42 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 52 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "TECHNICIAN: Still rain form. It has\n"
+	.string "rained very gently on my desk for a\l"
+	.string "year.\p"
+	.string "I've stopped moving the in-tray. The\n"
+	.string "paper dries.$"
+
+ParcelWeatherInstitute1F_Tech2_Text_1:
+# 57 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: Back at its desk. Rain\n"
 	.string "form, still. It rains very gently on my\l"
 	.string "in-tray now. I've moved the in-tray.$"
 
-ParcelWeatherInstitute1F_Tech2_Text_1:
-# 47 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech2_Text_2:
+# 62 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: Under the director's desk.\n"
 	.string "Of course. Rain form. Of course.\p"
 	.string "Take this. Management sends them for\n"
 	.string "'morale'. This is the most morale I've\l"
 	.string "had all year.$"
 
-ParcelWeatherInstitute1F_Tech2_Text_2:
-# 54 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech2_Text_3:
+# 69 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: Upstairs. It went up the\n"
 	.string "back stair during the storm drill. Look\l"
 	.string "under things. It likes under things.$"
 
-ParcelWeatherInstitute1F_Tech2_Text_3:
-# 59 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech2_Text_4:
+# 74 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: Ours is missing. The\n"
 	.string "CASTFORM. It went up the back stair\l"
 	.string "during the storm drill and nobody's seen\l"
@@ -244,22 +301,22 @@ ParcelWeatherInstitute1F_Tech2_Text_3:
 	.string "If you're going up to the director\n"
 	.string "anyway. Look under things.$"
 
-ParcelWeatherInstitute1F_Tech2_Text_4:
-# 65 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech2_Text_5:
+# 80 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: A CASTFORM in every\n"
 	.string "office, still. 'Adaptive thinking.' One of\l"
 	.string "them changed form during the hearing\l"
 	.string "broadcast. Rain. Nobody's explained it.\l"
 	.string "Nobody wants to.$"
 
-ParcelWeatherInstitute1F_Tech2_Text_5:
-# 69 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+ParcelWeatherInstitute1F_Tech2_Text_6:
+# 84 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "TECHNICIAN: A CASTFORM in every\n"
 	.string "office. Management's idea. 'Adaptive\l"
 	.string "thinking.' They mostly sleep.$"
 
 ParcelWeatherInstitute1F_Board_Text_0:
-# 75 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 90 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "STATION MISSION. 'To demonstrate that\n"
 	.string "regional climate outcomes are\l"
 	.string "manageable through targeted\l"
@@ -268,7 +325,7 @@ ParcelWeatherInstitute1F_Board_Text_0:
 	.string "whom?$"
 
 ParcelWeatherInstitute1F_Board_Text_1:
-# 77 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 92 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "Under the board, a drawer. Inside: the\n"
 	.string "over-the-fence log. Twelve months of\l"
 	.string "the real sky, in pencil.\p"
@@ -277,7 +334,7 @@ ParcelWeatherInstitute1F_Board_Text_1:
 	.string "date.$"
 
 ParcelWeatherInstitute1F_Scenarios_Text_0:
-# 87 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 102 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "The model, pinned to the wall in three\n"
 	.string "sheets. SCENARIO A: TARGETED\l"
 	.string "INTERVENTION. SCENARIO B: ENHANCED\l"
@@ -294,7 +351,7 @@ ParcelWeatherInstitute1F_Scenarios_Text_0:
 	.string "where the pencil stopped.$"
 
 ParcelWeatherInstitute1F_Register_Text_0:
-# 94 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 109 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "The Station's register, open on the\n"
 	.string "stand under the roof dish's cable.\l"
 	.string "Forty years of the same page: first\l"
@@ -312,7 +369,7 @@ ParcelWeatherInstitute1F_Register_Text_0:
 	.string "because it did not fully come.$"
 
 ParcelWeatherInstitute1F_Register_Text_1:
-# 95 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 110 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "STORMS NAMED. Four a year, then six,\n"
 	.string "then the year with eleven, when the\l"
 	.string "Director's hand gets smaller to fit them\l"
@@ -328,7 +385,7 @@ ParcelWeatherInstitute1F_Register_Text_1:
 	.string "line: Both. Keep both.$"
 
 ParcelWeatherInstitute1F_Register_Text_2:
-# 96 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+# 111 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "A loose sheet is tucked in the back:\n"
 	.string "the Survey's dusk counts from the\l"
 	.string "Reedmere hide, copied by hand into the\l"

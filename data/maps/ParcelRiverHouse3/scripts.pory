@@ -3,6 +3,11 @@ mapscripts ParcelRiverHouse3_MapScripts {
 script ParcelRiverHouse3_Mother {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MOTHER: Two rows of alder, waist-high. My husband measured them again. He says the water under them's clearer.\pThe CORPS woman came and looked and wrote it. Three looks. That's a fact now."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MOTHER: Two rows. The fund paid for the strip. My husband measured it twice and planted it once. The CORPS woman's report had our plot number in it. We've framed the page."), MSGBOX_DEFAULT)
         release

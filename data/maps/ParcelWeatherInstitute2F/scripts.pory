@@ -46,6 +46,11 @@ script ParcelWeatherInstitute2F_Director {
 script ParcelWeatherInstitute2F_Aide {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("AIDE: The director keeps one logbook now. He says the second one was for whoever came after, and someone did, so he stopped.\pHe writes slower. He writes true."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AIDE: The director's second logbook went into the record. The one he said was for whoever comes after. It was for you, it turns out. He's started a third."), MSGBOX_DEFAULT)
         release

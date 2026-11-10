@@ -195,6 +195,11 @@ script ParcelRiver_Harland {
 script ParcelRiver_Farmer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("FARMER: Buffer strip's two rows of alder and I curse it every time I turn the harrow.\pThe water below it's clearer. I've stopped cursing out loud."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FARMER: ILEX's buffer strip, two rows, got written into the allocation. The fund paid. I didn't believe the fund. I believed it when the cheque cleared. The strip's going in. Two rows."), MSGBOX_DEFAULT)
         release
@@ -215,6 +220,11 @@ script ParcelRiver_Farmer {
 script ParcelRiver_Ilex {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("ILEX: Stressed, not shifted. Still. I read the lower stakes last month and it held.\pHold it another year. Then we'll both say something."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("ILEX: Stressed, not shifted, and the hearing kept the difference. I held it like a coal for you. Now you hold it for the next one."), MSGBOX_DEFAULT)
         release
@@ -256,6 +266,11 @@ script ParcelRiver_Ilex {
 script ParcelRiver_Dorsey {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("DORSEY: Phase 2 is a smaller thing with a longer name now. I wrote the name.\pPeople read it aloud and watch my face. I let them. It's a fair charge."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("DORSEY: Phase 2 goes ahead. Six farms kept dry. You'd have done it too, RANGER, with a different word on the sign. I've stopped saying 'flood control'. I say 'the sluice'. It's the same sluice."), MSGBOX_DEFAULT)
         release
@@ -278,6 +293,11 @@ script ParcelRiver_Dorsey {
 script ParcelRiver_Aide {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("AIDE: Market day. Questions. A line, seven long, and a chair for the old ones.\pThe councilman brought the chair himself. Don't tell anyone he did."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("AIDE: Phase 2 consultation reopened by order. The councilman takes questions every market day now, not just when it suits. Form a line. There is one."), MSGBOX_DEFAULT)
         release
@@ -297,6 +317,11 @@ script ParcelRiver_Aide {
 script ParcelRiver_VendorEggs {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_HIVES_DONE)) {
+        msgbox(format("WOMAN: Six jars a week from the hives, and he comes down with them awake now. Buy something, RANGER.\pThe honey's the same. I've started saying so."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_HIVES_DONE)) {
         msgbox(format("WOMAN: He came down the next morning with six jars and no apology. I took the jars. Buy something or move along, RANGER. I've a stall."), MSGBOX_DEFAULT)
         release
@@ -332,6 +357,11 @@ script ParcelRiver_VendorEggs {
 script ParcelRiver_VendorFish {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: HARLAND's cousin. Eight trout, my number, four buyers. The FOUNDATION one still comes. He queues.\pI've never seen a man so surprised to queue."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: HARLAND's cousin. Six trout today. Sold two to the FOUNDATION buyer at my number, not his. First time. He paid it. He looked surprised to be paying it."), MSGBOX_DEFAULT)
         release
@@ -349,6 +379,11 @@ script ParcelRiver_VendorFish {
 script ParcelRiver_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OLD MAN: The beaver reach has water in it. Standing water. I walked up with the boy from HAUKFELL and he put his hand in it and said: not soft.\pRight word. Wrong reason. Good enough."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: The pond above the town. The allocation gives the beaver reach a flow. Beavers don't read allocations, but water does. I'll walk up and look. Every day, till I see one."), MSGBOX_DEFAULT)
         release
@@ -366,6 +401,11 @@ script ParcelRiver_OldMan {
 script ParcelRiver_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: The ribbon's still in the drawer. Mum says I can have it back when I'm old. I asked how old.\pShe said: when you know what it was for. I nearly do."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The councilman gave me a ribbon. PHASE 2, in blue. Mum put it in a drawer after the hearing. She said it's history now. I don't know what that means but it's still blue."), MSGBOX_DEFAULT)
         release
@@ -383,6 +423,11 @@ script ParcelRiver_Girl {
 script ParcelRiver_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: Swam below the plots. Cold. No green stuff. The HAUKFELL boy came too and said water's supposed to be cold, and I said I know.\pI didn't know."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Mum says I can swim below the plots again by summer. The green stuff's going. She says a ranger wrote it down and then men came and measured. I asked if writing works. She said 'sometimes'."), MSGBOX_DEFAULT)
         release
@@ -400,6 +445,11 @@ script ParcelRiver_Boy {
 script ParcelRiver_PondFisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_DEPTH_DONE)) {
+        msgbox(format("FISHER: Two marks on the pier, red under white, and this spring the river reached the red one for a day. One day.\pI wrote it on the pier in pencil, under both."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_DEPTH) && !flag(FLAG_SKALD_Q_DEPTH_DONE)) {
         if (flag(FLAG_SKALD_Q_DEPTH_FOUND)) {
             msgbox(format("FISHER: Still there. Two hands over theirs, red under white, and the river at neither. His was right in his year and theirs is right in theirs and the water's walked away from both.\pTake these. Catch something in the pool while there's a pool."), MSGBOX_DEFAULT)
@@ -2053,6 +2103,11 @@ script ParcelRiver_Stringer {
 script ParcelRiver_FordBoy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_BOOK_DONE)) {
+        msgbox(format("BOY: Twenty lines in my book now. One a week. DAD read it and didn't fix anything.\pThat's how it starts, he said. Then he went quiet."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_BOOK_DONE)) {
         msgbox(format("BOY: I'm keeping my own book now. One line a week. DAD says that's how it starts."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_BOOK)) {

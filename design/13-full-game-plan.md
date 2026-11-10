@@ -729,4 +729,19 @@ quest is built, how the peer works) before they are asked six more times.
   it was), and the Board's water-rights ledger ("when the sum is larger
   than the river, the river decides"). Three read in the emulator. 87,257
   hand-written words. ~2,200 words.
+- **2026-11-10 — the fourth state: 203 post-epilogue lines.** Every named
+  resident who had no `FLAG_SKALDMERE_EPILOGUE_DONE` branch now has one,
+  inserted straight after `faceplayer`, so the post-game is a settled
+  "what now" instead of the hearing's week repeated: BRAM's board with
+  dates three weeks out, TOBIN counted in front of the inspector, NILS
+  looking up THRESHOLD ("the step of a door"), the Fernwick boy counting
+  the pond before school, the Elvsund race that ran all spring and the
+  flour too good to sell, the HAUKFELL boy's hand in the beaver pool ("not
+  soft"), HOLLIS checking the injunction the way she used to check the
+  renewals, the dredge still parked and counted ("still one"), the Union
+  that couldn't guess the vote, the lifeguard's two-arrow sign, the
+  Institute's one logbook. Quest givers speak theirs only once their quest
+  is done, so no side path is blocked. Three scratchpad scripts
+  (epilogue1-3.py), all 103 scripts compile, two lines checked in the
+  emulator with the flag forced. 93,285 hand-written words. ~6,000 words.
 

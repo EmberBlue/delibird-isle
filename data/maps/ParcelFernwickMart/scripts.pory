@@ -30,6 +30,11 @@ ParcelFernwickMart_Items::
 script ParcelFernwickMart_Customer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("YOUNGSTER: REPELS on sale again. The marsh has a lot of WOOPER. The clerk says that's good now. She didn't say that last year.\pI asked why. She said: read the board."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("YOUNGSTER: REPELS are still on sale. The marsh still has a lot of WOOPER. Some things the hearing didn't fix. The WOOPER are fine about it."), MSGBOX_DEFAULT)
         release

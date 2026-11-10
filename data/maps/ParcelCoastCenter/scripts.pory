@@ -18,6 +18,11 @@ script ParcelCoastCenter_Nurse {
 script ParcelCoastCenter_Trainer {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("SAILOR: Five WINGULL in this month, none with hooks. The nurse has started weighing them. Heavier.\pShe writes it on the wall by the door. It's the only chart in here that goes up."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SAILOR: The WINGULL came in today without hooks in them. Three. The nurse didn't know what to do with a well bird. Neither did I."), MSGBOX_DEFAULT)
         release

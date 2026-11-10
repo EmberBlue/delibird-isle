@@ -8,12 +8,14 @@ ParcelFernwickHouse4_Woman::
 # 8 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	faceplayer
 # 9 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_Woman_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelFernwickHouse4_Woman_2
 # 14 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse4_Woman_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_Woman_5
 # 19 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	msgbox ParcelFernwickHouse4_Woman_Text_2, MSGBOX_DEFAULT
-# 20 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse4_Woman_8
+# 24 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Woman_Text_3, MSGBOX_DEFAULT
+# 25 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	release
 	end
 
@@ -31,72 +33,96 @@ ParcelFernwickHouse4_Woman_5:
 	release
 	end
 
+ParcelFernwickHouse4_Woman_8:
+# 20 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Woman_Text_2, MSGBOX_DEFAULT
+# 21 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	release
+	end
+
 
 ParcelFernwickHouse4_Boy::
-# 25 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 30 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	lock
-# 26 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 31 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	faceplayer
-# 27 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_Boy_2
 # 32 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse4_Boy_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelFernwickHouse4_Boy_2
 # 37 "data/maps/ParcelFernwickHouse4/scripts.pory"
-	msgbox ParcelFernwickHouse4_Boy_Text_2, MSGBOX_DEFAULT
-# 38 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_Boy_5
+# 42 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwickHouse4_Boy_8
+# 47 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Boy_Text_3, MSGBOX_DEFAULT
+# 48 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	release
 	end
 
 ParcelFernwickHouse4_Boy_2:
-# 28 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 33 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	msgbox ParcelFernwickHouse4_Boy_Text_0, MSGBOX_DEFAULT
-# 29 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 34 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	release
 	end
 
 ParcelFernwickHouse4_Boy_5:
-# 33 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 38 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	msgbox ParcelFernwickHouse4_Boy_Text_1, MSGBOX_DEFAULT
-# 34 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 39 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	release
+	end
+
+ParcelFernwickHouse4_Boy_8:
+# 43 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_Boy_Text_2, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	release
 	end
 
 
 ParcelFernwickHouse4_ReadDresser::
-# 43 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 53 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	msgbox ParcelFernwickHouse4_ReadDresser_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickHouse4_ReadDrawer::
-# 48 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 58 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	msgbox ParcelFernwickHouse4_ReadDrawer_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelFernwickHouse4_PaperRequisition::
-# 55 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 65 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_PaperRequisition_2
-# 58 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 68 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	msgbox ParcelFernwickHouse4_PaperRequisition_Text_1, MSGBOX_SIGN
 ParcelFernwickHouse4_PaperRequisition_1:
 	end
 
 ParcelFernwickHouse4_PaperRequisition_2:
-# 56 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 66 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	msgbox ParcelFernwickHouse4_PaperRequisition_Text_0, MSGBOX_SIGN
 	goto ParcelFernwickHouse4_PaperRequisition_1
 
 
 ParcelFernwickHouse4_Woman_Text_0:
 # 10 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "WOMAN: The cabinet came. Three drawers\n"
+	.string "of river and one of coast, and the\l"
+	.string "Survey's asked for nothing, still.\p"
+	.string "I've started a drawer for them anyway.\n"
+	.string "Red label.$"
+
+ParcelFernwickHouse4_Woman_Text_1:
+# 15 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "WOMAN: The hearing asked for every\n"
 	.string "page. I carried them to the coast\l"
 	.string "myself. Eleven hundred, their clerk\l"
 	.string "said. I'd counted twelve.$"
 
-ParcelFernwickHouse4_Woman_Text_1:
-# 15 "data/maps/ParcelFernwickHouse4/scripts.pory"
+ParcelFernwickHouse4_Woman_Text_2:
+# 20 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "WOMAN: The river report filled the\n"
 	.string "second drawer on its own. I've asked for\l"
 	.string "a cabinet.\p"
@@ -104,45 +130,52 @@ ParcelFernwickHouse4_Woman_Text_1:
 	.string "ILEX signed the form without reading\l"
 	.string "it. ILEX reads everything.$"
 
-ParcelFernwickHouse4_Woman_Text_2:
-# 19 "data/maps/ParcelFernwickHouse4/scripts.pory"
+ParcelFernwickHouse4_Woman_Text_3:
+# 24 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "WOMAN: I file the field reports at the\n"
 	.string "Survey office. Yours come in thicker\l"
 	.string "than anyone's. I've started a second\l"
 	.string "drawer.$"
 
 ParcelFernwickHouse4_Boy_Text_0:
-# 28 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 33 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "BOY: Dad still says 'wet on purpose'.\n"
+	.string "It's what he calls you. He says it's a\l"
+	.string "compliment.\p"
+	.string "He says it smiling, so.$"
+
+ParcelFernwickHouse4_Boy_Text_1:
+# 38 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "BOY: Dad read your name in the paper\n"
 	.string "and said 'wet on purpose'. He was smiling\l"
 	.string "when he said it.$"
 
-ParcelFernwickHouse4_Boy_Text_1:
-# 33 "data/maps/ParcelFernwickHouse4/scripts.pory"
+ParcelFernwickHouse4_Boy_Text_2:
+# 43 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "BOY: Dad says you went to the river and\n"
 	.string "made the Board count out loud.\p"
 	.string "I didn't know you could make grown-ups\n"
 	.string "count. I'm going to try it on Dad.$"
 
-ParcelFernwickHouse4_Boy_Text_2:
-# 37 "data/maps/ParcelFernwickHouse4/scripts.pory"
+ParcelFernwickHouse4_Boy_Text_3:
+# 47 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "BOY: Dad says the rangers are the ones\n"
 	.string "who get wet on purpose.$"
 
 ParcelFernwickHouse4_ReadDresser_Text_0:
-# 43 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 53 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "A Survey office lanyard hung on the\n"
 	.string "mirror, and a second-drawer key on a\l"
 	.string "ribbon beside it. The ribbon is new.$"
 
 ParcelFernwickHouse4_ReadDrawer_Text_0:
-# 48 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 58 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "A boy's boots drying on newspaper. The\n"
 	.string "newspaper is a river report. The boots\l"
 	.string "are wet on purpose.$"
 
 ParcelFernwickHouse4_PaperRequisition_Text_0:
-# 56 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 66 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "A requisition form, carbon copy, pinned\n"
 	.string "by the door. ONE (1) FILING CABINET,\l"
 	.string "FOUR-DRAWER. APPROVED, in a different\l"
@@ -152,7 +185,7 @@ ParcelFernwickHouse4_PaperRequisition_Text_0:
 	.string "don't know what they've got.$"
 
 ParcelFernwickHouse4_PaperRequisition_Text_1:
-# 58 "data/maps/ParcelFernwickHouse4/scripts.pory"
+# 68 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "A requisition form, carbon copy, pinned\n"
 	.string "by the door so it can be waved at\l"
 	.string "people. ONE (1) FILING CABINET,\l"

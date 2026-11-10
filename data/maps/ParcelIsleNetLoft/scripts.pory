@@ -7,6 +7,11 @@ mapscripts ParcelIsleNetLoft_MapScripts {
 script ParcelIsleNetLoft_Grette {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GRETTE: Sixty blankets went to the island in the autumn storm. All sixty. Needed. The crest didn't matter to anyone cold.\pI wrote the number on the loft wall. Used."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GRETTE: Sixty blankets. FOUNDATION crest, still in the plastic. Nobody's had a storm bad enough for sixty blankets.\pThat's the thing about relief. It's for a disaster that suits the giver."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {

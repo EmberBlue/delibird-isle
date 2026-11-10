@@ -6,6 +6,11 @@ mapscripts ParcelFernwickHouse5_MapScripts {
 script ParcelFernwickHouse5_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_PAGE_DONE)) {
+        msgbox(format("OLD MAN: Twenty-eight pairs, in the book, with the hole. And this spring twenty-eight again, in a new hand under mine. The boy's.\pThe book's not finished. I thought it was."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_PAGE_DONE)) {
         msgbox(format("OLD MAN: Twenty-eight pairs. It's back in the book, pulp and all. A book with a hole in it is a book with a hole in it. Mine's whole."), MSGBOX_DEFAULT)
         release
@@ -42,6 +47,11 @@ script ParcelFernwickHouse5_OldMan {
 script ParcelFernwickHouse5_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: He reads the boy's counts against his own now. Then he puts them away and says 'good'.\pSame word. Different reason."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: He got the notebooks out and read your filing against them. Then he put them away and said 'good'. Just that."), MSGBOX_DEFAULT)
         release

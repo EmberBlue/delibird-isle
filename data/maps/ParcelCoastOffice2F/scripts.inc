@@ -99,144 +99,153 @@ ParcelCoastOffice2F_Secretary::
 # 55 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	faceplayer
 # 56 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice2F_Secretary_2
-# 65 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastOffice2F_Secretary_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastOffice2F_Secretary_2
+# 61 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice2F_Secretary_5
 # 70 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	msgbox ParcelCoastOffice2F_Secretary_Text_3, MSGBOX_DEFAULT
-# 71 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastOffice2F_Secretary_8
+# 75 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_Secretary_Text_4, MSGBOX_DEFAULT
+# 76 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Secretary_2:
 # 57 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	goto_if_set FLAG_SKALD_CH_TEA, ParcelCoastOffice2F_Secretary_8
-# 60 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	msgbox ParcelCoastOffice2F_Secretary_Text_1, MSGBOX_DEFAULT
-ParcelCoastOffice2F_Secretary_7:
-# 62 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_Secretary_Text_0, MSGBOX_DEFAULT
+# 58 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Secretary_5:
-# 66 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 62 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALD_CH_TEA, ParcelCoastOffice2F_Secretary_11
+# 65 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Secretary_Text_2, MSGBOX_DEFAULT
+ParcelCoastOffice2F_Secretary_10:
 # 67 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Secretary_8:
-# 58 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	msgbox ParcelCoastOffice2F_Secretary_Text_0, MSGBOX_DEFAULT
-	goto ParcelCoastOffice2F_Secretary_7
+# 71 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_Secretary_Text_3, MSGBOX_DEFAULT
+# 72 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	release
+	end
+
+ParcelCoastOffice2F_Secretary_11:
+# 63 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	msgbox ParcelCoastOffice2F_Secretary_Text_1, MSGBOX_DEFAULT
+	goto ParcelCoastOffice2F_Secretary_10
 
 
 ParcelCoastOffice2F_Perrin::
-# 76 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 81 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	lock
-# 77 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 82 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	faceplayer
-# 78 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 83 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastOffice2F_Perrin_2
 ParcelCoastOffice2F_Perrin_1:
-# 81 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 86 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Text_0, MSGBOX_DEFAULT
-# 82 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 87 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Text_1, MSGBOX_DEFAULT
-# 83 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 88 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Perrin_2:
-# 79 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 84 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	goto ParcelCoastOffice2F_Perrin_Last
 	goto ParcelCoastOffice2F_Perrin_1
 
 
 ParcelCoastOffice2F_Perrin_Last::
-# 89 "data/maps/ParcelCoastOffice2F/scripts.pory"
-	goto_if_set FLAG_SKALD_PERRIN_7_DONE, ParcelCoastOffice2F_Perrin_Last_2
 # 94 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	goto_if_set FLAG_SKALD_PERRIN_7_DONE, ParcelCoastOffice2F_Perrin_Last_2
+# 99 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_1, MSGBOX_YESNO
-# 95 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 100 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelCoastOffice2F_Perrin_Last_5
-# 100 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 105 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_PERRIN_7, ParcelCoastOffice2F_Perrin_Last_Text_3
-# 101 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 106 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	setflag FLAG_SKALD_PERRIN_7_DONE
-# 102 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 107 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_4, MSGBOX_DEFAULT
-# 103 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 108 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Perrin_Last_2:
-# 90 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 95 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_0, MSGBOX_DEFAULT
-# 91 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 96 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 ParcelCoastOffice2F_Perrin_Last_5:
-# 96 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 101 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Perrin_Last_Text_2, MSGBOX_DEFAULT
-# 97 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 102 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	release
 	end
 
 
 ParcelCoastOffice2F_ReadModel::
-# 108 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 113 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_ReadModel_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastOffice2F_ReadDesk::
-# 113 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 118 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_ReadDesk_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastOffice2F_ReadBoat::
-# 118 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 123 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_ReadBoat_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastOffice2F_GrantFile::
-# 125 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 130 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice2F_GrantFile_1
-# 128 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 133 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_GrantFile_Text_1, MSGBOX_SIGN
 	return
 
 ParcelCoastOffice2F_GrantFile_1:
-# 126 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 131 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_GrantFile_Text_0, MSGBOX_SIGN
 	return
 
 
 ParcelCoastOffice2F_Programme::
-# 133 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 138 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_Programme_Text_0, MSGBOX_SIGN
 	return
 
 
 ParcelCoastOffice2F_AnnualReport::
-# 139 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 144 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_AnnualReport_Text_0, MSGBOX_SIGN
-# 140 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 145 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_AnnualReport_Text_1, MSGBOX_SIGN
-# 141 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 146 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_AnnualReport_Text_2, MSGBOX_SIGN
-# 142 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 147 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastOffice2F_AnnualReport_2
 ParcelCoastOffice2F_AnnualReport_1:
 	end
 
 ParcelCoastOffice2F_AnnualReport_2:
-# 143 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 148 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	msgbox ParcelCoastOffice2F_AnnualReport_Text_3, MSGBOX_SIGN
 	goto ParcelCoastOffice2F_AnnualReport_1
 
@@ -355,14 +364,23 @@ ParcelCoastOffice2F_Hollis_Text_14:
 	.string "argument.$"
 
 ParcelCoastOffice2F_Secretary_Text_0:
-# 58 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 57 "data/maps/ParcelCoastOffice2F/scripts.pory"
+	.string "SECRETARY: Ms. AUNE sees everyone.\n"
+	.string "More come now, oddly. Fishers, mostly,\l"
+	.string "with pages.\p"
+	.string "She makes the tea herself, and she's\n"
+	.string "stopped asking how they take it. She\l"
+	.string "remembers.$"
+
+ParcelCoastOffice2F_Secretary_Text_1:
+# 63 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "SECRETARY: Ms. AUNE still sees\n"
 	.string "everyone. Fewer come. She remembers\l"
 	.string "how each of them took their tea. She\l"
 	.string "has started making it herself.$"
 
-ParcelCoastOffice2F_Secretary_Text_1:
-# 60 "data/maps/ParcelCoastOffice2F/scripts.pory"
+ParcelCoastOffice2F_Secretary_Text_2:
+# 65 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "SECRETARY: Ms. AUNE still sees\n"
 	.string "everyone. Fewer come. She remembers\l"
 	.string "how each of them took their tea, and\l"
@@ -370,8 +388,8 @@ ParcelCoastOffice2F_Secretary_Text_1:
 	.string "She has started making it herself. She\n"
 	.string "still pours two.$"
 
-ParcelCoastOffice2F_Secretary_Text_2:
-# 66 "data/maps/ParcelCoastOffice2F/scripts.pory"
+ParcelCoastOffice2F_Secretary_Text_3:
+# 71 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "SECRETARY: Ms. AUNE remembers how\n"
 	.string "everyone takes their tea. She\l"
 	.string "remembered yours before you came up\l"
@@ -380,15 +398,15 @@ ParcelCoastOffice2F_Secretary_Text_2:
 	.string "since it was filed. She hasn't moved it.\l"
 	.string "She moves everything.$"
 
-ParcelCoastOffice2F_Secretary_Text_3:
-# 70 "data/maps/ParcelCoastOffice2F/scripts.pory"
+ParcelCoastOffice2F_Secretary_Text_4:
+# 75 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "SECRETARY: Ms. AUNE sees everyone.\n"
 	.string "Fishers, mayors, RANGERS. She remembers\l"
 	.string "how they take their tea. She remembers\l"
 	.string "everything. It's why they sent her.$"
 
 ParcelCoastOffice2F_Perrin_Text_0:
-# 81 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 86 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: They gave me a desk. The one by\n"
 	.string "the window. HOLLIS said I'd earned it.\p"
 	.string "I read your filing. All of it. Twice. I\n"
@@ -397,21 +415,21 @@ ParcelCoastOffice2F_Perrin_Text_0:
 	.string "isn't true.$"
 
 ParcelCoastOffice2F_Perrin_Text_1:
-# 82 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 87 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: I'm not sorry. I'm not NOT sorry.\n"
 	.string "Is that an answer?\p"
 	.string "Go on. You've got a ferry. I've got a\n"
 	.string "window.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_0:
-# 90 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 95 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: I'm staying. Someone should be\n"
 	.string "in here who's read it. That's me, now.\p"
 	.string "The window's good. You can see the\n"
 	.string "ferry from it.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_1:
-# 94 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 99 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: WREN. They put the hearing on\n"
 	.string "the office speaker. HOLLIS listened to\l"
 	.string "all of it with her tea going cold.\p"
@@ -419,30 +437,30 @@ ParcelCoastOffice2F_Perrin_Last_Text_1:
 	.string "Please.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_2:
-# 96 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 101 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: Then later. I'll be at this desk.\n"
 	.string "It's a good desk.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_3:
-# 100 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 105 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: …Okay. Okay. That one I'll keep.$"
 
 ParcelCoastOffice2F_Perrin_Last_Text_4:
-# 102 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 107 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PERRIN: I'm staying. Someone should be\n"
 	.string "in here who's read it. That's me, now.\p"
 	.string "Go on. You've got a region. I've got a\n"
 	.string "window.$"
 
 ParcelCoastOffice2F_ReadModel_Text_0:
-# 108 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 113 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "A model under glass: the harbour as the\n"
 	.string "FOUNDATION plans it. Six berths, a cold\l"
 	.string "store, a wind turbine where the union\l"
 	.string "hall is.$"
 
 ParcelCoastOffice2F_ReadDesk_Text_0:
-# 113 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 118 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "A desk with nothing on it but a tea tray\n"
 	.string "and your coast survey, squared to the\l"
 	.string "edge. The tea is still warm.\p"
@@ -450,7 +468,7 @@ ParcelCoastOffice2F_ReadDesk_Text_0:
 	.string "say so.$"
 
 ParcelCoastOffice2F_ReadBoat_Text_0:
-# 118 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 123 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "A model of a fishing boat, the old kind,\n"
 	.string "high in the bow. The card: 'Traditional\l"
 	.string "fleet, heritage display.'\p"
@@ -458,7 +476,7 @@ ParcelCoastOffice2F_ReadBoat_Text_0:
 	.string "owned by a lender.$"
 
 ParcelCoastOffice2F_GrantFile_Text_0:
-# 126 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 131 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "The grant file, HERON, open on the\n"
 	.string "cabinet. Three letters, one a year,\l"
 	.string "signed H. Aune. And a fourth, unsigned,\l"
@@ -490,7 +508,7 @@ ParcelCoastOffice2F_GrantFile_Text_0:
 	.string "It was not sent. It did not need to be.$"
 
 ParcelCoastOffice2F_GrantFile_Text_1:
-# 128 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 133 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "The grant file, HERON, open on the\n"
 	.string "cabinet. Three letters, one a year,\l"
 	.string "signed H. Aune.\p"
@@ -516,7 +534,7 @@ ParcelCoastOffice2F_GrantFile_Text_1:
 	.string "hand is the same hand.$"
 
 ParcelCoastOffice2F_Programme_Text_0:
-# 133 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 138 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "The programme ledger. Grants by\n"
 	.string "recipient, this cycle.\p"
 	.string "Skaldmere Climate Corps, two field\n"
@@ -539,7 +557,7 @@ ParcelCoastOffice2F_Programme_Text_0:
 	.string "does not have money. It has a parent.$"
 
 ParcelCoastOffice2F_AnnualReport_Text_0:
-# 139 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 144 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "THE MEREHOLT FOUNDATION. ANNUAL\n"
 	.string "REPORT. Glossy, square, heavier than it\l"
 	.string "needs to be. The cover is the Fernwick\l"
@@ -553,7 +571,7 @@ ParcelCoastOffice2F_AnnualReport_Text_0:
 	.string "that depend on them the same room.$"
 
 ParcelCoastOffice2F_AnnualReport_Text_1:
-# 140 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 145 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "PROGRAMMES. The Climate Corps field\n"
 	.string "stations: two. Certification training:\l"
 	.string "eighty provisional rangers supported.\l"
@@ -570,7 +588,7 @@ ParcelCoastOffice2F_AnnualReport_Text_1:
 	.string "Survey's. The caption does not say so.$"
 
 ParcelCoastOffice2F_AnnualReport_Text_2:
-# 141 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 146 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "FINANCIALS. Programme spending as a\n"
 	.string "share of group turnover: a figure to\l"
 	.string "one decimal place. Group turnover\l"
@@ -584,7 +602,7 @@ ParcelCoastOffice2F_AnnualReport_Text_2:
 	.string "is last, in smaller type, under Staff.$"
 
 ParcelCoastOffice2F_AnnualReport_Text_3:
-# 143 "data/maps/ParcelCoastOffice2F/scripts.pory"
+# 148 "data/maps/ParcelCoastOffice2F/scripts.pory"
 	.string "Someone has written across the Chair's\n"
 	.string "letter in pencil, small: ninth edition.\l"
 	.string "Withdrawn. The handwriting is HOLLIS's.$"

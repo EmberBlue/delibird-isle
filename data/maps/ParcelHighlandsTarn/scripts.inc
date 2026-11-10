@@ -1464,12 +1464,14 @@ ParcelHighlandsTarn_Cadet::
 # 666 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelHighlandsTarn/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsTarn_Cadet_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelHighlandsTarn_Cadet_2
 # 672 "data/maps/ParcelHighlandsTarn/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsTarn_Cadet_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsTarn_Cadet_5
 # 677 "data/maps/ParcelHighlandsTarn/scripts.pory"
-	msgbox ParcelHighlandsTarn_Cadet_Text_2, MSGBOX_DEFAULT
-# 678 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsTarn_Cadet_8
+# 682 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_Cadet_Text_3, MSGBOX_DEFAULT
+# 683 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	release
 	end
 
@@ -1487,71 +1489,78 @@ ParcelHighlandsTarn_Cadet_5:
 	release
 	end
 
+ParcelHighlandsTarn_Cadet_8:
+# 678 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_Cadet_Text_2, MSGBOX_DEFAULT
+# 679 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	release
+	end
+
 
 ParcelHighlandsTarn_ItemNeverMeltIce::
-# 681 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 686 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	finditem ITEM_NEVER_MELT_ICE
 	end
 
 
 ParcelHighlandsTarn_CoreTag::
-# 684 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 689 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_CORE, ParcelHighlandsTarn_CoreTag_3
 ParcelHighlandsTarn_CoreTag_1:
-# 689 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 694 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_CoreTag_Text_1, MSGBOX_SIGN
 	end
 
 ParcelHighlandsTarn_CoreTag_2:
-# 685 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 690 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_CoreTag_Text_0, MSGBOX_SIGN
-# 686 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 691 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	setflag FLAG_SKALD_Q_CORE_FOUND
 	end
 
 ParcelHighlandsTarn_CoreTag_3:
-# 684 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 689 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_CORE_FOUND, ParcelHighlandsTarn_CoreTag_2
 	goto ParcelHighlandsTarn_CoreTag_1
 
 
 ParcelHighlandsTarn_PairMelt::
-# 696 "data/maps/ParcelHighlandsTarn/scripts.pory"
-	lock
-# 697 "data/maps/ParcelHighlandsTarn/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsTarn_PairMelt_2
 # 701 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	lock
+# 702 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsTarn_PairMelt_2
+# 706 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlandsTarn_PairMelt_3
-# 707 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 712 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_7, MSGBOX_DEFAULT
-# 708 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 713 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_8, MSGBOX_DEFAULT
-# 709 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 714 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_9, MSGBOX_DEFAULT
-# 710 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 715 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_10, MSGBOX_DEFAULT
 ParcelHighlandsTarn_PairMelt_1:
-# 712 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 717 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	release
 	end
 
 ParcelHighlandsTarn_PairMelt_2:
-# 698 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 703 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_0, MSGBOX_DEFAULT
-# 699 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 704 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_1, MSGBOX_DEFAULT
-# 700 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 705 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_2, MSGBOX_DEFAULT
 	goto ParcelHighlandsTarn_PairMelt_1
 
 ParcelHighlandsTarn_PairMelt_3:
-# 702 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 707 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_3, MSGBOX_DEFAULT
-# 703 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 708 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_4, MSGBOX_DEFAULT
-# 704 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 709 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_5, MSGBOX_DEFAULT
-# 705 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 710 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	msgbox ParcelHighlandsTarn_PairMelt_Text_6, MSGBOX_DEFAULT
 	goto ParcelHighlandsTarn_PairMelt_1
 
@@ -2138,13 +2147,22 @@ ParcelHighlandsTarn_Randi_R5_Text_1:
 
 ParcelHighlandsTarn_Cadet_Text_0:
 # 668 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "CADET: VALE reads her gate log to the\n"
+	.string "new cadets every winter now, in the\l"
+	.string "cold, in the dark.\p"
+	.string "She says it's the only way they'll\n"
+	.string "remember what the cold cost. I\l"
+	.string "remember.$"
+
+ParcelHighlandsTarn_Cadet_Text_1:
+# 673 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "CADET: VALE said 'learn the cold'. The\n"
 	.string "hearing cited her gate log. She came up\l"
 	.string "here to read it to us. In the cold. It's a\l"
 	.string "good log.$"
 
-ParcelHighlandsTarn_Cadet_Text_1:
-# 673 "data/maps/ParcelHighlandsTarn/scripts.pory"
+ParcelHighlandsTarn_Cadet_Text_2:
+# 678 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "CADET: VALE went down to the coast for\n"
 	.string "the hearing and left me the cold. I've\l"
 	.string "learnt it twice over.\p"
@@ -2152,15 +2170,15 @@ ParcelHighlandsTarn_Cadet_Text_1:
 	.string "here'. There's nothing on the front but\l"
 	.string "water.$"
 
-ParcelHighlandsTarn_Cadet_Text_2:
-# 677 "data/maps/ParcelHighlandsTarn/scripts.pory"
+ParcelHighlandsTarn_Cadet_Text_3:
+# 682 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "CADET: VALE said 'learn the cold'. I've\n"
 	.string "learnt it. Can I go down now?\p"
 	.string "She said no. She says it kindly, which is\n"
 	.string "worse.$"
 
 ParcelHighlandsTarn_CoreTag_Text_0:
-# 685 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 690 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "At the edge of the old water line, half\n"
 	.string "under a stone, a brass tag stamped\l"
 	.string "48-50. Somebody's thumb has worn the\l"
@@ -2168,67 +2186,67 @@ ParcelHighlandsTarn_CoreTag_Text_0:
 	.string "The tag is colder than the cave.$"
 
 ParcelHighlandsTarn_CoreTag_Text_1:
-# 689 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 694 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "The old water line in the cave, a pale\n"
 	.string "band on the rock, a hand above the\l"
 	.string "water that is there now.$"
 
 ParcelHighlandsTarn_PairMelt_Text_0:
-# 698 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 703 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GEOLOGIST: The bore's capped. The tarn\n"
 	.string "is still coming up. Capping a hole\l"
 	.string "doesn't put the ice back in a mountain.$"
 
 ParcelHighlandsTarn_PairMelt_Text_1:
-# 699 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 704 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GUIDE: Then what does?$"
 
 ParcelHighlandsTarn_PairMelt_Text_2:
-# 700 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 705 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GEOLOGIST: Nothing. I wrote 'nothing' in\n"
 	.string "the review, and signed it, and I've slept\l"
 	.string "better than I have in two years.$"
 
 ParcelHighlandsTarn_PairMelt_Text_3:
-# 702 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 707 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GUIDE: The ranger measured the tarn\n"
 	.string "against the core tag. Wrote both\l"
 	.string "numbers on the stake.$"
 
 ParcelHighlandsTarn_PairMelt_Text_4:
-# 703 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 708 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GEOLOGIST: The tag's mine. From the\n"
 	.string "bore. I shouldn't have left it here.$"
 
 ParcelHighlandsTarn_PairMelt_Text_5:
-# 704 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 709 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GUIDE: Why did you?$"
 
 ParcelHighlandsTarn_PairMelt_Text_6:
-# 705 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 710 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GEOLOGIST: So somebody who wasn't paid\n"
 	.string "by the bore would find it. Took two\l"
 	.string "years. Took a ranger.$"
 
 ParcelHighlandsTarn_PairMelt_Text_7:
-# 707 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 712 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GEOLOGIST: The tarn came up a hand's\n"
 	.string "width since spring. Meltwater, off the\l"
 	.string "slope.$"
 
 ParcelHighlandsTarn_PairMelt_Text_8:
-# 708 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 713 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GUIDE: The slope's been there ten\n"
 	.string "thousand years. Why now?$"
 
 ParcelHighlandsTarn_PairMelt_Text_9:
-# 709 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 714 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GEOLOGIST: The ice inside it has been\n"
 	.string "there ten thousand years. The ice is\l"
 	.string "leaving. The slope's just what it's\l"
 	.string "leaving behind.$"
 
 ParcelHighlandsTarn_PairMelt_Text_10:
-# 710 "data/maps/ParcelHighlandsTarn/scripts.pory"
+# 715 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "GUIDE: You say that like you're talking\n"
 	.string "about a lodger.$"

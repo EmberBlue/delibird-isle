@@ -4,6 +4,11 @@ mapscripts ParcelCoastCannery_MapScripts {
 script ParcelCoastCannery_Foreman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("FOREMAN: Four days, by order, and the lads knock off and go home in daylight. The line's a line.\pIt runs at the speed of the fish now. First time it's ever waited for them."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FOREMAN: Half speed by order instead of by shortage. Same speed, different reason. The lads say it feels different. I say a line's a line. I'm wrong, I think."), MSGBOX_DEFAULT)
         release
@@ -21,6 +26,11 @@ script ParcelCoastCannery_Foreman {
 script ParcelCoastCannery_Line {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WORKER: Mixed sizes down the line most days. Nobody stops to look any more.\pThat's what we wanted. To stop having to look."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WORKER: A big one came down the line yesterday. The whole line stopped to look. Then we went on. That's all we ever wanted. Something worth stopping for."), MSGBOX_DEFAULT)
         release
@@ -38,6 +48,11 @@ script ParcelCoastCannery_Line {
 script ParcelCoastCannery_Inspector {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_COPY_DONE)) {
+        msgbox(format("INSPECTOR: My letters get filed now. On top. I've written three this quarter and all three got answers.\pI don't know what to do with my afternoons."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_COPY) && !flag(FLAG_SKALD_Q_COPY_DONE)) {
         if (flag(FLAG_SKALD_Q_COPY_FOUND)) {
             msgbox(format("INSPECTOR: Under the tray. RECEIVED, not filed. Of course.\pYou put it back on top? Good. That's all I ever asked of it. Here. I've no fish to give you, and I wouldn't give you those."), MSGBOX_DEFAULT)

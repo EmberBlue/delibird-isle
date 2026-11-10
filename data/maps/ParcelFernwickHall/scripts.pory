@@ -8,6 +8,11 @@ mapscripts ParcelFernwickHall_MapScripts {
 script ParcelFernwickHall_Greeter {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GREETER: Three passed first time this year. TARN says the river minutes are on the reading list.\pHe says it like it was always there."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GREETER: Nobody passes first time, and nobody's name gets read at a hearing. Both happened this year. TARN says it's a bad precedent. He's smiling when he says it."), MSGBOX_DEFAULT)
         release

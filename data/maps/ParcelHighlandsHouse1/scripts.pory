@@ -6,6 +6,11 @@ mapscripts ParcelHighlandsHouse1_MapScripts {
 script ParcelHighlandsHouse1_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_MAREEP_DONE)) {
+        msgbox(format("MAN: She came down. In the autumn, by herself, when the slope went quiet. She stands in the yard now and faces it.\pI don't tell her it's safe. I don't know that."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_MAREEP_DONE)) {
         msgbox(format("MAN: Standing. You said standing. She'll come down when the slope stops frightening her, or she won't. Either way I know where she is. That's most of shepherding."), MSGBOX_DEFAULT)
         release
@@ -42,6 +47,11 @@ script ParcelHighlandsHouse1_Man {
 script ParcelHighlandsHouse1_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: Grandad goes to the centre for the cocoa and comes back and tells me what everyone said. He never used to tell me anything.\pThe cocoa's good, he says. I think it's the telling."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Grandad went to the warming centre. He had the cocoa. He said it was good, and then he was quiet for a long time."), MSGBOX_DEFAULT)
         release

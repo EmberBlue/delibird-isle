@@ -1464,18 +1464,21 @@ ParcelCorridorWorkings_Miner::
 # 666 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_SIGN_DONE, ParcelCorridorWorkings_Miner_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCorridorWorkings_Miner_3
+ParcelCorridorWorkings_Miner_1:
 # 672 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_SIGN, ParcelCorridorWorkings_Miner_5
+	goto_if_set FLAG_SKALD_Q_SIGN_DONE, ParcelCorridorWorkings_Miner_7
 # 677 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_SIGN_SEEN, ParcelCorridorWorkings_Miner_8
-# 683 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridorWorkings_Miner_11
+	goto_if_set FLAG_SKALD_Q_SIGN, ParcelCorridorWorkings_Miner_10
+# 682 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SIGN_SEEN, ParcelCorridorWorkings_Miner_13
 # 688 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	msgbox ParcelCorridorWorkings_Miner_Text_4, MSGBOX_DEFAULT
-# 689 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridorWorkings_Miner_16
+# 693 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_Miner_Text_5, MSGBOX_DEFAULT
+# 694 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	setflag FLAG_SKALD_Q_SIGN_SEEN
-# 690 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 695 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	release
 	end
 
@@ -1486,81 +1489,93 @@ ParcelCorridorWorkings_Miner_2:
 	release
 	end
 
-ParcelCorridorWorkings_Miner_5:
+ParcelCorridorWorkings_Miner_3:
+# 667 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SIGN_DONE, ParcelCorridorWorkings_Miner_2
+	goto ParcelCorridorWorkings_Miner_1
+
+ParcelCorridorWorkings_Miner_7:
 # 673 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_Miner_Text_1, MSGBOX_DEFAULT
 # 674 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	release
 	end
 
-ParcelCorridorWorkings_Miner_8:
+ParcelCorridorWorkings_Miner_10:
 # 678 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_Miner_Text_2, MSGBOX_DEFAULT
 # 679 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	setflag FLAG_SKALD_Q_SIGN
-# 680 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	release
 	end
 
-ParcelCorridorWorkings_Miner_11:
-# 684 "data/maps/ParcelCorridorWorkings/scripts.pory"
+ParcelCorridorWorkings_Miner_13:
+# 683 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_Miner_Text_3, MSGBOX_DEFAULT
+# 684 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	setflag FLAG_SKALD_Q_SIGN
 # 685 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	release
+	end
+
+ParcelCorridorWorkings_Miner_16:
+# 689 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_Miner_Text_4, MSGBOX_DEFAULT
+# 690 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	release
 	end
 
 
 ParcelCorridorWorkings_ItemRevive::
-# 693 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 698 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	finditem ITEM_REVIVE
 	end
 
 
 ParcelCorridorWorkings_ItemHardStone::
-# 694 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 699 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	finditem ITEM_HARD_STONE
 	end
 
 
 ParcelCorridorWorkings_PairCrew::
-# 699 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	lock
-# 700 "data/maps/ParcelCorridorWorkings/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridorWorkings_PairCrew_2
 # 704 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	lock
+# 705 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridorWorkings_PairCrew_2
+# 709 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelCorridorWorkings_PairCrew_3
-# 710 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 715 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_7, MSGBOX_DEFAULT
-# 711 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 716 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_8, MSGBOX_DEFAULT
-# 712 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 717 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_9, MSGBOX_DEFAULT
-# 713 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 718 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_10, MSGBOX_DEFAULT
-# 714 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 719 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_11, MSGBOX_DEFAULT
 ParcelCorridorWorkings_PairCrew_1:
-# 716 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 721 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	release
 	end
 
 ParcelCorridorWorkings_PairCrew_2:
-# 701 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 706 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_0, MSGBOX_DEFAULT
-# 702 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 707 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_1, MSGBOX_DEFAULT
-# 703 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 708 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_2, MSGBOX_DEFAULT
 	goto ParcelCorridorWorkings_PairCrew_1
 
 ParcelCorridorWorkings_PairCrew_3:
-# 705 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 710 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_3, MSGBOX_DEFAULT
-# 706 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 711 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_4, MSGBOX_DEFAULT
-# 707 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 712 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_5, MSGBOX_DEFAULT
-# 708 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 713 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	msgbox ParcelCorridorWorkings_PairCrew_Text_6, MSGBOX_DEFAULT
 	goto ParcelCorridorWorkings_PairCrew_1
 
@@ -2154,19 +2169,27 @@ ParcelCorridorWorkings_Lise_R5_Text_2:
 
 ParcelCorridorWorkings_Miner_Text_0:
 # 668 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "MINER: I go and look at the sign in its\n"
+	.string "case. My name's on the back and the\l"
+	.string "glass hides it.\p"
+	.string "That's right. It was never about the\n"
+	.string "name.$"
+
+ParcelCorridorWorkings_Miner_Text_1:
+# 673 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "MINER: The sign's in the file. Exhibit\n"
 	.string "one, the clerk says. Thirty years I\l"
 	.string "carried it and it took a ranger to carry\l"
 	.string "it the last hundred yards.$"
 
-ParcelCorridorWorkings_Miner_Text_1:
-# 673 "data/maps/ParcelCorridorWorkings/scripts.pory"
+ParcelCorridorWorkings_Miner_Text_2:
+# 678 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "MINER: You've got the sign. The crew\n"
 	.string "hut, up the cut. Give it to the clerk,\l"
 	.string "not the foreman. The clerk reads.$"
 
-ParcelCorridorWorkings_Miner_Text_2:
-# 678 "data/maps/ParcelCorridorWorkings/scripts.pory"
+ParcelCorridorWorkings_Miner_Text_3:
+# 683 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "MINER: The closure sign. 1998, CORPS\n"
 	.string "stamp, my name on the back. It's in my\l"
 	.string "shed behind the hut and the clerk wants\l"
@@ -2174,15 +2197,15 @@ ParcelCorridorWorkings_Miner_Text_2:
 	.string "My knees won't carry it up the cut. You\n"
 	.string "carry it.$"
 
-ParcelCorridorWorkings_Miner_Text_3:
-# 684 "data/maps/ParcelCorridorWorkings/scripts.pory"
+ParcelCorridorWorkings_Miner_Text_4:
+# 689 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "MINER: They logged it a quarry; now it's\n"
 	.string "logged 'pending'. I carried the closure\l"
 	.string "sign in '98. I'd carry it again. Nobody's\l"
 	.string "asked. I've got it in the shed.$"
 
-ParcelCorridorWorkings_Miner_Text_4:
-# 688 "data/maps/ParcelCorridorWorkings/scripts.pory"
+ParcelCorridorWorkings_Miner_Text_5:
+# 693 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "MINER: Closed in '98. The CORPS signed\n"
 	.string "the closure; I carried the sign. The\l"
 	.string "road crew took the sign down for the\l"
@@ -2191,66 +2214,66 @@ ParcelCorridorWorkings_Miner_Text_4:
 	.string "opinions. Mind the props.$"
 
 ParcelCorridorWorkings_PairCrew_Text_0:
-# 701 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 706 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLD CREW: The MAWILE's still at the\n"
 	.string "back. Patient.$"
 
 ParcelCorridorWorkings_PairCrew_Text_1:
-# 702 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 707 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "YOUNGER CREW: For what?$"
 
 ParcelCorridorWorkings_PairCrew_Text_2:
-# 703 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 708 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLD CREW: For the hole to fill. Then it'll\n"
 	.string "move up a level, like the rest of us.\l"
 	.string "Everything in here waits better than\l"
 	.string "people do.$"
 
 ParcelCorridorWorkings_PairCrew_Text_3:
-# 705 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 710 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "YOUNGER CREW: The ranger walked every\n"
 	.string "chamber with a lamp and wrote down the\l"
 	.string "pools.$"
 
 ParcelCorridorWorkings_PairCrew_Text_4:
-# 706 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 711 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLD CREW: Pools?$"
 
 ParcelCorridorWorkings_PairCrew_Text_5:
-# 707 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 712 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "YOUNGER CREW: The seepage. Said it's\n"
 	.string "the water table coming back to where it\l"
 	.string "was before we pumped it. The hole's\l"
 	.string "filling in from underneath. Slowly.$"
 
 ParcelCorridorWorkings_PairCrew_Text_6:
-# 708 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 713 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLD CREW: Good. Something should get\n"
 	.string "its own back.$"
 
 ParcelCorridorWorkings_PairCrew_Text_7:
-# 710 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 715 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLD CREW: We pumped this dry in a month\n"
 	.string "and pulled out of it in a year. The seam\l"
 	.string "went nowhere.$"
 
 ParcelCorridorWorkings_PairCrew_Text_8:
-# 711 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 716 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "YOUNGER CREW: Then why's the sand still\n"
 	.string "here?$"
 
 ParcelCorridorWorkings_PairCrew_Text_9:
-# 712 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 717 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLD CREW: Nobody takes sand home.\n"
 	.string "Nobody takes anything home from a hole.\l"
 	.string "That's the whole history of holes.$"
 
 ParcelCorridorWorkings_PairCrew_Text_10:
-# 713 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 718 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "YOUNGER CREW: The ARON take the rails.$"
 
 ParcelCorridorWorkings_PairCrew_Text_11:
-# 714 "data/maps/ParcelCorridorWorkings/scripts.pory"
+# 719 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLD CREW: The ARON are the only\n"
 	.string "remediation this place has had. I'd give\l"
 	.string "them a contract.$"

@@ -4,6 +4,11 @@ mapscripts ParcelFernwickFlats_MapScripts {
 script ParcelFernwickFlats_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Six rangers, one bathroom, and nobody reads the transcript any more. It's on the shelf. We did that; now we do the next thing.\pThat's the job HALE never explained and didn't need to."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Corps housing. Six rangers, one bathroom, and a transcript on the kitchen table that everyone's read twice. We reduce harm. We still don't reduce queues."), MSGBOX_DEFAULT)
         release
@@ -22,6 +27,11 @@ script ParcelFernwickFlats_Man {
 script ParcelFernwickFlats_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: Daddy laughs at work sometimes now. Not a lot. He says the job's got laughing in it if you do it long enough.\pHe said it quietly."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Daddy came home from the hearing and said 'we reduced some harm'. Then he laughed. I didn't know the job had laughing in it."), MSGBOX_DEFAULT)
         release

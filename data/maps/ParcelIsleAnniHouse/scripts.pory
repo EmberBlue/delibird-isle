@@ -7,6 +7,11 @@ mapscripts ParcelIsleAnniHouse_MapScripts {
 script ParcelIsleAnniHouse_Piet {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_ANNI_DONE)) {
+        msgbox(format("PIET: I'm better. I count the boats from the jetty now. Mom lets me. Fourteen today.\pROLF says it was twenty when he started. I wrote both."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("PIET: Mom read the frog part out loud. Twice for ROLF and once more for me.\pWhen I'm better I'm going to count something. Everything. I've got a list started."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_ANNI_DONE)) {

@@ -90,6 +90,11 @@ movement Movement_MeadowPushBack {
 script ParcelMeadow_Rin {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("RIN: Five in the paddock. Two went with provisionals this spring. One of them chose a ranger who'd read your filing.\pI didn't tell him who you were. He'll find out. They all do."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RIN: Look at you. Read in a hearing. The meadow's the same. Seven in the paddock, and the one you took is the one who'll be remembered. Don't tell the others."), MSGBOX_DEFAULT)
         release

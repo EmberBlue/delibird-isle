@@ -8,12 +8,14 @@ ParcelRiverHouse3_Mother::
 # 5 "data/maps/ParcelRiverHouse3/scripts.pory"
 	faceplayer
 # 6 "data/maps/ParcelRiverHouse3/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse3_Mother_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelRiverHouse3_Mother_2
 # 11 "data/maps/ParcelRiverHouse3/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiverHouse3_Mother_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse3_Mother_5
 # 16 "data/maps/ParcelRiverHouse3/scripts.pory"
-	msgbox ParcelRiverHouse3_Mother_Text_2, MSGBOX_DEFAULT
-# 17 "data/maps/ParcelRiverHouse3/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiverHouse3_Mother_8
+# 21 "data/maps/ParcelRiverHouse3/scripts.pory"
+	msgbox ParcelRiverHouse3_Mother_Text_3, MSGBOX_DEFAULT
+# 22 "data/maps/ParcelRiverHouse3/scripts.pory"
 	release
 	end
 
@@ -31,49 +33,64 @@ ParcelRiverHouse3_Mother_5:
 	release
 	end
 
+ParcelRiverHouse3_Mother_8:
+# 17 "data/maps/ParcelRiverHouse3/scripts.pory"
+	msgbox ParcelRiverHouse3_Mother_Text_2, MSGBOX_DEFAULT
+# 18 "data/maps/ParcelRiverHouse3/scripts.pory"
+	release
+	end
+
 
 ParcelRiverHouse3_Zigzagoon::
-# 21 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 26 "data/maps/ParcelRiverHouse3/scripts.pory"
 	lock
-# 22 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 27 "data/maps/ParcelRiverHouse3/scripts.pory"
 	faceplayer
-# 23 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 28 "data/maps/ParcelRiverHouse3/scripts.pory"
 	msgbox ParcelRiverHouse3_Zigzagoon_Text_0, MSGBOX_DEFAULT
-# 24 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 29 "data/maps/ParcelRiverHouse3/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHouse3_ReadDresser::
-# 29 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 34 "data/maps/ParcelRiverHouse3/scripts.pory"
 	msgbox ParcelRiverHouse3_ReadDresser_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverHouse3_ReadDrawer::
-# 34 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 39 "data/maps/ParcelRiverHouse3/scripts.pory"
 	msgbox ParcelRiverHouse3_ReadDrawer_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverHouse3_Mother_Text_0:
 # 7 "data/maps/ParcelRiverHouse3/scripts.pory"
+	.string "MOTHER: Two rows of alder, waist-high.\n"
+	.string "My husband measured them again. He\l"
+	.string "says the water under them's clearer.\p"
+	.string "The CORPS woman came and looked and\n"
+	.string "wrote it. Three looks. That's a fact now.$"
+
+ParcelRiverHouse3_Mother_Text_1:
+# 12 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "MOTHER: Two rows. The fund paid for the\n"
 	.string "strip. My husband measured it twice and\l"
 	.string "planted it once. The CORPS woman's\l"
 	.string "report had our plot number in it. We've\l"
 	.string "framed the page.$"
 
-ParcelRiverHouse3_Mother_Text_1:
-# 12 "data/maps/ParcelRiverHouse3/scripts.pory"
+ParcelRiverHouse3_Mother_Text_2:
+# 17 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "MOTHER: Two rows. The CORPS woman\n"
 	.string "wrote it in her report, with a fund\l"
 	.string "named beside it. My husband's already\l"
 	.string "measured the strip. He's never measured\l"
 	.string "anything before it was paid for.$"
 
-ParcelRiverHouse3_Mother_Text_2:
-# 16 "data/maps/ParcelRiverHouse3/scripts.pory"
+ParcelRiverHouse3_Mother_Text_3:
+# 21 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "MOTHER: The drain runs under MARIT's\n"
 	.string "window. She says she can smell the\l"
 	.string "sacks in the water at night. I tell her\l"
@@ -81,11 +98,11 @@ ParcelRiverHouse3_Mother_Text_2:
 	.string "means.$"
 
 ParcelRiverHouse3_Zigzagoon_Text_0:
-# 23 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 28 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "ZIGZAGOON: Zig! Zig!$"
 
 ParcelRiverHouse3_ReadDresser_Text_0:
-# 29 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 34 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "A tape measure on the dresser, pulled\n"
 	.string "out to two rows' width and left. He\l"
 	.string "measured the strip before the fund\l"
@@ -93,7 +110,7 @@ ParcelRiverHouse3_ReadDresser_Text_0:
 	.string "He has never done that before.$"
 
 ParcelRiverHouse3_ReadDrawer_Text_0:
-# 34 "data/maps/ParcelRiverHouse3/scripts.pory"
+# 39 "data/maps/ParcelRiverHouse3/scripts.pory"
 	.string "Seed packets in the drawer, sorted, the\n"
 	.string "ones for the strip at the front. Hedge,\l"
 	.string "alder, sedge. None of them is a crop.$"

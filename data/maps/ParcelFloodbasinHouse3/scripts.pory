@@ -6,6 +6,11 @@ mapscripts ParcelFloodbasinHouse3_MapScripts {
 script ParcelFloodbasinHouse3_OldWoman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OLD WOMAN: No third line. The sheds are dry and so's my door. I keep the pencil mark. The day the hall voted.\pPencil's enough for a day that didn't flood."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD WOMAN: Phase 2 goes ahead. Dry sheds. My door frame gets a third line or it doesn't. The paper says it doesn't. The paper wasn't here in '09."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelFloodbasinHouse3_OldWoman {
 script ParcelFloodbasinHouse3_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Still got the blanket. Still warm. DORSEY shook my hand last month. I let him.\pA blanket's a blanket and a hand's a hand."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: I kept the blanket. MEREHOLT on it. It's warm. I'm not giving back a warm blanket to make a point."), MSGBOX_DEFAULT)
         release

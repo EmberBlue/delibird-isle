@@ -8,12 +8,14 @@ ParcelRiverHouse2_Woman::
 # 5 "data/maps/ParcelRiverHouse2/scripts.pory"
 	faceplayer
 # 6 "data/maps/ParcelRiverHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse2_Woman_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelRiverHouse2_Woman_2
 # 11 "data/maps/ParcelRiverHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHouse2_Woman_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse2_Woman_5
 # 16 "data/maps/ParcelRiverHouse2/scripts.pory"
-	msgbox ParcelRiverHouse2_Woman_Text_2, MSGBOX_DEFAULT
-# 17 "data/maps/ParcelRiverHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHouse2_Woman_8
+# 21 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_Woman_Text_3, MSGBOX_DEFAULT
+# 22 "data/maps/ParcelRiverHouse2/scripts.pory"
 	release
 	end
 
@@ -31,73 +33,96 @@ ParcelRiverHouse2_Woman_5:
 	release
 	end
 
+ParcelRiverHouse2_Woman_8:
+# 17 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_Woman_Text_2, MSGBOX_DEFAULT
+# 18 "data/maps/ParcelRiverHouse2/scripts.pory"
+	release
+	end
+
 
 ParcelRiverHouse2_Girl::
-# 21 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 26 "data/maps/ParcelRiverHouse2/scripts.pory"
 	lock
-# 22 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 27 "data/maps/ParcelRiverHouse2/scripts.pory"
 	faceplayer
-# 23 "data/maps/ParcelRiverHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse2_Girl_2
 # 28 "data/maps/ParcelRiverHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHouse2_Girl_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelRiverHouse2_Girl_2
 # 33 "data/maps/ParcelRiverHouse2/scripts.pory"
-	msgbox ParcelRiverHouse2_Girl_Text_2, MSGBOX_DEFAULT
-# 34 "data/maps/ParcelRiverHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse2_Girl_5
+# 38 "data/maps/ParcelRiverHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverHouse2_Girl_8
+# 43 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_Girl_Text_3, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelRiverHouse2/scripts.pory"
 	release
 	end
 
 ParcelRiverHouse2_Girl_2:
-# 24 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 29 "data/maps/ParcelRiverHouse2/scripts.pory"
 	msgbox ParcelRiverHouse2_Girl_Text_0, MSGBOX_DEFAULT
-# 25 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 30 "data/maps/ParcelRiverHouse2/scripts.pory"
 	release
 	end
 
 ParcelRiverHouse2_Girl_5:
-# 29 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 34 "data/maps/ParcelRiverHouse2/scripts.pory"
 	msgbox ParcelRiverHouse2_Girl_Text_1, MSGBOX_DEFAULT
-# 30 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 35 "data/maps/ParcelRiverHouse2/scripts.pory"
+	release
+	end
+
+ParcelRiverHouse2_Girl_8:
+# 39 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_Girl_Text_2, MSGBOX_DEFAULT
+# 40 "data/maps/ParcelRiverHouse2/scripts.pory"
 	release
 	end
 
 
 ParcelRiverHouse2_ReadDresser::
-# 39 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 49 "data/maps/ParcelRiverHouse2/scripts.pory"
 	msgbox ParcelRiverHouse2_ReadDresser_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverHouse2_ReadShelf::
-# 44 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 54 "data/maps/ParcelRiverHouse2/scripts.pory"
 	msgbox ParcelRiverHouse2_ReadShelf_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverHouse2_PaperMeterBook::
-# 51 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 61 "data/maps/ParcelRiverHouse2/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse2_PaperMeterBook_2
-# 54 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 64 "data/maps/ParcelRiverHouse2/scripts.pory"
 	msgbox ParcelRiverHouse2_PaperMeterBook_Text_1, MSGBOX_SIGN
 ParcelRiverHouse2_PaperMeterBook_1:
 	end
 
 ParcelRiverHouse2_PaperMeterBook_2:
-# 52 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 62 "data/maps/ParcelRiverHouse2/scripts.pory"
 	msgbox ParcelRiverHouse2_PaperMeterBook_Text_0, MSGBOX_SIGN
 	goto ParcelRiverHouse2_PaperMeterBook_1
 
 
 ParcelRiverHouse2_Woman_Text_0:
 # 7 "data/maps/ParcelRiverHouse2/scripts.pory"
+	.string "WOMAN: He reads the meters to the\n"
+	.string "window now and his voice carries down\l"
+	.string "the street. Fourteen plots.\p"
+	.string "People wait for it. It's the town clock.$"
+
+ParcelRiverHouse2_Woman_Text_1:
+# 12 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "WOMAN: My husband reads the meters for\n"
 	.string "the Board. He read them to the hearing.\l"
 	.string "Out loud. Fourteen plots. His voice held.\l"
 	.string "I was proud, and I was frightened, and\l"
 	.string "the pay's still steady.$"
 
-ParcelRiverHouse2_Woman_Text_1:
-# 12 "data/maps/ParcelRiverHouse2/scripts.pory"
+ParcelRiverHouse2_Woman_Text_2:
+# 17 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "WOMAN: He came home with the readings\n"
 	.string "and told me what they said. First time in\l"
 	.string "eleven years. Meltwater, all fourteen\l"
@@ -106,47 +131,56 @@ ParcelRiverHouse2_Woman_Text_1:
 	.string "different marriage. I'm not sure yet\l"
 	.string "which I prefer.$"
 
-ParcelRiverHouse2_Woman_Text_2:
-# 16 "data/maps/ParcelRiverHouse2/scripts.pory"
+ParcelRiverHouse2_Woman_Text_3:
+# 21 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "WOMAN: My husband reads the meters for\n"
 	.string "the Board. Good wage. Steady. I don't\l"
 	.string "ask what the readings say. He doesn't\l"
 	.string "tell me. That's a marriage.$"
 
 ParcelRiverHouse2_Girl_Text_0:
-# 24 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 29 "data/maps/ParcelRiverHouse2/scripts.pory"
+	.string "GIRL: Dad's ledger is a book now. For\n"
+	.string "real. The clerk had it bound. It's on the\l"
+	.string "Board counter and anyone can turn the\l"
+	.string "pages.\p"
+	.string "I turned them. It's still numbers. It's\n"
+	.string "our numbers.$"
+
+ParcelRiverHouse2_Girl_Text_1:
+# 34 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "GIRL: Dad read the river's ledger to a\n"
 	.string "room full of people. I went. It's still\l"
 	.string "not a book. It was a book for one\l"
 	.string "afternoon.$"
 
-ParcelRiverHouse2_Girl_Text_1:
-# 29 "data/maps/ParcelRiverHouse2/scripts.pory"
+ParcelRiverHouse2_Girl_Text_2:
+# 39 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "GIRL: Dad says the river's a ledger and\n"
 	.string "now the mountain's writing in it. I asked\l"
 	.string "if mountains can write. He said they\l"
 	.string "can't spell, but they're very loud.$"
 
-ParcelRiverHouse2_Girl_Text_2:
-# 33 "data/maps/ParcelRiverHouse2/scripts.pory"
+ParcelRiverHouse2_Girl_Text_3:
+# 43 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "GIRL: Dad says the river's a ledger. I\n"
 	.string "thought a ledger was a book. The river\l"
 	.string "isn't a book. I checked.$"
 
 ParcelRiverHouse2_ReadDresser_Text_0:
-# 39 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 49 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "A Board meter reader's badge on the\n"
 	.string "dresser, and a child's drawing of a river\l"
 	.string "with numbers in it instead of fish.$"
 
 ParcelRiverHouse2_ReadShelf_Text_0:
-# 44 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 54 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "Board ledgers, one per year. The current\n"
 	.string "one is at home instead of at the Board.\l"
 	.string "That is new, and it is not an accident.$"
 
 ParcelRiverHouse2_PaperMeterBook_Text_0:
-# 52 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 62 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "Her husband's meter book, the carbon\n"
 	.string "side, open on the table now where\l"
 	.string "anyone can see it. Fourteen plots, a\l"
@@ -158,7 +192,7 @@ ParcelRiverHouse2_PaperMeterBook_Text_0:
 	.string "counted.$"
 
 ParcelRiverHouse2_PaperMeterBook_Text_1:
-# 54 "data/maps/ParcelRiverHouse2/scripts.pory"
+# 64 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "Her husband's meter book, the carbon\n"
 	.string "side. Fourteen plots, a reading a week,\l"
 	.string "in a hand that does not change. Eleven\l"

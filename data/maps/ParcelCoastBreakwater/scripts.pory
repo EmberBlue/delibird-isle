@@ -664,6 +664,11 @@ script ParcelCoastBreakwater_Holger_R5 {
 script ParcelCoastBreakwater_Beachcomber {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_TINS_DONE)) {
+        msgbox(format("BEACHCOMBER: Thirty-one in chalk, and the tide took it, and I wrote it again. Twelve tins this winter. Fewer.\pEither they're dumping less or the sea's keeping more. I count what reaches me."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_TINS_DONE)) {
         msgbox(format("BEACHCOMBER: Thirty-one. I've written it on the wall in chalk. The tide will have it by spring. That's all right. It was true in between."), MSGBOX_DEFAULT)
         release

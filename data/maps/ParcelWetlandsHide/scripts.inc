@@ -1464,18 +1464,21 @@ ParcelWetlandsHide_Warden::
 # 666 "data/maps/ParcelWetlandsHide/scripts.pory"
 	faceplayer
 # 667 "data/maps/ParcelWetlandsHide/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_DUSK_DONE, ParcelWetlandsHide_Warden_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWetlandsHide_Warden_3
+ParcelWetlandsHide_Warden_1:
 # 672 "data/maps/ParcelWetlandsHide/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_DUSK_FOUND, ParcelWetlandsHide_Warden_5
-# 679 "data/maps/ParcelWetlandsHide/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_DUSK, ParcelWetlandsHide_Warden_8
+	goto_if_set FLAG_SKALD_Q_DUSK_DONE, ParcelWetlandsHide_Warden_7
+# 677 "data/maps/ParcelWetlandsHide/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_DUSK_FOUND, ParcelWetlandsHide_Warden_10
 # 684 "data/maps/ParcelWetlandsHide/scripts.pory"
-	goto_if_set FLAG_BADGE01_GET, ParcelWetlandsHide_Warden_11
-# 690 "data/maps/ParcelWetlandsHide/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHide_Warden_14
+	goto_if_set FLAG_SKALD_Q_DUSK, ParcelWetlandsHide_Warden_13
+# 689 "data/maps/ParcelWetlandsHide/scripts.pory"
+	goto_if_set FLAG_BADGE01_GET, ParcelWetlandsHide_Warden_16
 # 695 "data/maps/ParcelWetlandsHide/scripts.pory"
-	msgbox ParcelWetlandsHide_Warden_Text_5, MSGBOX_DEFAULT
-# 696 "data/maps/ParcelWetlandsHide/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHide_Warden_19
+# 700 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_Warden_Text_6, MSGBOX_DEFAULT
+# 701 "data/maps/ParcelWetlandsHide/scripts.pory"
 	release
 	end
 
@@ -1486,73 +1489,85 @@ ParcelWetlandsHide_Warden_2:
 	release
 	end
 
-ParcelWetlandsHide_Warden_5:
+ParcelWetlandsHide_Warden_3:
+# 667 "data/maps/ParcelWetlandsHide/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_DUSK_DONE, ParcelWetlandsHide_Warden_2
+	goto ParcelWetlandsHide_Warden_1
+
+ParcelWetlandsHide_Warden_7:
 # 673 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Warden_Text_1, MSGBOX_DEFAULT
 # 674 "data/maps/ParcelWetlandsHide/scripts.pory"
-	giveitem ITEM_NET_BALL, 5
-# 675 "data/maps/ParcelWetlandsHide/scripts.pory"
-	setflag FLAG_SKALD_Q_DUSK_DONE
-# 676 "data/maps/ParcelWetlandsHide/scripts.pory"
 	release
 	end
 
-ParcelWetlandsHide_Warden_8:
-# 680 "data/maps/ParcelWetlandsHide/scripts.pory"
+ParcelWetlandsHide_Warden_10:
+# 678 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Warden_Text_2, MSGBOX_DEFAULT
+# 679 "data/maps/ParcelWetlandsHide/scripts.pory"
+	giveitem ITEM_NET_BALL, 5
+# 680 "data/maps/ParcelWetlandsHide/scripts.pory"
+	setflag FLAG_SKALD_Q_DUSK_DONE
 # 681 "data/maps/ParcelWetlandsHide/scripts.pory"
 	release
 	end
 
-ParcelWetlandsHide_Warden_11:
+ParcelWetlandsHide_Warden_13:
 # 685 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Warden_Text_3, MSGBOX_DEFAULT
 # 686 "data/maps/ParcelWetlandsHide/scripts.pory"
-	setflag FLAG_SKALD_Q_DUSK
-# 687 "data/maps/ParcelWetlandsHide/scripts.pory"
 	release
 	end
 
-ParcelWetlandsHide_Warden_14:
-# 691 "data/maps/ParcelWetlandsHide/scripts.pory"
+ParcelWetlandsHide_Warden_16:
+# 690 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Warden_Text_4, MSGBOX_DEFAULT
+# 691 "data/maps/ParcelWetlandsHide/scripts.pory"
+	setflag FLAG_SKALD_Q_DUSK
 # 692 "data/maps/ParcelWetlandsHide/scripts.pory"
+	release
+	end
+
+ParcelWetlandsHide_Warden_19:
+# 696 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_Warden_Text_5, MSGBOX_DEFAULT
+# 697 "data/maps/ParcelWetlandsHide/scripts.pory"
 	release
 	end
 
 
 ParcelWetlandsHide_Sign::
-# 700 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 705 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Sign_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlandsHide_SignEast::
-# 704 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 709 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_SignEast_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlandsHide_ItemGreatBall::
-# 707 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 712 "data/maps/ParcelWetlandsHide/scripts.pory"
 	finditem ITEM_GREAT_BALL
 	end
 
 
 ParcelWetlandsHide_Leave::
-# 709 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 714 "data/maps/ParcelWetlandsHide/scripts.pory"
 	warp MAP_PARCEL_WETLANDS, 3, 27
-# 710 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 715 "data/maps/ParcelWetlandsHide/scripts.pory"
 	waitstate
 	end
 
 
 ParcelWetlandsHide_DuskCount::
-# 715 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 720 "data/maps/ParcelWetlandsHide/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_DUSK, ParcelWetlandsHide_DuskCount_2
-# 718 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 723 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_DuskCount_Text_0, MSGBOX_SIGN
-# 719 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 724 "data/maps/ParcelWetlandsHide/scripts.pory"
 	setflag FLAG_SKALD_Q_DUSK_FOUND
 	end
 
@@ -1561,56 +1576,56 @@ ParcelWetlandsHide_DuskCount_2:
 
 
 ParcelWetlandsHide_PairBirders::
-# 726 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 731 "data/maps/ParcelWetlandsHide/scripts.pory"
 	lock
-# 727 "data/maps/ParcelWetlandsHide/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHide_PairBirders_2
 # 732 "data/maps/ParcelWetlandsHide/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHide_PairBirders_2
+# 737 "data/maps/ParcelWetlandsHide/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlandsHide_PairBirders_3
-# 738 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 743 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_8, MSGBOX_DEFAULT
-# 739 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 744 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_9, MSGBOX_DEFAULT
-# 740 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 745 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_10, MSGBOX_DEFAULT
-# 741 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 746 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_11, MSGBOX_DEFAULT
 ParcelWetlandsHide_PairBirders_1:
-# 743 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 748 "data/maps/ParcelWetlandsHide/scripts.pory"
 	release
 	end
 
 ParcelWetlandsHide_PairBirders_2:
-# 728 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 733 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_0, MSGBOX_DEFAULT
-# 729 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 734 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_1, MSGBOX_DEFAULT
-# 730 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 735 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_2, MSGBOX_DEFAULT
-# 731 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 736 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_3, MSGBOX_DEFAULT
 	goto ParcelWetlandsHide_PairBirders_1
 
 ParcelWetlandsHide_PairBirders_3:
-# 733 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 738 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_4, MSGBOX_DEFAULT
-# 734 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 739 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_5, MSGBOX_DEFAULT
-# 735 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 740 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_6, MSGBOX_DEFAULT
-# 736 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 741 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_PairBirders_Text_7, MSGBOX_DEFAULT
 	goto ParcelWetlandsHide_PairBirders_1
 
 
 ParcelWetlandsHide_Board1::
-# 750 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 755 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Board1_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWetlandsHide_Board2::
-# 755 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 760 "data/maps/ParcelWetlandsHide/scripts.pory"
 	msgbox ParcelWetlandsHide_Board2_Text_0, MSGBOX_SIGN
 	end
 
@@ -2202,27 +2217,34 @@ ParcelWetlandsHide_Asta_R5_Text_2:
 
 ParcelWetlandsHide_Warden_Text_0:
 # 668 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "WARDEN: Twelve. In your book and mine.\n"
+	.string "RAGNA was right again.\p"
+	.string "I've stopped being tired about it.\n"
+	.string "Twelve is a good tired.$"
+
+ParcelWetlandsHide_Warden_Text_1:
+# 673 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "WARDEN: Eleven. It's in the book in your\n"
 	.string "hand, not mine. Next year we'll see if\l"
 	.string "it's twelve or ten. That's the whole job.\l"
 	.string "Next year.$"
 
-ParcelWetlandsHide_Warden_Text_1:
-# 673 "data/maps/ParcelWetlandsHide/scripts.pory"
+ParcelWetlandsHide_Warden_Text_2:
+# 678 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "WARDEN: Eleven. RAGNA was right and I\n"
 	.string "was tired. Write eleven.\p"
 	.string "Take these. The CORPS sent a box for\n"
 	.string "the hide and nobody here catches\l"
 	.string "anything.$"
 
-ParcelWetlandsHide_Warden_Text_2:
-# 680 "data/maps/ParcelWetlandsHide/scripts.pory"
+ParcelWetlandsHide_Warden_Text_3:
+# 685 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "WARDEN: The reed cut on the far bank of\n"
 	.string "the pond. Stand there. Count what\l"
 	.string "comes in. Don't count twice.$"
 
-ParcelWetlandsHide_Warden_Text_3:
-# 685 "data/maps/ParcelWetlandsHide/scripts.pory"
+ParcelWetlandsHide_Warden_Text_4:
+# 690 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "WARDEN: The herons come at dusk. RAGNA\n"
 	.string "counts eleven; I count nine. We need a\l"
 	.string "third pair of eyes, and yours are paid\l"
@@ -2230,15 +2252,15 @@ ParcelWetlandsHide_Warden_Text_3:
 	.string "Stand by the reed cut on the far bank\n"
 	.string "and count what comes in.$"
 
-ParcelWetlandsHide_Warden_Text_4:
-# 691 "data/maps/ParcelWetlandsHide/scripts.pory"
+ParcelWetlandsHide_Warden_Text_5:
+# 696 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "WARDEN: DR. HERON's line is still on the\n"
 	.string "wall. Somebody's written under it, in a\l"
 	.string "steady hand: 'Counted. Written down.' I\l"
 	.string "didn't see who. I've left it.$"
 
-ParcelWetlandsHide_Warden_Text_5:
-# 695 "data/maps/ParcelWetlandsHide/scripts.pory"
+ParcelWetlandsHide_Warden_Text_6:
+# 700 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "WARDEN: The hide was DR. HERON's idea,\n"
 	.string "twenty years back. Sit still long enough\l"
 	.string "and the place tells you what it is.\p"
@@ -2247,89 +2269,89 @@ ParcelWetlandsHide_Warden_Text_5:
 	.string "everyone's since.$"
 
 ParcelWetlandsHide_Sign_Text_0:
-# 700 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 705 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "REEDMERE HIDE. Sit still. Count. Write it\n"
 	.string "down.$"
 
 ParcelWetlandsHide_SignEast_Text_0:
-# 704 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 709 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "The backwater landing is east along the\n"
 	.string "bank. Keep to the boards.$"
 
 ParcelWetlandsHide_DuskCount_Text_0:
-# 718 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 723 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "The herons come in low over the reeds.\n"
 	.string "One. Two. Three.\p"
 	.string "Eleven. The twelfth doesn't come. You\n"
 	.string "count again. Eleven.$"
 
 ParcelWetlandsHide_PairBirders_Text_0:
-# 728 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 733 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "BIRDER: Forty-four tonight. Three\n"
 	.string "more.$"
 
 ParcelWetlandsHide_PairBirders_Text_1:
-# 729 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 734 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "SECOND BIRDER: Three isn't a trend. The\n"
 	.string "Survey would say so.$"
 
 ParcelWetlandsHide_PairBirders_Text_2:
-# 730 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 735 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "BIRDER: Three isn't a trend. Three is\n"
 	.string "three more lights than last year and I'm\l"
 	.string "allowed to sit here and like it for one\l"
 	.string "night.$"
 
 ParcelWetlandsHide_PairBirders_Text_3:
-# 731 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 736 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "SECOND BIRDER: One night. Then count\n"
 	.string "properly.$"
 
 ParcelWetlandsHide_PairBirders_Text_4:
-# 733 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 738 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "SECOND BIRDER: The ranger sat the dusk\n"
 	.string "count with us. Didn't talk. Didn't\l"
 	.string "fidget.$"
 
 ParcelWetlandsHide_PairBirders_Text_5:
-# 734 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 739 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "BIRDER: Did they get the same number?$"
 
 ParcelWetlandsHide_PairBirders_Text_6:
-# 735 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 740 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "SECOND BIRDER: Forty-one. Then asked\n"
 	.string "what the number was the year the pond\l"
 	.string "was dug straight. We didn't know. Nobody\l"
 	.string "counted that year.$"
 
 ParcelWetlandsHide_PairBirders_Text_7:
-# 736 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 741 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "BIRDER: Somebody should have been us.$"
 
 ParcelWetlandsHide_PairBirders_Text_8:
-# 738 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 743 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "BIRDER: Dusk count's down again.\n"
 	.string "Forty-one lights, where there were\l"
 	.string "hundreds.$"
 
 ParcelWetlandsHide_PairBirders_Text_9:
-# 739 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 744 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "SECOND BIRDER: You counted\n"
 	.string "forty-three.$"
 
 ParcelWetlandsHide_PairBirders_Text_10:
-# 740 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 745 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "BIRDER: I counted forty-one twice and\n"
 	.string "forty-three once. The Survey takes the\l"
 	.string "twice.$"
 
 ParcelWetlandsHide_PairBirders_Text_11:
-# 741 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 746 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "SECOND BIRDER: The Survey takes the\n"
 	.string "honest one. Say it properly.$"
 
 ParcelWetlandsHide_Board1_Text_0:
-# 750 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 755 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "A SURVEY BOARD inside the hide, where\n"
 	.string "the light is bad on purpose. The dusk\l"
 	.string "count is the oldest count the Survey\l"
@@ -2340,7 +2362,7 @@ ParcelWetlandsHide_Board1_Text_0:
 	.string "where they got smaller.$"
 
 ParcelWetlandsHide_Board2_Text_0:
-# 755 "data/maps/ParcelWetlandsHide/scripts.pory"
+# 760 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "A SURVEY BOARD on the hide's outer wall,\n"
 	.string "for people who will not go in. SURSKIT on\l"
 	.string "the open water mean the surface is\l"

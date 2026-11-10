@@ -5,6 +5,11 @@ mapscripts ParcelFloodbasinRelief_MapScripts {
 script ParcelFloodbasinRelief_Aide {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_ROOF_DONE)) {
+        msgbox(format("AIDE: The store's open again under the review. The sheet's back from the hearing with a stamp on it.\pI put MRS. ASKE's name at the top of the new one. Habit. Good habit."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_ROOF_FOUND) && !flag(FLAG_SKALD_Q_ROOF_DONE)) {
         msgbox(format("AIDE: MRS. ASKE's roof. It's on the sheet. It's been on the sheet for four weeks.\pI'll put it at the top. I'm not supposed to re-order the sheet. Take this and don't tell the councilman I can read."), MSGBOX_DEFAULT)
         giveitem(ITEM_RARE_CANDY)
@@ -29,6 +34,11 @@ script ParcelFloodbasinRelief_Aide {
 script ParcelFloodbasinRelief_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Her roof's new. Mine's fine. We don't talk about who signed. We talk about roofs.\pIt turns out roofs are enough to talk about."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: I signed. My neighbour didn't. Her roof's still got the tarp on, and now the Board's paying for a new one because she didn't sign. I'm not bitter. I'm confused. Same thing, round here."), MSGBOX_DEFAULT)
         release

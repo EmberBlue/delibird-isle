@@ -32,12 +32,14 @@ ParcelRiverCenter_Trainer::
 # 20 "data/maps/ParcelRiverCenter/scripts.pory"
 	faceplayer
 # 21 "data/maps/ParcelRiverCenter/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverCenter_Trainer_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelRiverCenter_Trainer_2
 # 26 "data/maps/ParcelRiverCenter/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverCenter_Trainer_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverCenter_Trainer_5
 # 31 "data/maps/ParcelRiverCenter/scripts.pory"
-	msgbox ParcelRiverCenter_Trainer_Text_2, MSGBOX_DEFAULT
-# 32 "data/maps/ParcelRiverCenter/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverCenter_Trainer_8
+# 36 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_Trainer_Text_3, MSGBOX_DEFAULT
+# 37 "data/maps/ParcelRiverCenter/scripts.pory"
 	release
 	end
 
@@ -55,28 +57,43 @@ ParcelRiverCenter_Trainer_5:
 	release
 	end
 
+ParcelRiverCenter_Trainer_8:
+# 32 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_Trainer_Text_2, MSGBOX_DEFAULT
+# 33 "data/maps/ParcelRiverCenter/scripts.pory"
+	release
+	end
+
 
 ParcelRiverCenter_ReadRack::
-# 37 "data/maps/ParcelRiverCenter/scripts.pory"
+# 42 "data/maps/ParcelRiverCenter/scripts.pory"
 	msgbox ParcelRiverCenter_ReadRack_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverCenter_ReadMap::
-# 42 "data/maps/ParcelRiverCenter/scripts.pory"
+# 47 "data/maps/ParcelRiverCenter/scripts.pory"
 	msgbox ParcelRiverCenter_ReadMap_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverCenter_Trainer_Text_0:
 # 22 "data/maps/ParcelRiverCenter/scripts.pory"
+	.string "YOUNGSTER: No itch this year from the\n"
+	.string "lower river. The nurse put the cream\l"
+	.string "away. She left one jar out.\p"
+	.string "She says you don't throw away a thing\n"
+	.string "that was right.$"
+
+ParcelRiverCenter_Trainer_Text_1:
+# 27 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "YOUNGSTER: The MARILL don't come in\n"
 	.string "itchy from the lower river so much. The\l"
 	.string "nurse still has the cream. She says keep\l"
 	.string "it. Water has a memory, she says.$"
 
-ParcelRiverCenter_Trainer_Text_1:
-# 27 "data/maps/ParcelRiverCenter/scripts.pory"
+ParcelRiverCenter_Trainer_Text_2:
+# 32 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "YOUNGSTER: The nurse's cream is for the\n"
 	.string "itch from the lower river. Now there's a\l"
 	.string "SWINUB in here from HAUKFELL with no\l"
@@ -85,15 +102,15 @@ ParcelRiverCenter_Trainer_Text_1:
 	.string "that's a mountain thing. She says\l"
 	.string "everything's a thing.$"
 
-ParcelRiverCenter_Trainer_Text_2:
-# 31 "data/maps/ParcelRiverCenter/scripts.pory"
+ParcelRiverCenter_Trainer_Text_3:
+# 36 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "YOUNGSTER: Everyone's MARILL comes in\n"
 	.string "itchy after the lower river. The nurse\l"
 	.string "has a cream for it now. A CREAM. For a\l"
 	.string "river.$"
 
 ParcelRiverCenter_ReadRack_Text_0:
-# 37 "data/maps/ParcelRiverCenter/scripts.pory"
+# 42 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "Leaflets from the WATER BOARD on\n"
 	.string "'Responsible Allocation'. The stack\l"
 	.string "hasn't gone down.\p"
@@ -101,7 +118,7 @@ ParcelRiverCenter_ReadRack_Text_0:
 	.string "labelled LOWER RIVER, with a spoon.$"
 
 ParcelRiverCenter_ReadMap_Text_0:
-# 42 "data/maps/ParcelRiverCenter/scripts.pory"
+# 47 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "A map of the valley with the fourteen\n"
 	.string "metered plots inked in. Plot nine is\l"
 	.string "circled. Nobody will say who circled it.$"

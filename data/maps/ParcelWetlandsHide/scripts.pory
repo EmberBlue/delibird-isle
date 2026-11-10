@@ -664,6 +664,11 @@ script ParcelWetlandsHide_Asta_R5 {
 script ParcelWetlandsHide_Warden {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_DUSK_DONE)) {
+        msgbox(format("WARDEN: Twelve. In your book and mine. RAGNA was right again.\pI've stopped being tired about it. Twelve is a good tired."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_DUSK_DONE)) {
         msgbox(format("WARDEN: Eleven. It's in the book in your hand, not mine. Next year we'll see if it's twelve or ten. That's the whole job. Next year."), MSGBOX_DEFAULT)
         release

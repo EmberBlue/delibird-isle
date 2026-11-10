@@ -8,12 +8,14 @@ ParcelCoastHearing_Clerk::
 # 7 "data/maps/ParcelCoastHearing/scripts.pory"
 	faceplayer
 # 8 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Clerk_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastHearing_Clerk_2
 # 13 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHearing_Clerk_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Clerk_5
 # 18 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Clerk_Text_2, MSGBOX_DEFAULT
-# 19 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHearing_Clerk_8
+# 23 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Clerk_Text_3, MSGBOX_DEFAULT
+# 24 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
@@ -31,214 +33,253 @@ ParcelCoastHearing_Clerk_5:
 	release
 	end
 
+ParcelCoastHearing_Clerk_8:
+# 19 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Clerk_Text_2, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelCoastHearing/scripts.pory"
+	release
+	end
+
 
 ParcelCoastHearing_Waiter1::
-# 23 "data/maps/ParcelCoastHearing/scripts.pory"
+# 28 "data/maps/ParcelCoastHearing/scripts.pory"
 	lock
-# 24 "data/maps/ParcelCoastHearing/scripts.pory"
+# 29 "data/maps/ParcelCoastHearing/scripts.pory"
 	faceplayer
-# 25 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_CARBON, ParcelCoastHearing_Waiter1_3
+# 30 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastHearing_Waiter1_3
 ParcelCoastHearing_Waiter1_1:
-# 39 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Waiter1_7
-# 44 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_unset FLAG_SKALD_Q_CARBON_DONE, ParcelCoastHearing_Waiter1_13
-# 50 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHearing_Waiter1_16
-# 55 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter1_Text_7, MSGBOX_DEFAULT
-# 56 "data/maps/ParcelCoastHearing/scripts.pory"
+# 35 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CARBON, ParcelCoastHearing_Waiter1_8
+ParcelCoastHearing_Waiter1_6:
+# 49 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Waiter1_12
+# 54 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_CARBON_DONE, ParcelCoastHearing_Waiter1_18
+# 60 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHearing_Waiter1_21
+# 65 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter1_Text_8, MSGBOX_DEFAULT
+# 66 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
 ParcelCoastHearing_Waiter1_2:
-# 26 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_CARBON_FOUND, ParcelCoastHearing_Waiter1_10
-# 35 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter1_Text_3, MSGBOX_DEFAULT
-# 36 "data/maps/ParcelCoastHearing/scripts.pory"
-	release
-	end
-
-ParcelCoastHearing_Waiter1_3:
-# 25 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_unset FLAG_SKALD_Q_CARBON_DONE, ParcelCoastHearing_Waiter1_2
-	goto ParcelCoastHearing_Waiter1_1
-
-ParcelCoastHearing_Waiter1_7:
-# 40 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter1_Text_4, MSGBOX_DEFAULT
-# 41 "data/maps/ParcelCoastHearing/scripts.pory"
-	release
-	end
-
-ParcelCoastHearing_Waiter1_10:
-# 27 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter1_Text_0, MSGBOX_DEFAULT
-# 28 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter1_Text_1, MSGBOX_DEFAULT
-# 29 "data/maps/ParcelCoastHearing/scripts.pory"
-	giveitem ITEM_LEFTOVERS
-# 30 "data/maps/ParcelCoastHearing/scripts.pory"
-	setflag FLAG_SKALD_Q_CARBON_DONE
 # 31 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter1_Text_2, MSGBOX_DEFAULT
+	msgbox ParcelCoastHearing_Waiter1_Text_0, MSGBOX_DEFAULT
 # 32 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
-ParcelCoastHearing_Waiter1_13:
+ParcelCoastHearing_Waiter1_3:
+# 30 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CARBON_DONE, ParcelCoastHearing_Waiter1_2
+	goto ParcelCoastHearing_Waiter1_1
+
+ParcelCoastHearing_Waiter1_7:
+# 36 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_CARBON_FOUND, ParcelCoastHearing_Waiter1_15
 # 45 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter1_Text_5, MSGBOX_DEFAULT
+	msgbox ParcelCoastHearing_Waiter1_Text_4, MSGBOX_DEFAULT
 # 46 "data/maps/ParcelCoastHearing/scripts.pory"
-	setflag FLAG_SKALD_Q_CARBON
-# 47 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
-ParcelCoastHearing_Waiter1_16:
+ParcelCoastHearing_Waiter1_8:
+# 35 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_CARBON_DONE, ParcelCoastHearing_Waiter1_7
+	goto ParcelCoastHearing_Waiter1_6
+
+ParcelCoastHearing_Waiter1_12:
+# 50 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter1_Text_5, MSGBOX_DEFAULT
 # 51 "data/maps/ParcelCoastHearing/scripts.pory"
+	release
+	end
+
+ParcelCoastHearing_Waiter1_15:
+# 37 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter1_Text_1, MSGBOX_DEFAULT
+# 38 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter1_Text_2, MSGBOX_DEFAULT
+# 39 "data/maps/ParcelCoastHearing/scripts.pory"
+	giveitem ITEM_LEFTOVERS
+# 40 "data/maps/ParcelCoastHearing/scripts.pory"
+	setflag FLAG_SKALD_Q_CARBON_DONE
+# 41 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter1_Text_3, MSGBOX_DEFAULT
+# 42 "data/maps/ParcelCoastHearing/scripts.pory"
+	release
+	end
+
+ParcelCoastHearing_Waiter1_18:
+# 55 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Waiter1_Text_6, MSGBOX_DEFAULT
-# 52 "data/maps/ParcelCoastHearing/scripts.pory"
+# 56 "data/maps/ParcelCoastHearing/scripts.pory"
+	setflag FLAG_SKALD_Q_CARBON
+# 57 "data/maps/ParcelCoastHearing/scripts.pory"
+	release
+	end
+
+ParcelCoastHearing_Waiter1_21:
+# 61 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter1_Text_7, MSGBOX_DEFAULT
+# 62 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
 
 ParcelCoastHearing_Waiter2::
-# 60 "data/maps/ParcelCoastHearing/scripts.pory"
+# 70 "data/maps/ParcelCoastHearing/scripts.pory"
 	lock
-# 61 "data/maps/ParcelCoastHearing/scripts.pory"
+# 71 "data/maps/ParcelCoastHearing/scripts.pory"
 	faceplayer
-# 62 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Waiter2_2
-# 67 "data/maps/ParcelCoastHearing/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHearing_Waiter2_5
 # 72 "data/maps/ParcelCoastHearing/scripts.pory"
-	msgbox ParcelCoastHearing_Waiter2_Text_2, MSGBOX_DEFAULT
-# 73 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastHearing_Waiter2_2
+# 77 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Waiter2_5
+# 82 "data/maps/ParcelCoastHearing/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHearing_Waiter2_8
+# 87 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter2_Text_3, MSGBOX_DEFAULT
+# 88 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
 ParcelCoastHearing_Waiter2_2:
-# 63 "data/maps/ParcelCoastHearing/scripts.pory"
+# 73 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Waiter2_Text_0, MSGBOX_DEFAULT
-# 64 "data/maps/ParcelCoastHearing/scripts.pory"
+# 74 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
 ParcelCoastHearing_Waiter2_5:
-# 68 "data/maps/ParcelCoastHearing/scripts.pory"
+# 78 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Waiter2_Text_1, MSGBOX_DEFAULT
-# 69 "data/maps/ParcelCoastHearing/scripts.pory"
+# 79 "data/maps/ParcelCoastHearing/scripts.pory"
+	release
+	end
+
+ParcelCoastHearing_Waiter2_8:
+# 83 "data/maps/ParcelCoastHearing/scripts.pory"
+	msgbox ParcelCoastHearing_Waiter2_Text_2, MSGBOX_DEFAULT
+# 84 "data/maps/ParcelCoastHearing/scripts.pory"
 	release
 	end
 
 
 ParcelCoastHearing_Notice::
-# 77 "data/maps/ParcelCoastHearing/scripts.pory"
+# 92 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Notice_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastHearing_Carbon::
-# 82 "data/maps/ParcelCoastHearing/scripts.pory"
+# 97 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_CARBON, ParcelCoastHearing_Carbon_3
 ParcelCoastHearing_Carbon_1:
-# 87 "data/maps/ParcelCoastHearing/scripts.pory"
+# 102 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Carbon_Text_1, MSGBOX_SIGN
 	end
 
 ParcelCoastHearing_Carbon_2:
-# 83 "data/maps/ParcelCoastHearing/scripts.pory"
+# 98 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Carbon_Text_0, MSGBOX_SIGN
-# 84 "data/maps/ParcelCoastHearing/scripts.pory"
+# 99 "data/maps/ParcelCoastHearing/scripts.pory"
 	setflag FLAG_SKALD_Q_CARBON_FOUND
 	end
 
 ParcelCoastHearing_Carbon_3:
-# 82 "data/maps/ParcelCoastHearing/scripts.pory"
+# 97 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_CARBON_FOUND, ParcelCoastHearing_Carbon_2
 	goto ParcelCoastHearing_Carbon_1
 
 
 ParcelCoastHearing_Tray::
-# 94 "data/maps/ParcelCoastHearing/scripts.pory"
+# 109 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Tray_1
-# 108 "data/maps/ParcelCoastHearing/scripts.pory"
+# 123 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_6, MSGBOX_SIGN
 	return
 
 ParcelCoastHearing_Tray_1:
-# 95 "data/maps/ParcelCoastHearing/scripts.pory"
+# 110 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_0, MSGBOX_SIGN
-# 96 "data/maps/ParcelCoastHearing/scripts.pory"
+# 111 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_set FLAG_SKALD_CH_MAHOGANY, ParcelCoastHearing_Tray_5
-# 99 "data/maps/ParcelCoastHearing/scripts.pory"
+# 114 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_2, MSGBOX_SIGN
 ParcelCoastHearing_Tray_4:
-# 101 "data/maps/ParcelCoastHearing/scripts.pory"
+# 116 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_set FLAG_SKALD_CH_HOLLIS_NAMED, ParcelCoastHearing_Tray_9
-# 104 "data/maps/ParcelCoastHearing/scripts.pory"
+# 119 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_4, MSGBOX_SIGN
 ParcelCoastHearing_Tray_8:
-# 106 "data/maps/ParcelCoastHearing/scripts.pory"
+# 121 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_5, MSGBOX_SIGN
 	return
 
 ParcelCoastHearing_Tray_5:
-# 97 "data/maps/ParcelCoastHearing/scripts.pory"
+# 112 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_1, MSGBOX_SIGN
 	goto ParcelCoastHearing_Tray_4
 
 ParcelCoastHearing_Tray_9:
-# 102 "data/maps/ParcelCoastHearing/scripts.pory"
+# 117 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Tray_Text_3, MSGBOX_SIGN
 	goto ParcelCoastHearing_Tray_8
 
 
 ParcelCoastHearing_Copy::
-# 115 "data/maps/ParcelCoastHearing/scripts.pory"
+# 130 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_COPY, ParcelCoastHearing_Copy_4
 ParcelCoastHearing_Copy_3:
-# 119 "data/maps/ParcelCoastHearing/scripts.pory"
+# 134 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Copy_Text_1, MSGBOX_SIGN
 ParcelCoastHearing_Copy_1:
 	end
 
 ParcelCoastHearing_Copy_2:
-# 116 "data/maps/ParcelCoastHearing/scripts.pory"
+# 131 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Copy_Text_0, MSGBOX_SIGN
-# 117 "data/maps/ParcelCoastHearing/scripts.pory"
+# 132 "data/maps/ParcelCoastHearing/scripts.pory"
 	setflag FLAG_SKALD_Q_COPY_FOUND
 	goto ParcelCoastHearing_Copy_1
 
 ParcelCoastHearing_Copy_4:
-# 115 "data/maps/ParcelCoastHearing/scripts.pory"
+# 130 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_COPY_FOUND, ParcelCoastHearing_Copy_2
 	goto ParcelCoastHearing_Copy_3
 
 
 ParcelCoastHearing_Register::
-# 127 "data/maps/ParcelCoastHearing/scripts.pory"
+# 142 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Register_Text_0, MSGBOX_SIGN
-# 128 "data/maps/ParcelCoastHearing/scripts.pory"
+# 143 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Register_Text_1, MSGBOX_SIGN
-# 129 "data/maps/ParcelCoastHearing/scripts.pory"
+# 144 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Register_Text_2, MSGBOX_SIGN
-# 130 "data/maps/ParcelCoastHearing/scripts.pory"
+# 145 "data/maps/ParcelCoastHearing/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHearing_Register_2
 ParcelCoastHearing_Register_1:
 	end
 
 ParcelCoastHearing_Register_2:
-# 131 "data/maps/ParcelCoastHearing/scripts.pory"
+# 146 "data/maps/ParcelCoastHearing/scripts.pory"
 	msgbox ParcelCoastHearing_Register_Text_3, MSGBOX_SIGN
 	goto ParcelCoastHearing_Register_1
 
 
 ParcelCoastHearing_Clerk_Text_0:
 # 9 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "CLERK: The review sits the first\n"
+	.string "Tuesday of the month. There's a public\l"
+	.string "gallery. People come.\p"
+	.string "I type slower now so they can follow.\n"
+	.string "Nobody asked me to.$"
+
+ParcelCoastHearing_Clerk_Text_1:
+# 14 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "CLERK: The hearing's in session. They\n"
 	.string "read a CORPS filing into the record this\l"
 	.string "morning. Parts of it twice.\p"
@@ -247,8 +288,8 @@ ParcelCoastHearing_Clerk_Text_0:
 	.string "said that's not a title. I said no, it\l"
 	.string "isn't.$"
 
-ParcelCoastHearing_Clerk_Text_1:
-# 14 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Clerk_Text_2:
+# 19 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "CLERK: Objections in writing, to the\n"
 	.string "Board. One came in today that wasn't an\l"
 	.string "objection. It was a survey, with a card\l"
@@ -257,8 +298,8 @@ ParcelCoastHearing_Clerk_Text_1:
 	.string "yours on top. I'm not supposed to have\l"
 	.string "a top.$"
 
-ParcelCoastHearing_Clerk_Text_2:
-# 18 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Clerk_Text_3:
+# 23 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "CLERK: Quota hearings are seasonal.\n"
 	.string "Next session after the harvest.\l"
 	.string "Objections in writing, to the Board. The\l"
@@ -266,38 +307,45 @@ ParcelCoastHearing_Clerk_Text_2:
 	.string "at reading.$"
 
 ParcelCoastHearing_Waiter1_Text_0:
-# 27 "data/maps/ParcelCoastHearing/scripts.pory"
+# 31 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "FISHER: Year five. Two sentences. My\n"
+	.string "wife packed a lunch and I ate it.\p"
+	.string "I've never eaten a hearing lunch. It was\n"
+	.string "good.$"
+
+ParcelCoastHearing_Waiter1_Text_1:
+# 37 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: That's it. Year four. One\n"
 	.string "sentence. I didn't know you were\l"
 	.string "allowed more than one.$"
 
-ParcelCoastHearing_Waiter1_Text_1:
-# 28 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter1_Text_2:
+# 38 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: Nine again. Here -- my wife\n"
 	.string "packs me a lunch for every hearing and\l"
 	.string "I never eat it. Nerves. Take it; it keeps\l"
 	.string "better than I do.$"
 
-ParcelCoastHearing_Waiter1_Text_2:
-# 31 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter1_Text_3:
+# 41 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: Nine carbons and a ranger's\n"
 	.string "survey in the same tray. First time the\l"
 	.string "tray's had company.$"
 
-ParcelCoastHearing_Waiter1_Text_3:
-# 35 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter1_Text_4:
+# 45 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: Blue carbon. 'OBJECTION' in\n"
 	.string "capitals. Somewhere on this floor.$"
 
-ParcelCoastHearing_Waiter1_Text_4:
-# 40 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter1_Text_5:
+# 50 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: Nine objections, nine carbon\n"
 	.string "copies, and the tenth one got read into\l"
 	.string "the record. I've kept the chair warm\l"
 	.string "nine years. It was worth the sitting.$"
 
-ParcelCoastHearing_Waiter1_Text_5:
-# 45 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter1_Text_6:
+# 55 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: Nine seasons, nine objections,\n"
 	.string "nine carbons. Eight, this morning. The\l"
 	.string "fourth year's gone. It was in the folder\l"
@@ -310,8 +358,8 @@ ParcelCoastHearing_Waiter1_Text_5:
 	.string "Find it for me? I can't lose a year. I've\n"
 	.string "got too few of them in here as it is.$"
 
-ParcelCoastHearing_Waiter1_Text_6:
-# 51 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter1_Text_7:
+# 61 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: Nine seasons, nine objections,\n"
 	.string "nine carbons. Today a ranger's survey\l"
 	.string "went in the same tray as mine.\p"
@@ -319,23 +367,31 @@ ParcelCoastHearing_Waiter1_Text_6:
 	.string "I've started a tenth. Might as well have\l"
 	.string "it ready.$"
 
-ParcelCoastHearing_Waiter1_Text_7:
-# 55 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter1_Text_8:
+# 65 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FISHER: I've sat in this chair every\n"
 	.string "season for nine years. Nine objections.\l"
 	.string "I keep the carbon copies. Nobody else\l"
 	.string "has them.$"
 
 ParcelCoastHearing_Waiter2_Text_0:
-# 63 "data/maps/ParcelCoastHearing/scripts.pory"
+# 73 "data/maps/ParcelCoastHearing/scripts.pory"
+	.string "WOMAN: The size rule's posted in the\n"
+	.string "hall and the market both. Nobody's\l"
+	.string "changed it since the hearing.\p"
+	.string "The fish are mixed again. Somebody told\n"
+	.string "the fish.$"
+
+ParcelCoastHearing_Waiter2_Text_1:
+# 78 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "WOMAN: They changed the size rule back.\n"
 	.string "Nobody told us when they changed it\l"
 	.string "the first time. This time there was a\l"
 	.string "notice, in the hall, in big letters.\l"
 	.string "Progress is a notice.$"
 
-ParcelCoastHearing_Waiter2_Text_1:
-# 68 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter2_Text_2:
+# 83 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "WOMAN: The size changed the week\n"
 	.string "before and nobody told the fish. Your\l"
 	.string "survey says the fish are all one size\l"
@@ -343,15 +399,15 @@ ParcelCoastHearing_Waiter2_Text_1:
 	.string "My husband laughed when I said that.\n"
 	.string "First time since the grounding.$"
 
-ParcelCoastHearing_Waiter2_Text_2:
-# 72 "data/maps/ParcelCoastHearing/scripts.pory"
+ParcelCoastHearing_Waiter2_Text_3:
+# 87 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "WOMAN: My husband's boat was grounded\n"
 	.string "for an undersize catch. The size\l"
 	.string "changed the week before. Nobody told\l"
 	.string "the fish.$"
 
 ParcelCoastHearing_Notice_Text_0:
-# 77 "data/maps/ParcelCoastHearing/scripts.pory"
+# 92 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "QUOTA REVIEW BOARD -- members:\n"
 	.string "MEREHOLT COASTAL HOLDINGS (3), the\l"
 	.string "FOUNDATION (2), the Union (1), the\l"
@@ -359,7 +415,7 @@ ParcelCoastHearing_Notice_Text_0:
 	.string "seat has been vacant for two years.$"
 
 ParcelCoastHearing_Carbon_Text_0:
-# 83 "data/maps/ParcelCoastHearing/scripts.pory"
+# 98 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "Behind the clerk's bench, folded small\n"
 	.string "where a shoe pushed it: a blue carbon\l"
 	.string "copy. OBJECTION, in capitals, pressed\l"
@@ -368,13 +424,13 @@ ParcelCoastHearing_Carbon_Text_0:
 	.string "is about the size of a fish.$"
 
 ParcelCoastHearing_Carbon_Text_1:
-# 87 "data/maps/ParcelCoastHearing/scripts.pory"
+# 102 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "The clerk's bench. Behind it, the floor\n"
 	.string "where nine seasons of chairs have\l"
 	.string "scraped the same two lines.$"
 
 ParcelCoastHearing_Tray_Text_0:
-# 95 "data/maps/ParcelCoastHearing/scripts.pory"
+# 110 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "The clerk's tray. The record of the\n"
 	.string "sitting, typed, still warm from the\l"
 	.string "carbon.\p"
@@ -395,7 +451,7 @@ ParcelCoastHearing_Tray_Text_0:
 	.string "were older than the office asking.$"
 
 ParcelCoastHearing_Tray_Text_1:
-# 97 "data/maps/ParcelCoastHearing/scripts.pory"
+# 112 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "ITEM 10. Statement read on behalf of\n"
 	.string "Dr. Heron, in her absence, by the ranger.\l"
 	.string "Four sentences, and a fifth in the\l"
@@ -405,7 +461,7 @@ ParcelCoastHearing_Tray_Text_1:
 	.string "not record.$"
 
 ParcelCoastHearing_Tray_Text_2:
-# 99 "data/maps/ParcelCoastHearing/scripts.pory"
+# 114 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "ITEM 10. Statement read on behalf of\n"
 	.string "Dr. Heron, in her absence, by the ranger.\l"
 	.string "Four sentences. Entered. The room was\l"
@@ -417,7 +473,7 @@ ParcelCoastHearing_Tray_Text_2:
 	.string "later, in a lawyer's hand.$"
 
 ParcelCoastHearing_Tray_Text_3:
-# 102 "data/maps/ParcelCoastHearing/scripts.pory"
+# 117 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "ITEM 11. The Mereholt Foundation\n"
 	.string "recovery model, as tabled by the\l"
 	.string "Commissioner in the spring. Withdrawn\l"
@@ -427,7 +483,7 @@ ParcelCoastHearing_Tray_Text_3:
 	.string "of every condition. She did not object.$"
 
 ParcelCoastHearing_Tray_Text_4:
-# 104 "data/maps/ParcelCoastHearing/scripts.pory"
+# 119 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "ITEM 11. The Mereholt Foundation\n"
 	.string "recovery model, as tabled by the\l"
 	.string "Commissioner in the spring. Withdrawn\l"
@@ -438,7 +494,7 @@ ParcelCoastHearing_Tray_Text_4:
 	.string "not write.$"
 
 ParcelCoastHearing_Tray_Text_5:
-# 106 "data/maps/ParcelCoastHearing/scripts.pory"
+# 121 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "DISPOSITION. Dredging consent:\n"
 	.string "suspended pending review. Permafrost\l"
 	.string "exploratory licence: deferred. The\l"
@@ -450,7 +506,7 @@ ParcelCoastHearing_Tray_Text_5:
 	.string "afternoon. Worth it.$"
 
 ParcelCoastHearing_Tray_Text_6:
-# 108 "data/maps/ParcelCoastHearing/scripts.pory"
+# 123 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "The clerk's tray. The order of business\n"
 	.string "for the next sitting, typed.\p"
 	.string "ITEM 1. Minutes. ITEM 2. Apologies. ITEM\n"
@@ -472,7 +528,7 @@ ParcelCoastHearing_Tray_Text_6:
 	.string "for nine years.$"
 
 ParcelCoastHearing_Copy_Text_0:
-# 116 "data/maps/ParcelCoastHearing/scripts.pory"
+# 131 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "Under the clerk's tray, a carbon copy of\n"
 	.string "a grading sheet, stamped RECEIVED in\l"
 	.string "the corner and never filed. Minimum size\l"
@@ -483,13 +539,13 @@ ParcelCoastHearing_Copy_Text_0:
 	.string "it to reach anything else.$"
 
 ParcelCoastHearing_Copy_Text_1:
-# 119 "data/maps/ParcelCoastHearing/scripts.pory"
+# 134 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "The clerk's tray, with a grading sheet\n"
 	.string "on top of it that was not there before.\l"
 	.string "It says RECEIVED.$"
 
 ParcelCoastHearing_Register_Text_0:
-# 127 "data/maps/ParcelCoastHearing/scripts.pory"
+# 142 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "A ledger on the clerk's shelf, REGISTER\n"
 	.string "OF OBJECTIONS, the spine mended with\l"
 	.string "tape. Mereholt Coastal, dredging\l"
@@ -509,7 +565,7 @@ ParcelCoastHearing_Register_Text_0:
 	.string "evidence.$"
 
 ParcelCoastHearing_Register_Text_1:
-# 128 "data/maps/ParcelCoastHearing/scripts.pory"
+# 143 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "FOUR. Objector: a schoolteacher of\n"
 	.string "Elvsund, on behalf of a class. Ground: a\l"
 	.string "letter in forty hands. Disposal: noted\l"
@@ -527,7 +583,7 @@ ParcelCoastHearing_Register_Text_1:
 	.string "certified.$"
 
 ParcelCoastHearing_Register_Text_2:
-# 129 "data/maps/ParcelCoastHearing/scripts.pory"
+# 144 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "SEVEN. Objector: the Mereholt Coast\n"
 	.string "fishers' union. Ground: the\l"
 	.string "certification itself. Disposal: out of\l"
@@ -543,7 +599,7 @@ ParcelCoastHearing_Register_Text_2:
 	.string "others. The pen pressed harder.$"
 
 ParcelCoastHearing_Register_Text_3:
-# 131 "data/maps/ParcelCoastHearing/scripts.pory"
+# 146 "data/maps/ParcelCoastHearing/scripts.pory"
 	.string "TEN. Objectors: a ranger of the Climate\n"
 	.string "Corps, the Skaldmere Survey, and a\l"
 	.string "statement read in absence. Ground:\l"

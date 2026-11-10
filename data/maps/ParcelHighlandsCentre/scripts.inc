@@ -8,12 +8,14 @@ ParcelHighlandsCentre_Host::
 # 7 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	faceplayer
 # 8 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Host_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelHighlandsCentre_Host_2
 # 13 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlandsCentre_Host_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Host_5
 # 18 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	msgbox ParcelHighlandsCentre_Host_Text_2, MSGBOX_DEFAULT
-# 19 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlandsCentre_Host_8
+# 23 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Host_Text_3, MSGBOX_DEFAULT
+# 24 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
@@ -31,192 +33,243 @@ ParcelHighlandsCentre_Host_5:
 	release
 	end
 
+ParcelHighlandsCentre_Host_8:
+# 19 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Host_Text_2, MSGBOX_DEFAULT
+# 20 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	release
+	end
+
 
 ParcelHighlandsCentre_OldMan::
-# 23 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 28 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	lock
-# 24 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 29 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	faceplayer
-# 25 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_OldMan_2
 # 30 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_OldMan_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelHighlandsCentre_OldMan_2
 # 35 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	msgbox ParcelHighlandsCentre_OldMan_Text_2, MSGBOX_DEFAULT
-# 36 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_OldMan_5
+# 40 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_OldMan_8
+# 45 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_OldMan_Text_3, MSGBOX_DEFAULT
+# 46 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_OldMan_2:
-# 26 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 31 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_OldMan_Text_0, MSGBOX_DEFAULT
-# 27 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 32 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_OldMan_5:
-# 31 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 36 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_OldMan_Text_1, MSGBOX_DEFAULT
-# 32 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 37 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	release
+	end
+
+ParcelHighlandsCentre_OldMan_8:
+# 41 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_OldMan_Text_2, MSGBOX_DEFAULT
+# 42 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 
 ParcelHighlandsCentre_Woman::
-# 40 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 50 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	lock
-# 41 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 51 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	faceplayer
-# 42 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Woman_2
-# 47 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_Woman_5
 # 52 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	msgbox ParcelHighlandsCentre_Woman_Text_2, MSGBOX_DEFAULT
-# 53 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelHighlandsCentre_Woman_2
+# 57 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Woman_5
+# 62 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_Woman_8
+# 67 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Woman_Text_3, MSGBOX_DEFAULT
+# 68 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_Woman_2:
-# 43 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 53 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Woman_Text_0, MSGBOX_DEFAULT
-# 44 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 54 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_Woman_5:
-# 48 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 58 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Woman_Text_1, MSGBOX_DEFAULT
-# 49 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 59 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	release
+	end
+
+ParcelHighlandsCentre_Woman_8:
+# 63 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Woman_Text_2, MSGBOX_DEFAULT
+# 64 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 
 ParcelHighlandsCentre_Boy::
-# 57 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 72 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	lock
-# 58 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 73 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	faceplayer
-# 59 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Boy_2
-# 64 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_Boy_5
-# 69 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	msgbox ParcelHighlandsCentre_Boy_Text_2, MSGBOX_DEFAULT
-# 70 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 74 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelHighlandsCentre_Boy_2
+# 79 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Boy_5
+# 84 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_Boy_8
+# 89 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Boy_Text_3, MSGBOX_DEFAULT
+# 90 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_Boy_2:
-# 60 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 75 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Boy_Text_0, MSGBOX_DEFAULT
-# 61 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 76 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_Boy_5:
-# 65 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 80 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Boy_Text_1, MSGBOX_DEFAULT
-# 66 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 81 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	release
+	end
+
+ParcelHighlandsCentre_Boy_8:
+# 85 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Boy_Text_2, MSGBOX_DEFAULT
+# 86 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 
 ParcelHighlandsCentre_Man::
-# 74 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 94 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	lock
-# 75 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 95 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	faceplayer
-# 76 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Man_2
-# 81 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_Man_5
-# 86 "data/maps/ParcelHighlandsCentre/scripts.pory"
-	msgbox ParcelHighlandsCentre_Man_Text_2, MSGBOX_DEFAULT
-# 87 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 96 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelHighlandsCentre_Man_2
+# 101 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Man_5
+# 106 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelHighlandsCentre_Man_8
+# 111 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Man_Text_3, MSGBOX_DEFAULT
+# 112 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_Man_2:
-# 77 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 97 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Man_Text_0, MSGBOX_DEFAULT
-# 78 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 98 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_Man_5:
-# 82 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 102 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Man_Text_1, MSGBOX_DEFAULT
-# 83 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 103 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	release
+	end
+
+ParcelHighlandsCentre_Man_8:
+# 107 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	msgbox ParcelHighlandsCentre_Man_Text_2, MSGBOX_DEFAULT
+# 108 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 
 ParcelHighlandsCentre_Board::
-# 91 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 116 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Board_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelHighlandsCentre_Dorsey::
-# 97 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 122 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	lock
-# 98 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 123 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	faceplayer
-# 99 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 124 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	goto_if_set FLAG_SKALD_DORSEY_HL, ParcelHighlandsCentre_Dorsey_2
-# 104 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 129 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Dorsey_Text_1, MSGBOX_DEFAULT
-# 105 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 130 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	setflag FLAG_SKALD_DORSEY_HL
-# 106 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 131 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 ParcelHighlandsCentre_Dorsey_2:
-# 100 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 125 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Dorsey_Text_0, MSGBOX_DEFAULT
-# 101 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 126 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	release
 	end
 
 
 ParcelHighlandsCentre_Plaque::
-# 113 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 138 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Plaque_Text_0, MSGBOX_SIGN
 	return
 
 
 ParcelHighlandsCentre_Box::
-# 117 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 142 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsCentre_Box_1
-# 120 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 145 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Box_Text_1, MSGBOX_SIGN
 	return
 
 ParcelHighlandsCentre_Box_1:
-# 118 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 143 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	msgbox ParcelHighlandsCentre_Box_Text_0, MSGBOX_SIGN
 	return
 
 
 ParcelHighlandsCentre_Host_Text_0:
 # 9 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "HOST: The centre's funded by the review\n"
+	.string "now. Same stove, different crest.\l"
+	.string "SHIFTED is on the grant form, in print.\p"
+	.string "I had to read it twice to believe\n"
+	.string "someone had typed it.$"
+
+ParcelHighlandsCentre_Host_Text_1:
+# 14 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "HOST: Your survey said SHIFTED. Ours\n"
 	.string "said 'transitioning'. The grants were\l"
 	.string "paid out of 'transitioning'. The hearing\l"
 	.string "used your word. The grants are 'under\l"
 	.string "review'. I've learnt a new word too.$"
 
-ParcelHighlandsCentre_Host_Text_1:
-# 14 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Host_Text_2:
+# 19 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "HOST: Your survey says SHIFTED. Ours\n"
 	.string "says 'transitioning'. The grants are\l"
 	.string "paid out of 'transitioning'. Think about\l"
 	.string "that before you pick a word.$"
 
-ParcelHighlandsCentre_Host_Text_2:
-# 18 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Host_Text_3:
+# 23 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "HOST: Welcome to the Warming Centre.\n"
 	.string "Beds through the back, soup at six, the\l"
 	.string "relocation desk is me.\p"
@@ -226,14 +279,22 @@ ParcelHighlandsCentre_Host_Text_2:
 	.string "that.$"
 
 ParcelHighlandsCentre_OldMan_Text_0:
-# 26 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 31 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "OLD MAN: The well's not back. I'm not\n"
+	.string "going back up. The soup's still good and\l"
+	.string "I've a bunk and a window.\p"
+	.string "Some things you stop waiting for, and it\n"
+	.string "turns out that's a kind of rest.$"
+
+ParcelHighlandsCentre_OldMan_Text_1:
+# 36 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "OLD MAN: Came down when the well went.\n"
 	.string "Warm here, soup's good. The leases are\l"
 	.string "enjoined. I'd go back up if the well came\l"
 	.string "back. Wells don't read hearings.$"
 
-ParcelHighlandsCentre_OldMan_Text_1:
-# 31 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_OldMan_Text_2:
+# 41 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "OLD MAN: A fisherman from the coast\n"
 	.string "came up to the centre. Lost his boat to\l"
 	.string "the lending company. Said the soup\l"
@@ -241,8 +302,8 @@ ParcelHighlandsCentre_OldMan_Text_1:
 	.string "Same crest on his bowl as mine. We didn't\n"
 	.string "talk about it. We ate.$"
 
-ParcelHighlandsCentre_OldMan_Text_2:
-# 35 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_OldMan_Text_3:
+# 45 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "OLD MAN: Came down from the north slope\n"
 	.string "in the spring when the well went. Warm\l"
 	.string "here. Soup's good.\p"
@@ -250,15 +311,24 @@ ParcelHighlandsCentre_OldMan_Text_2:
 	.string "would have me. It won't.$"
 
 ParcelHighlandsCentre_Woman_Text_0:
-# 43 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 53 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "WOMAN: The house we left is 'under\n"
+	.string "review'. The house we're in is warm. I've\l"
+	.string "stopped asking which is ours. Both.\l"
+	.string "Neither.\p"
+	.string "The children call this one home. That\n"
+	.string "decides it.$"
+
+ParcelHighlandsCentre_Woman_Text_1:
+# 58 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "WOMAN: The grant's real, the house in\n"
 	.string "the valley is real, and now the house we\l"
 	.string "left is 'subject to review'. I don't know\l"
 	.string "whose it is. I know it's not ours. That\l"
 	.string "hasn't changed.$"
 
-ParcelHighlandsCentre_Woman_Text_1:
-# 48 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Woman_Text_2:
+# 63 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "WOMAN: The valley house came with a\n"
 	.string "letter from the coast office saying the\l"
 	.string "FOUNDATION 'values our resilience'.\p"
@@ -267,22 +337,31 @@ ParcelHighlandsCentre_Woman_Text_1:
 	.string "a paper. I'm all one size too, now.\l"
 	.string "Resilient.$"
 
-ParcelHighlandsCentre_Woman_Text_2:
-# 52 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Woman_Text_3:
+# 67 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "WOMAN: The grant's real. The money came.\n"
 	.string "The house we got in the valley is real\l"
 	.string "too. It's just not ours. Nothing in it\l"
 	.string "remembers us.$"
 
 ParcelHighlandsCentre_Boy_Text_0:
-# 60 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 75 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "BOY: HOLLIS came back. She brought\n"
+	.string "cocoa. The good kind. She sat by the\l"
+	.string "stove and Mum sat next to her and they\l"
+	.string "didn't say anything for a long time.\p"
+	.string "Then they both laughed. I don't know at\n"
+	.string "what.$"
+
+ParcelHighlandsCentre_Boy_Text_1:
+# 80 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "BOY: The stove's still always on! HOLLIS\n"
 	.string "came and sat by it. She didn't say\l"
 	.string "anything. She drank the cocoa. Mum\l"
 	.string "watched her the whole time.$"
 
-ParcelHighlandsCentre_Boy_Text_1:
-# 65 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Boy_Text_2:
+# 85 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "BOY: A boy from the coast says their\n"
 	.string "beach is closed and the lifeguard just\l"
 	.string "sits there. Our stove's always on and\l"
@@ -291,22 +370,30 @@ ParcelHighlandsCentre_Boy_Text_1:
 	.string "the same man can't be everywhere. He\l"
 	.string "said you'd be surprised.$"
 
-ParcelHighlandsCentre_Boy_Text_2:
-# 69 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Boy_Text_3:
+# 89 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "BOY: There's a stove! It's always on! At\n"
 	.string "home the stove was only on at night. I\l"
 	.string "like it here. Mum doesn't.$"
 
 ParcelHighlandsCentre_Man_Text_0:
-# 77 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 97 "data/maps/ParcelHighlandsCentre/scripts.pory"
+	.string "MAN: Took the lanyard. Community\n"
+	.string "liaison. I liaise. Mostly I tell the coast\l"
+	.string "office what the soup line's saying, and\l"
+	.string "they write it down.\p"
+	.string "It's a job. It's not nothing.$"
+
+ParcelHighlandsCentre_Man_Text_1:
+# 102 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "MAN: Sign the form, get the grant. Don't\n"
 	.string "sign, get soup. The old woman up the hill\l"
 	.string "got soup for a year, and now she's got a\l"
 	.string "page in a hearing. I signed. I've got a\l"
 	.string "house. Hers is the page I'd rather have.$"
 
-ParcelHighlandsCentre_Man_Text_1:
-# 82 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Man_Text_2:
+# 107 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "MAN: Soup or grant. Now there's a third\n"
 	.string "option: the coast office is hiring\l"
 	.string "'community liaisons'. Sign the form, get\l"
@@ -314,15 +401,15 @@ ParcelHighlandsCentre_Man_Text_1:
 	.string "The old woman up the hill got offered\n"
 	.string "one. She asked if it came with soup.$"
 
-ParcelHighlandsCentre_Man_Text_2:
-# 86 "data/maps/ParcelHighlandsCentre/scripts.pory"
+ParcelHighlandsCentre_Man_Text_3:
+# 111 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "MAN: Sign the relocation form, you get\n"
 	.string "the grant. Don't sign, you get soup. The\l"
 	.string "old woman up the hill gets soup\l"
 	.string "delivered. Stubbornness has a menu.$"
 
 ParcelHighlandsCentre_Board_Text_0:
-# 91 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 116 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "RELOCATION NOTICE. Households on the\n"
 	.string "north slope are eligible for the\l"
 	.string "Haukfell Resilience Grant. Conditions:\l"
@@ -333,7 +420,7 @@ ParcelHighlandsCentre_Board_Text_0:
 	.string "blank, in a hand that pressed hard.$"
 
 ParcelHighlandsCentre_Dorsey_Text_0:
-# 100 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 125 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "DORSEY: Sit. Nobody's listening; they're\n"
 	.string "at the soup.\p"
 	.string "The old woman up the track won't sign.\n"
@@ -346,7 +433,7 @@ ParcelHighlandsCentre_Dorsey_Text_0:
 	.string "it.$"
 
 ParcelHighlandsCentre_Dorsey_Text_1:
-# 104 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 129 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "DORSEY: --and the grant is yours the\n"
 	.string "day you sign. The valley houses are\l"
 	.string "warm, the school's a bus ride, and\l"
@@ -360,7 +447,7 @@ ParcelHighlandsCentre_Dorsey_Text_1:
 	.string "one that matters up here.$"
 
 ParcelHighlandsCentre_Plaque_Text_0:
-# 113 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 138 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "The opening plaque, brass, polished by\n"
 	.string "somebody who takes it as their job.\p"
 	.string "HAUKFELL COMMUNITY CENTRE. Built with\n"
@@ -377,7 +464,7 @@ ParcelHighlandsCentre_Plaque_Text_0:
 	.string "point.$"
 
 ParcelHighlandsCentre_Box_Text_0:
-# 118 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 143 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "The suggestion box, with its lid off and\n"
 	.string "the slips pinned up beside it where\l"
 	.string "everyone can read them. Someone\l"
@@ -397,7 +484,7 @@ ParcelHighlandsCentre_Box_Text_0:
 	.string "AND MUM CRIED.$"
 
 ParcelHighlandsCentre_Box_Text_1:
-# 120 "data/maps/ParcelHighlandsCentre/scripts.pory"
+# 145 "data/maps/ParcelHighlandsCentre/scripts.pory"
 	.string "A suggestion box, locked, with a slot. A\n"
 	.string "few slips show through the slot where\l"
 	.string "the box is full.\p"

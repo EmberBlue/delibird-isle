@@ -99,10 +99,12 @@ ParcelWeatherInstitute2F_Aide::
 # 48 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	faceplayer
 # 49 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute2F_Aide_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelWeatherInstitute2F_Aide_2
 # 54 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
-	msgbox ParcelWeatherInstitute2F_Aide_Text_1, MSGBOX_DEFAULT
-# 55 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeatherInstitute2F_Aide_5
+# 59 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	msgbox ParcelWeatherInstitute2F_Aide_Text_2, MSGBOX_DEFAULT
+# 60 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	release
 	end
 
@@ -113,45 +115,52 @@ ParcelWeatherInstitute2F_Aide_2:
 	release
 	end
 
+ParcelWeatherInstitute2F_Aide_5:
+# 55 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	msgbox ParcelWeatherInstitute2F_Aide_Text_1, MSGBOX_DEFAULT
+# 56 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	release
+	end
+
 
 ParcelWeatherInstitute2F_Window::
-# 59 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 64 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Window_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelWeatherInstitute2F_Director_Rematch::
-# 65 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 70 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	lock
-# 66 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 71 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	faceplayer
-# 67 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 72 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Director_Rematch_Text_0, MSGBOX_YESNO
-# 68 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 73 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelWeatherInstitute2F_Director_Rematch_2
-# 73 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 78 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DIRECTOR_R, ParcelWeatherInstitute2F_Director_Rematch_Text_2
-# 74 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 79 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Director_Rematch_Text_3, MSGBOX_DEFAULT
-# 75 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 80 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	release
 	end
 
 ParcelWeatherInstitute2F_Director_Rematch_2:
-# 69 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 74 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Director_Rematch_Text_1, MSGBOX_DEFAULT
-# 70 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 75 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	release
 	end
 
 
 ParcelWeatherInstitute2F_Castform::
-# 80 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 85 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_CASTFORM, ParcelWeatherInstitute2F_Castform_2
-# 83 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 88 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	msgbox ParcelWeatherInstitute2F_Castform_Text_0, MSGBOX_SIGN
-# 84 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 89 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	setflag FLAG_SKALD_Q_CASTFORM_FOUND
 	end
 
@@ -252,26 +261,34 @@ ParcelWeatherInstitute2F_Director_Text_11:
 
 ParcelWeatherInstitute2F_Aide_Text_0:
 # 50 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+	.string "AIDE: The director keeps one logbook\n"
+	.string "now. He says the second one was for\l"
+	.string "whoever came after, and someone did, so\l"
+	.string "he stopped.\p"
+	.string "He writes slower. He writes true.$"
+
+ParcelWeatherInstitute2F_Aide_Text_1:
+# 55 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "AIDE: The director's second logbook\n"
 	.string "went into the record. The one he said\l"
 	.string "was for whoever comes after. It was for\l"
 	.string "you, it turns out. He's started a third.$"
 
-ParcelWeatherInstitute2F_Aide_Text_1:
-# 54 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+ParcelWeatherInstitute2F_Aide_Text_2:
+# 59 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "AIDE: The director keeps two logbooks.\n"
 	.string "One for the Board. One for himself. He\l"
 	.string "says the second one is for whoever\l"
 	.string "comes after. I think he means you.$"
 
 ParcelWeatherInstitute2F_Window_Text_0:
-# 59 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 64 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "From the window: four plots, four skies,\n"
 	.string "and past the fence the one real one,\l"
 	.string "grey and ordinary and not for sale.$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_0:
-# 67 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 72 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: The hearing cited the station's\n"
 	.string "models. Both logbooks. I'd like one more\l"
 	.string "reading, in weather of my choosing, with\l"
@@ -279,22 +296,22 @@ ParcelWeatherInstitute2F_Director_Rematch_Text_0:
 	.string "All four of mine are watching. Yes?$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_1:
-# 69 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 74 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: The forecast holds. So does the\n"
 	.string "offer.$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_2:
-# 73 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 78 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: …Cleanly done. In any weather. I\n"
 	.string "keep saying it.$"
 
 ParcelWeatherInstitute2F_Director_Rematch_Text_3:
-# 74 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 79 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "VANE: Come back. The sky changes. So do\n"
 	.string "I, slower.$"
 
 ParcelWeatherInstitute2F_Castform_Text_0:
-# 83 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
+# 88 "data/maps/ParcelWeatherInstitute2F/scripts.pory"
 	.string "Under the director's second desk, a\n"
 	.string "CASTFORM, asleep in its rain form.\p"
 	.string "It has been raining very gently on a box\n"

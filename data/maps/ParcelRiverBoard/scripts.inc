@@ -73,12 +73,14 @@ ParcelRiverBoard_Clerk::
 # 45 "data/maps/ParcelRiverBoard/scripts.pory"
 	faceplayer
 # 46 "data/maps/ParcelRiverBoard/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverBoard_Clerk_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelRiverBoard_Clerk_2
 # 51 "data/maps/ParcelRiverBoard/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverBoard_Clerk_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverBoard_Clerk_5
 # 56 "data/maps/ParcelRiverBoard/scripts.pory"
-	msgbox ParcelRiverBoard_Clerk_Text_2, MSGBOX_DEFAULT
-# 57 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverBoard_Clerk_8
+# 61 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Clerk_Text_3, MSGBOX_DEFAULT
+# 62 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
@@ -96,118 +98,143 @@ ParcelRiverBoard_Clerk_5:
 	release
 	end
 
+ParcelRiverBoard_Clerk_8:
+# 57 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Clerk_Text_2, MSGBOX_DEFAULT
+# 58 "data/maps/ParcelRiverBoard/scripts.pory"
+	release
+	end
+
 
 ParcelRiverBoard_Ratepayer::
-# 61 "data/maps/ParcelRiverBoard/scripts.pory"
+# 66 "data/maps/ParcelRiverBoard/scripts.pory"
 	lock
-# 62 "data/maps/ParcelRiverBoard/scripts.pory"
+# 67 "data/maps/ParcelRiverBoard/scripts.pory"
 	faceplayer
-# 63 "data/maps/ParcelRiverBoard/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverBoard_Ratepayer_2
 # 68 "data/maps/ParcelRiverBoard/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverBoard_Ratepayer_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelRiverBoard_Ratepayer_2
 # 73 "data/maps/ParcelRiverBoard/scripts.pory"
-	msgbox ParcelRiverBoard_Ratepayer_Text_2, MSGBOX_DEFAULT
-# 74 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverBoard_Ratepayer_5
+# 78 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverBoard_Ratepayer_8
+# 83 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Ratepayer_Text_3, MSGBOX_DEFAULT
+# 84 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 ParcelRiverBoard_Ratepayer_2:
-# 64 "data/maps/ParcelRiverBoard/scripts.pory"
+# 69 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Ratepayer_Text_0, MSGBOX_DEFAULT
-# 65 "data/maps/ParcelRiverBoard/scripts.pory"
+# 70 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 ParcelRiverBoard_Ratepayer_5:
-# 69 "data/maps/ParcelRiverBoard/scripts.pory"
+# 74 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Ratepayer_Text_1, MSGBOX_DEFAULT
-# 70 "data/maps/ParcelRiverBoard/scripts.pory"
+# 75 "data/maps/ParcelRiverBoard/scripts.pory"
+	release
+	end
+
+ParcelRiverBoard_Ratepayer_8:
+# 79 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Ratepayer_Text_2, MSGBOX_DEFAULT
+# 80 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 
 ParcelRiverBoard_Meterman::
-# 78 "data/maps/ParcelRiverBoard/scripts.pory"
+# 88 "data/maps/ParcelRiverBoard/scripts.pory"
 	lock
-# 79 "data/maps/ParcelRiverBoard/scripts.pory"
+# 89 "data/maps/ParcelRiverBoard/scripts.pory"
 	faceplayer
-# 80 "data/maps/ParcelRiverBoard/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverBoard_Meterman_2
-# 85 "data/maps/ParcelRiverBoard/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverBoard_Meterman_5
 # 90 "data/maps/ParcelRiverBoard/scripts.pory"
-	msgbox ParcelRiverBoard_Meterman_Text_2, MSGBOX_DEFAULT
-# 91 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelRiverBoard_Meterman_2
+# 95 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverBoard_Meterman_5
+# 100 "data/maps/ParcelRiverBoard/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelRiverBoard_Meterman_8
+# 105 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Meterman_Text_3, MSGBOX_DEFAULT
+# 106 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 ParcelRiverBoard_Meterman_2:
-# 81 "data/maps/ParcelRiverBoard/scripts.pory"
+# 91 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Meterman_Text_0, MSGBOX_DEFAULT
-# 82 "data/maps/ParcelRiverBoard/scripts.pory"
+# 92 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 ParcelRiverBoard_Meterman_5:
-# 86 "data/maps/ParcelRiverBoard/scripts.pory"
+# 96 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Meterman_Text_1, MSGBOX_DEFAULT
-# 87 "data/maps/ParcelRiverBoard/scripts.pory"
+# 97 "data/maps/ParcelRiverBoard/scripts.pory"
+	release
+	end
+
+ParcelRiverBoard_Meterman_8:
+# 101 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Meterman_Text_2, MSGBOX_DEFAULT
+# 102 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 
 ParcelRiverBoard_Ledger::
-# 95 "data/maps/ParcelRiverBoard/scripts.pory"
+# 110 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Ledger_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelRiverBoard_Sluice_Rematch::
-# 101 "data/maps/ParcelRiverBoard/scripts.pory"
+# 116 "data/maps/ParcelRiverBoard/scripts.pory"
 	lock
-# 102 "data/maps/ParcelRiverBoard/scripts.pory"
+# 117 "data/maps/ParcelRiverBoard/scripts.pory"
 	faceplayer
-# 103 "data/maps/ParcelRiverBoard/scripts.pory"
+# 118 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Sluice_Rematch_Text_0, MSGBOX_YESNO
-# 104 "data/maps/ParcelRiverBoard/scripts.pory"
+# 119 "data/maps/ParcelRiverBoard/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelRiverBoard_Sluice_Rematch_2
-# 109 "data/maps/ParcelRiverBoard/scripts.pory"
+# 124 "data/maps/ParcelRiverBoard/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_GYM4_R, ParcelRiverBoard_Sluice_Rematch_Text_2
-# 110 "data/maps/ParcelRiverBoard/scripts.pory"
+# 125 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Sluice_Rematch_Text_3, MSGBOX_DEFAULT
-# 111 "data/maps/ParcelRiverBoard/scripts.pory"
+# 126 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 ParcelRiverBoard_Sluice_Rematch_2:
-# 105 "data/maps/ParcelRiverBoard/scripts.pory"
+# 120 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Sluice_Rematch_Text_1, MSGBOX_DEFAULT
-# 106 "data/maps/ParcelRiverBoard/scripts.pory"
+# 121 "data/maps/ParcelRiverBoard/scripts.pory"
 	release
 	end
 
 
 ParcelRiverBoard_GaugeBook::
-# 118 "data/maps/ParcelRiverBoard/scripts.pory"
+# 133 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_GaugeBook_Text_0, MSGBOX_SIGN
-# 119 "data/maps/ParcelRiverBoard/scripts.pory"
+# 134 "data/maps/ParcelRiverBoard/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_BOOK, ParcelRiverBoard_GaugeBook_1
 	return
 
 ParcelRiverBoard_GaugeBook_1:
-# 120 "data/maps/ParcelRiverBoard/scripts.pory"
+# 135 "data/maps/ParcelRiverBoard/scripts.pory"
 	setflag FLAG_SKALD_Q_BOOK_FOUND
 	return
 
 
 ParcelRiverBoard_Allocations::
-# 127 "data/maps/ParcelRiverBoard/scripts.pory"
+# 142 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Allocations_Text_0, MSGBOX_SIGN
-# 128 "data/maps/ParcelRiverBoard/scripts.pory"
+# 143 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Allocations_Text_1, MSGBOX_SIGN
-# 129 "data/maps/ParcelRiverBoard/scripts.pory"
+# 144 "data/maps/ParcelRiverBoard/scripts.pory"
 	msgbox ParcelRiverBoard_Allocations_Text_2, MSGBOX_SIGN
 	end
 
@@ -281,14 +308,23 @@ ParcelRiverBoard_Sluice_Text_8:
 
 ParcelRiverBoard_Clerk_Text_0:
 # 47 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "CLERK: Allocations posted, names under\n"
+	.string "them, objections open the first of\l"
+	.string "every month. I keep the Phase 2 file on\l"
+	.string "the counter now.\p"
+	.string "Anyone can read it. Almost nobody does.\n"
+	.string "The point is the almost.$"
+
+ParcelRiverBoard_Clerk_Text_1:
+# 52 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "CLERK: Allocations reposted with six\n"
 	.string "names under them. Objections reopened.\l"
 	.string "The Phase 2 file came off the shelf and\l"
 	.string "into the hearing. You can read it now.\l"
 	.string "Everyone can. Nobody asks.$"
 
-ParcelRiverBoard_Clerk_Text_1:
-# 52 "data/maps/ParcelRiverBoard/scripts.pory"
+ParcelRiverBoard_Clerk_Text_2:
+# 57 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "CLERK: Allocations are posted. The\n"
 	.string "Phase 2 file has gone to the coast\l"
 	.string "office 'for review'. You still can't read\l"
@@ -297,8 +333,8 @@ ParcelRiverBoard_Clerk_Text_1:
 	.string "the shelf where it was. Ratepayers only.\l"
 	.string "There are fewer ratepayers.$"
 
-ParcelRiverBoard_Clerk_Text_2:
-# 56 "data/maps/ParcelRiverBoard/scripts.pory"
+ParcelRiverBoard_Clerk_Text_3:
+# 61 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "CLERK: Allocations are posted.\n"
 	.string "Objections are closed. The councilman's\l"
 	.string "Phase 2 file is on the shelf and no, you\l"
@@ -306,15 +342,23 @@ ParcelRiverBoard_Clerk_Text_2:
 	.string "not a ratepayer.$"
 
 ParcelRiverBoard_Ratepayer_Text_0:
-# 64 "data/maps/ParcelRiverBoard/scripts.pory"
+# 69 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "MAN: Plot nine. Metered. Cheaper. The\n"
+	.string "bore crew's wife has moved to the\l"
+	.string "valley.\p"
+	.string "I pay for water off a hill nobody's\n"
+	.string "drilling. It's the best bill I've had.$"
+
+ParcelRiverBoard_Ratepayer_Text_1:
+# 74 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "MAN: Plot nine. Metered, still. The rate\n"
 	.string "came down a page. I pay for water that\l"
 	.string "used to be free and now it's cheaper.\l"
 	.string "I'm told that's a win. I'm trying to feel\l"
 	.string "it.$"
 
-ParcelRiverBoard_Ratepayer_Text_1:
-# 69 "data/maps/ParcelRiverBoard/scripts.pory"
+ParcelRiverBoard_Ratepayer_Text_2:
+# 79 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "MAN: Plot nine. Metered. And now the\n"
 	.string "bore crew's wife is at the counter\l"
 	.string "paying for water off a hill that's\l"
@@ -323,8 +367,8 @@ ParcelRiverBoard_Ratepayer_Text_1:
 	.string "drills the hill. I'd admire it if I weren't\l"
 	.string "paying for both.$"
 
-ParcelRiverBoard_Ratepayer_Text_2:
-# 73 "data/maps/ParcelRiverBoard/scripts.pory"
+ParcelRiverBoard_Ratepayer_Text_3:
+# 83 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "MAN: Plot nine. Metered since spring. I\n"
 	.string "pay for water that used to run past my\l"
 	.string "gate for nothing.\p"
@@ -332,15 +376,24 @@ ParcelRiverBoard_Ratepayer_Text_2:
 	.string "fair. The FOUNDATION sells the meters.$"
 
 ParcelRiverBoard_Meterman_Text_0:
-# 81 "data/maps/ParcelRiverBoard/scripts.pory"
+# 91 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "METER READER: Fourteen plots, fourteen\n"
+	.string "meters, and the readings go to SLUICE\l"
+	.string "and then to the window. People read\l"
+	.string "them.\p"
+	.string "I used to think I was the only one who\n"
+	.string "read a meter.$"
+
+ParcelRiverBoard_Meterman_Text_1:
+# 96 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "METER READER: Fourteen plots, fourteen\n"
 	.string "meters, hourly, and the readings go to\l"
 	.string "SLUICE first now, not the coast office.\l"
 	.string "She reads them herself. She's a slow\l"
 	.string "reader. Deliberately.$"
 
-ParcelRiverBoard_Meterman_Text_1:
-# 86 "data/maps/ParcelRiverBoard/scripts.pory"
+ParcelRiverBoard_Meterman_Text_2:
+# 101 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "METER READER: Readings went up this\n"
 	.string "month. All fourteen. SLUICE says it's\l"
 	.string "meltwater off the high ground. The\l"
@@ -348,8 +401,8 @@ ParcelRiverBoard_Meterman_Text_1:
 	.string "The ledger doesn't say anything. It\n"
 	.string "just balances, and it balanced higher.$"
 
-ParcelRiverBoard_Meterman_Text_2:
-# 90 "data/maps/ParcelRiverBoard/scripts.pory"
+ParcelRiverBoard_Meterman_Text_3:
+# 105 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "METER READER: Fourteen plots, fourteen\n"
 	.string "meters, hourly. The readings go to the\l"
 	.string "coast office. SLUICE keeps a copy.\l"
@@ -357,7 +410,7 @@ ParcelRiverBoard_Meterman_Text_2:
 	.string "said.$"
 
 ParcelRiverBoard_Ledger_Text_0:
-# 95 "data/maps/ParcelRiverBoard/scripts.pory"
+# 110 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "THE ALLOCATION LEDGER. Plots 1-14,\n"
 	.string "metered flow, rates. A column headed\l"
 	.string "PHASE 2 -- UPSTREAM RESERVE. The\l"
@@ -365,7 +418,7 @@ ParcelRiverBoard_Ledger_Text_0:
 	.string "full. To the Foundation.$"
 
 ParcelRiverBoard_Sluice_Rematch_Text_0:
-# 103 "data/maps/ParcelRiverBoard/scripts.pory"
+# 118 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: The hearing rated your filing. I\n"
 	.string "metered it. For once the rating and the\l"
 	.string "meter agree.\p"
@@ -373,21 +426,21 @@ ParcelRiverBoard_Sluice_Rematch_Text_0:
 	.string "clearance on the end of it. Will you?$"
 
 ParcelRiverBoard_Sluice_Rematch_Text_1:
-# 105 "data/maps/ParcelRiverBoard/scripts.pory"
+# 120 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: Noted. The ledger keeps.$"
 
 ParcelRiverBoard_Sluice_Rematch_Text_2:
-# 109 "data/maps/ParcelRiverBoard/scripts.pory"
+# 124 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: …Balanced. Down to the drop,\n"
 	.string "again.$"
 
 ParcelRiverBoard_Sluice_Rematch_Text_3:
-# 110 "data/maps/ParcelRiverBoard/scripts.pory"
+# 125 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: Come back when the gauge\n"
 	.string "moves. It will.$"
 
 ParcelRiverBoard_GaugeBook_Text_0:
-# 118 "data/maps/ParcelRiverBoard/scripts.pory"
+# 133 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "The gauge book, open on the counter.\n"
 	.string "One line a week, in different hands, for\l"
 	.string "a long time.\p"
@@ -409,7 +462,7 @@ ParcelRiverBoard_GaugeBook_Text_0:
 	.string "moved the mark.$"
 
 ParcelRiverBoard_Allocations_Text_0:
-# 127 "data/maps/ParcelRiverBoard/scripts.pory"
+# 142 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "The Board's ledger of allocations,\n"
 	.string "chained to the shelf like the gauge\l"
 	.string "book. Who may take how much from the\l"
@@ -421,7 +474,7 @@ ParcelRiverBoard_Allocations_Text_0:
 	.string "thought to write what was not taken.$"
 
 ParcelRiverBoard_Allocations_Text_1:
-# 128 "data/maps/ParcelRiverBoard/scripts.pory"
+# 143 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "The middle pages lengthen. Farms:\n"
 	.string "thirty, and the rods become pipes.\l"
 	.string "Mereholt Logistics, for the depot: a\l"
@@ -437,7 +490,7 @@ ParcelRiverBoard_Allocations_Text_1:
 	.string "Nobody has asked the clerk to.$"
 
 ParcelRiverBoard_Allocations_Text_2:
-# 129 "data/maps/ParcelRiverBoard/scripts.pory"
+# 144 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "On the inside cover, newest, the Board's\n"
 	.string "stamp and SLUICE's initial: When the\l"
 	.string "sum is larger than the river, the river\l"

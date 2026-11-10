@@ -3,6 +3,11 @@ mapscripts ParcelRiverHouse2_MapScripts {
 script ParcelRiverHouse2_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: He reads the meters to the window now and his voice carries down the street. Fourteen plots.\pPeople wait for it. It's the town clock."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: My husband reads the meters for the Board. He read them to the hearing. Out loud. Fourteen plots. His voice held. I was proud, and I was frightened, and the pay's still steady."), MSGBOX_DEFAULT)
         release
@@ -20,6 +25,11 @@ script ParcelRiverHouse2_Woman {
 script ParcelRiverHouse2_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: Dad's ledger is a book now. For real. The clerk had it bound. It's on the Board counter and anyone can turn the pages.\pI turned them. It's still numbers. It's our numbers."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: Dad read the river's ledger to a room full of people. I went. It's still not a book. It was a book for one afternoon."), MSGBOX_DEFAULT)
         release

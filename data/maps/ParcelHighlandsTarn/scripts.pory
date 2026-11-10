@@ -664,6 +664,11 @@ script ParcelHighlandsTarn_Randi_R5 {
 script ParcelHighlandsTarn_Cadet {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("CADET: VALE reads her gate log to the new cadets every winter now, in the cold, in the dark.\pShe says it's the only way they'll remember what the cold cost. I remember."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CADET: VALE said 'learn the cold'. The hearing cited her gate log. She came up here to read it to us. In the cold. It's a good log."), MSGBOX_DEFAULT)
         release

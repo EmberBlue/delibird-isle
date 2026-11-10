@@ -664,6 +664,11 @@ script ParcelFloodbasinSluice_Grim_R5 {
 script ParcelFloodbasinSluice_Surveyor {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("SURVEYOR: The weir's cancelled. The gates stay. I measure what I'm told, and this year they told me to measure the marsh too.\pMore to measure. I don't mind more."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SURVEYOR: Phase 2 goes ahead. Sluice gates here. The weir above is 'deferred'. I measure what I'm told. There's less to measure now, and I'm told it kindly."), MSGBOX_DEFAULT)
         release

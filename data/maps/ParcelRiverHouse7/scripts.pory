@@ -6,6 +6,11 @@ mapscripts ParcelRiverHouse7_MapScripts {
 script ParcelRiverHouse7_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: My name's under HARLAND's in the record. I went to the coast and read it. My own name, typed.\pI'd have liked it bigger. It's the right size."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: HARLAND spoke at the hearing for the river people too. His name was in it where he put it. So's mine, under his."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelRiverHouse7_Woman {
 script ParcelRiverHouse7_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Small mesh, let the small ones through, and this spring there were big ones. Not many.\pI mended the HAUKFELL man's net again. He catches with it now. Badly. Honestly."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: Mended the net for the review season. Smaller mesh, she says. Let the small ones through. We've learnt that the slow way."), MSGBOX_DEFAULT)
         release

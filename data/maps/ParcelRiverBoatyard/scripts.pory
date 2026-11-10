@@ -3,6 +3,11 @@ mapscripts ParcelRiverBoatyard_MapScripts {
 script ParcelRiverBoatyard_Wright {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_PLANK_DONE)) {
+        msgbox(format("BOATWRIGHT: The hill farmer's boat is in the water. He rows like a man carrying a hill. He'll learn.\pThe keel's sound. Twelve years under the eaves and a river to float in. That's a boat."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_PLANK) && !flag(FLAG_SKALD_Q_PLANK_DONE)) {
         if (flag(FLAG_SKALD_Q_PLANK_HAVE)) {
             msgbox(format("BOATWRIGHT: Seasoned. Twelve years under the eaves; you can hear it when you knock. That's a keel."), MSGBOX_DEFAULT)
@@ -40,6 +45,11 @@ script ParcelRiverBoatyard_Wright {
 script ParcelRiverBoatyard_Apprentice {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("APPRENTICE: Three orders. Small boats, review money, people who'd never thought of a boat.\pMaster says we build them all. He says it like he's forgotten we ever didn't."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("APPRENTICE: Somebody ordered a boat. A whole boat. First in four years. The review grounded the big fleet and the small ones are worth building again. I'm learning the keel."), MSGBOX_DEFAULT)
         release

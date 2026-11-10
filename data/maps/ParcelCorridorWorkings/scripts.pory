@@ -664,6 +664,11 @@ script ParcelCorridorWorkings_Lise_R5 {
 script ParcelCorridorWorkings_Miner {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_SIGN_DONE)) {
+        msgbox(format("MINER: I go and look at the sign in its case. My name's on the back and the glass hides it.\pThat's right. It was never about the name."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_SIGN_DONE)) {
         msgbox(format("MINER: The sign's in the file. Exhibit one, the clerk says. Thirty years I carried it and it took a ranger to carry it the last hundred yards."), MSGBOX_DEFAULT)
         release

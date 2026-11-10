@@ -4,6 +4,11 @@ mapscripts ParcelFernwickHouse1_MapScripts {
 script ParcelFernwickHouse1_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: My brother's on the correction crew now. Same river, other side of the pipe. Dinner's loud.\pMy sister and him argue about the width. In paces. Both of them."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: My brother's dredge is idle pending survey. My sister wrote the survey. Dinner at ours is louder now. That's better. I think it's better."), MSGBOX_DEFAULT)
         release
@@ -37,6 +42,11 @@ script ParcelFernwickHouse1_ReadShelf {
 script ParcelFernwickHouse1_Sister {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("SISTER: He read my second survey at the table too. Didn't say anything. Then he asked where the paces start from.\pThat's a question. I'll take a question."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SISTER: I wrote the Reedmere survey. The pipe. He read it at the dinner table with the gravy going cold and didn't say a word till the end.\pThen he said: that's my shift you've written about. I said yes. He said: you spelled the foreman's name wrong. I had. He fixed it. That's us, now. He fixes my spelling."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {

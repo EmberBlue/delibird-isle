@@ -90,6 +90,11 @@ movement Movement_FaceUp {
 script ParcelIsle_HeavyCoat {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BRAM: The board's got dates on it three weeks out now. Boat's late half the time, same as always.\pLate is a kind of normal I can live with."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BRAM: The schedule board's got a date on it again. First time in a year!\pI'd say things are looking up, but I've been wrong before."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -107,6 +112,11 @@ script ParcelIsle_HeavyCoat {
 script ParcelIsle_Fisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_ANNI_DONE)) {
+        msgbox(format("TOBIN: Counted in front of the inspector this morning. She wrote down my number, not the cannery's.\pForty years, and it took a stranger with a clipboard. Still. It's written."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_ANNI_NET) && !flag(FLAG_SKALD_Q_ANNI_DONE)) {
         msgbox(format("TOBIN: That's my net! Only ANNI doubles the edge like that.\pShe sent you all the way down here? Then she likes you. She doesn't like anybody."), MSGBOX_DEFAULT)
         msgbox(format("TOBIN: Here, take my spare rod. It's old, but it knows this water.\pThrow the little ones back, okay? There's fewer every year."), MSGBOX_DEFAULT)
@@ -130,6 +140,11 @@ script ParcelIsle_Fisher {
 script ParcelIsle_Dockworker {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("ROLF: Day rate's back. Half the crates are the review's now, soil and jars. Lighter than ore, heavier to think about.\pI don't think about it. I lift."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_CORDELIA_DONE)) {
         msgbox(format("ROLF: Eighteen months of delay, they're saying. You know what eighteen months is to a guy on a day rate?\pI'm not saying you're wrong. ANNI read me the frog part. I'm saying it's easy to be right when it's not your boat."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FINALE_DONE)) {
@@ -147,6 +162,11 @@ script ParcelIsle_Dockworker {
 script ParcelIsle_NetMender {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_ANNI_DONE)) {
+        msgbox(format("ANNI: ROLF reads the paper himself now. Out loud, to the net. The net doesn't mind. Neither do I."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_ANNI_DONE)) {
         if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
             msgbox(format("ANNI: ROLF had me read him your report. The frog part, twice.\pHe didn't say anything after. For ROLF, that's a speech."), MSGBOX_DEFAULT)
@@ -201,6 +221,11 @@ script ParcelIsle_HarbourLad {
 script ParcelIsle_Widow {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_SIGRUN_DONE)) {
+        msgbox(format("SIGRUN: Eleven again this morning. Twelve, one day last week. I told EIRIK about the twelfth one.\pIt is still how I say good morning."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_SIGRUN_DONE)) {
         msgbox(format("SIGRUN: Eleven this morning. I still count them. It's how I say good morning to someone who isn't here."), MSGBOX_DEFAULT)
         release
@@ -245,6 +270,11 @@ script ParcelIsle_FerrySign {
 script ParcelIsle_FerryCaptain {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_TALLY_DONE)) {
+        msgbox(format("CAPTAIN: New post went in. First notch's already on it. Not mine. A LAPRAS off the north point, the mate swears.\pI let him cut it. Someone has to start the next count."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_TALLY) && !flag(FLAG_SKALD_Q_TALLY_DONE)) {
         if (flag(FLAG_SKALD_Q_TALLY_FOUND)) {
             msgbox(format("CAPTAIN: Eleven in the first decade, four in the second, one in the third. That's the count. I knew it. I wanted it said back to me by a notebook.\pHere. For the boat you'll need one day."), MSGBOX_DEFAULT)
@@ -346,6 +376,11 @@ script ParcelIsle_ItemNetBall {
 script ParcelIsle_LogisticsClerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("PELL: Manifests are moving again. Different crests on half of them. I log what moves.\pIt's moving slower, and I know where it's going now, which is new."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("PELL: Half my manifests are on hold. The other half are lawyers.\pI used to log trucks. Now I log the absence of trucks. It's the same form!"), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -365,6 +400,11 @@ script ParcelIsle_LogisticsClerk {
 script ParcelIsle_KidA {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("EBBA: NILS and me are in the Centre's paper! Not our names. 'Two children of Saltwick.' That's us.\pWe counted fourteen again. It's not less this time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("EBBA: NILS says you wrote everything down. Even the frogs!\pAre we in it? We saw them first!"), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -381,6 +421,11 @@ script ParcelIsle_KidA {
 script ParcelIsle_KidB {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("NILS: The word's THRESHOLD. I looked it up. It means the step of a door.\pEBBA says the frogs are on the step. I think they're still in the house. I wrote both down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("NILS: What's the word? For when a place is running out?\pEBBA says you've got a word for it now. I want the word."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -398,6 +443,11 @@ script ParcelIsle_KidB {
 script ParcelIsle_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_HALVAR_DONE)) {
+        msgbox(format("HALVAR: The bell's in the drawer with the whistle after all. They get on.\pLow water gave back a boot last week, nobody's. Marked it in my own book. You started that."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_HALVAR) && !flag(FLAG_SKALD_Q_HALVAR_DONE)) {
         if (flag(FLAG_SKALD_Q_HALVAR_FOUND)) {
             msgbox(format("HALVAR: ...Well. There it is. Twenty-two years in the water and it's cleaner than I am.\pBlow it? No. Let it be. Some things you keep because they're quiet now."), MSGBOX_DEFAULT)
@@ -432,6 +482,11 @@ script ParcelIsle_OldMan {
 script ParcelIsle_Birder {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_BIRDER_DONE)) {
+        msgbox(format("CORWEN: Twelve species on the inlet this morning. Twelve. One more than last year is not a trend, I know.\pI wrote it in a new colour anyway."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_BIRDER_DONE)) {
         if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
             msgbox(format("CORWEN: The storm birds were on the radio this morning! By name! DELIBIRD!\pForty years of lists and I never once made the news. Good."), MSGBOX_DEFAULT)
@@ -490,6 +545,11 @@ script ParcelIsle_TownSign {
 script ParcelIsle_Neighbor {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MARIT: The annex has a tenant again. A Survey girl, young, tidy. She leaves the window open the way the scientist did.\pI haven't told her that. I will."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MARIT: I told you to forget I said anything, that first day. I'm not saying it now.\pShe wrote about you because she knew you'd do this. I think she was sorry. I think she knew that too."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -517,6 +577,11 @@ movement Movement_GlanceAway {
 script ParcelIsle_Innkeeper {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("LIV: Mom's made the big pot every Thursday since. Rangers, a lawyer once, the Survey girl.\pShe says the pot's the only thing in town that's grown."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("LIV: Two lawyers and a reporter in the good rooms. Mom's charging them double and apologizing for it.\pYour room's still yours. She won't let anyone else have it."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -534,6 +599,11 @@ script ParcelIsle_Innkeeper {
 script ParcelIsle_ChandlerBrother {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OSSIAN: KIT's selling rope at the old price. Nobody's tying anything down any more.\pI sit. I've decided it was the right way after all, as long as somebody else is walking."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OSSIAN: KIT's sold more rope this week than all winter. Everyone suddenly wants to tie something down.\pMe, I sit. Turns out sitting was the wrong way to be right."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -590,6 +660,11 @@ script ParcelIsle_PreserveGateSign {
 script ParcelIsle_CenterAide {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MEDIC: Quiet mornings again. Rangers come off the ferry and walk home without sitting.\pThat's the whole report, and it's a good one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MEDIC: Aid station's for POKéMON. Yours look like they've walked a region. They have. Leave them with me an hour."), MSGBOX_DEFAULT)
         release
@@ -1086,6 +1161,11 @@ script ParcelIsle_Stringer {
 script ParcelIsle_Oysterman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_SHOAL_DONE)) {
+        msgbox(format("OYSTERMAN: Two shells with young on the old ground this spring. Two. Dad would have said that's not a bed, that's a start.\pI've written START under GONE. Same hand."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_SHOAL_DONE)) {
         msgbox(format("OYSTERMAN: GONE, it says. My father would have wanted the word. He'd have wanted it spelled right. It is."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_SHOAL)) {

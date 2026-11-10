@@ -3,6 +3,11 @@ mapscripts ParcelCoastHouse1_MapScripts {
 script ParcelCoastHouse1_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Husband on four days, son's boat out two, daughter typing something she won't say. Three wages again. One crest less.\pI've stopped counting the crests."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: Husband on half days, son's boat grounded to spring, daughter still at the FOUNDATION desk typing the review. Three wages, one cramped house, and the first dinner in years where nobody talked about fish."), MSGBOX_DEFAULT)
         release
@@ -20,6 +25,11 @@ script ParcelCoastHouse1_Woman {
 script ParcelCoastHouse1_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_SHELL_DONE)) {
+        msgbox(format("BOY: I found the second one. Off the breakwater, where GYDA said. It's on the sill with the first.\pMum says two is a pair. I'm going to make it a row."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: GYDA says the water's clearer off the breakwater. I'm going to dive it when I'm old enough. Mum says that's the first thing I've said that she can plan for."), MSGBOX_DEFAULT)
         release

@@ -99,6 +99,11 @@ script ParcelFernwick_Birder {
 script ParcelFernwick_Ranger {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("RANGER: Station's back to shifts. The witness list is in a drawer, and HALE's name is first on it, the way his name is first on most things here."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RANGER: Half the station's been called to the hearings as witnesses. The other half is covering their shifts.\pHALE's doing both."), MSGBOX_DEFAULT)
     }
@@ -116,6 +121,11 @@ script ParcelFernwick_Ranger {
 script ParcelFernwick_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("OLD MAN: A fishing village in a hearing transcript, and now a fishing village with a Survey stake outside the Hall.\pWe've been a lot of things. We're still fishing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("OLD MAN: A fishing village before the station, a fishing village with paperwork after, and now a fishing village in a hearing transcript. I read my own name in it. Page forty. I said 'the water's low'. I did say that."), MSGBOX_DEFAULT)
         release
@@ -134,6 +144,11 @@ script ParcelFernwick_OldMan {
 script ParcelFernwick_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: TARN smiled again. Twice in a year. The cadets think the regulation's been repealed.\pI think he's just older, and tired of holding it in."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: TARN smiled. I saw it. Tidewater regulation or not, he smiled when they read your name on the wireless. Half a second. Don't tell him I told you."), MSGBOX_DEFAULT)
         release
@@ -156,6 +171,11 @@ script ParcelFernwick_Woman {
 script ParcelFernwick_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: I asked HALE how you become a RANGER. He said: start counting. So I count the pond.\pTwenty-eight WINGULL. GRETTIR checks my adding."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: I'm gonna be a RANGER! Not a MEREHOLT guy. Their boots are still the best. But the RANGER's name was on the radio."), MSGBOX_DEFAULT)
         release
@@ -174,6 +194,11 @@ script ParcelFernwick_Boy {
 script ParcelFernwick_Girl {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GIRL: GRETTIR's POLIWAG came back up the channel. It brought a friend. Two.\pGRETTIR says two is not a population. I said two is two more than ducks."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GIRL: The pond's still ducks. WINGULL. But GRETTIR says a POLIWAG came up the channel. One. He's watching for it. I'm watching GRETTIR."), MSGBOX_DEFAULT)
         release
@@ -192,6 +217,11 @@ script ParcelFernwick_Girl {
 script ParcelFernwick_Fisher {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("FISHER: Water's up a hand. One hand. I rowed to the stake I used to walk to.\pI'm not calling it better. I'm calling it a hand."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("FISHER: Marsh water's still low. Your paper didn't raise it. It put a number on the discharge upstream, and a man with a jar. I'll row where I can and walk where I can't. Same as before. Less angry."), MSGBOX_DEFAULT)
         release
@@ -210,6 +240,11 @@ script ParcelFernwick_Fisher {
 script ParcelFernwick_Scientist {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_JAR_DONE)) {
+        msgbox(format("SCIENTIST: The pond jar's in the Survey archive now, labelled, dated, eleven days in the sun and still a reading.\pThe curator was unkind about the label. Correctly."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_JAR) && !flag(FLAG_SKALD_Q_JAR_DONE)) {
         if (flag(FLAG_SKALD_Q_JAR_FOUND)) {
             msgbox(format("SCIENTIST: Nine days. Nine days a jar of the pond sat in the sun with my name on it and nobody kicked it over. This town respects a label more than it respects the pond.\pTake these. I'm going to go and fill a new one."), MSGBOX_DEFAULT)
@@ -243,6 +278,11 @@ script ParcelFernwick_Scientist {
 script ParcelFernwick_Gentleman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("GENTLEMAN: The plaques are still up. The fountain still runs. Someone has put a small Survey stake in the flowerbed beside it, with a very small red cloth.\pI did not do it. I approve."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("GENTLEMAN: MEREHOLT paid for the fountain. It still says so. The hearing didn't take the plaques down. I'd have liked it to. Then I thought: let them stay. They say exactly what they say."), MSGBOX_DEFAULT)
         release
@@ -261,6 +301,11 @@ script ParcelFernwick_Gentleman {
 script ParcelFernwick_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("CLERK: Marsh works day rate's steady. The work's got a name now: remediation. Same men, same boots, different word.\pThe word pays the same. The men say it's better work."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CLERK: Day rate at the marsh works is down. Nobody asks what the work is now either. The deal's the same. The pay's not. Funny how the deal's the bit nobody renegotiates."), MSGBOX_DEFAULT)
         release
@@ -279,6 +324,11 @@ script ParcelFernwick_Clerk {
 script ParcelFernwick_Mother {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MOTHER: My boy counts the pond before school. He's seven. He has a notebook.\pI've stopped telling him RANGERS don't get paid. I started making him a lunch for the walk."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MOTHER: My boy still wants to be a RANGER. I've stopped saying RANGERS don't get paid. They don't. But somebody read one out at a hearing and the whole town went quiet."), MSGBOX_DEFAULT)
         release
@@ -949,6 +999,11 @@ script ParcelFernwick_Stringer {
 script ParcelFernwick_Gardener {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_STONE_DONE)) {
+        msgbox(format("GARDENER: Eleven paces. The water came back one pace this spring. I water the far bank anyway.\pHands need something. It can be the right thing."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_STONE_DONE)) {
         msgbox(format("GARDENER: Twelve paces. I've started watering the far bank. It won't bring it back. It's something to do with my hands."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALD_Q_STONE)) {

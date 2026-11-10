@@ -72,6 +72,11 @@ script ParcelDelibirdCliffs_Rune {
 script ParcelDelibirdCliffs_Einar {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_FIRSTONE_DONE)) {
+        msgbox(format("EINAR: Midwinter again this year, in chalk, in a better hand. The children keep the list now. I just read it.\pForty-two years. Dated."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_FIRSTONE) && !flag(FLAG_SKALD_Q_FIRSTONE_DONE)) {
         if (flag(FLAG_SKALD_Q_FIRSTONE_FOUND)) {
             msgbox(format("EINAR: Midwinter, this year, in chalk, in a hand with a backwards letter. It's on the list, then. Dated.\pForty-one years and the list has started writing itself faster than I can. Here. From the point, from when the water was cold."), MSGBOX_DEFAULT)

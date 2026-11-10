@@ -5,6 +5,11 @@ mapscripts ParcelCoastHearing_MapScripts {
 script ParcelCoastHearing_Clerk {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("CLERK: The review sits the first Tuesday of the month. There's a public gallery. People come.\pI type slower now so they can follow. Nobody asked me to."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("CLERK: The hearing's in session. They read a CORPS filing into the record this morning. Parts of it twice.\pThe review board wants the author. I told them the author was a RANGER. They said that's not a title. I said no, it isn't."), MSGBOX_DEFAULT)
         release
@@ -22,6 +27,11 @@ script ParcelCoastHearing_Clerk {
 script ParcelCoastHearing_Waiter1 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_CARBON_DONE)) {
+        msgbox(format("FISHER: Year five. Two sentences. My wife packed a lunch and I ate it.\pI've never eaten a hearing lunch. It was good."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_CARBON) && !flag(FLAG_SKALD_Q_CARBON_DONE)) {
         if (flag(FLAG_SKALD_Q_CARBON_FOUND)) {
             msgbox(format("FISHER: That's it. Year four. One sentence. I didn't know you were allowed more than one."), MSGBOX_DEFAULT)
@@ -59,6 +69,11 @@ script ParcelCoastHearing_Waiter1 {
 script ParcelCoastHearing_Waiter2 {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: The size rule's posted in the hall and the market both. Nobody's changed it since the hearing.\pThe fish are mixed again. Somebody told the fish."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: They changed the size rule back. Nobody told us when they changed it the first time. This time there was a notice, in the hall, in big letters. Progress is a notice."), MSGBOX_DEFAULT)
         release

@@ -6,6 +6,11 @@ mapscripts ParcelWetlandsHouse2_MapScripts {
 script ParcelWetlandsHouse2_OldMan {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && flag(FLAG_SKALD_Q_NEST_DONE) && flag(FLAG_SKALD_Q_REED_DONE)) {
+        msgbox(format("OLD MAN: Two herons on the north bed this spring. Two. A heron tells you the water's worth standing in.\pTwo tell you it's worth staying for."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALD_Q_NEST) && !flag(FLAG_SKALD_Q_NEST_DONE)) {
         if (flag(FLAG_SKALD_Q_NEST_FOUND)) {
             msgbox(format("OLD MAN: Sat. …Sat. Then there's something left in that water worth standing in all day for. A heron knows. A heron doesn't stand anywhere for the view.\pHere. For the walking out. I'd give you more for the walking back with that."), MSGBOX_DEFAULT)
@@ -60,6 +65,11 @@ script ParcelWetlandsHouse2_OldMan {
 script ParcelWetlandsHouse2_Boy {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BOY: Fifty-three! The clicker's mine for good. GUNNAR says I'm the count now. I'm nine.\pHe says the count doesn't care how old you are."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BOY: Forty-nine! I'm the clicker now. GUNNAR says I'm 'very accurate'."), MSGBOX_DEFAULT)
         release

@@ -6,6 +6,11 @@ mapscripts ParcelCoastOffice1F_MapScripts {
 script ParcelCoastOffice1F_Reception {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("RECEPTION: Welcome to the MEREHOLT FOUNDATION. The exhibit's reopened. It's smaller.\pIt's mostly a map with the stakes on it, and the Survey's name under the map. Ms. AUNE insisted."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("RECEPTION: Welcome to the MEREHOLT FOUNDATION. The exhibit is closed for revision. Ms. AUNE is upstairs. She said if a RANGER came, to send you up, and to say nothing clever."), MSGBOX_DEFAULT)
         release
@@ -23,6 +28,11 @@ script ParcelCoastOffice1F_Reception {
 script ParcelCoastOffice1F_Visitor {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: I come in for the warm. There's a new thing on the wall where the model was. A map, with little red flags.\pI like it better. It doesn't promise anything."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: I come in for the warm. The model on the wall's been taken down. There's a lighter patch where it was. I understand the patch."), MSGBOX_DEFAULT)
         release

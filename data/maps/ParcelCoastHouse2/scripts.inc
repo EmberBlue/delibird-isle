@@ -8,12 +8,14 @@ ParcelCoastHouse2_Skipper::
 # 5 "data/maps/ParcelCoastHouse2/scripts.pory"
 	faceplayer
 # 6 "data/maps/ParcelCoastHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse2_Skipper_2
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastHouse2_Skipper_2
 # 11 "data/maps/ParcelCoastHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse2_Skipper_5
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse2_Skipper_5
 # 16 "data/maps/ParcelCoastHouse2/scripts.pory"
-	msgbox ParcelCoastHouse2_Skipper_Text_2, MSGBOX_DEFAULT
-# 17 "data/maps/ParcelCoastHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse2_Skipper_8
+# 21 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Skipper_Text_3, MSGBOX_DEFAULT
+# 22 "data/maps/ParcelCoastHouse2/scripts.pory"
 	release
 	end
 
@@ -31,65 +33,90 @@ ParcelCoastHouse2_Skipper_5:
 	release
 	end
 
+ParcelCoastHouse2_Skipper_8:
+# 17 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Skipper_Text_2, MSGBOX_DEFAULT
+# 18 "data/maps/ParcelCoastHouse2/scripts.pory"
+	release
+	end
+
 
 ParcelCoastHouse2_Wife::
-# 21 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 26 "data/maps/ParcelCoastHouse2/scripts.pory"
 	lock
-# 22 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 27 "data/maps/ParcelCoastHouse2/scripts.pory"
 	faceplayer
-# 23 "data/maps/ParcelCoastHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse2_Wife_2
 # 28 "data/maps/ParcelCoastHouse2/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse2_Wife_5
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelCoastHouse2_Wife_2
 # 33 "data/maps/ParcelCoastHouse2/scripts.pory"
-	msgbox ParcelCoastHouse2_Wife_Text_2, MSGBOX_DEFAULT
-# 34 "data/maps/ParcelCoastHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse2_Wife_5
+# 38 "data/maps/ParcelCoastHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoastHouse2_Wife_8
+# 43 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Wife_Text_3, MSGBOX_DEFAULT
+# 44 "data/maps/ParcelCoastHouse2/scripts.pory"
 	release
 	end
 
 ParcelCoastHouse2_Wife_2:
-# 24 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 29 "data/maps/ParcelCoastHouse2/scripts.pory"
 	msgbox ParcelCoastHouse2_Wife_Text_0, MSGBOX_DEFAULT
-# 25 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 30 "data/maps/ParcelCoastHouse2/scripts.pory"
 	release
 	end
 
 ParcelCoastHouse2_Wife_5:
-# 29 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 34 "data/maps/ParcelCoastHouse2/scripts.pory"
 	msgbox ParcelCoastHouse2_Wife_Text_1, MSGBOX_DEFAULT
-# 30 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 35 "data/maps/ParcelCoastHouse2/scripts.pory"
+	release
+	end
+
+ParcelCoastHouse2_Wife_8:
+# 39 "data/maps/ParcelCoastHouse2/scripts.pory"
+	msgbox ParcelCoastHouse2_Wife_Text_2, MSGBOX_DEFAULT
+# 40 "data/maps/ParcelCoastHouse2/scripts.pory"
 	release
 	end
 
 
 ParcelCoastHouse2_ReadDresser::
-# 39 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 49 "data/maps/ParcelCoastHouse2/scripts.pory"
 	msgbox ParcelCoastHouse2_ReadDresser_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastHouse2_ReadShelf::
-# 44 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 54 "data/maps/ParcelCoastHouse2/scripts.pory"
 	msgbox ParcelCoastHouse2_ReadShelf_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastHouse2_ReadPantry::
-# 49 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 59 "data/maps/ParcelCoastHouse2/scripts.pory"
 	msgbox ParcelCoastHouse2_ReadPantry_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelCoastHouse2_Skipper_Text_0:
 # 7 "data/maps/ParcelCoastHouse2/scripts.pory"
+	.string "SKIPPER: The lending company sold the\n"
+	.string "forty boats. The review's fund bought\l"
+	.string "nine of them back for the men who'd lost\l"
+	.string "them.\p"
+	.string "Not mine. I sold mine. I knew the\n"
+	.string "difference the day I did it.$"
+
+ParcelCoastHouse2_Skipper_Text_1:
+# 12 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "SKIPPER: Sold the boat the year the\n"
 	.string "dredge came. The lending company's got\l"
 	.string "forty boats tied up now and no quota to\l"
 	.string "run them. I sat in my window and didn't\l"
 	.string "gloat. Much.$"
 
-ParcelCoastHouse2_Skipper_Text_1:
-# 12 "data/maps/ParcelCoastHouse2/scripts.pory"
+ParcelCoastHouse2_Skipper_Text_2:
+# 17 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "SKIPPER: Sold the boat the year the\n"
 	.string "dredge came. Took the money. Today\l"
 	.string "HARLAND lost on his own quay to a\l"
@@ -99,8 +126,8 @@ ParcelCoastHouse2_Skipper_Text_1:
 	.string "Best decision I ever made. I still\n"
 	.string "haven't forgiven it.$"
 
-ParcelCoastHouse2_Skipper_Text_2:
-# 16 "data/maps/ParcelCoastHouse2/scripts.pory"
+ParcelCoastHouse2_Skipper_Text_3:
+# 21 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "SKIPPER: Sold the boat to the lending\n"
 	.string "company the year the dredge came. Took\l"
 	.string "the money. Bought this house. Best\l"
@@ -108,15 +135,23 @@ ParcelCoastHouse2_Skipper_Text_2:
 	.string "forgiven myself for it.$"
 
 ParcelCoastHouse2_Wife_Text_0:
-# 24 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 29 "data/maps/ParcelCoastHouse2/scripts.pory"
+	.string "WIFE: He goes to the hall every week\n"
+	.string "now. Ink on his hands. He's the one who\l"
+	.string "writes the minutes.\p"
+	.string "He never wrote anything in his life but\n"
+	.string "a bill of sale.$"
+
+ParcelCoastHouse2_Wife_Text_1:
+# 34 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "WIFE: He went down to the union hall.\n"
 	.string "First time in six years he's gone\l"
 	.string "anywhere but the window. Came back with\l"
 	.string "ink on his fingers. He'd signed\l"
 	.string "something. He wouldn't say what.$"
 
-ParcelCoastHouse2_Wife_Text_1:
-# 29 "data/maps/ParcelCoastHouse2/scripts.pory"
+ParcelCoastHouse2_Wife_Text_2:
+# 39 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "WIFE: He watched the boats go out this\n"
 	.string "morning, and then he watched a ranger\l"
 	.string "walk off the quay with HARLAND's badge.\p"
@@ -124,27 +159,27 @@ ParcelCoastHouse2_Wife_Text_1:
 	.string "out, and the first 'good' I've heard from\l"
 	.string "the window.$"
 
-ParcelCoastHouse2_Wife_Text_2:
-# 33 "data/maps/ParcelCoastHouse2/scripts.pory"
+ParcelCoastHouse2_Wife_Text_3:
+# 43 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "WIFE: He stands at the window and\n"
 	.string "watches the boats go out. Forty years\l"
 	.string "he went out. Now he watches. Watching's\l"
 	.string "harder, he says.$"
 
 ParcelCoastHouse2_ReadDresser_Text_0:
-# 39 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 49 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "A skipper's cap on the dresser, brushed.\n"
 	.string "Beside it a cheque stub, forty years old\l"
 	.string "by the date, for a boat.\p"
 	.string "The ink has gone brown. The cap has not.$"
 
 ParcelCoastHouse2_ReadShelf_Text_0:
-# 44 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 54 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "Tide tables, forty years of them, in\n"
 	.string "order. The last ten have nothing\l"
 	.string "underlined.$"
 
 ParcelCoastHouse2_ReadPantry_Text_0:
-# 49 "data/maps/ParcelCoastHouse2/scripts.pory"
+# 59 "data/maps/ParcelCoastHouse2/scripts.pory"
 	.string "Tins with the crest. Tins without. The\n"
 	.string "ones without are at the front.$"

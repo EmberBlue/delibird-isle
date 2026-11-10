@@ -6,6 +6,11 @@ mapscripts ParcelCoastBreakwaterHut_MapScripts {
 script ParcelCoastBreakwaterHut_Lifeguard {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("LIFEGUARD: Open, breakwater side, by the readings. Closed the far side, by the readings. Same sign, two arrows.\pIt's the truest sign on this coast, and I painted it."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("LIFEGUARD: Closed 'pending review'. The review's running, so the sign stays, and so do I. It's good work, saying a true thing forty times a day."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelCoastBreakwaterHut_Lifeguard {
 script ParcelCoastBreakwaterHut_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: Twenty-one summers of ices. The mums read the readings every morning before they buy.\pI put the readings up myself now. Beside the prices."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: The TUBERS came back when the review posted the readings. Mums read the readings. Mums are the whole economy of a beach."), MSGBOX_DEFAULT)
         release
@@ -42,6 +52,11 @@ script ParcelCoastBreakwaterHut_Woman {
 script ParcelCoastBreakwaterHut_Tuber {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("TUBER: I swam to the first post and back. Properly. The lifeguard clapped.\pMum didn't watch. She read the readings, and then she watched."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("TUBER: The readings say it's fine on the breakwater side! Mum read them. I'm swimming. Properly. Watch."), MSGBOX_DEFAULT)
         release

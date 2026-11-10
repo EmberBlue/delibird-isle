@@ -6,6 +6,11 @@ mapscripts ParcelFernwickHouse7_MapScripts {
 script ParcelFernwickHouse7_Woman {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("WOMAN: I went home. The works have their page and the nose agrees with the paper now, mostly.\pMy sister kept my room anyway. Just in case, she says."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("WOMAN: They say the works have a new page in their permit. I'd like to go home. Not yet. The nose knows before the paper does."), MSGBOX_DEFAULT)
         release
@@ -24,6 +29,11 @@ script ParcelFernwickHouse7_Woman {
 script ParcelFernwickHouse7_Man {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("MAN: Drove the correction crew's pipe up the Corridor. Heavier than the minutes, lighter than the sandbags.\pEverything's a weight to a driver. That one was a good one."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("MAN: The map's been corrected. First time in eleven years. Your name's on the correction slip."), MSGBOX_DEFAULT)
         release

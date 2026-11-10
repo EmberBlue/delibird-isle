@@ -8,6 +8,11 @@ mapscripts ParcelIsleHall_MapScripts {
 script ParcelIsleHall_Brenna {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BRENNA: Twelve to nine became sixteen to five at the next vote. The five are still five. I buy them a drink after anyway.\pYou keep the nine close. You keep the five closer."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BRENNA: We voted. Twelve to nine, to back your report at the hearing.\pNine is a lot of nine in a town this size. I'll be buying nine people drinks for a year. That's what chairing is."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -24,6 +29,11 @@ script ParcelIsleHall_Brenna {
 script ParcelIsleHall_Ivar {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("IVAR: Berth's not pending. Berth's mine, two days a week, by the review's rota.\pI'm not angry at you. I decided that twice. It took the second time."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("IVAR: My berth is 'pending'. PENDING! And she's over there counting votes like it's a catch.\pI'm not angry at you. I decided that. It's taking effort."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -40,6 +50,11 @@ script ParcelIsleHall_Ivar {
 script ParcelIsleHall_Jorunn {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("JORUNN: Sixteen to five. I'm still not smiling. Herring's up a quarter in the inlet.\pThat I'd smile at, if it holds. It won't hold by me smiling."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("JORUNN: I'm not smiling. I'm counting. Twelve to nine.\pHe thinks I won. Nobody won. I'd rather have the herring than the vote."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
@@ -56,6 +71,11 @@ script ParcelIsleHall_Jorunn {
 script ParcelIsleHall_Bard {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("BARD: The notes from the night she sat with the ones who didn't clap are in the Survey archive now, in a box with your name on the lid.\pSmall word on the lid. Big box."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("BARD: The notes from the night she sat with the ones who didn't clap. They were yours all along, in the margins.\pShe was writing to you before she'd ever met you. I've lived long enough to see a thing like that. Not sure I wanted to."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {

@@ -108,10 +108,13 @@ test the water, the summit's thirteen snow patches), and nine more books
 (the Council's register of objections, Heron's marsh notebook, the Mahogany
 model with Ilex's margins, the Foundation's annual report, the Survey's
 nine rules, the Station's forty-year register, the lodging's visitors'
-book, the Courier bound, the Board's water-rights ledger). ~87,300
-hand-written words (~117,900 with the rematch-tier lines;
-`tools/skald/wordcount.py` is the counter), 704 objects, 429 readable
-events, 56 overheard conversations, 102 maps, 1,071 battles. The certification spine was fought
+book, the Courier bound, the Board's water-rights ledger), and a fourth
+story state for every named resident: 203 post-epilogue lines (the
+post-game as a settled "what now"; quest givers speak theirs only once
+their quest is done). ~93,300 hand-written words (~124,000 with the
+rematch-tier lines; `tools/skald/wordcount.py` is the counter), 704
+objects, 429 readable events, 56 overheard conversations, 102 maps, 1,071
+battles. The certification spine was fought
 through headlessly with the harness's new `--party`/`--var` (every leader,
 every signing, the confession, the boardroom: `tools/skald/spine.sh`).
 
