@@ -2163,3 +2163,10 @@ script ParcelHighlands_Board5 {
     msgbox(format("A SURVEY BOARD at the centre's woodpile. The pile is measured in autumn: how much wood the valley sends up, how many winters it would last at the old rate.\pThe second number used to be one. It is two now. Fewer people winter up here. The board does not say that this is why the pile lasts. It gives the two numbers."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelHighlands_Board10 {
+    msgbox(format("A SURVEY BOARD at the ridge gate. The wind here is a reading: the Survey counts the days a year the gate must be chained against it. Forty, fifty, sixty, in a column.\pVALE's cadets learn the cold at this gate. The board says so, under the column, in her hand."), MSGBOX_SIGN)
+    end
+}

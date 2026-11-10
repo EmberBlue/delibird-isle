@@ -50,6 +50,12 @@ ParcelIsle_PokemonCenter_1F_ReadMap::
 	end
 
 
+ParcelIsle_PokemonCenter_1F_Notice::
+# 47 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
+	msgbox ParcelIsle_PokemonCenter_1F_Notice_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsle_PokemonCenter_1F_EventScript_Fisher_Text_0:
 # 29 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
 	.string "Aid's free for provisionals. Corps\n"
@@ -69,3 +75,17 @@ ParcelIsle_PokemonCenter_1F_ReadMap_Text_0:
 	.string "A chart of the strait, the island, the\n"
 	.string "bridge. A thumbtack where the lab is.\l"
 	.string "Nobody has moved it.$"
+
+ParcelIsle_PokemonCenter_1F_Notice_Text_0:
+# 47 "data/maps/ParcelIsle_PokemonCenter_1F/scripts.pory"
+	.string "A notice by the Centre's counter, in the\n"
+	.string "nurse's hand: WHAT I SEE. Hooks in\l"
+	.string "WINGULL, three a month, down from\l"
+	.string "seven. Salt rash on WOOPER from the\l"
+	.string "inlet, none since spring. One LAPRAS,\l"
+	.string "once, from the north point, exhausted,\l"
+	.string "released.\p"
+	.string "The nurse treats what comes in and\n"
+	.string "writes down where it came from. The list\l"
+	.string "is the harbour's health, taken from the\l"
+	.string "other side.$"

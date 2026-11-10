@@ -1303,3 +1303,34 @@ script ParcelIsle_PairQuay {
     release
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelIsle_Board10 {
+    msgbox(format("A SURVEY BOARD at the school gate. The children's count: shells on the jetty steps after a storm, one child, one storm, one number, for twenty-two years of children.\pThe Survey copies it to the board every autumn and has never corrected a single figure. The children count honestly. It is the adults who round."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelIsle_PairSteps {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHWIFE: The review's inspector counts my catch on the steps, and the children count her."), MSGBOX_DEFAULT)
+        msgbox(format("TEACHER: They've started a column for inspectors."), MSGBOX_DEFAULT)
+        msgbox(format("FISHWIFE: What's it say?"), MSGBOX_DEFAULT)
+        msgbox(format("TEACHER: One. Every week. They're very pleased with how steady it is."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("TEACHER: The provisional's FOREST is on the school board. The children asked what a forest certificate certifies."), MSGBOX_DEFAULT)
+        msgbox(format("FISHWIFE: What did you say?"), MSGBOX_DEFAULT)
+        msgbox(format("TEACHER: That someone looked at a place carefully enough to be believed. One of them asked if you could get one for a harbour."), MSGBOX_DEFAULT)
+        msgbox(format("FISHWIFE: Can you?"), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("FISHWIFE: Half the catch is herring and the other half is talk."), MSGBOX_DEFAULT)
+        msgbox(format("TEACHER: The children count the shells after the storms. Twenty-two years of it."), MSGBOX_DEFAULT)
+        msgbox(format("FISHWIFE: Counting shells won't fill a boat."), MSGBOX_DEFAULT)
+        msgbox(format("TEACHER: No. It fills a child. The boat's your department."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

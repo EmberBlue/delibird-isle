@@ -1690,3 +1690,40 @@ script ParcelCorridor_Board4 {
     msgbox(format("A SURVEY BOARD at the checkpoint's blind side. The Company's bare stakes along the cut mark where their drainage will run. The Survey's red ones mark where the water does run.\pThe board gives the distance between the two sets, year by year. It closes. The Company is not moving its stakes."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelCorridor_Board10 {
+    msgbox(format("A SURVEY BOARD at the cut's midpoint. A line painted across the road, old, the Survey's: the point the stream crossed before the pipe. Lorries drive over it all day.\pThe board asks drivers to note that the paint has never needed renewing, because the stream still crosses here, under the road, and keeps the ground damp enough to hold it."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelCorridor_PairGate {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GUARD: No papers. The checkpoint's a weather station now, the review says. I read a gauge."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: And the bread?"), MSGBOX_DEFAULT)
+        msgbox(format("GUARD: Goes through. Somebody's in the hut by the marsh. Somebody always was. I knew. The sign didn't."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("WOMAN: The ranger came through with a notebook and you didn't ask for papers."), MSGBOX_DEFAULT)
+        msgbox(format("GUARD: The notebook was the papers."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Mine's a loaf."), MSGBOX_DEFAULT)
+        msgbox(format("GUARD: Loaves don't need stamping. I stamp them because the sign says. The ranger's sign said something else."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GUARD: Pass. Papers."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: I'm taking bread to the hut by the marsh."), MSGBOX_DEFAULT)
+        msgbox(format("GUARD: Nobody's in the hut by the marsh."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Then the bread will keep. Stamp it."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round six (2026-11-10) ---
+
+script ParcelCorridor_Board11 {
+    msgbox(format("A SURVEY BOARD at the cut's western end, where the road enters the trees. The board is the Corridor's roll: every species the Survey has recorded passing through, from the first stake to the last reading.\pThe roll is long. The last column, this year, is short. The board puts the two side by side and lets the width do the talking."), MSGBOX_SIGN)
+    end
+}

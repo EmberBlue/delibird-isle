@@ -2196,6 +2196,61 @@ ParcelFernwick_PairLane_3:
 	goto ParcelFernwick_PairLane_1
 
 
+ParcelFernwick_Board10::
+# 1150 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwick_PairTwentyEight::
+# 1157 "data/maps/ParcelFernwick/scripts.pory"
+	lock
+# 1158 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwick_PairTwentyEight_2
+# 1162 "data/maps/ParcelFernwick/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFernwick_PairTwentyEight_3
+# 1168 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_7, MSGBOX_DEFAULT
+# 1169 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_8, MSGBOX_DEFAULT
+# 1170 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_9, MSGBOX_DEFAULT
+# 1171 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_10, MSGBOX_DEFAULT
+# 1172 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_11, MSGBOX_DEFAULT
+ParcelFernwick_PairTwentyEight_1:
+# 1174 "data/maps/ParcelFernwick/scripts.pory"
+	release
+	end
+
+ParcelFernwick_PairTwentyEight_2:
+# 1159 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_0, MSGBOX_DEFAULT
+# 1160 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_1, MSGBOX_DEFAULT
+# 1161 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_2, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairTwentyEight_1
+
+ParcelFernwick_PairTwentyEight_3:
+# 1163 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_3, MSGBOX_DEFAULT
+# 1164 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_4, MSGBOX_DEFAULT
+# 1165 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_5, MSGBOX_DEFAULT
+# 1166 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_PairTwentyEight_Text_6, MSGBOX_DEFAULT
+	goto ParcelFernwick_PairTwentyEight_1
+
+
+ParcelFernwick_Board11::
+# 1181 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Board11_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwick_Smeargle_Text_0:
 # 30 "data/maps/ParcelFernwick/scripts.pory"
 	.string "A SMEARGLE sits on the bank with its\n"
@@ -3635,3 +3690,87 @@ ParcelFernwick_PairLane_Text_11:
 # 1141 "data/maps/ParcelFernwick/scripts.pory"
 	.string "POSTWOMAN: The one that doesn't need\n"
 	.string "the envelope.$"
+
+ParcelFernwick_Board10_Text_0:
+# 1150 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A SURVEY BOARD at the west lane. The\n"
+	.string "Corps' first station was a shed here,\l"
+	.string "the board says, with a stove and a map.\l"
+	.string "The map is in the HQ now. The shed is a\l"
+	.string "woodstore.\p"
+	.string "The board gives the shed's year and the\n"
+	.string "HQ's year and the number of rangers\l"
+	.string "certified between them, which is\l"
+	.string "forty-one. The Survey does not make\l"
+	.string "the joke.$"
+
+ParcelFernwick_PairTwentyEight_Text_0:
+# 1159 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD FISHER: Twenty-eight. And a\n"
+	.string "POLIWAG in the channel, which isn't in\l"
+	.string "my count, because it isn't a pair.$"
+
+ParcelFernwick_PairTwentyEight_Text_1:
+# 1160 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: Put it down anyway.$"
+
+ParcelFernwick_PairTwentyEight_Text_2:
+# 1161 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD FISHER: I've put it down. In pencil.\n"
+	.string "In the margin. The way she did.$"
+
+ParcelFernwick_PairTwentyEight_Text_3:
+# 1163 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: The ranger put the pond in the\n"
+	.string "river filing. One line. Twenty-eight, and\l"
+	.string "the warning.$"
+
+ParcelFernwick_PairTwentyEight_Text_4:
+# 1164 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD FISHER: What warning?$"
+
+ParcelFernwick_PairTwentyEight_Text_5:
+# 1165 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: Yours. Word for word. You're in a\n"
+	.string "hearing, old man.$"
+
+ParcelFernwick_PairTwentyEight_Text_6:
+# 1166 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD FISHER: Then I'd better be right.$"
+
+ParcelFernwick_PairTwentyEight_Text_7:
+# 1168 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD FISHER: Twenty-eight pairs. Same\n"
+	.string "as the year I started.$"
+
+ParcelFernwick_PairTwentyEight_Text_8:
+# 1169 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: That's good, isn't it?$"
+
+ParcelFernwick_PairTwentyEight_Text_9:
+# 1170 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD FISHER: It's steady. Steady's what\n"
+	.string "a pond looks like when it's stopped\l"
+	.string "being able to lose anything else.$"
+
+ParcelFernwick_PairTwentyEight_Text_10:
+# 1171 "data/maps/ParcelFernwick/scripts.pory"
+	.string "CLERK: I'll put down steady.$"
+
+ParcelFernwick_PairTwentyEight_Text_11:
+# 1172 "data/maps/ParcelFernwick/scripts.pory"
+	.string "OLD FISHER: Put down twenty-eight. Let\n"
+	.string "them do the steady.$"
+
+ParcelFernwick_Board11_Text_0:
+# 1181 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A SURVEY BOARD at the north lane. The\n"
+	.string "forest begins a field from here and the\l"
+	.string "Survey has measured the field every\l"
+	.string "spring: the distance from the lane to\l"
+	.string "the first tree.\p"
+	.string "It has not changed in thirty years. The\n"
+	.string "board says so, and adds: the one line in\l"
+	.string "the Survey's record that has not moved.\l"
+	.string "It is kept to remember what not moving\l"
+	.string "looks like.$"

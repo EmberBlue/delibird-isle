@@ -77,6 +77,12 @@ ParcelRiverCenter_ReadMap::
 	end
 
 
+ParcelRiverCenter_Notice::
+# 54 "data/maps/ParcelRiverCenter/scripts.pory"
+	msgbox ParcelRiverCenter_Notice_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverCenter_Trainer_Text_0:
 # 22 "data/maps/ParcelRiverCenter/scripts.pory"
 	.string "YOUNGSTER: No itch this year from the\n"
@@ -122,3 +128,14 @@ ParcelRiverCenter_ReadMap_Text_0:
 	.string "A map of the valley with the fourteen\n"
 	.string "metered plots inked in. Plot nine is\l"
 	.string "circled. Nobody will say who circled it.$"
+
+ParcelRiverCenter_Notice_Text_0:
+# 54 "data/maps/ParcelRiverCenter/scripts.pory"
+	.string "A notice by the counter: itch cream is\n"
+	.string "free for any MARILL or AZUMARILL from\l"
+	.string "below the plots, no questions.\p"
+	.string "Below it, newer: and for any from above\n"
+	.string "the plots, which there have been none\l"
+	.string "of, which is the point of the cream. The\l"
+	.string "nurse keeps a tally of jars given out.\l"
+	.string "It goes down the page and stops.$"

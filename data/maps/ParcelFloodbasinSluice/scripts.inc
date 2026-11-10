@@ -1617,6 +1617,12 @@ ParcelFloodbasinSluice_Board4::
 	end
 
 
+ParcelFloodbasinSluice_Board10::
+# 768 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasinSluice_Nils_Text_0:
 # 10 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "NILS: The crossing's the old ford. The\n"
@@ -2390,3 +2396,16 @@ ParcelFloodbasinSluice_Board4_Text_0:
 	.string "The last keeper's row is the longest and\n"
 	.string "the number is the lowest. The board\l"
 	.string "gives no reason. The ledger inside does.$"
+
+ParcelFloodbasinSluice_Board10_Text_0:
+# 768 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "A SURVEY BOARD on the lower channel\n"
+	.string "wall. ELECTRIKE on the gantry irons in a\l"
+	.string "storm, counted from the keeper's\l"
+	.string "window, because nobody goes onto the\l"
+	.string "wall in a storm.\p"
+	.string "The board gives the count and the\n"
+	.string "keeper's name for each year, four\l"
+	.string "keepers, one family, and a note that the\l"
+	.string "count is the only thing on the sluice\l"
+	.string "that was never argued about.$"

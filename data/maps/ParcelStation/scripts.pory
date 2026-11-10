@@ -510,51 +510,11 @@ script ParcelStation_ToMistwood {
 }
 
 // --- survey boards (2026-11-10) ---
-
-script ParcelStation_Board1 {
-    msgbox(format("A SURVEY BOARD at the Station fence. The weather here is measured, not watched: the instruments on the roof write the same hour every day and have for forty years.\pThe board records what the instruments cannot. The date the SEEDOT dropped. The date the first ELECTRIKE came down off the moor for warmth. Both earlier."), MSGBOX_SIGN)
-    end
-}
-
 script ParcelStation_Board2 {
     msgbox(format("A SURVEY BOARD, the Station's words copied out under the Survey's. A model is a story with numbers in it, the Station says. A count is a number with a place in it, the Survey says under that.\pBoth are true. The board asks you to carry both."), MSGBOX_SIGN)
     end
 }
 
 // --- town life (2026-11-10): the pairs, round four ---
-
-script ParcelStation_PairFence {
-    lock
-    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("TECHNICIAN: The Director handed both logbooks to the review. The roof one and the fence one."), MSGBOX_DEFAULT)
-        msgbox(format("CADET: I didn't know there were two."), MSGBOX_DEFAULT)
-        msgbox(format("TECHNICIAN: Nobody did. That was the second one's whole point. Now there's one, and the fence is in it."), MSGBOX_DEFAULT)
-    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("CADET: The new provisional passed FOREST. First out of Saltwick in nine years, the Hall says."), MSGBOX_DEFAULT)
-        msgbox(format("TECHNICIAN: Nine years. I've logged every one of them. I never thought of them as a wait."), MSGBOX_DEFAULT)
-        msgbox(format("CADET: What did you think of them as?"), MSGBOX_DEFAULT)
-        msgbox(format("TECHNICIAN: Weather."), MSGBOX_DEFAULT)
-    } else {
-        msgbox(format("TECHNICIAN: Roof dish reads one point two above the century mean."), MSGBOX_DEFAULT)
-        msgbox(format("CADET: Is that a lot?"), MSGBOX_DEFAULT)
-        msgbox(format("TECHNICIAN: It's a number. The Station doesn't do a lot. The Station does numbers."), MSGBOX_DEFAULT)
-        msgbox(format("CADET: Who does a lot?"), MSGBOX_DEFAULT)
-        msgbox(format("TECHNICIAN: The people who read the numbers and then go outside. Not many."), MSGBOX_DEFAULT)
-    }
-    release
-    end
-}
-
 // --- survey boards, round two (2026-11-10) ---
-
-script ParcelStation_Board3 {
-    msgbox(format("A SURVEY BOARD at the moor edge. NUMEL come down to the Station's warm vents in the cold months and ELECTRIKE to the fence line. The board notes which arrived first each year.\pFor twenty years it was the NUMEL. For the last six it has been both on the same day, earlier."), MSGBOX_SIGN)
-    end
-}
-
 // --- survey boards, round three (2026-11-10) ---
-
-script ParcelStation_Board4 {
-    msgbox(format("A SURVEY BOARD at the Station's back fence, where the staff smoke. Over-the-fence readings were taken here before they had a name, by someone who stood exactly where you stand to be out of the wind.\pThe board marks the spot with a brass dot. Stand on it. The Survey's rule: read from the same place."), MSGBOX_SIGN)
-    end
-}

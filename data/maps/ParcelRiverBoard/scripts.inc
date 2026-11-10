@@ -261,6 +261,12 @@ ParcelRiverBoard_FindDrawer_4:
 	goto ParcelRiverBoard_FindDrawer_3
 
 
+ParcelRiverBoard_Notice::
+# 163 "data/maps/ParcelRiverBoard/scripts.pory"
+	msgbox ParcelRiverBoard_Notice_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverBoard_Sluice_Text_0:
 # 17 "data/maps/ParcelRiverBoard/scripts.pory"
 	.string "SLUICE: STRESSED. I read your filing.\n"
@@ -536,3 +542,12 @@ ParcelRiverBoard_FindDrawer_Text_1:
 	.string "The bottom drawer. CORRESPONDENCE,\n"
 	.string "PUBLIC, and a word crossed out. The\l"
 	.string "shoebox is still inside.$"
+
+ParcelRiverBoard_Notice_Text_0:
+# 163 "data/maps/ParcelRiverBoard/scripts.pory"
+	.string "A notice on the Board's counter:\n"
+	.string "OBJECTIONS ARE RECEIVED THE FIRST OF\l"
+	.string "EACH MONTH.\p"
+	.string "Under it, in the clerk's hand: and read.\n"
+	.string "The second line is new. The clerk has\l"
+	.string "initialled it, which clerks do not do.$"

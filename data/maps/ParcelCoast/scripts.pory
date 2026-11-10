@@ -2172,3 +2172,39 @@ script ParcelCoast_Board5 {
     msgbox(format("A SURVEY BOARD on the warehouse corner. The quay's own weather: the Company's hooter at six, the boats out by seven, the gulls up at eight when the first catch lands.\pThe board gives the hour the gulls rise each year. It is later. The catch lands later because there is further to go for it."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelCoast_Board10 {
+    msgbox(format("A SURVEY BOARD on the south quay. The stacks that stood off this quay are drawn on the board from memory, by three people, and the three drawings do not agree.\pThe board keeps all three. The WINGULL that nested on them are a number the three do agree on."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelCoast_PairLorry {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DRIVER: Nine boxes. Mixed. The cold store won't take mixed; the review's buyer will."), MSGBOX_DEFAULT)
+        msgbox(format("DOCKER: Nine's more than six."), MSGBOX_DEFAULT)
+        msgbox(format("DRIVER: Nine's more than six. I've started counting up again. I'd forgotten the direction."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("DOCKER: The ranger counted the boxes with me. Wrote six, and the length of the smallest fish in each."), MSGBOX_DEFAULT)
+        msgbox(format("DRIVER: What's a length got to do with my load?"), MSGBOX_DEFAULT)
+        msgbox(format("DOCKER: Everything. The length's the next ten years of your load. It's one hand."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("DRIVER: Six boxes. I came for sixty."), MSGBOX_DEFAULT)
+        msgbox(format("DOCKER: Sixty's on the brochure. Six is on the quay."), MSGBOX_DEFAULT)
+        msgbox(format("DRIVER: I get paid by the box."), MSGBOX_DEFAULT)
+        msgbox(format("DOCKER: So do the fish. That's the trouble with boxes."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round six (2026-11-10) ---
+
+script ParcelCoast_Board11 {
+    msgbox(format("A SURVEY BOARD on the warehouse row. The roofs hold the WINGULL colony and the warehouses hold the Company's cold store, and the board notes the one thing they share: both are fuller in the years the boats come back lighter.\pThe Survey does not explain the sentence. It gives the numbers under it and lets them explain it."), MSGBOX_SIGN)
+    end
+}

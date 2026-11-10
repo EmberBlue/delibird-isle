@@ -259,6 +259,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFloodbasinSluice_Board4"
+    },
+    {
+      "type": "sign",
+      "x": 42,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFloodbasinSluice_Board10"
     }
   ]
 }

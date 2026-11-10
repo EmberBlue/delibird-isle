@@ -4473,6 +4473,12 @@ ParcelHighlands_Board5::
 	end
 
 
+ParcelHighlands_Board10::
+# 2170 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 39 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -6848,3 +6854,14 @@ ParcelHighlands_Board5_Text_0:
 	.string "The board does not say that this is why\l"
 	.string "the pile lasts. It gives the two\l"
 	.string "numbers.$"
+
+ParcelHighlands_Board10_Text_0:
+# 2170 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A SURVEY BOARD at the ridge gate. The\n"
+	.string "wind here is a reading: the Survey\l"
+	.string "counts the days a year the gate must\l"
+	.string "be chained against it. Forty, fifty,\l"
+	.string "sixty, in a column.\p"
+	.string "VALE's cadets learn the cold at this\n"
+	.string "gate. The board says so, under the\l"
+	.string "column, in her hand.$"

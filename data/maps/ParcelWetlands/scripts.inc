@@ -4465,6 +4465,57 @@ ParcelWetlands_Board5::
 	end
 
 
+ParcelWetlands_Board10::
+# 2185 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlands_PairStack::
+# 2192 "data/maps/ParcelWetlands/scripts.pory"
+	lock
+# 2193 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlands_PairStack_2
+# 2197 "data/maps/ParcelWetlands/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelWetlands_PairStack_3
+# 2203 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_7, MSGBOX_DEFAULT
+# 2204 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_8, MSGBOX_DEFAULT
+# 2205 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_9, MSGBOX_DEFAULT
+ParcelWetlands_PairStack_1:
+# 2207 "data/maps/ParcelWetlands/scripts.pory"
+	release
+	end
+
+ParcelWetlands_PairStack_2:
+# 2194 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_0, MSGBOX_DEFAULT
+# 2195 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_1, MSGBOX_DEFAULT
+# 2196 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_2, MSGBOX_DEFAULT
+	goto ParcelWetlands_PairStack_1
+
+ParcelWetlands_PairStack_3:
+# 2198 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_3, MSGBOX_DEFAULT
+# 2199 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_4, MSGBOX_DEFAULT
+# 2200 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_5, MSGBOX_DEFAULT
+# 2201 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_PairStack_Text_6, MSGBOX_DEFAULT
+	goto ParcelWetlands_PairStack_1
+
+
+ParcelWetlands_Board11::
+# 2214 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Board11_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlands_Harland_Text_0:
 # 77 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: My father's name's on the\n"
@@ -6661,3 +6712,78 @@ ParcelWetlands_Board5_Text_0:
 	.string "of circles with the count inside each.\l"
 	.string "Some circles have a zero in them now.\l"
 	.string "The stones have not moved.$"
+
+ParcelWetlands_Board10_Text_0:
+# 2185 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A SURVEY BOARD at the landing's west\n"
+	.string "edge. The old wreck in the shallows, a\l"
+	.string "barge, is the Survey's hard ground:\l"
+	.string "CORPHISH in its ribs, counted at the\l"
+	.string "spring low.\p"
+	.string "The board gives the count beside the\n"
+	.string "depth of the ribs under the mud. The\l"
+	.string "ribs sink a finger a year. The count\l"
+	.string "goes with them.$"
+
+ParcelWetlands_PairStack_Text_0:
+# 2194 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: The north edge is closed to\n"
+	.string "cutting. The Survey's stake, not the\l"
+	.string "Company's sign.$"
+
+ParcelWetlands_PairStack_Text_1:
+# 2195 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: Who closed it?$"
+
+ParcelWetlands_PairStack_Text_2:
+# 2196 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: Nobody. The WOOPER are on it.\n"
+	.string "You don't cut under WOOPER. That was\l"
+	.string "always the rule. Now it's written.$"
+
+ParcelWetlands_PairStack_Text_3:
+# 2198 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: The ranger counted WOOPER on our\n"
+	.string "turf. Fourteen. Wrote it on the stake.$"
+
+ParcelWetlands_PairStack_Text_4:
+# 2199 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: Fourteen on a turf is a good\n"
+	.string "turf. A good turf is water underneath.$"
+
+ParcelWetlands_PairStack_Text_5:
+# 2200 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: Is that why we stack here?$"
+
+ParcelWetlands_PairStack_Text_6:
+# 2201 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: It's why we're allowed to. Water\n"
+	.string "is the licence. Not the paper.$"
+
+ParcelWetlands_PairStack_Text_7:
+# 2203 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: Stack them loose. Turf that's\n"
+	.string "stacked tight rots before it dries.$"
+
+ParcelWetlands_PairStack_Text_8:
+# 2204 "data/maps/ParcelWetlands/scripts.pory"
+	.string "BOY: The Company stacks theirs tight.$"
+
+ParcelWetlands_PairStack_Text_9:
+# 2205 "data/maps/ParcelWetlands/scripts.pory"
+	.string "WOMAN: The Company doesn't burn it. It\n"
+	.string "sells it by the stack. Loose, I said.$"
+
+ParcelWetlands_Board11_Text_0:
+# 2214 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A SURVEY BOARD on the west path, above\n"
+	.string "the reeds. The reed bed's edge is\l"
+	.string "staked here and read each spring:\l"
+	.string "where the reeds stop and the open\l"
+	.string "water begins.\p"
+	.string "The open water grows. The board does\n"
+	.string "not call it a lake. A marsh that is\l"
+	.string "becoming a lake is a marsh that has\l"
+	.string "stopped filtering, and the board gives\l"
+	.string "the edge in paces so that nobody has to\l"
+	.string "use either word.$"

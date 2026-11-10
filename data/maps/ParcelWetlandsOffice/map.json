@@ -120,6 +120,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlandsOffice_Programme"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWetlandsOffice_Notice"
     }
   ]
 }

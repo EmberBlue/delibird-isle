@@ -156,3 +156,10 @@ script ParcelRiverBoard_FindDrawer {
     }
     end
 }
+
+// --- notices (2026-11-10) ---
+
+script ParcelRiverBoard_Notice {
+    msgbox(format("A notice on the Board's counter: OBJECTIONS ARE RECEIVED THE FIRST OF EACH MONTH.\pUnder it, in the clerk's hand: and read. The second line is new. The clerk has initialled it, which clerks do not do."), MSGBOX_SIGN)
+    end
+}

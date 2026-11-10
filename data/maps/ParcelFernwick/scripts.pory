@@ -1143,3 +1143,41 @@ script ParcelFernwick_PairLane {
     release
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelFernwick_Board10 {
+    msgbox(format("A SURVEY BOARD at the west lane. The Corps' first station was a shed here, the board says, with a stove and a map. The map is in the HQ now. The shed is a woodstore.\pThe board gives the shed's year and the HQ's year and the number of rangers certified between them, which is forty-one. The Survey does not make the joke."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round seven ---
+
+script ParcelFernwick_PairTwentyEight {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD FISHER: Twenty-eight. And a POLIWAG in the channel, which isn't in my count, because it isn't a pair."), MSGBOX_DEFAULT)
+        msgbox(format("CLERK: Put it down anyway."), MSGBOX_DEFAULT)
+        msgbox(format("OLD FISHER: I've put it down. In pencil. In the margin. The way she did."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("CLERK: The ranger put the pond in the river filing. One line. Twenty-eight, and the warning."), MSGBOX_DEFAULT)
+        msgbox(format("OLD FISHER: What warning?"), MSGBOX_DEFAULT)
+        msgbox(format("CLERK: Yours. Word for word. You're in a hearing, old man."), MSGBOX_DEFAULT)
+        msgbox(format("OLD FISHER: Then I'd better be right."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD FISHER: Twenty-eight pairs. Same as the year I started."), MSGBOX_DEFAULT)
+        msgbox(format("CLERK: That's good, isn't it?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD FISHER: It's steady. Steady's what a pond looks like when it's stopped being able to lose anything else."), MSGBOX_DEFAULT)
+        msgbox(format("CLERK: I'll put down steady."), MSGBOX_DEFAULT)
+        msgbox(format("OLD FISHER: Put down twenty-eight. Let them do the steady."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round six (2026-11-10) ---
+
+script ParcelFernwick_Board11 {
+    msgbox(format("A SURVEY BOARD at the north lane. The forest begins a field from here and the Survey has measured the field every spring: the distance from the lane to the first tree.\pIt has not changed in thirty years. The board says so, and adds: the one line in the Survey's record that has not moved. It is kept to remember what not moving looks like."), MSGBOX_SIGN)
+    end
+}

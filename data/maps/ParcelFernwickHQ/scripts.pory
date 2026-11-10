@@ -202,3 +202,10 @@ script ParcelFernwickHQ_RedCloth {
     msgbox(format("EIGHT. Sign with an initial. The Survey is not a career.\pNINE. When the stake has fallen and the cloth is gone and the habitat is gone with it, drive a new stake in the same hole and read it. The last reading is the one that matters.\pAt the bottom, in the Corps' type: Provisionals are reminded that Corps surveys are filed with the regional office and are not bound by the Survey's rules. In pencil beneath: they should be."), MSGBOX_SIGN)
     end
 }
+
+// --- notices (2026-11-10) ---
+
+script ParcelFernwickHQ_Roster {
+    msgbox(format("HALE's duty roster, pinned behind the desk. Eight stations, eight names, the shifts in his square hand.\pAt the bottom a ninth line with no station and one name: the provisional's. The duty is written as one word. LOOK."), MSGBOX_SIGN)
+    end
+}

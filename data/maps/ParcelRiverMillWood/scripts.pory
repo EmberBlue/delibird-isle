@@ -777,3 +777,34 @@ script ParcelRiverMillWood_Board3 {
     msgbox(format("A SURVEY BOARD in the second growth. SHROOMISH under the planted spruce and none under the old oak stump.\pThe board explains in one line: planted wood holds the damp, cut ground does not, and a SHROOMISH knows the difference before the soil scientist does."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelRiverMillWood_Board10 {
+    msgbox(format("A SURVEY BOARD by the charcoal clamp. Burners worked this wood for two hundred years and left the clamps as rings of black earth. SHROOMISH grow on the rings and nowhere else nearby.\pThe board explains: the burners fed the soil by accident for two centuries. The Board's planted spruce feed nothing."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelRiverMillWood_PairRide {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FORESTER: Two stands, marked, standing. The paper came back agreeing with us."), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: Because of the count?"), MSGBOX_DEFAULT)
+        msgbox(format("FORESTER: Because of the week. Forty husks is a lot of husks. An early week is a wood in trouble. The Board can read trouble when it's underlined."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("APPRENTICE: The ranger walked every ride. Counted husks on every trunk."), MSGBOX_DEFAULT)
+        msgbox(format("FORESTER: Every trunk?"), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: Every trunk. It took two days. She wrote forty, and the week, and underlined the week."), MSGBOX_DEFAULT)
+        msgbox(format("FORESTER: Then she knows more about this wood than the Board does. Good. Somebody should."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("FORESTER: Mark the two with no husks on them."), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: For felling?"), MSGBOX_DEFAULT)
+        msgbox(format("FORESTER: For the Board's paper. The Board wants five. We'll give it the two the NINCADA don't want either."), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: Will they take two?"), MSGBOX_DEFAULT)
+        msgbox(format("FORESTER: They'll take what's marked. Nobody from the Board has ever walked a ride."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

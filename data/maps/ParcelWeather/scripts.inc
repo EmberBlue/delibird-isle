@@ -2874,6 +2874,67 @@ ParcelWeather_GateHut::
 	end
 
 
+ParcelWeather_Board6::
+# 1358 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Board6_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWeather_Board8::
+# 1363 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Board8_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWeather_Board9::
+# 1368 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Board9_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWeather_PairFence::
+# 1373 "data/maps/ParcelWeather/scripts.pory"
+	lock
+# 1374 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWeather_PairFence_2
+# 1378 "data/maps/ParcelWeather/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelWeather_PairFence_3
+# 1384 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_7, MSGBOX_DEFAULT
+# 1385 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_8, MSGBOX_DEFAULT
+# 1386 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_9, MSGBOX_DEFAULT
+# 1387 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_10, MSGBOX_DEFAULT
+# 1388 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_11, MSGBOX_DEFAULT
+ParcelWeather_PairFence_1:
+# 1390 "data/maps/ParcelWeather/scripts.pory"
+	release
+	end
+
+ParcelWeather_PairFence_2:
+# 1375 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_0, MSGBOX_DEFAULT
+# 1376 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_1, MSGBOX_DEFAULT
+# 1377 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_2, MSGBOX_DEFAULT
+	goto ParcelWeather_PairFence_1
+
+ParcelWeather_PairFence_3:
+# 1379 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_3, MSGBOX_DEFAULT
+# 1380 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_4, MSGBOX_DEFAULT
+# 1381 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_5, MSGBOX_DEFAULT
+# 1382 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_PairFence_Text_6, MSGBOX_DEFAULT
+	goto ParcelWeather_PairFence_1
+
+
 ParcelWeather_FirstEntry_Text_0:
 # 28 "data/maps/ParcelWeather/scripts.pory"
 	.string "A sign over the landing: MEREHOLT\n"
@@ -4293,3 +4354,98 @@ ParcelWeather_GateHut_Text_0:
 	.string "At the bottom of the sheet: CONTINUED\n"
 	.string "IN THE DRAWER. And newer still, in a\l"
 	.string "third hand: CONTINUED IN THE RECORD.$"
+
+ParcelWeather_Board6_Text_0:
+# 1358 "data/maps/ParcelWeather/scripts.pory"
+	.string "A SURVEY BOARD at the Station fence.\n"
+	.string "The weather here is measured, not\l"
+	.string "watched: the instruments on the roof\l"
+	.string "write the same hour every day and have\l"
+	.string "for forty years.\p"
+	.string "The board records what the instruments\n"
+	.string "cannot. The date the SEEDOT dropped.\l"
+	.string "The date the first ELECTRIKE came down\l"
+	.string "off the moor for warmth. Both earlier.$"
+
+ParcelWeather_Board8_Text_0:
+# 1363 "data/maps/ParcelWeather/scripts.pory"
+	.string "A SURVEY BOARD at the moor edge. NUMEL\n"
+	.string "come down to the Station's warm vents\l"
+	.string "in the cold months and ELECTRIKE to\l"
+	.string "the fence line. The board notes which\l"
+	.string "arrived first each year.\p"
+	.string "For twenty years it was the NUMEL. For\n"
+	.string "the last six it has been both on the\l"
+	.string "same day, earlier.$"
+
+ParcelWeather_Board9_Text_0:
+# 1368 "data/maps/ParcelWeather/scripts.pory"
+	.string "A SURVEY BOARD at the Station's back\n"
+	.string "fence, where the staff smoke.\l"
+	.string "Over-the-fence readings were taken\l"
+	.string "here before they had a name, by someone\l"
+	.string "who stood exactly where you stand to\l"
+	.string "be out of the wind.\p"
+	.string "The board marks the spot with a brass\n"
+	.string "dot. Stand on it. The Survey's rule: read\l"
+	.string "from the same place.$"
+
+ParcelWeather_PairFence_Text_0:
+# 1375 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: The Director handed both\n"
+	.string "logbooks to the review. The roof one\l"
+	.string "and the fence one.$"
+
+ParcelWeather_PairFence_Text_1:
+# 1376 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: I didn't know there were two.$"
+
+ParcelWeather_PairFence_Text_2:
+# 1377 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: Nobody did. That was the\n"
+	.string "second one's whole point. Now there's\l"
+	.string "one, and the fence is in it.$"
+
+ParcelWeather_PairFence_Text_3:
+# 1379 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: The new provisional passed\n"
+	.string "FOREST. First out of Saltwick in nine\l"
+	.string "years, the Hall says.$"
+
+ParcelWeather_PairFence_Text_4:
+# 1380 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: Nine years. I've logged\n"
+	.string "every one of them. I never thought of\l"
+	.string "them as a wait.$"
+
+ParcelWeather_PairFence_Text_5:
+# 1381 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: What did you think of them as?$"
+
+ParcelWeather_PairFence_Text_6:
+# 1382 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: Weather.$"
+
+ParcelWeather_PairFence_Text_7:
+# 1384 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: Roof dish reads one point\n"
+	.string "two above the century mean.$"
+
+ParcelWeather_PairFence_Text_8:
+# 1385 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: Is that a lot?$"
+
+ParcelWeather_PairFence_Text_9:
+# 1386 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: It's a number. The Station\n"
+	.string "doesn't do a lot. The Station does\l"
+	.string "numbers.$"
+
+ParcelWeather_PairFence_Text_10:
+# 1387 "data/maps/ParcelWeather/scripts.pory"
+	.string "CADET: Who does a lot?$"
+
+ParcelWeather_PairFence_Text_11:
+# 1388 "data/maps/ParcelWeather/scripts.pory"
+	.string "TECHNICIAN: The people who read the\n"
+	.string "numbers and then go outside. Not many.$"

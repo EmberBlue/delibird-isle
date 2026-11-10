@@ -2178,3 +2178,39 @@ script ParcelWetlands_Board5 {
     msgbox(format("A SURVEY BOARD at the west landing, the quiet one. CORPHISH in the stones of the landing, counted by turning stones, ten stones a year, the same ten.\pThe board shows the ten stones as a row of circles with the count inside each. Some circles have a zero in them now. The stones have not moved."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelWetlands_Board10 {
+    msgbox(format("A SURVEY BOARD at the landing's west edge. The old wreck in the shallows, a barge, is the Survey's hard ground: CORPHISH in its ribs, counted at the spring low.\pThe board gives the count beside the depth of the ribs under the mud. The ribs sink a finger a year. The count goes with them."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round seven ---
+
+script ParcelWetlands_PairStack {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOMAN: The north edge is closed to cutting. The Survey's stake, not the Company's sign."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Who closed it?"), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Nobody. The WOOPER are on it. You don't cut under WOOPER. That was always the rule. Now it's written."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("BOY: The ranger counted WOOPER on our turf. Fourteen. Wrote it on the stake."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Fourteen on a turf is a good turf. A good turf is water underneath."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: Is that why we stack here?"), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: It's why we're allowed to. Water is the licence. Not the paper."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("WOMAN: Stack them loose. Turf that's stacked tight rots before it dries."), MSGBOX_DEFAULT)
+        msgbox(format("BOY: The Company stacks theirs tight."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: The Company doesn't burn it. It sells it by the stack. Loose, I said."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round six (2026-11-10) ---
+
+script ParcelWetlands_Board11 {
+    msgbox(format("A SURVEY BOARD on the west path, above the reeds. The reed bed's edge is staked here and read each spring: where the reeds stop and the open water begins.\pThe open water grows. The board does not call it a lake. A marsh that is becoming a lake is a marsh that has stopped filtering, and the board gives the edge in paces so that nobody has to use either word."), MSGBOX_SIGN)
+    end
+}

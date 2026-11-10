@@ -208,6 +208,12 @@ ParcelWetlandsOffice_Programme::
 	return
 
 
+ParcelWetlandsOffice_Notice::
+# 137 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	msgbox ParcelWetlandsOffice_Notice_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlandsOffice_Clerk_Text_0:
 # 12 "data/maps/ParcelWetlandsOffice/scripts.pory"
 	.string "CLERK: The office is open. The\n"
@@ -399,3 +405,15 @@ ParcelWetlandsOffice_Programme_Text_0:
 	.string "were, once, before the sluice. The\l"
 	.string "artist worked from the Board's old map,\l"
 	.string "and nobody at the ribbon noticed.$"
+
+ParcelWetlandsOffice_Notice_Text_0:
+# 137 "data/maps/ParcelWetlandsOffice/scripts.pory"
+	.string "A notice in the office window, the\n"
+	.string "Board's, typed: CHANNEL READINGS\l"
+	.string "POSTED TUESDAYS.\p"
+	.string "Under it, pencilled, a column of readings\n"
+	.string "somebody has copied off the Tuesday\l"
+	.string "sheets week by week, so that the whole\l"
+	.string "year can be read at once, which the\l"
+	.string "Board's sheet, one week at a time, never\l"
+	.string "allowed.$"

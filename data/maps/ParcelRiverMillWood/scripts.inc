@@ -1670,6 +1670,55 @@ ParcelRiverMillWood_Board3::
 	end
 
 
+ParcelRiverMillWood_Board10::
+# 784 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverMillWood_PairRide::
+# 791 "data/maps/ParcelRiverMillWood/scripts.pory"
+	lock
+# 792 "data/maps/ParcelRiverMillWood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverMillWood_PairRide_2
+# 796 "data/maps/ParcelRiverMillWood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiverMillWood_PairRide_3
+# 802 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_7, MSGBOX_DEFAULT
+# 803 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_8, MSGBOX_DEFAULT
+# 804 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_9, MSGBOX_DEFAULT
+# 805 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_10, MSGBOX_DEFAULT
+# 806 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_11, MSGBOX_DEFAULT
+ParcelRiverMillWood_PairRide_1:
+# 808 "data/maps/ParcelRiverMillWood/scripts.pory"
+	release
+	end
+
+ParcelRiverMillWood_PairRide_2:
+# 793 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_0, MSGBOX_DEFAULT
+# 794 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_1, MSGBOX_DEFAULT
+# 795 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_2, MSGBOX_DEFAULT
+	goto ParcelRiverMillWood_PairRide_1
+
+ParcelRiverMillWood_PairRide_3:
+# 797 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_3, MSGBOX_DEFAULT
+# 798 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_4, MSGBOX_DEFAULT
+# 799 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_5, MSGBOX_DEFAULT
+# 800 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairRide_Text_6, MSGBOX_DEFAULT
+	goto ParcelRiverMillWood_PairRide_1
+
+
 ParcelRiverMillWood_Halle_Text_0:
 # 10 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "HALLE: This stand is twelve years old.\n"
@@ -2509,3 +2558,77 @@ ParcelRiverMillWood_Board3_Text_0:
 	.string "not, and a SHROOMISH knows the\l"
 	.string "difference before the soil scientist\l"
 	.string "does.$"
+
+ParcelRiverMillWood_Board10_Text_0:
+# 784 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "A SURVEY BOARD by the charcoal clamp.\n"
+	.string "Burners worked this wood for two\l"
+	.string "hundred years and left the clamps as\l"
+	.string "rings of black earth. SHROOMISH grow on\l"
+	.string "the rings and nowhere else nearby.\p"
+	.string "The board explains: the burners fed the\n"
+	.string "soil by accident for two centuries. The\l"
+	.string "Board's planted spruce feed nothing.$"
+
+ParcelRiverMillWood_PairRide_Text_0:
+# 793 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "FORESTER: Two stands, marked,\n"
+	.string "standing. The paper came back agreeing\l"
+	.string "with us.$"
+
+ParcelRiverMillWood_PairRide_Text_1:
+# 794 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: Because of the count?$"
+
+ParcelRiverMillWood_PairRide_Text_2:
+# 795 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "FORESTER: Because of the week. Forty\n"
+	.string "husks is a lot of husks. An early week is\l"
+	.string "a wood in trouble. The Board can read\l"
+	.string "trouble when it's underlined.$"
+
+ParcelRiverMillWood_PairRide_Text_3:
+# 797 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: The ranger walked every\n"
+	.string "ride. Counted husks on every trunk.$"
+
+ParcelRiverMillWood_PairRide_Text_4:
+# 798 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "FORESTER: Every trunk?$"
+
+ParcelRiverMillWood_PairRide_Text_5:
+# 799 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: Every trunk. It took two\n"
+	.string "days. She wrote forty, and the week, and\l"
+	.string "underlined the week.$"
+
+ParcelRiverMillWood_PairRide_Text_6:
+# 800 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "FORESTER: Then she knows more about\n"
+	.string "this wood than the Board does. Good.\l"
+	.string "Somebody should.$"
+
+ParcelRiverMillWood_PairRide_Text_7:
+# 802 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "FORESTER: Mark the two with no husks\n"
+	.string "on them.$"
+
+ParcelRiverMillWood_PairRide_Text_8:
+# 803 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: For felling?$"
+
+ParcelRiverMillWood_PairRide_Text_9:
+# 804 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "FORESTER: For the Board's paper. The\n"
+	.string "Board wants five. We'll give it the two\l"
+	.string "the NINCADA don't want either.$"
+
+ParcelRiverMillWood_PairRide_Text_10:
+# 805 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: Will they take two?$"
+
+ParcelRiverMillWood_PairRide_Text_11:
+# 806 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "FORESTER: They'll take what's marked.\n"
+	.string "Nobody from the Board has ever walked a\l"
+	.string "ride.$"

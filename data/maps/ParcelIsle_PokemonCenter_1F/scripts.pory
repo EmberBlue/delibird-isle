@@ -40,3 +40,10 @@ script ParcelIsle_PokemonCenter_1F_ReadMap {
     msgbox(format("A chart of the strait, the island, the bridge. A thumbtack where the lab is. Nobody has moved it."), MSGBOX_SIGN)
     end
 }
+
+// --- notices (2026-11-10) ---
+
+script ParcelIsle_PokemonCenter_1F_Notice {
+    msgbox(format("A notice by the Centre's counter, in the nurse's hand: WHAT I SEE. Hooks in WINGULL, three a month, down from seven. Salt rash on WOOPER from the inlet, none since spring. One LAPRAS, once, from the north point, exhausted, released.\pThe nurse treats what comes in and writes down where it came from. The list is the harbour's health, taken from the other side."), MSGBOX_SIGN)
+    end
+}

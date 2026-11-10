@@ -4677,6 +4677,67 @@ ParcelFloodbasin_PairLevee_3:
 	goto ParcelFloodbasin_PairLevee_1
 
 
+ParcelFloodbasin_Board10::
+# 2258 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFloodbasin_PairTents::
+# 2265 "data/maps/ParcelFloodbasin/scripts.pory"
+	lock
+# 2266 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasin_PairTents_2
+# 2273 "data/maps/ParcelFloodbasin/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasin_PairTents_3
+# 2279 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_10, MSGBOX_DEFAULT
+# 2280 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_11, MSGBOX_DEFAULT
+# 2281 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_12, MSGBOX_DEFAULT
+# 2282 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_3, MSGBOX_DEFAULT
+# 2283 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_13, MSGBOX_DEFAULT
+ParcelFloodbasin_PairTents_1:
+# 2285 "data/maps/ParcelFloodbasin/scripts.pory"
+	release
+	end
+
+ParcelFloodbasin_PairTents_2:
+# 2267 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_0, MSGBOX_DEFAULT
+# 2268 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_1, MSGBOX_DEFAULT
+# 2269 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_2, MSGBOX_DEFAULT
+# 2270 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_3, MSGBOX_DEFAULT
+# 2271 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_4, MSGBOX_DEFAULT
+# 2272 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_5, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairTents_1
+
+ParcelFloodbasin_PairTents_3:
+# 2274 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_6, MSGBOX_DEFAULT
+# 2275 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_7, MSGBOX_DEFAULT
+# 2276 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_8, MSGBOX_DEFAULT
+# 2277 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_PairTents_Text_9, MSGBOX_DEFAULT
+	goto ParcelFloodbasin_PairTents_1
+
+
+ParcelFloodbasin_Board11::
+# 2292 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_Board11_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasin_FirstEntry_Text_0:
 # 58 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "The trees open onto a low, wide basin.\n"
@@ -7137,3 +7198,92 @@ ParcelFloodbasin_PairLevee_Text_8:
 	.string "OLD WOMAN: The weather was here before\n"
 	.string "the works too. It knew how to get to\l"
 	.string "the sea then.$"
+
+ParcelFloodbasin_Board10_Text_0:
+# 2258 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "A SURVEY BOARD at the north track. The\n"
+	.string "relief tents stand where the Survey's\l"
+	.string "first basin stake stood; the stake was\l"
+	.string "moved a pace to make room, and the\l"
+	.string "board records the pace.\p"
+	.string "One pace is nothing. The board records\n"
+	.string "it because the Survey has never once\l"
+	.string "moved a stake for anything else, and\l"
+	.string "wanted that written.$"
+
+ParcelFloodbasin_PairTents_Text_0:
+# 2267 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: Next. Name, household. No\n"
+	.string "vouchers this winter; the review put\l"
+	.string "the money on the pump instead.$"
+
+ParcelFloodbasin_PairTents_Text_1:
+# 2268 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAN: And the queue?$"
+
+ParcelFloodbasin_PairTents_Text_2:
+# 2269 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: You're it. I've been standing\n"
+	.string "here since eight for one man.$"
+
+ParcelFloodbasin_PairTents_Text_3:
+# 2270 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAN: Then ask me something you don't\n"
+	.string "know.$"
+
+ParcelFloodbasin_PairTents_Text_4:
+# 2271 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: Does the water still smell?$"
+
+ParcelFloodbasin_PairTents_Text_5:
+# 2272 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAN: No.$"
+
+ParcelFloodbasin_PairTents_Text_6:
+# 2274 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAN: The ranger stood in the queue.\n"
+	.string "Didn't take a voucher. Wrote down how\l"
+	.string "long the queue was.$"
+
+ParcelFloodbasin_PairTents_Text_7:
+# 2275 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: How long was it?$"
+
+ParcelFloodbasin_PairTents_Text_8:
+# 2276 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAN: An hour and ten. They wrote it the\n"
+	.string "way you'd write a depth.$"
+
+ParcelFloodbasin_PairTents_Text_9:
+# 2277 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: It is a depth.$"
+
+ParcelFloodbasin_PairTents_Text_10:
+# 2279 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: Next. Name, household, how many\n"
+	.string "under twelve.$"
+
+ParcelFloodbasin_PairTents_Text_11:
+# 2280 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "MAN: Four. Two. The same as last winter.$"
+
+ParcelFloodbasin_PairTents_Text_12:
+# 2281 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: I know. I'm supposed to ask.$"
+
+ParcelFloodbasin_PairTents_Text_13:
+# 2283 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "NURSE: Does the water still smell? I'm\n"
+	.string "not supposed to ask that.$"
+
+ParcelFloodbasin_Board11_Text_0:
+# 2292 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "A SURVEY BOARD at the basin's western\n"
+	.string "rim, where the fields begin. Runoff from\l"
+	.string "the fields reaches the marsh here\l"
+	.string "first, and the Survey reads it by the\l"
+	.string "colour of the ditch: clear, green, brown.\p"
+	.string "The board gives the colour by month for\n"
+	.string "twelve years as a row of painted\l"
+	.string "squares. Read it left to right. It is a\l"
+	.string "lesson in two words.$"

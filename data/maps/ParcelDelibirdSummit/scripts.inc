@@ -1193,6 +1193,12 @@ ParcelDelibirdSummit_Board3::
 	end
 
 
+ParcelDelibirdSummit_Board10::
+# 608 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibirdSummit_Ingrid_Text_0:
 # 20 "data/maps/ParcelDelibirdSummit/scripts.pory"
 	.string "Ingrid: You said it to their faces. ILEX\n"
@@ -1894,3 +1900,15 @@ ParcelDelibirdSummit_Board3_Text_0:
 	.string "When the patches go, the count will go\n"
 	.string "with them, and the board says so,\l"
 	.string "plainly, as the last line.$"
+
+ParcelDelibirdSummit_Board10_Text_0:
+# 608 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "A SURVEY BOARD by the upper cairn.\n"
+	.string "STANTLER come up with the melt and go\l"
+	.string "down with the first snow, and the board\l"
+	.string "gives their coming and going by date.\l"
+	.string "The two dates used to be a season\l"
+	.string "apart. They are six weeks apart now.\p"
+	.string "The board does not say where the\n"
+	.string "STANTLER spend the rest of the year.\l"
+	.string "The Survey does not know.$"

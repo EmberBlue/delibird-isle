@@ -180,6 +180,12 @@ ParcelFernwickHall_BenchBook::
 	end
 
 
+ParcelFernwickHall_Notice::
+# 125 "data/maps/ParcelFernwickHall/scripts.pory"
+	msgbox ParcelFernwickHall_Notice_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHall_Greeter_Text_0:
 # 12 "data/maps/ParcelFernwickHall/scripts.pory"
 	.string "GREETER: Three passed first time this\n"
@@ -390,3 +396,13 @@ ParcelFernwickHall_BenchBook_Text_0:
 	.string "Passed; the current was mine.\p"
 	.string "The last line is blank and the pen is\n"
 	.string "tied to the book.$"
+
+ParcelFernwickHall_Notice_Text_0:
+# 125 "data/maps/ParcelFernwickHall/scripts.pory"
+	.string "TARN's notice to cadets, pinned where\n"
+	.string "they queue: You will be asked what a\l"
+	.string "current is. The answer is not in the\l"
+	.string "handbook.\p"
+	.string "The answer is in the river, at the ford,\n"
+	.string "at dawn, with your boots off. Go and get\l"
+	.string "it. Then come and tell me. Then we fight.$"

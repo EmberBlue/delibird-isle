@@ -218,43 +218,10 @@ script ParcelBridge_ToSaltwick {
 }
 
 // --- survey boards (2026-11-10) ---
-
-script ParcelBridge_Board1 {
-    msgbox(format("A SURVEY BOARD at the bridge head. The bridge crosses the inlet where the saltmarsh meets the first fresh water, and everything that moves between the two moves under this deck.\pThe Survey counts it from the rail at dusk. The count takes an hour and the bridge takes a minute, which is the whole trouble with bridges."), MSGBOX_SIGN)
-    end
-}
-
 script ParcelBridge_Board2 {
     msgbox(format("A SURVEY BOARD, scratched. Someone has carved a POLIWAG into it, badly. Under the carving the Survey wrote: left here.\pIt is not an official entry. It stayed."), MSGBOX_SIGN)
     end
 }
 
 // --- town life (2026-11-10): the pairs, round four ---
-
-script ParcelBridge_PairRail {
-    lock
-    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("CADET: The inlet count's in the review. Mine. From this rail."), MSGBOX_DEFAULT)
-        msgbox(format("FISHER: Who'd have thought a bridge could be a hide."), MSGBOX_DEFAULT)
-        msgbox(format("CADET: You did. You said so."), MSGBOX_DEFAULT)
-        msgbox(format("FISHER: I say a lot of things at dusk. Most of them aren't in a review."), MSGBOX_DEFAULT)
-    } elif (flag(FLAG_SKALDMERE_STATION_BRIEF)) {
-        msgbox(format("FISHER: The provisional came through this morning. Stood here half an hour. Didn't write anything."), MSGBOX_DEFAULT)
-        msgbox(format("CADET: Then what was the point?"), MSGBOX_DEFAULT)
-        msgbox(format("FISHER: Looking. You write after you've looked. Most people do it the other way round and call it a survey."), MSGBOX_DEFAULT)
-    } else {
-        msgbox(format("CADET: The briefing says count at dusk from the rail."), MSGBOX_DEFAULT)
-        msgbox(format("FISHER: The briefing's right. First time for everything."), MSGBOX_DEFAULT)
-        msgbox(format("CADET: What am I counting?"), MSGBOX_DEFAULT)
-        msgbox(format("FISHER: Whatever moves under the deck. Salt side to fresh side. If you only count what you know the name of, you'll miss the half that matters."), MSGBOX_DEFAULT)
-    }
-    release
-    end
-}
-
 // --- survey boards, round two (2026-11-10) ---
-
-script ParcelBridge_Board3 {
-    msgbox(format("A SURVEY BOARD on the far bridge head. The inlet here is where the salt stops. The board gives the line as a date: the furthest upstream the Survey has tasted salt each spring.\pThe dates are the same. The distances are not. Salt is a hundred paces further in than when the board was made."), MSGBOX_SIGN)
-    end
-}

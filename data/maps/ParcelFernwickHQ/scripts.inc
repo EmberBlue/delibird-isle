@@ -340,6 +340,12 @@ ParcelFernwickHQ_RedCloth::
 	end
 
 
+ParcelFernwickHQ_Roster::
+# 209 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Roster_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHQ_Reception_Text_0:
 # 12 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "RECEPTION: HALE sleeps most nights\n"
@@ -819,3 +825,13 @@ ParcelFernwickHQ_RedCloth_Text_2:
 	.string "office and are not bound by the\l"
 	.string "Survey's rules. In pencil beneath: they\l"
 	.string "should be.$"
+
+ParcelFernwickHQ_Roster_Text_0:
+# 209 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "HALE's duty roster, pinned behind the\n"
+	.string "desk. Eight stations, eight names, the\l"
+	.string "shifts in his square hand.\p"
+	.string "At the bottom a ninth line with no\n"
+	.string "station and one name: the\l"
+	.string "provisional's. The duty is written as\l"
+	.string "one word. LOOK.$"

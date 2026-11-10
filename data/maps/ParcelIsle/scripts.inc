@@ -2488,6 +2488,55 @@ ParcelIsle_PairQuay_3:
 	goto ParcelIsle_PairQuay_1
 
 
+ParcelIsle_Board10::
+# 1310 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsle_PairSteps::
+# 1317 "data/maps/ParcelIsle/scripts.pory"
+	lock
+# 1318 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_PairSteps_2
+# 1323 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelIsle_PairSteps_3
+# 1329 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_8, MSGBOX_DEFAULT
+# 1330 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_9, MSGBOX_DEFAULT
+# 1331 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_10, MSGBOX_DEFAULT
+# 1332 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_11, MSGBOX_DEFAULT
+ParcelIsle_PairSteps_1:
+# 1334 "data/maps/ParcelIsle/scripts.pory"
+	release
+	end
+
+ParcelIsle_PairSteps_2:
+# 1319 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_0, MSGBOX_DEFAULT
+# 1320 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_1, MSGBOX_DEFAULT
+# 1321 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_2, MSGBOX_DEFAULT
+# 1322 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_3, MSGBOX_DEFAULT
+	goto ParcelIsle_PairSteps_1
+
+ParcelIsle_PairSteps_3:
+# 1324 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_4, MSGBOX_DEFAULT
+# 1325 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_5, MSGBOX_DEFAULT
+# 1326 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_6, MSGBOX_DEFAULT
+# 1327 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_PairSteps_Text_7, MSGBOX_DEFAULT
+	goto ParcelIsle_PairSteps_1
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAM: Hey! You're the mainlander, right?\n"
@@ -4218,3 +4267,77 @@ ParcelIsle_PairQuay_Text_10:
 # 1301 "data/maps/ParcelIsle/scripts.pory"
 	.string "DRAYMAN: The Company's never been in a\n"
 	.string "boat. I'll move forty.$"
+
+ParcelIsle_Board10_Text_0:
+# 1310 "data/maps/ParcelIsle/scripts.pory"
+	.string "A SURVEY BOARD at the school gate. The\n"
+	.string "children's count: shells on the jetty\l"
+	.string "steps after a storm, one child, one\l"
+	.string "storm, one number, for twenty-two\l"
+	.string "years of children.\p"
+	.string "The Survey copies it to the board every\n"
+	.string "autumn and has never corrected a\l"
+	.string "single figure. The children count\l"
+	.string "honestly. It is the adults who round.$"
+
+ParcelIsle_PairSteps_Text_0:
+# 1319 "data/maps/ParcelIsle/scripts.pory"
+	.string "FISHWIFE: The review's inspector\n"
+	.string "counts my catch on the steps, and the\l"
+	.string "children count her.$"
+
+ParcelIsle_PairSteps_Text_1:
+# 1320 "data/maps/ParcelIsle/scripts.pory"
+	.string "TEACHER: They've started a column for\n"
+	.string "inspectors.$"
+
+ParcelIsle_PairSteps_Text_2:
+# 1321 "data/maps/ParcelIsle/scripts.pory"
+	.string "FISHWIFE: What's it say?$"
+
+ParcelIsle_PairSteps_Text_3:
+# 1322 "data/maps/ParcelIsle/scripts.pory"
+	.string "TEACHER: One. Every week. They're very\n"
+	.string "pleased with how steady it is.$"
+
+ParcelIsle_PairSteps_Text_4:
+# 1324 "data/maps/ParcelIsle/scripts.pory"
+	.string "TEACHER: The provisional's FOREST is on\n"
+	.string "the school board. The children asked\l"
+	.string "what a forest certificate certifies.$"
+
+ParcelIsle_PairSteps_Text_5:
+# 1325 "data/maps/ParcelIsle/scripts.pory"
+	.string "FISHWIFE: What did you say?$"
+
+ParcelIsle_PairSteps_Text_6:
+# 1326 "data/maps/ParcelIsle/scripts.pory"
+	.string "TEACHER: That someone looked at a\n"
+	.string "place carefully enough to be believed.\l"
+	.string "One of them asked if you could get one\l"
+	.string "for a harbour.$"
+
+ParcelIsle_PairSteps_Text_7:
+# 1327 "data/maps/ParcelIsle/scripts.pory"
+	.string "FISHWIFE: Can you?$"
+
+ParcelIsle_PairSteps_Text_8:
+# 1329 "data/maps/ParcelIsle/scripts.pory"
+	.string "FISHWIFE: Half the catch is herring and\n"
+	.string "the other half is talk.$"
+
+ParcelIsle_PairSteps_Text_9:
+# 1330 "data/maps/ParcelIsle/scripts.pory"
+	.string "TEACHER: The children count the shells\n"
+	.string "after the storms. Twenty-two years of\l"
+	.string "it.$"
+
+ParcelIsle_PairSteps_Text_10:
+# 1331 "data/maps/ParcelIsle/scripts.pory"
+	.string "FISHWIFE: Counting shells won't fill a\n"
+	.string "boat.$"
+
+ParcelIsle_PairSteps_Text_11:
+# 1332 "data/maps/ParcelIsle/scripts.pory"
+	.string "TEACHER: No. It fills a child. The boat's\n"
+	.string "your department.$"

@@ -130,3 +130,10 @@ script ParcelWetlandsOffice_ReadGaugeDesk {
 script ParcelWetlandsOffice_Programme {
     msgbox(format("The programme from the office's opening, framed. TIDEWATER MONITORING OFFICE, A COMMUNITY PARTNERSHIP.\pTen o'clock, the ribbon. Commissioner Dorsey. Ten fifteen, remarks: the Foundation's programme officer. Ten thirty, the gauges explained: a technician. Eleven, refreshments, courtesy of Mereholt Coastal.\pA drawing of the five gauges on the back. Four of them stand where the gauges stand. The fifth is drawn at the falls.\pThere are no falls on this river. There were, once, before the sluice. The artist worked from the Board's old map, and nobody at the ribbon noticed."), MSGBOX_SIGN)
 }
+
+// --- notices (2026-11-10) ---
+
+script ParcelWetlandsOffice_Notice {
+    msgbox(format("A notice in the office window, the Board's, typed: CHANNEL READINGS POSTED TUESDAYS.\pUnder it, pencilled, a column of readings somebody has copied off the Tuesday sheets week by week, so that the whole year can be read at once, which the Board's sheet, one week at a time, never allowed."), MSGBOX_SIGN)
+    end
+}

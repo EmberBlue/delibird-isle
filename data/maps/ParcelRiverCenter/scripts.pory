@@ -47,3 +47,10 @@ script ParcelRiverCenter_ReadMap {
     msgbox(format("A map of the valley with the fourteen metered plots inked in. Plot nine is circled. Nobody will say who circled it."), MSGBOX_SIGN)
     end
 }
+
+// --- notices (2026-11-10) ---
+
+script ParcelRiverCenter_Notice {
+    msgbox(format("A notice by the counter: itch cream is free for any MARILL or AZUMARILL from below the plots, no questions.\pBelow it, newer: and for any from above the plots, which there have been none of, which is the point of the cream. The nurse keeps a tally of jars given out. It goes down the page and stops."), MSGBOX_SIGN)
+    end
+}

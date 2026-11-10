@@ -118,3 +118,10 @@ script ParcelFernwickHall_BenchBook {
     msgbox(format("A bench book on the cadets' shelf, where provisionals write one line on passing or failing. TARN's rule: one line, true.\pEleven years of lines. Passed, at last. Failed, fair. Failed, not fair, and under it in TARN's hand: fair. Passed; I cried. Passed; the current was mine.\pThe last line is blank and the pen is tied to the book."), MSGBOX_SIGN)
     end
 }
+
+// --- notices (2026-11-10) ---
+
+script ParcelFernwickHall_Notice {
+    msgbox(format("TARN's notice to cadets, pinned where they queue: You will be asked what a current is. The answer is not in the handbook.\pThe answer is in the river, at the ford, at dawn, with your boots off. Go and get it. Then come and tell me. Then we fight."), MSGBOX_SIGN)
+    end
+}

@@ -291,6 +291,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_Board3"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelDelibirdSummit_Board10"
     }
   ]
 }

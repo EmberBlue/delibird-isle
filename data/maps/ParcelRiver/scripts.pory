@@ -2207,3 +2207,41 @@ script ParcelRiver_PairStall {
     release
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelRiver_Board10 {
+    msgbox(format("A SURVEY BOARD on the lower bank. The straightened reach ends here and the old river begins again: bends, gravel, and a SEAKING riffle the board calls the control.\pThe Survey's word for the place nothing was done to. Every reading above the board is measured against this one."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelRiver_PairMill {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MILLER: The allocation gives the race a spring flow. A trickle. I'll grind on a trickle."), MSGBOX_DEFAULT)
+        msgbox(format("DAUGHTER: Is that enough?"), MSGBOX_DEFAULT)
+        msgbox(format("MILLER: It's enough to be a mill. Being a mill was the thing I missed. The flour was never the thing."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("DAUGHTER: The ranger asked how long the race used to run."), MSGBOX_DEFAULT)
+        msgbox(format("MILLER: Dawn to dusk, I said. And they asked when it stopped, and I knew the year, and I'd never said the year out loud."), MSGBOX_DEFAULT)
+        msgbox(format("DAUGHTER: What year?"), MSGBOX_DEFAULT)
+        msgbox(format("MILLER: The year you were born. I'd never put those together."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("MILLER: The race ran an hour yesterday. First time this year."), MSGBOX_DEFAULT)
+        msgbox(format("DAUGHTER: You cried."), MSGBOX_DEFAULT)
+        msgbox(format("MILLER: I had flour in my eye."), MSGBOX_DEFAULT)
+        msgbox(format("DAUGHTER: You hadn't ground anything yet."), MSGBOX_DEFAULT)
+        msgbox(format("MILLER: Forty years of flour in my eye, then."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round six (2026-11-10) ---
+
+script ParcelRiver_Board11 {
+    msgbox(format("A SURVEY BOARD on the east bank, above the plots. The irrigation take is here, a pipe into the river with a meter on it the Board reads monthly.\pThe Survey reads the river below the pipe, by the stake, the same day. The board gives both: what was taken, and what was left. The second column is the one the fish read."), MSGBOX_SIGN)
+    end
+}

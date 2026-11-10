@@ -706,3 +706,77 @@ script ParcelRoute1_Board5 {
     msgbox(format("A SURVEY BOARD at the north end of the route, where the saltmarsh gives up and the trees begin. The Survey calls this a line and draws it on the board as one, year by year.\pThe trees have not moved. The marsh has. The line is where it always was; the marsh is shorter on its side of it."), MSGBOX_SIGN)
     end
 }
+
+script ParcelRoute1_Board6 {
+    msgbox(format("A SURVEY BOARD at the bridge head. The bridge crosses the inlet where the saltmarsh meets the first fresh water, and everything that moves between the two moves under this deck.\pThe Survey counts it from the rail at dusk. The count takes an hour and the bridge takes a minute, which is the whole trouble with bridges."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRoute1_Board8 {
+    msgbox(format("A SURVEY BOARD on the far bridge head. The inlet here is where the salt stops. The board gives the line as a date: the furthest upstream the Survey has tasted salt each spring.\pThe dates are the same. The distances are not. Salt is a hundred paces further in than when the board was made."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRoute1_PairRail {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CADET: The inlet count's in the review. Mine. From this rail."), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: Who'd have thought a bridge could be a hide."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: You did. You said so."), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: I say a lot of things at dusk. Most of them aren't in a review."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_STATION_BRIEF)) {
+        msgbox(format("FISHER: The provisional came through this morning. Stood here half an hour. Didn't write anything."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Then what was the point?"), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: Looking. You write after you've looked. Most people do it the other way round and call it a survey."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("CADET: The briefing says count at dusk from the rail."), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: The briefing's right. First time for everything."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: What am I counting?"), MSGBOX_DEFAULT)
+        msgbox(format("FISHER: Whatever moves under the deck. Salt side to fresh side. If you only count what you know the name of, you'll miss the half that matters."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelRoute1_PairStile {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("HIKER: The crest's off the gate."), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: The crest's off the gate. The gate's still here. Gates were always the point. The crest was decoration."), MSGBOX_DEFAULT)
+        msgbox(format("HIKER: Who manages it now?"), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: The tide. Same as before."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_BRIDGE_SCENE)) {
+        msgbox(format("RANGER: A POLIWAG through the culvert the wrong way, and the provisional wrote it down instead of chasing it."), MSGBOX_DEFAULT)
+        msgbox(format("HIKER: Is that the right thing?"), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: It's the slow thing. Up here the slow thing and the right thing are usually the same thing."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("HIKER: The gate says managed access. Managed by whom?"), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: By the crest."), MSGBOX_DEFAULT)
+        msgbox(format("HIKER: Crests don't manage. People do."), MSGBOX_DEFAULT)
+        msgbox(format("RANGER: Then by the people who own the crest, which is a longer answer and the same one."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelRoute1_PairShore {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("SAILOR: Ferry's on time. Catch is small and on time."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: You sound surprised."), MSGBOX_DEFAULT)
+        msgbox(format("SAILOR: I've run this crossing twenty years. I've never once been on time because of less. Turns out that's how you do it."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("WOMAN: A provisional passed FOREST. First out of Saltwick in nine years."), MSGBOX_DEFAULT)
+        msgbox(format("SAILOR: I carried them over. Didn't look like much."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: They never do. The ones that look like much go to the Foundation."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("SAILOR: Ferry's late because the catch was late because the fish were late."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: The fish aren't late. There are fewer."), MSGBOX_DEFAULT)
+        msgbox(format("SAILOR: Same thing to a timetable."), MSGBOX_DEFAULT)
+        msgbox(format("WOMAN: Not to a fish."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

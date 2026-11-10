@@ -601,3 +601,10 @@ script ParcelDelibirdSummit_Board3 {
     msgbox(format("A SURVEY BOARD at the last snow patch. PILOSWINE come up to the patches in the warm months to lie on the cold. The board counts the PILOSWINE on the patches, not the patches.\pWhen the patches go, the count will go with them, and the board says so, plainly, as the last line."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelDelibirdSummit_Board10 {
+    msgbox(format("A SURVEY BOARD by the upper cairn. STANTLER come up with the melt and go down with the first snow, and the board gives their coming and going by date. The two dates used to be a season apart. They are six weeks apart now.\pThe board does not say where the STANTLER spend the rest of the year. The Survey does not know."), MSGBOX_SIGN)
+    end
+}

@@ -4438,6 +4438,57 @@ ParcelCoast_Board5::
 	end
 
 
+ParcelCoast_Board10::
+# 2179 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoast_PairLorry::
+# 2186 "data/maps/ParcelCoast/scripts.pory"
+	lock
+# 2187 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_PairLorry_2
+# 2191 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_PairLorry_3
+# 2196 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_6, MSGBOX_DEFAULT
+# 2197 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_7, MSGBOX_DEFAULT
+# 2198 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_8, MSGBOX_DEFAULT
+# 2199 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_9, MSGBOX_DEFAULT
+ParcelCoast_PairLorry_1:
+# 2201 "data/maps/ParcelCoast/scripts.pory"
+	release
+	end
+
+ParcelCoast_PairLorry_2:
+# 2188 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_0, MSGBOX_DEFAULT
+# 2189 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_1, MSGBOX_DEFAULT
+# 2190 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_2, MSGBOX_DEFAULT
+	goto ParcelCoast_PairLorry_1
+
+ParcelCoast_PairLorry_3:
+# 2192 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_3, MSGBOX_DEFAULT
+# 2193 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_4, MSGBOX_DEFAULT
+# 2194 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairLorry_Text_5, MSGBOX_DEFAULT
+	goto ParcelCoast_PairLorry_1
+
+
+ParcelCoast_Board11::
+# 2208 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Board11_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoast_FirstEntry_Text_0:
 # 49 "data/maps/ParcelCoast/scripts.pory"
 	.string "The ferry rounds the headland and the\n"
@@ -6928,3 +6979,77 @@ ParcelCoast_Board5_Text_0:
 	.string "each year. It is later. The catch lands\l"
 	.string "later because there is further to go\l"
 	.string "for it.$"
+
+ParcelCoast_Board10_Text_0:
+# 2179 "data/maps/ParcelCoast/scripts.pory"
+	.string "A SURVEY BOARD on the south quay. The\n"
+	.string "stacks that stood off this quay are\l"
+	.string "drawn on the board from memory, by\l"
+	.string "three people, and the three drawings do\l"
+	.string "not agree.\p"
+	.string "The board keeps all three. The WINGULL\n"
+	.string "that nested on them are a number the\l"
+	.string "three do agree on.$"
+
+ParcelCoast_PairLorry_Text_0:
+# 2188 "data/maps/ParcelCoast/scripts.pory"
+	.string "DRIVER: Nine boxes. Mixed. The cold\n"
+	.string "store won't take mixed; the review's\l"
+	.string "buyer will.$"
+
+ParcelCoast_PairLorry_Text_1:
+# 2189 "data/maps/ParcelCoast/scripts.pory"
+	.string "DOCKER: Nine's more than six.$"
+
+ParcelCoast_PairLorry_Text_2:
+# 2190 "data/maps/ParcelCoast/scripts.pory"
+	.string "DRIVER: Nine's more than six. I've\n"
+	.string "started counting up again. I'd\l"
+	.string "forgotten the direction.$"
+
+ParcelCoast_PairLorry_Text_3:
+# 2192 "data/maps/ParcelCoast/scripts.pory"
+	.string "DOCKER: The ranger counted the boxes\n"
+	.string "with me. Wrote six, and the length of\l"
+	.string "the smallest fish in each.$"
+
+ParcelCoast_PairLorry_Text_4:
+# 2193 "data/maps/ParcelCoast/scripts.pory"
+	.string "DRIVER: What's a length got to do with\n"
+	.string "my load?$"
+
+ParcelCoast_PairLorry_Text_5:
+# 2194 "data/maps/ParcelCoast/scripts.pory"
+	.string "DOCKER: Everything. The length's the\n"
+	.string "next ten years of your load. It's one\l"
+	.string "hand.$"
+
+ParcelCoast_PairLorry_Text_6:
+# 2196 "data/maps/ParcelCoast/scripts.pory"
+	.string "DRIVER: Six boxes. I came for sixty.$"
+
+ParcelCoast_PairLorry_Text_7:
+# 2197 "data/maps/ParcelCoast/scripts.pory"
+	.string "DOCKER: Sixty's on the brochure. Six is\n"
+	.string "on the quay.$"
+
+ParcelCoast_PairLorry_Text_8:
+# 2198 "data/maps/ParcelCoast/scripts.pory"
+	.string "DRIVER: I get paid by the box.$"
+
+ParcelCoast_PairLorry_Text_9:
+# 2199 "data/maps/ParcelCoast/scripts.pory"
+	.string "DOCKER: So do the fish. That's the\n"
+	.string "trouble with boxes.$"
+
+ParcelCoast_Board11_Text_0:
+# 2208 "data/maps/ParcelCoast/scripts.pory"
+	.string "A SURVEY BOARD on the warehouse row.\n"
+	.string "The roofs hold the WINGULL colony and\l"
+	.string "the warehouses hold the Company's cold\l"
+	.string "store, and the board notes the one\l"
+	.string "thing they share: both are fuller in the\l"
+	.string "years the boats come back lighter.\p"
+	.string "The Survey does not explain the\n"
+	.string "sentence. It gives the numbers under it\l"
+	.string "and lets them explain it.$"

@@ -3598,6 +3598,59 @@ ParcelCorridor_Board4::
 	end
 
 
+ParcelCorridor_Board10::
+# 1697 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCorridor_PairGate::
+# 1704 "data/maps/ParcelCorridor/scripts.pory"
+	lock
+# 1705 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridor_PairGate_2
+# 1709 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelCorridor_PairGate_3
+# 1715 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_7, MSGBOX_DEFAULT
+# 1716 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_8, MSGBOX_DEFAULT
+# 1717 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_9, MSGBOX_DEFAULT
+# 1718 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_10, MSGBOX_DEFAULT
+ParcelCorridor_PairGate_1:
+# 1720 "data/maps/ParcelCorridor/scripts.pory"
+	release
+	end
+
+ParcelCorridor_PairGate_2:
+# 1706 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_0, MSGBOX_DEFAULT
+# 1707 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_1, MSGBOX_DEFAULT
+# 1708 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_2, MSGBOX_DEFAULT
+	goto ParcelCorridor_PairGate_1
+
+ParcelCorridor_PairGate_3:
+# 1710 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_3, MSGBOX_DEFAULT
+# 1711 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_4, MSGBOX_DEFAULT
+# 1712 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_5, MSGBOX_DEFAULT
+# 1713 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairGate_Text_6, MSGBOX_DEFAULT
+	goto ParcelCorridor_PairGate_1
+
+
+ParcelCorridor_Board11::
+# 1727 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Board11_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCorridor_Checkpoint_Text_0:
 # 45 "data/maps/ParcelCorridor/scripts.pory"
 	.string "MIRREN: Hold it.$"
@@ -5273,3 +5326,83 @@ ParcelCorridor_Board4_Text_0:
 	.string "The board gives the distance between\n"
 	.string "the two sets, year by year. It closes.\l"
 	.string "The Company is not moving its stakes.$"
+
+ParcelCorridor_Board10_Text_0:
+# 1697 "data/maps/ParcelCorridor/scripts.pory"
+	.string "A SURVEY BOARD at the cut's midpoint. A\n"
+	.string "line painted across the road, old, the\l"
+	.string "Survey's: the point the stream crossed\l"
+	.string "before the pipe. Lorries drive over it\l"
+	.string "all day.\p"
+	.string "The board asks drivers to note that the\n"
+	.string "paint has never needed renewing,\l"
+	.string "because the stream still crosses here,\l"
+	.string "under the road, and keeps the ground\l"
+	.string "damp enough to hold it.$"
+
+ParcelCorridor_PairGate_Text_0:
+# 1706 "data/maps/ParcelCorridor/scripts.pory"
+	.string "GUARD: No papers. The checkpoint's a\n"
+	.string "weather station now, the review says. I\l"
+	.string "read a gauge.$"
+
+ParcelCorridor_PairGate_Text_1:
+# 1707 "data/maps/ParcelCorridor/scripts.pory"
+	.string "WOMAN: And the bread?$"
+
+ParcelCorridor_PairGate_Text_2:
+# 1708 "data/maps/ParcelCorridor/scripts.pory"
+	.string "GUARD: Goes through. Somebody's in the\n"
+	.string "hut by the marsh. Somebody always was.\l"
+	.string "I knew. The sign didn't.$"
+
+ParcelCorridor_PairGate_Text_3:
+# 1710 "data/maps/ParcelCorridor/scripts.pory"
+	.string "WOMAN: The ranger came through with a\n"
+	.string "notebook and you didn't ask for papers.$"
+
+ParcelCorridor_PairGate_Text_4:
+# 1711 "data/maps/ParcelCorridor/scripts.pory"
+	.string "GUARD: The notebook was the papers.$"
+
+ParcelCorridor_PairGate_Text_5:
+# 1712 "data/maps/ParcelCorridor/scripts.pory"
+	.string "WOMAN: Mine's a loaf.$"
+
+ParcelCorridor_PairGate_Text_6:
+# 1713 "data/maps/ParcelCorridor/scripts.pory"
+	.string "GUARD: Loaves don't need stamping. I\n"
+	.string "stamp them because the sign says. The\l"
+	.string "ranger's sign said something else.$"
+
+ParcelCorridor_PairGate_Text_7:
+# 1715 "data/maps/ParcelCorridor/scripts.pory"
+	.string "GUARD: Pass. Papers.$"
+
+ParcelCorridor_PairGate_Text_8:
+# 1716 "data/maps/ParcelCorridor/scripts.pory"
+	.string "WOMAN: I'm taking bread to the hut by\n"
+	.string "the marsh.$"
+
+ParcelCorridor_PairGate_Text_9:
+# 1717 "data/maps/ParcelCorridor/scripts.pory"
+	.string "GUARD: Nobody's in the hut by the\n"
+	.string "marsh.$"
+
+ParcelCorridor_PairGate_Text_10:
+# 1718 "data/maps/ParcelCorridor/scripts.pory"
+	.string "WOMAN: Then the bread will keep. Stamp\n"
+	.string "it.$"
+
+ParcelCorridor_Board11_Text_0:
+# 1727 "data/maps/ParcelCorridor/scripts.pory"
+	.string "A SURVEY BOARD at the cut's western\n"
+	.string "end, where the road enters the trees.\l"
+	.string "The board is the Corridor's roll: every\l"
+	.string "species the Survey has recorded\l"
+	.string "passing through, from the first stake\l"
+	.string "to the last reading.\p"
+	.string "The roll is long. The last column, this\n"
+	.string "year, is short. The board puts the two\l"
+	.string "side by side and lets the width do the\l"
+	.string "talking.$"

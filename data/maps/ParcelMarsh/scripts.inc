@@ -875,6 +875,51 @@ ParcelMarsh_Board3::
 	end
 
 
+ParcelMarsh_Board10::
+# 480 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelMarsh_PairPath::
+# 487 "data/maps/ParcelMarsh/scripts.pory"
+	lock
+# 488 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelMarsh_PairPath_2
+# 492 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HERON_MET, ParcelMarsh_PairPath_3
+# 498 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_7, MSGBOX_DEFAULT
+# 499 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_8, MSGBOX_DEFAULT
+# 500 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_9, MSGBOX_DEFAULT
+ParcelMarsh_PairPath_1:
+# 502 "data/maps/ParcelMarsh/scripts.pory"
+	release
+	end
+
+ParcelMarsh_PairPath_2:
+# 489 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_0, MSGBOX_DEFAULT
+# 490 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_1, MSGBOX_DEFAULT
+# 491 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_2, MSGBOX_DEFAULT
+	goto ParcelMarsh_PairPath_1
+
+ParcelMarsh_PairPath_3:
+# 493 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_3, MSGBOX_DEFAULT
+# 494 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_4, MSGBOX_DEFAULT
+# 495 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_5, MSGBOX_DEFAULT
+# 496 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_PairPath_Text_6, MSGBOX_DEFAULT
+	goto ParcelMarsh_PairPath_1
+
+
 ParcelMarsh_FirstEntry_Text_0:
 # 30 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: This is as far as I go. The road\n"
@@ -1616,3 +1661,63 @@ ParcelMarsh_Board3_Text_0:
 	.string "the Survey trusts. Not counted. Seen.\p"
 	.string "The board keeps a separate column for\n"
 	.string "seen, and the column is the honest one.$"
+
+ParcelMarsh_Board10_Text_0:
+# 480 "data/maps/ParcelMarsh/scripts.pory"
+	.string "A SURVEY BOARD in the alder, nearly\n"
+	.string "grown over. It is the oldest board in\l"
+	.string "Skaldmere and says only: THIS IS THE\l"
+	.string "CONTROL.\p"
+	.string "Under it, in the same hand decades\n"
+	.string "later: STILL. The Survey has not added\l"
+	.string "a third line, and will not until it is\l"
+	.string "false.$"
+
+ParcelMarsh_PairPath_Text_0:
+# 489 "data/maps/ParcelMarsh/scripts.pory"
+	.string "OLD WOMAN: The count's in the record.\n"
+	.string "Hers. The real one.$"
+
+ParcelMarsh_PairPath_Text_1:
+# 490 "data/maps/ParcelMarsh/scripts.pory"
+	.string "GIRL: Is she still in the hut?$"
+
+ParcelMarsh_PairPath_Text_2:
+# 491 "data/maps/ParcelMarsh/scripts.pory"
+	.string "OLD WOMAN: She's in the marsh. Which is\n"
+	.string "the same thing, now. Step where I step.$"
+
+ParcelMarsh_PairPath_Text_3:
+# 493 "data/maps/ParcelMarsh/scripts.pory"
+	.string "GIRL: The ranger went to the hut.\n"
+	.string "There's someone in the hut.$"
+
+ParcelMarsh_PairPath_Text_4:
+# 494 "data/maps/ParcelMarsh/scripts.pory"
+	.string "OLD WOMAN: There is. And you'll say\n"
+	.string "nothing about it in the village.$"
+
+ParcelMarsh_PairPath_Text_5:
+# 495 "data/maps/ParcelMarsh/scripts.pory"
+	.string "GIRL: Why?$"
+
+ParcelMarsh_PairPath_Text_6:
+# 496 "data/maps/ParcelMarsh/scripts.pory"
+	.string "OLD WOMAN: Because she's counting, and\n"
+	.string "counting needs quiet. You'll understand\l"
+	.string "when you're the one in the hut.$"
+
+ParcelMarsh_PairPath_Text_7:
+# 498 "data/maps/ParcelMarsh/scripts.pory"
+	.string "OLD WOMAN: Step where I step. The marsh\n"
+	.string "keeps its paths in its own head.$"
+
+ParcelMarsh_PairPath_Text_8:
+# 499 "data/maps/ParcelMarsh/scripts.pory"
+	.string "GIRL: How do you know them?$"
+
+ParcelMarsh_PairPath_Text_9:
+# 500 "data/maps/ParcelMarsh/scripts.pory"
+	.string "OLD WOMAN: I've been wrong on them.\n"
+	.string "That's how you learn a marsh. Wet to the\l"
+	.string "hip, once.$"

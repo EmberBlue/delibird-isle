@@ -2251,3 +2251,44 @@ script ParcelFloodbasin_PairLevee {
     release
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelFloodbasin_Board10 {
+    msgbox(format("A SURVEY BOARD at the north track. The relief tents stand where the Survey's first basin stake stood; the stake was moved a pace to make room, and the board records the pace.\pOne pace is nothing. The board records it because the Survey has never once moved a stake for anything else, and wanted that written."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelFloodbasin_PairTents {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("NURSE: Next. Name, household. No vouchers this winter; the review put the money on the pump instead."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: And the queue?"), MSGBOX_DEFAULT)
+        msgbox(format("NURSE: You're it. I've been standing here since eight for one man."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: Then ask me something you don't know."), MSGBOX_DEFAULT)
+        msgbox(format("NURSE: Does the water still smell?"), MSGBOX_DEFAULT)
+        msgbox(format("MAN: No."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("MAN: The ranger stood in the queue. Didn't take a voucher. Wrote down how long the queue was."), MSGBOX_DEFAULT)
+        msgbox(format("NURSE: How long was it?"), MSGBOX_DEFAULT)
+        msgbox(format("MAN: An hour and ten. They wrote it the way you'd write a depth."), MSGBOX_DEFAULT)
+        msgbox(format("NURSE: It is a depth."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("NURSE: Next. Name, household, how many under twelve."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: Four. Two. The same as last winter."), MSGBOX_DEFAULT)
+        msgbox(format("NURSE: I know. I'm supposed to ask."), MSGBOX_DEFAULT)
+        msgbox(format("MAN: Then ask me something you don't know."), MSGBOX_DEFAULT)
+        msgbox(format("NURSE: Does the water still smell? I'm not supposed to ask that."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+// --- survey boards, round six (2026-11-10) ---
+
+script ParcelFloodbasin_Board11 {
+    msgbox(format("A SURVEY BOARD at the basin's western rim, where the fields begin. Runoff from the fields reaches the marsh here first, and the Survey reads it by the colour of the ditch: clear, green, brown.\pThe board gives the colour by month for twelve years as a row of painted squares. Read it left to right. It is a lesson in two words."), MSGBOX_SIGN)
+    end
+}

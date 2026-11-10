@@ -761,3 +761,10 @@ script ParcelFloodbasinSluice_Board4 {
     msgbox(format("A SURVEY BOARD on the keeper's steps. The sluice has been kept by one family for four generations, and the board carries the keepers' initials and the years, and beside each the number of springs the gate opened on time.\pThe last keeper's row is the longest and the number is the lowest. The board gives no reason. The ledger inside does."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelFloodbasinSluice_Board10 {
+    msgbox(format("A SURVEY BOARD on the lower channel wall. ELECTRIKE on the gantry irons in a storm, counted from the keeper's window, because nobody goes onto the wall in a storm.\pThe board gives the count and the keeper's name for each year, four keepers, one family, and a note that the count is the only thing on the sluice that was never argued about."), MSGBOX_SIGN)
+    end
+}

@@ -4510,6 +4510,61 @@ ParcelRiver_PairStall_3:
 	goto ParcelRiver_PairStall_1
 
 
+ParcelRiver_Board10::
+# 2214 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Board10_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiver_PairMill::
+# 2221 "data/maps/ParcelRiver/scripts.pory"
+	lock
+# 2222 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiver_PairMill_2
+# 2226 "data/maps/ParcelRiver/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiver_PairMill_3
+# 2232 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_7, MSGBOX_DEFAULT
+# 2233 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_8, MSGBOX_DEFAULT
+# 2234 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_9, MSGBOX_DEFAULT
+# 2235 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_10, MSGBOX_DEFAULT
+# 2236 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_11, MSGBOX_DEFAULT
+ParcelRiver_PairMill_1:
+# 2238 "data/maps/ParcelRiver/scripts.pory"
+	release
+	end
+
+ParcelRiver_PairMill_2:
+# 2223 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_0, MSGBOX_DEFAULT
+# 2224 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_1, MSGBOX_DEFAULT
+# 2225 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_2, MSGBOX_DEFAULT
+	goto ParcelRiver_PairMill_1
+
+ParcelRiver_PairMill_3:
+# 2227 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_3, MSGBOX_DEFAULT
+# 2228 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_4, MSGBOX_DEFAULT
+# 2229 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_5, MSGBOX_DEFAULT
+# 2230 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_PairMill_Text_6, MSGBOX_DEFAULT
+	goto ParcelRiver_PairMill_1
+
+
+ParcelRiver_Board11::
+# 2245 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Board11_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 52 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -7012,3 +7067,86 @@ ParcelRiver_PairStall_Text_9:
 ParcelRiver_PairStall_Text_10:
 # 2205 "data/maps/ParcelRiver/scripts.pory"
 	.string "WEAVER: Then I'll weave a complaint.$"
+
+ParcelRiver_Board10_Text_0:
+# 2214 "data/maps/ParcelRiver/scripts.pory"
+	.string "A SURVEY BOARD on the lower bank. The\n"
+	.string "straightened reach ends here and the\l"
+	.string "old river begins again: bends, gravel,\l"
+	.string "and a SEAKING riffle the board calls\l"
+	.string "the control.\p"
+	.string "The Survey's word for the place nothing\n"
+	.string "was done to. Every reading above the\l"
+	.string "board is measured against this one.$"
+
+ParcelRiver_PairMill_Text_0:
+# 2223 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: The allocation gives the race a\n"
+	.string "spring flow. A trickle. I'll grind on a\l"
+	.string "trickle.$"
+
+ParcelRiver_PairMill_Text_1:
+# 2224 "data/maps/ParcelRiver/scripts.pory"
+	.string "DAUGHTER: Is that enough?$"
+
+ParcelRiver_PairMill_Text_2:
+# 2225 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: It's enough to be a mill. Being a\n"
+	.string "mill was the thing I missed. The flour\l"
+	.string "was never the thing.$"
+
+ParcelRiver_PairMill_Text_3:
+# 2227 "data/maps/ParcelRiver/scripts.pory"
+	.string "DAUGHTER: The ranger asked how long\n"
+	.string "the race used to run.$"
+
+ParcelRiver_PairMill_Text_4:
+# 2228 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: Dawn to dusk, I said. And they\n"
+	.string "asked when it stopped, and I knew the\l"
+	.string "year, and I'd never said the year out\l"
+	.string "loud.$"
+
+ParcelRiver_PairMill_Text_5:
+# 2229 "data/maps/ParcelRiver/scripts.pory"
+	.string "DAUGHTER: What year?$"
+
+ParcelRiver_PairMill_Text_6:
+# 2230 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: The year you were born. I'd\n"
+	.string "never put those together.$"
+
+ParcelRiver_PairMill_Text_7:
+# 2232 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: The race ran an hour yesterday.\n"
+	.string "First time this year.$"
+
+ParcelRiver_PairMill_Text_8:
+# 2233 "data/maps/ParcelRiver/scripts.pory"
+	.string "DAUGHTER: You cried.$"
+
+ParcelRiver_PairMill_Text_9:
+# 2234 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: I had flour in my eye.$"
+
+ParcelRiver_PairMill_Text_10:
+# 2235 "data/maps/ParcelRiver/scripts.pory"
+	.string "DAUGHTER: You hadn't ground anything\n"
+	.string "yet.$"
+
+ParcelRiver_PairMill_Text_11:
+# 2236 "data/maps/ParcelRiver/scripts.pory"
+	.string "MILLER: Forty years of flour in my eye,\n"
+	.string "then.$"
+
+ParcelRiver_Board11_Text_0:
+# 2245 "data/maps/ParcelRiver/scripts.pory"
+	.string "A SURVEY BOARD on the east bank, above\n"
+	.string "the plots. The irrigation take is here, a\l"
+	.string "pipe into the river with a meter on it\l"
+	.string "the Board reads monthly.\p"
+	.string "The Survey reads the river below the\n"
+	.string "pipe, by the stake, the same day. The\l"
+	.string "board gives both: what was taken, and\l"
+	.string "what was left. The second column is the\l"
+	.string "one the fish read.$"

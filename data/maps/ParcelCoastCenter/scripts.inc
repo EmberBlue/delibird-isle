@@ -77,6 +77,12 @@ ParcelCoastCenter_ReadMap::
 	end
 
 
+ParcelCoastCenter_Notice::
+# 54 "data/maps/ParcelCoastCenter/scripts.pory"
+	msgbox ParcelCoastCenter_Notice_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastCenter_Trainer_Text_0:
 # 22 "data/maps/ParcelCoastCenter/scripts.pory"
 	.string "SAILOR: Five WINGULL in this month,\n"
@@ -124,3 +130,16 @@ ParcelCoastCenter_ReadMap_Text_0:
 	.string "the old reef in blue, from memory.\p"
 	.string "The blue is in a different hand from the\n"
 	.string "red.$"
+
+ParcelCoastCenter_Notice_Text_0:
+# 54 "data/maps/ParcelCoastCenter/scripts.pory"
+	.string "A notice by the counter: WINGULL\n"
+	.string "brought in with hooks will be kept until\l"
+	.string "the hook is out and the bird has eaten,\l"
+	.string "and will be released from the\l"
+	.string "breakwater, not the quay, so they do\l"
+	.string "not go straight back to the boats.\p"
+	.string "The nurse has drawn the breakwater and\n"
+	.string "an arrow. Someone has written beside\l"
+	.string "the arrow: they come back anyway. The\l"
+	.string "nurse has written beneath: I know.$"

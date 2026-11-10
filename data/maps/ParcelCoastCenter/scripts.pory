@@ -47,3 +47,10 @@ script ParcelCoastCenter_ReadMap {
     msgbox(format("A chart of the coast with the dredge line marked in red. Somebody has added the old reef in blue, from memory.\pThe blue is in a different hand from the red."), MSGBOX_SIGN)
     end
 }
+
+// --- notices (2026-11-10) ---
+
+script ParcelCoastCenter_Notice {
+    msgbox(format("A notice by the counter: WINGULL brought in with hooks will be kept until the hook is out and the bird has eaten, and will be released from the breakwater, not the quay, so they do not go straight back to the boats.\pThe nurse has drawn the breakwater and an arrow. Someone has written beside the arrow: they come back anyway. The nurse has written beneath: I know."), MSGBOX_SIGN)
+    end
+}

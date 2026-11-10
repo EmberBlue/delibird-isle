@@ -112,6 +112,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFernwickHall_BenchBook"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 15,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwickHall_Notice"
     }
   ]
 }

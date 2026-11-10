@@ -76,7 +76,9 @@ def count_dex():
 
 def main():
     include_rematch = "--rematch" in sys.argv
-    scripts = sorted(glob.glob(str(ROOT / "data/maps/Parcel*/scripts.pory"))) + sorted(glob.glob(str(ROOT / "data/scripts/skald_*.pory")))
+    # the retired, unreachable maps (see tools/skald/audit.py RETIRED_MAPS) do not count
+    retired = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}
+    scripts = sorted(p for p in glob.glob(str(ROOT / "data/maps/Parcel*/scripts.pory")) if Path(p).parent.name not in retired) + sorted(glob.glob(str(ROOT / "data/scripts/skald_*.pory")))
     pory = sum(count_pory(Path(p), include_rematch) for p in scripts)
     notebook = count_c_strings(ROOT / "src/survey_scripting.c")
     dex, species = count_dex()

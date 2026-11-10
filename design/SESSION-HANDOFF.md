@@ -115,11 +115,12 @@ story state for every named resident: 203 post-epilogue lines (the
 post-game as a settled "what now"; quest givers speak theirs only once
 their quest is done), twenty more overheard pairs (rounds four and five,
 the side maps and the towns), side quests round five (eight; fifty-three
-in all), eighty-three Survey boards in all, seven more documents and a
-page two for every Courier front page. **100,080 hand-written words**
-(~130,700 with the rematch-tier lines; `tools/skald/wordcount.py` is the
-counter), 740 objects, 483 readable events, 76 overheard conversations,
-102 maps, 1,071 battles. The certification spine was fought
+in all), ninety-nine Survey boards in all, seven more documents, seven
+notices and a page two for every Courier front page. **100,187
+hand-written words** (~131,000 with the rematch-tier lines;
+`tools/skald/wordcount.py` is the counter, and it excludes the three
+retired maps), 737 objects, 496 readable events, 67 overheard pairs, 102
+maps, 1,071 battles. The certification spine was fought
 through headlessly with the harness's new `--party`/`--var` (every leader,
 every signing, the confession, the boardroom: `tools/skald/spine.sh`).
 
@@ -348,13 +349,14 @@ replaces is gone from the tree).
 
 ## Known-open (honest list)
 
-- **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816
-  rematch tiers) against the 1,000 target -- met; **~80,500 hand-written
-  words** (every `_R2`–`_R5`/`_FirstWin` rematch script excluded; ~94k
-  with them; 704 objects, 376 readable/hidden events; 42 side quests; 56 overheard conversations) against 100k -- the
-  remaining gap. Recount with the snippet in §13's 2026-11-10 entries
-  (script bodies minus the rematch scripts, plus the notebook's C strings
-  and the 81 dex entries). The rematch tiers
+- **Volume -- met.** 1,071 reachable trainer battles (255 distinct
+  opponents + 816 rematch tiers) against the 1,000 target; **100,187
+  hand-written words** by `python3 tools/skald/wordcount.py` (every
+  `_R2`–`_R9`/`_FirstWin`/`_Rematch` script excluded, the three retired
+  maps excluded, the notebook's C strings and the 161 dex entries
+  included; ~131k with the rematch tiers); 737 objects, 496 readable
+  events, 53 side quests, 67 overheard pairs, 99 Survey boards. The
+  counter is the record; do not recount by hand. The rematch tiers
   are the custom "ledger" system, not Match Call (the save block has 28
   bytes of headroom and the registered-flag range 0x15C–0x1A9 is boxed in
   by our flags; `FREE_*` options in `include/config/save.h` would buy room
@@ -370,11 +372,18 @@ replaces is gone from the tree).
   move" in §13 F is superseded: the Climate Station is zone 7's gym in the
   main path. **The Sketch thread** (§04's locked memory) now runs as private
   narration from the Saltwick boards to Heron's confession.
-- **Not playtested end to end in an emulator** since the rebuilds: each zone
-  was screenshot-checked at its arrival and one scene; the gym gates fire;
-  the Floodbasin relief line fires. Walk the whole game with Script 1
-  (debug menu → Scripts) when there is time; the connection offsets and
-  the ferry/Hale warps were audited, not walked.
+- **Not played end to end as one continuous run.** Every warp and
+  connection has been walked by `tools/skald/sweep.py`, the whole
+  certification spine fought through by `tools/skald/spine.sh`, and each
+  content pass spot-checked from the harness (boards, pairs, books, quest
+  finds, post-epilogue lines, the PokéNav map, the title). What has not
+  happened is one person playing from the ferry to the credits in a single
+  save; do that when there is time, with a notebook open.
+- **The retired maps** `ParcelStation`, `ParcelBridge` and
+  `ParcelStationHall` are unreachable and excluded from the audit and the
+  word count. Content placed there by mistake on 2026-11-10 was moved to
+  the Climate Station grounds and Route 1 (`relocate.py`). Delete the three
+  maps when nothing references them.
 - `ParcelStation` and `ParcelBridge` are retired (unreachable); delete when
   nothing references them.
 - **Delibird Isle is a real island now** (§09 *Built*): `ParcelDelibird`

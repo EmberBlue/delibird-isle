@@ -473,3 +473,32 @@ script ParcelMarsh_Board3 {
     msgbox(format("A SURVEY BOARD at the alder edge, nailed low. SMEARGLE have been seen here, the board says, twice, by people the Survey trusts. Not counted. Seen.\pThe board keeps a separate column for seen, and the column is the honest one."), MSGBOX_SIGN)
     end
 }
+
+// --- survey boards, round five (2026-11-10) ---
+
+script ParcelMarsh_Board10 {
+    msgbox(format("A SURVEY BOARD in the alder, nearly grown over. It is the oldest board in Skaldmere and says only: THIS IS THE CONTROL.\pUnder it, in the same hand decades later: STILL. The Survey has not added a third line, and will not until it is false."), MSGBOX_SIGN)
+    end
+}
+
+// --- town life (2026-11-10): the pairs, round six ---
+
+script ParcelMarsh_PairPath {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD WOMAN: The count's in the record. Hers. The real one."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: Is she still in the hut?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: She's in the marsh. Which is the same thing, now. Step where I step."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HERON_MET)) {
+        msgbox(format("GIRL: The ranger went to the hut. There's someone in the hut."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: There is. And you'll say nothing about it in the village."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: Why?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Because she's counting, and counting needs quiet. You'll understand when you're the one in the hut."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD WOMAN: Step where I step. The marsh keeps its paths in its own head."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: How do you know them?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: I've been wrong on them. That's how you learn a marsh. Wet to the hip, once."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

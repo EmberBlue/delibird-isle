@@ -764,7 +764,17 @@ quest is built, how the peer works) before they are asked six more times.
   snare book and its third column, the depot's grading card with HILL
   priced below two, VANE's weather glass, the gate hut's sheet); and a
   page two for all seven of INGER's front pages. Verified in the
-  emulator: a find, a pair, a board, the Courier. **100,080 hand-written
-  words** (`tools/skald/wordcount.py`; ~131,000 with the rematch tiers).
-  Audit: 102 maps, the 2 known warnings. The §13 target is met.
+  emulator: a find, a pair, a board, the Courier. The first count over
+  the line (100,080) included words in the two retired, unreachable maps
+  (`ParcelStation`, `ParcelBridge`), where four boards and two pairs had
+  been placed by mistake and where ~2,000 older words had always sat.
+  Those were moved to the Climate Station grounds and Route 1, the
+  counter now excludes retired maps, and the shortfall was made up in the
+  live maps: twelve more boards, ten more pairs (two of the round's pairs
+  had silently collided with older pair names and were placed again under
+  new ones), seven notices in the Centres, the Hall, the offices and the
+  HQ, then six more boards and the two recovered pairs. **100,187
+  hand-written words, all reachable** (`tools/skald/wordcount.py`;
+  ~131,000 with the rematch tiers). Audit: 102 maps, the 2 known
+  warnings. The §13 target is met.
 
