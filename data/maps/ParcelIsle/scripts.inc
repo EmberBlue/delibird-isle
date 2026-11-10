@@ -451,18 +451,20 @@ ParcelIsle_FerryCaptain::
 	lock
 # 272 "data/maps/ParcelIsle/scripts.pory"
 	faceplayer
-# 273 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelIsle_FerryCaptain_3
+# 275 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TALLY, ParcelIsle_FerryCaptain_4
 ParcelIsle_FerryCaptain_1:
-# 278 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_TALLY, ParcelIsle_FerryCaptain_10
-ParcelIsle_FerryCaptain_9:
-# 288 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALD_Q_TALLY_DONE, ParcelIsle_FerryCaptain_8
-# 294 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_FerryCaptain_14
+# 280 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALDMERE_HIGHLAND_CERT, ParcelIsle_FerryCaptain_9
+# 295 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_TALLY, ParcelIsle_FerryCaptain_13
+ParcelIsle_FerryCaptain_11:
 # 299 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_HIGHLAND_CERT, ParcelIsle_FerryCaptain_21
+	goto_if_set FLAG_SKALDMERE_EPILOGUE_DONE, ParcelIsle_FerryCaptain_23
+ParcelIsle_FerryCaptain_22:
+# 301 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsle_FerryCaptain_21
+ParcelIsle_FerryCaptain_19:
 # 304 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_6, MSGBOX_DEFAULT
 # 305 "data/maps/ParcelIsle/scripts.pory"
@@ -470,11 +472,11 @@ ParcelIsle_FerryCaptain_9:
 # 306 "data/maps/ParcelIsle/scripts.pory"
 	switch VAR_RESULT
 # 307 "data/maps/ParcelIsle/scripts.pory"
-	case 0, ParcelIsle_FerryCaptain_25
+	case 0, ParcelIsle_FerryCaptain_32
 # 314 "data/maps/ParcelIsle/scripts.pory"
-	case 1, ParcelIsle_FerryCaptain_26
+	case 1, ParcelIsle_FerryCaptain_33
 # 326 "data/maps/ParcelIsle/scripts.pory"
-	case 2, ParcelIsle_FerryCaptain_27
+	case 2, ParcelIsle_FerryCaptain_34
 # 339 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_9, MSGBOX_DEFAULT
 # 340 "data/maps/ParcelIsle/scripts.pory"
@@ -482,67 +484,80 @@ ParcelIsle_FerryCaptain_9:
 	end
 
 ParcelIsle_FerryCaptain_2:
-# 274 "data/maps/ParcelIsle/scripts.pory"
+# 276 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_0, MSGBOX_DEFAULT
-# 275 "data/maps/ParcelIsle/scripts.pory"
-	release
-	end
-
-ParcelIsle_FerryCaptain_3:
-# 273 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_TALLY_DONE, ParcelIsle_FerryCaptain_2
+# 277 "data/maps/ParcelIsle/scripts.pory"
+	giveitem ITEM_NET_BALL, 3
+# 278 "data/maps/ParcelIsle/scripts.pory"
+	setflag FLAG_SKALD_Q_TALLY_DONE
 	goto ParcelIsle_FerryCaptain_1
 
-ParcelIsle_FerryCaptain_7:
-# 279 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_TALLY_FOUND, ParcelIsle_FerryCaptain_17
-# 284 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_2, MSGBOX_DEFAULT
-ParcelIsle_FerryCaptain_16:
-# 286 "data/maps/ParcelIsle/scripts.pory"
-	release
-	end
+ParcelIsle_FerryCaptain_3:
+# 275 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TALLY_FOUND, ParcelIsle_FerryCaptain_2
+	goto ParcelIsle_FerryCaptain_1
 
-ParcelIsle_FerryCaptain_8:
+ParcelIsle_FerryCaptain_4:
+# 275 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_TALLY_DONE, ParcelIsle_FerryCaptain_3
+	goto ParcelIsle_FerryCaptain_1
+
+ParcelIsle_FerryCaptain_9:
+# 281 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_1, MSGBOX_DEFAULT
+# 282 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TALLY_DONE, ParcelIsle_FerryCaptain_17
+# 286 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TALLY, ParcelIsle_FerryCaptain_27
 # 289 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_3, MSGBOX_DEFAULT
 # 290 "data/maps/ParcelIsle/scripts.pory"
 	setflag FLAG_SKALD_Q_TALLY
-# 291 "data/maps/ParcelIsle/scripts.pory"
+ParcelIsle_FerryCaptain_26:
+# 292 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
-ParcelIsle_FerryCaptain_10:
-# 278 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALD_Q_TALLY_DONE, ParcelIsle_FerryCaptain_7
-	goto ParcelIsle_FerryCaptain_9
-
-ParcelIsle_FerryCaptain_14:
-# 295 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_4, MSGBOX_DEFAULT
+ParcelIsle_FerryCaptain_12:
 # 296 "data/maps/ParcelIsle/scripts.pory"
-	release
-	end
+	msgbox ParcelIsle_FerryCaptain_Text_3, MSGBOX_DEFAULT
+# 297 "data/maps/ParcelIsle/scripts.pory"
+	setflag FLAG_SKALD_Q_TALLY
+	goto ParcelIsle_FerryCaptain_11
+
+ParcelIsle_FerryCaptain_13:
+# 295 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_unset FLAG_SKALD_Q_TALLY_DONE, ParcelIsle_FerryCaptain_12
+	goto ParcelIsle_FerryCaptain_11
 
 ParcelIsle_FerryCaptain_17:
-# 280 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_1, MSGBOX_DEFAULT
-# 281 "data/maps/ParcelIsle/scripts.pory"
-	giveitem ITEM_NET_BALL, 3
-# 282 "data/maps/ParcelIsle/scripts.pory"
-	setflag FLAG_SKALD_Q_TALLY_DONE
-	goto ParcelIsle_FerryCaptain_16
-
-ParcelIsle_FerryCaptain_21:
-# 300 "data/maps/ParcelIsle/scripts.pory"
-	msgbox ParcelIsle_FerryCaptain_Text_5, MSGBOX_DEFAULT
-# 301 "data/maps/ParcelIsle/scripts.pory"
+# 283 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
+ParcelIsle_FerryCaptain_20:
+# 300 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_4, MSGBOX_DEFAULT
+	goto ParcelIsle_FerryCaptain_19
+
+ParcelIsle_FerryCaptain_21:
+# 302 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_5, MSGBOX_DEFAULT
+	goto ParcelIsle_FerryCaptain_19
+
+ParcelIsle_FerryCaptain_23:
+# 299 "data/maps/ParcelIsle/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_TALLY_DONE, ParcelIsle_FerryCaptain_20
+	goto ParcelIsle_FerryCaptain_22
+
+ParcelIsle_FerryCaptain_27:
+# 287 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_FerryCaptain_Text_2, MSGBOX_DEFAULT
+	goto ParcelIsle_FerryCaptain_26
+
 	end
 
-ParcelIsle_FerryCaptain_25:
+ParcelIsle_FerryCaptain_32:
 # 308 "data/maps/ParcelIsle/scripts.pory"
 	closemessage
 # 309 "data/maps/ParcelIsle/scripts.pory"
@@ -555,9 +570,9 @@ ParcelIsle_FerryCaptain_25:
 	waitstate
 	end
 
-ParcelIsle_FerryCaptain_26:
+ParcelIsle_FerryCaptain_33:
 # 315 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_DELIBIRD_ARRIVAL, ParcelIsle_FerryCaptain_30
+	goto_if_unset FLAG_SKALDMERE_DELIBIRD_ARRIVAL, ParcelIsle_FerryCaptain_37
 # 320 "data/maps/ParcelIsle/scripts.pory"
 	closemessage
 # 321 "data/maps/ParcelIsle/scripts.pory"
@@ -570,9 +585,9 @@ ParcelIsle_FerryCaptain_26:
 	waitstate
 	end
 
-ParcelIsle_FerryCaptain_27:
+ParcelIsle_FerryCaptain_34:
 # 327 "data/maps/ParcelIsle/scripts.pory"
-	goto_if_unset FLAG_SKALDMERE_COASTAL_CERT, ParcelIsle_FerryCaptain_33
+	goto_if_unset FLAG_SKALDMERE_COASTAL_CERT, ParcelIsle_FerryCaptain_40
 # 332 "data/maps/ParcelIsle/scripts.pory"
 	closemessage
 # 333 "data/maps/ParcelIsle/scripts.pory"
@@ -585,14 +600,14 @@ ParcelIsle_FerryCaptain_27:
 	waitstate
 	end
 
-ParcelIsle_FerryCaptain_30:
+ParcelIsle_FerryCaptain_37:
 # 316 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_7, MSGBOX_DEFAULT
 # 317 "data/maps/ParcelIsle/scripts.pory"
 	release
 	end
 
-ParcelIsle_FerryCaptain_33:
+ParcelIsle_FerryCaptain_40:
 # 328 "data/maps/ParcelIsle/scripts.pory"
 	msgbox ParcelIsle_FerryCaptain_Text_8, MSGBOX_DEFAULT
 # 329 "data/maps/ParcelIsle/scripts.pory"
@@ -2852,24 +2867,22 @@ ParcelIsle_FerrySign_Text_1:
 	.string "It has been for a while.$"
 
 ParcelIsle_FerryCaptain_Text_0:
-# 274 "data/maps/ParcelIsle/scripts.pory"
-	.string "CAPTAIN: New post went in. First\n"
-	.string "notch's already on it. Not mine. A\l"
-	.string "LAPRAS off the north point, the mate\l"
-	.string "swears.\p"
-	.string "I let him cut it. Someone has to start\n"
-	.string "the next count.$"
-
-ParcelIsle_FerryCaptain_Text_1:
-# 280 "data/maps/ParcelIsle/scripts.pory"
+# 276 "data/maps/ParcelIsle/scripts.pory"
 	.string "CAPTAIN: Eleven in the first decade,\n"
 	.string "four in the second, one in the third.\l"
 	.string "That's the count. I knew it. I wanted it\l"
 	.string "said back to me by a notebook.\p"
 	.string "Here. For the boat you'll need one day.$"
 
+ParcelIsle_FerryCaptain_Text_1:
+# 281 "data/maps/ParcelIsle/scripts.pory"
+	.string "CAPTAIN: Passage out? Not in this cold,\n"
+	.string "not without a reason.\p"
+	.string "Come back when the RANGERS have sent\n"
+	.string "you up the mountains. You'll know when.$"
+
 ParcelIsle_FerryCaptain_Text_2:
-# 284 "data/maps/ParcelIsle/scripts.pory"
+# 287 "data/maps/ParcelIsle/scripts.pory"
 	.string "CAPTAIN: The pier post. Far end. Count\n"
 	.string "the notches, not the splinters.$"
 
@@ -2885,18 +2898,20 @@ ParcelIsle_FerryCaptain_Text_3:
 	.string "it and tell me.$"
 
 ParcelIsle_FerryCaptain_Text_4:
-# 295 "data/maps/ParcelIsle/scripts.pory"
+# 300 "data/maps/ParcelIsle/scripts.pory"
+	.string "CAPTAIN: New post went in. First\n"
+	.string "notch's already on it. Not mine. A\l"
+	.string "LAPRAS off the north point, the mate\l"
+	.string "swears.\p"
+	.string "I let him cut it. Someone has to start\n"
+	.string "the next count.$"
+
+ParcelIsle_FerryCaptain_Text_5:
+# 302 "data/maps/ParcelIsle/scripts.pory"
 	.string "CAPTAIN: Passage out, RANGER? Any\n"
 	.string "time. Any weather. You've paid for the\l"
 	.string "ferry for life, the harbour office says.\l"
 	.string "I'd have taken you anyway.$"
-
-ParcelIsle_FerryCaptain_Text_5:
-# 300 "data/maps/ParcelIsle/scripts.pory"
-	.string "CAPTAIN: Passage out? Not in this cold,\n"
-	.string "not without a reason.\p"
-	.string "Come back when the RANGERS have sent\n"
-	.string "you up the mountains. You'll know when.$"
 
 ParcelIsle_FerryCaptain_Text_6:
 # 304 "data/maps/ParcelIsle/scripts.pory"
