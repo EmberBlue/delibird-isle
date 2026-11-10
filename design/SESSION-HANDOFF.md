@@ -94,13 +94,13 @@ warp and connection walked by `sweep.py` and the map-127 engine fix,
 twenty-eight documents on the desks, eighty-one Skaldmere dex entries, five
 remembered choices (Hollis's name, the Mahogany correction, the meeting,
 the blanket, the tea) and the examinations at every leader, forty-seven
-overheard conversations in the towns and on the routes, MAREN of the
+overheard conversations in the towns and on the routes, INGER of the
 Courier at seven doors and her front page in every Center, nine more side
 quests (thirty-three), Rin across the arc and the unchosen after the
 hearing, three books (Heron's field guide, the Corps handbook, the harbour
 almanac), the epilogue seen closer, and the post-game second readings
 (Ilex's red cloth). ~74,000 hand-written words, 686 objects, 336 readable
-events, 102 maps, 1,071 battles.
+events, 102 maps, 1,071 battles. The certification spine was fought through headlessly (every leader, every signing, the confession, the boardroom).
 
 ## THE recipe (every zone was built this way; keep using it)
 
@@ -259,9 +259,9 @@ Leader scenes need `A:300`-`A:350`, Vane `A:650`. The probe commands are in
 ## Known-open (honest list)
 
 - **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816
-  rematch tiers) against the 1,000 target -- met; **~74,000 hand-written
+  rematch tiers) against the 1,000 target -- met; **~74,900 hand-written
   words** (every `_R2`–`_R5`/`_FirstWin` rematch script excluded; ~94k
-  with them; 686 objects, 336 readable/hidden events; 33 side quests; 47 overheard conversations) against 100k -- the
+  with them; 686 objects, 344 readable/hidden events; 33 side quests; 47 overheard conversations) against 100k -- the
   remaining gap. Recount with the snippet in §13's 2026-11-10 entries
   (script bodies minus the rematch scripts, plus the notebook's C strings
   and the 81 dex entries). The rematch tiers

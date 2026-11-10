@@ -6176,7 +6176,7 @@ ParcelHighlands_PairCentre_Text_13:
 
 ParcelHighlands_Stringer_Text_0:
 # 1967 "data/maps/ParcelHighlands/scripts.pory"
-	.string "MAREN: They've pinned the slips up in\n"
+	.string "INGER: They've pinned the slips up in\n"
 	.string "the centre. I photographed the child's.\l"
 	.string "The ranger read the stakes out loud and\l"
 	.string "mum cried.\p"
@@ -6186,7 +6186,7 @@ ParcelHighlands_Stringer_Text_0:
 
 ParcelHighlands_Stringer_Text_1:
 # 1969 "data/maps/ParcelHighlands/scripts.pory"
-	.string "MAREN: The suggestion box. I asked the\n"
+	.string "INGER: The suggestion box. I asked the\n"
 	.string "host to open it for me. He said the\l"
 	.string "FOUNDATION empties it.\p"
 	.string "I said: then that's my story. He went\n"
@@ -6195,7 +6195,7 @@ ParcelHighlands_Stringer_Text_1:
 
 ParcelHighlands_Stringer_Text_2:
 # 1971 "data/maps/ParcelHighlands/scripts.pory"
-	.string "MAREN: The slide. I came up for the\n"
+	.string "INGER: The slide. I came up for the\n"
 	.string "slide. 'Weather event,' the Board says.\p"
 	.string "I've written weather event three times\n"
 	.string "in two years. I'm starting to feel like a\l"

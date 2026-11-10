@@ -1047,19 +1047,19 @@ script ParcelIsle_PairFreight {
     end
 }
 
-// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+// --- the stringer (2026-11-10): INGER, Skaldmere Courier ---
 
 script ParcelIsle_Stringer {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("MAREN: The Survey's in the lab now. I covered the move. Thirty-one years of red cloth going in through the door the company's van came out of at two in the morning.\pBest picture I've taken. Front page. Logistics did not comment, and I printed that they did not."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The Survey's in the lab now. I covered the move. Thirty-one years of red cloth going in through the door the company's van came out of at two in the morning.\pBest picture I've taken. Front page. Logistics did not comment, and I printed that they did not."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
-        msgbox(format("MAREN: FOREST, I heard. From a bench you hear things. The lab on the front is still boarded. The police call it burglary. I call it burglary in print, and we both know the word's wrong.\pWhen you've got the right word, I'm here. I'm always here. It's a very good bench."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: FOREST, I heard. From a bench you hear things. The lab on the front is still boarded. The police call it burglary. I call it burglary in print, and we both know the word's wrong.\pWhen you've got the right word, I'm here. I'm always here. It's a very good bench."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("MAREN: Skaldmere Courier. Dock desk, which is this bench. You came off the morning ferry with a bag and no partner. That's a story or it's nothing. Which?"), MSGBOX_DEFAULT)
+        msgbox(format("INGER: Skaldmere Courier. Dock desk, which is this bench. You came off the morning ferry with a bag and no partner. That's a story or it's nothing. Which?"), MSGBOX_DEFAULT)
         msgbox(format("{PLAYER}: Nothing yet."), MSGBOX_DEFAULT)
-        msgbox(format("MAREN: Good answer. Most people give me the other one and regret it by the second ferry. Come back when it's something."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: Good answer. Most people give me the other one and regret it by the second ferry. Come back when it's something."), MSGBOX_DEFAULT)
     }
     release
     end

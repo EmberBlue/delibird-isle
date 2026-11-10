@@ -40,3 +40,10 @@ script ParcelRiverDepot_Board {
     msgbox(format("PRICES, POSTED. Trout: by weight, Foundation rate. Greens: Foundation rate. Eggs: Foundation rate.\pFERTILISER, FOUNDATION BLEND: credit terms available. The crest on the poster is the crest on the Board's notice."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelRiverDepot_WeighBook {
+    msgbox(format("The buyer's weigh book, open on the counter. Trout, by the basket, by the week.\pThe weights go down the page the way the river's gauge goes down the ford: a little, then a little, then a line where the buyer started weighing in halves because wholes looked too bare.\pThe FOUNDATION RATE column never moves. It is the only straight line in the book, and the farmers are paid off it, and they know."), MSGBOX_SIGN)
+    end
+}

@@ -485,7 +485,7 @@ quest is built, how the peer works) before they are asked six more times.
   the secretary and the accountant (line forty, hospitality), the
   Station's technician and keeper (the brackets are the series), the cook
   and the cadet (the ones who read the yard walk slower). ~3,000 words,
-  36 objects (`pairs.py`). And **MAREN of the Skaldmere Courier**, a
+  36 objects (`pairs.py`). And **INGER of the Skaldmere Courier**, a
   stringer whose desk is a bench: outside the lodging, the HQ, the
   Tidewater office, the relief office, the hall, the centre, the hearing
   room, with two or three states each; at Reedmere she asks for one
@@ -591,4 +591,23 @@ quest is built, how the peer works) before they are asked six more times.
   forty-two in the marsh, in your hand). All seven back to Ilex earns the
   Survey's red cloth (`ITEM_RED_SCARF`): "tie it to something that needs
   reading." The notebook counts them (`FLAG_SKALD_SECOND_*`).
+- **2026-11-10 — the spine fought through; six more papers; the lab after;
+  the stringer's name.** The probe hook takes a party now (`--party`, a
+  level-100 partner with ICE BEAM forced into slot 1) and two vars
+  (`--var`), so for the first time the whole certification ladder was
+  *played* headlessly and every flag read back: eight leaders (exam,
+  battle, badge, field-craft), five signings (the Watershed one only after
+  marking the sight trainer TRYGVE defeated -- his line of sight crosses
+  the bank where Ilex stands, which is a probe lesson, not a bug), Heron's
+  confession through the Hollis choice, her battle and the final survey,
+  and Cordelia's boardroom (`tools/skald/spine.sh`). Six more documents:
+  the depot's weigh book (the Foundation rate is the only straight line),
+  the Station's three scenarios and the pencilled fourth (WHAT HAPPENED),
+  the boatyard's order book (REPAIRS ONLY, for now), the chandler's credit
+  ledger (two lines marked PAID that nobody paid), Grette's net gauge (a
+  size larger than the fish), the union's membership roll (whoever the sea
+  has taken something from). The erased lab has its after-the-hearing
+  state; the adit its pump plate; Rin's hut its register. The stringer is
+  **INGER** (MAREN was already Harland's household; SOLVEIG a Cliffs
+  trainer). ~74,900 hand-written words, 344 readable events.
 

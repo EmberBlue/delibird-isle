@@ -6257,7 +6257,7 @@ ParcelCoast_PairOffice_Text_12:
 
 ParcelCoast_Stringer_Text_0:
 # 1991 "data/maps/ParcelCoast/scripts.pory"
-	.string "MAREN: I ran your Reedmere sentence\n"
+	.string "INGER: I ran your Reedmere sentence\n"
 	.string "again, at the top, over the record of\l"
 	.string "the sitting. The water is a living\l"
 	.string "corridor.\p"
@@ -6267,7 +6267,7 @@ ParcelCoast_Stringer_Text_0:
 
 ParcelCoast_Stringer_Text_1:
 # 1993 "data/maps/ParcelCoast/scripts.pory"
-	.string "MAREN: 'The ranger declined to\n"
+	.string "INGER: 'The ranger declined to\n"
 	.string "comment.' I ran it again at the top, over\l"
 	.string "the record of the sitting.\p"
 	.string "It read better than every comment in\n"
@@ -6277,7 +6277,7 @@ ParcelCoast_Stringer_Text_1:
 
 ParcelCoast_Stringer_Text_2:
 # 1995 "data/maps/ParcelCoast/scripts.pory"
-	.string "MAREN: Item seven took the whole\n"
+	.string "INGER: Item seven took the whole\n"
 	.string "afternoon. I wrote it as it happened. I\l"
 	.string "don't think I've written anything as it\l"
 	.string "happened before. Everything else was\l"
@@ -6287,7 +6287,7 @@ ParcelCoast_Stringer_Text_2:
 
 ParcelCoast_Stringer_Text_3:
 # 1997 "data/maps/ParcelCoast/scripts.pory"
-	.string "MAREN: The sitting's coming. Item seven\n"
+	.string "INGER: The sitting's coming. Item seven\n"
 	.string "is one line, as every year. I'll be in the\l"
 	.string "back row, as every year.\p"
 	.string "If item seven is more than one line this\n"
@@ -6297,7 +6297,7 @@ ParcelCoast_Stringer_Text_3:
 
 ParcelCoast_Stringer_Text_4:
 # 1999 "data/maps/ParcelCoast/scripts.pory"
-	.string "MAREN: Forty jobs, the Commissioner\n"
+	.string "INGER: Forty jobs, the Commissioner\n"
 	.string "says. I've counted thirty-one. The\l"
 	.string "other nine are 'in the pipeline'.\p"
 	.string "I asked which pipeline. He laughed.\n"

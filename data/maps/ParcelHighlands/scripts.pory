@@ -1958,17 +1958,17 @@ script ParcelHighlands_PairCentre {
     end
 }
 
-// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+// --- the stringer (2026-11-10): INGER, Skaldmere Courier ---
 
 script ParcelHighlands_Stringer {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("MAREN: They've pinned the slips up in the centre. I photographed the child's. The ranger read the stakes out loud and mum cried.\pMy editor cut it. I put it back. He cut it again. It's in. We're not speaking, and the paper's never sold better."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: They've pinned the slips up in the centre. I photographed the child's. The ranger read the stakes out loud and mum cried.\pMy editor cut it. I put it back. He cut it again. It's in. We're not speaking, and the paper's never sold better."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
-        msgbox(format("MAREN: The suggestion box. I asked the host to open it for me. He said the FOUNDATION empties it.\pI said: then that's my story. He went white. Good man. Wrong employer. It's a common condition up here."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The suggestion box. I asked the host to open it for me. He said the FOUNDATION empties it.\pI said: then that's my story. He went white. Good man. Wrong employer. It's a common condition up here."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("MAREN: The slide. I came up for the slide. 'Weather event,' the Board says.\pI've written weather event three times in two years. I'm starting to feel like a forecaster. The drill went in two years ago; I'm not allowed to put those two sentences next to each other. So I put them one paragraph apart."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The slide. I came up for the slide. 'Weather event,' the Board says.\pI've written weather event three times in two years. I'm starting to feel like a forecaster. The drill went in two years ago; I'm not allowed to put those two sentences next to each other. So I put them one paragraph apart."), MSGBOX_DEFAULT)
     }
     release
     end

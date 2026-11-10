@@ -6462,7 +6462,7 @@ ParcelFloodbasin_PairBoat_Text_13:
 
 ParcelFloodbasin_Stringer_Text_0:
 # 2058 "data/maps/ParcelFloodbasin/scripts.pory"
-	.string "MAREN: The works are fenced and\n"
+	.string "INGER: The works are fenced and\n"
 	.string "there's a man inside the fence with a\l"
 	.string "pump. I ran a photograph of the pump.\p"
 	.string "A pump is not a story. In Leirvik, after\n"
@@ -6471,7 +6471,7 @@ ParcelFloodbasin_Stringer_Text_0:
 
 ParcelFloodbasin_Stringer_Text_1:
 # 2060 "data/maps/ParcelFloodbasin/scripts.pory"
-	.string "MAREN: Your stake by the hamlet sign\n"
+	.string "INGER: Your stake by the hamlet sign\n"
 	.string "made the paper. Not the words -- the\l"
 	.string "photograph. People standing in a row\l"
 	.string "reading a stick.\p"
@@ -6483,7 +6483,7 @@ ParcelFloodbasin_Stringer_Text_1:
 
 ParcelFloodbasin_Stringer_Text_2:
 # 2062 "data/maps/ParcelFloodbasin/scripts.pory"
-	.string "MAREN: Third flood, third relief line,\n"
+	.string "INGER: Third flood, third relief line,\n"
 	.string "third photograph of the Commissioner\l"
 	.string "handing a child a blanket. I've got a\l"
 	.string "drawer of them.\p"

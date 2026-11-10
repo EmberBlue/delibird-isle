@@ -68,6 +68,12 @@ ParcelRiverDepot_Board::
 	end
 
 
+ParcelRiverDepot_WeighBook::
+# 47 "data/maps/ParcelRiverDepot/scripts.pory"
+	msgbox ParcelRiverDepot_WeighBook_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverDepot_Buyer_Text_0:
 # 9 "data/maps/ParcelRiverDepot/scripts.pory"
 	.string "BUYER: Produce by weight, same day, no\n"
@@ -131,3 +137,18 @@ ParcelRiverDepot_Board_Text_0:
 	.string "terms available. The crest on the\l"
 	.string "poster is the crest on the Board's\l"
 	.string "notice.$"
+
+ParcelRiverDepot_WeighBook_Text_0:
+# 47 "data/maps/ParcelRiverDepot/scripts.pory"
+	.string "The buyer's weigh book, open on the\n"
+	.string "counter. Trout, by the basket, by the\l"
+	.string "week.\p"
+	.string "The weights go down the page the way\n"
+	.string "the river's gauge goes down the ford: a\l"
+	.string "little, then a little, then a line where\l"
+	.string "the buyer started weighing in halves\l"
+	.string "because wholes looked too bare.\p"
+	.string "The FOUNDATION RATE column never\n"
+	.string "moves. It is the only straight line in\l"
+	.string "the book, and the farmers are paid off\l"
+	.string "it, and they know.$"

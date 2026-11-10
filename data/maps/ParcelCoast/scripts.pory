@@ -1981,22 +1981,22 @@ script ParcelCoast_PairOffice {
     end
 }
 
-// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+// --- the stringer (2026-11-10): INGER, Skaldmere Courier ---
 
 script ParcelCoast_Stringer {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         if (flag(FLAG_SKALD_CH_QUOTE)) {
-            msgbox(format("MAREN: I ran your Reedmere sentence again, at the top, over the record of the sitting. The water is a living corridor.\pSomeone else's words, my byline. That's the job. It's the first time I've been glad of it."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: I ran your Reedmere sentence again, at the top, over the record of the sitting. The water is a living corridor.\pSomeone else's words, my byline. That's the job. It's the first time I've been glad of it."), MSGBOX_DEFAULT)
         } else {
-            msgbox(format("MAREN: 'The ranger declined to comment.' I ran it again at the top, over the record of the sitting.\pIt read better than every comment in the room. Including mine. I've started to think declining is a kind of sentence."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: 'The ranger declined to comment.' I ran it again at the top, over the record of the sitting.\pIt read better than every comment in the room. Including mine. I've started to think declining is a kind of sentence."), MSGBOX_DEFAULT)
         }
-        msgbox(format("MAREN: Item seven took the whole afternoon. I wrote it as it happened. I don't think I've written anything as it happened before. Everything else was after.\pGo on. You've got a region. I've got a deadline, for once."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: Item seven took the whole afternoon. I wrote it as it happened. I don't think I've written anything as it happened before. Everything else was after.\pGo on. You've got a region. I've got a deadline, for once."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
-        msgbox(format("MAREN: The sitting's coming. Item seven is one line, as every year. I'll be in the back row, as every year.\pIf item seven is more than one line this year, I'll know who did that. I'd like to be able to print the name. Think about it."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The sitting's coming. Item seven is one line, as every year. I'll be in the back row, as every year.\pIf item seven is more than one line this year, I'll know who did that. I'd like to be able to print the name. Think about it."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("MAREN: Forty jobs, the Commissioner says. I've counted thirty-one. The other nine are 'in the pipeline'.\pI asked which pipeline. He laughed. People laugh at me a lot in this town. It means I asked the right thing."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: Forty jobs, the Commissioner says. I've counted thirty-one. The other nine are 'in the pipeline'.\pI asked which pipeline. He laughed. People laugh at me a lot in this town. It means I asked the right thing."), MSGBOX_DEFAULT)
     }
     release
     end

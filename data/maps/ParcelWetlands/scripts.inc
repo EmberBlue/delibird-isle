@@ -6082,7 +6082,7 @@ ParcelWetlands_PairTurf_Text_11:
 
 ParcelWetlands_Stringer_Text_0:
 # 1998 "data/maps/ParcelWetlands/scripts.pory"
-	.string "MAREN: They pulled the pipe this\n"
+	.string "INGER: They pulled the pipe this\n"
 	.string "morning. I was here at six. So was\l"
 	.string "HARLAND.\p"
 	.string "He didn't say a word for three hours and\n"
@@ -6092,7 +6092,7 @@ ParcelWetlands_Stringer_Text_0:
 
 ParcelWetlands_Stringer_Text_1:
 # 2000 "data/maps/ParcelWetlands/scripts.pory"
-	.string "MAREN: You read the pipe. The manifest.\n"
+	.string "INGER: You read the pipe. The manifest.\n"
 	.string "The residue. HARLAND's gone quiet and\l"
 	.string "the new office has gone loud, which is\l"
 	.string "how you know who read what.\p"
@@ -6101,7 +6101,7 @@ ParcelWetlands_Stringer_Text_1:
 
 ParcelWetlands_Stringer_Text_2:
 # 2001 "data/maps/ParcelWetlands/scripts.pory"
-	.string "Give MAREN a sentence?$"
+	.string "Give INGER a sentence?$"
 
 ParcelWetlands_Stringer_Text_3:
 # 2003 "data/maps/ParcelWetlands/scripts.pory"
@@ -6111,7 +6111,7 @@ ParcelWetlands_Stringer_Text_3:
 
 ParcelWetlands_Stringer_Text_4:
 # 2004 "data/maps/ParcelWetlands/scripts.pory"
-	.string "MAREN: …That's two sentences. I'll run\n"
+	.string "INGER: …That's two sentences. I'll run\n"
 	.string "both. I'll run them exactly.\p"
 	.string "Nobody gives me exact. Thank you.$"
 
@@ -6122,7 +6122,7 @@ ParcelWetlands_Stringer_Text_5:
 
 ParcelWetlands_Stringer_Text_6:
 # 2008 "data/maps/ParcelWetlands/scripts.pory"
-	.string "MAREN: Everyone says read the survey.\n"
+	.string "INGER: Everyone says read the survey.\n"
 	.string "Nobody reads the survey. That's what\l"
 	.string "I'm for.\p"
 	.string "Fine. 'Declined to comment.' It reads\n"
@@ -6131,7 +6131,7 @@ ParcelWetlands_Stringer_Text_6:
 
 ParcelWetlands_Stringer_Text_7:
 # 2011 "data/maps/ParcelWetlands/scripts.pory"
-	.string "MAREN: Ribbon-cutting. Five gauges,\n"
+	.string "INGER: Ribbon-cutting. Five gauges,\n"
 	.string "one speech, refreshments courtesy of\l"
 	.string "Mereholt Coastal. I ate the\l"
 	.string "refreshments; the paper doesn't pay me\l"

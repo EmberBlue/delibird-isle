@@ -2011,21 +2011,21 @@ script ParcelRiver_PairFord {
     end
 }
 
-// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+// --- the stringer (2026-11-10): INGER, Skaldmere Courier ---
 
 script ParcelRiver_Stringer {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("MAREN: The Board publishes two columns now. Old datum, new datum. I ran them side by side without a word of comment.\pBest thing I never wrote. The miller framed it next to the Board's one-paragraph reply. He's got a wall going."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The Board publishes two columns now. Old datum, new datum. I ran them side by side without a word of comment.\pBest thing I never wrote. The miller framed it next to the Board's one-paragraph reply. He's got a wall going."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
         if (flag(FLAG_SKALD_CH_SPOKE)) {
-            msgbox(format("MAREN: The meeting ran as half a page. Including the ranger who stood up at the back and said refuse the straightened mile.\pI quoted you from memory. It was close. If it wasn't, you should have given me the sentence at Reedmere."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: The meeting ran as half a page. Including the ranger who stood up at the back and said refuse the straightened mile.\pI quoted you from memory. It was close. If it wasn't, you should have given me the sentence at Reedmere."), MSGBOX_DEFAULT)
         } else {
-            msgbox(format("MAREN: The meeting ran as half a page. The ranger stood at the back and wrote. I put that in.\pStanding at the back writing is a position too. ILEX has held it for thirty years. Look where it's got the Board."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: The meeting ran as half a page. The ranger stood at the back and wrote. I put that in.\pStanding at the back writing is a position too. ILEX has held it for thirty years. Look where it's got the Board."), MSGBOX_DEFAULT)
         }
     } else {
-        msgbox(format("MAREN: The water meeting's tonight. Forty-one ratepayers and a Board that won't name a year.\pI asked SLUICE which year. SLUICE said ask the Board. I asked the Board. The Board doesn't comment on individual readings. I've written that sentence so often I could set it in type myself."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The water meeting's tonight. Forty-one ratepayers and a Board that won't name a year.\pI asked SLUICE which year. SLUICE said ask the Board. I asked the Board. The Board doesn't comment on individual readings. I've written that sentence so often I could set it in type myself."), MSGBOX_DEFAULT)
     }
     release
     end

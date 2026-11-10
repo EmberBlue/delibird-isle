@@ -70,3 +70,10 @@ script ParcelWeatherInstitute1F_Board {
     release
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelWeatherInstitute1F_Scenarios {
+    msgbox(format("The model, pinned to the wall in three sheets. SCENARIO A: TARGETED INTERVENTION. SCENARIO B: ENHANCED INTERVENTION. SCENARIO C: FULL MANAGEMENT.\pEvery curve on every sheet ends in the same word: MANAGEABLE. Someone has pencilled a fourth sheet on the back of a requisition form and pinned it under the three. SCENARIO D: WHAT HAPPENED. The curve is the over-the-fence log, copied out. It does not end in a word. It ends at this month, because that is where the pencil stopped."), MSGBOX_SIGN)
+    end
+}

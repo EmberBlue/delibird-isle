@@ -106,6 +106,12 @@ ParcelIsleChandlery_ReadLamps::
 	end
 
 
+ParcelIsleChandlery_Credit::
+# 68 "data/maps/ParcelIsleChandlery/scripts.pory"
+	msgbox ParcelIsleChandlery_Credit_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleChandlery_Kit_Text_0:
 # 10 "data/maps/ParcelIsleChandlery/scripts.pory"
 	.string "KIT: I've sold more rope this week than\n"
@@ -167,3 +173,19 @@ ParcelIsleChandlery_ReadLamps_Text_0:
 	.string "A crate of fog lamps. A card on it: THE\n"
 	.string "BOAT REMEMBERS US WHEN IT REMEMBERS\l"
 	.string "US.$"
+
+ParcelIsleChandlery_Credit_Text_0:
+# 68 "data/maps/ParcelIsleChandlery/scripts.pory"
+	.string "The credit ledger, kept where the\n"
+	.string "counter hides it. Who owes, for what,\l"
+	.string "since when.\p"
+	.string "The since-whens cluster in one year,\n"
+	.string "the year the dredge started working\l"
+	.string "the Shoals. Rope, oil, hooks, a lantern.\l"
+	.string "The chandler has not charged interest\l"
+	.string "on any of it and has written PAID\l"
+	.string "against two lines in a different ink,\l"
+	.string "recently.\p"
+	.string "The two lines are the oysterman's.\n"
+	.string "Nobody paid them. The chandler decided\l"
+	.string "they were.$"

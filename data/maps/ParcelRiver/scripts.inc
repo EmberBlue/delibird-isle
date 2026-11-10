@@ -6366,7 +6366,7 @@ ParcelRiver_PairFord_Text_12:
 
 ParcelRiver_Stringer_Text_0:
 # 2020 "data/maps/ParcelRiver/scripts.pory"
-	.string "MAREN: The Board publishes two columns\n"
+	.string "INGER: The Board publishes two columns\n"
 	.string "now. Old datum, new datum. I ran them\l"
 	.string "side by side without a word of comment.\p"
 	.string "Best thing I never wrote. The miller\n"
@@ -6376,7 +6376,7 @@ ParcelRiver_Stringer_Text_0:
 
 ParcelRiver_Stringer_Text_1:
 # 2023 "data/maps/ParcelRiver/scripts.pory"
-	.string "MAREN: The meeting ran as half a page.\n"
+	.string "INGER: The meeting ran as half a page.\n"
 	.string "Including the ranger who stood up at\l"
 	.string "the back and said refuse the\l"
 	.string "straightened mile.\p"
@@ -6386,7 +6386,7 @@ ParcelRiver_Stringer_Text_1:
 
 ParcelRiver_Stringer_Text_2:
 # 2025 "data/maps/ParcelRiver/scripts.pory"
-	.string "MAREN: The meeting ran as half a page.\n"
+	.string "INGER: The meeting ran as half a page.\n"
 	.string "The ranger stood at the back and wrote.\l"
 	.string "I put that in.\p"
 	.string "Standing at the back writing is a\n"
@@ -6396,7 +6396,7 @@ ParcelRiver_Stringer_Text_2:
 
 ParcelRiver_Stringer_Text_3:
 # 2028 "data/maps/ParcelRiver/scripts.pory"
-	.string "MAREN: The water meeting's tonight.\n"
+	.string "INGER: The water meeting's tonight.\n"
 	.string "Forty-one ratepayers and a Board that\l"
 	.string "won't name a year.\p"
 	.string "I asked SLUICE which year. SLUICE said\n"

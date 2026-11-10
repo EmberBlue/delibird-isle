@@ -2859,7 +2859,7 @@ ParcelFernwick_PairPond_Text_12:
 
 ParcelFernwick_Stringer_Text_0:
 # 915 "data/maps/ParcelFernwick/scripts.pory"
-	.string "MAREN: The hearing is on the front\n"
+	.string "INGER: The hearing is on the front\n"
 	.string "page. My piece above the fold, the\l"
 	.string "Commissioner's reply below it. Nine\l"
 	.string "years I've had that upside down.\p"
@@ -2870,14 +2870,14 @@ ParcelFernwick_Stringer_Text_0:
 
 ParcelFernwick_Stringer_Text_1:
 # 917 "data/maps/ParcelFernwick/scripts.pory"
-	.string "MAREN: The Poisoned Waters piece ran.\n"
+	.string "INGER: The Poisoned Waters piece ran.\n"
 	.string "Page four. The Commissioner's reply ran\l"
 	.string "page two. That's the ratio in this\l"
 	.string "region: his two to my four.$"
 
 ParcelFernwick_Stringer_Text_2:
 # 919 "data/maps/ParcelFernwick/scripts.pory"
-	.string "MAREN: Your sentence is in it, under\n"
+	.string "INGER: Your sentence is in it, under\n"
 	.string "your name. The editor wanted it cut. I\l"
 	.string "said the ranger said it on the record,\l"
 	.string "and the record is the one thing he can't\l"
@@ -2885,14 +2885,14 @@ ParcelFernwick_Stringer_Text_2:
 
 ParcelFernwick_Stringer_Text_3:
 # 921 "data/maps/ParcelFernwick/scripts.pory"
-	.string "MAREN: You're in it without your name,\n"
+	.string "INGER: You're in it without your name,\n"
 	.string "because you didn't give me one. 'A\l"
 	.string "ranger read the manifest.' Passive\l"
 	.string "voice. I hate it. It's what you left me.$"
 
 ParcelFernwick_Stringer_Text_4:
 # 924 "data/maps/ParcelFernwick/scripts.pory"
-	.string "MAREN: The HQ. I'm not allowed in. HALE\n"
+	.string "INGER: The HQ. I'm not allowed in. HALE\n"
 	.string "says the Corps doesn't talk to the\l"
 	.string "press; it talks to the record.\p"
 	.string "I told him the record doesn't have a\n"

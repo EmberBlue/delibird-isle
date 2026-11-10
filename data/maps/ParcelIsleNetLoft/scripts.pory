@@ -40,3 +40,10 @@ script ParcelIsleNetLoft_ReadTally {
     msgbox(format("A tally of nets mended, chalked on the side of the cupboard. The marks get closer together each year.\pMore holes, she said."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelIsleNetLoft_Gauge {
+    msgbox(format("The net gauges hang on a nail, wooden slats with a mesh size cut into each. The legal minimum, by year, is burned into the wall beside them, and it climbs: the Council lets the holes get bigger so the small fish get through.\pGRETTE's own gauge hangs lowest and has not changed. It is a size smaller than the law and a size larger than the fish. She mends to it anyway. Somebody has to mend to the fish."), MSGBOX_SIGN)
+    end
+}

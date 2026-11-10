@@ -3353,7 +3353,7 @@ ParcelIsle_PairFreight_Text_11:
 
 ParcelIsle_Stringer_Text_0:
 # 1056 "data/maps/ParcelIsle/scripts.pory"
-	.string "MAREN: The Survey's in the lab now. I\n"
+	.string "INGER: The Survey's in the lab now. I\n"
 	.string "covered the move. Thirty-one years of\l"
 	.string "red cloth going in through the door the\l"
 	.string "company's van came out of at two in the\l"
@@ -3364,7 +3364,7 @@ ParcelIsle_Stringer_Text_0:
 
 ParcelIsle_Stringer_Text_1:
 # 1058 "data/maps/ParcelIsle/scripts.pory"
-	.string "MAREN: FOREST, I heard. From a bench\n"
+	.string "INGER: FOREST, I heard. From a bench\n"
 	.string "you hear things. The lab on the front is\l"
 	.string "still boarded. The police call it\l"
 	.string "burglary. I call it burglary in print, and\l"
@@ -3374,7 +3374,7 @@ ParcelIsle_Stringer_Text_1:
 
 ParcelIsle_Stringer_Text_2:
 # 1060 "data/maps/ParcelIsle/scripts.pory"
-	.string "MAREN: Skaldmere Courier. Dock desk,\n"
+	.string "INGER: Skaldmere Courier. Dock desk,\n"
 	.string "which is this bench. You came off the\l"
 	.string "morning ferry with a bag and no partner.\l"
 	.string "That's a story or it's nothing. Which?$"
@@ -3385,7 +3385,7 @@ ParcelIsle_Stringer_Text_3:
 
 ParcelIsle_Stringer_Text_4:
 # 1062 "data/maps/ParcelIsle/scripts.pory"
-	.string "MAREN: Good answer. Most people give me\n"
+	.string "INGER: Good answer. Most people give me\n"
 	.string "the other one and regret it by the\l"
 	.string "second ferry. Come back when it's\l"
 	.string "something.$"

@@ -66,6 +66,12 @@ ParcelIsleNetLoft_ReadTally::
 	end
 
 
+ParcelIsleNetLoft_Gauge::
+# 47 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	msgbox ParcelIsleNetLoft_Gauge_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsleNetLoft_Grette_Text_0:
 # 11 "data/maps/ParcelIsleNetLoft/scripts.pory"
 	.string "GRETTE: Sixty blankets. FOUNDATION\n"
@@ -117,3 +123,17 @@ ParcelIsleNetLoft_ReadTally_Text_0:
 	.string "side of the cupboard. The marks get\l"
 	.string "closer together each year.\p"
 	.string "More holes, she said.$"
+
+ParcelIsleNetLoft_Gauge_Text_0:
+# 47 "data/maps/ParcelIsleNetLoft/scripts.pory"
+	.string "The net gauges hang on a nail, wooden\n"
+	.string "slats with a mesh size cut into each.\l"
+	.string "The legal minimum, by year, is burned\l"
+	.string "into the wall beside them, and it climbs:\l"
+	.string "the Council lets the holes get bigger so\l"
+	.string "the small fish get through.\p"
+	.string "GRETTE's own gauge hangs lowest and\n"
+	.string "has not changed. It is a size smaller\l"
+	.string "than the law and a size larger than the\l"
+	.string "fish. She mends to it anyway. Somebody\l"
+	.string "has to mend to the fish.$"

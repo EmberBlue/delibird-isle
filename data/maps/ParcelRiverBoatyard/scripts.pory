@@ -64,3 +64,10 @@ script ParcelRiverBoatyard_ReadHulls {
     msgbox(format("Hulls on frames, waiting for repairs. Each has a tag with a name and a date. The dates are getting further apart."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelRiverBoatyard_OrderBook {
+    msgbox(format("The order book. Hulls built, by year, in the grandfather's hand and then the father's and then this one's.\pThe early pages are boats: a name, a length, a price, PAID. The middle pages are fewer boats and more names crossed through. The last page has no boats on it. It says REPAIRS ONLY and a date, and under that, in a hand that pressed hard: for now."), MSGBOX_SIGN)
+    end
+}

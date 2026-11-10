@@ -906,22 +906,22 @@ script ParcelFernwick_PairPond {
     end
 }
 
-// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+// --- the stringer (2026-11-10): INGER, Skaldmere Courier ---
 
 script ParcelFernwick_Stringer {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("MAREN: The hearing is on the front page. My piece above the fold, the Commissioner's reply below it. Nine years I've had that upside down.\pHALE still won't talk to me. He sent a note. It said: the record has a circulation now. Thank you. I've framed it. It's the only review I've had."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The hearing is on the front page. My piece above the fold, the Commissioner's reply below it. Nine years I've had that upside down.\pHALE still won't talk to me. He sent a note. It said: the record has a circulation now. Thank you. I've framed it. It's the only review I've had."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
-        msgbox(format("MAREN: The Poisoned Waters piece ran. Page four. The Commissioner's reply ran page two. That's the ratio in this region: his two to my four."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The Poisoned Waters piece ran. Page four. The Commissioner's reply ran page two. That's the ratio in this region: his two to my four."), MSGBOX_DEFAULT)
         if (flag(FLAG_SKALD_CH_QUOTE)) {
-            msgbox(format("MAREN: Your sentence is in it, under your name. The editor wanted it cut. I said the ranger said it on the record, and the record is the one thing he can't cut. He didn't know what I meant. He will."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: Your sentence is in it, under your name. The editor wanted it cut. I said the ranger said it on the record, and the record is the one thing he can't cut. He didn't know what I meant. He will."), MSGBOX_DEFAULT)
         } else {
-            msgbox(format("MAREN: You're in it without your name, because you didn't give me one. 'A ranger read the manifest.' Passive voice. I hate it. It's what you left me."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: You're in it without your name, because you didn't give me one. 'A ranger read the manifest.' Passive voice. I hate it. It's what you left me."), MSGBOX_DEFAULT)
         }
     } else {
-        msgbox(format("MAREN: The HQ. I'm not allowed in. HALE says the Corps doesn't talk to the press; it talks to the record.\pI told him the record doesn't have a circulation. He said that's its one advantage. I've been trying to think of an answer for six years."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The HQ. I'm not allowed in. HALE says the Corps doesn't talk to the press; it talks to the record.\pI told him the record doesn't have a circulation. He said that's its one advantage. I've been trying to think of an answer for six years."), MSGBOX_DEFAULT)
     }
     release
     end

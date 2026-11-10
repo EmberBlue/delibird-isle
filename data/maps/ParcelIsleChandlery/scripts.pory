@@ -61,3 +61,10 @@ script ParcelIsleChandlery_ReadLamps {
     msgbox(format("A crate of fog lamps. A card on it: THE BOAT REMEMBERS US WHEN IT REMEMBERS US."), MSGBOX_SIGN)
     end
 }
+
+// --- papers (2026-11-10): the documents on the desks ---
+
+script ParcelIsleChandlery_Credit {
+    msgbox(format("The credit ledger, kept where the counter hides it. Who owes, for what, since when.\pThe since-whens cluster in one year, the year the dredge started working the Shoals. Rope, oil, hooks, a lantern. The chandler has not charged interest on any of it and has written PAID against two lines in a different ink, recently.\pThe two lines are the oysterman's. Nobody paid them. The chandler decided they were."), MSGBOX_SIGN)
+    end
+}

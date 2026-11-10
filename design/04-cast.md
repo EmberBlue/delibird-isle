@@ -307,7 +307,7 @@ in Hollis's office after the finale, having typed the response. Not a rival
 trope: the rhyme's fourth leg. Sprite: the white-coated rich boy; parties
 built on Electrike/Numel (the two meadow partners nobody picks).
 
-## Maren — the stringer (added 2026-11-10, built)
+## Inger — the stringer (added 2026-11-10, built)
 
 The Skaldmere Courier's correspondent for everywhere, whose desk is
 whichever bench is outside the building she is not allowed into: the

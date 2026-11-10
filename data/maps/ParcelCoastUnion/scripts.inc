@@ -109,6 +109,12 @@ ParcelCoastUnion_Carbons_2:
 	return
 
 
+ParcelCoastUnion_Roll::
+# 68 "data/maps/ParcelCoastUnion/scripts.pory"
+	msgbox ParcelCoastUnion_Roll_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastUnion_Chair_Text_0:
 # 8 "data/maps/ParcelCoastUnion/scripts.pory"
 	.string "CHAIR: The review grounds half the\n"
@@ -270,3 +276,20 @@ ParcelCoastUnion_Carbons_Text_2:
 	.string "fishers and asks for a reply.\p"
 	.string "Nobody has written a reply on any of\n"
 	.string "them.$"
+
+ParcelCoastUnion_Roll_Text_0:
+# 68 "data/maps/ParcelCoastUnion/scripts.pory"
+	.string "The membership roll. A name, a boat, a\n"
+	.string "year joined. Three columns, four\l"
+	.string "decades.\p"
+	.string "The boats are crossed through more\n"
+	.string "often than the names. A boat sold is\l"
+	.string "one line; a boat sold to the dredge\l"
+	.string "company is two lines and a word nobody\l"
+	.string "has rubbed out.\p"
+	.string "The newest line has a name and no boat.\n"
+	.string "The chair wrote it in himself: the\l"
+	.string "oysterman's grandson, who has never\l"
+	.string "fished. Members, the chair says, are\l"
+	.string "whoever the sea has taken something\l"
+	.string "from. The roll agrees.$"

@@ -63,3 +63,8 @@ script ParcelCoastUnion_Carbons {
         msgbox(format("A folder with a rubber band round it. CARBONS, in capitals, and under that, smaller: do not lend.\pBlue sheets, one a year, each headed OBJECTION. Eight. Between the third and the fifth there is a gap where a sheet should be.\pThe first reads: the dredge is taking the ground the fish spawn on and I object. The eighth is signed by nine fishers and asks for a reply.\pNobody has written a reply on any of them."), MSGBOX_SIGN)
     }
 }
+
+script ParcelCoastUnion_Roll {
+    msgbox(format("The membership roll. A name, a boat, a year joined. Three columns, four decades.\pThe boats are crossed through more often than the names. A boat sold is one line; a boat sold to the dredge company is two lines and a word nobody has rubbed out.\pThe newest line has a name and no boat. The chair wrote it in himself: the oysterman's grandson, who has never fished. Members, the chair says, are whoever the sea has taken something from. The roll agrees."), MSGBOX_SIGN)
+    end
+}

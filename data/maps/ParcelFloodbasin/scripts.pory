@@ -2049,17 +2049,17 @@ script ParcelFloodbasin_PairBoat {
     end
 }
 
-// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+// --- the stringer (2026-11-10): INGER, Skaldmere Courier ---
 
 script ParcelFloodbasin_Stringer {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("MAREN: The works are fenced and there's a man inside the fence with a pump. I ran a photograph of the pump.\pA pump is not a story. In Leirvik, after twenty-two years, a pump is the story. The editor didn't argue. He's from here."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: The works are fenced and there's a man inside the fence with a pump. I ran a photograph of the pump.\pA pump is not a story. In Leirvik, after twenty-two years, a pump is the story. The editor didn't argue. He's from here."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
-        msgbox(format("MAREN: Your stake by the hamlet sign made the paper. Not the words -- the photograph. People standing in a row reading a stick.\pIt did better than the Commissioner with the blanket. He noticed. He asked me which photographer. I said the same one as always. He didn't like that either."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: Your stake by the hamlet sign made the paper. Not the words -- the photograph. People standing in a row reading a stick.\pIt did better than the Commissioner with the blanket. He noticed. He asked me which photographer. I said the same one as always. He didn't like that either."), MSGBOX_DEFAULT)
     } else {
-        msgbox(format("MAREN: Third flood, third relief line, third photograph of the Commissioner handing a child a blanket. I've got a drawer of them.\pDifferent child each time. Same blanket. I've never been allowed to print that sentence. I'm saying it to you so it exists somewhere."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: Third flood, third relief line, third photograph of the Commissioner handing a child a blanket. I've got a drawer of them.\pDifferent child each time. Same blanket. I've never been allowed to print that sentence. I'm saying it to you so it exists somewhere."), MSGBOX_DEFAULT)
     }
     release
     end

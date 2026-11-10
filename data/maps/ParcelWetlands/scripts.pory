@@ -1989,26 +1989,26 @@ script ParcelWetlands_PairTurf {
     end
 }
 
-// --- the stringer (2026-11-10): MAREN, Skaldmere Courier ---
+// --- the stringer (2026-11-10): INGER, Skaldmere Courier ---
 
 script ParcelWetlands_Stringer {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("MAREN: They pulled the pipe this morning. I was here at six. So was HARLAND.\pHe didn't say a word for three hours and I quoted the silence. The editor let it stand. First time he's let anything of mine stand that wasn't a number."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: They pulled the pipe this morning. I was here at six. So was HARLAND.\pHe didn't say a word for three hours and I quoted the silence. The editor let it stand. First time he's let anything of mine stand that wasn't a number."), MSGBOX_DEFAULT)
     } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
-        msgbox(format("MAREN: You read the pipe. The manifest. The residue. HARLAND's gone quiet and the new office has gone loud, which is how you know who read what.\pOne sentence. On the record, under your name. Yes?"), MSGBOX_DEFAULT)
-        msgbox(format("Give MAREN a sentence?"), MSGBOX_YESNO)
+        msgbox(format("INGER: You read the pipe. The manifest. The residue. HARLAND's gone quiet and the new office has gone loud, which is how you know who read what.\pOne sentence. On the record, under your name. Yes?"), MSGBOX_DEFAULT)
+        msgbox(format("Give INGER a sentence?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) {
             msgbox(format("{PLAYER}: The water is a living corridor. Someone put a pipe in it on schedule."), MSGBOX_DEFAULT)
-            msgbox(format("MAREN: …That's two sentences. I'll run both. I'll run them exactly.\pNobody gives me exact. Thank you."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: …That's two sentences. I'll run both. I'll run them exactly.\pNobody gives me exact. Thank you."), MSGBOX_DEFAULT)
             setflag(FLAG_SKALD_CH_QUOTE)
         } else {
             msgbox(format("{PLAYER}: Not on the record. Read the survey."), MSGBOX_DEFAULT)
-            msgbox(format("MAREN: Everyone says read the survey. Nobody reads the survey. That's what I'm for.\pFine. 'Declined to comment.' It reads better than most comments. I'll give it its own line."), MSGBOX_DEFAULT)
+            msgbox(format("INGER: Everyone says read the survey. Nobody reads the survey. That's what I'm for.\pFine. 'Declined to comment.' It reads better than most comments. I'll give it its own line."), MSGBOX_DEFAULT)
         }
     } else {
-        msgbox(format("MAREN: Ribbon-cutting. Five gauges, one speech, refreshments courtesy of Mereholt Coastal. I ate the refreshments; the paper doesn't pay me enough not to.\pYou're the ranger HARLAND's shouting about. When you've read what's under the falls, I'd like a sentence. One. I'll be the one eating."), MSGBOX_DEFAULT)
+        msgbox(format("INGER: Ribbon-cutting. Five gauges, one speech, refreshments courtesy of Mereholt Coastal. I ate the refreshments; the paper doesn't pay me enough not to.\pYou're the ranger HARLAND's shouting about. When you've read what's under the falls, I'd like a sentence. One. I'll be the one eating."), MSGBOX_DEFAULT)
     }
     release
     end

@@ -132,6 +132,12 @@ ParcelWeatherInstitute1F_Board_3:
 	goto ParcelWeatherInstitute1F_Board_1
 
 
+ParcelWeatherInstitute1F_Scenarios::
+# 77 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	msgbox ParcelWeatherInstitute1F_Scenarios_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWeatherInstitute1F_Reception_Text_0:
 # 8 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
 	.string "RECEPTION: The director is upstairs. He\n"
@@ -220,3 +226,20 @@ ParcelWeatherInstitute1F_Board_Text_1:
 	.string "Rain up a third. Frost days down by half.\n"
 	.string "Nobody signed it. Written down, with the\l"
 	.string "date.$"
+
+ParcelWeatherInstitute1F_Scenarios_Text_0:
+# 77 "data/maps/ParcelWeatherInstitute1F/scripts.pory"
+	.string "The model, pinned to the wall in three\n"
+	.string "sheets. SCENARIO A: TARGETED\l"
+	.string "INTERVENTION. SCENARIO B: ENHANCED\l"
+	.string "INTERVENTION. SCENARIO C: FULL\l"
+	.string "MANAGEMENT.\p"
+	.string "Every curve on every sheet ends in the\n"
+	.string "same word: MANAGEABLE. Someone has\l"
+	.string "pencilled a fourth sheet on the back of\l"
+	.string "a requisition form and pinned it under\l"
+	.string "the three. SCENARIO D: WHAT HAPPENED.\l"
+	.string "The curve is the over-the-fence log,\l"
+	.string "copied out. It does not end in a word. It\l"
+	.string "ends at this month, because that is\l"
+	.string "where the pencil stopped.$"

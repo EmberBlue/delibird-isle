@@ -117,6 +117,12 @@ ParcelRiverBoatyard_ReadHulls::
 	end
 
 
+ParcelRiverBoatyard_OrderBook::
+# 71 "data/maps/ParcelRiverBoatyard/scripts.pory"
+	msgbox ParcelRiverBoatyard_OrderBook_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverBoatyard_Wright_Text_0:
 # 8 "data/maps/ParcelRiverBoatyard/scripts.pory"
 	.string "BOATWRIGHT: Seasoned. Twelve years\n"
@@ -220,3 +226,16 @@ ParcelRiverBoatyard_ReadHulls_Text_0:
 	.string "Hulls on frames, waiting for repairs.\n"
 	.string "Each has a tag with a name and a date.\l"
 	.string "The dates are getting further apart.$"
+
+ParcelRiverBoatyard_OrderBook_Text_0:
+# 71 "data/maps/ParcelRiverBoatyard/scripts.pory"
+	.string "The order book. Hulls built, by year, in\n"
+	.string "the grandfather's hand and then the\l"
+	.string "father's and then this one's.\p"
+	.string "The early pages are boats: a name, a\n"
+	.string "length, a price, PAID. The middle pages\l"
+	.string "are fewer boats and more names crossed\l"
+	.string "through. The last page has no boats on\l"
+	.string "it. It says REPAIRS ONLY and a date, and\l"
+	.string "under that, in a hand that pressed\l"
+	.string "hard: for now.$"
