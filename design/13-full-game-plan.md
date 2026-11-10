@@ -911,5 +911,11 @@ quest is built, how the peer works) before they are asked six more times.
   Corridor's DAG), plus 19 NPCs standing in water (the sick MAGIKARP, the
   flooded hamlet's residents) that need the wildcard 0 because the player
   reads them from a bridge. `event_elev.py` finds and fixes both; the
-  standard audit warns on them now.
+  standard audit warns on them now. And a scripting one the run caught
+  at the Wetland signing: a three-argument `trainerbattle_single` ends
+  its script when the fight starts, so KOLE's evidence mark (the sixth
+  Floodbasin reading), Cordelia's post-game flag and Dell's quest flag
+  only ran if the player came back and talked again. All three are
+  continuation scripts now (the fourth argument), as the exams already
+  were.
 
