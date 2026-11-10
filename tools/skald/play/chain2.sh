@@ -33,7 +33,7 @@ seg s18 s17 - --walk GOTO:10,30 --walk UP:0 --walk TALK:3 --walk WAIT:300 \
   --walk GOTO:14,15 --walk UP:0 --walk TALK:2 --walk WAIT:300 \
   --walk GOTO:22,16 --walk DOWN:0 --walk TALK:2 --walk WAIT:300 \
   --walk GOTO:18,16 --walk DOWN:0 --walk TALK:3 --walk WAIT:300 \
-  --walk GOTO:28,17 --walk DOWN:0 --walk TALK:12 --walk WAIT:600 \
+  --walk GOTO:28,17 --walk DOWN:0 --walk TALK:12 --walk WAIT:1800 \
   --check VAR_SKALDMERE_CH2_EVIDENCE --expect MAP_PARCEL_FLOODBASIN
 # BREEN's checkpoint at (19,1): step onto it from (20,1); exam, badge 3, HM06
 seg s19 s18 FLAG_BADGE03_GET --walk GOTO:20,1 --walk LEFT:0 --walk WAIT:4500 --check FLAG_BADGE03_GET --expect MAP_PARCEL_FLOODBASIN
@@ -47,7 +47,8 @@ seg s20 s19 - --walk TEACHHM:HM06,2 --walk WAIT:200 --walk GOTO:12,1 --walk LEFT
 # at the Survey office (door = warp 4; ILEX at (6,3)), then HALE at the HQ (warp 1; HALE at (6,6))
 seg s21 s20 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_FLOODBASIN
 # back in the Floodbasin's neck the rocks have grown back: smash the one below, then south to the Corridor
-seg s22 s21 - --walk DOWN:0 --walk TALK:2 --walk WAIT:500 --walk DOWN:0 --walk WAIT:100 --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_CORRIDOR
+seg s22 s21 - --walk DOWN:0 --walk TALK:2 --walk WAIT:500 --walk DOWN:0 --walk WAIT:100 --walk RIGHT:0 --walk TALK:2 --walk WAIT:500 --walk RIGHT:0 --walk WAIT:100 \
+  --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_CORRIDOR
 seg s23 s22 - --walk GOTOEDGE:left --walk LEFT:0 --walk WAIT:600 --expect MAP_PARCEL_WETLANDS
 seg s24 s23 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_FERNWICK
 seg s25 s24 FLAG_SKALDMERE_WETLAND_CERT --walk GOTOWARP:4 --walk WAIT:400 --walk GOTO:6,4 --walk UP:0 --walk TALK:5 --walk WAIT:600 \

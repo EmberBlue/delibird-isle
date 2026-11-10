@@ -26,8 +26,8 @@ PICK1="--walk TAP:DOWN --walk IDLE:20 --walk A:1 --walk IDLE:300"
 seg s41 s40 - --walk GOTO:13,36 --walk DOWN:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:12,60 --walk WAIT:300 \
   --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:900 --expect MAP_PARCEL_RIVER
 # the River south into the Floodbasin's neck: the rocks have grown back; smash down through them from the north
-seg s42 s41 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --walk DOWN:0 --walk TALK:2 --walk WAIT:500 \
-  --walk DOWN:0 --walk DOWN:0 --walk TALK:2 --walk WAIT:500 --walk DOWN:0 --walk DOWN:0 --walk WAIT:300 --expect MAP_PARCEL_FLOODBASIN
+seg s42 s41 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --walk DOWN:0 --walk TALK:2 --walk WAIT:500 --walk DOWN:0 --walk WAIT:100 \
+  --walk RIGHT:0 --walk TALK:2 --walk WAIT:500 --walk RIGHT:0 --walk WAIT:300 --expect MAP_PARCEL_FLOODBASIN
 seg s43 s42 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_CORRIDOR
 seg s44 s43 - --walk GOTOEDGE:left --walk LEFT:0 --walk WAIT:600 --expect MAP_PARCEL_WETLANDS
 seg s45 s44 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_FERNWICK
