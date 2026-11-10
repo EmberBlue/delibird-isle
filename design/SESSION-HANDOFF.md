@@ -470,6 +470,15 @@ replaces is gone from the tree).
   no swimmer, and **events only work at the player's elevation**
   (`event_elev.py`: 33 NPCs/triggers/items in the elevation-5 and -4
   zones were silent, 19 water-standing NPCs need the wildcard 0).
+  **Played so far (2026-11-10):** chapters 1-3 end to end on one build
+  (three badges, the Forest, Wetland and Watershed signings, into the
+  Highlands); chapter 4 onward is the live run. It found the ferry and a
+  required reading locked behind side quests and the return ferries dead
+  after the finale (all fixed; `gates.py` now scans for the pattern), and
+  three battles whose rewards needed a second talk (continuation scripts
+  now). Standing audits before any map or script work is called done:
+  `audit.py` (2 known warnings), `reach.py` (0), `reach.py --trainers`
+  (0), `event_elev.py` (0), `gates.py` (0).
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to

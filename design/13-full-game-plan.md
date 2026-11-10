@@ -917,5 +917,17 @@ quest is built, how the peer works) before they are asked six more times.
   Floodbasin reading), Cordelia's post-game flag and Dell's quest flag
   only ran if the player came back and talked again. All three are
   continuation scripts now (the fourth argument), as the exams already
-  were.
+  were. Chapters 2 and 3 then played through (the Wetland and Watershed
+  signings), and chapter 4 showed the story-logic version of the same
+  disease: the side-quest pass had written each errand at the top of its
+  giver's script. For two givers that top was in front of the main road.
+  The ferry captain's pier-post tally ended the talk before the ferry
+  menu, so Delibird Isle, the Coast and the climate station needed an
+  unmarked side quest first, and after the hearing he and all three
+  return sailors swapped their function for a reaction line, which would
+  strand a post-game player on whichever shore they sailed to. The
+  Homesteader's lambing-field errand sat in front of the reading HALE's
+  certification counts. All restructured (function first, errand as a
+  preamble, reaction line as the prompt); `tools/skald/gates.py` scans
+  every script for the pattern and reads 0.
 

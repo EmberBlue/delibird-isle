@@ -116,6 +116,18 @@ goes in a continuation script passed as the fourth argument
 `VAR_0x8004/5` inside it since the battle clobbers them. KOLE's evidence bit,
 Cordelia's flag and Dell's quest were silently second-talk-only (2026-11-10).
 
+## An NPC's job comes before their errand, and survives the ending
+- **A side quest never stands in front of a main-path function.** If the
+  NPC carries a ferry, a heal, a shop, an exam or an evidence mark, that
+  comes first; quest turn-in and offer are preambles that fall through, and
+  the "still looking?" reminder only shows where it cannot block. The ferry
+  captain's pier-post tally locked chapters 5-7; the Homesteader's errand
+  locked a reading HALE requires.
+- **A post-finale / post-epilogue reaction line must not end the talk of an
+  NPC with a lasting function.** Make the new line the prompt (the three
+  return sailors: the reaction line became the YES/NO), then fall through.
+- `python3 tools/skald/gates.py` must print `0 suspicious gate(s)`.
+
 ## Prose rules (poryscript format())
 - No em-dash (use --), no escaped double quotes, \p new box, \n line, \l scroll.
 - §00 register: implies more than it states; no exposition dumps.
