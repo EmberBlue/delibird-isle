@@ -4009,6 +4009,18 @@ ParcelWetlands_ReedCount_3:
 	goto ParcelWetlands_ReedCount_1
 
 
+ParcelWetlands_SurveyStake::
+# 1934 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_SurveyStake_Text_0, MSGBOX_SIGN
+# 1935 "data/maps/ParcelWetlands/scripts.pory"
+	setvar VAR_0x8004, 0
+# 1936 "data/maps/ParcelWetlands/scripts.pory"
+	special SkaldSurveyStake
+# 1937 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox gStringVar4, MSGBOX_SIGN
+	end
+
+
 ParcelWetlands_Harland_Text_0:
 # 77 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: They read your report out on\n"
@@ -5704,3 +5716,10 @@ ParcelWetlands_ReedCount_Text_1:
 	.string "A reed bed. The stands lean the way the\n"
 	.string "wind went last. Fewer top your head\l"
 	.string "than you'd expect.$"
+
+ParcelWetlands_SurveyStake_Text_0:
+# 1934 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A survey stake driven into the\n"
+	.string "landing's turf, a strip of red cloth tied\l"
+	.string "at the top. It is the Corps' mark: this\l"
+	.string "place is being read.$"

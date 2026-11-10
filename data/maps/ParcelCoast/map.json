@@ -663,8 +663,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 10,
-      "y": 58,
+      "x": 14,
+      "y": 59,
       "elevation": 0,
       "item": "ITEM_HEART_SCALE",
       "flag": "FLAG_SKALD_HIDDEN_COAST_HEART_SCALE"
@@ -684,6 +684,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoast_Shell"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 52,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoast_SurveyStake"
     }
   ]
 }

@@ -4034,6 +4034,18 @@ ParcelRiver_Hives_2:
 	end
 
 
+ParcelRiver_SurveyStake::
+# 1955 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_SurveyStake_Text_0, MSGBOX_SIGN
+# 1956 "data/maps/ParcelRiver/scripts.pory"
+	setvar VAR_0x8004, 3
+# 1957 "data/maps/ParcelRiver/scripts.pory"
+	special SkaldSurveyStake
+# 1958 "data/maps/ParcelRiver/scripts.pory"
+	msgbox gStringVar4, MSGBOX_SIGN
+	end
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 51 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -6006,3 +6018,11 @@ ParcelRiver_Hives_Text_0:
 	.string "one with a smoker in his lap, perfectly\l"
 	.string "well.\p"
 	.string "The flowers are out all along the bank.$"
+
+ParcelRiver_SurveyStake_Text_0:
+# 1955 "data/maps/ParcelRiver/scripts.pory"
+	.string "A survey stake at the edge of the\n"
+	.string "market ground, red cloth at the top, a\l"
+	.string "child's blue ribbon tied under it by\l"
+	.string "somebody who thought it needed\l"
+	.string "company.$"

@@ -1928,3 +1928,12 @@ script ParcelWetlands_ReedCount {
     msgbox(format("A reed bed. The stands lean the way the wind went last. Fewer top your head than you'd expect."), MSGBOX_SIGN)
     end
 }
+
+// The zone's survey stake (§13 fix E): reads the chapter's evidence back.
+script ParcelWetlands_SurveyStake {
+    msgbox(format("A survey stake driven into the landing's turf, a strip of red cloth tied at the top. It is the Corps' mark: this place is being read."), MSGBOX_SIGN)
+    setvar(VAR_0x8004, 0)
+    special(SkaldSurveyStake)
+    msgbox(gStringVar4, MSGBOX_SIGN)
+    end
+}

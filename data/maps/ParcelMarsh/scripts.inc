@@ -745,6 +745,18 @@ ParcelMarsh_HeronCount_2:
 	end
 
 
+ParcelMarsh_SurveyStake::
+# 403 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_SurveyStake_Text_0, MSGBOX_SIGN
+# 404 "data/maps/ParcelMarsh/scripts.pory"
+	setvar VAR_0x8004, 6
+# 405 "data/maps/ParcelMarsh/scripts.pory"
+	special SkaldSurveyStake
+# 406 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox gStringVar4, MSGBOX_SIGN
+	end
+
+
 ParcelMarsh_FirstEntry_Text_0:
 # 30 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: This is as far as I go. The road\n"
@@ -1288,3 +1300,10 @@ ParcelMarsh_HeronCount_Text_0:
 	.string "end: forty-one, forty-one, thirty-nine,\l"
 	.string "forty.\p"
 	.string "No entry after it.$"
+
+ParcelMarsh_SurveyStake_Text_0:
+# 403 "data/maps/ParcelMarsh/scripts.pory"
+	.string "A survey stake at the marsh's edge.\n"
+	.string "Fresh red cloth. Under it, a much older\l"
+	.string "stake, the cloth gone to rust, driven by\l"
+	.string "somebody else a long time ago.$"

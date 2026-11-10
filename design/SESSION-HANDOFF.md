@@ -119,6 +119,51 @@ The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the
    every 70 frames to 8000, capture ≥8600; walking: 16 frames per tile + a
    few for the turn) → **revert the spawn** (`grep -c "TEMP TEST" src/new_game.c` = 0) → commit.
 
+## Map provenance — measured (2026-11-09)
+
+Every `build.py` prints how many tiles differ from its `base.bin`. The
+question "are the maps just vanilla with new content on top?" was fair
+until 2026-11-09 (the Coast was Slateport at 1%, the Marsh 1%, the Station
+0%, the side areas 0%). Current state:
+
+| Layout | Vanilla base | Changed | What the change says |
+|---|---|---|---|
+| `ParcelDelibird` | Azalea-style village | 27% | the village opened to the summit and cliffs; sea tile and border fixed |
+| `ParcelCoast` | Slateport | 21% | an industrial port: crate yard (822/823), quay walls, the park paved, boats landed |
+| `ParcelRiver` | Route 117 / Mauville | 15% | Elvsund's market ground and river |
+| `ParcelWetlands` | Route 119 south | 13% | dead-reed beds, standing water, the drained pond |
+| `ParcelCoastBreakwater` | Route 109 | 12% | the beach the breakwater killed: furniture gone, south lobe drowned, posts, apron |
+| `ParcelWeather` | Route 119 north | 10% | the Station yard: gravel inside a fence, stakes on the slope |
+| `ParcelCorridor` | Route 116 | 9% | the culvert route |
+| `ParcelWetlandsHide` | Route 102 | 9% | the pond drawn down a row onto mud; a hide screen |
+| `ParcelMarsh` | Route 119 north | 8% | the river low, puddled bed, dead-reed beds, a ledge |
+| `ParcelFernwick` | Rustboro | 7% | the Survey town |
+| `ParcelFloodbasin` | Route 120 | 7% | dead-reed beds, puddles on the flats |
+| `ParcelCavern` | Shoal Cave ice room | 6% | the ice gone to bare rock in patches (a stop never loses a reachable tile) |
+| `ParcelCorridorWorkings` | Altering Cave | 6% | sand spills with walkable shallow pools, roof-fall |
+| `ParcelHighlands` | Route 115 (+114 falls) | 5% | the drunken stand, mounds, puddles |
+| `ParcelFloodbasinSluice` | Route 118 | 5% | the old ford: shallow shelves along both beaches, the deep channel kept for Surf |
+| `ParcelRiverMillWood` | Petalburg Woods | 5% | a coppice: two stands felled, stools sprouting, cordwood |
+| `ParcelHighlandsTarn` | Shoal Cave | 3% | meltwater: the tarn up a row, pools on the sand, sand spills |
+
+Drawn from scratch on a canvas (no vanilla base): `ParcelIsle`,
+`ParcelMeadow`, `ParcelRoute1`, `ParcelMistwood`, `ParcelDelibirdSummit`,
+`ParcelDelibirdCliffs`. Interiors are vanilla room layouts with Skaldmere
+furniture scripts (§13 "readables").
+
+**The remix vocabulary** (in each `build.py`, General-tileset ids): `bed`
+(TAN 280–298 bare earth / PALE 256–274 bleached litter, grass-lipped
+edges), `puddle2` (the 2×2 grass-rimmed puddle 200/202/216/218), `shallow`
+(walkable shallow water 414 with sand rims 398/422/397/415/413/405/406/407
+-- only over sand 292/673), `spill` (cave sand 664–682 over the brown
+floor), `mound` (331–333 cordwood/spoil, solid), `fence_h` (312–314),
+`solid` (one prop: cave boulders 592/610/614, coppice stools 206, Slateport
+posts 619/620 and crates 822/823). The Breakwater's `retile` is a sand/sea
+autotiler (283/284/285/291/293/299/300/301 edges, 317/318/325/326 inner
+corners); it reports shapes the tileset cannot draw. Do not use 653 for
+crates (it is a produce basket) or 331–333 on sand or cave floor (grass
+rims). Puddle centre 209 alone is a flat blue square -- use the set.
+
 ## Verified by walking (2026-11-07)
 
 `tools/skald/walktest.py` needs the TEMP probe hook in `src/new_game.c`:
@@ -197,8 +242,12 @@ out of sight lines and treat "reached the battle screen" as the pass.
   Hale's own flag logic), Certifications, Side work, Margins (Heron's
   marginalia, one line per clearance, plus the player's own line after the
   finale). Pages are built in `src/survey_scripting.c` (`SkaldNotebookBuffer`)
-  and shown by `data/scripts/skald_notebook.pory`. The **survey action** at
-  red-cloth points (§13 fix E's other half) is still signposts.
+  and shown by `data/scripts/skald_notebook.pory`. The **survey stakes**
+  (§13 fix E's other half) stand one per zone -- Reedmere's landing, the
+  Hollowbend checkpoint, the Leirvik hamlet, Elvsund's market ground, the
+  Haukfell warming centre, the Mereholt quay, the marsh edge -- and read the
+  chapter's evidence bitfield back (`SkaldSurveyStake`: logged, still to
+  read, "all of it read, put a name on it").
 - **Harness lessons (2026-11-08):** `--walk DIR:n` holds the key for
   16n+12 frames, so an unobstructed segment moves **n+1** tiles — plan
   routes against walls/objects or pass n−1. **Sighted trainer approaches

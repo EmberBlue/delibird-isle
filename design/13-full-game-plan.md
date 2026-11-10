@@ -390,4 +390,38 @@ quest is built, how the peer works) before they are asked six more times.
   signed in a younger version of the hand from the margins, the breakwater
   hut's bench of initials, the Tidewater office's fifth gauge drawn where
   the falls are not. ~58,800 hand-written words.
+- **2026-11-09 — the survey stakes (fix E, the field half).** One red-cloth
+  stake per zone, on the landing turf, by the checkpoint, by the hamlet
+  sign, at the edge of the market ground, outside the warming centre, in a
+  crack of the quay stones, at the marsh edge over a much older stake. Each
+  reads the chapter's evidence bits back to the player -- what has been
+  logged, what is still to read, and when every counted bit is set, "All of
+  it read. Put a name on it." (`SkaldSurveyStake`, a table of bit names per
+  zone in `src/survey_scripting.c`). The tells stay; the stakes make the
+  reading visible as a list the player can check against.
+- **2026-11-09 — the remix pass (no zone is a vanilla slice with new
+  content on top any more).** Measured against each `base.bin`: the Coast
+  was Slateport at 1%, the Marsh 1%, the Station exterior 0%, and the seven
+  side areas 0%. Each now carries its own story in the ground, with every
+  placed event still reachable (audit) and walked in the emulator: the
+  Coast is an industrial port (21%: crate yard of wooden and metal crates
+  behind a low wall, quay walls and dark concrete, the park paved, the
+  south quay with boats landed); the Marsh's river is low with a puddled
+  bed and dead-reed beds (8%); the Station yard is gravel inside a fence
+  with a gate, stakes along the slope (10%); the Floodbasin, Haukfell and
+  Reedmere routes have dead-reed beds, standing water, the drunken stand
+  and a drained pond (7 / 5 / 13%); the Breakwater is the beach the
+  breakwater killed -- furniture gone, the south lobe and both flanks
+  drowned and re-edged by a sand/sea autotiler, tide pools, a line of posts
+  with one gap, the quay apron and crates (12%); the Sluice is the old
+  ford with the river two hands down -- walkable shelves of shallow water
+  along both beaches, the deep channel kept for the Surf gate (5%); the
+  Hide's pond has drawn down a row onto a mud margin behind a hide screen
+  (9%); the Mill Wood is a coppice -- two stands felled to bare earth with
+  the stools sprouting, cordwood at the rides (5%); the Workings and the
+  Tarn have sand spills with walkable shallow pools and roof-fall (6 /
+  3%); the Cavern's ice has gone to bare rock in patches (6%). The
+  vocabulary lives in each `build.py` (`bed`, `puddle2`, `shallow`,
+  `spill`, `mound`, `fence_h`, `solid`, the Breakwater's `retile`); the
+  build line prints the measured difference.
 

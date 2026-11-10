@@ -4143,6 +4143,18 @@ ParcelFloodbasin_MarkC_3:
 	goto ParcelFloodbasin_MarkC_1
 
 
+ParcelFloodbasin_SurveyStake::
+# 1978 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_SurveyStake_Text_0, MSGBOX_SIGN
+# 1979 "data/maps/ParcelFloodbasin/scripts.pory"
+	setvar VAR_0x8004, 2
+# 1980 "data/maps/ParcelFloodbasin/scripts.pory"
+	special SkaldSurveyStake
+# 1981 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox gStringVar4, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasin_FirstEntry_Text_0:
 # 58 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "The trees open onto a low, wide basin.\n"
@@ -6033,3 +6045,9 @@ ParcelFloodbasin_MarkC_Text_1:
 # 1972 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "A brown line under the tarp roof's\n"
 	.string "eaves, highest of the three.$"
+
+ParcelFloodbasin_SurveyStake_Text_0:
+# 1978 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "A survey stake by the hamlet sign, red\n"
+	.string "cloth at the top, the cloth gone pale on\l"
+	.string "the side the floods come from.$"

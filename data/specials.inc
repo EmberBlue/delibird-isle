@@ -294,6 +294,7 @@ gSpecials::
 	def_special SkaldGameClear
 	def_special SkaldNotebookBuffer
 	def_special SkaldRematchTier
+	def_special SkaldSurveyStake
 	def_special MoveElevator
 	def_special ShowGlassWorkshopMenu
 	def_special SpawnCameraObject

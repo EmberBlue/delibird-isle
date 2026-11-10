@@ -1585,3 +1585,12 @@ script ParcelCorridor_Mirren_Rematch {
     release
     end
 }
+
+// The zone's survey stake (§13 fix E): reads the chapter's evidence back.
+script ParcelCorridor_SurveyStake {
+    msgbox(format("A survey stake by the checkpoint, red cloth at the top. The bare stakes along the cut are MEREHOLT's. This one is yours."), MSGBOX_SIGN)
+    setvar(VAR_0x8004, 1)
+    special(SkaldSurveyStake)
+    msgbox(gStringVar4, MSGBOX_SIGN)
+    end
+}

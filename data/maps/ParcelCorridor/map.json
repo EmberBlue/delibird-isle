@@ -507,6 +507,14 @@
       "elevation": 0,
       "item": "ITEM_ETHER",
       "flag": "FLAG_SKALD_HIDDEN_COR_ETHER"
+    },
+    {
+      "type": "sign",
+      "x": 41,
+      "y": 10,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCorridor_SurveyStake"
     }
   ]
 }

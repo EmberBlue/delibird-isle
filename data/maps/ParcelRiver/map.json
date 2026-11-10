@@ -798,6 +798,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelRiver_Hives"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelRiver_SurveyStake"
     }
   ]
 }

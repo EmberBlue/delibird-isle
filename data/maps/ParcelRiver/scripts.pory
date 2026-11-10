@@ -1949,3 +1949,12 @@ script ParcelRiver_Hives {
     setflag(FLAG_SKALD_Q_HIVES_FOUND)
     end
 }
+
+// The zone's survey stake (§13 fix E): reads the chapter's evidence back.
+script ParcelRiver_SurveyStake {
+    msgbox(format("A survey stake at the edge of the market ground, red cloth at the top, a child's blue ribbon tied under it by somebody who thought it needed company."), MSGBOX_SIGN)
+    setvar(VAR_0x8004, 3)
+    special(SkaldSurveyStake)
+    msgbox(gStringVar4, MSGBOX_SIGN)
+    end
+}

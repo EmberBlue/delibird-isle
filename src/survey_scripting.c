@@ -419,6 +419,103 @@ void SkaldNotebookBuffer(void)
     }
 }
 
+
+// ---------------------------------------------------------------------------
+// The survey stakes (§13 fix E, the field half). One red-cloth stake per
+// zone reads the chapter's evidence bitfield back to the player: what has been
+// logged, what is still to read, and -- when every counted bit is set -- that
+// the place is ready to be named. in: gSpecialVar_0x8004 = zone (sStakes
+// index). out: gStringVar4.
+// ---------------------------------------------------------------------------
+struct SkaldStakeItem { u8 bit; const u8 *name; };
+struct SkaldStake { const u8 *zone; u16 var; u8 count; const struct SkaldStakeItem *items; };
+
+static const struct SkaldStakeItem sStakeReedmere[] = {
+    {0, COMPOUND_STRING("the reed roots")}, {1, COMPOUND_STRING("the crate imprint")}, {2, COMPOUND_STRING("the trade tag")},
+    {6, COMPOUND_STRING("the residue")}, {7, COMPOUND_STRING("the pipe")}, {8, COMPOUND_STRING("the manifest")},
+};
+static const struct SkaldStakeItem sStakeCorridor[] = {
+    {9, COMPOUND_STRING("the culvert")}, {10, COMPOUND_STRING("the works crew")},
+};
+static const struct SkaldStakeItem sStakeLeirvik[] = {
+    {0, COMPOUND_STRING("the discharge pipe")}, {1, COMPOUND_STRING("the sheen")}, {2, COMPOUND_STRING("the dead reeds")},
+    {3, COMPOUND_STRING("the WOOPER")}, {4, COMPOUND_STRING("the sick MAGIKARP")}, {5, COMPOUND_STRING("the booth")},
+};
+static const struct SkaldStakeItem sStakeElvsund[] = {
+    {0, COMPOUND_STRING("the cut")}, {1, COMPOUND_STRING("the broken dam")}, {2, COMPOUND_STRING("the bloom")},
+    {3, COMPOUND_STRING("the clean reach")}, {4, COMPOUND_STRING("the Board's sign")}, {5, COMPOUND_STRING("HARLAND")},
+};
+static const struct SkaldStakeItem sStakeHaukfell[] = {
+    {0, COMPOUND_STRING("the sunk ponds")}, {1, COMPOUND_STRING("the drunk trees")}, {2, COMPOUND_STRING("ILEX's band")},
+    {3, COMPOUND_STRING("the lowlander")}, {4, COMPOUND_STRING("the drill sign")}, {5, COMPOUND_STRING("the homesteader")},
+};
+static const struct SkaldStakeItem sStakeCoast[] = {
+    {0, COMPOUND_STRING("the dredge scar")}, {1, COMPOUND_STRING("the urchin barren")}, {2, COMPOUND_STRING("the catch, one size")},
+    {3, COMPOUND_STRING("the empty pilings")}, {4, COMPOUND_STRING("the plaque")}, {5, COMPOUND_STRING("HARLAND's boat")},
+};
+static const struct SkaldStakeItem sStakeMarsh[] = {
+    {0, COMPOUND_STRING("the drying channel")}, {1, COMPOUND_STRING("the dead reeds")}, {2, COMPOUND_STRING("the graded edge")},
+    {3, COMPOUND_STRING("the POLIWAG")},
+};
+static const struct SkaldStake sStakes[] = {
+    {COMPOUND_STRING("REEDMERE"),  VAR_SKALDMERE_CH1_EVIDENCE, 6, sStakeReedmere},
+    {COMPOUND_STRING("HOLLOWBEND"), VAR_SKALDMERE_CH1_EVIDENCE, 2, sStakeCorridor},
+    {COMPOUND_STRING("LEIRVIK"),   VAR_SKALDMERE_CH2_EVIDENCE, 6, sStakeLeirvik},
+    {COMPOUND_STRING("ELVSUND"),   VAR_SKALDMERE_CH3_EVIDENCE, 6, sStakeElvsund},
+    {COMPOUND_STRING("HAUKFELL"),  VAR_SKALDMERE_CH4_EVIDENCE, 6, sStakeHaukfell},
+    {COMPOUND_STRING("MEREHOLT COAST"), VAR_SKALDMERE_CH6_EVIDENCE, 6, sStakeCoast},
+    {COMPOUND_STRING("KEYSTONE MARSH"), VAR_SKALDMERE_CH7_EVIDENCE, 4, sStakeMarsh},
+};
+static const u8 sStake_Head[]    = _("SURVEY STAKE -- ");
+static const u8 sStake_Cloth[]   = _("\nRed cloth at the top. Yours.");
+static const u8 sStake_Read[]    = _("\pRead: ");
+static const u8 sStake_ToRead[]  = _("\pStill to read: ");
+static const u8 sStake_None[]    = _("nothing yet");
+static const u8 sStake_Comma[]   = _(", ");
+static const u8 sStake_Dot[]     = _(".");
+static const u8 sStake_AllRead[] = _("\pAll of it read. Put a name on it.");
+
+void SkaldSurveyStake(void)
+{
+    const struct SkaldStake *z;
+    u32 i, v, n, got;
+
+    if (gSpecialVar_0x8004 >= ARRAY_COUNT(sStakes))
+        gSpecialVar_0x8004 = 0;
+    z = &sStakes[gSpecialVar_0x8004];
+    v = VarGet(z->var);
+    StringCopy(gStringVar4, sStake_Head);
+    StringAppend(gStringVar4, z->zone);
+    StringAppend(gStringVar4, sStake_Cloth);
+    for (got = 0, n = 0, i = 0; i < z->count; i++)
+        if ((v >> z->items[i].bit) & 1)
+            got++;
+    StringAppend(gStringVar4, sStake_Read);
+    for (n = 0, i = 0; i < z->count; i++)
+    {
+        if (!((v >> z->items[i].bit) & 1))
+            continue;
+        if (n++) StringAppend(gStringVar4, sStake_Comma);
+        StringAppend(gStringVar4, z->items[i].name);
+    }
+    if (n == 0) StringAppend(gStringVar4, sStake_None);
+    StringAppend(gStringVar4, sStake_Dot);
+    if (got == z->count)
+    {
+        StringAppend(gStringVar4, sStake_AllRead);
+        return;
+    }
+    StringAppend(gStringVar4, sStake_ToRead);
+    for (n = 0, i = 0; i < z->count; i++)
+    {
+        if ((v >> z->items[i].bit) & 1)
+            continue;
+        if (n++) StringAppend(gStringVar4, sStake_Comma);
+        StringAppend(gStringVar4, z->items[i].name);
+    }
+    StringAppend(gStringVar4, sStake_Dot);
+}
+
 // ---------------------------------------------------------------------------
 // Route-trainer rematch tiers (tools/skald/rematch_tiers.py generates the
 // scripts and parties). A defeated trainer, talked to again, offers the

@@ -3977,6 +3977,18 @@ ParcelHighlands_Mareep_2:
 	end
 
 
+ParcelHighlands_SurveyStake::
+# 1894 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_SurveyStake_Text_0, MSGBOX_SIGN
+# 1895 "data/maps/ParcelHighlands/scripts.pory"
+	setvar VAR_0x8004, 4
+# 1896 "data/maps/ParcelHighlands/scripts.pory"
+	special SkaldSurveyStake
+# 1897 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox gStringVar4, MSGBOX_SIGN
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 39 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -5781,3 +5793,10 @@ ParcelHighlands_Mareep_Text_0:
 	.string "at you.\p"
 	.string "It is not coming down. It is, very\n"
 	.string "definitely, standing.$"
+
+ParcelHighlands_SurveyStake_Text_0:
+# 1894 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A survey stake outside the warming\n"
+	.string "centre, red cloth at the top. The ground\l"
+	.string "has moved since it was driven; it leans a\l"
+	.string "hand's width downslope.$"

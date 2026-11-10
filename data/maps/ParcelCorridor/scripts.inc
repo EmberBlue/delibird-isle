@@ -3426,6 +3426,18 @@ ParcelCorridor_Mirren_Rematch_2:
 	end
 
 
+ParcelCorridor_SurveyStake::
+# 1591 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_SurveyStake_Text_0, MSGBOX_SIGN
+# 1592 "data/maps/ParcelCorridor/scripts.pory"
+	setvar VAR_0x8004, 1
+# 1593 "data/maps/ParcelCorridor/scripts.pory"
+	special SkaldSurveyStake
+# 1594 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox gStringVar4, MSGBOX_SIGN
+	end
+
+
 ParcelCorridor_Checkpoint_Text_0:
 # 45 "data/maps/ParcelCorridor/scripts.pory"
 	.string "MIRREN: Hold it.$"
@@ -4872,3 +4884,10 @@ ParcelCorridor_Mirren_Rematch_Text_3:
 # 1584 "data/maps/ParcelCorridor/scripts.pory"
 	.string "MIRREN: Same time tomorrow, if you like.\n"
 	.string "The rock doesn't move.$"
+
+ParcelCorridor_SurveyStake_Text_0:
+# 1591 "data/maps/ParcelCorridor/scripts.pory"
+	.string "A survey stake by the checkpoint, red\n"
+	.string "cloth at the top. The bare stakes along\l"
+	.string "the cut are MEREHOLT's. This one is\l"
+	.string "yours.$"

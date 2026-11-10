@@ -78,8 +78,58 @@ def house(x, y):
 
 # houses added 2026-11-08 (interiors with residents)
 house(24, 57)
+def blob(x0, y0, x1, y1, clip=1, ok=(21, 520, 1, 14, 15, 23, 4)):
+    cells = set()
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if get(x, y) not in ok: continue
+            if min(x - x0, x1 - x) + min(y - y0, y1 - y) < clip: continue
+            cells.add((x, y))
+    for (x, y) in cells:
+        n = (x, y - 1) not in cells; s = (x, y + 1) not in cells
+        w = (x - 1, y) not in cells; e = (x + 1, y) not in cells
+        mid = 265
+        if n and w and not s and not e: mid = 256
+        elif n and e and not s and not w: mid = 258
+        elif s and w and not n and not e: mid = 272
+        elif s and e and not n and not w: mid = 274
+        elif n and not (s or e or w): mid = 257
+        elif s and not (n or e or w): mid = 273
+        elif w and not (n or s or e): mid = 264
+        elif e and not (n or s or w): mid = 266
+        put(x, y, mid, 0, 3)
+def puddle(x0, y0, x1, y1):
+    """a standing pool of the walkable puddle tiles, on grass only"""
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if get(x, y) not in (1, 4, 14, 15): continue
+            n, s, w, e = y == y0, y == y1, x == x0, x == x1
+            mid = 209
+            if n and w: mid = 200
+            elif n and e: mid = 202
+            elif s and w: mid = 216
+            elif s and e: mid = 218
+            elif n: mid = 201
+            elif s: mid = 217
+            elif w: mid = 208
+            elif e: mid = 210
+            put(x, y, mid, 0, 3)
+GRAVEL = {280: 256, 281: 257, 282: 258, 288: 264, 289: 265, 290: 266, 296: 272, 297: 273, 298: 274}
+
+# ---- the remix (2026-11-09): the sick backwater -----------------------------------
+# The backwater pond goes dark where the discharge reaches it; the reed beds
+# around it die back to bare earth; the west bank is mud; standing water on the
+# landing ground. Every event stays put.
+for y in range(26, 39):
+    for x in range(13, 26):
+        if get(x, y) == 368: put(x, y, 369, 0, 1)
+blob(3, 24, 11, 29, clip=2); blob(4, 16, 7, 18); blob(10, 24, 12, 30, clip=1, ok=(21, 520, 1))
+blob(2, 42, 8, 46, clip=2); blob(12, 48, 18, 52, clip=2); blob(30, 50, 36, 54, clip=2); blob(26, 15, 29, 19, clip=1)
+puddle(27, 36, 28, 37); puddle(32, 35, 33, 36); puddle(6, 50, 7, 51)
 house(10, 57)
 
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
-print(f"ParcelWetlands: wrote {W}x{H} map.bin")
+base = struct.unpack(f"<{W*H}H", (HERE / "base.bin").read_bytes())
+changed = sum(1 for a, b in zip(base, words) if (a & 0x3FF) != (b & 0x3FF))
+print(f"ParcelWetlands: wrote {W}x{H} map.bin; {changed} tiles differ from Route 119 ({100*changed//(W*H)}%)")

@@ -30,6 +30,25 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   primary, so they are seamless connections. Compose canvases with a small
   placement script if the map is big (see the git log for the island commit).
 
+## Evidence and the survey stakes
+- A zone's clue tells set bits in its `VAR_SKALDMERE_CHn_EVIDENCE` (bit
+  tables in each zone script's header). The zone's survey stake
+  (`<Map>_SurveyStake` -> `SkaldSurveyStake`) names those bits from
+  `sStakes[]` in `src/survey_scripting.c`; a new tell means a new bit AND a
+  new name in that table.
+
+## Remixing a vanilla slice (a map must not read as its base)
+- Every `data/layouts/<X>/build.py` prints "N tiles differ from the base
+  (P%)". Under ~5% the zone is still the vanilla map; reshape until the
+  ground tells the zone's story (see SESSION-HANDOFF "Map provenance").
+- Use the vocabulary already in the build scripts (`bed`, `puddle2`,
+  `shallow`, `spill`, `mound`, `fence_h`, `solid`, the Breakwater's
+  `retile`); check a new id on `tools/maptools/metatile_sheet.py` at 4x
+  before using it (653 is a produce basket, not a crate; 909 is sliding
+  ice; 209 alone is a flat blue square).
+- Keep every event reachable (`audit.py`), then walk the new ground in the
+  emulator (`walktest.py`): a shallow pool must be entered, a gap passed.
+
 ## Flags & vars
 - Claim only a `FLAG_UNUSED_*` whose define greps unreferenced outside flags.h.
 - NEVER change MAX_TRAINERS_COUNT (pinned 2048 since 2026-09-25 — moving it shifts

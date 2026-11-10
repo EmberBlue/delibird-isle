@@ -50,6 +50,49 @@ rect(12, 1, 14, 1, GRASS, 0, 3)
 # houses added 2026-11-08 (interiors with residents)
 house(18, 84)
 
+# ---- the remix (2026-11-09): a sick, flooding wetland, not Route 120 ---------------
+# Dead reed beds (bare earth) in the great reed field and around the upper lake;
+# standing floodwater (puddles) across the hamlet ground and the lake shores;
+# mud strips where the water keeps coming up. Every event stays put.
+def blob(x0, y0, x1, y1, clip=1):
+    """A bed of bare earth: a rectangle with its corners clipped, edged with the
+    grass-lipped pieces by which neighbours are outside the bed."""
+    cells = set()
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if get(x, y) not in (21, 520, 1, 14, 15, 23): continue
+            dx = min(x - x0, x1 - x); dy = min(y - y0, y1 - y)
+            if dx + dy < clip: continue
+            cells.add((x, y))
+    for (x, y) in cells:
+        n = (x, y - 1) not in cells; s = (x, y + 1) not in cells
+        w = (x - 1, y) not in cells; e = (x + 1, y) not in cells
+        mid = 265
+        if n and w and not s and not e: mid = 256
+        elif n and e and not s and not w: mid = 258
+        elif s and w and not n and not e: mid = 272
+        elif s and e and not n and not w: mid = 274
+        elif n and not (s or e or w): mid = 257
+        elif s and not (n or e or w): mid = 273
+        elif w and not (n or s or e): mid = 264
+        elif e and not (n or s or w): mid = 266
+        put(x, y, mid, 0, 3)
+# the reed field east of the cliff line
+blob(16, 38, 21, 42); blob(25, 40, 31, 43); blob(18, 46, 23, 50); blob(28, 51, 34, 55); blob(16, 54, 21, 58); blob(31, 45, 35, 48)
+# around the upper lake and its outfall
+blob(6, 15, 9, 19); blob(23, 15, 29, 18); blob(8, 31, 13, 35); blob(31, 24, 36, 27)
+# mud along the south-west lake and the hamlet's lake side
+blob(9, 80, 11, 86); blob(18, 94, 24, 94)
+# standing floodwater: puddles on the hamlet ground and the low shores
+for y in range(83, 95):
+    for x in range(10, 39):
+        if get(x, y) == 1 and (x * 7 + y * 3) % 9 == 0: put(x, y, 209, 0, 3)
+for y in range(60, 80):
+    for x in range(1, 12):
+        if get(x, y) == 1 and (x * 5 + y * 2) % 7 == 0: put(x, y, 209, 0, 3)
+
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
-print(f"ParcelFloodbasin: wrote {W}x{H} map.bin")
+base = struct.unpack(f"<{W*H}H", (HERE / "base.bin").read_bytes())
+changed = sum(1 for a, b in zip(base, words) if (a & 0x3FF) != (b & 0x3FF))
+print(f"ParcelFloodbasin: wrote {W}x{H} map.bin; {changed} tiles differ from Route 120 ({100*changed//(W*H)}%)")

@@ -57,7 +57,62 @@ put(24, 37, 0x261, 0, 3)
 # houses added 2026-11-08 (interiors with residents)
 house(10, 64)
 house(24, 58)
+def blob(x0, y0, x1, y1, clip=1, ok=(21, 520, 1, 14, 15, 23, 4)):
+    cells = set()
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if get(x, y) not in ok: continue
+            if min(x - x0, x1 - x) + min(y - y0, y1 - y) < clip: continue
+            cells.add((x, y))
+    for (x, y) in cells:
+        n = (x, y - 1) not in cells; s = (x, y + 1) not in cells
+        w = (x - 1, y) not in cells; e = (x + 1, y) not in cells
+        mid = 265
+        if n and w and not s and not e: mid = 256
+        elif n and e and not s and not w: mid = 258
+        elif s and w and not n and not e: mid = 272
+        elif s and e and not n and not w: mid = 274
+        elif n and not (s or e or w): mid = 257
+        elif s and not (n or e or w): mid = 273
+        elif w and not (n or s or e): mid = 264
+        elif e and not (n or s or w): mid = 266
+        put(x, y, mid, 0, 3)
+def puddle(x0, y0, x1, y1):
+    """a standing pool of the walkable puddle tiles, on grass only"""
+    for y in range(y0, y1 + 1):
+        for x in range(x0, x1 + 1):
+            if get(x, y) not in (1, 4, 14, 15): continue
+            n, s, w, e = y == y0, y == y1, x == x0, x == x1
+            mid = 209
+            if n and w: mid = 200
+            elif n and e: mid = 202
+            elif s and w: mid = 216
+            elif s and e: mid = 218
+            elif n: mid = 201
+            elif s: mid = 217
+            elif w: mid = 208
+            elif e: mid = 210
+            put(x, y, mid, 0, 3)
+GRAVEL = {280: 256, 281: 257, 282: 258, 288: 264, 289: 265, 290: 266, 296: 272, 297: 273, 298: 274}
+
+# ---- the remix (2026-11-09): the thaw, drawn --------------------------------------
+# Thermokarst: standing pools where the ground has let go, in the meadow and by
+# the drunken stand; the stand itself thinned to bare slumped earth; rubble off
+# the slide on the grass below the stake fence; the sand track a gravel one.
+puddle(22, 53, 23, 54); puddle(16, 55, 17, 56); puddle(22, 57, 23, 58); puddle(9, 68, 11, 69); puddle(16, 60, 17, 60)
+for y in range(53, 62, 2):                               # the drunken stand: every other tree gone to bare ground
+    for x in (14, 15):
+        if get(x, y) in (468, 469, 476, 477): put(x, y, 265, 0, 3)
+for (x, y) in ((22, 50), (23, 50), (24, 50)): put(x, y, (331, 332, 333)[x - 22], 1, 0)   # a rubble mound
+for (x, y) in ((14, 49), (15, 49), (16, 49)): put(x, y, (331, 332, 333)[x - 14], 1, 0)
+put(12, 51, 213, 1, 0); put(13, 51, 214, 1, 0)           # smaller scree spill
+blob(22, 62, 24, 66, clip=1)                              # slumped ground east of the homestead
+for y in range(H):                                        # the sand track becomes gravel
+    for x in range(W):
+        if get(x, y) in GRAVEL and y >= 48: put(x, y, GRAVEL[get(x, y)], 0, 3)
 
 # ---- write ------------------------------------------------------------------
 (HERE / "map.bin").write_bytes(b"".join(struct.pack("<H", v) for v in words))
-print(f"ParcelHighlands: wrote {W}x{H} map.bin")
+base = struct.unpack(f"<{W*H}H", (HERE / "base.bin").read_bytes())
+changed = sum(1 for a, b in zip(base, words) if (a & 0x3FF) != (b & 0x3FF))
+print(f"ParcelHighlands: wrote {W}x{H} map.bin; {changed} tiles differ from Route 115 ({100*changed//(W*H)}%)")

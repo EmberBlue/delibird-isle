@@ -251,6 +251,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelMarsh_HeronCount"
+    },
+    {
+      "type": "sign",
+      "x": 38,
+      "y": 27,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelMarsh_SurveyStake"
     }
   ]
 }

@@ -3959,6 +3959,18 @@ ParcelCoast_Dorsey_5:
 	end
 
 
+ParcelCoast_SurveyStake::
+# 1912 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_SurveyStake_Text_0, MSGBOX_SIGN
+# 1913 "data/maps/ParcelCoast/scripts.pory"
+	setvar VAR_0x8004, 5
+# 1914 "data/maps/ParcelCoast/scripts.pory"
+	special SkaldSurveyStake
+# 1915 "data/maps/ParcelCoast/scripts.pory"
+	msgbox gStringVar4, MSGBOX_SIGN
+	end
+
+
 ParcelCoast_FirstEntry_Text_0:
 # 48 "data/maps/ParcelCoast/scripts.pory"
 	.string "The ferry rounds the headland and the\n"
@@ -5865,3 +5877,10 @@ ParcelCoast_Dorsey_Text_2:
 	.string "'forty'. It's a true number.\p"
 	.string "They're all true numbers. That has never\n"
 	.string "been the problem.$"
+
+ParcelCoast_SurveyStake_Text_0:
+# 1912 "data/maps/ParcelCoast/scripts.pory"
+	.string "A survey stake set into a crack in the\n"
+	.string "quay stones, red cloth snapping in the\l"
+	.string "wind off the harbour. The dockers walk\l"
+	.string "round it.$"

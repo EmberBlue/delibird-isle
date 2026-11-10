@@ -1906,3 +1906,12 @@ script ParcelCoast_Dorsey {
     release
     end
 }
+
+// The zone's survey stake (§13 fix E): reads the chapter's evidence back.
+script ParcelCoast_SurveyStake {
+    msgbox(format("A survey stake set into a crack in the quay stones, red cloth snapping in the wind off the harbour. The dockers walk round it."), MSGBOX_SIGN)
+    setvar(VAR_0x8004, 5)
+    special(SkaldSurveyStake)
+    msgbox(gStringVar4, MSGBOX_SIGN)
+    end
+}

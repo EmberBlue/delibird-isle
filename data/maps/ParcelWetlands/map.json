@@ -683,6 +683,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelWetlands_ReedCount"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 38,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelWetlands_SurveyStake"
     }
   ]
 }
