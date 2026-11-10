@@ -221,16 +221,16 @@ def main():
                 path, runs = route.plan(mdir, (px, py), blocked=blocked, avoid_grass=True, **kw)
                 if not path:
                     path, runs = route.plan(mdir, (px, py), blocked=blocked, **kw)
-                if not runs:
-                    print(f"  GOTO: no path from ({px},{py}) on {mdir} to {target}"); break
-                if d.upper() != "GOTO" and len(path) == 1:
-                    # already on the warp tile and still on this map: an interior's exit door only fires
-                    # when stepped onto in its direction, so step off and back on, DOWN first (south doors)
-                    for back, fwd in (("UP", "DOWN"), ("DOWN", "UP"), ("RIGHT", "LEFT"), ("LEFT", "RIGHT")):
-                        step(12, back); step(20); step(12, fwd); step(40); dismiss(120)
+                if path and len(path) == 1 and d.upper() != "GOTO":
+                    # standing on the warp tile with the map unchanged: an interior's exit mat fires when the
+                    # player walks off it in its direction (south first), a side exit when walking sideways
+                    for key in ("DOWN", "UP", "LEFT", "RIGHT"):
+                        step(16, key); step(60); dismiss(120)
                         if live_pos()[0] != mapname:
                             break
                     break
+                if not runs:
+                    print(f"  GOTO: no path from ({px},{py}) on {mdir} to {target}"); break
                 rd, rk = runs[0]
                 print(f"  GOTO {target}: at ({px},{py}) {rd} x{rk} (frame {frame})", flush=True)
                 step(16 * (rk - 1) + 12, rd); step(30)
