@@ -521,7 +521,13 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   side areas only and stay species-dependent (ZIGZAGOON, LOTAD, POLIWAG,
   WINGULL and SLAKOTH are all early wild learners). The party menu's
   "NOT ABLE!" is the player's only warning, so re-run the audit whenever
-  a gate or a partner changes.
+  a gate or a partner changes. **Badge checks live in two places**: the
+  party menu (`OW_FIELD_MOVES_NEED_BADGES`, FALSE here) and the field
+  scripts in `data/scripts/field_move_scripts.inc` (the tree, the rock,
+  the boulder each had a `goto_if_unset FLAG_BADGE0x_GET`); the scripts
+  are now badge-free too. CUT is earned before badge 1, so the vanilla
+  tree check alone made chapter 1 unbeatable; the first real playthrough
+  found it, nothing else could have.
 
 ## RAM budget (the binding constraint)
 

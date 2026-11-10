@@ -846,7 +846,15 @@ quest is built, how the peer works) before they are asked six more times.
   seven partner lines -- and, from the HM audit the finding prompted,
   ROCK SMASH and STRENGTH too, since the Floodbasin's three rocks are the
   only way north and a row of rocks and boulders sits below VALE's gate;
-  the other five HMs open side areas only. The spine never saw this because it spawns past
+  the other five HMs open side areas only. Then, one step later, the
+  second soft-lock behind the first: with CUT taught, pressing A on the
+  deadfall still said only "This tree looks like it can be CUT down!",
+  because Emerald's tree script refuses CUT without the first badge, and
+  TARN's exam is on the far side of the tree. The party menu had already
+  been freed of badge checks (`OW_FIELD_MOVES_NEED_BADGES` is FALSE, with
+  a comment saying exactly this); the three field scripts -- the tree,
+  the breakable rock, the boulder -- had not. They are now. Every player
+  would have been stuck in Mistwood. The spine never saw this because it spawns past
   the gate; the sweep never saw it because the tree is a cuttable object,
   not a warp. This is what the honest "not played end to end" bullet in
   the handoff was for.

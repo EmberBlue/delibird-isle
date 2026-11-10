@@ -442,8 +442,11 @@ replaces is gone from the tree).
   Fernwick → HALE → TARN → the signing). First real finding: no Meadow
   partner could learn CUT, and most could not learn ROCK SMASH or
   STRENGTH either, the two other field moves the main path needs (fixed,
-  `partner_hms.py`; the five remaining HMs open side areas only).
-  Chapters 2-8 are still to be played this way.
+  `partner_hms.py`; the five remaining HMs open side areas only). Second
+  finding, one step later: the engine's tree script refused CUT without
+  badge 1, which is on the far side of the tree (fixed: the tree, rock
+  and boulder scripts no longer check badges, matching
+  `OW_FIELD_MOVES_NEED_BADGES`). Chapters 2-8 are still to be played.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to
