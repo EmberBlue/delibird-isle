@@ -127,8 +127,14 @@ def main():
         if a.trace: print(f"  battle: gBattleTypeFlags={core.memory.u32[btf] if btf else None:#x} wild={wild}", flush=True)
         run_keys = ["UP", "LEFT", "DOWN", "RIGHT", "A", "B", "B", "B"]
         bmons, acur = syms.get("gBattleMons"), syms.get("gActionSelectionCursor")
+        bmain = syms.get("BattleMainCB2")
         while in_battle() and spent < limit:
-            if wild:
+            if bmain and (core.memory.u32[gmain + 4] & ~1) != bmain and spent > 400:
+                # Some other screen is up inside the battle: the move-forget summary a level-up opens (an
+                # A there deletes move 1, which is how a partner lost ROCK SMASH to ROLLOUT, 2026-11-10),
+                # the bag, the party menu. B backs out of each; "Stop learning it?" then takes the A.
+                key = "B"
+            elif wild:
                 key = run_keys[taps % len(run_keys)]
             else:
                 if bmons is not None:
