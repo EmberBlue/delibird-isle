@@ -31,6 +31,7 @@ mapscripts ParcelCoast_MapScripts {
 
 // the Mereholt aide only appears once the testimony has landed
 script ParcelCoast_HideAide {
+    setflag(FLAG_VISITED_PARCEL_COAST)
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         clearflag(FLAG_TEMP_4)
     } else {

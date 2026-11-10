@@ -15,6 +15,7 @@ mapscripts ParcelFernwick_MapScripts {
 // and the epilogue has run does a SMEARGLE sit on the pond bank. Hidden
 // otherwise; gone once it has decided.
 script ParcelFernwick_OnTransition {
+    setflag(FLAG_VISITED_PARCEL_FERNWICK)
     if (flag(FLAG_SKALDMERE_EPILOGUE_DONE) && !flag(FLAG_SKALD_SMEARGLE_DONE)) {
         clearflag(FLAG_SKALD_SMEARGLE_HIDDEN)
     } else {

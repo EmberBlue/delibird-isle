@@ -31,6 +31,7 @@ mapscripts ParcelRiver_MapScripts {
 }
 
 script ParcelRiver_OnTransition {
+    setflag(FLAG_VISITED_PARCEL_RIVER)
     // Dorsey works the market until the Watershed Certification is signed.
     if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
         setflag(FLAG_TEMP_2)

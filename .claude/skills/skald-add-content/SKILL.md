@@ -70,9 +70,16 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 - Every custom graphic is generated: `tools/skald/title_art.py` (title layers),
   `tools/skald/cast_sprites.py` (nine cast sheets + two faction palettes),
   `tools/skald/leader_pics.py` (battle palettes for the leaders over stock
-  pictures), `tools/skald/ui_frames.py` (dialogue border colours, menu frame 1).
-  Edit the generator, re-run it, rebuild; the PNG/.pal/.bin outputs are what's
-  committed.
+  pictures), `tools/skald/ui_frames.py` (dialogue border colours, menu frame 1),
+  `tools/skald/pokenav_labels.py` (the PokéNav's SKALDMERE option and header,
+  lettered in the stock 6px-pitch label font; it reads the *stock* label images
+  as glyph sources, so `git checkout` them before re-running). Edit the
+  generator, re-run it, rebuild; the PNG/.pal/.bin outputs are what's committed.
+- A new fly town: `FLAG_VISITED_PARCEL_X` (alias an unreachable Hoenn visited
+  flag in `flags.h`), `setflag` it in the map's `MAP_SCRIPT_ON_TRANSITION`, add
+  the `MAPSEC_` case to `GetMapsecType()` in `src/region_map.c`, a row in
+  `sMapHealLocations`, the cell(s) in `region_map_layout.h`, and a town tile
+  (162) at the cell in `map.bin` (8-bit affine, see skald-verify).
 - A leader's battle picture: a palette-only variant needs a JASC `.pal` in
   `graphics/trainers/palettes/`, a `TRAINER_PIC_SKALD_X` (bump
   `TRAINER_PIC_COUNT`), a `gTrainerPalette_SkaldX` INCBIN and a

@@ -305,6 +305,21 @@ replaces is gone from the tree).
   `src/data/graphics/trainers.h`; `trainers.party` says `Pic: Skald Mirren`
   etc. on all 15 leader entries (first fights and rematches). Checked in
   battle by tracing the Mirren exam (`walktest.py --trace 100`).
+- **Region map (PokéNav)** — the Skaldmere archipelago drawn in an earlier
+  session had never rendered: `map.bin` was written as a 16-bit text
+  tilemap, but the region map BG is affine (8-bit, 64x64 bytes), so the
+  PokéNav showed vertical garbage stripes. Converted in place (the 37
+  180°-flipped entries became 15 rotated copies, tiles 186-200; max 233
+  tiles allowed). Town markers (tile 162) added at Fernwick, Elvsund, the
+  Coast and Delibird; MISTWOOD/SUMMIT/CLIFFS cells added to
+  `region_map_layout.h`. Fly: Fernwick, Elvsund, the Coast, Delibird and the
+  Climate Station are now `MAPSECTYPE_CITY_CANFLY` once visited
+  (`FLAG_VISITED_PARCEL_*` alias Hoenn's unreachable visited flags; set in
+  each town's on-transition script). The PokéNav's "HOENN MAP" option and
+  "HOENN MAP FULL VIEW" header are image labels: `tools/skald/pokenav_labels.py`
+  rewrites them to SKALDMERE in the stock 6px-pitch font (glyphs harvested
+  from the other labels, K drawn to match). Checked in the PokéNav itself:
+  `TAP:START, IDLE:40, TAP:DOWN, IDLE:15, TAP:A, IDLE:220, TAP:A, IDLE:260`.
 - **UI** — `ui_frames.py`. The dialogue box keeps its shape with ice/slate/
   dark-slate border colours (palette 13-15 of `message_box.png`; text
   colours untouched), and window frame 1 (the default menu border) is a

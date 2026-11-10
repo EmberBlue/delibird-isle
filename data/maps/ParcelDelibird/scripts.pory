@@ -27,11 +27,17 @@ const LOCALID_DEL_STRINGER = 13
 const LOCALID_DEL_FOLDER   = 14
 
 mapscripts ParcelDelibird_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelDelibird_SetVisited
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_SKALD_EPILOGUE, 5: ParcelDelibird_Epilogue
         VAR_TEMP_0, 0: ParcelDelibird_SetMapVar
         VAR_TEMP_1, 0: ParcelDelibird_FirstEntry
     ]
+}
+
+script ParcelDelibird_SetVisited {
+    setflag(FLAG_VISITED_PARCEL_DELIBIRD)
+    end
 }
 
 script ParcelDelibird_SetMapVar {

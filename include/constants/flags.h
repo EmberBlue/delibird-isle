@@ -1540,7 +1540,13 @@
 #define FLAG_VISITED_EVER_GRANDE_CITY               (SYSTEM_FLAGS + 0x1E)
 #define FLAG_VISITED_TEST_TOWN                      (SYSTEM_FLAGS + 0x21) 
 #define FLAG_VISITED_ROGUE_SPECIAL_MEWTWO           (SYSTEM_FLAGS + 0x22) 
-#define FLAG_VISITED_PARCEL_ISLE                    (SYSTEM_FLAGS + 0x23) 
+#define FLAG_VISITED_PARCEL_ISLE                    (SYSTEM_FLAGS + 0x23)
+// Skaldmere fly destinations alias Hoenn's unreachable "visited" flags.
+#define FLAG_VISITED_PARCEL_FERNWICK                FLAG_VISITED_OLDALE_TOWN
+#define FLAG_VISITED_PARCEL_RIVER                   FLAG_VISITED_PETALBURG_CITY
+#define FLAG_VISITED_PARCEL_COAST                   FLAG_VISITED_SLATEPORT_CITY
+#define FLAG_VISITED_PARCEL_DELIBIRD                FLAG_VISITED_DEWFORD_TOWN
+#define FLAG_VISITED_PARCEL_WEATHER                 FLAG_VISITED_MAUVILLE_CITY
 
 #define FLAG_IS_CHAMPION                            (SYSTEM_FLAGS + 0x1F) // Seems to be related to linking.
 #define FLAG_NURSE_UNION_ROOM_REMINDER              (SYSTEM_FLAGS + 0x20)

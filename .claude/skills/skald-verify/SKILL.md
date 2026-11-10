@@ -53,8 +53,20 @@ Title screen: `--frames 2600 --press START@500:8` lands on the settled title
 (the START skips the intro); take a second frame ~350 later to see the aurora
 drift and the harbour lamp pulse. Overworld sprites: `walktest.py --spawn` two
 tiles below the NPC, `--walk UP:0 --out shot.png`. A dialogue box: add
-`--walk A:90` before `--out`. `TAP:START` does not open the start menu under
-the harness (checked 2026-11-10), so menu frames are judged from their PNG.
+`--walk A:90` before `--out`. Menus: `TAP:START` works, but follow it with
+`IDLE:n`, never `WAIT:n` -- WAIT mashes B and closes the menu (that was the
+"start menu won't open" mystery of 2026-11-10). PokéNav map, from any field
+spot: `--walk IDLE:30 --walk TAP:START --walk IDLE:40 --walk TAP:DOWN --walk
+IDLE:15 --walk TAP:A --walk IDLE:220 --walk TAP:A --walk IDLE:260 --out map.png`.
+Add `--trace 60` to see every screen along the way. A fight's intro frames
+(trainer sprite, "would like to battle") are found the same way: `--trace 100`
+over the talk-and-fight sequence, then pick the frames.
+
+Region map gotcha: `graphics/pokenav/region_map/map.bin` is an **8-bit affine
+tilemap (64x64 bytes, no flips)**, not a 16-bit text tilemap. A 16-bit file
+of the same 4096 bytes renders as vertical stripes in the PokéNav. Decode it
+as bytes (`row*64+col`) when checking, and keep the tile sheet under 233
+tiles (`-num_tiles 233` in `graphics_file_rules.mk`).
 
 ## FireRed tileset (frp_*) specifics
 

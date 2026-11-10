@@ -682,6 +682,13 @@ quest is built, how the peer works) before they are asked six more times.
   Survey's old examiners, ILEX as a ranger in Survey olive, HARLAND in a
   navy oilskin, VANE grey-suited, CORDELIA in charcoal and silver -- so the
   person in the battle matches the person on the map; checked by tracing
-  the Mirren exam frame by frame. Deferred: a northern retint of the
-  outdoor tileset palettes, building exteriors, custom trainer classes.
+  the Mirren exam frame by frame. And the PokéNav, opened for the first
+  time in the emulator, turned out to have been showing garbage stripes all
+  along: the archipelago drawn for it earlier was saved as a 16-bit tilemap
+  for an 8-bit affine layer. Converted; town markers at Fernwick, Elvsund,
+  the Coast and Delibird; the three missing sections placed; "HOENN MAP"
+  relettered SKALDMERE in the stock pixel font; and fly now reaches every
+  Centre town once visited instead of only Saltwick. Deferred: a northern
+  retint of the outdoor tileset palettes, building exteriors, custom trainer
+  classes.
 

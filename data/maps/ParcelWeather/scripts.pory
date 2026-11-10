@@ -8,9 +8,15 @@
 const LOCALID_WS_SAILOR = 5
 
 mapscripts ParcelWeather_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ParcelWeather_SetVisited
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_TEMP_1, 0: ParcelWeather_FirstEntry
     ]
+}
+
+script ParcelWeather_SetVisited {
+    setflag(FLAG_VISITED_PARCEL_WEATHER)
+    end
 }
 
 script ParcelWeather_FirstEntry {
