@@ -55,6 +55,8 @@ def main():
     ap.add_argument("--flag", action="append", default=[], help="FLAG_X to set before the new game (up to 5, repeatable)")
     ap.add_argument("--check", action="append", default=[], help="FLAG_X or VAR_X to print at the end")
     ap.add_argument("--item", help="ITEM_X to put in the bag before the new game")
+    ap.add_argument("--party", help="SPECIES_X given at level 100 before the new game, so battles can be won by mashing A")
+    ap.add_argument("--var", action="append", default=[], help="VAR_X=value to set before the new game (up to 2, repeatable)")
     a = ap.parse_args()
     if a.map: MAPFILE[0] = Path(a.map)
     syms, maps = symbols(), map_ids()
@@ -94,6 +96,12 @@ def main():
         core.memory.u16[probe + 6 + 2 * i] = flags[f] if f in flags else tfs + trainers[f]
     if a.item:
         core.memory.u16[probe + 20] = constants("include/constants/items.h", "ITEM_")[a.item]
+    if a.party:
+        core.memory.u16[probe + 22] = constants("include/constants/species.h", "SPECIES_")[a.party]
+    assert len(a.var) <= 2, "at most 2 --var"
+    for i, v in enumerate(a.var):
+        name, val = v.split("=")
+        core.memory.u16[probe + 24 + 4 * i] = vars_[name]; core.memory.u16[probe + 26 + 4 * i] = int(val, 0)
     step(a.settle - 4400)
     def dismiss(frames):           # mash B: closes any scene text, harmless otherwise
         for f in range(0, frames, 45): presses[frame + f] = ("B", 8)

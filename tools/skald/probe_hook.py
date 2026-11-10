@@ -6,7 +6,8 @@
 
 The hook adds an EWRAM array (gProbe) the harness pokes before the new game
 starts: [0] map id, [1] x, [2] y, [3..7] flags to set, [10] an item to put in
-the bag, and WarpToTruck writes back [8] = offset of SaveBlock1.flags,
+the bag, [11] a species given at level 100 so battles can be won, [12..15] two
+var id/value pairs, and WarpToTruck writes back [8] = offset of SaveBlock1.flags,
 [9] = offset of SaveBlock1.vars so the harness can read flags and vars by name. Every added line carries the marker
 "TEMP TEST ONLY"; `grep -c "TEMP TEST" src/new_game.c` must be 0 in a commit.
 """
@@ -16,7 +17,7 @@ from pathlib import Path
 PATH = Path(__file__).resolve().parents[2] / "src/new_game.c"
 MARK = "// TEMP TEST ONLY"
 DECL_ANCHOR = "static void WarpToTruck(void);\n"
-DECL = f"EWRAM_DATA u16 gProbe[12] = {{0}}; {MARK}\n"
+DECL = f"EWRAM_DATA u16 gProbe[16] = {{0}}; {MARK}\nu32 ScriptGiveMon(u16 species, u8 level, u16 item); {MARK}\n"
 CALL = "    SetWarpDestination(MAP_GROUP(MAP_PARCEL_FERRY), MAP_NUM(MAP_PARCEL_FERRY), WARP_ID_NONE, 4, 6);\n"
 HOOK = f"""    if (gProbe[0] != 0) {MARK}: tools/skald/walktest.py pokes gProbe before the new game
     {{ {MARK}
@@ -29,6 +30,17 @@ HOOK = f"""    if (gProbe[0] != 0) {MARK}: tools/skald/walktest.py pokes gProbe 
         gProbe[9] = (u16)((u8 *)gSaveBlock1Ptr->vars - (u8 *)gSaveBlock1Ptr); {MARK}
         if (gProbe[10] != 0) {MARK}
             AddBagItem(gProbe[10], 1); {MARK}
+        if (gProbe[11] != 0) {MARK}: a level-100 partner so the harness can win battles
+        {{ {MARK}
+            u16 mv = 58; u8 pp = 16; {MARK}: ICE BEAM in slot 1 -- no type is immune, so mashing A always ends the fight
+            ScriptGiveMon(gProbe[11], 100, 0); {MARK}
+            SetMonData(&gPlayerParty[0], MON_DATA_MOVE1, &mv); {MARK}
+            SetMonData(&gPlayerParty[0], MON_DATA_PP1, &pp); {MARK}
+        }} {MARK}
+        if (gProbe[12] != 0) {MARK}: up to two vars, id/value pairs
+            VarSet(gProbe[12], gProbe[13]); {MARK}
+        if (gProbe[14] != 0) {MARK}
+            VarSet(gProbe[14], gProbe[15]); {MARK}
     }} {MARK}
     else {MARK}
 """

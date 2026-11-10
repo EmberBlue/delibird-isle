@@ -30,6 +30,11 @@ script ParcelLab_FirstEntry {
 script ParcelLab_Official {
     lock
     faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Official: The file's been reopened. Not by me. By the review, who wanted to know why a burglary had a company van in the harbour log.\pI wrote vandalism because vandalism is what you write. I've written something else now. It took one word and nine years."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("Official: No signs of forced entry beyond the latch. Could be vandalism.\pWe've filed it.\nNot much else we can do."), MSGBOX_DEFAULT)
     msgbox(format("He says it the way a man reads a bus schedule.\pHe has said it before."), MSGBOX_DEFAULT)
     release
@@ -38,6 +43,11 @@ script ParcelLab_Official {
 
 script ParcelLab_Resident {
     lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("She meets your eyes this time.\pRESIDENT: It was the company's van. I saw the crest from my window and I said nothing for a year, because the town is small and words carry over water.\pThen a ranger put it in a record, and I didn't have to carry it any more. That's what a record is for, isn't it. So the rest of us can put it down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("She doesn't meet your eyes.\pAs you pass, barely a breath:\nDon't make noise about it."), MSGBOX_DEFAULT)
     release
     end
@@ -45,14 +55,26 @@ script ParcelLab_Resident {
 
 // the examine points: the precision is the message
 script ParcelLab_Shelves {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The shelves are full again, with boxes. RED CLOTH, by zone, in the Surveyor's hand: REEDMERE, HOLLOWBEND, LEIRVIK, ELVSUND, HAUKFELL, THE QUAY, THE MARSH. Thirty-one years in cardboard.\pThe bookends are the same bookends. Nobody moved them. They have held two different histories now and look exactly the same."), MSGBOX_SIGN)
+        end
+    }
     msgbox(format("The shelves are empty--but not swept. Every binder gone; the bookends still standing.\pSomeone took these one at a time."), MSGBOX_SIGN)
     end
 }
 script ParcelLab_Desk {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The desk has a new blotter and the same lamp, standing. The drive bay is still empty; the Survey keeps its records on paper, on purpose, and the clerk says so to anyone who asks.\pIn the top drawer, under the pens, the coiled cable. Someone kept it. Evidence of care is still evidence."), MSGBOX_SIGN)
+        end
+    }
     msgbox(format("The desk drawers hang open, contents intact: pens, tape, a tin of nails.\pOnly the drive bay beneath is empty, its cable coiled neatly on the blotter.\pVandals don't coil cables."), MSGBOX_SIGN)
     end
 }
 script ParcelLab_SampleRack {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The sample rack holds jars again. Not hers: marsh water from the Corps monitor at Reedmere, one a week, dated, the colour going from brown to grey along the row.\pThe last jar is nearly clear. It is labelled, in a clerk's hand: not clean. Honest."), MSGBOX_SIGN)
+        end
+    }
     msgbox(format("A sample rack, every slot bare. No broken glass anywhere.\pOn the floor, one paper label, machine-printed:\nPOLIWAG -- MARSH 7 -- WK 41."), MSGBOX_SIGN)
     end
 }

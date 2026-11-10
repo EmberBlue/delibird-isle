@@ -38,38 +38,77 @@ ParcelLab_Official::
 # 32 "data/maps/ParcelLab/scripts.pory"
 	faceplayer
 # 33 "data/maps/ParcelLab/scripts.pory"
-	msgbox ParcelLab_Official_Text_0, MSGBOX_DEFAULT
-# 34 "data/maps/ParcelLab/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelLab_Official_2
+# 38 "data/maps/ParcelLab/scripts.pory"
 	msgbox ParcelLab_Official_Text_1, MSGBOX_DEFAULT
+# 39 "data/maps/ParcelLab/scripts.pory"
+	msgbox ParcelLab_Official_Text_2, MSGBOX_DEFAULT
+# 40 "data/maps/ParcelLab/scripts.pory"
+	release
+	end
+
+ParcelLab_Official_2:
+# 34 "data/maps/ParcelLab/scripts.pory"
+	msgbox ParcelLab_Official_Text_0, MSGBOX_DEFAULT
 # 35 "data/maps/ParcelLab/scripts.pory"
 	release
 	end
 
 
 ParcelLab_Resident::
-# 40 "data/maps/ParcelLab/scripts.pory"
+# 45 "data/maps/ParcelLab/scripts.pory"
 	lock
-# 41 "data/maps/ParcelLab/scripts.pory"
+# 46 "data/maps/ParcelLab/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelLab_Resident_2
+# 51 "data/maps/ParcelLab/scripts.pory"
+	msgbox ParcelLab_Resident_Text_1, MSGBOX_DEFAULT
+# 52 "data/maps/ParcelLab/scripts.pory"
+	release
+	end
+
+ParcelLab_Resident_2:
+# 47 "data/maps/ParcelLab/scripts.pory"
 	msgbox ParcelLab_Resident_Text_0, MSGBOX_DEFAULT
-# 42 "data/maps/ParcelLab/scripts.pory"
+# 48 "data/maps/ParcelLab/scripts.pory"
 	release
 	end
 
 
 ParcelLab_Shelves::
-# 48 "data/maps/ParcelLab/scripts.pory"
+# 58 "data/maps/ParcelLab/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelLab_Shelves_2
+# 62 "data/maps/ParcelLab/scripts.pory"
+	msgbox ParcelLab_Shelves_Text_1, MSGBOX_SIGN
+	end
+
+ParcelLab_Shelves_2:
+# 59 "data/maps/ParcelLab/scripts.pory"
 	msgbox ParcelLab_Shelves_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelLab_Desk::
-# 52 "data/maps/ParcelLab/scripts.pory"
+# 66 "data/maps/ParcelLab/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelLab_Desk_2
+# 70 "data/maps/ParcelLab/scripts.pory"
+	msgbox ParcelLab_Desk_Text_1, MSGBOX_SIGN
+	end
+
+ParcelLab_Desk_2:
+# 67 "data/maps/ParcelLab/scripts.pory"
 	msgbox ParcelLab_Desk_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelLab_SampleRack::
-# 56 "data/maps/ParcelLab/scripts.pory"
+# 74 "data/maps/ParcelLab/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelLab_SampleRack_2
+# 78 "data/maps/ParcelLab/scripts.pory"
+	msgbox ParcelLab_SampleRack_Text_1, MSGBOX_SIGN
+	end
+
+ParcelLab_SampleRack_2:
+# 75 "data/maps/ParcelLab/scripts.pory"
 	msgbox ParcelLab_SampleRack_Text_0, MSGBOX_SIGN
 	end
 
@@ -94,33 +133,79 @@ ParcelLab_FirstEntry_Text_2:
 	.string "An erasure.$"
 
 ParcelLab_Official_Text_0:
-# 33 "data/maps/ParcelLab/scripts.pory"
+# 34 "data/maps/ParcelLab/scripts.pory"
+	.string "Official: The file's been reopened. Not\n"
+	.string "by me. By the review, who wanted to know\l"
+	.string "why a burglary had a company van in the\l"
+	.string "harbour log.\p"
+	.string "I wrote vandalism because vandalism is\n"
+	.string "what you write. I've written something\l"
+	.string "else now. It took one word and nine\l"
+	.string "years.$"
+
+ParcelLab_Official_Text_1:
+# 38 "data/maps/ParcelLab/scripts.pory"
 	.string "Official: No signs of forced entry\n"
 	.string "beyond the latch. Could be vandalism.\p"
 	.string "We've filed it.\n"
 	.string "Not much else we can do.$"
 
-ParcelLab_Official_Text_1:
-# 34 "data/maps/ParcelLab/scripts.pory"
+ParcelLab_Official_Text_2:
+# 39 "data/maps/ParcelLab/scripts.pory"
 	.string "He says it the way a man reads a bus\n"
 	.string "schedule.\p"
 	.string "He has said it before.$"
 
 ParcelLab_Resident_Text_0:
-# 41 "data/maps/ParcelLab/scripts.pory"
+# 47 "data/maps/ParcelLab/scripts.pory"
+	.string "She meets your eyes this time.\p"
+	.string "RESIDENT: It was the company's van. I\n"
+	.string "saw the crest from my window and I said\l"
+	.string "nothing for a year, because the town is\l"
+	.string "small and words carry over water.\p"
+	.string "Then a ranger put it in a record, and I\n"
+	.string "didn't have to carry it any more. That's\l"
+	.string "what a record is for, isn't it. So the\l"
+	.string "rest of us can put it down.$"
+
+ParcelLab_Resident_Text_1:
+# 51 "data/maps/ParcelLab/scripts.pory"
 	.string "She doesn't meet your eyes.\p"
 	.string "As you pass, barely a breath:\n"
 	.string "Don't make noise about it.$"
 
 ParcelLab_Shelves_Text_0:
-# 48 "data/maps/ParcelLab/scripts.pory"
+# 59 "data/maps/ParcelLab/scripts.pory"
+	.string "The shelves are full again, with boxes.\n"
+	.string "RED CLOTH, by zone, in the Surveyor's\l"
+	.string "hand: REEDMERE, HOLLOWBEND, LEIRVIK,\l"
+	.string "ELVSUND, HAUKFELL, THE QUAY, THE MARSH.\l"
+	.string "Thirty-one years in cardboard.\p"
+	.string "The bookends are the same bookends.\n"
+	.string "Nobody moved them. They have held two\l"
+	.string "different histories now and look\l"
+	.string "exactly the same.$"
+
+ParcelLab_Shelves_Text_1:
+# 62 "data/maps/ParcelLab/scripts.pory"
 	.string "The shelves are empty--but not swept.\n"
 	.string "Every binder gone; the bookends still\l"
 	.string "standing.\p"
 	.string "Someone took these one at a time.$"
 
 ParcelLab_Desk_Text_0:
-# 52 "data/maps/ParcelLab/scripts.pory"
+# 67 "data/maps/ParcelLab/scripts.pory"
+	.string "The desk has a new blotter and the same\n"
+	.string "lamp, standing. The drive bay is still\l"
+	.string "empty; the Survey keeps its records on\l"
+	.string "paper, on purpose, and the clerk says so\l"
+	.string "to anyone who asks.\p"
+	.string "In the top drawer, under the pens, the\n"
+	.string "coiled cable. Someone kept it. Evidence\l"
+	.string "of care is still evidence.$"
+
+ParcelLab_Desk_Text_1:
+# 70 "data/maps/ParcelLab/scripts.pory"
 	.string "The desk drawers hang open, contents\n"
 	.string "intact: pens, tape, a tin of nails.\p"
 	.string "Only the drive bay beneath is empty, its\n"
@@ -128,7 +213,18 @@ ParcelLab_Desk_Text_0:
 	.string "Vandals don't coil cables.$"
 
 ParcelLab_SampleRack_Text_0:
-# 56 "data/maps/ParcelLab/scripts.pory"
+# 75 "data/maps/ParcelLab/scripts.pory"
+	.string "The sample rack holds jars again. Not\n"
+	.string "hers: marsh water from the Corps\l"
+	.string "monitor at Reedmere, one a week, dated,\l"
+	.string "the colour going from brown to grey\l"
+	.string "along the row.\p"
+	.string "The last jar is nearly clear. It is\n"
+	.string "labelled, in a clerk's hand: not clean.\l"
+	.string "Honest.$"
+
+ParcelLab_SampleRack_Text_1:
+# 78 "data/maps/ParcelLab/scripts.pory"
 	.string "A sample rack, every slot bare. No\n"
 	.string "broken glass anywhere.\p"
 	.string "On the floor, one paper label,\n"

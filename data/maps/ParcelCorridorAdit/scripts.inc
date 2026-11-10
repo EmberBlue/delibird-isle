@@ -47,6 +47,12 @@ ParcelCorridorAdit_Satchel_3:
 	goto ParcelCorridorAdit_Satchel_1
 
 
+ParcelCorridorAdit_Pump::
+# 30 "data/maps/ParcelCorridorAdit/scripts.pory"
+	msgbox ParcelCorridorAdit_Pump_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCorridorAdit_Mark_Text_0:
 # 12 "data/maps/ParcelCorridorAdit/scripts.pory"
 	.string "Survey marks chalked on the rock, one\n"
@@ -69,3 +75,15 @@ ParcelCorridorAdit_Satchel_Text_1:
 # 24 "data/maps/ParcelCorridorAdit/scripts.pory"
 	.string "A crack in the rock where a satchel\n"
 	.string "used to be wedged. Dry. Empty now.$"
+
+ParcelCorridorAdit_Pump_Text_0:
+# 30 "data/maps/ParcelCorridorAdit/scripts.pory"
+	.string "The pump housing, rusted to the rock.\n"
+	.string "MEREHOLT SUBSURFACE, a serial number,\l"
+	.string "and a brass plate: DEWATERED. The date\l"
+	.string "is the year before the culvert went in.\p"
+	.string "Below the plate, scratched: and never\n"
+	.string "watered again. The seepage pools on the\l"
+	.string "floor say otherwise. Slowly, in its own\l"
+	.string "time, the ground is getting its water\l"
+	.string "back without asking the plate.$"

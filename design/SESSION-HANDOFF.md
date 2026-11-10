@@ -241,6 +241,21 @@ trigger within one tile (arrival-only; the engine fires warps only from
 door/arrow/ladder tiles). After the fixes: every warp and connection
 passes except the retired Station's.
 
+**The spine, fought through (2026-11-10).** The hook now takes
+`--party SPECIES_X` (a level-100 partner with ICE BEAM forced into slot 1,
+so mashing A always ends a fight; no type is immune to Ice) and up to two
+`--var VAR_X=value`. With those, every certification was earned in the
+emulator and its flag read back: all eight leaders (exam → battle → badge
+→ field-craft), Hale's Forest and Wetland signings at the HQ
+(`--flag FLAG_BADGE01_GET`; `--var VAR_SKALDMERE_CH2_EVIDENCE=0xFFFF`),
+Hale's Highland signing on the slope and the Coastal one on the quay,
+Heron's confession with the Hollis choice, her battle and the final survey
+(`FLAG_SKALDMERE_FINALE_DONE` = 1 from `--flag FLAG_SKALDMERE_HERON_MET
+--var VAR_SKALDMERE_CH7_EVIDENCE=0xFFFF`), and Cordelia's boardroom
+(`FLAG_SKALDMERE_CORDELIA_DONE` = 1; her pages are long -- `A:1300`).
+Leader scenes need `A:300`-`A:350`, Vane `A:650`. The probe commands are in
+`tools/skald/sweep.py`'s neighbour, the scratch `gates.sh`, and the skill.
+
 ## Known-open (honest list)
 
 - **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816

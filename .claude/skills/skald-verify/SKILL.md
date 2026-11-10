@@ -87,6 +87,14 @@ that ROM's symbol file, so the sources can be clean while it runs). Read the
 BAD lines: a retired map or a tile the picker chose at the wrong elevation is
 noise; anything else is a break. Map number 127 of a group used to misroute
 every warp into it (fixed in the engine 2026-11-10).
+
+To fight through a gate instead of whiting out, give the harness a partner:
+`--party SPECIES_MEWTWO` puts a level-100 one in the party with ICE BEAM in
+slot 1 (no type is immune, so `--walk A:300` wins any leader; Vane needs
+`A:650`, Cordelia `A:1300`). `--var VAR_X=value` (up to two) sets the
+chapter evidence vars so the signings can be reached (`--var
+VAR_SKALDMERE_CH2_EVIDENCE=0xFFFF`). `tools/skald/spine.sh HOOKON.gba
+HOOKON.map` runs the whole certification spine and prints each flag.
 boots the ROM headless, pokes the spawn into `gProbe` (a TEMP hook in
 `src/new_game.c`: `python3 tools/skald/probe_hook.py --on` adds it, build,
 test, `--off` removes it, `grep -c "TEMP TEST" src/new_game.c` = 0 before

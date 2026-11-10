@@ -7,3 +7,12 @@ script ParcelMeadowHut_Note {
     msgbox(format("A feeding chart, in marker:\pDODUO -- anything. SHROOMISH -- don't. SEEDOT -- pretends it doesn't eat.\pLOTAD -- pool. CARVANHA -- POOL, CAREFULLY. NUMEL -- warm sand, will not move for food.\pELECTRIKE -- catch it first."), MSGBOX_SIGN)
     end
 }
+
+script ParcelMeadowHut_Register {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The meadow register, in RIN's hand. One line per animal: the day it came to the paddock, where from, who it chose, when. Most lines end in a dash.\pThe seventh column was headed WAITING when the book was ruled. Someone has crossed the word out and written STAYING over it, in the same hand, recently. The ink is still a different black."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The meadow register, in RIN's hand. One line per animal: the day it came to the paddock, where from, who it chose, when. Most lines end in a dash.\pThe seventh column is headed WAITING. The dashes run down it for years. The book does not say how long a dash is allowed to be."), MSGBOX_SIGN)
+    }
+    end
+}

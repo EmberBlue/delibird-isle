@@ -25,3 +25,8 @@ script ParcelCorridorAdit_Satchel {
     release
     end
 }
+
+script ParcelCorridorAdit_Pump {
+    msgbox(format("The pump housing, rusted to the rock. MEREHOLT SUBSURFACE, a serial number, and a brass plate: DEWATERED. The date is the year before the culvert went in.\pBelow the plate, scratched: and never watered again. The seepage pools on the floor say otherwise. Slowly, in its own time, the ground is getting its water back without asking the plate."), MSGBOX_SIGN)
+    end
+}
