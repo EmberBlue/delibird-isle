@@ -36,7 +36,7 @@ seg s46 s45 - --walk GOTO:14,58 --walk DOWN:0 --walk WAIT:900 --walk GOTO:14,2 -
   --walk DOWN:0 --walk DOWN:0 --walk WAIT:200 --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --expect MAP_PARCEL_ROUTE1
 seg s47 s46 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:900 --expect MAP_PARCEL_ISLE
 # the ferry captain (15,34), first choice = DELIBIRD ISLE (open after the Highland certification)
-seg s48 s47 FLAG_SKALDMERE_DELIBIRD_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk TALK:6 --walk WAIT:2500 \
+seg s48 s47 FLAG_SKALDMERE_DELIBIRD_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk MENU:0,14 --walk WAIT:1500 \
   --check FLAG_SKALDMERE_DELIBIRD_ARRIVAL --expect MAP_PARCEL_DELIBIRD
 # ILEX in the square (11,10) through the north gap: the aerial-survey competency test, badge 8, HM07
 seg s49 s48 FLAG_BADGE08_GET --walk GOTO:10,10 --walk RIGHT:0 --walk TALK:30 --walk WAIT:2500 --check FLAG_BADGE08_GET --expect MAP_PARCEL_DELIBIRD
@@ -48,7 +48,7 @@ seg s50 s49 - --walk GOTO:15,4 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk 
 seg s51 s50 - --walk GOTO:6,16 --walk UP:0 --walk TALK:8 --walk WAIT:400 --walk GOTO:20,17 --walk UP:0 --walk TALK:8 --walk WAIT:400 \
   --walk GOTO:7,11 --walk UP:0 --walk TALK:10 --walk WAIT:600 --walk GOTO:8,19 --walk UP:0 --walk TALK:4 --walk WAIT:900 --expect MAP_PARCEL_DELIBIRD
 # the sailor (9,23) back to Saltwick, then the captain's second choice = the MEREHOLT COAST
-seg s52 s51 - --walk GOTO:9,22 --walk DOWN:0 --walk TALK:3 --walk WAIT:2500 --expect MAP_PARCEL_ISLE
-seg s53 s52 FLAG_SKALDMERE_COAST_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk A:1 --walk IDLE:420 $PICK1 $PICK1 $PICK1 $PICK1 $PICK1 \
-  --walk WAIT:2500 --check FLAG_SKALDMERE_COAST_ARRIVAL --expect MAP_PARCEL_COAST
+seg s52 s51 - --walk GOTO:9,22 --walk DOWN:0 --walk MENU:0,8 --walk WAIT:900 --expect MAP_PARCEL_ISLE
+seg s53 s52 FLAG_SKALDMERE_COAST_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk MENU:1,14 \
+  --walk WAIT:1500 --check FLAG_SKALDMERE_COAST_ARRIVAL --expect MAP_PARCEL_COAST
 echo "=== chapter 5 complete, the Coast reached $(date +%H:%M:%S)"

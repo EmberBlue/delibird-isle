@@ -38,7 +38,7 @@ seg s57 s56 - --walk GOTOWARP:1 --walk WAIT:400 --walk GOTO:12,2 --walk UP:0 --w
 # HALE on the quay (29,52): the Coastal certification
 seg s58 s57 FLAG_SKALDMERE_COASTAL_CERT --walk GOTO:29,53 --walk UP:0 --walk TALK:26 --walk WAIT:1500 --check FLAG_SKALDMERE_COASTAL_CERT --expect MAP_PARCEL_COAST
 # the sailor (33,56) back to Saltwick; the captain's third choice = the climate station
-seg s59 s58 - --walk GOTO:33,55 --walk DOWN:0 --walk TALK:3 --walk WAIT:2500 --expect MAP_PARCEL_ISLE
-seg s60 s59 FLAG_VISITED_PARCEL_WEATHER --walk GOTO:15,33 --walk DOWN:0 --walk A:1 --walk IDLE:420 $PICK2 $PICK2 $PICK2 $PICK2 $PICK2 \
-  --walk WAIT:2500 --check FLAG_VISITED_PARCEL_WEATHER --expect MAP_PARCEL_WEATHER
+seg s59 s58 - --walk GOTO:33,55 --walk DOWN:0 --walk MENU:0,8 --walk WAIT:900 --expect MAP_PARCEL_ISLE
+seg s60 s59 FLAG_VISITED_PARCEL_WEATHER --walk GOTO:15,33 --walk DOWN:0 --walk MENU:2,14 \
+  --walk WAIT:1500 --check FLAG_VISITED_PARCEL_WEATHER --expect MAP_PARCEL_WEATHER
 echo "=== chapter 6 complete, the climate station reached $(date +%H:%M:%S)"

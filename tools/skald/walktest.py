@@ -317,6 +317,21 @@ def main():
             step(60)
             print(f"  TEACHHM {item_name or item} slot {slot}: back in the field = {cb2() == CB['CB2_Overworld']}")
             continue
+        elif d.upper() == "MENU":   # MENU:k,n -- a talk that ends in a choice box and a warp (the ferry): up to n
+            # rounds of [DOWN x k, A], stopping the moment the map changes, so no stray press lands on
+            # whoever stands at the arrival point. k = 0 is "A until the boat leaves".
+            k, rounds = (int(v) for v in n.split(","))
+            m0 = live_pos()[0]
+            for _ in range(rounds):
+                if live_pos()[0] != m0: break
+                for _ in range(k):
+                    step(8, "DOWN"); step(20)
+                step(8, "A")
+                for _ in range(30):                  # 300 frames, watching for the warp
+                    step(10)
+                    if live_pos()[0] != m0: break
+            step(200)
+            continue
         elif d.upper() == "TALK":   # TALK:n -- A, wait for the text, then n more A presses spaced for printing
             step(8, "A"); step(420)   # (a YES/NO prompt takes the default YES)
             for _ in range(int(n)):

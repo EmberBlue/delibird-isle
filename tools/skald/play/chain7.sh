@@ -28,5 +28,5 @@ seg s62 s61 - --walk GOTO:7,16 --walk LEFT:0 --walk TALK:1 --walk WAIT:900 --wal
 seg s63 s62 FLAG_BADGE07_GET --walk GOTO:6,33 --walk UP:0 --walk WAIT:400 --walk GOTOWARP:2 --walk WAIT:400 \
   --walk GOTO:10,9 --walk UP:0 --walk TALK:30 --walk WAIT:2500 --check FLAG_BADGE07_GET --check FLAG_SKALDMERE_WEATHER_CLEARED --expect MAP_PARCEL_WEATHER_INSTITUTE2_F
 # back down and out, the sailor (10,34) home to Saltwick
-seg s64 s63 - --walk GOTOWARP:0 --walk WAIT:400 --walk GOTOWARP:0 --walk WAIT:400 --walk GOTO:10,33 --walk DOWN:0 --walk TALK:3 --walk WAIT:2500 --expect MAP_PARCEL_ISLE
+seg s64 s63 - --walk GOTOWARP:0 --walk WAIT:400 --walk GOTOWARP:0 --walk WAIT:400 --walk GOTO:10,33 --walk DOWN:0 --walk MENU:0,8 --walk WAIT:900 --expect MAP_PARCEL_ISLE
 echo "=== chapter 7 complete, back in Saltwick $(date +%H:%M:%S)"
