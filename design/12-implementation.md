@@ -512,11 +512,16 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   Gen 9 era: species that could learn an HM in Emerald often cannot here
   (SEEDOT, LOTAD, SHROOMISH, NUMEL, ELECTRIKE, DODUO, CARVANHA all lacked
   CUT). Any gate that needs a field move must be checked against what the
-  player can actually hold at that point: the seven Meadow partners get
-  CUT from `tools/skald/partner_cut.py`; do the same audit for Rock Smash
-  (BREEN), Strength (SLUICE), Surf (VALE), Fly (HARLAND), Dive (VANE) and
-  Flash (MIRREN) before trusting a gate -- the party menu's "NOT ABLE!"
-  is the player's only warning.
+  player can actually hold at that point. The audit (2026-11-10): CUT
+  (the Mistwood deadfall), ROCK SMASH (the Floodbasin's three rocks are
+  the only way north to the river) and STRENGTH/ROCK SMASH (the row of
+  rocks and boulders below VALE's gate) sit on the main path, so the
+  seven Meadow partner lines learn all three from
+  `tools/skald/partner_hms.py`; SURF, FLY, DIVE, FLASH and WATERFALL open
+  side areas only and stay species-dependent (ZIGZAGOON, LOTAD, POLIWAG,
+  WINGULL and SLAKOTH are all early wild learners). The party menu's
+  "NOT ABLE!" is the player's only warning, so re-run the audit whenever
+  a gate or a partner changes.
 
 ## RAM budget (the binding constraint)
 

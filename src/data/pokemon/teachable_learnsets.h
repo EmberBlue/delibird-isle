@@ -4364,6 +4364,8 @@ static const u16 sSirfetchdTeachableLearnset[] = {
 
 #if P_FAMILY_DODUO
 static const u16 sDoduoTeachableLearnset[] = {
+    MOVE_ROCK_SMASH,
+    MOVE_STRENGTH,
     MOVE_CUT,
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
@@ -4391,6 +4393,8 @@ static const u16 sDoduoTeachableLearnset[] = {
 };
 
 static const u16 sDodrioTeachableLearnset[] = {
+    MOVE_ROCK_SMASH,
+    MOVE_STRENGTH,
     MOVE_CUT,
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
@@ -12827,6 +12831,7 @@ static const u16 sMightyenaTeachableLearnset[] = {
 
 #if P_FAMILY_ZIGZAGOON
 static const u16 sZigzagoonTeachableLearnset[] = {
+    MOVE_STRENGTH,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
     MOVE_BODY_SLAM,
@@ -13074,6 +13079,8 @@ static const u16 sDustoxTeachableLearnset[] = {
 
 #if P_FAMILY_LOTAD
 static const u16 sLotadTeachableLearnset[] = {
+    MOVE_ROCK_SMASH,
+    MOVE_STRENGTH,
     MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,
@@ -13202,6 +13209,7 @@ static const u16 sLudicoloTeachableLearnset[] = {
 
 #if P_FAMILY_SEEDOT
 static const u16 sSeedotTeachableLearnset[] = {
+    MOVE_STRENGTH,
     MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
@@ -13703,6 +13711,8 @@ static const u16 sMasquerainTeachableLearnset[] = {
 
 #if P_FAMILY_SHROOMISH
 static const u16 sShroomishTeachableLearnset[] = {
+    MOVE_ROCK_SMASH,
+    MOVE_STRENGTH,
     MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
@@ -14751,6 +14761,7 @@ static const u16 sMedichamTeachableLearnset[] = {
 
 #if P_FAMILY_ELECTRIKE
 static const u16 sElectrikeTeachableLearnset[] = {
+    MOVE_ROCK_SMASH,
     MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
@@ -14782,6 +14793,7 @@ static const u16 sElectrikeTeachableLearnset[] = {
 };
 
 static const u16 sManectricTeachableLearnset[] = {
+    MOVE_ROCK_SMASH,
     MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BODY_SLAM,
@@ -15164,6 +15176,8 @@ static const u16 sSwalotTeachableLearnset[] = {
 
 #if P_FAMILY_CARVANHA
 static const u16 sCarvanhaTeachableLearnset[] = {
+    MOVE_ROCK_SMASH,
+    MOVE_STRENGTH,
     MOVE_CUT,
     MOVE_ATTRACT,
     MOVE_BLIZZARD,

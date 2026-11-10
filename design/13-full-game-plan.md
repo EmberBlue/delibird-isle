@@ -842,8 +842,11 @@ quest is built, how the peer works) before they are asked six more times.
   expansion's Gen 9 learnsets none of the seven Meadow partners could
   learn CUT, while SKELD says "Teach it to your partner" -- a player who
   had caught nothing (ZIGZAGOON is the only local wild CUT user) was
-  stuck in the forest. `tools/skald/partner_cut.py` adds CUT to the
-  seven partner lines. The spine never saw this because it spawns past
+  stuck in the forest. `tools/skald/partner_hms.py` adds CUT to the
+  seven partner lines -- and, from the HM audit the finding prompted,
+  ROCK SMASH and STRENGTH too, since the Floodbasin's three rocks are the
+  only way north and a row of rocks and boulders sits below VALE's gate;
+  the other five HMs open side areas only. The spine never saw this because it spawns past
   the gate; the sweep never saw it because the tree is a cuttable object,
   not a warp. This is what the honest "not played end to end" bullet in
   the handoff was for.

@@ -440,9 +440,10 @@ replaces is gone from the tree).
   the scratchpad as `play/chain_all.sh` (ferry → Saltwick → RIN → the
   SEEDOT → Route 1 → the bridge → Mistwood → the snares → HM01 → CUT →
   Fernwick → HALE → TARN → the signing). First real finding: no Meadow
-  partner could learn CUT (fixed, `partner_cut.py`). Chapters 2-8 are
-  still to be played this way; the other HM gates (Rock Smash, Strength,
-  Surf, Fly, Dive, Flash) need the same learnset check first.
+  partner could learn CUT, and most could not learn ROCK SMASH or
+  STRENGTH either, the two other field moves the main path needs (fixed,
+  `partner_hms.py`; the five remaining HMs open side areas only).
+  Chapters 2-8 are still to be played this way.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to
