@@ -43156,7 +43156,7 @@ F_TRAINER_FEMALE |
 #line 17213
         .trainerName = _("VANE"),
 #line 17214
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_DIRECTOR,
 #line 17215
         .trainerPic = TRAINER_PIC_SKALD_VANE,
         .encounterMusic_gender =
@@ -43221,7 +43221,7 @@ F_TRAINER_FEMALE |
 #line 17234
         .trainerName = _("TARN"),
 #line 17235
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_INSTRUCTOR,
 #line 17236
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .encounterMusic_gender =
@@ -43275,7 +43275,7 @@ F_TRAINER_FEMALE |
 #line 17252
         .trainerName = _("MIRREN"),
 #line 17253
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_EXAMINER,
 #line 17254
         .trainerPic = TRAINER_PIC_SKALD_MIRREN,
         .encounterMusic_gender =
@@ -43329,7 +43329,7 @@ F_TRAINER_FEMALE |
 #line 17270
         .trainerName = _("BREEN"),
 #line 17271
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_RELIEF_CHIEF,
 #line 17272
         .trainerPic = TRAINER_PIC_SKALD_BREEN,
         .encounterMusic_gender =
@@ -43394,7 +43394,7 @@ F_TRAINER_FEMALE |
 #line 17291
         .trainerName = _("SLUICE"),
 #line 17292
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_KEEPER,
 #line 17293
         .trainerPic = TRAINER_PIC_SKALD_SLUICE,
         .encounterMusic_gender =
@@ -43450,7 +43450,7 @@ F_TRAINER_FEMALE |
 #line 17309
         .trainerName = _("VALE"),
 #line 17310
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_WARDEN,
 #line 17311
         .trainerPic = TRAINER_PIC_SKALD_VALE,
         .encounterMusic_gender =
@@ -43517,7 +43517,7 @@ F_TRAINER_FEMALE |
 #line 17330
         .trainerName = _("HARLAND"),
 #line 17331
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_CAPTAIN,
 #line 17332
         .trainerPic = TRAINER_PIC_SKALD_HARLAND,
         .encounterMusic_gender =
@@ -43582,7 +43582,7 @@ F_TRAINER_FEMALE |
 #line 17351
         .trainerName = _("ILEX"),
 #line 17352
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_SURVEYOR,
 #line 17353
         .trainerPic = TRAINER_PIC_SKALD_ILEX,
         .encounterMusic_gender =
@@ -43880,7 +43880,7 @@ F_TRAINER_FEMALE |
 #line 17448
         .trainerName = _("CORDELIA"),
 #line 17449
-        .trainerClass = TRAINER_CLASS_LADY,
+        .trainerClass = TRAINER_CLASS_CHAIR,
 #line 17450
         .trainerPic = TRAINER_PIC_SKALD_CORDELIA,
         .encounterMusic_gender =
@@ -51027,7 +51027,7 @@ F_TRAINER_FEMALE |
 #line 19890
         .trainerName = _("TARN"),
 #line 19891
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_INSTRUCTOR,
 #line 19892
         .trainerPic = TRAINER_PIC_EXPERT_M,
         .encounterMusic_gender =
@@ -51103,7 +51103,7 @@ F_TRAINER_FEMALE |
 #line 19914
         .trainerName = _("MIRREN"),
 #line 19915
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_EXAMINER,
 #line 19916
         .trainerPic = TRAINER_PIC_SKALD_MIRREN,
         .encounterMusic_gender =
@@ -51179,7 +51179,7 @@ F_TRAINER_FEMALE |
 #line 19938
         .trainerName = _("BREEN"),
 #line 19939
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_RELIEF_CHIEF,
 #line 19940
         .trainerPic = TRAINER_PIC_SKALD_BREEN,
         .encounterMusic_gender =
@@ -51255,7 +51255,7 @@ F_TRAINER_FEMALE |
 #line 19962
         .trainerName = _("SLUICE"),
 #line 19963
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_KEEPER,
 #line 19964
         .trainerPic = TRAINER_PIC_SKALD_SLUICE,
         .encounterMusic_gender =
@@ -51333,7 +51333,7 @@ F_TRAINER_FEMALE |
 #line 19986
         .trainerName = _("VALE"),
 #line 19987
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_WARDEN,
 #line 19988
         .trainerPic = TRAINER_PIC_SKALD_VALE,
         .encounterMusic_gender =
@@ -51411,7 +51411,7 @@ F_TRAINER_FEMALE |
 #line 20010
         .trainerName = _("HARLAND"),
 #line 20011
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_CAPTAIN,
 #line 20012
         .trainerPic = TRAINER_PIC_SKALD_HARLAND,
         .encounterMusic_gender =
@@ -51487,7 +51487,7 @@ F_TRAINER_FEMALE |
 #line 20034
         .trainerName = _("VANE"),
 #line 20035
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_DIRECTOR,
 #line 20036
         .trainerPic = TRAINER_PIC_SKALD_VANE,
         .encounterMusic_gender =
@@ -51563,7 +51563,7 @@ F_TRAINER_FEMALE |
 #line 20058
         .trainerName = _("ILEX"),
 #line 20059
-        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerClass = TRAINER_CLASS_SURVEYOR,
 #line 20060
         .trainerPic = TRAINER_PIC_SKALD_ILEX,
         .encounterMusic_gender =

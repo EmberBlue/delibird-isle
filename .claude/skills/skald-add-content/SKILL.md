@@ -80,6 +80,12 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   the `MAPSEC_` case to `GetMapsecType()` in `src/region_map.c`, a row in
   `sMapHealLocations`, the cell(s) in `region_map_layout.h`, and a town tile
   (162) at the cell in `map.bin` (8-bit affine, see skald-verify).
+- A trainer class (the title before the name in battle): `TRAINER_CLASS_X` after
+  0x4a in `include/constants/trainers.h` (bump `TRAINER_CLASS_COUNT`), a row
+  `{ _("NAME"), payout, BALL }` in `gTrainerClasses` (`src/battle_main.c`,
+  name ≤ 12 chars), then `Class: Relief Chief` on the `.party` entries
+  (trainerproc upper-cases and underscores the words). Nothing else indexes
+  classes in this fork.
 - A leader's battle picture: a palette-only variant needs a JASC `.pal` in
   `graphics/trainers/palettes/`, a `TRAINER_PIC_SKALD_X` (bump
   `TRAINER_PIC_COUNT`), a `gTrainerPalette_SkaldX` INCBIN and a

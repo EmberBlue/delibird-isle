@@ -777,4 +777,12 @@ quest is built, how the peer works) before they are asked six more times.
   hand-written words, all reachable** (`tools/skald/wordcount.py`;
   ~131,000 with the rematch tiers). Audit: 102 maps, the 2 known
   warnings. The §13 target is met.
+- **2026-11-10 — titles.** The examiners fight under their own trainer
+  classes instead of EXPERT: INSTRUCTOR TARN, EXAMINER MIRREN, RELIEF
+  CHIEF BREEN, KEEPER SLUICE, WARDEN VALE, CAPTAIN HARLAND (the bible's
+  "Captain Harland" at last), DIRECTOR VANE, SURVEYOR ILEX, and CHAIR for
+  Cordelia; nine classes with their own payouts and balls, on all
+  seventeen leader entries including rematches ("CAPTAIN HARLAND sent
+  out Gyarados!" in the emulator). The Pokédex now says SKALD DEX and
+  SKALDMERE region's POKéDEX, and the diploma SKALDMERE.
 

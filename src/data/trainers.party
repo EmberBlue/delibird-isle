@@ -17211,7 +17211,7 @@ Level: 35
 
 === TRAINER_SKALD_DIRECTOR ===
 Name: VANE
-Class: Expert
+Class: Director
 Pic: Skald Vane
 Gender: Male
 Music: Male
@@ -17232,7 +17232,7 @@ Level: 38
 
 === TRAINER_SKALD_GYM1 ===
 Name: TARN
-Class: Expert
+Class: Instructor
 Pic: Expert M
 Gender: Male
 Music: Male
@@ -17250,7 +17250,7 @@ Level: 16
 
 === TRAINER_SKALD_GYM2 ===
 Name: MIRREN
-Class: Expert
+Class: Examiner
 Pic: Skald Mirren
 Gender: Male
 Music: Male
@@ -17268,7 +17268,7 @@ Level: 19
 
 === TRAINER_SKALD_GYM3 ===
 Name: BREEN
-Class: Expert
+Class: Relief Chief
 Pic: Skald Breen
 Gender: Male
 Music: Male
@@ -17289,7 +17289,7 @@ Level: 23
 
 === TRAINER_SKALD_GYM4 ===
 Name: SLUICE
-Class: Expert
+Class: Keeper
 Pic: Skald Sluice
 Gender: Female
 Music: Female
@@ -17307,7 +17307,7 @@ Level: 26
 
 === TRAINER_SKALD_GYM5 ===
 Name: VALE
-Class: Expert
+Class: Warden
 Pic: Skald Vale
 Gender: Female
 Music: Female
@@ -17328,7 +17328,7 @@ Level: 31
 
 === TRAINER_SKALD_GYM6 ===
 Name: HARLAND
-Class: Expert
+Class: Captain
 Pic: Skald Harland
 Gender: Male
 Music: Male
@@ -17349,7 +17349,7 @@ Level: 37
 
 === TRAINER_SKALD_GYM8 ===
 Name: ILEX
-Class: Expert
+Class: Surveyor
 Pic: Skald Ilex
 Gender: Female
 Music: Female
@@ -17446,7 +17446,7 @@ Level: 41
 
 === TRAINER_SKALD_CORDELIA ===
 Name: CORDELIA
-Class: Lady
+Class: Chair
 Pic: Skald Cordelia
 Gender: Female
 Music: Female
@@ -19888,7 +19888,7 @@ Level: 34
 
 === TRAINER_SKALD_GYM1_R ===
 Name: TARN
-Class: Expert
+Class: Instructor
 Pic: Expert M
 Gender: Male
 Music: Male
@@ -19912,7 +19912,7 @@ Level: 61
 
 === TRAINER_SKALD_GYM2_R ===
 Name: MIRREN
-Class: Expert
+Class: Examiner
 Pic: Skald Mirren
 Gender: Male
 Music: Male
@@ -19936,7 +19936,7 @@ Level: 61
 
 === TRAINER_SKALD_GYM3_R ===
 Name: BREEN
-Class: Expert
+Class: Relief Chief
 Pic: Skald Breen
 Gender: Male
 Music: Male
@@ -19960,7 +19960,7 @@ Level: 61
 
 === TRAINER_SKALD_GYM4_R ===
 Name: SLUICE
-Class: Expert
+Class: Keeper
 Pic: Skald Sluice
 Gender: Female
 Music: Female
@@ -19984,7 +19984,7 @@ Level: 62
 
 === TRAINER_SKALD_GYM5_R ===
 Name: VALE
-Class: Expert
+Class: Warden
 Pic: Skald Vale
 Gender: Female
 Music: Female
@@ -20008,7 +20008,7 @@ Level: 62
 
 === TRAINER_SKALD_GYM6_R ===
 Name: HARLAND
-Class: Expert
+Class: Captain
 Pic: Skald Harland
 Gender: Male
 Music: Male
@@ -20032,7 +20032,7 @@ Level: 63
 
 === TRAINER_SKALD_DIRECTOR_R ===
 Name: VANE
-Class: Expert
+Class: Director
 Pic: Skald Vane
 Gender: Male
 Music: Male
@@ -20056,7 +20056,7 @@ Level: 62
 
 === TRAINER_SKALD_GYM8_R ===
 Name: ILEX
-Class: Expert
+Class: Surveyor
 Pic: Skald Ilex
 Gender: Female
 Music: Female

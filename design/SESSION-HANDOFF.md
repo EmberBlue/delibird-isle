@@ -338,6 +338,15 @@ replaces is gone from the tree).
   rewrites them to SKALDMERE in the stock 6px-pitch font (glyphs harvested
   from the other labels, K drawn to match). Checked in the PokéNav itself:
   `TAP:START, IDLE:40, TAP:DOWN, IDLE:15, TAP:A, IDLE:220, TAP:A, IDLE:260`.
+- **Trainer classes** — the examiners fight under their own titles:
+  INSTRUCTOR TARN, EXAMINER MIRREN, RELIEF CHIEF BREEN, KEEPER SLUICE,
+  WARDEN VALE, CAPTAIN HARLAND, DIRECTOR VANE, SURVEYOR ILEX, CHAIR
+  (Cordelia). `TRAINER_CLASS_*` 0x42-0x4a in `include/constants/trainers.h`,
+  rows (name, payout, ball) in `gTrainerClasses` (`src/battle_main.c`),
+  `Class: Relief Chief` etc. on all 17 leader entries in `trainers.party`.
+  Checked in battle ("CAPTAIN HARLAND sent out Gyarados!"). The Pokédex
+  labels read SKALD DEX / SKALDMERE region's POKéDEX and the diploma says
+  SKALDMERE (`src/strings.c`).
 - **UI** — `ui_frames.py`. The dialogue box keeps its shape with ice/slate/
   dark-slate border colours (palette 13-15 of `message_box.png`; text
   colours untouched), and window frame 1 (the default menu border) is a
@@ -423,7 +432,8 @@ replaces is gone from the tree).
   (the leaders have their own palettes; everyone else is a stock class), the
   overworld tileset palettes (a cooler northern retint was considered and
   deferred: three primary tilesets and a dozen secondaries would all need
-  the same hand), trainer class names ("EXPERT MIRREN" could be "SURVEYOR").
+  the same hand), the "they" avatar (a third player sprite set), the
+  building exteriors.
 
 ## Top gotchas from this session (full list in §12)
 

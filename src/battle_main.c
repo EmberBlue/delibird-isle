@@ -370,6 +370,16 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_PIKE_QUEEN] = { _("PIKE QUEEN") },
     [TRAINER_CLASS_PYRAMID_KING] = { _("PYRAMID KING") },
     [TRAINER_CLASS_RS_PROTAG] = { _("{PKMN} TRAINER") },
+    // Skaldmere: the certification ladder's examiners and the Chair
+    [TRAINER_CLASS_INSTRUCTOR] = { _("INSTRUCTOR"), 20, BALL_GREAT },
+    [TRAINER_CLASS_EXAMINER] = { _("EXAMINER"), 20, BALL_GREAT },
+    [TRAINER_CLASS_RELIEF_CHIEF] = { _("RELIEF CHIEF"), 20, BALL_GREAT },
+    [TRAINER_CLASS_KEEPER] = { _("KEEPER"), 20, BALL_GREAT },
+    [TRAINER_CLASS_WARDEN] = { _("WARDEN"), 20, BALL_ULTRA },
+    [TRAINER_CLASS_CAPTAIN] = { _("CAPTAIN"), 20, BALL_GREAT },
+    [TRAINER_CLASS_DIRECTOR] = { _("DIRECTOR"), 24, BALL_ULTRA },
+    [TRAINER_CLASS_SURVEYOR] = { _("SURVEYOR"), 24, BALL_ULTRA },
+    [TRAINER_CLASS_CHAIR] = { _("CHAIR"), 30, BALL_LUXURY },
 };
 
 static void (*const sTurnActionsFuncsTable[])(void) =

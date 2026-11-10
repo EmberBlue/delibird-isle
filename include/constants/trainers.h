@@ -361,7 +361,17 @@
 #define TRAINER_CLASS_PIKE_QUEEN     0x3f
 #define TRAINER_CLASS_PYRAMID_KING   0x40
 #define TRAINER_CLASS_RS_PROTAG      0x41
-#define TRAINER_CLASS_COUNT          0x42
+// Skaldmere: the certification ladder's examiners and the Chair
+#define TRAINER_CLASS_INSTRUCTOR     0x42
+#define TRAINER_CLASS_EXAMINER       0x43
+#define TRAINER_CLASS_RELIEF_CHIEF   0x44
+#define TRAINER_CLASS_KEEPER         0x45
+#define TRAINER_CLASS_WARDEN         0x46
+#define TRAINER_CLASS_CAPTAIN        0x47
+#define TRAINER_CLASS_DIRECTOR       0x48
+#define TRAINER_CLASS_SURVEYOR       0x49
+#define TRAINER_CLASS_CHAIR          0x4a
+#define TRAINER_CLASS_COUNT          0x4b
 
 
 #define TRAINER_ENCOUNTER_MUSIC_MALE         0 // standard male encounter music
