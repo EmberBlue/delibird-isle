@@ -39,6 +39,22 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
 - **Warp targets**: decode destination tile of every warp()/warp_event — col must be 0 (doors exempt).
 - **Connections**: for each edge connection, offset-aligned walkable tiles must exist both sides.
 - **Fly**: custom MAPSECs need rows in sMapHealLocations (src/region_map.c) or fly = Littleroot bedroom.
+- **Reachability (run this before calling any map, NPC or layout change done):**
+  `python3 tools/skald/reach.py` floods the whole game from the ferry spawn
+  (connections, warps, script warps, one-way ledges, the bike-only muddy
+  slope, elevation, NPCs solid, HM obstacles open) and lists every door,
+  edge, NPC and sign a player cannot stand next to. Must read `0 issue(s)`.
+  Then stage it like the story: `--hm none`, `--hm cut`,
+  `--hm cut,flash,rocksmash`, `...,strength`, `...,surf` — the only things
+  allowed to be unreachable at a stage are that chapter's own gate (the
+  Mistwood tree, BREEN's rocks, the Highlands boulders, the summit before
+  SURF) and water-only extras. `--frontier MAP` prints where and why the
+  reach stops on one map (an NPC, an elevation step, a ledge); `--grid MAP`
+  draws it. `grid.py MAP --comp` shows a single map's walkable components
+  as letters; two letters that look joined are cut off from each other.
+  Script warps a story flag gates are staged in `SCRIPT_STAGE`; NPCs a
+  script moves for good (BREEN) in `OBJ_AFTER` — add to both when writing
+  such scripts, or the audit lies.
 
 ## Seeing the game
 

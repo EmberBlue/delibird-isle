@@ -867,4 +867,30 @@ quest is built, how the peer works) before they are asked six more times.
   the gate; the sweep never saw it because the tree is a cuttable object,
   not a warp. This is what the honest "not played end to end" bullet in
   the handoff was for.
+- **2026-11-10 (later): the whole game as one graph.** The Corridor
+  finding generalised: `tools/skald/reach.py` floods the game from the
+  ferry spawn across connections, warps, script warps, one-way ledges,
+  the bike-only slope and the elevation rule, with NPCs solid, and lists
+  every door, edge, NPC and sign a player cannot stand next to. First
+  run: 158. Real ones: the Floodbasin village was sealed from its own
+  basin (three villagers shoulder to shoulder across the road, levee
+  ramps at the wrong elevation, puddles carrying elevation 3 inside an
+  elevation-5 village, the relief house walled off by trees, BREEN
+  respawning in the river neck after stepping aside); HALE's whole summit
+  trail only reached by a Mach-Bike slope the engine slides you back
+  down, with JARLE on the one tile below it and no stair out of the
+  village's ledge ring; the Weather zone's ground at elevation 4 wherever
+  grass was painted and 3 wherever snow was, so the forecourt could not
+  leave the Institute; the cavern's exit on Delibird a one-tile pocket
+  and both fence gaps of the square plugged by NPCs; a crew pair, a
+  gentleman, an aide and a trainer each standing on the only tile
+  through. All fixed with in-place tile and object edits (addresses
+  stable, savestates kept). The audit now reads 0 with every HM, and run
+  per chapter (`--hm cut`, `--hm cut,flash,rocksmash`, ...) it shows only
+  the intended gates: Mistwood's tree before CUT, BREEN's rocks before
+  ROCK SMASH, the Highlands boulders before STRENGTH, the summit before
+  SURF. Chapter 1 replays clean on the new build; the harness now reads
+  battle RAM (PP topped up, action cursor steered back to FIGHT) instead
+  of mashing blind, after the MIRREN exam showed a level-100 Mewtwo
+  Struggling to death with every move's PP spent.
 

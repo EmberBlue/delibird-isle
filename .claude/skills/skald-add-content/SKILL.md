@@ -21,6 +21,38 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 5. Exterior door: warp_event ON the door tile (doors are col1 — correct);
    interior exit warps' dest_warp_id = the exterior warp's INDEX (order matters).
 6. Build ritual: rm stale .o files (see skald-verify) then `make -j modern`.
+7. Run `python3 tools/skald/reach.py` (must read 0) — see skald-verify.
+
+## Placing NPCs and setting elevation (what the reachability audit keeps catching)
+- **Never put an NPC, trainer or item ball on the only tile through.** A
+  one-wide gap in a fence, a doorstep lane, a 1-tile corridor, the tile
+  below a stair: a standing NPC there seals the map for good (trainers who
+  walk up to you stay where they stop, so a trainer facing down a 1-wide
+  path can end up blocking it too — have them face a wall or stand beside
+  the path). Pairs standing shoulder to shoulder across a road are a wall.
+  `grid.py MAP --comp` before and after placing: the letters must not split.
+- **An NPC a script moves aside must be moved for good**: `applymovement`
+  is forgotten on the next map load. Put `setobjectxyperm` +
+  `setobjectmovementtype` under the flag in the map's ON_TRANSITION
+  (ParcelFloodbasin_OnTransition / BREEN is the template) and record it in
+  `reach.py`'s `OBJ_AFTER`.
+- **Elevation is per level, not per metatile.** Adjacent walkable tiles
+  connect only if their elevations match or one is 0 or 15. Puddles, snow
+  patches and other "decor" metatiles painted into an elevation-5 area
+  must carry 5 too, or they are invisible walls (the Floodbasin and
+  Highlands puddles). Keep every outdoor ground level at 3 unless a cliff
+  art line separates it; use 0 for stairs and the one ground tile beside a
+  bridge end; keep bridge decks at 4 or 15 (their rails are top-layer art,
+  elevation 4 draws the player above them — `audit.py` warns otherwise).
+  Cave ledge lips are `MB_IMPASSABLE_<dir>`: walkable floor with one walled
+  edge, not solid.
+- **Ledges are one-way and the Mach-Bike slope is down-only** (no bike in
+  Skaldmere). A ring of ledges around a village needs a stair out
+  (metatile 175 in the mountain kit, elevation 0 — see the Highlands at
+  (31,69)). Never use `MB_MUDDY_SLOPE` as a ramp the player must climb.
+- **Edit tiles and objects in place**: `layout_edit.py` (elev / copy / set)
+  and `map_obj.py` (--to / --face) keep the ROM's addresses stable, so
+  harness savestates survive a rebuild. Script edits do not.
 
 ## Delibird Isle (Johto tilesets)
 - Legend `tools/skald/legends/johtogeneral__azaleatown.json` (sea 473, not

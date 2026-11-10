@@ -67,6 +67,7 @@ def main():
     ap.add_argument("--item", help="ITEM_X to put in the bag before the new game")
     ap.add_argument("--party", help="SPECIES_X given at level 100 before the new game, so battles can be won by mashing A")
     ap.add_argument("--var", action="append", default=[], help="VAR_X=value to set before the new game (up to 2, repeatable)")
+    ap.add_argument("--fight-cap", type=int, default=20000, help="frames to spend on one battle before giving up (default 20000)")
     ap.add_argument("--fight", action="store_true", help="after each segment, while gMain.inBattle: mash A (FIGHT, first move) until the battle ends -- for a continuous run with a party")
     ap.add_argument("--load-state", help="resume from a savestate written by --save-state instead of booting a new game (--spawn is then ignored; pass any)")
     ap.add_argument("--save-state", help="write the emulator state at the end, so the next run can --load-state it (a continuous playthrough in segments)")
@@ -111,21 +112,30 @@ def main():
     def in_battle():
         return bool(gmain) and (core.memory.u8[gmain + 0x439] >> 1) & 1
     btf = syms.get("gBattleTypeFlags")
-    def fight(limit=20000):        # through a battle until inBattle clears.
+    def fight(limit=None):         # through a battle until inBattle clears.
+        limit = a.fight_cap if limit is None else limit
         spent, taps = 0, 0
         # A wild battle is run from (a level-100 partner always escapes): UP, LEFT to FIGHT, DOWN, RIGHT to RUN, A,
-        # then B through the text. Fighting every encounter drains PP until Recover is the only move left and a
-        # wild battle can never end. A trainer battle is fought: per six taps A (FIGHT), a cursor nudge, A (the
-        # move), A, A, B -- the nudge cycles the move so an exhausted move's "no PP left" cannot loop forever.
+        # then B through the text. A trainer battle is fought by reading the battle RAM instead of mashing blind:
+        # the lead's PP is topped up in gBattleMons (written back to the party when the battle ends), so move 1
+        # never reads "no PP left", and if the action cursor drifted off FIGHT (an A that landed during an
+        # animation, then a stray direction) it is steered back before the next A. B every sixth tap closes
+        # anything that still opened.
         wild = btf is not None and not (core.memory.u32[btf] & 8)   # BATTLE_TYPE_TRAINER
-        nudges = ["RIGHT", "DOWN", "LEFT", "UP"]
+        if a.trace: print(f"  battle: gBattleTypeFlags={core.memory.u32[btf] if btf else None:#x} wild={wild}", flush=True)
         run_keys = ["UP", "LEFT", "DOWN", "RIGHT", "A", "B", "B", "B"]
+        bmons, acur = syms.get("gBattleMons"), syms.get("gActionSelectionCursor")
         while in_battle() and spent < limit:
             if wild:
                 key = run_keys[taps % len(run_keys)]
             else:
-                k = taps % 6
-                key = nudges[(taps // 6) % 4] if k == 1 else ("B" if k == 5 else "A")
+                if bmons is not None:
+                    for i in range(4):                               # struct BattlePokemon: moves @0x0C, pp @0x25
+                        if core.memory.u16[bmons + 0x0C + 2 * i] and core.memory.u8[bmons + 0x25 + i] < 10:
+                            core.memory.u8[bmons + 0x25 + i] = 20
+                cur = core.memory.u8[acur] if acur is not None else 0    # 0 FIGHT, 1 BAG, 2 POKEMON, 3 RUN
+                key = "A" if cur == 0 else ("UP" if cur == 2 else "LEFT")
+                if cur == 0 and taps % 6 == 5: key = "B"
             step(8, key); step(32); spent += 40; taps += 1
         if spent:                   # the exp / level-up text and the fade back, plain B (no re-entry)
             step(120)

@@ -20,6 +20,7 @@ game as one graph, the way a player experiences it:
   python3 tools/skald/reach.py --hm cut,flash,rocksmash,strength   chapter 4; maps of later chapters read NEVER REACHED
   python3 tools/skald/reach.py --grid ParcelHighlands reach map: R reached, . not, # solid, ~ water
   python3 tools/skald/reach.py --frontier ParcelHighlands   where the reach stops on that map, and why
+  python3 tools/skald/reach.py --trainers            trainers whose walk-up would park them on a chokepoint
   python3 tools/skald/reach.py --from MAP_PARCEL_RIVER:20,20
 
 Optimistic where the engine is path-dependent: a pushed boulder's new position is not tracked,
@@ -104,8 +105,8 @@ def tile_kind(m, x, y, hm):
     if beh.startswith("MB_JUMP_"):
         d = beh[8:].lower()
         return (f"ledge:{d}", elev) if d in DIRS else None
-    if col != 0 or "IMPASSABLE" in beh:
-        return None
+    if col != 0:
+        return None                 # MB_IMPASSABLE_<dir> tiles are floor with one walled edge: see dir_blocked()
     if beh == "MB_WATERFALL":
         return ("fall", elev) if "waterfall" in hm else None
     if any(w in beh for w in WATER_WORDS):
@@ -127,6 +128,16 @@ def tile_kind(m, x, y, hm):
 
 def elev_ok(a, b):
     return a is None or b is None or a in (0, 15) or b in (0, 15) or a == b
+
+
+OPPOSITE = {"north": "south", "south": "north", "east": "west", "west": "east"}
+
+
+def dir_blocked(beh_here, beh_there, dname):
+    """pokeemerald's directional impassables (cave ledge lips): a tile marked IMPASSABLE_<D> cannot
+    be entered heading D, and cannot be left heading the opposite way. NORTHEAST etc. combine."""
+    d, o = dname.upper(), OPPOSITE[dname].upper()
+    return ("IMPASSABLE" in beh_there and d in beh_there) or ("IMPASSABLE" in beh_here and o in beh_here)
 
 
 def load_all(hm=frozenset()):
@@ -212,6 +223,8 @@ def reach(maps, byid, start, hm):
                 continue
             nk = tile_kind(nm, nx, ny, hm)
             if nk is None:
+                continue
+            if dir_blocked(m.beh(x, y)[2], nm.beh(nx, ny)[2], dname):
                 continue
             kind, nelev = nk
             if kind.startswith("ledge:"):
@@ -382,6 +395,103 @@ def grid(maps, seen, name):
         print(f"{y:4d} " + "".join(row))
 
 
+FACING = {"DOWN": (0, 1), "UP": (0, -1), "LEFT": (-1, 0), "RIGHT": (1, 0)}
+
+
+def articulation_points(adj):
+    """Cut vertices of an undirected graph (iterative Tarjan)."""
+    index, low, aps, counter = {}, {}, set(), 0
+    for root in adj:
+        if root in index:
+            continue
+        index[root] = low[root] = counter; counter += 1
+        root_children = 0
+        stack = [(root, None, iter(adj[root]))]
+        while stack:
+            v, parent, it = stack[-1]
+            advanced = False
+            for w in it:
+                if w == parent:
+                    continue
+                if w not in index:
+                    index[w] = low[w] = counter; counter += 1
+                    if v == root:
+                        root_children += 1
+                    stack.append((w, v, iter(adj[w]))); advanced = True
+                    break
+                low[v] = min(low[v], index[w])
+            if not advanced:
+                stack.pop()
+                if stack:
+                    u = stack[-1][0]
+                    low[u] = min(low[u], low[v])
+                    if u != root and low[v] >= index[u]:
+                        aps.add(u)
+        if root_children > 1:
+            aps.add(root)
+    return aps
+
+
+def trainer_chokepoints(maps, hm):
+    """Trainers who, after walking up to the player along their sight line, would stand on a tile
+    whose loss cuts the map: the tile is a cut vertex of the walkable graph and the smaller side has
+    more than a couple of tiles. A trainer stays where the battle started, so this is a soft-lock."""
+    found = 0
+    for name in sorted(maps):
+        if name in audit.RETIRED_MAPS:
+            continue
+        m = maps[name]
+        adj = {}
+        for y in range(m.H):
+            for x in range(m.W):
+                k = tile_kind(m, x, y, hm)
+                if not k or k[0] not in ("land", "boulder"):
+                    continue
+                adj[(x, y)] = []
+        for (x, y) in adj:
+            for dname, (dx, dy) in DIRS.items():
+                n = (x + dx, y + dy)
+                if n in adj and elev_ok(tile_kind(m, x, y, hm)[1], tile_kind(m, *n, hm)[1]) \
+                        and not dir_blocked(m.beh(x, y)[2], m.beh(*n)[2], dname):
+                    adj[(x, y)].append(n)
+        aps = articulation_points(adj)
+        for (x, y), o in sorted(m.objs.items(), key=lambda kv: (kv[0][1], kv[0][0])):
+            if o.get("trainer_type", "TRAINER_TYPE_NONE") == "TRAINER_TYPE_NONE":
+                continue
+            r = int(o.get("trainer_sight_or_berry_tree_id", 0) or 0)
+            mt = o.get("movement_type", "")
+            if "WANDER" in mt or "WALK" in mt:
+                continue                                    # moves anyway; placed by hand, judged by eye
+            faces = [FACING[d] for d in FACING if mt.endswith("_" + d)]
+            if not faces or o["trainer_type"] == "TRAINER_TYPE_SEE_ALL_DIRECTIONS" or "LOOK_AROUND" in mt or "ROTATE" in mt:
+                faces = list(FACING.values())
+            for dx, dy in faces:
+                for k in range(1, r):                       # where the trainer can stop: 1..r-1 tiles along the line
+                    p = (x + dx * k, y + dy * k)
+                    if p not in adj:
+                        break
+                    if p in aps:
+                        # size of the side cut off: BFS from each neighbour without p
+                        sizes = []
+                        seen = {p}
+                        for nb in adj[p]:
+                            if nb in seen:
+                                continue
+                            comp = {nb}; q = deque([nb]); seen.add(nb)
+                            while q:
+                                c = q.popleft()
+                                for w in adj[c]:
+                                    if w not in seen:
+                                        seen.add(w); comp.add(w); q.append(w)
+                            sizes.append(len(comp))
+                        small = min(sizes) if len(sizes) > 1 else 0
+                        if small >= 3:
+                            found += 1
+                            print(f"{name}: trainer {o['graphics_id'][14:]} {o.get('script') or ''} at ({x},{y}) {mt[14:]} range {r} "
+                                  f"can stop on ({p[0]},{p[1]}), a chokepoint cutting off {small} tiles")
+    print(f"\n{found} trainer(s) who could block a chokepoint after approaching")
+
+
 def main():
     args = sys.argv[1:]
     hm = set(ALL_HM)
@@ -403,6 +513,9 @@ def main():
             only = args[i + 1]; i += 1
         i += 1
     maps, byid = load_all(hm)
+    if "--trainers" in args:
+        trainer_chokepoints(maps, hm)
+        return
     mid, xy = start_spec.split(":")
     sx, sy = (int(v) for v in xy.split(","))
     seen = reach(maps, byid, (byid[mid], sx, sy), hm)

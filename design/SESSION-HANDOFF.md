@@ -446,7 +446,22 @@ replaces is gone from the tree).
   finding, one step later: the engine's tree script refused CUT without
   badge 1, which is on the far side of the tree (fixed: the tree, rock
   and boulder scripts no longer check badges, matching
-  `OW_FIELD_MOVES_NEED_BADGES`). Chapters 2-8 are still to be played.
+  `OW_FIELD_MOVES_NEED_BADGES`). Third finding, from planning chapter 2
+  on the map data: the Corridor road dead-ended short of its east plaza
+  with DAG on the one connecting tile (fixed in `build.py` step 7).
+  Fourth, the general case: `tools/skald/reach.py` now floods the whole
+  game as one graph (connections, warps, staged script warps, one-way
+  ledges, the down-only slope, elevation, NPCs solid) and reported 158
+  places nobody could stand next to; the real breaks were the Floodbasin
+  village sealed from its basin, HALE's summit trail reachable only by a
+  Mach-Bike slope, the Weather zone's forecourt walled in by elevation,
+  the Delibird cavern exit and square, and a handful of NPCs on the only
+  tile through (details §13 log, rules in skald-add-content). All fixed
+  in place; the audit reads 0 with every HM and, staged per chapter, only
+  the intended gates. Chapter 1 replays clean on the fixed build;
+  chapters 2-3 (`play/chain2.sh`, `play/chain3.sh`: the Wetlands, MIRREN,
+  the Floodbasin readings and BREEN, the River and SLUICE, ILEX's two
+  signings, into the Highlands) are the live run; 4-8 still to script.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to

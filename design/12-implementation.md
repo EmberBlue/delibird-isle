@@ -537,6 +537,37 @@ ROM artifact: `pokeemerald.gba`, 33,554,432 bytes, header
   (`tools/skald/route.py` does this per segment) and demand that every
   exit, door threshold and story object is reached; when a planner says
   "no path" in a map that must be crossed, believe it before the harness.
+- **Reachability is one graph, not a hundred maps (2026-11-10).**
+  `tools/skald/reach.py` is that flood fill for the whole game: from the
+  ferry spawn, across connections (edge tiles joined at the connection
+  offset), warp events (a mat is stepped on, a solid door entered from
+  below), script warps (a `warp(MAP, x, y)` in a map's `scripts.pory`
+  counts once any tile of that map is reached; the story-gated ones are
+  staged in `SCRIPT_STAGE` by the HM the player holds by then), one-way
+  ledges (landing two tiles on), the muddy slope (down only — there is no
+  Mach Bike), the elevation rule (equal, or one side 0/15), NPCs solid,
+  item balls passable, trees/rocks/boulders passable when their HM is in
+  `--hm` (a boulder needs a free tile beyond it), water with `surf`,
+  `MB_IMPASSABLE_<dir>` cave lips as floor with one walled edge. It
+  reports every door, connection edge, NPC, trainer (sight line counts),
+  sign and hidden item nobody can stand next to (counters count as
+  standing next to). `--frontier MAP` says where and why the reach stops;
+  `--grid MAP` draws it; `grid.py MAP --comp` letters a single map's
+  components. The first run found 158; the real breaks are in §13's log.
+  Lessons that are now rules (skald-add-content): never an NPC on the
+  only tile through; an NPC a script moves aside must be re-placed in
+  ON_TRANSITION with `setobjectxyperm` (and listed in `OBJ_AFTER`);
+  elevation belongs to the level, not the metatile (puddles and snow
+  painted into an elevation-5 village were invisible walls; the Weather
+  zone had grass at 4 and snow at 3 everywhere); bridge decks stay at 4
+  or 15 with an elevation-0 ground tile beside each end, never the deck
+  tile at 0 (its rails are top-layer art and `audit.py` warns); a ring of
+  ledges needs a stair out (metatile 175, elevation 0, in the mountain
+  kit). Run it staged — `--hm none`, `cut`, `cut,flash,rocksmash`,
+  `+strength`, `+surf` — and the only unreachable things may be that
+  chapter's gate. In-place edits (`layout_edit.py`, `map_obj.py`) keep
+  ROM addresses stable so harness savestates survive the rebuild; script
+  edits do not.
 
 ## RAM budget (the binding constraint)
 

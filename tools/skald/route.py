@@ -43,7 +43,7 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
             return False
         if (x, y) in warps and not is_goal:
             return False                      # stepping on a door mid-path would warp
-        if any(k in beh for k in ("WATER", "WATERFALL", "JUMP", "IMPASSABLE", "SAND_DUNE")):
+        if any(k in beh for k in ("WATER", "WATERFALL", "JUMP", "SAND_DUNE")):
             return False
         if avoid_grass and "GRASS" in beh and not is_goal:
             return False
@@ -116,6 +116,11 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
             if not passable(nx, ny, n in goals):
                 continue
             if not elev_ok(ce, info(nx, ny)[1]):
+                continue
+            # MB_IMPASSABLE_<D>: a cave ledge lip -- not entered heading D, not left heading the other way
+            dn, opp = DIRS[(dx, dy)], DIRS[(-dx, -dy)]
+            bh, bn = info(cx, cy)[2], info(nx, ny)[2]
+            if ("IMPASSABLE" in bn and dn in bn) or ("IMPASSABLE" in bh and opp in bh):
                 continue
             prev[n] = cur
             q.append(n)
