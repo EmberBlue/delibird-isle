@@ -4328,6 +4328,18 @@ ParcelRiver_PairRace_3:
 	goto ParcelRiver_PairRace_1
 
 
+ParcelRiver_Board1::
+# 2110 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiver_Board2::
+# 2115 "data/maps/ParcelRiver/scripts.pory"
+	msgbox ParcelRiver_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiver_FirstEntry_Text_0:
 # 52 "data/maps/ParcelRiver/scripts.pory"
 	.string "The land lifts and the trees thin. The\n"
@@ -6642,3 +6654,26 @@ ParcelRiver_PairRace_Text_10:
 # 2101 "data/maps/ParcelRiver/scripts.pory"
 	.string "STUDENT: I've been counting bees.\n"
 	.string "Reading's what you do after.$"
+
+ParcelRiver_Board1_Text_0:
+# 2110 "data/maps/ParcelRiver/scripts.pory"
+	.string "A SURVEY BOARD on the mill wall.\n"
+	.string "ELVSUND. Clean-water fish for clean\l"
+	.string "water: GOLDEEN and SEAKING in the\l"
+	.string "riffles, BARBOACH in the gravel.\p"
+	.string "The board gives the runoff reading from\n"
+	.string "the fields above the town beside the\l"
+	.string "fish count from the pool below it. They\l"
+	.string "move together, a month apart. The\l"
+	.string "fields are upstream of everything.$"
+
+ParcelRiver_Board2_Text_0:
+# 2115 "data/maps/ParcelRiver/scripts.pory"
+	.string "A SURVEY BOARD by the market bridge.\n"
+	.string "The river was straightened below the\l"
+	.string "town for the fields. A straight river is\l"
+	.string "faster, deeper, and empties its gravel,\l"
+	.string "and the SEAKING need the gravel.\p"
+	.string "The board shows the old bends as a\n"
+	.string "dotted line over the new channel. The\l"
+	.string "dotted line is where the fish were.$"

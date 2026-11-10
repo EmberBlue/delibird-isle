@@ -2082,3 +2082,15 @@ script ParcelWetlands_PairSouth {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelWetlands_Board1 {
+    msgbox(format("A SURVEY BOARD on the turf. REEDMERE. Freshwater marsh, flood-pulse: the water rises in spring, spreads, drops, and the marsh lives on what it leaves.\pThe WOOPER count is taken on the turf when the water drops. It tracks the water table closer than the Board's gauge does. When the count falls, the water fell first."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWetlands_Board2 {
+    msgbox(format("A SURVEY BOARD by the reed cut. Three frogs are three gauges. POLIWAG for the breeding pools, POLIWHIRL for the summer the pools lasted, QUAGSIRE for silt.\pMore QUAGSIRE is not more marsh. It is more mud. The Survey writes all three and underlines the third when it is the largest. It has been underlined for six years."), MSGBOX_SIGN)
+    end
+}

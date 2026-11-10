@@ -2177,6 +2177,18 @@ ParcelIsle_PairGreen_3:
 	goto ParcelIsle_PairGreen_1
 
 
+ParcelIsle_Board1::
+# 1153 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelIsle_Board2::
+# 1158 "data/maps/ParcelIsle/scripts.pory"
+	msgbox ParcelIsle_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelIsle_Arrival_Text_0:
 # 49 "data/maps/ParcelIsle/scripts.pory"
 	.string "BRAM: Hey! You're the mainlander, right?\n"
@@ -3637,3 +3649,26 @@ ParcelIsle_PairGreen_Text_10:
 	.string "that a thing done at two in the morning\l"
 	.string "is a thing someone didn't want seen.\l"
 	.string "Shall I stop?$"
+
+ParcelIsle_Board1_Text_0:
+# 1153 "data/maps/ParcelIsle/scripts.pory"
+	.string "A SURVEY BOARD on the harbour wall.\n"
+	.string "SALTWICK. Tidal nursery: half the fish\l"
+	.string "landed on this coast were small here\l"
+	.string "first. CLAMPERL beds under the\l"
+	.string "moorings, counted at the spring low:\l"
+	.string "220 shells open.\p"
+	.string "The number under it is the one that\n"
+	.string "matters and nobody reads. 60 of them\l"
+	.string "with young.$"
+
+ParcelIsle_Board2_Text_0:
+# 1158 "data/maps/ParcelIsle/scripts.pory"
+	.string "A SURVEY BOARD by the jetty steps.\n"
+	.string "STARYU on the harbour floor at night,\l"
+	.string "counted by their light from the end of\l"
+	.string "the jetty since before the Survey had a\l"
+	.string "name for the method.\p"
+	.string "It is the easiest count on the island\n"
+	.string "and so it is the longest. 40, 38, 41, 36,\l"
+	.string "29, 31, 24.$"

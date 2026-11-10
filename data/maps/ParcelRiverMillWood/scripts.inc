@@ -1594,6 +1594,18 @@ ParcelRiverMillWood_PairCoppice_3:
 	goto ParcelRiverMillWood_PairCoppice_1
 
 
+ParcelRiverMillWood_Board1::
+# 736 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRiverMillWood_Board2::
+# 741 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRiverMillWood_Halle_Text_0:
 # 10 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "HALLE: This stand is twelve years old.\n"
@@ -2329,3 +2341,26 @@ ParcelRiverMillWood_PairCoppice_Text_11:
 # 727 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "WOODCUTTER: That's not the wood.\n"
 	.string "That's the Board.$"
+
+ParcelRiverMillWood_Board1_Text_0:
+# 736 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "A SURVEY BOARD at the mill wood gate.\n"
+	.string "Second growth, planted after the mill\l"
+	.string "cut the first. The NINCADA husks are\l"
+	.string "counted on the trunks in the first week\l"
+	.string "of summer; the week comes earlier and\l"
+	.string "the husks come fewer.\p"
+	.string "The board shows both lines. They cross\n"
+	.string "the year the children now in the school\l"
+	.string "were born.$"
+
+ParcelRiverMillWood_Board2_Text_0:
+# 741 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "A SURVEY BOARD on a stump wide enough\n"
+	.string "to sit on. The stump is the count: the\l"
+	.string "rings were marked with a nail every\l"
+	.string "fifty years by someone with time. The\l"
+	.string "last nail is in the bark.\p"
+	.string "The Survey added the SEEDOT count\n"
+	.string "underneath, because a wood that drops\l"
+	.string "seed is a wood that is still trying.$"

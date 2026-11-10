@@ -1839,6 +1839,18 @@ ParcelDelibird_PairShore_3:
 	goto ParcelDelibird_PairShore_1
 
 
+ParcelDelibird_Board1::
+# 985 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelDelibird_Board2::
+# 990 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibird_FirstEntry_Text_0:
 # 55 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The boat noses in and the island takes\n"
@@ -3154,3 +3166,28 @@ ParcelDelibird_PairShore_Text_10:
 # 976 "data/maps/ParcelDelibird/scripts.pory"
 	.string "OLD MAN: None. It's just true. I've\n"
 	.string "decided to prefer true.$"
+
+ParcelDelibird_Board1_Text_0:
+# 985 "data/maps/ParcelDelibird/scripts.pory"
+	.string "A SURVEY BOARD outside the hall, under\n"
+	.string "the festival banner. DELIBIRD ISLE. The\l"
+	.string "village stands on frozen ground and the\l"
+	.string "ground is not staying frozen.\p"
+	.string "The board shows the hall's door sill\n"
+	.string "against the road, measured each\l"
+	.string "autumn: level, level, a finger, a hand.\l"
+	.string "The banner hangs from the same nails\l"
+	.string "every year and is straight. Somebody\l"
+	.string "adjusts it.$"
+
+ParcelDelibird_Board2_Text_0:
+# 990 "data/maps/ParcelDelibird/scripts.pory"
+	.string "A SURVEY BOARD by the shore path.\n"
+	.string "DELIBIRD bring food to the snowed-in.\l"
+	.string "The board records the storms they came\l"
+	.string "after, by year, and the storms they did\l"
+	.string "not need to.\p"
+	.string "The second list has become the longer\n"
+	.string "one. The islanders put a thank-you\l"
+	.string "under it anyway, every year, in the same\l"
+	.string "place.$"

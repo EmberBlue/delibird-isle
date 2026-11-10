@@ -2103,3 +2103,15 @@ script ParcelRiver_PairRace {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelRiver_Board1 {
+    msgbox(format("A SURVEY BOARD on the mill wall. ELVSUND. Clean-water fish for clean water: GOLDEEN and SEAKING in the riffles, BARBOACH in the gravel.\pThe board gives the runoff reading from the fields above the town beside the fish count from the pool below it. They move together, a month apart. The fields are upstream of everything."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiver_Board2 {
+    msgbox(format("A SURVEY BOARD by the market bridge. The river was straightened below the town for the fields. A straight river is faster, deeper, and empties its gravel, and the SEAKING need the gravel.\pThe board shows the old bends as a dotted line over the new channel. The dotted line is where the fish were."), MSGBOX_SIGN)
+    end
+}

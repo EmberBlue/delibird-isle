@@ -708,3 +708,15 @@ script ParcelFloodbasinSluice_PairFord {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelFloodbasinSluice_Board1 {
+    msgbox(format("A SURVEY BOARD on the sluice wall. The gate holds the basin's water back in spring and lets it go in summer, which is backwards from the marsh's point of view.\pThe GOLDEEN below the gate are counted at the drop. When the gate is right they are there. When the gate is late they are somewhere else. The gate has been late."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFloodbasinSluice_Board2 {
+    msgbox(format("A SURVEY BOARD, the paint burnt off the gate side by the sun. MARILL on the quiet water above the sluice, young in the reeds.\pThe board notes that the young appear a fortnight after the gate closes, every year. The gate's timing is the marsh's timing now. It did not use to be."), MSGBOX_SIGN)
+    end
+}

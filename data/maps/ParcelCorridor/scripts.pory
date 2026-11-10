@@ -1629,3 +1629,15 @@ script ParcelCorridor_PairCulvert {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelCorridor_Board1 {
+    msgbox(format("A SURVEY BOARD at the cut. SERVICE CUT. A road was driven through the corridor and the stream was put in a pipe to make room for it. The pipe is narrower than the stream.\pThe board lists what used the corridor before the pipe, and what uses the pipe. The second list is short, and all of it is small."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCorridor_Board2 {
+    msgbox(format("A SURVEY BOARD beside the checkpoint. The culvert was described as an upgrade, and the board quotes the description in full, without comment.\pUnder it the Survey has written the pipe width in paces and the old channel width in paces. Reading both is the comment."), MSGBOX_SIGN)
+    end
+}

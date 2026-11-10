@@ -237,6 +237,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastBreakwater_Tins"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoastBreakwater_Board1"
+    },
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 14,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoastBreakwater_Board2"
     }
   ]
 }

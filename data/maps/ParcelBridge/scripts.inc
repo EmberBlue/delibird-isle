@@ -508,6 +508,18 @@ ParcelBridge_ToSaltwick::
 	end
 
 
+ParcelBridge_Board1::
+# 223 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelBridge_Board2::
+# 228 "data/maps/ParcelBridge/scripts.pory"
+	msgbox ParcelBridge_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelBridge_SceneTrigger_Text_0:
 # 47 "data/maps/ParcelBridge/scripts.pory"
 	.string "Wind over the rail. Water surging\n"
@@ -611,3 +623,23 @@ ParcelBridge_Sign_Text_0:
 	.string "THE LONG BRIDGE\p"
 	.string "Wind advisory in effect.\n"
 	.string "Mind the rail.$"
+
+ParcelBridge_Board1_Text_0:
+# 223 "data/maps/ParcelBridge/scripts.pory"
+	.string "A SURVEY BOARD at the bridge head. The\n"
+	.string "bridge crosses the inlet where the\l"
+	.string "saltmarsh meets the first fresh water,\l"
+	.string "and everything that moves between the\l"
+	.string "two moves under this deck.\p"
+	.string "The Survey counts it from the rail at\n"
+	.string "dusk. The count takes an hour and the\l"
+	.string "bridge takes a minute, which is the\l"
+	.string "whole trouble with bridges.$"
+
+ParcelBridge_Board2_Text_0:
+# 228 "data/maps/ParcelBridge/scripts.pory"
+	.string "A SURVEY BOARD, scratched. Someone has\n"
+	.string "carved a POLIWAG into it, badly. Under\l"
+	.string "the carving the Survey wrote: left\l"
+	.string "here.\p"
+	.string "It is not an official entry. It stayed.$"

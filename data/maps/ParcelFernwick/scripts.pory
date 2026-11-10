@@ -1010,3 +1010,15 @@ script ParcelFernwick_PairStation {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelFernwick_Board1 {
+    msgbox(format("A SURVEY BOARD outside the Corps HQ. FERNWICK. The Corps certifies rangers; the Survey certifies the ground. The board is the Survey's and says so.\pIt lists what a provisional ranger should be able to count by the end of the forest season, in order: the pond, the seep, the canopy, the floor. The floor is last because it is hardest."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFernwick_Board2 {
+    msgbox(format("A SURVEY BOARD by the pond. WINGULL pairs on the Fernwick pond: 28 in the first spring of the record, 28 in the tenth. The board gives the number with a warning under it.\pA count that holds is not always a habitat that holds. Sometimes it is a habitat that has stopped being able to lose anything else."), MSGBOX_SIGN)
+    end
+}

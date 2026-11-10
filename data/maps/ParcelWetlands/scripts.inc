@@ -4300,6 +4300,18 @@ ParcelWetlands_PairSouth_3:
 	goto ParcelWetlands_PairSouth_1
 
 
+ParcelWetlands_Board1::
+# 2089 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlands_Board2::
+# 2094 "data/maps/ParcelWetlands/scripts.pory"
+	msgbox ParcelWetlands_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlands_Harland_Text_0:
 # 77 "data/maps/ParcelWetlands/scripts.pory"
 	.string "HARLAND: They read your report out on\n"
@@ -6337,3 +6349,28 @@ ParcelWetlands_PairSouth_Text_13:
 # 2080 "data/maps/ParcelWetlands/scripts.pory"
 	.string "FISHER: Nobody, yet. Somebody with a\n"
 	.string "notebook, I'm told, is on the way.$"
+
+ParcelWetlands_Board1_Text_0:
+# 2089 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A SURVEY BOARD on the turf. REEDMERE.\n"
+	.string "Freshwater marsh, flood-pulse: the\l"
+	.string "water rises in spring, spreads, drops,\l"
+	.string "and the marsh lives on what it leaves.\p"
+	.string "The WOOPER count is taken on the turf\n"
+	.string "when the water drops. It tracks the\l"
+	.string "water table closer than the Board's\l"
+	.string "gauge does. When the count falls, the\l"
+	.string "water fell first.$"
+
+ParcelWetlands_Board2_Text_0:
+# 2094 "data/maps/ParcelWetlands/scripts.pory"
+	.string "A SURVEY BOARD by the reed cut. Three\n"
+	.string "frogs are three gauges. POLIWAG for\l"
+	.string "the breeding pools, POLIWHIRL for the\l"
+	.string "summer the pools lasted, QUAGSIRE for\l"
+	.string "silt.\p"
+	.string "More QUAGSIRE is not more marsh. It is\n"
+	.string "more mud. The Survey writes all three\l"
+	.string "and underlines the third when it is the\l"
+	.string "largest. It has been underlined for six\l"
+	.string "years.$"

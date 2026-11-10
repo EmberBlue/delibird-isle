@@ -962,6 +962,18 @@ ParcelMistwood_PairSnares_3:
 	goto ParcelMistwood_PairSnares_1
 
 
+ParcelMistwood_Board1::
+# 506 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelMistwood_Board2::
+# 511 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMistwood_Sanna_Text_0:
 # 16 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SANNA: I've got two WURMPLE. Two! You\n"
@@ -1492,3 +1504,28 @@ ParcelMistwood_PairSnares_Text_10:
 # 497 "data/maps/ParcelMistwood/scripts.pory"
 	.string "CADET A: They're happy too. They're paid\n"
 	.string "by the pelt.$"
+
+ParcelMistwood_Board1_Text_0:
+# 506 "data/maps/ParcelMistwood/scripts.pory"
+	.string "A SURVEY BOARD under the big spruce.\n"
+	.string "MISTWOOD. Fog-fed forest: the trees\l"
+	.string "drink from the air more than the ground.\l"
+	.string "The SHROOMISH are the Survey's air\l"
+	.string "gauge.\p"
+	.string "Where they crowd a log the fog still\n"
+	.string "comes. Where the log is bare the fog\l"
+	.string "stopped coming before the log fell.\l"
+	.string "Three bare logs on this ride. Two last\l"
+	.string "year.$"
+
+ParcelMistwood_Board2_Text_0:
+# 511 "data/maps/ParcelMistwood/scripts.pory"
+	.string "A SURVEY BOARD with a snare nailed to\n"
+	.string "the back of it as a specimen. The ride is\l"
+	.string "checked for snares each week by the\l"
+	.string "Corps crew the Foundation funds. The\l"
+	.string "board records the finds: 9, 11, 6, 14.\p"
+	.string "It does not record the ones not found.\n"
+	.string "The HOOTHOOT count is the honest\l"
+	.string "version of the same number, and it goes\l"
+	.string "one way.$"

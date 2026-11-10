@@ -800,6 +800,18 @@ ParcelStation_ToMistwood::
 	end
 
 
+ParcelStation_Board1::
+# 515 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelStation_Board2::
+# 520 "data/maps/ParcelStation/scripts.pory"
+	msgbox ParcelStation_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelStation_Hale_Text_0:
 # 67 "data/maps/ParcelStation/scripts.pory"
 	.string "Hale: It's filed. It's true. Now we find\n"
@@ -1465,3 +1477,25 @@ ParcelStation_GateWard_Defeated_Text_0:
 	.string "Ward: Station clearance: granted.\n"
 	.string "Logged and filed.\p"
 	.string "No ceremony. That's not what this is.$"
+
+ParcelStation_Board1_Text_0:
+# 515 "data/maps/ParcelStation/scripts.pory"
+	.string "A SURVEY BOARD at the Station fence.\n"
+	.string "The weather here is measured, not\l"
+	.string "watched: the instruments on the roof\l"
+	.string "write the same hour every day and have\l"
+	.string "for forty years.\p"
+	.string "The board records what the instruments\n"
+	.string "cannot. The date the SEEDOT dropped.\l"
+	.string "The date the first ELECTRIKE came down\l"
+	.string "off the moor for warmth. Both earlier.$"
+
+ParcelStation_Board2_Text_0:
+# 520 "data/maps/ParcelStation/scripts.pory"
+	.string "A SURVEY BOARD, the Station's words\n"
+	.string "copied out under the Survey's. A model\l"
+	.string "is a story with numbers in it, the\l"
+	.string "Station says. A count is a number with a\l"
+	.string "place in it, the Survey says under that.\p"
+	.string "Both are true. The board asks you to\n"
+	.string "carry both.$"

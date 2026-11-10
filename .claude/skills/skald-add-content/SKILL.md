@@ -107,6 +107,18 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
 - Check art in the emulator, not just the PNG: `capture.py` for the title,
   `walktest.py --out` next to the NPC for sprites, a talk for the dialogue box.
 
+## Readables on the ground (Survey boards, stakes, papers)
+- A readable is a `bg_events` entry of type `sign` (elevation 0 = any) on a
+  **solid** tile with a walkable tile directly south, plus a
+  `msgbox(format("..."), MSGBOX_SIGN)` script. Scout spots with the pattern in
+  `boards_scout.py` (scratchpad; uses `tools/skald/audit.py`'s `load_map`): solid,
+  not water, not a door, clear of warps/events/objects and their wander ranges,
+  an open stand area, spread ≥ 9 tiles apart. Verify by spawning on the stand
+  tile: `--walk UP:0 --walk TAP:A --walk IDLE:100 --out shot.png`.
+- `python3 tools/skald/wordcount.py` after any prose pass (hand-written words
+  exclude the `_R2`..`_R9`/`_FirstWin`/`_Rematch` scripts; `--rematch` includes
+  them; dex entries counted via `tools/skald/dex_species.txt`).
+
 ## Ship ritual
 - `python3 tools/skald/audit.py` must be clean (walkability, warps, trigger guards,
   top-layer cover, connections, fly rows, trainer registration).

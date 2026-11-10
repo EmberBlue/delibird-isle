@@ -508,3 +508,15 @@ script ParcelStation_ToMistwood {
     waitstate
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelStation_Board1 {
+    msgbox(format("A SURVEY BOARD at the Station fence. The weather here is measured, not watched: the instruments on the roof write the same hour every day and have for forty years.\pThe board records what the instruments cannot. The date the SEEDOT dropped. The date the first ELECTRIKE came down off the moor for warmth. Both earlier."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelStation_Board2 {
+    msgbox(format("A SURVEY BOARD, the Station's words copied out under the Survey's. A model is a story with numbers in it, the Station says. A count is a number with a place in it, the Survey says under that.\pBoth are true. The board asks you to carry both."), MSGBOX_SIGN)
+    end
+}

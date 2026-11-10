@@ -430,3 +430,15 @@ script ParcelMarsh_SurveyStake {
     }
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelMarsh_Board1 {
+    msgbox(format("A SURVEY BOARD, older than the others and not in the Survey's hand. KEYSTONE MARSH. No gate, no crest, no path kept. Every guild present, because nothing here was ever taken apart.\pThe board's one line: complete. Under it, newer, in pencil: at the edges, narrowing. Nobody has made that official."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelMarsh_Board2 {
+    msgbox(format("A SURVEY BOARD with its red cloth gone. The POLIWAG of this marsh are the same line as the ones in the lower country and the ones on the old charts. The chart said the line recovered.\pThe marsh says: count them yourself. The space for the count is blank. It is blank on purpose."), MSGBOX_SIGN)
+    end
+}

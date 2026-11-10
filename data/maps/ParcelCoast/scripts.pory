@@ -2053,3 +2053,15 @@ script ParcelCoast_PairMarket {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelCoast_Board1 {
+    msgbox(format("A SURVEY BOARD on the quay. MEREHOLT COAST. Kelp below the breakwater once, thick enough to hide a boat's hull. The dredge took the seabed the kelp held and the fish the kelp hid.\pThe board lists the landings by year beside the kelp cover by year, and the Company's certification stamp beside both. The stamp is the only line that does not fall."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoast_Board2 {
+    msgbox(format("A SURVEY BOARD at the gull colony. WINGULL nests on the warehouse roofs, counted from the crane: 400, 360, 310, 190.\pThe fishers say the gulls follow the boats. The board says the gulls follow the fish, and the boats follow the fish, and both are now following the same small fish."), MSGBOX_SIGN)
+    end
+}

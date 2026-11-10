@@ -596,6 +596,18 @@ ParcelMeadow_AfterRecognition::
 	return
 
 
+ParcelMeadow_Board1::
+# 354 "data/maps/ParcelMeadow/scripts.pory"
+	msgbox ParcelMeadow_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelMeadow_Board2::
+# 359 "data/maps/ParcelMeadow/scripts.pory"
+	msgbox ParcelMeadow_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMeadow_FirstEntry_Text_0:
 # 32 "data/maps/ParcelMeadow/scripts.pory"
 	.string "RIN: Oh! You're WREN, right? HALE said\n"
@@ -953,3 +965,26 @@ ParcelMeadow_AfterRecognition_Text_1:
 	.string "RIN: Oh, and there's grass out there.\n"
 	.string "Real POKéMON, not meadow POKéMON.\l"
 	.string "Yours will want to fight them. Let it.$"
+
+ParcelMeadow_Board1_Text_0:
+# 354 "data/maps/ParcelMeadow/scripts.pory"
+	.string "A SURVEY BOARD at the meadow gate, in\n"
+	.string "RIN's hand. The holding meadow. Edge\l"
+	.string "species that tolerate us wait here; the\l"
+	.string "Corps does not issue partners, it\l"
+	.string "introduces them.\p"
+	.string "A board of names below, one for every\n"
+	.string "partner that left with a ranger. The\l"
+	.string "names are not crossed out when the\l"
+	.string "ranger is.$"
+
+ParcelMeadow_Board2_Text_0:
+# 359 "data/maps/ParcelMeadow/scripts.pory"
+	.string "A SURVEY BOARD, set low, for children.\n"
+	.string "What lives in a meadow lives in the\l"
+	.string "margins: the hedge, the ditch, the\l"
+	.string "stones. Mow the margins and the meadow\l"
+	.string "is grass. Grass is not a meadow.\p"
+	.string "The Survey counts the margin, which is\n"
+	.string "why the mower stops a stride short of\l"
+	.string "the hedge.$"

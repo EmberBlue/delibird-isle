@@ -1167,6 +1167,18 @@ ParcelDelibirdCliffs_FindFirstone_4:
 	goto ParcelDelibirdCliffs_FindFirstone_3
 
 
+ParcelDelibirdCliffs_Board1::
+# 585 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelDelibirdCliffs_Board2::
+# 590 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibirdCliffs_Tomas_Text_0:
 # 20 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "Tomas: The floor slopes a little more\n"
@@ -1798,3 +1810,25 @@ ParcelDelibirdCliffs_FindFirstone_Text_1:
 	.string "FIRST ONE, and a date. The TENTACOOL\l"
 	.string "has gone back out, or down. The chalk is\l"
 	.string "staying.$"
+
+ParcelDelibirdCliffs_Board1_Text_0:
+# 585 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "A SURVEY BOARD on the cliff path.\n"
+	.string "SHORELINE CLIFFS. The ledges hold the\l"
+	.string "colony and the SNEASEL rob it, as they\l"
+	.string "have since the record began. The board\l"
+	.string "gives the nest count and the raid\l"
+	.string "count. Both fall.\p"
+	.string "When the robber and the robbed fall\n"
+	.string "together, the Survey writes, the cause\l"
+	.string "is not the robber.$"
+
+ParcelDelibirdCliffs_Board2_Text_0:
+# 590 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "A SURVEY BOARD at the bench. STARYU\n"
+	.string "below, in the cold current, lit when the\l"
+	.string "water is clean. The board's instruction\l"
+	.string "is one line: sit until dark and count the\l"
+	.string "lights.\p"
+	.string "The second line is newer. If there are\n"
+	.string "none, write none. None is a reading.$"

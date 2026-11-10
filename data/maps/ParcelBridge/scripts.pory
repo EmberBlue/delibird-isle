@@ -216,3 +216,15 @@ script ParcelBridge_ToSaltwick {
     waitstate
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelBridge_Board1 {
+    msgbox(format("A SURVEY BOARD at the bridge head. The bridge crosses the inlet where the saltmarsh meets the first fresh water, and everything that moves between the two moves under this deck.\pThe Survey counts it from the rail at dusk. The count takes an hour and the bridge takes a minute, which is the whole trouble with bridges."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelBridge_Board2 {
+    msgbox(format("A SURVEY BOARD, scratched. Someone has carved a POLIWAG into it, badly. Under the carving the Survey wrote: left here.\pIt is not an official entry. It stayed."), MSGBOX_SIGN)
+    end
+}

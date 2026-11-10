@@ -4460,6 +4460,18 @@ ParcelFloodbasin_PairBank_3:
 	goto ParcelFloodbasin_PairBank_1
 
 
+ParcelFloodbasin_Board1::
+# 2143 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFloodbasin_Board2::
+# 2148 "data/maps/ParcelFloodbasin/scripts.pory"
+	msgbox ParcelFloodbasin_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasin_FirstEntry_Text_0:
 # 58 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "The trees open onto a low, wide basin.\n"
@@ -6719,3 +6731,26 @@ ParcelFloodbasin_PairBank_Text_9:
 ParcelFloodbasin_PairBank_Text_10:
 # 2134 "data/maps/ParcelFloodbasin/scripts.pory"
 	.string "BARGEMAN: …Good.$"
+
+ParcelFloodbasin_Board1_Text_0:
+# 2143 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "A SURVEY BOARD at the basin edge. THE\n"
+	.string "FLOODBASIN. The marsh filters the\l"
+	.string "water for everything downstream; that\l"
+	.string "is its work and the reason it is here.\p"
+	.string "The CROAGUNK carry two poisons, their\n"
+	.string "own and the one they drink. The Survey\l"
+	.string "tests the CROAGUNK to test the water.\l"
+	.string "The result is one word a year. Six words.\l"
+	.string "None of them is clean.$"
+
+ParcelFloodbasin_Board2_Text_0:
+# 2148 "data/maps/ParcelFloodbasin/scripts.pory"
+	.string "A SURVEY BOARD by the relief tents.\n"
+	.string "Deformity count, POLIWAG, spring sample\l"
+	.string "of one hundred, in a column down the\l"
+	.string "board: 0, 0, 1, 0, 3, 4, 7, 9.\p"
+	.string "A sign beside the board says the site is\n"
+	.string "being remediated. The board does not\l"
+	.string "argue with the sign. It is a column of\l"
+	.string "numbers.$"

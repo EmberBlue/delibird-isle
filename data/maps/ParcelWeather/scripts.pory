@@ -1327,3 +1327,15 @@ script ParcelWeather_PairGate {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelWeather_Board1 {
+    msgbox(format("A SURVEY BOARD at the Institute gate, with the Institute's permission stamped on it. The Station has measured the weather for forty years and the Survey has counted what lives in it for thirty.\pThe board sets the two columns side by side. The temperature column rises. The count column does not keep up. That is the finding."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWeather_Board2 {
+    msgbox(format("A SURVEY BOARD, the only one with a graph. First frost by year, from the Station's own records, plotted by the Survey because the Station would not.\pThe line walks right across the board. The last point is off the edge, on the post."), MSGBOX_SIGN)
+    end
+}

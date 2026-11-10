@@ -691,4 +691,21 @@ quest is built, how the peer works) before they are asked six more times.
   Centre town once visited instead of only Saltwick. Deferred: a northern
   retint of the outdoor tileset palettes, building exteriors, custom trainer
   classes.
+- **2026-11-10 — dex round two and the Survey boards.** Eighty more
+  Pokédex entries, for every species a Skaldmere trainer carries but the
+  wild tables don't hold (the bore-hole MAGNETON, the STEELIX that was an
+  ONIX when the Corridor was whole, TARN's KINGDRA above a weir built not
+  to ask whether it could go back down, the POLITOED dusk count from dozens
+  to one): 161 species now read as Skaldmere. Then forty-four Survey
+  boards, two in every outdoor map on tiles scouted for a clear stand-tile
+  south of a solid one, each a field note in the Survey's register and
+  grounded in §06's per-zone keystone, indicator read and mask: the WOOPER
+  counted at the culvert and not the pool, the SHROOMISH as the Mistwood's
+  air gauge, three frogs as three gauges on the Reedmere turf, the
+  CROAGUNK tested to test the Floodbasin's water, the slope readings beside
+  the bore in hands downslope, the summit's thirty-one snow patches become
+  thirteen, the Fernwick pond's twenty-eight pairs with the warning under
+  the number. Six boards read in the emulator from their stand tiles.
+  `tools/skald/wordcount.py` is now the counter: 85,093 hand-written
+  words (~115,700 with the rematch tiers). ~4,700 words.
 

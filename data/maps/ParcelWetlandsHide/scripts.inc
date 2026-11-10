@@ -1603,6 +1603,18 @@ ParcelWetlandsHide_PairBirders_3:
 	goto ParcelWetlandsHide_PairBirders_1
 
 
+ParcelWetlandsHide_Board1::
+# 750 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWetlandsHide_Board2::
+# 755 "data/maps/ParcelWetlandsHide/scripts.pory"
+	msgbox ParcelWetlandsHide_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWetlandsHide_Aslak_Text_0:
 # 10 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "ASLAK: Hide's full. Sit on the bank with\n"
@@ -2315,3 +2327,24 @@ ParcelWetlandsHide_PairBirders_Text_11:
 # 741 "data/maps/ParcelWetlandsHide/scripts.pory"
 	.string "SECOND BIRDER: The Survey takes the\n"
 	.string "honest one. Say it properly.$"
+
+ParcelWetlandsHide_Board1_Text_0:
+# 750 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "A SURVEY BOARD inside the hide, where\n"
+	.string "the light is bad on purpose. The dusk\l"
+	.string "count is the oldest count the Survey\l"
+	.string "keeps and the method has not changed:\l"
+	.string "sit, do not speak, count what lights.\p"
+	.string "The chalked numbers go back along the\n"
+	.string "wall and round the corner. The corner is\l"
+	.string "where they got smaller.$"
+
+ParcelWetlandsHide_Board2_Text_0:
+# 755 "data/maps/ParcelWetlandsHide/scripts.pory"
+	.string "A SURVEY BOARD on the hide's outer wall,\n"
+	.string "for people who will not go in. SURSKIT on\l"
+	.string "the open water mean the surface is\l"
+	.string "clean enough to stand on.\p"
+	.string "The board shows the count by year as a\n"
+	.string "row of ticks. You can see the shape of\l"
+	.string "it from the path.$"

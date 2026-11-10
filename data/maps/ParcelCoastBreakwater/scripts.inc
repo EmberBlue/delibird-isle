@@ -1614,6 +1614,18 @@ ParcelCoastBreakwater_PairBeach_3:
 	goto ParcelCoastBreakwater_PairBeach_1
 
 
+ParcelCoastBreakwater_Board1::
+# 758 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoastBreakwater_Board2::
+# 763 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	msgbox ParcelCoastBreakwater_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoastBreakwater_Ansgar_Text_0:
 # 10 "data/maps/ParcelCoastBreakwater/scripts.pory"
 	.string "ANSGAR: Off the boats a week. The\n"
@@ -2338,3 +2350,24 @@ ParcelCoastBreakwater_PairBeach_Text_10:
 	.string "took it. You can't close a beach that's\l"
 	.string "already gone; you can only put a sign\l"
 	.string "where it was.$"
+
+ParcelCoastBreakwater_Board1_Text_0:
+# 758 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "A SURVEY BOARD on the breakwater,\n"
+	.string "salt-eaten. WAILMER calve in the bay in\l"
+	.string "the cold months, and the spoil from the\l"
+	.string "dredge is dumped where they calve.\p"
+	.string "Calves seen from the end of the wall: 6,\n"
+	.string "5, 5, 2, 0, 1. The dumping is on a licence.\l"
+	.string "The board reproduces the licence\l"
+	.string "number.$"
+
+ParcelCoastBreakwater_Board2_Text_0:
+# 763 "data/maps/ParcelCoastBreakwater/scripts.pory"
+	.string "A SURVEY BOARD facing the sea. CORSOLA\n"
+	.string "on the old wall's foot, the only hard\l"
+	.string "ground the dredge cannot reach. Pink in\l"
+	.string "the clean years, white in the warm ones.\p"
+	.string "The board is a colour chart: a square\n"
+	.string "painted each summer. Read it from the\l"
+	.string "left.$"

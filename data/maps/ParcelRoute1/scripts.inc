@@ -1181,6 +1181,18 @@ ParcelRoute1_PairBridge_3:
 	goto ParcelRoute1_PairBridge_1
 
 
+ParcelRoute1_Board1::
+# 663 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelRoute1_Board2::
+# 668 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelRoute1_BridgeScene_Text_0:
 # 46 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A whole crowd of POLIWAG, jammed up\n"
@@ -1688,3 +1700,26 @@ ParcelRoute1_PairBridge_Text_11:
 # 654 "data/maps/ParcelRoute1/scripts.pory"
 	.string "ANGLER: Write it up. That's two of us\n"
 	.string "who've noticed in forty years.$"
+
+ParcelRoute1_Board1_Text_0:
+# 663 "data/maps/ParcelRoute1/scripts.pory"
+	.string "A SURVEY BOARD, fresh paint over older\n"
+	.string "paint. ROUTE 1. Saltmarsh edge: the\l"
+	.string "grass floods on the big tides and\l"
+	.string "drains in a day, and the WOOPER move\l"
+	.string "with it, so they are counted at the\l"
+	.string "culvert and not the pool.\p"
+	.string "Count this spring: 31. The old board\n"
+	.string "underneath said 50. Nobody painted\l"
+	.string "that out. It wore off.$"
+
+ParcelRoute1_Board2_Text_0:
+# 668 "data/maps/ParcelRoute1/scripts.pory"
+	.string "A SURVEY BOARD by the road. WINGULL\n"
+	.string "pairs on the shore pilings, counted at\l"
+	.string "dawn: 14. The Survey's rule for shore\l"
+	.string "birds is written under the number in a\l"
+	.string "smaller hand.\p"
+	.string "A pair that nests found enough fish. A\n"
+	.string "pair that stays and does not nest\l"
+	.string "found enough to stay. Watch which.$"

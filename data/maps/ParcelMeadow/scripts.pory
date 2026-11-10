@@ -347,3 +347,15 @@ script ParcelMeadow_AfterRecognition {
     msgbox(format("RIN: Oh, and there's grass out there. Real POKéMON, not meadow POKéMON. Yours will want to fight them. Let it."), MSGBOX_DEFAULT)
     return
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelMeadow_Board1 {
+    msgbox(format("A SURVEY BOARD at the meadow gate, in RIN's hand. The holding meadow. Edge species that tolerate us wait here; the Corps does not issue partners, it introduces them.\pA board of names below, one for every partner that left with a ranger. The names are not crossed out when the ranger is."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelMeadow_Board2 {
+    msgbox(format("A SURVEY BOARD, set low, for children. What lives in a meadow lives in the margins: the hedge, the ditch, the stones. Mow the margins and the meadow is grass. Grass is not a meadow.\pThe Survey counts the margin, which is why the mower stops a stride short of the hedge."), MSGBOX_SIGN)
+    end
+}

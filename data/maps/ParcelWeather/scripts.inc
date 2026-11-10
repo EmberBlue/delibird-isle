@@ -2850,6 +2850,18 @@ ParcelWeather_PairGate_3:
 	goto ParcelWeather_PairGate_1
 
 
+ParcelWeather_Board1::
+# 1334 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelWeather_Board2::
+# 1339 "data/maps/ParcelWeather/scripts.pory"
+	msgbox ParcelWeather_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelWeather_FirstEntry_Text_0:
 # 28 "data/maps/ParcelWeather/scripts.pory"
 	.string "A sign over the landing: MEREHOLT\n"
@@ -4221,3 +4233,26 @@ ParcelWeather_PairGate_Text_14:
 # 1325 "data/maps/ParcelWeather/scripts.pory"
 	.string "MODELLER: After isn't in the scenario.\n"
 	.string "That's not a flaw. That's a scope.$"
+
+ParcelWeather_Board1_Text_0:
+# 1334 "data/maps/ParcelWeather/scripts.pory"
+	.string "A SURVEY BOARD at the Institute gate,\n"
+	.string "with the Institute's permission\l"
+	.string "stamped on it. The Station has measured\l"
+	.string "the weather for forty years and the\l"
+	.string "Survey has counted what lives in it for\l"
+	.string "thirty.\p"
+	.string "The board sets the two columns side by\n"
+	.string "side. The temperature column rises. The\l"
+	.string "count column does not keep up. That is\l"
+	.string "the finding.$"
+
+ParcelWeather_Board2_Text_0:
+# 1339 "data/maps/ParcelWeather/scripts.pory"
+	.string "A SURVEY BOARD, the only one with a\n"
+	.string "graph. First frost by year, from the\l"
+	.string "Station's own records, plotted by the\l"
+	.string "Survey because the Station would not.\p"
+	.string "The line walks right across the board.\n"
+	.string "The last point is off the edge, on the\l"
+	.string "post.$"

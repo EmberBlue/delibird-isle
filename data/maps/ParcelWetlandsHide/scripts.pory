@@ -743,3 +743,15 @@ script ParcelWetlandsHide_PairBirders {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelWetlandsHide_Board1 {
+    msgbox(format("A SURVEY BOARD inside the hide, where the light is bad on purpose. The dusk count is the oldest count the Survey keeps and the method has not changed: sit, do not speak, count what lights.\pThe chalked numbers go back along the wall and round the corner. The corner is where they got smaller."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelWetlandsHide_Board2 {
+    msgbox(format("A SURVEY BOARD on the hide's outer wall, for people who will not go in. SURSKIT on the open water mean the surface is clean enough to stand on.\pThe board shows the count by year as a row of ticks. You can see the shape of it from the path."), MSGBOX_SIGN)
+    end
+}

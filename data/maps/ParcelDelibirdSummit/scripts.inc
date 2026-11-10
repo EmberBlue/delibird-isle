@@ -1132,6 +1132,18 @@ ParcelDelibirdSummit_PairStakes_3:
 	goto ParcelDelibirdSummit_PairStakes_1
 
 
+ParcelDelibirdSummit_Board1::
+# 565 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelDelibirdSummit_Board2::
+# 570 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibirdSummit_Ingrid_Text_0:
 # 20 "data/maps/ParcelDelibirdSummit/scripts.pory"
 	.string "Ingrid: You said it to their faces. ILEX\n"
@@ -1741,3 +1753,27 @@ ParcelDelibirdSummit_PairStakes_Text_10:
 # 556 "data/maps/ParcelDelibirdSummit/scripts.pory"
 	.string "OLD WOMAN: I know what it means. I'm\n"
 	.string "telling you what it meant.$"
+
+ParcelDelibirdSummit_Board1_Text_0:
+# 565 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "A SURVEY BOARD at the summit path, iced\n"
+	.string "over. SNOWY SUMMIT. Snow patches that\l"
+	.string "last the year: 31 when the board was\l"
+	.string "made, 13 now, each marked on the board's\l"
+	.string "map with a nail.\p"
+	.string "The SNORUNT live in them and move when\n"
+	.string "they move. There is no higher ground.\l"
+	.string "The board does not say what happens\l"
+	.string "then. It does not need to.$"
+
+ParcelDelibirdSummit_Board2_Text_0:
+# 570 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "A SURVEY BOARD on the cairn. The cairn\n"
+	.string "is older than the Survey and taller\l"
+	.string "every year; the islanders add a stone\l"
+	.string "when they reach it.\p"
+	.string "The board asks that you add one, count\n"
+	.string "the SWINUB tracks on the way up, and\l"
+	.string "write the count in the tin. The tin is\l"
+	.string "full of slips. The numbers get smaller as\l"
+	.string "the stack gets taller.$"

@@ -558,3 +558,15 @@ script ParcelDelibirdSummit_PairStakes {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelDelibirdSummit_Board1 {
+    msgbox(format("A SURVEY BOARD at the summit path, iced over. SNOWY SUMMIT. Snow patches that last the year: 31 when the board was made, 13 now, each marked on the board's map with a nail.\pThe SNORUNT live in them and move when they move. There is no higher ground. The board does not say what happens then. It does not need to."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibirdSummit_Board2 {
+    msgbox(format("A SURVEY BOARD on the cairn. The cairn is older than the Survey and taller every year; the islanders add a stone when they reach it.\pThe board asks that you add one, count the SWINUB tracks on the way up, and write the count in the tin. The tin is full of slips. The numbers get smaller as the stack gets taller."), MSGBOX_SIGN)
+    end
+}

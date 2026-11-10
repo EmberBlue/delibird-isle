@@ -2044,3 +2044,15 @@ script ParcelHighlands_PairThaw {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelHighlands_Board1 {
+    msgbox(format("A SURVEY BOARD outside the warming centre. HAUKFELL. The ground here is frozen and everything stands on the frozen ground. The SWINUB graze its edge and move up when it softens.\pThe board shows the edge as a line, one line a year, each higher than the last. Above the top line there is one more contour, and then the sky."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelHighlands_Board2 {
+    msgbox(format("A SURVEY BOARD on the bore road, the Foundation crest on the post it is nailed to. EXPLORATORY ONLY, says the Company sign a pace away.\pThe Survey board gives the slope readings beside the bore: 2, 4, 9, 15. The unit is hands downslope. The sign has moved with the ground. The board has moved the same distance."), MSGBOX_SIGN)
+    end
+}

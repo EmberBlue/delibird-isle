@@ -4277,6 +4277,18 @@ ParcelHighlands_PairThaw_3:
 	goto ParcelHighlands_PairThaw_1
 
 
+ParcelHighlands_Board1::
+# 2051 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelHighlands_Board2::
+# 2056 "data/maps/ParcelHighlands/scripts.pory"
+	msgbox ParcelHighlands_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelHighlands_FirstEntry_Text_0:
 # 39 "data/maps/ParcelHighlands/scripts.pory"
 	.string "The road climbs out of the farmland\n"
@@ -6425,3 +6437,27 @@ ParcelHighlands_PairThaw_Text_9:
 	.string "MOTHER: That's why you don't play on\n"
 	.string "them. The ground made them. It can make\l"
 	.string "more.$"
+
+ParcelHighlands_Board1_Text_0:
+# 2051 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A SURVEY BOARD outside the warming\n"
+	.string "centre. HAUKFELL. The ground here is\l"
+	.string "frozen and everything stands on the\l"
+	.string "frozen ground. The SWINUB graze its\l"
+	.string "edge and move up when it softens.\p"
+	.string "The board shows the edge as a line, one\n"
+	.string "line a year, each higher than the last.\l"
+	.string "Above the top line there is one more\l"
+	.string "contour, and then the sky.$"
+
+ParcelHighlands_Board2_Text_0:
+# 2056 "data/maps/ParcelHighlands/scripts.pory"
+	.string "A SURVEY BOARD on the bore road, the\n"
+	.string "Foundation crest on the post it is\l"
+	.string "nailed to. EXPLORATORY ONLY, says the\l"
+	.string "Company sign a pace away.\p"
+	.string "The Survey board gives the slope\n"
+	.string "readings beside the bore: 2, 4, 9, 15.\l"
+	.string "The unit is hands downslope. The sign\l"
+	.string "has moved with the ground. The board\l"
+	.string "has moved the same distance.$"

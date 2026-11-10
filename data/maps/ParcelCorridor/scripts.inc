@@ -3511,6 +3511,18 @@ ParcelCorridor_PairCulvert_3:
 	goto ParcelCorridor_PairCulvert_1
 
 
+ParcelCorridor_Board1::
+# 1636 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCorridor_Board2::
+# 1641 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCorridor_Checkpoint_Text_0:
 # 45 "data/maps/ParcelCorridor/scripts.pory"
 	.string "MIRREN: Hold it.$"
@@ -5068,3 +5080,26 @@ ParcelCorridor_PairCulvert_Text_11:
 # 1627 "data/maps/ParcelCorridor/scripts.pory"
 	.string "SURVEY HAND: Everything that fits.\n"
 	.string "That's what a pipe is for, they'd say.$"
+
+ParcelCorridor_Board1_Text_0:
+# 1636 "data/maps/ParcelCorridor/scripts.pory"
+	.string "A SURVEY BOARD at the cut. SERVICE CUT.\n"
+	.string "A road was driven through the corridor\l"
+	.string "and the stream was put in a pipe to make\l"
+	.string "room for it. The pipe is narrower than\l"
+	.string "the stream.\p"
+	.string "The board lists what used the corridor\n"
+	.string "before the pipe, and what uses the pipe.\l"
+	.string "The second list is short, and all of it is\l"
+	.string "small.$"
+
+ParcelCorridor_Board2_Text_0:
+# 1641 "data/maps/ParcelCorridor/scripts.pory"
+	.string "A SURVEY BOARD beside the checkpoint.\n"
+	.string "The culvert was described as an\l"
+	.string "upgrade, and the board quotes the\l"
+	.string "description in full, without comment.\p"
+	.string "Under it the Survey has written the\n"
+	.string "pipe width in paces and the old channel\l"
+	.string "width in paces. Reading both is the\l"
+	.string "comment.$"

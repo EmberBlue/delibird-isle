@@ -814,6 +814,18 @@ ParcelMarsh_SurveyStake_3:
 	goto ParcelMarsh_SurveyStake_1
 
 
+ParcelMarsh_Board1::
+# 437 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelMarsh_Board2::
+# 442 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelMarsh_FirstEntry_Text_0:
 # 30 "data/maps/ParcelMarsh/scripts.pory"
 	.string "HALE: This is as far as I go. The road\n"
@@ -1464,3 +1476,26 @@ ParcelMarsh_SurveyStake_Text_1:
 	.string "You tie a strip to the older stake, the\n"
 	.string "one under the first, and do not sign it.\l"
 	.string "The Survey knows whose it is.$"
+
+ParcelMarsh_Board1_Text_0:
+# 437 "data/maps/ParcelMarsh/scripts.pory"
+	.string "A SURVEY BOARD, older than the others\n"
+	.string "and not in the Survey's hand. KEYSTONE\l"
+	.string "MARSH. No gate, no crest, no path kept.\l"
+	.string "Every guild present, because nothing\l"
+	.string "here was ever taken apart.\p"
+	.string "The board's one line: complete. Under it,\n"
+	.string "newer, in pencil: at the edges,\l"
+	.string "narrowing. Nobody has made that\l"
+	.string "official.$"
+
+ParcelMarsh_Board2_Text_0:
+# 442 "data/maps/ParcelMarsh/scripts.pory"
+	.string "A SURVEY BOARD with its red cloth gone.\n"
+	.string "The POLIWAG of this marsh are the same\l"
+	.string "line as the ones in the lower country\l"
+	.string "and the ones on the old charts. The\l"
+	.string "chart said the line recovered.\p"
+	.string "The marsh says: count them yourself.\n"
+	.string "The space for the count is blank. It is\l"
+	.string "blank on purpose.$"

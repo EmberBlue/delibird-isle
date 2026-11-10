@@ -1545,6 +1545,18 @@ ParcelFloodbasinSluice_PairFord_3:
 	goto ParcelFloodbasinSluice_PairFord_1
 
 
+ParcelFloodbasinSluice_Board1::
+# 715 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFloodbasinSluice_Board2::
+# 720 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFloodbasinSluice_Nils_Text_0:
 # 10 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "NILS: The crossing's the old ford. The\n"
@@ -2212,3 +2224,27 @@ ParcelFloodbasinSluice_PairFord_Text_12:
 	.string "OLD MAN: You'd swim it in August and\n"
 	.string "read NORMAL on the gauge while you did.\l"
 	.string "That's progress.$"
+
+ParcelFloodbasinSluice_Board1_Text_0:
+# 715 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "A SURVEY BOARD on the sluice wall. The\n"
+	.string "gate holds the basin's water back in\l"
+	.string "spring and lets it go in summer, which is\l"
+	.string "backwards from the marsh's point of\l"
+	.string "view.\p"
+	.string "The GOLDEEN below the gate are counted\n"
+	.string "at the drop. When the gate is right they\l"
+	.string "are there. When the gate is late they\l"
+	.string "are somewhere else. The gate has been\l"
+	.string "late.$"
+
+ParcelFloodbasinSluice_Board2_Text_0:
+# 720 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "A SURVEY BOARD, the paint burnt off the\n"
+	.string "gate side by the sun. MARILL on the\l"
+	.string "quiet water above the sluice, young in\l"
+	.string "the reeds.\p"
+	.string "The board notes that the young appear\n"
+	.string "a fortnight after the gate closes,\l"
+	.string "every year. The gate's timing is the\l"
+	.string "marsh's timing now. It did not use to be.$"

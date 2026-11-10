@@ -499,3 +499,15 @@ script ParcelMistwood_PairSnares {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelMistwood_Board1 {
+    msgbox(format("A SURVEY BOARD under the big spruce. MISTWOOD. Fog-fed forest: the trees drink from the air more than the ground. The SHROOMISH are the Survey's air gauge.\pWhere they crowd a log the fog still comes. Where the log is bare the fog stopped coming before the log fell. Three bare logs on this ride. Two last year."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelMistwood_Board2 {
+    msgbox(format("A SURVEY BOARD with a snare nailed to the back of it as a specimen. The ride is checked for snares each week by the Corps crew the Foundation funds. The board records the finds: 9, 11, 6, 14.\pIt does not record the ones not found. The HOOTHOOT count is the honest version of the same number, and it goes one way."), MSGBOX_SIGN)
+    end
+}

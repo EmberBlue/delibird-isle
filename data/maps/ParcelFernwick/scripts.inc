@@ -1958,6 +1958,18 @@ ParcelFernwick_PairStation_3:
 	goto ParcelFernwick_PairStation_1
 
 
+ParcelFernwick_Board1::
+# 1017 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelFernwick_Board2::
+# 1022 "data/maps/ParcelFernwick/scripts.pory"
+	msgbox ParcelFernwick_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelFernwick_Smeargle_Text_0:
 # 30 "data/maps/ParcelFernwick/scripts.pory"
 	.string "A SMEARGLE sits on the bank with its\n"
@@ -3159,3 +3171,27 @@ ParcelFernwick_PairStation_Text_11:
 	.string "two of the eight. You'll understand the\l"
 	.string "arithmetic when you've been cold in a\l"
 	.string "station the poster didn't build.$"
+
+ParcelFernwick_Board1_Text_0:
+# 1017 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A SURVEY BOARD outside the Corps HQ.\n"
+	.string "FERNWICK. The Corps certifies rangers;\l"
+	.string "the Survey certifies the ground. The\l"
+	.string "board is the Survey's and says so.\p"
+	.string "It lists what a provisional ranger\n"
+	.string "should be able to count by the end of\l"
+	.string "the forest season, in order: the pond,\l"
+	.string "the seep, the canopy, the floor. The\l"
+	.string "floor is last because it is hardest.$"
+
+ParcelFernwick_Board2_Text_0:
+# 1022 "data/maps/ParcelFernwick/scripts.pory"
+	.string "A SURVEY BOARD by the pond. WINGULL\n"
+	.string "pairs on the Fernwick pond: 28 in the\l"
+	.string "first spring of the record, 28 in the\l"
+	.string "tenth. The board gives the number with\l"
+	.string "a warning under it.\p"
+	.string "A count that holds is not always a\n"
+	.string "habitat that holds. Sometimes it is a\l"
+	.string "habitat that has stopped being able to\l"
+	.string "lose anything else.$"

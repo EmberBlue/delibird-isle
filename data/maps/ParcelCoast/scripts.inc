@@ -4247,6 +4247,18 @@ ParcelCoast_PairMarket_3:
 	goto ParcelCoast_PairMarket_1
 
 
+ParcelCoast_Board1::
+# 2060 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Board1_Text_0, MSGBOX_SIGN
+	end
+
+
+ParcelCoast_Board2::
+# 2065 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_Board2_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelCoast_FirstEntry_Text_0:
 # 49 "data/maps/ParcelCoast/scripts.pory"
 	.string "The ferry rounds the headland and the\n"
@@ -6522,3 +6534,28 @@ ParcelCoast_PairMarket_Text_12:
 # 2051 "data/maps/ParcelCoast/scripts.pory"
 	.string "STALLHOLDER: Someone's going to have\n"
 	.string "to.$"
+
+ParcelCoast_Board1_Text_0:
+# 2060 "data/maps/ParcelCoast/scripts.pory"
+	.string "A SURVEY BOARD on the quay. MEREHOLT\n"
+	.string "COAST. Kelp below the breakwater once,\l"
+	.string "thick enough to hide a boat's hull. The\l"
+	.string "dredge took the seabed the kelp held\l"
+	.string "and the fish the kelp hid.\p"
+	.string "The board lists the landings by year\n"
+	.string "beside the kelp cover by year, and the\l"
+	.string "Company's certification stamp beside\l"
+	.string "both. The stamp is the only line that\l"
+	.string "does not fall.$"
+
+ParcelCoast_Board2_Text_0:
+# 2065 "data/maps/ParcelCoast/scripts.pory"
+	.string "A SURVEY BOARD at the gull colony.\n"
+	.string "WINGULL nests on the warehouse roofs,\l"
+	.string "counted from the crane: 400, 360, 310,\l"
+	.string "190.\p"
+	.string "The fishers say the gulls follow the\n"
+	.string "boats. The board says the gulls follow\l"
+	.string "the fish, and the boats follow the fish,\l"
+	.string "and both are now following the same\l"
+	.string "small fish.$"

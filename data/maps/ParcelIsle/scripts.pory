@@ -1146,3 +1146,15 @@ script ParcelIsle_PairGreen {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelIsle_Board1 {
+    msgbox(format("A SURVEY BOARD on the harbour wall. SALTWICK. Tidal nursery: half the fish landed on this coast were small here first. CLAMPERL beds under the moorings, counted at the spring low: 220 shells open.\pThe number under it is the one that matters and nobody reads. 60 of them with young."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelIsle_Board2 {
+    msgbox(format("A SURVEY BOARD by the jetty steps. STARYU on the harbour floor at night, counted by their light from the end of the jetty since before the Survey had a name for the method.\pIt is the easiest count on the island and so it is the longest. 40, 38, 41, 36, 29, 31, 24."), MSGBOX_SIGN)
+    end
+}

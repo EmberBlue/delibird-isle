@@ -729,3 +729,15 @@ script ParcelRiverMillWood_PairCoppice {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelRiverMillWood_Board1 {
+    msgbox(format("A SURVEY BOARD at the mill wood gate. Second growth, planted after the mill cut the first. The NINCADA husks are counted on the trunks in the first week of summer; the week comes earlier and the husks come fewer.\pThe board shows both lines. They cross the year the children now in the school were born."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRiverMillWood_Board2 {
+    msgbox(format("A SURVEY BOARD on a stump wide enough to sit on. The stump is the count: the rings were marked with a nail every fifty years by someone with time. The last nail is in the bark.\pThe Survey added the SEEDOT count underneath, because a wood that drops seed is a wood that is still trying."), MSGBOX_SIGN)
+    end
+}

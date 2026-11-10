@@ -578,3 +578,15 @@ script ParcelDelibirdCliffs_FindFirstone {
     }
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelDelibirdCliffs_Board1 {
+    msgbox(format("A SURVEY BOARD on the cliff path. SHORELINE CLIFFS. The ledges hold the colony and the SNEASEL rob it, as they have since the record began. The board gives the nest count and the raid count. Both fall.\pWhen the robber and the robbed fall together, the Survey writes, the cause is not the robber."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibirdCliffs_Board2 {
+    msgbox(format("A SURVEY BOARD at the bench. STARYU below, in the cold current, lit when the water is clean. The board's instruction is one line: sit until dark and count the lights.\pThe second line is newer. If there are none, write none. None is a reading."), MSGBOX_SIGN)
+    end
+}

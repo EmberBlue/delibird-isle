@@ -100,8 +100,13 @@ side quests (forty-two), Rin across the arc and the unchosen after the
 hearing, three books (Heron's field guide, the Corps handbook, the harbour
 almanac), household papers in twenty-three houses, the lab after the
 hearing, the epilogue seen closer, and the post-game second readings
-(Ilex's red cloth). ~80,500 hand-written words (~111,000 with the
-rematch-tier lines), 704 objects, 376 readable events, 56 overheard
+(Ilex's red cloth), eighty more dex entries (every species a trainer
+carries; 161 in all), and forty-four Survey boards, two in every outdoor
+map, each a field note in the Survey's voice grounded in §06 (the WOOPER
+counted at the culvert, the SHROOMISH as air gauge, the CROAGUNK tested to
+test the water, the summit's thirteen snow patches). ~85,100 hand-written
+words (~115,700 with the rematch-tier lines; `tools/skald/wordcount.py` is
+the counter), 704 objects, 420 readable events, 56 overheard
 conversations, 102 maps, 1,071 battles. The certification spine was fought
 through headlessly with the harness's new `--party`/`--var` (every leader,
 every signing, the confession, the boardroom: `tools/skald/spine.sh`).

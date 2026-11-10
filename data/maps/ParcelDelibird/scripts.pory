@@ -978,3 +978,15 @@ script ParcelDelibird_PairShore {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelDelibird_Board1 {
+    msgbox(format("A SURVEY BOARD outside the hall, under the festival banner. DELIBIRD ISLE. The village stands on frozen ground and the ground is not staying frozen.\pThe board shows the hall's door sill against the road, measured each autumn: level, level, a finger, a hand. The banner hangs from the same nails every year and is straight. Somebody adjusts it."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_Board2 {
+    msgbox(format("A SURVEY BOARD by the shore path. DELIBIRD bring food to the snowed-in. The board records the storms they came after, by year, and the storms they did not need to.\pThe second list has become the longer one. The islanders put a thank-you under it anyway, every year, in the same place."), MSGBOX_SIGN)
+    end
+}

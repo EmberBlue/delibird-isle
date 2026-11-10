@@ -751,3 +751,15 @@ script ParcelCoastBreakwater_PairBeach {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelCoastBreakwater_Board1 {
+    msgbox(format("A SURVEY BOARD on the breakwater, salt-eaten. WAILMER calve in the bay in the cold months, and the spoil from the dredge is dumped where they calve.\pCalves seen from the end of the wall: 6, 5, 5, 2, 0, 1. The dumping is on a licence. The board reproduces the licence number."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastBreakwater_Board2 {
+    msgbox(format("A SURVEY BOARD facing the sea. CORSOLA on the old wall's foot, the only hard ground the dredge cannot reach. Pink in the clean years, white in the warm ones.\pThe board is a colour chart: a square painted each summer. Read it from the left."), MSGBOX_SIGN)
+    end
+}

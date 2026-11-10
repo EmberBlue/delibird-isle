@@ -781,6 +781,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelFernwick_FindJar"
+    },
+    {
+      "type": "sign",
+      "x": 19,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_Board1"
+    },
+    {
+      "type": "sign",
+      "x": 23,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelFernwick_Board2"
     }
   ]
 }

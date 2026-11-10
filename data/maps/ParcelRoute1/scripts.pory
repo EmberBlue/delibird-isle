@@ -656,3 +656,15 @@ script ParcelRoute1_PairBridge {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelRoute1_Board1 {
+    msgbox(format("A SURVEY BOARD, fresh paint over older paint. ROUTE 1. Saltmarsh edge: the grass floods on the big tides and drains in a day, and the WOOPER move with it, so they are counted at the culvert and not the pool.\pCount this spring: 31. The old board underneath said 50. Nobody painted that out. It wore off."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelRoute1_Board2 {
+    msgbox(format("A SURVEY BOARD by the road. WINGULL pairs on the shore pilings, counted at dawn: 14. The Survey's rule for shore birds is written under the number in a smaller hand.\pA pair that nests found enough fish. A pair that stays and does not nest found enough to stay. Watch which."), MSGBOX_SIGN)
+    end
+}

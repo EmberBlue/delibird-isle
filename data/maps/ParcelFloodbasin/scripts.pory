@@ -2136,3 +2136,15 @@ script ParcelFloodbasin_PairBank {
     release
     end
 }
+
+// --- survey boards (2026-11-10) ---
+
+script ParcelFloodbasin_Board1 {
+    msgbox(format("A SURVEY BOARD at the basin edge. THE FLOODBASIN. The marsh filters the water for everything downstream; that is its work and the reason it is here.\pThe CROAGUNK carry two poisons, their own and the one they drink. The Survey tests the CROAGUNK to test the water. The result is one word a year. Six words. None of them is clean."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelFloodbasin_Board2 {
+    msgbox(format("A SURVEY BOARD by the relief tents. Deformity count, POLIWAG, spring sample of one hundred, in a column down the board: 0, 0, 1, 0, 3, 4, 7, 9.\pA sign beside the board says the site is being remediated. The board does not argue with the sign. It is a column of numbers."), MSGBOX_SIGN)
+    end
+}
