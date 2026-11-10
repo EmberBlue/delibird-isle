@@ -102,44 +102,58 @@ def plan(map_name, start, goal=None, edge=None, warp=None, avoid_grass=False, al
     def elev_ok(a, b):
         return a in (0, 15) or b in (0, 15) or a == b
 
-    prev = {tuple(start): None}
-    q = deque([tuple(start)])
+    # State is (x, y, surfing). A surfing player rides water and may land anywhere (which ends the
+    # ride); a walking player never enters water, because the planner cannot press A to surf. So a
+    # route found while surfing stays on the water until the shore it lands on reaches the goal.
+    start_mode = bool(surf) and is_water(info(*start)[2])
+    s0 = (start[0], start[1], start_mode)
+    prev = {s0: None}
+    q = deque([s0])
     found = None
     while q:
         cur = q.popleft()
-        if cur in goals:
+        cx, cy, mode = cur
+        if (cx, cy) in goals:
             found = cur
             break
-        cx, cy = cur
-        ce = info(cx, cy)[1]
+        ce, cbeh = info(cx, cy)[1], info(cx, cy)[2]
         for (dx, dy) in DIRS:
             nx, ny = cx + dx, cy + dy
             n = (nx, ny)
-            if n in prev:
+            if not (0 <= nx < W and 0 <= ny < H):
                 continue
-            if 0 <= nx < W and 0 <= ny < H and info(nx, ny)[2] == f"MB_JUMP_{LEDGE_DIR[DIRS[(dx, dy)]]}":
+            ncol, nelev, nbeh = info(nx, ny)
+            if nbeh == f"MB_JUMP_{LEDGE_DIR[DIRS[(dx, dy)]]}":
                 land = (nx + dx, ny + dy)           # a ledge: one press, the player lands two tiles on
-                if land not in prev and passable(*land, land in goals):
-                    prev[land] = cur
-                    q.append(land)
+                st = (land[0], land[1], False)
+                if not mode and st not in prev and passable(*land, land in goals) and not is_water(info(*land)[2]):
+                    prev[st] = cur
+                    q.append(st)
                 continue
-            if not passable(nx, ny, n in goals):
+            if is_water(nbeh):
+                if not mode or ncol != 0 or n in objs:
+                    continue
+                st = (nx, ny, True)
+            else:
+                if not passable(nx, ny, n in goals):
+                    continue
+                if not mode and not elev_ok(ce, nelev):
+                    continue                      # landing from a surf ride ignores elevation
+                # MB_IMPASSABLE_<D>: a cave ledge lip -- not entered heading D, not left heading the other way
+                dn, opp = DIRS[(dx, dy)], DIRS[(-dx, -dy)]
+                if ("IMPASSABLE" in nbeh and dn in nbeh) or ("IMPASSABLE" in cbeh and opp in cbeh):
+                    continue
+                st = (nx, ny, False)
+            if st in prev:
                 continue
-            if not elev_ok(ce, info(nx, ny)[1]) and not (is_water(info(cx, cy)[2]) or is_water(info(nx, ny)[2])):
-                continue                          # surf on/off ignores elevation
-            # MB_IMPASSABLE_<D>: a cave ledge lip -- not entered heading D, not left heading the other way
-            dn, opp = DIRS[(dx, dy)], DIRS[(-dx, -dy)]
-            bh, bn = info(cx, cy)[2], info(nx, ny)[2]
-            if ("IMPASSABLE" in bn and dn in bn) or ("IMPASSABLE" in bh and opp in bh):
-                continue
-            prev[n] = cur
-            q.append(n)
+            prev[st] = cur
+            q.append(st)
     if not found:
         return None, None
     path = []
     c = found
     while c is not None:
-        path.append(c)
+        path.append((c[0], c[1]))
         c = prev[c]
     path.reverse()
     # compress into runs; a ledge jump (two tiles in one step) is its own one-press run, since the
