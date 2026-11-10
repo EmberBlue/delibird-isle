@@ -728,3 +728,26 @@ script ParcelCoastBreakwater_Tins {
     setflag(FLAG_SKALD_Q_TINS_FOUND)
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelCoastBreakwater_PairBeach {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("DREDGE HAND: Dredge is stopped. I'm on the quay crew now."), MSGBOX_DEFAULT)
+        msgbox(format("OLD LIFEGUARD: Then take the sign down. There's nothing to keep people off."), MSGBOX_DEFAULT)
+        msgbox(format("DREDGE HAND: The sea took the beach. The sign stays till the sea gives it back."), MSGBOX_DEFAULT)
+        msgbox(format("OLD LIFEGUARD: …Fair. Put a date on the sign, then. People should know how long they've been waiting."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_COASTAL_CERT)) {
+        msgbox(format("OLD LIFEGUARD: The ranger walked the whole beach reading the line where the sand was. Didn't swim. Didn't need to."), MSGBOX_DEFAULT)
+        msgbox(format("DREDGE HAND: What's to read on a beach?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD LIFEGUARD: The posts. The high-water mark three rows up the shingle from where it used to be. Krabby burrows with the roofs off. A beach is a page if you were ever taught letters."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("DREDGE HAND: Beach is closed. Sign says so."), MSGBOX_DEFAULT)
+        msgbox(format("OLD LIFEGUARD: I know what the sign says. I put the first one up, before the sand went. Said no swimming on the dredge days."), MSGBOX_DEFAULT)
+        msgbox(format("DREDGE HAND: Now it's every day."), MSGBOX_DEFAULT)
+        msgbox(format("OLD LIFEGUARD: Now there's no sand to swim from. The breakwater you built took it. You can't close a beach that's already gone; you can only put a sign where it was."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

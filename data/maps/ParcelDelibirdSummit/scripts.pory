@@ -535,3 +535,26 @@ script ParcelDelibirdSummit_Sledge {
     msgbox(format("A leaning tree with something wedged in its fork, out of the wet. A child's sledge, by the runners."), MSGBOX_SIGN)
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelDelibirdSummit_PairStakes {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CADET LIV: Thirteen patches. ILEX counted them from the cliffs."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Thirteen's a number for a sledge run. Not a snowfield."), MSGBOX_DEFAULT)
+        msgbox(format("CADET LIV: It's in the record now. Against the regime's books."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Then it's thirteen for good. Even when it's nine. Even when it's none. Somebody wrote thirteen and the year."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("OLD WOMAN: The ranger carried tea to INGRID up here and wrote the stakes on the way. Both. In the same hour."), MSGBOX_DEFAULT)
+        msgbox(format("CADET LIV: That's the round and the survey."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: That's the island. Giving and counting in the same hour. Nobody off the ferry ever managed both before."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("CADET LIV: Zero on the gauge. Third winter running."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: Zero on the gauge means snow to the top of the gauge, when I was a girl. They've turned the numbers over."), MSGBOX_DEFAULT)
+        msgbox(format("CADET LIV: Zero means no snow now."), MSGBOX_DEFAULT)
+        msgbox(format("OLD WOMAN: I know what it means. I'm telling you what it meant."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

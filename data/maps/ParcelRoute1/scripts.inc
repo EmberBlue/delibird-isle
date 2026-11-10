@@ -1138,6 +1138,49 @@ ParcelRoute1_Whistle_3:
 	goto ParcelRoute1_Whistle_1
 
 
+ParcelRoute1_PairBridge::
+# 639 "data/maps/ParcelRoute1/scripts.pory"
+	lock
+# 640 "data/maps/ParcelRoute1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRoute1_PairBridge_2
+# 644 "data/maps/ParcelRoute1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelRoute1_PairBridge_3
+# 650 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_7, MSGBOX_DEFAULT
+# 651 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_8, MSGBOX_DEFAULT
+# 652 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_9, MSGBOX_DEFAULT
+# 653 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_10, MSGBOX_DEFAULT
+# 654 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_11, MSGBOX_DEFAULT
+ParcelRoute1_PairBridge_1:
+# 656 "data/maps/ParcelRoute1/scripts.pory"
+	release
+	end
+
+ParcelRoute1_PairBridge_2:
+# 641 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_0, MSGBOX_DEFAULT
+# 642 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_1, MSGBOX_DEFAULT
+# 643 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_2, MSGBOX_DEFAULT
+	goto ParcelRoute1_PairBridge_1
+
+ParcelRoute1_PairBridge_3:
+# 645 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_3, MSGBOX_DEFAULT
+# 646 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_4, MSGBOX_DEFAULT
+# 647 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_5, MSGBOX_DEFAULT
+# 648 "data/maps/ParcelRoute1/scripts.pory"
+	msgbox ParcelRoute1_PairBridge_Text_6, MSGBOX_DEFAULT
+	goto ParcelRoute1_PairBridge_1
+
+
 ParcelRoute1_BridgeScene_Text_0:
 # 46 "data/maps/ParcelRoute1/scripts.pory"
 	.string "A whole crowd of POLIWAG, jammed up\n"
@@ -1580,3 +1623,68 @@ ParcelRoute1_Whistle_Text_1:
 	.string "The inlet by the bridge, drawn back from\n"
 	.string "its stones. Low water. Things show in\l"
 	.string "low water that were never meant to.$"
+
+ParcelRoute1_PairBridge_Text_0:
+# 641 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ANGLER: One POLIWAG went downstream\n"
+	.string "on its own this morning. Middle of the\l"
+	.string "stream. Taking its time.$"
+
+ParcelRoute1_PairBridge_Text_1:
+# 642 "data/maps/ParcelRoute1/scripts.pory"
+	.string "CADET: Just one?$"
+
+ParcelRoute1_PairBridge_Text_2:
+# 643 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ANGLER: One's the number you start\n"
+	.string "with. I've fished this bank forty years\l"
+	.string "and I've never once seen the first one\l"
+	.string "before.$"
+
+ParcelRoute1_PairBridge_Text_3:
+# 645 "data/maps/ParcelRoute1/scripts.pory"
+	.string "CADET: The ranger from the ferry read\n"
+	.string "the bridge the first morning. Before\l"
+	.string "the badge, before anything.$"
+
+ParcelRoute1_PairBridge_Text_4:
+# 646 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ANGLER: Read it how?$"
+
+ParcelRoute1_PairBridge_Text_5:
+# 647 "data/maps/ParcelRoute1/scripts.pory"
+	.string "CADET: Stood where you're standing and\n"
+	.string "wrote down what the frogs were doing.\l"
+	.string "Then went south to the station like it\l"
+	.string "was nothing.$"
+
+ParcelRoute1_PairBridge_Text_6:
+# 648 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ANGLER: It was something. People stand\n"
+	.string "here and see a bridge.$"
+
+ParcelRoute1_PairBridge_Text_7:
+# 650 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ANGLER: The POLIWAG were under the\n"
+	.string "bridge again this morning. Jammed up.\l"
+	.string "Going nowhere.$"
+
+ParcelRoute1_PairBridge_Text_8:
+# 651 "data/maps/ParcelRoute1/scripts.pory"
+	.string "CADET: Something chasing them?$"
+
+ParcelRoute1_PairBridge_Text_9:
+# 652 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ANGLER: Nothing chases a POLIWAG into\n"
+	.string "a bridge. Something's wrong with the\l"
+	.string "water downstream and they know it\l"
+	.string "before we do.$"
+
+ParcelRoute1_PairBridge_Text_10:
+# 653 "data/maps/ParcelRoute1/scripts.pory"
+	.string "CADET: I'll write it up.$"
+
+ParcelRoute1_PairBridge_Text_11:
+# 654 "data/maps/ParcelRoute1/scripts.pory"
+	.string "ANGLER: Write it up. That's two of us\n"
+	.string "who've noticed in forty years.$"

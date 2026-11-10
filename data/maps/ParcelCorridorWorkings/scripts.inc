@@ -1522,6 +1522,49 @@ ParcelCorridorWorkings_ItemHardStone::
 	end
 
 
+ParcelCorridorWorkings_PairCrew::
+# 699 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	lock
+# 700 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridorWorkings_PairCrew_2
+# 704 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelCorridorWorkings_PairCrew_3
+# 710 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_7, MSGBOX_DEFAULT
+# 711 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_8, MSGBOX_DEFAULT
+# 712 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_9, MSGBOX_DEFAULT
+# 713 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_10, MSGBOX_DEFAULT
+# 714 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_11, MSGBOX_DEFAULT
+ParcelCorridorWorkings_PairCrew_1:
+# 716 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	release
+	end
+
+ParcelCorridorWorkings_PairCrew_2:
+# 701 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_0, MSGBOX_DEFAULT
+# 702 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_1, MSGBOX_DEFAULT
+# 703 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_2, MSGBOX_DEFAULT
+	goto ParcelCorridorWorkings_PairCrew_1
+
+ParcelCorridorWorkings_PairCrew_3:
+# 705 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_3, MSGBOX_DEFAULT
+# 706 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_4, MSGBOX_DEFAULT
+# 707 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_5, MSGBOX_DEFAULT
+# 708 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	msgbox ParcelCorridorWorkings_PairCrew_Text_6, MSGBOX_DEFAULT
+	goto ParcelCorridorWorkings_PairCrew_1
+
+
 ParcelCorridorWorkings_Olav_Text_0:
 # 10 "data/maps/ParcelCorridorWorkings/scripts.pory"
 	.string "OLAV: Ballast crew. The road eats rock,\n"
@@ -2146,3 +2189,68 @@ ParcelCorridorWorkings_Miner_Text_4:
 	.string "ballast and nobody signed that.\p"
 	.string "Eight of them in here now with lamps and\n"
 	.string "opinions. Mind the props.$"
+
+ParcelCorridorWorkings_PairCrew_Text_0:
+# 701 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "OLD CREW: The MAWILE's still at the\n"
+	.string "back. Patient.$"
+
+ParcelCorridorWorkings_PairCrew_Text_1:
+# 702 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "YOUNGER CREW: For what?$"
+
+ParcelCorridorWorkings_PairCrew_Text_2:
+# 703 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "OLD CREW: For the hole to fill. Then it'll\n"
+	.string "move up a level, like the rest of us.\l"
+	.string "Everything in here waits better than\l"
+	.string "people do.$"
+
+ParcelCorridorWorkings_PairCrew_Text_3:
+# 705 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "YOUNGER CREW: The ranger walked every\n"
+	.string "chamber with a lamp and wrote down the\l"
+	.string "pools.$"
+
+ParcelCorridorWorkings_PairCrew_Text_4:
+# 706 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "OLD CREW: Pools?$"
+
+ParcelCorridorWorkings_PairCrew_Text_5:
+# 707 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "YOUNGER CREW: The seepage. Said it's\n"
+	.string "the water table coming back to where it\l"
+	.string "was before we pumped it. The hole's\l"
+	.string "filling in from underneath. Slowly.$"
+
+ParcelCorridorWorkings_PairCrew_Text_6:
+# 708 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "OLD CREW: Good. Something should get\n"
+	.string "its own back.$"
+
+ParcelCorridorWorkings_PairCrew_Text_7:
+# 710 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "OLD CREW: We pumped this dry in a month\n"
+	.string "and pulled out of it in a year. The seam\l"
+	.string "went nowhere.$"
+
+ParcelCorridorWorkings_PairCrew_Text_8:
+# 711 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "YOUNGER CREW: Then why's the sand still\n"
+	.string "here?$"
+
+ParcelCorridorWorkings_PairCrew_Text_9:
+# 712 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "OLD CREW: Nobody takes sand home.\n"
+	.string "Nobody takes anything home from a hole.\l"
+	.string "That's the whole history of holes.$"
+
+ParcelCorridorWorkings_PairCrew_Text_10:
+# 713 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "YOUNGER CREW: The ARON take the rails.$"
+
+ParcelCorridorWorkings_PairCrew_Text_11:
+# 714 "data/maps/ParcelCorridorWorkings/scripts.pory"
+	.string "OLD CREW: The ARON are the only\n"
+	.string "remediation this place has had. I'd give\l"
+	.string "them a contract.$"

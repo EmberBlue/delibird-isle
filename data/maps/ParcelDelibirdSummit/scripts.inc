@@ -1091,6 +1091,47 @@ ParcelDelibirdSummit_Sledge_3:
 	goto ParcelDelibirdSummit_Sledge_1
 
 
+ParcelDelibirdSummit_PairStakes::
+# 542 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	lock
+# 543 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibirdSummit_PairStakes_2
+# 548 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibirdSummit_PairStakes_3
+# 553 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_7, MSGBOX_DEFAULT
+# 554 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_8, MSGBOX_DEFAULT
+# 555 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_9, MSGBOX_DEFAULT
+# 556 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_10, MSGBOX_DEFAULT
+ParcelDelibirdSummit_PairStakes_1:
+# 558 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	release
+	end
+
+ParcelDelibirdSummit_PairStakes_2:
+# 544 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_0, MSGBOX_DEFAULT
+# 545 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_1, MSGBOX_DEFAULT
+# 546 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_2, MSGBOX_DEFAULT
+# 547 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_3, MSGBOX_DEFAULT
+	goto ParcelDelibirdSummit_PairStakes_1
+
+ParcelDelibirdSummit_PairStakes_3:
+# 549 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_4, MSGBOX_DEFAULT
+# 550 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_5, MSGBOX_DEFAULT
+# 551 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	msgbox ParcelDelibirdSummit_PairStakes_Text_6, MSGBOX_DEFAULT
+	goto ParcelDelibirdSummit_PairStakes_1
+
+
 ParcelDelibirdSummit_Ingrid_Text_0:
 # 20 "data/maps/ParcelDelibirdSummit/scripts.pory"
 	.string "Ingrid: You said it to their faces. ILEX\n"
@@ -1641,3 +1682,62 @@ ParcelDelibirdSummit_Sledge_Text_1:
 	.string "A leaning tree with something wedged in\n"
 	.string "its fork, out of the wet. A child's\l"
 	.string "sledge, by the runners.$"
+
+ParcelDelibirdSummit_PairStakes_Text_0:
+# 544 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "CADET LIV: Thirteen patches. ILEX\n"
+	.string "counted them from the cliffs.$"
+
+ParcelDelibirdSummit_PairStakes_Text_1:
+# 545 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "OLD WOMAN: Thirteen's a number for a\n"
+	.string "sledge run. Not a snowfield.$"
+
+ParcelDelibirdSummit_PairStakes_Text_2:
+# 546 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "CADET LIV: It's in the record now.\n"
+	.string "Against the regime's books.$"
+
+ParcelDelibirdSummit_PairStakes_Text_3:
+# 547 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "OLD WOMAN: Then it's thirteen for good.\n"
+	.string "Even when it's nine. Even when it's none.\l"
+	.string "Somebody wrote thirteen and the year.$"
+
+ParcelDelibirdSummit_PairStakes_Text_4:
+# 549 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "OLD WOMAN: The ranger carried tea to\n"
+	.string "INGRID up here and wrote the stakes on\l"
+	.string "the way. Both. In the same hour.$"
+
+ParcelDelibirdSummit_PairStakes_Text_5:
+# 550 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "CADET LIV: That's the round and the\n"
+	.string "survey.$"
+
+ParcelDelibirdSummit_PairStakes_Text_6:
+# 551 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "OLD WOMAN: That's the island. Giving and\n"
+	.string "counting in the same hour. Nobody off\l"
+	.string "the ferry ever managed both before.$"
+
+ParcelDelibirdSummit_PairStakes_Text_7:
+# 553 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "CADET LIV: Zero on the gauge. Third\n"
+	.string "winter running.$"
+
+ParcelDelibirdSummit_PairStakes_Text_8:
+# 554 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "OLD WOMAN: Zero on the gauge means\n"
+	.string "snow to the top of the gauge, when I\l"
+	.string "was a girl. They've turned the numbers\l"
+	.string "over.$"
+
+ParcelDelibirdSummit_PairStakes_Text_9:
+# 555 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "CADET LIV: Zero means no snow now.$"
+
+ParcelDelibirdSummit_PairStakes_Text_10:
+# 556 "data/maps/ParcelDelibirdSummit/scripts.pory"
+	.string "OLD WOMAN: I know what it means. I'm\n"
+	.string "telling you what it meant.$"

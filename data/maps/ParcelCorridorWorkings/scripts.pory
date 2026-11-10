@@ -692,3 +692,27 @@ script ParcelCorridorWorkings_Miner {
 }
 script ParcelCorridorWorkings_ItemRevive { finditem(ITEM_REVIVE) end }
 script ParcelCorridorWorkings_ItemHardStone { finditem(ITEM_HARD_STONE) end }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelCorridorWorkings_PairCrew {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD CREW: The MAWILE's still at the back. Patient."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNGER CREW: For what?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD CREW: For the hole to fill. Then it'll move up a level, like the rest of us. Everything in here waits better than people do."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("YOUNGER CREW: The ranger walked every chamber with a lamp and wrote down the pools."), MSGBOX_DEFAULT)
+        msgbox(format("OLD CREW: Pools?"), MSGBOX_DEFAULT)
+        msgbox(format("YOUNGER CREW: The seepage. Said it's the water table coming back to where it was before we pumped it. The hole's filling in from underneath. Slowly."), MSGBOX_DEFAULT)
+        msgbox(format("OLD CREW: Good. Something should get its own back."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD CREW: We pumped this dry in a month and pulled out of it in a year. The seam went nowhere."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNGER CREW: Then why's the sand still here?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD CREW: Nobody takes sand home. Nobody takes anything home from a hole. That's the whole history of holes."), MSGBOX_DEFAULT)
+        msgbox(format("YOUNGER CREW: The ARON take the rails."), MSGBOX_DEFAULT)
+        msgbox(format("OLD CREW: The ARON are the only remediation this place has had. I'd give them a contract."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

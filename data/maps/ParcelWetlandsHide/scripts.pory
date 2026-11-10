@@ -719,3 +719,27 @@ script ParcelWetlandsHide_DuskCount {
     setflag(FLAG_SKALD_Q_DUSK_FOUND)
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelWetlandsHide_PairBirders {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BIRDER: Forty-four tonight. Three more."), MSGBOX_DEFAULT)
+        msgbox(format("SECOND BIRDER: Three isn't a trend. The Survey would say so."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: Three isn't a trend. Three is three more lights than last year and I'm allowed to sit here and like it for one night."), MSGBOX_DEFAULT)
+        msgbox(format("SECOND BIRDER: One night. Then count properly."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("SECOND BIRDER: The ranger sat the dusk count with us. Didn't talk. Didn't fidget."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: Did they get the same number?"), MSGBOX_DEFAULT)
+        msgbox(format("SECOND BIRDER: Forty-one. Then asked what the number was the year the pond was dug straight. We didn't know. Nobody counted that year."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: Somebody should have been us."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("BIRDER: Dusk count's down again. Forty-one lights, where there were hundreds."), MSGBOX_DEFAULT)
+        msgbox(format("SECOND BIRDER: You counted forty-three."), MSGBOX_DEFAULT)
+        msgbox(format("BIRDER: I counted forty-one twice and forty-three once. The Survey takes the twice."), MSGBOX_DEFAULT)
+        msgbox(format("SECOND BIRDER: The Survey takes the honest one. Say it properly."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

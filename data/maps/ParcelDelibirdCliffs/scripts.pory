@@ -527,3 +527,26 @@ script ParcelDelibirdCliffs_T_Astrid_R5 {
     release
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelDelibirdCliffs_PairBeach {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("MOTHER: EINAR's put the date on the CORSOLA. Then he put the date the first TENTACOOL came, under it. He says the list is a clock now."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: What time is it?"), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: Later than it was. Go and swim. It really is warm."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("GIRL: The ranger wrote down the CORSOLA. EINAR showed them the list."), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: Forty years on the list and never seen till now."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: That's good, isn't it? It's on the list!"), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: It's on the list the way a storm is on the forecast, love. Being right about it is not the same as wanting it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GIRL: The water's warm enough to swim! At Midwinter!"), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: Yes."), MSGBOX_DEFAULT)
+        msgbox(format("GIRL: Why aren't you happy?"), MSGBOX_DEFAULT)
+        msgbox(format("MOTHER: I'm happy for you. Go and swim. I'll be the one on the beach not being happy, and you can ask me about it when you're older."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

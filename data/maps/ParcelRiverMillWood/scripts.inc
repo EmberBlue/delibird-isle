@@ -1551,6 +1551,49 @@ ParcelRiverMillWood_DeadEndSouth::
 	end
 
 
+ParcelRiverMillWood_PairCoppice::
+# 712 "data/maps/ParcelRiverMillWood/scripts.pory"
+	lock
+# 713 "data/maps/ParcelRiverMillWood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverMillWood_PairCoppice_2
+# 717 "data/maps/ParcelRiverMillWood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelRiverMillWood_PairCoppice_3
+# 723 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_7, MSGBOX_DEFAULT
+# 724 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_8, MSGBOX_DEFAULT
+# 725 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_9, MSGBOX_DEFAULT
+# 726 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_10, MSGBOX_DEFAULT
+# 727 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_11, MSGBOX_DEFAULT
+ParcelRiverMillWood_PairCoppice_1:
+# 729 "data/maps/ParcelRiverMillWood/scripts.pory"
+	release
+	end
+
+ParcelRiverMillWood_PairCoppice_2:
+# 714 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_0, MSGBOX_DEFAULT
+# 715 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_1, MSGBOX_DEFAULT
+# 716 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_2, MSGBOX_DEFAULT
+	goto ParcelRiverMillWood_PairCoppice_1
+
+ParcelRiverMillWood_PairCoppice_3:
+# 718 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_3, MSGBOX_DEFAULT
+# 719 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_4, MSGBOX_DEFAULT
+# 720 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_5, MSGBOX_DEFAULT
+# 721 "data/maps/ParcelRiverMillWood/scripts.pory"
+	msgbox ParcelRiverMillWood_PairCoppice_Text_6, MSGBOX_DEFAULT
+	goto ParcelRiverMillWood_PairCoppice_1
+
+
 ParcelRiverMillWood_Halle_Text_0:
 # 10 "data/maps/ParcelRiverMillWood/scripts.pory"
 	.string "HALLE: This stand is twelve years old.\n"
@@ -2217,3 +2260,72 @@ ParcelRiverMillWood_DeadEndSouth_Text_0:
 	.string "The old race track. Grown over to the\n"
 	.string "knee. The water it fed doesn't come this\l"
 	.string "way now.$"
+
+ParcelRiverMillWood_PairCoppice_Text_0:
+# 714 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: The race has water in it.\n"
+	.string "First time since you started.$"
+
+ParcelRiverMillWood_PairCoppice_Text_1:
+# 715 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: The Board let it through?$"
+
+ParcelRiverMillWood_PairCoppice_Text_2:
+# 716 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: The Board publishes two\n"
+	.string "columns and can't explain the second\l"
+	.string "one, so it lets water through to make\l"
+	.string "the numbers quieter. Same wheel either\l"
+	.string "way. Turn it.$"
+
+ParcelRiverMillWood_PairCoppice_Text_3:
+# 718 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: The ranger counted the\n"
+	.string "stools. All of them. Took the whole\l"
+	.string "afternoon.$"
+
+ParcelRiverMillWood_PairCoppice_Text_4:
+# 719 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: And?$"
+
+ParcelRiverMillWood_PairCoppice_Text_5:
+# 720 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: Said a coppice is the only\n"
+	.string "place in the region where the count's\l"
+	.string "supposed to go down and come back.\l"
+	.string "Wrote that in the notebook and\l"
+	.string "underlined it.$"
+
+ParcelRiverMillWood_PairCoppice_Text_6:
+# 721 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: …Fetch the saw. We've a\n"
+	.string "stand to cut while someone's watching\l"
+	.string "how it's done.$"
+
+ParcelRiverMillWood_PairCoppice_Text_7:
+# 723 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: You cut the stand to the\n"
+	.string "stool and the stool sends up twenty\l"
+	.string "poles. Twelve years later you cut again.\l"
+	.string "Your grandfather's stools, my cuts.$"
+
+ParcelRiverMillWood_PairCoppice_Text_8:
+# 724 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: And the trees don't mind?$"
+
+ParcelRiverMillWood_PairCoppice_Text_9:
+# 725 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: The trees have been doing\n"
+	.string "this with us for a thousand years. It's\l"
+	.string "the only thing in this wood that's\l"
+	.string "getting older on purpose.$"
+
+ParcelRiverMillWood_PairCoppice_Text_10:
+# 726 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "APPRENTICE: Why does the race run dry,\n"
+	.string "then?$"
+
+ParcelRiverMillWood_PairCoppice_Text_11:
+# 727 "data/maps/ParcelRiverMillWood/scripts.pory"
+	.string "WOODCUTTER: That's not the wood.\n"
+	.string "That's the Board.$"

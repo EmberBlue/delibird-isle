@@ -476,3 +476,26 @@ script ParcelMistwood_T_Selma_R5 {
     release
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelMistwood_PairSnares {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("CADET A: Snare count's down to three a row. Either the setters have stopped or they've moved."), MSGBOX_DEFAULT)
+        msgbox(format("CADET B: Or the thing they were catching has."), MSGBOX_DEFAULT)
+        msgbox(format("CADET A: …Write that down. That's the kind of thing that gets read now."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("CADET B: The new provisional came through here with a Cut-trained partner and didn't cut one living tree. Walked round every one. Took an hour longer."), MSGBOX_DEFAULT)
+        msgbox(format("CADET A: That's the whole FOREST test and nobody told us."), MSGBOX_DEFAULT)
+        msgbox(format("CADET B: HALE told us. We weren't listening. We were counting snares."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("CADET A: Eleven snares this row. The FOUNDATION programme pays by the snare."), MSGBOX_DEFAULT)
+        msgbox(format("CADET B: Pays who?"), MSGBOX_DEFAULT)
+        msgbox(format("CADET A: The Corps. We pull them, the Corps invoices the Foundation, the Foundation puts it in the report. Everyone's happy."), MSGBOX_DEFAULT)
+        msgbox(format("CADET B: Except whoever's setting eleven snares a row."), MSGBOX_DEFAULT)
+        msgbox(format("CADET A: They're happy too. They're paid by the pelt."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

@@ -1515,6 +1515,47 @@ ParcelHighlandsTarn_CoreTag_3:
 	goto ParcelHighlandsTarn_CoreTag_1
 
 
+ParcelHighlandsTarn_PairMelt::
+# 696 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	lock
+# 697 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsTarn_PairMelt_2
+# 701 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_HIGHLAND_CERT, ParcelHighlandsTarn_PairMelt_3
+# 707 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_7, MSGBOX_DEFAULT
+# 708 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_8, MSGBOX_DEFAULT
+# 709 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_9, MSGBOX_DEFAULT
+# 710 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_10, MSGBOX_DEFAULT
+ParcelHighlandsTarn_PairMelt_1:
+# 712 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	release
+	end
+
+ParcelHighlandsTarn_PairMelt_2:
+# 698 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_0, MSGBOX_DEFAULT
+# 699 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_1, MSGBOX_DEFAULT
+# 700 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_2, MSGBOX_DEFAULT
+	goto ParcelHighlandsTarn_PairMelt_1
+
+ParcelHighlandsTarn_PairMelt_3:
+# 702 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_3, MSGBOX_DEFAULT
+# 703 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_4, MSGBOX_DEFAULT
+# 704 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_5, MSGBOX_DEFAULT
+# 705 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	msgbox ParcelHighlandsTarn_PairMelt_Text_6, MSGBOX_DEFAULT
+	goto ParcelHighlandsTarn_PairMelt_1
+
+
 ParcelHighlandsTarn_Arnfinn_Text_0:
 # 10 "data/maps/ParcelHighlandsTarn/scripts.pory"
 	.string "ARNFINN: The tarn's under the hill. Cold\n"
@@ -2131,3 +2172,63 @@ ParcelHighlandsTarn_CoreTag_Text_1:
 	.string "The old water line in the cave, a pale\n"
 	.string "band on the rock, a hand above the\l"
 	.string "water that is there now.$"
+
+ParcelHighlandsTarn_PairMelt_Text_0:
+# 698 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GEOLOGIST: The bore's capped. The tarn\n"
+	.string "is still coming up. Capping a hole\l"
+	.string "doesn't put the ice back in a mountain.$"
+
+ParcelHighlandsTarn_PairMelt_Text_1:
+# 699 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GUIDE: Then what does?$"
+
+ParcelHighlandsTarn_PairMelt_Text_2:
+# 700 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GEOLOGIST: Nothing. I wrote 'nothing' in\n"
+	.string "the review, and signed it, and I've slept\l"
+	.string "better than I have in two years.$"
+
+ParcelHighlandsTarn_PairMelt_Text_3:
+# 702 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GUIDE: The ranger measured the tarn\n"
+	.string "against the core tag. Wrote both\l"
+	.string "numbers on the stake.$"
+
+ParcelHighlandsTarn_PairMelt_Text_4:
+# 703 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GEOLOGIST: The tag's mine. From the\n"
+	.string "bore. I shouldn't have left it here.$"
+
+ParcelHighlandsTarn_PairMelt_Text_5:
+# 704 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GUIDE: Why did you?$"
+
+ParcelHighlandsTarn_PairMelt_Text_6:
+# 705 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GEOLOGIST: So somebody who wasn't paid\n"
+	.string "by the bore would find it. Took two\l"
+	.string "years. Took a ranger.$"
+
+ParcelHighlandsTarn_PairMelt_Text_7:
+# 707 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GEOLOGIST: The tarn came up a hand's\n"
+	.string "width since spring. Meltwater, off the\l"
+	.string "slope.$"
+
+ParcelHighlandsTarn_PairMelt_Text_8:
+# 708 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GUIDE: The slope's been there ten\n"
+	.string "thousand years. Why now?$"
+
+ParcelHighlandsTarn_PairMelt_Text_9:
+# 709 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GEOLOGIST: The ice inside it has been\n"
+	.string "there ten thousand years. The ice is\l"
+	.string "leaving. The slope's just what it's\l"
+	.string "leaving behind.$"
+
+ParcelHighlandsTarn_PairMelt_Text_10:
+# 710 "data/maps/ParcelHighlandsTarn/scripts.pory"
+	.string "GUIDE: You say that like you're talking\n"
+	.string "about a lodger.$"

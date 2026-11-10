@@ -689,3 +689,26 @@ script ParcelHighlandsTarn_CoreTag {
     msgbox(format("The old water line in the cave, a pale band on the rock, a hand above the water that is there now."), MSGBOX_SIGN)
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelHighlandsTarn_PairMelt {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GEOLOGIST: The bore's capped. The tarn is still coming up. Capping a hole doesn't put the ice back in a mountain."), MSGBOX_DEFAULT)
+        msgbox(format("GUIDE: Then what does?"), MSGBOX_DEFAULT)
+        msgbox(format("GEOLOGIST: Nothing. I wrote 'nothing' in the review, and signed it, and I've slept better than I have in two years."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_HIGHLAND_CERT)) {
+        msgbox(format("GUIDE: The ranger measured the tarn against the core tag. Wrote both numbers on the stake."), MSGBOX_DEFAULT)
+        msgbox(format("GEOLOGIST: The tag's mine. From the bore. I shouldn't have left it here."), MSGBOX_DEFAULT)
+        msgbox(format("GUIDE: Why did you?"), MSGBOX_DEFAULT)
+        msgbox(format("GEOLOGIST: So somebody who wasn't paid by the bore would find it. Took two years. Took a ranger."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GEOLOGIST: The tarn came up a hand's width since spring. Meltwater, off the slope."), MSGBOX_DEFAULT)
+        msgbox(format("GUIDE: The slope's been there ten thousand years. Why now?"), MSGBOX_DEFAULT)
+        msgbox(format("GEOLOGIST: The ice inside it has been there ten thousand years. The ice is leaving. The slope's just what it's leaving behind."), MSGBOX_DEFAULT)
+        msgbox(format("GUIDE: You say that like you're talking about a lodger."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

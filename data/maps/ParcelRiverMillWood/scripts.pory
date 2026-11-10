@@ -705,3 +705,27 @@ script ParcelRiverMillWood_DeadEndSouth {
     msgbox(format("The old race track. Grown over to the knee. The water it fed doesn't come this way now."), MSGBOX_SIGN)
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelRiverMillWood_PairCoppice {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WOODCUTTER: The race has water in it. First time since you started."), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: The Board let it through?"), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: The Board publishes two columns and can't explain the second one, so it lets water through to make the numbers quieter. Same wheel either way. Turn it."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("APPRENTICE: The ranger counted the stools. All of them. Took the whole afternoon."), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: And?"), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: Said a coppice is the only place in the region where the count's supposed to go down and come back. Wrote that in the notebook and underlined it."), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: …Fetch the saw. We've a stand to cut while someone's watching how it's done."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("WOODCUTTER: You cut the stand to the stool and the stool sends up twenty poles. Twelve years later you cut again. Your grandfather's stools, my cuts."), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: And the trees don't mind?"), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: The trees have been doing this with us for a thousand years. It's the only thing in this wood that's getting older on purpose."), MSGBOX_DEFAULT)
+        msgbox(format("APPRENTICE: Why does the race run dry, then?"), MSGBOX_DEFAULT)
+        msgbox(format("WOODCUTTER: That's not the wood. That's the Board."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

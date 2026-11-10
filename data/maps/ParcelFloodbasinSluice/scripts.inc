@@ -1500,6 +1500,51 @@ ParcelFloodbasinSluice_ItemHyperPotion::
 	end
 
 
+ParcelFloodbasinSluice_PairFord::
+# 690 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	lock
+# 691 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinSluice_PairFord_2
+# 696 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WATERSHED_CERT, ParcelFloodbasinSluice_PairFord_3
+# 703 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_9, MSGBOX_DEFAULT
+# 704 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_10, MSGBOX_DEFAULT
+# 705 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_11, MSGBOX_DEFAULT
+# 706 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_12, MSGBOX_DEFAULT
+ParcelFloodbasinSluice_PairFord_1:
+# 708 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	release
+	end
+
+ParcelFloodbasinSluice_PairFord_2:
+# 692 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_0, MSGBOX_DEFAULT
+# 693 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_1, MSGBOX_DEFAULT
+# 694 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_2, MSGBOX_DEFAULT
+# 695 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_3, MSGBOX_DEFAULT
+	goto ParcelFloodbasinSluice_PairFord_1
+
+ParcelFloodbasinSluice_PairFord_3:
+# 697 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_4, MSGBOX_DEFAULT
+# 698 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_5, MSGBOX_DEFAULT
+# 699 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_6, MSGBOX_DEFAULT
+# 700 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_7, MSGBOX_DEFAULT
+# 701 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	msgbox ParcelFloodbasinSluice_PairFord_Text_8, MSGBOX_DEFAULT
+	goto ParcelFloodbasinSluice_PairFord_1
+
+
 ParcelFloodbasinSluice_Nils_Text_0:
 # 10 "data/maps/ParcelFloodbasinSluice/scripts.pory"
 	.string "NILS: The crossing's the old ford. The\n"
@@ -2098,3 +2143,72 @@ ParcelFloodbasinSluice_Sign_Text_0:
 	.string "UPPER SLUICE (proposed). WATER BOARD /\n"
 	.string "MEREHOLT CIVIL. Works commence on\l"
 	.string "approval.$"
+
+ParcelFloodbasinSluice_PairFord_Text_0:
+# 692 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "ANGLER: The shelf's wider this year. The\n"
+	.string "river's lower, not the shelf.$"
+
+ParcelFloodbasinSluice_PairFord_Text_1:
+# 693 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "OLD MAN: Two boards on the gauge now.\n"
+	.string "Old mark, new mark. I read the old one.\l"
+	.string "I'm old.$"
+
+ParcelFloodbasinSluice_PairFord_Text_2:
+# 694 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "ANGLER: Which one does the Board read?$"
+
+ParcelFloodbasinSluice_PairFord_Text_3:
+# 695 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "OLD MAN: Both, in public, every week.\n"
+	.string "It's taken thirty years to make them do\l"
+	.string "a thing they could have done in a\l"
+	.string "morning.$"
+
+ParcelFloodbasinSluice_PairFord_Text_4:
+# 697 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "OLD MAN: The ranger stood on the shelf\n"
+	.string "in the shallows for an hour and counted\l"
+	.string "nothing.$"
+
+ParcelFloodbasinSluice_PairFord_Text_5:
+# 698 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "ANGLER: Nothing?$"
+
+ParcelFloodbasinSluice_PairFord_Text_6:
+# 699 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "OLD MAN: Wrote 'nothing' with the date.\n"
+	.string "Said nothing with a date on it is a\l"
+	.string "number. NILS heard that and hasn't\l"
+	.string "spoken since.$"
+
+ParcelFloodbasinSluice_PairFord_Text_7:
+# 700 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "ANGLER: NILS doesn't speak anyway.$"
+
+ParcelFloodbasinSluice_PairFord_Text_8:
+# 701 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "OLD MAN: He speaks less now.\n"
+	.string "Thoughtfully.$"
+
+ParcelFloodbasinSluice_PairFord_Text_9:
+# 703 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "ANGLER: The Board put a gauge on the\n"
+	.string "ford and called it a sluice.$"
+
+ParcelFloodbasinSluice_PairFord_Text_10:
+# 704 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "OLD MAN: It was a ford when I was a boy.\n"
+	.string "You walked across in August with your\l"
+	.string "boots round your neck.$"
+
+ParcelFloodbasinSluice_PairFord_Text_11:
+# 705 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "ANGLER: You'd swim it now.$"
+
+ParcelFloodbasinSluice_PairFord_Text_12:
+# 706 "data/maps/ParcelFloodbasinSluice/scripts.pory"
+	.string "OLD MAN: You'd swim it in August and\n"
+	.string "read NORMAL on the gauge while you did.\l"
+	.string "That's progress.$"

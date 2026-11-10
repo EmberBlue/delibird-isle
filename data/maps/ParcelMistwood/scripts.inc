@@ -921,6 +921,47 @@ ParcelMistwood_T_Selma_R5_2:
 	end
 
 
+ParcelMistwood_PairSnares::
+# 483 "data/maps/ParcelMistwood/scripts.pory"
+	lock
+# 484 "data/maps/ParcelMistwood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelMistwood_PairSnares_2
+# 488 "data/maps/ParcelMistwood/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FOREST_CERT, ParcelMistwood_PairSnares_3
+# 493 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_6, MSGBOX_DEFAULT
+# 494 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_7, MSGBOX_DEFAULT
+# 495 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_8, MSGBOX_DEFAULT
+# 496 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_9, MSGBOX_DEFAULT
+# 497 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_10, MSGBOX_DEFAULT
+ParcelMistwood_PairSnares_1:
+# 499 "data/maps/ParcelMistwood/scripts.pory"
+	release
+	end
+
+ParcelMistwood_PairSnares_2:
+# 485 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_0, MSGBOX_DEFAULT
+# 486 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_1, MSGBOX_DEFAULT
+# 487 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_2, MSGBOX_DEFAULT
+	goto ParcelMistwood_PairSnares_1
+
+ParcelMistwood_PairSnares_3:
+# 489 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_3, MSGBOX_DEFAULT
+# 490 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_4, MSGBOX_DEFAULT
+# 491 "data/maps/ParcelMistwood/scripts.pory"
+	msgbox ParcelMistwood_PairSnares_Text_5, MSGBOX_DEFAULT
+	goto ParcelMistwood_PairSnares_1
+
+
 ParcelMistwood_Sanna_Text_0:
 # 16 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SANNA: I've got two WURMPLE. Two! You\n"
@@ -1390,3 +1431,64 @@ ParcelMistwood_T_Selma_R5_Text_2:
 # 475 "data/maps/ParcelMistwood/scripts.pory"
 	.string "SELMA: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
+
+ParcelMistwood_PairSnares_Text_0:
+# 485 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET A: Snare count's down to three a\n"
+	.string "row. Either the setters have stopped or\l"
+	.string "they've moved.$"
+
+ParcelMistwood_PairSnares_Text_1:
+# 486 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET B: Or the thing they were\n"
+	.string "catching has.$"
+
+ParcelMistwood_PairSnares_Text_2:
+# 487 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET A: …Write that down. That's the\n"
+	.string "kind of thing that gets read now.$"
+
+ParcelMistwood_PairSnares_Text_3:
+# 489 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET B: The new provisional came\n"
+	.string "through here with a Cut-trained\l"
+	.string "partner and didn't cut one living tree.\l"
+	.string "Walked round every one. Took an hour\l"
+	.string "longer.$"
+
+ParcelMistwood_PairSnares_Text_4:
+# 490 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET A: That's the whole FOREST test\n"
+	.string "and nobody told us.$"
+
+ParcelMistwood_PairSnares_Text_5:
+# 491 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET B: HALE told us. We weren't\n"
+	.string "listening. We were counting snares.$"
+
+ParcelMistwood_PairSnares_Text_6:
+# 493 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET A: Eleven snares this row. The\n"
+	.string "FOUNDATION programme pays by the\l"
+	.string "snare.$"
+
+ParcelMistwood_PairSnares_Text_7:
+# 494 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET B: Pays who?$"
+
+ParcelMistwood_PairSnares_Text_8:
+# 495 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET A: The Corps. We pull them, the\n"
+	.string "Corps invoices the Foundation, the\l"
+	.string "Foundation puts it in the report.\l"
+	.string "Everyone's happy.$"
+
+ParcelMistwood_PairSnares_Text_9:
+# 496 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET B: Except whoever's setting\n"
+	.string "eleven snares a row.$"
+
+ParcelMistwood_PairSnares_Text_10:
+# 497 "data/maps/ParcelMistwood/scripts.pory"
+	.string "CADET A: They're happy too. They're paid\n"
+	.string "by the pelt.$"

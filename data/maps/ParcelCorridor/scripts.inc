@@ -3453,6 +3453,49 @@ ParcelCorridor_SurveyStake::
 	end
 
 
+ParcelCorridor_PairCulvert::
+# 1608 "data/maps/ParcelCorridor/scripts.pory"
+	lock
+# 1609 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCorridor_PairCulvert_2
+# 1614 "data/maps/ParcelCorridor/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_WETLAND_CERT, ParcelCorridor_PairCulvert_3
+# 1620 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_8, MSGBOX_DEFAULT
+# 1621 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_9, MSGBOX_DEFAULT
+# 1622 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_10, MSGBOX_DEFAULT
+# 1623 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_11, MSGBOX_DEFAULT
+ParcelCorridor_PairCulvert_1:
+# 1625 "data/maps/ParcelCorridor/scripts.pory"
+	release
+	end
+
+ParcelCorridor_PairCulvert_2:
+# 1610 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_0, MSGBOX_DEFAULT
+# 1611 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_1, MSGBOX_DEFAULT
+# 1612 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_2, MSGBOX_DEFAULT
+# 1613 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_3, MSGBOX_DEFAULT
+	goto ParcelCorridor_PairCulvert_1
+
+ParcelCorridor_PairCulvert_3:
+# 1615 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_4, MSGBOX_DEFAULT
+# 1616 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_5, MSGBOX_DEFAULT
+# 1617 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_6, MSGBOX_DEFAULT
+# 1618 "data/maps/ParcelCorridor/scripts.pory"
+	msgbox ParcelCorridor_PairCulvert_Text_7, MSGBOX_DEFAULT
+	goto ParcelCorridor_PairCulvert_1
+
+
 ParcelCorridor_Checkpoint_Text_0:
 # 45 "data/maps/ParcelCorridor/scripts.pory"
 	.string "MIRREN: Hold it.$"
@@ -4933,3 +4976,69 @@ ParcelCorridor_SurveyStake_Text_0:
 	.string "cloth at the top. The bare stakes along\l"
 	.string "the cut are MEREHOLT's. This one is\l"
 	.string "yours.$"
+
+ParcelCorridor_PairCulvert_Text_0:
+# 1610 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ROADMAN: The grates came. Four of them.\n"
+	.string "Culvert type.$"
+
+ParcelCorridor_PairCulvert_Text_1:
+# 1611 "data/maps/ParcelCorridor/scripts.pory"
+	.string "SURVEY HAND: Five months after next\n"
+	.string "month. And a sixth form, this one with a\l"
+	.string "real date on it, and a ranger's initials.$"
+
+ParcelCorridor_PairCulvert_Text_2:
+# 1612 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ROADMAN: Frogs through yet?$"
+
+ParcelCorridor_PairCulvert_Text_3:
+# 1613 "data/maps/ParcelCorridor/scripts.pory"
+	.string "SURVEY HAND: Two this morning.\n"
+	.string "Upstream. Against the current, which is\l"
+	.string "the point.$"
+
+ParcelCorridor_PairCulvert_Text_4:
+# 1615 "data/maps/ParcelCorridor/scripts.pory"
+	.string "SURVEY HAND: The ranger didn't try to\n"
+	.string "stop the crew. I half expected it.$"
+
+ParcelCorridor_PairCulvert_Text_5:
+# 1616 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ROADMAN: What did they do?$"
+
+ParcelCorridor_PairCulvert_Text_6:
+# 1617 "data/maps/ParcelCorridor/scripts.pory"
+	.string "SURVEY HAND: Stood at the culvert and\n"
+	.string "wrote until the foreman got\l"
+	.string "uncomfortable and offered a date. Then\l"
+	.string "wrote the date down. The foreman\l"
+	.string "looked like he'd been stabbed.$"
+
+ParcelCorridor_PairCulvert_Text_7:
+# 1618 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ROADMAN: A date in a notebook's worse\n"
+	.string "than a shout. You can't argue with it\l"
+	.string "later.$"
+
+ParcelCorridor_PairCulvert_Text_8:
+# 1620 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ROADMAN: Grates next month, the office\n"
+	.string "says.$"
+
+ParcelCorridor_PairCulvert_Text_9:
+# 1621 "data/maps/ParcelCorridor/scripts.pory"
+	.string "SURVEY HAND: The office has said next\n"
+	.string "month for five months. I've stopped\l"
+	.string "writing the date on the form; I write\l"
+	.string "'next month' and it's always right.$"
+
+ParcelCorridor_PairCulvert_Text_10:
+# 1622 "data/maps/ParcelCorridor/scripts.pory"
+	.string "ROADMAN: What goes down the pipe\n"
+	.string "meanwhile?$"
+
+ParcelCorridor_PairCulvert_Text_11:
+# 1623 "data/maps/ParcelCorridor/scripts.pory"
+	.string "SURVEY HAND: Everything that fits.\n"
+	.string "That's what a pipe is for, they'd say.$"

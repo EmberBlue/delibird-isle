@@ -683,3 +683,28 @@ script ParcelFloodbasinSluice_Sign {
     end
 }
 script ParcelFloodbasinSluice_ItemHyperPotion { finditem(ITEM_HYPER_POTION) end }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelFloodbasinSluice_PairFord {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("ANGLER: The shelf's wider this year. The river's lower, not the shelf."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Two boards on the gauge now. Old mark, new mark. I read the old one. I'm old."), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: Which one does the Board read?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Both, in public, every week. It's taken thirty years to make them do a thing they could have done in a morning."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("OLD MAN: The ranger stood on the shelf in the shallows for an hour and counted nothing."), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: Nothing?"), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: Wrote 'nothing' with the date. Said nothing with a date on it is a number. NILS heard that and hasn't spoken since."), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: NILS doesn't speak anyway."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: He speaks less now. Thoughtfully."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("ANGLER: The Board put a gauge on the ford and called it a sluice."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: It was a ford when I was a boy. You walked across in August with your boots round your neck."), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: You'd swim it now."), MSGBOX_DEFAULT)
+        msgbox(format("OLD MAN: You'd swim it in August and read NORMAL on the gauge while you did. That's progress."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

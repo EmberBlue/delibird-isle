@@ -257,6 +257,34 @@
       "trainer_sight_or_berry_tree_id": "3",
       "script": "ParcelMistwood_T_Selma",
       "flag": "FLAG_SKALD_NO_PARTNER_YET"
+    },
+    {
+      "local_id": "LOCALID_PAIRSNARES_A",
+      "graphics_id": "OBJ_EVENT_GFX_CAMPER",
+      "x": 16,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMistwood_PairSnares",
+      "flag": "0"
+    },
+    {
+      "local_id": "LOCALID_PAIRSNARES_B",
+      "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
+      "x": 17,
+      "y": 36,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ParcelMistwood_PairSnares",
+      "flag": "0"
     }
   ],
   "warp_events": [

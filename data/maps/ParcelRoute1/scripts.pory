@@ -632,3 +632,27 @@ script ParcelRoute1_Whistle {
     msgbox(format("The inlet by the bridge, drawn back from its stones. Low water. Things show in low water that were never meant to."), MSGBOX_SIGN)
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelRoute1_PairBridge {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("ANGLER: One POLIWAG went downstream on its own this morning. Middle of the stream. Taking its time."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Just one?"), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: One's the number you start with. I've fished this bank forty years and I've never once seen the first one before."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_FOREST_CERT)) {
+        msgbox(format("CADET: The ranger from the ferry read the bridge the first morning. Before the badge, before anything."), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: Read it how?"), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Stood where you're standing and wrote down what the frogs were doing. Then went south to the station like it was nothing."), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: It was something. People stand here and see a bridge."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("ANGLER: The POLIWAG were under the bridge again this morning. Jammed up. Going nowhere."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: Something chasing them?"), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: Nothing chases a POLIWAG into a bridge. Something's wrong with the water downstream and they know it before we do."), MSGBOX_DEFAULT)
+        msgbox(format("CADET: I'll write it up."), MSGBOX_DEFAULT)
+        msgbox(format("ANGLER: Write it up. That's two of us who've noticed in forty years."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

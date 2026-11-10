@@ -1601,3 +1601,27 @@ script ParcelCorridor_SurveyStake {
     msgbox(gStringVar4, MSGBOX_SIGN)
     end
 }
+
+// --- route life (2026-11-10): the pairs ---
+
+script ParcelCorridor_PairCulvert {
+    lock
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("ROADMAN: The grates came. Four of them. Culvert type."), MSGBOX_DEFAULT)
+        msgbox(format("SURVEY HAND: Five months after next month. And a sixth form, this one with a real date on it, and a ranger's initials."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: Frogs through yet?"), MSGBOX_DEFAULT)
+        msgbox(format("SURVEY HAND: Two this morning. Upstream. Against the current, which is the point."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_WETLAND_CERT)) {
+        msgbox(format("SURVEY HAND: The ranger didn't try to stop the crew. I half expected it."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: What did they do?"), MSGBOX_DEFAULT)
+        msgbox(format("SURVEY HAND: Stood at the culvert and wrote until the foreman got uncomfortable and offered a date. Then wrote the date down. The foreman looked like he'd been stabbed."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: A date in a notebook's worse than a shout. You can't argue with it later."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("ROADMAN: Grates next month, the office says."), MSGBOX_DEFAULT)
+        msgbox(format("SURVEY HAND: The office has said next month for five months. I've stopped writing the date on the form; I write 'next month' and it's always right."), MSGBOX_DEFAULT)
+        msgbox(format("ROADMAN: What goes down the pipe meanwhile?"), MSGBOX_DEFAULT)
+        msgbox(format("SURVEY HAND: Everything that fits. That's what a pipe is for, they'd say."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}

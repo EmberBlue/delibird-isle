@@ -1066,6 +1066,47 @@ ParcelDelibirdCliffs_T_Astrid_R5_2:
 	end
 
 
+ParcelDelibirdCliffs_PairBeach::
+# 534 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	lock
+# 535 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibirdCliffs_PairBeach_2
+# 539 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibirdCliffs_PairBeach_3
+# 545 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_7, MSGBOX_DEFAULT
+# 546 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_8, MSGBOX_DEFAULT
+# 547 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_9, MSGBOX_DEFAULT
+# 548 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_10, MSGBOX_DEFAULT
+ParcelDelibirdCliffs_PairBeach_1:
+# 550 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	release
+	end
+
+ParcelDelibirdCliffs_PairBeach_2:
+# 536 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_0, MSGBOX_DEFAULT
+# 537 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_1, MSGBOX_DEFAULT
+# 538 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_2, MSGBOX_DEFAULT
+	goto ParcelDelibirdCliffs_PairBeach_1
+
+ParcelDelibirdCliffs_PairBeach_3:
+# 540 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_3, MSGBOX_DEFAULT
+# 541 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_4, MSGBOX_DEFAULT
+# 542 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_5, MSGBOX_DEFAULT
+# 543 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_PairBeach_Text_6, MSGBOX_DEFAULT
+	goto ParcelDelibirdCliffs_PairBeach_1
+
+
 ParcelDelibirdCliffs_Tomas_Text_0:
 # 20 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "Tomas: The floor slopes a little more\n"
@@ -1596,3 +1637,60 @@ ParcelDelibirdCliffs_T_Astrid_R5_Text_2:
 # 526 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "ASTRID: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
+
+ParcelDelibirdCliffs_PairBeach_Text_0:
+# 536 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "MOTHER: EINAR's put the date on the\n"
+	.string "CORSOLA. Then he put the date the first\l"
+	.string "TENTACOOL came, under it. He says the\l"
+	.string "list is a clock now.$"
+
+ParcelDelibirdCliffs_PairBeach_Text_1:
+# 537 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "GIRL: What time is it?$"
+
+ParcelDelibirdCliffs_PairBeach_Text_2:
+# 538 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "MOTHER: Later than it was. Go and swim.\n"
+	.string "It really is warm.$"
+
+ParcelDelibirdCliffs_PairBeach_Text_3:
+# 540 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "GIRL: The ranger wrote down the\n"
+	.string "CORSOLA. EINAR showed them the list.$"
+
+ParcelDelibirdCliffs_PairBeach_Text_4:
+# 541 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "MOTHER: Forty years on the list and\n"
+	.string "never seen till now.$"
+
+ParcelDelibirdCliffs_PairBeach_Text_5:
+# 542 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "GIRL: That's good, isn't it? It's on the\n"
+	.string "list!$"
+
+ParcelDelibirdCliffs_PairBeach_Text_6:
+# 543 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "MOTHER: It's on the list the way a storm\n"
+	.string "is on the forecast, love. Being right\l"
+	.string "about it is not the same as wanting it.$"
+
+ParcelDelibirdCliffs_PairBeach_Text_7:
+# 545 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "GIRL: The water's warm enough to swim!\n"
+	.string "At Midwinter!$"
+
+ParcelDelibirdCliffs_PairBeach_Text_8:
+# 546 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "MOTHER: Yes.$"
+
+ParcelDelibirdCliffs_PairBeach_Text_9:
+# 547 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "GIRL: Why aren't you happy?$"
+
+ParcelDelibirdCliffs_PairBeach_Text_10:
+# 548 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "MOTHER: I'm happy for you. Go and swim.\n"
+	.string "I'll be the one on the beach not being\l"
+	.string "happy, and you can ask me about it when\l"
+	.string "you're older.$"

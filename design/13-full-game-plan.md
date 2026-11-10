@@ -540,4 +540,21 @@ quest is built, how the peer works) before they are asked six more times.
   the hut doorway and the stone holding the player's sheet, the dredge
   padlocked and the office above the docks with or without its
   nameplate (`FLAG_SKALD_CH_HOLLIS_NAMED`).
+- **2026-11-10 — route life.** Eleven more pairs, on the routes and in
+  the side areas, three states each (`pairs2.py`): the angler and the
+  cadet at the Route 1 bridge (one is the number you start with), two
+  snare cadets in Mistwood (paid by the snare, paid by the pelt), the
+  roadman and the survey hand at the culvert (a date in a notebook is
+  worse than a shout), the angler and the old man at the ford (you'd
+  swim it in August and read NORMAL), the two birders at the hide (the
+  Survey takes the honest one), the woodcutter and apprentice in the
+  coppice (the only count that's supposed to go down and come back), the
+  old and young crew in the workings (the hole filling in from
+  underneath), the geologist and the guide at the tarn (the ice is
+  leaving; the slope is what it leaves behind), Cadet Liv and the old
+  woman at the summit stakes (zero meant snow to the top, once), the
+  girl and her mother on the warm beach (being right about it is not
+  the same as wanting it), the dredge hand and the old lifeguard on the
+  closed beach (you can't close a beach that's already gone). ~1,800
+  words, 22 objects. Forty-seven conversations in the world now.
 
