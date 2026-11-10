@@ -972,6 +972,11 @@ static void CheckAcroBikeCollision(s16 x, s16 y, u8 metatileBehavior, u8 *collis
     {
         if (sAcroBikeTrickMetatiles[i](metatileBehavior))
         {
+            // Skaldmere has no bicycles. Route 119's balance rails (every entry after the
+            // bumpy slope) are the climate station's and the Wetlands' plank walks, and
+            // people cross them on foot; only a rider meets the rail collisions.
+            if (i != 0 && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE))
+                return;
             *collision = sAcroBikeTrickCollisionTypes[i];
             return;
         }
