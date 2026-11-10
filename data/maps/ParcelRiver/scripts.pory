@@ -506,9 +506,15 @@ script ParcelRiver_AnglerTrainer {
     release
     trainerbattle_single(TRAINER_SKALD_ANGLER,
         format("DELL: Forty years I worked this reach. Pulled SEAKING out by the armful, once.\pNow look at it. Battle me. I could use the distraction."),
-        format("DELL: Hah. You've still got the eye for it. Wish the river did."))
+        format("DELL: Hah. You've still got the eye for it. Wish the river did."),
+        ParcelRiver_AnglerTrainer_Won)
+    release
+    end
+}
+script ParcelRiver_AnglerTrainer_Won {
     msgbox(format("DELL: The Board swears the cut'll bring the fish back. The Board swears a lot of things.\pYou've got the eye. Do an old man a kindness. There's a brass lure on the gravel above town, my father's, lost thirty years. If anyone can spot it in that clear water, it's you."), MSGBOX_DEFAULT)
     setflag(FLAG_SKALD_Q_DELL)
+    release
     end
 }
 script ParcelRiver_Lure {

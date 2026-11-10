@@ -446,7 +446,14 @@ script ParcelFloodbasin_Remediator {
     msgbox(format("KOLE: Move along, RANGER. This isn't your patch."), MSGBOX_DEFAULT)
     trainerbattle_single(TRAINER_SKALD_REMEDIATOR,
         format("KOLE: Tch. Fine. We'll do this the loud way."),
-        format("KOLE: Hmph."))
+        format("KOLE: Hmph."),
+        ParcelFloodbasin_Remediator_Won)
+    release
+    end
+}
+script ParcelFloodbasin_Remediator_Won {
+    setvar(VAR_0x8005, VAR_SKALDMERE_CH2_EVIDENCE)
+    setvar(VAR_0x8004, 5)
     msgbox(format("KOLE: Write up whatever you write up.\pThis basin ran sick before you got here. It'll run sick after."), MSGBOX_DEFAULT)
     special(SkaldmereCertTaskMark)
     release

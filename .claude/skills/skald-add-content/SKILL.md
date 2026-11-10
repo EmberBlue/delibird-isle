@@ -107,6 +107,15 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   with a Defeated script (badge + fanfare + HM). Sight trainers' scripts must
   START with trainerbattle. Story bosses: TRAINER_TYPE_NONE talk script.
 
+## A trainer battle's aftermath needs the fourth argument
+`trainerbattle_single(TRAINER, intro, defeat)` ends the script when the fight
+starts; whatever follows runs only when the player talks again (that is the
+"already beaten" line). A mark, a flag or an item that must follow the win
+goes in a continuation script passed as the fourth argument
+(`trainerbattle_single(TRAINER, intro, defeat, Map_Name_Won)`), re-setting
+`VAR_0x8004/5` inside it since the battle clobbers them. KOLE's evidence bit,
+Cordelia's flag and Dell's quest were silently second-talk-only (2026-11-10).
+
 ## Prose rules (poryscript format())
 - No em-dash (use --), no escaped double quotes, \p new box, \n line, \l scroll.
 - §00 register: implies more than it states; no exposition dumps.

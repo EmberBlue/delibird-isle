@@ -77,7 +77,12 @@ script ParcelBoardroom_Cordelia {
     msgbox(format("She rises, and the room seems to rise with her. From beside the desk, unhurried, her partners come out to stand where they have stood in ten years of photographs.\pGroomed. Calm. Asked for nothing, ever, until now.\pCordelia: Neither of us is used to losing in a room like this. Shall we?"), MSGBOX_DEFAULT)
     trainerbattle_single(TRAINER_SKALD_CORDELIA,
         format("Cordelia: Gently, now.\nThis is still a boardroom."),
-        format("Cordelia: …There it is.\nThe thing the paper flattened."))
+        format("Cordelia: …There it is.\nThe thing the paper flattened."),
+        ParcelBoardroom_Cordelia_Won)
+    release
+    end
+}
+script ParcelBoardroom_Cordelia_Won {
     msgbox(format("She recalls her partners the way a person closes a ledger -- precisely, without haste, finished.\pCordelia: No settlement. No counter-offer. There would be no number on it anyway.\pYou have made honesty expensive, which is more than most people manage with a whole life. It will not be enough. I think you know that better than the ones who'll drink to you tonight."), MSGBOX_DEFAULT)
     msgbox(format("Cordelia: For what it is worth -- and you may price this however you like -- I read her model the year it was published, and I believed it.\pI wanted a region that could bear us. I still believe it can.\pWe differ on the arithmetic."), MSGBOX_DEFAULT)
     msgbox(format("She turns her chair to the window, to the harbour, to the cranes still swinging on schedule.\pWhatever her face does next, she has put the whole length of the room between you and it.\pThe meeting is over. Nobody says so. It is over anyway."), MSGBOX_DEFAULT)

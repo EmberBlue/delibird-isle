@@ -33,7 +33,7 @@ seg s18 s17 - --walk GOTO:10,30 --walk UP:0 --walk TALK:3 --walk WAIT:300 \
   --walk GOTO:14,15 --walk UP:0 --walk TALK:2 --walk WAIT:300 \
   --walk GOTO:22,16 --walk DOWN:0 --walk TALK:2 --walk WAIT:300 \
   --walk GOTO:18,16 --walk DOWN:0 --walk TALK:3 --walk WAIT:300 \
-  --walk GOTO:28,17 --walk DOWN:0 --walk TALK:12 --walk WAIT:1800 \
+  --walk GOTO:28,17 --walk DOWN:0 --walk TALK:12 --walk WAIT:1800 --walk TALK:14 --walk WAIT:900 \
   --check VAR_SKALDMERE_CH2_EVIDENCE --expect MAP_PARCEL_FLOODBASIN
 # BREEN's checkpoint at (19,1): step onto it from (20,1); exam, badge 3, HM06
 seg s19 s18 FLAG_BADGE03_GET --walk GOTO:20,1 --walk LEFT:0 --walk WAIT:4500 --check FLAG_BADGE03_GET --expect MAP_PARCEL_FLOODBASIN
