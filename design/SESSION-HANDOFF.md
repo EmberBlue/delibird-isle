@@ -436,8 +436,8 @@ replaces is gone from the tree).
   spine all fifteen flags. **Now being played for real** (2026-11-10):
   `walktest.py` keeps savestates across runs (`--save-state` /
   `--load-state`), fights or runs from battles (`--fight`), plans walks on
-  the live map (`GOTO`) and talks (`TALK`); the chapter-1 chain lives in
-  the scratchpad as `play/chain_all.sh` (ferry → Saltwick → RIN → the
+  the live map (`GOTO`) and talks (`TALK`); the chapter chains live in
+  `tools/skald/play/` (README there; `chain_all.sh` is chapter 1: ferry → Saltwick → RIN → the
   SEEDOT → Route 1 → the bridge → Mistwood → the snares → HM01 → CUT →
   Fernwick → HALE → TARN → the signing). First real finding: no Meadow
   partner could learn CUT, and most could not learn ROCK SMASH or

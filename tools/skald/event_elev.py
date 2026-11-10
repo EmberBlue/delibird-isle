@@ -45,6 +45,13 @@ def check(name, fix=False):
     for e in mj.get("object_events", []):
         ev = int(e.get("elevation", 0) or 0)
         w = want(e["x"], e["y"])
+        if w == 1 and ev != 0:
+            # standing in water (a sick fish, a swimmer): spoken to from a bridge or a boardwalk, where
+            # the player's elevation is whatever the ramp gave them -- only the wildcard works
+            out.append(f"object {e.get('local_id', '')} {e['graphics_id'][14:]} at ({e['x']},{e['y']}): elevation {ev} in water, needs 0")
+            if fix:
+                e["elevation"] = 0; changed = True
+            continue
         if w is None or ev == 0 or ev == w or w == 0:
             continue
         out.append(f"object {e.get('local_id', '')} {e['graphics_id'][14:]} at ({e['x']},{e['y']}): elevation {ev}, tile {w}")
