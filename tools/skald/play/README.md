@@ -45,3 +45,7 @@ tail -f $SKALD_SCRATCH/play/run/run_rest.log
 - The HM index in `TEACHHM:i,slot` is the position in the TMs & HMs pocket, which is sorted by
   item id: HM01 Cut, HM03 Surf, HM04 Strength, HM05 Flash, HM06 Rock Smash as they arrive.
 - Rocks and trees grow back on map reload; every return trip smashes or cuts again.
+- Never rebuild the probe ROM while a chain is running: mGBA maps the file, and replacing it
+  under a live segment kills it with SIGBUS (exit 135). Stop the chain, build, resume.
+- An NPC's elevation is re-read from its tile at spawn, so a fish in water is at 1 whatever the
+  template says; the tile under it is set to elevation 0 so it reads as a wildcard.

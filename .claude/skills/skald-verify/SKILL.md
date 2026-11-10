@@ -226,6 +226,8 @@ list that was green on 2026-11-07 is the one in the handoff.
   the crossing reloads them (the Corridor trainer re-faced in ROM kept
   challenging from the old facing for two runs until s15 was replayed from
   the Wetlands state). Layout (.bin) changes do not have this problem.
+- **Never rebuild the probe ROM under a running chain**: mGBA maps the file
+  and the live segment dies with SIGBUS (exit 135). Stop, build, resume.
 - **Menus remember their cursor.** The START menu reopens on the entry picked
   last, so "DOWN twice to BAG" worked once per run and then opened the
   PokéNav; `TEACHHM` now scans positions until `CB2_BagMenuRun` is live.
