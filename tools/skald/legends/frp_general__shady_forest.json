@@ -1,0 +1,280 @@
+{
+ "_about": "Mistwood: FireRed-port General as the primary (the Route 1 edge and the entrance rows are primary-only), the Shady Forest kit as the secondary (data/tilesets/secondary/shady_forest; Team Aqua's Asset Repo, see its CREDITS.md). D and L are the kit's teal and light conifers: 2x2 stamps that the dress pass finishes (feet, overlaps, tips).",
+ "fill": "#",
+ "border": [
+  528,
+  529,
+  522,
+  523
+ ],
+ "tiles": {
+  ".": [
+   1,
+   0,
+   3
+  ],
+  ",": [
+   8,
+   0,
+   3
+  ],
+  "p": [
+   217,
+   0,
+   3
+  ],
+  "t": [
+   10,
+   0,
+   3
+  ],
+  "X": [
+   28,
+   1,
+   0
+  ],
+  "w": [
+   29,
+   1,
+   0
+  ],
+  "x": [
+   36,
+   1,
+   0
+  ],
+  "W": [
+   37,
+   1,
+   0
+  ],
+  "S": [
+   2,
+   1,
+   0
+  ],
+  "B": [
+   5,
+   1,
+   0
+  ],
+  "F": [
+   231,
+   1,
+   0
+  ],
+  "g": [
+   512,
+   0,
+   3
+  ],
+  "k": [
+   527,
+   0,
+   3
+  ],
+  "^": [
+   539,
+   0,
+   3
+  ],
+  "Z": [
+   577,
+   1,
+   0
+  ],
+  "(": [
+   659,
+   0,
+   3
+  ],
+  ")": [
+   661,
+   0,
+   3
+  ],
+  "{": [
+   651,
+   0,
+   3
+  ],
+  "}": [
+   653,
+   0,
+   3
+  ],
+  "o": [
+   569,
+   1,
+   0
+  ],
+  "b": [
+   570,
+   1,
+   0
+  ],
+  "!": [
+   516,
+   1,
+   0
+  ],
+  "|": [
+   518,
+   1,
+   0
+  ],
+  ":": [
+   526,
+   1,
+   0
+  ],
+  ";": [
+   532,
+   1,
+   0
+  ]
+ },
+ "stamps": {
+  "N": {
+   "rows": [
+    [
+     28,
+     29
+    ],
+    [
+     36,
+     37
+    ]
+   ]
+  },
+  "T": {
+   "rows": [
+    [
+     30,
+     31
+    ],
+    [
+     22,
+     23
+    ]
+   ]
+  },
+  "D": {
+   "rows": [
+    [
+     528,
+     529
+    ],
+    [
+     522,
+     523
+    ]
+   ]
+  },
+  "L": {
+   "rows": [
+    [
+     683,
+     684
+    ],
+    [
+     689,
+     690
+    ]
+   ]
+  },
+  "A": {
+   "rows": [
+    [
+     578,
+     587,
+     588,
+     589
+    ],
+    [
+     586,
+     595,
+     596,
+     597
+    ],
+    [
+     570,
+     603,
+     604,
+     605
+    ],
+    [
+     569,
+     611,
+     612,
+     613
+    ]
+   ],
+   "door": [
+    3,
+    2
+   ],
+   "_note": "the ranger post: the kit's lit cottage wing (door 612) with a dead tree, a barrel and a stump stacked against its west wall; same 4x4 footprint and door cell as the old stamp"
+  }
+ },
+ "dress": {
+  "kinds": {
+   "D": [
+    528,
+    529
+   ],
+   "L": [
+    683,
+    684
+   ]
+  },
+  "bottom": {
+   "D>D": [
+    522,
+    523
+   ],
+   "D>L": [
+    678,
+    679
+   ],
+   "L>D": [
+    689,
+    690
+   ],
+   "L>L": [
+    681,
+    682
+   ],
+   "D>": [
+    536,
+    537
+   ],
+   "L>": [
+    691,
+    692
+   ]
+  },
+  "tip": {
+   "D": {
+    "512": [
+     520,
+     521
+    ],
+    "527": [
+     562,
+     563
+    ]
+   },
+   "L": {
+    "512": [
+     675,
+     676
+    ],
+    "527": [
+     562,
+     563
+    ]
+   }
+  }
+ }
+}

@@ -74,6 +74,48 @@ def parse_canvas(path):
     return head, anchors, extra, border, rows
 
 
+def dress(grid, spec, W, H):
+    """Trees that overlap. A kit whose trees are drawn as overlapping parts (a crown row, then a row
+    that is this tree's foot AND the tip of the tree in front of it) cannot be a fixed 2x2 stamp:
+    the second row depends on what stands below, and the tip sits in the open cell above. The
+    legend's "dress" block says how, and the canvas keeps one stamp per tree:
+
+      "dress": {"kinds":  {"D": [crownL, crownR], "L": [...]},       2x2 stamps, crown row first
+                "bottom": {"D>D": [l, r], "D>L": [l, r], "D>": [l, r], ...},   this kind > kind below ("" = open)
+                "tip":    {"D": {"512": [l, r], "527": [l, r]}, ...}}  the cell above a crown: id -> tip over it
+
+    Collision and elevation of every touched cell are kept; only the metatile id changes."""
+    if not spec:
+        return
+    kinds = {tuple(v): k for k, v in spec["kinds"].items()}
+
+    def mid(x, y):
+        return grid[y][x] & 0x3FF if 0 <= x < W and 0 <= y < H and grid[y][x] is not None else None
+
+    def put(x, y, m):
+        grid[y][x] = (grid[y][x] & ~0x3FF) | m
+
+    def kind_at(x, y):
+        return kinds.get((mid(x, y), mid(x + 1, y)))
+
+    blocks = [(x, y, kind_at(x, y)) for y in range(H - 1) for x in range(W - 1) if kind_at(x, y)]
+    bottoms = set()
+    for x, y, k in blocks:                                  # the foot row first, for every tree
+        below = kind_at(x, y + 2) if y + 2 < H else None
+        l, r = spec["bottom"][f"{k}>{below or ''}"]
+        put(x, y + 1, l); put(x + 1, y + 1, r)
+        bottoms.update({(x, y + 1), (x + 1, y + 1)})
+    for x, y, k in blocks:                                  # then the tips, over open ground only
+        if y == 0:
+            continue
+        for i in (0, 1):
+            if (x + i, y - 1) in bottoms:
+                continue
+            tip = spec["tip"].get(k, {}).get(str(mid(x + i, y - 1)))
+            if tip:
+                put(x + i, y - 1, tip[i])
+
+
 def build(canvas_path):
     canvas_path = Path(canvas_path)
     head, anchors_def, extra, border, rows = parse_canvas(canvas_path)
@@ -137,6 +179,8 @@ def build(canvas_path):
     missing = [a for a in anchors_def if a not in anchors]
     if missing:
         raise SystemExit(f"anchors declared but not drawn: {missing}")
+
+    dress(grid, legend.get("dress"), W, H)
 
     out_dir = canvas_path.parent
     import layout_fixes

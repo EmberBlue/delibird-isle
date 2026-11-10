@@ -89,8 +89,15 @@ taken from a released ROM hack's binary; every set below is a published decomp r
   is open source and asks for its credit chain to be kept: Pokémon Heart & Soul (tilesets by
   Crystal Advance / Kertra, Ekat99, TheDeadHeroAlistair, the Johto Redrawn Team).
 - **[Team Aqua's Asset Repo](https://github.com/TeamAquasHideout/Team-Aquas-Asset-Repo)**
-  (maintained by Pawkkie, PCG06, Archie): assets are free to use and edit with credit. Anything
-  ported from it is listed here with its own artists when it lands.
+  (maintained by Pawkkie, PCG06, Archie): assets are free to use and edit with credit. Ported
+  from it so far:
+  - **Shady Forest** (`data/tilesets/secondary/shady_forest`, Mistwood). Assembler: Yumekua.
+    Main creators: Ekat99, Heartlessdragoon, Vurtax. Insertable reformat and submission: Rahtak.
+    The kit asks that every name in its credits file be credited; the full list ships beside the
+    tiles as [`data/tilesets/secondary/shady_forest/CREDITS.md`](data/tilesets/secondary/shady_forest/CREDITS.md).
+    In this repository 69 of the kit's tiles were moved to other slots of its sheet so the
+    FireRed-port tiles Mistwood's primary needs could sit beside them
+    (`tools/skald/kit_share_frp.py`); the art is unchanged.
 - The spruce and fir trees, the title screen, the cast sprites and the UI frames are original
   to this project (see `tools/skald/`).
 

@@ -371,6 +371,22 @@ replaces is gone from the tree).
   this hand-drawn route: prefer a Porymap-ready folder (tiles.png, palettes,
   metatiles.bin, metatile_attributes.bin), and credit the artist in
   `CREDITS.md` and `src/data/credits.h`.
+- **Mistwood is the first map on a community kit** (2026-11-10): the
+  Shady Forest secondary from Team Aqua's Asset Repo (dark teal and light
+  conifers, ferns for tall grass, a lit cottage as the ranger post, a
+  paved way in), over the same FireRed-port primary so the Route 1 edge
+  is untouched. The canvas kept its shape exactly (zero collision or
+  elevation changes); `draw.py` gained a legend-driven `dress` pass for
+  trees that overlap, and `kit_share_frp.py` puts the 69 tiles the FireRed
+  primary borrows from its secondary into the kit's sheet. Recipe in
+  skald-add-content. Same repo, not yet used: Emerald Slide's snow
+  palettes (not for Haukfell: its story is the thaw), Bright General and
+  Alternative General (whole-primary replacements: every Emerald-kit map
+  would need re-laying), Droid779's snow sheet and Roger Wrightshoe's tree
+  sheets (raw PNGs for porytiles). Good next ports in the same way: the
+  other three FireRed-kit maps (Saltwick, the Meadow, Route 1) so the
+  opening has one look, and the Marsh (finale) onto Shady Forest's ground
+  and dead trees.
 - **Building kits** — `kit_restyle.py`. Every town was a stock building kit
   (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
   wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the

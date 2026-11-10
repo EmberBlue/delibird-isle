@@ -113,6 +113,11 @@ def write_pal(p, lines, colours):
     p.write_text("\n".join(lines[:3] + [f"{c[0]} {c[1]} {c[2]}" for c in colours]) + "\n", newline="\r\n")
 
 
+# Kits that arrive with a finished palette of their own and are left as their artists made them.
+# Shady Forest (Mistwood) is a night-teal conifer wood; the northern grade would only grey it.
+UNGRADED = {"gTileset_shady_forest"}
+
+
 def outdoor_tilesets():
     import audit
     lay = {l["id"]: l for l in json.load(open(ROOT / "data/layouts/layouts.json"))["layouts"]}
@@ -123,6 +128,8 @@ def outdoor_tilesets():
             continue
         l = lay[m["layout"]]
         for sym, kind in ((l["primary_tileset"], "primary"), (l["secondary_tileset"], "secondary")):
+            if sym in UNGRADED:
+                continue
             d = audit.tileset_dir(sym)
             if not d:
                 d = ROOT / "data/tilesets" / kind / sym.replace("gTileset_", "").replace("Primary_", "").lower()

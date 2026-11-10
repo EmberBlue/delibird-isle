@@ -79,6 +79,9 @@ WARP_BEHAVIOURS = warp_behaviours()
 # Fortree's 620 is the grass shore whose froth line sits on the top layer: on the Marsh landing strip (elevation 3,
 # so a surfer can come ashore below HERON) the line crosses the player's feet, which reads as the water's edge.
 TOPLAYER_OK = {("ParcelWeather", 15), ("ParcelMarsh", 620)}
+# The Shady Forest kit (Mistwood): the conifers' tips stand in the top layer of the open cell above each tree,
+# over bare ground (520, 521 teal; 675, 676 light) or ferns (562, 563). Walking behind them is the point.
+TOPLAYER_OK |= {("ParcelMistwood", m) for m in (520, 521, 562, 563, 675, 676)}
 TREETOP_TILES = {6, 7, 22, 493, 494, 495}      # General's tiles; see tools/skald/nordic_tiles.py
 RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
 

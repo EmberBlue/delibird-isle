@@ -819,6 +819,17 @@ const struct Tileset gTileset_frp_viridian_forest = {
     .callback            = NULL,
 };
 
+// ---- Skaldmere Secondary: Shady Forest (Team Aqua's Asset Repo; see data/tilesets/secondary/shady_forest/CREDITS.md) ----
+const struct Tileset gTileset_shady_forest = {
+    .isCompressed        = TRUE,
+    .isSecondary         = TRUE,
+    .tiles               = gTilesetTiles_shady_forest,
+    .palettes            = gTilesetPalettes_shady_forest,
+    .metatiles           = gMetatiles_shady_forest,
+    .metatileAttributes  = gMetatileAttributes_shady_forest,
+    .callback            = NULL,
+};
+
 // ---- FR Port Secondary: Viridian Gym ----
 const struct Tileset gTileset_frp_viridian_gym = {
     .isCompressed        = TRUE,

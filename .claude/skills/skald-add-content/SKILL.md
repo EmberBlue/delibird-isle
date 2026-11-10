@@ -204,6 +204,36 @@ Cordelia's flag and Dell's quest were silently second-talk-only (2026-11-10).
   missing tip over whatever stands behind (it makes the metatile if none
   exists) and removes a tip with no tree under it. A foot hidden by a roof or
   a fence in front is fine.
+- **Porting a community tileset** (Mistwood on the Shady Forest kit is the
+  worked example, 2026-11-10). Public GitHub is reachable with `git clone`
+  through the session proxy (zips and PokéCommunity/DeviantArt are not).
+  Team Aqua's Asset Repo (`TeamAquasHideout/Team-Aquas-Asset-Repo`,
+  `Tilesets/`) holds Porymap-ready kits, free to use with credit.
+  1. Copy the kit's `tiles.png`, `palettes/*.pal`, `metatiles.bin`,
+     `metatile_attributes.bin` into `data/tilesets/secondary/<name>/` and
+     its credits file beside them as `CREDITS.md`. Kits there are already
+     triple-layer (24 bytes a metatile).
+  2. Register it in `src/data/tilesets/headers.h`, `graphics.h` and
+     `metatiles.h` (copy the `frp_viridian_forest` blocks). The generic make
+     rule builds `tiles.4bpp.lz` and the `.gbapal` files.
+  3. If the map's primary is `gTileset_Primary_frp_general`, run
+     `python3 tools/skald/kit_share_frp.py <name>`: that primary draws 69
+     tiles from indices 512-639 of whatever secondary is loaded, and without
+     them its grass and tree corners come out as the kit's roof tiles.
+  4. Learn how the kit's trees are assembled before drawing anything: match
+     its example screenshot against its rendered metatiles
+     (`tools/skald/match_example.py` did this for Shady Forest at 2x scale;
+     adapt its paths) and read the grid. Trees
+     that overlap (a foot row that is also the next tree's tip) go in the
+     legend's `"dress"` block, which `draw.py` applies after the stamps.
+  5. Write `tools/skald/legends/<primary>__<name>.json`, point the canvas's
+     `legend` line and the layout's `secondary_tileset` at it, set the
+     border to the kit's trees, and keep every row a neighbouring map can
+     see primary-only (eight rows from a connection).
+  6. Compare collision and elevation of the old and new `map.bin`: a re-kit
+     should change zero cells. Add the kit to `UNGRADED` in `grade.py` if it
+     has a finished palette, its walk-behind tips to `TOPLAYER_OK` in
+     `audit.py`, its artists to `CREDITS.md` and `src/data/credits.h`.
 - Outdoor palettes are graded: a colour you want in the game goes into
   `tools/skald/palette_base/<tileset>/NN.pal` (kit_restyle writes there by
   itself), then `python3 tools/skald/grade.py --apply` regenerates the live

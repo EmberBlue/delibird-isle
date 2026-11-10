@@ -4617,7 +4617,7 @@
       "width": 30,
       "height": 44,
       "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_viridian_forest",
+      "secondary_tileset": "gTileset_shady_forest",
       "border_filepath": "data/layouts/ParcelMistwood/border.bin",
       "blockdata_filepath": "data/layouts/ParcelMistwood/map.bin"
     },

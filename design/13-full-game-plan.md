@@ -1005,3 +1005,17 @@ quest is built, how the peer works) before they are asked six more times.
   drawing in grey and yellow, the Mauville kit's own palette 12, which the
   blind harness had walked past since the River was built; it is spruces
   now. Ground texture, tall grass and flowers are next in the same method.
+  **The first community kit** (2026-11-10, after the user offered to fetch
+  tilesets). Public GitHub turned out to be reachable from the session, so
+  the sources were cloned rather than asked for: Team Aqua's Asset Repo,
+  leob0505's ORAS tilesets and Pokémon Heart & Soul. That settled two
+  credits the history had lost (the `leob_*` kits are leob0505's; the
+  Johto set under Delibird Isle is Heart & Soul's) and gave Mistwood the
+  Shady Forest kit: a dark conifer wood with ferns, a lit cottage for the
+  ranger post and a paved way in from the tree line. The drawing did not
+  move a single walkable cell. Two things had to be built for it. The
+  kit's trees overlap (a tree's foot row is also the tip of the tree in
+  front), so `draw.py` learned a `dress` pass the legend describes; and
+  the FireRed-port primary turned out to borrow 69 tiles from whichever
+  secondary is loaded, so `kit_share_frp.py` makes room for them in the
+  kit's sheet. Every artist the kit names is in `CREDITS.md`.

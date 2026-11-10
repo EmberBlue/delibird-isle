@@ -5,7 +5,6 @@ enum
 {
     PAGE_TITLE,
     PAGE_STORY,
-    PAGE_WORLD,
     PAGE_CORPS,
     PAGE_MEREHOLT,
     PAGE_LEADERS_1,
@@ -24,6 +23,7 @@ enum
     PAGE_CAVERN,
     PAGE_ENGINE,
     PAGE_DECOMP,
+    PAGE_TILES_2,
     PAGE_TOOLS,
     PAGE_ORIGINAL,
     PAGE_MUSIC,
@@ -127,9 +127,13 @@ static const u8 sCreditsText_Pret[] = _("pret");
 static const u8 sCreditsText_Tilesets[] = _("Tilesets");
 static const u8 sCreditsText_Liamjd14[] = _("FireRed port: Liamjd14");
 static const u8 sCreditsText_Leob[] = _("ORAS tiles: leob0505");
-static const u8 sCreditsText_HnS[] = _("Johto tiles: Heart & Soul");
-static const u8 sCreditsText_HnSArtists[] = _("Kertra, Ekat99, Alistair");
-static const u8 sCreditsText_JohtoRedrawn[] = _("Johto Redrawn Team");
+static const u8 sCreditsText_HnS[] = _("Heart & Soul: Kertra, Ekat99");
+static const u8 sCreditsText_HnSArtists[] = _("Alistair, Johto Redrawn Team");
+static const u8 sCreditsText_Shady[] = _("Shady Forest tiles");
+static const u8 sCreditsText_Shady1[] = _("Ekat99, Heartlessdragoon");
+static const u8 sCreditsText_Shady2[] = _("Vurtax, Yumekua, Rahtak");
+static const u8 sCreditsText_Shady3[] = _("and the artists named");
+static const u8 sCreditsText_Shady4[] = _("in CREDITS.md");
 static const u8 sCreditsText_TeamAqua[] = _("Team Aqua's Asset Repo");
 static const u8 sCreditsText_Tools[] = _("Tools");
 static const u8 sCreditsText_Poryscript[] = _("poryscript");
@@ -249,7 +253,11 @@ static const struct CreditsEntry sCreditsEntry_Liamjd14 = { 0, FALSE, sCreditsTe
 static const struct CreditsEntry sCreditsEntry_Leob = { 0, FALSE, sCreditsText_Leob};
 static const struct CreditsEntry sCreditsEntry_HnS = { 0, FALSE, sCreditsText_HnS};
 static const struct CreditsEntry sCreditsEntry_HnSArtists = { 0, FALSE, sCreditsText_HnSArtists};
-static const struct CreditsEntry sCreditsEntry_JohtoRedrawn = { 0, FALSE, sCreditsText_JohtoRedrawn};
+static const struct CreditsEntry sCreditsEntry_Shady = { 0, TRUE, sCreditsText_Shady};
+static const struct CreditsEntry sCreditsEntry_Shady1 = { 0, FALSE, sCreditsText_Shady1};
+static const struct CreditsEntry sCreditsEntry_Shady2 = { 0, FALSE, sCreditsText_Shady2};
+static const struct CreditsEntry sCreditsEntry_Shady3 = { 0, FALSE, sCreditsText_Shady3};
+static const struct CreditsEntry sCreditsEntry_Shady4 = { 0, FALSE, sCreditsText_Shady4};
 static const struct CreditsEntry sCreditsEntry_TeamAqua = { 0, FALSE, sCreditsText_TeamAqua};
 static const struct CreditsEntry sCreditsEntry_Tools = { 0, TRUE, sCreditsText_Tools};
 static const struct CreditsEntry sCreditsEntry_Poryscript = { 0, FALSE, sCreditsText_Poryscript};
@@ -286,18 +294,11 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
     },
     [PAGE_STORY] = {
-        _,
         &sCreditsEntry_StoryDesignWriting,
         &sCreditsEntry_Emberblue,
         _,
-        _,
-    },
-    [PAGE_WORLD] = {
-        _,
         &sCreditsEntry_MapsScriptsTrainers,
         &sCreditsEntry_Emberblue,
-        _,
-        _,
     },
     [PAGE_CORPS] = {
         &sCreditsEntry_TheCorps,
@@ -424,6 +425,13 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Leob,
         &sCreditsEntry_HnS,
         &sCreditsEntry_HnSArtists,
+    },
+    [PAGE_TILES_2] = {
+        &sCreditsEntry_Shady,
+        &sCreditsEntry_Shady1,
+        &sCreditsEntry_Shady2,
+        &sCreditsEntry_Shady3,
+        &sCreditsEntry_Shady4,
     },
     [PAGE_TOOLS] = {
         &sCreditsEntry_Tools,

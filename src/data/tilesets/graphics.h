@@ -3557,6 +3557,26 @@ const u16 gTilesetPalettes_frp_viridian_forest[][16] =
     INCBIN_U16("data/tilesets/secondary/frp_viridian_forest/palettes/15.gbapal"),
 };
 
+// --- Secondary: shady_forest ---
+const u32 gTilesetTiles_shady_forest[] =
+    INCBIN_U32("data/tilesets/secondary/shady_forest/tiles.4bpp.lz");
+const u16 gTilesetPalettes_shady_forest[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/shady_forest/palettes/12.gbapal"),
+};
+
 // --- Secondary: frp_viridian_gym ---
 const u32 gTilesetTiles_frp_viridian_gym[] =
     INCBIN_U32("data/tilesets/secondary/frp_viridian_gym/tiles.4bpp.lz");
