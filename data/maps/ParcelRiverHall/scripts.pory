@@ -81,6 +81,11 @@ script ParcelRiverHall_Harland {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("HARLAND: The vote went against us and the Board's publishing both numbers anyway. Somebody read the room better than the room did.\pI'm going back to the water while there's a season of it. There's a little more this year. Don't tell me why; I'll find out."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("HARLAND: I'm here because the mayor asked. I'd rather be on the water. There's less of it every year to be on."), MSGBOX_DEFAULT)
     release
     end
@@ -110,6 +115,11 @@ script ParcelRiverHall_Dell {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("DELL: Forty years, and somebody wrote it down. In a notebook, in my own words, with the date.\pI've started sleeping through the night. I don't trust it yet. Forty years of not sleeping is a habit, same as the other."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("DELL: Forty years. I'll say it till somebody writes it down."), MSGBOX_DEFAULT)
     release
     end
@@ -119,6 +129,11 @@ script ParcelRiverHall_Sluice {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("SLUICE: The ledger balanced in public for once. The councilman watched it balance. I'm told he didn't enjoy it. The ledger didn't care."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("SLUICE: The ledger balanced in front of forty-one people. That has never happened in this building.\pThe councilman has asked for the ledger to be kept in his office for safety. I have declined. In writing. Once. That is the correct number of times."), MSGBOX_DEFAULT)
         release
         end
     }
@@ -134,6 +149,11 @@ script ParcelRiverHall_Dorsey {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("DORSEY: I lost the vote and won the argument, or the other way about. I've stopped being sure which I'd prefer.\pPhase 2 proceeds. The Board publishes two columns. Call it a draw that nobody drew."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("DORSEY: I'd rather lose an argument in public than win one in a report. I say that a lot. I mean it every time."), MSGBOX_DEFAULT)
     release
     end
@@ -143,6 +163,11 @@ script ParcelRiverHall_Ilex {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("ILEX: The bank above the town. I still go. The river has a name on it now. Yours and mine, and the hearing's stamp under both."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WATERSHED_CERT)) {
+        msgbox(format("ILEX: Stressed, not shifted. I said it in this hall and the hall heard it, which is a different thing from being right.\pGo up the river. The mountain won't let you say stressed. I've measured it; it won't."), MSGBOX_DEFAULT)
         release
         end
     }

@@ -9,6 +9,11 @@ script ParcelWeatherInstitute1F_Reception {
         release
         end
     }
+    if (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
+        msgbox(format("RECEPTION: You've beaten the four and the director. He's asked me to stop saying 'the rules'.\pHe says there was only ever one rule, and it was his, and he isn't sure about it any more. I've never heard him say isn't sure. I wrote it down."), MSGBOX_DEFAULT)
+        release
+        end
+    }
     msgbox(format("RECEPTION: The director is upstairs. He sees anyone who's beaten the four divisions, and nobody who hasn't. Those are his rules. They're the only rules here he made himself."), MSGBOX_DEFAULT)
     release
     end
@@ -18,6 +23,11 @@ script ParcelWeatherInstitute1F_Tech1 {
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
         msgbox(format("TECHNICIAN: The drawer's open. The over-the-fence data went to the review in three boxes. We publish it monthly now, next to the plot data. The drawer's for sandwiches."), MSGBOX_DEFAULT)
+        release
+        end
+    }
+    if (flag(FLAG_SKALDMERE_WEATHER_CLEARED)) {
+        msgbox(format("TECHNICIAN: The director took the drawer upstairs after your battle. All twelve months of the over-the-fence log.\pHe said he wanted to read what the sky did while he was modelling it. He hasn't come down. We've started sending the sandwiches up."), MSGBOX_DEFAULT)
         release
         end
     }
