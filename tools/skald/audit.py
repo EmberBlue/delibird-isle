@@ -79,6 +79,7 @@ WARP_BEHAVIOURS = warp_behaviours()
 # Fortree's 620 is the grass shore whose froth line sits on the top layer: on the Marsh landing strip (elevation 3,
 # so a surfer can come ashore below HERON) the line crosses the player's feet, which reads as the water's edge.
 TOPLAYER_OK = {("ParcelWeather", 15), ("ParcelMarsh", 620)}
+TREETOP_TILES = {6, 7, 22, 493, 494, 495}      # General's tiles; see tools/skald/nordic_tiles.py
 RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
 
 
@@ -183,6 +184,11 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                 if beh == 0x02 or 0x10 <= beh <= 0x19 or beh in DOOR_BEHAVIOURS:  # grass/water shimmer/doorway overlays are intended
                     continue
                 if (name, mid) in TOPLAYER_OK:
+                    continue
+                # a treetop is meant to cover whoever stands behind the tree: the spruce's crown (6, 7, 22)
+                # and the big fir's tip (493-495) in the top layer are walk-behind art, on any ground
+                top = [c & 0x3FF for c in tiles[mid][0][8:12] if c & 0x3FF]
+                if lay["primary_tileset"] == "gTileset_General" and top and all(t in TREETOP_TILES for t in top):
                     continue
                 if any(tile_has_art(lay, c) for c in tiles[mid][0][8:12]):
                     covered.add(mid)

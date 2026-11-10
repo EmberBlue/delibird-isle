@@ -54,6 +54,11 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   raised tile (a dais, a deck, a chair behind a desk) answers only the
   player standing at its own height, so one side of it is dead air
   (Cordelia Brooke from behind her chair, 2026-11-10).
+- **Trees**: `python3 tools/skald/trees.py` must read `0 broken tree
+  assemblies` and `python3 tools/skald/nordic_tiles.py --check` `drift: 0`.
+  Then look: `python3 tools/skald/pal_tool.py render MAP out.png 2` shows the
+  map with its real palettes in a second, and it is the only check that sees
+  colour (the harness plays blind; it walked past a grey-and-yellow grove).
 - **Level curve**: after touching any boss, gate or rival party, run
   `python3 tools/skald/curve.py`. It prints every required battle in story
   order and must read `0 step(s) too steep`. The playthrough chains fight

@@ -188,6 +188,22 @@ Cordelia's flag and Dell's quest were silently second-talk-only (2026-11-10).
   `data/tilesets/primary/leob_general`, not `general`. Never put a new cottage
   or hall on General's palette 5 yellows (they are the sand) or expect the
   Pokémon Center's red on palette 1 (it lives on palette 4's free entries).
+- Trees and ground on the Emerald kit are original Skaldmere art, drawn by
+  `tools/skald/nordic_tiles.py` into the shared General tile sheet (the art is
+  ASCII rows in that file; `--sheet OUT.png` previews it, `--check` reports
+  drift). Change a tree there, never in `tiles.png`. Two kinds: the **small
+  spruce** (palette 2, one tile wide: metatile 14 crown over grass, 198 inside
+  a wood, 22 foot) is coloured correctly under every secondary kit; the **big
+  fir** (palette 12, two wide: tip 462/463 in the cell above, body 468/469,
+  foot 484/485, or 476/477 when the next tree's tip overlaps it) only has a
+  palette under the `leob_*` kits. Under Mauville, Fortree, Slateport or Cave
+  it draws in that kit's own palette 12 (a grove in Elvsund was grey and
+  yellow for weeks): use spruces there.
+- A big fir is three parts and all three must be there: `python3
+  tools/skald/trees.py` must read `0 broken tree assemblies`; `--fix` adds a
+  missing tip over whatever stands behind (it makes the metatile if none
+  exists) and removes a tip with no tree under it. A foot hidden by a roof or
+  a fence in front is fine.
 - Outdoor palettes are graded: a colour you want in the game goes into
   `tools/skald/palette_base/<tileset>/NN.pal` (kit_restyle writes there by
   itself), then `python3 tools/skald/grade.py --apply` regenerates the live

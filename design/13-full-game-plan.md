@@ -991,3 +991,17 @@ quest is built, how the peer works) before they are asked six more times.
   it, so he now says it is the last clearance and asks before the exam.
   `tools/skald/curve.py` prints every required boss in story order and
   fails on a step of more than seven levels (0).
+  **Original tiles, first pass** (2026-11-10, after the user asked whether
+  the maps would ever stop looking like Emerald). The outdoor Emerald-kit
+  maps share one tile sheet, and a dozen metatiles are sixty percent of
+  what is on screen, so the trees were redrawn in place: a one-tile spruce
+  and a two-tile tiered fir (`tools/skald/nordic_tiles.py`, the art kept as
+  rows of palette indices in the file). Every map changed at once and no
+  layout moved. The fir is strict where the round tree forgave: it needs
+  its tip, body and foot, and `tools/skald/trees.py` found 81 assemblies
+  that lacked one. It repairs most itself (a tip over anything, making the
+  metatile when none exists); Fernwick's park and east wood were re-laid by
+  hand. Rendering the maps to look at them also showed a grove in Elvsund
+  drawing in grey and yellow, the Mauville kit's own palette 12, which the
+  blind harness had walked past since the River was built; it is spruces
+  now. Ground texture, tall grass and flowers are next in the same method.

@@ -353,6 +353,24 @@ replaces is gone from the tree).
   dark-slate border colours (palette 13-15 of `message_box.png`; text
   colours untouched), and window frame 1 (the default menu border) is a
   slate band with an ice rule.
+- **Trees** — `nordic_tiles.py` (2026-11-10). The first original tile art:
+  Emerald's round trees are gone from the Emerald-kit maps. A one-tile
+  spruce (palette 2) and a two-tile tiered fir (palette 12) are drawn in
+  place into General's tile sheet, so every map changed at once and no
+  layout moved. `trees.py` keeps each fir whole (tip, body, foot); it found
+  81 loose assemblies the round tree had been hiding and a ten-tree grove in
+  Elvsund that had been drawing in the Mauville kit's grey-and-yellow
+  palette 12. Still Emerald's: grass texture, tall grass, flowers, cliffs,
+  water, paths, the Pokémon Centre and Mart, and every interior. The four
+  FireRed-kit maps (Saltwick to Mistwood) and the three Johto-kit Delibird
+  maps have their own trees and were not touched. Next in the same method:
+  ground texture and tall grass (tiles 2, 3, 16-19, 32-35), then flowers.
+  **The user has offered to fetch community tilesets** (asked 2026-11-10;
+  PokéCommunity and DeviantArt are unreachable from the cloud session). If
+  a pack arrives in `art/incoming/` or as an attachment, porting it replaces
+  this hand-drawn route: prefer a Porymap-ready folder (tiles.png, palettes,
+  metatiles.bin, metatile_attributes.bin), and credit the artist in
+  `CREDITS.md` and `src/data/credits.h`.
 - **Building kits** — `kit_restyle.py`. Every town was a stock building kit
   (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
   wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the
@@ -501,6 +519,7 @@ replaces is gone from the tree).
   (0), `event_elev.py` (0), `event_elev.py --sides` (0: nobody silent
   from one side), `warp_dest.py` (0 bad landings), `curve.py` (0 steep
   steps on the main road), `gates.py` (0),
+  `trees.py` (0 broken assemblies), `nordic_tiles.py --check` (0 drift),
   `layout_fixes.py --check` (0 differ: hand tile fixes live in each
   layout's `fixes.json`).
 - **Names are capitals in speech and narration** (people, places, species,
