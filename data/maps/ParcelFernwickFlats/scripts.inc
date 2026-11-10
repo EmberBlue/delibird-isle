@@ -74,6 +74,20 @@ ParcelFernwickFlats_ReadBunk::
 	end
 
 
+ParcelFernwickFlats_PaperRentCard::
+# 53 "data/maps/ParcelFernwickFlats/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickFlats_PaperRentCard_2
+# 56 "data/maps/ParcelFernwickFlats/scripts.pory"
+	msgbox ParcelFernwickFlats_PaperRentCard_Text_1, MSGBOX_SIGN
+ParcelFernwickFlats_PaperRentCard_1:
+	end
+
+ParcelFernwickFlats_PaperRentCard_2:
+# 54 "data/maps/ParcelFernwickFlats/scripts.pory"
+	msgbox ParcelFernwickFlats_PaperRentCard_Text_0, MSGBOX_SIGN
+	goto ParcelFernwickFlats_PaperRentCard_1
+
+
 ParcelFernwickFlats_Man_Text_0:
 # 8 "data/maps/ParcelFernwickFlats/scripts.pory"
 	.string "MAN: Corps housing. Six rangers, one\n"
@@ -131,3 +145,28 @@ ParcelFernwickFlats_ReadBunk_Text_0:
 	.string "a boot print on the wall at the same\l"
 	.string "height, where a ranger lies down without\l"
 	.string "taking the boots off first.$"
+
+ParcelFernwickFlats_PaperRentCard_Text_0:
+# 54 "data/maps/ParcelFernwickFlats/scripts.pory"
+	.string "A rent card for the flat, stamped\n"
+	.string "weekly. The two FOUNDATION stamps have\l"
+	.string "been struck through and CORPS written\l"
+	.string "over them, and a note: housing budget\l"
+	.string "restored, Director's office.\p"
+	.string "The man says he never understood the\n"
+	.string "stamps and understands the correction\l"
+	.string "less. He has kept the card anyway.\l"
+	.string "Everything in this town keeps its paper\l"
+	.string "now.$"
+
+ParcelFernwickFlats_PaperRentCard_Text_1:
+# 56 "data/maps/ParcelFernwickFlats/scripts.pory"
+	.string "A rent card for the flat, stamped\n"
+	.string "weekly. The landlord is the Corps'\l"
+	.string "housing office; the flats were built for\l"
+	.string "provisionals and their families and the\l"
+	.string "stamps are small and reliable.\p"
+	.string "Two weeks are stamped FOUNDATION\n"
+	.string "instead of CORPS. Nobody in the flat\l"
+	.string "knows what that means. Nobody has\l"
+	.string "asked.$"

@@ -74,6 +74,20 @@ ParcelRiverHouse6_ReadShelf::
 	end
 
 
+ParcelRiverHouse6_PaperRoundSheet::
+# 55 "data/maps/ParcelRiverHouse6/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse6_PaperRoundSheet_2
+# 58 "data/maps/ParcelRiverHouse6/scripts.pory"
+	msgbox ParcelRiverHouse6_PaperRoundSheet_Text_1, MSGBOX_SIGN
+ParcelRiverHouse6_PaperRoundSheet_1:
+	end
+
+ParcelRiverHouse6_PaperRoundSheet_2:
+# 56 "data/maps/ParcelRiverHouse6/scripts.pory"
+	msgbox ParcelRiverHouse6_PaperRoundSheet_Text_0, MSGBOX_SIGN
+	goto ParcelRiverHouse6_PaperRoundSheet_1
+
+
 ParcelRiverHouse6_Man_Text_0:
 # 10 "data/maps/ParcelRiverHouse6/scripts.pory"
 	.string "MAN: SLUICE had me re-read every gauge\n"
@@ -130,3 +144,26 @@ ParcelRiverHouse6_ReadShelf_Text_0:
 	.string "A child's arithmetic book, open at a\n"
 	.string "page about budgets. In the margin, in a\l"
 	.string "child's hand: RIVERS DON'T HAVE MONEY.$"
+
+ParcelRiverHouse6_PaperRoundSheet_Text_0:
+# 56 "data/maps/ParcelRiverHouse6/scripts.pory"
+	.string "The gauge round sheet. The Board's\n"
+	.string "column says MELTWATER now, in type,\l"
+	.string "with a reference to the Station's book.\l"
+	.string "His column says: told you, in pencil,\l"
+	.string "once, and then stops saying it.\p"
+	.string "SLUICE had him re-read every gauge\n"
+	.string "after the sitting. Same numbers. She\l"
+	.string "wanted the numbers to be able to say\l"
+	.string "so.$"
+
+ParcelRiverHouse6_PaperRoundSheet_Text_1:
+# 58 "data/maps/ParcelRiverHouse6/scripts.pory"
+	.string "The gauge round sheet, fourteen gauges\n"
+	.string "up the spine, one column a week. In the\l"
+	.string "Board's column: SEASONAL. In his: the\l"
+	.string "same numbers, and beside them, in\l"
+	.string "pencil, what he thinks they are.\p"
+	.string "MELTWATER, HAUKFELL. He has written it\n"
+	.string "eleven times. The Board has never once\l"
+	.string "written it back.$"

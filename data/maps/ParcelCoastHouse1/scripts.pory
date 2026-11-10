@@ -51,3 +51,14 @@ script ParcelCoastHouse1_ReadDrawer {
     msgbox(format("The top drawer holds a child's diving mask, still in its box, and a shell on a bed of cotton wool.\pThe box has been opened and closed a great many times."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelCoastHouse1_PaperWageSlips {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Three wage slips pinned to the wall. MEREHOLT COASTAL, half days, full pay, with the union's stamp. The boat: a number at last, small, in the son's hand. THE FOUNDATION slip is gone.\pThere is a fourth slip, folded so only the crest shows. Nobody has unfolded it."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("Three wage slips pinned to the wall in a row. MEREHOLT COASTAL, half days. The boat: a blank, with a date the boat is grounded to. THE FOUNDATION, full week, the crest in the corner.\pThree wages, one crest, the woman says, and the crest pays for the other two."), MSGBOX_SIGN)
+    }
+    end
+}

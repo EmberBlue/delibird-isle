@@ -48,6 +48,20 @@ ParcelIsleMooreHouse_ReadShelf::
 	end
 
 
+ParcelIsleMooreHouse_PaperTimetable::
+# 35 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleMooreHouse_PaperTimetable_2
+# 38 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	msgbox ParcelIsleMooreHouse_PaperTimetable_Text_1, MSGBOX_SIGN
+ParcelIsleMooreHouse_PaperTimetable_1:
+	end
+
+ParcelIsleMooreHouse_PaperTimetable_2:
+# 36 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	msgbox ParcelIsleMooreHouse_PaperTimetable_Text_0, MSGBOX_SIGN
+	goto ParcelIsleMooreHouse_PaperTimetable_1
+
+
 ParcelIsleMooreHouse_Runa_Text_0:
 # 10 "data/maps/ParcelIsleMooreHouse/scripts.pory"
 	.string "RUNA: He came home last night and sat\n"
@@ -92,3 +106,25 @@ ParcelIsleMooreHouse_ReadShelf_Text_0:
 	.string "ones are recent. A new one has been\l"
 	.string "started this month. It is thicker\l"
 	.string "already.$"
+
+ParcelIsleMooreHouse_PaperTimetable_Text_0:
+# 36 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	.string "The ferry timetable, with a new sheet\n"
+	.string "pinned over it: a mainland sailing\l"
+	.string "restored, twice weekly, for the review's\l"
+	.string "witnesses.\p"
+	.string "He has not circled it. He has written\n"
+	.string "beside it, in the good ink: logged. RUNA\l"
+	.string "says that is as close as he comes to a\l"
+	.string "celebration.$"
+
+ParcelIsleMooreHouse_PaperTimetable_Text_1:
+# 38 "data/maps/ParcelIsleMooreHouse/scripts.pory"
+	.string "The ferry timetable, pinned by the\n"
+	.string "harbourmaster's sister where he will\l"
+	.string "see it from the door. The mainland\l"
+	.string "sailings are crossed out one by one, in\l"
+	.string "his pencil, as the year goes on.\p"
+	.string "The island sailing is not crossed out.\n"
+	.string "It is circled. He circles it every\l"
+	.string "morning before he opens the log.$"

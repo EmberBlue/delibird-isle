@@ -68,3 +68,14 @@ script ParcelWetlandsHouse2_ReadDrawer {
     msgbox(format("GUNNAR's spare clicker, in the drawer, on a ribbon. Forty-four, it still says. Nobody has pressed it since."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelWetlandsHouse2_PaperReedTally {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The reed-cutting tally, chalked inside the door. Under this year's nineteen the boy has chalked his first count, twenty-three, and his initials, and the date.\pThe old man says twenty-three is not a trend. He says it the way a man does who has waited forty years to say it about an upward number."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The reed-cutting tally, chalked inside the door for three generations: bundles per bed per year. Fifty-one in the grandfather's hand. Forty in the father's. Nineteen in the old man's, this year, in a chalk that is nearly gone.\pThe boy has drawn a heron at the bottom. The heron is bigger than the numbers."), MSGBOX_SIGN)
+    }
+    end
+}

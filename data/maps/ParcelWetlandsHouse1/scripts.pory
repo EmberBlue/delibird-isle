@@ -48,3 +48,14 @@ script ParcelWetlandsHouse1_ReadDrawer {
     msgbox(format("Children's swimming things in the drawer, damp. Nobody has told them to stop. Nobody has put the things away either."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelWetlandsHouse1_PaperCatchDiary {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The fisher's catch diary. The downstream column has writing in it again: a date, the monitor's jar, and one fish, small, let go.\pUnder it, in capitals he does not usually use: FIRST SINCE. He has not written since what. Everyone on the landing knows since what."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The fisher's catch diary, two columns since the year the pipe went in: UPSTREAM and DOWNSTREAM. Upstream, fish. Downstream, the word SHEEN more often than any number.\pHe stopped writing the downstream column two winters ago. The column is still ruled. He keeps ruling it."), MSGBOX_SIGN)
+    }
+    end
+}

@@ -27,3 +27,14 @@ script ParcelCoastHouse3_ReadDrawer {
     msgbox(format("A locked drawer. Behind the lock, by the shape of it, a ledger.\pThe clerk said she wouldn't tell you the day. The drawer knows it."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelCoastHouse3_PaperLease {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The lease for the flat, still framed. The rent went up the month after the sitting, by a figure that is not an accident.\pHe stayed. He has started keeping a copy of the day the numbers turned in the frame behind the lease, where the landlord's agent will not think to look."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The lease for the flat, framed, which tells you something. HARBOUR VIEW, FURNISHED. The landlord is a company with a quay address and a parent you have seen the kerning of.\pThe rent is low for the view. The clerk knows exactly how low, and files the catch logs accordingly."), MSGBOX_SIGN)
+    }
+    end
+}

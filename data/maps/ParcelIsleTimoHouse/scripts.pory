@@ -35,3 +35,14 @@ script ParcelIsleTimoHouse_ReadDrawer {
     msgbox(format("A drawer of a boy's treasures: a bottle cap, a gull feather, a stone from past the bridge.\pGran knows about the stone."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelIsleTimoHouse_PaperLines {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A school exercise book on the dresser. The old lines are still there. A new page: WHAT AN ALLOCATION IS, in Gran's hand, and under it Timo's: when somebody decides who gets the water.\pUnder that, in Gran's: and now you're ready for the other answer. The other answer is not written down."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A school exercise book on the dresser. The same sentence written twenty times in a child's hand: I WILL NOT GO PAST THE BRIDGE.\pThe twenty-first line, smaller, is not the sentence. It says: why. Gran has not corrected it."), MSGBOX_SIGN)
+    }
+    end
+}

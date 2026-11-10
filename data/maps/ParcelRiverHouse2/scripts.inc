@@ -74,6 +74,20 @@ ParcelRiverHouse2_ReadShelf::
 	end
 
 
+ParcelRiverHouse2_PaperMeterBook::
+# 51 "data/maps/ParcelRiverHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse2_PaperMeterBook_2
+# 54 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_PaperMeterBook_Text_1, MSGBOX_SIGN
+ParcelRiverHouse2_PaperMeterBook_1:
+	end
+
+ParcelRiverHouse2_PaperMeterBook_2:
+# 52 "data/maps/ParcelRiverHouse2/scripts.pory"
+	msgbox ParcelRiverHouse2_PaperMeterBook_Text_0, MSGBOX_SIGN
+	goto ParcelRiverHouse2_PaperMeterBook_1
+
+
 ParcelRiverHouse2_Woman_Text_0:
 # 7 "data/maps/ParcelRiverHouse2/scripts.pory"
 	.string "WOMAN: My husband reads the meters for\n"
@@ -130,3 +144,25 @@ ParcelRiverHouse2_ReadShelf_Text_0:
 	.string "Board ledgers, one per year. The current\n"
 	.string "one is at home instead of at the Board.\l"
 	.string "That is new, and it is not an accident.$"
+
+ParcelRiverHouse2_PaperMeterBook_Text_0:
+# 52 "data/maps/ParcelRiverHouse2/scripts.pory"
+	.string "Her husband's meter book, the carbon\n"
+	.string "side, open on the table now where\l"
+	.string "anyone can see it. Fourteen plots, a\l"
+	.string "reading a week, and the hearing's stamp\l"
+	.string "on the page he read aloud.\p"
+	.string "She has read it. She says the numbers\n"
+	.string "were always in the house; she just\l"
+	.string "needed somebody outside it to say they\l"
+	.string "counted.$"
+
+ParcelRiverHouse2_PaperMeterBook_Text_1:
+# 54 "data/maps/ParcelRiverHouse2/scripts.pory"
+	.string "Her husband's meter book, the carbon\n"
+	.string "side. Fourteen plots, a reading a week,\l"
+	.string "in a hand that does not change. Eleven\l"
+	.string "years of NORMAL in the Board's column\l"
+	.string "beside his numbers, which are not normal\l"
+	.string "and never were.\p"
+	.string "She has never read it. She keeps it dry.$"

@@ -48,3 +48,14 @@ script ParcelRiverHouse4_ReadDrawer {
     msgbox(format("Market scales in the drawer, and a Board water receipt under them. Fish on one side of the scale, metered water on the other."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelRiverHouse4_PaperStallLicence {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The market stall licence, renewed. The Board has crossed out FOUNDATION RATE and written BOARD RATE above it, which is the same number with a different name on it.\pShe has written beside the box that says FAIR: ask the six. She has not decided whether that is a joke."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The market stall licence, renewed each spring. Produce and fish, FOUNDATION RATE. The rate is printed; the licence fee is printed; the word FAIR is printed, in a box, as if it were a quantity.\pShe pays it. Everyone pays it. The box says fair."), MSGBOX_SIGN)
+    }
+    end
+}

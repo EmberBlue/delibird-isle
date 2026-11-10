@@ -74,6 +74,20 @@ ParcelCoastHouse4_ReadDrawer::
 	end
 
 
+ParcelCoastHouse4_PaperRota::
+# 55 "data/maps/ParcelCoastHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse4_PaperRota_2
+# 58 "data/maps/ParcelCoastHouse4/scripts.pory"
+	msgbox ParcelCoastHouse4_PaperRota_Text_1, MSGBOX_SIGN
+ParcelCoastHouse4_PaperRota_1:
+	end
+
+ParcelCoastHouse4_PaperRota_2:
+# 56 "data/maps/ParcelCoastHouse4/scripts.pory"
+	msgbox ParcelCoastHouse4_PaperRota_Text_0, MSGBOX_SIGN
+	goto ParcelCoastHouse4_PaperRota_1
+
+
 ParcelCoastHouse4_Woman_Text_0:
 # 10 "data/maps/ParcelCoastHouse4/scripts.pory"
 	.string "WOMAN: The line's on half days under the\n"
@@ -131,3 +145,24 @@ ParcelCoastHouse4_ReadDrawer_Text_0:
 	.string "A drawer of gutting gloves, every pair\n"
 	.string "mended at the same finger.\p"
 	.string "The fish are all one size. So is the work.$"
+
+ParcelCoastHouse4_PaperRota_Text_0:
+# 56 "data/maps/ParcelCoastHouse4/scripts.pory"
+	.string "The line rota, this week's. Half days,\n"
+	.string "full pay, HARLAND'S UNION in the corner\l"
+	.string "where the crest used to be.\p"
+	.string "Thursday says: nothing. The tins\n"
+	.string "stopped coming when the dredge did. The\l"
+	.string "woman says she has started sleeping\l"
+	.string "through to six, which she had forgotten\l"
+	.string "was possible.$"
+
+ParcelCoastHouse4_PaperRota_Text_1:
+# 58 "data/maps/ParcelCoastHouse4/scripts.pory"
+	.string "The line rota, this week's, on the door.\n"
+	.string "Six to two, six days. Grading, canning,\l"
+	.string "labelling. The undersize column has its\l"
+	.string "own shift now.\p"
+	.string "Someone has written the word TINS\n"
+	.string "beside Thursday and underlined it, as if\l"
+	.string "the tins were the point.$"

@@ -102,6 +102,20 @@ ParcelFloodbasinHouse1_ReadDresser::
 	end
 
 
+ParcelFloodbasinHouse1_PaperScaleChart::
+# 65 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinHouse1_PaperScaleChart_2
+# 68 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
+	msgbox ParcelFloodbasinHouse1_PaperScaleChart_Text_1, MSGBOX_SIGN
+ParcelFloodbasinHouse1_PaperScaleChart_1:
+	end
+
+ParcelFloodbasinHouse1_PaperScaleChart_2:
+# 66 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
+	msgbox ParcelFloodbasinHouse1_PaperScaleChart_Text_0, MSGBOX_SIGN
+	goto ParcelFloodbasinHouse1_PaperScaleChart_1
+
+
 ParcelFloodbasinHouse1_Hedda_Text_0:
 # 8 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
 	.string "HEDDA: Forty years I didn't ask. You\n"
@@ -191,3 +205,24 @@ ParcelFloodbasinHouse1_ReadDresser_Text_0:
 	.string "brass, polished. Forty years of selling\l"
 	.string "fish, and she never once weighed the\l"
 	.string "water.$"
+
+ParcelFloodbasinHouse1_PaperScaleChart_Text_0:
+# 66 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
+	.string "HEDDA's chart. The line has climbed back\n"
+	.string "to DULL and held there for a season,\l"
+	.string "which on this chart is a recovery.\p"
+	.string "She has added a fifth square to the\n"
+	.string "painted card, above GOOD, and left it\l"
+	.string "blank. She says she will paint it when\l"
+	.string "she sees the colour.$"
+
+ParcelFloodbasinHouse1_PaperScaleChart_Text_1:
+# 68 "data/maps/ParcelFloodbasinHouse1/scripts.pory"
+	.string "HEDDA's chart for the MAGIKARP in the\n"
+	.string "washtub. Scale colour by week, against\l"
+	.string "a strip of painted card: GOOD, DULL,\l"
+	.string "PALE, WRONG.\p"
+	.string "The line wanders between DULL and PALE\n"
+	.string "for a year and touches WRONG twice,\l"
+	.string "both times the week after a pulse down\l"
+	.string "the basin.$"

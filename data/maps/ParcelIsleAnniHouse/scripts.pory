@@ -27,3 +27,14 @@ script ParcelIsleAnniHouse_ReadShelf {
     msgbox(format("A shelf of medicines in a row, with the doctor's note weighted under the first bottle. 'Fog.'\pUnderlined, by somebody else."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelIsleAnniHouse_PaperPietsList {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A list in a child's hand, taped to the bed frame: THINGS TO COUNT WHEN I'M BETTER. Boats, ticked. Gulls on the stack, ticked, with a number. Stairs to the jetty, ticked twice.\pThe fog has a number after it now: days without. The number is seven. He wrote it very carefully."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A list in a child's hand, taped to the bed frame: THINGS TO COUNT WHEN I'M BETTER. Boats. Gulls on the stack. Stairs to the jetty. The fog.\pThe fog has a question mark after it. He has not worked out how yet."), MSGBOX_SIGN)
+    }
+    end
+}

@@ -100,6 +100,20 @@ ParcelRiverHouse1_ReadDrawer::
 	end
 
 
+ParcelRiverHouse1_PaperAllocation::
+# 65 "data/maps/ParcelRiverHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse1_PaperAllocation_2
+# 68 "data/maps/ParcelRiverHouse1/scripts.pory"
+	msgbox ParcelRiverHouse1_PaperAllocation_Text_1, MSGBOX_SIGN
+ParcelRiverHouse1_PaperAllocation_1:
+	end
+
+ParcelRiverHouse1_PaperAllocation_2:
+# 66 "data/maps/ParcelRiverHouse1/scripts.pory"
+	msgbox ParcelRiverHouse1_PaperAllocation_Text_0, MSGBOX_SIGN
+	goto ParcelRiverHouse1_PaperAllocation_1
+
+
 ParcelRiverHouse1_OldMan_Text_0:
 # 7 "data/maps/ParcelRiverHouse1/scripts.pory"
 	.string "OLD MAN: Fresh chips, pale, and the\n"
@@ -183,3 +197,24 @@ ParcelRiverHouse1_ReadDrawer_Text_0:
 	.string "A drawer of the old woman's counting:\n"
 	.string "fifty-one years, in tally marks, on the\l"
 	.string "backs of seed packets.$"
+
+ParcelRiverHouse1_PaperAllocation_Text_0:
+# 66 "data/maps/ParcelRiverHouse1/scripts.pory"
+	.string "The Board's allocation notice, the new\n"
+	.string "one. Fourteen plots, a flow for each,\l"
+	.string "the clean reach kept slack, and six\l"
+	.string "names under it in the Board's own type.\p"
+	.string "The old man has written on the margin:\n"
+	.string "fresh chips, pale, the beavers are back\l"
+	.string "on the reach. He has underlined back.$"
+
+ParcelRiverHouse1_PaperAllocation_Text_1:
+# 68 "data/maps/ParcelRiverHouse1/scripts.pory"
+	.string "The Board's allocation notice, the one\n"
+	.string "that came through every door on the\l"
+	.string "river. Fourteen plots, a flow for each, a\l"
+	.string "reach reserved to the FOUNDATION.\l"
+	.string "Signed by the Board. Nobody's name on\l"
+	.string "it.\p"
+	.string "The old man has written on the margin:\n"
+	.string "who. Three times, like the miller.$"

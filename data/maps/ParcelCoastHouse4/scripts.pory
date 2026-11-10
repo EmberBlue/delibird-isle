@@ -48,3 +48,14 @@ script ParcelCoastHouse4_ReadDrawer {
     msgbox(format("A drawer of gutting gloves, every pair mended at the same finger.\pThe fish are all one size. So is the work."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelCoastHouse4_PaperRota {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The line rota, this week's. Half days, full pay, HARLAND'S UNION in the corner where the crest used to be.\pThursday says: nothing. The tins stopped coming when the dredge did. The woman says she has started sleeping through to six, which she had forgotten was possible."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The line rota, this week's, on the door. Six to two, six days. Grading, canning, labelling. The undersize column has its own shift now.\pSomeone has written the word TINS beside Thursday and underlined it, as if the tins were the point."), MSGBOX_SIGN)
+    }
+    end
+}

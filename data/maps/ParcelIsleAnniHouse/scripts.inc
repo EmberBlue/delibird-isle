@@ -41,6 +41,20 @@ ParcelIsleAnniHouse_ReadShelf::
 	end
 
 
+ParcelIsleAnniHouse_PaperPietsList::
+# 34 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleAnniHouse_PaperPietsList_2
+# 37 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	msgbox ParcelIsleAnniHouse_PaperPietsList_Text_1, MSGBOX_SIGN
+ParcelIsleAnniHouse_PaperPietsList_1:
+	end
+
+ParcelIsleAnniHouse_PaperPietsList_2:
+# 35 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	msgbox ParcelIsleAnniHouse_PaperPietsList_Text_0, MSGBOX_SIGN
+	goto ParcelIsleAnniHouse_PaperPietsList_1
+
+
 ParcelIsleAnniHouse_Piet_Text_0:
 # 11 "data/maps/ParcelIsleAnniHouse/scripts.pory"
 	.string "PIET: Mom read the frog part out loud.\n"
@@ -79,3 +93,23 @@ ParcelIsleAnniHouse_ReadShelf_Text_0:
 	.string "doctor's note weighted under the first\l"
 	.string "bottle. 'Fog.'\p"
 	.string "Underlined, by somebody else.$"
+
+ParcelIsleAnniHouse_PaperPietsList_Text_0:
+# 35 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	.string "A list in a child's hand, taped to the\n"
+	.string "bed frame: THINGS TO COUNT WHEN I'M\l"
+	.string "BETTER. Boats, ticked. Gulls on the\l"
+	.string "stack, ticked, with a number. Stairs to\l"
+	.string "the jetty, ticked twice.\p"
+	.string "The fog has a number after it now: days\n"
+	.string "without. The number is seven. He wrote\l"
+	.string "it very carefully.$"
+
+ParcelIsleAnniHouse_PaperPietsList_Text_1:
+# 37 "data/maps/ParcelIsleAnniHouse/scripts.pory"
+	.string "A list in a child's hand, taped to the\n"
+	.string "bed frame: THINGS TO COUNT WHEN I'M\l"
+	.string "BETTER. Boats. Gulls on the stack.\l"
+	.string "Stairs to the jetty. The fog.\p"
+	.string "The fog has a question mark after it. He\n"
+	.string "has not worked out how yet.$"

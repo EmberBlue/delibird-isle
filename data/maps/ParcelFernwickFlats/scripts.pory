@@ -46,3 +46,14 @@ script ParcelFernwickFlats_ReadBunk {
     msgbox(format("Six bunks, one bathroom. Each bunk has a boot print on the wall at the same height, where a ranger lies down without taking the boots off first."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelFernwickFlats_PaperRentCard {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A rent card for the flat, stamped weekly. The two FOUNDATION stamps have been struck through and CORPS written over them, and a note: housing budget restored, Director's office.\pThe man says he never understood the stamps and understands the correction less. He has kept the card anyway. Everything in this town keeps its paper now."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A rent card for the flat, stamped weekly. The landlord is the Corps' housing office; the flats were built for provisionals and their families and the stamps are small and reliable.\pTwo weeks are stamped FOUNDATION instead of CORPS. Nobody in the flat knows what that means. Nobody has asked."), MSGBOX_SIGN)
+    }
+    end
+}

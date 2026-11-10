@@ -74,6 +74,20 @@ ParcelFloodbasinHouse2_ReadDrawer::
 	end
 
 
+ParcelFloodbasinHouse2_PaperReliefSheet::
+# 52 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinHouse2_PaperReliefSheet_2
+# 55 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	msgbox ParcelFloodbasinHouse2_PaperReliefSheet_Text_1, MSGBOX_SIGN
+ParcelFloodbasinHouse2_PaperReliefSheet_1:
+	end
+
+ParcelFloodbasinHouse2_PaperReliefSheet_2:
+# 53 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	msgbox ParcelFloodbasinHouse2_PaperReliefSheet_Text_0, MSGBOX_SIGN
+	goto ParcelFloodbasinHouse2_PaperReliefSheet_1
+
+
 ParcelFloodbasinHouse2_Wife_Text_0:
 # 8 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
 	.string "WOMAN: Third flood, and the Board man\n"
@@ -137,3 +151,25 @@ ParcelFloodbasinHouse2_ReadDrawer_Text_0:
 	.string "rubber bands.\p"
 	.string "Signing gets you the vouchers. Nobody\n"
 	.string "said you had to use them.$"
+
+ParcelFloodbasinHouse2_PaperReliefSheet_Text_0:
+# 53 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	.string "A carbon of the relief sheet, and under\n"
+	.string "it now a second carbon, of the river\l"
+	.string "people's petition, with forty-one names\l"
+	.string "she has read so often she knows them in\l"
+	.string "order.\p"
+	.string "She did not sign the petition. She has\n"
+	.string "written on the back of her copy: next\l"
+	.string "time.$"
+
+ParcelFloodbasinHouse2_PaperReliefSheet_Text_1:
+# 55 "data/maps/ParcelFloodbasinHouse2/scripts.pory"
+	.string "A carbon of the relief sheet they\n"
+	.string "signed, kept flat under the bread\l"
+	.string "board. Blankets, two. Oil, one. Vouchers,\l"
+	.string "two. CAUSE OF NEED: FLOOD. Signed,\l"
+	.string "countersigned, stamped.\p"
+	.string "The woman keeps it because she was\n"
+	.string "told to keep it. She does not know what\l"
+	.string "for. Neither did the aide.$"

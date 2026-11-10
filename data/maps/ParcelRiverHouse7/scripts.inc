@@ -74,6 +74,20 @@ ParcelRiverHouse7_ReadDrawer::
 	end
 
 
+ParcelRiverHouse7_PaperSixNames::
+# 55 "data/maps/ParcelRiverHouse7/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse7_PaperSixNames_2
+# 58 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_PaperSixNames_Text_1, MSGBOX_SIGN
+ParcelRiverHouse7_PaperSixNames_1:
+	end
+
+ParcelRiverHouse7_PaperSixNames_2:
+# 56 "data/maps/ParcelRiverHouse7/scripts.pory"
+	msgbox ParcelRiverHouse7_PaperSixNames_Text_0, MSGBOX_SIGN
+	goto ParcelRiverHouse7_PaperSixNames_1
+
+
 ParcelRiverHouse7_Woman_Text_0:
 # 10 "data/maps/ParcelRiverHouse7/scripts.pory"
 	.string "WOMAN: HARLAND spoke at the hearing\n"
@@ -128,3 +142,23 @@ ParcelRiverHouse7_ReadDrawer_Text_0:
 	.string "A drawer of weights for a net: river\n"
 	.string "stones, drilled. Lighter ones at the\l"
 	.string "front now. The slow water isn't as slow.$"
+
+ParcelRiverHouse7_PaperSixNames_Text_0:
+# 56 "data/maps/ParcelRiverHouse7/scripts.pory"
+	.string "A list pinned over the table: six names,\n"
+	.string "and under them the Board's own bulletin\l"
+	.string "with the same six names typed at the\l"
+	.string "foot of it.\p"
+	.string "She has written across the top:\n"
+	.string "HARLAND spoke for us too. He is not on\l"
+	.string "the list. He did not need to be.$"
+
+ParcelRiverHouse7_PaperSixNames_Text_1:
+# 58 "data/maps/ParcelRiverHouse7/scripts.pory"
+	.string "A list pinned over the table: six names.\n"
+	.string "The people on the river who said they\l"
+	.string "would stand up at the hall if nobody\l"
+	.string "else did. Her husband's is third.\p"
+	.string "Under the list, a date, and the word\n"
+	.string "TONIGHT. The meeting was months ago.\l"
+	.string "Nobody has taken the list down.$"

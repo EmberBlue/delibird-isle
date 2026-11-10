@@ -58,3 +58,14 @@ script ParcelRiverHouse1_ReadDrawer {
     msgbox(format("A drawer of the old woman's counting: fifty-one years, in tally marks, on the backs of seed packets."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelRiverHouse1_PaperAllocation {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The Board's allocation notice, the new one. Fourteen plots, a flow for each, the clean reach kept slack, and six names under it in the Board's own type.\pThe old man has written on the margin: fresh chips, pale, the beavers are back on the reach. He has underlined back."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The Board's allocation notice, the one that came through every door on the river. Fourteen plots, a flow for each, a reach reserved to the FOUNDATION. Signed by the Board. Nobody's name on it.\pThe old man has written on the margin: who. Three times, like the miller."), MSGBOX_SIGN)
+    }
+    end
+}

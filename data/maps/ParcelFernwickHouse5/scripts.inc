@@ -107,6 +107,20 @@ ParcelFernwickHouse5_ReadDrawer::
 	end
 
 
+ParcelFernwickHouse5_PaperPondLedger::
+# 73 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse5_PaperPondLedger_2
+# 76 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	msgbox ParcelFernwickHouse5_PaperPondLedger_Text_1, MSGBOX_SIGN
+ParcelFernwickHouse5_PaperPondLedger_1:
+	end
+
+ParcelFernwickHouse5_PaperPondLedger_2:
+# 74 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	msgbox ParcelFernwickHouse5_PaperPondLedger_Text_0, MSGBOX_SIGN
+	goto ParcelFernwickHouse5_PaperPondLedger_1
+
+
 ParcelFernwickHouse5_OldMan_Text_0:
 # 10 "data/maps/ParcelFernwickHouse5/scripts.pory"
 	.string "OLD MAN: Twenty-eight pairs. It's back\n"
@@ -190,3 +204,24 @@ ParcelFernwickHouse5_ReadDrawer_Text_0:
 	.string "You don't open them. You know what a\n"
 	.string "page full of a place that isn't there\l"
 	.string "feels like under your hand.$"
+
+ParcelFernwickHouse5_PaperPondLedger_Text_0:
+# 74 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	.string "The old man's own pond book. The spring\n"
+	.string "after the sitting: twenty-eight pairs,\l"
+	.string "fourteen paces, and a third column he\l"
+	.string "has never kept before: WHO READ IT.\p"
+	.string "One name, yours, in capitals. He says a\n"
+	.string "count somebody else has read is a\l"
+	.string "different kind of number.$"
+
+ParcelFernwickHouse5_PaperPondLedger_Text_1:
+# 76 "data/maps/ParcelFernwickHouse5/scripts.pory"
+	.string "The old man's own pond book, kept since\n"
+	.string "before the Survey's. One line a spring:\l"
+	.string "WINGULL, pairs. Twenty-eight.\l"
+	.string "Twenty-eight. Twenty-eight.\p"
+	.string "Beside the last few: the water, in paces\n"
+	.string "from the stone. Twelve. Fourteen.\l"
+	.string "Fourteen. He writes the paces smaller,\l"
+	.string "as if ashamed of them.$"

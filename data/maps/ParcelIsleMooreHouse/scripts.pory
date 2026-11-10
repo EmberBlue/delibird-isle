@@ -28,3 +28,14 @@ script ParcelIsleMooreHouse_ReadShelf {
     msgbox(format("Harbour logs, bound by year. The thin ones are recent. A new one has been started this month. It is thicker already."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelIsleMooreHouse_PaperTimetable {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The ferry timetable, with a new sheet pinned over it: a mainland sailing restored, twice weekly, for the review's witnesses.\pHe has not circled it. He has written beside it, in the good ink: logged. RUNA says that is as close as he comes to a celebration."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The ferry timetable, pinned by the harbourmaster's sister where he will see it from the door. The mainland sailings are crossed out one by one, in his pencil, as the year goes on.\pThe island sailing is not crossed out. It is circled. He circles it every morning before he opens the log."), MSGBOX_SIGN)
+    }
+    end
+}

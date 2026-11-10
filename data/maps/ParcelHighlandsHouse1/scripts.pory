@@ -66,3 +66,14 @@ script ParcelHighlandsHouse1_ReadDrawer {
     msgbox(format("A drawer of mittens, in pairs, by size. The smallest pairs have never been worn. There was no snow to wear them in."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelHighlandsHouse1_PaperGrantLetter {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The relocation grant letter, and across its face in the Council's stamp: VOID PENDING SURVEY. The survey is yours.\pThe man has pinned it where the girl can reach it. She has drawn a house on the back, standing, legs braced."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The relocation grant letter, in its envelope, on the shelf where the girl cannot reach it. MEREHOLT FOUNDATION: RESETTLEMENT ASSISTANCE, HAUKFELL SLOPE. A sum. A deadline. A box to sign.\pThe box is empty. The envelope has been opened and closed so many times the flap has gone soft."), MSGBOX_SIGN)
+    }
+    end
+}

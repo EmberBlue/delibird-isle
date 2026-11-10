@@ -68,6 +68,20 @@ ParcelFernwickHouse2_ReadDresser::
 	end
 
 
+ParcelFernwickHouse2_PaperLetter::
+# 51 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse2_PaperLetter_2
+# 54 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	msgbox ParcelFernwickHouse2_PaperLetter_Text_1, MSGBOX_SIGN
+ParcelFernwickHouse2_PaperLetter_1:
+	end
+
+ParcelFernwickHouse2_PaperLetter_2:
+# 52 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	msgbox ParcelFernwickHouse2_PaperLetter_Text_0, MSGBOX_SIGN
+	goto ParcelFernwickHouse2_PaperLetter_1
+
+
 ParcelFernwickHouse2_Woman_Text_0:
 # 8 "data/maps/ParcelFernwickHouse2/scripts.pory"
 	.string "WOMAN: HALE was born in this house and\n"
@@ -118,3 +132,23 @@ ParcelFernwickHouse2_ReadDresser_Text_0:
 	.string "him, scowling at whoever held the\l"
 	.string "camera.\p"
 	.string "The scowl hasn't changed.$"
+
+ParcelFernwickHouse2_PaperLetter_Text_0:
+# 52 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	.string "A letter on the dresser from a cousin on\n"
+	.string "the Coast. The desk is restructured,\l"
+	.string "the quay is quiet, I am coming up for a\l"
+	.string "while, is the room free.\p"
+	.string "The reply is finished this time. It is\n"
+	.string "one line: Yes. Bring your boots; the\l"
+	.string "pond is lower this year.$"
+
+ParcelFernwickHouse2_PaperLetter_Text_1:
+# 54 "data/maps/ParcelFernwickHouse2/scripts.pory"
+	.string "A letter on the dresser from a cousin on\n"
+	.string "the Coast, in a round hand. The quay is\l"
+	.string "busy, the money is good, the Foundation\l"
+	.string "desk is hiring, come down.\p"
+	.string "The reply is half written beside it. It\n"
+	.string "gets as far as: The pond is lower this\l"
+	.string "year, and stops.$"

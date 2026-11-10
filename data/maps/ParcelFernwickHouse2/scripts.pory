@@ -44,3 +44,14 @@ script ParcelFernwickHouse2_ReadDresser {
     msgbox(format("A photograph on the dresser: a boy on the quay with a notebook too big for him, scowling at whoever held the camera.\pThe scowl hasn't changed."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelFernwickHouse2_PaperLetter {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A letter on the dresser from a cousin on the Coast. The desk is restructured, the quay is quiet, I am coming up for a while, is the room free.\pThe reply is finished this time. It is one line: Yes. Bring your boots; the pond is lower this year."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A letter on the dresser from a cousin on the Coast, in a round hand. The quay is busy, the money is good, the Foundation desk is hiring, come down.\pThe reply is half written beside it. It gets as far as: The pond is lower this year, and stops."), MSGBOX_SIGN)
+    }
+    end
+}

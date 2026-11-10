@@ -82,6 +82,20 @@ ParcelIsleOldCoupleHouse_ReadShelf::
 	end
 
 
+ParcelIsleOldCoupleHouse_PaperEnvelopes::
+# 52 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleOldCoupleHouse_PaperEnvelopes_2
+# 55 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_PaperEnvelopes_Text_1, MSGBOX_SIGN
+ParcelIsleOldCoupleHouse_PaperEnvelopes_1:
+	end
+
+ParcelIsleOldCoupleHouse_PaperEnvelopes_2:
+# 53 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	msgbox ParcelIsleOldCoupleHouse_PaperEnvelopes_Text_0, MSGBOX_SIGN
+	goto ParcelIsleOldCoupleHouse_PaperEnvelopes_1
+
+
 ParcelIsleOldCoupleHouse_Aud_Text_0:
 # 11 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
 	.string "AUD: She sat right where you're\n"
@@ -163,3 +177,26 @@ ParcelIsleOldCoupleHouse_ReadShelf_Text_0:
 	.string "Sten's tide notes, in a hand that does\n"
 	.string "not waste ink. The last page says:\l"
 	.string "currents wrong. AUD says not. Wrong.$"
+
+ParcelIsleOldCoupleHouse_PaperEnvelopes_Text_0:
+# 53 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	.string "A bundle of envelopes tied with string,\n"
+	.string "and one more now, loose, on top. It is\l"
+	.string "addressed to the ranger, care of this\l"
+	.string "house, in a hand AUD does not know.\p"
+	.string "She has not opened it. She says letters\n"
+	.string "to this house have been opened by the\l"
+	.string "wrong person before and she will not be\l"
+	.string "the one to start again.$"
+
+ParcelIsleOldCoupleHouse_PaperEnvelopes_Text_1:
+# 55 "data/maps/ParcelIsleOldCoupleHouse/scripts.pory"
+	.string "A bundle of envelopes tied with string,\n"
+	.string "all addressed in the same careful hand\l"
+	.string "to this house. AUD kept them after the\l"
+	.string "letters themselves went back to the\l"
+	.string "reader they were meant for.\p"
+	.string "The postmarks are a line up the region\n"
+	.string "and back: the mainland, the Coast, here.\l"
+	.string "The last is three weeks before the lab\l"
+	.string "was cleared.$"

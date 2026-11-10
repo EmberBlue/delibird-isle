@@ -45,3 +45,14 @@ script ParcelFloodbasinHouse2_ReadDrawer {
     msgbox(format("A drawer of relief vouchers, unspent, in rubber bands.\pSigning gets you the vouchers. Nobody said you had to use them."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelFloodbasinHouse2_PaperReliefSheet {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A carbon of the relief sheet, and under it now a second carbon, of the river people's petition, with forty-one names she has read so often she knows them in order.\pShe did not sign the petition. She has written on the back of her copy: next time."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A carbon of the relief sheet they signed, kept flat under the bread board. Blankets, two. Oil, one. Vouchers, two. CAUSE OF NEED: FLOOD. Signed, countersigned, stamped.\pThe woman keeps it because she was told to keep it. She does not know what for. Neither did the aide."), MSGBOX_SIGN)
+    }
+    end
+}

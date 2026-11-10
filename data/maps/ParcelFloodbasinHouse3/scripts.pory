@@ -48,3 +48,14 @@ script ParcelFloodbasinHouse3_ReadDrawer {
     msgbox(format("The top drawer sticks. It has stuck since the second flood. Everything in this house has a before and an after."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelFloodbasinHouse3_PaperInsurance {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The insurer's letter, and clipped to it a new one: the policy will cover flood from the next renewal, at a premium the letter does not give.\pThe old woman has written on the card under the water lines: they found a word for it once somebody else did."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A letter from the insurer, read to softness. The policy covers storm, fire, theft and subsidence. It does not cover FLOOD, which is defined on the back as any water that rises, as opposed to water that falls.\pThe old woman has written the definition out on a card and stuck it to the door frame under the water lines."), MSGBOX_SIGN)
+    }
+    end
+}

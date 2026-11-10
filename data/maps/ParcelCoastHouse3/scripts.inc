@@ -44,6 +44,20 @@ ParcelCoastHouse3_ReadDrawer::
 	end
 
 
+ParcelCoastHouse3_PaperLease::
+# 34 "data/maps/ParcelCoastHouse3/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse3_PaperLease_2
+# 37 "data/maps/ParcelCoastHouse3/scripts.pory"
+	msgbox ParcelCoastHouse3_PaperLease_Text_1, MSGBOX_SIGN
+ParcelCoastHouse3_PaperLease_1:
+	end
+
+ParcelCoastHouse3_PaperLease_2:
+# 35 "data/maps/ParcelCoastHouse3/scripts.pory"
+	msgbox ParcelCoastHouse3_PaperLease_Text_0, MSGBOX_SIGN
+	goto ParcelCoastHouse3_PaperLease_1
+
+
 ParcelCoastHouse3_Clerk_Text_0:
 # 7 "data/maps/ParcelCoastHouse3/scripts.pory"
 	.string "CLERK: The exact day the numbers\n"
@@ -83,3 +97,25 @@ ParcelCoastHouse3_ReadDrawer_Text_0:
 	.string "shape of it, a ledger.\p"
 	.string "The clerk said she wouldn't tell you the\n"
 	.string "day. The drawer knows it.$"
+
+ParcelCoastHouse3_PaperLease_Text_0:
+# 35 "data/maps/ParcelCoastHouse3/scripts.pory"
+	.string "The lease for the flat, still framed. The\n"
+	.string "rent went up the month after the\l"
+	.string "sitting, by a figure that is not an\l"
+	.string "accident.\p"
+	.string "He stayed. He has started keeping a\n"
+	.string "copy of the day the numbers turned in\l"
+	.string "the frame behind the lease, where the\l"
+	.string "landlord's agent will not think to look.$"
+
+ParcelCoastHouse3_PaperLease_Text_1:
+# 37 "data/maps/ParcelCoastHouse3/scripts.pory"
+	.string "The lease for the flat, framed, which\n"
+	.string "tells you something. HARBOUR VIEW,\l"
+	.string "FURNISHED. The landlord is a company\l"
+	.string "with a quay address and a parent you\l"
+	.string "have seen the kerning of.\p"
+	.string "The rent is low for the view. The clerk\n"
+	.string "knows exactly how low, and files the\l"
+	.string "catch logs accordingly.$"

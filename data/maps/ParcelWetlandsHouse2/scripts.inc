@@ -117,6 +117,20 @@ ParcelWetlandsHouse2_ReadDrawer::
 	end
 
 
+ParcelWetlandsHouse2_PaperReedTally::
+# 75 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHouse2_PaperReedTally_2
+# 78 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_PaperReedTally_Text_1, MSGBOX_SIGN
+ParcelWetlandsHouse2_PaperReedTally_1:
+	end
+
+ParcelWetlandsHouse2_PaperReedTally_2:
+# 76 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	msgbox ParcelWetlandsHouse2_PaperReedTally_Text_0, MSGBOX_SIGN
+	goto ParcelWetlandsHouse2_PaperReedTally_1
+
+
 ParcelWetlandsHouse2_OldMan_Text_0:
 # 11 "data/maps/ParcelWetlandsHouse2/scripts.pory"
 	.string "OLD MAN: Nineteen. There were forty in\n"
@@ -212,3 +226,27 @@ ParcelWetlandsHouse2_ReadDrawer_Text_0:
 	.string "GUNNAR's spare clicker, in the drawer,\n"
 	.string "on a ribbon. Forty-four, it still says.\l"
 	.string "Nobody has pressed it since.$"
+
+ParcelWetlandsHouse2_PaperReedTally_Text_0:
+# 76 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	.string "The reed-cutting tally, chalked inside\n"
+	.string "the door. Under this year's nineteen\l"
+	.string "the boy has chalked his first count,\l"
+	.string "twenty-three, and his initials, and the\l"
+	.string "date.\p"
+	.string "The old man says twenty-three is not a\n"
+	.string "trend. He says it the way a man does who\l"
+	.string "has waited forty years to say it about\l"
+	.string "an upward number.$"
+
+ParcelWetlandsHouse2_PaperReedTally_Text_1:
+# 78 "data/maps/ParcelWetlandsHouse2/scripts.pory"
+	.string "The reed-cutting tally, chalked inside\n"
+	.string "the door for three generations:\l"
+	.string "bundles per bed per year. Fifty-one in\l"
+	.string "the grandfather's hand. Forty in the\l"
+	.string "father's. Nineteen in the old man's, this\l"
+	.string "year, in a chalk that is nearly gone.\p"
+	.string "The boy has drawn a heron at the\n"
+	.string "bottom. The heron is bigger than the\l"
+	.string "numbers.$"

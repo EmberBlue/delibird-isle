@@ -44,3 +44,14 @@ script ParcelRiverHouse2_ReadShelf {
     msgbox(format("Board ledgers, one per year. The current one is at home instead of at the Board. That is new, and it is not an accident."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelRiverHouse2_PaperMeterBook {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Her husband's meter book, the carbon side, open on the table now where anyone can see it. Fourteen plots, a reading a week, and the hearing's stamp on the page he read aloud.\pShe has read it. She says the numbers were always in the house; she just needed somebody outside it to say they counted."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("Her husband's meter book, the carbon side. Fourteen plots, a reading a week, in a hand that does not change. Eleven years of NORMAL in the Board's column beside his numbers, which are not normal and never were.\pShe has never read it. She keeps it dry."), MSGBOX_SIGN)
+    }
+    end
+}

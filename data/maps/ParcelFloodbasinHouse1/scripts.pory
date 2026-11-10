@@ -58,3 +58,14 @@ script ParcelFloodbasinHouse1_ReadDresser {
     msgbox(format("A fishwife's scales on the dresser, brass, polished. Forty years of selling fish, and she never once weighed the water."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelFloodbasinHouse1_PaperScaleChart {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("HEDDA's chart. The line has climbed back to DULL and held there for a season, which on this chart is a recovery.\pShe has added a fifth square to the painted card, above GOOD, and left it blank. She says she will paint it when she sees the colour."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("HEDDA's chart for the MAGIKARP in the washtub. Scale colour by week, against a strip of painted card: GOOD, DULL, PALE, WRONG.\pThe line wanders between DULL and PALE for a year and touches WRONG twice, both times the week after a pulse down the basin."), MSGBOX_SIGN)
+    }
+    end
+}

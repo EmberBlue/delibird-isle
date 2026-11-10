@@ -48,3 +48,14 @@ script ParcelRiverHouse6_ReadShelf {
     msgbox(format("A child's arithmetic book, open at a page about budgets. In the margin, in a child's hand: RIVERS DON'T HAVE MONEY."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelRiverHouse6_PaperRoundSheet {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The gauge round sheet. The Board's column says MELTWATER now, in type, with a reference to the Station's book. His column says: told you, in pencil, once, and then stops saying it.\pSLUICE had him re-read every gauge after the sitting. Same numbers. She wanted the numbers to be able to say so."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The gauge round sheet, fourteen gauges up the spine, one column a week. In the Board's column: SEASONAL. In his: the same numbers, and beside them, in pencil, what he thinks they are.\pMELTWATER, HAUKFELL. He has written it eleven times. The Board has never once written it back."), MSGBOX_SIGN)
+    }
+    end
+}

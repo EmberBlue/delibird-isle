@@ -74,6 +74,20 @@ ParcelFloodbasinHouse3_ReadDrawer::
 	end
 
 
+ParcelFloodbasinHouse3_PaperInsurance::
+# 55 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFloodbasinHouse3_PaperInsurance_2
+# 58 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	msgbox ParcelFloodbasinHouse3_PaperInsurance_Text_1, MSGBOX_SIGN
+ParcelFloodbasinHouse3_PaperInsurance_1:
+	end
+
+ParcelFloodbasinHouse3_PaperInsurance_2:
+# 56 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	msgbox ParcelFloodbasinHouse3_PaperInsurance_Text_0, MSGBOX_SIGN
+	goto ParcelFloodbasinHouse3_PaperInsurance_1
+
+
 ParcelFloodbasinHouse3_OldWoman_Text_0:
 # 10 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
 	.string "OLD WOMAN: Phase 2 goes ahead. Dry\n"
@@ -134,3 +148,25 @@ ParcelFloodbasinHouse3_ReadDrawer_Text_0:
 	.string "The top drawer sticks. It has stuck\n"
 	.string "since the second flood. Everything in\l"
 	.string "this house has a before and an after.$"
+
+ParcelFloodbasinHouse3_PaperInsurance_Text_0:
+# 56 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	.string "The insurer's letter, and clipped to it a\n"
+	.string "new one: the policy will cover flood\l"
+	.string "from the next renewal, at a premium the\l"
+	.string "letter does not give.\p"
+	.string "The old woman has written on the card\n"
+	.string "under the water lines: they found a\l"
+	.string "word for it once somebody else did.$"
+
+ParcelFloodbasinHouse3_PaperInsurance_Text_1:
+# 58 "data/maps/ParcelFloodbasinHouse3/scripts.pory"
+	.string "A letter from the insurer, read to\n"
+	.string "softness. The policy covers storm, fire,\l"
+	.string "theft and subsidence. It does not\l"
+	.string "cover FLOOD, which is defined on the\l"
+	.string "back as any water that rises, as\l"
+	.string "opposed to water that falls.\p"
+	.string "The old woman has written the\n"
+	.string "definition out on a card and stuck it to\l"
+	.string "the door frame under the water lines.$"

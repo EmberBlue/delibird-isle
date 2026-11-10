@@ -48,3 +48,14 @@ script ParcelRiverHouse7_ReadDrawer {
     msgbox(format("A drawer of weights for a net: river stones, drilled. Lighter ones at the front now. The slow water isn't as slow."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelRiverHouse7_PaperSixNames {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A list pinned over the table: six names, and under them the Board's own bulletin with the same six names typed at the foot of it.\pShe has written across the top: HARLAND spoke for us too. He is not on the list. He did not need to be."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A list pinned over the table: six names. The people on the river who said they would stand up at the hall if nobody else did. Her husband's is third.\pUnder the list, a date, and the word TONIGHT. The meeting was months ago. Nobody has taken the list down."), MSGBOX_SIGN)
+    }
+    end
+}

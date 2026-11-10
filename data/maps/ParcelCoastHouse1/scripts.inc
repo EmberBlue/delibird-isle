@@ -87,6 +87,20 @@ ParcelCoastHouse1_ReadDrawer::
 	end
 
 
+ParcelCoastHouse1_PaperWageSlips::
+# 58 "data/maps/ParcelCoastHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoastHouse1_PaperWageSlips_2
+# 61 "data/maps/ParcelCoastHouse1/scripts.pory"
+	msgbox ParcelCoastHouse1_PaperWageSlips_Text_1, MSGBOX_SIGN
+ParcelCoastHouse1_PaperWageSlips_1:
+	end
+
+ParcelCoastHouse1_PaperWageSlips_2:
+# 59 "data/maps/ParcelCoastHouse1/scripts.pory"
+	msgbox ParcelCoastHouse1_PaperWageSlips_Text_0, MSGBOX_SIGN
+	goto ParcelCoastHouse1_PaperWageSlips_1
+
+
 ParcelCoastHouse1_Woman_Text_0:
 # 7 "data/maps/ParcelCoastHouse1/scripts.pory"
 	.string "WOMAN: Husband on half days, son's boat\n"
@@ -160,3 +174,24 @@ ParcelCoastHouse1_ReadDrawer_Text_0:
 	.string "bed of cotton wool.\p"
 	.string "The box has been opened and closed a\n"
 	.string "great many times.$"
+
+ParcelCoastHouse1_PaperWageSlips_Text_0:
+# 59 "data/maps/ParcelCoastHouse1/scripts.pory"
+	.string "Three wage slips pinned to the wall.\n"
+	.string "MEREHOLT COASTAL, half days, full pay,\l"
+	.string "with the union's stamp. The boat: a\l"
+	.string "number at last, small, in the son's hand.\l"
+	.string "THE FOUNDATION slip is gone.\p"
+	.string "There is a fourth slip, folded so only\n"
+	.string "the crest shows. Nobody has unfolded\l"
+	.string "it.$"
+
+ParcelCoastHouse1_PaperWageSlips_Text_1:
+# 61 "data/maps/ParcelCoastHouse1/scripts.pory"
+	.string "Three wage slips pinned to the wall in a\n"
+	.string "row. MEREHOLT COASTAL, half days. The\l"
+	.string "boat: a blank, with a date the boat is\l"
+	.string "grounded to. THE FOUNDATION, full week,\l"
+	.string "the crest in the corner.\p"
+	.string "Three wages, one crest, the woman says,\n"
+	.string "and the crest pays for the other two.$"

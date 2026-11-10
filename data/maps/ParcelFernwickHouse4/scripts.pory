@@ -48,3 +48,14 @@ script ParcelFernwickHouse4_ReadDrawer {
     msgbox(format("A boy's boots drying on newspaper. The newspaper is a river report. The boots are wet on purpose."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelFernwickHouse4_PaperRequisition {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A requisition form, carbon copy, pinned by the door. ONE (1) FILING CABINET, FOUR-DRAWER. APPROVED, in a different ink, dated the week after the sitting.\pUnder APPROVED, in her own hand: eleven hundred pages. One cabinet. They still don't know what they've got."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A requisition form, carbon copy, pinned by the door so it can be waved at people. ONE (1) FILING CABINET, FOUR-DRAWER, for the river report. DENIED: PENDING BUDGET REVIEW. Initialled at the Coast.\pShe has filed the denial in the drawer it was meant to relieve."), MSGBOX_SIGN)
+    }
+    end
+}

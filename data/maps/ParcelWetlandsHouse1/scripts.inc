@@ -74,6 +74,20 @@ ParcelWetlandsHouse1_ReadDrawer::
 	end
 
 
+ParcelWetlandsHouse1_PaperCatchDiary::
+# 55 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelWetlandsHouse1_PaperCatchDiary_2
+# 58 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	msgbox ParcelWetlandsHouse1_PaperCatchDiary_Text_1, MSGBOX_SIGN
+ParcelWetlandsHouse1_PaperCatchDiary_1:
+	end
+
+ParcelWetlandsHouse1_PaperCatchDiary_2:
+# 56 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	msgbox ParcelWetlandsHouse1_PaperCatchDiary_Text_0, MSGBOX_SIGN
+	goto ParcelWetlandsHouse1_PaperCatchDiary_1
+
+
 ParcelWetlandsHouse1_Fisher_Text_0:
 # 10 "data/maps/ParcelWetlandsHouse1/scripts.pory"
 	.string "FISHER: The works' permit has a new\n"
@@ -130,3 +144,25 @@ ParcelWetlandsHouse1_ReadDrawer_Text_0:
 	.string "drawer, damp. Nobody has told them to\l"
 	.string "stop. Nobody has put the things away\l"
 	.string "either.$"
+
+ParcelWetlandsHouse1_PaperCatchDiary_Text_0:
+# 56 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	.string "The fisher's catch diary. The\n"
+	.string "downstream column has writing in it\l"
+	.string "again: a date, the monitor's jar, and one\l"
+	.string "fish, small, let go.\p"
+	.string "Under it, in capitals he does not\n"
+	.string "usually use: FIRST SINCE. He has not\l"
+	.string "written since what. Everyone on the\l"
+	.string "landing knows since what.$"
+
+ParcelWetlandsHouse1_PaperCatchDiary_Text_1:
+# 58 "data/maps/ParcelWetlandsHouse1/scripts.pory"
+	.string "The fisher's catch diary, two columns\n"
+	.string "since the year the pipe went in:\l"
+	.string "UPSTREAM and DOWNSTREAM. Upstream,\l"
+	.string "fish. Downstream, the word SHEEN more\l"
+	.string "often than any number.\p"
+	.string "He stopped writing the downstream\n"
+	.string "column two winters ago. The column is\l"
+	.string "still ruled. He keeps ruling it.$"

@@ -66,3 +66,14 @@ script ParcelFernwickHouse5_ReadDrawer {
     msgbox(format("The chest. Old notebooks in the top drawer, each one a river.\pYou don't open them. You know what a page full of a place that isn't there feels like under your hand."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelFernwickHouse5_PaperPondLedger {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("The old man's own pond book. The spring after the sitting: twenty-eight pairs, fourteen paces, and a third column he has never kept before: WHO READ IT.\pOne name, yours, in capitals. He says a count somebody else has read is a different kind of number."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("The old man's own pond book, kept since before the Survey's. One line a spring: WINGULL, pairs. Twenty-eight. Twenty-eight. Twenty-eight.\pBeside the last few: the water, in paces from the stone. Twelve. Fourteen. Fourteen. He writes the paces smaller, as if ashamed of them."), MSGBOX_SIGN)
+    }
+    end
+}

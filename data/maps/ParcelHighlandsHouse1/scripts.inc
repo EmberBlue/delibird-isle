@@ -107,6 +107,20 @@ ParcelHighlandsHouse1_ReadDrawer::
 	end
 
 
+ParcelHighlandsHouse1_PaperGrantLetter::
+# 73 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelHighlandsHouse1_PaperGrantLetter_2
+# 76 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	msgbox ParcelHighlandsHouse1_PaperGrantLetter_Text_1, MSGBOX_SIGN
+ParcelHighlandsHouse1_PaperGrantLetter_1:
+	end
+
+ParcelHighlandsHouse1_PaperGrantLetter_2:
+# 74 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	msgbox ParcelHighlandsHouse1_PaperGrantLetter_Text_0, MSGBOX_SIGN
+	goto ParcelHighlandsHouse1_PaperGrantLetter_1
+
+
 ParcelHighlandsHouse1_Man_Text_0:
 # 10 "data/maps/ParcelHighlandsHouse1/scripts.pory"
 	.string "MAN: Standing. You said standing. She'll\n"
@@ -184,3 +198,23 @@ ParcelHighlandsHouse1_ReadDrawer_Text_0:
 	.string "A drawer of mittens, in pairs, by size.\n"
 	.string "The smallest pairs have never been\l"
 	.string "worn. There was no snow to wear them in.$"
+
+ParcelHighlandsHouse1_PaperGrantLetter_Text_0:
+# 74 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	.string "The relocation grant letter, and across\n"
+	.string "its face in the Council's stamp: VOID\l"
+	.string "PENDING SURVEY. The survey is yours.\p"
+	.string "The man has pinned it where the girl can\n"
+	.string "reach it. She has drawn a house on the\l"
+	.string "back, standing, legs braced.$"
+
+ParcelHighlandsHouse1_PaperGrantLetter_Text_1:
+# 76 "data/maps/ParcelHighlandsHouse1/scripts.pory"
+	.string "The relocation grant letter, in its\n"
+	.string "envelope, on the shelf where the girl\l"
+	.string "cannot reach it. MEREHOLT FOUNDATION:\l"
+	.string "RESETTLEMENT ASSISTANCE, HAUKFELL\l"
+	.string "SLOPE. A sum. A deadline. A box to sign.\p"
+	.string "The box is empty. The envelope has been\n"
+	.string "opened and closed so many times the\l"
+	.string "flap has gone soft.$"

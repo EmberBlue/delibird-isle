@@ -45,3 +45,14 @@ script ParcelIsleOldCoupleHouse_ReadShelf {
     msgbox(format("Sten's tide notes, in a hand that does not waste ink. The last page says: currents wrong. AUD says not. Wrong."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelIsleOldCoupleHouse_PaperEnvelopes {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A bundle of envelopes tied with string, and one more now, loose, on top. It is addressed to the ranger, care of this house, in a hand AUD does not know.\pShe has not opened it. She says letters to this house have been opened by the wrong person before and she will not be the one to start again."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A bundle of envelopes tied with string, all addressed in the same careful hand to this house. AUD kept them after the letters themselves went back to the reader they were meant for.\pThe postmarks are a line up the region and back: the mainland, the Coast, here. The last is three weeks before the lab was cleared."), MSGBOX_SIGN)
+    }
+    end
+}

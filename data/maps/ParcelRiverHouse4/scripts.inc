@@ -74,6 +74,20 @@ ParcelRiverHouse4_ReadDrawer::
 	end
 
 
+ParcelRiverHouse4_PaperStallLicence::
+# 55 "data/maps/ParcelRiverHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelRiverHouse4_PaperStallLicence_2
+# 58 "data/maps/ParcelRiverHouse4/scripts.pory"
+	msgbox ParcelRiverHouse4_PaperStallLicence_Text_1, MSGBOX_SIGN
+ParcelRiverHouse4_PaperStallLicence_1:
+	end
+
+ParcelRiverHouse4_PaperStallLicence_2:
+# 56 "data/maps/ParcelRiverHouse4/scripts.pory"
+	msgbox ParcelRiverHouse4_PaperStallLicence_Text_0, MSGBOX_SIGN
+	goto ParcelRiverHouse4_PaperStallLicence_1
+
+
 ParcelRiverHouse4_Woman_Text_0:
 # 10 "data/maps/ParcelRiverHouse4/scripts.pory"
 	.string "WOMAN: The Board posted the\n"
@@ -129,3 +143,24 @@ ParcelRiverHouse4_ReadDrawer_Text_0:
 	.string "water receipt under them. Fish on one\l"
 	.string "side of the scale, metered water on the\l"
 	.string "other.$"
+
+ParcelRiverHouse4_PaperStallLicence_Text_0:
+# 56 "data/maps/ParcelRiverHouse4/scripts.pory"
+	.string "The market stall licence, renewed. The\n"
+	.string "Board has crossed out FOUNDATION RATE\l"
+	.string "and written BOARD RATE above it, which\l"
+	.string "is the same number with a different\l"
+	.string "name on it.\p"
+	.string "She has written beside the box that\n"
+	.string "says FAIR: ask the six. She has not\l"
+	.string "decided whether that is a joke.$"
+
+ParcelRiverHouse4_PaperStallLicence_Text_1:
+# 58 "data/maps/ParcelRiverHouse4/scripts.pory"
+	.string "The market stall licence, renewed each\n"
+	.string "spring. Produce and fish, FOUNDATION\l"
+	.string "RATE. The rate is printed; the licence\l"
+	.string "fee is printed; the word FAIR is printed,\l"
+	.string "in a box, as if it were a quantity.\p"
+	.string "She pays it. Everyone pays it. The box\n"
+	.string "says fair.$"

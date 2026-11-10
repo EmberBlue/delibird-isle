@@ -74,6 +74,20 @@ ParcelFernwickHouse4_ReadDrawer::
 	end
 
 
+ParcelFernwickHouse4_PaperRequisition::
+# 55 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelFernwickHouse4_PaperRequisition_2
+# 58 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_PaperRequisition_Text_1, MSGBOX_SIGN
+ParcelFernwickHouse4_PaperRequisition_1:
+	end
+
+ParcelFernwickHouse4_PaperRequisition_2:
+# 56 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	msgbox ParcelFernwickHouse4_PaperRequisition_Text_0, MSGBOX_SIGN
+	goto ParcelFernwickHouse4_PaperRequisition_1
+
+
 ParcelFernwickHouse4_Woman_Text_0:
 # 10 "data/maps/ParcelFernwickHouse4/scripts.pory"
 	.string "WOMAN: The hearing asked for every\n"
@@ -126,3 +140,24 @@ ParcelFernwickHouse4_ReadDrawer_Text_0:
 	.string "A boy's boots drying on newspaper. The\n"
 	.string "newspaper is a river report. The boots\l"
 	.string "are wet on purpose.$"
+
+ParcelFernwickHouse4_PaperRequisition_Text_0:
+# 56 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "A requisition form, carbon copy, pinned\n"
+	.string "by the door. ONE (1) FILING CABINET,\l"
+	.string "FOUR-DRAWER. APPROVED, in a different\l"
+	.string "ink, dated the week after the sitting.\p"
+	.string "Under APPROVED, in her own hand: eleven\n"
+	.string "hundred pages. One cabinet. They still\l"
+	.string "don't know what they've got.$"
+
+ParcelFernwickHouse4_PaperRequisition_Text_1:
+# 58 "data/maps/ParcelFernwickHouse4/scripts.pory"
+	.string "A requisition form, carbon copy, pinned\n"
+	.string "by the door so it can be waved at\l"
+	.string "people. ONE (1) FILING CABINET,\l"
+	.string "FOUR-DRAWER, for the river report.\l"
+	.string "DENIED: PENDING BUDGET REVIEW.\l"
+	.string "Initialled at the Coast.\p"
+	.string "She has filed the denial in the drawer it\n"
+	.string "was meant to relieve.$"

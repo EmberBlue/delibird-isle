@@ -48,6 +48,20 @@ ParcelIsleTimoHouse_ReadDrawer::
 	end
 
 
+ParcelIsleTimoHouse_PaperLines::
+# 42 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelIsleTimoHouse_PaperLines_2
+# 45 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	msgbox ParcelIsleTimoHouse_PaperLines_Text_1, MSGBOX_SIGN
+ParcelIsleTimoHouse_PaperLines_1:
+	end
+
+ParcelIsleTimoHouse_PaperLines_2:
+# 43 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	msgbox ParcelIsleTimoHouse_PaperLines_Text_0, MSGBOX_SIGN
+	goto ParcelIsleTimoHouse_PaperLines_1
+
+
 ParcelIsleTimoHouse_Gran_Text_0:
 # 13 "data/maps/ParcelIsleTimoHouse/scripts.pory"
 	.string "Gran: Past the bridge, was it. All the\n"
@@ -108,3 +122,24 @@ ParcelIsleTimoHouse_ReadDrawer_Text_0:
 	.string "cap, a gull feather, a stone from past\l"
 	.string "the bridge.\p"
 	.string "Gran knows about the stone.$"
+
+ParcelIsleTimoHouse_PaperLines_Text_0:
+# 43 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	.string "A school exercise book on the dresser.\n"
+	.string "The old lines are still there. A new\l"
+	.string "page: WHAT AN ALLOCATION IS, in Gran's\l"
+	.string "hand, and under it Timo's: when\l"
+	.string "somebody decides who gets the water.\p"
+	.string "Under that, in Gran's: and now you're\n"
+	.string "ready for the other answer. The other\l"
+	.string "answer is not written down.$"
+
+ParcelIsleTimoHouse_PaperLines_Text_1:
+# 45 "data/maps/ParcelIsleTimoHouse/scripts.pory"
+	.string "A school exercise book on the dresser.\n"
+	.string "The same sentence written twenty times\l"
+	.string "in a child's hand: I WILL NOT GO PAST\l"
+	.string "THE BRIDGE.\p"
+	.string "The twenty-first line, smaller, is not\n"
+	.string "the sentence. It says: why. Gran has\l"
+	.string "not corrected it.$"

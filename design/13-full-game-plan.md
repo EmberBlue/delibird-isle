@@ -610,4 +610,22 @@ quest is built, how the peer works) before they are asked six more times.
   state; the adit its pump plate; Rin's hut its register. The stringer is
   **INGER** (MAREN was already Harland's household; SOLVEIG a Cliffs
   trainer). ~74,900 hand-written words, 344 readable events.
+- **2026-11-10 — household papers.** One more readable in twenty-three
+  houses, each with a before-and-after-the-hearing state: three wage slips
+  and one crest; the clerk's framed lease (the rent went up; he stayed);
+  the line rota with TINS underlined; a cousin's letter from the Coast and
+  a reply that stops at the pond; a filing-cabinet requisition DENIED then
+  APPROVED; the old man's pond book with a third column, WHO READ IT;
+  Hedda's scale chart with a fifth square left blank; the relief sheet
+  carbon and, under it, the petition; an insurer's definition of FLOOD;
+  the relocation grant marked VOID PENDING SURVEY with a house drawn on
+  the back, legs braced; the allocation notice with "who" written three
+  times and then six names; the meter book nobody read and then everyone
+  did; the stall licence's box that says FAIR; the gauge round sheet's
+  "told you"; the six names over the table; the catch diary's downstream
+  column with FIRST SINCE; the reed tally's twenty-three in a boy's hand;
+  Aud's bundle of envelopes and one unopened; the ferry timetable's
+  circled sailing; Timo's lines and the other answer; the neighbour's
+  window book with the 02:10 entry; Piet's list with the fog counted in
+  days without; the Flats' rent card. ~2,200 words.
 

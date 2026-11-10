@@ -35,3 +35,14 @@ script ParcelIsleNeighborHouse_Drawer {
     msgbox(format("A writing drawer, locked. The keyhole is bright from use.\pWhoever writes here writes often -- and puts it away, every time, before the kettle sings."), MSGBOX_SIGN)
     end
 }
+
+// --- household papers (2026-11-10) ---
+
+script ParcelIsleNeighborHouse_PaperWindowBook {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A notebook on the sill, in the wife's hand. The 02:10 entry has the review's reference number written beside it, small, in a hand that pressed hard enough to dent the next page.\pThe man at the stove says she wrote it down the night it happened and did not tell him for a year. He says that is the bravest thing he knows about her, and he has known her thirty years."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A notebook on the sill, in the wife's hand: every hull seen from this window, with the hour. A harbourmaster's log kept from a kitchen.\pOne night entry, 02:10, LOGISTICS, VAN AND LAUNCH, is underlined twice and then has a line drawn through the underlining, as if she had decided twice."), MSGBOX_SIGN)
+    }
+    end
+}
