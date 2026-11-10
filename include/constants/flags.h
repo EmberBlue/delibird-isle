@@ -1337,6 +1337,16 @@
 #define FLAG_SKALD_Q_FORTYONE               FLAG_ITEM_ROUTE_120_HYPER_POTION
 #define FLAG_SKALD_Q_FORTYONE_FOUND         FLAG_ITEM_ROUTE_120_NEST_BALL
 #define FLAG_SKALD_Q_FORTYONE_DONE          FLAG_ITEM_ROUTE_123_ELIXIR
+// Skaldmere: the second readings, post-game (2026-11-10)
+#define FLAG_SKALD_SECOND                  FLAG_ITEM_NEW_MAUVILLE_THUNDER_STONE           // Ilex asked for the stakes read again
+#define FLAG_SKALD_SECOND_0                FLAG_ITEM_FIERY_PATH_FIRE_STONE                // Reedmere, after
+#define FLAG_SKALD_SECOND_1                FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_TM_HAIL          // Hollowbend, after
+#define FLAG_SKALD_SECOND_2                FLAG_ITEM_SHOAL_CAVE_ICE_ROOM_NEVER_MELT_ICE   // Leirvik, after
+#define FLAG_SKALD_SECOND_3                FLAG_ITEM_ROUTE_103_GUARD_SPEC                 // Elvsund, after
+#define FLAG_SKALD_SECOND_4                FLAG_ITEM_ROUTE_104_X_ACCURACY                 // Haukfell, after
+#define FLAG_SKALD_SECOND_5                FLAG_ITEM_MAUVILLE_CITY_X_SPEED                // the quay, after
+#define FLAG_SKALD_SECOND_6                FLAG_ITEM_PETALBURG_WOODS_PARALYZE_HEAL        // the marsh, after
+#define FLAG_SKALD_SECOND_DONE             FLAG_ITEM_ROUTE_115_GREAT_BALL                 // the Survey's cloth given
 
 #define FLAG_SKALD_Q_DRAWER 0x493 // Skaldmere: side quests
 #define FLAG_SKALD_Q_DRAWER_SEEN 0x494 // Skaldmere: side quests

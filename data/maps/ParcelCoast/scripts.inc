@@ -3995,132 +3995,147 @@ ParcelCoast_SurveyStake::
 	special SkaldSurveyStake
 # 1928 "data/maps/ParcelCoast/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
+# 1929 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_set FLAG_SKALD_SECOND, ParcelCoast_SurveyStake_3
+ParcelCoast_SurveyStake_1:
 	end
+
+ParcelCoast_SurveyStake_2:
+# 1930 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_SurveyStake_Text_1, MSGBOX_SIGN
+# 1931 "data/maps/ParcelCoast/scripts.pory"
+	setflag FLAG_SKALD_SECOND_5
+	goto ParcelCoast_SurveyStake_1
+
+ParcelCoast_SurveyStake_3:
+# 1929 "data/maps/ParcelCoast/scripts.pory"
+	goto_if_unset FLAG_SKALD_SECOND_5, ParcelCoast_SurveyStake_2
+	goto ParcelCoast_SurveyStake_1
 
 
 ParcelCoast_PairQuay::
-# 1935 "data/maps/ParcelCoast/scripts.pory"
+# 1939 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1936 "data/maps/ParcelCoast/scripts.pory"
+# 1940 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_PairQuay_2
-# 1941 "data/maps/ParcelCoast/scripts.pory"
+# 1945 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_PairQuay_3
-# 1948 "data/maps/ParcelCoast/scripts.pory"
+# 1952 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_9, MSGBOX_DEFAULT
-# 1949 "data/maps/ParcelCoast/scripts.pory"
+# 1953 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_10, MSGBOX_DEFAULT
-# 1950 "data/maps/ParcelCoast/scripts.pory"
+# 1954 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_11, MSGBOX_DEFAULT
-# 1951 "data/maps/ParcelCoast/scripts.pory"
+# 1955 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_12, MSGBOX_DEFAULT
 ParcelCoast_PairQuay_1:
-# 1953 "data/maps/ParcelCoast/scripts.pory"
+# 1957 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_PairQuay_2:
-# 1937 "data/maps/ParcelCoast/scripts.pory"
+# 1941 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_0, MSGBOX_DEFAULT
-# 1938 "data/maps/ParcelCoast/scripts.pory"
+# 1942 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_1, MSGBOX_DEFAULT
-# 1939 "data/maps/ParcelCoast/scripts.pory"
+# 1943 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_2, MSGBOX_DEFAULT
-# 1940 "data/maps/ParcelCoast/scripts.pory"
+# 1944 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_3, MSGBOX_DEFAULT
 	goto ParcelCoast_PairQuay_1
 
 ParcelCoast_PairQuay_3:
-# 1942 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairQuay_Text_4, MSGBOX_DEFAULT
-# 1943 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairQuay_Text_5, MSGBOX_DEFAULT
-# 1944 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairQuay_Text_6, MSGBOX_DEFAULT
-# 1945 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairQuay_Text_7, MSGBOX_DEFAULT
 # 1946 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairQuay_Text_4, MSGBOX_DEFAULT
+# 1947 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairQuay_Text_5, MSGBOX_DEFAULT
+# 1948 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairQuay_Text_6, MSGBOX_DEFAULT
+# 1949 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairQuay_Text_7, MSGBOX_DEFAULT
+# 1950 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairQuay_Text_8, MSGBOX_DEFAULT
 	goto ParcelCoast_PairQuay_1
 
 
 ParcelCoast_PairOffice::
-# 1958 "data/maps/ParcelCoast/scripts.pory"
+# 1962 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1959 "data/maps/ParcelCoast/scripts.pory"
+# 1963 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_PairOffice_2
-# 1965 "data/maps/ParcelCoast/scripts.pory"
+# 1969 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_PairOffice_3
-# 1971 "data/maps/ParcelCoast/scripts.pory"
+# 1975 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_9, MSGBOX_DEFAULT
-# 1972 "data/maps/ParcelCoast/scripts.pory"
+# 1976 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_10, MSGBOX_DEFAULT
-# 1973 "data/maps/ParcelCoast/scripts.pory"
+# 1977 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_11, MSGBOX_DEFAULT
-# 1974 "data/maps/ParcelCoast/scripts.pory"
+# 1978 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_12, MSGBOX_DEFAULT
 ParcelCoast_PairOffice_1:
-# 1976 "data/maps/ParcelCoast/scripts.pory"
+# 1980 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_PairOffice_2:
-# 1960 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairOffice_Text_0, MSGBOX_DEFAULT
-# 1961 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairOffice_Text_1, MSGBOX_DEFAULT
-# 1962 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairOffice_Text_2, MSGBOX_DEFAULT
-# 1963 "data/maps/ParcelCoast/scripts.pory"
-	msgbox ParcelCoast_PairOffice_Text_3, MSGBOX_DEFAULT
 # 1964 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairOffice_Text_0, MSGBOX_DEFAULT
+# 1965 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairOffice_Text_1, MSGBOX_DEFAULT
+# 1966 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairOffice_Text_2, MSGBOX_DEFAULT
+# 1967 "data/maps/ParcelCoast/scripts.pory"
+	msgbox ParcelCoast_PairOffice_Text_3, MSGBOX_DEFAULT
+# 1968 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_4, MSGBOX_DEFAULT
 	goto ParcelCoast_PairOffice_1
 
 ParcelCoast_PairOffice_3:
-# 1966 "data/maps/ParcelCoast/scripts.pory"
+# 1970 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_5, MSGBOX_DEFAULT
-# 1967 "data/maps/ParcelCoast/scripts.pory"
+# 1971 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_6, MSGBOX_DEFAULT
-# 1968 "data/maps/ParcelCoast/scripts.pory"
+# 1972 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_7, MSGBOX_DEFAULT
-# 1969 "data/maps/ParcelCoast/scripts.pory"
+# 1973 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_PairOffice_Text_8, MSGBOX_DEFAULT
 	goto ParcelCoast_PairOffice_1
 
 
 ParcelCoast_Stringer::
-# 1983 "data/maps/ParcelCoast/scripts.pory"
+# 1987 "data/maps/ParcelCoast/scripts.pory"
 	lock
-# 1984 "data/maps/ParcelCoast/scripts.pory"
+# 1988 "data/maps/ParcelCoast/scripts.pory"
 	faceplayer
-# 1985 "data/maps/ParcelCoast/scripts.pory"
+# 1989 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelCoast_Stringer_2
-# 1992 "data/maps/ParcelCoast/scripts.pory"
+# 1996 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_COASTAL_CERT, ParcelCoast_Stringer_3
-# 1995 "data/maps/ParcelCoast/scripts.pory"
+# 1999 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Stringer_Text_4, MSGBOX_DEFAULT
 ParcelCoast_Stringer_1:
-# 1997 "data/maps/ParcelCoast/scripts.pory"
+# 2001 "data/maps/ParcelCoast/scripts.pory"
 	release
 	end
 
 ParcelCoast_Stringer_2:
-# 1986 "data/maps/ParcelCoast/scripts.pory"
+# 1990 "data/maps/ParcelCoast/scripts.pory"
 	goto_if_set FLAG_SKALD_CH_QUOTE, ParcelCoast_Stringer_8
-# 1989 "data/maps/ParcelCoast/scripts.pory"
+# 1993 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Stringer_Text_1, MSGBOX_DEFAULT
 ParcelCoast_Stringer_7:
-# 1991 "data/maps/ParcelCoast/scripts.pory"
+# 1995 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Stringer_Text_2, MSGBOX_DEFAULT
 	goto ParcelCoast_Stringer_1
 
 ParcelCoast_Stringer_3:
-# 1993 "data/maps/ParcelCoast/scripts.pory"
+# 1997 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Stringer_Text_3, MSGBOX_DEFAULT
 	goto ParcelCoast_Stringer_1
 
 ParcelCoast_Stringer_8:
-# 1987 "data/maps/ParcelCoast/scripts.pory"
+# 1991 "data/maps/ParcelCoast/scripts.pory"
 	msgbox ParcelCoast_Stringer_Text_0, MSGBOX_DEFAULT
 	goto ParcelCoast_Stringer_7
 
@@ -6091,146 +6106,157 @@ ParcelCoast_SurveyStake_Text_0:
 	.string "wind off the harbour. The dockers walk\l"
 	.string "round it.$"
 
+ParcelCoast_SurveyStake_Text_1:
+# 1930 "data/maps/ParcelCoast/scripts.pory"
+	.string "Second reading. The dredge is tied up\n"
+	.string "with a padlock through the chain.\l"
+	.string "Eleven fish, one length, in the last\l"
+	.string "landing before it stopped; the\l"
+	.string "inspector's second column has begun.\l"
+	.string "The cranes swing on schedule.\p"
+	.string "You write the padlock. Nobody else will\n"
+	.string "think it is data.$"
+
 ParcelCoast_PairQuay_Text_0:
-# 1937 "data/maps/ParcelCoast/scripts.pory"
+# 1941 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: Dredge is stopped pending\n"
 	.string "review. I'm on the quay crew now.\l"
 	.string "Unloading what the boats bring in.$"
 
 ParcelCoast_PairQuay_Text_1:
-# 1938 "data/maps/ParcelCoast/scripts.pory"
+# 1942 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISHER: Which is?$"
 
 ParcelCoast_PairQuay_Text_2:
-# 1939 "data/maps/ParcelCoast/scripts.pory"
+# 1943 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: Not much. But it's yours, and\n"
 	.string "it's wet, and I'm paid to lift it. That's a\l"
 	.string "job that doesn't argue with itself.$"
 
 ParcelCoast_PairQuay_Text_3:
-# 1940 "data/maps/ParcelCoast/scripts.pory"
+# 1944 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISHER: Give it a season. The small ones\n"
 	.string "come back first. Then we'll both have\l"
 	.string "work that argues less.$"
 
 ParcelCoast_PairQuay_Text_4:
-# 1942 "data/maps/ParcelCoast/scripts.pory"
+# 1946 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISHER: The ranger walked the whole\n"
 	.string "quay with a notebook. Didn't write\l"
 	.string "'forty'.$"
 
 ParcelCoast_PairQuay_Text_5:
-# 1943 "data/maps/ParcelCoast/scripts.pory"
+# 1947 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: What did they write?$"
 
 ParcelCoast_PairQuay_Text_6:
-# 1944 "data/maps/ParcelCoast/scripts.pory"
+# 1948 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISHER: The catch book. The undersize\n"
 	.string "column. The nine objections nobody had\l"
 	.string "read. They read them.$"
 
 ParcelCoast_PairQuay_Text_7:
-# 1945 "data/maps/ParcelCoast/scripts.pory"
+# 1949 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: And the forty jobs?$"
 
 ParcelCoast_PairQuay_Text_8:
-# 1946 "data/maps/ParcelCoast/scripts.pory"
+# 1950 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISHER: Those too. All true numbers.\n"
 	.string "That was never the problem; the ranger\l"
 	.string "said that back to DORSEY in his own\l"
 	.string "words.$"
 
 ParcelCoast_PairQuay_Text_9:
-# 1948 "data/maps/ParcelCoast/scripts.pory"
+# 1952 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: Forty jobs, DORSEY says. Forty.\n"
 	.string "I'm one. You're not.$"
 
 ParcelCoast_PairQuay_Text_10:
-# 1949 "data/maps/ParcelCoast/scripts.pory"
+# 1953 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISHER: I had a job. It swam. Your\n"
 	.string "dredge brought it up dead by the tonne\l"
 	.string "and called it a landing.$"
 
 ParcelCoast_PairQuay_Text_11:
-# 1950 "data/maps/ParcelCoast/scripts.pory"
+# 1954 "data/maps/ParcelCoast/scripts.pory"
 	.string "DOCKER: I didn't build the dredge.$"
 
 ParcelCoast_PairQuay_Text_12:
-# 1951 "data/maps/ParcelCoast/scripts.pory"
+# 1955 "data/maps/ParcelCoast/scripts.pory"
 	.string "FISHER: No. You just need it. So did I,\n"
 	.string "once. That's how they get you both\l"
 	.string "ends.$"
 
 ParcelCoast_PairOffice_Text_0:
-# 1960 "data/maps/ParcelCoast/scripts.pory"
+# 1964 "data/maps/ParcelCoast/scripts.pory"
 	.string "SECRETARY: Line forty's been struck. No\n"
 	.string "more hospitality budget. She buys the\l"
 	.string "tea herself now.$"
 
 ParcelCoast_PairOffice_Text_1:
-# 1961 "data/maps/ParcelCoast/scripts.pory"
+# 1965 "data/maps/ParcelCoast/scripts.pory"
 	.string "ACCOUNTANT: Restructured.$"
 
 ParcelCoast_PairOffice_Text_2:
-# 1962 "data/maps/ParcelCoast/scripts.pory"
+# 1966 "data/maps/ParcelCoast/scripts.pory"
 	.string "SECRETARY: Her word for it. She typed\n"
 	.string "the memo about herself and spelled her\l"
 	.string "own name right, which is more than the\l"
 	.string "board managed.$"
 
 ParcelCoast_PairOffice_Text_3:
-# 1963 "data/maps/ParcelCoast/scripts.pory"
+# 1967 "data/maps/ParcelCoast/scripts.pory"
 	.string "ACCOUNTANT: Still pours two cups.$"
 
 ParcelCoast_PairOffice_Text_4:
-# 1964 "data/maps/ParcelCoast/scripts.pory"
+# 1968 "data/maps/ParcelCoast/scripts.pory"
 	.string "SECRETARY: Still pours two. One of them\n"
 	.string "goes cold every afternoon. Nobody's\l"
 	.string "told her to stop.$"
 
 ParcelCoast_PairOffice_Text_5:
-# 1966 "data/maps/ParcelCoast/scripts.pory"
+# 1970 "data/maps/ParcelCoast/scripts.pory"
 	.string "ACCOUNTANT: The ranger went up. Came\n"
 	.string "down an hour later. Didn't look\l"
 	.string "threatened.$"
 
 ParcelCoast_PairOffice_Text_6:
-# 1967 "data/maps/ParcelCoast/scripts.pory"
+# 1971 "data/maps/ParcelCoast/scripts.pory"
 	.string "SECRETARY: Ms. AUNE doesn't threaten.\n"
 	.string "She explains the weather.$"
 
 ParcelCoast_PairOffice_Text_7:
-# 1968 "data/maps/ParcelCoast/scripts.pory"
+# 1972 "data/maps/ParcelCoast/scripts.pory"
 	.string "ACCOUNTANT: And the ranger?$"
 
 ParcelCoast_PairOffice_Text_8:
-# 1969 "data/maps/ParcelCoast/scripts.pory"
+# 1973 "data/maps/ParcelCoast/scripts.pory"
 	.string "SECRETARY: Said thank you for the tea.\n"
 	.string "Then went and read the catch book for\l"
 	.string "two hours. In the cannery. Standing up.$"
 
 ParcelCoast_PairOffice_Text_9:
-# 1971 "data/maps/ParcelCoast/scripts.pory"
+# 1975 "data/maps/ParcelCoast/scripts.pory"
 	.string "SECRETARY: Ms. AUNE's had the kettle on\n"
 	.string "since eight. She's expecting someone.$"
 
 ParcelCoast_PairOffice_Text_10:
-# 1972 "data/maps/ParcelCoast/scripts.pory"
+# 1976 "data/maps/ParcelCoast/scripts.pory"
 	.string "ACCOUNTANT: She's always expecting\n"
 	.string "someone. It's a tactic. The tea's ready\l"
 	.string "before you've decided to come up.$"
 
 ParcelCoast_PairOffice_Text_11:
-# 1973 "data/maps/ParcelCoast/scripts.pory"
+# 1977 "data/maps/ParcelCoast/scripts.pory"
 	.string "SECRETARY: It's very good tea.$"
 
 ParcelCoast_PairOffice_Text_12:
-# 1974 "data/maps/ParcelCoast/scripts.pory"
+# 1978 "data/maps/ParcelCoast/scripts.pory"
 	.string "ACCOUNTANT: It's budgeted. Line forty.\n"
 	.string "Hospitality, conservation programme.$"
 
 ParcelCoast_Stringer_Text_0:
-# 1987 "data/maps/ParcelCoast/scripts.pory"
+# 1991 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAREN: I ran your Reedmere sentence\n"
 	.string "again, at the top, over the record of\l"
 	.string "the sitting. The water is a living\l"
@@ -6240,7 +6266,7 @@ ParcelCoast_Stringer_Text_0:
 	.string "glad of it.$"
 
 ParcelCoast_Stringer_Text_1:
-# 1989 "data/maps/ParcelCoast/scripts.pory"
+# 1993 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAREN: 'The ranger declined to\n"
 	.string "comment.' I ran it again at the top, over\l"
 	.string "the record of the sitting.\p"
@@ -6250,7 +6276,7 @@ ParcelCoast_Stringer_Text_1:
 	.string "sentence.$"
 
 ParcelCoast_Stringer_Text_2:
-# 1991 "data/maps/ParcelCoast/scripts.pory"
+# 1995 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAREN: Item seven took the whole\n"
 	.string "afternoon. I wrote it as it happened. I\l"
 	.string "don't think I've written anything as it\l"
@@ -6260,7 +6286,7 @@ ParcelCoast_Stringer_Text_2:
 	.string "deadline, for once.$"
 
 ParcelCoast_Stringer_Text_3:
-# 1993 "data/maps/ParcelCoast/scripts.pory"
+# 1997 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAREN: The sitting's coming. Item seven\n"
 	.string "is one line, as every year. I'll be in the\l"
 	.string "back row, as every year.\p"
@@ -6270,7 +6296,7 @@ ParcelCoast_Stringer_Text_3:
 	.string "it.$"
 
 ParcelCoast_Stringer_Text_4:
-# 1995 "data/maps/ParcelCoast/scripts.pory"
+# 1999 "data/maps/ParcelCoast/scripts.pory"
 	.string "MAREN: Forty jobs, the Commissioner\n"
 	.string "says. I've counted thirty-one. The\l"
 	.string "other nine are 'in the pipeline'.\p"

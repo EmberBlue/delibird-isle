@@ -41,3 +41,19 @@ script ParcelTownLodging_ReadDresser {
     msgbox(format("A card with your name on it, in an innkeeper's hand, propped against the mirror. Three weeks old. Dusted around every week."), MSGBOX_SIGN)
     end
 }
+
+// --- books (2026-11-10) ---
+
+script ParcelTownLodging_FieldGuide {
+    msgbox(format("On the shelf by the window, a book the lodging keeper says every room has: A FIELD GUIDE TO THE WETLAND BIRDS AND AMPHIBIANS OF SKALDMERE. The author's name is one word. The drawings are hers.\pFOREWORD. I have counted most of what is in this book by hand, in boots, over twenty years. Where I give a number it is a number I stood in the water for. Where I give an opinion I have tried to say so. The reader should hold me to both."), MSGBOX_SIGN)
+    msgbox(format("WOOPER. The commonest thing in the lower marshes and the most useful. It will not tolerate a falling water table for more than a season, so a turf with WOOPER on it is a turf with water under it. Count them in the wet months, on the same morning each year. The count is the gauge. I have never found a better one, and I have tried several that cost more.\pDrawing: a WOOPER from above, the gills exact, the eyes slightly too kind."), MSGBOX_SIGN)
+    msgbox(format("WINGULL. Pairs on the Fernwick pond: twenty-eight in my first spring, twenty-eight in my tenth. I give the number with a warning. A count that does not change while the water does is not a healthy count; it is a crowd. Read the water first and the birds second, or the birds will flatter you.\pDrawing: two WINGULL on a post, the post leaning."), MSGBOX_SIGN)
+    msgbox(format("VOLBEAT and ILLUMISE. The dusk count at the Reedmere hide is the oldest count the Survey keeps and I would not change its method for anything. A person sits, and the lights come, and the person writes the number. No instrument improves it. The lights have been fewer every year I have sat there, and I have written the fewer number every year, and that is the whole of the method.\pDrawing: eleven small marks over a reed bed, one circled."), MSGBOX_SIGN)
+    msgbox(format("DELIBIRD. Not a wetland bird and not mine to describe, but it is in this book because the islanders asked, and because the island is where the cold goes to be counted. They say it brings food through storms to the door that needs it. I have seen it do so. I record the behaviour and decline, for once, to explain it.\pDrawing: a DELIBIRD at a cabin door in snow, the sack half empty."), MSGBOX_SIGN)
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("POLIWAG, POLIWHIRL, POLITOED. The keystone of the freshwater marsh and the reason for half this book. I have recorded the Mahogany population's recovery elsewhere (see the appendix); the Skaldmere populations hold where the slack water holds, and nowhere else.\pIn the margin of this page, in pencil newer than the print, in the hand from your notebook: No. 41. 41. 39. 40. The appendix is wrong. The frogs were not. H.\pThe lodging keeper does not know when it was written. You do."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("POLIWAG, POLIWHIRL, POLITOED. The keystone of the freshwater marsh and the reason for half this book. I have recorded the Mahogany population's recovery elsewhere (see the appendix); the Skaldmere populations hold where the slack water holds, and nowhere else.\pCount them by stage, not in total. Totals hide the year the eggs failed.\pThe appendix page has been read so often the corner is soft. Nobody has written anything on it."), MSGBOX_SIGN)
+    }
+    end
+}

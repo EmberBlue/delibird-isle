@@ -196,6 +196,8 @@ static const u8 sNb_Open[]             = _("--");
 static const u8 sNb_Clearances[]       = _("Clearances held: ");
 static const u8 sNb_Exams[]            = _("\nRead right at the examinations: ");
 static const u8 sNb_OfEightPlain[]     = _(" of 8.");
+static const u8 sNb_Second[]           = _("\nSecond readings, after: ");
+static const u8 sNb_OfSeven[]          = _(" of 7.");
 static const u8 sNb_Of8[]              = _(" of 8.\nTARN MIRREN BREEN SLUICE\pVALE HARLAND VANE ILEX,\nin that order up the region.");
 static const u8 sNb_Newline[]          = _("\n");
 static const u8 sNb_Page[]             = _("\p");
@@ -380,6 +382,17 @@ void SkaldNotebookBuffer(void)
             ConvertIntToDecimalStringN(gStringVar1, right, STR_CONV_MODE_LEFT_ALIGN, 1);
             StringAppend(gStringVar4, gStringVar1);
             StringAppend(gStringVar4, sNb_OfEightPlain);
+            if (FlagGet(FLAG_SKALD_SECOND))
+            {
+                static const u16 sSecondFlags[7] = {FLAG_SKALD_SECOND_0, FLAG_SKALD_SECOND_1, FLAG_SKALD_SECOND_2, FLAG_SKALD_SECOND_3, FLAG_SKALD_SECOND_4, FLAG_SKALD_SECOND_5, FLAG_SKALD_SECOND_6};
+                u32 again = 0;
+                for (i = 0; i < 7; i++)
+                    if (FlagGet(sSecondFlags[i])) again++;
+                StringAppend(gStringVar4, sNb_Second);
+                ConvertIntToDecimalStringN(gStringVar1, again, STR_CONV_MODE_LEFT_ALIGN, 1);
+                StringAppend(gStringVar4, gStringVar1);
+                StringAppend(gStringVar4, sNb_OfSeven);
+            }
         }
         break;
     case 2:

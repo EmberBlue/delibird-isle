@@ -47,7 +47,22 @@ script ParcelFernwickSurvey_Ilex {
     lock
     faceplayer
     if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
-        msgbox(format("ILEX: It's filed. It's read. HALE signed it in front of me, and he didn't smile, and his hand was steady. That's the version I'll remember."), MSGBOX_DEFAULT)
+        if (flag(FLAG_SKALD_SECOND_DONE)) {
+            msgbox(format("ILEX: Seven second readings in the register, under the seven first ones. The column had never been used. It has a date in it now, in your hand.\pTie the cloth to something that needs reading. That's the whole of the job, and you've done it twice."), MSGBOX_DEFAULT)
+        } elif (flag(FLAG_SKALD_SECOND)) {
+            if (flag(FLAG_SKALD_SECOND_0) && flag(FLAG_SKALD_SECOND_1) && flag(FLAG_SKALD_SECOND_2) && flag(FLAG_SKALD_SECOND_3) && flag(FLAG_SKALD_SECOND_4) && flag(FLAG_SKALD_SECOND_5) && flag(FLAG_SKALD_SECOND_6)) {
+                msgbox(format("ILEX: Seven, after. Reedmere up four and no trend. Hollowbend: two frogs. Leirvik: grey. Elvsund: two boards. Haukfell: SHIFTED, dated both sides. The quay: a padlock. The marsh: forty-two, in your hand.\pNobody has ever walked the whole set twice. The register has a column for it that has never been used."), MSGBOX_DEFAULT)
+                msgbox(format("ILEX: Here. The Survey's cloth. I've a drawer of it and nobody to give it to.\pTie it to something that needs reading. That's the whole of the job, and you've done it twice."), MSGBOX_DEFAULT)
+                giveitem(ITEM_RED_SCARF, 1)
+                setflag(FLAG_SKALD_SECOND_DONE)
+            } else {
+                msgbox(format("ILEX: Not all seven yet. Read them after, the way you read them before. The after is the part nobody funds.\pReedmere, Hollowbend, Leirvik, Elvsund, Haukfell, the quay, the marsh. The stakes are where they were. That's rather the point of stakes."), MSGBOX_DEFAULT)
+            }
+        } else {
+            msgbox(format("ILEX: It's filed. It's read. HALE signed it in front of me, and he didn't smile, and his hand was steady. That's the version I'll remember."), MSGBOX_DEFAULT)
+            msgbox(format("ILEX: One more thing, if you've the boots for it. The seven stakes. Go back and read them again, after.\pA first reading is a claim. A second is a record. Nobody has ever given me the second set. Tell me what changed."), MSGBOX_DEFAULT)
+            setflag(FLAG_SKALD_SECOND)
+        }
         release
         end
     }

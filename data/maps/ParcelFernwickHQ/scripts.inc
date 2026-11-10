@@ -302,6 +302,16 @@ ParcelFernwickHQ_Pinned_4:
 	return
 
 
+ParcelFernwickHQ_Handbook::
+# 181 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Handbook_Text_0, MSGBOX_SIGN
+# 182 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Handbook_Text_1, MSGBOX_SIGN
+# 183 "data/maps/ParcelFernwickHQ/scripts.pory"
+	msgbox ParcelFernwickHQ_Handbook_Text_2, MSGBOX_SIGN
+	end
+
+
 ParcelFernwickHQ_Reception_Text_0:
 # 12 "data/maps/ParcelFernwickHQ/scripts.pory"
 	.string "RECEPTION: HALE slept. A whole night. I\n"
@@ -671,3 +681,53 @@ ParcelFernwickHQ_Pinned_Text_3:
 	.string "Public-Private Partnerships.\p"
 	.string "Someone has pressed a thumbnail into\n"
 	.string "the word PART and left a crescent.$"
+
+ParcelFernwickHQ_Handbook_Text_0:
+# 181 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "The Corps handbook, on the counter for\n"
+	.string "provisionals to read while they wait.\l"
+	.string "The spine is broken at the same page in\l"
+	.string "every copy.\p"
+	.string "SECTION 1. WHAT WE ARE. The Skaldmere\n"
+	.string "Climate Corps surveys, documents,\l"
+	.string "restrains, removes, cites and, rarely,\l"
+	.string "seizes. It does not permit. It does not\l"
+	.string "license. It does not decide. Rangers\l"
+	.string "who want to decide things should stand\l"
+	.string "for the Council; several have.\p"
+	.string "SECTION 2. THE RECORD. A ranger's\n"
+	.string "record is admissible, durable and slow.\l"
+	.string "It is the only one of our tools that\l"
+	.string "works after we have gone home. Write it\l"
+	.string "as if the reader hates you and is\l"
+	.string "clever.$"
+
+ParcelFernwickHQ_Handbook_Text_1:
+# 182 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "SECTION 4. THE PARTNER. The Corps does\n"
+	.string "not issue partners. The holding meadow\l"
+	.string "holds edge species that tolerate us;\l"
+	.string "one will recognise the ranger or none\l"
+	.string "will. A ranger who leaves the meadow\l"
+	.string "alone has not failed. A ranger who takes\l"
+	.string "one that did not choose them has.\p"
+	.string "SECTION 6. SPONSORS. The Corps is\n"
+	.string "funded in part by the Mereholt\l"
+	.string "Foundation. Rangers will see the crest\l"
+	.string "on their own equipment. The crest does\l"
+	.string "not read the record. Neither does the\l"
+	.string "Director. Only the reader does.$"
+
+ParcelFernwickHQ_Handbook_Text_2:
+# 183 "data/maps/ParcelFernwickHQ/scripts.pory"
+	.string "SECTION 9. WHEN THE WORK IS WRONG. If a\n"
+	.string "ranger is asked to round up, round down,\l"
+	.string "omit, soften, delay or lose a record, the\l"
+	.string "ranger will decline, in writing, once, and\l"
+	.string "then file the record anyway. This\l"
+	.string "section is short because it is not\l"
+	.string "complicated. It is only hard.\p"
+	.string "The page the spine is broken at is this\n"
+	.string "one. Someone has written beside it, in\l"
+	.string "the ink the Corps issues: it is also the\l"
+	.string "whole job. H.$"

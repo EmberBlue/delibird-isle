@@ -424,5 +424,9 @@ script ParcelMarsh_SurveyStake {
     setvar(VAR_0x8004, 6)
     special(SkaldSurveyStake)
     msgbox(gStringVar4, MSGBOX_SIGN)
+    if (flag(FLAG_SKALD_SECOND) && !flag(FLAG_SKALD_SECOND_6)) {
+        msgbox(format("Second reading. Forty. Forty. Thirty-nine. Forty-two. In your hand now, under hers. The listing went through. The stream still runs. The keystone holds where it holds.\pYou tie a strip to the older stake, the one under the first, and do not sign it. The Survey knows whose it is."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_SECOND_6)
+    }
     end
 }

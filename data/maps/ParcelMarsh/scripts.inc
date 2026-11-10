@@ -796,7 +796,22 @@ ParcelMarsh_SurveyStake::
 	special SkaldSurveyStake
 # 426 "data/maps/ParcelMarsh/scripts.pory"
 	msgbox gStringVar4, MSGBOX_SIGN
+# 427 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_set FLAG_SKALD_SECOND, ParcelMarsh_SurveyStake_3
+ParcelMarsh_SurveyStake_1:
 	end
+
+ParcelMarsh_SurveyStake_2:
+# 428 "data/maps/ParcelMarsh/scripts.pory"
+	msgbox ParcelMarsh_SurveyStake_Text_1, MSGBOX_SIGN
+# 429 "data/maps/ParcelMarsh/scripts.pory"
+	setflag FLAG_SKALD_SECOND_6
+	goto ParcelMarsh_SurveyStake_1
+
+ParcelMarsh_SurveyStake_3:
+# 427 "data/maps/ParcelMarsh/scripts.pory"
+	goto_if_unset FLAG_SKALD_SECOND_6, ParcelMarsh_SurveyStake_2
+	goto ParcelMarsh_SurveyStake_1
 
 
 ParcelMarsh_FirstEntry_Text_0:
@@ -1438,3 +1453,14 @@ ParcelMarsh_SurveyStake_Text_0:
 	.string "Fresh red cloth. Under it, a much older\l"
 	.string "stake, the cloth gone to rust, driven by\l"
 	.string "somebody else a long time ago.$"
+
+ParcelMarsh_SurveyStake_Text_1:
+# 428 "data/maps/ParcelMarsh/scripts.pory"
+	.string "Second reading. Forty. Forty.\n"
+	.string "Thirty-nine. Forty-two. In your hand\l"
+	.string "now, under hers. The listing went\l"
+	.string "through. The stream still runs. The\l"
+	.string "keystone holds where it holds.\p"
+	.string "You tie a strip to the older stake, the\n"
+	.string "one under the first, and do not sign it.\l"
+	.string "The Survey knows whose it is.$"

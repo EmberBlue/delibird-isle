@@ -88,6 +88,20 @@ spots at Saltwick, Fernwick, Elvsund, Delibird, the Coast and the Station.
 The user's targets (§13) are 100k words / 1,000 trainers / 100+ maps: the
 *shape* of the game is now right; the remaining gap is volume.
 
+**Added 2026-11-10 (see §13's log for each):** the remix pass (no zone is a
+vanilla slice any more; measured in `build.py`), the survey stakes, every
+warp and connection walked by `sweep.py` and the map-127 engine fix,
+twenty-eight documents on the desks, eighty-one Skaldmere dex entries, five
+remembered choices (Hollis's name, the Mahogany correction, the meeting,
+the blanket, the tea) and the examinations at every leader, forty-seven
+overheard conversations in the towns and on the routes, MAREN of the
+Courier at seven doors and her front page in every Center, nine more side
+quests (thirty-three), Rin across the arc and the unchosen after the
+hearing, three books (Heron's field guide, the Corps handbook, the harbour
+almanac), the epilogue seen closer, and the post-game second readings
+(Ilex's red cloth). ~74,000 hand-written words, 686 objects, 336 readable
+events, 102 maps, 1,071 battles.
+
 ## THE recipe (every zone was built this way; keep using it)
 
 1. **Pick a vanilla base** and slice/compose it: `data/layouts/<Zone>/base.bin`
@@ -230,9 +244,9 @@ passes except the retired Station's.
 ## Known-open (honest list)
 
 - **Volume.** 1,071 reachable trainer battles (255 distinct opponents + 816
-  rematch tiers) against the 1,000 target -- met; **~72,400 hand-written
+  rematch tiers) against the 1,000 target -- met; **~74,000 hand-written
   words** (every `_R2`–`_R5`/`_FirstWin` rematch script excluded; ~94k
-  with them; 686 objects, 333 readable/hidden events; 33 side quests; 47 overheard conversations) against 100k -- the
+  with them; 686 objects, 336 readable/hidden events; 33 side quests; 47 overheard conversations) against 100k -- the
   remaining gap. Recount with the snippet in §13's 2026-11-10 entries
   (script bodies minus the rematch scripts, plus the notebook's C strings
   and the 81 dex entries). The rematch tiers

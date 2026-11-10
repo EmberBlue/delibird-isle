@@ -103,3 +103,11 @@ script ParcelIsleHall_Minutes {
 script ParcelIsleHall_Lease {
     msgbox(format("A lease file in the hall's cabinet, the lid left up. THE FRONT, UNIT 3. The lab.\pTenant: the Wetland Resilience Programme, Dr. Heron. Landlord: Saltwick Front Holdings, a company with a quay address and a parent you have seen the kerning of.\pNotice to quit, for redevelopment, dated nine days before the night the lab was emptied. Signed for the landlord. Not signed for the tenant. Served by hand, the note says.\pStapled behind it, a second sheet: redevelopment plan, Unit 3. Proposed use: storage, Mereholt Logistics.\pThe official who came to look at the broken lock had this file. He called it a burglary anyway. It was easier for everyone."), MSGBOX_SIGN)
 }
+
+// --- books (2026-11-10) ---
+
+script ParcelIsleHall_Almanac {
+    msgbox(format("The harbour almanac, chained to the shelf, the way the catch book is chained to the cannery desk. Saltwick's year, written down by whoever was harbourmaster.\pFIRST FROST, by year. A column that used to begin in the ninth month and now begins in the eleventh, with two blanks where there was no frost to write.\pLAST ICE IN THE HARBOUR. A column that stops. Not a blank: a line drawn under the last year, and under the line, in the harbourmaster's hand: see the Station's book. They keep the gaps."), MSGBOX_SIGN)
+    msgbox(format("HERRING, FIRST SHOAL. The dates walk backwards up the calendar a week a decade, and the sizes beside them walk down.\pSTORMS, by name. The old names are weather. The new names, the last nine years, are the names of the boats they took. The almanac does not comment. It is an almanac.\pThe last page is this year's, half filled. The current harbourmaster writes the way the first one did: the date, the thing, nothing else. It is the most honest book in the town and nobody reads it, because it is only a list."), MSGBOX_SIGN)
+    end
+}

@@ -571,4 +571,24 @@ quest is built, how the peer works) before they are asked six more times.
   JOBS and THIRTY-ONE, ITEM SEVEN TOOK THE AFTERNOON). The Fernwick dredge
   house has its sister (Corps, provisional, two years; he fixes her
   spelling now) and the baker her granddaughter (a loaf is a day).
+- **2026-11-10 — books, and the second readings.** Three books: Heron's
+  own field guide on the lodging shelf (her honest early voice -- the
+  WOOPER count as the gauge, the WINGULL warning that a count that does
+  not change while the water does is a crowd, the dusk count's method, a
+  DELIBIRD she declines to explain -- and the POLITOED page with the
+  appendix she later corrects in pencil: "The appendix is wrong. The
+  frogs were not. H."), the Corps handbook on the HQ counter (Section 9,
+  WHEN THE WORK IS WRONG, is where every spine is broken), and the
+  harbour almanac in the Saltwick hall (first frost, last ice, the
+  herring walking backwards up the calendar, storms named for the boats
+  they took). And the post-game's closing thread: after the hearing Ilex
+  asks for **the second readings** -- the seven stakes read again, after
+  ("a first reading is a claim; a second is a record"). Each stake adds
+  its after-line (Reedmere up four and no trend; two frogs through the
+  grates; Leirvik grey, STRESSED not COLLAPSING; two boards on the ford
+  gauge and REPORTED, which is what the Survey does with hope; Haukfell
+  SHIFTED with a date on both sides; the padlock on the dredge as data;
+  forty-two in the marsh, in your hand). All seven back to Ilex earns the
+  Survey's red cloth (`ITEM_RED_SCARF`): "tie it to something that needs
+  reading." The notebook counts them (`FLAG_SKALD_SECOND_*`).
 

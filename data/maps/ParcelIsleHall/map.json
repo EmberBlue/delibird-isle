@@ -118,6 +118,14 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelIsleHall_Lease"
+    },
+    {
+      "type": "sign",
+      "x": 13,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelIsleHall_Almanac"
     }
   ]
 }

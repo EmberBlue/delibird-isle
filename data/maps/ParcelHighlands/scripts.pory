@@ -1903,6 +1903,10 @@ script ParcelHighlands_SurveyStake {
     setvar(VAR_0x8004, 4)
     special(SkaldSurveyStake)
     msgbox(gStringVar4, MSGBOX_SIGN)
+    if (flag(FLAG_SKALD_SECOND) && !flag(FLAG_SKALD_SECOND_4)) {
+        msgbox(format("Second reading. The casing is capped. The slope is still soft and will stay soft; a capped hole does not put ice back in a mountain. The centre is open past midnight and the slips are under glass.\pSHIFTED. It was true before and it is true after. Now it has a date on both sides."), MSGBOX_SIGN)
+        setflag(FLAG_SKALD_SECOND_4)
+    }
     end
 }
 

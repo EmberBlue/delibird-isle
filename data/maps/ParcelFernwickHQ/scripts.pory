@@ -174,3 +174,12 @@ script ParcelFernwickHQ_Pinned {
         msgbox(format("A poster, the Foundation's green and grey. A ranger on a ridge with the light behind.\pSTEWARDSHIP. A Mereholt Foundation partnership with the Skaldmere Climate Corps. Two field stations. The certification programme. Equipment for every ranger in the region.\pSmaller, at the bottom: the Climate Corps is funded in part by Mereholt Foundation conservation grants administered through the Office of Public-Private Partnerships.\pSomeone has pressed a thumbnail into the word PART and left a crescent."), MSGBOX_SIGN)
     }
 }
+
+// --- books (2026-11-10) ---
+
+script ParcelFernwickHQ_Handbook {
+    msgbox(format("The Corps handbook, on the counter for provisionals to read while they wait. The spine is broken at the same page in every copy.\pSECTION 1. WHAT WE ARE. The Skaldmere Climate Corps surveys, documents, restrains, removes, cites and, rarely, seizes. It does not permit. It does not license. It does not decide. Rangers who want to decide things should stand for the Council; several have.\pSECTION 2. THE RECORD. A ranger's record is admissible, durable and slow. It is the only one of our tools that works after we have gone home. Write it as if the reader hates you and is clever."), MSGBOX_SIGN)
+    msgbox(format("SECTION 4. THE PARTNER. The Corps does not issue partners. The holding meadow holds edge species that tolerate us; one will recognise the ranger or none will. A ranger who leaves the meadow alone has not failed. A ranger who takes one that did not choose them has.\pSECTION 6. SPONSORS. The Corps is funded in part by the Mereholt Foundation. Rangers will see the crest on their own equipment. The crest does not read the record. Neither does the Director. Only the reader does."), MSGBOX_SIGN)
+    msgbox(format("SECTION 9. WHEN THE WORK IS WRONG. If a ranger is asked to round up, round down, omit, soften, delay or lose a record, the ranger will decline, in writing, once, and then file the record anyway. This section is short because it is not complicated. It is only hard.\pThe page the spine is broken at is this one. Someone has written beside it, in the ink the Corps issues: it is also the whole job. H."), MSGBOX_SIGN)
+    end
+}

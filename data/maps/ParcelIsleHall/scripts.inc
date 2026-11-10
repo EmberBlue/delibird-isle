@@ -195,6 +195,14 @@ ParcelIsleHall_Lease::
 	return
 
 
+ParcelIsleHall_Almanac::
+# 110 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Almanac_Text_0, MSGBOX_SIGN
+# 111 "data/maps/ParcelIsleHall/scripts.pory"
+	msgbox ParcelIsleHall_Almanac_Text_1, MSGBOX_SIGN
+	end
+
+
 ParcelIsleHall_Brenna_Text_0:
 # 12 "data/maps/ParcelIsleHall/scripts.pory"
 	.string "BRENNA: We voted. Twelve to nine, to\n"
@@ -394,3 +402,39 @@ ParcelIsleHall_Lease_Text_0:
 	.string "broken lock had this file. He called it a\l"
 	.string "burglary anyway. It was easier for\l"
 	.string "everyone.$"
+
+ParcelIsleHall_Almanac_Text_0:
+# 110 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "The harbour almanac, chained to the\n"
+	.string "shelf, the way the catch book is\l"
+	.string "chained to the cannery desk. Saltwick's\l"
+	.string "year, written down by whoever was\l"
+	.string "harbourmaster.\p"
+	.string "FIRST FROST, by year. A column that\n"
+	.string "used to begin in the ninth month and\l"
+	.string "now begins in the eleventh, with two\l"
+	.string "blanks where there was no frost to\l"
+	.string "write.\p"
+	.string "LAST ICE IN THE HARBOUR. A column that\n"
+	.string "stops. Not a blank: a line drawn under\l"
+	.string "the last year, and under the line, in the\l"
+	.string "harbourmaster's hand: see the\l"
+	.string "Station's book. They keep the gaps.$"
+
+ParcelIsleHall_Almanac_Text_1:
+# 111 "data/maps/ParcelIsleHall/scripts.pory"
+	.string "HERRING, FIRST SHOAL. The dates walk\n"
+	.string "backwards up the calendar a week a\l"
+	.string "decade, and the sizes beside them walk\l"
+	.string "down.\p"
+	.string "STORMS, by name. The old names are\n"
+	.string "weather. The new names, the last nine\l"
+	.string "years, are the names of the boats they\l"
+	.string "took. The almanac does not comment. It\l"
+	.string "is an almanac.\p"
+	.string "The last page is this year's, half filled.\n"
+	.string "The current harbourmaster writes the\l"
+	.string "way the first one did: the date, the\l"
+	.string "thing, nothing else. It is the most\l"
+	.string "honest book in the town and nobody\l"
+	.string "reads it, because it is only a list.$"
