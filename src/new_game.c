@@ -97,10 +97,10 @@ static void InitPlayerTrainerId(void)
     SetTrainerId(trainerId, gSaveBlock2Ptr->playerTrainerId);
 }
 
-// INTERIM (Skaldmere): Wren is a fixed, fully-defined protagonist (§04) —
-// the player chooses pronouns only, and that choice arrives with the real
-// §07 opening. Until then every new game is named canonically so dialogue
-// can use {PLAYER} and the menu isn't blank.
+// Skaldmere: Wren is a fixed, fully-defined protagonist (§04). The player
+// chooses only how the manifest lists them (the ferry's attendant, §07 --
+// SkaldmereSetGender); every new game is named canonically so dialogue can
+// use {PLAYER} and the menu isn't blank. There is no naming screen.
 static const u8 sSkaldmereDefaultName[] = _("Wren");
 
 static void SetSkaldmereDefaultIdentity(void)
@@ -148,9 +148,9 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    // INTERIM (Skaldmere): the game opens at the cold coastal arrival town
-    // (§07 prologue), not the Hoenn truck. The proper prologue cutscene
-    // (ferry horn, the letter) replaces this scaffolding later.
+    // Skaldmere: the game opens in the ferry's cabin (§07 prologue), not the
+    // Hoenn truck. ParcelFerry_Opening plays the scroll and the manifest check,
+    // then lands the player on Saltwick's pier.
     // The ferry arrives in daylight (§07 scene 1); start the clock at 10:00
     // so a new game doesn't open under the DNS night tint.
     FakeRtc_ForwardTimeTo(10, 0, 0);

@@ -103,20 +103,20 @@ The first custom game code, built and verified (not just config):
   This proves the bigger point: custom systems for this game are buildable and
   fully testable here, the same way the DNS was verified.
 
-- **Opening warps into Skaldmere, not Hoenn** (interim scaffolding). The game
-  now starts at the coastal arrival map instead of the Emerald truck:
-  - `src/new_game.c` — `WarpToTruck()` spawns at `MAP_PARCEL_ISLE` (41, 48 —
-    mid-pier) and starts the fake RTC at 10:00 (the ferry arrives in
-    daylight, §07; otherwise a new game opens under the DNS night tint).
-  - `src/overworld.c` — `CB2_NewGame` no longer runs `ExecuteTruckSequence`.
-  - `src/main_menu.c` — NEW GAME routes straight to `CB2_NewGame`, skipping the
-    Hoenn Birch speech.
-  - `data/maps/ParcelIsle/map.json` — fog weather + a quiet island theme for the
-    §07 "salt, fog, gull cries" arrival mood.
-
-  All marked `INTERIM (Skaldmere)` in-code: the proper §07 prologue cutscene
-  (ferry horn, the letter, gender select) replaces them later. Verified
-  end-to-end via the screenshot tool.
+- **Opening: the crossing, not Hoenn.** A new game starts in the ferry
+  cabin (`src/new_game.c` sets the warp to `MAP_PARCEL_FERRY` 4,6 and the
+  fake RTC to 10:00 so the arrival is in daylight under the DNS);
+  `ParcelFerry_Opening` (ON_FRAME) plays the two canonical scroll
+  paragraphs, the attendant's manifest check is the §04 pronoun choice
+  (`MULTI_SKALD_MANIFEST` → `SkaldmereSetGender`, he/she; "they" would need
+  a third gender in the save block), the horn sounds and the warp lands on
+  Saltwick's pier (`ParcelIsle` 15,31), where `ParcelIsle_Arrival` runs the
+  §07 arrival beat. `src/overworld.c` `CB2_NewGame` no longer runs
+  `ExecuteTruckSequence`; `src/main_menu.c` routes NEW GAME straight to
+  `CB2_NewGame` (no Birch speech; `data/text/birch_speech.inc` is unused).
+  The protagonist is Wren, fixed (§04), so there is no naming screen. The
+  `INTERIM (Skaldmere)` markers in `new_game.c` predate the ferry and can
+  go.
 
 - **The arrival scene — scripts, dialogue, NPCs** (§07 Scene 1), all
   verified in-engine:
