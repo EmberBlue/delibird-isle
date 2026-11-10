@@ -200,7 +200,10 @@ def main():
                     kw["edge"] = target.lower()
                 else:
                     kw["warp"] = int(target)
-                path, runs = route.plan(mdir, (px, py), blocked=blocked, **kw)
+                # prefer a grass-free path (fewer wild battles); fall back to any path
+                path, runs = route.plan(mdir, (px, py), blocked=blocked, avoid_grass=True, **kw)
+                if not path:
+                    path, runs = route.plan(mdir, (px, py), blocked=blocked, **kw)
                 if not runs:
                     print(f"  GOTO: no path from ({px},{py}) on {mdir} to {target}"); break
                 if d.upper() != "GOTO" and len(path) == 1:
