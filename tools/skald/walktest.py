@@ -380,7 +380,12 @@ def main():
                 rd, rk = runs[0]
                 print(f"  GOTO {target}: at ({px},{py}) {rd} x{rk} (frame {frame})", flush=True)
                 fights_before = battles[0]
-                step(16 * (rk - 1) + 12, rd); step(30)
+                # walking is 16 frames a tile, surfing 8: hold the key for the run at the current speed,
+                # or a surf ride overshoots onto whatever shore lies beyond the plan
+                if kw.get("surf"):
+                    step(8 * (rk - 1) + 6, rd); step(30)
+                else:
+                    step(16 * (rk - 1) + 12, rd); step(30)
                 dismiss(120)
                 nm, nx, ny = live_pos()
                 if nm != mapname:
