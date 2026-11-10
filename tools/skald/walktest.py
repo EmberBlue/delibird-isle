@@ -128,6 +128,7 @@ def main():
         run_keys = ["UP", "LEFT", "DOWN", "RIGHT", "A", "B", "B", "B"]
         bmons, acur = syms.get("gBattleMons"), syms.get("gActionSelectionCursor")
         bmain = syms.get("BattleMainCB2")
+        backed_out = False
         while in_battle() and spent < limit:
             # (no grace period at the start: a fight() that hit its cap is re-entered mid-battle, and an A in
             # its first frames landed on the summary screen and deleted the move after all)
@@ -140,6 +141,13 @@ def main():
                 # backs out of each; "Stop learning it?" then takes the A. A fainted lead is the one case
                 # where that screen is the party menu and wants an A, so it falls through to the taps below.
                 key = "B"
+                backed_out = True
+            elif backed_out and not wild:
+                # Back on the battle screen at "Do you want to give up on learning it?". The taps below
+                # are five A's and a B, and the forget loop (text, YES, summary, B, text) is twelve taps
+                # long: the B landed on that question every time and answered NO for 45000 frames.
+                # Restart the count so the answer is an A.
+                backed_out, taps, key = False, 0, "A"
             elif wild:
                 key = run_keys[taps % len(run_keys)]
             else:
