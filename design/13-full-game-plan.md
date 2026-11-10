@@ -955,4 +955,39 @@ quest is built, how the peer works) before they are asked six more times.
   because every one of these tile fixes had been made on generated
   `map.bin` files, they now live in per-layout `fixes.json` files that
   the generators re-apply (`layout_fixes.py --check`: 0 differ).
-
+  **The whole game then played through on one build** (2026-11-10):
+  `tools/skald/play/run_all.sh`, chains 1 to 10, ferry to credits to the
+  post-game, about seventeen minutes of emulator time. What the last
+  stretch found. The finale: a surfer could not come ashore below HERON,
+  because the engine lands a surfer only on elevation-3 ground and her
+  bank was 4 (a landing strip now; `reach.py` and `route.py` know the
+  rule). The harness itself answered NO to "Will you file it true?",
+  because `WAIT` mashes B and B is NO: scenes with a question after their
+  battle are driven with `TALKFIGHT` and `TALK`. The boardroom: CORDELIA
+  sits on a raised tile behind her desk, so a player who walked round
+  behind her chair pressed A into silence; two more people had the same
+  dead side, and `event_elev.py --sides` now lists the pattern (0). The
+  epilogue: the Delibird stop landed the player on top of a villager
+  placed after the tour was written; `warp_dest.py` now checks every
+  scripted warp for a solid tile, open water or a person (25 checked, 0
+  bad). The last scene's POLIWAG started where the text box had been; it
+  surfaces under the planks and swims out of frame. Reading the ending
+  on screen also showed two things no audit would: the Delibird Isle
+  chapter, the boardroom and the ferry spelled names in mixed case
+  ("Ilex:", "Cordelia:") against the rest of the game's capitals, and
+  the credits opened with DELIBIRD ISLE under a title screen that says
+  POKéMON ANTHROPOCENE. Both normalised; the protagonist's saved name is
+  WREN, as every line that says it aloud spells it. The credits and
+  `CREDITS.md` name the FireRed Tileset Port; the Johto-style set under
+  the three Delibird maps has no recorded author and needs one before
+  any public release. After the credits the run takes CONTINUE and plays
+  the post-game beats: the SMEARGLE at the pond, TARN's rematch, the
+  ferry again, PERRIN's last battle.
+  And the thing a level-100 test party can never feel, read off the party
+  files instead: CORDELIA stood at 55 to 58 straight after a level-42
+  finale, nothing between them to train on, and the credits behind her.
+  She is 44 to 47. ILEX's Skyline clearance (badge 8, a 42 ace) waits on
+  an island the ferry opens in chapter 5; nothing on the main road needs
+  it, so he now says it is the last clearance and asks before the exam.
+  `tools/skald/curve.py` prints every required boss in story order and
+  fails on a step of more than seven levels (0).

@@ -20,7 +20,7 @@ segment's log and `.png` in `$S/play/run/` say where and why.
 | `chain9.sh` | 9 | Fernwick, the record filed | the ferry to the Coast, the boardroom, the eight-stop epilogue, the credits, CONTINUE into the post-game |
 | `chain10.sh` | post-game | Fernwick after CONTINUE | the SMEARGLE at the pond, TARN's rematch, the ferry again, PERRIN's last battle |
 
-`run_all.sh` runs chapters 1-9 in order (`chain10.sh` is run by hand after it); `run_rest.sh` is the tail after a fix (edit its first line to
+`run_all.sh` runs them all in order; `run_rest.sh` is the tail after a fix (edit its first line to
 the segment to resume from); `rebuild_and_run.sh` builds the clean ROM and the probe ROM first.
 
 ## Running
@@ -32,7 +32,7 @@ stashed as `$S/probe/hookon.gba` + `.map`, where `$S` is the session scratchpad
 ```bash
 export SKALD_SCRATCH=/tmp/claude-0/-home-user-delibird-isle/<id>/scratchpad
 mkdir -p $SKALD_SCRATCH/play/run
-bash tools/skald/play/rebuild_and_run.sh      # ~4 min of builds, then ~30 min of play
+bash tools/skald/play/rebuild_and_run.sh      # ~4 min of builds, then ~17 min of play
 tail -f $SKALD_SCRATCH/play/run/run_rest.log
 ```
 

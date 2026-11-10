@@ -54,6 +54,11 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   raised tile (a dais, a deck, a chair behind a desk) answers only the
   player standing at its own height, so one side of it is dead air
   (Cordelia Brooke from behind her chair, 2026-11-10).
+- **Level curve**: after touching any boss, gate or rival party, run
+  `python3 tools/skald/curve.py`. It prints every required battle in story
+  order and must read `0 step(s) too steep`. The playthrough chains fight
+  with a level-100 lead and cannot feel difficulty; this is the only check
+  that can (Cordelia was sixteen levels over the finale, 2026-11-10).
 - **Scripted warps**: `python3 tools/skald/warp_dest.py` must read `0 with a
   bad landing`. A `warp(MAP_X, x, y)` in a script is a bare coordinate
   nothing else checks; it goes stale when an NPC is placed or the ground

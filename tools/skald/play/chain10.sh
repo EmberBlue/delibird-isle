@@ -19,8 +19,8 @@ seg() {
   if [ $rc -ne 0 ]; then echo "!!! $name failed (exit $rc)"; exit 1; fi
   if [ "$need" != "-" ] && ! grep -q "$need = 1" $P/$name.log; then echo "!!! $name: $need not set"; exit 1; fi
 }
-# the SMEARGLE on the pond bank (9,27), from the east: "Let it come?" YES
-seg s78 s77 FLAG_SKALD_SMEARGLE_DONE --walk GOTO:10,27 --walk LEFT:0 --walk TALK:14 --walk WAIT:300 \
+# the SMEARGLE on the pond bank (9,27), from the north (east of it is the pond): "Let it come?" YES
+seg s78 s77 FLAG_SKALD_SMEARGLE_DONE --walk GOTO:9,26 --walk DOWN:0 --walk TALK:40 --walk WAIT:300 \
   --check FLAG_SKALD_SMEARGLE_DONE --expect MAP_PARCEL_FERNWICK
 # the Certification Hall (warp 3): TARN at full strength
 seg s79 s78 "TRAINER_SKALD_GYM1_R defeated" --walk GOTOWARP:3 --walk WAIT:400 --walk GOTO:5,4 --walk UP:0 --walk TALKFIGHT:10 --walk TALK:4 --walk WAIT:300 \

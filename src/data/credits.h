@@ -36,7 +36,7 @@ enum
 #define ENTRIES_PER_PAGE 5
 
 static const u8 sCreditsText_EmptyString[] = _("");
-static const u8 sCreditsText_DelibirdIsle[] = _("DELIBIRD ISLE");
+static const u8 sCreditsText_GameTitle[] = _("POKéMON ANTHROPOCENE");   // as the title screen spells it
 static const u8 sCreditsText_ASkaldmereStory[] = _("a SKALDMERE story");
 static const u8 sCreditsText_StoryDesignWriting[] = _("Story, Design & Writing");
 static const u8 sCreditsText_Emberblue[] = _("EMBERBLUE");
@@ -124,6 +124,8 @@ static const u8 sCreditsText_PokeemeraldExpansion[] = _("pokeemerald-expansion")
 static const u8 sCreditsText_RomHackingHideout[] = _("Rom Hacking Hideout");
 static const u8 sCreditsText_Decompilation[] = _("Decompilation");
 static const u8 sCreditsText_Pret[] = _("pret");
+static const u8 sCreditsText_Tilesets[] = _("FireRed Tileset Port");
+static const u8 sCreditsText_Liamjd14[] = _("Liamjd14");
 static const u8 sCreditsText_Tools[] = _("Tools");
 static const u8 sCreditsText_Poryscript[] = _("poryscript");
 static const u8 sCreditsText_Porytiles[] = _("porytiles");
@@ -149,7 +151,7 @@ static const u8 sCreditsText_PokemonIsATrademarkOf[] = _("POKéMON is a trademar
 static const u8 sCreditsText_NintendoCreaturesAndGameFreak[] = _("Nintendo, Creatures and GAME FREAK");
 
 static const struct CreditsEntry sCreditsEntry_EmptyString = { 0, FALSE, sCreditsText_EmptyString};
-static const struct CreditsEntry sCreditsEntry_DelibirdIsle = { 0, TRUE, sCreditsText_DelibirdIsle};
+static const struct CreditsEntry sCreditsEntry_GameTitle = { 0, TRUE, sCreditsText_GameTitle};
 static const struct CreditsEntry sCreditsEntry_ASkaldmereStory = { 0, FALSE, sCreditsText_ASkaldmereStory};
 static const struct CreditsEntry sCreditsEntry_StoryDesignWriting = { 0, TRUE, sCreditsText_StoryDesignWriting};
 static const struct CreditsEntry sCreditsEntry_Emberblue = { 0, FALSE, sCreditsText_Emberblue};
@@ -237,6 +239,8 @@ static const struct CreditsEntry sCreditsEntry_PokeemeraldExpansion = { 0, FALSE
 static const struct CreditsEntry sCreditsEntry_RomHackingHideout = { 0, FALSE, sCreditsText_RomHackingHideout};
 static const struct CreditsEntry sCreditsEntry_Decompilation = { 0, TRUE, sCreditsText_Decompilation};
 static const struct CreditsEntry sCreditsEntry_Pret = { 0, FALSE, sCreditsText_Pret};
+static const struct CreditsEntry sCreditsEntry_Tilesets = { 0, TRUE, sCreditsText_Tilesets};
+static const struct CreditsEntry sCreditsEntry_Liamjd14 = { 0, FALSE, sCreditsText_Liamjd14};
 static const struct CreditsEntry sCreditsEntry_Tools = { 0, TRUE, sCreditsText_Tools};
 static const struct CreditsEntry sCreditsEntry_Poryscript = { 0, FALSE, sCreditsText_Poryscript};
 static const struct CreditsEntry sCreditsEntry_Porytiles = { 0, FALSE, sCreditsText_Porytiles};
@@ -266,7 +270,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
 {
     [PAGE_TITLE] = {
         _,
-        &sCreditsEntry_DelibirdIsle,
+        &sCreditsEntry_GameTitle,
         &sCreditsEntry_ASkaldmereStory,
         _,
         _,
@@ -405,11 +409,11 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         _,
     },
     [PAGE_DECOMP] = {
-        _,
         &sCreditsEntry_Decompilation,
         &sCreditsEntry_Pret,
         _,
-        _,
+        &sCreditsEntry_Tilesets,
+        &sCreditsEntry_Liamjd14,
     },
     [PAGE_TOOLS] = {
         &sCreditsEntry_Tools,

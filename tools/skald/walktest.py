@@ -194,6 +194,12 @@ def main():
     # SaveBlock1's flags/vars offsets, written into the probe block by the new-game hook. Remember them now:
     # a soft reset (the credits) clears EWRAM, and CONTINUE does not run the hook again.
     offs0 = (core.memory.u16[probe + 16], core.memory.u16[probe + 18])
+    offs_file = Path(str(a.rom) + ".offs")        # ... and across runs: a state saved after the reset has none
+    if offs0[0] and offs0[1]:
+        if not offs_file.exists() or offs_file.read_text() != f"{offs0[0]} {offs0[1]}":
+            offs_file.write_text(f"{offs0[0]} {offs0[1]}")
+    elif offs_file.exists():
+        offs0 = tuple(int(v) for v in offs_file.read_text().split())
     tracing[0] = True
     for wspec in a.walk:
         d, n = (wspec.split(":") + ["1"])[:2]

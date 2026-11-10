@@ -400,6 +400,16 @@ script ParcelDelibird_GymIlex {
     faceplayer
     if (!flag(FLAG_BADGE08_GET)) {
         msgbox(format("ILEX stands a little apart from the lights, a folded square of red cloth in one hand, eyes on the high snowline above the cabins.\pILEX: Surveyor, Skaldmere Survey. I don't fix anything. I measure how fast it's going.\pILEX: You read places on the ground -- snares, residue, the catch on the pallet. I read them from above. The whole crescent of an island at once, before and after, change against change."), MSGBOX_DEFAULT)
+        // The Skyline is badge 8 (a level-42 ace) on an island the ferry opens in chapter 5. Nothing on
+        // the main road needs it, so say so and let an early arrival come back after the coast and the station.
+        if (!flag(FLAG_BADGE07_GET)) {
+            msgbox(format("ILEX: One thing before the frame. The Skyline is the last clearance on the card, and I examine it as the last. Most RANGERS come back for it after the coast and the climate station.\pI won't go easy because you came early. Sit it now?"), MSGBOX_YESNO)
+            if (var(VAR_RESULT) == 0) {
+                msgbox(format("ILEX: Then see the island first. The snowline will wait for you. It's the one thing up here that will."), MSGBOX_DEFAULT)
+                release
+                end
+            }
+        }
         msgbox(format("ILEX: The summit first. Thirteen patches of snow up there this Midwinter, by my cloth. More than last year?"), MSGBOX_YESNO)
         if (var(VAR_RESULT) == 1) {
             msgbox(format("ILEX: Fewer. Nineteen last year. People see thirteen patches and think snow. I see six that aren't there.\pFrame first, then count. Let's see you hold the frame."), MSGBOX_DEFAULT)

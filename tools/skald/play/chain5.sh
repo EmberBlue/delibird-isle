@@ -38,8 +38,9 @@ seg s47 s46 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --walk GOTOEDGE
 # the ferry captain (15,34), first choice = DELIBIRD ISLE (open after the Highland certification)
 seg s48 s47 FLAG_SKALDMERE_DELIBIRD_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk MENU:0,14 --walk WAIT:1500 \
   --check FLAG_SKALDMERE_DELIBIRD_ARRIVAL --expect MAP_PARCEL_DELIBIRD
-# ILEX in the square (11,10) through the north gap: the aerial-survey competency test, badge 8, HM07
-seg s49 s48 FLAG_BADGE08_GET --walk GOTO:10,10 --walk RIGHT:0 --walk TALK:30 --walk WAIT:2500 --check FLAG_BADGE08_GET --expect MAP_PARCEL_DELIBIRD
+# ILEX in the square (11,10) through the north gap: the aerial-survey competency test, badge 8, HM07.
+# He warns an early arrival and asks (YES/NO) before the frame, so A all the way to the battle.
+seg s49 s48 FLAG_BADGE08_GET --walk GOTO:10,10 --walk RIGHT:0 --walk TALKFIGHT:60 --walk WAIT:2500 --check FLAG_BADGE08_GET --expect MAP_PARCEL_DELIBIRD
 # the gift square: the two item balls, the reveler, then the keeper; the elder's parcel to the relief man, and the
 # Delibird itself; a heal at the warming hut
 seg s50 s49 - --walk GOTO:15,4 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:25,21 --walk UP:0 --walk TALK:1 --walk WAIT:400 \

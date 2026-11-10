@@ -661,11 +661,11 @@ ParcelDelibird_GymIlex_1:
 # 401 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_unset FLAG_BADGE08_GET, ParcelDelibird_GymIlex_5
 ParcelDelibird_GymIlex_4:
-# 415 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Text_6, MSGBOX_DEFAULT
-# 416 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Text_7, MSGBOX_DEFAULT
-# 417 "data/maps/ParcelDelibird/scripts.pory"
+# 425 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_8, MSGBOX_DEFAULT
+# 426 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_9, MSGBOX_DEFAULT
+# 427 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
@@ -677,1208 +677,1226 @@ ParcelDelibird_GymIlex_2:
 ParcelDelibird_GymIlex_5:
 # 402 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_GymIlex_Text_0, MSGBOX_DEFAULT
-# 403 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Text_1, MSGBOX_YESNO
-# 404 "data/maps/ParcelDelibird/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq ParcelDelibird_GymIlex_8
-# 407 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Text_3, MSGBOX_DEFAULT
-# 408 "data/maps/ParcelDelibird/scripts.pory"
-	setflag FLAG_SKALD_EXAM_8
+# 405 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_unset FLAG_BADGE07_GET, ParcelDelibird_GymIlex_8
 ParcelDelibird_GymIlex_7:
-# 410 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Text_4, MSGBOX_DEFAULT
-# 411 "data/maps/ParcelDelibird/scripts.pory"
-	trainerbattle_no_intro TRAINER_SKALD_GYM8, ParcelDelibird_GymIlex_Text_5
-# 412 "data/maps/ParcelDelibird/scripts.pory"
+# 413 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_3, MSGBOX_YESNO
+# 414 "data/maps/ParcelDelibird/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq ParcelDelibird_GymIlex_11
+# 417 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_5, MSGBOX_DEFAULT
+# 418 "data/maps/ParcelDelibird/scripts.pory"
+	setflag FLAG_SKALD_EXAM_8
+ParcelDelibird_GymIlex_10:
+# 420 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_6, MSGBOX_DEFAULT
+# 421 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_no_intro TRAINER_SKALD_GYM8, ParcelDelibird_GymIlex_Text_7
+# 422 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_GymIlex_Defeated
 	goto ParcelDelibird_GymIlex_4
 
 ParcelDelibird_GymIlex_8:
-# 405 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_GymIlex_Text_2, MSGBOX_DEFAULT
+# 406 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_1, MSGBOX_YESNO
+# 407 "data/maps/ParcelDelibird/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq ParcelDelibird_GymIlex_14
 	goto ParcelDelibird_GymIlex_7
+
+ParcelDelibird_GymIlex_11:
+# 415 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_4, MSGBOX_DEFAULT
+	goto ParcelDelibird_GymIlex_10
+
+ParcelDelibird_GymIlex_14:
+# 408 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_GymIlex_Text_2, MSGBOX_DEFAULT
+# 409 "data/maps/ParcelDelibird/scripts.pory"
+	release
+	end
 
 
 ParcelDelibird_GymIlex_Defeated::
-# 422 "data/maps/ParcelDelibird/scripts.pory"
+# 432 "data/maps/ParcelDelibird/scripts.pory"
 	setflag FLAG_BADGE08_GET
-# 423 "data/maps/ParcelDelibird/scripts.pory"
+# 433 "data/maps/ParcelDelibird/scripts.pory"
 	call Common_EventScript_PlayGymBadgeFanfare
-# 424 "data/maps/ParcelDelibird/scripts.pory"
+# 434 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_GymIlex_Defeated_Text_0, MSGBOX_DEFAULT
-# 425 "data/maps/ParcelDelibird/scripts.pory"
+# 435 "data/maps/ParcelDelibird/scripts.pory"
 	giveitem ITEM_HM07
-# 426 "data/maps/ParcelDelibird/scripts.pory"
+# 436 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_GymIlex_Defeated_Text_1, MSGBOX_DEFAULT
-# 427 "data/maps/ParcelDelibird/scripts.pory"
+# 437 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_SquareKeeper::
-# 436 "data/maps/ParcelDelibird/scripts.pory"
+# 446 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 437 "data/maps/ParcelDelibird/scripts.pory"
+# 447 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 438 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_SquareKeeper_2
-# 443 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_set FLAG_SKALD_DEL_GIFT_SQUARE, ParcelDelibird_SquareKeeper_5
 # 448 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_SquareKeeper_Text_2, MSGBOX_DEFAULT
-# 449 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_SquareKeeper_Text_3, MSGBOX_DEFAULT
-# 450 "data/maps/ParcelDelibird/scripts.pory"
-	random 4
-# 451 "data/maps/ParcelDelibird/scripts.pory"
-	switch VAR_RESULT
-# 452 "data/maps/ParcelDelibird/scripts.pory"
-	case 0, ParcelDelibird_SquareKeeper_9
-# 454 "data/maps/ParcelDelibird/scripts.pory"
-	case 1, ParcelDelibird_SquareKeeper_10
-# 456 "data/maps/ParcelDelibird/scripts.pory"
-	case 2, ParcelDelibird_SquareKeeper_11
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_SquareKeeper_2
+# 453 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALD_DEL_GIFT_SQUARE, ParcelDelibird_SquareKeeper_5
 # 458 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_SquareKeeper_Text_2, MSGBOX_DEFAULT
+# 459 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_SquareKeeper_Text_3, MSGBOX_DEFAULT
+# 460 "data/maps/ParcelDelibird/scripts.pory"
+	random 4
+# 461 "data/maps/ParcelDelibird/scripts.pory"
+	switch VAR_RESULT
+# 462 "data/maps/ParcelDelibird/scripts.pory"
+	case 0, ParcelDelibird_SquareKeeper_9
+# 464 "data/maps/ParcelDelibird/scripts.pory"
+	case 1, ParcelDelibird_SquareKeeper_10
+# 466 "data/maps/ParcelDelibird/scripts.pory"
+	case 2, ParcelDelibird_SquareKeeper_11
+# 468 "data/maps/ParcelDelibird/scripts.pory"
 	case 3, ParcelDelibird_SquareKeeper_12
 ParcelDelibird_SquareKeeper_7:
-# 461 "data/maps/ParcelDelibird/scripts.pory"
+# 471 "data/maps/ParcelDelibird/scripts.pory"
 	setflag FLAG_SKALD_DEL_GIFT_SQUARE
-# 462 "data/maps/ParcelDelibird/scripts.pory"
+# 472 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_SquareKeeper_Text_4, MSGBOX_YESNO
-# 463 "data/maps/ParcelDelibird/scripts.pory"
+# 473 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelDelibird_SquareKeeper_14
-# 475 "data/maps/ParcelDelibird/scripts.pory"
+# 485 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_SquareKeeper_Text_7, MSGBOX_DEFAULT
-# 476 "data/maps/ParcelDelibird/scripts.pory"
+# 486 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_SquareKeeper_2:
-# 439 "data/maps/ParcelDelibird/scripts.pory"
+# 449 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_SquareKeeper_Text_0, MSGBOX_DEFAULT
-# 440 "data/maps/ParcelDelibird/scripts.pory"
+# 450 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_SquareKeeper_5:
-# 444 "data/maps/ParcelDelibird/scripts.pory"
+# 454 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_SquareKeeper_Text_1, MSGBOX_DEFAULT
-# 445 "data/maps/ParcelDelibird/scripts.pory"
+# 455 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_SquareKeeper_9:
-# 453 "data/maps/ParcelDelibird/scripts.pory"
+# 463 "data/maps/ParcelDelibird/scripts.pory"
 	giveitem ITEM_LUCKY_EGG
 	goto ParcelDelibird_SquareKeeper_7
 
 ParcelDelibird_SquareKeeper_10:
-# 455 "data/maps/ParcelDelibird/scripts.pory"
+# 465 "data/maps/ParcelDelibird/scripts.pory"
 	giveitem ITEM_STAR_PIECE
 	goto ParcelDelibird_SquareKeeper_7
 
 ParcelDelibird_SquareKeeper_11:
-# 457 "data/maps/ParcelDelibird/scripts.pory"
+# 467 "data/maps/ParcelDelibird/scripts.pory"
 	giveitem ITEM_PP_UP
 	goto ParcelDelibird_SquareKeeper_7
 
 ParcelDelibird_SquareKeeper_12:
-# 459 "data/maps/ParcelDelibird/scripts.pory"
+# 469 "data/maps/ParcelDelibird/scripts.pory"
 	giveitem ITEM_SITRUS_BERRY, 3
 	goto ParcelDelibird_SquareKeeper_7
 
 ParcelDelibird_SquareKeeper_14:
-# 464 "data/maps/ParcelDelibird/scripts.pory"
+# 474 "data/maps/ParcelDelibird/scripts.pory"
 	checkitem ITEM_POTION
-# 465 "data/maps/ParcelDelibird/scripts.pory"
+# 475 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 1
 	goto_if_eq ParcelDelibird_SquareKeeper_17
-# 471 "data/maps/ParcelDelibird/scripts.pory"
+# 481 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_SquareKeeper_Text_6, MSGBOX_DEFAULT
-# 472 "data/maps/ParcelDelibird/scripts.pory"
+# 482 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_SquareKeeper_17:
-# 466 "data/maps/ParcelDelibird/scripts.pory"
+# 476 "data/maps/ParcelDelibird/scripts.pory"
 	removeitem ITEM_POTION
-# 467 "data/maps/ParcelDelibird/scripts.pory"
+# 477 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_SquareKeeper_Text_5, MSGBOX_DEFAULT
-# 468 "data/maps/ParcelDelibird/scripts.pory"
+# 478 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_WarmingHut::
-# 482 "data/maps/ParcelDelibird/scripts.pory"
+# 492 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 483 "data/maps/ParcelDelibird/scripts.pory"
+# 493 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 484 "data/maps/ParcelDelibird/scripts.pory"
+# 494 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_WarmingHut_Text_0, MSGBOX_DEFAULT
-# 485 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_WarmingHut_Text_1, MSGBOX_DEFAULT
-# 486 "data/maps/ParcelDelibird/scripts.pory"
-	closemessage
-# 487 "data/maps/ParcelDelibird/scripts.pory"
-	call Common_EventScript_OutOfCenterPartyHeal
-# 488 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_WarmingHut_Text_2, MSGBOX_DEFAULT
-# 489 "data/maps/ParcelDelibird/scripts.pory"
-	release
-	end
-
-
-ParcelDelibird_Stringer::
 # 495 "data/maps/ParcelDelibird/scripts.pory"
-	lock
+	msgbox ParcelDelibird_WarmingHut_Text_1, MSGBOX_DEFAULT
 # 496 "data/maps/ParcelDelibird/scripts.pory"
-	faceplayer
+	closemessage
 # 497 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_Stringer_Text_0, MSGBOX_DEFAULT
+	call Common_EventScript_OutOfCenterPartyHeal
 # 498 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_Stringer_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelDelibird_WarmingHut_Text_2, MSGBOX_DEFAULT
 # 499 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
-ParcelDelibird_Blankets::
+ParcelDelibird_Stringer::
 # 505 "data/maps/ParcelDelibird/scripts.pory"
 	lock
 # 506 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
 # 507 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_Blankets_Text_0, MSGBOX_DEFAULT
+	msgbox ParcelDelibird_Stringer_Text_0, MSGBOX_DEFAULT
 # 508 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_Blankets_Text_1, MSGBOX_DEFAULT
+	msgbox ParcelDelibird_Stringer_Text_1, MSGBOX_DEFAULT
 # 509 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
-ParcelDelibird_T_Hakon::
+ParcelDelibird_Blankets::
 # 515 "data/maps/ParcelDelibird/scripts.pory"
-	trainerbattle_single TRAINER_SKALD_DEL_HAKON, ParcelDelibird_T_Hakon_Text_0, ParcelDelibird_T_Hakon_Text_1, ParcelDelibird_T_Hakon_FirstWin
+	lock
+# 516 "data/maps/ParcelDelibird/scripts.pory"
+	faceplayer
+# 517 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_Blankets_Text_0, MSGBOX_DEFAULT
+# 518 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_Blankets_Text_1, MSGBOX_DEFAULT
 # 519 "data/maps/ParcelDelibird/scripts.pory"
+	release
+	end
+
+
+ParcelDelibird_T_Hakon::
+# 525 "data/maps/ParcelDelibird/scripts.pory"
+	trainerbattle_single TRAINER_SKALD_DEL_HAKON, ParcelDelibird_T_Hakon_Text_0, ParcelDelibird_T_Hakon_Text_1, ParcelDelibird_T_Hakon_FirstWin
+# 529 "data/maps/ParcelDelibird/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 520 "data/maps/ParcelDelibird/scripts.pory"
+# 530 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibird_T_Hakon_3
 ParcelDelibird_T_Hakon_1:
-# 523 "data/maps/ParcelDelibird/scripts.pory"
+# 533 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibird_T_Hakon_8
 ParcelDelibird_T_Hakon_6:
-# 526 "data/maps/ParcelDelibird/scripts.pory"
+# 536 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibird_T_Hakon_13
 ParcelDelibird_T_Hakon_11:
-# 529 "data/maps/ParcelDelibird/scripts.pory"
+# 539 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibird_T_Hakon_18
 ParcelDelibird_T_Hakon_16:
-# 532 "data/maps/ParcelDelibird/scripts.pory"
+# 542 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibird_T_Hakon_2:
-# 521 "data/maps/ParcelDelibird/scripts.pory"
+# 531 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Hakon_R2
 	goto ParcelDelibird_T_Hakon_1
 
 ParcelDelibird_T_Hakon_3:
-# 520 "data/maps/ParcelDelibird/scripts.pory"
+# 530 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_HAKON_R2
 	goto_if 0, ParcelDelibird_T_Hakon_2
 	goto ParcelDelibird_T_Hakon_1
 
 ParcelDelibird_T_Hakon_7:
-# 524 "data/maps/ParcelDelibird/scripts.pory"
+# 534 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Hakon_R3
 	goto ParcelDelibird_T_Hakon_6
 
 ParcelDelibird_T_Hakon_8:
-# 523 "data/maps/ParcelDelibird/scripts.pory"
+# 533 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_HAKON_R3
 	goto_if 0, ParcelDelibird_T_Hakon_7
 	goto ParcelDelibird_T_Hakon_6
 
 ParcelDelibird_T_Hakon_12:
-# 527 "data/maps/ParcelDelibird/scripts.pory"
+# 537 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Hakon_R4
 	goto ParcelDelibird_T_Hakon_11
 
 ParcelDelibird_T_Hakon_13:
-# 526 "data/maps/ParcelDelibird/scripts.pory"
+# 536 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_HAKON_R4
 	goto_if 0, ParcelDelibird_T_Hakon_12
 	goto ParcelDelibird_T_Hakon_11
 
 ParcelDelibird_T_Hakon_17:
-# 530 "data/maps/ParcelDelibird/scripts.pory"
+# 540 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Hakon_R5
 	goto ParcelDelibird_T_Hakon_16
 
 ParcelDelibird_T_Hakon_18:
-# 529 "data/maps/ParcelDelibird/scripts.pory"
+# 539 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_HAKON_R5
 	goto_if 0, ParcelDelibird_T_Hakon_17
 	goto ParcelDelibird_T_Hakon_16
 
 
 ParcelDelibird_T_Hakon_FirstWin::
-# 536 "data/maps/ParcelDelibird/scripts.pory"
+# 546 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_Text_2, MSGBOX_DEFAULT
-# 537 "data/maps/ParcelDelibird/scripts.pory"
+# 547 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Hakon_R2::
-# 541 "data/maps/ParcelDelibird/scripts.pory"
+# 551 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 542 "data/maps/ParcelDelibird/scripts.pory"
+# 552 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 543 "data/maps/ParcelDelibird/scripts.pory"
+# 553 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R2_Text_0, MSGBOX_YESNO
-# 544 "data/maps/ParcelDelibird/scripts.pory"
+# 554 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Hakon_R2_2
-# 549 "data/maps/ParcelDelibird/scripts.pory"
+# 559 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_HAKON_R2, ParcelDelibird_T_Hakon_R2_Text_2
-# 550 "data/maps/ParcelDelibird/scripts.pory"
+# 560 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R2_Text_3, MSGBOX_DEFAULT
-# 551 "data/maps/ParcelDelibird/scripts.pory"
+# 561 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Hakon_R2_2:
-# 545 "data/maps/ParcelDelibird/scripts.pory"
+# 555 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R2_Text_1, MSGBOX_DEFAULT
-# 546 "data/maps/ParcelDelibird/scripts.pory"
+# 556 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Hakon_R3::
-# 555 "data/maps/ParcelDelibird/scripts.pory"
+# 565 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 556 "data/maps/ParcelDelibird/scripts.pory"
+# 566 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 557 "data/maps/ParcelDelibird/scripts.pory"
+# 567 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R3_Text_0, MSGBOX_YESNO
-# 558 "data/maps/ParcelDelibird/scripts.pory"
+# 568 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Hakon_R3_2
-# 563 "data/maps/ParcelDelibird/scripts.pory"
+# 573 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_HAKON_R3, ParcelDelibird_T_Hakon_R2_Text_2
-# 564 "data/maps/ParcelDelibird/scripts.pory"
+# 574 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R3_Text_1, MSGBOX_DEFAULT
-# 565 "data/maps/ParcelDelibird/scripts.pory"
+# 575 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Hakon_R3_2:
-# 559 "data/maps/ParcelDelibird/scripts.pory"
+# 569 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R2_Text_1, MSGBOX_DEFAULT
-# 560 "data/maps/ParcelDelibird/scripts.pory"
+# 570 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Hakon_R4::
-# 569 "data/maps/ParcelDelibird/scripts.pory"
+# 579 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 570 "data/maps/ParcelDelibird/scripts.pory"
+# 580 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 571 "data/maps/ParcelDelibird/scripts.pory"
+# 581 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R4_Text_0, MSGBOX_YESNO
-# 572 "data/maps/ParcelDelibird/scripts.pory"
+# 582 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Hakon_R4_2
-# 577 "data/maps/ParcelDelibird/scripts.pory"
+# 587 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_HAKON_R4, ParcelDelibird_T_Hakon_R4_Text_1
-# 578 "data/maps/ParcelDelibird/scripts.pory"
+# 588 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R4_Text_2, MSGBOX_DEFAULT
-# 579 "data/maps/ParcelDelibird/scripts.pory"
+# 589 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Hakon_R4_2:
-# 573 "data/maps/ParcelDelibird/scripts.pory"
+# 583 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R2_Text_1, MSGBOX_DEFAULT
-# 574 "data/maps/ParcelDelibird/scripts.pory"
+# 584 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Hakon_R5::
-# 583 "data/maps/ParcelDelibird/scripts.pory"
+# 593 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 584 "data/maps/ParcelDelibird/scripts.pory"
+# 594 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 585 "data/maps/ParcelDelibird/scripts.pory"
+# 595 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R5_Text_0, MSGBOX_YESNO
-# 586 "data/maps/ParcelDelibird/scripts.pory"
+# 596 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Hakon_R5_2
-# 591 "data/maps/ParcelDelibird/scripts.pory"
+# 601 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_HAKON_R5, ParcelDelibird_T_Hakon_R5_Text_1
-# 592 "data/maps/ParcelDelibird/scripts.pory"
+# 602 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R5_Text_2, MSGBOX_DEFAULT
-# 593 "data/maps/ParcelDelibird/scripts.pory"
+# 603 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Hakon_R5_2:
-# 587 "data/maps/ParcelDelibird/scripts.pory"
+# 597 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Hakon_R2_Text_1, MSGBOX_DEFAULT
-# 588 "data/maps/ParcelDelibird/scripts.pory"
+# 598 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Bjarne::
-# 597 "data/maps/ParcelDelibird/scripts.pory"
+# 607 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_DEL_BJARNE, ParcelDelibird_T_Bjarne_Text_0, ParcelDelibird_T_Bjarne_Text_1, ParcelDelibird_T_Bjarne_FirstWin
-# 601 "data/maps/ParcelDelibird/scripts.pory"
+# 611 "data/maps/ParcelDelibird/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 602 "data/maps/ParcelDelibird/scripts.pory"
+# 612 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibird_T_Bjarne_3
 ParcelDelibird_T_Bjarne_1:
-# 605 "data/maps/ParcelDelibird/scripts.pory"
+# 615 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibird_T_Bjarne_8
 ParcelDelibird_T_Bjarne_6:
-# 608 "data/maps/ParcelDelibird/scripts.pory"
+# 618 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibird_T_Bjarne_13
 ParcelDelibird_T_Bjarne_11:
-# 611 "data/maps/ParcelDelibird/scripts.pory"
+# 621 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibird_T_Bjarne_18
 ParcelDelibird_T_Bjarne_16:
-# 614 "data/maps/ParcelDelibird/scripts.pory"
+# 624 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibird_T_Bjarne_2:
-# 603 "data/maps/ParcelDelibird/scripts.pory"
+# 613 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Bjarne_R2
 	goto ParcelDelibird_T_Bjarne_1
 
 ParcelDelibird_T_Bjarne_3:
-# 602 "data/maps/ParcelDelibird/scripts.pory"
+# 612 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_BJARNE_R2
 	goto_if 0, ParcelDelibird_T_Bjarne_2
 	goto ParcelDelibird_T_Bjarne_1
 
 ParcelDelibird_T_Bjarne_7:
-# 606 "data/maps/ParcelDelibird/scripts.pory"
+# 616 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Bjarne_R3
 	goto ParcelDelibird_T_Bjarne_6
 
 ParcelDelibird_T_Bjarne_8:
-# 605 "data/maps/ParcelDelibird/scripts.pory"
+# 615 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_BJARNE_R3
 	goto_if 0, ParcelDelibird_T_Bjarne_7
 	goto ParcelDelibird_T_Bjarne_6
 
 ParcelDelibird_T_Bjarne_12:
-# 609 "data/maps/ParcelDelibird/scripts.pory"
+# 619 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Bjarne_R4
 	goto ParcelDelibird_T_Bjarne_11
 
 ParcelDelibird_T_Bjarne_13:
-# 608 "data/maps/ParcelDelibird/scripts.pory"
+# 618 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_BJARNE_R4
 	goto_if 0, ParcelDelibird_T_Bjarne_12
 	goto ParcelDelibird_T_Bjarne_11
 
 ParcelDelibird_T_Bjarne_17:
-# 612 "data/maps/ParcelDelibird/scripts.pory"
+# 622 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Bjarne_R5
 	goto ParcelDelibird_T_Bjarne_16
 
 ParcelDelibird_T_Bjarne_18:
-# 611 "data/maps/ParcelDelibird/scripts.pory"
+# 621 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_BJARNE_R5
 	goto_if 0, ParcelDelibird_T_Bjarne_17
 	goto ParcelDelibird_T_Bjarne_16
 
 
 ParcelDelibird_T_Bjarne_FirstWin::
-# 618 "data/maps/ParcelDelibird/scripts.pory"
+# 628 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_Text_2, MSGBOX_DEFAULT
-# 619 "data/maps/ParcelDelibird/scripts.pory"
+# 629 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Bjarne_R2::
-# 623 "data/maps/ParcelDelibird/scripts.pory"
+# 633 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 624 "data/maps/ParcelDelibird/scripts.pory"
+# 634 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 625 "data/maps/ParcelDelibird/scripts.pory"
+# 635 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R2_Text_0, MSGBOX_YESNO
-# 626 "data/maps/ParcelDelibird/scripts.pory"
+# 636 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Bjarne_R2_2
-# 631 "data/maps/ParcelDelibird/scripts.pory"
+# 641 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_BJARNE_R2, ParcelDelibird_T_Bjarne_R2_Text_2
-# 632 "data/maps/ParcelDelibird/scripts.pory"
+# 642 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R2_Text_3, MSGBOX_DEFAULT
-# 633 "data/maps/ParcelDelibird/scripts.pory"
+# 643 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Bjarne_R2_2:
-# 627 "data/maps/ParcelDelibird/scripts.pory"
+# 637 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R2_Text_1, MSGBOX_DEFAULT
-# 628 "data/maps/ParcelDelibird/scripts.pory"
+# 638 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Bjarne_R3::
-# 637 "data/maps/ParcelDelibird/scripts.pory"
+# 647 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 638 "data/maps/ParcelDelibird/scripts.pory"
+# 648 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 639 "data/maps/ParcelDelibird/scripts.pory"
+# 649 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R3_Text_0, MSGBOX_YESNO
-# 640 "data/maps/ParcelDelibird/scripts.pory"
+# 650 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Bjarne_R3_2
-# 645 "data/maps/ParcelDelibird/scripts.pory"
+# 655 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_BJARNE_R3, ParcelDelibird_T_Bjarne_R3_Text_1
-# 646 "data/maps/ParcelDelibird/scripts.pory"
+# 656 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R3_Text_2, MSGBOX_DEFAULT
-# 647 "data/maps/ParcelDelibird/scripts.pory"
+# 657 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Bjarne_R3_2:
-# 641 "data/maps/ParcelDelibird/scripts.pory"
+# 651 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R2_Text_1, MSGBOX_DEFAULT
-# 642 "data/maps/ParcelDelibird/scripts.pory"
+# 652 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Bjarne_R4::
-# 651 "data/maps/ParcelDelibird/scripts.pory"
+# 661 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 652 "data/maps/ParcelDelibird/scripts.pory"
+# 662 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 653 "data/maps/ParcelDelibird/scripts.pory"
+# 663 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R4_Text_0, MSGBOX_YESNO
-# 654 "data/maps/ParcelDelibird/scripts.pory"
+# 664 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Bjarne_R4_2
-# 659 "data/maps/ParcelDelibird/scripts.pory"
+# 669 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_BJARNE_R4, ParcelDelibird_T_Bjarne_R4_Text_1
-# 660 "data/maps/ParcelDelibird/scripts.pory"
+# 670 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R4_Text_2, MSGBOX_DEFAULT
-# 661 "data/maps/ParcelDelibird/scripts.pory"
+# 671 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Bjarne_R4_2:
-# 655 "data/maps/ParcelDelibird/scripts.pory"
+# 665 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R2_Text_1, MSGBOX_DEFAULT
-# 656 "data/maps/ParcelDelibird/scripts.pory"
+# 666 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Bjarne_R5::
-# 665 "data/maps/ParcelDelibird/scripts.pory"
+# 675 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 666 "data/maps/ParcelDelibird/scripts.pory"
+# 676 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 667 "data/maps/ParcelDelibird/scripts.pory"
+# 677 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R5_Text_0, MSGBOX_YESNO
-# 668 "data/maps/ParcelDelibird/scripts.pory"
+# 678 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Bjarne_R5_2
-# 673 "data/maps/ParcelDelibird/scripts.pory"
+# 683 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_BJARNE_R5, ParcelDelibird_T_Bjarne_R5_Text_1
-# 674 "data/maps/ParcelDelibird/scripts.pory"
+# 684 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R5_Text_2, MSGBOX_DEFAULT
-# 675 "data/maps/ParcelDelibird/scripts.pory"
+# 685 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Bjarne_R5_2:
-# 669 "data/maps/ParcelDelibird/scripts.pory"
+# 679 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Bjarne_R2_Text_1, MSGBOX_DEFAULT
-# 670 "data/maps/ParcelDelibird/scripts.pory"
+# 680 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Frida::
-# 679 "data/maps/ParcelDelibird/scripts.pory"
+# 689 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_DEL_FRIDA, ParcelDelibird_T_Frida_Text_0, ParcelDelibird_T_Frida_Text_1, ParcelDelibird_T_Frida_FirstWin
-# 683 "data/maps/ParcelDelibird/scripts.pory"
+# 693 "data/maps/ParcelDelibird/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 684 "data/maps/ParcelDelibird/scripts.pory"
+# 694 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibird_T_Frida_3
 ParcelDelibird_T_Frida_1:
-# 687 "data/maps/ParcelDelibird/scripts.pory"
+# 697 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibird_T_Frida_8
 ParcelDelibird_T_Frida_6:
-# 690 "data/maps/ParcelDelibird/scripts.pory"
+# 700 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibird_T_Frida_13
 ParcelDelibird_T_Frida_11:
-# 693 "data/maps/ParcelDelibird/scripts.pory"
+# 703 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibird_T_Frida_18
 ParcelDelibird_T_Frida_16:
-# 696 "data/maps/ParcelDelibird/scripts.pory"
+# 706 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibird_T_Frida_2:
-# 685 "data/maps/ParcelDelibird/scripts.pory"
+# 695 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Frida_R2
 	goto ParcelDelibird_T_Frida_1
 
 ParcelDelibird_T_Frida_3:
-# 684 "data/maps/ParcelDelibird/scripts.pory"
+# 694 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_FRIDA_R2
 	goto_if 0, ParcelDelibird_T_Frida_2
 	goto ParcelDelibird_T_Frida_1
 
 ParcelDelibird_T_Frida_7:
-# 688 "data/maps/ParcelDelibird/scripts.pory"
+# 698 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Frida_R3
 	goto ParcelDelibird_T_Frida_6
 
 ParcelDelibird_T_Frida_8:
-# 687 "data/maps/ParcelDelibird/scripts.pory"
+# 697 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_FRIDA_R3
 	goto_if 0, ParcelDelibird_T_Frida_7
 	goto ParcelDelibird_T_Frida_6
 
 ParcelDelibird_T_Frida_12:
-# 691 "data/maps/ParcelDelibird/scripts.pory"
+# 701 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Frida_R4
 	goto ParcelDelibird_T_Frida_11
 
 ParcelDelibird_T_Frida_13:
-# 690 "data/maps/ParcelDelibird/scripts.pory"
+# 700 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_FRIDA_R4
 	goto_if 0, ParcelDelibird_T_Frida_12
 	goto ParcelDelibird_T_Frida_11
 
 ParcelDelibird_T_Frida_17:
-# 694 "data/maps/ParcelDelibird/scripts.pory"
+# 704 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Frida_R5
 	goto ParcelDelibird_T_Frida_16
 
 ParcelDelibird_T_Frida_18:
-# 693 "data/maps/ParcelDelibird/scripts.pory"
+# 703 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_FRIDA_R5
 	goto_if 0, ParcelDelibird_T_Frida_17
 	goto ParcelDelibird_T_Frida_16
 
 
 ParcelDelibird_T_Frida_FirstWin::
-# 700 "data/maps/ParcelDelibird/scripts.pory"
+# 710 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_Text_2, MSGBOX_DEFAULT
-# 701 "data/maps/ParcelDelibird/scripts.pory"
+# 711 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Frida_R2::
-# 705 "data/maps/ParcelDelibird/scripts.pory"
+# 715 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 706 "data/maps/ParcelDelibird/scripts.pory"
+# 716 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 707 "data/maps/ParcelDelibird/scripts.pory"
+# 717 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R2_Text_0, MSGBOX_YESNO
-# 708 "data/maps/ParcelDelibird/scripts.pory"
+# 718 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Frida_R2_2
-# 713 "data/maps/ParcelDelibird/scripts.pory"
+# 723 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_FRIDA_R2, ParcelDelibird_T_Frida_R2_Text_2
-# 714 "data/maps/ParcelDelibird/scripts.pory"
+# 724 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R2_Text_3, MSGBOX_DEFAULT
-# 715 "data/maps/ParcelDelibird/scripts.pory"
+# 725 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Frida_R2_2:
-# 709 "data/maps/ParcelDelibird/scripts.pory"
+# 719 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R2_Text_1, MSGBOX_DEFAULT
-# 710 "data/maps/ParcelDelibird/scripts.pory"
+# 720 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Frida_R3::
-# 719 "data/maps/ParcelDelibird/scripts.pory"
+# 729 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 720 "data/maps/ParcelDelibird/scripts.pory"
+# 730 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 721 "data/maps/ParcelDelibird/scripts.pory"
+# 731 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R3_Text_0, MSGBOX_YESNO
-# 722 "data/maps/ParcelDelibird/scripts.pory"
+# 732 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Frida_R3_2
-# 727 "data/maps/ParcelDelibird/scripts.pory"
+# 737 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_FRIDA_R3, ParcelDelibird_T_Frida_R3_Text_1
-# 728 "data/maps/ParcelDelibird/scripts.pory"
+# 738 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R3_Text_2, MSGBOX_DEFAULT
-# 729 "data/maps/ParcelDelibird/scripts.pory"
+# 739 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Frida_R3_2:
-# 723 "data/maps/ParcelDelibird/scripts.pory"
+# 733 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R2_Text_1, MSGBOX_DEFAULT
-# 724 "data/maps/ParcelDelibird/scripts.pory"
+# 734 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Frida_R4::
-# 733 "data/maps/ParcelDelibird/scripts.pory"
+# 743 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 734 "data/maps/ParcelDelibird/scripts.pory"
+# 744 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 735 "data/maps/ParcelDelibird/scripts.pory"
+# 745 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R4_Text_0, MSGBOX_YESNO
-# 736 "data/maps/ParcelDelibird/scripts.pory"
+# 746 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Frida_R4_2
-# 741 "data/maps/ParcelDelibird/scripts.pory"
+# 751 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_FRIDA_R4, ParcelDelibird_T_Frida_R4_Text_1
-# 742 "data/maps/ParcelDelibird/scripts.pory"
+# 752 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R4_Text_2, MSGBOX_DEFAULT
-# 743 "data/maps/ParcelDelibird/scripts.pory"
+# 753 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Frida_R4_2:
-# 737 "data/maps/ParcelDelibird/scripts.pory"
+# 747 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R2_Text_1, MSGBOX_DEFAULT
-# 738 "data/maps/ParcelDelibird/scripts.pory"
+# 748 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Frida_R5::
-# 747 "data/maps/ParcelDelibird/scripts.pory"
+# 757 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 748 "data/maps/ParcelDelibird/scripts.pory"
+# 758 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 749 "data/maps/ParcelDelibird/scripts.pory"
+# 759 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R5_Text_0, MSGBOX_YESNO
-# 750 "data/maps/ParcelDelibird/scripts.pory"
+# 760 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Frida_R5_2
-# 755 "data/maps/ParcelDelibird/scripts.pory"
+# 765 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_FRIDA_R5, ParcelDelibird_T_Frida_R5_Text_1
-# 756 "data/maps/ParcelDelibird/scripts.pory"
+# 766 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R5_Text_2, MSGBOX_DEFAULT
-# 757 "data/maps/ParcelDelibird/scripts.pory"
+# 767 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Frida_R5_2:
-# 751 "data/maps/ParcelDelibird/scripts.pory"
+# 761 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Frida_R2_Text_1, MSGBOX_DEFAULT
-# 752 "data/maps/ParcelDelibird/scripts.pory"
+# 762 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Erlend::
-# 761 "data/maps/ParcelDelibird/scripts.pory"
+# 771 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_single TRAINER_SKALD_DEL_ERLEND, ParcelDelibird_T_Erlend_Text_0, ParcelDelibird_T_Erlend_Text_1, ParcelDelibird_T_Erlend_FirstWin
-# 765 "data/maps/ParcelDelibird/scripts.pory"
+# 775 "data/maps/ParcelDelibird/scripts.pory"
 	specialvar VAR_RESULT, SkaldRematchTier
-# 766 "data/maps/ParcelDelibird/scripts.pory"
+# 776 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_ge ParcelDelibird_T_Erlend_3
 ParcelDelibird_T_Erlend_1:
-# 769 "data/maps/ParcelDelibird/scripts.pory"
+# 779 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 3
 	goto_if_ge ParcelDelibird_T_Erlend_8
 ParcelDelibird_T_Erlend_6:
-# 772 "data/maps/ParcelDelibird/scripts.pory"
+# 782 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 4
 	goto_if_ge ParcelDelibird_T_Erlend_13
 ParcelDelibird_T_Erlend_11:
-# 775 "data/maps/ParcelDelibird/scripts.pory"
+# 785 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_ge ParcelDelibird_T_Erlend_18
 ParcelDelibird_T_Erlend_16:
-# 778 "data/maps/ParcelDelibird/scripts.pory"
+# 788 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_Text_2, MSGBOX_DEFAULT
 	end
 
 ParcelDelibird_T_Erlend_2:
-# 767 "data/maps/ParcelDelibird/scripts.pory"
+# 777 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Erlend_R2
 	goto ParcelDelibird_T_Erlend_1
 
 ParcelDelibird_T_Erlend_3:
-# 766 "data/maps/ParcelDelibird/scripts.pory"
+# 776 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_ERLEND_R2
 	goto_if 0, ParcelDelibird_T_Erlend_2
 	goto ParcelDelibird_T_Erlend_1
 
 ParcelDelibird_T_Erlend_7:
-# 770 "data/maps/ParcelDelibird/scripts.pory"
+# 780 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Erlend_R3
 	goto ParcelDelibird_T_Erlend_6
 
 ParcelDelibird_T_Erlend_8:
-# 769 "data/maps/ParcelDelibird/scripts.pory"
+# 779 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_ERLEND_R3
 	goto_if 0, ParcelDelibird_T_Erlend_7
 	goto ParcelDelibird_T_Erlend_6
 
 ParcelDelibird_T_Erlend_12:
-# 773 "data/maps/ParcelDelibird/scripts.pory"
+# 783 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Erlend_R4
 	goto ParcelDelibird_T_Erlend_11
 
 ParcelDelibird_T_Erlend_13:
-# 772 "data/maps/ParcelDelibird/scripts.pory"
+# 782 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_ERLEND_R4
 	goto_if 0, ParcelDelibird_T_Erlend_12
 	goto ParcelDelibird_T_Erlend_11
 
 ParcelDelibird_T_Erlend_17:
-# 776 "data/maps/ParcelDelibird/scripts.pory"
+# 786 "data/maps/ParcelDelibird/scripts.pory"
 	goto ParcelDelibird_T_Erlend_R5
 	goto ParcelDelibird_T_Erlend_16
 
 ParcelDelibird_T_Erlend_18:
-# 775 "data/maps/ParcelDelibird/scripts.pory"
+# 785 "data/maps/ParcelDelibird/scripts.pory"
 	checktrainerflag TRAINER_SKALD_DEL_ERLEND_R5
 	goto_if 0, ParcelDelibird_T_Erlend_17
 	goto ParcelDelibird_T_Erlend_16
 
 
 ParcelDelibird_T_Erlend_FirstWin::
-# 782 "data/maps/ParcelDelibird/scripts.pory"
+# 792 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_Text_2, MSGBOX_DEFAULT
-# 783 "data/maps/ParcelDelibird/scripts.pory"
+# 793 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Erlend_R2::
-# 787 "data/maps/ParcelDelibird/scripts.pory"
+# 797 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 788 "data/maps/ParcelDelibird/scripts.pory"
+# 798 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 789 "data/maps/ParcelDelibird/scripts.pory"
+# 799 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R2_Text_0, MSGBOX_YESNO
-# 790 "data/maps/ParcelDelibird/scripts.pory"
+# 800 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Erlend_R2_2
-# 795 "data/maps/ParcelDelibird/scripts.pory"
+# 805 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_ERLEND_R2, ParcelDelibird_T_Erlend_R2_Text_2
-# 796 "data/maps/ParcelDelibird/scripts.pory"
+# 806 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R2_Text_3, MSGBOX_DEFAULT
-# 797 "data/maps/ParcelDelibird/scripts.pory"
+# 807 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Erlend_R2_2:
-# 791 "data/maps/ParcelDelibird/scripts.pory"
+# 801 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R2_Text_1, MSGBOX_DEFAULT
-# 792 "data/maps/ParcelDelibird/scripts.pory"
+# 802 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Erlend_R3::
-# 801 "data/maps/ParcelDelibird/scripts.pory"
+# 811 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 802 "data/maps/ParcelDelibird/scripts.pory"
+# 812 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 803 "data/maps/ParcelDelibird/scripts.pory"
+# 813 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R3_Text_0, MSGBOX_YESNO
-# 804 "data/maps/ParcelDelibird/scripts.pory"
+# 814 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Erlend_R3_2
-# 809 "data/maps/ParcelDelibird/scripts.pory"
+# 819 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_ERLEND_R3, ParcelDelibird_T_Erlend_R3_Text_1
-# 810 "data/maps/ParcelDelibird/scripts.pory"
+# 820 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R3_Text_2, MSGBOX_DEFAULT
-# 811 "data/maps/ParcelDelibird/scripts.pory"
+# 821 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Erlend_R3_2:
-# 805 "data/maps/ParcelDelibird/scripts.pory"
+# 815 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R2_Text_1, MSGBOX_DEFAULT
-# 806 "data/maps/ParcelDelibird/scripts.pory"
+# 816 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Erlend_R4::
-# 815 "data/maps/ParcelDelibird/scripts.pory"
+# 825 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 816 "data/maps/ParcelDelibird/scripts.pory"
+# 826 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 817 "data/maps/ParcelDelibird/scripts.pory"
+# 827 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R4_Text_0, MSGBOX_YESNO
-# 818 "data/maps/ParcelDelibird/scripts.pory"
+# 828 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Erlend_R4_2
-# 823 "data/maps/ParcelDelibird/scripts.pory"
+# 833 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_ERLEND_R4, ParcelDelibird_T_Erlend_R3_Text_1
-# 824 "data/maps/ParcelDelibird/scripts.pory"
+# 834 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R4_Text_1, MSGBOX_DEFAULT
-# 825 "data/maps/ParcelDelibird/scripts.pory"
+# 835 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Erlend_R4_2:
-# 819 "data/maps/ParcelDelibird/scripts.pory"
+# 829 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R2_Text_1, MSGBOX_DEFAULT
-# 820 "data/maps/ParcelDelibird/scripts.pory"
+# 830 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_T_Erlend_R5::
-# 829 "data/maps/ParcelDelibird/scripts.pory"
+# 839 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 830 "data/maps/ParcelDelibird/scripts.pory"
+# 840 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 831 "data/maps/ParcelDelibird/scripts.pory"
+# 841 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R5_Text_0, MSGBOX_YESNO
-# 832 "data/maps/ParcelDelibird/scripts.pory"
+# 842 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_T_Erlend_R5_2
-# 837 "data/maps/ParcelDelibird/scripts.pory"
+# 847 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_DEL_ERLEND_R5, ParcelDelibird_T_Erlend_R3_Text_1
-# 838 "data/maps/ParcelDelibird/scripts.pory"
+# 848 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R5_Text_1, MSGBOX_DEFAULT
-# 839 "data/maps/ParcelDelibird/scripts.pory"
+# 849 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_T_Erlend_R5_2:
-# 833 "data/maps/ParcelDelibird/scripts.pory"
+# 843 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_T_Erlend_R2_Text_1, MSGBOX_DEFAULT
-# 834 "data/maps/ParcelDelibird/scripts.pory"
+# 844 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_Epilogue::
-# 845 "data/maps/ParcelDelibird/scripts.pory"
+# 855 "data/maps/ParcelDelibird/scripts.pory"
 	lockall
-# 846 "data/maps/ParcelDelibird/scripts.pory"
+# 856 "data/maps/ParcelDelibird/scripts.pory"
 	delay 20
-# 847 "data/maps/ParcelDelibird/scripts.pory"
+# 857 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_Epilogue_Text_0, MSGBOX_DEFAULT
-# 848 "data/maps/ParcelDelibird/scripts.pory"
+# 858 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_Epilogue_Text_1, MSGBOX_DEFAULT
-# 849 "data/maps/ParcelDelibird/scripts.pory"
+# 859 "data/maps/ParcelDelibird/scripts.pory"
 	closemessage
-# 850 "data/maps/ParcelDelibird/scripts.pory"
+# 860 "data/maps/ParcelDelibird/scripts.pory"
 	setvar VAR_SKALD_EPILOGUE, 6
-# 851 "data/maps/ParcelDelibird/scripts.pory"
+# 861 "data/maps/ParcelDelibird/scripts.pory"
 	warp MAP_PARCEL_MARSH, 19, 9
-# 852 "data/maps/ParcelDelibird/scripts.pory"
+# 862 "data/maps/ParcelDelibird/scripts.pory"
 	waitstate
 	end
 
 
 ParcelDelibird_GymIlex_Rematch::
-# 858 "data/maps/ParcelDelibird/scripts.pory"
+# 868 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 859 "data/maps/ParcelDelibird/scripts.pory"
+# 869 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 860 "data/maps/ParcelDelibird/scripts.pory"
+# 870 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_GymIlex_Rematch_Text_0, MSGBOX_YESNO
-# 861 "data/maps/ParcelDelibird/scripts.pory"
+# 871 "data/maps/ParcelDelibird/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ParcelDelibird_GymIlex_Rematch_2
-# 866 "data/maps/ParcelDelibird/scripts.pory"
+# 876 "data/maps/ParcelDelibird/scripts.pory"
 	trainerbattle_no_intro TRAINER_SKALD_GYM8_R, ParcelDelibird_GymIlex_Rematch_Text_2
-# 867 "data/maps/ParcelDelibird/scripts.pory"
+# 877 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_GymIlex_Rematch_Text_3, MSGBOX_DEFAULT
-# 868 "data/maps/ParcelDelibird/scripts.pory"
+# 878 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_GymIlex_Rematch_2:
-# 862 "data/maps/ParcelDelibird/scripts.pory"
+# 872 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_GymIlex_Rematch_Text_1, MSGBOX_DEFAULT
-# 863 "data/maps/ParcelDelibird/scripts.pory"
+# 873 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 
 ParcelDelibird_PairLights::
-# 875 "data/maps/ParcelDelibird/scripts.pory"
+# 885 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 876 "data/maps/ParcelDelibird/scripts.pory"
+# 886 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_PairLights_2
-# 882 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairLights_3
-# 888 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_PairLights_Text_9, MSGBOX_DEFAULT
-# 889 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_PairLights_Text_10, MSGBOX_DEFAULT
-# 890 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_PairLights_Text_11, MSGBOX_DEFAULT
-# 891 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_PairLights_Text_12, MSGBOX_DEFAULT
 # 892 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairLights_3
+# 898 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_9, MSGBOX_DEFAULT
+# 899 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_10, MSGBOX_DEFAULT
+# 900 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_11, MSGBOX_DEFAULT
+# 901 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairLights_Text_12, MSGBOX_DEFAULT
+# 902 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_13, MSGBOX_DEFAULT
 ParcelDelibird_PairLights_1:
-# 894 "data/maps/ParcelDelibird/scripts.pory"
+# 904 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_PairLights_2:
-# 877 "data/maps/ParcelDelibird/scripts.pory"
+# 887 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_0, MSGBOX_DEFAULT
-# 878 "data/maps/ParcelDelibird/scripts.pory"
+# 888 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_1, MSGBOX_DEFAULT
-# 879 "data/maps/ParcelDelibird/scripts.pory"
+# 889 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_2, MSGBOX_DEFAULT
-# 880 "data/maps/ParcelDelibird/scripts.pory"
+# 890 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_3, MSGBOX_DEFAULT
-# 881 "data/maps/ParcelDelibird/scripts.pory"
+# 891 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_4, MSGBOX_DEFAULT
 	goto ParcelDelibird_PairLights_1
 
 ParcelDelibird_PairLights_3:
-# 883 "data/maps/ParcelDelibird/scripts.pory"
+# 893 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_5, MSGBOX_DEFAULT
-# 884 "data/maps/ParcelDelibird/scripts.pory"
+# 894 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_6, MSGBOX_DEFAULT
-# 885 "data/maps/ParcelDelibird/scripts.pory"
+# 895 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_7, MSGBOX_DEFAULT
-# 886 "data/maps/ParcelDelibird/scripts.pory"
+# 896 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairLights_Text_8, MSGBOX_DEFAULT
 	goto ParcelDelibird_PairLights_1
 
 
 ParcelDelibird_PairGround::
-# 899 "data/maps/ParcelDelibird/scripts.pory"
+# 909 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 900 "data/maps/ParcelDelibird/scripts.pory"
+# 910 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_PairGround_2
-# 906 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairGround_3
-# 913 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_PairGround_Text_10, MSGBOX_DEFAULT
-# 914 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_PairGround_Text_11, MSGBOX_DEFAULT
-# 915 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_PairGround_Text_12, MSGBOX_DEFAULT
 # 916 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairGround_3
+# 923 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_10, MSGBOX_DEFAULT
+# 924 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_11, MSGBOX_DEFAULT
+# 925 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_PairGround_Text_12, MSGBOX_DEFAULT
+# 926 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_13, MSGBOX_DEFAULT
 ParcelDelibird_PairGround_1:
-# 918 "data/maps/ParcelDelibird/scripts.pory"
+# 928 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_PairGround_2:
-# 901 "data/maps/ParcelDelibird/scripts.pory"
+# 911 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_0, MSGBOX_DEFAULT
-# 902 "data/maps/ParcelDelibird/scripts.pory"
+# 912 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_1, MSGBOX_DEFAULT
-# 903 "data/maps/ParcelDelibird/scripts.pory"
+# 913 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_2, MSGBOX_DEFAULT
-# 904 "data/maps/ParcelDelibird/scripts.pory"
+# 914 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_3, MSGBOX_DEFAULT
-# 905 "data/maps/ParcelDelibird/scripts.pory"
+# 915 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_4, MSGBOX_DEFAULT
 	goto ParcelDelibird_PairGround_1
 
 ParcelDelibird_PairGround_3:
-# 907 "data/maps/ParcelDelibird/scripts.pory"
+# 917 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_5, MSGBOX_DEFAULT
-# 908 "data/maps/ParcelDelibird/scripts.pory"
+# 918 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_6, MSGBOX_DEFAULT
-# 909 "data/maps/ParcelDelibird/scripts.pory"
+# 919 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_7, MSGBOX_DEFAULT
-# 910 "data/maps/ParcelDelibird/scripts.pory"
+# 920 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_8, MSGBOX_DEFAULT
-# 911 "data/maps/ParcelDelibird/scripts.pory"
+# 921 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairGround_Text_9, MSGBOX_DEFAULT
 	goto ParcelDelibird_PairGround_1
 
 
 ParcelDelibird_LampStringer::
-# 925 "data/maps/ParcelDelibird/scripts.pory"
+# 935 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 926 "data/maps/ParcelDelibird/scripts.pory"
+# 936 "data/maps/ParcelDelibird/scripts.pory"
 	faceplayer
-# 927 "data/maps/ParcelDelibird/scripts.pory"
+# 937 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_SCRATCH_DONE, ParcelDelibird_LampStringer_2
-# 929 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_set FLAG_SKALD_Q_SCRATCH, ParcelDelibird_LampStringer_3
-# 938 "data/maps/ParcelDelibird/scripts.pory"
-	msgbox ParcelDelibird_LampStringer_Text_3, MSGBOX_DEFAULT
 # 939 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALD_Q_SCRATCH, ParcelDelibird_LampStringer_3
+# 948 "data/maps/ParcelDelibird/scripts.pory"
+	msgbox ParcelDelibird_LampStringer_Text_3, MSGBOX_DEFAULT
+# 949 "data/maps/ParcelDelibird/scripts.pory"
 	setflag FLAG_SKALD_Q_SCRATCH
 ParcelDelibird_LampStringer_1:
-# 941 "data/maps/ParcelDelibird/scripts.pory"
+# 951 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_LampStringer_2:
-# 928 "data/maps/ParcelDelibird/scripts.pory"
+# 938 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_LampStringer_Text_0, MSGBOX_DEFAULT
 	goto ParcelDelibird_LampStringer_1
 
 ParcelDelibird_LampStringer_3:
-# 930 "data/maps/ParcelDelibird/scripts.pory"
+# 940 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_SCRATCH_FOUND, ParcelDelibird_LampStringer_7
-# 935 "data/maps/ParcelDelibird/scripts.pory"
+# 945 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_LampStringer_Text_2, MSGBOX_DEFAULT
 	goto ParcelDelibird_LampStringer_1
 
 ParcelDelibird_LampStringer_7:
-# 931 "data/maps/ParcelDelibird/scripts.pory"
+# 941 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_LampStringer_Text_1, MSGBOX_DEFAULT
-# 932 "data/maps/ParcelDelibird/scripts.pory"
+# 942 "data/maps/ParcelDelibird/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 1
-# 933 "data/maps/ParcelDelibird/scripts.pory"
+# 943 "data/maps/ParcelDelibird/scripts.pory"
 	setflag FLAG_SKALD_Q_SCRATCH_DONE
 	goto ParcelDelibird_LampStringer_1
 
 
 ParcelDelibird_HutScratch::
-# 946 "data/maps/ParcelDelibird/scripts.pory"
+# 956 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_SCRATCH, ParcelDelibird_HutScratch_4
 ParcelDelibird_HutScratch_3:
-# 950 "data/maps/ParcelDelibird/scripts.pory"
+# 960 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_HutScratch_Text_1, MSGBOX_SIGN
 ParcelDelibird_HutScratch_1:
 	end
 
 ParcelDelibird_HutScratch_2:
-# 947 "data/maps/ParcelDelibird/scripts.pory"
+# 957 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_HutScratch_Text_0, MSGBOX_SIGN
-# 948 "data/maps/ParcelDelibird/scripts.pory"
+# 958 "data/maps/ParcelDelibird/scripts.pory"
 	setflag FLAG_SKALD_Q_SCRATCH_FOUND
 	goto ParcelDelibird_HutScratch_1
 
 ParcelDelibird_HutScratch_4:
-# 946 "data/maps/ParcelDelibird/scripts.pory"
+# 956 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_SCRATCH_FOUND, ParcelDelibird_HutScratch_2
 	goto ParcelDelibird_HutScratch_3
 
 
 ParcelDelibird_FindCorner::
-# 958 "data/maps/ParcelDelibird/scripts.pory"
+# 968 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_set FLAG_SKALD_Q_CORNER, ParcelDelibird_FindCorner_4
 ParcelDelibird_FindCorner_3:
-# 962 "data/maps/ParcelDelibird/scripts.pory"
+# 972 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_FindCorner_Text_1, MSGBOX_SIGN
 ParcelDelibird_FindCorner_1:
 	end
 
 ParcelDelibird_FindCorner_2:
-# 959 "data/maps/ParcelDelibird/scripts.pory"
+# 969 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_FindCorner_Text_0, MSGBOX_SIGN
-# 960 "data/maps/ParcelDelibird/scripts.pory"
+# 970 "data/maps/ParcelDelibird/scripts.pory"
 	setflag FLAG_SKALD_Q_CORNER_FOUND
 	goto ParcelDelibird_FindCorner_1
 
 ParcelDelibird_FindCorner_4:
-# 958 "data/maps/ParcelDelibird/scripts.pory"
+# 968 "data/maps/ParcelDelibird/scripts.pory"
 	goto_if_unset FLAG_SKALD_Q_CORNER_FOUND, ParcelDelibird_FindCorner_2
 	goto ParcelDelibird_FindCorner_3
 
 
 ParcelDelibird_PairShore::
-# 968 "data/maps/ParcelDelibird/scripts.pory"
+# 978 "data/maps/ParcelDelibird/scripts.pory"
 	lock
-# 969 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_PairShore_2
-# 974 "data/maps/ParcelDelibird/scripts.pory"
-	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairShore_3
 # 979 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_FINALE_DONE, ParcelDelibird_PairShore_2
+# 984 "data/maps/ParcelDelibird/scripts.pory"
+	goto_if_set FLAG_SKALDMERE_DELIBIRD_GIFT, ParcelDelibird_PairShore_3
+# 989 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_7, MSGBOX_DEFAULT
-# 980 "data/maps/ParcelDelibird/scripts.pory"
+# 990 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_8, MSGBOX_DEFAULT
-# 981 "data/maps/ParcelDelibird/scripts.pory"
+# 991 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_9, MSGBOX_DEFAULT
-# 982 "data/maps/ParcelDelibird/scripts.pory"
+# 992 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_10, MSGBOX_DEFAULT
 ParcelDelibird_PairShore_1:
-# 984 "data/maps/ParcelDelibird/scripts.pory"
+# 994 "data/maps/ParcelDelibird/scripts.pory"
 	release
 	end
 
 ParcelDelibird_PairShore_2:
-# 970 "data/maps/ParcelDelibird/scripts.pory"
+# 980 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_0, MSGBOX_DEFAULT
-# 971 "data/maps/ParcelDelibird/scripts.pory"
+# 981 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_1, MSGBOX_DEFAULT
-# 972 "data/maps/ParcelDelibird/scripts.pory"
+# 982 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_2, MSGBOX_DEFAULT
-# 973 "data/maps/ParcelDelibird/scripts.pory"
+# 983 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_3, MSGBOX_DEFAULT
 	goto ParcelDelibird_PairShore_1
 
 ParcelDelibird_PairShore_3:
-# 975 "data/maps/ParcelDelibird/scripts.pory"
+# 985 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_4, MSGBOX_DEFAULT
-# 976 "data/maps/ParcelDelibird/scripts.pory"
+# 986 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_5, MSGBOX_DEFAULT
-# 977 "data/maps/ParcelDelibird/scripts.pory"
+# 987 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_PairShore_Text_6, MSGBOX_DEFAULT
 	goto ParcelDelibird_PairShore_1
 
 
 ParcelDelibird_Board1::
-# 991 "data/maps/ParcelDelibird/scripts.pory"
+# 1001 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_Board1_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelDelibird_Board2::
-# 996 "data/maps/ParcelDelibird/scripts.pory"
+# 1006 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_Board2_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelDelibird_Board3::
-# 1003 "data/maps/ParcelDelibird/scripts.pory"
+# 1013 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_Board3_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelDelibird_Board4::
-# 1010 "data/maps/ParcelDelibird/scripts.pory"
+# 1020 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_Board4_Text_0, MSGBOX_SIGN
 	end
 
 
 ParcelDelibird_Board5::
-# 1017 "data/maps/ParcelDelibird/scripts.pory"
+# 1027 "data/maps/ParcelDelibird/scripts.pory"
 	msgbox ParcelDelibird_Board5_Text_0, MSGBOX_SIGN
 	end
 
@@ -2406,42 +2424,58 @@ ParcelDelibird_GymIlex_Text_0:
 	.string "change.$"
 
 ParcelDelibird_GymIlex_Text_1:
-# 403 "data/maps/ParcelDelibird/scripts.pory"
+# 406 "data/maps/ParcelDelibird/scripts.pory"
+	.string "ILEX: One thing before the frame. The\n"
+	.string "Skyline is the last clearance on the\l"
+	.string "card, and I examine it as the last. Most\l"
+	.string "RANGERS come back for it after the\l"
+	.string "coast and the climate station.\p"
+	.string "I won't go easy because you came early.\n"
+	.string "Sit it now?$"
+
+ParcelDelibird_GymIlex_Text_2:
+# 408 "data/maps/ParcelDelibird/scripts.pory"
+	.string "ILEX: Then see the island first. The\n"
+	.string "snowline will wait for you. It's the one\l"
+	.string "thing up here that will.$"
+
+ParcelDelibird_GymIlex_Text_3:
+# 413 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: The summit first. Thirteen\n"
 	.string "patches of snow up there this\l"
 	.string "Midwinter, by my cloth. More than last\l"
 	.string "year?$"
 
-ParcelDelibird_GymIlex_Text_2:
-# 405 "data/maps/ParcelDelibird/scripts.pory"
+ParcelDelibird_GymIlex_Text_4:
+# 415 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: Fewer. Nineteen last year. People\n"
 	.string "see thirteen patches and think snow. I\l"
 	.string "see six that aren't there.\p"
 	.string "Frame first, then count. Let's see you\n"
 	.string "hold the frame.$"
 
-ParcelDelibird_GymIlex_Text_3:
-# 407 "data/maps/ParcelDelibird/scripts.pory"
+ParcelDelibird_GymIlex_Text_5:
+# 417 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: Fewer. Nineteen last year. The\n"
 	.string "count goes one way, and it will go one\l"
 	.string "way after I've stopped counting.\p"
 	.string "You kept the frame. Now keep it with the\n"
 	.string "current against you.$"
 
-ParcelDelibird_GymIlex_Text_4:
-# 410 "data/maps/ParcelDelibird/scripts.pory"
+ParcelDelibird_GymIlex_Text_6:
+# 420 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: A field hand should be able to do\n"
 	.string "both. Show me you can hold a line of\l"
 	.string "sight as steady as a line of evidence.\l"
 	.string "From up here, looking down.$"
 
-ParcelDelibird_GymIlex_Text_5:
-# 411 "data/maps/ParcelDelibird/scripts.pory"
+ParcelDelibird_GymIlex_Text_7:
+# 421 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: Steady. You kept the frame. Few\n"
 	.string "do, this high up.$"
 
-ParcelDelibird_GymIlex_Text_6:
-# 415 "data/maps/ParcelDelibird/scripts.pory"
+ParcelDelibird_GymIlex_Text_8:
+# 425 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX turns the red cloth over once,\n"
 	.string "then pockets it.\p"
 	.string "ILEX: The snowline I'm watching is lower\n"
@@ -2452,15 +2486,15 @@ ParcelDelibird_GymIlex_Text_6:
 	.string "that nobody knew. Carry that with the\l"
 	.string "badge.$"
 
-ParcelDelibird_GymIlex_Text_7:
-# 416 "data/maps/ParcelDelibird/scripts.pory"
+ParcelDelibird_GymIlex_Text_9:
+# 426 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: You hold a pen like somebody who\n"
 	.string "learned to look from a brush. I won't\l"
 	.string "ask.\p"
 	.string "Red cloth is red cloth, whoever ties it.$"
 
 ParcelDelibird_GymIlex_Defeated_Text_0:
-# 424 "data/maps/ParcelDelibird/scripts.pory"
+# 434 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: The Skyline clearance. It marks\n"
 	.string "you fit to read a place from any height\l"
 	.string "-- and to be trusted on the harder\l"
@@ -2468,7 +2502,7 @@ ParcelDelibird_GymIlex_Defeated_Text_0:
 	.string "You'll want the tool that goes with it.$"
 
 ParcelDelibird_GymIlex_Defeated_Text_1:
-# 426 "data/maps/ParcelDelibird/scripts.pory"
+# 436 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: WATERFALL. It takes you up the\n"
 	.string "climbs that turn most people back.\p"
 	.string "The corridor inland has a few. That's\n"
@@ -2476,21 +2510,21 @@ ParcelDelibird_GymIlex_Defeated_Text_1:
 	.string "You're nearly ready for it.$"
 
 ParcelDelibird_SquareKeeper_Text_0:
-# 439 "data/maps/ParcelDelibird/scripts.pory"
+# 449 "data/maps/ParcelDelibird/scripts.pory"
 	.string "KEEPER: The shelf thins and fills.\n"
 	.string "Somebody put a MEREHOLT blanket on it\l"
 	.string "last week. Folded in thirds. Nobody said\l"
 	.string "anything. That's the ledger working.$"
 
 ParcelDelibird_SquareKeeper_Text_1:
-# 444 "data/maps/ParcelDelibird/scripts.pory"
+# 454 "data/maps/ParcelDelibird/scripts.pory"
 	.string "KEEPER: The shelf thins and fills, thins\n"
 	.string "and fills.\p"
 	.string "Nobody keeps the ledger, so nobody's\n"
 	.string "ever behind.$"
 
 ParcelDelibird_SquareKeeper_Text_2:
-# 448 "data/maps/ParcelDelibird/scripts.pory"
+# 458 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A trestle table under the string lights,\n"
 	.string "laid out with parcels -- mittens, dried\l"
 	.string "fish, a kettle with a mended spout. A\l"
@@ -2502,18 +2536,18 @@ ParcelDelibird_SquareKeeper_Text_2:
 	.string "first in line. House rule.$"
 
 ParcelDelibird_SquareKeeper_Text_3:
-# 449 "data/maps/ParcelDelibird/scripts.pory"
+# 459 "data/maps/ParcelDelibird/scripts.pory"
 	.string "KEEPER: Go on -- the wrapped ones. No\n"
 	.string "peeking, no choosing. That's the whole\l"
 	.string "game.\p"
 	.string "You take the parcel your hand lands on.$"
 
 ParcelDelibird_SquareKeeper_Text_4:
-# 462 "data/maps/ParcelDelibird/scripts.pory"
+# 472 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Leave something on the shelf?$"
 
 ParcelDelibird_SquareKeeper_Text_5:
-# 467 "data/maps/ParcelDelibird/scripts.pory"
+# 477 "data/maps/ParcelDelibird/scripts.pory"
 	.string "You set a Potion between the mittens\n"
 	.string "and the kettle. The keeper doesn't\l"
 	.string "watch you do it, which is its own kind of\l"
@@ -2521,7 +2555,7 @@ ParcelDelibird_SquareKeeper_Text_5:
 	.string "KEEPER: There. Now you're from here.$"
 
 ParcelDelibird_SquareKeeper_Text_6:
-# 471 "data/maps/ParcelDelibird/scripts.pory"
+# 481 "data/maps/ParcelDelibird/scripts.pory"
 	.string "You go through your bag twice. The\n"
 	.string "keeper waves it off before you can\l"
 	.string "apologize.\p"
@@ -2530,14 +2564,14 @@ ParcelDelibird_SquareKeeper_Text_6:
 	.string "Bring it when you're rich.$"
 
 ParcelDelibird_SquareKeeper_Text_7:
-# 475 "data/maps/ParcelDelibird/scripts.pory"
+# 485 "data/maps/ParcelDelibird/scripts.pory"
 	.string "KEEPER: Then don't. The square doesn't\n"
 	.string "keep accounts.\p"
 	.string "That's not a kindness, mind. It's a\n"
 	.string "discipline.$"
 
 ParcelDelibird_WarmingHut_Text_0:
-# 484 "data/maps/ParcelDelibird/scripts.pory"
+# 494 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The hut smells of woodsmoke and wet\n"
 	.string "wool. A row of cots, a kettle always on,\l"
 	.string "a crate of donated kit by the door.\p"
@@ -2547,12 +2581,12 @@ ParcelDelibird_WarmingHut_Text_0:
 	.string "long day.$"
 
 ParcelDelibird_WarmingHut_Text_1:
-# 485 "data/maps/ParcelDelibird/scripts.pory"
+# 495 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUTKEEPER: Set your partners down by\n"
 	.string "the stove. Go on.$"
 
 ParcelDelibird_WarmingHut_Text_2:
-# 488 "data/maps/ParcelDelibird/scripts.pory"
+# 498 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUTKEEPER: There. Warmed through.\p"
 	.string "This hut's the oldest building standing\n"
 	.string "on the island, you know. The festival is\l"
@@ -2560,7 +2594,7 @@ ParcelDelibird_WarmingHut_Text_2:
 	.string "Most things are.$"
 
 ParcelDelibird_Stringer_Text_0:
-# 497 "data/maps/ParcelDelibird/scripts.pory"
+# 507 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A woman on a short ladder feeds string\n"
 	.string "lights along the eaves, a spare bulb\l"
 	.string "held in her teeth. She talks around it.\p"
@@ -2571,7 +2605,7 @@ ParcelDelibird_Stringer_Text_0:
 	.string "them.$"
 
 ParcelDelibird_Stringer_Text_1:
-# 498 "data/maps/ParcelDelibird/scripts.pory"
+# 508 "data/maps/ParcelDelibird/scripts.pory"
 	.string "STRINGER: There's been no first freeze\n"
 	.string "worth the name in six years. So now we\l"
 	.string "go by the calendar, like mainlanders.\p"
@@ -2582,7 +2616,7 @@ ParcelDelibird_Stringer_Text_1:
 	.string "what we've got.$"
 
 ParcelDelibird_Blankets_Text_0:
-# 507 "data/maps/ParcelDelibird/scripts.pory"
+# 517 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A man folds relief blankets into neat\n"
 	.string "thirds on a bench -- good thick wool,\l"
 	.string "brand new.\p"
@@ -2593,7 +2627,7 @@ ParcelDelibird_Blankets_Text_0:
 	.string "it needs.$"
 
 ParcelDelibird_Blankets_Text_1:
-# 508 "data/maps/ParcelDelibird/scripts.pory"
+# 518 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Folder: Good blankets, these. Warm.\n"
 	.string "Free.\p"
 	.string "You learn not to read the corner.\p"
@@ -2601,299 +2635,299 @@ ParcelDelibird_Blankets_Text_1:
 	.string "MEREHOLT FOUNDATION.$"
 
 ParcelDelibird_T_Hakon_Text_0:
-# 516 "data/maps/ParcelDelibird/scripts.pory"
+# 526 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: Ferry's tied up till the festival\n"
 	.string "ends. I've seen it eleven years running.\l"
 	.string "Battle me, it's the only new thing today.$"
 
 ParcelDelibird_T_Hakon_Text_1:
-# 517 "data/maps/ParcelDelibird/scripts.pory"
+# 527 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: New thing: I lost.$"
 
 ParcelDelibird_T_Hakon_Text_2:
-# 532 "data/maps/ParcelDelibird/scripts.pory"
+# 542 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: The gift square's lovely. The\n"
 	.string "thaw line's moved up the slope again.\l"
 	.string "You can see both from the quay.$"
 
 ParcelDelibird_T_Hakon_R2_Text_0:
-# 543 "data/maps/ParcelDelibird/scripts.pory"
+# 553 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelDelibird_T_Hakon_R2_Text_1:
-# 545 "data/maps/ParcelDelibird/scripts.pory"
+# 555 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: Another time, then.$"
 
 ParcelDelibird_T_Hakon_R2_Text_2:
-# 549 "data/maps/ParcelDelibird/scripts.pory"
+# 559 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: …Fair.$"
 
 ParcelDelibird_T_Hakon_R2_Text_3:
-# 550 "data/maps/ParcelDelibird/scripts.pory"
+# 560 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelDelibird_T_Hakon_R3_Text_0:
-# 557 "data/maps/ParcelDelibird/scripts.pory"
+# 567 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: I've been training against the\n"
 	.string "lake. You're the test. Yes?$"
 
 ParcelDelibird_T_Hakon_R3_Text_1:
-# 564 "data/maps/ParcelDelibird/scripts.pory"
+# 574 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelDelibird_T_Hakon_R4_Text_0:
-# 571 "data/maps/ParcelDelibird/scripts.pory"
+# 581 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelDelibird_T_Hakon_R4_Text_1:
-# 577 "data/maps/ParcelDelibird/scripts.pory"
+# 587 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: Noted. Properly, this time.$"
 
 ParcelDelibird_T_Hakon_R4_Text_2:
-# 578 "data/maps/ParcelDelibird/scripts.pory"
+# 588 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelDelibird_T_Hakon_R5_Text_0:
-# 585 "data/maps/ParcelDelibird/scripts.pory"
+# 595 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelDelibird_T_Hakon_R5_Text_1:
-# 591 "data/maps/ParcelDelibird/scripts.pory"
+# 601 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: That's the one I wanted to see.$"
 
 ParcelDelibird_T_Hakon_R5_Text_2:
-# 592 "data/maps/ParcelDelibird/scripts.pory"
+# 602 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HAKON: Five. Write that one down too.\n"
 	.string "I'll know you did.$"
 
 ParcelDelibird_T_Bjarne_Text_0:
-# 598 "data/maps/ParcelDelibird/scripts.pory"
+# 608 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: The summit trail's up past the\n"
 	.string "cave mouth. Cold up there. Proper cold.\l"
 	.string "Last of it. Battle before you climb.$"
 
 ParcelDelibird_T_Bjarne_Text_1:
-# 599 "data/maps/ParcelDelibird/scripts.pory"
+# 609 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Climb, then.$"
 
 ParcelDelibird_T_Bjarne_Text_2:
-# 614 "data/maps/ParcelDelibird/scripts.pory"
+# 624 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: The cavern's the only place the\n"
 	.string "old cold lives now. MEREHOLT put an\l"
 	.string "officer in it. In the cold. Logging it.$"
 
 ParcelDelibird_T_Bjarne_R2_Text_0:
-# 625 "data/maps/ParcelDelibird/scripts.pory"
+# 635 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Didn't think you'd come back\n"
 	.string "through. Good. Again?$"
 
 ParcelDelibird_T_Bjarne_R2_Text_1:
-# 627 "data/maps/ParcelDelibird/scripts.pory"
+# 637 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Another time, then.$"
 
 ParcelDelibird_T_Bjarne_R2_Text_2:
-# 631 "data/maps/ParcelDelibird/scripts.pory"
+# 641 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Noted. Properly, this time.$"
 
 ParcelDelibird_T_Bjarne_R2_Text_3:
-# 632 "data/maps/ParcelDelibird/scripts.pory"
+# 642 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelDelibird_T_Bjarne_R3_Text_0:
-# 639 "data/maps/ParcelDelibird/scripts.pory"
+# 649 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Three stamps, then five. Fine.\n"
 	.string "Me next?$"
 
 ParcelDelibird_T_Bjarne_R3_Text_1:
-# 645 "data/maps/ParcelDelibird/scripts.pory"
+# 655 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: …Fair.$"
 
 ParcelDelibird_T_Bjarne_R3_Text_2:
-# 646 "data/maps/ParcelDelibird/scripts.pory"
+# 656 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelDelibird_T_Bjarne_R4_Text_0:
-# 653 "data/maps/ParcelDelibird/scripts.pory"
+# 663 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Full strength, no excuses, mine\n"
 	.string "or yours. Rematch?$"
 
 ParcelDelibird_T_Bjarne_R4_Text_1:
-# 659 "data/maps/ParcelDelibird/scripts.pory"
+# 669 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Still yours.$"
 
 ParcelDelibird_T_Bjarne_R4_Text_2:
-# 660 "data/maps/ParcelDelibird/scripts.pory"
+# 670 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelDelibird_T_Bjarne_R5_Text_0:
-# 667 "data/maps/ParcelDelibird/scripts.pory"
+# 677 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelDelibird_T_Bjarne_R5_Text_1:
-# 673 "data/maps/ParcelDelibird/scripts.pory"
+# 683 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: That's the one I wanted to see.$"
 
 ParcelDelibird_T_Bjarne_R5_Text_2:
-# 674 "data/maps/ParcelDelibird/scripts.pory"
+# 684 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BJARNE: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelDelibird_T_Frida_Text_0:
-# 680 "data/maps/ParcelDelibird/scripts.pory"
+# 690 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: My DELIBIRD was born on the\n"
 	.string "summit. There won't be another. Battle?$"
 
 ParcelDelibird_T_Frida_Text_1:
-# 681 "data/maps/ParcelDelibird/scripts.pory"
+# 691 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Still the best bird on the island.$"
 
 ParcelDelibird_T_Frida_Text_2:
-# 696 "data/maps/ParcelDelibird/scripts.pory"
+# 706 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: The festival's a gift economy.\n"
 	.string "Give, take, give. MEREHOLT gives the\l"
 	.string "banner. Guess what they take.$"
 
 ParcelDelibird_T_Frida_R2_Text_0:
-# 707 "data/maps/ParcelDelibird/scripts.pory"
+# 717 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: I kept the team up for this.\n"
 	.string "Again?$"
 
 ParcelDelibird_T_Frida_R2_Text_1:
-# 709 "data/maps/ParcelDelibird/scripts.pory"
+# 719 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Suit yourself. I'm here.$"
 
 ParcelDelibird_T_Frida_R2_Text_2:
-# 713 "data/maps/ParcelDelibird/scripts.pory"
+# 723 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Right. That's the whole of it.$"
 
 ParcelDelibird_T_Frida_R2_Text_3:
-# 714 "data/maps/ParcelDelibird/scripts.pory"
+# 724 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Come back with more clearances.\n"
 	.string "I'll have more for you.$"
 
 ParcelDelibird_T_Frida_R3_Text_0:
-# 721 "data/maps/ParcelDelibird/scripts.pory"
+# 731 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Word gets up the river. Half a\n"
 	.string "region signed off on you. Show me?$"
 
 ParcelDelibird_T_Frida_R3_Text_1:
-# 727 "data/maps/ParcelDelibird/scripts.pory"
+# 737 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Still yours.$"
 
 ParcelDelibird_T_Frida_R3_Text_2:
-# 728 "data/maps/ParcelDelibird/scripts.pory"
+# 738 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: One more in me. After the high\n"
 	.string "ground.$"
 
 ParcelDelibird_T_Frida_R4_Text_0:
-# 735 "data/maps/ParcelDelibird/scripts.pory"
+# 745 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Seven stamps. I've one more\n"
 	.string "fight in me that's worth the name. Yes?$"
 
 ParcelDelibird_T_Frida_R4_Text_1:
-# 741 "data/maps/ParcelDelibird/scripts.pory"
+# 751 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: …Fair.$"
 
 ParcelDelibird_T_Frida_R4_Text_2:
-# 742 "data/maps/ParcelDelibird/scripts.pory"
+# 752 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: When it's all filed, come and find\n"
 	.string "me. Once more.$"
 
 ParcelDelibird_T_Frida_R5_Text_0:
-# 749 "data/maps/ParcelDelibird/scripts.pory"
+# 759 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: The region's different now.\n"
 	.string "Let's see if you are?$"
 
 ParcelDelibird_T_Frida_R5_Text_1:
-# 755 "data/maps/ParcelDelibird/scripts.pory"
+# 765 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: Noted. Properly, this time.$"
 
 ParcelDelibird_T_Frida_R5_Text_2:
-# 756 "data/maps/ParcelDelibird/scripts.pory"
+# 766 "data/maps/ParcelDelibird/scripts.pory"
 	.string "FRIDA: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelDelibird_T_Erlend_Text_0:
-# 762 "data/maps/ParcelDelibird/scripts.pory"
+# 772 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: Cadet ERLEND, island posting.\n"
 	.string "ILEX runs the gym here and nobody\l"
 	.string "beats her. Spar, so I've something to\l"
 	.string "report.$"
 
 ParcelDelibird_T_Erlend_Text_1:
-# 763 "data/maps/ParcelDelibird/scripts.pory"
+# 773 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: Reported.$"
 
 ParcelDelibird_T_Erlend_Text_2:
-# 778 "data/maps/ParcelDelibird/scripts.pory"
+# 788 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: ILEX's Skyline badge needs the\n"
 	.string "whole island read. The summit, the\l"
 	.string "shore. She doesn't sign for half.$"
 
 ParcelDelibird_T_Erlend_R2_Text_0:
-# 789 "data/maps/ParcelDelibird/scripts.pory"
+# 799 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: You again. I've had time to\n"
 	.string "think about last time. Go again?$"
 
 ParcelDelibird_T_Erlend_R2_Text_1:
-# 791 "data/maps/ParcelDelibird/scripts.pory"
+# 801 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: No hurry. The water keeps.$"
 
 ParcelDelibird_T_Erlend_R2_Text_2:
-# 795 "data/maps/ParcelDelibird/scripts.pory"
+# 805 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: Noted. Properly, this time.$"
 
 ParcelDelibird_T_Erlend_R2_Text_3:
-# 796 "data/maps/ParcelDelibird/scripts.pory"
+# 806 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: Come back with more\n"
 	.string "clearances. I'll have more for you.$"
 
 ParcelDelibird_T_Erlend_R3_Text_0:
-# 803 "data/maps/ParcelDelibird/scripts.pory"
+# 813 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: I moved the whole team on.\n"
 	.string "Let's see if you have?$"
 
 ParcelDelibird_T_Erlend_R3_Text_1:
-# 809 "data/maps/ParcelDelibird/scripts.pory"
+# 819 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: …Again, then. Later.$"
 
 ParcelDelibird_T_Erlend_R3_Text_2:
-# 810 "data/maps/ParcelDelibird/scripts.pory"
+# 820 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: Three. I'll be stronger when the\n"
 	.string "coast's done with you.$"
 
 ParcelDelibird_T_Erlend_R4_Text_0:
-# 817 "data/maps/ParcelDelibird/scripts.pory"
+# 827 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: I don't care about the paper. I\n"
 	.string "care about the one I lost. Go?$"
 
 ParcelDelibird_T_Erlend_R4_Text_1:
-# 824 "data/maps/ParcelDelibird/scripts.pory"
+# 834 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: Four. There's one more, after.\n"
 	.string "Whatever after is.$"
 
 ParcelDelibird_T_Erlend_R5_Text_0:
-# 831 "data/maps/ParcelDelibird/scripts.pory"
+# 841 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: After everything, one more. For\n"
 	.string "the ledger. Yes?$"
 
 ParcelDelibird_T_Erlend_R5_Text_1:
-# 838 "data/maps/ParcelDelibird/scripts.pory"
+# 848 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ERLEND: That's all I've got. It was\n"
 	.string "enough to see it done.$"
 
 ParcelDelibird_Epilogue_Text_0:
-# 847 "data/maps/ParcelDelibird/scripts.pory"
+# 857 "data/maps/ParcelDelibird/scripts.pory"
 	.string "DELIBIRD ISLE. The thaw didn't stop\n"
 	.string "because a hearing sat. The festival\l"
 	.string "ground is a third mud.\p"
@@ -2903,7 +2937,7 @@ ParcelDelibird_Epilogue_Text_0:
 	.string "noon.$"
 
 ParcelDelibird_Epilogue_Text_1:
-# 848 "data/maps/ParcelDelibird/scripts.pory"
+# 858 "data/maps/ParcelDelibird/scripts.pory"
 	.string "MARTA's list has your name beside a door\n"
 	.string "you have never been through. KETIL\l"
 	.string "says the bird put it there. It goes\l"
@@ -2916,7 +2950,7 @@ ParcelDelibird_Epilogue_Text_1:
 	.string "surveyor.$"
 
 ParcelDelibird_GymIlex_Rematch_Text_0:
-# 860 "data/maps/ParcelDelibird/scripts.pory"
+# 870 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: The snowline is lower than last\n"
 	.string "Midwinter. I have the number now. It's in\l"
 	.string "your record.\p"
@@ -2924,186 +2958,186 @@ ParcelDelibird_GymIlex_Rematch_Text_0:
 	.string "me once more, from the top. Will you?$"
 
 ParcelDelibird_GymIlex_Rematch_Text_1:
-# 862 "data/maps/ParcelDelibird/scripts.pory"
+# 872 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: Then watch the snowline with me a\n"
 	.string "while.$"
 
 ParcelDelibird_GymIlex_Rematch_Text_2:
-# 866 "data/maps/ParcelDelibird/scripts.pory"
+# 876 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: Steady. You still keep the frame.$"
 
 ParcelDelibird_GymIlex_Rematch_Text_3:
-# 867 "data/maps/ParcelDelibird/scripts.pory"
+# 877 "data/maps/ParcelDelibird/scripts.pory"
 	.string "ILEX: The cloth is in my pocket.\n"
 	.string "Whenever you like.$"
 
 ParcelDelibird_PairLights_Text_0:
-# 877 "data/maps/ParcelDelibird/scripts.pory"
+# 887 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: The square's lit. Nobody\n"
 	.string "cheered. Did you notice? Nobody\l"
 	.string "cheered.$"
 
 ParcelDelibird_PairLights_Text_1:
-# 878 "data/maps/ParcelDelibird/scripts.pory"
+# 888 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BOY: Was that wrong?$"
 
 ParcelDelibird_PairLights_Text_2:
-# 879 "data/maps/ParcelDelibird/scripts.pory"
+# 889 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: It was right. You don't\n"
 	.string "cheer a lamp in a storm. You stand near\l"
 	.string "it.$"
 
 ParcelDelibird_PairLights_Text_3:
-# 880 "data/maps/ParcelDelibird/scripts.pory"
+# 890 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BOY: The ranger stood near it.$"
 
 ParcelDelibird_PairLights_Text_4:
-# 881 "data/maps/ParcelDelibird/scripts.pory"
+# 891 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: The ranger looked up the\n"
 	.string "slope at the wet ground, same as me.\l"
 	.string "Then stood near it anyway. That's the\l"
 	.string "whole of being grown.$"
 
 ParcelDelibird_PairLights_Text_5:
-# 883 "data/maps/ParcelDelibird/scripts.pory"
+# 893 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BOY: The ranger did the whole round.\n"
 	.string "Three doors, on foot. MARTA gave them\l"
 	.string "the bird.$"
 
 ParcelDelibird_PairLights_Text_6:
-# 884 "data/maps/ParcelDelibird/scripts.pory"
+# 894 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: MARTA gave them the bird\n"
 	.string "because the bird chose. You don't give a\l"
 	.string "DELIBIRD. It goes.$"
 
 ParcelDelibird_PairLights_Text_7:
-# 885 "data/maps/ParcelDelibird/scripts.pory"
+# 895 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BOY: Where would it go?$"
 
 ParcelDelibird_PairLights_Text_8:
-# 886 "data/maps/ParcelDelibird/scripts.pory"
+# 896 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: Wherever something's\n"
 	.string "needed. It has a worse sense of\l"
 	.string "self-preservation than you do.$"
 
 ParcelDelibird_PairLights_Text_9:
-# 888 "data/maps/ParcelDelibird/scripts.pory"
+# 898 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: The stringer's up the\n"
 	.string "ladder again. Every bulb on the eaves\l"
 	.string "tested, and it's a month off.$"
 
 ParcelDelibird_PairLights_Text_10:
-# 889 "data/maps/ParcelDelibird/scripts.pory"
+# 899 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BOY: Why so early?$"
 
 ParcelDelibird_PairLights_Text_11:
-# 890 "data/maps/ParcelDelibird/scripts.pory"
+# 900 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: Because the ground under\n"
 	.string "the ladder was dry last year and it isn't\l"
 	.string "this year. She wants it done before it\l"
 	.string "isn't a ladder you'd want to stand on.$"
 
 ParcelDelibird_PairLights_Text_12:
-# 891 "data/maps/ParcelDelibird/scripts.pory"
+# 901 "data/maps/ParcelDelibird/scripts.pory"
 	.string "BOY: Can I hold the ladder?$"
 
 ParcelDelibird_PairLights_Text_13:
-# 892 "data/maps/ParcelDelibird/scripts.pory"
+# 902 "data/maps/ParcelDelibird/scripts.pory"
 	.string "GRANDMOTHER: Hold the ladder. That's\n"
 	.string "what boys are for.$"
 
 ParcelDelibird_PairGround_Text_0:
-# 901 "data/maps/ParcelDelibird/scripts.pory"
+# 911 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: The FOUNDATION's paper about\n"
 	.string "moving the festival. MARTA wrote back\l"
 	.string "'thank you, and no'. In those words.$"
 
 ParcelDelibird_PairGround_Text_1:
-# 902 "data/maps/ParcelDelibird/scripts.pory"
+# 912 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUSBAND: And the Council?$"
 
 ParcelDelibird_PairGround_Text_2:
-# 903 "data/maps/ParcelDelibird/scripts.pory"
+# 913 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: Sent a surveyor. A real one, with\n"
 	.string "the red cloth. To ask us where we'd want\l"
 	.string "to be, if.$"
 
 ParcelDelibird_PairGround_Text_3:
-# 904 "data/maps/ParcelDelibird/scripts.pory"
+# 914 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUSBAND: If.$"
 
 ParcelDelibird_PairGround_Text_4:
-# 905 "data/maps/ParcelDelibird/scripts.pory"
+# 915 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: If. First time anyone's said it to\n"
 	.string "us as a question.$"
 
 ParcelDelibird_PairGround_Text_5:
-# 907 "data/maps/ParcelDelibird/scripts.pory"
+# 917 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUSBAND: The ranger measured the slump\n"
 	.string "with a tape. Wrote the number on the\l"
 	.string "stake and the date under it.$"
 
 ParcelDelibird_PairGround_Text_6:
-# 908 "data/maps/ParcelDelibird/scripts.pory"
+# 918 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: What was the number?$"
 
 ParcelDelibird_PairGround_Text_7:
-# 909 "data/maps/ParcelDelibird/scripts.pory"
+# 919 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUSBAND: Doesn't matter. What matters\n"
 	.string "is there'll be another number next year\l"
 	.string "under it, and anyone can see which way\l"
 	.string "they go.$"
 
 ParcelDelibird_PairGround_Text_8:
-# 910 "data/maps/ParcelDelibird/scripts.pory"
+# 920 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: That's not comfort.$"
 
 ParcelDelibird_PairGround_Text_9:
-# 911 "data/maps/ParcelDelibird/scripts.pory"
+# 921 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUSBAND: No. It's a ruler. We've had\n"
 	.string "comfort. It came with a crest on it.$"
 
 ParcelDelibird_PairGround_Text_10:
-# 913 "data/maps/ParcelDelibird/scripts.pory"
+# 923 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: TOMAS's cabin corner is in the\n"
 	.string "ground to the sill. KETIL's talking\l"
 	.string "about moving him.$"
 
 ParcelDelibird_PairGround_Text_11:
-# 914 "data/maps/ParcelDelibird/scripts.pory"
+# 924 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUSBAND: Moving him where? Every cabin\n"
 	.string "on the north side has a corner going.$"
 
 ParcelDelibird_PairGround_Text_12:
-# 915 "data/maps/ParcelDelibird/scripts.pory"
+# 925 "data/maps/ParcelDelibird/scripts.pory"
 	.string "WIFE: Then we move the north side.$"
 
 ParcelDelibird_PairGround_Text_13:
-# 916 "data/maps/ParcelDelibird/scripts.pory"
+# 926 "data/maps/ParcelDelibird/scripts.pory"
 	.string "HUSBAND: We've moved it twice in my life.\n"
 	.string "Each time it caught us up.$"
 
 ParcelDelibird_LampStringer_Text_0:
-# 928 "data/maps/ParcelDelibird/scripts.pory"
+# 938 "data/maps/ParcelDelibird/scripts.pory"
 	.string "STRINGER: Two hands. I say it before I\n"
 	.string "go up the ladder now. Then I go up the\l"
 	.string "ladder.$"
 
 ParcelDelibird_LampStringer_Text_1:
-# 931 "data/maps/ParcelDelibird/scripts.pory"
+# 941 "data/maps/ParcelDelibird/scripts.pory"
 	.string "STRINGER: Two hands. …Two hands in nine\n"
 	.string "years. It isn't the ladder.\p"
 	.string "I'll string them anyway. Here. For\n"
 	.string "climbing things that sink.$"
 
 ParcelDelibird_LampStringer_Text_2:
-# 935 "data/maps/ParcelDelibird/scripts.pory"
+# 945 "data/maps/ParcelDelibird/scripts.pory"
 	.string "STRINGER: The warming hut wall. A\n"
 	.string "scratch at head height. Mine was, the\l"
 	.string "first year.$"
 
 ParcelDelibird_LampStringer_Text_3:
-# 938 "data/maps/ParcelDelibird/scripts.pory"
+# 948 "data/maps/ParcelDelibird/scripts.pory"
 	.string "STRINGER: I string the lights. Every\n"
 	.string "year the foot of the ladder sits a\l"
 	.string "little lower against the hut wall, and I\l"
@@ -3114,7 +3148,7 @@ ParcelDelibird_LampStringer_Text_3:
 	.string "can't make myself.$"
 
 ParcelDelibird_HutScratch_Text_0:
-# 947 "data/maps/ParcelDelibird/scripts.pory"
+# 957 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A scratch on the hut wall at head\n"
 	.string "height, with a year beside it, nine\l"
 	.string "winters back. The ground beneath it has\l"
@@ -3125,13 +3159,13 @@ ParcelDelibird_HutScratch_Text_0:
 	.string "hasn't moved. The island has.$"
 
 ParcelDelibird_HutScratch_Text_1:
-# 950 "data/maps/ParcelDelibird/scripts.pory"
+# 960 "data/maps/ParcelDelibird/scripts.pory"
 	.string "Two scratches on the hut wall, level\n"
 	.string "with each other, nine years apart. The\l"
 	.string "ground between them has gone.$"
 
 ParcelDelibird_FindCorner_Text_0:
-# 959 "data/maps/ParcelDelibird/scripts.pory"
+# 969 "data/maps/ParcelDelibird/scripts.pory"
 	.string "On the shore, in the wet ground, the line\n"
 	.string "of a sill: the bottom beam of a cabin,\l"
 	.string "sunk to its second plank, the wood still\l"
@@ -3141,46 +3175,46 @@ ParcelDelibird_FindCorner_Text_0:
 	.string "time and is not finished.$"
 
 ParcelDelibird_FindCorner_Text_1:
-# 962 "data/maps/ParcelDelibird/scripts.pory"
+# 972 "data/maps/ParcelDelibird/scripts.pory"
 	.string "The line of a sill in the wet shore, two\n"
 	.string "planks under. The hinge is the only part\l"
 	.string "still above the ground.$"
 
 ParcelDelibird_PairShore_Text_0:
-# 970 "data/maps/ParcelDelibird/scripts.pory"
+# 980 "data/maps/ParcelDelibird/scripts.pory"
 	.string "NETMAN: Red cloth on stakes along the\n"
 	.string "slump line. We put them in ourselves.\l"
 	.string "Didn't wait for the Survey.$"
 
 ParcelDelibird_PairShore_Text_1:
-# 971 "data/maps/ParcelDelibird/scripts.pory"
+# 981 "data/maps/ParcelDelibird/scripts.pory"
 	.string "OLD MAN: The Survey came anyway. Wrote\n"
 	.string "down that we'd put them in. That's in a\l"
 	.string "record now too.$"
 
 ParcelDelibird_PairShore_Text_2:
-# 972 "data/maps/ParcelDelibird/scripts.pory"
+# 982 "data/maps/ParcelDelibird/scripts.pory"
 	.string "NETMAN: Everything's in a record now.$"
 
 ParcelDelibird_PairShore_Text_3:
-# 973 "data/maps/ParcelDelibird/scripts.pory"
+# 983 "data/maps/ParcelDelibird/scripts.pory"
 	.string "OLD MAN: Everything always was. In the\n"
 	.string "ground. Somebody finally learned to\l"
 	.string "read it back.$"
 
 ParcelDelibird_PairShore_Text_4:
-# 975 "data/maps/ParcelDelibird/scripts.pory"
+# 985 "data/maps/ParcelDelibird/scripts.pory"
 	.string "OLD MAN: The ranger carried tea to\n"
 	.string "INGRID, oil to TOMAS, and read the\l"
 	.string "stakes between. MARTA gave them the\l"
 	.string "bird.$"
 
 ParcelDelibird_PairShore_Text_5:
-# 976 "data/maps/ParcelDelibird/scripts.pory"
+# 986 "data/maps/ParcelDelibird/scripts.pory"
 	.string "NETMAN: The bird gives itself.$"
 
 ParcelDelibird_PairShore_Text_6:
-# 977 "data/maps/ParcelDelibird/scripts.pory"
+# 987 "data/maps/ParcelDelibird/scripts.pory"
 	.string "OLD MAN: So MARTA says. I've watched\n"
 	.string "that bird thirty winters. It goes where\l"
 	.string "it's needed. It went off the boat\l"
@@ -3188,12 +3222,12 @@ ParcelDelibird_PairShore_Text_6:
 	.string "what you like.$"
 
 ParcelDelibird_PairShore_Text_7:
-# 979 "data/maps/ParcelDelibird/scripts.pory"
+# 989 "data/maps/ParcelDelibird/scripts.pory"
 	.string "NETMAN: The shore's two steps further\n"
 	.string "in than when I was a boy.$"
 
 ParcelDelibird_PairShore_Text_8:
-# 980 "data/maps/ParcelDelibird/scripts.pory"
+# 990 "data/maps/ParcelDelibird/scripts.pory"
 	.string "OLD MAN: Three. I counted. Then I\n"
 	.string "stopped counting because it\l"
 	.string "frightened me, and now I count again\l"
@@ -3201,16 +3235,16 @@ ParcelDelibird_PairShore_Text_8:
 	.string "it anyway.$"
 
 ParcelDelibird_PairShore_Text_9:
-# 981 "data/maps/ParcelDelibird/scripts.pory"
+# 991 "data/maps/ParcelDelibird/scripts.pory"
 	.string "NETMAN: What good's the count?$"
 
 ParcelDelibird_PairShore_Text_10:
-# 982 "data/maps/ParcelDelibird/scripts.pory"
+# 992 "data/maps/ParcelDelibird/scripts.pory"
 	.string "OLD MAN: None. It's just true. I've\n"
 	.string "decided to prefer true.$"
 
 ParcelDelibird_Board1_Text_0:
-# 991 "data/maps/ParcelDelibird/scripts.pory"
+# 1001 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A SURVEY BOARD outside the hall, under\n"
 	.string "the festival banner. DELIBIRD ISLE. The\l"
 	.string "village stands on frozen ground and the\l"
@@ -3223,7 +3257,7 @@ ParcelDelibird_Board1_Text_0:
 	.string "adjusts it.$"
 
 ParcelDelibird_Board2_Text_0:
-# 996 "data/maps/ParcelDelibird/scripts.pory"
+# 1006 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A SURVEY BOARD by the shore path.\n"
 	.string "DELIBIRD bring food to the snowed-in.\l"
 	.string "The board records the storms they came\l"
@@ -3235,7 +3269,7 @@ ParcelDelibird_Board2_Text_0:
 	.string "place.$"
 
 ParcelDelibird_Board3_Text_0:
-# 1003 "data/maps/ParcelDelibird/scripts.pory"
+# 1013 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A SURVEY BOARD on the hall's seaward\n"
 	.string "wall. The festival dates by year, and\l"
 	.string "beside each the date the strait froze,\l"
@@ -3246,7 +3280,7 @@ ParcelDelibird_Board3_Text_0:
 	.string "The second column does.$"
 
 ParcelDelibird_Board4_Text_0:
-# 1010 "data/maps/ParcelDelibird/scripts.pory"
+# 1020 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A SURVEY BOARD by the festival stage.\n"
 	.string "The stage is rebuilt every year and the\l"
 	.string "Survey measures where it stands: a\l"
@@ -3258,7 +3292,7 @@ ParcelDelibird_Board4_Text_0:
 	.string "The board calls it a reading.$"
 
 ParcelDelibird_Board5_Text_0:
-# 1017 "data/maps/ParcelDelibird/scripts.pory"
+# 1027 "data/maps/ParcelDelibird/scripts.pory"
 	.string "A SURVEY BOARD on the shore road. The\n"
 	.string "island's one road is measured each\l"
 	.string "spring from the hall's door to the\l"

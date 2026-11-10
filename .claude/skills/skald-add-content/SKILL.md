@@ -73,6 +73,11 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   plank next to the bank): give the NPC's own tile elevation 0, or the
   player beside it at the other height presses A into silence.
   `event_elev.py --sides` lists every such NPC.
+- **A required battle goes on the curve.** A boss, gate or rival the main
+  road passes through sits at most seven levels over the last required
+  ace and within reach of the wild levels on the way. Add it to `SPINE`
+  in `tools/skald/curve.py`. A stronger optional fight says so in its own
+  voice and asks first (ILEX on Delibird Isle).
 - **Before placing an NPC, check nothing warps the player onto that tile.**
   Scripted warps (`warp(MAP_X, x, y)`: ferries, walk-in scenes, the eight
   epilogue stops) are bare coordinates. `python3 tools/skald/warp_dest.py`

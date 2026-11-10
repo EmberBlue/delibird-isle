@@ -427,7 +427,24 @@ replaces is gone from the tree).
   move" in §13 F is superseded: the Climate Station is zone 7's gym in the
   main path. **The Sketch thread** (§04's locked memory) now runs as private
   narration from the Saltwick boards to Heron's confession.
-- **Not played end to end as one continuous run.** Every warp and
+- **Played end to end as one continuous run (2026-11-10).**
+  `tools/skald/play/run_all.sh` plays chains 1 to 10 on one build: the
+  ferry, eight badges, five certifications, the finale with HERON, the
+  boardroom, the eight-stop epilogue, the credits, CONTINUE, and the
+  post-game beats (the SMEARGLE, TARN's rematch, PERRIN's last battle).
+  About four minutes of builds and seventeen of play
+  (`play/rebuild_and_run.sh`; README in `tools/skald/play/`). Re-run it
+  after any script change: script edits move ROM addresses and invalidate
+  every savestate, so there is no partial replay. What it does NOT cover:
+  side quests, optional areas, the other six partners, losing a battle,
+  and anything a person would notice by feel (pacing, difficulty, music).
+  The test party is a level-100 lead, so balance is unplayed; what stands
+  in for it is `tools/skald/curve.py`, which reads the boss parties in
+  story order and fails on a step of more than seven levels (it found
+  CORDELIA sixteen over the finale with the credits behind her; she is
+  44 to 47 now, and ILEX warns an early arrival that badge 8 is the last
+  clearance). Route trainers, exp flow and move sets are unreviewed. History of
+  how it got here, kept for the rules it taught: every warp and
   connection has been walked by `tools/skald/sweep.py`, the whole
   certification spine fought through by `tools/skald/spine.sh`, and each
   content pass spot-checked from the harness (boards, pairs, books, quest
@@ -481,8 +498,21 @@ replaces is gone from the tree).
   works unreachable (fixed; the audit no longer surfs off bridges).
   Standing audits before any map or script work is called done:
   `audit.py` (2 known warnings), `reach.py` (0), `reach.py --trainers`
-  (0), `event_elev.py` (0), `gates.py` (0), `layout_fixes.py --check`
-  (0 differ: hand tile fixes live in each layout's `fixes.json`).
+  (0), `event_elev.py` (0), `event_elev.py --sides` (0: nobody silent
+  from one side), `warp_dest.py` (0 bad landings), `curve.py` (0 steep
+  steps on the main road), `gates.py` (0),
+  `layout_fixes.py --check` (0 differ: hand tile fixes live in each
+  layout's `fixes.json`).
+- **Names are capitals in speech and narration** (people, places, species,
+  speaker tags), as Emerald writes them; the protagonist's saved name is
+  WREN. In-world documents (minutes, ledgers, plaques) keep ordinary
+  capitalisation on purpose. Institution words (Survey, Corps, Board,
+  Foundation) are still mixed across the game; a pass over those is open.
+- **Tileset credits**: `CREDITS.md` and the in-game credits name the
+  FireRed Tileset Port (Liamjd14). The Johto-style set under the three
+  Delibird maps (`johtogeneral`, `azaleatown`) and the `leob_*` working
+  copies of Emerald's sets have no recorded source in the history. Find
+  and credit the Johto set's artist before any public release.
 - **The retired maps** `ParcelStation`, `ParcelBridge` and
   `ParcelStationHall` are unreachable and excluded from the audit and the
   word count. Content placed there by mistake on 2026-11-10 was moved to

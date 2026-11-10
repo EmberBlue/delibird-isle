@@ -10,4 +10,5 @@ bash $S/play/chain6.sh s54 > $S/play/run/chain6.log 2>&1 || { echo "chain6 faile
 bash $S/play/chain7.sh s61 > $S/play/run/chain7.log 2>&1 || { echo "chain7 failed"; exit 1; }
 bash $S/play/chain8.sh s65 > $S/play/run/chain8.log 2>&1 || { echo "chain8 failed"; exit 1; }
 bash $S/play/chain9.sh s72 > $S/play/run/chain9.log 2>&1 || { echo "chain9 failed"; exit 1; }
+bash $S/play/chain10.sh s78 > $S/play/run/chain10.log 2>&1 || { echo "chain10 failed"; exit 1; }
 echo "all chains done"
