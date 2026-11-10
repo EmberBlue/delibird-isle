@@ -67,7 +67,7 @@ def main():
     ap.add_argument("--item", help="ITEM_X to put in the bag before the new game")
     ap.add_argument("--party", help="SPECIES_X given at level 100 before the new game, so battles can be won by mashing A")
     ap.add_argument("--var", action="append", default=[], help="VAR_X=value to set before the new game (up to 2, repeatable)")
-    ap.add_argument("--fight-cap", type=int, default=20000, help="frames to spend on one battle before giving up (default 20000)")
+    ap.add_argument("--fight-cap", type=int, default=45000, help="frames to spend on one battle before giving up (default 45000: a partner that gains nine levels at once is offered four moves, and declining each takes a trip through the summary screen)")
     ap.add_argument("--fight", action="store_true", help="after each segment, while gMain.inBattle: mash A (FIGHT, first move) until the battle ends -- for a continuous run with a party")
     ap.add_argument("--load-state", help="resume from a savestate written by --save-state instead of booting a new game (--spawn is then ignored; pass any)")
     ap.add_argument("--save-state", help="write the emulator state at the end, so the next run can --load-state it (a continuous playthrough in segments)")
@@ -129,7 +129,9 @@ def main():
         bmons, acur = syms.get("gBattleMons"), syms.get("gActionSelectionCursor")
         bmain = syms.get("BattleMainCB2")
         while in_battle() and spent < limit:
-            other_screen = bmain and (core.memory.u32[gmain + 4] & ~1) != bmain and spent > 400
+            # (no grace period at the start: a fight() that hit its cap is re-entered mid-battle, and an A in
+            # its first frames landed on the summary screen and deleted the move after all)
+            other_screen = bmain and (core.memory.u32[gmain + 4] & ~1) != bmain
             fainted = bmons is not None and core.memory.u16[bmons + 0x2A] == 0     # struct BattlePokemon: hp
             if other_screen and not fainted:
                 # Some other screen is up inside the battle and nobody has to be replaced: the move-forget
