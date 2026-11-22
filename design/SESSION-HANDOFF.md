@@ -30,7 +30,12 @@ is the reference: water through the town, bridges, a square with a
 centrepiece, landmark buildings of different shapes, levels joined by
 stairs and one-way ledges, furniture along every street, a harbour with
 things in it. Every town and route still on a three-lane grid is owed the
-same treatment, the opening first, then zone by zone.
+same treatment. A look at all sixteen other outdoor maps the same day
+ranked them: Coast, River, Wetlands, Weather, Marsh, Floodbasin, Highlands,
+Corridor, the Sluice, Fernwick and Mistwood are already rich; **Delibird
+Isle itself is the plainest map in the game** (houses in a field on a
+checker path), with its Cliffs and Summit, the Breakwater and the Wetlands
+Hide behind it. Delibird is next.
 
 ## What's playable right now (the whole arc, end to end)
 
