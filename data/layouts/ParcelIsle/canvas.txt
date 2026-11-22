@@ -1,70 +1,52 @@
 legend general__brick_city
-size 44 40
-# Saltwick -- the arrival dock town on the Saltmarsh Coast (zone 1). Hand-composed:
-# a fir cap with the preserve track (north, sand until the paving starts at row 4),
-# three flagstone lanes of brick houses, the stone quay, a pier to the landing
-# (the lamp marks it), the west inlet, the east road to the long bridge (rows 18-22).
-# 'c' is flagstone paving, '!' a street lamp, 'B' a small spruce, 'Q' a moored boat,
-# 'X' a notice board standing on the paving. Firs on a rock bank ('{', '}') close the
-# harbour to the west and the east, so the map border's firs continue a wood, not the sea.
-anchor j c
-anchor C c
-anchor @ c
-anchor k c
-anchor r c
-anchor y .
-anchor z .
-anchor O .
-anchor m .
-anchor I c
-anchor 8 c
-anchor o .
-anchor h c
-anchor a c
-anchor N c
-anchor U c
-anchor g c
-anchor l .
-anchor 3 S
-anchor 4 S
+size 60 40
+# Saltwick -- the arrival town on the Saltmarsh Coast (zone 1), second drawing: a brick
+# harbour town on a canal. The stone pier and its landing are where they always were
+# (the arrival scene and the ferry warps land on them); everything else is new.
+#
+# North to south: the fir cap with the preserve avenue; the Annex and its weather plot,
+# the row houses and the chandlery on the west bank; the walled canal with a plank
+# footbridge, the Main Street bridge and the quay bridge; the Center, the fishers' hall,
+# the fountain square and the inn on the east bank; Main Street (a kerbed road); a ledge
+# with stairs down to the quay district; the quay, two rows deep; the harbour.
 ---
-T#T#T#T#T#T#T#T#T#T#ppT#T#T#T#T#T#T#T#T#T#T#
-####################pp######################
-T#T#T#T#T#T#T#....T#pp..T#....T#T#T#T#T#T#T#
-##############....##pp3.##....##############
-T#.................,cc......,.......,..o..T#
-##.B..A###..R####...cc..P####..K####..A#####
-T#,...####..#####...cc..#####..#####..####T#
-##....####..#####...cc..#####..#####..######
-T#.B..####.S#####...cc..#####.Z#####..####T#
-##...cccccjccccccccccccfcc@ccfcccCcccccccc##
-T#,....ff........,...................,....T#
-##..!...................................!.##
-T#.,..M###HHH.V###..FFF...A###HHH.V###....T#
-##....####....####..F4F.ff####....####....##
-T#qne.####....####....,...####....####..B.T#
-##{~>c####....####S.......####....####....##
-T#{~>cccccckccccccccccccccccccccccccccccccT#
-##{~>ILLLLLLLLLLLLL..c.fff........m.fffff.##
-T#{~>c......y!z......c...,...O...!.....,....
-##{~>ccccccccccccccccccccccccccccccccccccccc
-T#{~>cccccccccccccccccccccccccccccccrccccXcc
-##{~>ccccccccccccccccccccccccccccccccccccccc
-T#{~>c..c.....,...........c.,......,ff......
-##{~>c..cA###......V###...c...A###...A###.T#
-T#{~>c..c####ff.B..####.,.c.B.####...####B##
-##{~>8..c####......####...cFFF####.B.####.T#
-T#{~>c..c####....Z.####...g.l.####...####.##
-##{~>ccccUccccccchcccNccaccccccccccccccccccc
-T#{~unnnnnnnnY####nnnnnnnnnnnnnnnnnnnnneT#T#
-##{~~~~~~~~~~J####~~~~~~~~~~~~~~~~~~~~~}####
-T#{~~~~~~~~~~J####~~Q###~~~~~~~~~~~~~~~}T#T#
-##{~~~~~~~~~~J####~~####~~~~~~~~~~~~~~~}####
-T#{~~~Q###~~~J####~~~~~~~~~~~~~~~~~~~~~}T#T#
-##{~~~####~~D#####~~~~~~~~~~~~~~~~~~~~~}####
-T#{~dddd~~~~######~~~~~~~~~~~~~~~~~~dd~}T#T#
-##{~dddd~~~~######~~~~~~~~~~~~Q###~~dd~}####
-T#{~dddd~~~~~~~~~~~~~~~~~~~~~~####~~dd~}T#T#
-##{~dddddd~~~~~~~~~~~~~~~~~~~~~~~~dddd~}####
-T#{~dddddddd~~~~~~~~~~~~~~~~~~~~dddddd~}T#T#
-##{~dddddddddddddddddddddddddddddddddd~}####
+T#T#T#T#T#T#T#T#T#T#ppT#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#
+####################pp######################################
+T#T#T#T#T#T#T#T#T#..pp..T#T#T#T#T#T#T#T#T#T#W#########T#T#T#
+##################B.ppS.####################################
+T#T#................cc......................##########T#T#T#
+####.B..V###.FFFFFB.cc.A###f..qnnne...P####.################
+T#T#....####.F.S.F.!cc!####.cc<~~~>cc!#####.##########T#T#T#
+####..f.####.F...Ff.cc.####Bcc<~~~>cc.#####.################
+T#T#f...####S.......cc.####.cc<~~~>cc.#####.##########..T#T#
+####..ccccccccccccccccccccccccwwwwwccccccccc##########..####
+T#T#f..cE###I###cf.fccff..T#cc<~~~>ccccccccccXi(_)icccccccT#
+####...c########cHHHccf...##cc<~~~>ccicccc==ccccccccG#######
+T#T#.B.c########c..!cc.M###.cc<~~~>ccccccf....fcccic######T#
+####..fc########ckk.ccB####fcc<~~~>ccc&##..o#..&##cc########
+T#qne.fc########c..fcc.####.cc<~~~>ccc###..##..###cc######T#
+##{~>c.c########cS.Bcc.####fcc<~~~>ccccccf....fccccc########
+T#{~>cBc########c...cccccccccc<~~~>cciccccc==ccccciX######..
+##{~>ccccciccccccccccccciccccc<--->ccccciccccccicccccccccccc
+T#{~>c::::::::::::::::::::::::::::::::::::::::::::::::::::::
+##{~>c::::::::::::::::::::::::::::::::::::::::::::::::::::::
+T#{~>ccccccccccccicccccccccccc^|^|^ccccccccciccccccccccccXcc
+##{~>$LLLLLLLLL$$LLLLLLLLLLL$$'''''$$LLLLLLLLLL$$LLLLLLLLLLL
+T#{~>;B.V###f..;;.A###.K####;;<~~~>;;.A###.V###;;.U##B..T#T#
+##{~>c..####...cc.####f#####cc<~~~>ccf####B####cc.###...####
+T#{~>cf.####.B.ccS####.#####cc<~~~>cc.####.####cc.###f..T#T#
+##{~>c..####.f.cc.####B#####cc<~~~>cc.####f####cckk...B.####
+T#{~>ciXcc==iccccXic==xcccaaic<--->ciXcc==iccciccXcc==xcT#T#
+##{~>ccccccccccccccccccccccccccccccccccccccccccccccccccc####
+T#{~unnnnnnnnY####nnnnnnnnnnnn^|^|^nnnnnnnnnnnnnnn++nnneT#T#
+##{~~~~~~~~~~J####~~~~~~~~~~~~'''''~~~~~~~~~~~~~~~++~~~}####
+T#{~~~~~~~~~~J####~~Q###~~~~~~~~~~~~~~~~~~~~~~~~~~++~~~}T#T#
+##{~~~Q###~~~J####~~####~~~~~~~~~~~~~~Q###~~~~~~~~++~@#}####
+T#{~~~####~~~J####~~~~~~~~~~~~~~~~~~~~####~~~~~~~~++~~~}T#T#
+##{~~~~~~~~~D#####~~~~~~@#~~~~~~~~~~~~~~~~~~Q###~~++~~~}####
+T#{~~~~~~~~~######~~ddddddddddddddd*#~~~~~~~####~~~~~~~}T#T#
+##{~~~~~*#~~######ddddddddddddddddddddddddd~~~~~~~~~~~~}####
+T#{~~~~~~~ddddddddddddddddddddddddddddddddddddd~~~~~~~~}T#T#
+##{~~~~~ddddddddddddddddddddddddddddddddddddddddddd~~~~}####
+T#{~~~~ddddddddddddddddddddddddddddddddddddddddddddd~~~}T#T#
+##{~~~~ddddddddddddddddddddddddddddddddddddddddddddd~~~}####

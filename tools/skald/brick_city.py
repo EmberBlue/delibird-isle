@@ -15,6 +15,7 @@ appended after the kit's own 375 metatiles, in this order, so their ids are fixe
   892-895 fountain_*   the kit's fountain standing on paving instead of its lawn
   896-898 jetty_*      a plank jetty over the sea: its head, its run, its foot
   899 footbridge  the one-row plank walk over water
+  900 crate       the kit's slatted crate standing on paving
 
 After the kit's extras come the pieces the canvas tool makes on demand (tools/skald/mtile.py);
 their ids depend on the order the canvases were drawn in. `--rebuild` starts over from the
@@ -73,6 +74,7 @@ EXTRA = [
     (897, "jetty_run", WATER + (e(539, 5), e(539, 5, h=True), e(539, 5), e(539, 5, h=True)) + NONE, 0),
     (898, "jetty_foot", WATER + (e(539, 5), e(539, 5, h=True), e(523, 5), e(523, 5, h=True)) + NONE, 0),
     (899, "footbridge", WATER + (e(555, 5), e(555, 5, h=True), e(523, 5), e(523, 5, h=True)) + NONE, 0),
+    (900, "crate", FLAG + (e(703, 10, h=True), e(702, 10, h=True), e(719, 10, h=True), e(718, 10, h=True)) + NONE, 0),
 ]
 KIT_METATILES = 375
 CANVASES = ("ParcelIsle", "ParcelMeadow", "ParcelRoute1")      # every canvas drawn on this kit, in this order

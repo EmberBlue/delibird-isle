@@ -209,6 +209,20 @@ Cordelia's flag and Dell's quest were silently second-talk-only (2026-11-10).
   missing tip over whatever stands behind (it makes the metatile if none
   exists) and removes a tip with no tree under it. A foot hidden by a roof or
   a fence in front is fine.
+- **Design standard (the user, 2026-11-22): "Make sure the maps are complex
+  and cool, you should go all out with design!"** A map is not done because
+  it is walkable and audited. Before calling one done, look at its render
+  and ask what a player would screenshot: water with something crossing it,
+  a landmark building, a change of level (ledges are one-way: mark them
+  impassable; stairs are `$` over `;`), a square or a clearing with a
+  centrepiece, furniture along the ways people walk, flowers and trees in
+  drifts and clumps rather than rows, grass patches with ragged edges, a
+  nook that hides an item. Saltwick (`data/layouts/ParcelIsle/canvas.txt`)
+  is the reference for a town; its legend
+  (`tools/skald/legends/general__brick_city.json`) lists the pieces. When
+  redrawing a map that scripts land on, keep those cells' coordinates and
+  draw around them; move everything else and re-place every event, then
+  `reach.py`, `event_elev.py`, `sweep.py --only PARCEL_X` and a full replay.
 - **Porting a community tileset** (Saltwick on Brick City, 2026-11-22, is
   the full worked example; Mistwood on Shady Forest, 2026-11-10, the first).
   Public GitHub is reachable with `git clone` through the session proxy

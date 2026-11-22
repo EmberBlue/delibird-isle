@@ -4464,7 +4464,7 @@
     {
       "id": "LAYOUT_PARCEL_ISLE",
       "name": "ParcelIsle_Layout",
-      "width": 44,
+      "width": 60,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_brick_city",

@@ -1036,3 +1036,15 @@ quest is built, how the peer works) before they are asked six more times.
   eight tile slots of a secondary sheet, and a seam shows six rows of the
   next map in the wrong kit. The seam audit found 113 such cells on the
   older zones, which is the next map job.
+  **Saltwick drawn again, and the seams closed** (same day, on "make sure
+  the maps are complex and cool, go all out with design"). The reskin kept
+  a three-lane grid; the second drawing is a canal town: a walled canal
+  with a footbridge and two arched bridges, a kerbed Main Street, the
+  fishers' hall with its awning, a fountain square, a gabled inn, row
+  houses, a ledge with stairways down to a quay two rows deep, a fishing
+  jetty. The pier kept its coordinates so the arrival scene and the ferry
+  warps did not change; every other event was placed again. The Meadow and
+  Route 1 gained flowers, boulders, a pool and benches. The 113 seam cells
+  went to zero with the fir palette in three kits, one kit swap and twenty
+  edge cells. This is the standard for the rest: each zone's town and
+  route gets the same pass, with the kit that suits it.

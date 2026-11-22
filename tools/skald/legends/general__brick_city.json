@@ -135,8 +135,8 @@
   ],
   "L": [
    135,
-   0,
-   3
+   1,
+   0
   ],
   "X": [
    856,
@@ -232,6 +232,16 @@
    899,
    0,
    3
+  ],
+  "a": [
+   900,
+   1,
+   0
+  ],
+  "/": [
+   540,
+   1,
+   0
   ]
  },
  "stamps": {
@@ -1114,12 +1124,38 @@
      374
     ]
    ]
+  },
+  "o": {
+   "rows": [
+    [
+     838,
+     839
+    ],
+    [
+     846,
+     847
+    ]
+   ],
+   "_note": "the fountain on its lawn"
+  },
+  "r": {
+   "rows": [
+    [
+     104,
+     106
+    ],
+    [
+     120,
+     122
+    ]
+   ],
+   "_note": "a boulder (General's rock, primary tiles only: allowed by a seam)"
   }
  },
  "paths": [
   {
    "chars": "c",
-   "join": "$%&'()+-:;<=>ACDEGIJKMOPRVWXY^_deinpqsuvwx{|}~",
+   "join": "$%&'()+-:;<=>ACDEGIJKMOPRVWXY^_adeinpqsuvwx{|}~",
    "pieces": {
     "plain": 769,
     "N": 586,
@@ -1183,6 +1219,12 @@
    823
   ],
   "k": [
+   540,
+   540,
+   541,
+   540
+  ],
+  "/": [
    540,
    540,
    541,

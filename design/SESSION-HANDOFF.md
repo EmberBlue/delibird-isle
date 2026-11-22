@@ -23,6 +23,15 @@ ecology-first Pokémon Emerald romhack (pokeemerald-expansion). Read order:
 containers re-provision onto `claude/wizardly-noether-znwom5`. If you are
 there: `git fetch origin claude/emerald-romhack-planning-T2LgQ && git checkout claude/emerald-romhack-planning-T2LgQ`.
 
+**The map standard, in the user's words (2026-11-22):** "Make sure the maps
+are complex and cool, you should go all out with design!" A reskin of a
+plain layout does not meet it. Saltwick's second drawing (below, under Art)
+is the reference: water through the town, bridges, a square with a
+centrepiece, landmark buildings of different shapes, levels joined by
+stairs and one-way ledges, furniture along every street, a harbour with
+things in it. Every town and route still on a three-lane grid is owed the
+same treatment, the opening first, then zone by zone.
+
 ## What's playable right now (the whole arc, end to end)
 
 Saltwick (dock town) → the Holding Meadow (seven partners) → Route 1 (the
@@ -405,7 +414,32 @@ replaces is gone from the tree).
   zones are open**, worst at Coast/Breakwater, River/Highlands,
   Corridor/Wetlands). The General primary has no free metatile slot left.
   Same repo, good next: Alternative Pokecenter for every centre, Gen 4
-  Cave or Beach Cave for the caverns, Sewer for the Floodbasin works.
+  Cave or Beach Cave for the caverns, Sewer for the Floodbasin works,
+  Brick Cafe Interior (same artist as Brick City) for Saltwick's inn.
+- **Saltwick, second drawing** (2026-11-22, on "complex and cool"). 60x40,
+  drawn from scratch around the one thing that had to stay: the stone pier
+  and its landing keep their coordinates (the arrival scene, four ferry
+  warps and five harness steps land there). New: a walled canal down the
+  middle with a plank footbridge and two arched road bridges; Main Street
+  as a kerbed road; the fishers' hall (ten wide, awning, steps); a fountain
+  square with planters and benches; a gabled inn; paired row houses; a
+  ledge with five stairways between Main Street and the quay district; a
+  quay two rows deep with lamps, benches, boards and the sealed crate; a
+  plank fishing jetty, boats and rocks. All 37 objects, 13 doors and 15
+  signs were re-placed (signs beside what they describe; the hidden potion
+  behind the inn). The Meadow and Route 1 kept their shape and gained
+  flower drifts, boulders, a pool, benches and ragged grass patches.
+  Lessons: (1) ledges are one-way only when their cells are impassable
+  (the canvas legend had them walkable; fixed, Route 1 included);
+  (2) furniture on one row of a two-row quay turns the other row into a
+  corridor, and an NPC standing in it seals whatever door is behind
+  (`reach.py` catches it); (3) a lamp's head covers the cell above it, so
+  not under a sign; (4) redraw with a small builder script, then let
+  `canvas.txt` be the source; (5) after moving doors run
+  `sweep.py --only PARCEL_X` to walk every warp both ways.
+  seams.py reads 0 for the whole game since the same day (fir palette in
+  Fortree, Mauville and Slateport; the Breakwater on the Coast's kit; a few
+  edge cells swapped for the primary's twins).
 - **Building kits** — `kit_restyle.py`. Every town was a stock building kit
   (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
   wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the
