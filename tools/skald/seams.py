@@ -12,10 +12,13 @@ So near a seam between two different secondaries a map may only use
 
 and connected maps must share the primary outright.
 
-Only what is on screen at the moment of the swap counts: the screen is fifteen tiles wide and ten
-tall with the player in the middle, so from each cell where the edge can be crossed (walkable on
-both sides, as audit.py pairs them) the check covers seven columns to either side and six rows
-in (north/south seams), or five rows to either side and eight columns in (east/west seams).
+Only what is on screen counts. The screen is fifteen tiles wide and ten tall, the player in the
+middle and the rows offset by half a tile: standing on the far side of a seam the player sees
+four and a half rows of this map past a north or south edge, and seven columns past an east or
+west one, for as long as they stand there. So from each cell where the edge can be crossed
+(walkable on both sides) the check covers seven columns to either side and five rows in, or five
+rows to either side and seven columns in. One row (or column) further is on screen only for the
+few frames of the step that crosses; it is not checked.
 
   python3 tools/skald/seams.py            list every offending metatile per seam; exit 1 if any
   python3 tools/skald/seams.py A B ...    only seams of these maps (the others are listed as a count)
@@ -30,7 +33,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import audit  # noqa: E402
 import pal_tool  # noqa: E402
 
-DEPTH = {"up": 6, "down": 6, "left": 8, "right": 8}
+DEPTH = {"up": 5, "down": 5, "left": 7, "right": 7}
 
 
 def pal_text(tdir, n):

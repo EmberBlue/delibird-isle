@@ -195,10 +195,15 @@ Cordelia's flag and Dell's quest were silently second-talk-only (2026-11-10).
   spruce** (palette 2, one tile wide: metatile 14 crown over grass, 198 inside
   a wood, 22 foot) is coloured correctly under every secondary kit; the **big
   fir** (palette 12, two wide: tip 462/463 in the cell above, body 468/469,
-  foot 484/485, or 476/477 when the next tree's tip overlaps it) only has a
-  palette under the `leob_*` kits. Under Mauville, Fortree, Slateport or Cave
-  it draws in that kit's own palette 12 (a grove in Elvsund was grey and
-  yellow for weeks): use spruces there.
+  foot 484/485, or 476/477 when the next tree's tip overlaps it) needs the
+  fir palette in slot 12 of the loaded secondary. The `leob_*` kits, Brick
+  City and (since 2026-11-22, their slot 12 was unused) Fortree, Mauville
+  and Slateport carry it; Cave, the Johto kits and Shady Forest do not (a
+  grove in Elvsund was grey and yellow for weeks before Mauville had it):
+  use spruces there. To give a graded kit the palette, copy
+  `tools/skald/palette_base/leob_rustboro/12.pal` over the kit's LIVE
+  `palettes/12.pal` and run `grade.py --apply` (the tool reads an ungraded
+  live value as the new base).
 - A big fir is three parts and all three must be there: `python3
   tools/skald/trees.py` must read `0 broken tree assemblies`; `--fix` adds a
   missing tip over whatever stands behind (it makes the metatile if none
