@@ -59,9 +59,26 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   Then look: `python3 tools/skald/pal_tool.py render MAP out.png 2` shows the
   map with its real palettes in a second, and it is the only check that sees
   colour (the harness plays blind; it walked past a grey-and-yellow grove).
+- **Seams**: `python3 tools/skald/seams.py MAP...` must read `0 seam
+  problem(s)` for the maps you touched. Crossing a connection swaps the
+  secondary tileset while the map behind is still on screen, so the six
+  rows by a seam between two different secondaries may only use primary
+  metatiles in primary palettes (or a secondary palette both kits hold
+  identically), and connected maps must share the primary. 113 old
+  problems on the leob-kit zones are listed when run without arguments
+  (2026-11-22); they are open work, not a baseline to add to.
+- **Community kits**: `python3 tools/skald/brick_city.py --check` must say
+  `ok` (the kit's extra metatiles, its grass repoint and its three tiles
+  moved off the door slots). `audit.py` also warns when a map with doors
+  draws anything from secondary tiles 1016-1023: the engine writes door
+  animation frames there and leaves them (Saltwick's quay edge turned into
+  door fragments the first time a door opened, 2026-11-22). After adding a
+  door, trace it: `walktest.py ... --trace 6 --walk GOTO:x,y --walk UP:1`
+  and look at the frames around the fade.
 - **Kits under the FireRed primary**: `python3 tools/skald/kit_share_frp.py
   shady_forest --check` must say the 69 shared tiles are in place (any
-  non-`frp_*` secondary paired with `frp_general` needs them).
+  non-`frp_*` secondary paired with `frp_general` needs them; no map is on
+  that primary since 2026-11-22, so this only matters if one goes back).
 - **Level curve**: after touching any boss, gate or rival party, run
   `python3 tools/skald/curve.py`. It prints every required battle in story
   order and must read `0 step(s) too steep`. The playthrough chains fight

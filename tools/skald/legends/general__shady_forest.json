@@ -1,5 +1,5 @@
 {
- "_about": "Mistwood: FireRed-port General as the primary (the Route 1 edge and the entrance rows are primary-only), the Shady Forest kit as the secondary (data/tilesets/secondary/shady_forest; Team Aqua's Asset Repo, see its CREDITS.md). D and L are the kit's teal and light conifers: 2x2 stamps that the dress pass finishes (feet, overlaps, tips).",
+ "_about": "Mistwood: Emerald General (leob0505's ORAS set) as the primary, the Shady Forest kit as the secondary (data/tilesets/secondary/shady_forest; Team Aqua's Asset Repo, see its CREDITS.md). D and L are the kit's teal and light conifers: 2x2 stamps that the dress pass finishes (feet, overlaps, tips). The entrance rows by the Route 1 seam use the primary only: N is General's small spruce as a wood (palette 2), 'p' the sand track. The kit fills palette 12 itself, so the Skaldmere fir (palette 12) cannot stand in this map.",
  "fill": "#",
  "border": [
   528,
@@ -14,52 +14,32 @@
    3
   ],
   ",": [
-   8,
+   1,
    0,
    3
   ],
   "p": [
-   217,
+   289,
    0,
    3
   ],
   "t": [
-   10,
+   13,
    0,
    3
   ],
-  "X": [
-   28,
-   1,
-   0
-  ],
-  "w": [
-   29,
-   1,
-   0
-  ],
-  "x": [
-   36,
-   1,
-   0
-  ],
-  "W": [
-   37,
-   1,
-   0
-  ],
   "S": [
-   2,
+   27,
    1,
    0
   ],
   "B": [
-   5,
+   22,
    1,
    0
   ],
   "F": [
-   231,
+   329,
    1,
    0
   ],
@@ -135,30 +115,6 @@
   ]
  },
  "stamps": {
-  "N": {
-   "rows": [
-    [
-     28,
-     29
-    ],
-    [
-     36,
-     37
-    ]
-   ]
-  },
-  "T": {
-   "rows": [
-    [
-     30,
-     31
-    ],
-    [
-     22,
-     23
-    ]
-   ]
-  },
   "D": {
    "rows": [
     [
@@ -215,6 +171,18 @@
     2
    ],
    "_note": "the ranger post: the kit's lit cottage wing (door 612) with a dead tree, a barrel and a stump stacked against its west wall; same 4x4 footprint and door cell as the old stamp"
+  },
+  "N": {
+   "rows": [
+    [
+     14,
+     14
+    ],
+    [
+     22,
+     22
+    ]
+   ]
   }
  },
  "dress": {
@@ -275,6 +243,35 @@
      563
     ]
    }
+  }
+ },
+ "paths": [
+  {
+   "chars": "p",
+   "join": "(){}",
+   "pieces": {
+    "plain": 289,
+    "N": 281,
+    "S": 297,
+    "W": 288,
+    "E": 290,
+    "NW": 280,
+    "NE": 282,
+    "SW": 296,
+    "SE": 298
+   }
+  }
+ ],
+ "wood": {
+  "N": [
+   14,
+   198,
+   22
+  ]
+ },
+ "tall": {
+  "B": {
+   "top_of": 14
   }
  }
 }

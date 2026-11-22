@@ -4465,9 +4465,9 @@
       "id": "LAYOUT_PARCEL_ISLE",
       "name": "ParcelIsle_Layout",
       "width": 44,
-      "height": 36,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_vermilion_city",
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_brick_city",
       "border_filepath": "data/layouts/ParcelIsle/border.bin",
       "blockdata_filepath": "data/layouts/ParcelIsle/map.bin"
     },
@@ -4596,8 +4596,8 @@
       "name": "ParcelMeadow_Layout",
       "width": 24,
       "height": 20,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_vermilion_city",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_brick_city",
       "border_filepath": "data/layouts/ParcelMeadow/border.bin",
       "blockdata_filepath": "data/layouts/ParcelMeadow/map.bin"
     },
@@ -4606,8 +4606,8 @@
       "name": "ParcelRoute1_Layout",
       "width": 30,
       "height": 48,
-      "primary_tileset": "gTileset_Primary_frp_general",
-      "secondary_tileset": "gTileset_frp_vermilion_city",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_brick_city",
       "border_filepath": "data/layouts/ParcelRoute1/border.bin",
       "blockdata_filepath": "data/layouts/ParcelRoute1/map.bin"
     },
@@ -4616,7 +4616,7 @@
       "name": "ParcelMistwood_Layout",
       "width": 30,
       "height": 44,
-      "primary_tileset": "gTileset_Primary_frp_general",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_shady_forest",
       "border_filepath": "data/layouts/ParcelMistwood/border.bin",
       "blockdata_filepath": "data/layouts/ParcelMistwood/map.bin"

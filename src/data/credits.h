@@ -129,11 +129,14 @@ static const u8 sCreditsText_Liamjd14[] = _("FireRed port: Liamjd14");
 static const u8 sCreditsText_Leob[] = _("ORAS tiles: leob0505");
 static const u8 sCreditsText_HnS[] = _("Heart & Soul: Kertra, Ekat99");
 static const u8 sCreditsText_HnSArtists[] = _("Alistair, Johto Redrawn Team");
-static const u8 sCreditsText_Shady[] = _("Shady Forest tiles");
+// the two kits ported from Team Aqua's Asset Repo share most of their artists: Shady Forest
+// (Ekat99, Heartlessdragoon, Vurtax; assembled by Yumekua, reformatted by Rahtak) and Brick City
+// (Ekat99, Vurtax, Heartlessdragoon, Alistar, Slimshady; imported by Kumatora)
+static const u8 sCreditsText_Shady[] = _("Shady Forest, Brick City");
 static const u8 sCreditsText_Shady1[] = _("Ekat99, Heartlessdragoon");
-static const u8 sCreditsText_Shady2[] = _("Vurtax, Yumekua, Rahtak");
-static const u8 sCreditsText_Shady3[] = _("and the artists named");
-static const u8 sCreditsText_Shady4[] = _("in CREDITS.md");
+static const u8 sCreditsText_Shady2[] = _("Vurtax, Alistar, Slimshady");
+static const u8 sCreditsText_Shady3[] = _("Yumekua, Rahtak, Kumatora");
+static const u8 sCreditsText_Shady4[] = _("and all named in CREDITS.md");
 static const u8 sCreditsText_TeamAqua[] = _("Team Aqua's Asset Repo");
 static const u8 sCreditsText_Tools[] = _("Tools");
 static const u8 sCreditsText_Poryscript[] = _("poryscript");

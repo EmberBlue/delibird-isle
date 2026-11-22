@@ -1,8 +1,16 @@
-legend frp_general__frp_vermilion_city
+legend general__brick_city
+# the river is fresh water: General's pond set instead of the quay walls
+tile ~ 161 0 1
+tile < 184 0 1
+tile > 186 0 1
+tile q 176 0 1
+tile n 177 0 1
+tile e 178 0 1
 size 30 48
 # ROUTE 1 -- Saltwick's meadow to Mistwood. A river down the west side with a
 # plank bridge at its head (the Poliwag scene), a ledge shelf, two grass
-# fields, five trainers, a Cut pocket on the far bank.
+# fields, five trainers, a Cut pocket on the far bank. Rows 0-7 are the Mistwood
+# seam: primary tiles and palettes only there (N spruces, not T firs).
 anchor 1 .
 anchor 2 .
 anchor 3 .
@@ -20,13 +28,13 @@ anchor 7 ~
 anchor 8 ~
 anchor 9 ~
 ---
-T#T#T#T#T#T#T#ppT#T#T#T#T#T#T#
+N#N#N#N#N#N#N#ppN#N#N#N#N#N#N#
 ##############pp##############
-T#T#T#........pp............T#
+N#N#N#........pp............N#
 ######.......pppp..........B##
-T#T#T#.....Z.pppp........h..T#
+N#N#N#.....Z.pppp........h..N#
 ######.......pppp...........##
-T#T#T#.......pppp..,..ttttt.T#
+N#N#N#.......pppp..,..ttttt.N#
 ######......Bpppp.....ttttt.##
 T#T#T#.......pppp.B...ttttt.T#
 ######.....B.,ppp.....ttttt.##

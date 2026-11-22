@@ -18,10 +18,10 @@ variants (a tip over a fence, a body over a cliff edge) are covered:
   python3 tools/skald/trees.py --fix      repair the mechanical cases in place (layout_edit rules:
                                           collision and elevation kept, fixes.json updated):
                                           a body gets its tip in the metatile above, whatever
-                                          stands there (the variant is found, or made: in a free
-                                          slot of the primary when it only uses primary tiles,
-                                          appended to the map's secondary otherwise); a tip with
-                                          no tree under it is taken off
+                                          stands there (the variant is found, or made by mtile.py:
+                                          in a free slot of the primary when it only uses primary
+                                          tiles and one is left, appended to the map's secondary
+                                          otherwise); a tip with no tree under it is taken off
 
 A body whose foot is hidden by something solid in front of it (a roof, a fence) is not an error.
 
@@ -75,47 +75,8 @@ def _tileset_files(d, mid):
 def with_tip(d, base_id, side):
     """The id of a metatile that is base_id with the fir's tip in its top layer; made if it does not exist.
     None when the base has no room for one (all three layers in use)."""
-    w = d["mts"][base_id]
-    bottom, mid, top = w[0:4], w[4:8], w[8:12]
-    if not any(top):
-        target = tuple(bottom) + tuple(mid) + TIP[side]
-    elif not any(bottom):
-        target = tuple(mid) + tuple(top) + TIP[side]        # a canopy: slide its two layers down
-    else:
-        return None
-    for mid_, ww in d["mts"].items():
-        if tuple(ww) == target:
-            return mid_
-    # make it: in the primary when every tile is a primary tile, else in this map's secondary
-    in_primary = all((e & 0x3FF) < 512 for e in target)
-    tdir = d["prim"] if in_primary else d["sec"]
-    base = 0 if in_primary else 512
-    mfile, afile = tdir / "metatiles.bin", tdir / "metatile_attributes.bin"
-    mdata, adata = bytearray(mfile.read_bytes()), bytearray(afile.read_bytes())
-    n = len(mdata) // 24
-    slot = None
-    if in_primary:
-        for i in range(1, n):                                 # an all-zero slot (never slot 0)
-            if not any(mdata[i * 24:(i + 1) * 24]) and not any(adata[i * 2:i * 2 + 2]):
-                slot = i
-                break
-        if slot is None:
-            return None
-        mdata[slot * 24:(slot + 1) * 24] = struct.pack("<12H", *target)
-    else:
-        if n >= 512:
-            return None
-        slot = n
-        mdata += struct.pack("<12H", *target)
-        adata += b"\0\0"
-    # behaviour and layer type follow the tile it was made from
-    src_m, src_a, src_base = _tileset_files(d, base_id)
-    attr = src_a.read_bytes()[(base_id - src_base) * 2:(base_id - src_base) * 2 + 2]
-    adata[slot * 2:slot * 2 + 2] = attr
-    mfile.write_bytes(bytes(mdata)); afile.write_bytes(bytes(adata))
-    d["mts"][base + slot] = target
-    print(f"   new metatile {base + slot} in {tdir.name}: {base_id} with a fir tip ({side})")
-    return base + slot
+    import mtile
+    return mtile.with_top(d, base_id, TIP[side], why=f"{base_id} with a fir tip ({side})")
 
 
 def without_tip(d, mid):

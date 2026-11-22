@@ -319,6 +319,10 @@ const u16 gMetatileAttributes_frp_viridian_city[] = INCBIN_U16("data/tilesets/se
 const u16 gMetatiles_frp_viridian_forest[] = INCBIN_U16("data/tilesets/secondary/frp_viridian_forest/metatiles.bin");
 const u16 gMetatileAttributes_frp_viridian_forest[] = INCBIN_U16("data/tilesets/secondary/frp_viridian_forest/metatile_attributes.bin");
 
+// ---- SECONDARY: brick_city (metatiles + attributes) ----
+const u16 gMetatiles_brick_city[] = INCBIN_U16("data/tilesets/secondary/brick_city/metatiles.bin");
+const u16 gMetatileAttributes_brick_city[] = INCBIN_U16("data/tilesets/secondary/brick_city/metatile_attributes.bin");
+
 // ---- SECONDARY: shady_forest (metatiles + attributes) ----
 const u16 gMetatiles_shady_forest[] = INCBIN_U16("data/tilesets/secondary/shady_forest/metatiles.bin");
 const u16 gMetatileAttributes_shady_forest[] = INCBIN_U16("data/tilesets/secondary/shady_forest/metatile_attributes.bin");

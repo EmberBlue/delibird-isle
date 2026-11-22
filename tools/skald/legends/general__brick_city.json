@@ -1,0 +1,703 @@
+{
+ "_about": "Emerald General (leob0505's ORAS set, data/tilesets/primary/leob_general) + the Brick City kit (data/tilesets/secondary/brick_city; Ekat99, imported by Kumatora; see its CREDITS.md). Saltwick, the Holding Meadow and Route 1. 'c' is the kit's flagstone paving, 'p'/'s' General's sand track; the paths pass gives every cell its edges. T is the Skaldmere fir (2x2; palette 12, which the kit leaves free and brick_city.py fills), N the small spruce as a wood (palette 2: the only tree allowed within eight rows of the Mistwood seam, whose kit has its own palette 12). Quay: 'n' wall to the north of the water, '>' to the east, '<' to the west, 'e'/'q' the two inside corners, 'u'/'v' the outside ones (887-891 are brick_city.py's additions). '{' and '}' are General's rock bank on a water cell, land to the west and to the east: the wooded banks that close the harbour, so the border's firs never stand in open water.",
+ "fill": "#",
+ "border": [
+  468,
+  469,
+  476,
+  477
+ ],
+ "tiles": {
+  ".": [
+   1,
+   0,
+   3
+  ],
+  ",": [
+   1,
+   0,
+   3
+  ],
+  "t": [
+   13,
+   0,
+   3
+  ],
+  "f": [
+   4,
+   0,
+   3
+  ],
+  "c": [
+   769,
+   0,
+   3
+  ],
+  "p": [
+   289,
+   0,
+   3
+  ],
+  "s": [
+   289,
+   0,
+   3
+  ],
+  "b": [
+   891,
+   0,
+   3
+  ],
+  "[": [
+   891,
+   0,
+   3
+  ],
+  "]": [
+   891,
+   0,
+   3
+  ],
+  "~": [
+   368,
+   0,
+   1
+  ],
+  "d": [
+   369,
+   0,
+   1
+  ],
+  "n": [
+   748,
+   0,
+   1
+  ],
+  ">": [
+   758,
+   0,
+   1
+  ],
+  "<": [
+   887,
+   0,
+   1
+  ],
+  "e": [
+   888,
+   0,
+   1
+  ],
+  "q": [
+   889,
+   0,
+   1
+  ],
+  "u": [
+   751,
+   0,
+   1
+  ],
+  "v": [
+   749,
+   0,
+   1
+  ],
+  "B": [
+   22,
+   1,
+   0
+  ],
+  "!": [
+   539,
+   1,
+   0
+  ],
+  "H": [
+   646,
+   1,
+   0
+  ],
+  "F": [
+   329,
+   1,
+   0
+  ],
+  "S": [
+   27,
+   1,
+   0
+  ],
+  "Z": [
+   3,
+   1,
+   0
+  ],
+  "L": [
+   135,
+   0,
+   3
+  ],
+  "X": [
+   856,
+   1,
+   0
+  ],
+  "{": [
+   380,
+   1,
+   0
+  ],
+  "}": [
+   378,
+   1,
+   0
+  ]
+ },
+ "stamps": {
+  "T": {
+   "rows": [
+    [
+     468,
+     469
+    ],
+    [
+     484,
+     485
+    ]
+   ]
+  },
+  "N": {
+   "rows": [
+    [
+     14,
+     14
+    ],
+    [
+     22,
+     22
+    ]
+   ]
+  },
+  "P": {
+   "rows": [
+    [
+     14,
+     72,
+     73,
+     74,
+     75
+    ],
+    [
+     22,
+     80,
+     81,
+     82,
+     83
+    ],
+    [
+     14,
+     88,
+     89,
+     90,
+     91
+    ],
+    [
+     22,
+     96,
+     97,
+     98,
+     99
+    ]
+   ],
+   "door": [
+    3,
+    2
+   ],
+   "_note": "General's Pokemon Center is four wide; two spruces fill the fifth column so the door stays where the old stamp had it"
+  },
+  "M": {
+   "rows": [
+    [
+     40,
+     41,
+     41,
+     43
+    ],
+    [
+     48,
+     49,
+     50,
+     51
+    ],
+    [
+     56,
+     57,
+     58,
+     59
+    ],
+    [
+     96,
+     65,
+     66,
+     67
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ]
+  },
+  "A": {
+   "rows": [
+    [
+     544,
+     545,
+     545,
+     547
+    ],
+    [
+     554,
+     555,
+     555,
+     563
+    ],
+    [
+     562,
+     551,
+     571,
+     534
+    ],
+    [
+     584,
+     874,
+     561,
+     579
+    ]
+   ],
+   "pass": [
+    [
+     3,
+     1
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ]
+  },
+  "V": {
+   "rows": [
+    [
+     544,
+     545,
+     545,
+     547
+    ],
+    [
+     554,
+     555,
+     555,
+     563
+    ],
+    [
+     562,
+     551,
+     605,
+     666
+    ],
+    [
+     584,
+     874,
+     561,
+     579
+    ]
+   ],
+   "pass": [
+    [
+     3,
+     1
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ]
+  },
+  "K": {
+   "rows": [
+    [
+     544,
+     545,
+     545,
+     545,
+     547
+    ],
+    [
+     554,
+     555,
+     555,
+     555,
+     563
+    ],
+    [
+     562,
+     551,
+     571,
+     643,
+     624
+    ],
+    [
+     584,
+     874,
+     561,
+     649,
+     642
+    ]
+   ],
+   "pass": [
+    [
+     3,
+     1
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ]
+  },
+  "R": {
+   "rows": [
+    [
+     544,
+     545,
+     545,
+     545,
+     547
+    ],
+    [
+     554,
+     555,
+     555,
+     555,
+     563
+    ],
+    [
+     562,
+     551,
+     571,
+     608,
+     534
+    ],
+    [
+     584,
+     874,
+     561,
+     577,
+     579
+    ]
+   ],
+   "pass": [
+    [
+     3,
+     1
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ]
+  },
+  "J": {
+   "rows": [
+    [
+     758,
+     769,
+     769,
+     769,
+     887
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "water": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     4
+    ]
+   ]
+  },
+  "D": {
+   "rows": [
+    [
+     758,
+     890,
+     769,
+     769,
+     769,
+     887
+    ],
+    [
+     758,
+     538,
+     769,
+     769,
+     769,
+     887
+    ],
+    [
+     751,
+     748,
+     748,
+     748,
+     748,
+     749
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     1,
+     3
+    ],
+    [
+     1,
+     4
+    ]
+   ],
+   "_note": "the landing at the end of the stone pier: a lamp on its west side, the quay wall round its foot"
+  },
+  "U": {
+   "rows": [
+    [
+     200,
+     201,
+     202
+    ],
+    [
+     208,
+     209,
+     210
+    ],
+    [
+     216,
+     217,
+     218
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ]
+  },
+  "Q": {
+   "rows": [
+    [
+     850,
+     851,
+     852,
+     853
+    ],
+    [
+     735,
+     859,
+     860,
+     861
+    ]
+   ],
+   "_note": "a moored sailboat (solid)"
+  },
+  "Y": {
+   "rows": [
+    [
+     888,
+     769,
+     769,
+     769,
+     889
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "water": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "_note": "the pier's first row, where its side walls meet the quay: the two inside corners"
+  }
+ },
+ "paths": [
+  {
+   "chars": "c",
+   "join": "ps~dn<>equvAKRVPMJDX{}Y",
+   "pieces": {
+    "plain": 769,
+    "N": 586,
+    "S": 602,
+    "W": 593,
+    "E": 595,
+    "NW": 588,
+    "NE": 589,
+    "SW": 596,
+    "SE": 597,
+    "iNW": 601,
+    "iNE": 603,
+    "iSW": 585,
+    "iSE": 587
+   }
+  },
+  {
+   "chars": "ps",
+   "join": "cb[]",
+   "pieces": {
+    "plain": 289,
+    "N": 281,
+    "S": 297,
+    "W": 288,
+    "E": 290,
+    "NW": 280,
+    "NE": 282,
+    "SW": 296,
+    "SE": 298
+   }
+  }
+ ],
+ "runs": {
+  "H": [
+   645,
+   646,
+   647,
+   709
+  ]
+ },
+ "fences": {
+  "F": {
+   "h": 329,
+   "tl": 312,
+   "tr": 314,
+   "bl": 328,
+   "br": 330,
+   "vl": 320,
+   "vr": 322
+  }
+ },
+ "wood": {
+  "N": [
+   14,
+   198,
+   22
+  ]
+ },
+ "firs": {
+  "T": {
+   "body": [
+    468,
+    469
+   ],
+   "foot": [
+    484,
+    485
+   ],
+   "foot_tip": [
+    476,
+    477
+   ]
+  }
+ },
+ "tall": {
+  "B": {
+   "top_of": 14
+  },
+  "!": {
+   "top": [
+    21278,
+    21279,
+    21294,
+    21295
+   ]
+  }
+ }
+}

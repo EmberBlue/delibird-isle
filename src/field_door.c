@@ -130,6 +130,9 @@ static const u16 sDoorNullPalette47[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillLobbyElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_lobby_elevator.4bpp");
 static const u16 sDoorNullPalette48[16] = {};
 static const u8 sDoorAnimTiles_TrainerHillRoofElevator[] = INCBIN_U8("graphics/door_anims/trainer_hill_roof_elevator.4bpp");
+// Skaldmere: the Brick City kit's house door and sliding shop door (data/tilesets/secondary/brick_city)
+static const u8 sDoorAnimTiles_BrickCity[] = INCBIN_U8("graphics/door_anims/brick_city.4bpp");
+static const u8 sDoorAnimTiles_BrickCitySlide[] = INCBIN_U8("graphics/door_anims/brick_city_slide.4bpp");
 static const u16 sDoorNullPalette49[16] = {};
 
 static const struct DoorAnimFrame sDoorOpenAnimFrames[] =
@@ -219,6 +222,19 @@ static const u8 sDoorAnimPalettes_BattleDomePreBattleRoom[] = {9, 9, 7, 7, 7, 7,
 static const u8 sDoorAnimPalettes_BattleTentInterior[] = {9, 9, 9, 9, 9, 9, 9, 9};
 static const u8 sDoorAnimPalettes_TrainerHillLobbyElevator[] = {7, 7, 7, 7, 7, 7, 7, 7};
 static const u8 sDoorAnimPalettes_TrainerHillRoofElevator[] = {9, 9, 7, 7, 7, 7, 7, 7};
+
+static const u8 sDoorAnimPalettes_BrickCity[] = {9, 9, 9, 9, 9, 9, 9, 9};
+
+// Skaldmere: metatile ids of a secondary tileset are only unique inside that tileset, so a kit's
+// doors live in their own table, consulted only while that kit is the loaded secondary.
+extern const struct Tileset gTileset_brick_city;
+static const struct DoorGraphics sDoorAnimGraphicsTable_BrickCity[] =
+{
+    {0x36A, DOOR_SOUND_NORMAL,  1, sDoorAnimTiles_BrickCity, sDoorAnimPalettes_BrickCity},
+    {0x367, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BrickCitySlide, sDoorAnimPalettes_BrickCity},
+    {0x2B5, DOOR_SOUND_SLIDING, 1, sDoorAnimTiles_BrickCitySlide, sDoorAnimPalettes_BrickCity},
+    {},
+};
 
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
@@ -425,6 +441,18 @@ static const struct DoorAnimFrame *GetLastDoorFrame(const struct DoorAnimFrame *
 
 static const struct DoorGraphics *GetDoorGraphics(const struct DoorGraphics *gfx, u16 metatileNum)
 {
+    if (metatileNum >= NUM_METATILES_IN_PRIMARY && gMapHeader.mapLayout->secondaryTileset == &gTileset_brick_city)
+    {
+        const struct DoorGraphics *kit = sDoorAnimGraphicsTable_BrickCity;
+
+        while (kit->tiles != NULL)
+        {
+            if (kit->metatileNum == metatileNum)
+                return kit;
+            kit++;
+        }
+        return NULL;
+    }
     while (gfx->tiles != NULL)
     {
         if (gfx->metatileNum == metatileNum)

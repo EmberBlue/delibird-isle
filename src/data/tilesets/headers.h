@@ -819,6 +819,17 @@ const struct Tileset gTileset_frp_viridian_forest = {
     .callback            = NULL,
 };
 
+// ---- Skaldmere Secondary: Brick City (Team Aqua's Asset Repo; see data/tilesets/secondary/brick_city/CREDITS.md) ----
+const struct Tileset gTileset_brick_city = {
+    .isCompressed        = TRUE,
+    .isSecondary         = TRUE,
+    .tiles               = gTilesetTiles_brick_city,
+    .palettes            = gTilesetPalettes_brick_city,
+    .metatiles           = gMetatiles_brick_city,
+    .metatileAttributes  = gMetatileAttributes_brick_city,
+    .callback            = NULL,
+};
+
 // ---- Skaldmere Secondary: Shady Forest (Team Aqua's Asset Repo; see data/tilesets/secondary/shady_forest/CREDITS.md) ----
 const struct Tileset gTileset_shady_forest = {
     .isCompressed        = TRUE,

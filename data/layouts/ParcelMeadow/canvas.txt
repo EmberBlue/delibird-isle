@@ -1,4 +1,4 @@
-legend frp_general__frp_vermilion_city
+legend general__brick_city
 size 24 20
 # The Holding Meadow -- the Corps' preserve just past Saltwick's north gate.
 # Two fenced paddocks, a pool, Rin's hut, the track north to Route 1.

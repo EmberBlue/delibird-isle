@@ -1,4 +1,4 @@
-legend frp_general__shady_forest
+legend general__shady_forest
 size 30 44
 # MISTWOOD -- the forest between Route 1 and the station. Dark conifers of the
 # Shady Forest kit (D teal, L light; the legend's dress pass gives each its
@@ -6,7 +6,7 @@ size 30 44
 # out of them; a paved way in from the tree line; the
 # Corps ranger post in a clearing; three snared Pokemon; the deadfall at the
 # north exit that needs Cut. The entrance zone (rows 36-43) is primary-only
-# so the edge preview from Route 1 stays clean.
+# (General's spruce wood and sand track) so the edge preview from Route 1 stays clean.
 anchor 1 g
 anchor 2 g
 anchor 3 g

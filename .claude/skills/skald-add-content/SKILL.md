@@ -204,36 +204,67 @@ Cordelia's flag and Dell's quest were silently second-talk-only (2026-11-10).
   missing tip over whatever stands behind (it makes the metatile if none
   exists) and removes a tip with no tree under it. A foot hidden by a roof or
   a fence in front is fine.
-- **Porting a community tileset** (Mistwood on the Shady Forest kit is the
-  worked example, 2026-11-10). Public GitHub is reachable with `git clone`
-  through the session proxy (zips and PokéCommunity/DeviantArt are not).
-  Team Aqua's Asset Repo (`TeamAquasHideout/Team-Aquas-Asset-Repo`,
-  `Tilesets/`) holds Porymap-ready kits, free to use with credit.
-  1. Copy the kit's `tiles.png`, `palettes/*.pal`, `metatiles.bin`,
+- **Porting a community tileset** (Saltwick on Brick City, 2026-11-22, is
+  the full worked example; Mistwood on Shady Forest, 2026-11-10, the first).
+  Public GitHub is reachable with `git clone` through the session proxy
+  (zips and PokéCommunity/DeviantArt are not). Team Aqua's Asset Repo
+  (`TeamAquasHideout/Team-Aquas-Asset-Repo`, `Tilesets/`) holds
+  Porymap-ready kits, free to use with credit; they are secondaries drawn
+  against stock Emerald General, so pair them with `gTileset_General`.
+  1. Copy the kit's `tiles.png`, `palettes/00-11.pal`, `metatiles.bin`,
      `metatile_attributes.bin` into `data/tilesets/secondary/<name>/` and
      its credits file beside them as `CREDITS.md`. Kits there are already
-     triple-layer (24 bytes a metatile).
+     triple-layer (24 bytes a metatile). Count which palettes its metatiles
+     use: if 12 is free, copy `leob_rustboro/palettes/12.pal` there and the
+     Skaldmere fir can stand in the map; if the kit fills 12 itself (Shady
+     Forest), only palette-2 spruces can.
   2. Register it in `src/data/tilesets/headers.h`, `graphics.h` and
-     `metatiles.h` (copy the `frp_viridian_forest` blocks). The generic make
-     rule builds `tiles.4bpp.lz` and the `.gbapal` files.
-  3. If the map's primary is `gTileset_Primary_frp_general`, run
-     `python3 tools/skald/kit_share_frp.py <name>`: that primary draws 69
-     tiles from indices 512-639 of whatever secondary is loaded, and without
-     them its grass and tree corners come out as the kit's roof tiles.
-  4. Learn how the kit's trees are assembled before drawing anything: match
-     its example screenshot against its rendered metatiles
-     (`tools/skald/match_example.py` did this for Shady Forest at 2x scale;
-     adapt its paths) and read the grid. Trees
-     that overlap (a foot row that is also the next tree's tip) go in the
-     legend's `"dress"` block, which `draw.py` applies after the stamps.
-  5. Write `tools/skald/legends/<primary>__<name>.json`, point the canvas's
-     `legend` line and the layout's `secondary_tileset` at it, set the
-     border to the kit's trees, and keep every row a neighbouring map can
-     see primary-only (eight rows from a connection).
-  6. Compare collision and elevation of the old and new `map.bin`: a re-kit
-     should change zero cells. Add the kit to `UNGRADED` in `grade.py` if it
-     has a finished palette, its walk-behind tips to `TOPLAYER_OK` in
-     `audit.py`, its artists to `CREDITS.md` and `src/data/credits.h`.
+     `metatiles.h` (copy the `brick_city` blocks). The generic make rule
+     builds `tiles.4bpp.lz` and the `.gbapal` files.
+  3. Render it over OUR General before drawing anything
+     (`pal_tool.py render` on a test canvas, or a metatile sheet): the kit
+     points at stock General's tile slots, and this General differs.
+     Brick City drew stock grass tiles 490/491/506/507 under every paving
+     edge, which here are the pale meadow patch; `brick_city.py` repoints
+     them to tiles 2 and 3. Do such fixes in a small idempotent script per
+     kit, with a `--check`, never by hand.
+  4. Doors. A kit door needs `MB_ANIMATED_DOOR` (0x69) on its metatile and
+     an entry in the kit's own table in `src/field_door.c` (see
+     `sDoorAnimGraphicsTable_BrickCity`: secondary metatile ids are only
+     unique inside one tileset, so `GetDoorGraphics` looks a kit's doors up
+     only while that kit is loaded). The animation PNG (16x96, three frames)
+     goes in `graphics/door_anims/`; its palette numbers are the palette
+     the frames were drawn in. Then check tiles 1016-1023 of the kit's
+     sheet: the engine writes door frames there, so nothing a map shows
+     may live in them (`brick_city.py` moves three tiles).
+  5. Learn how the kit's pieces go together from its example screenshot:
+     `python3 tools/skald/match_example.py KIT_DIR PRIMARY_DIR example.png
+     out.txt` prints the screenshot as a grid of metatile ids (it finds the
+     scale and offset). Buildings, kerbs and roofs are then copied from
+     verified rows, not guessed.
+  6. Write `tools/skald/legends/<primary>__<name>.json`. The legend's
+     passes do the fiddly parts, so the canvas stays one character a cell
+     (all documented at the top of `tools/skald/draw.py`): `paths` (a path
+     set as corner, edge and inner-corner pieces; each quarter of a cell is
+     chosen by its three neighbours and missing combinations are put
+     together by `tools/skald/mtile.py`), `runs` (hedges), `fences`,
+     `wood` (spruce wood), `firs` (the 2x2 fir with its tip over whatever
+     stands above), `tall` (lamps, single spruces: a head in the top layer
+     of the cell above), `dress` (kit trees that overlap). The General
+     primary has no free metatile slot left: everything new lands in the
+     secondary, which is fine everywhere except by a seam.
+  7. Point the canvas's `legend` line and the layout's tilesets at it.
+     Connected maps must share the primary, so a strip of maps converts
+     together. By a seam with another kit keep six rows primary-only
+     (`tools/skald/seams.py`). The border block is the map's own trees; if
+     the map has sea at an edge, close it with a wooded bank so the border
+     never stands in open water (Saltwick's west and east banks).
+  8. Compare collision and elevation of the old and new `map.bin`: a re-kit
+     should change zero cells, or only ones you can name. Add the kit to
+     `UNGRADED` in `grade.py` if it has a finished palette, its walk-behind
+     art to `KIT_WALKBEHIND` or `TOPLAYER_OK` in `audit.py`, its artists to
+     `CREDITS.md`, the kit's own `CREDITS.md` and `src/data/credits.h`
+     (PAGE_COUNT stays a multiple of 9: merge lines rather than add a page).
 - Outdoor palettes are graded: a colour you want in the game goes into
   `tools/skald/palette_base/<tileset>/NN.pal` (kit_restyle writes there by
   itself), then `python3 tools/skald/grade.py --apply` regenerates the live

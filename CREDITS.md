@@ -80,8 +80,9 @@ taken from a released ROM hack's binary; every set below is a published decomp r
   Source: [lbsbezerra/pokeemerald-modern-oras](https://github.com/lbsbezerra/pokeemerald-modern-oras)
   and the "LeoB ORAS" entry of Team Aqua's Asset Repo. Free with credit, per the author.
 - **[FireRed Tileset Port](https://github.com/Liamjd14/Firered-Tileset-Port)** by Liamjd14, the
-  `frp_*` tilesets, vendored as the `extern/Firered-Tileset-Port` submodule (Saltwick, the
-  Holding Meadow, Route 1, Mistwood).
+  `frp_*` tilesets, vendored as the `extern/Firered-Tileset-Port` submodule. Saltwick, the
+  Holding Meadow, Route 1 and Mistwood were drawn on it until they moved to the kits below; no
+  Skaldmere map uses it now, and it stays in the tree for the canvas tools' older legends.
 - **Pokémon Heart & Soul's Johto tilesets**: `johtogeneral` and `azaleatown` (the three Delibird
   Isle maps) match the `johto_general` / `kanto_general` sheets of
   [PokemonHnS-Development/pokemonHnS](https://github.com/PokemonHnS-Development/pokemonHnS) tile
@@ -95,9 +96,19 @@ taken from a released ROM hack's binary; every set below is a published decomp r
     Main creators: Ekat99, Heartlessdragoon, Vurtax. Insertable reformat and submission: Rahtak.
     The kit asks that every name in its credits file be credited; the full list ships beside the
     tiles as [`data/tilesets/secondary/shady_forest/CREDITS.md`](data/tilesets/secondary/shady_forest/CREDITS.md).
-    In this repository 69 of the kit's tiles were moved to other slots of its sheet so the
-    FireRed-port tiles Mistwood's primary needs could sit beside them
-    (`tools/skald/kit_share_frp.py`); the art is unchanged.
+    In this repository 69 of the kit's tiles were moved to other slots of its sheet
+    (`tools/skald/kit_share_frp.py`, from the time Mistwood's primary was the FireRed port); the
+    art is unchanged.
+  - **Brick City** (`data/tilesets/secondary/brick_city`: Saltwick, the Holding Meadow, Route 1).
+    Derived from Ekat99's "Brick City" tileset, a public use tileset for non-commercial projects;
+    imported to pokeemerald by Kumatora. Credit as the author asks: Ekat (Ekat99), Vurtax (FRLG
+    rips), Heartlessdragoon (RSE rips), Alistar (tree bases and short grass patches), Slimshady
+    (mailboxes). The notice ships beside the tiles as
+    [`data/tilesets/secondary/brick_city/CREDITS.md`](data/tilesets/secondary/brick_city/CREDITS.md).
+    In this repository three of the kit's tiles sit in other slots of its sheet (clear of the
+    slots the engine's door animation overwrites), its metatiles draw this game's grass under
+    the paving edges, and a few metatiles are added after its own (`tools/skald/brick_city.py`,
+    `tools/skald/mtile.py`); the art is unchanged.
 - The spruce and fir trees, the title screen, the cast sprites and the UI frames are original
   to this project (see `tools/skald/`).
 

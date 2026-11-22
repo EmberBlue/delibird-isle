@@ -83,6 +83,8 @@ TOPLAYER_OK = {("ParcelWeather", 15), ("ParcelMarsh", 620)}
 # over bare ground (520, 521 teal; 675, 676 light) or ferns (562, 563). Walking behind them is the point.
 TOPLAYER_OK |= {("ParcelMistwood", m) for m in (520, 521, 562, 563, 675, 676)}
 TREETOP_TILES = {6, 7, 22, 493, 494, 495}      # General's tiles; see tools/skald/nordic_tiles.py
+# a kit's own walk-behind art: the head of Brick City's street lamp stands in the top layer of the cell above its foot
+KIT_WALKBEHIND = {"gTileset_brick_city": {798, 799, 814, 815}}
 RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
 
 
@@ -193,10 +195,20 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
                 top = [c & 0x3FF for c in tiles[mid][0][8:12] if c & 0x3FF]
                 if lay["primary_tileset"] == "gTileset_General" and top and all(t in TREETOP_TILES for t in top):
                     continue
+                if top and all(t in KIT_WALKBEHIND.get(lay["secondary_tileset"], ()) for t in top):
+                    continue
                 if any(tile_has_art(lay, c) for c in tiles[mid][0][8:12]):
                     covered.add(mid)
         if covered:
             warn(name, f"walkable metatiles with top-layer art (player drawn under): {sorted(covered)}")
+        # a door's animation is played by writing its frames over the last eight tile slots of the secondary
+        # sheet (field_door.c), and they stay there: anything on this map drawn from those slots turns into
+        # door fragments the first time a door opens (Saltwick's quay edge, 2026-11-22)
+        used = {m for m in (decode(w)[0] for w in words) if m in tiles}
+        if any(tiles[m][1] == 0x69 for m in used):
+            late = sorted(m for m in used if any((c & 0x3FF) >= 1016 for c in tiles[m][0]))
+            if late:
+                warn(name, f"metatiles drawn from the door animation's tile slots (1016-1023) on a map with doors: {late}")
 
     for e in mj.get("object_events", []):
         if e.get("script") == "Common_EventScript_PkmnCenterNurse":

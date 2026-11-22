@@ -383,10 +383,29 @@ replaces is gone from the tree).
   palettes (not for Haukfell: its story is the thaw), Bright General and
   Alternative General (whole-primary replacements: every Emerald-kit map
   would need re-laying), Droid779's snow sheet and Roger Wrightshoe's tree
-  sheets (raw PNGs for porytiles). Good next ports in the same way: the
-  other three FireRed-kit maps (Saltwick, the Meadow, Route 1) so the
-  opening has one look, and the Marsh (finale) onto Shady Forest's ground
-  and dead trees.
+  sheets (raw PNGs for porytiles). Good next port in the same way: the Marsh (finale) onto
+  Shady Forest's ground and dead trees.
+- **The opening is off the FireRed kit** (2026-11-22). Saltwick, the
+  Holding Meadow and Route 1 are on Emerald General + Team Aqua's **Brick
+  City** kit (Ekat99's; brick houses under slate roofs, flagstone lanes, a
+  stone quay and pier, street lamps, hedges in planters, moored boats);
+  Mistwood keeps Shady Forest but sits on General too, since connected maps
+  must share the primary. No map uses the FireRed port any more. The four
+  canvases kept every walkable cell and every anchor; the only collision
+  changes are in Saltwick's harbour, which is new: three moored boats,
+  wooded rock banks west and east (so the border's firs never stand in the
+  sea), four more rows of sea below the pier, and the Mart's door one cell
+  west (General's Mart). `draw.py` learned to finish a drawing from its
+  neighbours (paths from quarter tiles, hedges, fences, spruce wood, firs,
+  two-cell-tall lamps and spruces) and `mtile.py` makes the metatile a pass
+  needs when none exists. Two traps found on the way, both audited now:
+  the engine writes door animation frames over secondary tiles 1016-1023
+  (`audit.py`), and what a seam shows of the next map must be primary-only
+  (`seams.py`: the opening is clean, **113 old problems on the leob-kit
+  zones are open**, worst at Coast/Breakwater, River/Highlands,
+  Corridor/Wetlands). The General primary has no free metatile slot left.
+  Same repo, good next: Alternative Pokecenter for every centre, Gen 4
+  Cave or Beach Cave for the caverns, Sewer for the Floodbasin works.
 - **Building kits** — `kit_restyle.py`. Every town was a stock building kit
   (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
   wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the
@@ -537,7 +556,8 @@ replaces is gone from the tree).
   steps on the main road), `gates.py` (0),
   `trees.py` (0 broken assemblies), `nordic_tiles.py --check` (0 drift),
   `layout_fixes.py --check` (0 differ: hand tile fixes live in each
-  layout's `fixes.json`).
+  layout's `fixes.json`), `brick_city.py --check` (ok), `seams.py MAP...`
+  (0 on the maps touched).
 - **Names are capitals in speech and narration** (people, places, species,
   speaker tags), as Emerald writes them; the protagonist's saved name is
   WREN. In-world documents (minutes, ledgers, plaques) keep ordinary

@@ -1019,3 +1019,20 @@ quest is built, how the peer works) before they are asked six more times.
   the FireRed-port primary turned out to borrow 69 tiles from whichever
   secondary is loaded, so `kit_share_frp.py` makes room for them in the
   kit's sheet. Every artist the kit names is in `CREDITS.md`.
+  **The opening on one base** (2026-11-22, on "use the cool tilesets").
+  Saltwick is a brick harbour town now: Team Aqua's Brick City kit
+  (Ekat99's tileset, imported by Kumatora) over Emerald General, with the
+  Holding Meadow and Route 1 on the same pair and Mistwood moved onto
+  General under its Shady Forest kit, so the whole first strip shares a
+  primary and nothing in the game draws from the FireRed port. Nobody's
+  feet moved: every anchor and walkable cell of the four canvases is where
+  it was, and the full playthrough was replayed on the build. What changed
+  on purpose is the harbour: a stone quay and pier with a lamp at the
+  landing, three moored boats, wooded rock banks closing the bay west and
+  east, four more rows of sea. The drawing tool now finishes a canvas from
+  its neighbours (path pieces assembled from quarter tiles as the original
+  autotile intended, hedges, paddock fences, spruce wood, firs, lamps), and
+  two engine facts became audits: door animation frames overwrite the last
+  eight tile slots of a secondary sheet, and a seam shows six rows of the
+  next map in the wrong kit. The seam audit found 113 such cells on the
+  older zones, which is the next map job.

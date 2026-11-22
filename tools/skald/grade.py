@@ -115,7 +115,7 @@ def write_pal(p, lines, colours):
 
 # Kits that arrive with a finished palette of their own and are left as their artists made them.
 # Shady Forest (Mistwood) is a night-teal conifer wood; the northern grade would only grey it.
-UNGRADED = {"gTileset_shady_forest"}
+UNGRADED = {"gTileset_shady_forest", "gTileset_brick_city"}
 
 
 def outdoor_tilesets():

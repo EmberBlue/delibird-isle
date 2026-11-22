@@ -24,6 +24,28 @@ Legend JSON:
 A stamp char marks the top-left of a multi-tile object; the cells it covers
 must contain the fill char. Cells listed in "pass" are walkable (col 0, elev 3)
 - doors, arches; everything else in a stamp is solid (col 1).
+
+After the characters are laid down, the legend's optional passes finish the drawing. None of
+them changes collision or elevation; they only choose the metatile for a cell from what lies
+around it, so the canvas stays one character per cell:
+
+  "paths"   [{"chars": "c", "join": "~AK", "pieces": {"plain": id, "N": id, "S", "W", "E",
+              "NW", "NE", "SW", "SE", "iNW", "iNE", "iSW", "iSE"}}]
+            A path set. N = the piece with open ground to its north, NW = the outer corner,
+            iNW = the inner corner (optional). Each quarter of a cell is chosen by the three
+            neighbours that touch it; where no shipped piece has those four quarters, one is
+            put together from them (tools/skald/mtile.py). "join" lists characters (stamp
+            letters included) the path runs up to without an edge: water, walls, another path.
+  "runs"    {"H": [left, mid, right, single]}        a hedge: its ends follow the run
+  "fences"  {"F": {"h", "tl", "tr", "bl", "br", "vl", "vr"}}   a paddock: corners and sides
+  "wood"    {"N": [top, mid, bottom]}                a spruce wood: each column's run of cells
+  "firs"    {"T": {"body": [l, r], "foot": [l, r], "foot_tip": [l, r]}}
+            General's big fir as a 2x2 stamp: the foot carries the tip of the fir below it,
+            and a tip is laid over whatever stands above a top-row fir
+  "tall"    {"B": {"top_of": id} | {"top": [4 tile entries]}}
+            something two cells tall on one solid cell: its head goes into the top layer of
+            the cell above, so the player walks behind it
+  "dress"   overlapping kit trees (see dress() below)
 """
 import json, struct, sys
 from pathlib import Path
@@ -116,6 +138,167 @@ def dress(grid, spec, W, H):
                 put(x + i, y - 1, tip[i])
 
 
+OFFS = {"N": (0, -1), "E": (1, 0), "S": (0, 1), "W": (-1, 0), "NE": (1, -1), "SE": (1, 1), "SW": (-1, 1), "NW": (-1, -1)}
+QUARTERS = (("N", "W", "NW"), ("N", "E", "NE"), ("S", "W", "SW"), ("S", "E", "SE"))    # TL, TR, BL, BR
+# which quarters a shipped piece is made of, so the piece itself is used when a cell needs exactly those
+WHOLE = {"plain": ("plain",) * 4, "N": ("N", "N", "plain", "plain"), "S": ("plain", "plain", "S", "S"),
+         "W": ("W", "plain", "W", "plain"), "E": ("plain", "E", "plain", "E"),
+         "NW": ("NW", "N", "W", "plain"), "NE": ("N", "NE", "plain", "E"),
+         "SW": ("W", "plain", "SW", "S"), "SE": ("plain", "E", "S", "SE"),
+         "iNW": ("iNW", "plain", "plain", "plain"), "iNE": ("plain", "iNE", "plain", "plain"),
+         "iSW": ("plain", "plain", "iSW", "plain"), "iSE": ("plain", "plain", "plain", "iSE")}
+
+
+def put(grid, x, y, m):
+    grid[y][x] = (grid[y][x] & ~0x3FF) | m
+
+
+def paths(grid, owner, specs, W, H, d):
+    import mtile
+    for spec in specs:
+        chars, join, pc = set(spec["chars"]), set(spec.get("join", "")), spec["pieces"]
+
+        def same(x, y):
+            return not (0 <= x < W and 0 <= y < H) or owner[y][x] in chars or owner[y][x] in join
+
+        for y in range(H):
+            for x in range(W):
+                if owner[y][x] not in chars:
+                    continue
+                keys = []
+                for vert, horiz, diag in QUARTERS:
+                    v = not same(x + OFFS[vert][0], y + OFFS[vert][1])
+                    h = not same(x + OFFS[horiz][0], y + OFFS[horiz][1])
+                    g = not same(x + OFFS[diag][0], y + OFFS[diag][1])
+                    keys.append(diag if v and h else vert if v else horiz if h
+                                else "i" + diag if g and "i" + diag in pc else "plain")
+                whole = [k for k, sig in WHOLE.items() if sig == tuple(keys) and k in pc]
+                if whole:
+                    put(grid, x, y, pc[whole[0]])
+                    continue
+                # an edge quarter beside a corner quarter comes from the corner piece (its own edge variant)
+                src = []
+                for q, k in enumerate(keys):
+                    beside, under = keys[q ^ 1], keys[q ^ 2]
+                    if k in ("N", "S") and len(beside) == 2 and not beside.startswith("i") and beside[0] == k:
+                        k = beside
+                    elif k in ("W", "E") and len(under) == 2 and not under.startswith("i") and under[1] == k:
+                        k = under
+                    src.append(pc[k])
+                m = mtile.quad(d, src, like=pc["plain"])
+                if m is None:
+                    raise SystemExit(f"path piece at {x},{y}: no room left for a new metatile")
+                put(grid, x, y, m)
+
+
+def runs(grid, owner, spec, W, H):
+    for ch, (left, mid, right, single) in spec.items():
+        for y in range(H):
+            for x in range(W):
+                if owner[y][x] != ch:
+                    continue
+                w = x > 0 and owner[y][x - 1] == ch
+                e = x < W - 1 and owner[y][x + 1] == ch
+                put(grid, x, y, mid if w and e else left if e else right if w else single)
+
+
+def fences(grid, owner, spec, W, H):
+    for ch, f in spec.items():
+        def is_f(x, y):
+            return 0 <= x < W and 0 <= y < H and owner[y][x] == ch
+
+        for y in range(H):
+            for x in range(W):
+                if not is_f(x, y):
+                    continue
+                n, e, s, w = is_f(x, y - 1), is_f(x + 1, y), is_f(x, y + 1), is_f(x - 1, y)
+                if e or w:
+                    m = (f["tl"] if s and e and not w else f["tr"] if s and w and not e else
+                         f["bl"] if n and e and not w else f["br"] if n and w and not e else f["h"])
+                else:                       # a side: which one? follow it to its corner and see where the rail goes
+                    side = None
+                    for step in (-1, 1):
+                        yy = y
+                        while is_f(x, yy + step):
+                            yy += step
+                        ce, cw = is_f(x + 1, yy), is_f(x - 1, yy)
+                        if ce != cw:
+                            side = "vl" if ce else "vr"
+                            break
+                    m = f[side or "vl"]
+                put(grid, x, y, m)
+
+
+def wood(grid, owner, spec, W, H):
+    for ch, (top, mid, bottom) in spec.items():
+        for x in range(W):
+            y = 0
+            while y < H:
+                if owner[y][x] != ch:
+                    y += 1
+                    continue
+                y0 = y
+                while y < H and owner[y][x] == ch:
+                    y += 1
+                for yy in range(y0, y):
+                    # a run that leaves the map goes on in the next map or the border: no crown row, no foot row there
+                    put(grid, x, yy, top if yy == y0 and y0 > 0 else bottom if yy == y - 1 and y < H else mid)
+
+
+def firs(grid, owner, spec, W, H, d):
+    import mtile, trees
+    for ch, f in spec.items():
+        body = {f["body"][0]: 0, f["body"][1]: 1}
+
+        def half(x, y):
+            if 0 <= x < W and 0 <= y < H and owner[y][x] == ch:
+                return body.get(grid[y][x] & 0x3FF)
+            return None
+
+        feet = set()
+        cells = [(x, y, half(x, y)) for y in range(H) for x in range(W) if half(x, y) is not None]
+        for x, y, i in cells:                               # the foot: with the next fir's tip when one stands below
+            if y + 1 >= H:
+                continue
+            below = half(x, y + 2) == i or y + 2 >= H        # past the last row the border's firs go on
+            put(grid, x, y + 1, (f["foot_tip"] if below else f["foot"])[i])
+            feet.add((x, y + 1))
+        for x, y, i in cells:                               # the tip, over whatever stands above
+            if y == 0 or (x, y - 1) in feet:
+                continue
+            m = mtile.with_top(d, grid[y - 1][x] & 0x3FF, trees.TIP["LR"[i]], why="a fir tip over it")
+            if m is None:
+                print(f"  warning: no room for a fir tip at {x},{y - 1}")
+            else:
+                put(grid, x, y - 1, m)
+
+
+def tall(grid, owner, spec, W, H, d):
+    import mtile
+    for ch, t in spec.items():
+        top = tuple(t["top"]) if "top" in t else tuple(d["mts"][t["top_of"]][8:12])
+        for y in range(1, H):
+            for x in range(W):
+                if owner[y][x] != ch:
+                    continue
+                m = mtile.with_top(d, grid[y - 1][x] & 0x3FF, top, why=f"the head of {ch!r} over it")
+                if m is None:
+                    print(f"  warning: no room for the head of {ch!r} at {x},{y - 1}")
+                else:
+                    put(grid, x, y - 1, m)
+
+
+def tileset_pair(canvas_path):
+    """The loaded metatiles of the tilesets this canvas's layout uses (for the passes that may add one)."""
+    import mtile, pal_tool
+    rel = str(Path(canvas_path).resolve().parent.relative_to(HERE.parents[1]))
+    for lay in json.loads((HERE.parents[1] / "data/layouts/layouts.json").read_text())["layouts"]:
+        if str(Path(lay.get("blockdata_filepath", "")).parent) == rel:
+            return mtile.load(pal_tool.tdir(lay["primary_tileset"], "primary"),
+                              pal_tool.tdir(lay["secondary_tileset"], "secondary"))
+    raise SystemExit(f"{canvas_path}: no layout in layouts.json draws from this folder")
+
+
 def build(canvas_path):
     canvas_path = Path(canvas_path)
     head, anchors_def, extra, border, rows = parse_canvas(canvas_path)
@@ -132,13 +315,14 @@ def build(canvas_path):
             raise SystemExit(f"{canvas_path}: row {y} is {len(r)} wide, size says {W}")
 
     grid = [[None] * W for _ in range(H)]
+    owner = [[None] * W for _ in range(H)]      # the legend character each cell belongs to (a stamp's letter for all its cells)
     anchors = {}
     doors = []
     covered = set()
     # pass 1: stamps (so their fill cells are claimed before single tiles)
     for y, r in enumerate(rows):
         for x, ch in enumerate(r):
-            if ch in stamps:
+            if ch in stamps and ch not in anchors_def:     # a canvas's own anchor letter wins over a legend stamp of that name
                 st = stamps[ch]
                 passable = {tuple(p) for p in st.get("pass", [])}
                 water = {tuple(p) for p in st.get("water", [])}
@@ -155,6 +339,7 @@ def build(canvas_path):
                             grid[yy][xx] = wq(mid, 0, 1)
                         else:
                             grid[yy][xx] = wq(mid, 1, 0)
+                        owner[yy][xx] = ch
                         covered.add((xx, yy))
                 if "door" in st:
                     ddy, ddx = st["door"]
@@ -176,11 +361,23 @@ def build(canvas_path):
                 raise SystemExit(f"unknown char {base!r} at {x},{y}")
             mid, col, elev = tiles[base]
             grid[y][x] = wq(mid, col, elev)
+            owner[y][x] = base
     missing = [a for a in anchors_def if a not in anchors]
     if missing:
         raise SystemExit(f"anchors declared but not drawn: {missing}")
 
+    if any(k in legend for k in ("paths", "firs", "tall")):
+        d = tileset_pair(canvas_path)
+    if "paths" in legend:
+        paths(grid, owner, legend["paths"], W, H, d)
+    runs(grid, owner, legend.get("runs", {}), W, H)
+    fences(grid, owner, legend.get("fences", {}), W, H)
+    wood(grid, owner, legend.get("wood", {}), W, H)
+    if "firs" in legend:
+        firs(grid, owner, legend["firs"], W, H, d)
     dress(grid, legend.get("dress"), W, H)
+    if "tall" in legend:
+        tall(grid, owner, legend["tall"], W, H, d)
 
     out_dir = canvas_path.parent
     import layout_fixes
