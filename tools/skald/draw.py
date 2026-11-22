@@ -36,6 +36,8 @@ around it, so the canvas stays one character per cell:
             neighbours that touch it; where no shipped piece has those four quarters, one is
             put together from them (tools/skald/mtile.py). "join" lists characters (stamp
             letters included) the path runs up to without an edge: water, walls, another path.
+            Optional "kerb": {"against": ":", "pieces": {same keys}}: where one of those
+            characters (a road) touches a quarter, the quarter is the kerb piece instead.
   "runs"    {"H": [left, mid, right, single]}        a hedge: its ends follow the run
   "fences"  {"F": {"h", "tl", "tr", "bl", "br", "vl", "vr"}}   a paddock: corners and sides
   "wood"    {"N": [top, mid, bottom]}                a spruce wood: each column's run of cells
@@ -156,10 +158,20 @@ def put(grid, x, y, m):
 def paths(grid, owner, specs, W, H, d):
     import mtile
     for spec in specs:
-        chars, join, pc = set(spec["chars"]), set(spec.get("join", "")), spec["pieces"]
+        chars, join, pc = set(spec["chars"]), set(spec.get("join", "")), dict(spec["pieces"])
+        kerb = spec.get("kerb")                       # paving beside a road: {"against": ":", "pieces": {...}}
+        against = set(kerb["against"]) if kerb else set()
+        if kerb:
+            pc.update({"k" + k: v for k, v in kerb["pieces"].items()})
+        whole = {k: sig for k, sig in WHOLE.items()}
+        whole.update({"k" + k: tuple(q if q == "plain" else "k" + q for q in sig) for k, sig in WHOLE.items() if k != "plain"})
+
+        def at(x, y):
+            return owner[y][x] if 0 <= x < W and 0 <= y < H else None
 
         def same(x, y):
-            return not (0 <= x < W and 0 <= y < H) or owner[y][x] in chars or owner[y][x] in join
+            o = at(x, y)
+            return o is None or o in chars or o in join
 
         for y in range(H):
             for x in range(W):
@@ -167,23 +179,28 @@ def paths(grid, owner, specs, W, H, d):
                     continue
                 keys = []
                 for vert, horiz, diag in QUARTERS:
-                    v = not same(x + OFFS[vert][0], y + OFFS[vert][1])
-                    h = not same(x + OFFS[horiz][0], y + OFFS[horiz][1])
-                    g = not same(x + OFFS[diag][0], y + OFFS[diag][1])
+                    nb = [(x + OFFS[k][0], y + OFFS[k][1]) for k in (vert, horiz, diag)]
+                    rv, rh, rd = [at(*n) in against for n in nb]
+                    if rv or rh or rd:                # a road touches this quarter: a kerb, whatever else does
+                        k = diag if rv and rh else vert if rv else horiz if rh else "i" + diag
+                        keys.append("k" + k if "k" + k in pc else "plain")
+                        continue
+                    v, h, g = [not same(*n) for n in nb]
                     keys.append(diag if v and h else vert if v else horiz if h
                                 else "i" + diag if g and "i" + diag in pc else "plain")
-                whole = [k for k, sig in WHOLE.items() if sig == tuple(keys) and k in pc]
-                if whole:
-                    put(grid, x, y, pc[whole[0]])
+                hit = [k for k, sig in whole.items() if sig == tuple(keys) and k in pc]
+                if hit:
+                    put(grid, x, y, pc[hit[0]])
                     continue
                 # an edge quarter beside a corner quarter comes from the corner piece (its own edge variant)
                 src = []
                 for q, k in enumerate(keys):
-                    beside, under = keys[q ^ 1], keys[q ^ 2]
-                    if k in ("N", "S") and len(beside) == 2 and not beside.startswith("i") and beside[0] == k:
-                        k = beside
-                    elif k in ("W", "E") and len(under) == 2 and not under.startswith("i") and under[1] == k:
-                        k = under
+                    pre, kind = ("k", k[1:]) if k.startswith("k") else ("", k)
+                    for other in (keys[q ^ 1], keys[q ^ 2]):
+                        opre, okind = ("k", other[1:]) if other.startswith("k") else ("", other)
+                        if opre == pre and len(okind) == 2 and not okind.startswith("i") and len(kind) == 1 and kind in okind:
+                            k = other
+                            break
                     src.append(pc[k])
                 m = mtile.quad(d, src, like=pc["plain"])
                 if m is None:

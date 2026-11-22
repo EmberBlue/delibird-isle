@@ -1,5 +1,5 @@
 {
- "_about": "Emerald General (leob0505's ORAS set, data/tilesets/primary/leob_general) + the Brick City kit (data/tilesets/secondary/brick_city; Ekat99, imported by Kumatora; see its CREDITS.md). Saltwick, the Holding Meadow and Route 1. 'c' is the kit's flagstone paving, 'p'/'s' General's sand track; the paths pass gives every cell its edges. T is the Skaldmere fir (2x2; palette 12, which the kit leaves free and brick_city.py fills), N the small spruce as a wood (palette 2: the only tree allowed within eight rows of the Mistwood seam, whose kit has its own palette 12). Quay: 'n' wall to the north of the water, '>' to the east, '<' to the west, 'e'/'q' the two inside corners, 'u'/'v' the outside ones (887-891 are brick_city.py's additions). '{' and '}' are General's rock bank on a water cell, land to the west and to the east: the wooded banks that close the harbour, so the border's firs never stand in open water.",
+ "_about": "Emerald General (leob0505's ORAS set, data/tilesets/primary/leob_general) + the Brick City kit (data/tilesets/secondary/brick_city; Ekat99, imported by Kumatora; see its CREDITS.md). Saltwick, the Holding Meadow and Route 1. 'c' is the kit's flagstone paving, 'p'/'s' General's sand track; the paths pass gives every cell its edges. T is the Skaldmere fir (2x2; palette 12, which the kit leaves free and brick_city.py fills), N the small spruce as a wood (palette 2: the only tree allowed within eight rows of the Mistwood seam, whose kit has its own palette 12). Quay: 'n' wall to the north of the water, '>' to the east, '<' to the west, 'e'/'q' the two inside corners, 'u'/'v' the outside ones (887-891 are brick_city.py's additions). '{' and '}' are General's rock bank on a water cell, land to the west and to the east: the wooded banks that close the harbour, so the border's firs never stand in open water. ':' is the kit's road; paving beside it gets a kerb. 'i' a lamp on paving, '=' a bench, '&' and '%' hedge planters, 'O' the fountain, G/E/I/C the gabled houses, W the hall with its steps '( _ )'. '-' '^' '|' ''' are the water cells on either side of a bridge (its north edge, the arches and their piers, the shadow), '+' a plank jetty over the sea, 'w' a plank footbridge, '$' ';' the two cells of a stair across a ledge.",
  "fill": "#",
  "border": [
   468,
@@ -152,6 +152,86 @@
    378,
    1,
    0
+  ],
+  ":": [
+   699,
+   0,
+   3
+  ],
+  "i": [
+   538,
+   1,
+   0
+  ],
+  "=": [
+   823,
+   1,
+   0
+  ],
+  "x": [
+   718,
+   1,
+   0
+  ],
+  "k": [
+   540,
+   1,
+   0
+  ],
+  "(": [
+   700,
+   1,
+   0
+  ],
+  "_": [
+   701,
+   0,
+   3
+  ],
+  ")": [
+   702,
+   1,
+   0
+  ],
+  "-": [
+   766,
+   1,
+   0
+  ],
+  "^": [
+   763,
+   1,
+   0
+  ],
+  "|": [
+   747,
+   1,
+   0
+  ],
+  "'": [
+   738,
+   1,
+   0
+  ],
+  "$": [
+   175,
+   0,
+   3
+  ],
+  ";": [
+   207,
+   0,
+   3
+  ],
+  "+": [
+   897,
+   0,
+   3
+  ],
+  "w": [
+   899,
+   0,
+   3
   ]
  },
  "stamps": {
@@ -607,12 +687,439 @@
     ]
    ],
    "_note": "the pier's first row, where its side walls meet the quay: the two inside corners"
+  },
+  "G": {
+   "rows": [
+    [
+     769,
+     779,
+     793,
+     794,
+     780,
+     769
+    ],
+    [
+     800,
+     801,
+     792,
+     795,
+     802,
+     803
+    ],
+    [
+     816,
+     788,
+     688,
+     696,
+     795,
+     819
+    ],
+    [
+     824,
+     825,
+     570,
+     570,
+     826,
+     818
+    ],
+    [
+     548,
+     551,
+     572,
+     519,
+     514,
+     835
+    ],
+    [
+     584,
+     874,
+     580,
+     527,
+     522,
+     579
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     5
+    ],
+    [
+     5,
+     1
+    ]
+   ],
+   "door": [
+    5,
+    1
+   ],
+   "_note": "the gabled house, six by six; it stands on paving (its roof corners are drawn over flagstones)"
+  },
+  "E": {
+   "rows": [
+    [
+     769,
+     808,
+     811,
+     769
+    ],
+    [
+     796,
+     793,
+     794,
+     803
+    ],
+    [
+     816,
+     792,
+     795,
+     819
+    ],
+    [
+     817,
+     690,
+     691,
+     818
+    ],
+    [
+     832,
+     651,
+     683,
+     814
+    ],
+    [
+     562,
+     551,
+     605,
+     666
+    ],
+    [
+     584,
+     874,
+     561,
+     579
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "door": [
+    6,
+    1
+   ],
+   "_note": "left half of a pair of row houses (four by seven, on paving)"
+  },
+  "I": {
+   "rows": [
+    [
+     769,
+     808,
+     811,
+     769
+    ],
+    [
+     800,
+     793,
+     794,
+     797
+    ],
+    [
+     816,
+     792,
+     795,
+     819
+    ],
+    [
+     817,
+     690,
+     691,
+     818
+    ],
+    [
+     832,
+     651,
+     683,
+     814
+    ],
+    [
+     562,
+     551,
+     605,
+     666
+    ],
+    [
+     584,
+     874,
+     561,
+     579
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "door": [
+    6,
+    1
+   ],
+   "_note": "right half of a pair (four by seven, on paving)"
+  },
+  "C": {
+   "rows": [
+    [
+     769,
+     808,
+     811,
+     769
+    ],
+    [
+     796,
+     793,
+     794,
+     797
+    ],
+    [
+     816,
+     792,
+     795,
+     819
+    ],
+    [
+     817,
+     690,
+     691,
+     818
+    ],
+    [
+     832,
+     651,
+     683,
+     814
+    ],
+    [
+     562,
+     551,
+     605,
+     666
+    ],
+    [
+     584,
+     874,
+     561,
+     579
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     6,
+     1
+    ]
+   ],
+   "door": [
+    6,
+    1
+   ],
+   "_note": "a row house standing alone (four by seven, on paving)"
+  },
+  "W": {
+   "rows": [
+    [
+     544,
+     545,
+     545,
+     545,
+     545,
+     545,
+     545,
+     545,
+     545,
+     547
+    ],
+    [
+     552,
+     553,
+     553,
+     553,
+     553,
+     553,
+     553,
+     553,
+     553,
+     567
+    ],
+    [
+     554,
+     555,
+     555,
+     555,
+     555,
+     555,
+     555,
+     555,
+     555,
+     563
+    ],
+    [
+     568,
+     659,
+     660,
+     570,
+     659,
+     660,
+     570,
+     659,
+     660,
+     534
+    ],
+    [
+     568,
+     667,
+     668,
+     570,
+     667,
+     668,
+     570,
+     667,
+     668,
+     534
+    ],
+    [
+     568,
+     582,
+     583,
+     570,
+     582,
+     583,
+     570,
+     582,
+     583,
+     534
+    ],
+    [
+     640,
+     644,
+     608,
+     684,
+     685,
+     686,
+     515,
+     519,
+     514,
+     534
+    ],
+    [
+     641,
+     650,
+     678,
+     692,
+     693,
+     694,
+     523,
+     527,
+     522,
+     579
+    ]
+   ],
+   "door": [
+    7,
+    4
+   ],
+   "_note": "the hall: ten wide, two storeys, an awning over a glass door; steps ( _ ) go on the row below"
+  },
+  "O": {
+   "rows": [
+    [
+     892,
+     893
+    ],
+    [
+     894,
+     895
+    ]
+   ],
+   "_note": "the fountain on paving"
+  },
+  "&": {
+   "rows": [
+    [
+     636,
+     637,
+     639
+    ],
+    [
+     661,
+     662,
+     663
+    ]
+   ]
+  },
+  "%": {
+   "rows": [
+    [
+     669,
+     670
+    ],
+    [
+     661,
+     663
+    ]
+   ]
+  },
+  "@": {
+   "rows": [
+    [
+     370,
+     371
+    ]
+   ],
+   "_note": "a rock mound in the sea"
+  },
+  "*": {
+   "rows": [
+    [
+     373,
+     374
+    ]
+   ]
   }
  },
  "paths": [
   {
    "chars": "c",
-   "join": "ps~dn<>equvAKRVPMJDX{}Y",
+   "join": "$%&'()+-:;<=>ACDEGIJKMOPRVWXY^_deinpqsuvwx{|}~",
    "pieces": {
     "plain": 769,
     "N": 586,
@@ -627,6 +1134,23 @@
     "iNE": 603,
     "iSW": 585,
     "iSE": 587
+   },
+   "kerb": {
+    "against": ":",
+    "pieces": {
+     "N": 761,
+     "S": 777,
+     "W": 768,
+     "E": 770,
+     "NW": 760,
+     "NE": 762,
+     "SW": 776,
+     "SE": 778,
+     "iNW": 787,
+     "iNE": 786,
+     "iSW": 785,
+     "iSE": 784
+    }
    }
   },
   {
@@ -651,6 +1175,18 @@
    646,
    647,
    709
+  ],
+  "=": [
+   830,
+   823,
+   831,
+   823
+  ],
+  "k": [
+   540,
+   540,
+   541,
+   540
   ]
  },
  "fences": {
@@ -669,6 +1205,11 @@
    14,
    198,
    22
+  ],
+  "+": [
+   896,
+   897,
+   898
   ]
  },
  "firs": {
@@ -692,6 +1233,14 @@
    "top_of": 14
   },
   "!": {
+   "top": [
+    21278,
+    21279,
+    21294,
+    21295
+   ]
+  },
+  "i": {
    "top": [
     21278,
     21279,

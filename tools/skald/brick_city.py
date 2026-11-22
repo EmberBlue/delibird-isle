@@ -12,6 +12,14 @@ appended after the kit's own 375 metatiles, in this order, so their ids are fixe
   889 quay_nw     the same, north and west
   890 lamp_flag   a lamp's head over plain flagstones (top layer: the player walks behind it)
   891 plank_row   a plank walk one row deep on grass
+  892-895 fountain_*   the kit's fountain standing on paving instead of its lawn
+  896-898 jetty_*      a plank jetty over the sea: its head, its run, its foot
+  899 footbridge  the one-row plank walk over water
+
+After the kit's extras come the pieces the canvas tool makes on demand (tools/skald/mtile.py);
+their ids depend on the order the canvases were drawn in. `--rebuild` starts over from the
+kit's own 375 metatiles, appends the extras and redraws every canvas on this kit, so the ids
+are settled together with the maps that use them. Run it after adding an extra here.
 
 One adaptation of the kit's own metatiles: it was drawn against stock Emerald General, where
 tiles 490/491/506/507 are plain grass, and puts them under every paving edge, lamp foot and
@@ -26,6 +34,7 @@ empty slots of the sheet (1020 -> 524, 1021 -> 603, 1022 -> 736) and the metatil
 
   python3 tools/skald/brick_city.py            make them (idempotent)
   python3 tools/skald/brick_city.py --check    exit 1 if one is missing or sits at another id
+  python3 tools/skald/brick_city.py --rebuild  from the kit's own metatiles: extras, then every canvas
 """
 import sys
 from pathlib import Path
@@ -56,7 +65,17 @@ EXTRA = [
     (889, "quay_nw", WATER + LEDGE_N + (e(671, 7), 0, e(671, 7), 0), OCEAN),
     (890, "lamp_flag", FLAG + NONE + LAMP_HEAD, 0),
     (891, "plank_row", GRASS + (e(555, 5), e(555, 5, h=True), e(523, 5), e(523, 5, h=True)) + NONE, 0),
+    (892, "fountain_nw", FLAG + NONE + (e(527, 5, h=True), e(526, 5, h=True), e(543, 5, h=True), e(542, 5, h=True)), 0),
+    (893, "fountain_ne", FLAG + NONE + (e(526, 5), e(527, 5), e(542, 5), e(543, 5)), 0),
+    (894, "fountain_sw", FLAG + NONE + (e(559, 5, h=True), e(558, 5, h=True), e(575, 5, h=True), e(574, 5, h=True)), 0),
+    (895, "fountain_se", FLAG + NONE + (e(558, 5), e(559, 5), e(574, 5), e(575, 5)), 0),
+    (896, "jetty_head", WATER + (e(555, 5), e(555, 5, h=True), e(539, 5), e(539, 5, h=True)) + NONE, 0),
+    (897, "jetty_run", WATER + (e(539, 5), e(539, 5, h=True), e(539, 5), e(539, 5, h=True)) + NONE, 0),
+    (898, "jetty_foot", WATER + (e(539, 5), e(539, 5, h=True), e(523, 5), e(523, 5, h=True)) + NONE, 0),
+    (899, "footbridge", WATER + (e(555, 5), e(555, 5, h=True), e(523, 5), e(523, 5, h=True)) + NONE, 0),
 ]
+KIT_METATILES = 375
+CANVASES = ("ParcelIsle", "ParcelMeadow", "ParcelRoute1")      # every canvas drawn on this kit, in this order
 
 
 STOCK_GRASS = {490: 2, 491: 3, 506: 3, 507: 2}       # stock General's plain grass block -> this General's
@@ -116,8 +135,28 @@ def move_off_door_slots(check):
     return n + m
 
 
+def rebuild():
+    """Back to the kit's own metatiles, then the extras, then every canvas (which re-makes the on-demand pieces)."""
+    import subprocess
+    for name, per in (("metatiles.bin", 24), ("metatile_attributes.bin", 2)):
+        f = KIT / name
+        f.write_bytes(f.read_bytes()[:KIT_METATILES * per])
+    rc = main_inner(check=False)
+    for c in CANVASES:
+        subprocess.run([sys.executable, str(Path(__file__).resolve().parent / "draw.py"),
+                        str(ROOT / "data/layouts" / c / "canvas.txt")], check=True, stdout=subprocess.DEVNULL)
+    import struct
+    print("rebuilt:", len((KIT / "metatiles.bin").read_bytes()) // 24, "metatiles on the kit")
+    return rc
+
+
 def main():
-    check = "--check" in sys.argv
+    if "--rebuild" in sys.argv:
+        return rebuild()
+    return main_inner("--check" in sys.argv)
+
+
+def main_inner(check):
     bad = 0
     n = move_off_door_slots(check)
     if n:
