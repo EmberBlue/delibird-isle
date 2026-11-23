@@ -1,0 +1,31 @@
+// ParcelDelibirdCabin2 -- the yellow cabin by the hall: the bakery. Woodsmoke and something baking.
+
+mapscripts ParcelDelibirdCabin2_MapScripts {
+}
+
+script ParcelDelibirdCabin2_Baker {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("BAKER: The flour comes on the ferry, and the ferry runs when the strait is clear, and the strait is always clear now. So there is always flour.\pThat's the one good thing I can find in it. I've looked."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("BAKER: Three doors, on foot. There were rolls in those parcels, did MARTA say?\pTOMAS takes his with the crust off. I leave the crust on. He needs something to complain about."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("BAKER: Woodsmoke and something baking. That's what they all say when they step off the boat.\pI've started to think it's what we're for. Then I think: there are worse things to be for."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibirdCabin2_Apprentice {
+    lock
+    faceplayer
+    msgbox(format("APPRENTICE: She makes me weigh everything. Nothing else on this island gets weighed. Just flour.\pShe says giving is free but bread is chemistry."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdCabin2_Oven {
+    msgbox(format("The oven, banked for the night. A slate beside it lists who gets bread this week without asking.\pIt is the whole village."), MSGBOX_SIGN)
+    end
+}

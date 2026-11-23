@@ -626,3 +626,10 @@ script ParcelDelibirdCliffs_Board3 {
     msgbox(format("A SURVEY BOARD on the path above the pools. CORSOLA in the warm pools, new; KRABBY in the cold ones, fewer. The children chalk the pools' names on the rock and the Survey copies the chalk onto the board before the rain takes it.\pThe children are the Survey's best field team on this island, and know it."), MSGBOX_SIGN)
     end
 }
+
+// --- the cliffs redrawn (2026-11-23) ---
+
+script ParcelDelibirdCliffs_TomasDoor {
+    msgbox(format("TOMAS's cabin. The door sticks at the top and gapes at the bottom.\pInside, a marble on the floorboards has rolled to the seaward wall and stayed there."), MSGBOX_SIGN)
+    end
+}

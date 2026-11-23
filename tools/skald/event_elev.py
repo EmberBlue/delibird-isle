@@ -57,7 +57,7 @@ def check(name, fix=False):
             mid_, col_, _ = audit.decode(words[e["y"] * W + e["x"]])
             beh_ = audit.BEH.get(tiles.get(mid_, ((), 0, 0))[1], "")
             g = e["graphics_id"][14:]
-            swims = g.startswith(("SWIMMER", "TUBER", "SPECIES(")) or "ITEM_BALL" in g
+            swims = g.startswith(("SWIMMER", "TUBER", "SPECIES(")) or "ITEM_BALL" in g or g.endswith("_BOAT")   # a moored boat
             if col_ == 0 and ("WATER" in beh_ or "SEAWEED" in beh_) and "SHALLOW" not in beh_ and not swims:
                 # water tiles have collision 0, so a placement pass that asks "is it walkable?" puts
                 # villagers in lakes (seven in the Floodbasin, two in the Coast basin, 2026-11-10)

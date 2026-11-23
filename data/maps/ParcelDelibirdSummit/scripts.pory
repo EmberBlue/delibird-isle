@@ -10,6 +10,19 @@ const LOCALID_SUM_INGRID = 1
 const LOCALID_SUM_KARI   = 2
 
 mapscripts ParcelDelibirdSummit_MapScripts {
+    MAP_SCRIPT_ON_LOAD: ParcelDelibirdSummit_OnLoad
+}
+
+// Thirteen patches of snow are drawn on this map, the number ILEX asks about and the board gives. After the
+// hearing the pair at the cairn count twelve: the patch on the west shoulder (5-6, 9-10) has gone to grass.
+script ParcelDelibirdSummit_OnLoad {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        setmetatile(5, 9, 1, FALSE)
+        setmetatile(6, 9, 1, FALSE)
+        setmetatile(5, 10, 1, FALSE)
+        setmetatile(6, 10, 1, FALSE)
+    }
+    end
 }
 
 // --- Ingrid, the watcher: the summit parcel ------------------------------------
@@ -606,5 +619,17 @@ script ParcelDelibirdSummit_Board3 {
 
 script ParcelDelibirdSummit_Board10 {
     msgbox(format("A SURVEY BOARD by the upper cairn. STANTLER come up with the melt and go down with the first snow, and the board gives their coming and going by date. The two dates used to be a season apart. They are six weeks apart now.\pThe board does not say where the STANTLER spend the rest of the year. The Survey does not know."), MSGBOX_SIGN)
+    end
+}
+
+// --- the summit redrawn (2026-11-23) ---
+
+script ParcelDelibirdSummit_HutDoor {
+    msgbox(format("INGRID's hut. The latch is a loop of cord. Through the pane: a lamp, a cot, and sixty years of notebooks with the same hand on every spine."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibirdSummit_TopStake {
+    msgbox(format("The top stake. This Midwinter's date in wet paint, and above it the line where the snow should start.\pThe paint is the only new thing on it."), MSGBOX_SIGN)
     end
 }

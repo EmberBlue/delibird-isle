@@ -75,6 +75,11 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   door fragments the first time a door opened, 2026-11-22). After adding a
   door, trace it: `walktest.py ... --trace 6 --walk GOTO:x,y --walk UP:1`
   and look at the frames around the fade.
+- **Delibird Isle's kit**: `python3 tools/skald/holiday_kit.py --check` must
+  say `ok`. Its three maps share metatiles the drawing passes append to the
+  kit, so they are only ever redrawn together (`--rebuild`); a single
+  `draw.py` run after a rebuild leaves the other two pointing at the wrong
+  pieces (a cairn standing on a path was the tell, 2026-11-23).
 - **Kits under the FireRed primary**: `python3 tools/skald/kit_share_frp.py
   shady_forest --check` must say the 69 shared tiles are in place (any
   non-`frp_*` secondary paired with `frp_general` needs them; no map is on

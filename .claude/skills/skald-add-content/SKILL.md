@@ -106,13 +106,45 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   near side, or a dry path. `reach.py` models this; `--why MAP x,y` prints
   the route it found to any tile.
 
-## Delibird Isle (Johto tilesets)
-- Legend `tools/skald/legends/johtogeneral__azaleatown.json` (sea 473, not
-  265 which carries a rock pair; cliff strips A B C over H K M, stairs T over
-  |; ponds solid; snow patches are the 13 metatiles `tools/skald/snowtiles.py`
-  adds to AzaleaTown, 564-575 + 601). The three island outdoor maps share the
-  primary, so they are seamless connections. Compose canvases with a small
-  placement script if the map is big (see the git log for the island commit).
+## Delibird Isle (General + leob0505's Lilycove kit, since 2026-11-23)
+- The three outdoor maps (`ParcelDelibird`, `ParcelDelibirdSummit` to the north,
+  `ParcelDelibirdCliffs` to the east) are canvases on
+  `tools/skald/legends/general__leob_lilycove.json`, joined at offset 0. Their
+  border is sea, so every coast closes inside a map. The legend's `_about`
+  lists every character.
+- **Heights, not cliff tiles.** Each canvas has a `--- levels` block (one digit
+  a cell). The legend's `terrain` pass draws the rock faces and their base
+  row, the side walls (chosen by what lies beside them: grass, sand, water),
+  north rims, shore shadows, shallows and tide lines. Keep every column's
+  height falling toward the south: a rise seen from the north is only a rim
+  line, and rim cells are solid. A stair `=` crosses both rows of a face; a
+  waterfall is `^` on the wall row, `v` on the base row, `u` below. A ground
+  cell on the outermost ring of a level becomes cliff, so keep paths, props
+  and snow one cell in. A pool needs three cells each way before it has a
+  plain middle.
+- **Drawing makes metatiles.** A fir tip over a roof, lights over a rail: the
+  passes append them to the kit in the order the maps are drawn. After
+  changing the kit, the legend or any of the three canvases run `python3
+  tools/skald/holiday_kit.py --rebuild` (the kit's additions again, then the
+  three maps, always in the same order). Never draw one island map alone
+  after a rebuild. `--check` must say ok; `--sheet out.png` shows the
+  original art at 6x.
+- The festival pieces are in the legend: lights `*` and the banner `!` go in
+  the canvas's `--- over` block (hung over whatever the cell is), the giving
+  table `V` is `MB_COUNTER` (the keeper is spoken to across it), `<` `>` are
+  leaning spruces, `x` `X` red-cloth stakes, `E` the beacon, `&` a cairn.
+- Doors are solid cells; a warp event on one makes it open. A door with no
+  interior gets a `sign` bg event on the door cell instead.
+- To move a terrace, the brook or a whole block, edit the placement script
+  (`tools/skald/compose/delibird_village.py`, `_summit.py`, `_cliffs.py`;
+  helpers in `compose/kit.py`: levels, stamps that claim their cells, a fir
+  lattice, the shallows ring) and run it with `--write`, then the kit's
+  `--rebuild`. For a small change edit `canvas.txt` itself; the script's
+  `--check` then reports that the canvas differs, which is the reminder to
+  fold the edit back before the script is used again. Events are placed in
+  `map.json` by hand (print a grid of the canvas to pick cells).
+- The Johto legend (`johtogeneral__azaleatown.json`) and `snowtiles.py` are
+  what the island was drawn with before; no map uses them now.
 
 ## Evidence and the survey stakes
 - A zone's clue tells set bits in its `VAR_SKALDMERE_CHn_EVIDENCE` (bit

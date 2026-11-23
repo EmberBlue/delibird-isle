@@ -197,7 +197,12 @@
     "ParcelCoastHouse5",
     "ParcelCoastBreakwaterHut",
     "ParcelDelibirdSummit",
-    "ParcelDelibirdCliffs"
+    "ParcelDelibirdCliffs",
+    "ParcelDelibirdHut",
+    "ParcelDelibirdHall",
+    "ParcelDelibirdStore",
+    "ParcelDelibirdCabin1",
+    "ParcelDelibirdCabin2"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

@@ -38,18 +38,20 @@ seg s47 s46 - --walk GOTOEDGE:down --walk DOWN:0 --walk WAIT:600 --walk GOTOEDGE
 # the ferry captain (15,34), first choice = DELIBIRD ISLE (open after the Highland certification)
 seg s48 s47 FLAG_SKALDMERE_DELIBIRD_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk MENU:0,14 --walk WAIT:1500 \
   --check FLAG_SKALDMERE_DELIBIRD_ARRIVAL --expect MAP_PARCEL_DELIBIRD
-# ILEX in the square (11,10) through the north gap: the aerial-survey competency test, badge 8, HM07.
-# He warns an early arrival and asks (YES/NO) before the frame, so A all the way to the battle.
-seg s49 s48 FLAG_BADGE08_GET --walk GOTO:10,10 --walk RIGHT:0 --walk TALKFIGHT:60 --walk WAIT:2500 --check FLAG_BADGE08_GET --expect MAP_PARCEL_DELIBIRD
-# the gift square: the two item balls, the reveler, then the keeper; the elder's parcel to the relief man, and the
-# Delibird itself; a heal at the warming hut
-seg s50 s49 - --walk GOTO:15,4 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:25,21 --walk UP:0 --walk TALK:1 --walk WAIT:400 \
-  --walk GOTO:9,13 --walk RIGHT:0 --walk TALK:1 --walk WAIT:600 --walk GOTO:9,11 --walk LEFT:0 --walk TALK:10 --walk WAIT:600 \
+# ILEX at the lookout bench on the north-east heath (40,6): the aerial-survey competency test, badge 8, HM07.
+# He warns an early arrival and asks (YES/NO) before the frame, so A all the way to the battle. The way there
+# is the pier, both stairs, the square, the street east and the heath path (FRIDA watches it from the grass).
+seg s49 s48 FLAG_BADGE08_GET --walk GOTO:39,6 --walk RIGHT:0 --walk TALKFIGHT:60 --walk WAIT:2500 --check FLAG_BADGE08_GET --expect MAP_PARCEL_DELIBIRD
+# the two item balls (the shelf's west clearing, the tip of the spit), NOEL on the stage, then the keeper across
+# the giving table; MARTA's parcels, the relief man at the seep, the Delibird; a heal inside the warming hut
+seg s50 s49 - --walk GOTO:6,5 --walk UP:0 --walk TALK:1 --walk WAIT:400 --walk GOTO:7,37 --walk DOWN:0 --walk TALK:1 --walk WAIT:400 \
+  --walk GOTO:25,21 --walk UP:0 --walk TALK:1 --walk WAIT:600 --walk GOTO:18,22 --walk UP:0 --walk TALK:10 --walk WAIT:600 \
   --check FLAG_SKALD_DEL_GIFT_SQUARE --expect MAP_PARCEL_DELIBIRD
-seg s51 s50 - --walk GOTO:6,16 --walk UP:0 --walk TALK:8 --walk WAIT:400 --walk GOTO:20,17 --walk UP:0 --walk TALK:8 --walk WAIT:400 \
-  --walk GOTO:8,10 --walk LEFT:0 --walk TALK:10 --walk WAIT:600 --walk GOTO:8,19 --walk UP:0 --walk TALK:4 --walk WAIT:900 --expect MAP_PARCEL_DELIBIRD
-# the sailor (9,23) back to Saltwick, then the captain's second choice = the MEREHOLT COAST
-seg s52 s51 - --walk GOTO:9,22 --walk DOWN:0 --walk MENU:0,8 --walk WAIT:900 --expect MAP_PARCEL_ISLE
+seg s51 s50 - --walk GOTO:20,19 --walk UP:0 --walk TALK:8 --walk WAIT:400 --walk GOTO:30,22 --walk UP:0 --walk TALK:8 --walk WAIT:400 \
+  --walk GOTO:19,19 --walk UP:0 --walk TALK:10 --walk WAIT:600 --walk GOTOWARP:0 --walk WAIT:400 --walk GOTO:5,4 --walk UP:0 --walk TALK:4 --walk WAIT:900 \
+  --walk GOTOWARP:0 --walk WAIT:400 --expect MAP_PARCEL_DELIBIRD
+# the sailor on the pier head (23,44) back to Saltwick, then the captain's second choice = the MEREHOLT COAST
+seg s52 s51 - --walk GOTO:22,44 --walk RIGHT:0 --walk MENU:0,8 --walk WAIT:900 --expect MAP_PARCEL_ISLE
 seg s53 s52 FLAG_SKALDMERE_COAST_ARRIVAL --walk GOTO:15,33 --walk DOWN:0 --walk MENU:1,14 \
   --walk WAIT:1500 --check FLAG_SKALDMERE_COAST_ARRIVAL --expect MAP_PARCEL_COAST
 echo "=== chapter 5 complete, the Coast reached $(date +%H:%M:%S)"

@@ -1243,6 +1243,12 @@ ParcelDelibirdCliffs_Board3::
 	end
 
 
+ParcelDelibirdCliffs_TomasDoor::
+# 633 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	msgbox ParcelDelibirdCliffs_TomasDoor_Text_0, MSGBOX_SIGN
+	end
+
+
 ParcelDelibirdCliffs_Tomas_Text_0:
 # 20 "data/maps/ParcelDelibirdCliffs/scripts.pory"
 	.string "TOMAS: The floor slopes a little more\n"
@@ -1971,3 +1977,11 @@ ParcelDelibirdCliffs_Board3_Text_0:
 	.string "it.\p"
 	.string "The children are the Survey's best field\n"
 	.string "team on this island, and know it.$"
+
+ParcelDelibirdCliffs_TomasDoor_Text_0:
+# 633 "data/maps/ParcelDelibirdCliffs/scripts.pory"
+	.string "TOMAS's cabin. The door sticks at the\n"
+	.string "top and gapes at the bottom.\p"
+	.string "Inside, a marble on the floorboards has\n"
+	.string "rolled to the seaward wall and stayed\l"
+	.string "there.$"

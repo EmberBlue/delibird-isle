@@ -1,0 +1,1087 @@
+{
+ "_about": "Emerald General (leob0505's ORAS set) + leob0505's Lilycove kit with Delibird Isle's additions (tools/skald/holiday_kit.py). The island's three maps: the Holiday Village, the Snowy Summit, the Shoreline Cliffs. The canvas's levels block gives every cell its height and the terrain pass draws the cliffs, the rims, the shore and the beach. GROUND '.' grass, ',' grass a builder leaves clear, 'f' flowers, 't' tall grass, 'a' long grass, 'g' pale lichen heath, 'i' snow, 'm' bare wet soil, 'c' cobble, 'p' a sand trail, 's' beach sand, 'w' shallows (waded), '~' sea, 'r' the brook (sea water at the land's height, not entered), 'o' still fresh water. '=' a stair (two wide; draw it across both rows of a rock face), 'L' a ledge. '^' 'v' 'u' a waterfall's lip, body and foot. 'j' planks over the brook, 'J' planks over a puddle pond, '+' a plank jetty, 'D' a plank deck on land. PROPS 'b' round bush, 'F' railing, 'l' street lamp, 'S' wooden sign, 'Z' town signboard, 'N' notice board, 'B' a single spruce, '<' '>' a spruce leaning left or right (the drunken forest), '&' a cairn, 'k' boulder, 'q' boulder on sand, 'd' rock in the shallows, '0' rock in deep water, 'x' red-cloth stake in sand, 'X' red-cloth stake on grass, 'z' bare stake in sand, '1' a grey post (a snow stake), 'n' board in sand, '$' sandbags, '_' a sunk sill in sand. STAMPS T the big fir (2x2); H R Y the small cabin in blue, red, yellow; W the slate-roofed hut (General's house); M the thatched hall; G the store with the awning; K the boat shed; C a cave mouth for a rock face; U a puddle pond (waded); P the same with planks across; O a rock outcrop; Q a bench; V the giving table; E the beacon (2x3, its top walked behind); A a sea stack; e a low rock awash. OVER block: '*' a string of lights, '!' the banner.",
+ "fill": "#",
+ "border": [
+  368,
+  368,
+  368,
+  368
+ ],
+ "tiles": {
+  ".": [
+   1,
+   0,
+   3
+  ],
+  ",": [
+   1,
+   0,
+   3
+  ],
+  "f": [
+   4,
+   0,
+   3
+  ],
+  "t": [
+   13,
+   0,
+   3
+  ],
+  "a": [
+   21,
+   0,
+   3
+  ],
+  "g": [
+   473,
+   0,
+   3
+  ],
+  "i": [
+   265,
+   0,
+   3
+  ],
+  "m": [
+   268,
+   0,
+   3
+  ],
+  "c": [
+   563,
+   0,
+   3
+  ],
+  "p": [
+   289,
+   0,
+   3
+  ],
+  "s": [
+   292,
+   0,
+   3
+  ],
+  "w": [
+   414,
+   0,
+   3
+  ],
+  "~": [
+   368,
+   0,
+   1
+  ],
+  "r": [
+   368,
+   1,
+   0
+  ],
+  "o": [
+   161,
+   1,
+   0
+  ],
+  "=": [
+   175,
+   0,
+   3
+  ],
+  "L": [
+   135,
+   1,
+   0
+  ],
+  "^": [
+   179,
+   1,
+   0
+  ],
+  "v": [
+   185,
+   1,
+   0
+  ],
+  "u": [
+   52,
+   1,
+   0
+  ],
+  "j": [
+   884,
+   0,
+   3
+  ],
+  "J": [
+   889,
+   0,
+   3
+  ],
+  "+": [
+   884,
+   0,
+   3
+  ],
+  "D": [
+   907,
+   0,
+   3
+  ],
+  "b": [
+   658,
+   1,
+   0
+  ],
+  "F": [
+   593,
+   1,
+   0
+  ],
+  "l": [
+   666,
+   1,
+   0
+  ],
+  "S": [
+   27,
+   1,
+   0
+  ],
+  "Z": [
+   3,
+   1,
+   0
+  ],
+  "N": [
+   305,
+   1,
+   0
+  ],
+  "B": [
+   22,
+   1,
+   0
+  ],
+  "k": [
+   224,
+   1,
+   0
+  ],
+  "q": [
+   302,
+   1,
+   0
+  ],
+  "d": [
+   404,
+   1,
+   0
+  ],
+  "x": [
+   892,
+   1,
+   0
+  ],
+  "X": [
+   893,
+   1,
+   0
+  ],
+  "z": [
+   890,
+   1,
+   0
+  ],
+  "1": [
+   306,
+   1,
+   0
+  ],
+  "n": [
+   891,
+   1,
+   0
+  ],
+  "$": [
+   905,
+   1,
+   0
+  ],
+  "_": [
+   906,
+   1,
+   0
+  ],
+  "0": [
+   908,
+   1,
+   0
+  ],
+  ">": [
+   909,
+   1,
+   0
+  ],
+  "<": [
+   911,
+   1,
+   0
+  ],
+  "&": [
+   913,
+   1,
+   0
+  ]
+ },
+ "stamps": {
+  "T": {
+   "rows": [
+    [
+     468,
+     469
+    ],
+    [
+     484,
+     485
+    ]
+   ]
+  },
+  "H": {
+   "rows": [
+    [
+     557,
+     558,
+     558,
+     559
+    ],
+    [
+     565,
+     566,
+     566,
+     567
+    ],
+    [
+     573,
+     574,
+     575,
+     589
+    ],
+    [
+     581,
+     582,
+     583,
+     597
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ],
+   "_note": "the small cabin, blue; its top row is roof over open ground (walked behind)"
+  },
+  "R": {
+   "rows": [
+    [
+     863,
+     864,
+     864,
+     865
+    ],
+    [
+     866,
+     867,
+     867,
+     868
+    ],
+    [
+     869,
+     870,
+     871,
+     872
+    ],
+    [
+     581,
+     582,
+     583,
+     597
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ],
+   "_note": "the same cabin under a red roof"
+  },
+  "Y": {
+   "rows": [
+    [
+     873,
+     874,
+     874,
+     875
+    ],
+    [
+     876,
+     877,
+     877,
+     878
+    ],
+    [
+     879,
+     880,
+     881,
+     882
+    ],
+    [
+     581,
+     582,
+     583,
+     597
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ],
+   "_note": "and under a yellow one"
+  },
+  "W": {
+   "rows": [
+    [
+     8,
+     9,
+     9,
+     10
+    ],
+    [
+     16,
+     17,
+     17,
+     18
+    ],
+    [
+     24,
+     25,
+     11,
+     26
+    ],
+    [
+     32,
+     33,
+     19,
+     34
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ],
+   "_note": "General's slate-roofed house: the warming hut"
+  },
+  "M": {
+   "rows": [
+    [
+     1,
+     659,
+     660,
+     660,
+     661,
+     1
+    ],
+    [
+     659,
+     662,
+     668,
+     668,
+     663,
+     661
+    ],
+    [
+     667,
+     670,
+     703,
+     703,
+     671,
+     669
+    ],
+    [
+     675,
+     646,
+     687,
+     677,
+     677,
+     678
+    ],
+    [
+     683,
+     654,
+     695,
+     685,
+     685,
+     686
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     5
+    ]
+   ],
+   "door": [
+    4,
+    1
+   ],
+   "_note": "the thatched hall (leob's Cove Lily Motel), six by five"
+  },
+  "G": {
+   "rows": [
+    [
+     808,
+     809,
+     809,
+     809,
+     810
+    ],
+    [
+     816,
+     817,
+     817,
+     817,
+     818
+    ],
+    [
+     824,
+     825,
+     825,
+     825,
+     826
+    ],
+    [
+     819,
+     804,
+     805,
+     806,
+     821
+    ],
+    [
+     834,
+     836,
+     813,
+     837,
+     835
+    ]
+   ],
+   "door": [
+    4,
+    2
+   ],
+   "_note": "the store with the awning (leob's Safari Zone gate)"
+  },
+  "K": {
+   "rows": [
+    [
+     841,
+     841,
+     841,
+     841,
+     842
+    ],
+    [
+     849,
+     849,
+     849,
+     849,
+     850
+    ],
+    [
+     849,
+     849,
+     849,
+     849,
+     850
+    ],
+    [
+     857,
+     857,
+     857,
+     857,
+     858
+    ],
+    [
+     844,
+     845,
+     846,
+     847,
+     860
+    ],
+    [
+     852,
+     743,
+     854,
+     851,
+     862
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "door": [
+    5,
+    1
+   ],
+   "_note": "the boat shed (leob's harbour terminal)"
+  },
+  "C": {
+   "rows": [
+    [
+     680,
+     681,
+     682
+    ],
+    [
+     688,
+     689,
+     690
+    ]
+   ],
+   "door": [
+    1,
+    1
+   ],
+   "_note": "a cave mouth; set it into a rock face"
+  },
+  "U": {
+   "rows": [
+    [
+     200,
+     201,
+     202
+    ],
+    [
+     208,
+     209,
+     210
+    ],
+    [
+     216,
+     217,
+     218
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "_note": "a puddle pond one wades"
+  },
+  "O": {
+   "rows": [
+    [
+     104,
+     106
+    ],
+    [
+     120,
+     122
+    ]
+   ],
+   "_note": "a rock outcrop"
+  },
+  "Q": {
+   "rows": [
+    [
+     650,
+     651,
+     652
+    ]
+   ],
+   "_note": "a bench"
+  },
+  "V": {
+   "rows": [
+    [
+     897,
+     898
+    ]
+   ],
+   "_note": "the giving table"
+  },
+  "E": {
+   "rows": [
+    [
+     899,
+     900
+    ],
+    [
+     901,
+     902
+    ],
+    [
+     903,
+     904
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "_note": "the beacon"
+  },
+  "P": {
+   "rows": [
+    [
+     200,
+     201,
+     202
+    ],
+    [
+     889,
+     889,
+     889
+    ],
+    [
+     216,
+     217,
+     218
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ],
+   "_note": "the slump pond with planks laid across it"
+  },
+  "A": {
+   "rows": [
+    [
+     370,
+     379,
+     372
+    ],
+    [
+     378,
+     113,
+     380
+    ],
+    [
+     386,
+     121,
+     388
+    ]
+   ],
+   "_note": "a sea stack (set it in deep water)"
+  },
+  "e": {
+   "rows": [
+    [
+     373,
+     374
+    ]
+   ],
+   "_note": "a low rock awash (deep water)"
+  }
+ },
+ "terrain": {
+  "ground": ".,ftagim",
+  "deep": "~r0",
+  "shallow": "wd",
+  "sand": "sxzn_q",
+  "plain": "d0",
+  "wall": {
+   "S": 124,
+   "W": 115,
+   "E": 117,
+   "SW": 123,
+   "SE": 125,
+   "iSW": 137,
+   "iSE": 116,
+   "endW": 116,
+   "endE": 137,
+   "W_grass": 112,
+   "W_sand": 136,
+   "E_land": 114,
+   "N": 2,
+   "NW": 211,
+   "NE": 212
+  },
+  "base": {
+   "mid": 145,
+   "left": 120,
+   "right": 122,
+   "left_sand": 144,
+   "right_sand": 146
+  },
+  "rim": {
+   "N": 393,
+   "E": 402,
+   "W": 400,
+   "NE": 385,
+   "NW": 384,
+   "iNE": 410,
+   "iNW": 408
+  },
+  "tide": {
+   "N": 422,
+   "W": 415,
+   "E": 413,
+   "S": 406,
+   "NW": 398,
+   "NE": 397,
+   "SW": 390,
+   "SE": 389,
+   "iNW": 423,
+   "iNE": 421,
+   "iSE": 405,
+   "iSW": 407
+  },
+  "shelf": {
+   "N": 430,
+   "NW": 411,
+   "NE": 412
+  },
+  "drop": {
+   "N": 446,
+   "E": 437,
+   "W": 439,
+   "NE": 419,
+   "NW": 420,
+   "iNE": 445,
+   "iNW": 447
+  },
+  "fresh": "o",
+  "wet": "o^vujJ~wr+dAe0",
+  "bank": {
+   "N": 177,
+   "E": 186,
+   "W": 184,
+   "NE": 178,
+   "NW": 176,
+   "iNE": 194,
+   "iNW": 192
+  },
+  "through": "=C^vu"
+ },
+ "paths": [
+  {
+   "chars": "c",
+   "join": "=HRYWMGKC+jJVD",
+   "pieces": {
+    "plain": 563,
+    "N": 555,
+    "S": 571,
+    "W": 562,
+    "E": 564,
+    "NW": 554,
+    "NE": 556,
+    "SW": 570,
+    "SE": 572
+   }
+  },
+  {
+   "chars": "p",
+   "join": "c=sPjJ",
+   "pieces": {
+    "plain": 289,
+    "N": 281,
+    "S": 297,
+    "W": 288,
+    "E": 290,
+    "NW": 280,
+    "NE": 282,
+    "SW": 296,
+    "SE": 298
+   }
+  },
+  {
+   "chars": "i",
+   "join": "",
+   "pieces": {
+    "plain": 265,
+    "N": 257,
+    "S": 273,
+    "W": 264,
+    "E": 266,
+    "NW": 256,
+    "NE": 258,
+    "SW": 272,
+    "SE": 274
+   }
+  },
+  {
+   "chars": "g",
+   "join": "",
+   "pieces": {
+    "plain": 473,
+    "N": 465,
+    "S": 481,
+    "W": 472,
+    "E": 474,
+    "NW": 464,
+    "NE": 466,
+    "SW": 480,
+    "SE": 482
+   }
+  },
+  {
+   "chars": "m",
+   "join": "",
+   "pieces": {
+    "plain": 268,
+    "N": 260,
+    "S": 276,
+    "W": 267,
+    "E": 269,
+    "NW": 259,
+    "NE": 261,
+    "SW": 275,
+    "SE": 277
+   }
+  }
+ ],
+ "runs": {
+  "F": [
+   592,
+   593,
+   594,
+   593
+  ],
+  "=": [
+   175,
+   207,
+   207,
+   207
+  ],
+  "^": [
+   187,
+   179,
+   188,
+   179
+  ],
+  "u": [
+   44,
+   52,
+   60,
+   52
+  ]
+ },
+ "wood": {
+  "+": [
+   883,
+   884,
+   885
+  ]
+ },
+ "firs": {
+  "T": {
+   "body": [
+    468,
+    469
+   ],
+   "foot": [
+    484,
+    485
+   ],
+   "foot_tip": [
+    476,
+    477
+   ]
+  }
+ },
+ "tall": {
+  "B": {
+   "top_of": 14
+  },
+  ">": {
+   "top_of": 910
+  },
+  "<": {
+   "top_of": 912
+  }
+ },
+ "over": {
+  "*": {
+   "run": [
+    886,
+    887,
+    888
+   ]
+  },
+  "!": {
+   "run": [
+    894,
+    895,
+    896
+   ]
+  }
+ }
+}

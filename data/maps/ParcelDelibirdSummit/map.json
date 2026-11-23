@@ -23,10 +23,10 @@
     {
       "local_id": "LOCALID_SUM_INGRID",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 23,
-      "y": 7,
+      "x": 16,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -37,8 +37,8 @@
     {
       "local_id": "LOCALID_SUM_KARI",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 13,
-      "y": 27,
+      "x": 26,
+      "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -51,8 +51,8 @@
     {
       "local_id": "LOCALID_T_SUM_RAGNAR",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 8,
-      "y": 32,
+      "x": 12,
+      "y": 31,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -65,8 +65,8 @@
     {
       "local_id": "LOCALID_T_SUM_ESKIL",
       "graphics_id": "OBJ_EVENT_GFX_MAN_3",
-      "x": 9,
-      "y": 14,
+      "x": 6,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -79,10 +79,10 @@
     {
       "local_id": "LOCALID_T_SUM_LIV",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 16,
-      "y": 19,
+      "x": 19,
+      "y": 22,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -93,10 +93,10 @@
     {
       "local_id": "LOCALID_T_SUM_BIRGITTA",
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_F",
-      "x": 9,
+      "x": 18,
       "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -107,8 +107,8 @@
     {
       "local_id": "LOCALID_T_SUM_TORVALD",
       "graphics_id": "OBJ_EVENT_GFX_HIKER",
-      "x": 20,
-      "y": 7,
+      "x": 22,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -121,8 +121,8 @@
     {
       "local_id": "LOCALID_SUM_ITEM_A",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 25,
-      "y": 7,
+      "x": 26,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -135,8 +135,8 @@
     {
       "local_id": "LOCALID_SUM_ITEM_B",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 25,
-      "y": 13,
+      "x": 36,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -149,8 +149,8 @@
     {
       "local_id": "LOCALID_SUM_ITEM_C",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 25,
-      "y": 23,
+      "x": 37,
+      "y": 32,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -163,8 +163,8 @@
     {
       "local_id": "LOCALID_PAIRSTAKES_A",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 19,
-      "y": 13,
+      "x": 15,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -177,8 +177,8 @@
     {
       "local_id": "LOCALID_PAIRSTAKES_B",
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 20,
-      "y": 13,
+      "x": 16,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -191,8 +191,8 @@
     {
       "local_id": "LOCALID_PAIRCAIRN_A",
       "graphics_id": "OBJ_EVENT_GFX_MAN_5",
-      "x": 21,
-      "y": 17,
+      "x": 12,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -205,8 +205,8 @@
     {
       "local_id": "LOCALID_PAIRCAIRN_B",
       "graphics_id": "OBJ_EVENT_GFX_LASS",
-      "x": 22,
-      "y": 17,
+      "x": 13,
+      "y": 22,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -222,32 +222,32 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 15,
-      "y": 5,
+      "x": 22,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_PeakSign"
     },
     {
       "type": "sign",
-      "x": 13,
-      "y": 16,
+      "x": 18,
+      "y": 23,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_StakesSign"
     },
     {
       "type": "sign",
-      "x": 13,
-      "y": 25,
+      "x": 25,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_PondSign"
     },
     {
       "type": "hidden_item",
-      "x": 6,
-      "y": 6,
+      "x": 36,
+      "y": 22,
       "elevation": 0,
       "item": "ITEM_NUGGET",
       "flag": "FLAG_SKALD_HIDDEN_SUM_A"
@@ -255,50 +255,66 @@
     {
       "type": "hidden_item",
       "x": 3,
-      "y": 26,
+      "y": 33,
       "elevation": 0,
       "item": "ITEM_SITRUS_BERRY",
       "flag": "FLAG_SKALD_HIDDEN_SUM_B"
     },
     {
       "type": "sign",
-      "x": 14,
-      "y": 24,
+      "x": 20,
+      "y": 30,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_Sledge"
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 16,
+      "x": 17,
+      "y": 36,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_Board1"
     },
     {
       "type": "sign",
-      "x": 18,
-      "y": 28,
+      "x": 14,
+      "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_Board2"
     },
     {
       "type": "sign",
-      "x": 24,
-      "y": 16,
+      "x": 25,
+      "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_Board3"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 24,
+      "x": 24,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdSummit_Board10"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 12,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelDelibirdSummit_HutDoor"
+    },
+    {
+      "type": "sign",
+      "x": 17,
+      "y": 13,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelDelibirdSummit_TopStake"
     }
   ]
 }

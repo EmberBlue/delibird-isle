@@ -255,7 +255,7 @@ script ParcelCavern_Leave {
     lockall
     msgbox(format("The ladder up to the summit, and the bright thin daylight beyond."), MSGBOX_DEFAULT)
     closemessage
-    warp(MAP_PARCEL_DELIBIRD, 8, 4)
+    warp(MAP_PARCEL_DELIBIRD, 7, 12)
     waitstate
     end
 }

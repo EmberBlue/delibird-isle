@@ -784,8 +784,8 @@ Outdoor zones, their vanilla bases and connections. Interiors hang off each.
 | ParcelFloodbasin | the Floodbasin / Leirvik | Route 120 (Fortree) | down → Corridor (−65) | up → River (−25), rubble (HM06) |
 | ParcelRiver | Elvsund | Route 117 ⊕ Mauville + painted farm & river | down → Floodbasin (5) | up → Highlands (30) |
 | ParcelHighlands | Haukfell | Route 115 + Route 114 falls (leob_fallarbor) | down → River (−30) | — (summit) |
-| ParcelDelibird | Delibird Isle | hand-drawn (AzaleaTown) | ferry | summit mouth → Cavern (16,10) |
-| ParcelCavern | Crystal Cavern | Shoal Cave ice room | script warp | ladder trigger → Delibird (8,4) |
+| ParcelDelibird | Delibird Isle | hand-drawn (General + leob_lilycove, with the Summit north and the Cliffs east as seamless connections) | ferry → pier (22,43) | cave mouth (7,11) → Cavern (16,10); five doors indoors |
+| ParcelCavern | Crystal Cavern | Shoal Cave ice room | script warp | ladder trigger → Delibird (7,12) |
 | ParcelCoast | Mereholt Coast | Slateport City | ferry → quay (30,55) | aide → Boardroom; ferry home |
 | ParcelWeather | Climate Station | Route 119 rows 0–35 | ferry → bridge (9,34) | ferry home |
 | ParcelMarsh | the Last Corridor | Route 119 rows 36–71 | Hale's warp → (37,27) | east-edge trigger → Fernwick (11,16) |

@@ -16,6 +16,10 @@ Canvas file format:
   border <id> <id> <id> <id>    # optional 2x2 border override
   ---
   <H rows of exactly W characters; text after two spaces and '#' is a comment>
+  --- levels                    # optional: the height of every cell, one digit each (see "terrain")
+  <H rows of exactly W digits>
+  --- over                      # optional: things hung over the ground ('.' = nothing; see "over")
+  <H rows of exactly W characters>
 
 Legend JSON:
   {"tiles": {".": [id, col, elev], ...},
@@ -23,7 +27,10 @@ Legend JSON:
    "fill": "#", "border": [id,id,id,id]}
 A stamp char marks the top-left of a multi-tile object; the cells it covers
 must contain the fill char. Cells listed in "pass" are walkable (col 0, elev 3)
-- doors, arches; everything else in a stamp is solid (col 1).
+- arches, a roof one walks behind; everything else in a stamp is solid (col 1),
+its door too: the engine opens a door the player walks north into when a warp
+event sits on it, whatever its collision. "door": [row, col] has the door's
+cell printed and written to anchors.json.
 
 After the characters are laid down, the legend's optional passes finish the drawing. None of
 them changes collision or elevation; they only choose the metatile for a cell from what lies
@@ -48,6 +55,10 @@ around it, so the canvas stays one character per cell:
             something two cells tall on one solid cell: its head goes into the top layer of
             the cell above, so the player walks behind it
   "dress"   overlapping kit trees (see dress() below)
+  "terrain" cliffs, shore and beach from the canvas's levels block (see terrain() below)
+  "over"    {"*": {"run": [left, mid, right]}}: the canvas's over block marks cells with something
+            overhead (a string of lights); the top layer of the named metatile is laid over
+            whatever the cell turned out to be, the ends of each horizontal run with their own
 """
 import json, struct, sys
 from pathlib import Path
@@ -66,7 +77,22 @@ def load_legend(name):
 def parse_canvas(path):
     head, rows, in_rows = {}, [], False
     anchors, extra, border = {}, {}, None
+    levels = head.setdefault("levels", [])
     for line in Path(path).read_text().splitlines():
+        if in_rows and line.strip() == "--- levels":
+            in_rows = "levels"
+            continue
+        if in_rows and line.strip() == "--- over":
+            in_rows = "over"
+            continue
+        if in_rows == "levels":
+            if line.strip():
+                levels.append(line.rstrip("\n"))
+            continue
+        if in_rows == "over":
+            if line.strip():
+                head.setdefault("over", []).append(line.rstrip("\n"))
+            continue
         if in_rows:
             if "  #" in line:
                 line = line[: line.index("  #")]
@@ -305,6 +331,169 @@ def tall(grid, owner, spec, W, H, d):
                     put(grid, x, y - 1, m)
 
 
+def terrain(grid, owner, levels, spec, W, H):
+    """Cliffs, shore and beach, Emerald's way, from a height for every cell.
+
+    The canvas only says what the ground is ('.' grass, '~' sea, 'w' shallows, 's' sand ...) and,
+    in its levels block, how high each cell stands. This pass does what a mapper does by hand:
+
+      * the outermost cells of every higher area become its cliff. Where the drop is to the south
+        the cell is a rock face (and the cell below it, if that is land, the face's second row,
+        the base); to the west or east it is the side wall; to the NORTH it is only the rim, the
+        far edge of the top seen from the front (a pale line: "N", "NW", "NE"). All are solid.
+      * a side wall and a base end are chosen by what lies beside them: "W_grass" / "W_sand"
+        beside lower grass or sand, plain "W" beside water or more rock; "E_land" beside land;
+        the base ends "left"/"right" on grass, "left_sand"/"right_sand" on sand, the plain
+        corner beside water
+      * deep water beside land gets the bank's shadow (a brook is deep water at the land's own
+        height); deep water beside shallows gets the shelf's edge; shallows beside sand get the
+        tide line
+      * fresh water ("fresh") gets a bank ("bank") on every side that is not water ("wet")
+    The legend's "terrain" block names the characters and the pieces:
+
+      "terrain": {"ground": ".,f", "deep": "~", "shallow": "w", "sand": "s",
+                  "wall": {"S", "W", "E", "SW", "SE", "iSW", "iSE", "endW", "endE",
+                           "W_grass", "W_sand", "E_land", "N", "NW", "NE"},
+                  "base": {"mid", "left", "right", "left_sand", "right_sand"},
+                  "rim": {"N", "E", "W", "NE", "NW", "iNE", "iNW"},
+                  "tide": {...}, "shelf": {...}, "drop": {...}, "through": "=C"}
+    Stairs and anything else that is not a "ground" character is left alone, so a stair drawn
+    across a wall's two rows stays a stair. "through" lists what interrupts a wall without ending
+    it (a stair, a cave mouth, a waterfall): the wall beside it keeps its plain piece.
+    Outside the map the ground is taken to go on as it is at the edge (a connection carries it), so a
+    cliff that runs off the map keeps its plain piece in the last column."""
+    if not spec:
+        return
+    if len(levels) != H or any(len(r) != W for r in levels):
+        raise SystemExit("terrain: the canvas needs a '--- levels' block of the map's size")
+    L = [[int(c) if c.isdigit() else 0 for c in r] for r in levels]
+    ground, deep, shallow, sand = set(spec["ground"]), set(spec["deep"]), set(spec.get("shallow", "")), set(spec.get("sand", ""))
+    wall, base, rim, through = spec["wall"], spec.get("base"), spec["rim"], set(spec.get("through", ""))
+    south = ("S", "SW", "SE", "endW", "endE")
+
+    def lower(x, y, h):
+        # past the map's edge the ground goes on as it is at the edge (a connected map carries the same profile)
+        return L[min(max(y, 0), H - 1)][min(max(x, 0), W - 1)] < h
+
+    def solid(x, y, m):
+        grid[y][x] = wq(m, 1, 0)
+
+    walls = {}
+    for y in range(H):
+        for x in range(W):
+            if owner[y][x] not in ground or L[y][x] == 0:
+                continue
+            h = L[y][x]
+            lo = {k: lower(x + dx, y + dy, h) for k, (dx, dy) in OFFS.items()}
+            if lo["N"]:
+                if "N" not in wall:
+                    print(f"  warning: the ground drops to the north at {x},{y}; this set has no rim piece")
+                    continue
+                if lo["S"]:
+                    print(f"  warning: a one-row ridge at {x},{y} (lower ground both north and south)")
+                k = "NW" if lo["W"] else "NE" if lo["E"] else "N"
+            else:
+                k = ("SW" if lo["S"] and lo["W"] else "SE" if lo["S"] and lo["E"] else
+                     ("endW" if lo["SE"] and not lo["SW"] else "endE" if lo["SW"] and not lo["SE"] else "S") if lo["S"] else
+                     "W" if lo["W"] else "E" if lo["E"] else "iSW" if lo["SW"] else "iSE" if lo["SE"] else None)
+            if k:
+                walls[(x, y)] = k
+
+    def beside(x, y):
+        """What a wall at the neighbouring cell would stand against: grass, sand, or neither (water, rock)."""
+        if not (0 <= x < W and 0 <= y < H) or (x, y) in walls:
+            return None
+        o = owner[y][x]
+        return "grass" if o in ground else "sand" if o in sand else None
+
+    for (x, y), k in walls.items():
+        m = wall[k]
+        if k == "W":
+            m = wall.get({"grass": "W_grass", "sand": "W_sand"}.get(beside(x - 1, y)), m)
+        elif k == "E" and beside(x + 1, y):
+            m = wall.get("E_land", m)
+        solid(x, y, m)
+    for (x, y) in walls:
+        owner[y][x] = "%"                       # a cliff: nothing joins it, nothing walks on it
+    if base:
+        made = []
+        for (x, y), k in walls.items():
+            if k not in south or y + 1 >= H or (x, y + 1) in walls:
+                continue
+            o = owner[y + 1][x]
+            if o in ground or o in sand:
+                on = lambda xx: not 0 <= xx < W or walls.get((xx, y)) in south or owner[y][xx] in through
+                left, right = not on(x - 1), not on(x + 1)
+                m = base["mid"]
+                if left != right:
+                    side = beside(x - 1 if left else x + 1, y + 1)
+                    end = "left" if left else "right"
+                    m = (base.get(end + "_sand", base[end]) if side == "sand" else base[end] if side == "grass"
+                         else wall["SW" if left else "SE"])
+                made.append((x, y + 1, m))
+        for x, y, m in made:
+            solid(x, y, m)
+            owner[y][x] = "%"
+    tide, shelf, drop = spec.get("tide", {}), spec.get("shelf", {}), spec.get("drop", {})
+    fresh, bank = set(spec.get("fresh", "")), spec.get("bank", {})
+    wet = set(spec.get("wet", "")) | deep | shallow | fresh
+    plain = set(spec.get("plain", ""))          # wet or sandy things that keep their own picture (a rock, a stake)
+    is_land = lambda x, y: 0 <= x < W and 0 <= y < H and owner[y][x] not in wet and owner[y][x] not in sand
+    is_in = lambda x, y, chars: 0 <= x < W and 0 <= y < H and owner[y][x] in chars
+
+    def pick(table, at):
+        """at(dir) -> bool. The piece for which sides are 'there': a corner pair first, then a side, then a lone diagonal."""
+        for a, b in (("N", "W"), ("N", "E"), ("S", "W"), ("S", "E")):
+            if at(a) and at(b) and a + b in table:
+                return table[a + b]
+        for a in "NSWE":
+            if at(a) and a in table:
+                return table[a]
+        for dg in ("NW", "NE", "SW", "SE"):
+            if at(dg) and "i" + dg in table:
+                return table["i" + dg]
+        return None
+
+    for y in range(H):
+        for x in range(W):
+            o = owner[y][x]
+            if o in plain:
+                continue
+            here = lambda chars: (lambda k: is_in(x + OFFS[k][0], y + OFFS[k][1], chars))
+            m = None
+            if o in deep:
+                m = pick(rim, lambda k: is_land(x + OFFS[k][0], y + OFFS[k][1])) or pick(drop, here(shallow))
+            elif o in shallow:
+                m = pick(tide, here(sand)) or pick(shelf, here(deep))
+            elif o in fresh:                      # a brook or a pool: a bank wherever the neighbour is not water
+                m = pick(bank, lambda k: 0 <= x + OFFS[k][0] < W and 0 <= y + OFFS[k][1] < H
+                         and owner[y + OFFS[k][1]][x + OFFS[k][0]] not in wet)
+            if m:
+                put(grid, x, y, m)
+
+
+def over(grid, rows, spec, W, H, d):
+    import mtile
+    if not rows:
+        return
+    if len(rows) != H or any(len(r) != W for r in rows):
+        raise SystemExit("over: the block must be the map's size")
+    for y in range(H):
+        for x in range(W):
+            ch = rows[y][x]
+            if ch not in spec:
+                continue
+            left, mid, right = spec[ch]["run"]
+            w = x > 0 and rows[y][x - 1] == ch
+            e = x < W - 1 and rows[y][x + 1] == ch
+            piece = mid if (w and e) or not (w or e) else left if e else right
+            m = mtile.with_top(d, grid[y][x] & 0x3FF, d["mts"][piece][8:12], why=f"{ch!r} hung over it")
+            if m is None:
+                print(f"  warning: no room to hang {ch!r} over {x},{y}")
+            else:
+                put(grid, x, y, m)
+
+
 def tileset_pair(canvas_path):
     """The loaded metatiles of the tilesets this canvas's layout uses (for the passes that may add one)."""
     import mtile, pal_tool
@@ -383,7 +572,8 @@ def build(canvas_path):
     if missing:
         raise SystemExit(f"anchors declared but not drawn: {missing}")
 
-    if any(k in legend for k in ("paths", "firs", "tall")):
+    terrain(grid, owner, head.get("levels") or [], legend.get("terrain"), W, H)
+    if any(k in legend for k in ("paths", "firs", "tall", "over")):
         d = tileset_pair(canvas_path)
     if "paths" in legend:
         paths(grid, owner, legend["paths"], W, H, d)
@@ -395,6 +585,8 @@ def build(canvas_path):
     dress(grid, legend.get("dress"), W, H)
     if "tall" in legend:
         tall(grid, owner, legend["tall"], W, H, d)
+    if "over" in legend:
+        over(grid, head.get("over") or [], legend["over"], W, H, d)
 
     out_dir = canvas_path.parent
     import layout_fixes

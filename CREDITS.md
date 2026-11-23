@@ -79,12 +79,19 @@ taken from a released ROM hack's binary; every set below is a published decomp r
   `data/tilesets/` (General and the town kits; 95 maps), restyled and regraded in this project.
   Source: [lbsbezerra/pokeemerald-modern-oras](https://github.com/lbsbezerra/pokeemerald-modern-oras)
   and the "LeoB ORAS" entry of Team Aqua's Asset Repo. Free with credit, per the author.
+  Delibird Isle's three maps (the Holiday Village, the Snowy Summit, the Shoreline Cliffs) are
+  drawn on General + `leob_lilycove`. The festival pieces added to that kit are this project's own
+  pixel art, made by `tools/skald/holiday_kit.py`: the string lights, the banner, the giving table,
+  the red and yellow cabin roofs (palette copies of leob's house), the red-cloth stakes, the
+  sandbags, the sunk sill, the cairn, the beacon, and the leaning spruces (General's small spruce,
+  itself Skaldmere art, pushed over).
 - **[FireRed Tileset Port](https://github.com/Liamjd14/Firered-Tileset-Port)** by Liamjd14, the
   `frp_*` tilesets, vendored as the `extern/Firered-Tileset-Port` submodule. Saltwick, the
   Holding Meadow, Route 1 and Mistwood were drawn on it until they moved to the kits below; no
   Skaldmere map uses it now, and it stays in the tree for the canvas tools' older legends.
 - **Pokémon Heart & Soul's Johto tilesets**: `johtogeneral` and `azaleatown` (the three Delibird
-  Isle maps) match the `johto_general` / `kanto_general` sheets of
+  Isle maps until 2026-11-23; no Skaldmere map uses them now, they stay in the tree with their
+  legend) match the `johto_general` / `kanto_general` sheets of
   [PokemonHnS-Development/pokemonHnS](https://github.com/PokemonHnS-Development/pokemonHnS) tile
   for tile (over 60 % verbatim; the rest are this project's snow and festival tiles). Heart & Soul
   is open source and asks for its credit chain to be kept: Pokémon Heart & Soul (tilesets by

@@ -4544,10 +4544,10 @@
     {
       "id": "LAYOUT_PARCEL_DELIBIRD",
       "name": "ParcelDelibird_Layout",
-      "width": 30,
-      "height": 26,
-      "primary_tileset": "gTileset_JohtoGeneral",
-      "secondary_tileset": "gTileset_AzaleaTown",
+      "width": 44,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_lilycove",
       "border_filepath": "data/layouts/ParcelDelibird/border.bin",
       "blockdata_filepath": "data/layouts/ParcelDelibird/map.bin"
     },
@@ -4694,20 +4694,20 @@
     {
       "id": "LAYOUT_PARCEL_DELIBIRD_SUMMIT",
       "name": "ParcelDelibirdSummit_Layout",
-      "width": 30,
-      "height": 36,
-      "primary_tileset": "gTileset_JohtoGeneral",
-      "secondary_tileset": "gTileset_AzaleaTown",
+      "width": 44,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_lilycove",
       "border_filepath": "data/layouts/ParcelDelibirdSummit/border.bin",
       "blockdata_filepath": "data/layouts/ParcelDelibirdSummit/map.bin"
     },
     {
       "id": "LAYOUT_PARCEL_DELIBIRD_CLIFFS",
       "name": "ParcelDelibirdCliffs_Layout",
-      "width": 34,
-      "height": 20,
-      "primary_tileset": "gTileset_JohtoGeneral",
-      "secondary_tileset": "gTileset_AzaleaTown",
+      "width": 40,
+      "height": 46,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_leob_lilycove",
       "border_filepath": "data/layouts/ParcelDelibirdCliffs/border.bin",
       "blockdata_filepath": "data/layouts/ParcelDelibirdCliffs/map.bin"
     }

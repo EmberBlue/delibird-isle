@@ -496,7 +496,7 @@ ParcelCavern_Leave::
 # 257 "data/maps/ParcelCavern/scripts.pory"
 	closemessage
 # 258 "data/maps/ParcelCavern/scripts.pory"
-	warp MAP_PARCEL_DELIBIRD, 8, 4
+	warp MAP_PARCEL_DELIBIRD, 7, 12
 # 259 "data/maps/ParcelCavern/scripts.pory"
 	waitstate
 	end

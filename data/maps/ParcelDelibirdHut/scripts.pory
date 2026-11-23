@@ -1,0 +1,38 @@
+// ParcelDelibirdHut -- the warming hut, the oldest building standing on Delibird Isle. Storm rule: nobody
+// asks, nobody pays. The hutkeeper's heal is ParcelDelibird_WarmingHut (in the village's script file).
+
+mapscripts ParcelDelibirdHut_MapScripts {
+}
+
+script ParcelDelibirdHut_Guest {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GIRL: The hut is in a filing now. The hut man put the filing on the shelf with the tea.\pHe says that is where the important things go."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("GIRL: You did the round. They lit the square. I watched from the door with my boots off.\pIt is the best place to watch from. You can leave before anyone sees you cry."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GIRL: I'm not cold. I just like the stove.\pStorm rule says you don't have to say why you came in. So I'm not saying."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibirdHut_Swinub {
+    lock
+    playmoncry(SPECIES_SWINUB, CRY_MODE_NORMAL)
+    msgbox(format("SWINUB has its nose a whisker from the stove door. Every so often it moves a little closer and looks surprised."), MSGBOX_DEFAULT)
+    waitmoncry
+    release
+    end
+}
+
+script ParcelDelibirdHut_Crate {
+    msgbox(format("A crate of donated kit. Mittens in pairs that do not match, a lantern, a tin of wax.\pA card on the lid: TAKE WHAT THE WEATHER ASKS."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibirdHut_Log {
+    msgbox(format("The hut log. One line for every night somebody slept here, sixty years of lines.\pThe early pages are all one season. The late pages are all of them."), MSGBOX_SIGN)
+    end
+}

@@ -85,6 +85,22 @@ TOPLAYER_OK |= {("ParcelMistwood", m) for m in (520, 521, 562, 563, 675, 676)}
 TREETOP_TILES = {6, 7, 22, 493, 494, 495}      # General's tiles; see tools/skald/nordic_tiles.py
 # a kit's own walk-behind art: the head of Brick City's street lamp stands in the top layer of the cell above its foot
 KIT_WALKBEHIND = {"gTileset_brick_city": {798, 799, 814, 815}}
+
+
+def _top_tiles(primary, secondary, metatiles):
+    """The tiles those metatiles draw in their top layer (a kit's walk-behind art, named by metatile)."""
+    import mtile
+    d = mtile.load(ROOT / "data/tilesets/primary" / primary, ROOT / "data/tilesets/secondary" / secondary)
+    return {c & 0x3FF for m in metatiles if m in d["mts"] for c in d["mts"][m][8:12] if c & 0x3FF}
+
+
+# Delibird Isle on General + leob's Lilycove kit: one walks behind the top row of a roof (General's house 8-10,
+# the kit's cabin 557-559 and its red and yellow copies, the thatched hall 659-661, the boat shed 841 842),
+# under the string lights and the banner (886-888, 894-896), behind the beacon's lantern (899 900) and the
+# crown of a leaning spruce (910 912). tools/skald/holiday_kit.py makes the last four groups.
+KIT_WALKBEHIND["gTileset_leob_lilycove"] = _top_tiles("leob_general", "leob_lilycove", (
+    8, 9, 10, 557, 558, 559, 659, 660, 661, 841, 842, 863, 864, 865, 873, 874, 875,
+    886, 887, 888, 894, 895, 896, 899, 900, 910, 912)) | TREETOP_TILES
 RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
 
 
@@ -312,9 +328,9 @@ def audit_map(name, all_maps, fly_secs, trainer_ids, party_ids):
     # maps entered by script warps (ferries, Hale's walk, the summit mouth) have no
     # warp/connection entrance of their own: seed from their arrival tiles
     ARRIVALS = {"ParcelMarsh": [(37, 27)], "ParcelCavern": [(16, 10)], "ParcelWeather": [(9, 34)],
-                "ParcelCoast": [(30, 55), (31, 28)], "ParcelDelibird": [(9, 22), (8, 4)], "ParcelBoardroom": [(4, 2)],
+                "ParcelCoast": [(30, 55), (31, 28)], "ParcelDelibird": [(22, 43), (7, 12)], "ParcelBoardroom": [(4, 2)],
                 "ParcelCorridorWorkings": [(18, 21)], "ParcelRiverMillWood": [(36, 37)],
-                "ParcelWetlandsHide": [(47, 10)], "ParcelDelibirdSummit": [(4, 35)], "ParcelDelibirdCliffs": [(0, 5)]}
+                "ParcelWetlandsHide": [(47, 10)], "ParcelDelibirdSummit": [(15, 38)], "ParcelDelibirdCliffs": [(0, 17)]}
     seeds = set(ARRIVALS.get(name, []))
     for e in mj.get("warp_events", []):
         seeds.add((e["x"], e["y"]))

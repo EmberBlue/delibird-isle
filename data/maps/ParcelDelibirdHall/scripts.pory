@@ -1,0 +1,66 @@
+// ParcelDelibirdHall -- the Midwinter Hall. The relief store is in the loft, the round is on the wall, the
+// Foundation's letter hangs by one pin. The blanket-folder's script is ParcelDelibird_Blankets.
+
+mapscripts ParcelDelibirdHall_MapScripts {
+}
+
+script ParcelDelibirdHall_Warden {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("WARDEN: Someone from the Council came and counted the loft. She asked who paid for it. I said read the corners.\pShe read the corners. She wrote it down. First time anyone has written down what is on a blanket."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("WARDEN: The loft is full to the stairs, RANGER. Blankets, mostly. The FOUNDATION sends them by the pallet.\pWe haven't the heart to send them back cold. You can't sleep under a crest. You can sleep under wool."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibirdHall_Boy {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("BOY: I said it! 'It's lit.' Nobody cheered.\pMARTA says that means I said it right."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("BOY: I've got one line for the lighting. 'It's lit.' That's the whole line.\pI've been practising since autumn."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibirdHall_OldMan {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("OLD MAN: They read out the sill in a hearing, I'm told. Our sill. A hand lower in nine years.\pI could have told them that for nothing. Nobody asked me for nothing. They asked the ranger."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("OLD MAN: Sixty Midwinters in this hall. The door sill used to be a step up. Now you step down to come in.\pSame door. Same step. I've stopped arguing about which of them moved."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibirdHall_Letter {
+    if (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("A letter on FOUNDATION paper, pinned up with one pin. RE: RELOCATION OF THE MIDWINTER FESTIVAL TO A SITE OF LOWER FLOOD EXPOSURE. It offers transport, tents and a sum.\pPinned over the sum, on the back of a programme, in MARTA's hand: THANK YOU, AND NO."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A letter on FOUNDATION paper, pinned up with one pin. RE: RELOCATION OF THE MIDWINTER FESTIVAL TO A SITE OF LOWER FLOOD EXPOSURE.\pThree pages. The third offers transport, tents and a sum. Nobody has answered it. Nobody has taken it down."), MSGBOX_SIGN)
+    }
+    end
+}
+
+script ParcelDelibirdHall_Round {
+    if (flag(FLAG_SKALDMERE_EPILOGUE_DONE)) {
+        msgbox(format("THE RELIEF ROUND. Every door on the island and who carries to it.\pYour name is on it now, beside a door you have never been through."), MSGBOX_SIGN)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("THE RELIEF ROUND. Every door on the island and who carries to it.\pBeside TOMAS, INGRID and RUNE someone has written RANGER, and ticked it, three times."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("THE RELIEF ROUND. Every door on the island and who carries to it.\pThree doors have no name beside them this winter: TOMAS, INGRID, RUNE. The bird's wings are not what they were."), MSGBOX_SIGN)
+    }
+    end
+}
+
+script ParcelDelibirdHall_Blankets {
+    msgbox(format("Relief blankets, folded in thirds, good thick wool. Every corner has the same small crest.\pA few corners have been unpicked. The wool underneath is the same wool."), MSGBOX_SIGN)
+    end
+}

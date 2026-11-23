@@ -32,10 +32,10 @@ stairs and one-way ledges, furniture along every street, a harbour with
 things in it. Every town and route still on a three-lane grid is owed the
 same treatment. A look at all sixteen other outdoor maps the same day
 ranked them: Coast, River, Wetlands, Weather, Marsh, Floodbasin, Highlands,
-Corridor, the Sluice, Fernwick and Mistwood are already rich; **Delibird
-Isle itself is the plainest map in the game** (houses in a field on a
-checker path), with its Cliffs and Summit, the Breakwater and the Wetlands
-Hide behind it. Delibird is next.
+Corridor, the Sluice, Fernwick and Mistwood are already rich; Delibird
+Isle was the plainest map in the game and **was redrawn whole on
+2026-11-23** (village, Summit and Cliffs as one island; see Art). The
+Breakwater and the Wetlands Hide are what is left of that list.
 
 ## What's playable right now (the whole arc, end to end)
 
@@ -445,6 +445,50 @@ replaces is gone from the tree).
   seams.py reads 0 for the whole game since the same day (fir palette in
   Fortree, Mauville and Slateport; the Breakwater on the Coast's kit; a few
   edge cells swapped for the primary's twins).
+- **Delibird Isle, third drawing** (2026-11-23, same standard). The three
+  outdoor maps moved from the Johto pair to General + `leob_lilycove` and
+  were drawn as one island: a sea border, every coast closed inside a map,
+  seamless connections at offset 0 (Summit 44x40 north, village 44x46,
+  Cliffs 40x46 east). What made it possible is a **terrain pass** in
+  `draw.py`: the canvas gives every cell a height (`--- levels`) and the
+  pass draws rock faces with their base row, side walls chosen by what
+  lies beside them (grass, sand, water), north rims, shore shadows,
+  shallows and tide lines; the pieces were learned from leob's own 259
+  General layouts and then checked piece by piece at zoom. The canvas's
+  `--- over` block hangs top-layer art over whatever a cell turned out to
+  be (string lights, the banner). `holiday_kit.py` adds the island's own
+  pixel art to the kit (lights, banner, giving table, beacon, cairn,
+  sandbags, sill, red-cloth stakes, red and yellow roofs as palette
+  copies, leaning spruces made by pushing General's spruce over) and
+  `--rebuild` redraws the three maps in a fixed order, because drawing
+  passes append metatiles to the kit as they go (**never redraw one island
+  map alone after a rebuild**; 440 of the kit's 512 metatile slots are
+  used). In the village: pier with the ferry moored (Mr. Briney's boat
+  object), beach, a wooded spit, the shore terrace with the slump pond
+  under planks, the square (festival fir, giving table as a counter,
+  stage, banner over the stair, lights to the tree and along the rails),
+  hall, warming hut, store, bakery, cabins in three colours, a brook over
+  three falls, the forest shelf, a lookout where ILEX now stands (40,6).
+  Five doors open (`ParcelDelibirdHut`, `-Hall`, `-Store`, `-Cabin1`,
+  `-Cabin2`: the hutkeeper's heal and the blanket-folder moved indoors);
+  the other cabins carry a card in the latch. After the hearing an
+  `ON_LOAD` script ties red cloth to eight stakes (`setmetatile` 892/893).
+  The Summit has four levels, a tarn the brook leaves by a fall, the stake
+  line, two cairns, a drunken forest of leaning spruces and exactly
+  thirteen snow patches (General's 256-274 set); the Cliffs have the heath,
+  the beacon on a knoll, two terraces with stairs at both ends, tide pools,
+  Tomas's cabin on dune grass and sea stacks. Lessons: (1) a ground cell on
+  the outermost ring of a level becomes cliff, so paths, snow and props
+  stay one cell in; (2) past a map's edge the pass assumes the ground goes
+  on as at the edge, which is what a connection needs; (3) a bench, a
+  spruce and a standing pair can enclose a pocket (`reach.py` named the
+  NPC); (4) doors are solid cells and open only where a warp event sits,
+  so a shut door is just a door with a sign on it; (5) the placement
+  scripts that composed the three canvases are kept this time
+  (`tools/skald/compose/delibird_*.py`: `--write`, then the kit's
+  `--rebuild`; `--check` says whether a canvas was hand-edited since). The
+  canvas is still what the game is built from. Also the same day:
+  Saltwick's stairs take the kit's left-edge piece (nine cells).
 - **Building kits** — `kit_restyle.py`. Every town was a stock building kit
   (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
   wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the

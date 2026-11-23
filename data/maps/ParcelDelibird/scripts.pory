@@ -14,20 +14,14 @@
 // cert). The thaw made playable: a relief beat you help with but cannot win.
 // Mereholt's money is on the festival banner.
 
-const LOCALID_DEL_ELDER    = 1
-const LOCALID_DEL_DELIBIRD = 2
-const LOCALID_DEL_GIVER    = 3
-const LOCALID_DEL_KETIL    = 4   // was the fisher; Tomas moved down under the cliffs
-const LOCALID_DEL_RELIEF   = 5
-const LOCALID_DEL_SAILOR   = 6
-const LOCALID_DEL_GYM      = 7   // Ilex: Gym 8, the aerial-survey competency test
-const LOCALID_DEL_KEEPER   = 11  // the gift square (after the item balls + reveler)
-const LOCALID_DEL_HUT      = 12  // the warming hut (heal)
-const LOCALID_DEL_STRINGER = 13
-const LOCALID_DEL_FOLDER   = 14
+// Drawn a third time on Emerald General + the Lilycove kit (2026-11-23): the pier and the beach, the shore
+// terrace with the slump pond, the village terrace with the square, the forest shelf under the summit. The
+// warming hut, the hall, the store and two cabins are real doors now (ParcelDelibirdHut, -Hall, -Store, -Cabin1,
+// -Cabin2); the hutkeeper and the blanket-folder moved indoors with their scripts, which stay in this file.
 
 mapscripts ParcelDelibird_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ParcelDelibird_SetVisited
+    MAP_SCRIPT_ON_LOAD: ParcelDelibird_OnLoad
     MAP_SCRIPT_ON_FRAME_TABLE [
         VAR_SKALD_EPILOGUE, 5: ParcelDelibird_Epilogue
         VAR_TEMP_0, 0: ParcelDelibird_SetMapVar
@@ -1025,5 +1019,76 @@ script ParcelDelibird_Board4 {
 
 script ParcelDelibird_Board5 {
     msgbox(format("A SURVEY BOARD on the shore road. The island's one road is measured each spring from the hall's door to the water's edge. The board gives the paces.\pThe road has not shortened. The water's edge has come to meet it, three paces in nine years, and the board shows the three as three short lines, like a tally nobody wants to finish."), MSGBOX_SIGN)
+    end
+}
+
+// --- the island redrawn (2026-11-23): the red cloth, the shut doors, the ground's small readings ---
+
+// After the hearing the islanders tie red cloth to the stakes themselves (the pair on the shore say so, and
+// the epilogue). 892 and 893 are the red-cloth stake in sand and on grass (tools/skald/holiday_kit.py).
+script ParcelDelibird_OnLoad {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        setmetatile(12, 35, 892, TRUE)
+        setmetatile(14, 35, 892, TRUE)
+        setmetatile(16, 35, 892, TRUE)
+        setmetatile(18, 35, 892, TRUE)
+        setmetatile(19, 9, 893, TRUE)
+        setmetatile(22, 9, 893, TRUE)
+        setmetatile(25, 9, 893, TRUE)
+        setmetatile(28, 9, 893, TRUE)
+    }
+    end
+}
+
+script ParcelDelibird_DoorNote1 {
+    msgbox(format("A card tucked in the latch: AT THE SQUARE. COME AND FIND US THERE."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_DoorNote2 {
+    msgbox(format("The door is on the latch. Through the glass, a table laid for more people than live here."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_DoorNote3 {
+    msgbox(format("Nobody home. A row of boots by the step, smallest to largest, all of them dry."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_DoorNote4 {
+    msgbox(format("A cord across the door and a card: GONE UP TO STRING THE EAST RAIL. THE KETTLE IS ON IF YOU ARE COLD."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_DoorSunk {
+    msgbox(format("The door has dropped in its frame and no longer hangs square. It will not open. It will not quite shut either.\pSomeone has stuffed the gap with a blanket. The corner of the blanket has a crest on it."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_Sandbags {
+    msgbox(format("Sandbags, three courses. The bottom course is dark to the top stitch."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelDelibird_SlopeStake {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("A stake at the foot of the wet slope, red cloth tied to it. Nobody from the Survey put the cloth there.\pThe knot is a net-mender's knot."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A stake at the foot of the wet slope. A number in pencil and a date. Under them the same hand again, a year on.\pThe second number is bigger."), MSGBOX_SIGN)
+    }
+    end
+}
+
+script ParcelDelibird_BeachStake {
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("Red cloth on the stakes along the slump line. The islanders tied it on themselves.\pYou know the colour. It is the one in your own kit."), MSGBOX_SIGN)
+    } else {
+        msgbox(format("A row of stakes along the top of the beach, where the ground starts to give. Each one has a line cut in it at the height of the sand.\pThe older cuts are higher up."), MSGBOX_SIGN)
+    }
+    end
+}
+
+script ParcelDelibird_FestivalFir {
+    msgbox(format("The festival fir. The lights run to it from the lamps of the square.\pThere is a tin star at the top. It leans a little further every Midwinter, and every Midwinter someone climbs up and puts it straight."), MSGBOX_SIGN)
     end
 }

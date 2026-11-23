@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_PARCEL_DELIBIRD",
-      "offset": -6,
+      "offset": 0,
       "direction": "left"
     }
   ],
@@ -23,8 +23,8 @@
     {
       "local_id": "LOCALID_CLF_TOMAS",
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 25,
-      "y": 13,
+      "x": 33,
+      "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -37,8 +37,8 @@
     {
       "local_id": "LOCALID_CLF_RUNE",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 29,
-      "y": 5,
+      "x": 32,
+      "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -51,8 +51,8 @@
     {
       "local_id": "LOCALID_CLF_EINAR",
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 24,
-      "y": 4,
+      "x": 34,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -65,10 +65,10 @@
     {
       "local_id": "LOCALID_T_CLF_SOLVEIG",
       "graphics_id": "OBJ_EVENT_GFX_PICNICKER",
-      "x": 8,
-      "y": 5,
+      "x": 9,
+      "y": 16,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -79,10 +79,10 @@
     {
       "local_id": "LOCALID_T_CLF_OLAV",
       "graphics_id": "OBJ_EVENT_GFX_MAN_2",
-      "x": 18,
-      "y": 7,
+      "x": 26,
+      "y": 18,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -93,8 +93,8 @@
     {
       "local_id": "LOCALID_T_CLF_GEIR",
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 7,
-      "y": 17,
+      "x": 8,
+      "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -107,8 +107,8 @@
     {
       "local_id": "LOCALID_T_CLF_PELLE",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
-      "x": 14,
-      "y": 15,
+      "x": 17,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -121,10 +121,10 @@
     {
       "local_id": "LOCALID_T_CLF_ASTRID",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 20,
-      "y": 19,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "x": 18,
+      "y": 41,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -135,8 +135,8 @@
     {
       "local_id": "LOCALID_CLF_ITEM_A",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 32,
-      "y": 7,
+      "x": 36,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -149,8 +149,8 @@
     {
       "local_id": "LOCALID_CLF_ITEM_B",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 31,
-      "y": 16,
+      "x": 37,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -163,8 +163,8 @@
     {
       "local_id": "LOCALID_CLF_ITEM_C",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 3,
-      "y": 14,
+      "x": 1,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -177,8 +177,8 @@
     {
       "local_id": "LOCALID_PAIRBEACH_A",
       "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
-      "x": 6,
-      "y": 11,
+      "x": 16,
+      "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -191,8 +191,8 @@
     {
       "local_id": "LOCALID_PAIRBEACH_B",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
-      "x": 7,
-      "y": 11,
+      "x": 17,
+      "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -206,7 +206,7 @@
       "local_id": "LOCALID_PAIRLEDGE_A",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
       "x": 14,
-      "y": 5,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -220,7 +220,7 @@
       "local_id": "LOCALID_PAIRLEDGE_B",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
       "x": 15,
-      "y": 5,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -236,8 +236,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 27,
-      "y": 6,
+      "x": 35,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdCliffs_BeaconSign"
@@ -245,7 +245,7 @@
     {
       "type": "sign",
       "x": 3,
-      "y": 7,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdCliffs_TrailSign"
@@ -253,39 +253,39 @@
     {
       "type": "hidden_item",
       "x": 31,
-      "y": 6,
+      "y": 10,
       "elevation": 0,
       "item": "ITEM_STAR_PIECE",
       "flag": "FLAG_SKALD_HIDDEN_CLF_A"
     },
     {
       "type": "hidden_item",
-      "x": 10,
-      "y": 14,
+      "x": 2,
+      "y": 37,
       "elevation": 0,
       "item": "ITEM_PEARL",
       "flag": "FLAG_SKALD_HIDDEN_CLF_B"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 11,
+      "x": 15,
+      "y": 37,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdCliffs_FindFirstone"
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 4,
+      "x": 16,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdCliffs_Board1"
     },
     {
       "type": "sign",
-      "x": 29,
-      "y": 10,
+      "x": 14,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdCliffs_Board2"
@@ -293,10 +293,18 @@
     {
       "type": "sign",
       "x": 17,
-      "y": 10,
+      "y": 28,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelDelibirdCliffs_Board3"
+    },
+    {
+      "type": "sign",
+      "x": 32,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelDelibirdCliffs_TomasDoor"
     }
   ]
 }

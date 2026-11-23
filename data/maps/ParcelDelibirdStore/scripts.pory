@@ -1,0 +1,54 @@
+// ParcelDelibirdStore -- the island store: the one place on Delibird Isle that keeps accounts.
+
+mapscripts ParcelDelibirdStore_MapScripts {
+}
+
+script ParcelDelibirdStore_Clerk {
+    lock
+    faceplayer
+    message(gText_HowMayIServeYou)
+    waitmessage
+    pokemart(ParcelDelibirdStore_Items)
+    msgbox(gText_PleaseComeAgain, MSGBOX_DEFAULT)
+    release
+    end
+}
+raw `
+	.align 2
+ParcelDelibirdStore_Items::
+	.2byte ITEM_GREAT_BALL
+	.2byte ITEM_ULTRA_BALL
+	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_HYPER_POTION
+	.2byte ITEM_REVIVE
+	.2byte ITEM_ICE_HEAL
+	.2byte ITEM_FULL_HEAL
+	.2byte ITEM_SUPER_REPEL
+	.2byte ITEM_ESCAPE_ROPE
+	.2byte ITEM_NONE
+`
+
+script ParcelDelibirdStore_Customer {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("FISHER: The boat brought newspapers. Your hearing is on the second page.\pThe first page is the weather. Fair enough. Up here it always is."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("FISHER: The store is the one place on the island that keeps accounts. Has to. The mainland sends a bill.\pBut you'll notice nothing on the bottom shelf has a price. That's the shelf for when you can't."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibirdStore_Girl {
+    lock
+    faceplayer
+    msgbox(format("GIRL: I'm allowed one thing. I've been choosing since the boat came in.\pIt's between the red string and the liquorice. The string lasts longer. The liquorice is liquorice."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdStore_Shelf {
+    msgbox(format("ICE HEAL, a full row, dusty. A card: REDUCED.\pNobody on the island has needed one in three winters."), MSGBOX_SIGN)
+    end
+}

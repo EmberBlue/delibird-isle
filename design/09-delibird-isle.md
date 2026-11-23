@@ -1,6 +1,6 @@
 # 09 — Delibird Isle (Zone 6)
 
-> Status: **FIRMED** (built 2026-11-08 — see *Built* below; the *frame* is locked — zone 6, mandatory mid-game
+> Status: **FIRMED** (built 2026-11-08, redrawn 2026-11-23 — see *Built* below; the *frame* is locked — zone 6, mandatory mid-game
 > chapter, festival cheer over a permafrost crisis, the thesis in miniature,
 > the give-vs-take motif. The *side-content specifics* below — gift exchange,
 > delivery questline, festival staging — are revisable and partly inherited
@@ -110,32 +110,63 @@ island; a **Ranger commendation** for the delivery mini-mission.
 | Help fix the village flooding | permafrost thaw, **irreversible** (§06); reduce harm, don't win |
 | A relaxing side-island | the **title location** — the game's thesis in miniature (§00) |
 
-## Built (2026-11-08) — the island as it plays
+## Built — the island as it plays
 
-The four areas of the geography table exist as four maps, drawn on the
-Johto tilesets (`gTileset_JohtoGeneral` + `gTileset_AzaleaTown`):
+*First built 2026-11-08 on the Johto tilesets. Drawn again 2026-11-23 on
+Emerald General + leob0505's Lilycove kit, as one piece of ground; that
+drawing is what is described here.*
+
+The four areas of the geography table are four maps, and five doors lead
+indoors. The three outdoor maps share one tileset pair and join without a
+seam: the same terraces run from the village into the Cliffs, the same
+wood from the village up into the Summit, and one brook comes down
+through all of it over five falls, from the tarn to the beach.
 
 | Area | Map | What is there |
 |------|-----|---------------|
-| Holiday Village | `ParcelDelibird` | the gift square, the warming hut, Marta's parcels, the relief line, Ilex (Gym 8), the notice board, two trailheads (north: x 3–5; east: rows 10–12) |
-| Snowy Summit | `ParcelDelibirdSummit` (north connection) | three terraces: the drunken forest and the slump pond (Kari), the snow stakes and the stake-field pond (Cadet Liv's zero gauge, Eskil's thinning nest), the summit tarn with Ingrid's hut and the last patches of snow; the peak sign |
-| Shoreline Cliffs | `ParcelDelibirdCliffs` (east connection) | the cliff top to the point beacon (Rune, Einar's forty-year list with CORSOLA on it), stairs at both ends, the warm beach below with Tomas's cabin at the cliff foot, a Tuber swimming at Midwinter, a Swimmer off the point |
+| Holiday Village | `ParcelDelibird` (44×46) | **the bay**: the pier with the ferry moored at its head, the beach, the survey stakes along the slump line, the sunk sill, a wooded spit that hides an item · **the shore terrace**: the slump pond with planks laid across it and a lantern, the cabin that is going into the ground, Ketil · **the village terrace**: the square (the festival fir with the string lights run to it, the giving table, the stage, the banner over the stair), the Midwinter Hall, the warming hut, the store, the bakery, cabins in red, blue and yellow, lit railings, the seep with its sandbags · **the forest shelf**: tall grass, the wet slope above the hall with its stakes, the Crystal Cavern's mouth in the rock face, the Summit trail · **the north-east heath**: a bench over the strait, where ILEX stands apart from the lights |
+| Snowy Summit | `ParcelDelibirdSummit` (north, 44×40) | four levels joined by stairs: **the drunken forest** (spruces leaning away from the slump pond, Kari, the sledge tree), **the stake field** (the stake line climbing the slope, the stake-field pond, the cairn), **the tarn terrace** (Ingrid's hut, the top stake, the tarn the brook leaves by a fall), **the peak** (the view, the upper cairn). Thirteen patches of snow: the number ILEX asks about and the board gives |
+| Shoreline Cliffs | `ParcelDelibirdCliffs` (east, 40×46) | **the heath** on the cliff top: tall grass, wind-bent spruces, the bench where one counts the lights · **the point beacon** on its knoll (Rune, Einar's list) · **the shore terrace**: the trail, the tall grass, stairs at both ends · **the warm beach**: the tide pools (the chalked FIRST ONE), Tomas's cabin on its dune grass below the east stair · sea stacks off both shores |
 | Crystal Cavern | `ParcelCavern` | unchanged (Kelda, the everfrost) |
+| indoors | `ParcelDelibirdHut`, `-Hall`, `-Store`, `-Cabin1`, `-Cabin2` | the warming hut (the heal: storm rule, nobody asks, nobody pays); the Midwinter Hall (the relief round on the wall, the Foundation's letter on one pin, the blanket loft); the island store; NOEL's family and their chest of sixty-one programmes; the bakery |
 
-**The thaw drawn, not told.** The Johto tilesets have no snow, which is the
-point: the Summit is grass, bare rock, thaw ponds and *thirteen snow-patch
-metatiles added for it* (`tools/skald/snowtiles.py`) — the last snow on a
-summit named for it. Stakes painted to a snowline that is three winters
-bare; a pond where a sledge run was; a drowned trunk in the tarn.
+**The thaw drawn, not told.** The primary tileset has a snow-patch set and
+the Summit uses it exactly thirteen times. The drunken forest's leaning
+spruces, the cairn, the sandbags, the sunk sill, the stakes and their red
+cloth are original art (`tools/skald/holiday_kit.py`). The cabin by the
+slump pond has a door that "will not open and will not quite shut". After
+the hearing the map itself changes: the stakes on the beach and on the wet
+slope carry red cloth (an `ON_LOAD` script under
+`FLAG_SKALDMERE_FINALE_DONE`), because the islanders tied it on themselves,
+and the Summit has twelve patches of snow, as the pair at the cairn say:
+the one on the west shoulder has gone to grass.
+
+**The cheer drawn, too.** String lights run from lamp to lamp round the
+square, to the festival fir and along the terrace rails; the banner hangs
+over the stair one climbs from the boat; the cabins are the kit's one
+small house under three roofs (palette copies); the giving table is a
+counter, so the keeper is spoken to across the parcels; the beacon is a
+small white tower with a red band. Most cabin doors are shut, with a card
+in the latch: AT THE SQUARE. That is where everybody is.
 
 **The relief round (the delivery questline, §13 fix A).** Marta hands
 three parcels at once: Tomas under the cliffs, Ingrid at the stakes, Rune
 at the beacon — three doors across two maps, in any order. All three home,
 she gives the Delibird (Lv 28) and the square is lit at dusk in a short
 scene (the festival night, played straight: "Nobody cheers. They stand in
-it."). The round is in the Field Notebook's side work. Flags:
+it."). The round is in the Field Notebook's side work, and on the hall's
+wall, where the three names gain a tick. Flags:
 `FLAG_SKALDMERE_DELIBIRD_PARCEL / DELIVERED` (Tomas) /
 `FLAG_SKALD_DEL_INGRID_DONE / RUNE_DONE / FLAG_SKALDMERE_DELIBIRD_GIFT`.
+
+**How it is drawn.** Each map is a character canvas
+(`data/layouts/<Map>/canvas.txt`) with a height for every cell; the
+legend `tools/skald/legends/general__leob_lilycove.json` and the terrain
+pass of `tools/skald/draw.py` turn heights into cliffs, rims, shore and
+beach. `python3 tools/skald/holiday_kit.py --rebuild` remakes the kit's
+additions and redraws the three maps in order. The canvases were laid out
+by placement scripts (`tools/skald/compose/delibird_*.py`), kept for the
+next time a terrace has to move.
 
 **Resolved from the Open list below:** the named elder who carries the
 guardian lore is **Marta**; the festival trigger is the completed round,

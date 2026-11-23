@@ -1,0 +1,31 @@
+// ParcelDelibirdCabin1 -- the red cabin on the west lane: NOEL's family. Sixty-one festival programmes in a chest.
+
+mapscripts ParcelDelibirdCabin1_MapScripts {
+}
+
+script ParcelDelibirdCabin1_Gran {
+    lock
+    faceplayer
+    if (flag(FLAG_SKALDMERE_FINALE_DONE)) {
+        msgbox(format("GRAN: Sixty-one Midwinters. I kept every programme. The Survey girl asked to copy the dates. I said copy them here. They don't leave the house.\pShe sat on the floor and copied them. That's a proper surveyor."), MSGBOX_DEFAULT)
+    } elif (flag(FLAG_SKALDMERE_DELIBIRD_GIFT)) {
+        msgbox(format("GRAN: They lit the square. I could see all of it from this chair.\pThat's how I know it's smaller. I used to have to go outside to see the end of it."), MSGBOX_DEFAULT)
+    } else {
+        msgbox(format("GRAN: NOEL is on the stage again, I expect, challenging anybody with a badge.\pI told that boy the festival is smaller every year. He heard 'festival'. Good. Let him."), MSGBOX_DEFAULT)
+    }
+    release
+    end
+}
+
+script ParcelDelibirdCabin1_Father {
+    lock
+    faceplayer
+    msgbox(format("MAN: The runners want waxing. They've wanted waxing for three winters. I do it anyway, first week of December.\pYou keep a sledge ready the way you keep a spare bed made."), MSGBOX_DEFAULT)
+    release
+    end
+}
+
+script ParcelDelibirdCabin1_Chest {
+    msgbox(format("A chest of festival programmes, one a year, sixty-one of them.\pThe early ones give two dates: the festival, and the day the strait froze. The last nine give one."), MSGBOX_SIGN)
+    end
+}

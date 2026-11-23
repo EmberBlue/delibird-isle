@@ -308,7 +308,7 @@ script ParcelIsle_FerryCaptain {
             closemessage
             playse(SE_SHIP)
             delay(40)
-            warp(MAP_PARCEL_DELIBIRD, 9, 22)
+            warp(MAP_PARCEL_DELIBIRD, 22, 43)
             waitstate
             end
         case 1:
