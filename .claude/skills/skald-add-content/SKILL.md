@@ -133,8 +133,12 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   the canvas's `--- over` block (hung over whatever the cell is), the giving
   table `V` is `MB_COUNTER` (the keeper is spoken to across it), `<` `>` are
   leaning spruces, `x` `X` red-cloth stakes, `E` the beacon, `&` a cairn.
-- Doors are solid cells; a warp event on one makes it open. A door with no
-  interior gets a `sign` bg event on the door cell instead.
+- An animated door (`MB_ANIMATED_DOOR`, 0x69) is a solid cell; a warp event
+  on it makes it open. A door with no interior gets a `sign` bg event on
+  the door cell instead. A door that does not animate (`MB_NON_ANIMATED_DOOR`,
+  0x60: the Breakwater hut's dark doorway) must be a walkable cell, listed
+  in its stamp's `pass`: its warp fires on stepping in, and drawn solid it
+  is a wall (`sweep.py` caught exactly that on the Breakwater's first draw).
 - To move a terrace, the brook or a whole block, edit the placement script
   (`tools/skald/compose/delibird_village.py`, `_summit.py`, `_cliffs.py`;
   helpers in `compose/kit.py`: levels, stamps that claim their cells, a fir
@@ -145,6 +149,28 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   `map.json` by hand (print a grid of the canvas to pick cells).
 - The Johto legend (`johtogeneral__azaleatown.json`) and `snowtiles.py` are
   what the island was drawn with before; no map uses them now.
+- **The same terrain pass works on any General map.** Its pieces are all in
+  the primary, so a legend for another kit only copies the `terrain` block
+  (`general__slateport.json`, the Breakwater, is the second one). Three
+  things it knows that are easy to get wrong by hand: (1) paving or grass
+  at land height standing in water becomes a mole or a headland by itself
+  (rock flanks, the water's shadow), so levels can be just 1 for land and 0
+  for water; (2) the edge between shallows and deep water is a ring of
+  half-and-half pieces: its north row is drawn in the shallow cells, its
+  other sides in the deep cells beside them (`ring_piece` in `draw.py`);
+  (3) sand straight onto deep water takes the `strand` ring by the same
+  rule (only its north edge is sand; the west, east and south lips are
+  ocean to the engine and lie in the sea cell, never on a cell one walks),
+  sand onto shallows the `tide` line. A low rock is 2x2 (373 374 over
+  381 382), a rock awash 336 337 over 344 345, a sea stack 3x3.
+- **Check a piece's behaviour before putting it under the player's feet.**
+  A shore set mixes ground and water pieces that look alike (General's
+  283-301: 284, 292, 317, 318 are sand, the rest ocean). A water piece on
+  a walkable cell gives wild water Pokemon on foot, and `reach.py`, which
+  takes water by its behaviour, plans as if the cell were sea while the
+  harness walks onto it. `reach.py` lists such cells ("water a walker can
+  step onto"). A sign that is read by facing water (the dredge line) needs
+  the faced cell at the water's elevation, 1.
 
 ## Evidence and the survey stakes
 - A zone's clue tells set bits in its `VAR_SKALDMERE_CHn_EVIDENCE` (bit

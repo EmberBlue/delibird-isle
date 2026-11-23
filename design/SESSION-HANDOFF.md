@@ -35,7 +35,9 @@ ranked them: Coast, River, Wetlands, Weather, Marsh, Floodbasin, Highlands,
 Corridor, the Sluice, Fernwick and Mistwood are already rich; Delibird
 Isle was the plainest map in the game and **was redrawn whole on
 2026-11-23** (village, Summit and Cliffs as one island; see Art). The
-Breakwater and the Wetlands Hide are what is left of that list.
+Breakwater and the Wetlands Hide followed the same day, so that list is
+done. What a next look should rank is the interiors (most are stock
+layouts).
 
 ## What's playable right now (the whole arc, end to end)
 
@@ -182,10 +184,10 @@ until 2026-11-09 (the Coast was Slateport at 1%, the Marsh 1%, the Station
 | `ParcelCoast` | Slateport | 21% | an industrial port: crate yard (822/823), quay walls, the park paved, boats landed |
 | `ParcelRiver` | Route 117 / Mauville | 15% | Elvsund's market ground and river |
 | `ParcelWetlands` | Route 119 south | 13% | dead-reed beds, standing water, the drained pond |
-| `ParcelCoastBreakwater` | Route 109 | 12% | the beach the breakwater killed: furniture gone, south lobe drowned, posts, apron |
+| `ParcelCoastBreakwater` | none since 2026-11-23 (was Route 109, 12%) | drawn | a canvas now: the breakwater as a wall, the silted basin, the spoil bank, the old wall's posts (see Art) |
+| `ParcelWetlandsHide` | none since 2026-11-23 (was Route 102) | drawn | a canvas now: the pond dug straight, boards on the bank, the hide behind its gate, the reed cut (see Art) |
 | `ParcelWeather` | Route 119 north | 10% | the Station yard: gravel inside a fence, stakes on the slope |
 | `ParcelCorridor` | Route 116 | 9% | the culvert route |
-| `ParcelWetlandsHide` | Route 102 | 9% | the pond drawn down a row onto mud; a hide screen |
 | `ParcelMarsh` | Route 119 north | 8% | the river low, puddled bed, dead-reed beds, a ledge |
 | `ParcelFernwick` | Rustboro | 7% | the Survey town |
 | `ParcelFloodbasin` | Route 120 | 7% | dead-reed beds, puddles on the flats |
@@ -488,7 +490,68 @@ replaces is gone from the tree).
   (`tools/skald/compose/delibird_*.py`: `--write`, then the kit's
   `--rebuild`; `--check` says whether a canvas was hand-edited since). The
   canvas is still what the game is built from. Also the same day:
-  Saltwick's stairs take the kit's left-edge piece (nine cells).
+  Saltwick's stairs take the kit's left-edge piece (nine cells). Verified
+  on commit 974707ae92: every standing audit, the island's 19 warps and
+  connections walked in the emulator, the full replay (ten chains; the
+  island chapter now walks pier to lookout for ILEX, plays the square and
+  heals inside the hut), CI green. `tools/skald/play/chain5.sh` and
+  `spine.sh` carry the new coordinates.
+- **The Breakwater, second drawing** (2026-11-23). `ParcelCoastBreakwater`
+  was Route 109 with 12% changed: a beach, a row of posts and sand islands
+  with hard edges. It is a canvas now (`general__slateport`, composed by
+  `tools/skald/compose/coast_breakwater.py`) and the thing it is named for
+  exists: a paved wall with rock flanks from the apron's east end, south,
+  then west across the bay's mouth to "the end of the wall" (Board1),
+  bollards on its lee side. Paving at land height standing in water is all
+  the terrain pass needs to make it. Behind it the basin is silted shallows
+  one wades, with the dredged channel, a dredge hole, silt banked against
+  the wall and the spoil bank (a new sign); the old wall is three posts on
+  the sand and five rocks awash; the lifeguard hut, the closure notice and
+  the tins moved to where the dialogue says they are ("past the hut, start
+  at the wall end"). Outside the wall: three sandbars in rings of shallows
+  for the SURF content, boats in the lee, rocks all round. The join rows
+  0-1 are the Coast's apron as before. Two finds on the way, both in `draw.py` now: the
+  shallows-to-deep edge is a nine-piece ring of half-and-half pieces whose
+  north row belongs to the shallow cells and the rest to the deep cells
+  beside them (the first table put inner-corner pieces on outer corners
+  and left teeth; `shoal_piece` has the rule), and the low rock 373/374 is
+  the top half of a 2x2 (381/382 under it). The island's Cliffs lost four
+  half rocks to the second fix. A third find, on the Coast itself: its
+  generator took 824-826/832-834 for a rock heap and stood two of them on
+  the south quay as dredge spoil; in this kit they are a sailboat on its
+  own square of water. They are crates now (twelve cells, collision
+  unchanged). And one in the engine's rules: a door that does not animate
+  (`MB_NON_ANIMATED_DOOR`, the lifeguard hut's) must be a walkable cell,
+  where an animated one is solid; `sweep.py` caught the hut's door drawn
+  solid. The replay caught the last: the beach's foam-lip pieces
+  (283-301, 325/326) are ocean to the engine, all but the north edge, so
+  they belong in the sea cell beside the sand. Drawn on sand, the lip at
+  the foot of the quay was ground: the dredge reading at (7,0) was walked
+  onto instead of faced (chapter 6 could not be signed), and a walker
+  there would have met wild water Pokemon on foot. The strand follows the
+  shoal's rule now (`ring_piece` in `draw.py`), the quay's lip is four sea
+  tiles in the legend (as it is on the Coast above), and `reach.py`
+  reports any water left at ground height beside ground a walker reaches.
+- **The Reedmere hide, second drawing** (2026-11-23). `ParcelWetlandsHide`
+  was a Route 102 slice with patches. It is a canvas now
+  (`general__leob_petalburg`, composed by
+  `tools/skald/compose/wetlands_hide.py`), drawn from what its signs say:
+  "keep to the boards" (boards in from the landing between the firs, along
+  the bank, a pier one sits on; `tools/skald/hide_kit.py` adds four plank
+  metatiles to the Petalburg kit, `--rebuild` redraws the map), "the year
+  the pond was dug straight" (ragged far bank, straight south and east
+  banks), "the hide's gate" and "outer wall" (leob's brown-roofed cottage
+  behind two posts and a hedge screen; its door is shut and carries the
+  board that is "inside the hide"), "the reed cut on the far bank" (a gap
+  in the reeds with the dusk-count sign). The arrival cell (47,10) and the
+  exit triggers (49,10-11) kept their coordinates. The terrain pass draws
+  a pond's south bank on the grass cell under the water now. The pond is
+  water one can use, as the old one was (the first pass of this drawing
+  had it solid): surfed with the map's water table, and fished from the
+  boards and the pier, which HJALTE says he does ("MAGIKARP in the pond.
+  Hundreds."). The map had no fishing table; it has one now (MAGIKARP on
+  every rod, GOLDEEN and BARBOACH, the clean-water fish of §06, from the
+  good rod up, SEAKING and WHISCASH rare on the super rod).
 - **Building kits** — `kit_restyle.py`. Every town was a stock building kit
   (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
   wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the

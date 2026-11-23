@@ -1,0 +1,379 @@
+{
+ "_about": "Emerald General (leob0505's ORAS set) + leob0505's Petalburg kit with the hide's boards (tools/skald/hide_kit.py): the Reedmere hide. GROUND '.' grass (a placement script plants firs on it), ',' grass kept clear, 'f' flowers, 't' reeds one walks through (tall grass), 'a' the taller reeds, 'r' bleached reed litter, 'g' pale sedge, 'm' bare mud, 'p' a sand path, 'o' the pond (still water at the water's own height: surfed across, fished from the boards and the pier; the bank pieces the terrain pass puts on it are pond water too). 'k' boards for a walk running east-west, 'K' north-south, 'j' 'J' the same over water. PROPS 'b' round bush, 'h' a clump of hedge, 'F' a post-and-rail fence, '1' a post, 'S' wooden sign, 'Z' signboard, 'N' notice board, 'B' a single spruce, 'q' boulder. STAMPS T the big fir (2x2), C the hide (a brown-roofed cottage, 4x4), U a puddle (3x3, waded).",
+ "fill": "#",
+ "border": [
+  468,
+  469,
+  476,
+  477
+ ],
+ "tiles": {
+  ".": [
+   1,
+   0,
+   3
+  ],
+  ",": [
+   1,
+   0,
+   3
+  ],
+  "f": [
+   4,
+   0,
+   3
+  ],
+  "t": [
+   13,
+   0,
+   3
+  ],
+  "a": [
+   21,
+   0,
+   3
+  ],
+  "r": [
+   265,
+   0,
+   3
+  ],
+  "g": [
+   473,
+   0,
+   3
+  ],
+  "m": [
+   268,
+   0,
+   3
+  ],
+  "p": [
+   289,
+   0,
+   3
+  ],
+  "o": [
+   161,
+   0,
+   1
+  ],
+  "k": [
+   656,
+   0,
+   3
+  ],
+  "K": [
+   657,
+   0,
+   3
+  ],
+  "j": [
+   658,
+   0,
+   3
+  ],
+  "J": [
+   659,
+   0,
+   3
+  ],
+  "b": [
+   514,
+   1,
+   0
+  ],
+  "h": [
+   575,
+   1,
+   0
+  ],
+  "F": [
+   329,
+   1,
+   0
+  ],
+  "1": [
+   306,
+   1,
+   0
+  ],
+  "S": [
+   27,
+   1,
+   0
+  ],
+  "Z": [
+   3,
+   1,
+   0
+  ],
+  "N": [
+   305,
+   1,
+   0
+  ],
+  "B": [
+   22,
+   1,
+   0
+  ],
+  "q": [
+   224,
+   1,
+   0
+  ]
+ },
+ "stamps": {
+  "T": {
+   "rows": [
+    [
+     468,
+     469
+    ],
+    [
+     484,
+     485
+    ]
+   ]
+  },
+  "C": {
+   "rows": [
+    [
+     620,
+     621,
+     621,
+     622
+    ],
+    [
+     628,
+     629,
+     629,
+     630
+    ],
+    [
+     636,
+     639,
+     637,
+     638
+    ],
+    [
+     644,
+     647,
+     655,
+     646
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "door": [
+    3,
+    1
+   ],
+   "_note": "the hide: leob's brown-roofed cottage"
+  },
+  "U": {
+   "rows": [
+    [
+     200,
+     201,
+     202
+    ],
+    [
+     208,
+     209,
+     210
+    ],
+    [
+     216,
+     217,
+     218
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     1,
+     0
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     0
+    ],
+    [
+     2,
+     1
+    ],
+    [
+     2,
+     2
+    ]
+   ]
+  }
+ },
+ "terrain": {
+  "ground": ".,ftargm",
+  "deep": "",
+  "wall": {
+   "S": 124,
+   "W": 115,
+   "E": 117,
+   "SW": 123,
+   "SE": 125,
+   "iSW": 137,
+   "iSE": 116,
+   "endW": 116,
+   "endE": 137,
+   "W_grass": 112,
+   "E_land": 114,
+   "N": 2,
+   "NW": 211,
+   "NE": 212
+  },
+  "base": {
+   "mid": 145,
+   "left": 120,
+   "right": 122
+  },
+  "rim": {},
+  "fresh": "o",
+  "wet": "ojJ",
+  "lawn": ".,",
+  "bank": {
+   "N": 177,
+   "E": 186,
+   "W": 184,
+   "NE": 178,
+   "NW": 176,
+   "iNE": 194,
+   "iNW": 192,
+   "below": 2
+  }
+ },
+ "paths": [
+  {
+   "chars": "p",
+   "join": "kKjJ",
+   "pieces": {
+    "plain": 289,
+    "N": 281,
+    "S": 297,
+    "W": 288,
+    "E": 290,
+    "NW": 280,
+    "NE": 282,
+    "SW": 296,
+    "SE": 298
+   }
+  },
+  {
+   "chars": "r",
+   "join": "",
+   "pieces": {
+    "plain": 265,
+    "N": 257,
+    "S": 273,
+    "W": 264,
+    "E": 266,
+    "NW": 256,
+    "NE": 258,
+    "SW": 272,
+    "SE": 274
+   }
+  },
+  {
+   "chars": "g",
+   "join": "",
+   "pieces": {
+    "plain": 473,
+    "N": 465,
+    "S": 481,
+    "W": 472,
+    "E": 474,
+    "NW": 464,
+    "NE": 466,
+    "SW": 480,
+    "SE": 482
+   }
+  },
+  {
+   "chars": "m",
+   "join": "",
+   "pieces": {
+    "plain": 268,
+    "N": 260,
+    "S": 276,
+    "W": 267,
+    "E": 269,
+    "NW": 259,
+    "NE": 261,
+    "SW": 275,
+    "SE": 277
+   }
+  }
+ ],
+ "runs": {
+  "F": [
+   328,
+   329,
+   330,
+   329
+  ]
+ },
+ "firs": {
+  "T": {
+   "body": [
+    468,
+    469
+   ],
+   "foot": [
+    484,
+    485
+   ],
+   "foot_tip": [
+    476,
+    477
+   ]
+  }
+ },
+ "tall": {
+  "B": {
+   "top_of": 14
+  }
+ }
+}

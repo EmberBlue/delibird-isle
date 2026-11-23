@@ -1,0 +1,363 @@
+{
+ "_about": "Emerald General (leob0505's ORAS set) + the Slateport kit (the Mereholt Coast's): the Breakwater. The canvas's levels block says what is land (1) and what is water (0); the terrain pass gives paving that stands in water its rock flanks (a mole), the water its shadows, the shallows their tide line and sand straight onto deep water its foam lip (in the sea cell beside the sand, as the set is made: those pieces are ocean). 'c' paving (a mole's walkway; its outermost cells toward water become rock, and bollards on a north edge), 's' sand, 'w' shallows (waded), '~' sea, 'O' sea a swimmer stands in. 'i' 'I' the old wall's posts in the sand, 'd' a rock in the shallows, 'n' a wooden board in the sand, 'Z' the harbour office's notice, 'z' a signboard, 'K' 'k' 'j' 'J' crates, 'b' a mooring cleat on the paving, 'h' a bench. '[' ']' '_' '/' the lip of sand at the foot of the Coast's quay where it comes down onto this map (sea cells, as on the Coast: west, east, south, the south-east corner), '(' ')' the lower half of a rock awash whose upper half is the Coast's last row. STAMPS H the lifeguard hut, R a rock awash (2x2), e a low rock (2x2), A a sea stack (3x3), Y a sailboat (3x2), U a beach umbrella (2x2, its top walked behind).",
+ "fill": "#",
+ "border": [
+  368,
+  368,
+  368,
+  368
+ ],
+ "tiles": {
+  "~": [
+   368,
+   0,
+   1
+  ],
+  "O": [
+   368,
+   0,
+   0
+  ],
+  "w": [
+   414,
+   0,
+   3
+  ],
+  "s": [
+   292,
+   0,
+   3
+  ],
+  "c": [
+   514,
+   0,
+   3
+  ],
+  "i": [
+   635,
+   1,
+   0
+  ],
+  "I": [
+   636,
+   1,
+   0
+  ],
+  "d": [
+   404,
+   1,
+   0
+  ],
+  "n": [
+   660,
+   1,
+   0
+  ],
+  "Z": [
+   870,
+   1,
+   0
+  ],
+  "z": [
+   3,
+   1,
+   0
+  ],
+  "K": [
+   822,
+   1,
+   0
+  ],
+  "k": [
+   823,
+   1,
+   0
+  ],
+  "j": [
+   814,
+   1,
+   0
+  ],
+  "J": [
+   815,
+   1,
+   0
+  ],
+  "b": [
+   813,
+   1,
+   0
+  ],
+  "(": [
+   344,
+   1,
+   0
+  ],
+  ")": [
+   345,
+   1,
+   0
+  ],
+  "[": [
+   291,
+   0,
+   1
+  ],
+  "]": [
+   293,
+   0,
+   1
+  ],
+  "_": [
+   300,
+   0,
+   1
+  ],
+  "/": [
+   301,
+   0,
+   1
+  ]
+ },
+ "stamps": {
+  "H": {
+   "rows": [
+    [
+     704,
+     705,
+     705,
+     705,
+     706
+    ],
+    [
+     712,
+     713,
+     713,
+     713,
+     714
+    ],
+    [
+     728,
+     721,
+     723,
+     721,
+     730
+    ],
+    [
+     717,
+     19,
+     731,
+     19,
+     718
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     0,
+     4
+    ],
+    [
+     3,
+     2
+    ]
+   ],
+   "door": [
+    3,
+    2
+   ],
+   "_note": "the lifeguard hut; its door (731) is not an animated one, so the cell is walkable and the warp fires on stepping in"
+  },
+  "R": {
+   "rows": [
+    [
+     336,
+     337
+    ],
+    [
+     344,
+     345
+    ]
+   ],
+   "_note": "a rock awash"
+  },
+  "e": {
+   "rows": [
+    [
+     373,
+     374
+    ],
+    [
+     381,
+     382
+    ]
+   ],
+   "_note": "a low rock awash (deep water)"
+  },
+  "A": {
+   "rows": [
+    [
+     370,
+     379,
+     372
+    ],
+    [
+     378,
+     113,
+     380
+    ],
+    [
+     386,
+     121,
+     388
+    ]
+   ],
+   "_note": "a sea stack"
+  },
+  "Y": {
+   "rows": [
+    [
+     824,
+     825,
+     826
+    ],
+    [
+     832,
+     833,
+     834
+    ]
+   ],
+   "_note": "a sailboat"
+  },
+  "U": {
+   "rows": [
+    [
+     738,
+     739
+    ],
+    [
+     754,
+     755
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "_note": "a beach umbrella"
+  },
+  "h": {
+   "rows": [
+    [
+     736
+    ],
+    [
+     752
+    ]
+   ],
+   "_note": "a bench on the sand"
+  }
+ },
+ "terrain": {
+  "wall": {
+   "S": 124,
+   "W": 115,
+   "E": 117,
+   "SW": 123,
+   "SE": 125,
+   "iSW": 137,
+   "iSE": 116,
+   "endW": 116,
+   "endE": 137,
+   "N": 560,
+   "NW": 115,
+   "NE": 117
+  },
+  "base": {
+   "mid": 145,
+   "left": 120,
+   "right": 122,
+   "left_sand": 144,
+   "right_sand": 146
+  },
+  "rim": {
+   "N": 393,
+   "E": 402,
+   "W": 400,
+   "NE": 385,
+   "NW": 384,
+   "iNE": 410,
+   "iNW": 408
+  },
+  "tide": {
+   "N": 422,
+   "W": 415,
+   "E": 413,
+   "S": 406,
+   "NW": 398,
+   "NE": 397,
+   "SW": 390,
+   "SE": 389,
+   "iNW": 423,
+   "iNE": 421,
+   "iSE": 405,
+   "iSW": 407
+  },
+  "strand": {
+   "N": 284,
+   "S": 300,
+   "W": 291,
+   "E": 293,
+   "NW": 283,
+   "NE": 285,
+   "SW": 299,
+   "SE": 301,
+   "iNE": 318,
+   "iNW": 317,
+   "iSE": 326,
+   "iSW": 325
+  },
+  "ground": "c",
+  "deep": "~O",
+  "shallow": "wd",
+  "sand": "siInZz",
+  "plain": "d",
+  "wet": "~OwdReAY()[]_/",
+  "through": "",
+  "shoal": {
+   "N": 430,
+   "S": 446,
+   "W": 437,
+   "E": 439,
+   "NW": 429,
+   "NE": 431,
+   "SW": 445,
+   "SE": 447,
+   "iNW": 411,
+   "iNE": 412,
+   "iSW": 419,
+   "iSE": 420
+  }
+ }
+}

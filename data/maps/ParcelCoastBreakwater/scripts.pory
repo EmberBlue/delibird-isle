@@ -1,6 +1,9 @@
-// ParcelCoastBreakwater -- the beach south of the quay (Route 109): closed to bathing, tins with
-// the crest on every tide, swimmers over the dredge line, a fisherman on the far island who
-// isn't in the quota. Eight trainers at 33-38 (the water ones need Surf).
+// ParcelCoastBreakwater -- the beach south of the quay: closed to bathing, tins with the crest on
+// every tide, swimmers over the dredge line, a fisherman on the far bar who isn't in the quota.
+// Eight trainers at 33-38 (the water ones need Surf). Drawn a second time 2026-11-23 as a canvas:
+// the breakwater is a real wall now (root at the beach, out south, then west across the bay's
+// mouth to "the end of the wall"), the basin behind it is silted shallows one wades, with the
+// dredged channel and the spoil bank; the old wall is a line of posts and rocks awash.
 
 mapscripts ParcelCoastBreakwater_MapScripts {
 }
@@ -795,5 +798,17 @@ script ParcelCoastBreakwater_PairWall {
 
 script ParcelCoastBreakwater_Board3 {
     msgbox(format("A SURVEY BOARD at the breakwater's root. TENTACOOL in the shallows below, more every warm year, the board says, and KRABBY fewer. The board gives both lines and lets them cross.\pWhere they cross is a date. The date has a tide written beside it, as if the Survey wanted the hour too."), MSGBOX_SIGN)
+    end
+}
+
+// --- the breakwater redrawn (2026-11-23): the wall, the basin behind it, the spoil bank ---
+
+script ParcelCoastBreakwater_Spoil {
+    msgbox(format("MEREHOLT HARBOUR WORKS. Dredge spoil. Licensed disposal site.\pThe licence number is the one the board at the end of the wall gives. KRABBY have dug into the bank. They are the only thing on it that chose to be here."), MSGBOX_SIGN)
+    end
+}
+
+script ParcelCoastBreakwater_OuterBoard {
+    msgbox(format("A board on the outer bar, facing the open water. No crest and no number. Painted by hand:\pTHEY CALVE HERE. GO ROUND."), MSGBOX_SIGN)
     end
 }

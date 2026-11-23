@@ -27,10 +27,12 @@ Legend JSON:
    "fill": "#", "border": [id,id,id,id]}
 A stamp char marks the top-left of a multi-tile object; the cells it covers
 must contain the fill char. Cells listed in "pass" are walkable (col 0, elev 3)
-- arches, a roof one walks behind; everything else in a stamp is solid (col 1),
-its door too: the engine opens a door the player walks north into when a warp
-event sits on it, whatever its collision. "door": [row, col] has the door's
-cell printed and written to anchors.json.
+- arches, a roof one walks behind; everything else in a stamp is solid (col 1).
+An animated door (behaviour MB_ANIMATED_DOOR) stays solid: the engine opens it
+when the player walks north into it and a warp event sits on it. A door that
+does not animate (MB_NON_ANIMATED_DOOR: a dark doorway, a cave mouth) must be
+in "pass", because its warp fires on stepping onto the cell. "door": [row, col]
+has the door's cell printed and written to anchors.json.
 
 After the characters are laid down, the legend's optional passes finish the drawing. None of
 them changes collision or elevation; they only choose the metatile for a cell from what lies
@@ -346,9 +348,15 @@ def terrain(grid, owner, levels, spec, W, H):
         the base ends "left"/"right" on grass, "left_sand"/"right_sand" on sand, the plain
         corner beside water
       * deep water beside land gets the bank's shadow (a brook is deep water at the land's own
-        height); deep water beside shallows gets the shelf's edge; shallows beside sand get the
-        tide line
-      * fresh water ("fresh") gets a bank ("bank") on every side that is not water ("wet")
+        height); the edge between shallows and deep water is the "shoal" ring (see ring_piece
+        below for which cell carries which piece); shallows beside sand get the tide line; sand
+        straight onto deep water gets the "strand" ring (optional: the Coast's hard beach edge),
+        drawn by the same rule as the shoal: the sand's lip lies in the SEA cell west, east and
+        south of the sand (those pieces are ocean to the engine: drawn on sand, a walker would
+        meet wild water Pokemon on foot), and only the north edge is drawn on the sand itself
+      * fresh water ("fresh") gets a bank ("bank") on every side that is not water ("wet"); the
+        set has no piece for land to the south, so the lip of a south bank is drawn on the grass
+        cell under the water ("lawn" names the plain grass, "bank": {"below": id} the piece)
     The legend's "terrain" block names the characters and the pieces:
 
       "terrain": {"ground": ".,f", "deep": "~", "shallow": "w", "sand": "s",
@@ -356,7 +364,8 @@ def terrain(grid, owner, levels, spec, W, H):
                            "W_grass", "W_sand", "E_land", "N", "NW", "NE"},
                   "base": {"mid", "left", "right", "left_sand", "right_sand"},
                   "rim": {"N", "E", "W", "NE", "NW", "iNE", "iNW"},
-                  "tide": {...}, "shelf": {...}, "drop": {...}, "through": "=C"}
+                  "tide": {...}, "shoal": {"N","S","W","E","NW","NE","SW","SE","iNW","iNE","iSW","iSE"},
+                  "strand": {...}, "through": "=C"}
     Stairs and anything else that is not a "ground" character is left alone, so a stair drawn
     across a wall's two rows stays a stair. "through" lists what interrupts a wall without ending
     it (a stair, a cave mouth, a waterfall): the wall beside it keeps its plain piece.
@@ -434,8 +443,9 @@ def terrain(grid, owner, levels, spec, W, H):
         for x, y, m in made:
             solid(x, y, m)
             owner[y][x] = "%"
-    tide, shelf, drop = spec.get("tide", {}), spec.get("shelf", {}), spec.get("drop", {})
+    tide, shelf, drop, strand = spec.get("tide", {}), spec.get("shelf", {}), spec.get("drop", {}), spec.get("strand", {})
     fresh, bank = set(spec.get("fresh", "")), spec.get("bank", {})
+    lawn = set(spec.get("lawn", ""))            # plain grass that takes the lip of a pond's south bank ("bank": {"below": id})
     wet = set(spec.get("wet", "")) | deep | shallow | fresh
     plain = set(spec.get("plain", ""))          # wet or sandy things that keep their own picture (a rock, a stake)
     is_land = lambda x, y: 0 <= x < W and 0 <= y < H and owner[y][x] not in wet and owner[y][x] not in sand
@@ -454,6 +464,37 @@ def terrain(grid, owner, levels, spec, W, H):
                 return table["i" + dg]
         return None
 
+    shoal = spec.get("shoal")
+
+    def cls(x, y, chars):                       # past the edge the water goes on as it is at the edge
+        return owner[min(max(y, 0), H - 1)][min(max(x, 0), W - 1)] in chars
+
+    def ring_piece(x, y, o, inner, table):
+        """An edge against deep water drawn with a nine-piece ring whose pieces are each half and half: the
+        shoal between shallows and deep water, the strand where sand meets the sea with no shallows between.
+        Only the ring's north row is ground of the inner kind (shallows one can wade, sand one can walk); the
+        rest is sea a surfer crosses with the inner ground's lip painted in. So the north edge is drawn in the
+        inner cell, the other three in the deep cell beside it:
+          an inner cell under deep water      N (or the inner corner iNW / iNE where the deep above ends)
+          a deep cell beside / below inner    W, E, S; the rounded corners NW, NE beside a north-edge cell,
+                                              SW, SE where the inner ground touches only diagonally from above;
+                                              iSW, iSE where it lies both above and to one side."""
+        dp, sh = (lambda a, b: cls(a, b, deep)), (lambda a, b: cls(a, b, inner))
+        if o in inner:
+            if not dp(x, y - 1):
+                return None
+            nw, ne = dp(x - 1, y - 1), dp(x + 1, y - 1)
+            return table["iNW"] if nw and not ne else table["iNE"] if ne and not nw else table["N"]
+        n, e, w = sh(x, y - 1), sh(x + 1, y), sh(x - 1, y)
+        if n and e: return table["iSW"]
+        if n and w: return table["iSE"]
+        if n: return table["S"]
+        if e: return table["NW"] if dp(x + 1, y - 1) else table["W"]
+        if w: return table["NE"] if dp(x - 1, y - 1) else table["E"]
+        if sh(x + 1, y - 1): return table["SW"]
+        if sh(x - 1, y - 1): return table["SE"]
+        return None
+
     for y in range(H):
         for x in range(W):
             o = owner[y][x]
@@ -462,12 +503,18 @@ def terrain(grid, owner, levels, spec, W, H):
             here = lambda chars: (lambda k: is_in(x + OFFS[k][0], y + OFFS[k][1], chars))
             m = None
             if o in deep:
-                m = pick(rim, lambda k: is_land(x + OFFS[k][0], y + OFFS[k][1])) or pick(drop, here(shallow))
+                m = pick(rim, lambda k: is_land(x + OFFS[k][0], y + OFFS[k][1]))
+                m = m or (ring_piece(x, y, o, sand, strand) if strand else None)
+                m = m or (ring_piece(x, y, o, shallow, shoal) if shoal else pick(drop, here(shallow)))
             elif o in shallow:
-                m = pick(tide, here(sand)) or pick(shelf, here(deep))
+                m = pick(tide, here(sand)) or (ring_piece(x, y, o, shallow, shoal) if shoal else pick(shelf, here(deep)))
+            elif o in sand and strand:            # sand straight onto the sea: only the north edge is sand to walk on
+                m = ring_piece(x, y, o, sand, strand)
             elif o in fresh:                      # a brook or a pool: a bank wherever the neighbour is not water
                 m = pick(bank, lambda k: 0 <= x + OFFS[k][0] < W and 0 <= y + OFFS[k][1] < H
                          and owner[y + OFFS[k][1]][x + OFFS[k][0]] not in wet)
+            elif o in lawn and "below" in bank and y > 0 and owner[y - 1][x] in fresh:
+                m = bank["below"]                 # the south bank is drawn on the grass under the water
             if m:
                 put(grid, x, y, m)
 

@@ -374,6 +374,24 @@ def report(maps, byid, seen, hm, only=None):
                     continue
                 if dm and sw[2] is not None and dm.inside(sw[1], sw[2]) and (sw[1], sw[2]) not in reached.get(dm.name, set()):
                     issues.append(f"script warp -> {sw[0][11:]} ({sw[1]},{sw[2]}): destination tile not reachable (solid?)")
+            # Water is water to this audit by its behaviour, but to the engine a walker is kept off it only by its
+            # elevation (1). A sea or pond tile left at ground height beside ground is walked onto, and gives wild
+            # water Pokemon on foot (the Breakwater's beach lip, 2026-11-23: its pieces are ocean, drawn on sand).
+            wet = set()
+            for (x, y) in r:
+                k = tile_kind(m, x, y, hm)
+                if not k or k[0] != "land" or k[1] in (0, 1, 15):
+                    continue                      # "land" at elevation 1 is a pier's foot a surfer passes under
+                for nx, ny in neighbours(x, y):
+                    if not m.inside(nx, ny) or (nx, ny) in m.objs:
+                        continue                  # a swimmer or a fish stands on its elevation-0 tile and keeps it shut
+                    col, elev, beh = m.beh(nx, ny)
+                    if col == 0 and elev in (0, 15, k[1]) and any(w in beh for w in WATER_WORDS):
+                        wet.add((nx, ny))
+            if wet:
+                cells = sorted(wet, key=lambda t: (t[1], t[0]))
+                issues.append(f"water a walker can step onto ({len(cells)} tile(s) at ground height): "
+                              + " ".join(f"({x},{y})" for x, y in cells[:8]) + (" ..." if len(cells) > 8 else ""))
         odd = {}
         for yy in range(m.H):
             for xx in range(m.W):

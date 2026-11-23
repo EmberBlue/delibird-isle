@@ -1,6 +1,10 @@
-// ParcelWetlandsHide -- the Reedmere bird hide: a trail west of the landing (Route 102), the
-// pond that is the backwater's last clean water, eight trainers at 14-16, a warden, two signs.
+// ParcelWetlandsHide -- the Reedmere bird hide: boards west from the landing, the pond that is
+// the backwater's last clean water, eight trainers at 14-16, a warden, the boards and signs.
 // In and out by the east end (49,10-11) <-> the Wetlands' west edge (2-3,26-27).
+// Drawn a second time 2026-11-23 as a canvas: the pond is ragged on its far side and dug straight
+// along the south and the east, the boards run on the dug bank with a pier, the hide stands on the
+// east bank behind its gate, and the reed cut where the dusk count is kept is on the far bank.
+// The pond is surfed (water_mons) and fished from the boards and the pier (fishing_mons: HJALTE's MAGIKARP).
 
 mapscripts ParcelWetlandsHide_MapScripts {
 }

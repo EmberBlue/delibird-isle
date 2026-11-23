@@ -23,10 +23,10 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 24,
-      "y": 13,
+      "x": 32,
+      "y": 24,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -37,10 +37,10 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
-      "x": 19,
-      "y": 10,
+      "x": 13,
+      "y": 9,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -51,10 +51,10 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
-      "x": 22,
-      "y": 7,
+      "x": 25,
+      "y": 10,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -65,10 +65,10 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 15,
-      "y": 17,
+      "x": 20,
+      "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -79,8 +79,8 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_TUBER_F",
-      "x": 29,
-      "y": 32,
+      "x": 10,
+      "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -94,7 +94,7 @@
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
       "x": 12,
-      "y": 36,
+      "y": 57,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -107,8 +107,8 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 25,
-      "y": 39,
+      "x": 26,
+      "y": 57,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -121,9 +121,9 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 21,
+      "x": 20,
       "y": 56,
-      "elevation": 0,
+      "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -135,10 +135,10 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 33,
+      "x": 32,
       "y": 6,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -149,8 +149,8 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 27,
-      "y": 46,
+      "x": 29,
+      "y": 52,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
@@ -163,8 +163,8 @@
     {
       "local_id": "LOCALID_COR_WORKER",
       "graphics_id": "OBJ_EVENT_GFX_RICH_BOY",
-      "x": 16,
-      "y": 6,
+      "x": 11,
+      "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -177,8 +177,8 @@
     {
       "local_id": "LOCALID_PAIRBEACH_A",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 17,
-      "y": 18,
+      "x": 19,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -191,8 +191,8 @@
     {
       "local_id": "LOCALID_PAIRBEACH_B",
       "graphics_id": "OBJ_EVENT_GFX_OLD_MAN",
-      "x": 18,
-      "y": 18,
+      "x": 20,
+      "y": 7,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -205,8 +205,8 @@
     {
       "local_id": "LOCALID_PAIRWALL_A",
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 28,
-      "y": 4,
+      "x": 22,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -219,8 +219,8 @@
     {
       "local_id": "LOCALID_PAIRWALL_B",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
-      "x": 29,
-      "y": 4,
+      "x": 23,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -233,8 +233,8 @@
   ],
   "warp_events": [
     {
-      "x": 12,
-      "y": 5,
+      "x": 23,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_PARCEL_COAST_BREAKWATER_HUT",
       "dest_warp_id": "0"
@@ -244,48 +244,48 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 15,
-      "y": 5,
+      "x": 10,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastBreakwater_Sign"
     },
     {
       "type": "sign",
-      "x": 12,
-      "y": 5,
+      "x": 26,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastBreakwater_SignHouse"
     },
     {
       "type": "sign",
-      "x": 35,
-      "y": 3,
+      "x": 34,
+      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastBreakwater_Tins"
     },
     {
       "type": "sign",
-      "x": 22,
-      "y": 3,
+      "x": 13,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastBreakwater_Board1"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 14,
+      "x": 21,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastBreakwater_Board2"
     },
     {
       "type": "sign",
-      "x": 16,
-      "y": 3,
+      "x": 29,
+      "y": 5,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoastBreakwater_Board3"
@@ -297,6 +297,22 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ParcelCoast_Dredge"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoastBreakwater_Spoil"
+    },
+    {
+      "type": "sign",
+      "x": 18,
+      "y": 56,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "ParcelCoastBreakwater_OuterBoard"
     }
   ]
 }

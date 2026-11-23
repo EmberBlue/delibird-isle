@@ -101,6 +101,11 @@ def _top_tiles(primary, secondary, metatiles):
 KIT_WALKBEHIND["gTileset_leob_lilycove"] = _top_tiles("leob_general", "leob_lilycove", (
     8, 9, 10, 557, 558, 559, 659, 660, 661, 841, 842, 863, 864, 865, 873, 874, 875,
     886, 887, 888, 894, 895, 896, 899, 900, 910, 912)) | TREETOP_TILES
+# The Breakwater on General + Slateport: the top row of the lifeguard hut's roof (704-706) and a beach umbrella's
+# canopy (738 739) stand over sand one can walk on.
+KIT_WALKBEHIND["gTileset_Slateport"] = _top_tiles("leob_general", "slateport", (704, 705, 706, 738, 739))
+# The Reedmere hide on General + leob's Petalburg kit: the top row of the hide's roof (620-622).
+KIT_WALKBEHIND["gTileset_leob_petalburg"] = _top_tiles("leob_general", "leob_petalburg", (620, 621, 622)) | TREETOP_TILES
 RETIRED_MAPS = {"ParcelStation", "ParcelBridge", "ParcelStationHall"}   # unreachable since the Station became zone 7's gym; kept until nothing references them
 
 

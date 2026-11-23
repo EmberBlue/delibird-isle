@@ -14,7 +14,7 @@ What changes (every door and every placed event stays where it is):
   (ParcelCoastBreakwater's rows 0-1 match it)
 Ids: 514 dark concrete, 529 light pavement (528/530 edges, 521/537 top/bottom),
 322/329 low wall (vertical / horizontal), 822 wooden crates, 823 metal crates (653 is a produce basket)
-crates, 824-826/832-834 a 3x2 rock heap, 572/564/581/589/597/605 quay walls,
+crates, 824-826/832-834 a 3x2 sailboat (on water), 572/564/581/589/597/605 quay walls,
 400/408/392/393 water against a wall, 368 deep water, 292 sand, 198/199 trees.
 """
 import struct
@@ -40,7 +40,9 @@ def repaint(x0, y0, x1, y1, frm, mid, c=0, e=3):
 def crates(x, y, w=2, h=2, mid=822):
     rect(x, y, x + w - 1, y + h - 1, mid, 1, 0)
 def heap(x, y):
-    for j, row in enumerate(([824, 825, 826], [832, 833, 834])):
+    # 824-826/832-834 were taken for a rock heap; in this kit they are a sailboat on its own square of water,
+    # and two of them stood on the paving (found 2026-11-23). The dredge's gear stands there crated instead.
+    for j, row in enumerate(([822, 814, 823], [815, 823, 822])):
         for i, mid in enumerate(row): put(x + i, y + j, mid, 1, 0)
 HOUSE = [[8, 9, 9, 10], [16, 17, 17, 18], [24, 25, 11, 26], [32, 33, 19, 34]]
 def house(x, y):
@@ -89,7 +91,7 @@ crates(3, 3); crates(7, 3); crates(10, 4, 2, 1)
 rect(22, 55, 26, 57, 514, 0, 3)             # the sand pocket behind the cannery
 rect(8, 59, 35, 59, 514, 0, 3)              # the beach is a quay now
 rect(8, 58, 14, 58, 514, 0, 3)
-heap(8, 58); heap(28, 58)                   # dredge spoil where the sand was
+heap(8, 58); heap(28, 58)                   # the dredge's gear, crated, where the sand was
 rect(31, 58, 33, 58, 823, 1, 0)             # crates landed on the quay
 
 # ---- write ----------------------------------------------------------------------

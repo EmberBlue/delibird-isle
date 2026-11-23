@@ -1,5 +1,5 @@
 {
- "_about": "Emerald General (leob0505's ORAS set) + leob0505's Lilycove kit with Delibird Isle's additions (tools/skald/holiday_kit.py). The island's three maps: the Holiday Village, the Snowy Summit, the Shoreline Cliffs. The canvas's levels block gives every cell its height and the terrain pass draws the cliffs, the rims, the shore and the beach. GROUND '.' grass, ',' grass a builder leaves clear, 'f' flowers, 't' tall grass, 'a' long grass, 'g' pale lichen heath, 'i' snow, 'm' bare wet soil, 'c' cobble, 'p' a sand trail, 's' beach sand, 'w' shallows (waded), '~' sea, 'r' the brook (sea water at the land's height, not entered), 'o' still fresh water. '=' a stair (two wide; draw it across both rows of a rock face), 'L' a ledge. '^' 'v' 'u' a waterfall's lip, body and foot. 'j' planks over the brook, 'J' planks over a puddle pond, '+' a plank jetty, 'D' a plank deck on land. PROPS 'b' round bush, 'F' railing, 'l' street lamp, 'S' wooden sign, 'Z' town signboard, 'N' notice board, 'B' a single spruce, '<' '>' a spruce leaning left or right (the drunken forest), '&' a cairn, 'k' boulder, 'q' boulder on sand, 'd' rock in the shallows, '0' rock in deep water, 'x' red-cloth stake in sand, 'X' red-cloth stake on grass, 'z' bare stake in sand, '1' a grey post (a snow stake), 'n' board in sand, '$' sandbags, '_' a sunk sill in sand. STAMPS T the big fir (2x2); H R Y the small cabin in blue, red, yellow; W the slate-roofed hut (General's house); M the thatched hall; G the store with the awning; K the boat shed; C a cave mouth for a rock face; U a puddle pond (waded); P the same with planks across; O a rock outcrop; Q a bench; V the giving table; E the beacon (2x3, its top walked behind); A a sea stack; e a low rock awash. OVER block: '*' a string of lights, '!' the banner.",
+ "_about": "Emerald General (leob0505's ORAS set) + leob0505's Lilycove kit with Delibird Isle's additions (tools/skald/holiday_kit.py). The island's three maps: the Holiday Village, the Snowy Summit, the Shoreline Cliffs. The canvas's levels block gives every cell its height and the terrain pass draws the cliffs, the rims, the shore and the beach. GROUND '.' grass, ',' grass a builder leaves clear, 'f' flowers, 't' tall grass, 'a' long grass, 'g' pale lichen heath, 'i' snow, 'm' bare wet soil, 'c' cobble, 'p' a sand trail, 's' beach sand, 'w' shallows (waded), '~' sea, 'r' the brook (sea water at the land's height, not entered), 'o' still fresh water. '=' a stair (two wide; draw it across both rows of a rock face), 'L' a ledge. '^' 'v' 'u' a waterfall's lip, body and foot. 'j' planks over the brook, 'J' planks over a puddle pond, '+' a plank jetty, 'D' a plank deck on land. PROPS 'b' round bush, 'F' railing, 'l' street lamp, 'S' wooden sign, 'Z' town signboard, 'N' notice board, 'B' a single spruce, '<' '>' a spruce leaning left or right (the drunken forest), '&' a cairn, 'k' boulder, 'q' boulder on sand, 'd' rock in the shallows, '0' rock in deep water, 'x' red-cloth stake in sand, 'X' red-cloth stake on grass, 'z' bare stake in sand, '1' a grey post (a snow stake), 'n' board in sand, '$' sandbags, '_' a sunk sill in sand. STAMPS T the big fir (2x2); H R Y the small cabin in blue, red, yellow; W the slate-roofed hut (General's house); M the thatched hall; G the store with the awning; K the boat shed; C a cave mouth for a rock face; U a puddle pond (waded); P the same with planks across; O a rock outcrop; Q a bench; V the giving table; E the beacon (2x3, its top walked behind); A a sea stack; e a low rock awash (2x2). OVER block: '*' a string of lights, '!' the banner.",
  "fill": "#",
  "border": [
   368,
@@ -736,33 +736,6 @@
    ],
    "_note": "the giving table"
   },
-  "E": {
-   "rows": [
-    [
-     899,
-     900
-    ],
-    [
-     901,
-     902
-    ],
-    [
-     903,
-     904
-    ]
-   ],
-   "pass": [
-    [
-     0,
-     0
-    ],
-    [
-     0,
-     1
-    ]
-   ],
-   "_note": "the beacon"
-  },
   "P": {
    "rows": [
     [
@@ -846,9 +819,40 @@
     [
      373,
      374
+    ],
+    [
+     381,
+     382
     ]
    ],
    "_note": "a low rock awash (deep water)"
+  },
+  "E": {
+   "rows": [
+    [
+     899,
+     900
+    ],
+    [
+     901,
+     902
+    ],
+    [
+     903,
+     904
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     1
+    ]
+   ],
+   "_note": "the beacon"
   }
  },
  "terrain": {
@@ -904,20 +908,6 @@
    "iSE": 405,
    "iSW": 407
   },
-  "shelf": {
-   "N": 430,
-   "NW": 411,
-   "NE": 412
-  },
-  "drop": {
-   "N": 446,
-   "E": 437,
-   "W": 439,
-   "NE": 419,
-   "NW": 420,
-   "iNE": 445,
-   "iNW": 447
-  },
   "fresh": "o",
   "wet": "o^vujJ~wr+dAe0",
   "bank": {
@@ -929,7 +919,21 @@
    "iNE": 194,
    "iNW": 192
   },
-  "through": "=C^vu"
+  "through": "=C^vu",
+  "shoal": {
+   "N": 430,
+   "S": 446,
+   "W": 437,
+   "E": 439,
+   "NW": 429,
+   "NE": 431,
+   "SW": 445,
+   "SE": 447,
+   "iNW": 411,
+   "iNE": 412,
+   "iSW": 419,
+   "iSE": 420
+  }
  },
  "paths": [
   {

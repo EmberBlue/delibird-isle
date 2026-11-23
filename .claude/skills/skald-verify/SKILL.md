@@ -80,6 +80,14 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   kit, so they are only ever redrawn together (`--rebuild`); a single
   `draw.py` run after a rebuild leaves the other two pointing at the wrong
   pieces (a cairn standing on a path was the tell, 2026-11-23).
+- **The hide's kit**: `python3 tools/skald/hide_kit.py --check` must say `ok`
+  (four plank metatiles on leob's Petalburg kit; `--rebuild` redraws the
+  Reedmere hide, the only map on that kit).
+- **Placement scripts**: each `python3 tools/skald/compose/<map>.py --check`
+  says whether a composed canvas (the island's three, the Breakwater, the
+  hide) still matches its script. A mismatch is not an error; it means the
+  canvas was edited by hand and the script must not be run with `--write`
+  until the edit is folded in.
 - **Kits under the FireRed primary**: `python3 tools/skald/kit_share_frp.py
   shady_forest --check` must say the 69 shared tiles are in place (any
   non-`frp_*` secondary paired with `frp_general` needs them; no map is on
@@ -111,6 +119,12 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   such scripts, or the audit lies. `--trainers` must also read 0: a trainer
   who walks up to the player stays where the battle began, so a sight line
   across a cut vertex of the walkable graph is a soft-lock (eleven were).
+  The audit takes water by its behaviour; the engine keeps a walker off it
+  only by its elevation (1). So it also reports "water a walker can step
+  onto": a sea or pond tile at ground height (or 0 with nobody standing on
+  it) beside ground the walk reaches. There the model and the game
+  disagree, and the game gives wild water Pokemon on foot (the
+  Breakwater's beach lip, 2026-11-23).
 
 ## Seeing the game
 
@@ -285,6 +299,18 @@ list that was green on 2026-11-07 is the one in the handoff.
   PokéNav; `TEACHHM` now scans positions until `CB2_BagMenuRun` is live.
   The same goes for the bag's pocket cursor and the party menu: read the
   state (gMain.callback2, gActionSelectionCursor) rather than counting.
+- **Testing SURF or a rod on one map without a replay:** `--party
+  SPECIES_GYARADOS --item ITEM_HM03 --flag FLAG_BADGE05_GET --dismiss 0
+  --walk IDLE:60 --walk TEACHHM:HM03,1 --walk WAIT:200`, then face the
+  water (`UP:0`), `TAP:A`, `IDLE:260` (the prompt), `TAP:A` three times
+  with `IDLE:260` between, and walk. Two traps: the harness's MEWTWO
+  cannot learn SURF in this engine ("not compatible"), and TEACHHM comes
+  back with the START menu still open, so the next step must be `WAIT`
+  (its B closes the menu); after an `IDLE` the first direction key moves
+  the menu cursor instead of the player. Fishing asks the same of the
+  ground as SURF does (`IsPlayerFacingSurfableFishableWater`: the water
+  tile passable at elevation 1, the player at 3), so a surf prompt from a
+  bank proves the rod works there too.
 - Trainer fights are driven from battle RAM, not blind taps: `fight()` tops
   up the lead's PP in `gBattleMons` and steers `gActionSelectionCursor` back
   to FIGHT. The probe party's lead has three attacking moves and an empty

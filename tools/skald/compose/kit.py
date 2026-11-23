@@ -9,13 +9,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 STAMPS = {'T': (2, 2), 'H': (4, 4), 'R': (4, 4), 'Y': (4, 4), 'W': (4, 4), 'M': (6, 5), 'G': (5, 5), 'K': (5, 6),
-          'C': (3, 2), 'U': (3, 3), 'P': (3, 3), 'O': (2, 2), 'Q': (3, 1), 'V': (2, 1), 'E': (2, 3), 'A': (3, 3), 'e': (2, 1)}
+          'C': (3, 2), 'U': (3, 3), 'P': (3, 3), 'O': (2, 2), 'Q': (3, 1), 'V': (2, 1), 'E': (2, 3), 'A': (3, 3), 'e': (2, 2)}
 GROUND = set('.,')
 
 
 class Canvas:
-    def __init__(self, w, h, sea='~'):
+    def __init__(self, w, h, sea='~', stamps=None):
         self.W, self.H = w, h
+        self.sizes = dict(STAMPS, **(stamps or {}))       # a legend's own stamps: {letter: (w, h)}
         self.g = [[sea] * w for _ in range(h)]
         self.lv = [[0] * w for _ in range(h)]
         self.ov = [['.'] * w for _ in range(h)]
@@ -53,7 +54,7 @@ class Canvas:
 
     # --- stamps
     def stamp(self, x, y, ch):
-        w, h = STAMPS[ch]
+        w, h = self.sizes[ch]
         for dy in range(h):
             for dx in range(w):
                 xx, yy = x + dx, y + dy
@@ -90,7 +91,8 @@ class Canvas:
 
     # --- output
     def text(self, legend, title):
-        head = f"legend {legend}\nsize {self.W} {self.H}\n" + ''.join(f"# {l}\n" for l in title.splitlines())
+        head = (f"legend {legend}\nsize {self.W} {self.H}\n" + ''.join(f"# {l}\n" for l in title.splitlines())
+                + ''.join(l + "\n" for l in getattr(self, "header", [])))      # a canvas's own "tile X id col elev" lines
         body = [head + '---'] + [''.join(r) for r in self.g] + ['--- levels'] + [''.join(str(v) for v in r) for r in self.lv]
         if any(c != '.' for r in self.ov for c in r):
             body += ['--- over'] + [''.join(r) for r in self.ov]
@@ -107,7 +109,10 @@ class Canvas:
         p = ROOT / 'data/layouts' / layout / 'canvas.txt'
         if '--write' in argv:
             self.write(layout, legend, title)
-            print(f"{layout}: canvas written; now python3 tools/skald/holiday_kit.py --rebuild")
+            how = ("python3 tools/skald/holiday_kit.py --rebuild" if legend == "general__leob_lilycove"
+                   else "python3 tools/skald/hide_kit.py --rebuild" if legend == "general__leob_petalburg"
+                   else f"python3 tools/skald/draw.py data/layouts/{layout}/canvas.txt")
+            print(f"{layout}: canvas written; draw it: {how}")
         if '--show' in argv:
             self.show()
         if '--check' in argv:

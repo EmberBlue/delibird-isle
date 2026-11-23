@@ -1,0 +1,48 @@
+legend general__leob_petalburg
+size 50 20
+# The Reedmere hide, second drawing (composed by tools/skald/compose/wetlands_hide.py; this file is the source).
+# In by the boards from the backwater landing (east edge, rows 10-11; arrival 47,10). The gate, the hide on the pond's
+# east bank, the pond dug straight along its south and east with the boards on the dug bank and a pier, reeds on the
+# far side with the cut where the dusk count is kept, bleached reed litter and mud toward the backwater.
+---
+T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#
+##################################################
+T#T#,,,,,,,ttatrrr,tttatt,,,,,,,,B,,,,,,,,,,,,T#T#
+####tttt,tt,tatrrr,,,,,ttat,f,,,,,f,,,rrrrtat,####
+T#T#tttt,tt,,,ooooooooo,,,tt,,,,,,,,,rrrrr,tt,T#T#
+####taat,tt,oooooooooooooo,,,bC###B,,rrrr,,,,,####
+T#T#aatt,t,ooooooooooooooooot,####,h,,,,,,,rr,T#T#
+####ttttSaooooooooooooooooooat####,h,tt,,,,rr,####
+T#T#,,,,,,oooooooooooooooooo,f####Zh,,ta,,,,,BT#T#
+####ttt,K,ooooooojjjoooooooo,,,K,f,1N,,,,,S,f,####
+T#T#tat,K,ooooooooJooooooooo,kkkkkkkkkkkkkkkkkkkkk
+####ttt,K,ooooooooJooooooooo,K,,,,,1,,,,f,,,,,kkkk
+T#T#,,,,kkkkkkkkkkkkkkkkkkkkkk,,,,,h,,,,,,ggg,T#T#
+####,,,,,,,,U##,,,,,,,B,f,,,,,,ggg,h,,mmm,gggf####
+T#T#,,qf,,f,###,f,,ttt,tt,,t,,,ggg,,f,mmm,ggg,T#T#
+####,,,,,,,,###,,,ttatt,,,ttt,B,,,,,,,mmm,,,,,####
+T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#
+##################################################
+T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#
+##################################################
+--- levels
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
+11111111111111111111111111111111111111111111111111
