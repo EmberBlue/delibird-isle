@@ -6,7 +6,7 @@ of Pokémon Emerald on pokeemerald-expansion.
 **Read `design/CODEX-HANDOFF.md` first.** It is the handoff from the agent
 that built the project so far (Claude) to you. The owner was not satisfied
 with that work and wants very detailed new maps, possibly on new tilesets.
-The handoff holds their words, an independent review of every outdoor map,
+The handoff holds their words, a blunt review of every outdoor map,
 the tileset situation, what a redraw must not break, and how to prove a
 change.
 

@@ -17,7 +17,8 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
    `.include "data/maps/<Name>/scripts.inc"` to `data/event_scripts.s`.
 4. Connections: ONLY between maps sharing the same primary tileset (the engine
    reloads just the secondary on a seamless crossing). Different primary =>
-   edge coord triggers that `warp` both ways (see ParcelIsle_ToBridge).
+   edge coord triggers that `warp` both ways (see ParcelRiver's west edge to the
+   mill wood, or ParcelMarsh's east edge to Fernwick).
 5. Exterior door: warp_event ON the door tile (doors are col1 — correct);
    interior exit warps' dest_warp_id = the exterior warp's INDEX (order matters).
 6. Build ritual: rm stale .o files (see skald-verify) then `make -j modern`.

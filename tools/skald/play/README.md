@@ -20,8 +20,10 @@ segment's log and `.png` in `$S/play/run/` say where and why.
 | `chain9.sh` | 9 | Fernwick, the record filed | the ferry to the Coast, the boardroom, the eight-stop epilogue, the credits, CONTINUE into the post-game |
 | `chain10.sh` | post-game | Fernwick after CONTINUE | the SMEARGLE at the pond, TARN's rematch, the ferry again, PERRIN's last battle |
 
-`run_all.sh` runs them all in order; `run_rest.sh` is the tail after a fix (edit its first line to
-the segment to resume from); `rebuild_and_run.sh` builds the clean ROM and the probe ROM first.
+`run_all.sh` runs them all in order from the ferry and needs no saved state; `run_rest.sh` is the
+tail after a fix (it resumes from states an earlier run saved; edit its first line to the segment
+to resume from); `rebuild_and_run.sh` builds the clean ROM and the probe ROM and then calls
+`run_all.sh`.
 
 ## Running
 
@@ -34,8 +36,8 @@ export SKALD_ROOT=/path/to/this/checkout        # default /home/user/delibird-is
 export SKALD_SCRATCH=/some/scratch/dir          # states, logs, the two ROMs; outside the repo
 mkdir -p $SKALD_SCRATCH/play/run $SKALD_SCRATCH/probe
 cp tools/skald/play/*.sh $SKALD_SCRATCH/play/   # run_all.sh calls the copies there
-bash tools/skald/play/rebuild_and_run.sh      # ~4 min of builds, then ~17 min of play
-tail -f $SKALD_SCRATCH/play/run/run_rest.log
+bash $SKALD_SCRATCH/play/rebuild_and_run.sh   # ~4 min of builds, then run_all.sh: ~18 min of play
+tail -f $SKALD_SCRATCH/play/run/chain1.log    # one log per chain; run_all.sh prints "all chains done"
 ```
 
 ## Rules the chains taught (also in skald-verify)

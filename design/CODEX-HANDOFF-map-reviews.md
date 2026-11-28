@@ -2,11 +2,16 @@
 
 Appendix to `design/CODEX-HANDOFF.md`. Written 2026-11-28.
 
-Eight independent reviewers (Claude Opus agents that had not seen the mapmaker's opinion of the maps) each
-rendered two or three maps with `tools/skald/pal_tool.py render <Map> out.png 2`, looked at them whole and in
-crops, and wrote what follows. They were told the owner is not satisfied and asked to be blunt. Their text is
-reproduced as returned, unedited. Coordinates are tile (x,y) on the map as it stood at commit `5994d61a48`;
-in a scale-2 render tile (x,y) is at pixel (32x, 32y).
+Eight separate Claude Opus agents each rendered two or three maps with
+`tools/skald/pal_tool.py render <Map> out.png 2`, looked at them whole and in crops, and wrote what follows.
+They are the same family of model as the agent that made the maps, that agent wrote their brief, and they
+read each map's header comment; they had not seen its opinion of how good the maps are. They were told the
+owner is not satisfied and asked to be blunt. Their text is reproduced as returned, unedited. Coordinates
+are tile (x,y) on the map as it stood at commit `5994d61a48`; in a scale-2 render tile (x,y) is at pixel
+(32x, 32y).
+
+Erratum found when the handoff was fact-checked: in the `ParcelFernwick` review the third pale patch is at
+(15-16,57), not (15-16,52-53). Six other "broken" locations were spot-checked against renders and held.
 
 Scale: 5 is about as good as a stock Emerald route; 8 or more is a map a player would screenshot.
 
