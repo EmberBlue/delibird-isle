@@ -30,8 +30,9 @@ SPINE = [
     ("SLUICE, Elvsund (badge 4)", "TRAINER_SKALD_GYM4", True, ["ParcelRiver"]),
     ("VALE, Haukfell (badge 5)", "TRAINER_SKALD_GYM5", True, ["ParcelHighlands"]),
     ("ILEX, Delibird Isle (badge 8, optional)", "TRAINER_SKALD_GYM8", False, ["ParcelDelibird", "ParcelDelibirdSummit"]),
-    ("HARLAND, the Coast (badge 6)", "TRAINER_SKALD_GYM6", True, ["ParcelCoast"]),
-    ("VANE, the climate station (badge 7)", "TRAINER_SKALD_DIRECTOR", True, ["ParcelCoastBreakwater"]),
+    # the Coast is a town with no grass: zone 7's ground Pokemon are met on the Breakwater's spoil bank
+    ("HARLAND, the Coast (badge 6)", "TRAINER_SKALD_GYM6", True, ["ParcelCoast", "ParcelCoastBreakwater"]),
+    ("VANE, the climate station (badge 7)", "TRAINER_SKALD_DIRECTOR", True, ["ParcelCoastBreakwater", "ParcelWeather"]),
     ("AUNE, the marsh gate", "TRAINER_SKALD_GATE_MARSH", True, ["ParcelMarsh"]),
     ("DR. HERON, the finale", "TRAINER_SKALD_HERON", True, ["ParcelMarsh"]),
     ("CORDELIA BROOKE, the boardroom (credits behind her)", "TRAINER_SKALD_CORDELIA", True, ["ParcelMarsh"]),

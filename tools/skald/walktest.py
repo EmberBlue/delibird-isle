@@ -39,6 +39,14 @@ def map_folders():
                 _folders[json.loads((p / "map.json").read_text()).get("id")] = p.name
     return _folders
 
+_species = {}
+def species_names():
+    """species id -> SPECIES_X (the first name defined for an id)."""
+    if not _species:
+        for k, v in constants("include/constants/species.h", "SPECIES_").items():
+            if isinstance(v, int): _species.setdefault(v, k)
+    return _species
+
 def constants(header, prefix, seed=None):
     """#define NAME value, where value may be an expression over earlier names (FLAG_SYS_* etc.)."""
     out = dict(seed or {})
@@ -124,6 +132,17 @@ def main():
         # anything that still opened.
         battles[0] += 1
         wild = btf is not None and not (core.memory.u32[btf] & 8)   # BATTLE_TYPE_TRAINER
+        if wild and syms.get("gBattleMons") is not None:
+            # name what was met (a table is only proven by what comes out of it): the opposing battler is
+            # gBattleMons[1]; one entry's size is the gap to the next symbol over the four battlers
+            bm = syms["gBattleMons"]
+            nxt = min((v for v in syms.values() if v > bm), default=bm + 4 * 0x60)
+            opp = bm + (nxt - bm) // 4
+            for _ in range(40):                                      # the struct is filled a moment after inBattle sets
+                if core.memory.u16[opp]: break
+                step(10)
+            names = species_names()
+            print(f"  wild: {names.get(core.memory.u16[opp], core.memory.u16[opp])} L{core.memory.u8[opp + 0x2C]}", flush=True)
         if a.trace: print(f"  battle: gBattleTypeFlags={core.memory.u32[btf] if btf else None:#x} wild={wild}", flush=True)
         run_keys = ["UP", "LEFT", "DOWN", "RIGHT", "A", "B", "B", "B"]
         bmons, acur = syms.get("gBattleMons"), syms.get("gActionSelectionCursor")

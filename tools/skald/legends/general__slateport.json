@@ -1,5 +1,5 @@
 {
- "_about": "Emerald General (leob0505's ORAS set) + the Slateport kit (the Mereholt Coast's): the Breakwater. The canvas's levels block says what is land (1) and what is water (0); the terrain pass gives paving that stands in water its rock flanks (a mole), the water its shadows, the shallows their tide line and sand straight onto deep water its foam lip (in the sea cell beside the sand, as the set is made: those pieces are ocean). 'c' paving (a mole's walkway; its outermost cells toward water become rock, and bollards on a north edge), 's' sand, 'w' shallows (waded), '~' sea, 'O' sea a swimmer stands in. 'i' 'I' the old wall's posts in the sand, 'd' a rock in the shallows, 'n' a wooden board in the sand, 'Z' the harbour office's notice, 'z' a signboard, 'K' 'k' 'j' 'J' crates, 'b' a mooring cleat on the paving, 'h' a bench. '[' ']' '_' '/' the lip of sand at the foot of the Coast's quay where it comes down onto this map (sea cells, as on the Coast: west, east, south, the south-east corner), '(' ')' the lower half of a rock awash whose upper half is the Coast's last row. STAMPS H the lifeguard hut, R a rock awash (2x2), e a low rock (2x2), A a sea stack (3x3), Y a sailboat (3x2), U a beach umbrella (2x2, its top walked behind).",
+ "_about": "Emerald General (leob0505's ORAS set) + the Slateport kit (the Mereholt Coast's): the Breakwater. The canvas's levels block says what is land (1) and what is water (0); the terrain pass gives paving that stands in water its rock flanks (a mole), the water its shadows, the shallows their tide line and sand straight onto deep water its foam lip (in the sea cell beside the sand, as the set is made: those pieces are ocean). 'c' paving (a mole's walkway; its outermost cells toward water become rock, and bollards on a north edge), 's' sand, 'w' shallows (waded), '~' sea, 'O' sea a swimmer stands in. 'x' the dredge spoil: sand that is soft underfoot (tools/skald/breakwater_kit.py adds the piece; the desert's deep-sand behaviour, so tracks sink and the map's land table lives on it, where the sign says KRABBY have dug in). 'i' 'I' the old wall's posts in the sand, 'd' a rock in the shallows, 'n' a wooden board in the sand, 'Z' the harbour office's notice, 'z' a signboard, 'K' 'k' 'j' 'J' crates, 'b' a mooring cleat on the paving, 'h' a bench. '[' ']' '_' '/' the lip of sand at the foot of the Coast's quay where it comes down onto this map (sea cells, as on the Coast: west, east, south, the south-east corner), '(' ')' the lower half of a rock awash whose upper half is the Coast's last row. STAMPS H the lifeguard hut, R a rock awash (2x2), e a low rock (2x2), A a sea stack (3x3), Y a sailboat (3x2), U a beach umbrella (2x2, its top walked behind).",
  "fill": "#",
  "border": [
   368,
@@ -117,6 +117,11 @@
    301,
    0,
    1
+  ],
+  "x": [
+   918,
+   0,
+   3
   ]
  },
  "stamps": {
@@ -341,7 +346,7 @@
   "ground": "c",
   "deep": "~O",
   "shallow": "wd",
-  "sand": "siInZz",
+  "sand": "siInZzx",
   "plain": "d",
   "wet": "~OwdReAY()[]_/",
   "through": "",

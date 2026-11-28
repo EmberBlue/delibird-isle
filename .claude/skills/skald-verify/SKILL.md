@@ -92,6 +92,15 @@ over all Parcel maps (exit 1 on findings). Run it first; read on for the why.
   shady_forest --check` must say the 69 shared tiles are in place (any
   non-`frp_*` secondary paired with `frp_general` needs them; no map is on
   that primary since 2026-11-22, so this only matters if one goes back).
+- **Encounter tables**: `python3 tools/skald/wild_check.py` must print `0
+  table(s) at odds with the ground`. It lists grass, cave floor or water a
+  player reaches on a map with no table for it, and tables on maps with no
+  ground that can trigger them (a land table needs tall or long grass,
+  soft sand or a cave floor; plain sand and paving have no wild Pokemon).
+  Test a table by walking it: `walktest.py --party SPECIES_MEWTWO --fight
+  --dismiss 60 --walk RIGHT:4 --walk LEFT:4 ...` prints `wild: SPECIES_X
+  L##` for each one met (on water, teach SURF first, see below, and keep
+  the legs short enough not to land again).
 - **Level curve**: after touching any boss, gate or rival party, run
   `python3 tools/skald/curve.py`. It prints every required battle in story
   order and must read `0 step(s) too steep`. The playthrough chains fight

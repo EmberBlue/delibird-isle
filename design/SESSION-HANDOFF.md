@@ -552,6 +552,50 @@ replaces is gone from the tree).
   Hundreds."). The map had no fishing table; it has one now (MAGIKARP on
   every rod, GOLDEEN and BARBOACH, the clean-water fish of §06, from the
   good rod up, SEAKING and WHISCASH rare on the super rod).
+- **Encounter tables against the ground** (2026-11-23, after the hide's
+  pond). A table is met only where a map has the ground for it, and
+  nothing checked the two against each other. `tools/skald/wild_check.py`
+  does now (it walks the game as `reach.py` does; it must print `0
+  table(s) at odds with the ground`). What it found, and what was done:
+  - water one can surf or fish with no table: Route 1's river, the
+    Corridor's stream, the Sluice (no rod), the Marsh (no rod), the
+    Holiday Village's bay (no rod), the Summit's sea, Fernwick's pond, and
+    the whole of the Climate Station's grounds (23 tiles of grass and its
+    river, no entry at all). Each has tables now, written from §06 and
+    from what the map's own people say: POLIWAG on the first rod in the
+    Marsh, where it is the keystone; Fernwick's pond "just has ducks.
+    Well. WINGULL." and a rod there brings up MAGIKARP and a pet-shop
+    CORPHISH; the Station's four plots of private weather have each drawn
+    in their own (LOMBRE and MASQUERAIN for the rain plot, GLOOM and
+    ROSELIA for the sun, NUMEL for the sand, SNORUNT and SWINUB for the
+    ice), and at one in a hundred the office mascot, a CASTFORM that got
+    out.
+  - cave floors with no table: Pump House 2 (GRIMER, GOLBAT, MUK; a rod
+    there brings up almost nothing but MAGIKARP, which is the reading)
+    and the Highlands bore (SWINUB and SNORUNT holding on where the
+    ground is still cold).
+  - tables nothing could meet: land tables in Saltwick and on the Coast
+    (towns with no grass; removed), a water table in the Crystal Cavern
+    (ice, no water; it is the Summit's sea table now, WALREIN with it),
+    and the Breakwater's land table (plain sand has no wild Pokemon).
+    The Breakwater's is live: the spoil bank is soft ground now
+    (`tools/skald/breakwater_kit.py` adds one metatile to the Slateport
+    kit, General's sand with the desert's `MB_DEEP_SAND`; it looks like
+    the beach, tracks sink in it), and the table is what its sign says:
+    KRABBY that dug in, and the GRIMER and MUK the dredge brought up. So
+    zone 7 has ground Pokemon one can meet, which it never had; `curve.py`
+    reads HARLAND's and VANE's "wild on the way" from there and from the
+    Station's grass instead of from two tables that could not be met.
+  - the regional dex follows the tables (`regional_dex.py`, re-run):
+    MAGIKARP and GYARADOS moved up to Route 1, SHROOMISH and BRELOOM to
+    Mistwood (they never lived in Saltwick's streets), SURSKIT and
+    MASQUERAIN to Fernwick. 160 species still; a new map with a table
+    needs its suffix in that tool's `ZONES`.
+  - `walktest.py --fight` names each wild Pokemon it meets (`wild:
+    SPECIES_X L##`), so a table is tested by walking its ground: the
+    spoil bank, the Station's grass (the CASTFORM came up), the Works,
+    the bore, Route 1's river and the Corridor's stream were each walked
+    or surfed on the build.
 - **Building kits** — `kit_restyle.py`. Every town was a stock building kit
   (FireRed's Vermilion in Saltwick, Rustboro in Fernwick, Fortree on the
   wetlands, Mauville in Elvsund, Fallarbor on the fell, Slateport on the

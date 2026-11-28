@@ -48,7 +48,7 @@ for y, (a, b) in {30: (4, 20), 31: (4, 23), 32: (4, 24), 33: (4, 22), 34: (4, 18
     c.fill(a, y, b, y, '~')
 c.fill(4, 35, 11, 42, '~'); c.fill(4, 43, 11, 47, '~')                                        # and its way out past the wall's end
 for y, (a, b) in {23: (9, 13), 24: (8, 15), 25: (7, 16), 26: (7, 16), 27: (8, 15), 28: (10, 13)}.items():
-    land(a, y, b, y, 's')                                                                     # the spoil bank
+    land(a, y, b, y, 'x')                                                                     # the spoil bank: soft ground, the land table's
 c.fill(22, 35, 25, 38, '~'); c.put(22, 35, 'w'); c.put(25, 38, 'w')                           # a hole the dredge left
 
 # ================= sandbars outside the wall (SURF)

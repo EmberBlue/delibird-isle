@@ -111,6 +111,7 @@ class Canvas:
             self.write(layout, legend, title)
             how = ("python3 tools/skald/holiday_kit.py --rebuild" if legend == "general__leob_lilycove"
                    else "python3 tools/skald/hide_kit.py --rebuild" if legend == "general__leob_petalburg"
+                   else "python3 tools/skald/breakwater_kit.py --rebuild" if legend == "general__slateport"
                    else f"python3 tools/skald/draw.py data/layouts/{layout}/canvas.txt")
             print(f"{layout}: canvas written; draw it: {how}")
         if '--show' in argv:

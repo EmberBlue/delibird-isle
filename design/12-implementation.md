@@ -651,6 +651,9 @@ post-build delta.
   format used in this fork.
 - **`wild_encounters`** (`tools/wild_encounters/`) generates the C tables
   from `src/data/wild_encounters.json`. Always edit the JSON.
+  `tools/skald/wild_check.py` checks every table against ground a player
+  can reach that can trigger it (and the reverse); `regional_dex.py`
+  orders the regional dex from the tables.
 - **`trainerproc`** generates trainer parties from `data/trainers/`.
 - **`mgba-rom-test-hydra`** drives `mgba-rom-test` for the in-tree test
   suite. This is how we'll regression-test ROM behavior in CI-style.

@@ -172,6 +172,24 @@ description: Checklist for adding maps, interiors, NPCs, trainers, flags, or ite
   step onto"). A sign that is read by facing water (the dredge line) needs
   the faced cell at the water's elevation, 1.
 
+## Wild encounters
+- `src/data/wild_encounters.json` is the source (`json.dumps(indent=2)`
+  round-trips it). A map with grass, a cave floor or water a player can
+  reach gets its tables in the same pass that draws it, and a table goes
+  only on a map with ground for it: `python3 tools/skald/wild_check.py`
+  must read 0. Write a table from `design/06-ecology.md` for its zone and
+  from what the map's own signs and people say lives there (the hide's
+  fisherman, Fernwick's "now it just has ducks", the spoil bank's KRABBY).
+- Sand has no wild Pokemon. Ground Pokemon on a beach need the soft-sand
+  piece (`tools/skald/breakwater_kit.py`, metatile 918 in the Slateport
+  kit, `MB_DEEP_SAND`): copy that script for another kit.
+- Use species that already have a Skaldmere dex entry
+  (`tools/skald/dex_species.txt`). After changing which species a map
+  holds, re-run `python3 tools/skald/regional_dex.py` (the regional dex
+  is ordered by where a family first lives; a new map's suffix goes into
+  its `ZONES`), and keep `curve.py`'s `SPINE` pointing at maps whose land
+  table can really be met before each required battle.
+
 ## Evidence and the survey stakes
 - A zone's clue tells set bits in its `VAR_SKALDMERE_CHn_EVIDENCE` (bit
   tables in each zone script's header). The zone's survey stake

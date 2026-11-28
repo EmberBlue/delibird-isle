@@ -17,9 +17,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 
 # zones south -> north (the certification ladder), by encounter-table map suffix
-ZONES = ["ROUTE1", "ISLE", "MEADOW", "MISTWOOD", "STATION", "BRIDGE", "WETLANDS", "WETLANDS_HIDE", "MARSH",
-         "CORRIDOR", "CORRIDOR_ADIT", "CORRIDOR_WORKINGS", "FLOODBASIN", "FLOODBASIN_SLUICE", "RIVER",
-         "RIVER_MILL_WOOD", "HIGHLANDS", "HIGHLANDS_TARN", "WEATHER", "COAST", "COAST_BREAKWATER",
+ZONES = ["ROUTE1", "ISLE", "MEADOW", "MISTWOOD", "STATION", "FERNWICK", "BRIDGE", "WETLANDS", "WETLANDS_HIDE", "MARSH",
+         "CORRIDOR", "CORRIDOR_ADIT", "CORRIDOR_WORKINGS", "FLOODBASIN", "FLOODBASIN_WORKS", "FLOODBASIN_SLUICE", "RIVER",
+         "RIVER_MILL_WOOD", "HIGHLANDS", "HIGHLANDS_TARN", "HIGHLANDS_BORE", "WEATHER", "COAST", "COAST_BREAKWATER",
          "DELIBIRD", "DELIBIRD_CLIFFS", "DELIBIRD_SUMMIT", "CAVERN"]
 # trainer-id prefixes -> zone (for species that only trainers carry)
 PREFIX_ZONE = {"R1": "ROUTE1", "MW": "MISTWOOD", "MWD": "MISTWOOD", "FW": "MISTWOOD", "GYM1": "MISTWOOD",

@@ -4,6 +4,8 @@
 // the breakwater is a real wall now (root at the beach, out south, then west across the bay's
 // mouth to "the end of the wall"), the basin behind it is silted shallows one wades, with the
 // dredged channel and the spoil bank; the old wall is a line of posts and rocks awash.
+// The spoil bank is soft ground (metatile 918, MB_DEEP_SAND): the map's land table is met there and
+// nowhere else (KRABBY that dug in, GRIMER and MUK that came up with the dredge), as its sign says.
 
 mapscripts ParcelCoastBreakwater_MapScripts {
 }
