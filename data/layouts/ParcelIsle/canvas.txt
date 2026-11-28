@@ -1,6 +1,6 @@
 legend general__brick_city
 size 60 40
-# Saltwick -- the arrival town on the Saltmarsh Coast (zone 1), second drawing: a brick
+# Saltwick -- the arrival town on the Saltmarsh Coast (zone 1), a brick
 # harbour town on a canal. The stone pier and its landing are where they always were
 # (the arrival scene and the ferry warps land on them); everything else is new.
 #
@@ -9,6 +9,8 @@ size 60 40
 # footbridge, the Main Street bridge and the quay bridge; the Center, the fishers' hall,
 # the fountain square and the inn on the east bank; Main Street (a kerbed road); a ledge
 # with stairs down to the quay district; the quay, two rows deep; the harbour.
+# Working quay: the mail ferry ties up west of the stone pier. The red-thread
+# stake marks the spent oyster ground; the freight derrick stands on the east wharf.
 ---
 T#T#T#T#T#T#T#T#T#T#ppT#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#T#
 ####################pp######################################
@@ -21,32 +23,32 @@ T#T#....####.F.S.F.!cc!####.cc<~~~>cc!#####.##########T#T#T#
 T#T#f...####S.......cc.####.cc<~~~>cc.#####.##########..T#T#
 ####..ccccccccccccccccccccccccwwwwwccccccccc##########..####
 T#T#f..cE###I###cf.fccff..T#cc<~~~>ccccccccccXi(_)icccccccT#
-####...c########cHHHccf...##cc<~~~>ccicccc==ccccccccG#######
-T#T#.B.c########c..!cc.M###.cc<~~~>ccccccf....fcccic######T#
+####...c########cHHHccf...##cc<~~~>ccccccc==ccccccccG#######
+T#T#.B.c########c..!cc.M###.cc<~~~>ccccccf....fccccc######T#
 ####..fc########ckk.ccB####fcc<~~~>ccc&##..o#..&##cc########
 T#qne.fc########c..fcc.####.cc<~~~>ccc###..##..###cc######T#
 ##{~>c.c########cS.Bcc.####fcc<~~~>ccccccf....fccccc########
-T#{~>cBc########c...cccccccccc<~~~>cciccccc==ccccciX######..
-##{~>ccccciccccccccccccciccccc<--->ccccciccccccicccccccccccc
+T#{~>cBc########c...cccccccccc<~~~>cccccccc==ccccccX######..
+##{~>ccccccccccccccccccccccccc<--->ccccccccccccccccccccccccc
 T#{~>c::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ##{~>c::::::::::::::::::::::::::::::::::::::::::::::::::::::
-T#{~>ccccccccccccicccccccccccc^|^|^ccccccccciccccccccccccXcc
+T#{~>ccccccccccccicccccccccccc^|^|^ccccccccccccccccccccccXcc
 ##{~>$LLLLLLLLL$$LLLLLLLLLLL$$'''''$$LLLLLLLLLL$$LLLLLLLLLLL
-T#{~>;B.V###f..;;.A###.K####;;<~~~>;;.A###.V###;;.U##B..T#T#
-##{~>c..####...cc.####f#####cc<~~~>ccf####B####cc.###...####
-T#{~>cf.####.B.ccS####.#####cc<~~~>cc.####.####cc.###f..T#T#
-##{~>c..####.f.cc.####B#####cc<~~~>cc.####f####cckk...B.####
-T#{~>ciXcc==iccccXic==xcccaaic<--->ciXcc==iccciccXcc==xcT#T#
+T#{~>;B.V###f..;;.A###.K####;;<~~~>;;.A###.V###;;ccaacc.T#T#
+##{~>c..####...cc.####f#####cc<~~~>ccf####B####ccccccac.####
+T#{~>cf.####.B.ccS####.#####cc<~~~>cc.####.####cccccccc.T#T#
+##{~>c..####.f.cc.####B#####cc<~~~>cc.####f####ccccccc..####
+T#{~>ccXccm#cccccXccccccccaacc<--->ccXcccccccccccXccccccT#T#
 ##{~>ccccccccccccccccccccccccccccccccccccccccccccccccccc####
-T#{~unnnnnnnnY####nnnnnnnnnnnn^|^|^nnnnnnnnnnnnnnn++nnneT#T#
-##{~~~~~~~~~~J####~~~~~~~~~~~~'''''~~~~~~~~~~~~~~~++~~~}####
-T#{~~~~~~~~~~J####~~Q###~~~~~~~~~~~~~~~~~~~~~~~~~~++~~~}T#T#
-##{~~~Q###~~~J####~~####~~~~~~~~~~~~~~Q###~~~~~~~~++~@#}####
-T#{~~~####~~~J####~~~~~~~~~~~~~~~~~~~~####~~~~~~~~++~~~}T#T#
-##{~~~~~~~~~D#####~~~~~~@#~~~~~~~~~~~~~~~~~~Q###~~++~~~}####
-T#{~~~~~~~~~######~~ddddddddddddddd*#~~~~~~~####~~~~~~~}T#T#
-##{~~~~~*#~~######ddddddddddddddddddddddddd~~~~~~~~~~~~}####
-T#{~~~~~~~ddddddddddddddddddddddddddddddddddddd~~~~~~~~}T#T#
-##{~~~~~ddddddddddddddddddddddddddddddddddddddddddd~~~~}####
-T#{~~~~ddddddddddddddddddddddddddddddddddddddddddddd~~~}T#T#
-##{~~~~ddddddddddddddddddddddddddddddddddddddddddddd~~~}####
+T#{~unnnnnnnnY####neaaccqnnnnn^|^|^nnnnneaa1###cccccqnneT#T#
+##{~~~~~h####J####~>ccac<~~~~~'''''~~~~~>ac####g#ccc<~~}####
+T#{~~~~~#####J####~unnnnv~~~~~~~~~~~~~~~>cc######ccc<~~}T#T#
+##{~~~~~#####J####~~~~~~~~z~~~~~~~~~~~~~unnnnnnnnn++v~~}####
+T#{~~~~~~~~~~j####~~~~y#~~~~~~~~~~~~~~~~~~~~~~Q###++~~~}T#T#
+##{~~~~~~~~~D#####~~~~~~~~~~y#~~~~~~~~~~~~~~~~####++~~~}####
+T#{~~~~l~~~~######~~~~~~y#~~~~~~~~~~~~~~~~~~~~~~~~++~~~}T#T#
+##{~~~~~~~~~######~~~~~~~~~~~~~~~~@#~~~~~~~~~~~~~~~~~~~}####
+T#{~~~~~~~~~~~~~~~l~~~~~~~~~~~~~~~~~~~~~~y#~~~~~~~~~~~~}T#T#
+##{~~@#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}####
+T#{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*#~~~~~~~~~~~~~~~~}T#T#
+##{~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}####

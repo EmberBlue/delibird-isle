@@ -242,6 +242,16 @@
    540,
    1,
    0
+  ],
+  "z": [
+   858,
+   1,
+   0
+  ],
+  "l": [
+   878,
+   1,
+   0
   ]
  },
  "stamps": {
@@ -1150,12 +1160,130 @@
     ]
    ],
    "_note": "a boulder (General's rock, primary tiles only: allowed by a seam)"
+  },
+  "h": {
+   "rows": [
+    [
+     368,
+     520,
+     521,
+     533,
+     542
+    ],
+    [
+     546,
+     549,
+     556,
+     557,
+     564
+    ],
+    [
+     566,
+     573,
+     578,
+     581,
+     590
+    ]
+   ],
+   "_note": "Saltwick mail ferry alongside the arrival pier",
+   "water": [
+    [
+     0,
+     0
+    ]
+   ]
+  },
+  "g": {
+   "rows": [
+    [
+     591,
+     604
+    ],
+    [
+     612,
+     615
+    ]
+   ],
+   "_note": "cargo derrick at the east slip"
+  },
+  "m": {
+   "rows": [
+    [
+     682,
+     704
+    ]
+   ],
+   "_note": "the net mender's drying trestle"
+  },
+  "y": {
+   "rows": [
+    [
+     705,
+     706
+    ]
+   ],
+   "_note": "exposed oyster shells on the shoal"
+  },
+  "1": {
+   "rows": [
+    [
+     727,
+     732,
+     733,
+     743
+    ],
+    [
+     754,
+     757,
+     781,
+     812
+    ],
+    [
+     820,
+     822,
+     828,
+     834
+    ]
+   ],
+   "_note": "fish sorting shelter on the lower wharf"
+  },
+  "j": {
+   "rows": [
+    [
+     758,
+     864,
+     769,
+     769,
+     887
+    ]
+   ],
+   "pass": [
+    [
+     0,
+     2
+    ],
+    [
+     0,
+     3
+    ]
+   ],
+   "water": [
+    [
+     0,
+     0
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "_note": "notched post on the west lip of the pier"
   }
  },
  "paths": [
   {
    "chars": "c",
-   "join": "$%&'()+-:;<=>ACDEGIJKMOPRVWXY^_adeinpqsuvwx{|}~",
+   "join": "$%&'()+-:;<=>ACDEGIJKMOPRVWXY^_adeinpqsuvwx{|}~gm1",
    "pieces": {
     "plain": 769,
     "N": 586,

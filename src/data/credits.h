@@ -38,6 +38,7 @@ enum
 static const u8 sCreditsText_EmptyString[] = _("");
 static const u8 sCreditsText_GameTitle[] = _("POKéMON ANTHROPOCENE");   // as the title screen spells it
 static const u8 sCreditsText_ASkaldmereStory[] = _("a SKALDMERE story");
+static const u8 sCreditsText_QuayArt[] = _("Saltwick quay art: Codex");
 static const u8 sCreditsText_StoryDesignWriting[] = _("Story, Design & Writing");
 static const u8 sCreditsText_Emberblue[] = _("EMBERBLUE");
 static const u8 sCreditsText_MapsScriptsTrainers[] = _("Maps, Scripts & Trainers");
@@ -165,6 +166,7 @@ static const u8 sCreditsText_NintendoCreaturesAndGameFreak[] = _("Nintendo, Crea
 static const struct CreditsEntry sCreditsEntry_EmptyString = { 0, FALSE, sCreditsText_EmptyString};
 static const struct CreditsEntry sCreditsEntry_GameTitle = { 0, TRUE, sCreditsText_GameTitle};
 static const struct CreditsEntry sCreditsEntry_ASkaldmereStory = { 0, FALSE, sCreditsText_ASkaldmereStory};
+static const struct CreditsEntry sCreditsEntry_QuayArt = { 0, FALSE, sCreditsText_QuayArt};
 static const struct CreditsEntry sCreditsEntry_StoryDesignWriting = { 0, TRUE, sCreditsText_StoryDesignWriting};
 static const struct CreditsEntry sCreditsEntry_Emberblue = { 0, FALSE, sCreditsText_Emberblue};
 static const struct CreditsEntry sCreditsEntry_MapsScriptsTrainers = { 0, TRUE, sCreditsText_MapsScriptsTrainers};
@@ -299,7 +301,7 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
     [PAGE_STORY] = {
         &sCreditsEntry_StoryDesignWriting,
         &sCreditsEntry_Emberblue,
-        _,
+        &sCreditsEntry_QuayArt,
         &sCreditsEntry_MapsScriptsTrainers,
         &sCreditsEntry_Emberblue,
     },

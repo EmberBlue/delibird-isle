@@ -115,7 +115,9 @@ taken from a released ROM hack's binary; every set below is a published decomp r
     In this repository three of the kit's tiles sit in other slots of its sheet (clear of the
     slots the engine's door animation overwrites), its metatiles draw this game's grass under
     the paving edges, and a few metatiles are added after its own (`tools/skald/brick_city.py`,
-    `tools/skald/mtile.py`); the art is unchanged.
+    `tools/skald/mtile.py`). The Saltwick-specific artwork is credited below.
+- The mail ferry, sorting shelter, derrick, drying net, oyster beds and navigation marks
+  on Saltwick's quay are original pixel art by Codex for Pokémon Anthropocene.
 - The spruce and fir trees, the title screen, the cast sprites and the UI frames are original
   to this project (see `tools/skald/`).
 

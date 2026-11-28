@@ -13,6 +13,12 @@
 > `AGENTS.md` points at it. This file remains the history of how the game
 > got to where it is.
 
+**2026-11-28 · Saltwick waterfront.** Codex redrew the ferry landing and east
+fish wharf. The new art is in Brick City, and `data/layouts/ParcelIsle/canvas.txt`
+places it. The pier post at (14,32) and shoal stake at (26,31) mark the two
+existing quest readings. The ferry-to-post-game emulator replay passed on this
+layout. Saltwick's upper town and the other outdoor maps still await their redraws.
+
 ## The 60-second orientation
 
 You are continuing **delibird-isle** (working title *Skaldmere*), an
