@@ -1,6 +1,6 @@
 #!/bin/bash
 # clean ROM for delivery, then the probe ROM, then the whole playthrough from the ferry
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 touch data/event_scripts.s data/map_events.s data/maps.s src/tilesets.c
 make -j$(nproc) modern > /tmp/build_clean3.log 2>&1 || { echo "clean build failed"; exit 1; }

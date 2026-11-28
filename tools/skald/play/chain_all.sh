@@ -1,7 +1,7 @@
 #!/bin/bash
 # Chapter 1 from a real new game, in savestate segments. Usage: chain_all.sh [first_segment_name]
 # Each segment loads the previous state; a segment whose --check flag or --expect fails stops the chain.
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 P=$S/play/run
 mkdir -p $P

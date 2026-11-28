@@ -2,7 +2,7 @@
 # Chapter 9 (after the finale: the boardroom, the epilogue tour, the credits, the post-game save) in savestate
 # segments, continuing from chain8.sh's s71 (back in Fernwick at (11,16) with the record filed).
 # Usage: chain9.sh [first_segment_name]
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 P=$S/play/run
 W="python3 tools/skald/walktest.py --rom $S/probe/hookon.gba --map $S/probe/hookon.map --fight"

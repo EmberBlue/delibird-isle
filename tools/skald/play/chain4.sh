@@ -2,7 +2,7 @@
 # Chapter 4 (Haukfell, the Highlands) in savestate segments, continuing from chain3.sh's s33 (arrival at the
 # Highlands' south edge; FirstEntry has fired).
 # Usage: chain4.sh [first_segment_name]
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 P=$S/play/run
 W="python3 tools/skald/walktest.py --rom $S/probe/hookon.gba --map $S/probe/hookon.map --fight"

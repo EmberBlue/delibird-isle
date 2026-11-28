@@ -2,7 +2,7 @@
 # Chapter 5 (the walk back to Saltwick, the ferry, Delibird Isle) in savestate segments, continuing from
 # chain4.sh's s40 (the Highland certification at the summit).
 # Usage: chain5.sh [first_segment_name]
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 P=$S/play/run
 W="python3 tools/skald/walktest.py --rom $S/probe/hookon.gba --map $S/probe/hookon.map --fight"

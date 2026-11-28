@@ -30,8 +30,10 @@ stashed as `$S/probe/hookon.gba` + `.map`, where `$S` is the session scratchpad
 (`SKALD_SCRATCH` overrides it). Copy these scripts to `$S/play/` or run them in place:
 
 ```bash
-export SKALD_SCRATCH=/tmp/claude-0/-home-user-delibird-isle/<id>/scratchpad
-mkdir -p $SKALD_SCRATCH/play/run
+export SKALD_ROOT=/path/to/this/checkout        # default /home/user/delibird-isle
+export SKALD_SCRATCH=/some/scratch/dir          # states, logs, the two ROMs; outside the repo
+mkdir -p $SKALD_SCRATCH/play/run $SKALD_SCRATCH/probe
+cp tools/skald/play/*.sh $SKALD_SCRATCH/play/   # run_all.sh calls the copies there
 bash tools/skald/play/rebuild_and_run.sh      # ~4 min of builds, then ~17 min of play
 tail -f $SKALD_SCRATCH/play/run/run_rest.log
 ```

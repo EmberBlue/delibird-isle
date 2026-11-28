@@ -2,7 +2,7 @@
 # The post-game, continuing from chain9.sh's s77 (CONTINUE after the credits: Fernwick, outside the Centre):
 # the SMEARGLE at the pond, TARN's rematch, the road and the ferry again, PERRIN's last battle.
 # Usage: chain10.sh [first_segment_name]
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 P=$S/play/run
 W="python3 tools/skald/walktest.py --rom $S/probe/hookon.gba --map $S/probe/hookon.map --fight"

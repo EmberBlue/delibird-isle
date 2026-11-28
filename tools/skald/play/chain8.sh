@@ -2,7 +2,7 @@
 # Chapter 8 (the finale: HALE walks you into the Last Corridor) in savestate segments, continuing from
 # chain7.sh's s64 (back in Saltwick at the ferry landing (15,31)).
 # Usage: chain8.sh [first_segment_name]
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 P=$S/play/run
 W="python3 tools/skald/walktest.py --rom $S/probe/hookon.gba --map $S/probe/hookon.map --fight"

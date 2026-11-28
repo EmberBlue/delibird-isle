@@ -2,7 +2,7 @@
 # Chapter 7 (the Mereholt climate station) in savestate segments, continuing from chain6.sh's s60 (the ferry lands
 # at (9,34); the first-entry scene has fired).
 # Usage: chain7.sh [first_segment_name]
-cd /home/user/delibird-isle
+cd "${SKALD_ROOT:-/home/user/delibird-isle}"
 S=${SKALD_SCRATCH:-$(ls -d /tmp/claude-0/-home-user-delibird-isle/*/scratchpad | head -1)}
 P=$S/play/run
 W="python3 tools/skald/walktest.py --rom $S/probe/hookon.gba --map $S/probe/hookon.map --fight"

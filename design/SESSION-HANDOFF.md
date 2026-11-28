@@ -6,6 +6,13 @@
 > zone on vanilla layouts and re-voiced the whole game in the plain Pokémon
 > register. **If this note disagrees with reality, reality wins.**
 
+> **2026-11-28: the owner is handing the map and tileset work to another
+> agent (Codex).** They were not satisfied with what was built here. The
+> brief for whoever continues is `design/CODEX-HANDOFF.md` (with every
+> outdoor map reviewed in `design/CODEX-HANDOFF-map-reviews.md`); root
+> `AGENTS.md` points at it. This file remains the history of how the game
+> got to where it is.
+
 ## The 60-second orientation
 
 You are continuing **delibird-isle** (working title *Skaldmere*), an
